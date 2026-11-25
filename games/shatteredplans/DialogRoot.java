@@ -512,7 +512,7 @@ final class DialogRoot extends SingleChildWidget {
         PairedIntSortSupport.field_c.setTarget(CanvasResizeController.field_a.field_K, UniformNineSliceFactory.field_c, (byte) 76, 0, 0);
         int var1 = UniformNineSliceFactory.field_c + 2;
         MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!AccountStatusDialog.field_pb ? 0 : var1), (byte) 105, !AccountStatusDialog.field_pb ? 0 : var1, 0);
-        CachedArchiveSource.d(18);
+        CachedArchiveSource.layoutLobbyPlayerList(18);
         QuickChatMenu.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
         IconLabelPanel.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
         SoundEffectDefinition.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);

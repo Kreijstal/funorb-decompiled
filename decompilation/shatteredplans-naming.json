@@ -417,7 +417,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:CachedArchiveSource.b(Z)V#0"
+      "renamedSymbol": "B:CachedArchiveSource.pollBackgroundRequests(Z)V#0"
     },
     {
       "symbol": "B:pe.a(Z[IZI[IZLsr;)V#0",
@@ -14596,6 +14596,30 @@
       "renamedSymbol": "M:Bzip2Decoder.collectUsedSymbols(LBzip2State;)V"
     },
     {
+      "symbol": "M:lc.a(BI)[B",
+      "originalName": "a",
+      "to": "takeGroupData",
+      "evidence": "Abstract completed-group payload retrieval contract;sole implementation loads priority request and returns/nulls as available,unlinks on success. Archive.loadGroup and concrete implementation read;preserve abstract descriptor and override closure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSource.takeGroupData(BI)[B"
+    },
+    {
+      "symbol": "M:lc.a(I)Lci;",
+      "originalName": "a",
+      "to": "loadIndex",
+      "evidence": "Abstract async archive-index retrieval contract;sole CachedArchiveSource implementation returns cached index,loads/validates disk/network result,or returns null while pending. Archive.isIndexLoaded and complete implementation read;preserve descriptor/dispatch. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSource.loadIndex(I)LArchiveIndex;"
+    },
+    {
+      "symbol": "M:lc.a(IB)I",
+      "originalName": "a",
+      "to": "getGroupProgress",
+      "evidence": "Abstract per-group loading percentage contract;sole implementation delegates to retained request progress or returns0after original missing-request guard. Archive.getGroupProgress and concrete methods read;preserve descriptor/override family. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSource.getGroupProgress(IB)I"
+    },
+    {
       "symbol": "M:lc.a(II)I",
       "originalName": "a",
       "to": "bitCount",
@@ -17444,12 +17468,76 @@
       "renamedSymbol": "M:RoundedMenuPanel.clearStatics(Z)V"
     },
     {
+      "symbol": "M:p.a(B)V",
+      "originalName": "a",
+      "to": "pollGroupPrefetches",
+      "evidence": "When scan deque exists and index loads, iterate explicit group queue, discard invalid/empty IDs, perform disk check for state0or background network request for state-1,unlink completed state1entries. Preserve reused intrusive cursor, discarded requests, byte-derived index guard and late wrong-byte prefetch-all callback. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.pollGroupPrefetches(B)V"
+    },
+    {
+      "symbol": "M:p.a(BI)[B",
+      "originalName": "a",
+      "to": "takeGroupData",
+      "evidence": "Request group in priority mode0;return null if unavailable,otherwise evaluate original byte modulo,get completed payload and unlink request before return. Archive.loadGroup and concrete disk/network data helpers read;preserve padding/version bytes,aliases,arithmetic traps and call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.takeGroupData(BI)[B"
+    },
+    {
+      "symbol": "M:p.a(I)Lci;",
+      "originalName": "a",
+      "to": "loadIndex",
+      "evidence": "Return retained index or request archive255/index-ID subject to priority capacity,wait for completion,validate index CRC/Whirlpool and disk revision. Disk failure retries via network;network failure resets transport/XOR then retries;optional disk-write cache and allocate group-state array. Preserve distinct catch paths,guard caption clear,aliases and all partial state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.loadIndex(I)LArchiveIndex;"
+    },
+    {
+      "symbol": "M:p.a(IB)I",
+      "originalName": "a",
+      "to": "getGroupProgress",
+      "evidence": "Find retained per-group request and return its implementation progress;missing request evaluates original byte division then returns0. Complete disk/network progress helpers and Archive.getGroupProgress caller read;preserve early hit bypass of guard,hash cursor and arithmetic failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.getGroupProgress(IB)I"
+    },
+    {
+      "symbol": "M:p.a(III)Ljc;",
+      "originalName": "a",
+      "to": "loadGroupRequest",
+      "evidence": "Get/create group request by mode0priority,1disk-check,2prefetch;upgrade pending nonpriority on priority access. Validate data CRC,optional64byteWhirlpool digest and disk version;retry failed disk reads via priority network,reset transport on network validation failure,append two version bytes and queue disk write after success. Preserve both catch scopes,request unlink/hash insertion timing,queue-capacity checks,invalid modes/indices,full integer domains and partial writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;"
+    },
+    {
       "symbol": "M:p.b(B)V",
       "originalName": "b",
       "to": "clearStatics",
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CachedArchiveSource.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:p.b(Z)V",
+      "originalName": "b",
+      "to": "pollBackgroundRequests",
+      "evidence": "Progress initial disk-validation scan with worker cap250,then optional prefetch-all scan with network cap20;retain pending IDs and completion flags/cursor. Periodically mark/unlink completed priority requests using original one-second clock gates. Preserve all three decompiler control flags,label transfers,clock call/write schedule,queued aliases,wrong-bool index-request clear and partial phase transitions. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.pollBackgroundRequests(Z)V"
+    },
+    {
+      "symbol": "M:p.c(I)V",
+      "originalName": "c",
+      "to": "prefetchAllGroups",
+      "evidence": "If group disk cache exists,enable all-group network prefetch and allocate scan deque if absent. Wrong int first invokes original invalid-mode loadGroupRequest;preserve flag write before callback/failure and no-cache return. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.prefetchAllGroups(I)V"
+    },
+    {
+      "symbol": "M:p.d(I)V",
+      "originalName": "d",
+      "to": "layoutLobbyPlayerList",
+      "evidence": "Lay out Name and optional Rating column headers and lobby player ScrollPane from retained panel width/height. Lobby UI constructor identifies both header captions;DialogRoot and lobby-layout callers read. Preserve parameter as rating-header height,conditional width expression,negative offsets and nested scrollbar layout callback. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CachedArchiveSource.layoutLobbyPlayerList(I)V"
     },
     {
       "symbol": "M:pa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -20764,12 +20852,52 @@
       "renamedSymbol": "M:ArchiveSourceManager.clearStatics(B)V"
     },
     {
+      "symbol": "M:tj.a(BIJ)V",
+      "originalName": "a",
+      "to": "writeInviteRequest",
+      "evidence": "Lobby player Invite action writes caller-selected ISAAC opcode,reserves length byte,writes action-kind6and supplied player64bit ID,then patches length byte. Invite caption/action0callers and complete packet writers read. Preserve modulo after opcode/reservation,ISAAC draw,byte/cursor/overflow/partial write and long serialization order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.writeInviteRequest(BIJ)V"
+    },
+    {
       "symbol": "M:tj.a(I)I",
       "originalName": "a",
       "to": "getTargetFrameRate",
       "evidence": "Returns the frames per second from the stored nanoseconds per frame.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArchiveSourceManager.getTargetFrameRate(I)I"
+    },
+    {
+      "symbol": "M:tj.a(ZILua;Lua;Z)Lp;",
+      "originalName": "a",
+      "to": "getOrCreateArchiveSource",
+      "evidence": "Require validated master index,check archive ID,return cached source or parse its72byte record of CRC/revision/digest,construct with correctly ordered sector caches and retain by ID. Archive factory and full source constructor read. Preserve param0RSA-modulus clear only on creation path,record cursor,64byte allocation,exceptions and cache identity. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;"
+    },
+    {
+      "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+      "originalName": "a",
+      "to": "createGradientPanelSprites",
+      "evidence": "Create16px-wide vertical gradient strip and optional copies with black top-left/top-right corner masks;return nine-slot panel sprite array with copies/base at3,4,5. Lobby panel setup callers read. Preserve copy/null alias behavior,wrong-byte static clear,gradient/row geometry and setTarget restoration that resets clip rather than restoring previous clip. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;"
+    },
+    {
+      "symbol": "M:tj.b(I)Z",
+      "originalName": "b",
+      "to": "loadMasterIndex",
+      "evidence": "Request network master index255/255when capacity permits,wait for response,read archive count and72byte records,optionally RSA-decode trailing signature then verify65byte form and64byteWhirlpool digest. Retain source array and packet buffer only after success. Complete digest helper read;preserve signed BigInteger behavior,length/cursor arithmetic,partial allocations,bad-guard late field write and no invented catch/retry. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.loadMasterIndex(I)Z"
+    },
+    {
+      "symbol": "M:tj.c(I)V",
+      "originalName": "c",
+      "to": "pollArchiveSources",
+      "evidence": "When source array exists,evaluate original int modulo,first poll explicit group-prefetch queues for every nonnull source,then poll every source background scanner in second pass. Preserve two-pass order,null slots,modulo failure and pending state visibility. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.pollArchiveSources(I)V"
     },
     {
       "symbol": "M:tl.a(IIIIZIII)V",
@@ -23920,7 +24048,7 @@
     },
     {
       "symbol": "B:p.b(Z)V#0",
-      "renamedSymbol": "B:CachedArchiveSource.b(Z)V#0",
+      "renamedSymbol": "B:CachedArchiveSource.pollBackgroundRequests(Z)V#0",
       "originalName": "L6",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -243689,7 +243817,7 @@
     },
     {
       "symbol": "L:p.a(B)V#0",
-      "renamedSymbol": "L:CachedArchiveSource.a(B)V#0",
+      "renamedSymbol": "L:CachedArchiveSource.pollGroupPrefetches(B)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -243700,7 +243828,7 @@
     },
     {
       "symbol": "L:p.a(B)V#1",
-      "renamedSymbol": "L:CachedArchiveSource.a(B)V#1",
+      "renamedSymbol": "L:CachedArchiveSource.pollGroupPrefetches(B)V#1",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -243711,7 +243839,7 @@
     },
     {
       "symbol": "L:p.a(B)V#2",
-      "renamedSymbol": "L:CachedArchiveSource.a(B)V#2",
+      "renamedSymbol": "L:CachedArchiveSource.pollGroupPrefetches(B)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -243722,7 +243850,7 @@
     },
     {
       "symbol": "L:p.a(B)V#3",
-      "renamedSymbol": "L:CachedArchiveSource.a(B)V#3",
+      "renamedSymbol": "L:CachedArchiveSource.pollGroupPrefetches(B)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -243733,7 +243861,7 @@
     },
     {
       "symbol": "L:p.a(B)V#4",
-      "renamedSymbol": "L:CachedArchiveSource.a(B)V#4",
+      "renamedSymbol": "L:CachedArchiveSource.pollGroupPrefetches(B)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -243744,7 +243872,7 @@
     },
     {
       "symbol": "L:p.a(BI)[B#0",
-      "renamedSymbol": "L:CachedArchiveSource.a(BI)[B#0",
+      "renamedSymbol": "L:CachedArchiveSource.takeGroupData(BI)[B#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -243755,7 +243883,7 @@
     },
     {
       "symbol": "L:p.a(BI)[B#1",
-      "renamedSymbol": "L:CachedArchiveSource.a(BI)[B#1",
+      "renamedSymbol": "L:CachedArchiveSource.takeGroupData(BI)[B#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -243766,7 +243894,7 @@
     },
     {
       "symbol": "L:p.a(BI)[B#2",
-      "renamedSymbol": "L:CachedArchiveSource.a(BI)[B#2",
+      "renamedSymbol": "L:CachedArchiveSource.takeGroupData(BI)[B#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -243777,7 +243905,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#0",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#0",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -243788,7 +243916,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#1",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#1",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -243799,7 +243927,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#10",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#10",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#10",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -243810,7 +243938,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#2",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#2",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -243821,7 +243949,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#3",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#3",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -243832,7 +243960,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#4",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#4",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -243843,7 +243971,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#5",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#5",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -243854,7 +243982,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#6",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#6",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -243865,7 +243993,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#7",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#7",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -243876,7 +244004,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#8",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#8",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -243887,7 +244015,7 @@
     },
     {
       "symbol": "L:p.a(I)Lci;#9",
-      "renamedSymbol": "L:CachedArchiveSource.a(I)LArchiveIndex;#9",
+      "renamedSymbol": "L:CachedArchiveSource.loadIndex(I)LArchiveIndex;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -243898,7 +244026,7 @@
     },
     {
       "symbol": "L:p.a(IB)I#0",
-      "renamedSymbol": "L:CachedArchiveSource.a(IB)I#0",
+      "renamedSymbol": "L:CachedArchiveSource.getGroupProgress(IB)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -243909,7 +244037,7 @@
     },
     {
       "symbol": "L:p.a(IB)I#1",
-      "renamedSymbol": "L:CachedArchiveSource.a(IB)I#1",
+      "renamedSymbol": "L:CachedArchiveSource.getGroupProgress(IB)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -243920,7 +244048,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#0",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#0",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#0",
       "originalName": "stackIn_59_0",
       "renamedName": "stackIn_59_0",
       "declaration": {
@@ -243931,7 +244059,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#1",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#1",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#1",
       "originalName": "stackIn_59_1",
       "renamedName": "stackIn_59_1",
       "declaration": {
@@ -243942,7 +244070,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#10",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#10",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -243953,7 +244081,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#11",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#11",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -243964,7 +244092,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#12",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#12",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -243975,7 +244103,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#13",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#13",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -243986,7 +244114,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#14",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#14",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -243997,7 +244125,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#15",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#15",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#15",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -244008,7 +244136,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#16",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#16",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#16",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -244019,7 +244147,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#17",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#17",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#17",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -244030,7 +244158,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#18",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#18",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#18",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -244041,7 +244169,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#19",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#19",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#19",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -244052,7 +244180,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#2",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#2",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#2",
       "originalName": "stackIn_89_0",
       "renamedName": "stackIn_89_0",
       "declaration": {
@@ -244063,7 +244191,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#20",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#20",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -244074,7 +244202,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#21",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#21",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#21",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -244085,7 +244213,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#3",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#3",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -244096,7 +244224,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#4",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#4",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -244107,7 +244235,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#5",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#5",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -244118,7 +244246,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#6",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#6",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#6",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -244129,7 +244257,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#7",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#7",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -244140,7 +244268,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#8",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#8",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#8",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -244151,7 +244279,7 @@
     },
     {
       "symbol": "L:p.a(III)Ljc;#9",
-      "renamedSymbol": "L:CachedArchiveSource.a(III)LArchiveRequest;#9",
+      "renamedSymbol": "L:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -244162,7 +244290,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#0",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#0",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#0",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -244173,7 +244301,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#1",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#1",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#1",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -244184,7 +244312,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#10",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#10",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -244195,7 +244323,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#11",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#11",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#11",
       "originalName": "var2_intLifetime1",
       "renamedName": "var2_intLifetime1",
       "declaration": {
@@ -244206,7 +244334,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#12",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#12",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#12",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -244217,7 +244345,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#13",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#13",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#13",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -244228,7 +244356,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#14",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#14",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#14",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -244239,7 +244367,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#15",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#15",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#15",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -244250,7 +244378,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#16",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#16",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#16",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -244261,7 +244389,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#17",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#17",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#17",
       "originalName": "decompiledFrameRemainder2",
       "renamedName": "decompiledFrameRemainder2",
       "declaration": {
@@ -244272,7 +244400,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#2",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#2",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#2",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -244283,7 +244411,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#3",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#3",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#3",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -244294,7 +244422,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#4",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#4",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#4",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -244305,7 +244433,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#5",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#5",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -244316,7 +244444,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#6",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#6",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -244327,7 +244455,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#7",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#7",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -244338,7 +244466,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#8",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#8",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -244349,7 +244477,7 @@
     },
     {
       "symbol": "L:p.b(Z)V#9",
-      "renamedSymbol": "L:CachedArchiveSource.b(Z)V#9",
+      "renamedSymbol": "L:CachedArchiveSource.pollBackgroundRequests(Z)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -244360,7 +244488,7 @@
     },
     {
       "symbol": "L:p.c(I)V#0",
-      "renamedSymbol": "L:CachedArchiveSource.c(I)V#0",
+      "renamedSymbol": "L:CachedArchiveSource.prefetchAllGroups(I)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -287150,7 +287278,7 @@
     },
     {
       "symbol": "L:tj.a(BIJ)V#0",
-      "renamedSymbol": "L:ArchiveSourceManager.a(BIJ)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.writeInviteRequest(BIJ)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -287161,7 +287289,7 @@
     },
     {
       "symbol": "L:tj.a(BIJ)V#1",
-      "renamedSymbol": "L:ArchiveSourceManager.a(BIJ)V#1",
+      "renamedSymbol": "L:ArchiveSourceManager.writeInviteRequest(BIJ)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -287172,7 +287300,7 @@
     },
     {
       "symbol": "L:tj.a(BIJ)V#2",
-      "renamedSymbol": "L:ArchiveSourceManager.a(BIJ)V#2",
+      "renamedSymbol": "L:ArchiveSourceManager.writeInviteRequest(BIJ)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -287183,7 +287311,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#0",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#0",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -287194,7 +287322,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#1",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#1",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -287205,7 +287333,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#10",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#10",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -287216,7 +287344,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#11",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#11",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -287227,7 +287355,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#12",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#12",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -287238,7 +287366,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#13",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#13",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -287249,7 +287377,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#2",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#2",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#2",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -287260,7 +287388,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#3",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#3",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#3",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -287271,7 +287399,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#4",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#4",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#4",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -287282,7 +287410,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#5",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#5",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#5",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -287293,7 +287421,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#6",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#6",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#6",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -287304,7 +287432,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#7",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#7",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -287315,7 +287443,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#8",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#8",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#8",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -287326,7 +287454,7 @@
     },
     {
       "symbol": "L:tj.a(ZILua;Lua;Z)Lp;#9",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#9",
+      "renamedSymbol": "L:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -287337,7 +287465,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#0",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#0",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#0",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -287348,7 +287476,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#1",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#1",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -287359,7 +287487,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#10",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#10",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -287370,7 +287498,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#2",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#2",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#2",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -287381,7 +287509,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#3",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#3",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#3",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -287392,7 +287520,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#4",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#4",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -287403,7 +287531,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#5",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#5",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -287414,7 +287542,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#6",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#6",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -287425,7 +287553,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#7",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#7",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -287436,7 +287564,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#8",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#8",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -287447,7 +287575,7 @@
     },
     {
       "symbol": "L:tj.a(ZIZIIB)[Lbi;#9",
-      "renamedSymbol": "L:ArchiveSourceManager.a(ZIZIIB)[LSprite;#9",
+      "renamedSymbol": "L:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -287458,7 +287586,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#0",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#0",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -287469,7 +287597,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#1",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#1",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -287480,7 +287608,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#10",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#10",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#10",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -287491,7 +287619,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#2",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#2",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -287502,7 +287630,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#3",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#3",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -287513,7 +287641,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#4",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#4",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#4",
       "originalName": "var7_ref_java_math_BigInteger",
       "renamedName": "var7_ref_java_math_BigInteger",
       "declaration": {
@@ -287524,7 +287652,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#5",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#5",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -287535,7 +287663,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#6",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#6",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -287546,7 +287674,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#7",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#7",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -287557,7 +287685,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#8",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#8",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -287568,7 +287696,7 @@
     },
     {
       "symbol": "L:tj.b(I)Z#9",
-      "renamedSymbol": "L:ArchiveSourceManager.b(I)Z#9",
+      "renamedSymbol": "L:ArchiveSourceManager.loadMasterIndex(I)Z#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -287579,7 +287707,7 @@
     },
     {
       "symbol": "L:tj.c(I)V#0",
-      "renamedSymbol": "L:ArchiveSourceManager.c(I)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.pollArchiveSources(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -287590,7 +287718,7 @@
     },
     {
       "symbol": "L:tj.c(I)V#1",
-      "renamedSymbol": "L:ArchiveSourceManager.c(I)V#1",
+      "renamedSymbol": "L:ArchiveSourceManager.pollArchiveSources(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -287601,7 +287729,7 @@
     },
     {
       "symbol": "L:tj.c(I)V#2",
-      "renamedSymbol": "L:ArchiveSourceManager.c(I)V#2",
+      "renamedSymbol": "L:ArchiveSourceManager.pollArchiveSources(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -287612,7 +287740,7 @@
     },
     {
       "symbol": "L:tj.c(I)V#3",
-      "renamedSymbol": "L:ArchiveSourceManager.c(I)V#3",
+      "renamedSymbol": "L:ArchiveSourceManager.pollArchiveSources(I)V#3",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -340148,9 +340276,9 @@
     },
     {
       "symbol": "M:lc.a(BI)[B",
-      "renamedSymbol": "M:ArchiveSource.a(BI)[B",
+      "renamedSymbol": "M:ArchiveSource.takeGroupData(BI)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "takeGroupData",
       "declaration": {
         "file": "lc.java",
         "start": 4832,
@@ -340159,9 +340287,9 @@
     },
     {
       "symbol": "M:lc.a(I)Lci;",
-      "renamedSymbol": "M:ArchiveSource.a(I)LArchiveIndex;",
+      "renamedSymbol": "M:ArchiveSource.loadIndex(I)LArchiveIndex;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadIndex",
       "declaration": {
         "file": "lc.java",
         "start": 4796,
@@ -340170,9 +340298,9 @@
     },
     {
       "symbol": "M:lc.a(IB)I",
-      "renamedSymbol": "M:ArchiveSource.a(IB)I",
+      "renamedSymbol": "M:ArchiveSource.getGroupProgress(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupProgress",
       "declaration": {
         "file": "lc.java",
         "start": 4878,
@@ -345978,9 +346106,9 @@
     },
     {
       "symbol": "M:p.a(B)V",
-      "renamedSymbol": "M:CachedArchiveSource.a(B)V",
+      "renamedSymbol": "M:CachedArchiveSource.pollGroupPrefetches(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollGroupPrefetches",
       "declaration": {
         "file": "p.java",
         "start": 6801,
@@ -345989,9 +346117,9 @@
     },
     {
       "symbol": "M:p.a(BI)[B",
-      "renamedSymbol": "M:CachedArchiveSource.a(BI)[B",
+      "renamedSymbol": "M:CachedArchiveSource.takeGroupData(BI)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "takeGroupData",
       "declaration": {
         "file": "p.java",
         "start": 11590,
@@ -346000,9 +346128,9 @@
     },
     {
       "symbol": "M:p.a(I)Lci;",
-      "renamedSymbol": "M:CachedArchiveSource.a(I)LArchiveIndex;",
+      "renamedSymbol": "M:CachedArchiveSource.loadIndex(I)LArchiveIndex;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadIndex",
       "declaration": {
         "file": "p.java",
         "start": 8387,
@@ -346011,9 +346139,9 @@
     },
     {
       "symbol": "M:p.a(IB)I",
-      "renamedSymbol": "M:CachedArchiveSource.a(IB)I",
+      "renamedSymbol": "M:CachedArchiveSource.getGroupProgress(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getGroupProgress",
       "declaration": {
         "file": "p.java",
         "start": 11167,
@@ -346022,9 +346150,9 @@
     },
     {
       "symbol": "M:p.a(III)Ljc;",
-      "renamedSymbol": "M:CachedArchiveSource.a(III)LArchiveRequest;",
+      "renamedSymbol": "M:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadGroupRequest",
       "declaration": {
         "file": "p.java",
         "start": 11885,
@@ -346044,9 +346172,9 @@
     },
     {
       "symbol": "M:p.b(Z)V",
-      "renamedSymbol": "M:CachedArchiveSource.b(Z)V",
+      "renamedSymbol": "M:CachedArchiveSource.pollBackgroundRequests(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollBackgroundRequests",
       "declaration": {
         "file": "p.java",
         "start": 996,
@@ -346055,9 +346183,9 @@
     },
     {
       "symbol": "M:p.c(I)V",
-      "renamedSymbol": "M:CachedArchiveSource.c(I)V",
+      "renamedSymbol": "M:CachedArchiveSource.prefetchAllGroups(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "prefetchAllGroups",
       "declaration": {
         "file": "p.java",
         "start": 669,
@@ -346066,9 +346194,9 @@
     },
     {
       "symbol": "M:p.d(I)V",
-      "renamedSymbol": "M:CachedArchiveSource.d(I)V",
+      "renamedSymbol": "M:CachedArchiveSource.layoutLobbyPlayerList(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "layoutLobbyPlayerList",
       "declaration": {
         "file": "p.java",
         "start": 8040,
@@ -353524,9 +353652,9 @@
     },
     {
       "symbol": "M:tj.a(BIJ)V",
-      "renamedSymbol": "M:ArchiveSourceManager.a(BIJ)V",
+      "renamedSymbol": "M:ArchiveSourceManager.writeInviteRequest(BIJ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeInviteRequest",
       "declaration": {
         "file": "tj.java",
         "start": 4334,
@@ -353546,9 +353674,9 @@
     },
     {
       "symbol": "M:tj.a(ZILua;Lua;Z)Lp;",
-      "renamedSymbol": "M:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;",
+      "renamedSymbol": "M:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getOrCreateArchiveSource",
       "declaration": {
         "file": "tj.java",
         "start": 484,
@@ -353557,9 +353685,9 @@
     },
     {
       "symbol": "M:tj.a(ZIZIIB)[Lbi;",
-      "renamedSymbol": "M:ArchiveSourceManager.a(ZIZIIB)[LSprite;",
+      "renamedSymbol": "M:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createGradientPanelSprites",
       "declaration": {
         "file": "tj.java",
         "start": 2846,
@@ -353568,9 +353696,9 @@
     },
     {
       "symbol": "M:tj.b(I)Z",
-      "renamedSymbol": "M:ArchiveSourceManager.b(I)Z",
+      "renamedSymbol": "M:ArchiveSourceManager.loadMasterIndex(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "loadMasterIndex",
       "declaration": {
         "file": "tj.java",
         "start": 5356,
@@ -353579,9 +353707,9 @@
     },
     {
       "symbol": "M:tj.c(I)V",
-      "renamedSymbol": "M:ArchiveSourceManager.c(I)V",
+      "renamedSymbol": "M:ArchiveSourceManager.pollArchiveSources(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "pollArchiveSources",
       "declaration": {
         "file": "tj.java",
         "start": 4689,
@@ -410768,7 +410896,7 @@
     },
     {
       "symbol": "P:lc.a(BI)[B#0",
-      "renamedSymbol": "P:ArchiveSource.a(BI)[B#0",
+      "renamedSymbol": "P:ArchiveSource.takeGroupData(BI)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410779,7 +410907,7 @@
     },
     {
       "symbol": "P:lc.a(BI)[B#1",
-      "renamedSymbol": "P:ArchiveSource.a(BI)[B#1",
+      "renamedSymbol": "P:ArchiveSource.takeGroupData(BI)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -410790,7 +410918,7 @@
     },
     {
       "symbol": "P:lc.a(I)Lci;#0",
-      "renamedSymbol": "P:ArchiveSource.a(I)LArchiveIndex;#0",
+      "renamedSymbol": "P:ArchiveSource.loadIndex(I)LArchiveIndex;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410801,7 +410929,7 @@
     },
     {
       "symbol": "P:lc.a(IB)I#0",
-      "renamedSymbol": "P:ArchiveSource.a(IB)I#0",
+      "renamedSymbol": "P:ArchiveSource.getGroupProgress(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410812,7 +410940,7 @@
     },
     {
       "symbol": "P:lc.a(IB)I#1",
-      "renamedSymbol": "P:ArchiveSource.a(IB)I#1",
+      "renamedSymbol": "P:ArchiveSource.getGroupProgress(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425816,7 +425944,7 @@
     },
     {
       "symbol": "P:p.a(B)V#0",
-      "renamedSymbol": "P:CachedArchiveSource.a(B)V#0",
+      "renamedSymbol": "P:CachedArchiveSource.pollGroupPrefetches(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425827,7 +425955,7 @@
     },
     {
       "symbol": "P:p.a(BI)[B#0",
-      "renamedSymbol": "P:CachedArchiveSource.a(BI)[B#0",
+      "renamedSymbol": "P:CachedArchiveSource.takeGroupData(BI)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425838,7 +425966,7 @@
     },
     {
       "symbol": "P:p.a(BI)[B#1",
-      "renamedSymbol": "P:CachedArchiveSource.a(BI)[B#1",
+      "renamedSymbol": "P:CachedArchiveSource.takeGroupData(BI)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425849,7 +425977,7 @@
     },
     {
       "symbol": "P:p.a(I)Lci;#0",
-      "renamedSymbol": "P:CachedArchiveSource.a(I)LArchiveIndex;#0",
+      "renamedSymbol": "P:CachedArchiveSource.loadIndex(I)LArchiveIndex;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425860,7 +425988,7 @@
     },
     {
       "symbol": "P:p.a(IB)I#0",
-      "renamedSymbol": "P:CachedArchiveSource.a(IB)I#0",
+      "renamedSymbol": "P:CachedArchiveSource.getGroupProgress(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425871,7 +425999,7 @@
     },
     {
       "symbol": "P:p.a(IB)I#1",
-      "renamedSymbol": "P:CachedArchiveSource.a(IB)I#1",
+      "renamedSymbol": "P:CachedArchiveSource.getGroupProgress(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425882,7 +426010,7 @@
     },
     {
       "symbol": "P:p.a(III)Ljc;#0",
-      "renamedSymbol": "P:CachedArchiveSource.a(III)LArchiveRequest;#0",
+      "renamedSymbol": "P:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425893,7 +426021,7 @@
     },
     {
       "symbol": "P:p.a(III)Ljc;#1",
-      "renamedSymbol": "P:CachedArchiveSource.a(III)LArchiveRequest;#1",
+      "renamedSymbol": "P:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425904,7 +426032,7 @@
     },
     {
       "symbol": "P:p.a(III)Ljc;#2",
-      "renamedSymbol": "P:CachedArchiveSource.a(III)LArchiveRequest;#2",
+      "renamedSymbol": "P:CachedArchiveSource.loadGroupRequest(III)LArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -425926,7 +426054,7 @@
     },
     {
       "symbol": "P:p.b(Z)V#0",
-      "renamedSymbol": "P:CachedArchiveSource.b(Z)V#0",
+      "renamedSymbol": "P:CachedArchiveSource.pollBackgroundRequests(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425937,7 +426065,7 @@
     },
     {
       "symbol": "P:p.c(I)V#0",
-      "renamedSymbol": "P:CachedArchiveSource.c(I)V#0",
+      "renamedSymbol": "P:CachedArchiveSource.prefetchAllGroups(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425948,7 +426076,7 @@
     },
     {
       "symbol": "P:p.d(I)V#0",
-      "renamedSymbol": "P:CachedArchiveSource.d(I)V#0",
+      "renamedSymbol": "P:CachedArchiveSource.layoutLobbyPlayerList(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -443988,7 +444116,7 @@
     },
     {
       "symbol": "P:tj.a(BIJ)V#0",
-      "renamedSymbol": "P:ArchiveSourceManager.a(BIJ)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.writeInviteRequest(BIJ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -443999,7 +444127,7 @@
     },
     {
       "symbol": "P:tj.a(BIJ)V#1",
-      "renamedSymbol": "P:ArchiveSourceManager.a(BIJ)V#1",
+      "renamedSymbol": "P:ArchiveSourceManager.writeInviteRequest(BIJ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -444010,7 +444138,7 @@
     },
     {
       "symbol": "P:tj.a(BIJ)V#2",
-      "renamedSymbol": "P:ArchiveSourceManager.a(BIJ)V#2",
+      "renamedSymbol": "P:ArchiveSourceManager.writeInviteRequest(BIJ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -444032,7 +444160,7 @@
     },
     {
       "symbol": "P:tj.a(ZILua;Lua;Z)Lp;#0",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#0",
+      "renamedSymbol": "P:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444043,7 +444171,7 @@
     },
     {
       "symbol": "P:tj.a(ZILua;Lua;Z)Lp;#1",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#1",
+      "renamedSymbol": "P:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -444054,7 +444182,7 @@
     },
     {
       "symbol": "P:tj.a(ZILua;Lua;Z)Lp;#2",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#2",
+      "renamedSymbol": "P:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -444065,7 +444193,7 @@
     },
     {
       "symbol": "P:tj.a(ZILua;Lua;Z)Lp;#3",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#3",
+      "renamedSymbol": "P:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -444076,7 +444204,7 @@
     },
     {
       "symbol": "P:tj.a(ZILua;Lua;Z)Lp;#4",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#4",
+      "renamedSymbol": "P:ArchiveSourceManager.getOrCreateArchiveSource(ZILSectorCacheStore;LSectorCacheStore;Z)LCachedArchiveSource;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -444087,7 +444215,7 @@
     },
     {
       "symbol": "P:tj.a(ZIZIIB)[Lbi;#0",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZIZIIB)[LSprite;#0",
+      "renamedSymbol": "P:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444098,7 +444226,7 @@
     },
     {
       "symbol": "P:tj.a(ZIZIIB)[Lbi;#1",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZIZIIB)[LSprite;#1",
+      "renamedSymbol": "P:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -444109,7 +444237,7 @@
     },
     {
       "symbol": "P:tj.a(ZIZIIB)[Lbi;#2",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZIZIIB)[LSprite;#2",
+      "renamedSymbol": "P:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -444120,7 +444248,7 @@
     },
     {
       "symbol": "P:tj.a(ZIZIIB)[Lbi;#3",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZIZIIB)[LSprite;#3",
+      "renamedSymbol": "P:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -444131,7 +444259,7 @@
     },
     {
       "symbol": "P:tj.a(ZIZIIB)[Lbi;#4",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZIZIIB)[LSprite;#4",
+      "renamedSymbol": "P:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -444142,7 +444270,7 @@
     },
     {
       "symbol": "P:tj.a(ZIZIIB)[Lbi;#5",
-      "renamedSymbol": "P:ArchiveSourceManager.a(ZIZIIB)[LSprite;#5",
+      "renamedSymbol": "P:ArchiveSourceManager.createGradientPanelSprites(ZIZIIB)[LSprite;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -444153,7 +444281,7 @@
     },
     {
       "symbol": "P:tj.b(I)Z#0",
-      "renamedSymbol": "P:ArchiveSourceManager.b(I)Z#0",
+      "renamedSymbol": "P:ArchiveSourceManager.loadMasterIndex(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444164,7 +444292,7 @@
     },
     {
       "symbol": "P:tj.c(I)V#0",
-      "renamedSymbol": "P:ArchiveSourceManager.c(I)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.pollArchiveSources(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -482808,7 +482936,7 @@
       "original": "bc.java",
       "renamed": "Archive.java",
       "inputSha256": "0251dde79a293019ee424a736ad340cd2fc69eff2c0fcd6b301f6a7cd2cc9dde",
-      "outputSha256": "4e672e93117159bd79bded953697d9d5b58320d09aabaeb8a8deb8d401fbdeb6",
+      "outputSha256": "bc0596fb5ea8c4868ea28ba171683bce5f537f5a331fff3d8fa0fdc58f930c23",
       "edits": [
         {
           "start": 50,
@@ -482958,6 +483086,13 @@
           "renamed": "isIndexLoaded"
         },
         {
+          "start": 4186,
+          "end": 4187,
+          "symbol": "M:lc.a(I)Lci;",
+          "original": "a",
+          "renamed": "loadIndex"
+        },
+        {
           "start": 4440,
           "end": 4441,
           "symbol": "M:bc.a(Ljava/lang/String;B)I",
@@ -483033,6 +483168,13 @@
           "symbol": "M:bc.b(BI)Z",
           "original": "b",
           "renamed": "isValidGroup"
+        },
+        {
+          "start": 6472,
+          "end": 6473,
+          "symbol": "M:lc.a(IB)I",
+          "original": "a",
+          "renamed": "getGroupProgress"
         },
         {
           "start": 6532,
@@ -483285,6 +483427,20 @@
           "symbol": "M:wq.a(ZB[B)Ljava/lang/Object;",
           "original": "a",
           "renamed": "wrapByteArray"
+        },
+        {
+          "start": 13319,
+          "end": 13320,
+          "symbol": "M:lc.a(BI)[B",
+          "original": "a",
+          "renamed": "takeGroupData"
+        },
+        {
+          "start": 13407,
+          "end": 13408,
+          "symbol": "M:lc.a(BI)[B",
+          "original": "a",
+          "renamed": "takeGroupData"
         },
         {
           "start": 13485,
@@ -493468,7 +493624,7 @@
       "original": "cc.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "fe203fb395d05186f908d9b8e344c102f70d7f7955191c1ac2e43b62816b0bf3",
-      "outputSha256": "a5e5534a8fc756f6ca56db4df1be2ebac3be6b06086d8121f85c4450f196606c",
+      "outputSha256": "4680e51738b30fdc21186378b822ea467da1a55cb321c66a3f20450d86d2fe65",
       "edits": [
         {
           "start": 69,
@@ -494136,6 +494292,13 @@
           "renamed": "ProxyAuthenticationRequiredException"
         },
         {
+          "start": 5904,
+          "end": 5905,
+          "symbol": "M:tj.a(ZILua;Lua;Z)Lp;",
+          "original": "a",
+          "renamed": "getOrCreateArchiveSource"
+        },
+        {
           "start": 5922,
           "end": 5924,
           "symbol": "C:ua",
@@ -494148,6 +494311,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 6001,
+          "end": 6002,
+          "symbol": "M:p.c(I)V",
+          "original": "c",
+          "renamed": "prefetchAllGroups"
         },
         {
           "start": 6054,
@@ -515071,7 +515241,7 @@
       "original": "dm.java",
       "renamed": "ObjectList.java",
       "inputSha256": "2ed4fe489c7e8fffbec5f404e1d4bcee016418274f2c02c98d01145565d8755a",
-      "outputSha256": "826e904785adcc5c5601544df357c4d5dfded7b31941d52799b7eda5a56abbe8",
+      "outputSha256": "2e60002c8dc1a5491bb5e3bd2ac910861d3a0f988966b55613d93ee09feac3b4",
       "edits": [
         {
           "start": 50,
@@ -515905,6 +516075,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 12034,
+          "end": 12035,
+          "symbol": "M:tj.a(BIJ)V",
+          "original": "a",
+          "renamed": "writeInviteRequest"
         },
         {
           "start": 12166,
@@ -540711,7 +540888,7 @@
       "original": "en.java",
       "renamed": "LobbyLayoutSupport.java",
       "inputSha256": "3c69ca02e4526f19b78e5b8b82ec9c39eb0976a9f7076e25c041ec6f94024098",
-      "outputSha256": "72d911c573d48b81836420cc79e610988966fb635d7b12cd14d6201ebaef7a32",
+      "outputSha256": "2e1cca0c842c0a9d989d9c527c0f1ba2f9a168b2fdad338421fdd49bd7a9877f",
       "edits": [
         {
           "start": 50,
@@ -541552,6 +541729,13 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 6856,
+          "end": 6857,
+          "symbol": "M:p.d(I)V",
+          "original": "d",
+          "renamed": "layoutLobbyPlayerList"
         },
         {
           "start": 7081,
@@ -546971,7 +547155,7 @@
       "original": "fc.java",
       "renamed": "PlayerContextMenuController.java",
       "inputSha256": "444e7285b57f0940a014e8c7d64bf6342e77edff17f1517860a86a0342c2b8d1",
-      "outputSha256": "955bd029af66b0f367bcf98b99e2df9ee349482d0305b3507d494385a1686d89",
+      "outputSha256": "1374c284a9d0fad038641d9421fe40a1f2aae92cc78e9c153debd2f455feeded",
       "edits": [
         {
           "start": 50,
@@ -548444,6 +548628,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 18269,
+          "end": 18270,
+          "symbol": "M:tj.a(BIJ)V",
+          "original": "a",
+          "renamed": "writeInviteRequest"
+        },
+        {
           "start": 18383,
           "end": 18385,
           "symbol": "C:bc",
@@ -548533,6 +548724,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 19184,
+          "end": 19185,
+          "symbol": "M:tj.a(BIJ)V",
+          "original": "a",
+          "renamed": "writeInviteRequest"
         },
         {
           "start": 19290,
@@ -638898,7 +639096,7 @@
       "original": "lc.java",
       "renamed": "ArchiveSource.java",
       "inputSha256": "ce85fa34fda16250f025bd1bfe80f3d97c2ff7f1c945563fff69cb91e449a41c",
-      "outputSha256": "1f2a0ed987e071efbc2c1ff5f0b60bdc2f8edf8c461dd2752ac049c572273a5c",
+      "outputSha256": "11014a47d38f9c4a821eae80190704fb7acbb2a2f0720cc21658d7474181f6df",
       "edits": [
         {
           "start": 53,
@@ -639249,6 +639447,27 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 4796,
+          "end": 4797,
+          "symbol": "M:lc.a(I)Lci;",
+          "original": "a",
+          "renamed": "loadIndex"
+        },
+        {
+          "start": 4832,
+          "end": 4833,
+          "symbol": "M:lc.a(BI)[B",
+          "original": "a",
+          "renamed": "takeGroupData"
+        },
+        {
+          "start": 4878,
+          "end": 4879,
+          "symbol": "M:lc.a(IB)I",
+          "original": "a",
+          "renamed": "getGroupProgress"
         },
         {
           "start": 5000,
@@ -645215,7 +645434,7 @@
       "original": "m.java",
       "renamed": "StrongCacheEntry.java",
       "inputSha256": "492546d3d7eaeeb255e29a66044fcc133b8f66fb639c6dfa84303195c9c498b2",
-      "outputSha256": "54490ff0a53e1e01c4dc8ec4a2f2cb777087107ff053eef272033ce6536d6cc6",
+      "outputSha256": "4ef230d244c90baed720758bd252f2c7bb0ea42b387b1c002a8b1329470aeae2",
       "edits": [
         {
           "start": 50,
@@ -646191,6 +646410,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 12190,
+          "end": 12191,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
+        },
+        {
           "start": 12252,
           "end": 12253,
           "symbol": "C:l",
@@ -646443,6 +646669,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 13037,
+          "end": 13038,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
+        },
+        {
           "start": 13096,
           "end": 13098,
           "symbol": "C:td",
@@ -646476,6 +646709,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 13197,
+          "end": 13198,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
         },
         {
           "start": 13258,
@@ -646513,6 +646753,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 13359,
+          "end": 13360,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
+        },
+        {
           "start": 13420,
           "end": 13422,
           "symbol": "C:vm",
@@ -646546,6 +646793,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 13524,
+          "end": 13525,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
         },
         {
           "start": 13584,
@@ -646737,6 +646991,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 14298,
+          "end": 14299,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
+        },
+        {
           "start": 14359,
           "end": 14361,
           "symbol": "C:fg",
@@ -646777,6 +647038,13 @@
           "symbol": "C:tj",
           "original": "tj",
           "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 14465,
+          "end": 14466,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
         },
         {
           "start": 14526,
@@ -655661,7 +655929,7 @@
       "original": "mp.java",
       "renamed": "AccountRequestState.java",
       "inputSha256": "17d43e1514c972f5f6cceff9c91543afd206f8eb53a9c50a12572d2734371bcb",
-      "outputSha256": "fbb594b3f2eca22ef4dd61134d9be4c16072ec4c775a653abdbab28c8b4423a5",
+      "outputSha256": "e1ea76ba9d0a5aee04fdd192eb0ad2989c38a8028a3cf74a429457cb44e9e837",
       "edits": [
         {
           "start": 50,
@@ -655720,11 +655988,25 @@
           "renamed": "ProxyAuthenticationRequiredException"
         },
         {
+          "start": 580,
+          "end": 581,
+          "symbol": "M:tj.b(I)Z",
+          "original": "b",
+          "renamed": "loadMasterIndex"
+        },
+        {
           "start": 613,
           "end": 615,
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 624,
+          "end": 625,
+          "symbol": "M:tj.b(I)Z",
+          "original": "b",
+          "renamed": "loadMasterIndex"
         }
       ]
     },
@@ -677891,7 +678173,7 @@
       "original": "p.java",
       "renamed": "CachedArchiveSource.java",
       "inputSha256": "0bd645edaf7535411bdb64f924bff8a02da1b048411cb440b6fef342f236e4ad",
-      "outputSha256": "5c04297ef328192553f9b1daf9ab99af87a85de6ce3f9d842ac4083fc0a70da5",
+      "outputSha256": "8686765287cc2e5d268627009f09524f1baf47311b3ed565f1795a694309be7a",
       "edits": [
         {
           "start": 50,
@@ -677978,6 +678260,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 669,
+          "end": 670,
+          "symbol": "M:p.c(I)V",
+          "original": "c",
+          "renamed": "prefetchAllGroups"
+        },
+        {
           "start": 693,
           "end": 695,
           "symbol": "C:jc",
@@ -677985,11 +678274,25 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 867,
+          "end": 868,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
+        },
+        {
           "start": 958,
           "end": 960,
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 996,
+          "end": 997,
+          "symbol": "M:p.b(Z)V",
+          "original": "b",
+          "renamed": "pollBackgroundRequests"
         },
         {
           "start": 1024,
@@ -678069,6 +678372,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 1710,
+          "end": 1711,
+          "symbol": "M:p.a(I)Lci;",
+          "original": "a",
+          "renamed": "loadIndex"
+        },
+        {
           "start": 1838,
           "end": 1839,
           "symbol": "M:pf.d(I)Loh;",
@@ -678083,6 +678393,13 @@
           "renamed": "key"
         },
         {
+          "start": 1999,
+          "end": 2000,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
+        },
+        {
           "start": 2096,
           "end": 2097,
           "symbol": "M:oh.b(B)V",
@@ -678095,6 +678412,13 @@
           "symbol": "M:pf.a(B)Loh;",
           "original": "a",
           "renamed": "nextForward"
+        },
+        {
+          "start": 2600,
+          "end": 2601,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
         },
         {
           "start": 2725,
@@ -678181,6 +678505,13 @@
           "renamed": "key"
         },
         {
+          "start": 4469,
+          "end": 4470,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
+        },
+        {
           "start": 4665,
           "end": 4666,
           "symbol": "M:oh.b(B)V",
@@ -678216,6 +678547,13 @@
           "original": "L6",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 5191,
+          "end": 5192,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
         },
         {
           "start": 5328,
@@ -678302,6 +678640,13 @@
           "renamed": "currentTimeMillis"
         },
         {
+          "start": 6801,
+          "end": 6802,
+          "symbol": "M:p.a(B)V",
+          "original": "a",
+          "renamed": "pollGroupPrefetches"
+        },
+        {
           "start": 6826,
           "end": 6828,
           "symbol": "C:jc",
@@ -678323,6 +678668,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7067,
+          "end": 7068,
+          "symbol": "M:p.a(I)Lci;",
+          "original": "a",
+          "renamed": "loadIndex"
+        },
+        {
           "start": 7149,
           "end": 7150,
           "symbol": "M:pf.d(I)Loh;",
@@ -678342,6 +678694,20 @@
           "symbol": "M:oh.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 7492,
+          "end": 7493,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
+        },
+        {
+          "start": 7610,
+          "end": 7611,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
         },
         {
           "start": 7713,
@@ -678370,6 +678736,20 @@
           "symbol": "M:pf.a(B)Loh;",
           "original": "a",
           "renamed": "nextForward"
+        },
+        {
+          "start": 7992,
+          "end": 7993,
+          "symbol": "M:p.c(I)V",
+          "original": "c",
+          "renamed": "prefetchAllGroups"
+        },
+        {
+          "start": 8040,
+          "end": 8041,
+          "symbol": "M:p.d(I)V",
+          "original": "d",
+          "renamed": "layoutLobbyPlayerList"
         },
         {
           "start": 8064,
@@ -678477,6 +678857,13 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 8387,
+          "end": 8388,
+          "symbol": "M:p.a(I)Lci;",
+          "original": "a",
+          "renamed": "loadIndex"
+        },
+        {
           "start": 8883,
           "end": 8884,
           "symbol": "M:ar.c(I)Z",
@@ -678575,6 +678962,13 @@
           "renamed": "queueWrite"
         },
         {
+          "start": 11167,
+          "end": 11168,
+          "symbol": "M:p.a(IB)I",
+          "original": "a",
+          "renamed": "getGroupProgress"
+        },
+        {
           "start": 11204,
           "end": 11206,
           "symbol": "C:jc",
@@ -678610,11 +679004,32 @@
           "renamed": "CachedArchiveSource"
         },
         {
+          "start": 11525,
+          "end": 11526,
+          "symbol": "M:p.d(I)V",
+          "original": "d",
+          "renamed": "layoutLobbyPlayerList"
+        },
+        {
+          "start": 11590,
+          "end": 11591,
+          "symbol": "M:p.a(BI)[B",
+          "original": "a",
+          "renamed": "takeGroupData"
+        },
+        {
           "start": 11627,
           "end": 11629,
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 11642,
+          "end": 11643,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
         },
         {
           "start": 11821,
@@ -678631,11 +679046,25 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 11885,
+          "end": 11886,
+          "symbol": "M:p.a(III)Ljc;",
+          "original": "a",
+          "renamed": "loadGroupRequest"
+        },
+        {
           "start": 12326,
           "end": 12328,
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 12613,
+          "end": 12614,
+          "symbol": "M:p.a(IB)I",
+          "original": "a",
+          "renamed": "getGroupProgress"
         },
         {
           "start": 12659,
@@ -737452,7 +737881,7 @@
       "original": "tc.java",
       "renamed": "DialogRoot.java",
       "inputSha256": "ab7dfb13d40b0a7e162ec9e295e3c6236547ee2112212a09dfcc9c1733bb4fa1",
-      "outputSha256": "3169e2c2226eaf5b59edf092eb389f7df8d200bbdf2077dfaf46f14db6557590",
+      "outputSha256": "c50a559441e423cc4e080ee310b7d7265eab7b862c5bfb938695aa91c36d36f9",
       "edits": [
         {
           "start": 50,
@@ -739014,6 +739443,13 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 19289,
+          "end": 19290,
+          "symbol": "M:p.d(I)V",
+          "original": "d",
+          "renamed": "layoutLobbyPlayerList"
         },
         {
           "start": 19304,
@@ -742424,7 +742860,7 @@
       "original": "tj.java",
       "renamed": "ArchiveSourceManager.java",
       "inputSha256": "3d00f761aafe27b7cb24740215fbc8dbc3b979dae5c3c4ca97fe439b3b859277",
-      "outputSha256": "a69c428aaa5360913957f638d0834375d4a5a3f13b00bc278b301b5aafee4e58",
+      "outputSha256": "060107d0820705a98d5099f80b9a8f0dba34929d88258c113b0595f99ef04ba2",
       "edits": [
         {
           "start": 50,
@@ -742495,6 +742931,13 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 484,
+          "end": 485,
+          "symbol": "M:tj.a(ZILua;Lua;Z)Lp;",
+          "original": "a",
+          "renamed": "getOrCreateArchiveSource"
         },
         {
           "start": 514,
@@ -742586,6 +743029,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2846,
+          "end": 2847,
+          "symbol": "M:tj.a(ZIZIIB)[Lbi;",
+          "original": "a",
+          "renamed": "createGradientPanelSprites"
         },
         {
           "start": 2939,
@@ -742910,6 +743360,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 4334,
+          "end": 4335,
+          "symbol": "M:tj.a(BIJ)V",
+          "original": "a",
+          "renamed": "writeInviteRequest"
+        },
+        {
           "start": 4384,
           "end": 4386,
           "symbol": "C:sl",
@@ -742971,6 +743428,34 @@
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 4689,
+          "end": 4690,
+          "symbol": "M:tj.c(I)V",
+          "original": "c",
+          "renamed": "pollArchiveSources"
+        },
+        {
+          "start": 5082,
+          "end": 5083,
+          "symbol": "M:p.a(B)V",
+          "original": "a",
+          "renamed": "pollGroupPrefetches"
+        },
+        {
+          "start": 5299,
+          "end": 5300,
+          "symbol": "M:p.b(Z)V",
+          "original": "b",
+          "renamed": "pollBackgroundRequests"
+        },
+        {
+          "start": 5356,
+          "end": 5357,
+          "symbol": "M:tj.b(I)Z",
+          "original": "b",
+          "renamed": "loadMasterIndex"
         },
         {
           "start": 5540,
@@ -757224,7 +757709,7 @@
       "original": "u.java",
       "renamed": "ValidationState.java",
       "inputSha256": "8a7c71dba6689d49699ae0350b71e1d8fc6f9ac6cbb5c0c88f338b610509927b",
-      "outputSha256": "ec3c2fe7e7f046dc3ecff3fefcdd64cb74fbcd45058bafea7392ac9d99f25035",
+      "outputSha256": "25d3236b7689cafc65a85dc0ccad47460f02fc9fb59650f0c2418d32c0be2544",
       "edits": [
         {
           "start": 50,
@@ -757477,6 +757962,13 @@
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 3178,
+          "end": 3179,
+          "symbol": "M:tj.c(I)V",
+          "original": "c",
+          "renamed": "pollArchiveSources"
         },
         {
           "start": 3199,
@@ -800604,10 +801096,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "32f0e0541a625cd6c90d11ffbe1175886a7bdda115615ba3048c42dfad90a841",
+    "rulesSha256": "32626b86176f0391eb03d2388efca944bc7b4057945bc2c73a383f44555fa707",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "17ebdb76dcce0a1e95ac17f9b1805674b3166c7f2fa22284d315ddb837ab6cd2",
+    "outputTreeSha256": "9f3a3cdc35225a6adb951bbf3afc76edb19ce376474a2b8c0197db7bfecb4112",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

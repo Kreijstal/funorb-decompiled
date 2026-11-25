@@ -317,7 +317,7 @@ final class ObjectList {
             if (var12.field_rb != 0 &&
               !var12.isSecondaryDetached(-72)) {
               if (0 != var12.field_Jb.field_rb) {
-                ArchiveSourceManager.a((byte) -79, param4, var12.field_Ib);
+                ArchiveSourceManager.writeInviteRequest((byte) -79, param4, var12.field_Ib);
               } else {
                 if (0 == var12.field_Mb.field_rb) {
                   TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, SliderWidget.field_P, param2, 0, 0, (byte) 110);

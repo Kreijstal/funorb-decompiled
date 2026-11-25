@@ -167,7 +167,7 @@ final class LobbyLayoutSupport {
           QuickChatPhraseRegistry.field_a.field_F = Wormhole.a(16, 3, QuickChatPhraseRegistry.field_a.field_mb, 11579568, 8421504, 1);
           MenuList.field_v.setTarget(QuickChatPhraseRegistry.field_a.field_K - 10, -2 + QuickChatPhraseRegistry.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
           ClientRasterSupport.field_c.setTarget(80, 24, (byte) 108, -5 + QuickChatPhraseRegistry.field_a.field_mb - 24, (QuickChatPhraseRegistry.field_a.field_K - 80) / 2);
-          CachedArchiveSource.d(18);
+          CachedArchiveSource.layoutLobbyPlayerList(18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

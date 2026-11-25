@@ -19,7 +19,7 @@ final class ArchiveSourceManager {
         field_b = null;
     }
 
-    final CachedArchiveSource a(boolean param0, int param1, SectorCacheStore param2, SectorCacheStore param3, boolean param4) {
+    final CachedArchiveSource getOrCreateArchiveSource(boolean param0, int param1, SectorCacheStore param2, SectorCacheStore param3, boolean param4) {
         CachedArchiveSource stackIn_9_0 = null;
         CachedArchiveSource stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -77,7 +77,7 @@ final class ArchiveSourceManager {
         }
     }
 
-    final static Sprite[] a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5) {
+    final static Sprite[] createGradientPanelSprites(boolean param0, int param1, boolean param2, int param3, int param4, byte param5) {
         Sprite var13 = null;
         Sprite var14 = null;
         int[] var16 = SoftwareRasterizer.field_h;
@@ -129,7 +129,7 @@ final class ArchiveSourceManager {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static void a(byte param0, int param1, long param2) {
+    final static void writeInviteRequest(byte param0, int param1, long param2) {
         CipherPacketBuffer var4 = LobbyOptionSupport.field_f;
         var4.h(param1, 255);
         var4.position = var4.position + 1;
@@ -140,7 +140,7 @@ final class ArchiveSourceManager {
         var4.patchLengthByte(-var5 + var4.position, (byte) 118);
     }
 
-    final void c(int param0) {
+    final void pollArchiveSources(int param0) {
         int var2;
         int var3;
         int var4;
@@ -152,17 +152,17 @@ final class ArchiveSourceManager {
         var3 = -3 % ((-53 - param0) / 38);
         for (var2 = 0; this.field_a.length > var2; var2++) {
           if (this.field_a[var2] != null) {
-            this.field_a[var2].a((byte) 65);
+            this.field_a[var2].pollGroupPrefetches((byte) 65);
           }
         }
         for (var2Lifetime1 = 0; this.field_a.length > var2Lifetime1; var2Lifetime1++) {
           if (null != this.field_a[var2Lifetime1]) {
-            this.field_a[var2Lifetime1].b(false);
+            this.field_a[var2Lifetime1].pollBackgroundRequests(false);
           }
         }
     }
 
-    final boolean b(int param0) {
+    final boolean loadMasterIndex(int param0) {
         int var7 = 0;
         int var3;
         byte[] var4;

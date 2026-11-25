@@ -24,9 +24,9 @@ final class AccountRequestState {
     final static boolean pollArchiveIndexReady(boolean param0) {
         if (!param0) {
           AccountRequestState.clearStatics(104);
-          return ProxyAuthenticationRequiredException.field_c.b(107);
+          return ProxyAuthenticationRequiredException.field_c.loadMasterIndex(107);
         }
-        return ProxyAuthenticationRequiredException.field_c.b(107);
+        return ProxyAuthenticationRequiredException.field_c.loadMasterIndex(107);
     }
 
     public final String toString() {

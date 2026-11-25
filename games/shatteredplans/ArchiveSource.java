@@ -141,11 +141,11 @@ abstract class ArchiveSource {
         field_a = null;
     }
 
-    abstract ArchiveIndex a(int param0);
+    abstract ArchiveIndex loadIndex(int param0);
 
-    abstract byte[] a(byte param0, int param1);
+    abstract byte[] takeGroupData(byte param0, int param1);
 
-    abstract int a(int param0, byte param1);
+    abstract int getGroupProgress(int param0, byte param1);
 
     static {
         field_d = "Click to hide the Fleet Info window.";

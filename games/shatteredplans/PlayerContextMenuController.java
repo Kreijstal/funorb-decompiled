@@ -560,7 +560,7 @@ final class PlayerContextMenuController {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 == 4) {
           if (0 == param2) {
-            ArchiveSourceManager.a((byte) 92, param0, this.field_b);
+            ArchiveSourceManager.writeInviteRequest((byte) 92, param0, this.field_b);
             return true;
           }
           if (param2 == 1) {
@@ -592,7 +592,7 @@ final class PlayerContextMenuController {
         var6 = (CharSequence) null;
         PlayerContextMenuController.parseInteger(-97, (CharSequence) null, (byte) 99, true);
         if (0 == param2) {
-          ArchiveSourceManager.a((byte) 92, param0, this.field_b);
+          ArchiveSourceManager.writeInviteRequest((byte) 92, param0, this.field_b);
           return true;
         }
         if (param2 == 1) {

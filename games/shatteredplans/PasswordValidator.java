@@ -159,9 +159,9 @@ final class PasswordValidator extends TextFieldValidator {
               }
               var7 = new SectorCacheStore(param2, TextReplacementEntry.field_g, MapView.field_Eb[param2], 2097152);
             }
-            var8 = ProxyAuthenticationRequiredException.field_c.a(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
+            var8 = ProxyAuthenticationRequiredException.field_c.getOrCreateArchiveSource(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
             if (param5) {
-              var8.c(255);
+              var8.prefetchAllGroups(255);
             }
             stackIn_15_0 = new Archive(var8, param4, param0);
             return stackIn_15_0;

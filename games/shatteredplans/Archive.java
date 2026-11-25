@@ -113,7 +113,7 @@ final class Archive {
     final synchronized boolean isIndexLoaded(byte param0) {
         int var2 = -20 % ((60 - param0) / 47);
         if (this.field_f == null) {
-          this.field_f = this.field_e.a(6);
+          this.field_f = this.field_e.loadIndex(6);
           if (this.field_f == null) {
             return false;
           }
@@ -182,7 +182,7 @@ final class Archive {
         if (param0 != 36) {
           this.field_m = (Object[]) (this.field_m[11]);
         }
-        return this.field_e.a(param1, (byte) 77);
+        return this.field_e.getGroupProgress(param1, (byte) 77);
     }
 
     final synchronized boolean preloadAll(int param0) {
@@ -376,9 +376,9 @@ final class Archive {
 
     private final synchronized void loadGroup(byte param0, int param1) {
         if (!this.field_j) {
-          this.field_m[param1] = HighscorePlayerRecord.wrapByteArray(false, (byte) -126, this.field_e.a((byte) -120, param1));
+          this.field_m[param1] = HighscorePlayerRecord.wrapByteArray(false, (byte) -126, this.field_e.takeGroupData((byte) -120, param1));
         } else {
-          this.field_m[param1] = this.field_e.a((byte) -112, param1);
+          this.field_m[param1] = this.field_e.takeGroupData((byte) -112, param1);
         }
         if (param0 >= -42) {
           this.getGroupProgress((byte) 112, -73);

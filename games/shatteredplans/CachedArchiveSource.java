@@ -26,21 +26,21 @@ final class CachedArchiveSource extends ArchiveSource {
     private long field_e;
     private boolean field_s;
 
-    final void c(int param0) {
+    final void prefetchAllGroups(int param0) {
         ArchiveRequest discarded$0 = null;
         if (null == this.field_r) {
           return;
         }
         this.field_m = true;
         if (param0 != 255) {
-          discarded$0 = this.a(21, -34, 75);
+          discarded$0 = this.loadGroupRequest(21, -34, 75);
         }
         if (null == this.field_h) {
           this.field_h = new IntrusiveDeque();
         }
     }
 
-    final void b(boolean param0) {
+    final void pollBackgroundRequests(boolean param0) {
         ArchiveRequest discarded$3 = null;
         ArchiveRequest discarded$2 = null;
         ArchiveRequest discarded$1 = null;
@@ -64,7 +64,7 @@ final class CachedArchiveSource extends ArchiveSource {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder2 = true;
         if (this.field_h != null) {
-          if (null == this.a(6)) {
+          if (null == this.loadIndex(6)) {
             return;
           }
           if (this.field_x) {
@@ -73,7 +73,7 @@ final class CachedArchiveSource extends ArchiveSource {
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_u[var4]) {
-                discarded$3 = this.a(1, 0, var4);
+                discarded$3 = this.loadGroupRequest(1, 0, var4);
               }
               if (this.field_u[var4] != 0) {
                 var3.unlink((byte) -76);
@@ -89,7 +89,7 @@ final class CachedArchiveSource extends ArchiveSource {
               }
               if (this.field_k.field_d < 250) {
                 if (this.field_u[this.field_q] == 0) {
-                  discarded$2 = this.a(1, 0, this.field_q);
+                  discarded$2 = this.loadGroupRequest(1, 0, this.field_q);
                 }
                 if (this.field_u[this.field_q] == 0) {
                   var6 = new IntrusiveNode();
@@ -139,7 +139,7 @@ final class CachedArchiveSource extends ArchiveSource {
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_u[var4Lifetime1] != 1) {
-                  discarded$1 = this.a(2, 0, var4Lifetime1);
+                  discarded$1 = this.loadGroupRequest(2, 0, var4Lifetime1);
                 }
                 if (this.field_u[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
@@ -156,7 +156,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       break scanLoop1;
                     }
                     if (this.field_u[this.field_q] != 1) {
-                      discarded$0 = this.a(2, 0, this.field_q);
+                      discarded$0 = this.loadGroupRequest(2, 0, this.field_q);
                     }
                     if (this.field_u[this.field_q] != 1) {
                       var7 = new IntrusiveNode();
@@ -205,7 +205,7 @@ final class CachedArchiveSource extends ArchiveSource {
 
     }
 
-    final void a(byte param0) {
+    final void pollGroupPrefetches(byte param0) {
         ArchiveRequest discarded$0 = null;
         ArchiveRequest discarded$1 = null;
         IntrusiveNode var2;
@@ -215,7 +215,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (null == this.field_h) {
           return;
         }
-        if (this.a(param0 - 59) == null) {
+        if (this.loadIndex(param0 - 59) == null) {
           return;
         }
         var2 = this.field_i.startForward(0);
@@ -227,10 +227,10 @@ final class CachedArchiveSource extends ArchiveSource {
                 var2.unlink((byte) -85);
               } else {
                 if (this.field_u[var3] == 0) {
-                  discarded$0 = this.a(1, 0, var3);
+                  discarded$0 = this.loadGroupRequest(1, 0, var3);
                 }
                 if (this.field_u[var3] == -1) {
-                  discarded$1 = this.a(2, 0, var3);
+                  discarded$1 = this.loadGroupRequest(2, 0, var3);
                 }
                 if (this.field_u[var3] == 1) {
                   var2.unlink((byte) -90);
@@ -245,17 +245,17 @@ final class CachedArchiveSource extends ArchiveSource {
           var2 = this.field_i.nextForward((byte) -71);
         }
         if (param0 != 65) {
-          this.c(-101);
+          this.prefetchAllGroups(-101);
         }
     }
 
-    final static void d(int param0) {
+    final static void layoutLobbyPlayerList(int param0) {
         SoundPlayback.field_m.setTarget(MenuList.field_v.field_K - (AccountStatusDialog.field_pb ? 42 + (UnderageAccountInfoPanel.field_K + 2) : 0), 18, (byte) 39, 0, 0);
         SoundTriggerTick.field_f.setTarget(42 + UnderageAccountInfoPanel.field_K, param0, (byte) 42, 0, -40 + (MenuList.field_v.field_K - (UnderageAccountInfoPanel.field_K + 2)));
         GalaxyMapLayoutSupport.field_a.a(MenuList.field_v.field_K, 20, 0, 2, -122, MenuList.field_v.field_mb - 20, UnderageAccountInfoPanel.field_K);
     }
 
-    final ArchiveIndex a(int param0) {
+    final ArchiveIndex loadIndex(int param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -336,7 +336,7 @@ final class CachedArchiveSource extends ArchiveSource {
         return this.field_p;
     }
 
-    final int a(int param0, byte param1) {
+    final int getGroupProgress(int param0, byte param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_f.get((long)param0, -25064));
         if (var3 != null) {
           return var3.e(0);
@@ -349,13 +349,13 @@ final class CachedArchiveSource extends ArchiveSource {
         field_g = null;
         field_y = null;
         if (param0 != 114) {
-          CachedArchiveSource.d(24);
+          CachedArchiveSource.layoutLobbyPlayerList(24);
         }
         field_A = null;
     }
 
-    final byte[] a(byte param0, int param1) {
-        ArchiveRequest var3 = this.a(0, 0, param1);
+    final byte[] takeGroupData(byte param0, int param1) {
+        ArchiveRequest var3 = this.loadGroupRequest(0, 0, param1);
         if (var3 == null) {
           return null;
         }
@@ -365,7 +365,7 @@ final class CachedArchiveSource extends ArchiveSource {
         return var4;
     }
 
-    private final ArchiveRequest a(int param0, int param1, int param2) {
+    private final ArchiveRequest loadGroupRequest(int param0, int param1, int param2) {
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
         Object stackIn_89_0 = null;
@@ -388,7 +388,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] var30 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != 0) {
-          this.a(55, (byte) -28);
+          this.getGroupProgress(55, (byte) -28);
         }
         var12 = (ArchiveRequest) (this.field_f.get((long)param2, -25064));
         var4 = var12;
