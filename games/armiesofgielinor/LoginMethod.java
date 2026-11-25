@@ -15,7 +15,7 @@ final class LoginMethod {
         RuntimeException decompiledCaughtException = null;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!cd.c(9501)) {
+          if (!GameUiOverlaySupport.hasOpenGameDialog(9501)) {
             if (FixedQuaternion.fullscreenCanvas != null &&
               FixedQuaternion.fullscreenCanvas.focusLost) {
               StructureTerrainSupport.b(-110);

@@ -537,7 +537,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = mu.a(28799, var2.charAt(var3));
+                      stackIn_68_0 = QuickChatSetupSupport.isAsciiDigit(28799, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

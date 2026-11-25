@@ -235,7 +235,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           return true;
         }
         var4 = DualNodeDeque.typedCharacter;
-        if (!uu.a(true, (char) var4)) {
+        if (!LobbyRoomControlSupport.isAllowedChatCharacter(true, (char) var4)) {
           if (param1 == -59) {
           }
           return false;

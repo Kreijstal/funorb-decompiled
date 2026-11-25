@@ -445,7 +445,7 @@ final class MapRepository {
             }
             break;
           }
-          et.a(param0, -10, param3, var7_int, var8);
+          LogoFaceSortSupport.bucketLogoFacesByDepth(param0, -10, param3, var7_int, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

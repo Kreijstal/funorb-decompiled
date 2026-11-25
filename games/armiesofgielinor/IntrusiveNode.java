@@ -15,7 +15,7 @@ class IntrusiveNode {
 
     final static int a(int param0, int param1) {
         int var2 = -103 / ((27 - param0) / 46);
-        return cd.campaigns[param1].missions.length;
+        return GameUiOverlaySupport.campaigns[param1].missions.length;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -316,7 +316,7 @@ class IntrusiveNode {
         if (!param2) {
           IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 39, (String) null, -75L);
         }
-        return et.pollAccountFlowAction(-3);
+        return LogoFaceSortSupport.pollAccountFlowAction(-3);
     }
 
     final static int b(int param0) {

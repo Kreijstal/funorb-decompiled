@@ -154,13 +154,13 @@ final class CampaignMenu {
           ChannelGainProfile.campaignBackgrounds[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           ChannelGainProfile.campaignBackgrounds[1] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           ChannelGainProfile.campaignBackgrounds[2] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          mu.field_g = new IndexedSprite[3][3];
+          QuickChatSetupSupport.field_g = new IndexedSprite[3][3];
           var2_int = 0;
           while (3 > var2_int) {
             var3 = "campaign_map" + (var2_int + 1);
-            mu.field_g[var2_int][0] = AccountNameFoldingSupport.a("campaign", var3, AchievementUnlockRequest.field_l, 24914);
-            mu.field_g[var2_int][1] = AccountNameFoldingSupport.a("campaign", var3 + "_areas", AchievementUnlockRequest.field_l, 24914);
-            mu.field_g[var2_int][2] = AccountNameFoldingSupport.a("campaign", var3 + "_full", AchievementUnlockRequest.field_l, 24914);
+            QuickChatSetupSupport.field_g[var2_int][0] = AccountNameFoldingSupport.a("campaign", var3, AchievementUnlockRequest.field_l, 24914);
+            QuickChatSetupSupport.field_g[var2_int][1] = AccountNameFoldingSupport.a("campaign", var3 + "_areas", AchievementUnlockRequest.field_l, 24914);
+            QuickChatSetupSupport.field_g[var2_int][2] = AccountNameFoldingSupport.a("campaign", var3 + "_full", AchievementUnlockRequest.field_l, 24914);
             var2_int++;
             if (var4 != 0) {
               return;
@@ -199,7 +199,7 @@ final class CampaignMenu {
           if (obfuscationGuard < 119) {
             this.rebuildMissionEntries(4, 127);
           }
-          mu.field_g = (IndexedSprite[][]) null;
+          QuickChatSetupSupport.field_g = (IndexedSprite[][]) null;
           DeployAction.field_D = null;
           System.gc();
           return;
@@ -1939,7 +1939,7 @@ final class CampaignMenu {
         int initialTop;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.regionMap = new PaletteRegionMap(mu.field_g[campaignIndex][1], 1, 16777215);
+          this.regionMap = new PaletteRegionMap(QuickChatSetupSupport.field_g[campaignIndex][1], 1, 16777215);
           this.missionEntries = new NodeHashTable(32);
           campaign = CampaignLookupSupport.getCampaign(campaignIndex, (byte) -118);
           if (campaign != null) {
@@ -2037,7 +2037,7 @@ final class CampaignMenu {
             CipherPacketBuffer.a(false, 11, 1, ChatInputDispatchSupport.field_a);
             return;
           }
-          if (null == mu.field_g) {
+          if (null == QuickChatSetupSupport.field_g) {
             this.loadCampaignResources((byte) -122);
           }
           this.campaignIndex = campaignIndex;
@@ -2162,7 +2162,7 @@ final class CampaignMenu {
         int var7Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = mu.field_g[this.campaignIndex][0];
+          var2 = QuickChatSetupSupport.field_g[this.campaignIndex][0];
           var2.drawOpaque(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
           if (null != this.regionMap) {
             try {
@@ -2170,7 +2170,7 @@ final class CampaignMenu {
               var4 = (CampaignMenuEntry) (this.missionEntries.first(param0 ^ -25751));
               do {
                 if (var4 == null) {
-                  this.regionMap.drawSelectedRegions((byte) 93, IgnoreListLookupSupport.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.campaignIndex][2]);
+                  this.regionMap.drawSelectedRegions((byte) 93, IgnoreListLookupSupport.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), QuickChatSetupSupport.field_g[this.campaignIndex][2]);
                   break;
                 }
                 ((byte[]) (var3))[var4.entryId] = (byte) (var4.selectable ? 1 : 0);

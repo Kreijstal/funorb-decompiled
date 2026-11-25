@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gq {
-    final static void a(IndexedSprite param0, int param1, int param2, int param3) {
+final class IndexedSpriteColourSupport {
+    final static void drawIndexedSpriteSolidColour(IndexedSprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -43,10 +43,10 @@ final class gq {
           var6 <= 0) {
           return;
         }
-        gq.b(SoftwareRaster.pixels, param0.pixelIndices, param0.palette, param3, var5, var4, var7, var6, var8, var9);
+        IndexedSpriteColourSupport.blitIndexedSpriteSolidColour(SoftwareRaster.pixels, param0.pixelIndices, param0.palette, param3, var5, var4, var7, var6, var8, var9);
     }
 
-    final static int b(int param0) {
+    final static int packedHsvToRgb(int param0) {
         int var1 = param0 >>> 19 & 8191;
         int var2 = param0 >>> 8 & 2047;
         int var3 = param0 & 255;
@@ -84,7 +84,7 @@ final class gq {
         return 16711935;
     }
 
-    final static void b(IndexedSprite param0, int param1, int param2, int param3) {
+    final static void drawIndexedSpriteGrayscaleTint(IndexedSprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -125,10 +125,10 @@ final class gq {
           var6 <= 0) {
           return;
         }
-        gq.a(SoftwareRaster.pixels, param0.pixelIndices, param0.palette, var5, var4, var7, var6, var8, var9, param3);
+        IndexedSpriteColourSupport.blitIndexedSpriteGrayscaleTint(SoftwareRaster.pixels, param0.pixelIndices, param0.palette, var5, var4, var7, var6, var8, var9, param3);
     }
 
-    final static int a(int param0) {
+    final static int rgbToPackedHsv(int param0) {
         int var4 = 0;
         int var1 = param0 >> 16 & 255;
         int var2 = param0 >> 8 & 255;
@@ -166,7 +166,7 @@ final class gq {
         return (4096 + 1024 * (var1 - var2) / var4Lifetime3) % 6144 << 19 | var4Lifetime3 * 524032 / var3 & 524032 | var3;
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedSpriteSolidColour(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -223,7 +223,7 @@ final class gq {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedSpriteGrayscaleTint(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var16 = 0;
         int var17 = 0;
         int incrementValue$0 = 0;

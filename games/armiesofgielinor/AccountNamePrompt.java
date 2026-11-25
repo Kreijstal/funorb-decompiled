@@ -168,7 +168,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             }
             return true;
           }
-          if (!mu.a(28799, (char) var2)) {
+          if (!QuickChatSetupSupport.isAsciiDigit(28799, (char) var2)) {
             if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
@@ -251,7 +251,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             }
             return true;
           }
-          if (!mu.a(28799, (char) var2Lifetime1)) {
+          if (!QuickChatSetupSupport.isAsciiDigit(28799, (char) var2Lifetime1)) {
             if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
@@ -334,7 +334,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           return false;
         }
-        if (!mu.a(28799, (char) var2Lifetime2)) {
+        if (!QuickChatSetupSupport.isAsciiDigit(28799, (char) var2Lifetime2)) {
           if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;

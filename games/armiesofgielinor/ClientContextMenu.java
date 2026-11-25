@@ -162,7 +162,7 @@ final class ClientContextMenu {
             this.menu.addTextAction(13, BoundedUrlRequest.field_c, (byte) -121);
           }
           if (message.channelId == 2) {
-            if (cd.field_c == 0) {
+            if (GameUiOverlaySupport.field_c == 0) {
               this.menu.addTextAction(12, SummonRequest.field_C, (byte) -120);
             }
             this.menu.addTextAction(13, ScrollWidgetContainer.field_R, (byte) -119);
@@ -178,8 +178,8 @@ final class ClientContextMenu {
           ImageProducerSurface.field_n = DropdownSelectorPainter.loadRgbSpritesByName("chatfilter", (byte) -125, param3, "lobby");
           BattlefieldTheme.field_k[0] = QuickChatPhrase.field_v;
           BattlefieldTheme.field_k[1] = IterableDualNodeDeque.field_a;
-          BattlefieldTheme.field_k[param1] = cd.field_d;
-          mu.a(ReloadPageSupport.field_a, param1 - 2, param0);
+          BattlefieldTheme.field_k[param1] = GameUiOverlaySupport.field_d;
+          QuickChatSetupSupport.initializeQuickChatResources(ReloadPageSupport.field_a, param1 - 2, param0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -256,7 +256,7 @@ final class ClientContextMenu {
                 this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
               } else {
                 this.menu.addTextAction(0, EmailCheckResult.a(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
-                this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, vq.field_g, new String[]{var5}), (byte) -113);
+                this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, SelectionMenuLayoutSupport.field_g, new String[]{var5}), (byte) -113);
               }
             }
           }
@@ -305,7 +305,7 @@ final class ClientContextMenu {
               this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
             } else {
               this.menu.addTextAction(0, EmailCheckResult.a(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
-              this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, vq.field_g, new String[]{var5}), (byte) -113);
+              this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, SelectionMenuLayoutSupport.field_g, new String[]{var5}), (byte) -113);
             }
           }
         }

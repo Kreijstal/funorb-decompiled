@@ -115,7 +115,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
           }
           this.accountInput.tooltipText = SpellCastErrorSupport.field_d;
           if (null != this.registerButton) {
-            this.registerButton.tooltipText = hb.field_b;
+            this.registerButton.tooltipText = SessionIoSupport.field_b;
           }
           if (!this.retryMode) {
             if (this.offerGuestPlay) {

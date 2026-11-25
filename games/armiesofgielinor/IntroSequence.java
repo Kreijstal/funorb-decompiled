@@ -349,7 +349,7 @@ final class IntroSequence {
           }
           try {
             if (LabeledWidgetContainer.field_N == 0) {
-              AccountRegistrationForm.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, IgnoreListLookupSupport.field_c);
+              AccountRegistrationForm.field_R = SelectionMenuLayoutSupport.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, IgnoreListLookupSupport.field_c);
               LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
             }
             if (LabeledWidgetContainer.field_N == 1) {
@@ -362,11 +362,11 @@ final class IntroSequence {
               }
             }
             if (LabeledWidgetContainer.field_N == 2) {
-              FriendLookupSupport.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), vq.field_c);
+              FriendLookupSupport.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), SelectionMenuLayoutSupport.field_c);
               var2 = new PacketBuffer(13);
               ChatMessageWriteSupport.a(ClientNetworkBootstrap.field_e, false, MoveAttackRequest.field_x, var2, AccountNameSelectionSupport.field_e);
               var2.writeByte(1, 15);
-              var2.writeInt((byte) -124, vq.field_d);
+              var2.writeInt((byte) -124, SelectionMenuLayoutSupport.field_d);
               FriendLookupSupport.field_g.write(var2.payload, (byte) 20, 0, 13);
               LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
               UnitInfoPopup.field_s = 30000L + MonotonicClockSupport.monotonicMillis(103);

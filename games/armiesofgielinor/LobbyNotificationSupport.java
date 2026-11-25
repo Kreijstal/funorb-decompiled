@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s {
+final class LobbyNotificationSupport {
     static RgbSprite quickChatArrow;
     static NodeDeque field_a;
     static NodeDeque field_e;
     static int field_d;
     static String field_b;
 
-    final static void a(int param0, int param1, TerrainScatterSupport param2) {
+    final static void sendIntArrayRequest(int param0, int param1, TerrainScatterSupport param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = EmailValidator.outgoingPacket;
@@ -24,7 +24,7 @@ final class s {
         }
     }
 
-    final static String a(boolean param0, String param1, int param2) {
+    final static String formatLobbyNotification(boolean param0, String param1, int param2) {
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;

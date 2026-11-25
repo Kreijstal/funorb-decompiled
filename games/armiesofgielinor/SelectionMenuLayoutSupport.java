@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq {
+final class SelectionMenuLayoutSupport {
     static int field_d;
     static PlatformTaskService field_c;
     static ScrollContainer field_a;
@@ -10,7 +10,7 @@ final class vq {
     static String field_e;
     static IndexedSprite field_b;
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void configureStatusSelectionMenu(int param0, boolean param1, byte param2) {
         int stackIn_31_0 = 0;
         int stackIn_34_0 = 0;
         String[] stackIn_41_0 = null;
@@ -133,7 +133,7 @@ final class vq {
               if (NumericDateInputWidget.field_J != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = BattleTutorial.a(LoginMethod.field_d, hb.field_a, 7502, TaggedMapData.field_b, SocketFactory.field_b);
+              var3_int = BattleTutorial.a(LoginMethod.field_d, SessionIoSupport.field_a, 7502, TaggedMapData.field_b, SocketFactory.field_b);
               var4 = 3 + var3_int;
               AnimationFrameSet.field_v = new String[var4];
               TileMetadata.field_h = new int[var4];
@@ -291,9 +291,9 @@ final class vq {
               var8Lifetime1 = -(var7Lifetime2 >> 1) + InstructionsPanel.field_B;
               var5Lifetime4 = var5Lifetime4 + EventPresenterFactory.field_a;
               GzipDecoder.field_b[var4Lifetime3] = new int[4];
-              GzipDecoder.field_b[var4Lifetime3][0] = var8Lifetime1 - et.field_b;
+              GzipDecoder.field_b[var4Lifetime3][0] = var8Lifetime1 - LogoFaceSortSupport.field_b;
               GzipDecoder.field_b[var4Lifetime3][1] = var5Lifetime4;
-              GzipDecoder.field_b[var4Lifetime3][2] = var7Lifetime2 + (et.field_b << 1);
+              GzipDecoder.field_b[var4Lifetime3][2] = var7Lifetime2 + (LogoFaceSortSupport.field_b << 1);
               var5Lifetime4 = var5Lifetime4 + (TelepopEvent.field_B + (EventPresenterFactory.field_a + (MouseWheelSource.field_c << 1)));
               GzipDecoder.field_b[var4Lifetime3][3] = TelepopEvent.field_B + (MouseWheelSource.field_c << 1);
             } else {
@@ -326,7 +326,7 @@ final class vq {
         field_f = null;
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean isValidAccountName(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -335,7 +335,7 @@ final class vq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = GiveTileConsoleCommand.a(param0, (byte) 65, false);
+            stackIn_4_0 = GiveTileConsoleCommand.isValidAccountName(param0, (byte) 65, false);
             return stackIn_4_0;
           }
           return false;
@@ -353,7 +353,7 @@ final class vq {
         }
     }
 
-    final static boolean a(CipherPacketBuffer param0, int param1) {
+    final static boolean readBooleanBit(CipherPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

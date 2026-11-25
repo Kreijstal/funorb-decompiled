@@ -150,14 +150,14 @@ abstract class ConsoleCommand extends DualLinkedNode {
           var1 = var0 + 1;
           field_z[var0] = Math.min(AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(var1 << 16, 16729482), ProceduralMapSupport.bitwiseAnd(-2046820097, var1) << 8), ProceduralMapSupport.bitwiseAnd(var1 << 2, 252)), 267583488);
           field_z[var0] = AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(16515326, field_z[var0]), ProceduralMapSupport.bitwiseAnd(32512, field_z[var0] >> 1));
-          var2 = gq.a(field_z[var0]);
+          var2 = IndexedSpriteColourSupport.rgbToPackedHsv(field_z[var0]);
           var2 = var2 & 655359;
           var3 = 255 & var2;
           if (var3 > 5) {
             var3 = 5;
           }
           var2 = -256 & var2 | var3;
-          field_z[var0] = gq.b(var2);
+          field_z[var0] = IndexedSpriteColourSupport.packedHsvToRgb(var2);
         }
         field_v = new int[8][16];
     }

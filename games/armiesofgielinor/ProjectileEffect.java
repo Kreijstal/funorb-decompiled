@@ -63,12 +63,12 @@ final class ProjectileEffect {
         int var5;
         RatingLeaderboardRequest var4Lifetime1;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var4 = (RatingLeaderboardRequest) (s.field_a.first((byte) 112));
+        var4 = (RatingLeaderboardRequest) (LobbyNotificationSupport.field_a.first((byte) 112));
         while (var4 != null) {
           if (~var4.field_o == ~param0) {
             return var4;
           }
-          var4 = (RatingLeaderboardRequest) (s.field_a.next((byte) 123));
+          var4 = (RatingLeaderboardRequest) (LobbyNotificationSupport.field_a.next((byte) 123));
         }
         if (param1 < 65) {
           field_j = (String[]) null;
@@ -76,7 +76,7 @@ final class ProjectileEffect {
         var4Lifetime1 = new RatingLeaderboardRequest();
         var4Lifetime1.field_o = param0;
         var4Lifetime1.field_q = param2;
-        s.field_a.addLast((byte) -119, (IntrusiveNode) (var4Lifetime1));
+        LobbyNotificationSupport.field_a.addLast((byte) -119, (IntrusiveNode) (var4Lifetime1));
         TilePosition.sendRatingLeaderboardRequest(param3, var4Lifetime1, (byte) -64);
         return var4Lifetime1;
     }

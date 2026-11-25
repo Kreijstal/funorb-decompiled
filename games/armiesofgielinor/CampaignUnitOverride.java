@@ -47,2988 +47,2988 @@ final class CampaignUnitOverride {
                 PaginationTextSupport.field_e = param1;
                 var2 = NodeIterator.a(param0 + 132, "loginm3");
                 if (null != var2) {
-                  ValidationState.field_a = uu.decodeTextBytes(var2, (byte) -118);
+                  ValidationState.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "loginm2");
                 if (null != var2) {
-                  DamageEvent.field_y = uu.decodeTextBytes(var2, (byte) 51);
+                  DamageEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(50, "loginm1");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -123);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "idlemessage20min");
                 if (var2 != null) {
-                  LobbyPlayer.field_bc = uu.decodeTextBytes(var2, (byte) -92);
+                  LobbyPlayer.field_bc = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "error_js5crc");
                 if (var2 != null) {
-                  AlternateKeyedLoginCredentials.field_k = uu.decodeTextBytes(var2, (byte) -125);
+                  AlternateKeyedLoginCredentials.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(param0 + 132, "error_js5io");
                 if (null != var2) {
-                  CampaignMenu.field_k = uu.decodeTextBytes(var2, (byte) 100);
+                  CampaignMenu.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "error_js5connect_full");
                 if (null != var2) {
-                  ResourceArchive.field_d = uu.decodeTextBytes(var2, (byte) 34);
+                  ResourceArchive.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "error_js5connect");
                 if (var2 != null) {
-                  AccountRequestState.field_a = uu.decodeTextBytes(var2, (byte) -116);
+                  AccountRequestState.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "login_gameupdated");
                 if (null != var2) {
-                  DropdownSelectorPainter.field_f = uu.decodeTextBytes(var2, (byte) -107);
+                  DropdownSelectorPainter.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "create_unable");
                 if (null != var2) {
-                  CampaignMission.field_s = uu.decodeTextBytes(var2, (byte) -127);
+                  CampaignMission.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "create_ineligible");
                 if (null != var2) {
-                  ResourceProtocolClient.field_m = uu.decodeTextBytes(var2, (byte) 76);
+                  ResourceProtocolClient.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "usernameprompt");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 51);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "passwordprompt");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 59);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "andagainprompt");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -95);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "ticketing_read");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 71);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 71);
                 }
                 var2 = NodeIterator.a(param0 + 132, "ticketing_ignore");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(param0 + 132, "ticketing_oneunread");
                 if (var2 != null) {
-                  TrianglePulse.field_a = uu.decodeTextBytes(var2, (byte) 42);
+                  TrianglePulse.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 42);
                 }
                 var2 = NodeIterator.a(50, "ticketing_xunread");
                 if (null != var2) {
-                  StandardContentDialog.field_nb = uu.decodeTextBytes(var2, (byte) 34);
+                  StandardContentDialog.field_nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "ticketing_gotowebsite");
                 if (null != var2) {
-                  UnitAirAttackSupport.field_a = uu.decodeTextBytes(var2, (byte) 5);
+                  UnitAirAttackSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(50, "ticketing_waitingformessages");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -100);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_chat_on");
                 if (var2 != null) {
-                  QuickChatPhrase.field_v = uu.decodeTextBytes(var2, (byte) -120);
+                  QuickChatPhrase.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_friends");
                 if (null != var2) {
-                  IterableDualNodeDeque.field_a = uu.decodeTextBytes(var2, (byte) 90);
+                  IterableDualNodeDeque.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 90);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_off");
                 if (var2 != null) {
-                  cd.field_d = uu.decodeTextBytes(var2, (byte) -107);
+                  GameUiOverlaySupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby");
                 if (null != var2) {
-                  ClientConnectionState.field_c = uu.decodeTextBytes(var2, (byte) -114);
+                  ClientConnectionState.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_public");
                 if (null != var2) {
-                  NetworkGameShell.field_u = uu.decodeTextBytes(var2, (byte) 8);
+                  NetworkGameShell.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 8);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_ignore");
                 if (null != var2) {
-                  FriendRequestSupport.field_e = uu.decodeTextBytes(var2, (byte) 42);
+                  FriendRequestSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 42);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_chat_tips");
                 if (var2 != null) {
-                  TeleportAction.field_x = uu.decodeTextBytes(var2, (byte) -100);
+                  TeleportAction.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game");
                 if (var2 != null) {
-                  GridWidgetContainer.field_O = uu.decodeTextBytes(var2, (byte) -108);
+                  GridWidgetContainer.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_private");
                 if (null != var2) {
-                  NineSliceSpriteSupport.field_d = uu.decodeTextBytes(var2, (byte) 29);
+                  NineSliceSpriteSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(50, "mu_x_entered_game");
                 if (null != var2) {
-                  GrowthEvent.field_B = uu.decodeTextBytes(var2, (byte) 50);
+                  GrowthEvent.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 50);
                 }
                 var2 = NodeIterator.a(50, "mu_x_joined_your_game");
                 if (var2 != null) {
-                  CommunityTabGroup.field_d = uu.decodeTextBytes(var2, (byte) 24);
+                  CommunityTabGroup.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
                 var2 = NodeIterator.a(50, "mu_x_entered_other_game");
                 if (var2 != null) {
-                  IterableNodeHashTable.field_b = uu.decodeTextBytes(var2, (byte) -109);
+                  IterableNodeHashTable.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "mu_x_left_lobby");
                 if (null != var2) {
-                  DropdownOptionList.field_X = uu.decodeTextBytes(var2, (byte) -107);
+                  DropdownOptionList.field_X = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_x_lost_con");
                 if (var2 != null) {
-                  FixInvisibleUnitsConsoleCommand.field_H = uu.decodeTextBytes(var2, (byte) -128);
+                  FixInvisibleUnitsConsoleCommand.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "mu_x_cannot_join_full");
                 if (null != var2) {
-                  MatchingTextValidator.field_j = uu.decodeTextBytes(var2, (byte) -94);
+                  MatchingTextValidator.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "mu_x_cannot_join_inprogress");
                 if (var2 != null) {
-                  AlphaWidgetContainer.field_I = uu.decodeTextBytes(var2, (byte) 77);
+                  AlphaWidgetContainer.field_I = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 77);
                 }
                 var2 = NodeIterator.a(50, "mu_x_declined_invite");
                 if (null != var2) {
-                  AccountNamePrompt.field_Nb = uu.decodeTextBytes(var2, (byte) -102);
+                  AccountNamePrompt.field_Nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  Spell.field_a = uu.decodeTextBytes(var2, (byte) 52);
+                  Spell.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 52);
                 }
                 var2 = NodeIterator.a(50, "mu_x_removed");
                 if (null != var2) {
-                  DirectByteStorage.field_i = uu.decodeTextBytes(var2, (byte) 52);
+                  DirectByteStorage.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 52);
                 }
                 var2 = NodeIterator.a(50, "mu_x_dropped_out");
                 if (null != var2) {
-                  EventPresenterFactory.field_f = uu.decodeTextBytes(var2, (byte) -99);
+                  EventPresenterFactory.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "mu_entered_other_game");
                 if (var2 != null) {
-                  TileableNoiseGenerator.field_e = uu.decodeTextBytes(var2, (byte) -98);
+                  TileableNoiseGenerator.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "mu_game_is_full");
                 if (var2 != null) {
-                  ChatMessage.field_l = uu.decodeTextBytes(var2, (byte) 102);
+                  ChatMessage.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "mu_game_has_started");
                 if (null != var2) {
-                  ClippedWidgetContainer.field_H = uu.decodeTextBytes(var2, (byte) -117);
+                  ClippedWidgetContainer.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "mu_you_declined_invite");
                 if (null != var2) {
-                  cd.field_b = uu.decodeTextBytes(var2, (byte) 120);
+                  GameUiOverlaySupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
                 var2 = NodeIterator.a(50, "mu_invite_withdrawn");
                 if (null != var2) {
-                  SoundEffectPreloadSupport.field_d = uu.decodeTextBytes(var2, (byte) 41);
+                  SoundEffectPreloadSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 41);
                 }
                 var2 = NodeIterator.a(50, "mu_request_declined");
                 if (var2 != null) {
-                  SharedUiLoadingSupport.field_h = uu.decodeTextBytes(var2, (byte) -99);
+                  SharedUiLoadingSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "mu_request_withdrawn");
                 if (var2 != null) {
-                  BitReversalSupport.field_b = uu.decodeTextBytes(var2, (byte) 6);
+                  BitReversalSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "mu_all_players_have_left");
                 if (null != var2) {
-                  ActionSpell.field_i = uu.decodeTextBytes(var2, (byte) 37);
+                  ActionSpell.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_name");
                 if (var2 != null) {
-                  AiWeightProfile.field_b = uu.decodeTextBytes(var2, (byte) -113);
+                  AiWeightProfile.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_rating");
                 if (var2 != null) {
-                  PcmPlayerService.ratingLabel = uu.decodeTextBytes(var2, (byte) 60);
+                  PcmPlayerService.ratingLabel = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_friend_add");
                 if (null != var2) {
-                  LoginKind.field_b = uu.decodeTextBytes(var2, (byte) 72);
+                  LoginKind.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_friend_rm");
                 if (var2 != null) {
-                  AnimationFrameSet.field_y = uu.decodeTextBytes(var2, (byte) -103);
+                  AnimationFrameSet.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_lobby_name_add");
                 if (var2 != null) {
-                  LobbyControlResources.field_a = uu.decodeTextBytes(var2, (byte) 94);
+                  LobbyControlResources.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_name_rm");
                 if (var2 != null) {
-                  ArchiveIndex.field_u = uu.decodeTextBytes(var2, (byte) -127);
+                  ArchiveIndex.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_location");
                 if (null != var2) {
-                  SingleChildWidgetContainer.field_C = uu.decodeTextBytes(var2, (byte) 43);
+                  SingleChildWidgetContainer.field_C = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 43);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_all_games");
                 if (null != var2) {
-                  NineSliceFrame.field_d = uu.decodeTextBytes(var2, (byte) 117);
+                  NineSliceFrame.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 117);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_status");
                 if (null != var2) {
-                  IntrusiveNode.field_a = uu.decodeTextBytes(var2, (byte) 61);
+                  IntrusiveNode.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_gamelist_owner");
                 if (null != var2) {
-                  LoginCredentialStagingSupport.field_c = uu.decodeTextBytes(var2, (byte) 5);
+                  LoginCredentialStagingSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_players");
                 if (var2 != null) {
-                  DropdownSelectorPainter.field_g = uu.decodeTextBytes(var2, (byte) -111);
+                  DropdownSelectorPainter.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_avg_rating");
                 if (var2 != null) {
-                  InteractiveWidget.field_H = uu.decodeTextBytes(var2, (byte) -102);
+                  InteractiveWidget.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_options");
                 if (null != var2) {
-                  ArrayWidgetContainer.field_D = uu.decodeTextBytes(var2, (byte) 111);
+                  ArrayWidgetContainer.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 111);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_elapsed_time");
                 if (null != var2) {
-                  RevivalEvent.field_B = uu.decodeTextBytes(var2, (byte) -128);
+                  RevivalEvent.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "mu_play_rated");
                 if (var2 != null) {
-                  QuickChatCategoryMenuSupport.field_f = uu.decodeTextBytes(var2, (byte) 123);
+                  QuickChatCategoryMenuSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 123);
                 }
                 var2 = NodeIterator.a(50, "mu_create_unrated");
                 if (null != var2) {
-                  CampaignMenuEntry.field_C = uu.decodeTextBytes(var2, (byte) 95);
+                  CampaignMenuEntry.field_C = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 95);
                 }
                 var2 = NodeIterator.a(50, "mu_options");
                 if (null != var2) {
-                  EffectPresentation.field_d = uu.decodeTextBytes(var2, (byte) 49);
+                  EffectPresentation.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 49);
                 }
                 var2 = NodeIterator.a(50, "mu_options_whocanjoin");
                 if (null != var2) {
-                  et.field_c = uu.decodeTextBytes(var2, (byte) -105);
+                  LogoFaceSortSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "mu_options_players");
                 if (null != var2) {
-                  IntroSequence.field_h = uu.decodeTextBytes(var2, (byte) -103);
+                  IntroSequence.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(50, "mu_options_dontmind");
                 if (var2 != null) {
-                  QuinticFadeSupport.field_a = uu.decodeTextBytes(var2, (byte) -112);
+                  QuinticFadeSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_options_allow_spectate");
                 if (null != var2) {
-                  GameEvent.field_p = uu.decodeTextBytes(var2, (byte) 96);
+                  GameEvent.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "mu_options_ratedgametype");
                 if (var2 != null) {
-                  AnimationFrameSet.field_u = uu.decodeTextBytes(var2, (byte) 38);
+                  AnimationFrameSet.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 38);
                 }
                 var2 = NodeIterator.a(50, "yes");
                 if (var2 != null) {
-                  QuickChatShortcutSupport.field_b = uu.decodeTextBytes(var2, (byte) -96);
+                  QuickChatShortcutSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "no");
                 if (var2 != null) {
-                  LeaderEscortCondition.field_e = uu.decodeTextBytes(var2, (byte) -106);
+                  LeaderEscortCondition.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "mu_invite_players");
                 if (var2 != null) {
-                  TickCounter.field_d = uu.decodeTextBytes(var2, (byte) -113);
+                  TickCounter.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "close");
                 if (var2 != null) {
-                  ConsoleCommand.field_D = uu.decodeTextBytes(var2, (byte) 37);
+                  ConsoleCommand.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "add_x_to_friends");
                 if (var2 != null) {
-                  TileableNoiseGenerator.field_l = uu.decodeTextBytes(var2, (byte) 88);
+                  TileableNoiseGenerator.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
                 var2 = NodeIterator.a(50, "add_x_to_ignore");
                 if (null != var2) {
-                  ToastMessage.field_o = uu.decodeTextBytes(var2, (byte) 64);
+                  ToastMessage.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "rm_x_from_friends");
                 if (var2 != null) {
-                  AccountNameSelectionForm.field_K = uu.decodeTextBytes(var2, (byte) -99);
+                  AccountNameSelectionForm.field_K = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "rm_x_from_ignore");
                 if (var2 != null) {
-                  ToggleTurnSkipConsoleCommand.field_E = uu.decodeTextBytes(var2, (byte) -109);
+                  ToggleTurnSkipConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "send_pm_to_x");
                 if (null != var2) {
-                  MusicPatchNode.field_k = uu.decodeTextBytes(var2, (byte) -105);
+                  MusicPatchNode.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "send_qc_to_x");
                 if (null != var2) {
-                  DeployRequest.field_w = uu.decodeTextBytes(var2, (byte) 24);
+                  DeployRequest.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
                 var2 = NodeIterator.a(50, "send_pm");
                 if (null != var2) {
-                  BitCountSupport.field_d = uu.decodeTextBytes(var2, (byte) -124);
+                  BitCountSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "invite_accept_xs_game");
                 if (null != var2) {
-                  ByteStorage.field_b = uu.decodeTextBytes(var2, (byte) 109);
+                  ByteStorage.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
                 var2 = NodeIterator.a(50, "invite_decline_xs_game");
                 if (var2 != null) {
-                  DialWidgetPainter.field_a = uu.decodeTextBytes(var2, (byte) -115);
+                  DialWidgetPainter.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "join_xs_game");
                 if (null != var2) {
-                  RasterViewportResizeHandler.field_e = uu.decodeTextBytes(var2, (byte) 122);
+                  RasterViewportResizeHandler.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 122);
                 }
                 var2 = NodeIterator.a(50, "join_request_xs_game");
                 if (null != var2) {
-                  CampaignResult.field_d = uu.decodeTextBytes(var2, (byte) 2);
+                  CampaignResult.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 2);
                 }
                 var2 = NodeIterator.a(50, "join_withdraw_request_xs_game");
                 if (var2 != null) {
-                  PasswordLoginCredentials.field_j = uu.decodeTextBytes(var2, (byte) 76);
+                  PasswordLoginCredentials.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
-                  DraggableWidgetContainer.field_R = uu.decodeTextBytes(var2, (byte) 64);
+                  DraggableWidgetContainer.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_gameopt_withdraw_invite_to_x");
                 if (var2 != null) {
-                  AccountRegistrationDialog.field_zb = uu.decodeTextBytes(var2, (byte) -118);
+                  AccountRegistrationDialog.field_zb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
-                  ManaStarParticle.field_x = uu.decodeTextBytes(var2, (byte) -114);
+                  ManaStarParticle.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
-                  vq.field_g = uu.decodeTextBytes(var2, (byte) 8);
+                  SelectionMenuLayoutSupport.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 8);
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_invite_x_to_game");
                 if (null != var2) {
-                  ValidationStatusWidget.field_W = uu.decodeTextBytes(var2, (byte) -114);
+                  ValidationStatusWidget.field_W = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "report_x_for_abuse");
                 if (var2 != null) {
-                  IterableDualNodeDeque.field_e = uu.decodeTextBytes(var2, (byte) -96);
+                  IterableDualNodeDeque.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "unable_to_send_message_password_a");
                 if (null != var2) {
-                  KingBlackDragonEvent.field_y = uu.decodeTextBytes(var2, (byte) -108);
+                  KingBlackDragonEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(param0 + 132, "unable_to_send_message_password_b");
                 if (var2 != null) {
-                  ContextualRuntimeException.field_a = uu.decodeTextBytes(var2, (byte) -122);
+                  ContextualRuntimeException.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  EmailValidator.field_o = uu.decodeTextBytes(var2, (byte) 121);
+                  EmailValidator.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_friends_only");
                 if (null != var2) {
-                  ValidationStatusWidget.field_S = uu.decodeTextBytes(var2, (byte) 20);
+                  ValidationStatusWidget.field_S = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 20);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_friends");
                 if (var2 != null) {
-                  PreferencesWriteRequest.field_m = uu.decodeTextBytes(var2, (byte) -116);
+                  PreferencesWriteRequest.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_hide");
                 if (null != var2) {
-                  MapRepository.field_g = uu.decodeTextBytes(var2, (byte) 47);
+                  MapRepository.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 47);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  ChannelGainProfile.field_c = uu.decodeTextBytes(var2, (byte) 43);
+                  ChannelGainProfile.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 43);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_friends_only");
                 if (var2 != null) {
-                  FriendLookupSupport.field_b = uu.decodeTextBytes(var2, (byte) 40);
+                  FriendLookupSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 40);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_chat_game_friends");
                 if (var2 != null) {
-                  AnimationFrameSetCacheEntry.field_l = uu.decodeTextBytes(var2, (byte) -107);
+                  AnimationFrameSetCacheEntry.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_hide");
                 if (var2 != null) {
-                  BoundedUrlRequest.field_c = uu.decodeTextBytes(var2, (byte) -126);
+                  BoundedUrlRequest.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_show_all");
                 if (var2 != null) {
-                  SocketResourceClient.field_v = uu.decodeTextBytes(var2, (byte) 93);
+                  SocketResourceClient.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 93);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_friends_only");
                 if (var2 != null) {
-                  SummonRequest.field_C = uu.decodeTextBytes(var2, (byte) -100);
+                  SummonRequest.field_C = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_friends");
                 if (null != var2) {
-                  FriendLookupSupport.field_e = uu.decodeTextBytes(var2, (byte) -122);
+                  FriendLookupSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  ScrollWidgetContainer.field_R = uu.decodeTextBytes(var2, (byte) -119);
+                  ScrollWidgetContainer.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  ActionSpell.field_l = uu.decodeTextBytes(var2, (byte) 121);
+                  ActionSpell.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "your_rating_is_x");
                 if (null != var2) {
-                  AttackEvent.field_F = uu.decodeTextBytes(var2, (byte) 18);
+                  AttackEvent.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 18);
                 }
                 var2 = NodeIterator.a(50, "you_are_on_x_server");
                 if (var2 != null) {
-                  DisplayModeOptionPainter.field_A = uu.decodeTextBytes(var2, (byte) -99);
+                  DisplayModeOptionPainter.field_A = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "rated_game");
                 if (var2 != null) {
-                  uu.field_a = uu.decodeTextBytes(var2, (byte) 59);
+                  LobbyRoomControlSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unrated_game");
                 if (null != var2) {
-                  CampaignProgress.field_c = uu.decodeTextBytes(var2, (byte) -126);
+                  CampaignProgress.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "rated_game_tips");
                 if (var2 != null) {
-                  AiActionCandidate.field_v = uu.decodeTextBytes(var2, (byte) -108);
+                  AiActionCandidate.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "searching_for_opponent_singular");
                 if (null != var2) {
-                  PreparedAction.field_l = uu.decodeTextBytes(var2, (byte) 72);
+                  PreparedAction.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
                 var2 = NodeIterator.a(50, "searching_for_opponents_plural");
                 if (null != var2) {
-                  SoundCache.field_f = uu.decodeTextBytes(var2, (byte) 114);
+                  SoundCache.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 114);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "find_opponent_singular");
                 if (null != var2) {
-                  DropdownSelectorPainter.field_e = uu.decodeTextBytes(var2, (byte) -125);
+                  DropdownSelectorPainter.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "find_opponents_plural");
                 if (var2 != null) {
-                  DefeatPlayerWithMetricsConsoleCommand.field_E = uu.decodeTextBytes(var2, (byte) -112);
+                  DefeatPlayerWithMetricsConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "rated_game_tips_setup_singular");
                 if (var2 != null) {
-                  SpectateRoomRequestSupport.field_k = uu.decodeTextBytes(var2, (byte) 105);
+                  SpectateRoomRequestSupport.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 105);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rated_game_tips_setup_plural");
                 if (var2 != null) {
-                  ConsoleCommand.field_x = uu.decodeTextBytes(var2, (byte) -111);
+                  ConsoleCommand.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "waiting_to_start_hint");
                 if (var2 != null) {
-                  ScreenWipeTransition.field_i = uu.decodeTextBytes(var2, (byte) 64);
+                  ScreenWipeTransition.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "your_game");
                 if (var2 != null) {
-                  DualNodeHashTable.field_f = uu.decodeTextBytes(var2, (byte) 10);
+                  DualNodeHashTable.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 10);
                 }
                 var2 = NodeIterator.a(50, "game_full");
                 if (var2 != null) {
-                  TelefragEvent.field_y = uu.decodeTextBytes(var2, (byte) 28);
+                  TelefragEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
                 var2 = NodeIterator.a(50, "join_requests_one");
                 if (null != var2) {
-                  TileableNoiseGenerator.field_c = uu.decodeTextBytes(var2, (byte) -122);
+                  TileableNoiseGenerator.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "join_requests_many");
                 if (null != var2) {
-                  UnitSpell.field_h = uu.decodeTextBytes(var2, (byte) 20);
+                  UnitSpell.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 20);
                 }
                 var2 = NodeIterator.a(50, "xs_game");
                 if (var2 != null) {
-                  CampaignMenu.field_m = uu.decodeTextBytes(var2, (byte) -93);
+                  CampaignMenu.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "waiting_for_x_to_start_game");
                 if (null != var2) {
-                  GiveTileConsoleCommand.field_F = uu.decodeTextBytes(var2, (byte) 119);
+                  GiveTileConsoleCommand.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
                 var2 = NodeIterator.a(50, "game_options_changed");
                 if (null != var2) {
-                  CorpseConditionMarker.field_t = uu.decodeTextBytes(var2, (byte) -104);
+                  CorpseConditionMarker.field_t = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "players_x_of_y");
                 if (null != var2) {
-                  DialWidget.field_T = uu.decodeTextBytes(var2, (byte) -106);
+                  DialWidget.field_T = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "message_lobby");
                 if (null != var2) {
-                  SharedUiLoadingSupport.field_b = uu.decodeTextBytes(var2, (byte) -126);
+                  SharedUiLoadingSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "quickchat_lobby");
                 if (null != var2) {
-                  FixedQuaternion.field_g = uu.decodeTextBytes(var2, (byte) -96);
+                  FixedQuaternion.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "message_game");
                 if (null != var2) {
-                  CampaignMenu.field_q = uu.decodeTextBytes(var2, (byte) 51);
+                  CampaignMenu.field_q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(50, "message_team");
                 if (null != var2) {
-                  QuickChatCategoryMenuSupport.field_d = uu.decodeTextBytes(var2, (byte) 118);
+                  QuickChatCategoryMenuSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "quickchat_game");
                 if (var2 != null) {
-                  CampaignMenuEntry.field_E = uu.decodeTextBytes(var2, (byte) 74);
+                  CampaignMenuEntry.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "kick");
                 if (var2 != null) {
-                  LogoMaterial.field_a = uu.decodeTextBytes(var2, (byte) -105);
+                  LogoMaterial.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(param0 + 132, "inviting_x");
                 if (null != var2) {
-                  AiPlanningStrategy.field_g = uu.decodeTextBytes(var2, (byte) -120);
+                  AiPlanningStrategy.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "x_wants_to_join");
                 if (var2 != null) {
-                  DeployEvent.field_G = uu.decodeTextBytes(var2, (byte) 90);
+                  DeployEvent.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 90);
                 }
                 var2 = NodeIterator.a(50, "accept");
                 if (var2 != null) {
-                  LeaderEscortCondition.field_g = uu.decodeTextBytes(var2, (byte) -118);
+                  LeaderEscortCondition.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "reject");
                 if (var2 != null) {
-                  SpellConfirmationDialog.field_l = uu.decodeTextBytes(var2, (byte) -123);
+                  SpellConfirmationDialog.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "invite");
                 if (var2 != null) {
-                  LogoMaterial.field_b = uu.decodeTextBytes(var2, (byte) -103);
+                  LogoMaterial.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(50, "status_concluded");
                 if (null != var2) {
-                  ValidationStatusIcon.field_Q = uu.decodeTextBytes(var2, (byte) -124);
+                  ValidationStatusIcon.field_Q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "status_spectate");
                 if (null != var2) {
-                  HelloConsoleCommand.field_E = uu.decodeTextBytes(var2, (byte) -112);
+                  HelloConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(param0 + 132, "status_playing");
                 if (null != var2) {
-                  RasterImageSurface.field_d = uu.decodeTextBytes(var2, (byte) -97);
+                  RasterImageSurface.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "status_join");
                 if (null != var2) {
-                  WidgetTheme.field_l = uu.decodeTextBytes(var2, (byte) -97);
+                  WidgetTheme.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "status_private");
                 if (null != var2) {
-                  ClientUiComponent.field_zb = uu.decodeTextBytes(var2, (byte) -112);
+                  ClientUiComponent.field_zb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "status_full");
                 if (var2 != null) {
-                  AnimationFrameSet.field_I = uu.decodeTextBytes(var2, (byte) -92);
+                  AnimationFrameSet.field_I = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "players_in_game");
                 if (var2 != null) {
-                  ImageProducerSurface.field_i = uu.decodeTextBytes(var2, (byte) -107);
+                  ImageProducerSurface.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "you_are_invited_to_xs_game");
                 if (var2 != null) {
-                  ToastMessage.field_n = uu.decodeTextBytes(var2, (byte) 41);
+                  ToastMessage.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 41);
                 }
                 var2 = NodeIterator.a(50, "asking_to_join_xs_game");
                 if (var2 != null) {
-                  GameplayController.field_A = uu.decodeTextBytes(var2, (byte) -108);
+                  GameplayController.field_A = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "who_can_join");
                 if (null != var2) {
-                  ToggleWidget.field_P = uu.decodeTextBytes(var2, (byte) 93);
+                  ToggleWidget.field_P = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 93);
                 }
                 var2 = NodeIterator.a(50, "you_can_join");
                 if (null != var2) {
-                  AttackEvent.field_K = uu.decodeTextBytes(var2, (byte) 96);
+                  AttackEvent.field_K = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "you_can_ask_to_join");
                 if (null != var2) {
-                  StructureGlowRenderer.field_e = uu.decodeTextBytes(var2, (byte) 82);
+                  StructureGlowRenderer.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
                 var2 = NodeIterator.a(50, "you_cannot_join_in_progress");
                 if (var2 != null) {
-                  SummonRequest.field_y = uu.decodeTextBytes(var2, (byte) 82);
+                  SummonRequest.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
                 var2 = NodeIterator.a(param0 + 132, "you_can_spectate");
                 if (null != var2) {
-                  BitmapTextLayout.field_e = uu.decodeTextBytes(var2, (byte) -115);
+                  BitmapTextLayout.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "you_can_not_spectate");
                 if (var2 != null) {
-                  FriendLookupSupport.field_d = uu.decodeTextBytes(var2, (byte) -104);
+                  FriendLookupSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "spectate_xs_game");
                 if (null != var2) {
-                  SectorCacheStore.field_k = uu.decodeTextBytes(var2, (byte) -94);
+                  SectorCacheStore.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "hide_players_in_xs_game");
                 if (null != var2) {
-                  EventPresenterFactory.field_g = uu.decodeTextBytes(var2, (byte) 3);
+                  EventPresenterFactory.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 3);
                 }
                 var2 = NodeIterator.a(50, "show_players_in_xs_game");
                 if (var2 != null) {
-                  PrivateTextRecipientSupport.field_a = uu.decodeTextBytes(var2, (byte) -115);
+                  PrivateTextRecipientSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "connecting_to_friend_server_twoline");
                 if (null != var2) {
-                  TeleportAction.field_u = uu.decodeTextBytes(var2, (byte) -111);
+                  TeleportAction.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "loading");
                 if (null != var2) {
-                  ConsoleParseException.field_a = uu.decodeTextBytes(var2, (byte) 64);
+                  ConsoleParseException.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "offline");
                 if (var2 != null) {
-                  BattleTutorial.field_i = uu.decodeTextBytes(var2, (byte) -116);
+                  BattleTutorial.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "multiconst_invite_only");
                 if (null != var2) {
-                  AttackEvent.field_D = uu.decodeTextBytes(var2, (byte) 89);
+                  AttackEvent.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 89);
                 }
                 var2 = NodeIterator.a(50, "multiconst_clan");
                 if (null != var2) {
-                  ProxySocketFactory.field_i = uu.decodeTextBytes(var2, (byte) 9);
+                  ProxySocketFactory.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 9);
                 }
                 var2 = NodeIterator.a(50, "multiconst_friends");
                 if (null != var2) {
-                  AccountRegistrationForm.field_L = uu.decodeTextBytes(var2, (byte) -96);
+                  AccountRegistrationForm.field_L = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "multiconst_similar_rating");
                 if (null != var2) {
-                  AccountNameSelectionSupport.field_f = uu.decodeTextBytes(var2, (byte) 45);
+                  AccountNameSelectionSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "multiconst_open");
                 if (var2 != null) {
-                  MusicPatch.field_p = uu.decodeTextBytes(var2, (byte) 83);
+                  MusicPatch.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 83);
                 }
                 var2 = NodeIterator.a(50, "no_options_available");
                 if (null != var2) {
-                  QuickChatCategory.field_F = uu.decodeTextBytes(var2, (byte) -108);
+                  QuickChatCategory.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "reportabuse");
                 if (var2 != null) {
-                  CampaignMenu.field_n = uu.decodeTextBytes(var2, (byte) -127);
+                  CampaignMenu.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "presstabtochat");
                 if (null != var2) {
-                  VerticalScrollbar.field_Tb = uu.decodeTextBytes(var2, (byte) -118);
+                  VerticalScrollbar.field_Tb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "pressf10toquickchat");
                 if (var2 != null) {
-                  TabbedPanel.field_Lb = uu.decodeTextBytes(var2, (byte) 6);
+                  TabbedPanel.field_Lb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "dob_chatdisabled");
                 if (null != var2) {
-                  ReflectionCheckRequest.field_l = uu.decodeTextBytes(var2, (byte) 61);
+                  ReflectionCheckRequest.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(param0 + 132, "dob_enterforchat");
                 if (null != var2) {
-                  QuickChatMenu.field_Nb = uu.decodeTextBytes(var2, (byte) -122);
+                  QuickChatMenu.field_Nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "tab_hidechattemporarily");
                 if (var2 != null) {
-                  Bzip2State.field_t = uu.decodeTextBytes(var2, (byte) 51);
+                  Bzip2State.field_t = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(param0 + 132, "esc_cancelprivatemessage");
                 if (var2 != null) {
-                  LogoMaterial.field_d = uu.decodeTextBytes(var2, (byte) 113);
+                  LogoMaterial.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(50, "esc_cancelthisline");
                 if (null != var2) {
-                  FixedQuaternion.field_c = uu.decodeTextBytes(var2, (byte) -107);
+                  FixedQuaternion.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "privatequickchat_from_x");
                 if (var2 != null) {
-                  SpectateRoomRequestSupport.field_l = uu.decodeTextBytes(var2, (byte) -96);
+                  SpectateRoomRequestSupport.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "privatequickchat_to_x");
                 if (var2 != null) {
-                  LabeledWidgetContainer.field_Q = uu.decodeTextBytes(var2, (byte) 108);
+                  LabeledWidgetContainer.field_Q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(param0 + 132, "privatechat_blankarea_explanation");
                 if (null != var2) {
-                  MusicPatchPcmStream.field_q = uu.decodeTextBytes(var2, (byte) -100);
+                  MusicPatchPcmStream.field_q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "publicchat_unavailable_ratedgame");
                 if (null != var2) {
-                  DraggableWidgetContainer.field_K = uu.decodeTextBytes(var2, (byte) 15);
+                  DraggableWidgetContainer.field_K = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(param0 + 132, "privatechat_friend_offline");
                 if (var2 != null) {
-                  ContentTransitionDialog.field_gb = uu.decodeTextBytes(var2, (byte) 15);
+                  ContentTransitionDialog.field_gb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(50, "privatechat_friend_notlisted");
                 if (var2 != null) {
-                  DiskCacheWorker.field_h = uu.decodeTextBytes(var2, (byte) 28);
+                  DiskCacheWorker.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "chatviewscrolledup");
                 if (var2 != null) {
-                  CacheEntry.field_w = uu.decodeTextBytes(var2, (byte) 100);
+                  CacheEntry.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(param0 + 132, "thisisrunescapeclan");
                 if (var2 != null) {
-                  ActionSpell.field_f = uu.decodeTextBytes(var2, (byte) -121);
+                  ActionSpell.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(param0 + 132, "thisisrunescapeclan_notowner");
                 if (null != var2) {
-                  FriendRequestSupport.field_a = uu.decodeTextBytes(var2, (byte) 116);
+                  FriendRequestSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 116);
                 }
                 var2 = NodeIterator.a(50, "runescapeclan");
                 if (var2 != null) {
-                  AiInfluenceMap.field_j = uu.decodeTextBytes(var2, (byte) -97);
+                  AiInfluenceMap.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "rated_membersonly");
                 if (null != var2) {
-                  CoatOfArmsOverlaySupport.field_a = uu.decodeTextBytes(var2, (byte) 23);
+                  CoatOfArmsOverlaySupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 23);
                 }
                 var2 = NodeIterator.a(50, "gameopt_membersonly");
                 if (var2 != null) {
-                  LocalAccountNameSupport.field_a = uu.decodeTextBytes(var2, (byte) 58);
+                  LocalAccountNameSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(50, "gameopt_1moreratedgame");
                 if (null != var2) {
-                  LoginAndTutorialSetupSupport.field_a = uu.decodeTextBytes(var2, (byte) 22);
+                  LoginAndTutorialSetupSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 22);
                 }
                 var2 = NodeIterator.a(50, "gameopt_moreratedgames");
                 if (var2 != null) {
-                  ByteStorage.field_a = uu.decodeTextBytes(var2, (byte) -118);
+                  ByteStorage.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needrating");
                 if (null != var2) {
-                  AnimationSequence.field_k = uu.decodeTextBytes(var2, (byte) 47);
+                  AnimationSequence.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 47);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_unratedonly");
                 if (var2 != null) {
-                  TaggedMapData.field_h = uu.decodeTextBytes(var2, (byte) -93);
+                  TaggedMapData.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "gameopt_notunlocked");
                 if (null != var2) {
-                  ParasiteEvent.field_F = uu.decodeTextBytes(var2, (byte) -96);
+                  ParasiteEvent.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "gameopt_cannotbecombined1");
                 if (null != var2) {
-                  AlphanumericTextSupport.field_e = uu.decodeTextBytes(var2, (byte) -106);
+                  AlphanumericTextSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  AudioShutdownSupport.field_a = uu.decodeTextBytes(var2, (byte) 6);
+                  AudioShutdownSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playernotmember");
                 if (var2 != null) {
-                  TickCounter.field_b = uu.decodeTextBytes(var2, (byte) -125);
+                  TickCounter.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_younotmember");
                 if (var2 != null) {
-                  LeapYearSupport.field_a = uu.decodeTextBytes(var2, (byte) -94);
+                  LeapYearSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerneedsrating");
                 if (var2 != null) {
-                  MusicTrackSelectionSupport.field_g = uu.decodeTextBytes(var2, (byte) 24);
+                  MusicTrackSelectionSupport.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
                 var2 = NodeIterator.a(50, "gameopt_youneedrating");
                 if (var2 != null) {
-                  MonotonicClockSupport.field_b = uu.decodeTextBytes(var2, (byte) 37);
+                  MonotonicClockSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
-                  AccountNamePrompt.field_Ib = uu.decodeTextBytes(var2, (byte) 3);
+                  AccountNamePrompt.field_Ib = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 3);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_youneedratedgames");
                 if (var2 != null) {
-                  GlobalSpell.field_j = uu.decodeTextBytes(var2, (byte) -108);
+                  GlobalSpell.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  BattlefieldTheme.field_r = uu.decodeTextBytes(var2, (byte) -117);
+                  BattlefieldTheme.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
-                  FullscreenMembershipDialog.field_Y = uu.decodeTextBytes(var2, (byte) -111);
+                  FullscreenMembershipDialog.field_Y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerhasntunlocked");
                 if (null != var2) {
-                  LoginKind.field_f = uu.decodeTextBytes(var2, (byte) 15);
+                  LoginKind.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_youhaventunlocked");
                 if (var2 != null) {
-                  EventPresenter.field_l = uu.decodeTextBytes(var2, (byte) 88);
+                  EventPresenter.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
                 var2 = NodeIterator.a(50, "gameopt_trychanging1");
                 if (var2 != null) {
-                  DualNodeHashTable.field_c = uu.decodeTextBytes(var2, (byte) 113);
+                  DualNodeHashTable.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(50, "gameopt_trychanging2");
                 if (var2 != null) {
-                  IterableDualNodeDeque.field_d = uu.decodeTextBytes(var2, (byte) -93);
+                  IterableDualNodeDeque.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging1");
                 if (null != var2) {
-                  BufferedFile.field_e = uu.decodeTextBytes(var2, (byte) 41);
+                  BufferedFile.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 41);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging2");
                 if (null != var2) {
-                  MusicCrossfadeStream.field_u = uu.decodeTextBytes(var2, (byte) -127);
+                  MusicCrossfadeStream.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "gameopt_mightchange");
                 if (null != var2) {
-                  DirectByteStorage.field_l = uu.decodeTextBytes(var2, (byte) 76);
+                  DirectByteStorage.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playersdontqualify");
                 if (null != var2) {
-                  ResourceArchive.field_f = uu.decodeTextBytes(var2, (byte) 46);
+                  ResourceArchive.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 46);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
-                  Battlefield.field_pb = uu.decodeTextBytes(var2, (byte) -124);
+                  Battlefield.field_pb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "gameopt_unselectedoptions");
                 if (null != var2) {
-                  FullscreenFocusCanvas.field_f = uu.decodeTextBytes(var2, (byte) -92);
+                  FullscreenFocusCanvas.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "gameopt_pleaseselectoption1");
                 if (var2 != null) {
-                  TeamRoster.field_d = uu.decodeTextBytes(var2, (byte) 73);
+                  TeamRoster.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 73);
                 }
                 var2 = NodeIterator.a(50, "gameopt_pleaseselectoption2");
                 if (null != var2) {
-                  MaskedTextEntryPainter.field_x = uu.decodeTextBytes(var2, (byte) 93);
+                  MaskedTextEntryPainter.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 93);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_badnumplayers");
                 if (var2 != null) {
-                  QuickChatCategoryMenuSupport.field_h = uu.decodeTextBytes(var2, (byte) -99);
+                  QuickChatCategoryMenuSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
-                  ClientRecoverySupport.field_c = uu.decodeTextBytes(var2, (byte) -113);
+                  ClientRecoverySupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
-                  LobbyRoom.field_Jb = uu.decodeTextBytes(var2, (byte) 58);
+                  LobbyRoom.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(50, "gameopt_novalidcombos");
                 if (var2 != null) {
-                  MarkerSliderPainter.field_e = uu.decodeTextBytes(var2, (byte) -112);
+                  MarkerSliderPainter.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
             }
             void loadAbuseRegistrationAndResourceStatusText() throws java.lang.RuntimeException {
                 var2 = NodeIterator.a(50, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  SpectateRoomRequestSupport.field_j = uu.decodeTextBytes(var2, (byte) -94);
+                  SpectateRoomRequestSupport.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "ra_title");
                 if (null != var2) {
-                  DebugConsole.field_u = uu.decodeTextBytes(var2, (byte) -97);
+                  DebugConsole.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "ra_mutethisplayer");
                 if (var2 != null) {
-                  SpellCastAction.field_v = uu.decodeTextBytes(var2, (byte) 108);
+                  SpellCastAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "ra_suggestmute");
                 if (null != var2) {
-                  SetCoatConsoleCommand.field_E = uu.decodeTextBytes(var2, (byte) -109);
+                  SetCoatConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "ra_intro");
                 if (var2 != null) {
-                  AccountFlowUpdateSupport.field_c = uu.decodeTextBytes(var2, (byte) 100);
+                  AccountFlowUpdateSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "ra_intro_no_name");
                 if (var2 != null) {
-                  FixInvisibleUnitsConsoleCommand.field_F = uu.decodeTextBytes(var2, (byte) -94);
+                  FixInvisibleUnitsConsoleCommand.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "ra_explanation");
                 if (null != var2) {
-                  TextFieldValidator.field_d = uu.decodeTextBytes(var2, (byte) 107);
+                  TextFieldValidator.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_0");
                 if (var2 != null) {
-                  LeapYearSupport.field_g = uu.decodeTextBytes(var2, (byte) -113);
+                  LeapYearSupport.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "rule_0_0");
                 if (var2 != null) {
-                  MapHeaderSupport.field_c = uu.decodeTextBytes(var2, (byte) -94);
+                  MapHeaderSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "rule_0_1");
                 if (null != var2) {
-                  GiveTileConsoleCommand.field_E = uu.decodeTextBytes(var2, (byte) -94);
+                  GiveTileConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_0_2");
                 if (var2 != null) {
-                  ClientConnectionState.field_f = uu.decodeTextBytes(var2, (byte) -105);
+                  ClientConnectionState.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rule_0_3");
                 if (var2 != null) {
-                  QuickChatMenuDisplaySupport.field_d = uu.decodeTextBytes(var2, (byte) -92);
+                  QuickChatMenuDisplaySupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "rule_0_4");
                 if (null != var2) {
-                  AnimationSkeleton.field_r = uu.decodeTextBytes(var2, (byte) 8);
+                  AnimationSkeleton.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 8);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_0_5");
                 if (var2 != null) {
-                  IntrusiveNode.field_c = uu.decodeTextBytes(var2, (byte) -120);
+                  IntrusiveNode.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_1");
                 if (null != var2) {
-                  SpellCastAction.field_y = uu.decodeTextBytes(var2, (byte) 59);
+                  SpellCastAction.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "rule_1_0");
                 if (null != var2) {
-                  ContentTransitionStage.field_e = uu.decodeTextBytes(var2, (byte) -126);
+                  ContentTransitionStage.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "rule_1_1");
                 if (var2 != null) {
-                  GameClock.field_b = uu.decodeTextBytes(var2, (byte) 87);
+                  GameClock.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 87);
                 }
                 var2 = NodeIterator.a(50, "rule_1_2");
                 if (var2 != null) {
-                  ResizableModalDialog.field_Q = uu.decodeTextBytes(var2, (byte) -96);
+                  ResizableModalDialog.field_Q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_1_3");
                 if (null != var2) {
-                  MidiPcmStream.field_X = uu.decodeTextBytes(var2, (byte) -113);
+                  MidiPcmStream.field_X = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "rule_1_4");
                 if (var2 != null) {
-                  MatchSetupPanel.field_d = uu.decodeTextBytes(var2, (byte) 45);
+                  MatchSetupPanel.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_2");
                 if (null != var2) {
-                  FriendRequestSupport.field_d = uu.decodeTextBytes(var2, (byte) -110);
+                  FriendRequestSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "rule_2_0");
                 if (var2 != null) {
-                  EffectPresentation.field_b = uu.decodeTextBytes(var2, (byte) -97);
+                  EffectPresentation.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "rule_2_1");
                 if (null != var2) {
-                  HuffmanCodec.field_f = uu.decodeTextBytes(var2, (byte) -100);
+                  HuffmanCodec.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "rule_2_2");
                 if (null != var2) {
-                  LoginMethod.field_f = uu.decodeTextBytes(var2, (byte) -110);
+                  LoginMethod.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "createafreeaccount");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "cancel");
                 if (null != var2) {
-                  ManaStarParticle.field_s = uu.decodeTextBytes(var2, (byte) -101);
+                  ManaStarParticle.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(50, "pleaselogintoplay");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -105);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "pleaselogin");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 60);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
                 var2 = NodeIterator.a(50, "pleaselogin_member");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 44);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
                 var2 = NodeIterator.a(param0 + 132, "invaliduserorpass");
                 if (var2 != null) {
-                  PowerOfTwoSupport.field_x = uu.decodeTextBytes(var2, (byte) -119);
+                  PowerOfTwoSupport.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "pleasetryagain");
                 if (null != var2) {
-                  SummonAction.field_D = uu.decodeTextBytes(var2, (byte) 125);
+                  SummonAction.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 125);
                 }
                 var2 = NodeIterator.a(50, "pleasereenterpass");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "playfreeversion");
                 if (var2 != null) {
-                  IconTextComponent.field_Jb = uu.decodeTextBytes(var2, (byte) -114);
+                  IconTextComponent.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "reloadgame");
                 if (var2 != null) {
-                  QuickChatCommandDefinition.field_d = uu.decodeTextBytes(var2, (byte) -107);
+                  QuickChatCommandDefinition.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "toserverlist");
                 if (var2 != null) {
-                  SoundPlaybackHandle.field_m = uu.decodeTextBytes(var2, (byte) -126);
+                  SoundPlaybackHandle.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "tocustomersupport");
                 if (null != var2) {
-                  CombatEvent.field_O = uu.decodeTextBytes(var2, (byte) -101);
+                  CombatEvent.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(50, "changedisplayname");
                 if (var2 != null) {
-                  BattleTutorial.field_b = uu.decodeTextBytes(var2, (byte) 63);
+                  BattleTutorial.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 63);
                 }
                 var2 = NodeIterator.a(50, "returntohomepage");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -99);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "justplay");
                 if (var2 != null) {
-                  MarkerSliderWidget.field_O = uu.decodeTextBytes(var2, (byte) -126);
+                  MarkerSliderWidget.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "justplay_excl");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 14);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 14);
                 }
                 var2 = NodeIterator.a(50, "login");
                 if (null != var2) {
-                  ResourceRequest.field_v = uu.decodeTextBytes(var2, (byte) -124);
+                  ResourceRequest.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 + 132, "goback");
                 if (null != var2) {
-                  ContentTransitionDialog.field_Y = uu.decodeTextBytes(var2, (byte) 67);
+                  ContentTransitionDialog.field_Y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 67);
                 }
                 var2 = NodeIterator.a(50, "otheroptions");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -111);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "proceed");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 43);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 43);
                 }
                 var2 = NodeIterator.a(50, "connectingtoserver");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -120);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "pleasewait");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "logging_in");
                 if (var2 != null) {
-                  MapLayout.field_o = uu.decodeTextBytes(var2, (byte) 62);
+                  MapLayout.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 62);
                 }
                 var2 = NodeIterator.a(50, "reconnect");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 99);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 99);
                 }
                 var2 = NodeIterator.a(50, "backtoerror");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -127);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "pleasecheckinternet");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -113);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "attemptingtoreconnect");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 46);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 46);
                 }
                 var2 = NodeIterator.a(50, "connectionlost_reconnecting");
                 if (null != var2) {
-                  CachedArchiveProvider.field_z = uu.decodeTextBytes(var2, (byte) 80);
+                  CachedArchiveProvider.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 80);
                 }
                 var2 = NodeIterator.a(50, "connectionlost_withreason");
                 if (null != var2) {
-                  KeyedLoginCredentials.field_d = uu.decodeTextBytes(var2, (byte) -107);
+                  KeyedLoginCredentials.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "passwordverificationrequired");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -107);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "invalidpass");
                 if (var2 != null) {
-                  ConsoleTextNode.field_o = uu.decodeTextBytes(var2, (byte) 115);
+                  ConsoleTextNode.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
                 var2 = NodeIterator.a(50, "retry");
                 if (null != var2) {
-                  RegionAnchor.field_k = uu.decodeTextBytes(var2, (byte) -112);
+                  RegionAnchor.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "back");
                 if (null != var2) {
-                  ViewportManager.field_a = uu.decodeTextBytes(var2, (byte) 11);
+                  ViewportManager.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 11);
                 }
                 var2 = NodeIterator.a(param0 + 132, "exitfullscreenmode");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "quittowebsite");
                 if (var2 != null) {
-                  DateValiditySupport.field_c = uu.decodeTextBytes(var2, (byte) -113);
+                  DateValiditySupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "connectionrestored");
                 if (null != var2) {
-                  QuickChatCategory.field_B = uu.decodeTextBytes(var2, (byte) -96);
+                  QuickChatCategory.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "warning_ifyouquit");
                 if (var2 != null) {
-                  VineGrowthAction.field_v = uu.decodeTextBytes(var2, (byte) 72);
+                  VineGrowthAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
                 var2 = NodeIterator.a(50, "warning_ifyouquitorleavepage");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "resubscribe_withoutlosing_fs");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 29);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(50, "resubscribe_withoutlosing");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -101);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(50, "customersupport_withoutlosing_fs");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "customersupport_withoutlosing");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 37);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "js5help_withoutlosing_fs");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 36);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 36);
                 }
                 var2 = NodeIterator.a(50, "js5help_withoutlosing");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 55);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 55);
                 }
                 var2 = NodeIterator.a(param0 + 132, "checkinternet_withoutlosing_fs");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 66);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 66);
                 }
                 var2 = NodeIterator.a(50, "checkinternet_withoutlosing");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 94);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(50, "create_intro");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 26);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
                 var2 = NodeIterator.a(50, "create_sameaccounttip_unnamed");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 51);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(50, "dateofbirthprompt");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 44);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
                 var2 = NodeIterator.a(50, "fetchingcountrylist");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "countryprompt");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -93);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "countrylisterror");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "theonlypersonalquestions");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "create_submittingdata");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 124);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "check");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -101);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(50, "create_pleasechooseausername");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_usernameblurb");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "checkingavailability");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "checking");
                 if (var2 != null) {
-                  LocalAccountNameSupport.validationPendingText = uu.decodeTextBytes(var2, (byte) -92);
+                  LocalAccountNameSupport.validationPendingText = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "create_namealreadytaken");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 36);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 36);
                 }
                 var2 = NodeIterator.a(50, "create_sameaccounttip_named");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -113);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "create_nosuggestions");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_alternativelygoback");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 79);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_available");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_willnowshowtermsandconditions");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "fetchingterms");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 86);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
                 var2 = NodeIterator.a(50, "termserror");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -122);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "create_iagree");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -97);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "create_idisagree");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 54);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 54);
                 }
                 var2 = NodeIterator.a(50, "create_pleasescrolldowntoaccept");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -95);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_linkaddress");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -96);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "openinpopupwindow");
                 if (var2 != null) {
-                  DiskCacheRequest.field_I = uu.decodeTextBytes(var2, (byte) -104);
+                  DiskCacheRequest.field_I = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "create");
                 if (null != var2) {
-                  SessionTransitionSupport.field_c = uu.decodeTextBytes(var2, (byte) 94);
+                  SessionTransitionSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(50, "create_pleasechooseapassword");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "create_passwordblurb");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "create_nevergivepassword");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 76);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(param0 + 132, "creatingyouraccount");
                 if (var2 != null) {
-                  AccountRequestState.field_d = uu.decodeTextBytes(var2, (byte) 107);
+                  AccountRequestState.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_youmustaccept");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -100);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "create_passwordsdifferent");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 32);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 32);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_success");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -93);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "day");
                 if (null != var2) {
-                  MusicPatchNode.field_z = uu.decodeTextBytes(var2, (byte) 107);
+                  MusicPatchNode.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(50, "month");
                 if (var2 != null) {
-                  BitCountSupport.field_e = uu.decodeTextBytes(var2, (byte) 94);
+                  BitCountSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(param0 + 132, "year");
                 if (null != var2) {
-                  BattleTutorial.field_l = uu.decodeTextBytes(var2, (byte) 89);
+                  BattleTutorial.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 89);
                 }
                 var2 = NodeIterator.a(50, "monthnames,0");
                 if (var2 != null) {
-                  ViewportManager.field_q[0] = uu.decodeTextBytes(var2, (byte) -117);
+                  ViewportManager.field_q[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "monthnames,1");
                 if (var2 != null) {
-                  ViewportManager.field_q[1] = uu.decodeTextBytes(var2, (byte) 26);
+                  ViewportManager.field_q[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
                 var2 = NodeIterator.a(50, "monthnames,2");
                 if (var2 != null) {
-                  ViewportManager.field_q[2] = uu.decodeTextBytes(var2, (byte) 59);
+                  ViewportManager.field_q[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "monthnames,3");
                 if (var2 != null) {
-                  ViewportManager.field_q[3] = uu.decodeTextBytes(var2, (byte) -106);
+                  ViewportManager.field_q[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "monthnames,4");
                 if (null != var2) {
-                  ViewportManager.field_q[4] = uu.decodeTextBytes(var2, (byte) -99);
+                  ViewportManager.field_q[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "monthnames,5");
                 if (var2 != null) {
-                  ViewportManager.field_q[5] = uu.decodeTextBytes(var2, (byte) 68);
+                  ViewportManager.field_q[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "monthnames,6");
                 if (var2 != null) {
-                  ViewportManager.field_q[6] = uu.decodeTextBytes(var2, (byte) 123);
+                  ViewportManager.field_q[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 123);
                 }
                 var2 = NodeIterator.a(param0 + 132, "monthnames,7");
                 if (var2 != null) {
-                  ViewportManager.field_q[7] = uu.decodeTextBytes(var2, (byte) 75);
+                  ViewportManager.field_q[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 75);
                 }
                 var2 = NodeIterator.a(50, "monthnames,8");
                 if (var2 != null) {
-                  ViewportManager.field_q[8] = uu.decodeTextBytes(var2, (byte) 122);
+                  ViewportManager.field_q[8] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 122);
                 }
                 var2 = NodeIterator.a(50, "monthnames,9");
                 if (null != var2) {
-                  ViewportManager.field_q[9] = uu.decodeTextBytes(var2, (byte) -124);
+                  ViewportManager.field_q[9] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "monthnames,10");
                 if (var2 != null) {
-                  ViewportManager.field_q[10] = uu.decodeTextBytes(var2, (byte) 33);
+                  ViewportManager.field_q[10] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 33);
                 }
                 var2 = NodeIterator.a(50, "monthnames,11");
                 if (var2 != null) {
-                  ViewportManager.field_q[11] = uu.decodeTextBytes(var2, (byte) -127);
+                  ViewportManager.field_q[11] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "create_welcome");
                 if (null != var2) {
-                  AccountCreationInfoText.field_a = uu.decodeTextBytes(var2, (byte) -104);
+                  AccountCreationInfoText.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "create_u13_welcome");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -96);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "create_createanaccount");
                 if (null != var2) {
-                  PreferencesWriteRequest.field_p = uu.decodeTextBytes(var2, (byte) 34);
+                  PreferencesWriteRequest.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "create_username");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 86);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
                 var2 = NodeIterator.a(50, "create_displayname");
                 if (var2 != null) {
-                  MusicPatchEnvelope.field_k = uu.decodeTextBytes(var2, (byte) -99);
+                  MusicPatchEnvelope.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "create_password");
                 if (null != var2) {
-                  FriendLookupSupport.field_h = uu.decodeTextBytes(var2, (byte) -124);
+                  FriendLookupSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "create_password_confirm");
                 if (null != var2) {
-                  TilePosition.field_m = uu.decodeTextBytes(var2, (byte) 68);
+                  TilePosition.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "create_email");
                 if (var2 != null) {
-                  FullscreenMembershipDialog.field_X = uu.decodeTextBytes(var2, (byte) -95);
+                  FullscreenMembershipDialog.field_X = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "create_email_confirm");
                 if (null != var2) {
-                  TrianglePulse.field_j = uu.decodeTextBytes(var2, (byte) 48);
+                  TrianglePulse.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
                 var2 = NodeIterator.a(50, "create_age");
                 if (null != var2) {
-                  AccountRegistrationForm.field_S = uu.decodeTextBytes(var2, (byte) -123);
+                  AccountRegistrationForm.field_S = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "create_u13_email");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -103);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_u13_email_confirm");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -103);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(50, "create_dob");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 38);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 38);
                 }
                 var2 = NodeIterator.a(50, "create_country");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -92);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "create_alternatives_header");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 79);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
                 var2 = NodeIterator.a(50, "create_alternatives_select");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 6);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "create_suggestions");
                 if (null != var2) {
-                  ArchiveLoadStep.field_i = uu.decodeTextBytes(var2, (byte) 12);
+                  ArchiveLoadStep.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 12);
                 }
                 var2 = NodeIterator.a(50, "create_more_suggestions");
                 if (null != var2) {
-                  LoginKind.field_h = uu.decodeTextBytes(var2, (byte) 57);
+                  LoginKind.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 57);
                 }
                 var2 = NodeIterator.a(50, "create_select_alternative");
                 if (null != var2) {
-                  ModalDialog.field_J = uu.decodeTextBytes(var2, (byte) 19);
+                  ModalDialog.field_J = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 19);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_optin_news");
                 if (var2 != null) {
-                  IterableDualNodeDeque.field_c = uu.decodeTextBytes(var2, (byte) 86);
+                  IterableDualNodeDeque.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
                 var2 = NodeIterator.a(50, "create_agreeterms");
                 if (null != var2) {
-                  StateChangeEvent.field_D = uu.decodeTextBytes(var2, (byte) 116);
+                  StateChangeEvent.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 116);
                 }
                 var2 = NodeIterator.a(50, "create_u13terms");
                 if (var2 != null) {
-                  MidiPcmStream.field_R = uu.decodeTextBytes(var2, (byte) -114);
+                  MidiPcmStream.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(param0 + 132, "login_username_email");
                 if (null != var2) {
-                  AlphaWidgetContainer.field_J = uu.decodeTextBytes(var2, (byte) -98);
+                  AlphaWidgetContainer.field_J = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "login_username");
                 if (null != var2) {
-                  DualNodeDeque.field_h = uu.decodeTextBytes(var2, (byte) 22);
+                  DualNodeDeque.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 22);
                 }
                 var2 = NodeIterator.a(50, "login_email");
                 if (var2 != null) {
-                  DeployAction.field_t = uu.decodeTextBytes(var2, (byte) 108);
+                  DeployAction.field_t = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(50, "login_username_tooltip");
                 if (var2 != null) {
-                  SpellCastErrorSupport.field_d = uu.decodeTextBytes(var2, (byte) -96);
+                  SpellCastErrorSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "login_password_tooltip");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 39);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 39);
                 }
                 var2 = NodeIterator.a(50, "login_login_tooltip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -112);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(param0 + 132, "login_create_tooltip");
                 if (var2 != null) {
-                  hb.field_b = uu.decodeTextBytes(var2, (byte) -112);
+                  SessionIoSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "login_justplay_tooltip");
                 if (var2 != null) {
-                  CombatSandbox.field_e = uu.decodeTextBytes(var2, (byte) 56);
+                  CombatSandbox.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 56);
                 }
                 var2 = NodeIterator.a(50, "login_back_tooltip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 21);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 21);
                 }
                 var2 = NodeIterator.a(param0 + 132, "login_no_displayname");
                 if (null != var2) {
-                  BattleTutorial.field_u = uu.decodeTextBytes(var2, (byte) -96);
+                  BattleTutorial.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_username_tooltip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -93);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "create_username_hint");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 25);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 25);
                 }
                 var2 = NodeIterator.a(50, "create_displayname_tooltip");
                 if (var2 != null) {
-                  DualLinkedNode.field_m = uu.decodeTextBytes(var2, (byte) 60);
+                  DualLinkedNode.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
                 var2 = NodeIterator.a(50, "create_displayname_hint");
                 if (var2 != null) {
-                  ScrollContainer.field_Ob = uu.decodeTextBytes(var2, (byte) 40);
+                  ScrollContainer.field_Ob = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 40);
                 }
                 var2 = NodeIterator.a(50, "create_password_tooltip");
                 if (null != var2) {
-                  CachedArchiveProvider.field_k = uu.decodeTextBytes(var2, (byte) 87);
+                  CachedArchiveProvider.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 87);
                 }
                 var2 = NodeIterator.a(50, "create_password_hint");
                 if (null != var2) {
-                  TurnEffectEvent.field_B = uu.decodeTextBytes(var2, (byte) -114);
+                  TurnEffectEvent.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  WeightedScoreStrategy.field_i = uu.decodeTextBytes(var2, (byte) 21);
+                  WeightedScoreStrategy.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 21);
                 }
                 var2 = NodeIterator.a(50, "create_email_tooltip");
                 if (var2 != null) {
-                  NodeIterator.field_d = uu.decodeTextBytes(var2, (byte) -105);
+                  NodeIterator.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  AccountNamePrompt.field_Jb = uu.decodeTextBytes(var2, (byte) -100);
+                  AccountNamePrompt.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_age_tooltip");
                 if (var2 != null) {
-                  StrongCacheEntry.field_A = uu.decodeTextBytes(var2, (byte) 50);
+                  StrongCacheEntry.field_A = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 50);
                 }
                 var2 = NodeIterator.a(50, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  FullscreenFocusCanvas.field_g = uu.decodeTextBytes(var2, (byte) -109);
+                  FullscreenFocusCanvas.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "create_u13_email_tooltip");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "create_u13_email_confirm_tooltip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -122);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "create_dob_tooltip");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -110);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_country_tooltip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 85);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 85);
                 }
                 var2 = NodeIterator.a(50, "create_optin_tooltip");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 89);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 89);
                 }
                 var2 = NodeIterator.a(50, "create_continue");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 115);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
                 var2 = NodeIterator.a(50, "create_username_unavailable");
                 if (null != var2) {
-                  AccountNamePrompt.field_Ob = uu.decodeTextBytes(var2, (byte) 11);
+                  AccountNamePrompt.field_Ob = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 11);
                 }
                 var2 = NodeIterator.a(50, "create_username_available");
                 if (null != var2) {
-                  BoundedUrlRequest.field_d = uu.decodeTextBytes(var2, (byte) -120);
+                  BoundedUrlRequest.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "create_alert_namelength");
                 if (null != var2) {
-                  LogoMesh.field_G = uu.decodeTextBytes(var2, (byte) -127);
+                  LogoMesh.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "create_alert_namechars");
                 if (null != var2) {
-                  ByteArrayPoolSupport.field_h = uu.decodeTextBytes(var2, (byte) -98);
+                  ByteArrayPoolSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "create_alert_nameleadingspace");
                 if (var2 != null) {
-                  AccountRegistrationForm.field_U = uu.decodeTextBytes(var2, (byte) 103);
+                  AccountRegistrationForm.field_U = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 103);
                 }
                 var2 = NodeIterator.a(50, "create_alert_doublespace");
                 if (var2 != null) {
-                  LineOfSightGrid.field_o = uu.decodeTextBytes(var2, (byte) 117);
+                  LineOfSightGrid.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 117);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_passchars");
                 if (null != var2) {
-                  CommunityTabGroup.field_c = uu.decodeTextBytes(var2, (byte) 13);
+                  CommunityTabGroup.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 13);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passrepeated");
                 if (var2 != null) {
-                  CampaignMenu.field_v = uu.decodeTextBytes(var2, (byte) -94);
+                  CampaignMenu.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passlength");
                 if (null != var2) {
-                  SocialListPanel.field_Pb = uu.decodeTextBytes(var2, (byte) -112);
+                  SocialListPanel.field_Pb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passcontainsname");
                 if (null != var2) {
-                  SpellCastErrorSupport.field_c = uu.decodeTextBytes(var2, (byte) -119);
+                  SpellCastErrorSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passcontainsemail");
                 if (var2 != null) {
-                  SoundCache.field_d = uu.decodeTextBytes(var2, (byte) -118);
+                  SoundCache.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  ClientRecoverySupport.field_b = uu.decodeTextBytes(var2, (byte) -120);
+                  ClientRecoverySupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "create_alert_checkname");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -117);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_alert_invalidemail");
                 if (null != var2) {
-                  ArmiesOfGielinor.field_H = uu.decodeTextBytes(var2, (byte) -127);
+                  ArmiesOfGielinor.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "create_alert_email_unavailable");
                 if (null != var2) {
-                  QuickChatHelpDialog.field_Ib = uu.decodeTextBytes(var2, (byte) -120);
+                  QuickChatHelpDialog.field_Ib = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_invaliddate");
                 if (var2 != null) {
-                  StateChangeEvent.field_z = uu.decodeTextBytes(var2, (byte) 30);
+                  StateChangeEvent.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 30);
                 }
                 var2 = NodeIterator.a(50, "create_alert_invalidage");
                 if (null != var2) {
-                  AchievementNotification.field_n = uu.decodeTextBytes(var2, (byte) -96);
+                  AchievementNotification.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "create_alert_yearrange");
                 if (var2 != null) {
-                  CampaignMenu.field_r = uu.decodeTextBytes(var2, (byte) -106);
+                  CampaignMenu.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_mismatch");
                 if (var2 != null) {
-                  BitmapTextLayout.field_j = uu.decodeTextBytes(var2, (byte) -106);
+                  BitmapTextLayout.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "create_passwordvalid");
                 if (var2 != null) {
-                  ChannelGainProfile.field_b = uu.decodeTextBytes(var2, (byte) -105);
+                  ChannelGainProfile.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "create_emailvalid");
                 if (var2 != null) {
-                  CampaignRewardPreview.field_a = uu.decodeTextBytes(var2, (byte) -92);
+                  CampaignRewardPreview.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "create_account_success");
                 if (null != var2) {
-                  PasswordLoginCredentials.field_i = uu.decodeTextBytes(var2, (byte) -115);
+                  PasswordLoginCredentials.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "invalid_name");
                 if (null != var2) {
-                  SectorCacheStore.field_d = uu.decodeTextBytes(var2, (byte) 56);
+                  SectorCacheStore.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 56);
                 }
                 var2 = NodeIterator.a(50, "cannot_add_yourself");
                 if (null != var2) {
-                  MoveAttackRequest.field_F = uu.decodeTextBytes(var2, (byte) 113);
+                  MoveAttackRequest.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unable_to_add_friend");
                 if (null != var2) {
-                  GameAppletShell.field_c = uu.decodeTextBytes(var2, (byte) -113);
+                  GameAppletShell.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "unable_to_add_ignore");
                 if (var2 != null) {
-                  TextHotspotRegion.field_m = uu.decodeTextBytes(var2, (byte) 34);
+                  TextHotspotRegion.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "unable_to_delete_friend");
                 if (null != var2) {
-                  PopupPresentation.field_l = uu.decodeTextBytes(var2, (byte) 17);
+                  PopupPresentation.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 17);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unable_to_delete_ignore");
                 if (var2 != null) {
-                  EffectPresentation.field_a = uu.decodeTextBytes(var2, (byte) -106);
+                  EffectPresentation.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(param0 + 132, "friendlistfull");
                 if (var2 != null) {
-                  MapLayout.field_m = uu.decodeTextBytes(var2, (byte) -100);
+                  MapLayout.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "friendlistdupe");
                 if (var2 != null) {
-                  ReportAbuseDialog.field_Ob = uu.decodeTextBytes(var2, (byte) -128);
+                  ReportAbuseDialog.field_Ob = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "friendnotfound");
                 if (null != var2) {
-                  TaggedMapData.field_d = uu.decodeTextBytes(var2, (byte) 109);
+                  TaggedMapData.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
                 var2 = NodeIterator.a(50, "ignorelistfull");
                 if (var2 != null) {
-                  SharedUiLoadingSupport.field_d = uu.decodeTextBytes(var2, (byte) -96);
+                  SharedUiLoadingSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "ignorelistdupe");
                 if (null != var2) {
-                  TextLineLayout.field_k = uu.decodeTextBytes(var2, (byte) 121);
+                  TextLineLayout.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "ignorenotfound");
                 if (null != var2) {
-                  CacheEntry.field_x = uu.decodeTextBytes(var2, (byte) -127);
+                  CacheEntry.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "removeignorefirst");
                 if (null != var2) {
-                  ProjectileEffect.field_a = uu.decodeTextBytes(var2, (byte) 76);
+                  ProjectileEffect.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(50, "removefriendfirst");
                 if (var2 != null) {
-                  PopupPresentation.field_p = uu.decodeTextBytes(var2, (byte) -123);
+                  PopupPresentation.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(param0 + 132, "enterfriend_add");
                 if (null != var2) {
-                  GameAppletShell.field_a = uu.decodeTextBytes(var2, (byte) -110);
+                  GameAppletShell.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "enterfriend_del");
                 if (var2 != null) {
-                  IgnoreRequestSupport.field_b = uu.decodeTextBytes(var2, (byte) -122);
+                  IgnoreRequestSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "enterignore_add");
                 if (null != var2) {
-                  AchievementUnlockRequest.field_o = uu.decodeTextBytes(var2, (byte) -112);
+                  AchievementUnlockRequest.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "enterignore_del");
                 if (null != var2) {
-                  StandardContentDialog.field_kb = uu.decodeTextBytes(var2, (byte) 81);
+                  StandardContentDialog.field_kb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 81);
                 }
                 var2 = NodeIterator.a(param0 + 132, "text_removed_from_game");
                 if (null != var2) {
-                  ContextualRuntimeException.field_d = uu.decodeTextBytes(var2, (byte) 58);
+                  ContextualRuntimeException.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
-                  SpellMenuGroup.field_l = uu.decodeTextBytes(var2, (byte) -116);
+                  SpellMenuGroup.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "opengl");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "sse");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -123);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "purejava");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -126);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "waitingfor_graphics");
                 if (null != var2) {
-                  TileMetadata.field_i = uu.decodeTextBytes(var2, (byte) -107);
+                  TileMetadata.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_models");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 100);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_fonts");
                 if (var2 != null) {
-                  LeapYearSupport.field_f = uu.decodeTextBytes(var2, (byte) 98);
+                  LeapYearSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_soundeffects");
                 if (var2 != null) {
-                  ResourceProtocolClient.field_k = uu.decodeTextBytes(var2, (byte) -121);
+                  ResourceProtocolClient.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "waitingfor_music");
                 if (var2 != null) {
-                  PacketBuffer.field_m = uu.decodeTextBytes(var2, (byte) -103);
+                  PacketBuffer.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(param0 + 132, "waitingfor_instruments");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -95);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(param0 + 132, "waitingfor_levels");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 92);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 92);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_extradata");
                 if (var2 != null) {
-                  ProgressDialog.field_eb = uu.decodeTextBytes(var2, (byte) -100);
+                  ProgressDialog.field_eb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "waitingfor_languages");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 45);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_textures");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 106);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 106);
                 }
                 var2 = NodeIterator.a(50, "waitingfor_animations");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
                 var2 = NodeIterator.a(50, "loading_graphics");
                 if (null != var2) {
-                  Battlefield.field_nb = uu.decodeTextBytes(var2, (byte) -93);
+                  Battlefield.field_nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "loading_models");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -93);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "loading_fonts");
                 if (null != var2) {
-                  QuickChatPhraseRepository.field_a = uu.decodeTextBytes(var2, (byte) -117);
+                  QuickChatPhraseRepository.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "loading_soundeffects");
                 if (null != var2) {
-                  PointerCaptureSupport.field_b = uu.decodeTextBytes(var2, (byte) -112);
+                  PointerCaptureSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
             }
             void loadMenusMatchAndDisplayText() throws java.lang.RuntimeException {
                 var2 = NodeIterator.a(50, "loading_music");
                 if (null != var2) {
-                  LeapYearSupport.field_d = uu.decodeTextBytes(var2, (byte) 119);
+                  LeapYearSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
                 var2 = NodeIterator.a(50, "loading_instruments");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -117);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "loading_levels");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -125);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(50, "loading_extradata");
                 if (var2 != null) {
-                  DateInputWidget.field_G = uu.decodeTextBytes(var2, (byte) 82);
+                  DateInputWidget.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
                 var2 = NodeIterator.a(50, "loading_languages");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 101);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
                 var2 = NodeIterator.a(50, "loading_textures");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 88);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
                 var2 = NodeIterator.a(50, "loading_animations");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
                 var2 = NodeIterator.a(50, "unpacking_graphics");
                 if (var2 != null) {
-                  SectorCacheStore.field_i = uu.decodeTextBytes(var2, (byte) 74);
+                  SectorCacheStore.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "unpacking_models");
                 if (null != var2) {
-                  AiPlanner.field_R = uu.decodeTextBytes(var2, (byte) -109);
+                  AiPlanner.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "unpacking_soundeffects");
                 if (var2 != null) {
-                  AccountNameCharacterSupport.field_a = uu.decodeTextBytes(var2, (byte) -114);
+                  AccountNameCharacterSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "unpacking_music");
                 if (var2 != null) {
-                  LabeledWidgetContainer.field_M = uu.decodeTextBytes(var2, (byte) 74);
+                  LabeledWidgetContainer.field_M = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "unpacking_levels");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 101);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
                 var2 = NodeIterator.a(param0 + 132, "unpacking_languages");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -99);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "unpacking_animations");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -117);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "unpacking_toolkit");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 28);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
                 var2 = NodeIterator.a(50, "instructions");
                 if (null != var2) {
-                  PointerInputHandler.field_d = uu.decodeTextBytes(var2, (byte) -119);
+                  PointerInputHandler.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "tutorial");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -113);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(param0 + 132, "playtutorial");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -96);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "sound_colon");
                 if (var2 != null) {
-                  AiWeightProfile.field_c = uu.decodeTextBytes(var2, (byte) -121);
+                  AiWeightProfile.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "music_colon");
                 if (null != var2) {
-                  InstructionsPanel.field_c = uu.decodeTextBytes(var2, (byte) -93);
+                  InstructionsPanel.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "fullscreen");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -127);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "screensize");
                 if (null != var2) {
-                  AiInfluenceMap.field_k = uu.decodeTextBytes(var2, (byte) 39);
+                  AiInfluenceMap.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 39);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "highscores");
                 if (var2 != null) {
-                  AlphaDecodedSpriteSupport.field_o = uu.decodeTextBytes(var2, (byte) 126);
+                  AlphaDecodedSpriteSupport.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rankings");
                 if (var2 != null) {
-                  MouseWheelSource.field_a = uu.decodeTextBytes(var2, (byte) 10);
+                  MouseWheelSource.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 10);
                 }
                 var2 = NodeIterator.a(50, "achievements");
                 if (var2 != null) {
-                  s.field_b = uu.decodeTextBytes(var2, (byte) -99);
+                  LobbyNotificationSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "achievementsthisgame");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -101);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(param0 + 132, "achievementsthissession");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 74);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "watchintroduction");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "quit");
                 if (null != var2) {
-                  InstructionsPanel.field_y = uu.decodeTextBytes(var2, (byte) 96);
+                  InstructionsPanel.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "login_createaccount");
                 if (null != var2) {
-                  NodeHashIterator.field_h = uu.decodeTextBytes(var2, (byte) 26);
+                  NodeHashIterator.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
                 var2 = NodeIterator.a(param0 + 132, "tohighscores");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 59);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "returntomainmenu");
                 if (var2 != null) {
-                  PasswordLoginCredentials.field_e = uu.decodeTextBytes(var2, (byte) 6);
+                  PasswordLoginCredentials.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "returntopausemenu");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -115);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "returntooptionsmenu_notpaused");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -97);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "mainmenu");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -115);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(param0 + 132, "pausemenu");
                 if (null != var2) {
-                  ScrollWidgetContainer.field_U = uu.decodeTextBytes(var2, (byte) 54);
+                  ScrollWidgetContainer.field_U = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 54);
                 }
                 var2 = NodeIterator.a(50, "optionsmenu_notpaused");
                 if (var2 != null) {
-                  ClientStateChecksumSupport.field_i = uu.decodeTextBytes(var2, (byte) -94);
+                  ClientStateChecksumSupport.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "menu");
                 if (var2 != null) {
-                  GuestSavePrompts.field_c = uu.decodeTextBytes(var2, (byte) 61);
+                  GuestSavePrompts.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(param0 + 132, "selectlevel");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -105);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "nextlevel");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -104);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "startgame");
                 if (var2 != null) {
-                  ArchiveProvider.field_b = uu.decodeTextBytes(var2, (byte) 48);
+                  ArchiveProvider.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
                 var2 = NodeIterator.a(50, "newgame");
                 if (null != var2) {
-                  NetworkResourceRequest.field_G = uu.decodeTextBytes(var2, (byte) -112);
+                  NetworkResourceRequest.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "resumegame");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 66);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 66);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "resumetutorial");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -127);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "skip");
                 if (null != var2) {
-                  StateChangeEvent.field_y = uu.decodeTextBytes(var2, (byte) 33);
+                  StateChangeEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 33);
                 }
                 var2 = NodeIterator.a(50, "skiptutorial");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 121);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "skipending");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -114);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(param0 + 132, "restartlevel");
                 if (var2 != null) {
-                  GameEvent.field_u = uu.decodeTextBytes(var2, (byte) 4);
+                  GameEvent.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 4);
                 }
                 var2 = NodeIterator.a(50, "endtest");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 9);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 9);
                 }
                 var2 = NodeIterator.a(50, "endgame");
                 if (var2 != null) {
-                  PreparedAction.field_k = uu.decodeTextBytes(var2, (byte) 101);
+                  PreparedAction.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
                 var2 = NodeIterator.a(param0 + 132, "endtutorial");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -121);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "ok");
                 if (var2 != null) {
-                  LineOfSightGrid.field_f = uu.decodeTextBytes(var2, (byte) -125);
+                  LineOfSightGrid.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 if (param0 != -82) {
                   field_c = (String) null;
                 }
                 var2 = NodeIterator.a(50, "on");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -97);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "off");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 107);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(50, "previous");
                 if (null != var2) {
-                  ClientNetworkBootstrap.field_d = uu.decodeTextBytes(var2, (byte) -118);
+                  ClientNetworkBootstrap.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "prev");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 82);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
                 var2 = NodeIterator.a(50, "next");
                 if (null != var2) {
-                  ClientConnectionState.field_e = uu.decodeTextBytes(var2, (byte) 101);
+                  ClientConnectionState.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
                 var2 = NodeIterator.a(50, "graphics_colon");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -115);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "hotseatmultiplayer");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "entermultiplayerlobby");
                 if (var2 != null) {
-                  UnitUnlockPreviewModel.field_e = uu.decodeTextBytes(var2, (byte) -119);
+                  UnitUnlockPreviewModel.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "singleplayergame");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -127);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "returntogame");
                 if (var2 != null) {
-                  ClientConnectionState.field_b = uu.decodeTextBytes(var2, (byte) 75);
+                  ClientConnectionState.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 75);
                 }
                 var2 = NodeIterator.a(50, "endgameresign");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -99);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "offerdraw");
                 if (null != var2) {
-                  uu.field_c = uu.decodeTextBytes(var2, (byte) -114);
+                  LobbyRoomControlSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "canceldraw");
                 if (null != var2) {
-                  ContextActionMenu.field_Jb = uu.decodeTextBytes(var2, (byte) 69);
+                  ContextActionMenu.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 69);
                 }
                 var2 = NodeIterator.a(50, "acceptdraw");
                 if (null != var2) {
-                  MatchSetupPanel.field_O = uu.decodeTextBytes(var2, (byte) 118);
+                  MatchSetupPanel.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "resign");
                 if (null != var2) {
-                  TilePosition.field_p = uu.decodeTextBytes(var2, (byte) -110);
+                  TilePosition.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "returntolobby");
                 if (null != var2) {
-                  DeployAction.field_v = uu.decodeTextBytes(var2, (byte) 86);
+                  DeployAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
                 var2 = NodeIterator.a(50, "cont");
                 if (null != var2) {
-                  ProgressMessageDialog.field_kb = uu.decodeTextBytes(var2, (byte) -110);
+                  ProgressMessageDialog.field_kb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "continue_spectating");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "messages");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -111);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "graphics_fastest");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -115);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "graphics_medium");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 24);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
                 var2 = NodeIterator.a(50, "graphics_best");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -125);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(50, "graphics_directx");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "graphics_opengl");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "graphics_java");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "graphics_quality_high");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "graphics_quality_low");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 50);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 50);
                 }
                 var2 = NodeIterator.a(50, "graphics_mode");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 99);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 99);
                 }
                 var2 = NodeIterator.a(50, "graphics_quality");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 25);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 25);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mode");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "quality");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -125);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(50, "keys");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
                 var2 = NodeIterator.a(param0 + 132, "objective");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -117);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "currentobjective");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
                 var2 = NodeIterator.a(50, "pressescforpausemenu");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -116);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "pressescforpausemenuortoskiptutorial");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 120);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
                 var2 = NodeIterator.a(param0 + 132, "pressescforoptionsmenu_doesntpause");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 78);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 78);
                 }
                 var2 = NodeIterator.a(50, "pressescforoptionsmenu_doesntpause_short");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 7);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 7);
                 }
                 var2 = NodeIterator.a(50, "powerups");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -113);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "latestlevel_suffix");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -92);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unreachedlevel_name");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -102);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unreachedlevel_cannotplayreason");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 116);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 116);
                 }
                 var2 = NodeIterator.a(50, "unreachedlevel_cannotplayreason_shorter");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(50, "unreachedworld_cannotplayreason");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 112);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 112);
                 }
                 var2 = NodeIterator.a(50, "memberslevel_name");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 48);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
                 var2 = NodeIterator.a(50, "memberslevel_cannotplayreason");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 99);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 99);
                 }
                 var2 = NodeIterator.a(50, "membersworld_cannotplayreason");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -104);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "unreachedlevel_createtip");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -114);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "unreachedlevel_createtip_line1");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -92);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unreachedlevel_createtip_line2");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "unreachedlevel_logintip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -115);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "memberslevel_logintip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -123);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "displayname_none");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 91);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 91);
                 }
                 var2 = NodeIterator.a(param0 + 132, "levelxofy1");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 61);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(50, "levelxofy2");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -103);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(50, "levelxofy");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 58);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(50, "ingame_level");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 37);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "mouseoveranicon");
                 if (var2 != null) {
-                  StructureTerrainSupport.field_a = uu.decodeTextBytes(var2, (byte) 96);
+                  StructureTerrainSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "notyetachieved");
                 if (null != var2) {
-                  QuickChatCategoryRepository.field_g = uu.decodeTextBytes(var2, (byte) -120);
+                  QuickChatCategoryRepository.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "achieved");
                 if (null != var2) {
-                  AccountRequestResult.field_f = uu.decodeTextBytes(var2, (byte) -120);
+                  AccountRequestResult.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "orbpoints");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "orbcoins");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -114);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "orbpoints_colon");
                 if (var2 != null) {
-                  FullscreenFocusCanvas.field_h = uu.decodeTextBytes(var2, (byte) -124);
+                  FullscreenFocusCanvas.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "orbcoins_colon");
                 if (null != var2) {
-                  DiskCacheWorker.field_e = uu.decodeTextBytes(var2, (byte) 113);
+                  DiskCacheWorker.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "achieved_colon_description");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 83);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 83);
                 }
                 var2 = NodeIterator.a(param0 + 132, "secretachievement");
                 if (null != var2) {
-                  UnitCycler.field_d = uu.decodeTextBytes(var2, (byte) -117);
+                  UnitCycler.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "no_highscores");
                 if (null != var2) {
-                  SessionTransitionSupport.field_b = uu.decodeTextBytes(var2, (byte) 98);
+                  SessionTransitionSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
                 var2 = NodeIterator.a(50, "hs_name");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -104);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(param0 + 132, "hs_level");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 109);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
                 var2 = NodeIterator.a(50, "hs_fromlevel");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "hs_tolevel");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -92);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "hs_score");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "hs_end");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "ingame_score");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "score_colon");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -122);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_leavegame");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 2);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 2);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_offerrematch");
                 if (var2 != null) {
-                  IgnoreListLookupSupport.field_h = uu.decodeTextBytes(var2, (byte) 78);
+                  IgnoreListLookupSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 78);
                 }
                 var2 = NodeIterator.a(50, "mp_offerrematch_unrated");
                 if (var2 != null) {
-                  BoundedUrlRequest.field_e = uu.decodeTextBytes(var2, (byte) 47);
+                  BoundedUrlRequest.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 47);
                 }
                 var2 = NodeIterator.a(50, "mp_acceptrematch");
                 if (null != var2) {
-                  BitmapTextWidgetPainter.field_s = uu.decodeTextBytes(var2, (byte) -94);
+                  BitmapTextWidgetPainter.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mp_acceptrematch_unrated");
                 if (null != var2) {
-                  field_c = uu.decodeTextBytes(var2, (byte) -114);
+                  field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "mp_cancelrematch");
                 if (var2 != null) {
-                  LeapYearSupport.field_c = uu.decodeTextBytes(var2, (byte) -99);
+                  LeapYearSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "mp_cancelrematch_unrated");
                 if (var2 != null) {
-                  TurnSkipToggleSupport.field_a = uu.decodeTextBytes(var2, (byte) 64);
+                  TurnSkipToggleSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "mp_rematchnewgame");
                 if (var2 != null) {
-                  AccountNameCheckSupport.field_b = uu.decodeTextBytes(var2, (byte) 28);
+                  AccountNameCheckSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_rematchnewgame_unrated");
                 if (null != var2) {
-                  TabbedPanel.field_Nb = uu.decodeTextBytes(var2, (byte) 4);
+                  TabbedPanel.field_Nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 4);
                 }
                 var2 = NodeIterator.a(50, "mp_x_wantstodraw");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -116);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "mp_x_offersrematch");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -105);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "mp_x_offersrematch_unrated");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 107);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(50, "mp_youofferrematch");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -121);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "mp_youofferrematch_unrated");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -125);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(50, "mp_youofferdraw");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_youresigned");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 126);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 126);
                 }
                 var2 = NodeIterator.a(50, "mp_youresigned_rematch");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 7);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 7);
                 }
                 var2 = NodeIterator.a(50, "mp_x_hasresignedandleft");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 12);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 12);
                 }
                 var2 = NodeIterator.a(50, "mp_x_hasresigned_rematch");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -119);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "mp_x_hasresigned");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 88);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
                 var2 = NodeIterator.a(50, "mp_x_hasleft");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 112);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 112);
                 }
                 var2 = NodeIterator.a(50, "mp_x_haswon");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 44);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
                 var2 = NodeIterator.a(50, "mp_youhavewon");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 16);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 16);
                 }
                 var2 = NodeIterator.a(50, "mp_gamedrawn");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 74);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "mp_timeremaining");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 34);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "mp_x_turn");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -112);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "mp_yourturn");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 73);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 73);
                 }
                 var2 = NodeIterator.a(50, "gameover");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -112);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "mp_hidechat");
                 if (null != var2) {
-                  CalendarSupport.field_d = uu.decodeTextBytes(var2, (byte) -100);
+                  CalendarSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "mp_showchat_nounread");
                 if (null != var2) {
-                  StandardContentDialog.field_pb = uu.decodeTextBytes(var2, (byte) -117);
+                  StandardContentDialog.field_pb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mp_showchat_unread1");
                 if (var2 != null) {
-                  CacheEntry.field_y = uu.decodeTextBytes(var2, (byte) -124);
+                  CacheEntry.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "mp_showchat_unread2");
                 if (null != var2) {
-                  MovementPlanner.field_s = uu.decodeTextBytes(var2, (byte) -121);
+                  MovementPlanner.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "click_to_quickchat");
                 if (var2 != null) {
-                  DisplayModeOptionPainter.field_z = uu.decodeTextBytes(var2, (byte) 65);
+                  DisplayModeOptionPainter.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 65);
                 }
                 var2 = NodeIterator.a(50, "autorespond");
                 if (null != var2) {
-                  EmailConfirmationValidator.field_m = uu.decodeTextBytes(var2, (byte) 115);
+                  EmailConfirmationValidator.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
                 var2 = NodeIterator.a(50, "quickchat_help");
                 if (var2 != null) {
-                  GameEvent.quickChatHelpTitle = uu.decodeTextBytes(var2, (byte) -111);
+                  GameEvent.quickChatHelpTitle = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "quickchat_help_title");
                 if (null != var2) {
-                  BattlefieldTheme.quickChatHelpSubtitle = uu.decodeTextBytes(var2, (byte) -115);
+                  BattlefieldTheme.quickChatHelpSubtitle = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  AiUnitPlanner.quickChatShortcutDescriptions[0] = uu.decodeTextBytes(var2, (byte) -105);
+                  AiUnitPlanner.quickChatShortcutDescriptions[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  AiUnitPlanner.quickChatShortcutDescriptions[1] = uu.decodeTextBytes(var2, (byte) -102);
+                  AiUnitPlanner.quickChatShortcutDescriptions[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  AiUnitPlanner.quickChatShortcutDescriptions[2] = uu.decodeTextBytes(var2, (byte) 84);
+                  AiUnitPlanner.quickChatShortcutDescriptions[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 84);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  AiUnitPlanner.quickChatShortcutDescriptions[3] = uu.decodeTextBytes(var2, (byte) 61);
+                  AiUnitPlanner.quickChatShortcutDescriptions[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  AiUnitPlanner.quickChatShortcutDescriptions[4] = uu.decodeTextBytes(var2, (byte) -118);
+                  AiUnitPlanner.quickChatShortcutDescriptions[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "quickchat_shortcut_help,5");
                 if (var2 != null) {
-                  AiUnitPlanner.quickChatShortcutDescriptions[5] = uu.decodeTextBytes(var2, (byte) -112);
+                  AiUnitPlanner.quickChatShortcutDescriptions[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[0] = uu.decodeTextBytes(var2, (byte) -124);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[1] = uu.decodeTextBytes(var2, (byte) -95);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[2] = uu.decodeTextBytes(var2, (byte) 56);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 56);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,3");
                 if (null != var2) {
-                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[3] = uu.decodeTextBytes(var2, (byte) 95);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 95);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[4] = uu.decodeTextBytes(var2, (byte) -106);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[5] = uu.decodeTextBytes(var2, (byte) -126);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  et.field_a = ArchiveLoadStep.decodeSingleByteCharacter(-121, var2[0]);
+                  LogoFaceSortSupport.field_a = ArchiveLoadStep.decodeSingleByteCharacter(-121, var2[0]);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_noratings");
                 if (null != var2) {
-                  AccountRequestResult.field_l = uu.decodeTextBytes(var2, (byte) 102);
+                  AccountRequestResult.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "rating_rating");
                 if (null != var2) {
-                  CampaignQuicksave.field_i = uu.decodeTextBytes(var2, (byte) 117);
+                  CampaignQuicksave.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_played");
                 if (var2 != null) {
-                  MapRepository.field_f = uu.decodeTextBytes(var2, (byte) 108);
+                  MapRepository.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(50, "rating_won");
                 if (var2 != null) {
-                  TextLineLayout.field_g = uu.decodeTextBytes(var2, (byte) 29);
+                  TextLineLayout.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(50, "rating_lost");
                 if (var2 != null) {
-                  MonotonicClockSupport.field_c = uu.decodeTextBytes(var2, (byte) -106);
+                  MonotonicClockSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "rating_drawn");
                 if (var2 != null) {
-                  ClientNetworkBootstrap.field_c = uu.decodeTextBytes(var2, (byte) 34);
+                  ClientNetworkBootstrap.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "benefits_fullscreen");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -121);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "benefits_noadverts");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -107);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "benefits_price");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 22);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 22);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_benefits,0");
                 if (null != var2) {
-                  IgnoreListLookupSupport.field_e[0] = uu.decodeTextBytes(var2, (byte) 112);
+                  IgnoreListLookupSupport.field_e[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 112);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  IgnoreListLookupSupport.field_e[1] = uu.decodeTextBytes(var2, (byte) 59);
+                  IgnoreListLookupSupport.field_e[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_benefits,2");
                 if (var2 != null) {
-                  IgnoreListLookupSupport.field_e[2] = uu.decodeTextBytes(var2, (byte) -101);
+                  IgnoreListLookupSupport.field_e[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_price_top");
                 if (var2 != null) {
-                  LocalizedUrlSupport.field_a = uu.decodeTextBytes(var2, (byte) 68);
+                  LocalizedUrlSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_price_bottom");
                 if (var2 != null) {
-                  AnimationFrameSet.field_B = uu.decodeTextBytes(var2, (byte) -94);
+                  AnimationFrameSet.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  QuickChatMenu.field_Lb[0] = uu.decodeTextBytes(var2, (byte) 121);
+                  QuickChatMenu.field_Lb[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  QuickChatMenu.field_Lb[1] = uu.decodeTextBytes(var2, (byte) -94);
+                  QuickChatMenu.field_Lb[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  QuickChatMenu.field_Lb[2] = uu.decodeTextBytes(var2, (byte) -93);
+                  QuickChatMenu.field_Lb[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  QuickChatMenu.field_Lb[3] = uu.decodeTextBytes(var2, (byte) -121);
+                  QuickChatMenu.field_Lb[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -116);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "reconnect_restored");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 59);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "reconnect_please_check");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 58);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(50, "reconnect_wait");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -97);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "reconnect_retry");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 75);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 75);
                 }
                 var2 = NodeIterator.a(50, "reconnect_resume");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "reconnect_or");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 48);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
                 var2 = NodeIterator.a(50, "reconnect_exitfs");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(50, "reconnect_exitfs_quit");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(50, "reconnect_quit");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 68);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "reconnect_check_fs");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 44);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
                 var2 = NodeIterator.a(50, "reconnect_check_nonfs");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -127);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "fs_accept_beforeaccept");
                 if (null != var2) {
-                  UnitAirAttackSupport.field_d = uu.decodeTextBytes(var2, (byte) -126);
+                  UnitAirAttackSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "fs_button_accept");
                 if (null != var2) {
-                  DualNodeDeque.field_e = uu.decodeTextBytes(var2, (byte) 5);
+                  DualNodeDeque.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_accept_afteraccept");
                 if (null != var2) {
-                  ByteArrayPoolSupport.field_e = uu.decodeTextBytes(var2, (byte) -106);
+                  ByteArrayPoolSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "fs_button_cancel");
                 if (var2 != null) {
-                  WeightedScoreStrategy.field_m = uu.decodeTextBytes(var2, (byte) 6);
+                  WeightedScoreStrategy.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_accept_aftercancel");
                 if (null != var2) {
-                  TextLineLayout.field_f = uu.decodeTextBytes(var2, (byte) 79);
+                  TextLineLayout.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
                 var2 = NodeIterator.a(50, "fs_accept_countdown_sing");
                 if (null != var2) {
-                  IgnoreListLookupSupport.field_f = uu.decodeTextBytes(var2, (byte) 65);
+                  IgnoreListLookupSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 65);
                 }
                 var2 = NodeIterator.a(50, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  SummonAction.field_v = uu.decodeTextBytes(var2, (byte) 30);
+                  SummonAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 30);
                 }
                 var2 = NodeIterator.a(50, "fs_nonmember");
                 if (var2 != null) {
-                  SummonRequest.field_z = uu.decodeTextBytes(var2, (byte) -126);
+                  SummonRequest.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_button_close");
                 if (null != var2) {
-                  PasswordLengthSupport.field_f = uu.decodeTextBytes(var2, (byte) 74);
+                  PasswordLengthSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "fs_button_members");
                 if (var2 != null) {
-                  ClientContextMenu.field_j = uu.decodeTextBytes(var2, (byte) 34);
+                  ClientContextMenu.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "fs_unavailable");
                 if (null != var2) {
-                  FullscreenStatusDialog.field_ab = uu.decodeTextBytes(var2, (byte) 70);
+                  FullscreenStatusDialog.field_ab = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 70);
                 }
                 var2 = NodeIterator.a(50, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  NodeHashIterator.field_a = uu.decodeTextBytes(var2, (byte) -113);
+                  NodeHashIterator.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "fs_focus");
                 if (null != var2) {
-                  MoveAttackRequest.field_y = uu.decodeTextBytes(var2, (byte) -127);
+                  MoveAttackRequest.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  FullscreenStatusDialog.field_W = uu.decodeTextBytes(var2, (byte) 120);
+                  FullscreenStatusDialog.field_W = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_timeout");
                 if (null != var2) {
-                  hb.field_a = uu.decodeTextBytes(var2, (byte) -120);
+                  SessionIoSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "fs_button_tryagain");
                 if (var2 != null) {
-                  MembershipExpansionScreen.field_j = uu.decodeTextBytes(var2, (byte) 73);
+                  MembershipExpansionScreen.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 73);
                 }
                 var2 = NodeIterator.a(50, "graphics_ui_fs_countdown");
                 if (null != var2) {
-                  FullscreenDisplayMode.field_d = uu.decodeTextBytes(var2, (byte) 29);
+                  FullscreenDisplayMode.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mb_caption_title");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 5);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(50, "mb_including_gamename");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -92);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "mb_full_access_1");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mb_full_access_2");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -118);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "mb_achievement_count_1");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -108);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mb_achievement_count_2");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 81);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 81);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mb_exclusive_1");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) 45);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mb_exclusive_2");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -112);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "me_extra_benefits");
                 if (var2 != null) {
-                  UnitModelPreview.field_h = uu.decodeTextBytes(var2, (byte) 72);
+                  UnitModelPreview.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
                 var2 = NodeIterator.a(50, "hs_friend_tip");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -107);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "hs_friend_tip_multi");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 105);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 105);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,0");
                 if (var2 != null) {
-                  AccountNamePrompt.field_Pb[0] = uu.decodeTextBytes(var2, (byte) 60);
+                  AccountNamePrompt.field_Pb[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
             }
             void loadLeaderboardDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,1");
                 if (var2 != null) {
-                  AccountNamePrompt.field_Pb[1] = uu.decodeTextBytes(var2, (byte) -120);
+                  AccountNamePrompt.field_Pb[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,2");
                 if (null != var2) {
-                  AccountNamePrompt.field_Pb[2] = uu.decodeTextBytes(var2, (byte) 55);
+                  AccountNamePrompt.field_Pb[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 55);
                 }
                 var2 = NodeIterator.a(50, "rating_mode_name,0");
                 if (var2 != null) {
-                  DelayedPacket.field_s[0] = uu.decodeTextBytes(var2, (byte) -96);
+                  DelayedPacket.field_s[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rating_mode_name,1");
                 if (null != var2) {
-                  DelayedPacket.field_s[1] = uu.decodeTextBytes(var2, (byte) 61);
+                  DelayedPacket.field_s[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(50, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  ConsoleCommand.field_C[0] = uu.decodeTextBytes(var2, (byte) -114);
+                  ConsoleCommand.field_C[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "rating_mode_long_name,1");
                 if (null != var2) {
-                  ConsoleCommand.field_C[1] = uu.decodeTextBytes(var2, (byte) -108);
+                  ConsoleCommand.field_C[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fixed_size");
                 if (var2 != null) {
-                  AlternateKeyedLoginCredentials.field_j = uu.decodeTextBytes(var2, (byte) -118);
+                  AlternateKeyedLoginCredentials.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "graphics_config_resizable");
                 if (null != var2) {
-                  Unit.field_n = uu.decodeTextBytes(var2, (byte) 23);
+                  Unit.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 23);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fullscreen");
                 if (null != var2) {
-                  MembershipExpansionScreen.field_e = uu.decodeTextBytes(var2, (byte) 30);
+                  MembershipExpansionScreen.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 30);
                 }
                 var2 = NodeIterator.a(50, "graphics_config_done");
                 if (var2 != null) {
-                  VineGrowthAction.field_w = uu.decodeTextBytes(var2, (byte) 20);
+                  VineGrowthAction.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 20);
                 }
                 var2 = NodeIterator.a(param0 + 132, "graphics_config_apply");
                 if (null != var2) {
-                  NineSliceFrame.field_f = uu.decodeTextBytes(var2, (byte) -116);
+                  NineSliceFrame.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(param0 + 132, "graphics_config_title");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -98);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "graphics_config_instruction");
                 if (var2 != null) {
-                  GameEvent.field_l = uu.decodeTextBytes(var2, (byte) -93);
+                  GameEvent.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(param0 + 132, "graphics_config_need_memory");
                 if (null != var2) {
-                  ViewportManager.field_w = uu.decodeTextBytes(var2, (byte) -128);
+                  ViewportManager.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "pleasewait_dotdotdot");
                 if (var2 != null) {
-                  SpriteSliceAndBlendSupport.field_c = uu.decodeTextBytes(var2, (byte) -117);
+                  SpriteSliceAndBlendSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "serviceunavailable");
                 if (var2 != null) {
-                  SocketResourceClient.field_s = uu.decodeTextBytes(var2, (byte) 15);
+                  SocketResourceClient.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(50, "createtouse");
                 if (null != var2) {
-                  PasswordLoginCredentials.field_n = uu.decodeTextBytes(var2, (byte) 79);
+                  PasswordLoginCredentials.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
                 var2 = NodeIterator.a(50, "achievementsoffline");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 58);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(param0 + 132, "warning");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) -124);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  HighscoreAccountEntry.field_a = uu.decodeTextBytes(var2, (byte) -116);
+                  HighscoreAccountEntry.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "mustlogin1");
                 if (null != var2) {
-                  uu.decodeTextBytes(var2, (byte) -121);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,1");
                 if (null != var2) {
-                  GuestSavePrompts.field_d[1] = uu.decodeTextBytes(var2, (byte) 76);
+                  GuestSavePrompts.field_d[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin2,2");
                 if (null != var2) {
-                  GuestSavePrompts.field_d[2] = uu.decodeTextBytes(var2, (byte) -108);
+                  GuestSavePrompts.field_d[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,3");
                 if (var2 != null) {
-                  GuestSavePrompts.field_d[3] = uu.decodeTextBytes(var2, (byte) 96);
+                  GuestSavePrompts.field_d[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,4");
                 if (null != var2) {
-                  GuestSavePrompts.field_d[4] = uu.decodeTextBytes(var2, (byte) -123);
+                  GuestSavePrompts.field_d[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,5");
                 if (null != var2) {
-                  GuestSavePrompts.field_d[5] = uu.decodeTextBytes(var2, (byte) -127);
+                  GuestSavePrompts.field_d[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,6");
                 if (null != var2) {
-                  GuestSavePrompts.field_d[6] = uu.decodeTextBytes(var2, (byte) 100);
+                  GuestSavePrompts.field_d[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,7");
                 if (null != var2) {
-                  GuestSavePrompts.field_d[7] = uu.decodeTextBytes(var2, (byte) 37);
+                  GuestSavePrompts.field_d[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "mustlogin3,1");
                 if (null != var2) {
-                  DeployAction.field_y[1] = uu.decodeTextBytes(var2, (byte) -94);
+                  DeployAction.field_y[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "mustlogin3,2");
                 if (null != var2) {
-                  DeployAction.field_y[2] = uu.decodeTextBytes(var2, (byte) -95);
+                  DeployAction.field_y[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "mustlogin3,3");
                 if (null != var2) {
-                  DeployAction.field_y[3] = uu.decodeTextBytes(var2, (byte) -96);
+                  DeployAction.field_y[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mustlogin3,4");
                 if (var2 != null) {
-                  DeployAction.field_y[4] = uu.decodeTextBytes(var2, (byte) 94);
+                  DeployAction.field_y[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin3,5");
                 if (var2 != null) {
-                  DeployAction.field_y[5] = uu.decodeTextBytes(var2, (byte) -117);
+                  DeployAction.field_y[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "mustlogin3,6");
                 if (var2 != null) {
-                  DeployAction.field_y[6] = uu.decodeTextBytes(var2, (byte) -128);
+                  DeployAction.field_y[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "mustlogin3,7");
                 if (null != var2) {
-                  DeployAction.field_y[7] = uu.decodeTextBytes(var2, (byte) 54);
+                  DeployAction.field_y[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 54);
                 }
                 var2 = NodeIterator.a(50, "discard");
                 if (var2 != null) {
-                  ConsolePanel.field_r = uu.decodeTextBytes(var2, (byte) 103);
+                  ConsolePanel.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 103);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mustlogin4,1");
                 if (null != var2) {
-                  StateChangeMarker.field_s[1] = uu.decodeTextBytes(var2, (byte) 115);
+                  StateChangeMarker.field_s[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
                 var2 = NodeIterator.a(50, "mustlogin4,2");
                 if (null != var2) {
-                  StateChangeMarker.field_s[2] = uu.decodeTextBytes(var2, (byte) 100);
+                  StateChangeMarker.field_s[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin4,3");
                 if (null != var2) {
-                  StateChangeMarker.field_s[3] = uu.decodeTextBytes(var2, (byte) -110);
+                  StateChangeMarker.field_s[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "mustlogin4,4");
                 if (var2 != null) {
-                  StateChangeMarker.field_s[4] = uu.decodeTextBytes(var2, (byte) 26);
+                  StateChangeMarker.field_s[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
                 var2 = NodeIterator.a(50, "mustlogin4,5");
                 if (var2 != null) {
-                  StateChangeMarker.field_s[5] = uu.decodeTextBytes(var2, (byte) -113);
+                  StateChangeMarker.field_s[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "mustlogin4,6");
                 if (var2 != null) {
-                  StateChangeMarker.field_s[6] = uu.decodeTextBytes(var2, (byte) -104);
+                  StateChangeMarker.field_s[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "mustlogin4,7");
                 if (var2 != null) {
-                  StateChangeMarker.field_s[7] = uu.decodeTextBytes(var2, (byte) -113);
+                  StateChangeMarker.field_s[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_notloggedin");
                 if (null != var2) {
-                  ValidationStatusWidget.field_V = uu.decodeTextBytes(var2, (byte) -127);
+                  ValidationStatusWidget.field_V = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,1");
                 if (var2 != null) {
-                  EventPresenterFactory.field_b[1] = uu.decodeTextBytes(var2, (byte) 120);
+                  EventPresenterFactory.field_b[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  EventPresenterFactory.field_b[2] = uu.decodeTextBytes(var2, (byte) 69);
+                  EventPresenterFactory.field_b[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 69);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mustlogin_alternate,3");
                 if (null != var2) {
-                  EventPresenterFactory.field_b[3] = uu.decodeTextBytes(var2, (byte) 66);
+                  EventPresenterFactory.field_b[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 66);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  EventPresenterFactory.field_b[4] = uu.decodeTextBytes(var2, (byte) 13);
+                  EventPresenterFactory.field_b[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 13);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin_alternate,5");
                 if (null != var2) {
-                  EventPresenterFactory.field_b[5] = uu.decodeTextBytes(var2, (byte) -93);
+                  EventPresenterFactory.field_b[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,6");
                 if (null != var2) {
-                  EventPresenterFactory.field_b[6] = uu.decodeTextBytes(var2, (byte) -108);
+                  EventPresenterFactory.field_b[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,7");
                 if (null != var2) {
-                  EventPresenterFactory.field_b[7] = uu.decodeTextBytes(var2, (byte) 77);
+                  EventPresenterFactory.field_b[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 77);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  AnimationSequence.field_c[0] = uu.decodeTextBytes(var2, (byte) 13);
+                  AnimationSequence.field_c[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 13);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  AnimationSequence.field_c[1] = uu.decodeTextBytes(var2, (byte) -105);
+                  AnimationSequence.field_c[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  AnimationSequence.field_c[2] = uu.decodeTextBytes(var2, (byte) 6);
+                  AnimationSequence.field_c[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,3");
                 if (null != var2) {
-                  AnimationSequence.field_c[3] = uu.decodeTextBytes(var2, (byte) 127);
+                  AnimationSequence.field_c[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 127);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,4");
                 if (null != var2) {
-                  AnimationSequence.field_c[4] = uu.decodeTextBytes(var2, (byte) 45);
+                  AnimationSequence.field_c[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,5");
                 if (null != var2) {
-                  AnimationSequence.field_c[5] = uu.decodeTextBytes(var2, (byte) -122);
+                  AnimationSequence.field_c[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  AnimationSequence.field_c[6] = uu.decodeTextBytes(var2, (byte) 62);
+                  AnimationSequence.field_c[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 62);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  AnimationSequence.field_c[7] = uu.decodeTextBytes(var2, (byte) -127);
+                  AnimationSequence.field_c[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  AnimationSequence.field_c[8] = uu.decodeTextBytes(var2, (byte) 100);
+                  AnimationSequence.field_c[8] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,9");
                 if (var2 != null) {
-                  AnimationSequence.field_c[9] = uu.decodeTextBytes(var2, (byte) -114);
+                  AnimationSequence.field_c[9] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  AnimationSequence.field_c[10] = uu.decodeTextBytes(var2, (byte) -92);
+                  AnimationSequence.field_c[10] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,11");
                 if (var2 != null) {
-                  AnimationSequence.field_c[11] = uu.decodeTextBytes(var2, (byte) 118);
+                  AnimationSequence.field_c[11] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,12");
                 if (var2 != null) {
-                  AnimationSequence.field_c[12] = uu.decodeTextBytes(var2, (byte) 67);
+                  AnimationSequence.field_c[12] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 67);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "sentence_separator");
                 if (var2 != null) {
-                  uu.decodeTextBytes(var2, (byte) 27);
+                  LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 27);
                 }
                 PaginationTextSupport.field_e = null;
             }

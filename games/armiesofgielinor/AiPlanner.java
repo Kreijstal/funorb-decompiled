@@ -1632,7 +1632,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             ClientStateChecksumSupport.textChatActive = true;
             return true;
           }
-          return cd.a(param0, param1, false);
+          return GameUiOverlaySupport.handleQuickChatKey(param0, param1, false);
         }
         if (!MusicPatchPcmStream.e(-1)) {
           return false;

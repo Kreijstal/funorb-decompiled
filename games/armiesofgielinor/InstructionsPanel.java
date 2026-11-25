@@ -2360,7 +2360,7 @@ final class InstructionsPanel {
               EmailValidator.outgoingPacket.position = 0;
               EmailValidator.outgoingPacket.writeByte(1, 14);
               EmailValidator.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.getLoginKind((byte) -16).code);
-              hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
+              SessionIoSupport.flushSessionPacketsWithIntGuard(67, -1);
               SpectateRoomRequestSupport.connectionState = AccountNameCheckStatusSupport.field_d;
             }
             if (SpectateRoomRequestSupport.connectionState == AccountNameCheckStatusSupport.field_d &&

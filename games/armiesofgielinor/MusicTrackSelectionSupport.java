@@ -67,9 +67,9 @@ final class MusicTrackSelectionSupport {
           if (DropdownSelector.field_P != null) {
             EmailValidator.outgoingPacket.writeNullCircumfixedString(DropdownSelector.field_P, 413740432);
           }
-          IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
+          IconLabelControl.a(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
           EmailValidator.outgoingPacket.writeShortLengthPrefix(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
-          hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
+          SessionIoSupport.flushSessionPacketsWithIntGuard(29, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,8 +153,8 @@ final class MusicTrackSelectionSupport {
           CombatEvent.field_I.addChild(SocialListPanel.field_Qb, 55);
           var18 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var18.children = new NodeDeque();
-          vq.field_a = new ScrollContainer(0L, var18, param1, param9);
-          SocialListPanel.field_Qb.addChild(vq.field_a, 126);
+          SelectionMenuLayoutSupport.field_a = new ScrollContainer(0L, var18, param1, param9);
+          SocialListPanel.field_Qb.addChild(SelectionMenuLayoutSupport.field_a, 126);
           ArchiveLoadStep.field_f = new ClientUiComponent(0L, param6);
           SocialListPanel.field_Qb.addChild(ArchiveLoadStep.field_f, 110);
           UpkeepEvent.field_z = new ClientUiComponent(0L, param2);

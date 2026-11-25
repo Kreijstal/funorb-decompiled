@@ -60,7 +60,7 @@ final class UnitAnimationSelectionSupport {
         DequeWidgetContainer.j(-118);
         if (GrowableIntArray.b((byte) -88)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);
-          hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);
+          SessionIoSupport.flushSessionPacketsWithIntGuard(124, 0);
         }
         TextSplitSupport.closeSessionSocket((byte) -126);
         if (param0) {

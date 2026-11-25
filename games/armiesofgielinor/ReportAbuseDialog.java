@@ -660,7 +660,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        cd.a(108, param2, param1, 2);
+        GameUiOverlaySupport.drawSpellTrinketIcon(108, param2, param1, 2);
         if (param0) {
           RgbSprite[] var4 = (RgbSprite[]) null;
           ReportAbuseDialog.drawNineSlice((RgbSprite[]) null, -22, 63, (byte) 45, 53, 9);

@@ -85,7 +85,7 @@ final class CampaignLookupSupport {
         if (obfuscationGuard > -4) {
           heldKeys = (boolean[]) null;
         }
-        return cd.campaigns[campaignIndex];
+        return GameUiOverlaySupport.campaigns[campaignIndex];
     }
 
     final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {

@@ -51,9 +51,9 @@ class ClientUiNode extends DualLinkedNode {
         if (QuickChatCategory.field_D > 2) {
           QuickChatCategory.field_D = 2;
         }
-        cd.field_c = param0 & 3;
-        if (!(cd.field_c <= 2)) {
-          cd.field_c = 2;
+        GameUiOverlaySupport.field_c = param0 & 3;
+        if (!(GameUiOverlaySupport.field_c <= 2)) {
+          GameUiOverlaySupport.field_c = 2;
         }
     }
 

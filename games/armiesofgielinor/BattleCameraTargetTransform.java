@@ -68,7 +68,7 @@ final class BattleCameraTargetTransform {
           DisplacedUnitMarker.field_t[22] = ClientNetworkBootstrap.field_d;
           DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
           DisplacedUnitMarker.field_t[28] = NetworkGameShell.field_s;
-          DisplacedUnitMarker.field_t[19] = s.field_b;
+          DisplacedUnitMarker.field_t[19] = LobbyNotificationSupport.field_b;
           DisplacedUnitMarker.field_t[21] = ConsolePanel.field_r;
           DisplacedUnitMarker.field_t[26] = AlphaDecodedSpriteSupport.field_l;
           DisplacedUnitMarker.field_t[46] = UnitModelViewer.field_d;
@@ -254,7 +254,7 @@ final class BattleCameraTargetTransform {
             MarkerSliderWidget.field_N.height = 0;
             var6 = MarkerSliderWidget.field_N;
             var6.width = 0;
-            AccountRegistrationForm.field_F.text = uu.field_a.toUpperCase();
+            AccountRegistrationForm.field_F.text = LobbyRoomControlSupport.field_a.toUpperCase();
             var7 = (2 + PasswordLengthSupport.field_c.width) / 2;
             MarkerSliderWidget.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + PasswordLengthSupport.field_c.height, 0);
             FixedSquareRootSupport.field_d.setBounds(40, param0 ^ -20499, -var7 + PasswordLengthSupport.field_c.width, -40 + PasswordLengthSupport.field_c.height, var7);

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hb {
+final class SessionIoSupport {
     static String field_b;
     static String field_a;
 
@@ -15,7 +15,7 @@ final class hb {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11, boolean param12, int param13) {
+    final static void updateSharedUiInput(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11, boolean param12, int param13) {
         DialogMessagePane.field_I = null;
         ChannelBaseVolumeConsoleCommand.e((byte) -128);
         param11 = FixedQuaternion.a(param11, param9, param6, param2, param7, param13, (byte) -83);
@@ -30,7 +30,7 @@ final class hb {
         UiSelectionState.a(param13, param4, 0, param11);
     }
 
-    final static void a(byte param0, int param1) {
+    final static void flushSessionPackets(byte param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
@@ -80,7 +80,7 @@ final class hb {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+    final static void flushSessionPacketsWithIntGuard(int param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;

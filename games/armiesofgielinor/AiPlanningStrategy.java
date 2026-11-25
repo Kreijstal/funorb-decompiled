@@ -489,7 +489,7 @@ abstract class AiPlanningStrategy {
           }
           if (null == ActionSpell.viewportManager &&
             CalendarSupport.field_e) {
-            vq.a(var2_int, param0, (byte) 13);
+            SelectionMenuLayoutSupport.configureStatusSelectionMenu(var2_int, param0, (byte) 13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -620,11 +620,11 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
               }
             }
             var1_int = -99 % ((param0 + 48) / 58);
-            if (null != mu.field_b) {
-              for (var2 = 0; var2 < mu.field_b.length; var2++) {
-                if (null != mu.field_b[var2]) {
+            if (null != QuickChatSetupSupport.field_b) {
+              for (var2 = 0; var2 < QuickChatSetupSupport.field_b.length; var2++) {
+                if (null != QuickChatSetupSupport.field_b[var2]) {
                   try {
-                    mu.field_b[var2].close((byte) 81);
+                    QuickChatSetupSupport.field_b[var2].close((byte) 81);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var3 = (IOException) (Object) decompiledCaughtException;

@@ -3388,7 +3388,7 @@ final class TutorialController {
               }
               if (19 == this.tutorialStage &&
                 -1 < itemIndex) {
-                var3_int = var3_int + (NineSliceFrame.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1);
+                var3_int = var3_int + (NineSliceFrame.field_e.getParagraphHeight(QuickChatSetupSupport.field_e, 500, 0) >> 1);
               }
               if (this.tutorialStage != 0) {
                 stackIn_85_0 = var3_int + itemIndex * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -29);
@@ -4582,7 +4582,7 @@ final class TutorialController {
         int var2_intLifetime1;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (cd.c(9501)) {
+          if (GameUiOverlaySupport.hasOpenGameDialog(9501)) {
             return;
           }
           if (this.tutorialStage == 15) {
@@ -4606,7 +4606,7 @@ final class TutorialController {
           var2_intLifetime1 = 69 / ((param0 + 36) / 37);
           if (!SpellCastAction.field_t &&
             !ScrollContainer.field_Qb &&
-            null == mu.field_a) {
+            null == QuickChatSetupSupport.field_a) {
             while (true) {
               if (Unit.pollKeyEvent((byte) 102)) {
                 if (ValidationState.debugConsoleHandlesKey(121) &&
@@ -5710,9 +5710,9 @@ final class TutorialController {
           }
           if (decompiledFrameRemainder0) {
             var2_intLifetime2 = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -124);
-            var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (NineSliceFrame.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1));
+            var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (NineSliceFrame.field_e.getParagraphHeight(QuickChatSetupSupport.field_e, 500, 0) >> 1));
             GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
-            stackIn_189_0 = mu.field_e;
+            stackIn_189_0 = QuickChatSetupSupport.field_e;
             stackIn_190_2 = !(param0);
             GradientUiRenderer.drawWrappedCenteredSolidText(stackIn_189_0, this.getItemLeftX(stackIn_190_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
             stackIn_193_0 = LoginCredentialStagingSupport.field_b[this.tutorialStage];

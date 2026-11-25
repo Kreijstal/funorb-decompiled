@@ -114,10 +114,10 @@ final class SpellCastEvent extends GameEvent {
         RuntimeException var2_ref = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (PreferencesWriteRequest) (s.field_e.first((byte) 108));
+          var4 = (PreferencesWriteRequest) (LobbyNotificationSupport.field_e.first((byte) 108));
           while (var4 != null) {
             DeathEvent.sendPreferencesWrite(var4, param0, 25522);
-            var4 = (PreferencesWriteRequest) (s.field_e.next((byte) 123));
+            var4 = (PreferencesWriteRequest) (LobbyNotificationSupport.field_e.next((byte) 123));
           }
           if (param1 != -32666) {
             field_D = (ClientUiComponent) null;

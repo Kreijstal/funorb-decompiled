@@ -107,7 +107,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         this.backButton.listener = (WidgetListener) (this);
         this.registerButton.listener = (WidgetListener) (this);
         this.guestPlayButton.listener = (WidgetListener) (this);
-        this.registerButton.tooltipText = hb.field_b;
+        this.registerButton.tooltipText = SessionIoSupport.field_b;
         this.guestPlayButton.tooltipText = CombatSandbox.field_e;
         this.addChild((byte) 10, (Widget) (this.backButton));
         this.addChild((byte) 10, (Widget) (this.registerButton));

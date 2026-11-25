@@ -714,12 +714,12 @@ final class GameplayController {
           }
           GradientUiRenderer.drawHollowGradientFrame(param0, param8, param7, param2, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           if (param4) {
-            vq.field_b.drawScaled(param0 + param9, param8 + param1, param5, param6);
+            SelectionMenuLayoutSupport.field_b.drawScaled(param0 + param9, param8 + param1, param5, param6);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
           }
-          vq.field_b.drawOpaque(param9 + param0, param8 + param1);
+          SelectionMenuLayoutSupport.field_b.drawOpaque(param9 + param0, param8 + param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1210,9 +1210,9 @@ final class GameplayController {
           var5 = 133;
           var6 = 25;
           var7 = 0;
-          var8 = vq.field_b.canvasWidth;
+          var8 = SelectionMenuLayoutSupport.field_b.canvasWidth;
           var7Lifetime1 = 1;
-          var9 = var6 + vq.field_b.canvasHeight;
+          var9 = var6 + SelectionMenuLayoutSupport.field_b.canvasHeight;
           this.a(4, 2, var5, (byte) 89, var7Lifetime1 != 0, var8, var9, 99, var4, 3);
           this.a(param0 - 111, 90, 9, this.o(125) - 133, 24, var6);
           this.a(30, var3 != 0, var6, 16, (byte) -126, 63, var2_int);
@@ -2228,7 +2228,7 @@ final class GameplayController {
           if (this.battlefield.field_X) {
             this.field_j = 0;
           }
-          if (mu.field_a == null &&
+          if (QuickChatSetupSupport.field_a == null &&
             0 >= this.field_j &&
             this.field_Sb <= 0) {
             this.trackCampaignMetrics(param0);
@@ -2270,7 +2270,7 @@ final class GameplayController {
                 if (null != QuickChatCategoryMenuSupport.activeCampaignMission) {
                   stackIn_60_0 = AccountNameFoldingSupport.field_d;
                 } else {
-                  stackIn_60_0 = vq.field_f;
+                  stackIn_60_0 = SelectionMenuLayoutSupport.field_f;
                 }
                 var8_ref_String = stackIn_60_0;
               }
@@ -3669,7 +3669,7 @@ final class GameplayController {
               (decompiledFrameRemainder3 = (this.field_V))) {
               this.field_V = false;
               this.field_j = 0;
-              mu.field_a = new ScreenWipeTransition();
+              QuickChatSetupSupport.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               return;
             }
@@ -3695,7 +3695,7 @@ final class GameplayController {
                   if (var10 != 0) {
                     this.field_Sb = this.field_Sb - 1;
                     if (this.field_Sb == 0) {
-                      mu.field_a = new ScreenWipeTransition();
+                      QuickChatSetupSupport.field_a = new ScreenWipeTransition();
                       ValidatedTextWidget.field_Z = false;
                       GameClock.field_j = 0;
                     }
@@ -3705,7 +3705,7 @@ final class GameplayController {
             } else {
               this.field_Sb = this.field_Sb - 1;
               if (this.field_Sb == 0) {
-                mu.field_a = new ScreenWipeTransition();
+                QuickChatSetupSupport.field_a = new ScreenWipeTransition();
                 ValidatedTextWidget.field_Z = false;
                 GameClock.field_j = 0;
               }
@@ -3949,7 +3949,7 @@ final class GameplayController {
               this.field_Sb = this.field_Sb - 1;
               if (this.field_Sb == 0 &&
                 null == this.battlefield.campaignMission) {
-                mu.field_a = new ScreenWipeTransition();
+                QuickChatSetupSupport.field_a = new ScreenWipeTransition();
                 GameClock.field_j = 0;
               }
             }
@@ -4024,13 +4024,13 @@ final class GameplayController {
           if (this.field_lb) {
             MarkerSliderPainter.field_k = CalendarSupport.field_d;
             if (!ValidatedTextWidget.field_Z) {
-              boolean decompiledSharedTail0 = !(s.field_d > 1);
+              boolean decompiledSharedTail0 = !(LobbyNotificationSupport.field_d > 1);
               if (!decompiledSharedTail0) {
-                MarkerSliderPainter.field_k = EmailCheckResult.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(s.field_d)});
+                MarkerSliderPainter.field_k = EmailCheckResult.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(LobbyNotificationSupport.field_d)});
                 decompiledSharedTail0 = (var10 != 0);
               }
               if (decompiledSharedTail0) {
-                if (1 == s.field_d) {
+                if (1 == LobbyNotificationSupport.field_d) {
                   MarkerSliderPainter.field_k = CacheEntry.field_y;
                   if (var10 != 0) {
                     MarkerSliderPainter.field_k = StandardContentDialog.field_pb;
@@ -5034,7 +5034,7 @@ final class GameplayController {
             decompiledSharedTail0 = (var5 != 0);
           }
           if (decompiledSharedTail0) {
-            if (2 == mu.field_f &&
+            if (2 == QuickChatSetupSupport.field_f &&
               this.aiPlanners[this.selectedUnit.ownerPlayer] != null) {
               var4_ref = this.aiPlanners[this.selectedUnit.ownerPlayer];
               var4_ref.reevaluateUnitActions(this.selectedUnit, (byte) -55);
@@ -5163,12 +5163,12 @@ final class GameplayController {
         try {
           if (this.aiPlanners.length >= ActionSpell.field_j &&
             this.aiPlanners[ActionSpell.field_j] != null) {
-            this.aiPlanners[ActionSpell.field_j].a(mu.field_f, BattleGraphicsAssets.field_c, (byte) 18, param1);
+            this.aiPlanners[ActionSpell.field_j].a(QuickChatSetupSupport.field_f, BattleGraphicsAssets.field_c, (byte) 18, param1);
             if (param0 != 0) {
               discarded$0 = this.a((EventPresenter) null, false);
             }
             var3 = "ai " + (ActionSpell.field_j + 1) + " ";
-            var4 = mu.field_f;
+            var4 = QuickChatSetupSupport.field_f;
             switch ((var5 == 0
               || var4 == 1
               || var4 == 2
@@ -5255,7 +5255,7 @@ final class GameplayController {
             return;
           }
           if (PowerOfTwoSupport.keyCode == 13 &&
-            mu.field_a == null) {
+            QuickChatSetupSupport.field_a == null) {
             var2_int = 1;
             if (this.campaignMode) {
               var2_int = 24;
@@ -5465,10 +5465,10 @@ final class GameplayController {
               if (CampaignLookupSupport.heldKeys[81]) {
                 BattleGraphicsAssets.field_c = (BattleGraphicsAssets.field_c + 1) % 9;
                 if (var8 != 0) {
-                  mu.field_f = (mu.field_f + 1) % 5;
+                  QuickChatSetupSupport.field_f = (QuickChatSetupSupport.field_f + 1) % 5;
                 }
               } else {
-                mu.field_f = (mu.field_f + 1) % 5;
+                QuickChatSetupSupport.field_f = (QuickChatSetupSupport.field_f + 1) % 5;
               }
               this.c(0, false);
             }
@@ -7530,7 +7530,7 @@ final class GameplayController {
                 if (null != QuickChatCategoryMenuSupport.activeCampaignMission) {
                   stackIn_25_0 = AccountNameFoldingSupport.field_d;
                 } else {
-                  stackIn_25_0 = vq.field_f;
+                  stackIn_25_0 = SelectionMenuLayoutSupport.field_f;
                 }
                 var4_ref_String = stackIn_25_0;
               }
@@ -7538,7 +7538,7 @@ final class GameplayController {
               var6 = 0;
               var7 = 0;
               if (this.field_lb) {
-                if (s.field_d > 0 &&
+                if (LobbyNotificationSupport.field_d > 0 &&
                   NanoGameClock.field_n % 40 < 20) {
                   stackIn_36_0 = 1;
                 } else {
@@ -7583,7 +7583,7 @@ final class GameplayController {
             if (~this.field_C < param0 &&
               this.field_Zb > -1 &&
               param1) {
-              uu.a(this.field_Zb, -103, this.field_C);
+              LobbyRoomControlSupport.drawBattleGridHighlight(this.field_Zb, -103, this.field_C);
             }
             if (!this.battlefield.field_Cb) {
               this.p(20);
@@ -7670,7 +7670,7 @@ final class GameplayController {
               }
             }
             if (this.field_lb) {
-              if (s.field_d > 0 &&
+              if (LobbyNotificationSupport.field_d > 0 &&
                 NanoGameClock.field_n % 40 < 20) {
                 stackIn_136_0 = 1;
               } else {
@@ -8133,7 +8133,7 @@ final class GameplayController {
               this.a(false, 58, (Unit) null);
             }
           }
-          if (null != mu.field_a) {
+          if (null != QuickChatSetupSupport.field_a) {
             return;
           }
           var7_ref_fi = (UnitInfoPopup) (this.field_o.first((byte) 97));
@@ -8171,7 +8171,7 @@ final class GameplayController {
             if (this.field_V) {
               this.field_j = 0;
               this.field_V = false;
-              mu.field_a = new ScreenWipeTransition();
+              QuickChatSetupSupport.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               return;
             }
@@ -8216,7 +8216,7 @@ final class GameplayController {
               stackIn_251_0 = !(ValidatedTextWidget.field_Z);
               ValidatedTextWidget.field_Z = stackIn_251_0;
               if (ValidatedTextWidget.field_Z) {
-                s.field_d = 0;
+                LobbyNotificationSupport.field_d = 0;
               }
               return;
             }
@@ -9025,7 +9025,7 @@ final class GameplayController {
             this.field_lc = false;
             if (!this.field_z) {
               this.field_V = true;
-              mu.field_a = new ScreenWipeTransition();
+              QuickChatSetupSupport.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
               var3 = this.battlefield.currentPlayer;
               if (var3 > -1) {
@@ -9054,8 +9054,8 @@ final class GameplayController {
           }
           GiveTileConsoleCommand.field_G = false;
           IntroSequence.field_f = false;
-          et.field_d = false;
-          uu.field_b = false;
+          LogoFaceSortSupport.field_d = false;
+          LobbyRoomControlSupport.field_b = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11063,7 +11063,7 @@ final class GameplayController {
                   } else {
                     this.e((byte) 77);
                     this.field_V = true;
-                    mu.field_a = new ScreenWipeTransition();
+                    QuickChatSetupSupport.field_a = new ScreenWipeTransition();
                     GameClock.field_j = 0;
                     this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
                   }
@@ -11508,7 +11508,7 @@ final class GameplayController {
           var7 = 1.401298464324817e-45f;
           var8 = 3.4028234663852886e+38f;
           if (PrivateTextRecipientSupport.field_b != null &&
-            mu.field_f != 0) {
+            QuickChatSetupSupport.field_f != 0) {
             var9 = 0;
             while (!(var9 >= PrivateTextRecipientSupport.field_b.length)) {
               var10_float = PrivateTextRecipientSupport.field_b[var9];
@@ -11538,7 +11538,7 @@ final class GameplayController {
                 var10 = stackIn_111_0;
                 while (var10 < this.battlefield.mapWidth) {
                   var11 = UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].terrainPreviewColours[this.battlefield.tiles[var2_int].terrainType];
-                  var13 = mu.field_f;
+                  var13 = QuickChatSetupSupport.field_f;
                   stackIn_75_0 = var13;
                   if (stackIn_75_0 == 0) {
                     if (!(this.battlefield.tiles[var2_int].ownerPlayer <= -1)) {

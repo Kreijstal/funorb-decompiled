@@ -188,7 +188,7 @@ final class DiskCacheWorker implements Runnable {
               var7 = TextWidthSupport.measureTextWidth(SpriteScrollBar.field_h[var4], true, false);
               var5 = var5 + QuickChatPhrase.field_w;
               var8 = LoginAndTutorialSetupSupport.field_g - (var7 >> 1);
-              if (mu.a(param2, AchievementNotification.field_k + (FullscreenFocusCanvas.field_b << 1), param1, -LoginForm.field_E + var8, 5138823, (LoginForm.field_E << 1) + var7, var5)) {
+              if (QuickChatSetupSupport.containsPointInRectangle(param2, AchievementNotification.field_k + (FullscreenFocusCanvas.field_b << 1), param1, -LoginForm.field_E + var8, 5138823, (LoginForm.field_E << 1) + var7, var5)) {
                 stackIn_6_0 = var6;
                 return stackIn_6_0;
               }

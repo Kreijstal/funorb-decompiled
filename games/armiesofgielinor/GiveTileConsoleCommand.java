@@ -47,7 +47,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static boolean a(CharSequence param0, byte param1, boolean param2) {
+    final static boolean isValidAccountName(CharSequence param0, byte param1, boolean param2) {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -115,7 +115,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         stackIn_12_8 = true;
         stackIn_12_9 = 11;
         stackIn_14_10 = (ViewportManager.field_c) || (ModalDialogHost.field_H);
-        hb.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_9_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9, stackIn_14_10, param1, var2 != 0, 0);
+        SessionIoSupport.updateSharedUiInput(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_9_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9, stackIn_14_10, param1, var2 != 0, 0);
         if (EventPresenterFactory.field_h) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 64);
           EventPresenterFactory.field_h = false;

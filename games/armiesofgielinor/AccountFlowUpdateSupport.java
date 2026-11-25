@@ -15,7 +15,7 @@ final class AccountFlowUpdateSupport {
     }
 
     final static void advanceAccountFlow(int param0, byte param1) {
-        et.pollAccountFlowAction(-3);
+        LogoFaceSortSupport.pollAccountFlowAction(-3);
         int var2 = -1 % ((param1 - 16) / 39);
     }
 

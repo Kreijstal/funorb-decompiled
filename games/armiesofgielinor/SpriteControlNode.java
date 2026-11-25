@@ -12,7 +12,7 @@ abstract class SpriteControlNode extends IntrusiveNode {
           return BestScoreStrategy.field_i.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
         }
         if (BattleTutorial.quickChatMenuVisible) {
-          return cd.a(param2, param0, false);
+          return GameUiOverlaySupport.handleQuickChatKey(param2, param0, false);
         }
         if (QuickChatShortcutSupport.handleQuickChatShortcuts(param0, 6150, param2)) {
           return true;

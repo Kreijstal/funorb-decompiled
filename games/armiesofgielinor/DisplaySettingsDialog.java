@@ -452,7 +452,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         int var2Lifetime2;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          mu.field_a = null;
+          QuickChatSetupSupport.field_a = null;
           GameClock.field_j = 0;
           if (QuickChatMenuDisplaySupport.field_j) {
             FullscreenFocusCanvas.gameplayController = null;

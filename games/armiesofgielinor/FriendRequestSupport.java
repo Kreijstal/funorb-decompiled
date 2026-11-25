@@ -65,7 +65,7 @@ final class FriendRequestSupport {
           }
           var6 = (TerrainScatterSupport) (StateChangeMarker.field_t.first((byte) 112));
           while (var6 != null) {
-            s.a(127, param0, var6);
+            LobbyNotificationSupport.sendIntArrayRequest(127, param0, var6);
             var6 = (TerrainScatterSupport) (StateChangeMarker.field_t.next((byte) 123));
           }
           return;

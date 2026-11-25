@@ -42,7 +42,7 @@ final class ContextActionMenu extends ClientUiComponent {
     }
 
     final static void a(boolean param0, byte param1) {
-        if (!cd.c(9501)) {
+        if (!GameUiOverlaySupport.hasOpenGameDialog(9501)) {
           return;
         }
         if (param0) {

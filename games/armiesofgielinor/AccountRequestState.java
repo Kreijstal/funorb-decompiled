@@ -113,7 +113,7 @@ final class AccountRequestState {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        vq.field_a.content.children.clear(108);
+        SelectionMenuLayoutSupport.field_a.content.children.clear(108);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -132,7 +132,7 @@ final class AccountRequestState {
             if (null == var8_ref_mo.rowComponent ||
               MoveEvent.field_J) {
               if (null == var8_ref_mo.rowComponent) {
-                s.field_d = s.field_d + 1;
+                LobbyNotificationSupport.field_d = LobbyNotificationSupport.field_d + 1;
               }
               var10 = LoginCredentials.formatChatPrefix(var8_ref_mo, (byte) 103);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_mo.text);
@@ -157,7 +157,7 @@ final class AccountRequestState {
         while (BitmapTextWidgetPainter.chatHistorySize > var8) {
           var9_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var8];
           if (null != var9_ref_mo.rowComponent) {
-            vq.field_a.content.addChild(var9_ref_mo.rowComponent, 65);
+            SelectionMenuLayoutSupport.field_a.content.addChild(var9_ref_mo.rowComponent, 65);
             var9_ref_mo.rowComponent.setBounds(param0, -20500, var9_ref_mo.rowComponent.getPreferredWidth(-49), var7Lifetime1, param1);
             if (0 != var9_ref_mo.rowComponent.pressedButton) {
               var4_ref = var9_ref_mo;
@@ -166,77 +166,77 @@ final class AccountRequestState {
           }
           var8++;
         }
-        var8Lifetime1 = -var7Lifetime1 + (var6 + (vq.field_a.content.height + vq.field_a.content.pendingHeightDelta));
-        vq.field_a.content.height = vq.field_a.content.height - var8Lifetime1;
-        vq.field_a.content.y = vq.field_a.content.y + var8Lifetime1;
+        var8Lifetime1 = -var7Lifetime1 + (var6 + (SelectionMenuLayoutSupport.field_a.content.height + SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta));
+        SelectionMenuLayoutSupport.field_a.content.height = SelectionMenuLayoutSupport.field_a.content.height - var8Lifetime1;
+        SelectionMenuLayoutSupport.field_a.content.y = SelectionMenuLayoutSupport.field_a.content.y + var8Lifetime1;
         if (MoveEvent.field_J) {
-          vq.field_a.content.height = var7Lifetime1;
-          vq.field_a.content.pendingHeightDelta = -vq.field_a.content.height + var7Lifetime1;
+          SelectionMenuLayoutSupport.field_a.content.height = var7Lifetime1;
+          SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta = -SelectionMenuLayoutSupport.field_a.content.height + var7Lifetime1;
           if (MoveEvent.field_J) {
-            vq.field_a.content.y = vq.field_a.viewport.height - vq.field_a.content.height;
-            vq.field_a.content.pendingYDelta = 0;
+            SelectionMenuLayoutSupport.field_a.content.y = SelectionMenuLayoutSupport.field_a.viewport.height - SelectionMenuLayoutSupport.field_a.content.height;
+            SelectionMenuLayoutSupport.field_a.content.pendingYDelta = 0;
             MoveEvent.field_J = false;
             BitLengthSupport.field_c = true;
           }
           if (ClientStateChecksumSupport.textChatActive) {
             if (null == UnitCycler.field_g) {
-              var9Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
+              var9Lifetime1 = -SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta - (SelectionMenuLayoutSupport.field_a.content.height - SelectionMenuLayoutSupport.field_a.viewport.height);
               if (BitLengthSupport.field_c) {
-                vq.field_a.content.pendingYDelta = var9Lifetime1 - vq.field_a.content.y;
+                SelectionMenuLayoutSupport.field_a.content.pendingYDelta = var9Lifetime1 - SelectionMenuLayoutSupport.field_a.content.y;
               }
-              vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-              stackIn_45_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1);
+              SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+              stackIn_45_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime1);
               BitLengthSupport.field_c = stackIn_45_0;
               return (ChatMessage) (var4);
             }
             BitLengthSupport.field_c = true;
           }
-          var9Lifetime1Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
+          var9Lifetime1Lifetime1 = -SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta - (SelectionMenuLayoutSupport.field_a.content.height - SelectionMenuLayoutSupport.field_a.viewport.height);
           if (!BitLengthSupport.field_c) {
-            vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-            stackIn_51_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1Lifetime1);
+            SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+            stackIn_51_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime1Lifetime1);
             BitLengthSupport.field_c = stackIn_51_0;
           } else {
-            vq.field_a.content.pendingYDelta = var9Lifetime1Lifetime1 - vq.field_a.content.y;
-            vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-            stackIn_55_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1Lifetime1);
+            SelectionMenuLayoutSupport.field_a.content.pendingYDelta = var9Lifetime1Lifetime1 - SelectionMenuLayoutSupport.field_a.content.y;
+            SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+            stackIn_55_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime1Lifetime1);
             BitLengthSupport.field_c = stackIn_55_0;
           }
           return (ChatMessage) (var4);
         }
-        vq.field_a.content.pendingHeightDelta = -vq.field_a.content.height + var7Lifetime1;
+        SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta = -SelectionMenuLayoutSupport.field_a.content.height + var7Lifetime1;
         if (MoveEvent.field_J) {
-          vq.field_a.content.y = vq.field_a.viewport.height - vq.field_a.content.height;
-          vq.field_a.content.pendingYDelta = 0;
+          SelectionMenuLayoutSupport.field_a.content.y = SelectionMenuLayoutSupport.field_a.viewport.height - SelectionMenuLayoutSupport.field_a.content.height;
+          SelectionMenuLayoutSupport.field_a.content.pendingYDelta = 0;
           MoveEvent.field_J = false;
           BitLengthSupport.field_c = true;
         }
         if (ClientStateChecksumSupport.textChatActive) {
           if (null == UnitCycler.field_g) {
-            var9Lifetime2 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
+            var9Lifetime2 = -SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta - (SelectionMenuLayoutSupport.field_a.content.height - SelectionMenuLayoutSupport.field_a.viewport.height);
             if (!BitLengthSupport.field_c) {
-              vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-              stackIn_66_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime2);
+              SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+              stackIn_66_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime2);
               BitLengthSupport.field_c = stackIn_66_0;
             } else {
-              vq.field_a.content.pendingYDelta = var9Lifetime2 - vq.field_a.content.y;
-              vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-              stackIn_70_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime2);
+              SelectionMenuLayoutSupport.field_a.content.pendingYDelta = var9Lifetime2 - SelectionMenuLayoutSupport.field_a.content.y;
+              SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+              stackIn_70_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime2);
               BitLengthSupport.field_c = stackIn_70_0;
             }
             return (ChatMessage) (var4);
           }
           BitLengthSupport.field_c = true;
         }
-        var9Lifetime3 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
+        var9Lifetime3 = -SelectionMenuLayoutSupport.field_a.content.pendingHeightDelta - (SelectionMenuLayoutSupport.field_a.content.height - SelectionMenuLayoutSupport.field_a.viewport.height);
         if (!BitLengthSupport.field_c) {
-          vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-          stackIn_77_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime3);
+          SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+          stackIn_77_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime3);
           BitLengthSupport.field_c = stackIn_77_0;
         } else {
-          vq.field_a.content.pendingYDelta = var9Lifetime3 - vq.field_a.content.y;
-          vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
-          stackIn_81_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime3);
+          SelectionMenuLayoutSupport.field_a.content.pendingYDelta = var9Lifetime3 - SelectionMenuLayoutSupport.field_a.content.y;
+          SelectionMenuLayoutSupport.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+          stackIn_81_0 = (SelectionMenuLayoutSupport.field_a.content.pendingYDelta + SelectionMenuLayoutSupport.field_a.content.y == var9Lifetime3);
           BitLengthSupport.field_c = stackIn_81_0;
         }
         return (ChatMessage) (var4);

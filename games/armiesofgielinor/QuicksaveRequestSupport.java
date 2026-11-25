@@ -17,7 +17,7 @@ final class QuicksaveRequestSupport {
             BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
           }
           if (0 < InstructionsPanel.field_D) {
-            uu.a(param0, param9, param5, param7 + 1, param8);
+            LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
           }
           if (ChannelGainProfile.field_f &&
             ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
@@ -44,7 +44,7 @@ final class QuicksaveRequestSupport {
                 BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
               }
               if (0 < InstructionsPanel.field_D) {
-                uu.a(param0, param9, param5, param7 + 1, param8);
+                LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
@@ -68,7 +68,7 @@ final class QuicksaveRequestSupport {
                 BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
               }
               if (0 < InstructionsPanel.field_D) {
-                uu.a(param0, param9, param5, param7 + 1, param8);
+                LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
@@ -105,7 +105,7 @@ final class QuicksaveRequestSupport {
                 BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
               }
               if (0 < InstructionsPanel.field_D) {
-                uu.a(param0, param9, param5, param7 + 1, param8);
+                LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
@@ -140,7 +140,7 @@ final class QuicksaveRequestSupport {
               BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
             }
             if (0 < InstructionsPanel.field_D) {
-              uu.a(param0, param9, param5, param7 + 1, param8);
+              LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
             }
             if (ChannelGainProfile.field_f &&
               ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
@@ -163,7 +163,7 @@ final class QuicksaveRequestSupport {
                 BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
               }
               if (0 < InstructionsPanel.field_D) {
-                uu.a(param0, param9, param5, param7 + 1, param8);
+                LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
@@ -182,7 +182,7 @@ final class QuicksaveRequestSupport {
                 BattleCameraTargetTransform.updateLobbyControls(1, param9, param0, param5);
               }
               if (0 < InstructionsPanel.field_D) {
-                uu.a(param0, param9, param5, param7 + 1, param8);
+                LobbyRoomControlSupport.updateLobbyRoomControls(param0, param9, param5, param7 + 1, param8);
               }
               if (!ChannelGainProfile.field_f) {
                 IconTextComponent.field_Kb.inputEnabled = true;

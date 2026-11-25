@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mu {
+final class QuickChatSetupSupport {
     static ScreenWipeTransition field_a;
     static java.math.BigInteger field_c;
     static IndexedSprite[][] field_g;
@@ -10,7 +10,7 @@ final class mu {
     static int field_f;
     static BufferedFile[] field_b;
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPointInRectangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 != 5138823) {
           return true;
         }
@@ -29,7 +29,7 @@ final class mu {
         return false;
     }
 
-    final static void a(BitmapFont param0, int param1, ResourceArchive param2) {
+    final static void initializeQuickChatResources(BitmapFont param0, int param1, ResourceArchive param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -74,8 +74,8 @@ final class mu {
           var5 = SoftwareRaster.width;
           var6 = SoftwareRaster.height;
           var16 = SoftwareRaster.pixels;
-          s.quickChatArrow = new RgbSprite(10, 14);
-          s.quickChatArrow.bindAsRasterTarget();
+          LobbyNotificationSupport.quickChatArrow = new RgbSprite(10, 14);
+          LobbyNotificationSupport.quickChatArrow.bindAsRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRaster.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
@@ -118,7 +118,7 @@ final class mu {
         field_e = null;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiDigit(int param0, char param1) {
         if (param0 != 28799) {
           return false;
         }

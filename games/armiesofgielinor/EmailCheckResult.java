@@ -63,7 +63,7 @@ final class EmailCheckResult {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (mu.a(28799, param1.charAt(var5))) {
+                if (QuickChatSetupSupport.isAsciiDigit(28799, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -99,7 +99,7 @@ final class EmailCheckResult {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (mu.a(param0 ^ 25279, param1.charAt(var5Lifetime1))) {
+              if (QuickChatSetupSupport.isAsciiDigit(param0 ^ 25279, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

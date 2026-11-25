@@ -22,7 +22,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException caughtFailure = null;
         try {
           candidateName = (CharSequence) ((Object) text);
-          if (!vq.a(candidateName, true)) {
+          if (!SelectionMenuLayoutSupport.isValidAccountName(candidateName, true)) {
             invalidSyntaxState = ProceduralMapSupport.validationInvalid;
             return invalidSyntaxState;
           }

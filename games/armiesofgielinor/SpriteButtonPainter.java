@@ -64,7 +64,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
           campaign.localPlayerName = localPlayerName;
           campaign.localGodId = localGodId;
           campaign.initialUnitTypes = initialUnitTypes;
-          cd.campaigns[campaignIndex] = campaign;
+          GameUiOverlaySupport.campaigns[campaignIndex] = campaign;
           participantCount = packet.readUnsignedByte(obfuscationGuard - 23948);
           campaign.participants = new CampaignParticipant[participantCount];
           for (participantIndexThenOverrideCount = 0; participantCount > participantIndexThenOverrideCount; participantIndexThenOverrideCount++) {

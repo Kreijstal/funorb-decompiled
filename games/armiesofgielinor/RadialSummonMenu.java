@@ -132,8 +132,8 @@ final class RadialSummonMenu {
         if (obfuscationGuard < 19) {
           return (String) null;
         }
-        for (missionIndex = 0; missionIndex < cd.campaigns[campaignIndex].missions.length; missionIndex++) {
-          missionList = missionList + missionIndex + ": " + cd.campaigns[campaignIndex].missions[missionIndex].name + "\n";
+        for (missionIndex = 0; missionIndex < GameUiOverlaySupport.campaigns[campaignIndex].missions.length; missionIndex++) {
+          missionList = missionList + missionIndex + ": " + GameUiOverlaySupport.campaigns[campaignIndex].missions[missionIndex].name + "\n";
         }
         return missionList;
     }

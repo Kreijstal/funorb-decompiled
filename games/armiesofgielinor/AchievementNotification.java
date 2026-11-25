@@ -543,7 +543,7 @@ final class AchievementNotification extends IntrusiveNode {
             }
             if (var12.ratedIcon.heldButtonMatches) {
               if (var12.rated) {
-                stackIn_156_0 = uu.field_a;
+                stackIn_156_0 = LobbyRoomControlSupport.field_a;
               } else {
                 stackIn_156_0 = CampaignProgress.field_c;
               }

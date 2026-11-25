@@ -59,12 +59,12 @@ final class HuffmanCodec {
             NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
             DropTargetWidgetContainer.field_J.bindAsRasterTarget();
             SoftwareRaster.clearPixels();
-            gq.b(SectorCacheStore.field_j[3][0], 0, 0, param1);
+            IndexedSpriteColourSupport.drawIndexedSpriteGrayscaleTint(SectorCacheStore.field_j[3][0], 0, 0, param1);
             GradientUiRenderer.drawCenteredSolidText(DeployRequest.a(param2, (byte) 42), CoatOfArmsOverlaySupport.field_e[3][0] >> 1, 20 + (CoatOfArmsOverlaySupport.field_e[3][1] >> 1), 2, true);
             NumericDateInputWidget.field_P.bindAsRasterTarget();
             DropTargetWidgetContainer.field_J.drawHalfSize(param0, param5);
           } else {
-            gq.b(SectorCacheStore.field_j[3][0], param0, param5, param1);
+            IndexedSpriteColourSupport.drawIndexedSpriteGrayscaleTint(SectorCacheStore.field_j[3][0], param0, param5, param1);
             GradientUiRenderer.drawCenteredSolidText(DeployRequest.a(param2, (byte) 42), (CoatOfArmsOverlaySupport.field_e[3][0] >> 1) + param0, 20 + (CoatOfArmsOverlaySupport.field_e[3][1] >> 1) + param5, 2, true);
           }
           int var6_int = 67 % ((param4 - 48) / 53);

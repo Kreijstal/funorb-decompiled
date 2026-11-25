@@ -24,7 +24,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           var3 = QuickChatCategory.field_D;
         }
         if (channelId == 2) {
-          var3 = cd.field_c;
+          var3 = GameUiOverlaySupport.field_c;
         }
         return var3;
     }

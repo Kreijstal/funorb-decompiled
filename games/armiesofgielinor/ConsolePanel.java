@@ -212,7 +212,7 @@ abstract class ConsolePanel implements ConsolePanelMarker {
           DisplacedUnitMarker.field_t[10] = ContextActionMenu.field_Jb;
         } else {
           if ((~FullscreenFocusCanvas.gameplayController.battlefield.eliminatedPlayerMask & FullscreenFocusCanvas.gameplayController.battlefield.field_C) == 0) {
-            DisplacedUnitMarker.field_t[10] = uu.field_c;
+            DisplacedUnitMarker.field_t[10] = LobbyRoomControlSupport.field_c;
           } else {
             DisplacedUnitMarker.field_t[10] = MatchSetupPanel.field_O;
           }

@@ -14,7 +14,7 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
 
     final static String getEmailIdentifier(int param0) {
         if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
-          return cd.field_e;
+          return GameUiOverlaySupport.field_e;
         }
         if (param0 != 488997228) {
           field_s = (String) null;

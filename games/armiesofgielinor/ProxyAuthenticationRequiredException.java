@@ -22,7 +22,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           EmailValidator.outgoingPacket.writeInt((byte) -117, RadialSummonMenu.field_d);
           EmailValidator.outgoingPacket.writeInt((byte) -98, var4);
           if (param2) {
-            hb.$cfr$intArgs$a$e9dea5688aa5(116, 0);
+            SessionIoSupport.flushSessionPacketsWithIntGuard(116, 0);
             TextSplitSupport.closeSessionSocket((byte) -125);
           }
         } catch (RuntimeException runtimeException) {

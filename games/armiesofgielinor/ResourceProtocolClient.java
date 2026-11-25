@@ -107,7 +107,7 @@ abstract class ResourceProtocolClient {
           var3 = var9;
           for (var4 = 0; var4 < var11.length; var4++) {
             var11[var4] = param1;
-            var5 = gq.a(var11[var4]);
+            var5 = IndexedSpriteColourSupport.rgbToPackedHsv(var11[var4]);
             var6 = (524092 & var5) >> 8;
             var6 = var6 + 5 * var4 / var11.length;
             var7 = 255 & var5;
@@ -116,7 +116,7 @@ abstract class ResourceProtocolClient {
             }
             var5 = var6 << 8 | -524033 & var5;
             var5 = -256 & var5 | var7;
-            var9[var4] = gq.b(var5);
+            var9[var4] = IndexedSpriteColourSupport.packedHsvToRgb(var5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

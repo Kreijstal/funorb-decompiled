@@ -1154,9 +1154,9 @@ final class MatchSetupPanel {
                 BattleUnitRenderer.a(EditableTextField.field_Vb[var14][0] + param8, 16777215, (byte) -88, SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][1] + param10);
               }
               if (!param4) {
-                gq.b(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
+                IndexedSpriteColourSupport.drawIndexedSpriteGrayscaleTint(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
               } else {
-                gq.a(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 1);
+                IndexedSpriteColourSupport.drawIndexedSpriteSolidColour(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 1);
               }
               if (var14 == 3 &&
                 !param4) {

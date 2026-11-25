@@ -285,9 +285,9 @@ abstract class GameEvent extends IntrusiveNode {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = vq.a(param1, -2) ? 1 : 0;
+          var3 = SelectionMenuLayoutSupport.readBooleanBit(param1, -2) ? 1 : 0;
           var5 = 1 / ((param0 - 61) / 50);
-          var4 = vq.a(param1, -2) ? 1 : 0;
+          var4 = SelectionMenuLayoutSupport.readBooleanBit(param1, -2) ? 1 : 0;
           var6 = new LogoMesh();
           var6.field_O = (short)param1.readBits(61, 16);
           var6.field_z = SpellCastRequest.a(var6.field_z, 16, param1, 10064);
@@ -314,10 +314,10 @@ abstract class GameEvent extends IntrusiveNode {
             var6.field_i = SpellCastRequest.a(var6.field_i, 16, param1, 10064);
             var6.field_b = SpellCastRequest.a(var6.field_b, 16, param1, 10064);
           }
-          if (vq.a(param1, -2)) {
+          if (SelectionMenuLayoutSupport.readBooleanBit(param1, -2)) {
             var6.field_u = SpellCastRequest.a(var6.field_u, 16, param1, 10064);
           }
-          if (vq.a(param1, -2)) {
+          if (SelectionMenuLayoutSupport.readBooleanBit(param1, -2)) {
             var6.field_K = AccountRegistrationForm.a(16, param1, var6.field_K, (byte) -122);
             var7 = 0;
             for (var8 = 0; var8 < var6.field_K.length; var8++) {

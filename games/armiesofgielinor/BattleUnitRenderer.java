@@ -246,7 +246,7 @@ final class BattleUnitRenderer {
           var9 = new AccountRegistrationDialog(KingBlackDragonEvent.field_C, param1);
           KingBlackDragonEvent.field_C.showDialog(var9, 0);
           if (!AnimationSkeleton.a(-8327)) {
-            cd.field_e = param3;
+            GameUiOverlaySupport.field_e = param3;
             SoundCache.field_a = null;
             BufferedFile.field_a = param6;
             MusicCrossfadeStream.field_z = param4;

@@ -38,9 +38,9 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
           UpkeepEvent.field_z.setBounds(param4, -20500, -DebouncedValidator.field_b.width + (ArchiveLoadStep.field_f.width - param2), 0, param2);
           var7 = var7 - (2 + param4);
           DebouncedValidator.field_b.setBounds(param4, -20500, DebouncedValidator.field_b.width, 0, param2 + UpkeepEvent.field_z.width);
-          vq.field_a.setLayout(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
+          SelectionMenuLayoutSupport.field_a.setLayout(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
           if (null != BestScoreStrategy.field_i) {
-            BestScoreStrategy.field_i.setBounds(vq.field_a.x, vq.field_a.width, vq.field_a.y, param5 ^ 8193, vq.field_a.height);
+            BestScoreStrategy.field_i.setBounds(SelectionMenuLayoutSupport.field_a.x, SelectionMenuLayoutSupport.field_a.width, SelectionMenuLayoutSupport.field_a.y, param5 ^ 8193, SelectionMenuLayoutSupport.field_a.height);
           }
           var8 = -var6_int + (-param2 + CombatEvent.field_I.width);
           var9 = var8 / 2;

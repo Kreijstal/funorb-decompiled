@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd {
+final class GameUiOverlaySupport {
     static int field_c;
     static CampaignDefinition[] campaigns;
     static String field_e;
@@ -36,10 +36,10 @@ final class cd {
               return;
             }
             var3 = var8.readInt(1);
-            var4 = (PreferencesWriteRequest) (s.field_e.first((byte) 92));
+            var4 = (PreferencesWriteRequest) (LobbyNotificationSupport.field_e.first((byte) 92));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (PreferencesWriteRequest) (s.field_e.next((byte) 123));
+                var4 = (PreferencesWriteRequest) (LobbyNotificationSupport.field_e.next((byte) 123));
                 continue;
               }
               break;
@@ -92,7 +92,7 @@ final class cd {
         BattleCharacter.field_g = null;
     }
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, boolean param2) {
         if (param2) {
           campaigns = (CampaignDefinition[]) null;
           if (PowerOfTwoSupport.keyCode == 13) {
@@ -128,7 +128,7 @@ final class cd {
         return false;
     }
 
-    final static boolean c(int param0) {
+    final static boolean hasOpenGameDialog(int param0) {
         if (param0 != 9501) {
           field_d = (String) null;
           if (SphinxActionRequest.field_v == null) {
@@ -148,7 +148,7 @@ final class cd {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawSpellTrinketIcon(int param0, int param1, int param2, int param3) {
         BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[param0][param3]].drawHalfSize(48 + param1, param2 + 12);
         ProjectileEffect.field_h[0].drawHalfSize(param1 + 46, param2 + 10);
     }

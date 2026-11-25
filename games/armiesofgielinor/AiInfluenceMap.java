@@ -765,10 +765,10 @@ final class AiInfluenceMap {
         try {
           var14 = ByteStorage.incomingPacket;
           var2 = var14.readUnsignedByte(0);
-          var3 = (RatingLeaderboardRequest) (s.field_a.first((byte) 120));
+          var3 = (RatingLeaderboardRequest) (LobbyNotificationSupport.field_a.first((byte) 120));
           while (var3 != null) {
             if (var2 != var3.field_o) {
-              var3 = (RatingLeaderboardRequest) (s.field_a.next((byte) 123));
+              var3 = (RatingLeaderboardRequest) (LobbyNotificationSupport.field_a.next((byte) 123));
               continue;
             }
             break;

@@ -255,7 +255,7 @@ final class DropdownSelectorPainter implements WidgetPainter {
           var3 = param1.readBits(55, param0);
           var4 = new LogoMaterial[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (vq.a(param1, -2)) {
+            if (SelectionMenuLayoutSupport.readBooleanBit(param1, -2)) {
               var6 = new LogoMaterial();
               param1.readBits(60, 24);
               param1.readBits(-107, 24);

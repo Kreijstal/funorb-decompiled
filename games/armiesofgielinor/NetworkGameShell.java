@@ -49,7 +49,7 @@ abstract class NetworkGameShell extends GameAppletShell {
 
     final static void resetIdleTracking(int obfuscationGuard) {
         EditableTextField.field_Lb = MonotonicClockSupport.monotonicMillis(-83);
-        mu.field_d = 0;
+        QuickChatSetupSupport.field_d = 0;
         if (obfuscationGuard != -20873) {
           NetworkGameShell.releaseSharedShellGlobals(-23);
         }
@@ -190,7 +190,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         int textLength = DropdownSelectorPainter.packetPayloadLength - 1;
         byte[] encodedUrl = new byte[textLength];
         ByteStorage.incomingPacket.a(textLength, encodedUrl, false, 0);
-        SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
+        SpellCastAction.a(CombatEvent.d((byte) -125), 87, LobbyRoomControlSupport.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
         if (obfuscationGuard != 16433) {
           this.dispatchSharedPacket(-76);
         }
@@ -450,7 +450,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 this.persistSessionCookie((byte) 127);
                 break;
               case 5:
-                cd.handlePreferencesResponse(obfuscationGuard - 48);
+                GameUiOverlaySupport.handlePreferencesResponse(obfuscationGuard - 48);
                 break;
               case 3:
                 AchievementNotification.e(0);
@@ -655,7 +655,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (StrongCacheEntry.field_E == 3 &&
           SharedUiLoadingSupport.ensureCommonUiResources(DisplayModeOptionPainter.field_u, (byte) 127, LoginKind.field_g, CombatPresentation.field_M) &&
           SharedUiLoadingSupport.ensureAllUiGroupsAvailable(LoginKind.field_g, -27701)) {
-          cd.releaseStatics(12);
+          GameUiOverlaySupport.releaseStatics(12);
           EmailValidator.c((byte) 91);
           ChatMessageWriteSupport.field_b = false;
           UnitSpell.field_e = ConsoleParseException.field_a;

@@ -22,17 +22,17 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         var3 = var1 - EditableTextField.field_Lb;
         if (var3 > 30000L) {
           EditableTextField.field_Lb = var1;
-          mu.field_d = 0;
+          QuickChatSetupSupport.field_d = 0;
           return true;
         }
         var5 = 3000;
-        if (7 <= mu.field_d) {
+        if (7 <= QuickChatSetupSupport.field_d) {
           var5 = 12000;
         } else {
-          if (mu.field_d >= 5) {
+          if (QuickChatSetupSupport.field_d >= 5) {
             var5 = 9000;
           } else {
-            if (3 <= mu.field_d) {
+            if (3 <= QuickChatSetupSupport.field_d) {
               var5 = 6000;
             }
           }
@@ -41,7 +41,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
           return false;
         }
         EditableTextField.field_Lb = var1;
-        mu.field_d = mu.field_d + 1;
+        QuickChatSetupSupport.field_d = QuickChatSetupSupport.field_d + 1;
         return true;
     }
 
@@ -179,10 +179,10 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (RatingLeaderboardRequest) (s.field_a.first((byte) 104));
+          var4 = (RatingLeaderboardRequest) (LobbyNotificationSupport.field_a.first((byte) 104));
           while (var4 != null) {
             TilePosition.sendRatingLeaderboardRequest(param0, var4, (byte) -64);
-            var4 = (RatingLeaderboardRequest) (s.field_a.next((byte) 123));
+            var4 = (RatingLeaderboardRequest) (LobbyNotificationSupport.field_a.next((byte) 123));
           }
           if (param1 == 1742) {
             return;

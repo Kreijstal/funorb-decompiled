@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uu {
+final class LobbyRoomControlSupport {
     static boolean field_b;
     static String field_c;
     static String field_a;
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, boolean param4) {
+    final static void updateLobbyRoomControls(boolean param0, boolean param1, int param2, int param3, boolean param4) {
         ClientUiComponent stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int stackIn_39_0 = 0;
@@ -71,7 +71,7 @@ final class uu {
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 0) {
-            uu.releaseStatics((byte) -86);
+            LobbyRoomControlSupport.releaseStatics((byte) -86);
           }
           AnimationSequence.a(InstructionsPanel.field_D, 125);
           if (ToggleWidget.currentRoom != null) {
@@ -481,18 +481,18 @@ final class uu {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        ResourceArchive.field_a.b(param0, param2, (byte) 93);
+    final static void drawBattleGridHighlight(int param0, int param1, int param2) {
+        ResourceArchive.field_a.drawRadialGridHighlight(param0, param2, (byte) 93);
         if (param1 >= -22) {
           field_c = (String) null;
         }
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isAllowedChatCharacter(boolean param0, char param1) {
         byte[] var3;
         if (!param0) {
           var3 = (byte[]) null;
-          uu.decodeTextBytes((byte[]) null, (byte) -92);
+          LobbyRoomControlSupport.decodeTextBytes((byte[]) null, (byte) -92);
         }
         if (param1 >= 32 &&
           param1 <= 126) {

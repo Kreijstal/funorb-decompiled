@@ -283,7 +283,7 @@ final class VertexNormal {
               }
               var19 = var19 + GradientSpanBlendSupport.field_d;
             }
-            var23 = s.a(false, var20, var12.notificationCode);
+            var23 = LobbyNotificationSupport.formatLobbyNotification(false, var20, var12.notificationCode);
             var24 = var23;
             var30 = var24;
             var25 = var30;

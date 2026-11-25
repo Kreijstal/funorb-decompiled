@@ -49,7 +49,7 @@ final class LeaderEscortCondition implements MatchCondition {
         if (param0 != 3) {
           field_i = -52;
         }
-        return (QuickChatCategory.field_D << 2) + (MaskedTextEntryPainter.field_B << 4) + cd.field_c;
+        return (QuickChatCategory.field_D << 2) + (MaskedTextEntryPainter.field_B << 4) + GameUiOverlaySupport.field_c;
     }
 
     public final boolean isVictory(int obfuscationGuard) {
@@ -103,7 +103,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return stackIn_10_0;
           }
           if (8 == param0) {
-            stackIn_13_0 = cd.field_b;
+            stackIn_13_0 = GameUiOverlaySupport.field_b;
             return stackIn_13_0;
           }
           if (9 == param0) {

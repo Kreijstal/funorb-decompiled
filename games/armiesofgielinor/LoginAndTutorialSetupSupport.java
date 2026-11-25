@@ -12,12 +12,12 @@ final class LoginAndTutorialSetupSupport {
 
     final static void stagePostRegistrationLogin(int param0) {
         if (param0 == 0) {
-          LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, cd.field_e, PaginationTextSupport.field_b);
+          LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, GameUiOverlaySupport.field_e, PaginationTextSupport.field_b);
           IgnoreRequestSupport.field_f = true;
           return;
         }
         LoginAndTutorialSetupSupport.releaseStatics(83);
-        LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, cd.field_e, PaginationTextSupport.field_b);
+        LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, GameUiOverlaySupport.field_e, PaginationTextSupport.field_b);
         IgnoreRequestSupport.field_f = true;
     }
 

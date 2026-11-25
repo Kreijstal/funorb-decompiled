@@ -213,7 +213,7 @@ final class UnitCycler {
 
     final static void a(int param0, int param1, int param2, Unit param3) {
         try {
-          cd.a(27, param2 - 16, param1, 2);
+          GameUiOverlaySupport.drawSpellTrinketIcon(27, param2 - 16, param1, 2);
           int var4_int = 110 / ((49 - param0) / 39);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "eu.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

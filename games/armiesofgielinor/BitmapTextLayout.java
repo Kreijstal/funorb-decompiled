@@ -390,7 +390,7 @@ final class BitmapTextLayout extends TextLayout {
           AccountRsaBufferSupport.field_b.writeByte(1, day);
           AccountRsaBufferSupport.field_b.writeByte(1, monthIndex);
           AccountRsaBufferSupport.field_b.writeShort(true, year);
-          AccountRsaBufferSupport.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
+          AccountRsaBufferSupport.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, QuickChatSetupSupport.field_c);
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
           fieldTemp$0 = EmailValidator.outgoingPacket.position + 1;
           EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
@@ -404,7 +404,7 @@ final class BitmapTextLayout extends TextLayout {
         AccountRsaBufferSupport.field_b.writeByte(1, day);
         AccountRsaBufferSupport.field_b.writeByte(1, monthIndex);
         AccountRsaBufferSupport.field_b.writeShort(true, year);
-        AccountRsaBufferSupport.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
+        AccountRsaBufferSupport.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, QuickChatSetupSupport.field_c);
         EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
         int fieldTemp$1 = EmailValidator.outgoingPacket.position + 1;
         EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;

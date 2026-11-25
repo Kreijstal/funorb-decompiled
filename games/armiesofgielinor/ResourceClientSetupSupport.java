@@ -23,8 +23,8 @@ final class ResourceClientSetupSupport {
 
     final static void initializeResourceClient(int param0, String param1, int param2, byte param3, int param4, int param5, int param6, int param7, PlatformTaskService param8) {
         MoveAttackRequest.field_x = param5;
-        vq.field_d = param2;
-        vq.field_c = param8;
+        SelectionMenuLayoutSupport.field_d = param2;
+        SelectionMenuLayoutSupport.field_c = param8;
         AccountNameSelectionSupport.field_e = param4;
         ClientNetworkBootstrap.field_e = param0;
         IgnoreListLookupSupport.field_c = param1;
@@ -70,7 +70,7 @@ final class ResourceClientSetupSupport {
           if (param5 >= -107) {
             field_b = (String) null;
           }
-          et.field_b = param1;
+          LogoFaceSortSupport.field_b = param1;
           MouseWheelSource.field_c = param2;
           EventPresenterFactory.field_a = param4;
         } catch (RuntimeException runtimeException) {

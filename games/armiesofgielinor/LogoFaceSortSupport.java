@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class et {
+final class LogoFaceSortSupport {
     static String field_c;
     static boolean field_d;
     static int field_b;
     static char field_a;
 
-    final static void a(LogoMesh param0, int param1, boolean param2, int param3, int param4) {
+    final static void bucketLogoFacesByDepth(LogoMesh param0, int param1, boolean param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_24_0 = 0;
@@ -169,7 +169,7 @@ final class et {
           KingBlackDragonEvent.field_C.a(true, -6226, LoginMethod.field_b, UiSelectionState.field_i);
           KingBlackDragonEvent.field_C.advanceDialogs((byte) -102);
           if (param0 != -3) {
-            et.pollAccountFlowAction(103);
+            LogoFaceSortSupport.pollAccountFlowAction(103);
           }
           do {
             if (!Unit.pollKeyEvent((byte) 80)) {
@@ -208,12 +208,12 @@ final class et {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 != 13626) {
-            et.c(-112);
+            LogoFaceSortSupport.releaseStatics(-112);
           }
           field_c = null;
           return;
@@ -224,7 +224,7 @@ final class et {
         }
     }
 
-    final static ClientUiComponent b(int param0) {
+    final static ClientUiComponent getLobbyPlayerListContent(int param0) {
         RuntimeException var1 = null;
         ClientUiComponent stackIn_2_0 = null;
         ClientUiComponent stackIn_4_0 = null;

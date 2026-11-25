@@ -415,7 +415,7 @@ final class BattleCamera {
         this.targetPosition[0] = var4;
     }
 
-    final void b(int param0, int param1, byte param2) {
+    final void drawRadialGridHighlight(int param0, int param1, byte param2) {
         int var15 = 0;
         int var17 = 0;
         int stackIn_19_0 = 0;
@@ -1150,7 +1150,7 @@ final class BattleCamera {
           this.targetPosition[0] = this.focusWorldX;
           this.targetPosition[1] = this.focusWorldY;
           if (obfuscationGuard <= 99) {
-            this.b(63, 30, (byte) -17);
+            this.drawRadialGridHighlight(63, 30, (byte) -17);
           }
           discarded$0 = this.advanceTowardTarget((byte) -127, -1);
           return;

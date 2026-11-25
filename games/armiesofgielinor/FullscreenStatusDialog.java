@@ -16,8 +16,8 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             if (channelId == 1) {
               if (QuickChatCategory.field_D == filterValue) {
                 if (2 == channelId &&
-                  cd.field_c != filterValue) {
-                  cd.field_c = filterValue;
+                  GameUiOverlaySupport.field_c != filterValue) {
+                  GameUiOverlaySupport.field_c = filterValue;
                   MoveEvent.field_J = true;
                   SocketResourceClient.a(896, packetOpcode);
                 }
@@ -57,10 +57,10 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         if (2 != channelId) {
           return;
         }
-        if (cd.field_c == filterValue) {
+        if (GameUiOverlaySupport.field_c == filterValue) {
           return;
         }
-        cd.field_c = filterValue;
+        GameUiOverlaySupport.field_c = filterValue;
         MoveEvent.field_J = true;
         SocketResourceClient.a(896, packetOpcode);
     }
@@ -131,7 +131,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             } else {
               if (statusToken == FullscreenMembershipDialog.field_cb) {
                 this.height = this.height + 30;
-                var3 = hb.field_a;
+                var3 = SessionIoSupport.field_a;
               }
             }
           } else {

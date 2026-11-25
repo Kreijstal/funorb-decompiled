@@ -67,7 +67,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
         if (!ClientConnectionState.a(76)) {
           return;
         }
-        vq.a(4, param0, (byte) 61);
+        SelectionMenuLayoutSupport.configureStatusSelectionMenu(4, param0, (byte) 61);
     }
 
     public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {

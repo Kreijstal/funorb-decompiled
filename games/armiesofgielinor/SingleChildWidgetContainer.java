@@ -407,7 +407,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           BattleTutorial.field_d = new ClientUiComponent(0L, ProceduralMapSupport.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
           LogoMesh.field_k = new IconTextComponent[4 + param1][];
-          KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, IconLabelControl.field_Lb, et.field_c);
+          KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, IconLabelControl.field_Lb, LogoFaceSortSupport.field_c);
           LogoMesh.field_k[0] = new IconTextComponent[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             LogoMesh.field_k[0][var17_int + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, PowerOfTwoSupport.field_p[var17_int], ResourceRequest.field_u[var17_int]);

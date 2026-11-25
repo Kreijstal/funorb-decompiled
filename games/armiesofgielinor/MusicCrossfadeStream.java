@@ -502,7 +502,7 @@ final class MusicCrossfadeStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new PreferencesWriteRequest(param2);
-          s.field_e.addLast((byte) -119, (IntrusiveNode) (var3));
+          LobbyNotificationSupport.field_e.addLast((byte) -119, (IntrusiveNode) (var3));
           DeathEvent.sendPreferencesWrite(var3, param1, 25522);
           if (param0 == 0) {
             stackIn_4_0 = var3;

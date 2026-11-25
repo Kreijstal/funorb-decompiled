@@ -32,21 +32,21 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
               return stackIn_2_0;
             }
             var6 = null;
-            if (null != vq.field_c.cacheDataFile) {
-              SpellMenuGroup.field_b = new BufferedFile(vq.field_c.cacheDataFile, 5200, 0);
-              vq.field_c.cacheDataFile = null;
-              var6 = new SectorCacheStore(255, SpellMenuGroup.field_b, new BufferedFile(vq.field_c.masterIndexFile, 12000, 0), 2097152);
+            if (null != SelectionMenuLayoutSupport.field_c.cacheDataFile) {
+              SpellMenuGroup.field_b = new BufferedFile(SelectionMenuLayoutSupport.field_c.cacheDataFile, 5200, 0);
+              SelectionMenuLayoutSupport.field_c.cacheDataFile = null;
+              var6 = new SectorCacheStore(255, SpellMenuGroup.field_b, new BufferedFile(SelectionMenuLayoutSupport.field_c.masterIndexFile, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != SpellMenuGroup.field_b) {
-              if (mu.field_b == null) {
-                mu.field_b = new BufferedFile[vq.field_c.cacheIndexFiles.length];
+              if (QuickChatSetupSupport.field_b == null) {
+                QuickChatSetupSupport.field_b = new BufferedFile[SelectionMenuLayoutSupport.field_c.cacheIndexFiles.length];
               }
-              if (mu.field_b[param0] == null) {
-                mu.field_b[param0] = new BufferedFile(vq.field_c.cacheIndexFiles[param0], 12000, 0);
-                vq.field_c.cacheIndexFiles[param0] = null;
+              if (QuickChatSetupSupport.field_b[param0] == null) {
+                QuickChatSetupSupport.field_b[param0] = new BufferedFile(SelectionMenuLayoutSupport.field_c.cacheIndexFiles[param0], 12000, 0);
+                SelectionMenuLayoutSupport.field_c.cacheIndexFiles[param0] = null;
               }
-              var7 = new SectorCacheStore(param0, SpellMenuGroup.field_b, mu.field_b[param0], 2097152);
+              var7 = new SectorCacheStore(param0, SpellMenuGroup.field_b, QuickChatSetupSupport.field_b[param0], 2097152);
             }
             var8 = CheckMarkWidgetPainter.field_c.openProvider(param3, (SectorCacheStore) (var7), param0, 0, (SectorCacheStore) (var6));
             if (param4) {

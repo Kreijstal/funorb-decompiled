@@ -99,7 +99,7 @@ final class QuickChatMenu extends ClientUiComponent {
           this.advanceMenu(-72, (byte) -60, -60);
         }
         if (var5 > 0) {
-          if (var5 == et.field_a) {
+          if (var5 == LogoFaceSortSupport.field_a) {
             var5 = 63;
           }
           for (var6 = 0; this.shortcuts.length > var6; var6++) {
@@ -462,7 +462,7 @@ final class QuickChatMenu extends ClientUiComponent {
             arrow = null;
             if (this.submenus[itemIndex] != null ||
               this.phraseIds[itemIndex] == -1) {
-              arrow = s.quickChatArrow;
+              arrow = LobbyNotificationSupport.quickChatArrow;
             }
             this.items[itemIndex] = new IconTextComponent(0L, itemStyle, (ClientUiComponent) null, textStyle, (RgbSprite) (arrow), labels[itemIndex]);
             this.addChild(this.items[itemIndex], 55);
@@ -471,7 +471,7 @@ final class QuickChatMenu extends ClientUiComponent {
               this.contentWidth = labelWidth;
             }
           }
-          this.contentWidth = this.contentWidth + (10 + s.quickChatArrow.canvasWidth);
+          this.contentWidth = this.contentWidth + (10 + LobbyNotificationSupport.quickChatArrow.canvasWidth);
           this.setCollapseTicks(12, -8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
