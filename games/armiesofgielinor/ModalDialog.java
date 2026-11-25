@@ -195,7 +195,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           stackIn_25_0 = false;
           stackIn_25_1 = var3;
           stackIn_26_2 = (param1) && (ToastMessage.c((byte) -103));
-          RevivalEvent.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
+          RevivalEvent.drawChatInputAndTooltip(stackIn_25_0, stackIn_25_1, stackIn_26_2);
         }
     }
 

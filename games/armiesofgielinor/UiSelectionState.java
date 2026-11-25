@@ -264,7 +264,7 @@ final class UiSelectionState {
     }
 
     final static void initializeChatEditor(int param0) {
-        TurnEffectEvent.a(8, PasswordLoginCredentials.field_h, ArchiveIndex.field_b, ConsoleEvaluationException.field_c, UnitModelPreview.field_m);
+        TurnEffectEvent.initializeExpandedChatEntry(8, PasswordLoginCredentials.field_h, ArchiveIndex.field_b, ConsoleEvaluationException.field_c, UnitModelPreview.field_m);
         if (param0 != 0) {
           field_i = 123;
         }

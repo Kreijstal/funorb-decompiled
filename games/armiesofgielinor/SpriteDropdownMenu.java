@@ -583,7 +583,7 @@ final class SpriteDropdownMenu {
           TriangleRasterizer.useRasterClip();
           SoftwareRaster.clearPixels();
           PasswordValidator.field_j = 0;
-          DebouncedValidator.e(9);
+          DebouncedValidator.drawLogoMeshes(9);
           var2 = var1.copySprite();
           for (var3 = 0; 15 > var3; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);

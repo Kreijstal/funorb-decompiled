@@ -235,10 +235,10 @@ final class QuickChatMenu extends ClientUiComponent {
               LocalAccountNameSupport.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ManaStarParticle.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, BattleCameraTargetTransform.field_b, AccountNameFoldingSupport.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].drawFadedToColour(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, BattleCameraTargetTransform.field_b, AccountNameFoldingSupport.field_b, FullscreenConfirmationDialog.field_Y, -87))].drawFadedToColour(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(LocalAccountNameSupport.field_i, BattleCameraTargetTransform.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].drawFadedToColour(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, BattleCameraTargetTransform.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[FullscreenDisplayMode.getTerrainCornerSpriteOffset(ConsoleTextNode.field_m, BattleCameraTargetTransform.field_b, AccountNameFoldingSupport.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.getTerrainCornerSpriteOffset(ContextActionMenu.field_Wb, BattleCameraTargetTransform.field_b, AccountNameFoldingSupport.field_b, FullscreenConfirmationDialog.field_Y, -87))].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.getTerrainCornerSpriteOffset(LocalAccountNameSupport.field_i, BattleCameraTargetTransform.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.getTerrainCornerSpriteOffset(ChannelBaseVolumeConsoleCommand.field_E, BattleCameraTargetTransform.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].drawFadedToColour(param0, param4, param5, param1);
           if (BitLengthSupport.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {

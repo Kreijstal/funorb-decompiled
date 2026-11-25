@@ -2346,7 +2346,7 @@ final class InstructionsPanel {
           var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             if (null == MoveAttackRequest.sessionSocket &&
-              !EffectPresentation.a(param5, 0)) {
+              !EffectPresentation.advanceSessionSocketRequest(param5, 0)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }

@@ -48,7 +48,7 @@ abstract class CacheEntry extends DualLinkedNode {
           var14 = param1.getIdentifier(param2 ^ -20049);
           var8 = param5.getIdentifier(-91);
           if (null == MoveAttackRequest.sessionSocket &&
-            !EffectPresentation.a(false, 0)) {
+            !EffectPresentation.advanceSessionSocketRequest(false, 0)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }

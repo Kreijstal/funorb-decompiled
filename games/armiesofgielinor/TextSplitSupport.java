@@ -157,7 +157,7 @@ final class TextSplitSupport {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var11 = (CharSequence) ((Object) text);
-          var3_int = RevivalEvent.a(var11, 0, delimiter);
+          var3_int = RevivalEvent.countCharacterFromIndex(var11, 0, delimiter);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

@@ -17,7 +17,7 @@ final class ClientRecoverySupport {
     final static void enterReconnectState(int param0) {
         if (~SoundCache.field_b == param0 ||
           !SocketFactory.c(10)) {
-          EffectPresentation.d(7);
+          EffectPresentation.openAccountLoginProgress(7);
           SoundCache.field_b = 11;
         }
         ArchiveMasterIndex.field_a = true;
@@ -111,7 +111,7 @@ final class ClientRecoverySupport {
         if (PointerInputHandler.field_a != null) {
           PointerInputHandler.field_a.freezeNormalProgressAnimation((byte) 2);
         }
-        QuicksaveRequestSupport.a((byte) 124);
+        QuicksaveRequestSupport.resetTooltipState((byte) 124);
     }
 
     static {

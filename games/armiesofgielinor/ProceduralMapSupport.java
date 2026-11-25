@@ -43,7 +43,7 @@ final class ProceduralMapSupport {
 
     final static void openLoginDialog(int obfuscationGuard, String unusedText, boolean showRegistration, boolean offerGuestPlay) {
         try {
-          MapRepository.a(true);
+          MapRepository.resetAccountFlow(true);
           KingBlackDragonEvent.field_C.closeAllDialogs(obfuscationGuard ^ -124);
           ContextActionMenu.loginForm = new LoginForm(IsaacRandom.loginAccountIdentifier, (String) null, GrowableIntArray.field_i, showRegistration, offerGuestPlay);
           if (obfuscationGuard != 3) {

@@ -12,7 +12,7 @@ final class DualNodeIterator implements Iterator {
     private DualLinkedNode cursor;
     static double packetJitterMillis;
 
-    final static java.awt.Container a(int param0) {
+    final static java.awt.Container getAppletContainer(int param0) {
         if (null != ContextualRuntimeException.field_f) {
           return (java.awt.Container) ((Object) ContextualRuntimeException.field_f);
         }
@@ -23,7 +23,7 @@ final class DualNodeIterator implements Iterator {
         return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
     }
 
-    final static PalettedBitmapFont a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
+    final static PalettedBitmapFont loadPalettedFontById(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -69,9 +69,9 @@ final class DualNodeIterator implements Iterator {
         this.lastReturned = null;
     }
 
-    final static ClientUiComponent b(byte param0) {
+    final static ClientUiComponent getLobbyRoomListContent(byte param0) {
         if (param0 >= -80) {
-          DualNodeIterator.b((byte) -47);
+          DualNodeIterator.getLobbyRoomListContent((byte) -47);
           return CipherPacketBuffer.field_x.content;
         }
         return CipherPacketBuffer.field_x.content;
@@ -84,7 +84,7 @@ final class DualNodeIterator implements Iterator {
     public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
         if (obfuscationGuard > -60) {
-          DualNodeIterator.b((byte) -85);
+          DualNodeIterator.getLobbyRoomListContent((byte) -85);
           field_g = null;
           return;
         }

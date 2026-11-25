@@ -520,9 +520,9 @@ final class MembershipExpansionScreen {
               var3 = this.field_p * (var7.canvasWidth + 60) / PaginationTextSupport.field_a;
               var4 = var3 - 30;
               if (!this.field_s) {
-                DebouncedValidator.a(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);
+                DebouncedValidator.drawIndexedSpriteWithHorizontalAlphaRamp(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);
               } else {
-                DebouncedValidator.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.canvasWidth) / 30, var7);
+                DebouncedValidator.drawIndexedSpriteWithHorizontalAlphaRamp(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.canvasWidth) / 30, var7);
               }
             }
           }

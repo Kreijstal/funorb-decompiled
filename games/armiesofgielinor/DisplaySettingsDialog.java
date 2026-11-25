@@ -333,7 +333,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
                   ActionSpell.viewportManager.setFullscreenSize(this.displayModes[selectedModeIndex].width, this.displayModes[selectedModeIndex].height, -8717);
                 }
               }
-              AiPlanningStrategy.a(true, obfuscationGuard + 8029);
+              AiPlanningStrategy.requestFullscreen(true, obfuscationGuard + 8029);
               this.host.showDialog(new FullscreenConfirmationDialog(this.host), 0);
             }
           }

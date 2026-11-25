@@ -5333,11 +5333,11 @@ final class GameplayController {
               StructureTerrainSupport.b(-122);
               if (var8 != 0) {
                 SoundEffectPreloadSupport.field_a = false;
-                AiPlanningStrategy.a(false, 8028);
+                AiPlanningStrategy.requestFullscreen(false, 8028);
               }
             } else {
               SoundEffectPreloadSupport.field_a = false;
-              AiPlanningStrategy.a(false, 8028);
+              AiPlanningStrategy.requestFullscreen(false, 8028);
             }
           }
           if (84 == PowerOfTwoSupport.keyCode &&
@@ -11336,7 +11336,7 @@ final class GameplayController {
         int[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          if (DebouncedValidator.a(param0, BoundedFile.field_e, 1)) {
+          if (DebouncedValidator.isBitSet(param0, BoundedFile.field_e, 1)) {
             return;
           }
           if (param1 != 30) {

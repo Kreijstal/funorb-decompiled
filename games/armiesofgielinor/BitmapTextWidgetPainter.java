@@ -569,7 +569,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
         field_r = null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isLogoAnimationFinished(boolean param0) {
         if (!param0) {
           return true;
         }
@@ -690,7 +690,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
         return this.font.maxDescent + this.font.maxAscent;
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void attachCanvasInput(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -724,7 +724,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
     protected BitmapTextWidgetPainter() {
     }
 
-    final static void a(PlatformTaskService param0, int param1, MusicCrossfadeStream param2, byte param3, boolean param4, java.awt.Component param5) {
+    final static void initializeAudioPlayersWithSharedRate(PlatformTaskService param0, int param1, MusicCrossfadeStream param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
           TileMetadata.initializeAudioPlayers(param5, 1024, param0, param4, -115, param2, param1, param1);

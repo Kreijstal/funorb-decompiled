@@ -2799,7 +2799,7 @@ final class TutorialController {
                 if (~var6 == ~LobbyControlResources.field_c) {
                   TeamRoster.field_e.drawAdditive(var3_intLifetime1 - 20, -20 + var4Lifetime1, 128);
                 }
-                if (!DebouncedValidator.a(var6, var5, 1)) {
+                if (!DebouncedValidator.isBitSet(var6, var5, 1)) {
                   if (!(param0)) {
                     if (GradientFrame.field_n[var6] &&
                       LoginForm.memberEntitlementValue <= 0) {
@@ -2842,7 +2842,7 @@ final class TutorialController {
           }
           var7 = PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent;
           GradientUiRenderer.drawGradientText(FixedSquareRootSupport.field_a[var6], IgnoreListLookupSupport.a(true, 272), MatchConditionEntry.a(260 - (PowerOfTwoSupport.field_n.maxDescent - PowerOfTwoSupport.field_n.baselineHeight), (byte) 94), ConsoleValue.field_b, true);
-          var8 = DebouncedValidator.a(var6, var5, 1) ? 1 : 0;
+          var8 = DebouncedValidator.isBitSet(var6, var5, 1) ? 1 : 0;
           var9 = MatchConditionEntry.a(288, (byte) 94);
           if (var8 != 0) {
             PowerOfTwoSupport.field_n.drawText(AccountRequestResult.field_f, IgnoreListLookupSupport.a(true, 272), var9, 65280, -1);
@@ -4616,7 +4616,7 @@ final class TutorialController {
                 if (2 <= BufferedSocket.field_j &&
                   PowerOfTwoSupport.keyCode == 1 &&
                   CampaignLookupSupport.heldKeys[82]) {
-                  RevivalEvent.d((byte) 122);
+                  RevivalEvent.clearFirstStage25TutorialItem((byte) 122);
                   var3_ref_int__ = BoundedFile.field_e;
                   var3_ref_int__[0] = AccountRegistrationDialog.bitwiseOr(var3_ref_int__[0], 2);
                   ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new AchievementNotification(0)));
@@ -5076,7 +5076,7 @@ final class TutorialController {
               }
             }
             SoundEffectPreloadSupport.field_a = false;
-            AiPlanningStrategy.a(false, 8028);
+            AiPlanningStrategy.requestFullscreen(false, 8028);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -5408,7 +5408,7 @@ final class TutorialController {
             stackIn_7_0 = ReportAbuseDialog.field_Nb;
           }
           var3 = stackIn_7_0;
-          stackIn_8_0 = DebouncedValidator.a(param1, var3, 1);
+          stackIn_8_0 = DebouncedValidator.isBitSet(param1, var3, 1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

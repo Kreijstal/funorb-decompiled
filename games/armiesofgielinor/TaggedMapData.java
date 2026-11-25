@@ -41,7 +41,7 @@ final class TaggedMapData implements TaggedFieldReader {
         CombatSandbox.pushSpriteRasterTarget(ReflectionCheckRequest.field_n, 3);
         TriangleRasterizer.useRasterClip();
         SoftwareRaster.clearPixels();
-        DebouncedValidator.e(9);
+        DebouncedValidator.drawLogoMeshes(9);
         if (var5 < 256) {
           SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, -var5 + 256);
           QuickChatPhraseRepository.popRasterState(-18862);

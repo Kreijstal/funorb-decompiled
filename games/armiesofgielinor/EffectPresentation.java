@@ -39,8 +39,8 @@ final class EffectPresentation implements EventPresentation {
         return this.finished;
     }
 
-    final static void d(int param0) {
-        MapRepository.a(true);
+    final static void openAccountLoginProgress(int param0) {
+        MapRepository.resetAccountFlow(true);
         DeployAction.field_A = true;
         GrowableIntArray.field_i = true;
         KingBlackDragonEvent.field_C.closeAllDialogs(-102);
@@ -50,7 +50,7 @@ final class EffectPresentation implements EventPresentation {
         LoginCredentials.openLoginProgress(false, CachedArchiveProvider.field_z, -1);
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3, byte param4, int param5) {
+    final static void drawWavingOwnershipEdge(boolean param0, int param1, boolean param2, int param3, byte param4, int param5) {
         int var10 = 0;
         int var15 = 0;
         int stackIn_10_0 = 0;
@@ -151,7 +151,7 @@ final class EffectPresentation implements EventPresentation {
         field_e = null;
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean advanceSessionSocketRequest(boolean param0, int param1) {
         long dupTemp$2 = 0L;
         if (AccountRegistrationForm.field_J == null) {
           AccountRegistrationForm.field_J = ScoreLeaderboardRequest.field_n.openSocketAsync(ProceduralMapSupport.field_d, (byte) 120, AccountNameNormalizer.field_c);

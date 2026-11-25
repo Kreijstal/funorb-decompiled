@@ -15,7 +15,7 @@ final class AchievementNotification extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void playUnitActionSound(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         if (param2 != 512) {
           AchievementNotification.drawQuickChatOverlay((byte) 13);
@@ -39,7 +39,7 @@ final class AchievementNotification extends IntrusiveNode {
           OwnerChangeEvent.quickChatMenuHost.draw(false, 20);
         }
         if (param0 != 102) {
-          AchievementNotification.a(-122, true, false, -112, 41, -27, 39);
+          AchievementNotification.updateLobbyRoomRows(-122, true, false, -112, 41, -27, 39);
         }
     }
 
@@ -47,7 +47,7 @@ final class AchievementNotification extends IntrusiveNode {
         this.field_l = param0;
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final static void updateLobbyRoomRows(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
         ClientUiComponent dupTemp$0 = null;
@@ -600,7 +600,7 @@ final class AchievementNotification extends IntrusiveNode {
         }
     }
 
-    final static void e(int param0) {
+    final static void readUnlockRequestReply(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

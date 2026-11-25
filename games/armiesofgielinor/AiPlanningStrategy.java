@@ -53,7 +53,7 @@ abstract class AiPlanningStrategy {
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = ListMissionsConsoleCommand.field_E.listContent.children;
           if (obfuscationGuard <= 20) {
-            AiPlanningStrategy.a(-8, (String[]) null, (String) null, -108);
+            AiPlanningStrategy.handleAccountNameCheckResponse(-8, (String[]) null, (String) null, -108);
           }
           boolean decompiledFrameRemainder1 = true;
           var5 = null;
@@ -258,7 +258,7 @@ abstract class AiPlanningStrategy {
         RuntimeException var7_ref = null;
         try {
           if (obfuscationGuard != 71) {
-            AiPlanningStrategy.a(76, (String[]) null, (String) null, 20);
+            AiPlanningStrategy.handleAccountNameCheckResponse(76, (String[]) null, (String) null, 20);
           }
           var7 = this.acquireCandidate(obfuscationGuard ^ 711);
           var7.score = score;
@@ -294,7 +294,7 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseAiPlanningStrategyStatics(int param0) {
         try {
           field_e = null;
           field_g = null;
@@ -306,7 +306,7 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    final static void a(int param0, String[] param1, String param2, int param3) {
+    final static void handleAccountNameCheckResponse(int param0, String[] param1, String param2, int param3) {
         String[] var4 = null;
         int var5 = 0;
         boolean stackIn_18_0 = false;
@@ -445,7 +445,7 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void requestFullscreen(boolean param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -476,7 +476,7 @@ abstract class AiPlanningStrategy {
             }
             if (null != FixedQuaternion.fullscreenCanvas) {
               var2_int = 2;
-              BitmapTextWidgetPainter.a(77, FixedQuaternion.fullscreenCanvas);
+              BitmapTextWidgetPainter.attachCanvasInput(77, FixedQuaternion.fullscreenCanvas);
               if (var3 != 0) {
                 var2_int = 3;
               }

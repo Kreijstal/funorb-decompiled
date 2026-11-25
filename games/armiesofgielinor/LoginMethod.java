@@ -100,7 +100,7 @@ final class LoginMethod {
           }
           var4 = new CampaignMission();
           NumericDateInputWidget.readTaggedFields(param2, var4, param0, -24721);
-          var4.a(true);
+          var4.resolveMapSizeSetting(true);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

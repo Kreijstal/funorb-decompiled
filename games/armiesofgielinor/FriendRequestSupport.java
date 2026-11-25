@@ -10,7 +10,7 @@ final class FriendRequestSupport {
     static ResourceArchive field_b;
     static int[] field_f;
 
-    final static void a(int param0, String param1) {
+    final static void drawLobbyTooltip(int param0, String param1) {
         int var7 = 0;
         int var8 = 0;
         int var2_int = AiPlanningStrategy.pointerX;
@@ -32,7 +32,7 @@ final class FriendRequestSupport {
         }
     }
 
-    final static void a(int param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
+    final static void configureMessageDialogFrames(int param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
         try {
           LoginForm.field_E = param1;
           QuickChatPhrase.field_w = param0;
@@ -45,7 +45,7 @@ final class FriendRequestSupport {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void sendQueuedStructuredRequests(int param0, boolean param1) {
         int var3 = 0;
         NineSliceFrame var4 = null;
         PowerOfTwoSupport var5 = null;
@@ -61,7 +61,7 @@ final class FriendRequestSupport {
           }
           if (!param1) {
             var4 = (NineSliceFrame) null;
-            FriendRequestSupport.a(108, -59, (NineSliceFrame) null, (NineSliceFrame) null, -23, 0);
+            FriendRequestSupport.configureMessageDialogFrames(108, -59, (NineSliceFrame) null, (NineSliceFrame) null, -23, 0);
           }
           var6 = (TerrainScatterSupport) (StateChangeMarker.field_t.first((byte) 112));
           while (var6 != null) {

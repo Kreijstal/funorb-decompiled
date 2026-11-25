@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class QuicksaveRequestSupport {
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9) {
+    final static void updateLobbyInterface(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9) {
         int var11;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param9) {
@@ -81,7 +81,7 @@ final class QuicksaveRequestSupport {
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             }
-            AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
+            AchievementNotification.updateLobbyRoomRows(0, param3, param6, param1, param2, param4, param5);
             VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
             KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
             return;
@@ -117,7 +117,7 @@ final class QuicksaveRequestSupport {
                 MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
-              AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
+              AchievementNotification.updateLobbyRoomRows(0, param3, param6, param1, param2, param4, param5);
               VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
               KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
               return;
@@ -202,12 +202,12 @@ final class QuicksaveRequestSupport {
             }
           }
         }
-        AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
+        AchievementNotification.updateLobbyRoomRows(0, param3, param6, param1, param2, param4, param5);
         VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
         KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawQuickChatHelpDialog(boolean param0, int param1) {
         if (param1 == 0) {
           if (null != Spell.quickChatHelpDialog) {
             SoftwareRaster.darkenRectangle(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
@@ -215,7 +215,7 @@ final class QuicksaveRequestSupport {
           }
           return;
         }
-        QuicksaveRequestSupport.a((byte) -15);
+        QuicksaveRequestSupport.resetTooltipState((byte) -15);
         if (null != Spell.quickChatHelpDialog) {
           SoftwareRaster.darkenRectangle(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
           Spell.quickChatHelpDialog.draw(param0, 20);
@@ -232,7 +232,7 @@ final class QuicksaveRequestSupport {
         }
     }
 
-    final static void a(byte param0) {
+    final static void resetTooltipState(byte param0) {
         IntegerPowerSupport.field_e = -1;
         RasterViewportResizeHandler.field_a = 0;
         BoundedFile.field_b = false;

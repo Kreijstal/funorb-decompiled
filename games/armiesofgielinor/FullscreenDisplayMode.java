@@ -9,7 +9,7 @@ final class FullscreenDisplayMode {
     static String field_d;
     int bitDepth;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int getTerrainCornerSpriteOffset(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var7;
@@ -109,7 +109,7 @@ final class FullscreenDisplayMode {
         return var8;
     }
 
-    final static IndexedSprite a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static IndexedSprite loadIndexedSpriteById(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         IndexedSprite stackIn_5_0 = null;
         IndexedSprite stackIn_7_0 = null;
@@ -141,7 +141,7 @@ final class FullscreenDisplayMode {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, java.math.BigInteger param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
+    final static void writeRsaXteaEncryptedBytes(PacketBuffer param0, int param1, java.math.BigInteger param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

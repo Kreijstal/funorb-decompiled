@@ -19,7 +19,7 @@ final class SessionIoSupport {
         DialogMessagePane.field_I = null;
         ChannelBaseVolumeConsoleCommand.e((byte) -128);
         param11 = FixedQuaternion.a(param11, param9, param6, param2, param7, param13, (byte) -83);
-        QuicksaveRequestSupport.a(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
+        QuicksaveRequestSupport.updateLobbyInterface(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
         UnitUnlockPreviewModel.updateSocialListControls(param3, param4, -1);
         if (!param8) {
           field_b = (String) null;

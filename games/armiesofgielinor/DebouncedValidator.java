@@ -128,7 +128,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static void e(int param0) {
+    final static void drawLogoMeshes(int param0) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -223,7 +223,7 @@ abstract class DebouncedValidator implements ValidationSource {
             for (var18 = 0; var18 < 3; var18++) {
               PasswordLengthSupport.field_a[var18] = PasswordLengthSupport.field_a[var18] + CampaignParticipant.field_s[var15][var18];
             }
-            MapRepository.a(var17, true, true, false, false, PasswordLengthSupport.field_a, ActionRequest.field_t);
+            MapRepository.projectAndSortLogoMesh(var17, true, true, false, false, PasswordLengthSupport.field_a, ActionRequest.field_t);
             IconLabelControl.drawLitLogoMesh(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
           }
           return;
@@ -254,7 +254,7 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.evaluateState(118);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, IndexedSprite param5) {
+    final static void drawIndexedSpriteWithHorizontalAlphaRamp(int param0, int param1, int param2, int param3, int param4, IndexedSprite param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -298,7 +298,7 @@ abstract class DebouncedValidator implements ValidationSource {
             var8 = var8 + SoftwareRaster.width * var14;
           }
           if (param1 != -1708086482) {
-            DebouncedValidator.e(-63);
+            DebouncedValidator.drawLogoMeshes(-63);
           }
           var13 = 0;
           if (param2 < SoftwareRaster.clipLeft) {
@@ -367,7 +367,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static boolean a(int param0, int[] param1, int param2) {
+    final static boolean isBitSet(int param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

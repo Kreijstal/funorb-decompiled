@@ -43,7 +43,7 @@ final class RevivalEvent extends GameEvent {
         }
     }
 
-    final static int a(CharSequence param0, int param1, char param2) {
+    final static int countCharacterFromIndex(CharSequence param0, int param1, char param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -120,7 +120,7 @@ final class RevivalEvent extends GameEvent {
         }
     }
 
-    final static void d(byte param0) {
+    final static void clearFirstStage25TutorialItem(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -183,7 +183,7 @@ final class RevivalEvent extends GameEvent {
         }
     }
 
-    final static void a(boolean param0, String param1, boolean param2) {
+    final static void drawChatInputAndTooltip(boolean param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -197,7 +197,7 @@ final class RevivalEvent extends GameEvent {
           if (null == DialogMessagePane.field_I) {
             return;
           }
-          FriendRequestSupport.a(-110, DialogMessagePane.field_I);
+          FriendRequestSupport.drawLobbyTooltip(-110, DialogMessagePane.field_I);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

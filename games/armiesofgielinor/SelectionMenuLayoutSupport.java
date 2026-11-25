@@ -243,7 +243,7 @@ final class SelectionMenuLayoutSupport {
           for (var4Lifetime1 = 0; var4Lifetime1 < AnimationFrameSet.field_v.length; var4Lifetime1++) {
             stackIn_89_0 = AnimationFrameSet.field_v[var4Lifetime1];
             stackIn_90_1 = !(TileMetadata.field_h[var4Lifetime1] < 0);
-            var5Lifetime1 = GzipDecoder.a(stackIn_89_0, stackIn_90_1, (byte) -101);
+            var5Lifetime1 = GzipDecoder.measureSelectionMenuText(stackIn_89_0, stackIn_90_1, (byte) -101);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -253,7 +253,7 @@ final class SelectionMenuLayoutSupport {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = GzipDecoder.a(var11, false, (byte) -128);
+              var7Lifetime1 = GzipDecoder.measureSelectionMenuText(var11, false, (byte) -128);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -261,7 +261,7 @@ final class SelectionMenuLayoutSupport {
             var4_ref_String__Lifetime1 = KeyboardInputListener.field_d;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = GzipDecoder.a(var12, false, (byte) -122);
+              var7Lifetime1Lifetime1 = GzipDecoder.measureSelectionMenuText(var12, false, (byte) -122);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -287,7 +287,7 @@ final class SelectionMenuLayoutSupport {
           while (AnimationFrameSet.field_v.length > var4Lifetime3) {
             var6Lifetime1 = TileMetadata.field_h[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = GzipDecoder.a(AnimationFrameSet.field_v[var4Lifetime3], true, (byte) -89);
+              var7Lifetime2 = GzipDecoder.measureSelectionMenuText(AnimationFrameSet.field_v[var4Lifetime3], true, (byte) -89);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + InstructionsPanel.field_B;
               var5Lifetime4 = var5Lifetime4 + EventPresenterFactory.field_a;
               GzipDecoder.field_b[var4Lifetime3] = new int[4];

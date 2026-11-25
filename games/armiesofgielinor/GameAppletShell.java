@@ -181,7 +181,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isAppletStartupAllowed(int param0) {
         return true;
     }
 
@@ -409,7 +409,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     abstract void tickClient(byte obfuscationGuard);
 
-    final static void a(boolean param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawLoadingScreen(boolean param0, boolean param1, java.awt.Canvas param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -421,7 +421,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           boolean decompiledFrameRemainder0 = true;
           if (StrongCacheEntry.field_E >= 10) {
-            if (BitmapTextWidgetPainter.b(true)) {
+            if (BitmapTextWidgetPainter.isLogoAnimationFinished(true)) {
               if (SoundCache.field_b == 0) {
                 NineSliceSpriteSupport.a(param1, false, 112);
                 ContentTransitionDialog.a(0, 12, param2, 0);
@@ -923,7 +923,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         this.errorReported = false;
     }
 
-    public static void d(int param0) {
+    public static void releaseGameAppletShellStatics(int param0) {
         field_m = null;
         field_c = null;
         if (param0 <= 86) {

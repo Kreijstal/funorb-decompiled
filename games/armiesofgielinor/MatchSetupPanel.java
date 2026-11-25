@@ -249,17 +249,17 @@ final class MatchSetupPanel {
     final static void drawTileOwnershipEdges(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         if (param5) {
           if ((4 & param4) != 0) {
-            EffectPresentation.a(param5, param3, true, param2, (byte) -33, param0);
+            EffectPresentation.drawWavingOwnershipEdge(param5, param3, true, param2, (byte) -33, param0);
           }
           if ((2 & param4) != 0) {
-            EffectPresentation.a(param5, param3, false, param2, (byte) -33, param0);
+            EffectPresentation.drawWavingOwnershipEdge(param5, param3, false, param2, (byte) -33, param0);
           }
         } else {
           if (0 != (param4 & 1)) {
-            EffectPresentation.a(param5, param3, false, param2, (byte) -33, param0);
+            EffectPresentation.drawWavingOwnershipEdge(param5, param3, false, param2, (byte) -33, param0);
           }
           if ((8 & param4) != 0) {
-            EffectPresentation.a(param5, param3, true, param2, (byte) -33, param0);
+            EffectPresentation.drawWavingOwnershipEdge(param5, param3, true, param2, (byte) -33, param0);
           }
         }
         if (param1) {

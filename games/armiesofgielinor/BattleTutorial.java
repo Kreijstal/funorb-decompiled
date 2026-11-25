@@ -1761,7 +1761,7 @@ class BattleTutorial {
     }
 
     private final void completeBattleTutorial(byte param0) {
-        RevivalEvent.d((byte) 113);
+        RevivalEvent.clearFirstStage25TutorialItem((byte) 113);
         int var2 = 47 / ((param0 + 75) / 34);
         this.controller.unlockAchievement(0, (byte) 30, 255);
     }

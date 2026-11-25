@@ -10,7 +10,7 @@ final class GzipDecoder {
     static String field_c;
     static int decodedSpriteCanvasWidth;
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadLogoFinalFrameSlices(int param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -69,7 +69,7 @@ final class GzipDecoder {
           nameCharacters = (CharSequence) ((Object) name);
           nameKey = AccountNameNormalizer.normalize(nameCharacters, false);
           if (obfuscationGuard != -34) {
-            GzipDecoder.a((byte) 5);
+            GzipDecoder.releaseStatics((byte) 5);
           }
           if (nameKey == null) {
             return null;
@@ -160,7 +160,7 @@ final class GzipDecoder {
         }
     }
 
-    final static int a(String param0, boolean param1, byte param2) {
+    final static int measureSelectionMenuText(String param0, boolean param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -194,7 +194,7 @@ final class GzipDecoder {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_b = (int[][]) null;
         if (param0 >= 78) {

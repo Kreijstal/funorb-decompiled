@@ -23,7 +23,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         field_J = null;
     }
 
-    private final String a(byte param0) {
+    private final String getAgreementLinkClosingTag(byte param0) {
         if (param0 != -117) {
           this.continueButton = (InteractiveWidget) null;
           return "</col></u>";
@@ -100,7 +100,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           }
           if (obfuscationGuard) {
             var4 = (PcmStreamMixer) null;
-            RegistrationAgreementPane.a((ResourceArchive) null, (byte) 120, (PcmStreamMixer) null, -19);
+            RegistrationAgreementPane.initializeLogoAnimation((ResourceArchive) null, (byte) 120, (PcmStreamMixer) null, -19);
           }
           if (!Battlefield.passwordContainsCompactNameVariant(password, (byte) -26, name)) {
             return true;
@@ -161,12 +161,12 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1, PcmStreamMixer param2, int param3) {
+    final static void initializeLogoAnimation(ResourceArchive param0, byte param1, PcmStreamMixer param2, int param3) {
         try {
           InteractiveWidget.field_C = DualNodeHashTable.getNominalTickRate(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);
           FriendLookupSupport.loadLogoMeshes(-93, param0);
-          GzipDecoder.a(32381, param0);
+          GzipDecoder.loadLogoFinalFrameSlices(32381, param0);
           DropdownArrowPainter.initializeLogoHighlightLookup(54);
           SpriteDropdownMenu.buildLogoGlowSprite(true);
           if (param1 <= 70) {
@@ -190,7 +190,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           this.dialog = dialog;
           this.continueButton = new InteractiveWidget(ProgressMessageDialog.field_kb, (WidgetListener) null);
           this.continueButton.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
-          var7 = EmailCheckResult.formatTemplate(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
+          var7 = EmailCheckResult.formatTemplate(4800, MidiPcmStream.field_R, new String[]{this.getAgreementLinkOpeningTag(-29442), this.getAgreementLinkClosingTag((byte) -117)});
           var3 = 20;
           var4 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
           this.agreementText = new HotspotTextWidget(var7, var4);
@@ -243,7 +243,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         }
     }
 
-    private final String a(int param0) {
+    private final String getAgreementLinkOpeningTag(int param0) {
         if (param0 != -29442) {
           return (String) null;
         }

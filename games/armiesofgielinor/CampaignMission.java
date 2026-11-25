@@ -305,7 +305,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         return new CampaignRewardPreview(this.rewardUnitTypes, this.rewardSpellId, this.manaBonusPercent);
     }
 
-    final static RgbSprite[] a(byte param0, String param1, String param2, ResourceArchive param3) {
+    final static RgbSprite[] loadNormalizedNineSliceSpritesByName(byte param0, String param1, String param2, ResourceArchive param3) {
         RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -357,7 +357,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final void a(boolean param0) {
+    final void resolveMapSizeSetting(boolean param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = 0; var2 < ArrayWidgetContainer.field_G.length; var2++) {
@@ -371,7 +371,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void resizeLoginDialogViewport(int param0, int param1, int param2) {
         if (param1 != -22696) {
           field_s = (String) null;
         }
@@ -385,7 +385,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     final static AccountIdentifierStatus getEmailIdentifierStatus(byte param0) {
         if (param0 >= -11) {
           ResourceArchive var2 = (ResourceArchive) null;
-          CampaignMission.a((byte) -102, (String) null, (String) null, (ResourceArchive) null);
+          CampaignMission.loadNormalizedNineSliceSpritesByName((byte) -102, (String) null, (String) null, (ResourceArchive) null);
         }
         return new AccountIdentifierStatus(OctaveNoiseMap.getEmailIdentifier(488997228), QuickChatPhraseRepository.isEmailCheckPending(-104));
     }

@@ -198,7 +198,7 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseTurnEffectStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -218,7 +218,7 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3, ClientUiComponent param4) {
+    final static void initializeExpandedChatEntry(int param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3, ClientUiComponent param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -238,7 +238,7 @@ final class TurnEffectEvent extends GameEvent {
             return;
           }
           if (param0 != 8) {
-            TurnEffectEvent.a(-95, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null);
+            TurnEffectEvent.initializeExpandedChatEntry(-95, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           ClientStateChecksumSupport.textChatActive = false;
           if (!NodeIterator.field_a) {
@@ -337,7 +337,7 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    final static PalettedBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, int param4) {
+    final static PalettedBitmapFont loadPalettedFontByName(String param0, ResourceArchive param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -354,11 +354,11 @@ final class TurnEffectEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != -2088) {
-            TurnEffectEvent.a(false);
+            TurnEffectEvent.releaseTurnEffectStatics(false);
           }
           var5_int = param2.getGroupId(param3, param4 ^ -2139);
           var6 = param2.getFileId((byte) 120, var5_int, param0);
-          stackIn_4_0 = DualNodeIterator.a(param2, var6, 0, var5_int, param1);
+          stackIn_4_0 = DualNodeIterator.loadPalettedFontById(param2, var6, 0, var5_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

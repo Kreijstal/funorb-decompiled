@@ -37,7 +37,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         ResourceClientSetupSupport.initializeResourceClient(ConsoleExpression.field_m, this.serverHost, this.gameCrc, (byte) 103, this.serverNumber, serviceId, this.secondaryGamePort, this.primaryGamePort, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
         CampaignMission.field_I = ColourRampSupport.createMouseWheelSource(68);
-        BitmapTextWidgetPainter.a(101, IndexedSpriteBase.field_b);
+        BitmapTextWidgetPainter.attachCanvasInput(101, IndexedSpriteBase.field_b);
         ChatMessage.field_c = primaryCommonUiArchiveId;
         TerrainScatterSupport.field_n = uiLocalizationArchiveId;
         BitmapTextWidgetPainter.field_p = gameLocalizationArchiveId;
@@ -221,7 +221,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (1 == actionCode) {
             actionOneResult = ClientConnectionState.pollAccountIdentifierChecks(false, CampaignMission.getEmailIdentifierStatus((byte) -27), IconLabelControl.getAccountNameIdentifierStatus(-117));
             if (actionOneResult != -1) {
-              AiPlanningStrategy.a(103, CampaignLookupSupport.field_b, BitmapTextWidgetPainter.field_r, actionOneResult);
+              AiPlanningStrategy.handleAccountNameCheckResponse(103, CampaignLookupSupport.field_b, BitmapTextWidgetPainter.field_r, actionOneResult);
               BitmapTextWidgetPainter.field_r = null;
               CampaignLookupSupport.field_b = null;
             }
@@ -376,7 +376,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         if (!AccountRequestResult.isGameUiPhaseActive((byte) 60)) {
           if (StrongCacheEntry.field_E >= 10) {
-            if (!BitmapTextWidgetPainter.b(true)) {
+            if (!BitmapTextWidgetPainter.isLogoAnimationFinished(true)) {
               StateChangeEvent.advanceLogoAnimation((byte) -84);
             } else {
               if (SoundCache.field_b == 0) {
@@ -453,7 +453,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 GameUiOverlaySupport.handlePreferencesResponse(obfuscationGuard - 48);
                 break;
               case 3:
-                AchievementNotification.e(0);
+                AchievementNotification.readUnlockRequestReply(0);
                 break;
               case 1:
                 InstructionsPanel.readQueuedRequestReply(obfuscationGuard - 135);
@@ -513,7 +513,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != ActionSpell.viewportManager) {
           if (null == FixedQuaternion.fullscreenCanvas) {
-            container = DualNodeIterator.a(0);
+            container = DualNodeIterator.getAppletContainer(0);
             containerSize = container.getSize();
             ActionSpell.viewportManager.setContainerSize(containerSize.height, containerSize.width, -30514);
           }
@@ -675,7 +675,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
             HighscoreAccountEntry.field_e = SpriteScrollBar.c((byte) 111);
           }
-          RegistrationAgreementPane.a(LoginKind.field_g, (byte) 76, ContentTransitionDialog.field_eb, HighscoreAccountEntry.field_e);
+          RegistrationAgreementPane.initializeLogoAnimation(LoginKind.field_g, (byte) 76, ContentTransitionDialog.field_eb, HighscoreAccountEntry.field_e);
           DisplayModeOptionPainter.field_u = null;
           CombatPresentation.field_M = null;
           LoginKind.field_g = null;
@@ -720,7 +720,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           NineSliceSpriteSupport.canvasRebuildRequested) {
           DateValiditySupport.a(IndexedSpriteBase.field_b, 23678);
           this.recreateCanvas((byte) 87);
-          BitmapTextWidgetPainter.a(123, IndexedSpriteBase.field_b);
+          BitmapTextWidgetPainter.attachCanvasInput(123, IndexedSpriteBase.field_b);
         }
         if (CheckBoxWidgetPainter.acceptedPacketOpcodes[8]) {
           LogoMesh.sendReadyReflectionCheckResponses(28704);
@@ -743,7 +743,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         String errorMessage = null;
         try {
           try {
-            if (!this.e(obfuscationGuard + 26203)) {
+            if (!this.isAppletStartupAllowed(obfuscationGuard + 26203)) {
               return;
             }
             this.serverHost = this.getCodeBase().getHost();

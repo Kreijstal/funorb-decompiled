@@ -148,7 +148,7 @@ final class TeleportEvent extends GameEvent {
             if (0 > var5) {
               var4 = var4 + GrowableIntArray.field_e;
             } else {
-              var6 = GzipDecoder.a(AnimationFrameSet.field_v[var3_int], true, (byte) -56);
+              var6 = GzipDecoder.measureSelectionMenuText(AnimationFrameSet.field_v[var3_int], true, (byte) -56);
               var4 = var4 + EventPresenterFactory.field_a;
               var7 = InstructionsPanel.field_B - (var6 >> 1);
               if (QuickChatSetupSupport.containsPointInRectangle(param0, (MouseWheelSource.field_c << 1) + TelepopEvent.field_B, param2, -LogoFaceSortSupport.field_b + var7, 5138823, var6 + (LogoFaceSortSupport.field_b << 1), var4)) {

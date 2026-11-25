@@ -259,8 +259,8 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               ValidationState.field_b = null;
               OwnerChangeEvent.field_B = true;
               Unit.processPendingUnlockNotifications(77);
-              if (DebouncedValidator.a(0, BoundedFile.field_e, 1)) {
-                RevivalEvent.d((byte) 125);
+              if (DebouncedValidator.isBitSet(0, BoundedFile.field_e, 1)) {
+                RevivalEvent.clearFirstStage25TutorialItem((byte) 125);
               }
             }
             if (OwnerChangeEvent.field_B) {
@@ -555,7 +555,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           if (param11 != -99) {
             return;
           }
-          FriendRequestSupport.a(param7, param1, param12, param14, -3, param6);
+          FriendRequestSupport.configureMessageDialogFrames(param7, param1, param12, param14, -3, param6);
           ContextualRuntimeException.setMessageDialogCenter((byte) -85, param15, param9);
           MusicPatchNode.a(param8, param0, param13, 3815);
           return;

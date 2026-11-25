@@ -200,7 +200,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 14) {
-                  RadialSummonItem.a(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), LogoFaceSortSupport.getLobbyPlayerListContent(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
+                  RadialSummonItem.a(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.getLobbyRoomListContent((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), LogoFaceSortSupport.getLobbyPlayerListContent(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
                   IntroSequence.initializeSocialLists(TextWidthSupport.b(-126), -72, ProjectileEffect.getSocialListContent(0));
                   LobbyNotificationSupport.field_d = 0;
                   ValidatedTextWidget.field_Z = true;
@@ -565,7 +565,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               SphinxActionRequest.sendQueuedRequestPackets(2, (byte) 37);
               WhirlpoolHasher.a(127, 3);
               LocalCoatSupport.a((byte) 33, 4);
-              FriendRequestSupport.a(5, true);
+              FriendRequestSupport.sendQueuedStructuredRequests(5, true);
               SpellCastEvent.b(6, -32666);
               BestScoreStrategy.a(7, 1742);
               TutorialLayout.a(true);
@@ -923,7 +923,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   CipherPacketBuffer.a(false, ClientContextMenu.field_a, 1, 0);
                   if (SoundEffectPreloadSupport.field_a) {
                     SoundEffectPreloadSupport.field_a = false;
-                    AiPlanningStrategy.a(false, 8028);
+                    AiPlanningStrategy.requestFullscreen(false, 8028);
                   }
                   if (ContentTransitionStage.field_a) {
                     CipherPacketBuffer.a(false, -4, 1, ChatInputDispatchSupport.field_a);
@@ -1016,7 +1016,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         try {
           var2 = VerticalScrollbar.p(0);
           if (PopupPresentation.requiresAccountUi(obfuscationGuard ^ 31337)) {
-            GameAppletShell.a(false, PrivateTextRecipientSupport.hasFocusOrFullscreen(false), var2);
+            GameAppletShell.drawLoadingScreen(false, PrivateTextRecipientSupport.hasFocusOrFullscreen(false), var2);
             return;
           }
           if (!DelayedPacket.field_q) {
@@ -1154,7 +1154,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MonotonicClockSupport.releaseStatics(true);
           NetworkGameShell.releaseSharedShellGlobals(71);
           ContextualRuntimeException.releaseStatics(1);
-          GameAppletShell.d(105);
+          GameAppletShell.releaseGameAppletShellStatics(105);
           BoundedUrlRequest.releaseStatics((byte) 100);
           PointerInputHandler.releaseStatics((byte) -79);
           MouseWheelSource.releaseStatics(-8834);
@@ -1216,7 +1216,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           LobbyPlayer.releaseStatics((byte) 20);
           AccountFlowUpdateSupport.releaseStatics((byte) -1);
           ArchiveIndex.releaseStatics(obfuscationGuard + 2);
-          GzipDecoder.a((byte) 126);
+          GzipDecoder.releaseStatics((byte) 126);
           ArchiveProvider.releaseStatics(false);
           AccountCreationInfoText.releaseStatics((byte) -22);
           ClientNetworkBootstrap.releaseStatics((byte) -73);
@@ -1261,7 +1261,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ManaEvent.releaseStatics(-829);
           MoveEvent.g(obfuscationGuard ^ -29395);
           SummonEvent.releaseStatics((byte) 113);
-          TurnEffectEvent.a(true);
+          TurnEffectEvent.releaseTurnEffectStatics(true);
           DeployRequest.releaseStatics((byte) 44);
           SphinxActionRequest.releaseStatics(-27538);
           SummonRequest.releaseSummonRequestStatics((byte) -58);
@@ -1326,7 +1326,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           IndexedSpriteBase.releaseStatics(18347);
           ClientStateChecksumSupport.releaseStatics((byte) 19);
           HuffmanCodec.releaseStatics(-1);
-          MapRepository.a(4116);
+          MapRepository.releaseStatics(4116);
           NodeIterator.releaseStatics((byte) -121);
           QuickChatMenuDisplaySupport.releaseStatics(obfuscationGuard ^ 21);
           NineSliceFrame.releaseStatics((byte) -119);
@@ -1442,7 +1442,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SynthesizerVoice.releaseScratch();
           MusicPatchUsage.releaseUiReferences(-119);
           AiInfluenceMap.releaseStatics(61);
-          AiPlanningStrategy.a(-1);
+          AiPlanningStrategy.releaseAiPlanningStrategyStatics(-1);
           CameraOverviewTarget.releaseStatics(-93);
           BattleCameraTargetTransform.releaseStatics((byte) 125);
           RadialSummonItem.releaseStatics(76);
@@ -1624,7 +1624,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var5 = 0;
           do {
             if (!(CorpseConditionMarker.defaultMusicProfile.gains.length > var5)) {
-              BitmapTextWidgetPainter.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+              BitmapTextWidgetPainter.initializeAudioPlayersWithSharedRate(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
               Widget.field_o = new int[7];
               break;
             }
@@ -2173,7 +2173,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           PowerOfTwoSupport.field_n = DropdownArrowPainter.loadBinaryBitmapFontByName(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
           DateInputWidget.field_E = DropdownArrowPainter.loadBinaryBitmapFontByName("basic", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
           TrianglePulse.field_i = ChatMessageWriteSupport.loadAntialiasedFontByName("introfont", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
-          NineSliceFrame.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, AchievementUnlockRequest.field_l, "basic", -2088);
+          NineSliceFrame.field_e = TurnEffectEvent.loadPalettedFontByName("runewarsfont", UnitAnimationPreview.field_j, AchievementUnlockRequest.field_l, "basic", -2088);
           GradientUiRenderer.installFont(NineSliceFrame.field_e);
           GradientUiRenderer.textBackdropSprites = DropdownSelectorPainter.loadRgbSpritesByName("textshadow", (byte) -127, AchievementUnlockRequest.field_l, "basic");
           var5_array = MapLayout.loadIndexedSpritesByName("members_benefits_screenshots", -28106, "basic", AchievementUnlockRequest.field_l);
@@ -2254,11 +2254,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           do {
             if (var6_array.length <= var7_int) {
               BufferedSocket.field_i = new IntroSequence(MusicPatchUsage.backgroundArchive);
-              HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", AchievementUnlockRequest.field_l);
-              MusicPatch.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", AchievementUnlockRequest.field_l);
-              ChannelBaseVolumeConsoleCommand.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", AchievementUnlockRequest.field_l);
-              EffectPresentation.field_j = CampaignMission.a((byte) -108, "frame_boxes", "basic", AchievementUnlockRequest.field_l);
-              DisplacedUnitMarker.field_s = CampaignMission.a((byte) 89, "frame_button", "basic", AchievementUnlockRequest.field_l);
+              HuffmanCodec.field_i = CampaignMission.loadNormalizedNineSliceSpritesByName((byte) -125, "frame_outer", "basic", AchievementUnlockRequest.field_l);
+              MusicPatch.field_m = CampaignMission.loadNormalizedNineSliceSpritesByName((byte) 83, "frame_inner", "basic", AchievementUnlockRequest.field_l);
+              ChannelBaseVolumeConsoleCommand.field_J = CampaignMission.loadNormalizedNineSliceSpritesByName((byte) 83, "frame_ingame", "basic", AchievementUnlockRequest.field_l);
+              EffectPresentation.field_j = CampaignMission.loadNormalizedNineSliceSpritesByName((byte) -108, "frame_boxes", "basic", AchievementUnlockRequest.field_l);
+              DisplacedUnitMarker.field_s = CampaignMission.loadNormalizedNineSliceSpritesByName((byte) 89, "frame_button", "basic", AchievementUnlockRequest.field_l);
               break;
             }
             var8_ref = var6_array[var7_int];
