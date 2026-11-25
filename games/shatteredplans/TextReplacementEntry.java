@@ -87,7 +87,7 @@ final class TextReplacementEntry {
           throw new IllegalStateException();
         }
         UiTextSupport.field_a = true;
-        WidgetStateStyle.a(param0, false);
+        WidgetStateStyle.openLoginForm(param0, false);
         SoundPlayback.field_i = 0;
     }
 

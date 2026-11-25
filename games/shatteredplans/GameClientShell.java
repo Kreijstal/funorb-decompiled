@@ -781,7 +781,7 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    final static java.awt.Frame a(boolean param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame requestFullscreenFrame(boolean param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;

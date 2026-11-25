@@ -1429,7 +1429,7 @@ final class MidiPcmStream extends PcmStream {
         return 0;
     }
 
-    final static void g(int param0) {
+    final static void resetTooltipState(int param0) {
         if (param0 != 14745) {
           field_L = (String) null;
         }

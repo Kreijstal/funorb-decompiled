@@ -21,7 +21,7 @@ final class PlayerOverlaySupport {
             param1 = false;
           }
           GameScreen.drawOverlays((byte) -57, param1);
-          ChatMessage.b(20975);
+          ChatMessage.drawQuickChatOverlay(20975);
           return;
         }
         field_a = (String) null;
@@ -29,7 +29,7 @@ final class PlayerOverlaySupport {
           param1 = false;
         }
         GameScreen.drawOverlays((byte) -57, param1);
-        ChatMessage.b(20975);
+        ChatMessage.drawQuickChatOverlay(20975);
     }
 
     final static void writePlayer(Player param0, PacketBuffer param1, int param2) {

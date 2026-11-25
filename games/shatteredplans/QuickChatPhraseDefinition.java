@@ -15,7 +15,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     static int field_r;
 
     final static void resetDialogProgressAndInteractionState(int param0) {
-        GuestPlayForm.a(-50);
+        GuestPlayForm.resetDialogsAndTooltipState(-50);
         if (param0 != -23771) {
           byte[] var2 = (byte[]) null;
           QuickChatPhraseDefinition.computeWhirlpoolDigest((byte[]) null, -8, -126, -100);
@@ -216,7 +216,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           QuickChatPhraseDefinition.resetDialogProgressAndInteractionState(2);
         }
         if (13 == TextReplacementEntry.field_j) {
-          ProgressDialog.f(false);
+          ProgressDialog.closeQuickChatMenusIfOpen(false);
           return true;
         }
         if (TextReplacementEntry.field_j == 102) {

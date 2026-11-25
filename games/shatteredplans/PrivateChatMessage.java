@@ -19,7 +19,7 @@ final class PrivateChatMessage extends ChatMessage {
         try {
           param0.writeMarkedString((byte) 95, this.field_m);
           if (param1 <= 67) {
-            PrivateChatMessage.a((QuickChatMenu) null, false);
+            PrivateChatMessage.attachQuickChatSubmenu((QuickChatMenu) null, false);
           }
           param0.writePackedName((byte) -120, this.field_i);
           return;
@@ -37,7 +37,7 @@ final class PrivateChatMessage extends ChatMessage {
         }
     }
 
-    final static void a(QuickChatMenu param0, boolean param1) {
+    final static void attachQuickChatSubmenu(QuickChatMenu param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -63,7 +63,7 @@ final class PrivateChatMessage extends ChatMessage {
         }
     }
 
-    final static int a(PacketBuffer param0, byte param1, String param2) {
+    final static int writeCompressedChatText(PacketBuffer param0, byte param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

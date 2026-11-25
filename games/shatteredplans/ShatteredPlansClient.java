@@ -852,7 +852,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ClientRasterSupport.clearStatics(4);
         LobbyOptionResources.releaseLobbyOptionResources((byte) -58);
         MessageKind.clearStatics(false);
-        ChatMessage.a(param0 ^ 24068);
+        ChatMessage.clearChatMessageStatics(param0 ^ 24068);
         CipherPacketBuffer.clearStatics(0);
         LeaderboardSortSupport.clearStatics((byte) 1);
         ClientInputSupport.clearStatics((byte) 87);

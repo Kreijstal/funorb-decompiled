@@ -20,7 +20,7 @@ class TargetedChatMessage extends ChatMessage {
         field_m = null;
     }
 
-    final static boolean a(byte param0, Star param1, Star param2, int param3, Star param4) {
+    final static boolean isStarOutsideLinkMargin(byte param0, Star param1, Star param2, int param3, Star param4) {
         boolean stackIn_13_0 = false;
         boolean stackIn_19_0 = false;
         boolean stackIn_25_0 = false;
@@ -55,7 +55,7 @@ class TargetedChatMessage extends ChatMessage {
             }
             if (param0 < 88) {
               var11 = (Star) null;
-              TargetedChatMessage.a((byte) 115, (Star) null, (Star) null, -109, (Star) null);
+              TargetedChatMessage.isStarOutsideLinkMargin((byte) 115, (Star) null, (Star) null, -109, (Star) null);
             }
             var7 = Math.sqrt((double)(var6 * var6 + var5_int * var5_int));
             var9 = (double)(-((param1.field_S - param4.field_S) * var5_int) + (param1.field_A - param4.field_A) * var6) / var7;
@@ -89,7 +89,7 @@ class TargetedChatMessage extends ChatMessage {
         }
     }
 
-    final static void c(int param0) {
+    final static void setHostLegacyStatusFlag(int param0) {
         PasswordInputPainter.setLegacyStatusFlag(GameScreen.getHostApplet((byte) 126), true);
         if (param0 != -1) {
           field_n = 16;

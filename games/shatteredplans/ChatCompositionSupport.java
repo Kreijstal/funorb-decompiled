@@ -183,7 +183,7 @@ final class ChatCompositionSupport {
             }
             if (QuickChatPhraseDefinition.field_t) {
               StripedProgressWidget.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
-              ProgressDialog.f(false);
+              ProgressDialog.closeQuickChatMenusIfOpen(false);
             }
           }
           if (null == var2 &&

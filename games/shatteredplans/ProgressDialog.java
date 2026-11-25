@@ -466,7 +466,7 @@ final class ProgressDialog extends ResizingDialog {
         }
     }
 
-    final static void f(boolean param0) {
+    final static void closeQuickChatMenusIfOpen(boolean param0) {
         if (QuickChatPhraseDefinition.field_t) {
           SocialNameInputPanel.closeQuickChatMenus((byte) 118);
         }

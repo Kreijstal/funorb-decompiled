@@ -76,7 +76,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetDialogsAndTooltipState(int param0) {
         if (null != ByteArrayStorage.field_e) {
           ByteArrayStorage.field_e.removeClosedDialogs((byte) 121);
         }
@@ -84,7 +84,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
           if (MouseInputHandler.field_h != null) {
             MouseInputHandler.field_h.enableDeterminateProgress(8305);
           }
-          MidiPcmStream.g(param0 + 14795);
+          MidiPcmStream.resetTooltipState(param0 + 14795);
           return;
         }
     }

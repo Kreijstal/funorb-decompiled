@@ -25,7 +25,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 != -9861) {
           AnimatedPanel var5 = (AnimatedPanel) null;
-          StatefulWidgetTheme.a(122, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
+          StatefulWidgetTheme.createQuickChatCategoryMenu(122, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         if (IndexedSpriteState.field_h != null &&
           13 == TextReplacementEntry.field_j) {
@@ -192,12 +192,12 @@ final class StatefulWidgetTheme extends WidgetTheme {
         field_x = null;
         if (!param0) {
           AnimatedPanel var2 = (AnimatedPanel) null;
-          StatefulWidgetTheme.a(-46, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
+          StatefulWidgetTheme.createQuickChatCategoryMenu(-46, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         field_y = null;
     }
 
-    final static QuickChatMenu a(int param0, QuickChatCategoryDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+    final static QuickChatMenu createQuickChatCategoryMenu(int param0, QuickChatCategoryDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -269,7 +269,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
               var13_ref_si = GameScreen.field_A.getDefinition(param1.field_r[var12], (byte) 100);
               var8[var12] = var13_ref_si.field_t;
               var9[var12] = param1.field_p[var12];
-              var11[var12] = StatefulWidgetTheme.a(param0 + 0, var13_ref_si, param2, param3, param4);
+              var11[var12] = StatefulWidgetTheme.createQuickChatCategoryMenu(param0 + 0, var13_ref_si, param2, param3, param4);
             }
           }
           if (null != param1.field_x) {

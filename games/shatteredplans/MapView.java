@@ -737,7 +737,7 @@ final class MapView extends MapViewState {
         var4 = DerelictMapReader.field_h.hasPointerInteraction(param2) ? 1 : 0;
         if (LobbyCommandSupport.field_d != 0 &&
           var4 == 0) {
-          ProgressDialog.f(false);
+          ProgressDialog.closeQuickChatMenusIfOpen(false);
           param1 = false;
         }
         if (param1) {

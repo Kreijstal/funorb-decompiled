@@ -171,7 +171,7 @@ final class QuickChatMenu extends AnimatedPanel {
             this.setAnimationFrame(false, 0);
             this.field_Gb = param2;
             this.field_Ob = this.field_yb[this.field_Gb];
-            PrivateChatMessage.a(this.field_Ob, true);
+            PrivateChatMessage.attachQuickChatSubmenu(this.field_Ob, true);
             this.field_Ob.setAnimationFrame(false, 12);
           } else {
             if (this.field_Hb[param2] != -1) {
@@ -190,7 +190,7 @@ final class QuickChatMenu extends AnimatedPanel {
               SocialNameInputPanel.closeQuickChatMenus((byte) 119);
               GameState.resetChatRateLimit(-5883);
             } else {
-              EmailSyntaxValidator.d(param0 ^ -16705);
+              EmailSyntaxValidator.openQuickChatHelpPanel(param0 ^ -16705);
               SocialNameInputPanel.closeQuickChatMenus((byte) 119);
             }
           }

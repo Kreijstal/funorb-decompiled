@@ -67,7 +67,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         HighscoreResponseSupport.field_f.setContent(SocialListSetupSupport.field_b, -54);
     }
 
-    final static void d(int param0) {
+    final static void openQuickChatHelpPanel(int param0) {
         if (param0 == -16705) {
           IndexedSpriteState.field_h = new QuickChatHelpPanel(QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, ClientInputSupport.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w);
           return;

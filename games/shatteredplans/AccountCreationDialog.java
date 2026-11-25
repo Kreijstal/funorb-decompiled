@@ -160,7 +160,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
               var4 = param2.field_g;
               if (param2.field_c == 248) {
                 if (!param1) {
-                  TargetedChatMessage.c(-1);
+                  TargetedChatMessage.setHostLegacyStatusFlag(-1);
                 }
                 var4 = IconLabelPanel.field_xb;
                 this.field_Eb = true;

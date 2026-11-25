@@ -425,7 +425,7 @@ final class MusicCrossfadeStream extends PcmStream {
         return null;
     }
 
-    final synchronized void a(int param0, int param1, byte param2, boolean param3, int param4, MusicTrack param5) {
+    final synchronized void transitionToTrack(int param0, int param1, byte param2, boolean param3, int param4, MusicTrack param5) {
         boolean stackIn_20_1 = false;
         int stackIn_35_0 = 0;
         MidiPcmStream stackIn_42_0 = null;

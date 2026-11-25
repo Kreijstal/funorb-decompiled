@@ -47,7 +47,7 @@ final class WidgetStateStyle {
         int var1 = -11 % ((-6 - param0) / 63);
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void openLoginForm(boolean param0, boolean param1) {
         RasterCoverageSpan.openLoginForm((byte) 109, param1, param0);
     }
 

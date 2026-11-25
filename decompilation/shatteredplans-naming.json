@@ -7164,6 +7164,14 @@
       "renamedSymbol": "M:GuestPlayForm.clearStatics(B)V"
     },
     {
+      "symbol": "M:cq.a(I)V",
+      "originalName": "a",
+      "to": "resetDialogsAndTooltipState",
+      "evidence": "Remove closed dialogs,then for int-50enable determinate progress on retained widget and reset tooltip state. Complete tooltip producer/visibility/draw consumers inspected. Preserve repeated globals,null paths and helper call/exception order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GuestPlayForm.resetDialogsAndTooltipState(I)V"
+    },
+    {
       "symbol": "M:cq.a(ICILvg;)Z",
       "originalName": "a",
       "to": "handleKey",
@@ -8324,6 +8332,22 @@
       "renamedSymbol": "M:PrivateChatMessage.write(LPacketBuffer;B)V"
     },
     {
+      "symbol": "M:ee.a(Lob;BLjava/lang/String;)I",
+      "originalName": "a",
+      "to": "writeCompressedChatText",
+      "evidence": "Encode text using original CP1252-style byte mapper,write smart uncompressed length,then Huffman-compress into packet at current position and return bytes written. Complete encoding helper and chat packet callers read. Preserve unsupported-char question-mark substitution,byte guard cleanup,length writes and partial position/array mutation on failure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I"
+    },
+    {
+      "symbol": "M:ee.a(Lvm;Z)V",
+      "originalName": "a",
+      "to": "attachQuickChatSubmenu",
+      "evidence": "Attach supplied menu to retained QuickChat root panel. Preserve false-bool account-state clear before addChild,nullable aliases and runtime exception wrapper. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V"
+    },
+    {
       "symbol": "M:ee.a(Z)V",
       "originalName": "a",
       "to": "clearStatics",
@@ -8722,6 +8746,14 @@
       "evidence": "Updates status text and scaled progress and selects waiting/determinate progress colors and animation.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ProgressDialog.updateProgress(ZLjava/lang/String;IF)V"
+    },
+    {
+      "symbol": "M:eo.f(Z)V",
+      "originalName": "f",
+      "to": "closeQuickChatMenusIfOpen",
+      "evidence": "When QuickChat open call original close helper;true bool then clears static caption. Preserve open-flag read,close ordering and both bool domains. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProgressDialog.closeQuickChatMenusIfOpen(Z)V"
     },
     {
       "symbol": "M:eo.h(B)V",
@@ -9724,6 +9756,14 @@
       "renamedSymbol": "M:MidiPcmStream.stop(I)V"
     },
     {
+      "symbol": "M:ga.g(I)V",
+      "originalName": "g",
+      "to": "resetTooltipState",
+      "evidence": "Clear retained tooltip text,set saved pointer coordinates to-1,clear suppression flag and reset tick counter. Complete visible-text and tooltip update helpers plus draw consumer read. Preserve wrong-int caption clear before tooltip writes and global assignment order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.resetTooltipState(I)V"
+    },
+    {
       "symbol": "M:ga.h(I)Z",
       "originalName": "h",
       "to": "isPlaying",
@@ -10268,6 +10308,14 @@
       "renamedSymbol": "M:StatefulWidgetTheme.setAllStateOverlaySprite(ILSprite;)V"
     },
     {
+      "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
+      "originalName": "a",
+      "to": "createQuickChatCategoryMenu",
+      "evidence": "Recursively build category submenus,phrase labels/IDs and shortcuts including-1help entry,then allocate QuickChatMenu. Preserve null category early return,string allocation before wrong-int null,category/phrase lookup order,char shortcut increments,array aliases and cycles/recursion behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;"
+    },
+    {
       "symbol": "M:gn.a(Lgn;ZI)V",
       "originalName": "a",
       "to": "copyTo",
@@ -10562,6 +10610,14 @@
       "evidence": "Abstract: advances the stream by a number of frames. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MusicCrossfadeStream.skip(I)V"
+    },
+    {
+      "symbol": "M:h.a(IIBZILgh;)V",
+      "originalName": "a",
+      "to": "transitionToTrack",
+      "evidence": "Under original synchronized monitor,replace/reuse one of two MIDI tracks and set signed fade step,volume and tempo via retained helper;bool selects interruption/loop behavior. Preserve null==retained-track early cases,byte guard after state changes,stream stop/play/configuration order,signed negation and partial retained state on failure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V"
     },
     {
       "symbol": "M:h.b()Ltn;",
@@ -14148,6 +14204,14 @@
       "renamedSymbol": "M:TargetedChatMessage.getKind(B)LMessageKind;"
     },
     {
+      "symbol": "M:kp.a(BLln;Lln;ILln;)Z",
+      "originalName": "a",
+      "to": "isStarOutsideLinkMargin",
+      "evidence": "Test map-link clearance using endpoint x-range checks,vertical/horizontal coordinate branches and signed cross-product distance truncated to int. Complete181line graph-link builder rejects candidates when false. Preserve asymmetric signed comparisons,no absolute value,int overflow before sqrt/division,NaNs/casts,byte null-recursion trap and all failure ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z"
+    },
+    {
       "symbol": "M:kp.a(Lob;B)V",
       "originalName": "a",
       "to": "write",
@@ -14162,6 +14226,14 @@
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TargetedChatMessage.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:kp.c(I)V",
+      "originalName": "c",
+      "to": "setHostLegacyStatusFlag",
+      "evidence": "Get host applet then set legacy status flag through existing helper;wrong int afterwards sets static sentinel16. Preserve helper cookie/status behavior,applet lookup order and late mutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TargetedChatMessage.setHostLegacyStatusFlag(I)V"
     },
     {
       "symbol": "M:kq.a(B)V",
@@ -15692,6 +15764,14 @@
       "renamedSymbol": "M:EmailSyntaxValidator.computeStateFor(ILjava/lang/String;)LValidationState;"
     },
     {
+      "symbol": "M:mm.d(I)V",
+      "originalName": "d",
+      "to": "openQuickChatHelpPanel",
+      "evidence": "Replace retained help panel with new QuickChatHelpPanel from six style references. Both int paths allocate;wrong int first clears static bool. Preserve constructor arguments/reference order,old panel alias and failure behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:EmailSyntaxValidator.openQuickChatHelpPanel(I)V"
+    },
+    {
       "symbol": "M:mm.e(I)V",
       "originalName": "e",
       "to": "clearStatics",
@@ -15796,12 +15876,36 @@
       "renamedSymbol": "M:ChatMessage.getKind(B)LMessageKind;"
     },
     {
+      "symbol": "M:ms.a(I)V",
+      "originalName": "a",
+      "to": "clearChatMessageStatics",
+      "evidence": "Null retained ChatMessage static references;int-1then clears int matrix and returns. Other ints recurse with42before final matrix clear. Preserve original nontermination/StackOverflowError path,partial writes and exact guard domain. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ChatMessage.clearChatMessageStatics(I)V"
+    },
+    {
+      "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
+      "originalName": "a",
+      "to": "containsForwardOrReversedIgnoringUnderscores",
+      "evidence": "Remove underscores from supplied haystack,reverse needle,then test original or reversed needle by String.indexOf. Password-check callers and complete character replacement helper read. Preserve argument direction,case sensitivity,UTF16reverse semantics,empty/null behavior,short-circuit order and wrong-byte null recursion. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z"
+    },
+    {
       "symbol": "M:ms.a(Lob;B)V",
       "originalName": "a",
       "to": "write",
       "evidence": "Abstract: writes the message fields to the packet.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ChatMessage.write(LPacketBuffer;B)V"
+    },
+    {
+      "symbol": "M:ms.b(I)V",
+      "originalName": "b",
+      "to": "drawQuickChatOverlay",
+      "evidence": "If QuickChat open,clear current raster clip rectangle then draw retained root panel. Preserve wrong-int null-string helper call before drawing,clip arithmetic,global reads and partial raster state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ChatMessage.drawQuickChatOverlay(I)V"
     },
     {
       "symbol": "M:n.a(I)V",
@@ -21380,6 +21484,14 @@
       "renamedSymbol": "M:GameClientShell.configureGame(Ljava/lang/String;IB)V"
     },
     {
+      "symbol": "M:tl.a(ZLqb;IIII)Ljava/awt/Frame;",
+      "originalName": "a",
+      "to": "requestFullscreenFrame",
+      "evidence": "Check platform readiness,optionally select matching display mode with greatest retained refresh field,queue fullscreen task and poll status every10ms;return frame or dispose failed frame. Preserve zero-mode/full-int/bool domains,original selection predicates,unbounded wait,task result cast and disposal/exception order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;"
+    },
+    {
       "symbol": "M:tl.a(ZZIZZZZ)V",
       "originalName": "a",
       "to": "allowOpcodeGroups",
@@ -23890,6 +24002,14 @@
       "evidence": "Controls whether applyTo first paints and clears the accumulated style before merging this style.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WidgetStateStyle.setFlushBeforeApply(ZI)LWidgetStateStyle;"
+    },
+    {
+      "symbol": "M:wk.a(ZZ)V",
+      "originalName": "a",
+      "to": "openLoginForm",
+      "evidence": "Forward supplied bools in original reversed argument order to retained login-form helper. Preserve primitive domains and helper guard/error behavior without changing login policy. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WidgetStateStyle.openLoginForm(ZZ)V"
     },
     {
       "symbol": "M:wk.a([Lbi;I)Lwk;",
@@ -117376,7 +117496,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#0",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#0",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -117387,7 +117507,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#1",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#1",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -117398,7 +117518,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#10",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#10",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -117409,7 +117529,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#2",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#2",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -117420,7 +117540,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#3",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#3",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -117431,7 +117551,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#4",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#4",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#4",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -117442,7 +117562,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#5",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#5",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#5",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -117453,7 +117573,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#6",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#6",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#6",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -117464,7 +117584,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#7",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#7",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#7",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -117475,7 +117595,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#8",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#8",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#8",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -117486,7 +117606,7 @@
     },
     {
       "symbol": "L:ee.a(Lob;BLjava/lang/String;)I#9",
-      "renamedSymbol": "L:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#9",
+      "renamedSymbol": "L:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -117497,7 +117617,7 @@
     },
     {
       "symbol": "L:ee.a(Lvm;Z)V#0",
-      "renamedSymbol": "L:PrivateChatMessage.a(LQuickChatMenu;Z)V#0",
+      "renamedSymbol": "L:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#0",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -117508,7 +117628,7 @@
     },
     {
       "symbol": "L:ee.a(Lvm;Z)V#1",
-      "renamedSymbol": "L:PrivateChatMessage.a(LQuickChatMenu;Z)V#1",
+      "renamedSymbol": "L:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#1",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -117519,7 +117639,7 @@
     },
     {
       "symbol": "L:ee.a(Lvm;Z)V#2",
-      "renamedSymbol": "L:PrivateChatMessage.a(LQuickChatMenu;Z)V#2",
+      "renamedSymbol": "L:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#2",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -117530,7 +117650,7 @@
     },
     {
       "symbol": "L:ee.a(Lvm;Z)V#3",
-      "renamedSymbol": "L:PrivateChatMessage.a(LQuickChatMenu;Z)V#3",
+      "renamedSymbol": "L:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -117541,7 +117661,7 @@
     },
     {
       "symbol": "L:ee.a(Lvm;Z)V#4",
-      "renamedSymbol": "L:PrivateChatMessage.a(LQuickChatMenu;Z)V#4",
+      "renamedSymbol": "L:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -117552,7 +117672,7 @@
     },
     {
       "symbol": "L:ee.a(Lvm;Z)V#5",
-      "renamedSymbol": "L:PrivateChatMessage.a(LQuickChatMenu;Z)V#5",
+      "renamedSymbol": "L:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -147813,7 +147933,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#0",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#0",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#0",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -147824,7 +147944,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#1",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#1",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -147835,7 +147955,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#10",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#10",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#10",
       "originalName": "stackIn_35_2",
       "renamedName": "stackIn_35_2",
       "declaration": {
@@ -147846,7 +147966,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#11",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#11",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#11",
       "originalName": "stackIn_37_1",
       "renamedName": "stackIn_37_1",
       "declaration": {
@@ -147857,7 +147977,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#12",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#12",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#12",
       "originalName": "stackIn_38_2",
       "renamedName": "stackIn_38_2",
       "declaration": {
@@ -147868,7 +147988,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#13",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#13",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#13",
       "originalName": "stackIn_40_1",
       "renamedName": "stackIn_40_1",
       "declaration": {
@@ -147879,7 +147999,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#14",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#14",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#14",
       "originalName": "stackIn_41_2",
       "renamedName": "stackIn_41_2",
       "declaration": {
@@ -147890,7 +148010,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#15",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#15",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -147901,7 +148021,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#16",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#16",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#16",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -147912,7 +148032,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#17",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#17",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#17",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -147923,7 +148043,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#18",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#18",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#18",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -147934,7 +148054,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#19",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#19",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#19",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -147945,7 +148065,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#2",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#2",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -147956,7 +148076,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#20",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#20",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#20",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -147967,7 +148087,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#21",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#21",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#21",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -147978,7 +148098,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#22",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#22",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#22",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -147989,7 +148109,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#23",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#23",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#23",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -148000,7 +148120,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#24",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#24",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#24",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -148011,7 +148131,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#25",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#25",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#25",
       "originalName": "var13_ref_si",
       "renamedName": "var13_ref_si",
       "declaration": {
@@ -148022,7 +148142,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#26",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#26",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#26",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -148033,7 +148153,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#27",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#27",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#27",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -148044,7 +148164,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#28",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#28",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#28",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -148055,7 +148175,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#29",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#29",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#29",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -148066,7 +148186,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#3",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#3",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -148077,7 +148197,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#30",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#30",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#30",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -148088,7 +148208,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#31",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#31",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#31",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -148099,7 +148219,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#32",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#32",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#32",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -148110,7 +148230,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#33",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#33",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#33",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -148121,7 +148241,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#34",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#34",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#34",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -148132,7 +148252,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#35",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#35",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#35",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -148143,7 +148263,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#4",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#4",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#4",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -148154,7 +148274,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#5",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#5",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#5",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -148165,7 +148285,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#6",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#6",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#6",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -148176,7 +148296,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#7",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#7",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#7",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -148187,7 +148307,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#8",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#8",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#8",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -148198,7 +148318,7 @@
     },
     {
       "symbol": "L:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#9",
-      "renamedSymbol": "L:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#9",
+      "renamedSymbol": "L:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#9",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -150783,7 +150903,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#0",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#0",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#0",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -150794,7 +150914,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#1",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#1",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#1",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -150805,7 +150925,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#10",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#10",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#10",
       "originalName": "stackIn_57_0",
       "renamedName": "stackIn_57_0",
       "declaration": {
@@ -150816,7 +150936,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#11",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#11",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#11",
       "originalName": "stackIn_57_1",
       "renamedName": "stackIn_57_1",
       "declaration": {
@@ -150827,7 +150947,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#12",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#12",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#12",
       "originalName": "stackIn_58_2",
       "renamedName": "stackIn_58_2",
       "declaration": {
@@ -150838,7 +150958,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#13",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#13",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -150849,7 +150969,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#14",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#14",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#14",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -150860,7 +150980,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#15",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#15",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#15",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -150871,7 +150991,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#16",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#16",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#16",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -150882,7 +151002,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#17",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#17",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150893,7 +151013,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#2",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#2",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#2",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -150904,7 +151024,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#3",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#3",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#3",
       "originalName": "stackIn_42_1",
       "renamedName": "stackIn_42_1",
       "declaration": {
@@ -150915,7 +151035,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#4",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#4",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#4",
       "originalName": "stackIn_42_2",
       "renamedName": "stackIn_42_2",
       "declaration": {
@@ -150926,7 +151046,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#5",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#5",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#5",
       "originalName": "stackIn_43_3",
       "renamedName": "stackIn_43_3",
       "declaration": {
@@ -150937,7 +151057,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#6",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#6",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#6",
       "originalName": "stackIn_51_0",
       "renamedName": "stackIn_51_0",
       "declaration": {
@@ -150948,7 +151068,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#7",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#7",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#7",
       "originalName": "stackIn_51_1",
       "renamedName": "stackIn_51_1",
       "declaration": {
@@ -150959,7 +151079,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#8",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#8",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#8",
       "originalName": "stackIn_51_2",
       "renamedName": "stackIn_51_2",
       "declaration": {
@@ -150970,7 +151090,7 @@
     },
     {
       "symbol": "L:h.a(IIBZILgh;)V#9",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#9",
+      "renamedSymbol": "L:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#9",
       "originalName": "stackIn_52_3",
       "renamedName": "stackIn_52_3",
       "declaration": {
@@ -200899,7 +201019,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#0",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#0",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -200910,7 +201030,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#1",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#1",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#1",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -200921,7 +201041,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#10",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#10",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -200932,7 +201052,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#11",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#11",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#11",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -200943,7 +201063,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#12",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#12",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -200954,7 +201074,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#13",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#13",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -200965,7 +201085,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#14",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#14",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -200976,7 +201096,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#15",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#15",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -200987,7 +201107,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#16",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#16",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#16",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -200998,7 +201118,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#17",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#17",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -201009,7 +201129,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#2",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#2",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#2",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -201020,7 +201140,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#3",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#3",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#3",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -201031,7 +201151,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#4",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#4",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#4",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -201042,7 +201162,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#5",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#5",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#5",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -201053,7 +201173,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#6",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#6",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#6",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -201064,7 +201184,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#7",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#7",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#7",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -201075,7 +201195,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#8",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#8",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#8",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -201086,7 +201206,7 @@
     },
     {
       "symbol": "L:kp.a(BLln;Lln;ILln;)Z#9",
-      "renamedSymbol": "L:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#9",
+      "renamedSymbol": "L:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#9",
       "originalName": "stackIn_35_2",
       "renamedName": "stackIn_35_2",
       "declaration": {
@@ -226067,7 +226187,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -226078,7 +226198,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -226089,7 +226209,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#10",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#10",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -226100,7 +226220,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -226111,7 +226231,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -226122,7 +226242,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -226133,7 +226253,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -226144,7 +226264,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#6",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -226155,7 +226275,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#7",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -226166,7 +226286,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -226177,7 +226297,7 @@
     },
     {
       "symbol": "L:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
-      "renamedSymbol": "L:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
+      "renamedSymbol": "L:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#9",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -226188,7 +226308,7 @@
     },
     {
       "symbol": "L:ms.b(I)V#0",
-      "renamedSymbol": "L:ChatMessage.b(I)V#0",
+      "renamedSymbol": "L:ChatMessage.drawQuickChatOverlay(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -288976,7 +289096,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#0",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#0",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -288987,7 +289107,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#1",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#1",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -288998,7 +289118,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#10",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#10",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -289009,7 +289129,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#11",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#11",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#11",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -289020,7 +289140,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#12",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#12",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#12",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -289031,7 +289151,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#13",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#13",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -289042,7 +289162,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#14",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#14",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -289053,7 +289173,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#15",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#15",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -289064,7 +289184,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#16",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#16",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#16",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -289075,7 +289195,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#17",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#17",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -289086,7 +289206,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#2",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#2",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -289097,7 +289217,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#3",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#3",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#3",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -289108,7 +289228,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#4",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#4",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#4",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -289119,7 +289239,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#5",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#5",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#5",
       "originalName": "stackIn_40_0",
       "renamedName": "stackIn_40_0",
       "declaration": {
@@ -289130,7 +289250,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#6",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#6",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#6",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -289141,7 +289261,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#7",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#7",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#7",
       "originalName": "stackIn_43_1",
       "renamedName": "stackIn_43_1",
       "declaration": {
@@ -289152,7 +289272,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#8",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#8",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#8",
       "originalName": "stackIn_44_2",
       "renamedName": "stackIn_44_2",
       "declaration": {
@@ -289163,7 +289283,7 @@
     },
     {
       "symbol": "L:tl.a(ZLqb;IIII)Ljava/awt/Frame;#9",
-      "renamedSymbol": "L:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#9",
+      "renamedSymbol": "L:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -325188,9 +325308,9 @@
     },
     {
       "symbol": "M:cq.a(I)V",
-      "renamedSymbol": "M:GuestPlayForm.a(I)V",
+      "renamedSymbol": "M:GuestPlayForm.resetDialogsAndTooltipState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetDialogsAndTooltipState",
       "declaration": {
         "file": "cq.java",
         "start": 2493,
@@ -327619,9 +327739,9 @@
     },
     {
       "symbol": "M:ee.a(Lob;BLjava/lang/String;)I",
-      "renamedSymbol": "M:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I",
+      "renamedSymbol": "M:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeCompressedChatText",
       "declaration": {
         "file": "ee.java",
         "start": 2324,
@@ -327630,9 +327750,9 @@
     },
     {
       "symbol": "M:ee.a(Lvm;Z)V",
-      "renamedSymbol": "M:PrivateChatMessage.a(LQuickChatMenu;Z)V",
+      "renamedSymbol": "M:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "attachQuickChatSubmenu",
       "declaration": {
         "file": "ee.java",
         "start": 1325,
@@ -328620,9 +328740,9 @@
     },
     {
       "symbol": "M:eo.f(Z)V",
-      "renamedSymbol": "M:ProgressDialog.f(Z)V",
+      "renamedSymbol": "M:ProgressDialog.closeQuickChatMenusIfOpen(Z)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "closeQuickChatMenusIfOpen",
       "declaration": {
         "file": "eo.java",
         "start": 17126,
@@ -331007,9 +331127,9 @@
     },
     {
       "symbol": "M:ga.g(I)V",
-      "renamedSymbol": "M:MidiPcmStream.g(I)V",
+      "renamedSymbol": "M:MidiPcmStream.resetTooltipState(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "resetTooltipState",
       "declaration": {
         "file": "ga.java",
         "start": 55125,
@@ -332085,9 +332205,9 @@
     },
     {
       "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
-      "renamedSymbol": "M:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;",
+      "renamedSymbol": "M:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createQuickChatCategoryMenu",
       "declaration": {
         "file": "gn.java",
         "start": 6261,
@@ -332690,9 +332810,9 @@
     },
     {
       "symbol": "M:h.a(IIBZILgh;)V",
-      "renamedSymbol": "M:MusicCrossfadeStream.a(IIBZILMusicTrack;)V",
+      "renamedSymbol": "M:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "transitionToTrack",
       "declaration": {
         "file": "h.java",
         "start": 14681,
@@ -339719,9 +339839,9 @@
     },
     {
       "symbol": "M:kp.a(BLln;Lln;ILln;)Z",
-      "renamedSymbol": "M:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z",
+      "renamedSymbol": "M:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isStarOutsideLinkMargin",
       "declaration": {
         "file": "kp.java",
         "start": 465,
@@ -339752,9 +339872,9 @@
     },
     {
       "symbol": "M:kp.c(I)V",
-      "renamedSymbol": "M:TargetedChatMessage.c(I)V",
+      "renamedSymbol": "M:TargetedChatMessage.setHostLegacyStatusFlag(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "setHostLegacyStatusFlag",
       "declaration": {
         "file": "kp.java",
         "start": 3407,
@@ -342986,9 +343106,9 @@
     },
     {
       "symbol": "M:mm.d(I)V",
-      "renamedSymbol": "M:EmailSyntaxValidator.d(I)V",
+      "renamedSymbol": "M:EmailSyntaxValidator.openQuickChatHelpPanel(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "openQuickChatHelpPanel",
       "declaration": {
         "file": "mm.java",
         "start": 2053,
@@ -343195,9 +343315,9 @@
     },
     {
       "symbol": "M:ms.a(I)V",
-      "renamedSymbol": "M:ChatMessage.a(I)V",
+      "renamedSymbol": "M:ChatMessage.clearChatMessageStatics(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearChatMessageStatics",
       "declaration": {
         "file": "ms.java",
         "start": 1997,
@@ -343206,9 +343326,9 @@
     },
     {
       "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
-      "renamedSymbol": "M:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z",
+      "renamedSymbol": "M:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "containsForwardOrReversedIgnoringUnderscores",
       "declaration": {
         "file": "ms.java",
         "start": 339,
@@ -343228,9 +343348,9 @@
     },
     {
       "symbol": "M:ms.b(I)V",
-      "renamedSymbol": "M:ChatMessage.b(I)V",
+      "renamedSymbol": "M:ChatMessage.drawQuickChatOverlay(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawQuickChatOverlay",
       "declaration": {
         "file": "ms.java",
         "start": 2330,
@@ -354426,9 +354546,9 @@
     },
     {
       "symbol": "M:tl.a(ZLqb;IIII)Ljava/awt/Frame;",
-      "renamedSymbol": "M:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;",
+      "renamedSymbol": "M:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestFullscreenFrame",
       "declaration": {
         "file": "tl.java",
         "start": 24429,
@@ -359519,9 +359639,9 @@
     },
     {
       "symbol": "M:wk.a(ZZ)V",
-      "renamedSymbol": "M:WidgetStateStyle.a(ZZ)V",
+      "renamedSymbol": "M:WidgetStateStyle.openLoginForm(ZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openLoginForm",
       "declaration": {
         "file": "wk.java",
         "start": 1527,
@@ -374215,7 +374335,7 @@
     },
     {
       "symbol": "P:cq.a(I)V#0",
-      "renamedSymbol": "P:GuestPlayForm.a(I)V#0",
+      "renamedSymbol": "P:GuestPlayForm.resetDialogsAndTooltipState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378967,7 +379087,7 @@
     },
     {
       "symbol": "P:ee.a(Lob;BLjava/lang/String;)I#0",
-      "renamedSymbol": "P:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#0",
+      "renamedSymbol": "P:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378978,7 +379098,7 @@
     },
     {
       "symbol": "P:ee.a(Lob;BLjava/lang/String;)I#1",
-      "renamedSymbol": "P:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#1",
+      "renamedSymbol": "P:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378989,7 +379109,7 @@
     },
     {
       "symbol": "P:ee.a(Lob;BLjava/lang/String;)I#2",
-      "renamedSymbol": "P:PrivateChatMessage.a(LPacketBuffer;BLjava/lang/String;)I#2",
+      "renamedSymbol": "P:PrivateChatMessage.writeCompressedChatText(LPacketBuffer;BLjava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -379000,7 +379120,7 @@
     },
     {
       "symbol": "P:ee.a(Lvm;Z)V#0",
-      "renamedSymbol": "P:PrivateChatMessage.a(LQuickChatMenu;Z)V#0",
+      "renamedSymbol": "P:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -379011,7 +379131,7 @@
     },
     {
       "symbol": "P:ee.a(Lvm;Z)V#1",
-      "renamedSymbol": "P:PrivateChatMessage.a(LQuickChatMenu;Z)V#1",
+      "renamedSymbol": "P:PrivateChatMessage.attachQuickChatSubmenu(LQuickChatMenu;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -381695,7 +381815,7 @@
     },
     {
       "symbol": "P:eo.f(Z)V#0",
-      "renamedSymbol": "P:ProgressDialog.f(Z)V#0",
+      "renamedSymbol": "P:ProgressDialog.closeQuickChatMenusIfOpen(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -387668,7 +387788,7 @@
     },
     {
       "symbol": "P:ga.g(I)V#0",
-      "renamedSymbol": "P:MidiPcmStream.g(I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.resetTooltipState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391265,7 +391385,7 @@
     },
     {
       "symbol": "P:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#0",
-      "renamedSymbol": "P:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#0",
+      "renamedSymbol": "P:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391276,7 +391396,7 @@
     },
     {
       "symbol": "P:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#1",
-      "renamedSymbol": "P:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#1",
+      "renamedSymbol": "P:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -391287,7 +391407,7 @@
     },
     {
       "symbol": "P:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#2",
-      "renamedSymbol": "P:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#2",
+      "renamedSymbol": "P:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -391298,7 +391418,7 @@
     },
     {
       "symbol": "P:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#3",
-      "renamedSymbol": "P:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#3",
+      "renamedSymbol": "P:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -391309,7 +391429,7 @@
     },
     {
       "symbol": "P:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;#4",
-      "renamedSymbol": "P:StatefulWidgetTheme.a(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#4",
+      "renamedSymbol": "P:StatefulWidgetTheme.createQuickChatCategoryMenu(ILQuickChatCategoryDefinition;LAnimatedPanel;LAnimatedPanel;LAnimatedPanel;)LQuickChatMenu;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -392486,7 +392606,7 @@
     },
     {
       "symbol": "P:h.a(IIBZILgh;)V#0",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#0",
+      "renamedSymbol": "P:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392497,7 +392617,7 @@
     },
     {
       "symbol": "P:h.a(IIBZILgh;)V#1",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#1",
+      "renamedSymbol": "P:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392508,7 +392628,7 @@
     },
     {
       "symbol": "P:h.a(IIBZILgh;)V#2",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#2",
+      "renamedSymbol": "P:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392519,7 +392639,7 @@
     },
     {
       "symbol": "P:h.a(IIBZILgh;)V#3",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#3",
+      "renamedSymbol": "P:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -392530,7 +392650,7 @@
     },
     {
       "symbol": "P:h.a(IIBZILgh;)V#4",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#4",
+      "renamedSymbol": "P:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -392541,7 +392661,7 @@
     },
     {
       "symbol": "P:h.a(IIBZILgh;)V#5",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IIBZILMusicTrack;)V#5",
+      "renamedSymbol": "P:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -408898,7 +409018,7 @@
     },
     {
       "symbol": "P:kp.a(BLln;Lln;ILln;)Z#0",
-      "renamedSymbol": "P:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#0",
+      "renamedSymbol": "P:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -408909,7 +409029,7 @@
     },
     {
       "symbol": "P:kp.a(BLln;Lln;ILln;)Z#1",
-      "renamedSymbol": "P:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#1",
+      "renamedSymbol": "P:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -408920,7 +409040,7 @@
     },
     {
       "symbol": "P:kp.a(BLln;Lln;ILln;)Z#2",
-      "renamedSymbol": "P:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#2",
+      "renamedSymbol": "P:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -408931,7 +409051,7 @@
     },
     {
       "symbol": "P:kp.a(BLln;Lln;ILln;)Z#3",
-      "renamedSymbol": "P:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#3",
+      "renamedSymbol": "P:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -408942,7 +409062,7 @@
     },
     {
       "symbol": "P:kp.a(BLln;Lln;ILln;)Z#4",
-      "renamedSymbol": "P:TargetedChatMessage.a(BLStar;LStar;ILStar;)Z#4",
+      "renamedSymbol": "P:TargetedChatMessage.isStarOutsideLinkMargin(BLStar;LStar;ILStar;)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -408986,7 +409106,7 @@
     },
     {
       "symbol": "P:kp.c(I)V#0",
-      "renamedSymbol": "P:TargetedChatMessage.c(I)V#0",
+      "renamedSymbol": "P:TargetedChatMessage.setHostLegacyStatusFlag(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416598,7 +416718,7 @@
     },
     {
       "symbol": "P:mm.d(I)V#0",
-      "renamedSymbol": "P:EmailSyntaxValidator.d(I)V#0",
+      "renamedSymbol": "P:EmailSyntaxValidator.openQuickChatHelpPanel(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416939,7 +417059,7 @@
     },
     {
       "symbol": "P:ms.a(I)V#0",
-      "renamedSymbol": "P:ChatMessage.a(I)V#0",
+      "renamedSymbol": "P:ChatMessage.clearChatMessageStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416950,7 +417070,7 @@
     },
     {
       "symbol": "P:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416961,7 +417081,7 @@
     },
     {
       "symbol": "P:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -416972,7 +417092,7 @@
     },
     {
       "symbol": "P:ms.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
-      "renamedSymbol": "P:ChatMessage.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "renamedSymbol": "P:ChatMessage.containsForwardOrReversedIgnoringUnderscores(Ljava/lang/String;BLjava/lang/String;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -417005,7 +417125,7 @@
     },
     {
       "symbol": "P:ms.b(I)V#0",
-      "renamedSymbol": "P:ChatMessage.b(I)V#0",
+      "renamedSymbol": "P:ChatMessage.drawQuickChatOverlay(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -445231,7 +445351,7 @@
     },
     {
       "symbol": "P:tl.a(ZLqb;IIII)Ljava/awt/Frame;#0",
-      "renamedSymbol": "P:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#0",
+      "renamedSymbol": "P:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -445242,7 +445362,7 @@
     },
     {
       "symbol": "P:tl.a(ZLqb;IIII)Ljava/awt/Frame;#1",
-      "renamedSymbol": "P:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#1",
+      "renamedSymbol": "P:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -445253,7 +445373,7 @@
     },
     {
       "symbol": "P:tl.a(ZLqb;IIII)Ljava/awt/Frame;#2",
-      "renamedSymbol": "P:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#2",
+      "renamedSymbol": "P:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -445264,7 +445384,7 @@
     },
     {
       "symbol": "P:tl.a(ZLqb;IIII)Ljava/awt/Frame;#3",
-      "renamedSymbol": "P:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#3",
+      "renamedSymbol": "P:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -445275,7 +445395,7 @@
     },
     {
       "symbol": "P:tl.a(ZLqb;IIII)Ljava/awt/Frame;#4",
-      "renamedSymbol": "P:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#4",
+      "renamedSymbol": "P:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -445286,7 +445406,7 @@
     },
     {
       "symbol": "P:tl.a(ZLqb;IIII)Ljava/awt/Frame;#5",
-      "renamedSymbol": "P:GameClientShell.a(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#5",
+      "renamedSymbol": "P:GameClientShell.requestFullscreenFrame(ZLPlatformTaskDispatcher;IIII)Ljava/awt/Frame;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -457342,7 +457462,7 @@
     },
     {
       "symbol": "P:wk.a(ZZ)V#0",
-      "renamedSymbol": "P:WidgetStateStyle.a(ZZ)V#0",
+      "renamedSymbol": "P:WidgetStateStyle.openLoginForm(ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -457353,7 +457473,7 @@
     },
     {
       "symbol": "P:wk.a(ZZ)V#1",
-      "renamedSymbol": "P:WidgetStateStyle.a(ZZ)V#1",
+      "renamedSymbol": "P:WidgetStateStyle.openLoginForm(ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -457808,7 +457928,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "0c3839b2a564ffc51e4e73412e280b67e6128f016ca6b539dba5a8eec5da9e66",
+      "outputSha256": "869dfd6f92ca96bbd90aff94f9ff9c21aacfb42fb475aa4853173f691cbbc33c",
       "edits": [
         {
           "start": 86,
@@ -464482,6 +464602,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 30707,
+          "end": 30708,
+          "symbol": "M:ms.a(I)V",
+          "original": "a",
+          "renamed": "clearChatMessageStatics"
         },
         {
           "start": 30734,
@@ -489750,7 +489877,7 @@
       "original": "bk.java",
       "renamed": "ChatCompositionSupport.java",
       "inputSha256": "5a9407e814065d6b3573dbb8d36d09172980615c71df0343995c53b072787cc1",
-      "outputSha256": "aaa66e9d0f583877fd5f52fdd36fe90293f7292d242cf9bd5d793af436955ef5",
+      "outputSha256": "78f37ac0599b94e1ee2caf5554cba260b7018c50bc2fe50d10ed33e5416969d5",
       "edits": [
         {
           "start": 50,
@@ -490157,6 +490284,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "ProgressDialog"
+        },
+        {
+          "start": 6112,
+          "end": 6113,
+          "symbol": "M:eo.f(Z)V",
+          "original": "f",
+          "renamed": "closeQuickChatMenusIfOpen"
         },
         {
           "start": 6235,
@@ -494627,7 +494761,7 @@
       "original": "cc.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "fe203fb395d05186f908d9b8e344c102f70d7f7955191c1ac2e43b62816b0bf3",
-      "outputSha256": "4680e51738b30fdc21186378b822ea467da1a55cb321c66a3f20450d86d2fe65",
+      "outputSha256": "1d5e89185943ab740cf112e17c2fd635a46aea21650f18d66322de2a1252e528",
       "edits": [
         {
           "start": 69,
@@ -495664,6 +495798,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 11153,
+          "end": 11154,
+          "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "containsForwardOrReversedIgnoringUnderscores"
         },
         {
           "start": 11209,
@@ -504246,7 +504387,7 @@
       "original": "cq.java",
       "renamed": "GuestPlayForm.java",
       "inputSha256": "a375b0d4035b7a5f722858d5d8cca089dbb7135b0d7a29792bf15e8d531b9792",
-      "outputSha256": "7a282619378b9eb91b53578657082b2bb9760a99e5d800934ea6261e847d098e",
+      "outputSha256": "7ba252e596dcff695a5e8d98de2ee56104ed7b35ade3147cd36587a66115cbcc",
       "edits": [
         {
           "start": 50,
@@ -504564,6 +504705,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 2493,
+          "end": 2494,
+          "symbol": "M:cq.a(I)V",
+          "original": "a",
+          "renamed": "resetDialogsAndTooltipState"
+        },
+        {
           "start": 2529,
           "end": 2531,
           "symbol": "C:le",
@@ -504611,6 +504759,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 2711,
+          "end": 2712,
+          "symbol": "M:ga.g(I)V",
+          "original": "g",
+          "renamed": "resetTooltipState"
         },
         {
           "start": 2783,
@@ -518479,7 +518634,7 @@
       "original": "dp.java",
       "renamed": "QuickChatPhraseDefinition.java",
       "inputSha256": "11ad7b910221c66abbce859491dcfd18c4eb1a03acd5afd380d3dcdd28145d95",
-      "outputSha256": "e4e947dab7548e0463d21669d0a19b5bf0c813dc32b1d9a2c584b07acd615567",
+      "outputSha256": "9d833314e33ec0691e5ba20b93d0b43aa557978e1657f1a60615e5e0ea836683",
       "edits": [
         {
           "start": 50,
@@ -518515,6 +518670,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "GuestPlayForm"
+        },
+        {
+          "start": 400,
+          "end": 401,
+          "symbol": "M:cq.a(I)V",
+          "original": "a",
+          "renamed": "resetDialogsAndTooltipState"
         },
         {
           "start": 489,
@@ -518837,6 +518999,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "ProgressDialog"
+        },
+        {
+          "start": 7405,
+          "end": 7406,
+          "symbol": "M:eo.f(Z)V",
+          "original": "f",
+          "renamed": "closeQuickChatMenusIfOpen"
         },
         {
           "start": 7460,
@@ -523381,7 +523550,7 @@
       "original": "ee.java",
       "renamed": "PrivateChatMessage.java",
       "inputSha256": "ca26e765ca93efb12df9fd6ad84412b085bf87ba9b15b96a3649c139da5bd266",
-      "outputSha256": "2ab143c1f98fa0c11d8e191b558ec77a624b8a592fd553751d1a08676b6fd06b",
+      "outputSha256": "eeae7fa617abde193086970f32b46a502cc56fae2d2a2a1b6d4a84994ebfbd43",
       "edits": [
         {
           "start": 50,
@@ -523433,6 +523602,13 @@
           "renamed": "PrivateChatMessage"
         },
         {
+          "start": 614,
+          "end": 615,
+          "symbol": "M:ee.a(Lvm;Z)V",
+          "original": "a",
+          "renamed": "attachQuickChatSubmenu"
+        },
+        {
           "start": 617,
           "end": 619,
           "symbol": "C:vm",
@@ -523459,6 +523635,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 1325,
+          "end": 1326,
+          "symbol": "M:ee.a(Lvm;Z)V",
+          "original": "a",
+          "renamed": "attachQuickChatSubmenu"
         },
         {
           "start": 1327,
@@ -523501,6 +523684,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2324,
+          "end": 2325,
+          "symbol": "M:ee.a(Lob;BLjava/lang/String;)I",
+          "original": "a",
+          "renamed": "writeCompressedChatText"
         },
         {
           "start": 2326,
@@ -543159,7 +543349,7 @@
       "original": "eo.java",
       "renamed": "ProgressDialog.java",
       "inputSha256": "3493e59cec5f50169719fb8ebe72aefaee372f516e9cd46137d51e523936dbca",
-      "outputSha256": "a092c8c5423c54cc42bf3fb6fa9b8fe6f78265840bb4c79a0c05adeffafad706",
+      "outputSha256": "f6819f65ac504bfcb2e05d9a848374054255e4415a73bb9e59dcbbfc9b7d2633",
       "edits": [
         {
           "start": 50,
@@ -543475,6 +543665,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 17126,
+          "end": 17127,
+          "symbol": "M:eo.f(Z)V",
+          "original": "f",
+          "renamed": "closeQuickChatMenusIfOpen"
         },
         {
           "start": 17158,
@@ -555345,7 +555542,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "957b55ccbad243ca1af530eab22c9fe13ba9c6ba55c89057859c27a4ca53ea27",
+      "outputSha256": "30ceebef1edc5310930c00ef2df3121ed91e8df610cb638d9d9b7cab8038f353",
       "edits": [
         {
           "start": 50,
@@ -558720,6 +558917,13 @@
           "symbol": "M:ga.a()I",
           "original": "a",
           "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 55125,
+          "end": 55126,
+          "symbol": "M:ga.g(I)V",
+          "original": "g",
+          "renamed": "resetTooltipState"
         },
         {
           "start": 55225,
@@ -562905,7 +563109,7 @@
       "original": "gi.java",
       "renamed": "LoginRequestSupport.java",
       "inputSha256": "6a72108ad7440108707754e081f3617f2d4762a1edea6bf3d8c24da610efd8fb",
-      "outputSha256": "b58fb23b687929773c2d9a6760db924e6527d053c54f70f1318e5364e316f915",
+      "outputSha256": "97bf8f61dfe50fefd4675d653f78cb073d01cfd2a814f0515941d4920c8e7b65",
       "edits": [
         {
           "start": 50,
@@ -562962,6 +563166,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 979,
+          "end": 980,
+          "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "containsForwardOrReversedIgnoringUnderscores"
         },
         {
           "start": 1065,
@@ -566235,7 +566446,7 @@
       "original": "gn.java",
       "renamed": "StatefulWidgetTheme.java",
       "inputSha256": "15098b5f6647d50b3af68643175ec0e0658a8dc5f770cf2b4508f8e10f430969",
-      "outputSha256": "fef0d3227da5c08f2335daeeb6769d1258901a2f2ba9975c75f4403cacafe54a",
+      "outputSha256": "ecb7f9e2eaf4d338a32fa5a429d413eb8c21f52acbaba10f692857ba7d16578c",
       "edits": [
         {
           "start": 50,
@@ -566348,6 +566559,13 @@
           "symbol": "C:gn",
           "original": "gn",
           "renamed": "StatefulWidgetTheme"
+        },
+        {
+          "start": 701,
+          "end": 702,
+          "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
+          "original": "a",
+          "renamed": "createQuickChatCategoryMenu"
         },
         {
           "start": 709,
@@ -566924,6 +567142,13 @@
           "renamed": "StatefulWidgetTheme"
         },
         {
+          "start": 6148,
+          "end": 6149,
+          "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
+          "original": "a",
+          "renamed": "createQuickChatCategoryMenu"
+        },
+        {
           "start": 6156,
           "end": 6158,
           "symbol": "C:si",
@@ -566957,6 +567182,13 @@
           "symbol": "C:vm",
           "original": "vm",
           "renamed": "QuickChatMenu"
+        },
+        {
+          "start": 6261,
+          "end": 6262,
+          "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
+          "original": "a",
+          "renamed": "createQuickChatCategoryMenu"
         },
         {
           "start": 6275,
@@ -567062,6 +567294,13 @@
           "symbol": "C:gn",
           "original": "gn",
           "renamed": "StatefulWidgetTheme"
+        },
+        {
+          "start": 8683,
+          "end": 8684,
+          "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
+          "original": "a",
+          "renamed": "createQuickChatCategoryMenu"
         },
         {
           "start": 9060,
@@ -570021,7 +570260,7 @@
       "original": "h.java",
       "renamed": "MusicCrossfadeStream.java",
       "inputSha256": "a729cb5b2c8eb9981959a273f43436a7b1ac1f258a6f73a34078448db5dd32f7",
-      "outputSha256": "2ad4b097e5ce26acbf783e7ad5d1e28062c7331a8b9a34ba86c72c1dd4a60f57",
+      "outputSha256": "a43087ede2301fb7c14236256036c7e7e2d2c07ebf0415e5b93b33d18b1ec052",
       "edits": [
         {
           "start": 50,
@@ -570666,6 +570905,13 @@
           "symbol": "M:h.b()Ltn;",
           "original": "b",
           "renamed": "firstChild"
+        },
+        {
+          "start": 14681,
+          "end": 14682,
+          "symbol": "M:h.a(IIBZILgh;)V",
+          "original": "a",
+          "renamed": "transitionToTrack"
         },
         {
           "start": 14748,
@@ -586314,7 +586560,7 @@
       "original": "ih.java",
       "renamed": "AccountNoticeKind.java",
       "inputSha256": "b2bd8bb082f01fa050afc8e1817c252e6db7d022a0532adfa664cf92db72dd82",
-      "outputSha256": "8ac1587496f4f7ffda54b2f7f4db3144bacb8878c68c73682de343ad0799cde5",
+      "outputSha256": "84c4ffb14fdb43279a5ce16bf778ff4bb875b34fa9fc3fe10618acf372794e25",
       "edits": [
         {
           "start": 50,
@@ -586427,6 +586673,13 @@
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "PrivateChatMessage"
+        },
+        {
+          "start": 772,
+          "end": 773,
+          "symbol": "M:ee.a(Lob;BLjava/lang/String;)I",
+          "original": "a",
+          "renamed": "writeCompressedChatText"
         },
         {
           "start": 828,
@@ -587992,7 +588245,7 @@
       "original": "im.java",
       "renamed": "PlayerOverlaySupport.java",
       "inputSha256": "e0af0e01d5deae5f9071fa1f804a80fef23cc8e9360c9fce5f72440472a3a9aa",
-      "outputSha256": "d73c0ad605bafd60a7d90450bf5b60620693a1961a0ecb6b31d9049c7cc767f9",
+      "outputSha256": "eca3f7bf7a7cf4f6400ceb0086601971730a21c645319f54cda6b2b9db776404",
       "edits": [
         {
           "start": 50,
@@ -588051,6 +588304,13 @@
           "renamed": "ChatMessage"
         },
         {
+          "start": 507,
+          "end": 508,
+          "symbol": "M:ms.b(I)V",
+          "original": "b",
+          "renamed": "drawQuickChatOverlay"
+        },
+        {
           "start": 590,
           "end": 592,
           "symbol": "C:ol",
@@ -588077,6 +588337,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 685,
+          "end": 686,
+          "symbol": "M:ms.b(I)V",
+          "original": "b",
+          "renamed": "drawQuickChatOverlay"
         },
         {
           "start": 724,
@@ -597565,7 +597832,7 @@
       "original": "jo.java",
       "renamed": "QuickChatCategoryRegistry.java",
       "inputSha256": "e19c02b30e0bd100b7c3996b81118417f15be1db5d0cdfef7a8961d62e704340",
-      "outputSha256": "89ffd071aafac0f790e8d82e5e9005fce98c8e72d283abc9a456769f45621992",
+      "outputSha256": "9920cac066f27258104f62bb3929f716e11e46e14a76a7fd344ab4f6f7c449b9",
       "edits": [
         {
           "start": 69,
@@ -597755,6 +598022,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 3386,
+          "end": 3387,
+          "symbol": "M:h.a(IIBZILgh;)V",
+          "original": "a",
+          "renamed": "transitionToTrack"
         },
         {
           "start": 3526,
@@ -623379,7 +623653,7 @@
       "original": "kp.java",
       "renamed": "TargetedChatMessage.java",
       "inputSha256": "264c535bc0ff53ecd1a3cdb5e2027028fbd2f32639a05a6f5ec864f644045326",
-      "outputSha256": "af7bd332390b596ce4b3eadc425ceb480d9937ef56bce98e4781f75f1de83fe4",
+      "outputSha256": "3d1ebf820de6c9448c3a6b4e96f84b960d36937f461c5dffcd03d49058dad971",
       "edits": [
         {
           "start": 44,
@@ -623408,6 +623682,13 @@
           "symbol": "M:kp.b(B)V",
           "original": "b",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 465,
+          "end": 466,
+          "symbol": "M:kp.a(BLln;Lln;ILln;)Z",
+          "original": "a",
+          "renamed": "isStarOutsideLinkMargin"
         },
         {
           "start": 480,
@@ -623452,6 +623733,13 @@
           "renamed": "TargetedChatMessage"
         },
         {
+          "start": 1904,
+          "end": 1905,
+          "symbol": "M:kp.a(BLln;Lln;ILln;)Z",
+          "original": "a",
+          "renamed": "isStarOutsideLinkMargin"
+        },
+        {
           "start": 1919,
           "end": 1921,
           "symbol": "C:ln",
@@ -623485,6 +623773,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 3407,
+          "end": 3408,
+          "symbol": "M:kp.c(I)V",
+          "original": "c",
+          "renamed": "setHostLegacyStatusFlag"
         },
         {
           "start": 3431,
@@ -658700,7 +658995,7 @@
       "original": "mm.java",
       "renamed": "EmailSyntaxValidator.java",
       "inputSha256": "bae856cf96c86403a54fb677bdaaffc9dae80d353a59ac0efe2783c8949a3f78",
-      "outputSha256": "6d48c422d705b23e388a50968cc5f57121c705d2169d5bff0edd14599dfc926f",
+      "outputSha256": "23fe12a3fec59133b594b79afb91fbf68b7ac4fe616c97c12792027c8d91ffe9",
       "edits": [
         {
           "start": 50,
@@ -658890,6 +659185,13 @@
           "symbol": "C:sj",
           "original": "sj",
           "renamed": "SocialListSetupSupport"
+        },
+        {
+          "start": 2053,
+          "end": 2054,
+          "symbol": "M:mm.d(I)V",
+          "original": "d",
+          "renamed": "openQuickChatHelpPanel"
         },
         {
           "start": 2111,
@@ -660148,7 +660450,7 @@
       "original": "ms.java",
       "renamed": "ChatMessage.java",
       "inputSha256": "e63aa93bc8bb4dc8c749a023cebd0c5712ae17519fee111c9709c7d22803c2db",
-      "outputSha256": "cc0939b4b2756f20965be181dc02383ded2dd8e4230c57c7039806d827acc1fb",
+      "outputSha256": "365390d59374ed1a37ed5edbbd1061129691d372108b54121fe411ea667e4942",
       "edits": [
         {
           "start": 53,
@@ -660179,6 +660481,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 339,
+          "end": 340,
+          "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "containsForwardOrReversedIgnoringUnderscores"
+        },
+        {
           "start": 817,
           "end": 819,
           "symbol": "C:fr",
@@ -660207,6 +660516,13 @@
           "renamed": "ChatMessage"
         },
         {
+          "start": 960,
+          "end": 961,
+          "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "containsForwardOrReversedIgnoringUnderscores"
+        },
+        {
           "start": 1830,
           "end": 1831,
           "symbol": "C:r",
@@ -660221,11 +660537,32 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1997,
+          "end": 1998,
+          "symbol": "M:ms.a(I)V",
+          "original": "a",
+          "renamed": "clearChatMessageStatics"
+        },
+        {
           "start": 2257,
           "end": 2259,
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 2260,
+          "end": 2261,
+          "symbol": "M:ms.a(I)V",
+          "original": "a",
+          "renamed": "clearChatMessageStatics"
+        },
+        {
+          "start": 2330,
+          "end": 2331,
+          "symbol": "M:ms.b(I)V",
+          "original": "b",
+          "renamed": "drawQuickChatOverlay"
         },
         {
           "start": 2391,
@@ -660310,6 +660647,13 @@
           "symbol": "C:ms",
           "original": "ms",
           "renamed": "ChatMessage"
+        },
+        {
+          "start": 2626,
+          "end": 2627,
+          "symbol": "M:ms.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "containsForwardOrReversedIgnoringUnderscores"
         },
         {
           "start": 2684,
@@ -662527,7 +662871,7 @@
       "original": "ne.java",
       "renamed": "BattleContribution.java",
       "inputSha256": "9fedd35967e4eca7648a45799c1ea9a35e1eb0c80ed721241f8c1e5708198f55",
-      "outputSha256": "6d36c16a669c8119c5e4be201d5a0543dd1ef0bb20637700717d362a370c2e35",
+      "outputSha256": "cb30d6c21f9aea5bdc7267d994ee04813d84b197171a2590c8dc79fa298d0bfc",
       "edits": [
         {
           "start": 50,
@@ -663137,6 +663481,13 @@
           "symbol": "C:gn",
           "original": "gn",
           "renamed": "StatefulWidgetTheme"
+        },
+        {
+          "start": 5805,
+          "end": 5806,
+          "symbol": "M:gn.a(ILsi;Lqr;Lqr;Lqr;)Lvm;",
+          "original": "a",
+          "renamed": "createQuickChatCategoryMenu"
         },
         {
           "start": 5816,
@@ -675666,7 +676017,7 @@
       "original": "oj.java",
       "renamed": "AccountCreationDialog.java",
       "inputSha256": "976948de6ad9f45ab94f9099172da1710f34c35084d3a75bbd760f008635a398",
-      "outputSha256": "d8a54c0b73c606870b20852e6c50dbe9f3bf129614c08f67bec29e515373ec96",
+      "outputSha256": "9942004a0b76f57c0553595cc198c9e639605a5bf1c056cd117b00831ca3e291",
       "edits": [
         {
           "start": 50,
@@ -676115,6 +676466,13 @@
           "symbol": "C:kp",
           "original": "kp",
           "renamed": "TargetedChatMessage"
+        },
+        {
+          "start": 5456,
+          "end": 5457,
+          "symbol": "M:kp.c(I)V",
+          "original": "c",
+          "renamed": "setHostLegacyStatusFlag"
         },
         {
           "start": 5504,
@@ -680139,7 +680497,7 @@
       "original": "oq.java",
       "renamed": "TextReplacementEntry.java",
       "inputSha256": "0a11a42fde7ae8da09287fc1d2a2441f449f84ed7ce0cde38b8bcef65f4bd29f",
-      "outputSha256": "710eaca6f0e23ee849a41f6491cc19cf1eb4984b9d3b8d70181f99a7d3afbee8",
+      "outputSha256": "ee1659a961445b4757b472e6871bab1d2bce5ede6087115dd8dcb870b92186e7",
       "edits": [
         {
           "start": 50,
@@ -680357,6 +680715,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 2665,
+          "end": 2666,
+          "symbol": "M:wk.a(ZZ)V",
+          "original": "a",
+          "renamed": "openLoginForm"
         },
         {
           "start": 2691,
@@ -719924,7 +720289,7 @@
       "original": "si.java",
       "renamed": "QuickChatCategoryDefinition.java",
       "inputSha256": "e86a3642f3646dd6591980e4be7e6fb6fa981d25876ff9af582f53a789a2152f",
-      "outputSha256": "8e70b5ac3674c7c872c808ff9f58b88eda2519b427ac4ba5c274a8caf8ad0974",
+      "outputSha256": "3af9d6f5cd2b38beb53bd43387348eb5fdd7511389f66ed07c6c6d847aad12c8",
       "edits": [
         {
           "start": 50,
@@ -719967,6 +720332,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 480,
+          "end": 481,
+          "symbol": "M:wk.a(ZZ)V",
+          "original": "a",
+          "renamed": "openLoginForm"
         },
         {
           "start": 504,
@@ -721423,6 +721795,13 @@
           "symbol": "C:tl",
           "original": "tl",
           "renamed": "GameClientShell"
+        },
+        {
+          "start": 12885,
+          "end": 12886,
+          "symbol": "M:tl.a(ZLqb;IIII)Ljava/awt/Frame;",
+          "original": "a",
+          "renamed": "requestFullscreenFrame"
         },
         {
           "start": 13045,
@@ -748100,7 +748479,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "04493a70fb1ba209fcfc37a6e53ab089b939d93866667c1ce2ddf65e0a93b9f9",
+      "outputSha256": "e27a6102352f751d0ee37d53008066b957b78c359f29e985e02dcebfd5f33723",
       "edits": [
         {
           "start": 53,
@@ -751694,6 +752073,13 @@
           "renamed": "allowOpcode2"
         },
         {
+          "start": 24429,
+          "end": 24430,
+          "symbol": "M:tl.a(ZLqb;IIII)Ljava/awt/Frame;",
+          "original": "a",
+          "renamed": "requestFullscreenFrame"
+        },
+        {
           "start": 24447,
           "end": 24449,
           "symbol": "C:qb",
@@ -752950,7 +753336,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "24a7b4b464f3acd145d2cd639b7893d8e2645cb6aa6c969616e56c8436993c2d",
+      "outputSha256": "157caed60bb13ab60d393e886c52bd59647e735491f96e059df80e711a677c89",
       "edits": [
         {
           "start": 71,
@@ -754589,6 +754975,13 @@
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "ProgressDialog"
+        },
+        {
+          "start": 28939,
+          "end": 28940,
+          "symbol": "M:eo.f(Z)V",
+          "original": "f",
+          "renamed": "closeQuickChatMenusIfOpen"
         },
         {
           "start": 29017,
@@ -775616,7 +776009,7 @@
       "original": "vf.java",
       "renamed": "QuaternaryListSequence.java",
       "inputSha256": "853037c3e7164a76fe67095821c78d174335b13a9c5d4821eb35a02e44c8cc6b",
-      "outputSha256": "65de415eba9c15525fca0262cd3b0a9a10009a672cd175f504e00f8909339b19",
+      "outputSha256": "999d6cfd01489dc2576a9c1f21b4a1fd0b8088e28d36a2970de55916dfd15ee6",
       "edits": [
         {
           "start": 71,
@@ -775807,6 +776200,13 @@
           "symbol": "C:kp",
           "original": "kp",
           "renamed": "TargetedChatMessage"
+        },
+        {
+          "start": 5725,
+          "end": 5726,
+          "symbol": "M:kp.a(BLln;Lln;ILln;)Z",
+          "original": "a",
+          "renamed": "isStarOutsideLinkMargin"
         },
         {
           "start": 6076,
@@ -795978,7 +796378,7 @@
       "original": "vm.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "a0272fe8e75a3b61c7a9ab38bd067d96019b3a1776cf28d05fc35ee913fdb216",
-      "outputSha256": "e34fb2f36ce1ea4b448e8fb173b9f0e9884bd3eaf4ef9ef7169477ade8775e7b",
+      "outputSha256": "65e7bab91379d284ff122176717ff3479f280b6ab2b6da8c4202f2ee196b2f3b",
       "edits": [
         {
           "start": 71,
@@ -796394,6 +796794,13 @@
           "renamed": "PrivateChatMessage"
         },
         {
+          "start": 5908,
+          "end": 5909,
+          "symbol": "M:ee.a(Lvm;Z)V",
+          "original": "a",
+          "renamed": "attachQuickChatSubmenu"
+        },
+        {
           "start": 5958,
           "end": 5959,
           "symbol": "M:vm.c(ZI)V",
@@ -796532,6 +796939,13 @@
           "symbol": "C:mm",
           "original": "mm",
           "renamed": "EmailSyntaxValidator"
+        },
+        {
+          "start": 6634,
+          "end": 6635,
+          "symbol": "M:mm.d(I)V",
+          "original": "d",
+          "renamed": "openQuickChatHelpPanel"
         },
         {
           "start": 6668,
@@ -803647,7 +804061,7 @@
       "original": "wk.java",
       "renamed": "WidgetStateStyle.java",
       "inputSha256": "59cd76d3f6a62f71793b3c54e5616a960f62b12eeafa8598760d0b245183107a",
-      "outputSha256": "b254bc0af95ab8e6c8382ea2cf9f2d8d545508169261c7c495f2cbb4d47a75d3",
+      "outputSha256": "c0f3c44f52549df110b5b3fca2e03dde7756ebebccbf5c7ff541649977b045e7",
       "edits": [
         {
           "start": 50,
@@ -803788,6 +804202,13 @@
           "symbol": "M:wk.a(B)V",
           "original": "a",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 1527,
+          "end": 1528,
+          "symbol": "M:wk.a(ZZ)V",
+          "original": "a",
+          "renamed": "openLoginForm"
         },
         {
           "start": 1571,
@@ -806089,10 +806510,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "a469f8882d33db6b1517d1389c4f7900b72ed3c55efd95a16869d5d7e5d65bc1",
+    "rulesSha256": "5b15ac8276c2400c1139adbf0ab7313037286c2484f5886ade6bc75737a7501a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "849c519a19d72273058cc6d4fad9dfc7cdb6a7230c61e27309f60d4d52087421",
+    "outputTreeSha256": "2665d07649b13b07721cd2427a6b65e95467188231445bf0dfd7c87baf4e0f19",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

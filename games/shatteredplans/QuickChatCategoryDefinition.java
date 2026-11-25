@@ -19,7 +19,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
           throw new IllegalStateException();
         }
         UiTextSupport.field_a = true;
-        WidgetStateStyle.a(false, true);
+        WidgetStateStyle.openLoginForm(false, true);
         SoundPlayback.field_i = 0;
         if (param0 != -91) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
@@ -356,7 +356,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = GameClientShell.a(true, param1, param4, param2, param5, param0);
+          var9 = GameClientShell.requestFullscreenFrame(true, param1, param4, param2, param5, param0);
           var6 = var9;
           if (var9 == null) {
             return null;

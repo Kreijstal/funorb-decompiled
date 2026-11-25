@@ -32,7 +32,7 @@ final class LoginRequestSupport {
           if (param1 != -12076) {
             return true;
           }
-          if (ChatMessage.a(param0, (byte) -53, param2)) {
+          if (ChatMessage.containsForwardOrReversedIgnoringUnderscores(param0, (byte) -53, param2)) {
             return false;
           }
           if (!Bzip2State.a(param0, 127, param2)) {

@@ -96,7 +96,7 @@ final class QuickChatCategoryRegistry {
             MusicTrack var5 = (MusicTrack) null;
             QuickChatCategoryRegistry.transitionMusicTrack(6, (MusicTrack) null, false, -66);
           }
-          ValidationState.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
+          ValidationState.field_b.transitionToTrack(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jo.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

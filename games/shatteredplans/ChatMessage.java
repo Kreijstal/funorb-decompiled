@@ -13,7 +13,7 @@ abstract class ChatMessage {
 
     abstract void write(PacketBuffer param0, byte param1);
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean containsForwardOrReversedIgnoringUnderscores(String param0, byte param1, String param2) {
         String var3 = null;
         String var4 = null;
         boolean stackIn_7_0 = false;
@@ -29,7 +29,7 @@ abstract class ChatMessage {
           var3 = DualLinkDequeSequence.reverseString(param0, true);
           if (param1 != -53) {
             var4 = (String) null;
-            ChatMessage.a((String) null, (byte) 116, (String) null);
+            ChatMessage.containsForwardOrReversedIgnoringUnderscores((String) null, (byte) 116, (String) null);
           }
           stackIn_7_0 = (-1 != param2.indexOf(param0)) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;
@@ -53,7 +53,7 @@ abstract class ChatMessage {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearChatMessageStatics(int param0) {
         field_h = null;
         field_e = null;
         field_d = null;
@@ -64,11 +64,11 @@ abstract class ChatMessage {
           field_c = (int[][]) null;
           return;
         }
-        ChatMessage.a(42);
+        ChatMessage.clearChatMessageStatics(42);
         field_c = (int[][]) null;
     }
 
-    final static void b(int param0) {
+    final static void drawQuickChatOverlay(int param0) {
         if (param0 == 20975) {
           if (QuickChatPhraseDefinition.field_t) {
             SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
@@ -77,7 +77,7 @@ abstract class ChatMessage {
           return;
         }
         String var2 = (String) null;
-        ChatMessage.a((String) null, (byte) -111, (String) null);
+        ChatMessage.containsForwardOrReversedIgnoringUnderscores((String) null, (byte) -111, (String) null);
         if (QuickChatPhraseDefinition.field_t) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
           SectorCacheStore.field_f.drawFullRaster(false, -104);
