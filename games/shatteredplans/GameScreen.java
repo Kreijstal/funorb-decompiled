@@ -2177,7 +2177,7 @@ final class GameScreen {
     }
 
     final static void setFullscreenDialogModeIfOpen(int param0) {
-        if (!TutorialScene.isQuickChatMenuOpen(false)) {
+        if (!TutorialScene.isFullscreenDialogOpen(false)) {
           return;
         }
         try {

@@ -104,7 +104,7 @@ final class SettingsCookieSupport {
         return (param1 + (param1 >>> 31)) % param0 + var4;
     }
 
-    final static void clearQuickChatLookupState(byte param0) {
+    final static void clearFullscreenDialogState(byte param0) {
         BoundsRect.field_j = false;
         if (param0 == -15) {
           PanelNode.field_p = null;

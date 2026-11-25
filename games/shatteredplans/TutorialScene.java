@@ -176,7 +176,7 @@ final class TutorialScene {
         }
     }
 
-    final static boolean isQuickChatMenuOpen(boolean param0) {
+    final static boolean isFullscreenDialogOpen(boolean param0) {
         if (param0) {
           return false;
         }

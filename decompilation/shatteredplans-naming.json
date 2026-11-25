@@ -12102,10 +12102,10 @@
     {
       "symbol": "M:jf.b(B)V",
       "originalName": "b",
-      "to": "clearQuickChatLookupState",
-      "evidence": "Clear lookup-active flag and shared result arrays. Wrong byte additionally nulls retained byte[][] before same clears. Preserve exact field writes, ordering and array aliases. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
+      "to": "clearFullscreenDialogState",
+      "evidence": "Clear fullscreen-dialog open flag then release four retained confirmation-layout text arrays. Complete15line current body read; complete fullscreen builder and selection/timeout consumer establish dialog lifecycle. Wrong byte also clears separate shared byte[][]before same text-array clears. Preserve every write/alias, byte domain, early return, modifiers/descriptor, literals and exception/call order. Identifier-only correction of previously misleading Quick Chat alias.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:SettingsCookieSupport.clearQuickChatLookupState(B)V"
+      "renamedSymbol": "M:SettingsCookieSupport.clearFullscreenDialogState(B)V"
     },
     {
       "symbol": "M:jg.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -20110,10 +20110,10 @@
     {
       "symbol": "M:sq.a(Z)Z",
       "originalName": "a",
-      "to": "isQuickChatMenuOpen",
-      "evidence": "True bool returnsfalse, otherwise read retained menu visibility flag. Existing draw/input callers confirm Quick Chat menu role; preserve guard and shared read. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "to": "isFullscreenDialogOpen",
+      "evidence": "Return false for true bool; otherwise return retained fullscreen-dialog open flag BoundsRect.field_j. Complete6line current body read; flag producer is complete309line fullscreen dialog builder with membership/configuration/focus failure and10second confirmation modes, not Quick Chat. Complete consumer/clearer bodies read and fresh continuity checked after3GameScreen-only identifier changes. Preserve true guard, flag read, modifiers/descriptor and caller evaluation order. Identifier-only correction of previously misleading Quick Chat alias.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:TutorialScene.isQuickChatMenuOpen(Z)Z"
+      "renamedSymbol": "M:TutorialScene.isFullscreenDialogOpen(Z)Z"
     },
     {
       "symbol": "M:sr.a(B)V",
@@ -335188,9 +335188,9 @@
     },
     {
       "symbol": "M:jf.b(B)V",
-      "renamedSymbol": "M:SettingsCookieSupport.clearQuickChatLookupState(B)V",
+      "renamedSymbol": "M:SettingsCookieSupport.clearFullscreenDialogState(B)V",
       "originalName": "b",
-      "renamedName": "clearQuickChatLookupState",
+      "renamedName": "clearFullscreenDialogState",
       "declaration": {
         "file": "jf.java",
         "start": 4062,
@@ -352205,9 +352205,9 @@
     },
     {
       "symbol": "M:sq.a(Z)Z",
-      "renamedSymbol": "M:TutorialScene.isQuickChatMenuOpen(Z)Z",
+      "renamedSymbol": "M:TutorialScene.isFullscreenDialogOpen(Z)Z",
       "originalName": "a",
-      "renamedName": "isQuickChatMenuOpen",
+      "renamedName": "isFullscreenDialogOpen",
       "declaration": {
         "file": "sq.java",
         "start": 5836,
@@ -400198,7 +400198,7 @@
     },
     {
       "symbol": "P:jf.b(B)V#0",
-      "renamedSymbol": "P:SettingsCookieSupport.clearQuickChatLookupState(B)V#0",
+      "renamedSymbol": "P:SettingsCookieSupport.clearFullscreenDialogState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -440700,7 +440700,7 @@
     },
     {
       "symbol": "P:sq.a(Z)Z#0",
-      "renamedSymbol": "P:TutorialScene.isQuickChatMenuOpen(Z)Z#0",
+      "renamedSymbol": "P:TutorialScene.isFullscreenDialogOpen(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456720,7 +456720,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "c8676c2a7b3847c2a02e0973c77ab47fa713e6810f1a169b92ccd14bd19f6392",
+      "outputSha256": "397fbcc5b4321c9de8511e05d103790de6f7185b5f3ac83ef3cd432e4d9d4302",
       "edits": [
         {
           "start": 86,
@@ -457448,7 +457448,7 @@
           "end": 5635,
           "symbol": "M:sq.a(Z)Z",
           "original": "a",
-          "renamed": "isQuickChatMenuOpen"
+          "renamed": "isFullscreenDialogOpen"
         },
         {
           "start": 5668,
@@ -468790,7 +468790,7 @@
           "end": 47257,
           "symbol": "M:sq.a(Z)Z",
           "original": "a",
-          "renamed": "isQuickChatMenuOpen"
+          "renamed": "isFullscreenDialogOpen"
         },
         {
           "start": 47278,
@@ -502451,7 +502451,7 @@
       "original": "cq.java",
       "renamed": "GuestPlayForm.java",
       "inputSha256": "a375b0d4035b7a5f722858d5d8cca089dbb7135b0d7a29792bf15e8d531b9792",
-      "outputSha256": "fe9813a3d575ebe315f329b16a83245825090ee626f17e8f1d341239d0072e5a",
+      "outputSha256": "101cba5cf0e08a2c1f817ff25d4a71f4e64a34adb0a7b8fade10f3508b44fc0c",
       "edits": [
         {
           "start": 50,
@@ -502682,7 +502682,7 @@
           "end": 1701,
           "symbol": "M:jf.b(B)V",
           "original": "b",
-          "renamed": "clearQuickChatLookupState"
+          "renamed": "clearFullscreenDialogState"
         },
         {
           "start": 1796,
@@ -502703,7 +502703,7 @@
           "end": 1828,
           "symbol": "M:jf.b(B)V",
           "original": "b",
-          "renamed": "clearQuickChatLookupState"
+          "renamed": "clearFullscreenDialogState"
         },
         {
           "start": 1907,
@@ -591225,7 +591225,7 @@
       "original": "jf.java",
       "renamed": "SettingsCookieSupport.java",
       "inputSha256": "747f564ddaecf2912420207a36123c68727f9689dce1549f7b996d332d5372d7",
-      "outputSha256": "e7f7b111e56e1a5b7c2806c141be7288b0fc5c9926a1cc9be51b884e64f09d75",
+      "outputSha256": "2c6b78caba61e539d5b05ccf26c7c00a5a60d9cf7e71e117743d8ee6a8b28ba3",
       "edits": [
         {
           "start": 50,
@@ -591365,7 +591365,7 @@
           "end": 4063,
           "symbol": "M:jf.b(B)V",
           "original": "b",
-          "renamed": "clearQuickChatLookupState"
+          "renamed": "clearFullscreenDialogState"
         },
         {
           "start": 4087,
@@ -620360,7 +620360,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "943409e4713dc220b8bb4804b65b74d68d6bcda8245113eeaf340f5c59ada07f",
+      "outputSha256": "7b1ccd842b6c3c24a868b79431954798bb090d172fa367bb8692d4241b109655",
       "edits": [
         {
           "start": 50,
@@ -624979,7 +624979,7 @@
           "end": 83558,
           "symbol": "M:sq.a(Z)Z",
           "original": "a",
-          "renamed": "isQuickChatMenuOpen"
+          "renamed": "isFullscreenDialogOpen"
         },
         {
           "start": 83621,
@@ -731406,7 +731406,7 @@
       "original": "sq.java",
       "renamed": "TutorialScene.java",
       "inputSha256": "654975a5ffc0cb2289965a3b29f1a70c4481dad6ee534ea9a729190872995d6b",
-      "outputSha256": "1ce9fb77790003e2b4280559713f546a7717a92b965b504e4774336762caefb5",
+      "outputSha256": "97004f3c72c1a4904a1a3ba49a70e58a4162809cad9ef3d7d7549f4c3d7ea4c4",
       "edits": [
         {
           "start": 50,
@@ -731651,7 +731651,7 @@
           "end": 5837,
           "symbol": "M:sq.a(Z)Z",
           "original": "a",
-          "renamed": "isQuickChatMenuOpen"
+          "renamed": "isFullscreenDialogOpen"
         },
         {
           "start": 5927,
@@ -799142,10 +799142,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "548d4eea853195b98d44d23fb1c7519f3c286a1725f919553f0a0dd74336a902",
+    "rulesSha256": "ae9fef0088cf1cb11dedeb7d1704265af059f34a24af77bd74b8e47c15c5f42f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "25ac1745efd6c8a3dee1296a96bf385ffa1e371fb6c6813fbaa9df2a286e1a0f",
+    "outputTreeSha256": "8944cf30928d69c083cdabb4c76b0abc7e074366b6e9b1260b6a85a323b3ebbe",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

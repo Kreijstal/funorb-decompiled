@@ -177,7 +177,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               DialogRoot.f((byte) 125);
             } else {
               if (DisplayModeInfo.field_e) {
-                if (!TutorialScene.isQuickChatMenuOpen(false)) {
+                if (!TutorialScene.isFullscreenDialogOpen(false)) {
                   if (PlayerReportPanel.refreshClientActivityDeadline((byte) -67)) {
                     var2 = 1;
                     stackIn_45_1 = true;
@@ -1446,7 +1446,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         if (FullscreenFocusCanvas.field_b > 0) {
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);
         }
-        if (TutorialScene.isQuickChatMenuOpen(false)) {
+        if (TutorialScene.isFullscreenDialogOpen(false)) {
           TextHotspotWidget.a(SpriteWipeSupport.getQuickChatMenuWidth(-27572), param0 ^ -2, FleetMove.e(param0 ^ -84));
           QuickChatMenuSupport.drawQuickChatMenu((byte) -119);
         } else {
