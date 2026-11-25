@@ -5903,7 +5903,7 @@
       "symbol": "M:cr.a(IIII)[Lbi;",
       "originalName": "a",
       "to": "createUniformNineSlice",
-      "evidence": "Allocate nine Sprite entries, create shared outer square, alias it into remaining entries, then allocate separate center with fixed alpha64. Wrong guard recursively calls fixed arguments before center replacement; retain original recursion and allocation order. Name agrees with pending user patch. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
+      "evidence": "Allocate nine Sprite entries, create shared outer square, alias it into remaining entries, then allocate separate center with fixed size64. Wrong guard recursively calls fixed arguments before center replacement; retain original recursion and allocation order. Name agrees with pending user patch. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:UniformNineSliceFactory.createUniformNineSlice(IIII)[LSprite;"
     },
@@ -721854,7 +721854,7 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "cb72d2fa5cd42dd2839e13375beb030571f69069df0cd7bed2dab838879c7017",
+    "rulesSha256": "7843910db9b635099153d403227841ddf682c1cc00866edae683e153654249d4",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
     "outputTreeSha256": "dcbc4cdc4d4719264d9527b73cf8e1115599b49640ba7dcaac692bbf053ffac9",

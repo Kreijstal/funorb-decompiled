@@ -11000,13 +11000,13 @@
       },
       "dictionary": {
         "path": "decompilation/shatteredplans-naming.json",
-        "sha256": "78352576f5dc9152aedc0c3acf7379b0725414c107181ad5d8b9aeb849c8586c"
+        "sha256": "44d883e73e4cc1debac561d08ba8c13d084efd6e7e8ab6787950b25c4ed83364"
       },
       "readingGuide": {
         "path": "games/shatteredplans/README.md",
         "sha256": "d8f79fa026526c7a85b9b7e36a9651197080aaec00e47c7834d03aca9696fcd0"
       },
-      "rulesSha256": "cb72d2fa5cd42dd2839e13375beb030571f69069df0cd7bed2dab838879c7017",
+      "rulesSha256": "7843910db9b635099153d403227841ddf682c1cc00866edae683e153654249d4",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
