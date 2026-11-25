@@ -246,7 +246,7 @@ final class MapTile implements TaggedFieldReader {
                 } else {
                   stackIn_30_2 = 75;
                 }
-                var5 = ((Battlefield) (Object) stackIn_29_0).d(stackIn_29_1, stackIn_30_2, 6);
+                var5 = ((Battlefield) (Object) stackIn_29_0).scaleStructureManaIncome(stackIn_29_1, stackIn_30_2, 6);
                 dupTemp$0 = this.battlefield.getPlayerTeamIndex(this.ownerPlayer, -1);
                 this.battlefield.field_S[dupTemp$0] = this.battlefield.field_S[dupTemp$0] + 75;
               }
@@ -258,7 +258,7 @@ final class MapTile implements TaggedFieldReader {
               } else {
                 stackIn_26_2 = 25;
               }
-              var5 = ((Battlefield) (Object) stackIn_25_0).d(stackIn_25_1, stackIn_26_2, 6);
+              var5 = ((Battlefield) (Object) stackIn_25_0).scaleStructureManaIncome(stackIn_25_1, stackIn_26_2, 6);
               dupTemp$1 = this.battlefield.getPlayerTeamIndex(this.ownerPlayer, -1);
               this.battlefield.field_S[dupTemp$1] = this.battlefield.field_S[dupTemp$1] + 25;
             }
@@ -270,7 +270,7 @@ final class MapTile implements TaggedFieldReader {
             } else {
               stackIn_22_2 = 50;
             }
-            var5 = ((Battlefield) (Object) stackIn_21_0).d(stackIn_21_1, stackIn_22_2, 6);
+            var5 = ((Battlefield) (Object) stackIn_21_0).scaleStructureManaIncome(stackIn_21_1, stackIn_22_2, 6);
             dupTemp$2 = this.battlefield.getPlayerTeamIndex(this.ownerPlayer, -1);
             this.battlefield.field_S[dupTemp$2] = this.battlefield.field_S[dupTemp$2] + 50;
           }
@@ -365,7 +365,7 @@ final class MapTile implements TaggedFieldReader {
             } else {
               stackIn_103_2 = 25;
             }
-            var5Lifetime1 = ((Battlefield) (Object) stackIn_102_0).d(stackIn_102_1, stackIn_103_2, 6);
+            var5Lifetime1 = ((Battlefield) (Object) stackIn_102_0).scaleStructureManaIncome(stackIn_102_1, stackIn_103_2, 6);
             if (var7Lifetime1 != 0) {
               this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(0, var5Lifetime1, param2)));
               return;
@@ -394,7 +394,7 @@ final class MapTile implements TaggedFieldReader {
             } else {
               stackIn_116_2 = 12;
             }
-            var5Lifetime1Lifetime1 = ((Battlefield) (Object) stackIn_115_0).d(stackIn_115_1, stackIn_116_2, param3 ^ 6);
+            var5Lifetime1Lifetime1 = ((Battlefield) (Object) stackIn_115_0).scaleStructureManaIncome(stackIn_115_1, stackIn_116_2, param3 ^ 6);
             if (var7Lifetime1 != 0) {
               this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(2, var5Lifetime1Lifetime1, param2)));
               return;
@@ -423,7 +423,7 @@ final class MapTile implements TaggedFieldReader {
           } else {
             stackIn_126_2 = 37;
           }
-          var5Lifetime1Lifetime2 = ((Battlefield) (Object) stackIn_125_0).d(stackIn_125_1, stackIn_126_2, 6);
+          var5Lifetime1Lifetime2 = ((Battlefield) (Object) stackIn_125_0).scaleStructureManaIncome(stackIn_125_1, stackIn_126_2, 6);
           if (var7Lifetime1 != 0) {
             this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(1, var5Lifetime1Lifetime2, param2)));
             return;

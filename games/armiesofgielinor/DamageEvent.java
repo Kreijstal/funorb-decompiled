@@ -236,7 +236,7 @@ final class DamageEvent extends GameEvent {
           }
           if (battlefield.field_b) {
             battlefield.damageTakenByPlayer[this.unit.ownerPlayer] = battlefield.damageTakenByPlayer[this.unit.ownerPlayer] + var3_int;
-            battlefield.d(this.unit.ownerPlayer, battlefield.damageTakenByPlayer[this.unit.ownerPlayer], 72, 11);
+            battlefield.recordStatisticMaximum(this.unit.ownerPlayer, battlefield.damageTakenByPlayer[this.unit.ownerPlayer], 72, 11);
           }
           ClientStateChecksumSupport.recomputeClientStateChecksum(battlefield, (byte) 9, true);
         } catch (RuntimeException runtimeException) {

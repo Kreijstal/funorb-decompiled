@@ -41,18 +41,18 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           var2_int = 0;
           do {
             if (!(CampaignLookupSupport.field_c.length > var2_int)) {
-              controller.battlefield.a(true, 14, 74, 13, 1, 1, 0);
-              controller.battlefield.a(true, 17, 0, 8, 1, 1, 0);
-              controller.battlefield.a(true, 10, 0, 14, 1, 1, 0);
-              controller.battlefield.a(true, 9, 9, 4, 1, 1, 1);
-              controller.battlefield.a(true, 4, 9, 14, 1, 1, 0);
-              controller.battlefield.a(true, 1, 16, 11, 1, 1, 3);
-              controller.battlefield.a(true, 16, 16, 4, 1, 1, 0);
-              controller.battlefield.a(true, 14, 22, 9, 1, 1, 0);
-              controller.battlefield.a(true, 3, 22, 12, 1, 1, 1);
-              controller.battlefield.a(true, 8, 52, 5, 1, 1, 2);
-              controller.battlefield.a(true, 7, 52, 10, 1, 1, 0);
-              controller.battlefield.a(true, 5, 52, 5, 1, 1, 3);
+              controller.battlefield.createUnitAt(true, 14, 74, 13, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 17, 0, 8, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 10, 0, 14, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 9, 9, 4, 1, 1, 1);
+              controller.battlefield.createUnitAt(true, 4, 9, 14, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 1, 16, 11, 1, 1, 3);
+              controller.battlefield.createUnitAt(true, 16, 16, 4, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 14, 22, 9, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 3, 22, 12, 1, 1, 1);
+              controller.battlefield.createUnitAt(true, 8, 52, 5, 1, 1, 2);
+              controller.battlefield.createUnitAt(true, 7, 52, 10, 1, 1, 0);
+              controller.battlefield.createUnitAt(true, 5, 52, 5, 1, 1, 3);
               break;
             }
             controller.battlefield.tiles[CampaignLookupSupport.field_c[var2_int]].setModifierFlag8(126);

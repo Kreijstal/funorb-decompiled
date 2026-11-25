@@ -311,7 +311,7 @@ final class StateChangeEvent extends GameEvent {
               }
             }
           } else {
-            battlefield.c(this.tileY, this.tileX, this.playerId, (byte) -115);
+            battlefield.changeStructureOwner(this.tileY, this.tileX, this.playerId, (byte) -115);
           }
           if (obfuscationGuard != -26661) {
             var5 = (GameplayController) null;

@@ -186,7 +186,7 @@ final class Battlefield {
         }
     }
 
-    final static int a(int param0, byte[] param1, boolean param2) {
+    final static int getQuicksaveTurnNumber(int param0, byte[] param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -260,7 +260,7 @@ final class Battlefield {
         if (this.field_b) {
           var4 = new NodeDeque();
         }
-        this.g((byte) -15);
+        this.prepareTileTurnEffects((byte) -15);
         if (skipUnitProcessing) {
           return (NodeDeque) (var4);
         }
@@ -342,8 +342,8 @@ final class Battlefield {
               var5_ref_jdLifetime1.queueTurnConsequences(-1);
               if (collectMarkers) {
                 this.applyPendingEvents((byte) 108);
-                this.d(this.currentPlayer, this.unitsByPlayer[this.currentPlayer].size(false), 91, 13);
-                this.d(this.currentPlayer, this.field_ob[this.currentPlayer], obfuscationGuard ^ 82, 12);
+                this.recordStatisticMaximum(this.currentPlayer, this.unitsByPlayer[this.currentPlayer].size(false), 91, 13);
+                this.recordStatisticMaximum(this.currentPlayer, this.field_ob[this.currentPlayer], obfuscationGuard ^ 82, 12);
               }
             }
             var5_ref_jdLifetime1 = (Unit) (this.unitsByPlayer[this.currentPlayer].previous((byte) 100));
@@ -531,7 +531,7 @@ final class Battlefield {
         return;
     }
 
-    final NodeDeque b(boolean param0, boolean param1, int param2) {
+    final NodeDeque advanceTurnAndPrepareConsequences(boolean param0, boolean param1, int param2) {
         int stackIn_42_0 = 0;
         int stackIn_42_1 = 0;
         boolean stackIn_49_1 = false;
@@ -566,7 +566,7 @@ final class Battlefield {
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameCompleted1 = true;
         if (param0) {
-          this.a(true);
+          this.checkSurvivingPlayersForDefeat(true);
           this.currentPlayer = (this.currentPlayer + 1) % this.playerCount;
           while (~this.currentPlayer != ~var4) {
             stackIn_42_0 = -1;
@@ -611,7 +611,7 @@ final class Battlefield {
         if ((decompiledFrameCompleted2) &&
           (decompiledFrameCompleted0)) {
           this.turnNumber = this.turnNumber + 1;
-          this.a(this.currentPlayer, (byte) -102);
+          this.updateTurnStartNotification(this.currentPlayer, (byte) -102);
           if (param0 && (var4 == this.currentPlayer ||
             this.hasSingleSurvivor((byte) -42))) {
             this.field_qb = true;
@@ -637,7 +637,7 @@ final class Battlefield {
         return var5;
     }
 
-    private final void a(int param0, byte param1) {
+    private final void updateTurnStartNotification(int param0, byte param1) {
         int var3;
         var3 = 124 % ((37 - param1) / 34);
         if ((this.localPlayer < 0 ||
@@ -669,12 +669,12 @@ final class Battlefield {
         }
         MapTile var4 = this.tiles[tileX + tileY * this.mapWidth];
         if (!obfuscationGuard) {
-          discarded$0 = this.a((int[]) null, -58, 5, -34);
+          discarded$0 = this.isChallengerRankedAhead((int[]) null, -58, 5, -34);
         }
         return var4.occupant;
     }
 
-    private final boolean a(int[] param0, int param1, int param2, int param3) {
+    private final boolean isChallengerRankedAhead(int[] param0, int param1, int param2, int param3) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -740,7 +740,7 @@ final class Battlefield {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void createUnitAt(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_40_0 = 0;
         int stackIn_40_1 = 0;
         int stackIn_76_0 = 0;
@@ -858,7 +858,7 @@ final class Battlefield {
         this.playerMana[param5] = this.playerMana[param5] - WhirlpoolHasher.unitDefinitions[param2][8];
         if (this.field_b) {
           this.field_ub[param5] = this.field_ub[param5] + WhirlpoolHasher.unitDefinitions[param2][8];
-          this.d(param5, this.field_ub[param5], 106, 10);
+          this.recordStatisticMaximum(param5, this.field_ub[param5], 106, 10);
         }
         boolean decompiledFrameRemainder0 = true;
         var12Lifetime1 = WhirlpoolHasher.unitDefinitions[param2][2];
@@ -904,8 +904,8 @@ final class Battlefield {
         }
         if (this.field_b) {
           this.field_Y[param5] = this.field_Y[param5] + 1;
-          this.d(param5, this.unitsByPlayer[param5].size(false), param4 ^ 104, 13);
-          this.d(param5, this.field_Y[param5], 119, 5);
+          this.recordStatisticMaximum(param5, this.unitsByPlayer[param5].size(false), param4 ^ 104, 13);
+          this.recordStatisticMaximum(param5, this.field_Y[param5], 119, 5);
         }
     }
 
@@ -1033,7 +1033,7 @@ final class Battlefield {
         }
     }
 
-    private final void g(byte param0) {
+    private final void prepareTileTurnEffects(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1068,7 +1068,7 @@ final class Battlefield {
         return;
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int resolveUnitAnimationSlot(int param0, int param1, int param2) {
         if (param2 != -4) {
           field_q = (String) null;
         }
@@ -1240,7 +1240,7 @@ final class Battlefield {
         return this.unitsByPlayer[playerId];
     }
 
-    private final void b(int[] param0, int param1, int param2, int param3) {
+    private final void collectNearbyTeamEffectFlags(int[] param0, int param1, int param2, int param3) {
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
         int stackIn_26_0 = 0;
@@ -1434,7 +1434,7 @@ final class Battlefield {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean consumeTurnStartNotification(int param0) {
         int var2 = this.field_Fb ? 1 : 0;
         this.field_Fb = false;
         if (param0 != -293) {
@@ -1685,7 +1685,7 @@ final class Battlefield {
         return false;
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3, int param4) {
+    final boolean canSelectUnitAt(int param0, boolean param1, int param2, int param3, int param4) {
         MapTile var6;
         if (0 <= param2 &&
           0 <= param3 &&
@@ -1837,7 +1837,7 @@ final class Battlefield {
         return;
     }
 
-    final void c(int param0, int param1, int param2, byte param3) {
+    final void changeStructureOwner(int param0, int param1, int param2, byte param3) {
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
         int[] dupTemp$2 = null;
@@ -1931,7 +1931,7 @@ final class Battlefield {
         }
         if (this.field_b &&
           !this.teamGame) {
-          this.d(param2, this.teamStructureCounts[this.playerTeamIndices[param2]][1] + (this.teamStructureCounts[this.playerTeamIndices[param2]][0] + this.teamStructureCounts[this.playerTeamIndices[param2]][2]), 102, 0);
+          this.recordStatisticMaximum(param2, this.teamStructureCounts[this.playerTeamIndices[param2]][1] + (this.teamStructureCounts[this.playerTeamIndices[param2]][0] + this.teamStructureCounts[this.playerTeamIndices[param2]][2]), 102, 0);
           var7Lifetime2 = -1 + this.playerCount;
           var8 = 0;
           while (true) {
@@ -1954,13 +1954,13 @@ final class Battlefield {
             if (stackIn_43_0 > stackIn_43_1 &&
               ~this.rankedParticipants[var7Lifetime2] == ~var6) {
               this.field_y[param2] = this.field_y[param2] + 1;
-              this.d(param2, this.field_y[param2], 104, 15);
+              this.recordStatisticMaximum(param2, this.field_y[param2], 104, 15);
             }
             if (~this.rankedParticipants[0] != ~var6) {
               break;
             }
             this.field_M[param2] = this.field_M[param2] + 1;
-            this.d(param2, this.field_M[param2], param3 ^ -18, 14);
+            this.recordStatisticMaximum(param2, this.field_M[param2], param3 ^ -18, 14);
             break;
           }
         }
@@ -2001,7 +2001,7 @@ final class Battlefield {
         return;
     }
 
-    private final void j(int param0) {
+    private final void markKingBlackDragonSummonedUnlessGuardMatches(int param0) {
         if (param0 != 7) {
           this.kingBlackDragonSummoned = true;
           return;
@@ -2303,7 +2303,7 @@ final class Battlefield {
         }
     }
 
-    private final void a(boolean param0, Unit param1, IndentedTextBuilder param2) {
+    private final void appendUnitDiagnostics(boolean param0, Unit param1, IndentedTextBuilder param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -2484,7 +2484,7 @@ final class Battlefield {
             while (this.mapHeight > var6) {
               var7 = var6 * this.mapWidth + var5;
               var8 = this.tiles[var7];
-              this.a(var4, var8, (byte) -40, var6, var12, var5);
+              this.appendTileDiagnostics(var4, var8, (byte) -40, var6, var12, var5);
               var6++;
             }
             var5++;
@@ -2498,7 +2498,7 @@ final class Battlefield {
           var11 = (Unit) (this.unitsByPlayer[var5Lifetime1].first((byte) 124));
           while (true) {
             if (var11 != null) {
-              this.a(false, var11, var10);
+              this.appendUnitDiagnostics(false, var11, var10);
               var11 = (Unit) (this.unitsByPlayer[var5Lifetime1].next((byte) 123));
               if (var9 == 0) {
                 continue;
@@ -2658,7 +2658,7 @@ final class Battlefield {
           if (obfuscationGuard != 0) {
             this.field_D = -23;
           }
-          this.j(7);
+          this.markKingBlackDragonSummonedUnlessGuardMatches(7);
           var4 = context + "\n" + var4;
           this.pendingEvents.clear(obfuscationGuard ^ 98);
           Spell.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
@@ -2804,7 +2804,7 @@ final class Battlefield {
         }
     }
 
-    private final boolean d(byte param0) {
+    private final boolean isFirstTeamRankedFirst(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -2877,7 +2877,7 @@ final class Battlefield {
         return true;
     }
 
-    private final int a(String param0, int param1) {
+    private final int findPlayerByAccountName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -2930,7 +2930,7 @@ final class Battlefield {
         }
     }
 
-    final int d(int param0, int param1, int param2) {
+    final int scaleStructureManaIncome(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -3264,7 +3264,7 @@ final class Battlefield {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void checkSurvivingPlayersForDefeat(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -3317,7 +3317,7 @@ final class Battlefield {
         }
     }
 
-    final int g(int param0) {
+    final int getBlockedPortalFailureTurnsRemaining(int param0) {
         if (param0 == ~this.field_A) {
           return -1;
         }
@@ -3346,7 +3346,7 @@ final class Battlefield {
           0 == (1 << var9 & this.godUnitUnlockMasks[playerId][var8 + 1])) {
           return 4;
         }
-        if (!this.f(WhirlpoolHasher.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
+        if (!this.hasRequiredMana(WhirlpoolHasher.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
           var6 = var6 | 1;
         }
         if (WhirlpoolHasher.unitDefinitions[unitType][1] == -1) {
@@ -3357,7 +3357,7 @@ final class Battlefield {
         } else {
           var10 = var7[WhirlpoolHasher.unitDefinitions[unitType][1]];
         }
-        if (!this.a(var10, true, WhirlpoolHasher.unitDefinitions[unitType][2])) {
+        if (!this.hasRequiredGodFavour(var10, true, WhirlpoolHasher.unitDefinitions[unitType][2])) {
           var6 = var6 | 2;
         }
         return var6;
@@ -3400,7 +3400,7 @@ final class Battlefield {
               }
               var6 = 0;
               while (var6 < this.mapHeight) {
-                this.b(this.tiles[var6 * this.mapWidth + var5].teamEffectFlags, 12534, var6, var5);
+                this.collectNearbyTeamEffectFlags(this.tiles[var6 * this.mapWidth + var5].teamEffectFlags, 12534, var6, var5);
                 if (null != this.tiles[var5 + var6 * this.mapWidth].occupant) {
                   this.tiles[var5 + var6 * this.mapWidth].occupant.refreshTileEffects((byte) -17);
                 }
@@ -3435,7 +3435,7 @@ final class Battlefield {
               }
               var10 = var7;
               while (var10 <= var8) {
-                this.b(this.tiles[var10 * this.mapWidth + var9].teamEffectFlags, 12534, var10, var9);
+                this.collectNearbyTeamEffectFlags(this.tiles[var10 * this.mapWidth + var9].teamEffectFlags, 12534, var10, var9);
                 if (this.tiles[var9 + var10 * this.mapWidth].occupant != null) {
                   this.tiles[this.mapWidth * var10 + var9].occupant.refreshTileEffects((byte) 55);
                 }
@@ -3499,7 +3499,7 @@ final class Battlefield {
         return var2;
     }
 
-    final int a(int param0, int param1, int param2, byte param3) {
+    final int findAvailableAlliedRevivalStructure(int param0, int param1, int param2, byte param3) {
         int discarded$0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
@@ -3521,7 +3521,7 @@ final class Battlefield {
         int var8Lifetime3;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 > -32) {
-          discarded$0 = this.a((String) null, 89);
+          discarded$0 = this.findPlayerByAccountName((String) null, 89);
         }
         var5 = 1;
         while (var5 != 0) {
@@ -4086,7 +4086,7 @@ final class Battlefield {
           }
           if ((decompiledNaturalLoopExit0) &&
             (obfuscationGuard >= -69)) {
-            this.a(83, -46, -45, (byte) -10);
+            this.findAvailableAlliedRevivalStructure(83, -46, -45, (byte) -10);
           }
           var6Lifetime1 = 0;
           while (var6Lifetime1 < this.tiles.length) {
@@ -4262,7 +4262,7 @@ final class Battlefield {
         }
     }
 
-    private final void a(int param0, MapTile param1, byte param2, int param3, IndentedTextBuilder param4, int param5) {
+    private final void appendTileDiagnostics(int param0, MapTile param1, byte param2, int param3, IndentedTextBuilder param4, int param5) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -4385,7 +4385,7 @@ final class Battlefield {
           0 == (this.godUnitUnlockMasks[playerId][1 + var7] & 1 << var8)) {
           return false;
         }
-        if (this.f(WhirlpoolHasher.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
+        if (this.hasRequiredMana(WhirlpoolHasher.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
           var10Lifetime1 = var6;
           if (-1 == WhirlpoolHasher.unitDefinitions[unitType][1]) {
             var9 = var12[6];
@@ -4397,7 +4397,7 @@ final class Battlefield {
             var10Lifetime1Lifetime1 = var6;
             var9 = var10Lifetime1Lifetime1[WhirlpoolHasher.unitDefinitions[unitType][1]];
           }
-          if (this.a(var9, true, WhirlpoolHasher.unitDefinitions[unitType][2])) {
+          if (this.hasRequiredGodFavour(var9, true, WhirlpoolHasher.unitDefinitions[unitType][2])) {
             return true;
           }
         }
@@ -4578,14 +4578,14 @@ final class Battlefield {
         }
     }
 
-    final int a(byte param0, int param1, int param2) {
+    final int getGodStrengthBonus(byte param0, int param1, int param2) {
         if (param0 != 11) {
           this.healOrRaiseSkeletonAt((byte) 47, 3, 37, -46);
         }
         return 0;
     }
 
-    final void d(int param0, int param1, int param2, int param3) {
+    final void recordStatisticMaximum(int param0, int param1, int param2, int param3) {
         if (!this.field_b) {
           return;
         }
@@ -4628,7 +4628,7 @@ final class Battlefield {
           this.currentPlayer = nextPlayer;
           this.turnNumber = turnNumber;
         }
-        this.a(nextPlayer, (byte) 111);
+        this.updateTurnStartNotification(nextPlayer, (byte) 111);
         if (obfuscationGuard) {
           return;
         }
@@ -4981,12 +4981,12 @@ final class Battlefield {
           if (this.field_b) {
             defender.attacksReceived = defender.attacksReceived + 1;
             attacker.attacksMade = attacker.attacksMade + 1;
-            this.d(attacker.ownerPlayer, attacker.attacksMade, 112, 7);
-            this.d(defender.ownerPlayer, defender.attacksReceived, 79, 6);
+            this.recordStatisticMaximum(attacker.ownerPlayer, attacker.attacksMade, 112, 7);
+            this.recordStatisticMaximum(defender.ownerPlayer, defender.attacksReceived, 79, 6);
             campaignKillMarker = 0;
             if (attackerDies) {
               this.field_g[defender.ownerPlayer] = this.field_g[defender.ownerPlayer] + 1;
-              this.d(defender.ownerPlayer, this.field_g[defender.ownerPlayer], 120, 4);
+              this.recordStatisticMaximum(defender.ownerPlayer, this.field_g[defender.ownerPlayer], 120, 4);
               if (attacker.tag == 10 &&
                 11 == defender.tag) {
                 stackIn_130_0 = 1;
@@ -4997,7 +4997,7 @@ final class Battlefield {
             }
             if (defenderDies) {
               this.field_g[attackerLookup.ownerPlayer] = this.field_g[attackerLookup.ownerPlayer] + 1;
-              this.d(attacker.ownerPlayer, this.field_g[attackerLookup.ownerPlayer], 91, 4);
+              this.recordStatisticMaximum(attacker.ownerPlayer, this.field_g[attackerLookup.ownerPlayer], 91, 4);
               if (defender.tag == 10 &&
                 attacker.tag == 11) {
                 stackIn_136_0 = 1;
@@ -5017,7 +5017,7 @@ final class Battlefield {
           }
           return;
         }
-        boolean discarded$0 = this.a(attacker, targetDeltaX, attackerDamage, attackerDies, attackerY, -1, targetDeltaY, defender, attackerX, defenderDamage, unseenUnitType, defenderDies, 0);
+        boolean discarded$0 = this.reportCombatStateMismatch(attacker, targetDeltaX, attackerDamage, attackerDies, attackerY, -1, targetDeltaY, defender, attackerX, defenderDamage, unseenUnitType, defenderDies, 0);
     }
 
     final void loadOrGenerateMap(int obfuscationGuard, int tutorialSelection) {
@@ -5090,7 +5090,7 @@ final class Battlefield {
         throw new RuntimeException(stackIn_8_2);
     }
 
-    final int a(String param0, byte param1) {
+    final int getPlayerChatTeamColour(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5107,7 +5107,7 @@ final class Battlefield {
           }
           var3_int = this.getPlayerTeamIndex(this.localPlayer, param1 ^ 63);
           if (var3_int < 0) {
-            var4 = this.a(param0, -128);
+            var4 = this.findPlayerByAccountName(param0, -128);
             var3_int = this.getPlayerTeamIndex(var4, -1);
             if (var3_int < 0) {
               var3_int = 2;
@@ -5129,7 +5129,7 @@ final class Battlefield {
         }
     }
 
-    private final boolean a(int param0, boolean param1, int param2) {
+    private final boolean hasRequiredGodFavour(int param0, boolean param1, int param2) {
         if (!param1) {
           this.registerUnit(127, (Unit) null);
         }
@@ -5137,7 +5137,7 @@ final class Battlefield {
         return var4 != 0;
     }
 
-    private final boolean a(Unit param0, int param1, int param2, boolean param3, int param4, int param5, int param6, Unit param7, int param8, int param9, int param10, boolean param11, int param12) {
+    private final boolean reportCombatStateMismatch(Unit param0, int param1, int param2, boolean param3, int param4, int param5, int param6, Unit param7, int param8, int param9, int param10, boolean param11, int param12) {
         StringBuilder stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         StringBuilder stackIn_5_0 = null;
@@ -5317,7 +5317,7 @@ final class Battlefield {
         }
     }
 
-    private final boolean f(int param0, int param1, int param2) {
+    private final boolean hasRequiredMana(int param0, int param1, int param2) {
         int var4 = param1 >= param0 ? 1 : 0;
         if (param2 != 0) {
           this.getSpellCastDelay(73, 49, -89);
@@ -5325,7 +5325,7 @@ final class Battlefield {
         return var4 != 0;
     }
 
-    private final int b(byte param0) {
+    private final int calculateTurnLimit(byte param0) {
         int var2 = 1 + this.field_vb;
         if (this.mapSizeSetting < 0 ||
           ArrayWidgetContainer.field_G.length <= this.mapSizeSetting) {
@@ -5395,7 +5395,7 @@ final class Battlefield {
               break;
           }
           if (obfuscationGuard >= -50) {
-            this.a(true, 103, -100, 43, -48, -87, -117);
+            this.createUnitAt(true, 103, -100, 43, -48, -87, -117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5412,7 +5412,7 @@ final class Battlefield {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final int getSummoningBonus(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param3 != 0) {
           return -22;
         }
@@ -6093,7 +6093,7 @@ final class Battlefield {
             return 65535;
           }
           if (obfuscationGuard != -27300) {
-            this.a(41, 1, 42, (byte) 14);
+            this.findAvailableAlliedRevivalStructure(41, 1, 42, (byte) 14);
           }
           if (var6 != 0 &&
             var7.terrainType == 11) {
@@ -6162,7 +6162,7 @@ final class Battlefield {
         }
     }
 
-    final boolean b(int param0, boolean param1, int param2) {
+    final boolean checkBlockedPortalsFailure(int param0, boolean param1, int param2) {
         int var4;
         int var5;
         MapTile[] var6;
@@ -6318,7 +6318,7 @@ final class Battlefield {
               return;
             }
           }
-          if (!this.d((byte) 125)) {
+          if (!this.isFirstTeamRankedFirst((byte) 125)) {
             this.rankedParticipants[1] = 0;
             this.rankedParticipants[0] = 1;
             if (var9 != 0) {
@@ -6404,7 +6404,7 @@ final class Battlefield {
             }
             var5 = stackIn_73_0;
             while (this.playerCount > var5) {
-              stackOut_66_0 = this.a(var14, this.rankedParticipants[var4], -24107, this.rankedParticipants[var5]);
+              stackOut_66_0 = this.isChallengerRankedAhead(var14, this.rankedParticipants[var4], -24107, this.rankedParticipants[var5]);
               stackIn_71_0 = stackOut_66_0 ? 1 : 0;
               stackIn_67_0 = stackOut_66_0;
               if (stackIn_67_0) {
@@ -7174,7 +7174,7 @@ final class Battlefield {
               this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, PreferencesWriteRequest.field_n);
               this.loadOrGenerateMap(0, 0);
             }
-            this.turnLimit = this.b((byte) 32);
+            this.turnLimit = this.calculateTurnLimit((byte) 32);
             this.recountMapStructures(-2);
             this.collectedManaTarget = this.computeManaTarget((byte) -80);
             this.field_F = false;

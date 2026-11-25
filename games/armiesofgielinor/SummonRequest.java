@@ -237,7 +237,7 @@ final class SummonRequest extends ActionRequest {
           if (obfuscationGuard < 31) {
             field_y = (String) null;
           }
-          summoningBonus = battlefield.a(WhirlpoolHasher.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, WhirlpoolHasher.unitDefinitions[this.unitType][2]);
+          summoningBonus = battlefield.getSummoningBonus(WhirlpoolHasher.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, WhirlpoolHasher.unitDefinitions[this.unitType][2]);
           stackIn_31_0 = new SummonAction(this.tileX, this.tileY, this.unitType, summoningBonus, this.actingPlayer);
           return (PreparedAction) ((Object) stackIn_31_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

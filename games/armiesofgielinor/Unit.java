@@ -664,7 +664,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.removedFromActivePlay = true;
           var2 = -1;
           if (this.accessoryType == 5) {
-            var2 = this.battlefield.a(this.tileY, this.ownerPlayer, this.tileX, (byte) -53);
+            var2 = this.battlefield.findAvailableAlliedRevivalStructure(this.tileY, this.ownerPlayer, this.tileX, (byte) -53);
           }
           if (var2 > -1) {
             this.battlefield.tiles[var2].field_l = true;

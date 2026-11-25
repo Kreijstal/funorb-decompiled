@@ -4280,7 +4280,7 @@ final class GameplayController {
           DateInputWidget.field_E.drawText(TextFieldValidator.field_i, param3 - 45, param0 + 12, 16777215, -1);
           DateInputWidget.field_E.drawText(IntegerPowerSupport.field_a, param3 - 45, 29 + param0, 16777215, -1);
           DateInputWidget.field_E.drawText(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
-          DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, WhirlpoolHasher.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
+          DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][4] + this.battlefield.getGodStrengthBonus((byte) 11, WhirlpoolHasher.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
           DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
           if (34 != param1) {
             if (WhirlpoolHasher.unitDefinitions[param1][6] != WhirlpoolHasher.unitDefinitions[param1][7]) {
@@ -8649,7 +8649,7 @@ final class GameplayController {
                 stackIn_597_0 = this.battlefield;
                 stackIn_597_1 = -1;
                 stackIn_600_2 = (this.selectedUnit == null) || (this.selectedUnit.ownerPlayer != this.controlledPlayerId) || (this.field_lc);
-                if (((Battlefield) (Object) stackIn_597_0).a(stackIn_597_1, stackIn_600_2, var8Lifetime2, var9Lifetime1, this.controlledPlayerId) && (this.selectedUnit == null ||
+                if (((Battlefield) (Object) stackIn_597_0).canSelectUnitAt(stackIn_597_1, stackIn_600_2, var8Lifetime2, var9Lifetime1, this.controlledPlayerId) && (this.selectedUnit == null ||
                   this.controlledPlayerId == this.selectedUnit.ownerPlayer ||
                   this.movementPlanner.otherPlayerPreview)) {
                   var10_ref_jd = this.battlefield.getUnitAt(var9Lifetime1, true, var8Lifetime2);
@@ -8975,11 +8975,11 @@ final class GameplayController {
           if (null != this.battlefield.campaignMission) {
             this.saveCampaignQuicksave((byte) -64);
             if (null == this.aiPlanners[this.battlefield.currentPlayer]) {
-              if (this.battlefield.b(this.battlefield.campaignMission.playerSlot, this.field_a, -1)) {
+              if (this.battlefield.checkBlockedPortalsFailure(this.battlefield.campaignMission.playerSlot, this.field_a, -1)) {
                 this.battlefield.eliminatePlayer(10001, this.battlefield.campaignMission.playerSlot, false);
               }
               if (!this.field_a) {
-                var3 = this.battlefield.g(-1);
+                var3 = this.battlefield.getBlockedPortalFailureTurnsRemaining(-1);
                 if (var3 > 0) {
                   MusicPatchEnvelope.a(this.field_Nb, EmailCheckResult.formatTemplate(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
                 }
@@ -9002,7 +9002,7 @@ final class GameplayController {
               } else {
                 stackIn_29_0 = this.battlefield;
                 stackIn_30_1 = !(this.field_z);
-                ((Battlefield) (Object) stackIn_29_0).b(stackIn_30_1, false, 30156);
+                ((Battlefield) (Object) stackIn_29_0).advanceTurnAndPrepareConsequences(stackIn_30_1, false, 30156);
                 this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
                 this.field_ic = -1;
                 this.field_nc = -1;
@@ -9588,7 +9588,7 @@ final class GameplayController {
           if (obfuscationGuard != -42) {
             this.l((byte) 23);
           }
-          if (this.battlefield.h(-293) &&
+          if (this.battlefield.consumeTurnStartNotification(-293) &&
             !this.field_z) {
             cameraPlayerIndex = this.controlledPlayerId;
             if (0 > cameraPlayerIndex) {

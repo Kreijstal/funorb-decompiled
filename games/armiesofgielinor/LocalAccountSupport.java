@@ -142,7 +142,7 @@ final class LocalAccountSupport {
         RuntimeException decompiledCaughtException = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param0 = Battlefield.b(param0, param4, -4);
+          param0 = Battlefield.resolveUnitAnimationSlot(param0, param4, -4);
           var5_int = param2[param0].length;
           for (var6 = param1; var6 < var5_int; var6++) {
             var7 = var6;

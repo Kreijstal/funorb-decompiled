@@ -242,10 +242,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   var2 = CommunityTabGroup.decodeChatMessageWithIntGuard(stackIn_119_0, stackIn_120_1);
                   if (((ChatMessage) (var2)).channelId == 4) {
                     if (null != FullscreenFocusCanvas.gameplayController) {
-                      NodeHashTable.a(-1, FullscreenFocusCanvas.gameplayController.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
+                      NodeHashTable.a(-1, FullscreenFocusCanvas.gameplayController.battlefield.getPlayerChatTeamColour(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                     if (SectorCacheStore.field_a != null) {
-                      NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
+                      NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.getPlayerChatTeamColour(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                   }
                   MapLayout.acceptReceivedChatMessage((ChatMessage) (var2), -1);

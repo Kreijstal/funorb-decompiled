@@ -63,7 +63,7 @@ final class SummonEvent extends GameEvent {
         }
         try {
           this.applied = true;
-          battlefield.a(false, this.tileX, this.unitType, this.tileY, 1, this.playerId, this.strengthBonus);
+          battlefield.createUnitAt(false, this.tileX, this.unitType, this.tileY, 1, this.playerId, this.strengthBonus);
           this.unit = battlefield.getUnitAt(this.tileY, true, this.tileX);
           this.unit.packedFlag8 = this.unit.packedFlag8 | this.field_y;
           if (obfuscationGuard != -26661) {

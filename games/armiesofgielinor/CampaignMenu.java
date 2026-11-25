@@ -233,7 +233,7 @@ final class CampaignMenu {
         try {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(111);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
-          var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
+          var4 = Battlefield.getQuicksaveTurnNumber(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_e, new String[]{var3.name, Integer.toString(var4)});
           var6 = EmailCheckResult.formatTemplate(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
@@ -721,7 +721,7 @@ final class CampaignMenu {
         try {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(97);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, param0 - 26);
-          var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
+          var4 = Battlefield.getQuicksaveTurnNumber(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = EmailCheckResult.formatTemplate(4800, DateOfBirthValidator.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
           if (!decompiledSharedTail0) {
@@ -2357,7 +2357,7 @@ final class CampaignMenu {
                   var11.height = 57;
                   var11.left = 45;
                   var12 = QuickChatPhrase.getCampaignMission(var10_ref_sl.campaignIndex, var10_ref_sl.missionId, 0);
-                  var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.snapshotBytes, false);
+                  var13_int = Battlefield.getQuicksaveTurnNumber(var12.participantIds.length, var10_ref_sl.snapshotBytes, false);
                   var14 = EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.title = var12.campaign.name;
                   var11.selectable = true;

@@ -41,7 +41,7 @@ final class UpkeepEvent extends GameEvent {
             battlefield.playerMana[var4.ownerPlayer] = battlefield.playerMana[var4.ownerPlayer] - 10;
             if (battlefield.field_b) {
               battlefield.field_ub[var4.ownerPlayer] = battlefield.field_ub[var4.ownerPlayer] + 10;
-              battlefield.d(var5.ownerPlayer, battlefield.field_ub[var4.ownerPlayer], 85, 10);
+              battlefield.recordStatisticMaximum(var5.ownerPlayer, battlefield.field_ub[var4.ownerPlayer], 85, 10);
             }
           }
           WidgetTheme.recomputeClientStateChecksum(battlefield, -113);
