@@ -73,7 +73,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
             return stackIn_3_0;
           }
           if (ClientLobbyResources.field_f == null &&
-            !TextHotspotWidget.a(false, -2)) {
+            !TextHotspotWidget.pollAccountSocketConnection(false, -2)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }

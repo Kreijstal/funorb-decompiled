@@ -22,7 +22,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     BitmapFont field_c;
     int field_l;
 
-    public final int getTextHeight(byte param0, UiWidget param1) {
+    public final int getTextWidth(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -464,7 +464,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int getTextWidth(boolean param0, UiWidget param1) {
+    public final int getTextHeight(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;

@@ -33,7 +33,7 @@ class TextHotspotWidget extends FocusableWidget {
         }
     }
 
-    final void a(int param0, boolean param1, String param2) {
+    final void setHotspotTooltip(int param0, boolean param1, String param2) {
         int var5 = 0;
         String[] var4 = null;
         RuntimeException var4_ref = null;
@@ -62,7 +62,7 @@ class TextHotspotWidget extends FocusableWidget {
           if (param1) {
             return;
           }
-          this.e(false);
+          this.rebuildHotspotRegions(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ class TextHotspotWidget extends FocusableWidget {
 
     final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         super.setBounds(param0, param1, (byte) 122, param3, param4);
-        this.e(false);
+        this.rebuildHotspotRegions(false);
         if (param2 < 99) {
           this.drawLayer(23, -42, -29, 82);
         }
@@ -129,7 +129,7 @@ class TextHotspotWidget extends FocusableWidget {
         field_H = null;
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean pollAccountSocketConnection(boolean param0, int param1) {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
@@ -220,14 +220,14 @@ class TextHotspotWidget extends FocusableWidget {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        this.setBounds(param1, ((WidgetMetrics) ((Object) this.field_p)).getTextWidth(true, (UiWidget) (this)), (byte) 100, param0, param3);
+    final void setBoundsWithTextHeight(int param0, int param1, byte param2, int param3) {
+        this.setBounds(param1, ((WidgetMetrics) ((Object) this.field_p)).getTextHeight(true, (UiWidget) (this)), (byte) 100, param0, param3);
         if (param2 != 57) {
           field_E = (String) null;
         }
     }
 
-    final static void a(int param0) {
+    final static void drawIntroSequence(int param0) {
         int var1;
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -268,7 +268,7 @@ class TextHotspotWidget extends FocusableWidget {
         PointsVictoryChecker.drawGradientTextButton(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, MenuInputState.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
     }
 
-    final void e(boolean param0) {
+    final void rebuildHotspotRegions(boolean param0) {
         int var2;
         int var5;
         int var7;
@@ -412,7 +412,7 @@ class TextHotspotWidget extends FocusableWidget {
         }
     }
 
-    private final TextHotspotRegion b(int param0, int param1, byte param2) {
+    private final TextHotspotRegion findHotspotAt(int param0, int param1, byte param2) {
         TextHotspotRegion var4;
         TextHotspotRegion var5;
         int var6;
@@ -464,7 +464,7 @@ class TextHotspotWidget extends FocusableWidget {
           if (this.field_k) {
             var5_int = -this.field_m + (-param0 + TertiaryListSequence.field_k);
             var6 = LobbyRoomControlsSupport.field_b - param1 - this.field_q;
-            this.field_I = this.b(var5_int, var6, (byte) -66);
+            this.field_I = this.findHotspotAt(var5_int, var6, (byte) -66);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ts.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -475,7 +475,7 @@ class TextHotspotWidget extends FocusableWidget {
         super.fireAction(param0, param1, param2, param3);
         int var5 = -this.field_m + param1;
         int var6 = -this.field_q + param2;
-        TextHotspotRegion var7 = this.b(var5, var6, (byte) -66);
+        TextHotspotRegion var7 = this.findHotspotAt(var5, var6, (byte) -66);
         if (var7 == null) {
           return;
         }

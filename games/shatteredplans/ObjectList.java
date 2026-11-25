@@ -142,7 +142,7 @@ final class ObjectList {
           stackIn_42_1 = 4 * (2 + UniformNineSliceFactory.field_c) * param0;
           stackIn_42_2 = UniformNineSliceFactory.field_c * 2 + 4;
           stackIn_43_3 = (param2 == DerelictVictoryChecker.field_l);
-          stackIn_46_0 = (!((ScrollPane) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
+          stackIn_46_0 = (!((ScrollPane) (Object) stackIn_42_0).updateScrollLayout(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
           var10 = param2.field_xb.field_M;
           var11 = null;

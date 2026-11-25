@@ -16,12 +16,12 @@ final class ValidationState {
         field_c = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawCurrentClientScreen(boolean param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
           ValidationState.clearStatics(58);
           if (GameRules.field_c == -3) {
-            TextHotspotWidget.a(6493);
+            TextHotspotWidget.drawIntroSequence(6493);
           } else {
             if (null != PasswordInputPainter.field_x) {
               IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
@@ -37,7 +37,7 @@ final class ValidationState {
           return;
         }
         if (GameRules.field_c == -3) {
-          TextHotspotWidget.a(6493);
+          TextHotspotWidget.drawIntroSequence(6493);
         } else {
           if (null != PasswordInputPainter.field_x) {
             IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
@@ -56,7 +56,7 @@ final class ValidationState {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawQ4Line(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -99,7 +99,7 @@ final class ValidationState {
         SoftwareRasterizer.drawLine(param3, param0, param2, param4, param5);
     }
 
-    final static void c(int param0) {
+    final static void resetFrameTiming(int param0) {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1_intLifetime1;
@@ -120,7 +120,7 @@ final class ValidationState {
         }
     }
 
-    final static int a(int param0) {
+    final static int pollArchiveServices(int param0) {
         ProxyAuthenticationRequiredException.field_c.pollArchiveSources(123);
         if (!TertiaryLinkNode.field_o.pollNetwork(0)) {
           return IsaacRandom.pollArchiveConnection((byte) 115);

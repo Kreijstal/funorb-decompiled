@@ -60,7 +60,7 @@ final class LobbyLayoutSupport {
             return;
           }
           MenuComponent.field_q.setTarget(42 + UnderageAccountInfoPanel.field_K, 18, (byte) 84, UniformNineSliceFactory.field_c + 2, -40 + (BattleExplosionVisual.field_t.field_K - UnderageAccountInfoPanel.field_K) - 2);
-          EmailValidationError.field_a.a(BattleExplosionVisual.field_t.field_K, 22 + UniformNineSliceFactory.field_c, 0, 2, -128, -UniformNineSliceFactory.field_c + (BattleExplosionVisual.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
+          EmailValidationError.field_a.layoutScrollPane(BattleExplosionVisual.field_t.field_K, 22 + UniformNineSliceFactory.field_c, 0, 2, -128, -UniformNineSliceFactory.field_c + (BattleExplosionVisual.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
           DialPainter.field_g.setTarget(SocialListPanel.field_xb.field_K, 40, (byte) 107, -40 + SocialListPanel.field_xb.field_mb, 0);
           ArchiveSourceManager.field_f.setTarget(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           NameSuggestionsPanel.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);

@@ -46,7 +46,7 @@ final class LoginResultSupport {
           }
           stackIn_6_0 = 93;
           stackIn_7_1 = !(AlternateLoginCredentials.field_t >= 13);
-          ProjectsWindowSupport.field_a = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
+          ProjectsWindowSupport.field_a = ScrollPane.createAccountSuccessResultFullInts(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           SocialNameInputPanel.updateAccountNameSuggestions((String[]) null, false);
           return;

@@ -296,7 +296,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          SliderPainter.a((int[]) null, param1.field_Ib, param1.field_Cb, param1.field_Db, 293, param3, param1, -1, -1);
+          SliderPainter.createContextMenuController((int[]) null, param1.field_Ib, param1.field_Cb, param1.field_Db, 293, param3, param1, -1, -1);
           DerelictVictoryChecker.field_m.addInviteActions(true, param6 ^ -16763);
           DerelictVictoryChecker.field_m.addSocialActions((int[]) null, 0, (byte) -36);
           DerelictVictoryChecker.field_m.addReportAction(17);

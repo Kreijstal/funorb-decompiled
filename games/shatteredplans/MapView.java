@@ -3093,7 +3093,7 @@ final class MapView extends MapViewState {
                       InvalidMapConnectionException.drawClippedAntialiasedLineQ4(70, var26 << 4, var27 << 4, var25 << 4, var24, var28 << 4);
                       break;
                     }
-                    ValidationState.a(var26 << 4, -40, var27 << 4, var25 << 4, var28 << 4, var24);
+                    ValidationState.drawQ4Line(var26 << 4, -40, var27 << 4, var25 << 4, var28 << 4, var24);
                     break;
                   }
                 }

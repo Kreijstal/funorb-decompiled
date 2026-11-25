@@ -523,7 +523,7 @@ final class DialogRoot extends SingleChildWidget {
         int var2 = !AccountStatusDialog.field_pb ? 200 : 250;
         IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
         AccountHandshakeSupport.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
-        SingleChildWidget.field_y.a(-5 + SoundEffectDefinition.field_e.field_K - 5, 37, 5, 2, -125, -5 + (SoundEffectDefinition.field_e.field_mb - 32) - 5, UnderageAccountInfoPanel.field_K);
+        SingleChildWidget.field_y.layoutScrollPane(-5 + SoundEffectDefinition.field_e.field_K - 5, 37, 5, 2, -125, -5 + (SoundEffectDefinition.field_e.field_mb - 32) - 5, UnderageAccountInfoPanel.field_K);
         if (param0 < 93) {
           field_C = -10;
         }

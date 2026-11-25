@@ -61,11 +61,11 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           var4 = new WidgetTheme(StatefulWidgetTheme.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, StatefulWidgetTheme.field_u.field_J, -1, 2147483647, true);
           this.field_G = new TextHotspotWidget(var2, var4);
           this.field_G.field_v = "";
-          this.field_G.a(0, true, ChatCompositionSupport.field_c);
-          this.field_G.a(1, true, ChatCompositionSupport.field_c);
+          this.field_G.setHotspotTooltip(0, true, ChatCompositionSupport.field_c);
+          this.field_G.setHotspotTooltip(1, true, ChatCompositionSupport.field_c);
           this.field_G.field_u = (WidgetListener) (this);
           this.field_G.field_x = -40 + this.field_x;
-          this.field_G.a(26, var3, (byte) 57, this.field_x - 40);
+          this.field_G.setBoundsWithTextHeight(26, var3, (byte) 57, this.field_x - 40);
           var3 = var3 + (this.field_G.field_n + 15);
           this.addChild((byte) -46, this.field_G);
           var5 = 4;

@@ -285,7 +285,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           stackIn_5_1 = param2 * ((UniformNineSliceFactory.field_c + 2) * 3);
           stackIn_5_2 = 2 + UniformNineSliceFactory.field_c;
           stackIn_6_3 = (ClientLobbyResources.field_a.field_Db == DerelictVictoryChecker.field_l);
-          var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_5_0).updateScrollLayout(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
           var4 = ClientLobbyResources.field_a.field_Eb.field_M;
           if (2 != ClientInputSupport.field_b &&
             1 != ClientInputSupport.field_b) {
@@ -351,7 +351,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             }
             var5 = var6;
             if (0 != var6.field_rb) {
-              SliderPainter.a((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, ClientLobbyResources.field_a.field_Db, var6, -1, -1);
+              SliderPainter.createContextMenuController((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, ClientLobbyResources.field_a.field_Db, var6, -1, -1);
               var16 = DerelictVictoryChecker.field_m;
               var13_ref_String = TutorialVictoryChecker.field_o;
               var16.field_j.addItem(1, 7, var13_ref_String);

@@ -109,7 +109,7 @@ final class GraphicsSettings {
           }
           stackIn_12_0 = 93;
           stackIn_13_1 = !(AlternateLoginCredentials.field_t >= 13);
-          ChatAndSocialPanel.field_c = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_12_0, stackIn_13_1);
+          ChatAndSocialPanel.field_c = ScrollPane.createAccountSuccessResultFullInts(stackIn_12_0, stackIn_13_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

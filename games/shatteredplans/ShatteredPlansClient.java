@@ -592,7 +592,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             SpriteState.loadGameMusic(StrongCacheEntry.field_z, DualLinkNode.field_n, param0 - 47);
             DualLinkNode.field_n = null;
             StrongCacheEntry.field_z = null;
-            ValidationState.c(126);
+            ValidationState.resetFrameTiming(126);
             return false;
           }
           if (IntrusiveNodeHashTable.field_g != null) {
@@ -602,26 +602,26 @@ public final class ShatteredPlansClient extends GameClientShell {
             TextReplacementContext.field_f = null;
             IntrusiveNodeHashTable.field_g = null;
             RichTextLayout.field_k = null;
-            ValidationState.c(122);
+            ValidationState.resetFrameTiming(122);
             return false;
           }
           if (PointsVictoryChecker.field_l != null) {
             GameSpriteResources.loadGameBackdropSprites((byte) -126, PointsVictoryChecker.field_l);
             PointsVictoryChecker.field_l = null;
-            ValidationState.c(125);
+            ValidationState.resetFrameTiming(125);
             return false;
           }
           if (null != LeaderboardSortSupport.field_c) {
             ListContent.loadTutorialScenes(LeaderboardSortSupport.field_c, param0 - 167);
             IsaacRandom.field_h = TextReplacementEntry.decodeTrimmedLines(LeaderboardSortSupport.field_c.getFileByName(true, "starnames.txt", ""), (byte) -17);
             LeaderboardSortSupport.field_c = null;
-            ValidationState.c(121);
+            ValidationState.resetFrameTiming(121);
             return false;
           }
           if (null != GameSpriteResources.field_h) {
             CellVertex.setChatHuffmanCodec(1, new HuffmanCodec(GameSpriteResources.field_h.getFileByName(true, "huffman", "")));
             GameSpriteResources.field_h = null;
-            ValidationState.c(126);
+            ValidationState.resetFrameTiming(126);
             return false;
           }
           this.l(1);
@@ -641,7 +641,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           StringNode.field_j = -1;
           PaddedContentDialog.setTargetFrameRate(50, (byte) 52);
           UsernameAvailabilityValidator.b(param0 ^ -86, 50);
-          ValidationState.c(122);
+          ValidationState.resetFrameTiming(122);
           QuickChatCategoryRegistry.transitionMusicTrack(32767, PaddedContentDialog.field_nb, true, 1048576);
           return true;
         }
@@ -680,7 +680,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                                   GameSoundSetupSupport.initializeGameSounds(ByteArrayReadRequest.field_m, IntHashIndex.field_a, param0 + 18);
                                   IntHashIndex.field_a = null;
                                   ByteArrayReadRequest.field_m = null;
-                                  ValidationState.c(122);
+                                  ValidationState.resetFrameTiming(122);
                                   return false;
                                 }
                                 ClientDialogSupport.setLoadingProgress(75.0f, 2, CandidateLink.formatArchiveLoadingProgress(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
@@ -1205,7 +1205,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               if (GameRules.field_c != -1) {
                 if (GameRules.field_c != -2) {
                   if (GameRules.field_c == -3) {
-                    ScrollPane.f((byte) 93);
+                    ScrollPane.tickIntroSequence((byte) 93);
                   } else {
                     if (PointsVictoryChecker.isMenuScreen((byte) -121, GameRules.field_c)) {
                       LobbyPlayerEntry.field_Hb[GameRules.field_c].updateMenu(2664);
@@ -1331,7 +1331,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         if (StandardAi.field_e != null) {
           PrivateChatMessage.loadGameText(-47, StandardAi.field_e);
           StandardAi.field_e = null;
-          ValidationState.c(121);
+          ValidationState.resetFrameTiming(121);
         }
         GameSpriteResources.field_h = SoundCache.createArchive(3, 50);
         ChatMessage.field_d = IterableNodeHashTable.createArchive(5, true, param0, !param0 ? true : false, false);
@@ -1396,7 +1396,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
         if (~PlayerRankingRequest.field_o != ~GameRules.field_c) {
           stackIn_28_0 = (-1 == GameRules.field_c);
-          ValidationState.a(stackIn_28_0, false);
+          ValidationState.drawCurrentClientScreen(stackIn_28_0, false);
           if (~GameRules.field_c != ~PlayerRankingRequest.field_o ||
             -2 != GameRules.field_c) {
             ShatteredPlansClient.n((byte) 67);
@@ -1418,7 +1418,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         } else {
           if (GameRules.field_c != -2) {
             stackIn_18_0 = (GameRules.field_c == -1);
-            ValidationState.a(stackIn_18_0, false);
+            ValidationState.drawCurrentClientScreen(stackIn_18_0, false);
             if (GameRules.field_c != PlayerRankingRequest.field_o ||
               GameRules.field_c != -2) {
               ShatteredPlansClient.n((byte) 67);

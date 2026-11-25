@@ -4286,7 +4286,7 @@ final class GameScreen {
           if (this.field_v) {
             this.field_E.field_xb.field_w = var9Lifetime1 - this.field_E.field_xb.field_db;
           }
-          this.field_E.a(30 * BattleExplosionVisual.field_o, true, (byte) -115, param0);
+          this.field_E.processScrollInput(30 * BattleExplosionVisual.field_o, true, (byte) -115, param0);
           stackIn_40_1 = (var9Lifetime1 == this.field_E.field_xb.field_db + this.field_E.field_xb.field_w);
           this.field_v = stackIn_40_1;
           this.field_O.updatePointerState(true, -20429);
@@ -5183,7 +5183,7 @@ final class GameScreen {
               this.field_O.addChild(4, var4_ref);
               var4_ref.addChild(4, this.field_E);
               var5 = -5 + var4_ref.field_mb;
-              this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
+              this.field_E.layoutScrollPane(624, 5, 5, 2, -125, -5 + var5, 15);
               ImageProducerRasterBuffer.field_n = false;
             }
             GuestPlayForm.initializeChatNotifications(IconTextPanel.field_Cb, true);

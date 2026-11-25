@@ -153,7 +153,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         CipherPacketBuffer.field_p = (BitmapFont) ((Object) LoginForm.loadCoverageBitmapFontByName("arezzo14bold", "commonui", param1, param2, (byte) 111));
         Sprite var17 = new Sprite(param3.getFileByName(true, "", "button.gif"), (java.awt.Component) ((Object) NotificationEntry.field_i));
         GameApplet.a("commonui", -108, param1, "dropdown");
-        IndexedSprite[] var5 = SliderPainter.a("commonui", param1, "screen_options", (byte) -118);
+        IndexedSprite[] var5 = SliderPainter.loadIndexedSpritesByName("commonui", param1, "screen_options", (byte) -118);
         ValidationIndicator.field_E = new IndexedSprite[4];
         EmailValidator.field_o = new IndexedSprite[4];
         AnimatedPanel.field_A = new IndexedSprite[4];

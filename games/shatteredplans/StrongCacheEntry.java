@@ -264,7 +264,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         int var7_intLifetime3;
         var18 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var20 = SliderPainter.a("lobby", param4, "crowns", (byte) -118);
+          var20 = SliderPainter.loadIndexedSpritesByName("lobby", param4, "crowns", (byte) -118);
           var5 = var20;
           ClientException.field_d = var20.length;
           if (param3 != null) {

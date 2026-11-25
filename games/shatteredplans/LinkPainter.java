@@ -180,7 +180,7 @@ final class LinkPainter implements WidgetPainter {
           stackIn_4_1 = param1 * ((UniformNineSliceFactory.field_c + 2) * 3);
           stackIn_4_2 = UniformNineSliceFactory.field_c + 2;
           stackIn_5_3 = (DerelictVictoryChecker.field_l == ClientPacketFlushSupport.field_a.field_Db);
-          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).updateScrollLayout(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
           var4 = ClientPacketFlushSupport.field_a.field_Eb.field_M;
           if (!param0) {
             field_e = 100;
@@ -285,7 +285,7 @@ final class LinkPainter implements WidgetPainter {
                     !var7.field_Db.field_L) {
                     if (var7.field_rb != 0) {
                       var16 = var7.field_Ab;
-                      SliderPainter.a((int[]) null, 0L, (String) null, var16, 293, ClientPacketFlushSupport.field_a.field_Db, var7, -1, -1);
+                      SliderPainter.createContextMenuController((int[]) null, 0L, (String) null, var16, 293, ClientPacketFlushSupport.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
                         !Player.a(62, DerelictVictoryChecker.field_m.field_k) &&
                         !LoginMethodPreference.field_g) {

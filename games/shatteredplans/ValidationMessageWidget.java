@@ -108,7 +108,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           var17 = AnimatedPanel.field_R;
           if (!var17.equals(this.field_s)) {
             this.field_s = var17;
-            this.e(false);
+            this.rebuildHotspotRegions(false);
           }
           super.drawLayer(param0, param1, param2, param3);
           var6 = this.field_M.getState(-123);
@@ -175,7 +175,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           var23 = AnimatedPanel.field_R;
           if (!var23.equals(this.field_s)) {
             this.field_s = var23;
-            this.e(false);
+            this.rebuildHotspotRegions(false);
           }
           super.drawLayer(param0, param1, param2, param3);
           var6 = this.field_M.getState(-123);
@@ -244,7 +244,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           var5 = var29;
           if (!var29.equals(this.field_s)) {
             this.field_s = var29;
-            this.e(false);
+            this.rebuildHotspotRegions(false);
           }
           super.drawLayer(param0, param1, param2, param3);
           var6Lifetime1 = this.field_M.getState(-123);
@@ -293,7 +293,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
         }
         if (!var5.equals(this.field_s)) {
           this.field_s = var5;
-          this.e(false);
+          this.rebuildHotspotRegions(false);
         }
         super.drawLayer(param0, param1, param2, param3);
         var6Lifetime2 = this.field_M.getState(-123);

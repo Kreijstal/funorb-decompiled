@@ -314,7 +314,7 @@ final class AccountBooleanRequest {
           } else {
             stackIn_3_8 = 0;
           }
-          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          SliderPainter.createContextMenuController((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
             !TextLayoutLine.isDefaultChatInputActive((byte) 95) &&
             null == MenuInputState.field_a &&

@@ -78,7 +78,7 @@ final class SliderPainter implements WidgetPainter {
         }
     }
 
-    final static IndexedSprite[] a(String param0, Archive param1, String param2, byte param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(String param0, Archive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -125,7 +125,7 @@ final class SliderPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int[] param0, long param1, String param2, String param3, int param4, ScrollPane param5, AnimatedPanel param6, int param7, int param8) {
+    final static void createContextMenuController(int[] param0, long param1, String param2, String param3, int param4, ScrollPane param5, AnimatedPanel param6, int param7, int param8) {
         try {
           if (param4 != 293) {
             field_k = (String) null;
@@ -151,7 +151,7 @@ final class SliderPainter implements WidgetPainter {
         }
     }
 
-    final static void b(byte param0) {
+    final static void advanceTutorialLine(byte param0) {
         int fieldTemp$0 = 0;
         int var1 = 0;
         int var1Lifetime1;

@@ -31,7 +31,7 @@ final class IntroGlowPoint {
             return null;
           }
           if (Territory.field_t.charAt(0) != 91) {
-            SliderPainter.b((byte) 34);
+            SliderPainter.advanceTutorialLine((byte) 34);
             continue;
           }
           break;
@@ -41,7 +41,7 @@ final class IntroGlowPoint {
         var1 = var8;
         Territory.field_t.substring(1, Territory.field_t.indexOf(']'));
         var3 = new StringBuilder();
-        SliderPainter.b((byte) 56);
+        SliderPainter.advanceTutorialLine((byte) 56);
         while (null != Territory.field_t) {
           if (Territory.field_t.charAt(0) == 91) {
             var8.field_c = var3.toString();
@@ -112,7 +112,7 @@ final class IntroGlowPoint {
             discarded$0 = var3.append(Territory.field_t);
             discarded$1 = var3.append(' ');
           }
-          SliderPainter.b((byte) -118);
+          SliderPainter.advanceTutorialLine((byte) -118);
         }
         var8.field_c = var3.toString();
         return var8;

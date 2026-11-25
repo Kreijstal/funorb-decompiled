@@ -18878,10 +18878,10 @@
     {
       "symbol": "M:o.a(BLvg;)I",
       "originalName": "a",
-      "to": "getTextHeight",
-      "evidence": "Returns the layout height plus the padding. Resolved override family.",
+      "to": "getTextWidth",
+      "evidence": "Return layout maximum line width plus horizontal padding,as proved by TextLayout.getMaxLineWidth and UiWidget width assignment. Correct reversed width/height alias;preserve byte guard,layout refresh,late static clear and arithmetic/call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:WidgetTheme.getTextHeight(BLUiWidget;)I"
+      "renamedSymbol": "M:WidgetTheme.getTextWidth(BLUiWidget;)I"
     },
     {
       "symbol": "M:o.a(BLvg;II)I",
@@ -19006,10 +19006,10 @@
     {
       "symbol": "M:o.a(ZLvg;)I",
       "originalName": "a",
-      "to": "getTextWidth",
-      "evidence": "Returns the layout width plus the padding. Resolved override family.",
+      "to": "getTextHeight",
+      "evidence": "Return layout height plus vertical padding,as proved by TextLayout.getHeight and UiWidget height assignment. Correct reversed width/height alias;preserve boolean forwarding,layout refresh,padding arithmetic and exception/call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:WidgetTheme.getTextWidth(ZLUiWidget;)I"
+      "renamedSymbol": "M:WidgetTheme.getTextHeight(ZLUiWidget;)I"
     },
     {
       "symbol": "M:o.b(BLvg;)V",
@@ -20878,10 +20878,10 @@
     {
       "symbol": "M:pj.a(BLvg;)I",
       "originalName": "a",
-      "to": "getTextHeight",
-      "evidence": "Returns the layout height plus the padding.",
+      "to": "getTextWidth",
+      "evidence": "Return layout maximum line width plus horizontal padding,as proved by TextLayout.getMaxLineWidth and UiWidget width assignment. Correct reversed width/height alias;preserve byte guard,layout refresh,late static clear and arithmetic/call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:WidgetMetrics.getTextHeight(BLUiWidget;)I"
+      "renamedSymbol": "M:WidgetMetrics.getTextWidth(BLUiWidget;)I"
     },
     {
       "symbol": "M:pj.a(IIIIILvg;)V",
@@ -20942,10 +20942,10 @@
     {
       "symbol": "M:pj.a(ZLvg;)I",
       "originalName": "a",
-      "to": "getTextWidth",
-      "evidence": "Returns the layout width plus the padding.",
+      "to": "getTextHeight",
+      "evidence": "Return layout height plus vertical padding,as proved by TextLayout.getHeight and UiWidget height assignment. Correct reversed width/height alias;preserve boolean forwarding,layout refresh,padding arithmetic and exception/call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:WidgetMetrics.getTextWidth(ZLUiWidget;)I"
+      "renamedSymbol": "M:WidgetMetrics.getTextHeight(ZLUiWidget;)I"
     },
     {
       "symbol": "M:pj.b(ILvg;I)I",
@@ -25292,12 +25292,36 @@
       "renamedSymbol": "M:SliderPainter.clearStatics(B)V"
     },
     {
+      "symbol": "M:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;",
+      "originalName": "a",
+      "to": "loadIndexedSpritesByName",
+      "evidence": "Resolve archive group/file names and load retained indexed sprite set through original decode helper. Complete helper and crowns/screen-options contexts read. Preserve group lookup before wrong-byte sentinel write,file lookup order,derived helper guard,nullable decode result and wrapper context. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;"
+    },
+    {
       "symbol": "M:tp.a(Lvg;IZIB)V",
       "originalName": "a",
       "to": "paintWidget",
       "evidence": "UiWidget.drawLayer invokes the painter contract to render the widget at its parent origin with its active state. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SliderPainter.paintWidget(LUiWidget;IZIB)V"
+    },
+    {
+      "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+      "originalName": "a",
+      "to": "createContextMenuController",
+      "evidence": "Retain active context-menu scroll pane and construct shared controller from original anchor,identity,scope and selection arguments. All player/chat/filter caller contexts read. Preserve prior guard caption clear,scroll-pane publication before constructor,nullable arguments/selection-array aliases and replacement timing. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V"
+    },
+    {
+      "symbol": "M:tp.b(B)V",
+      "originalName": "b",
+      "to": "advanceTutorialLine",
+      "evidence": "Advance retained tutorial text index and current line,or set line null at end. Complete tutorial loader/parser read. Preserve postincrement before array access,end check against live array,negative index/null behavior and byte remainder after current-line write on both paths. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SliderPainter.advanceTutorialLine(B)V"
     },
     {
       "symbol": "M:tq.a(BI)V",
@@ -25676,6 +25700,22 @@
       "renamedSymbol": "M:TextHotspotWidget.focusFirst(BLUiWidget;)Z"
     },
     {
+      "symbol": "M:ts.a(I)V",
+      "originalName": "a",
+      "to": "drawIntroSequence",
+      "evidence": "Dispatch original six intro scenes,apply transition overlay and draw intro text/skip button on valid guard6493. Complete847line combined selected-source pass and draw callers read. Preserve scene-specific derived guards,state reads,early guard return after scene draw,font measurement,min button width and draw order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.drawIntroSequence(I)V"
+    },
+    {
+      "symbol": "M:ts.a(IIBI)V",
+      "originalName": "a",
+      "to": "setBoundsWithTextHeight",
+      "evidence": "Set supplied width and position with height measured by WidgetMetrics layout-height method. WidgetTheme dimensions,UiWidget assignments and creation form/underage callers read. Correct metric family aliases separately;preserve setBounds virtual dispatch/rebuild before late non57caption clear and all int domains. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.setBoundsWithTextHeight(IIBI)V"
+    },
+    {
       "symbol": "M:ts.a(IIBII)V",
       "originalName": "a",
       "to": "setBounds",
@@ -25716,12 +25756,36 @@
       "renamedSymbol": "M:TextHotspotWidget.updateHover(IILUiWidget;B)V"
     },
     {
+      "symbol": "M:ts.a(IZLjava/lang/String;)V",
+      "originalName": "a",
+      "to": "setHotspotTooltip",
+      "evidence": "Grow retained hotspot tooltip array as needed,copy prior entries,assign exact supplied text,and optionally rebuild hotspot regions. Complete tooltip getter/rebuild body read. Preserve index+1overflow,negative-index/nullable failures,array publication before assignment,old String identities and false-flag rebuild ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V"
+    },
+    {
       "symbol": "M:ts.a(Ljava/applet/Applet;B)V",
       "originalName": "a",
       "to": "openSubscriptionPage",
       "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain 96/((byteGuard+19)/53) after URL allocation and before AppletContext evaluation,inside original Exception catch. Complete original-body SHA256 4f52833e1bee17b3da267b7eaa80ce42a22ec32cc38ac31feaaac7d0f61efb3f. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V"
+    },
+    {
+      "symbol": "M:ts.a(ZI)Z",
+      "originalName": "a",
+      "to": "pollAccountSocketConnection",
+      "evidence": "Start/poll original account socket task;on completion record times,handle status or retain socket/reset packet state/write handshake/flush,then clear task and return true. Complete handshake/flush helpers and both account poll contexts read. Preserve int-complement success test,boolean opcode sentinels,clock timing,IOException scope,partial socket/phase state and false only while pending. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.pollAccountSocketConnection(ZI)Z"
+    },
+    {
+      "symbol": "M:ts.b(IIB)Lql;",
+      "originalName": "b",
+      "to": "findHotspotAt",
+      "evidence": "Find first retained hotspot chain whose segment contains supplied coordinates and return original chain entry. Complete hover/action consumers read. Preserve left/top inclusion,right exclusion,bottom inclusion,segment traversal,root identity and wrong-byte tooltip-array clear only after miss. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;"
     },
     {
       "symbol": "M:ts.c(Z)Ljava/lang/String;",
@@ -25732,12 +25796,52 @@
       "renamedSymbol": "M:TextHotspotWidget.getTooltip(Z)Ljava/lang/String;"
     },
     {
+      "symbol": "M:ts.e(Z)V",
+      "originalName": "e",
+      "to": "rebuildHotspotRegions",
+      "evidence": "Replace retained hotspot deque and parse original hotspot markup into per-line rectangle/chain nodes from text layout. Complete region constructor and setBounds/hover/action consumers read. Preserve source-string indices,exact parseInt/malformed-tag failures,closing-tag cursor,all segment publications and true-flag static sprite clear before equivalent scan. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.rebuildHotspotRegions(Z)V"
+    },
+    {
+      "symbol": "M:u.a(I)I",
+      "originalName": "a",
+      "to": "pollArchiveServices",
+      "evidence": "Poll archive sources then network;when network poll fails return original archive connection poll result,otherwise0. Shell boot caller read. Preserve operation/return order,network success conditional late sentinel write and arbitrary int guard domain. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationState.pollArchiveServices(I)I"
+    },
+    {
+      "symbol": "M:u.a(IIIIII)V",
+      "originalName": "a",
+      "to": "drawQ4Line",
+      "evidence": "Shift original Q4endpoints to pixels,perform original endpoint sorts/bounds rejection,then draw raster line. Map link caller read. Preserve signed shifts,swap order,guard rejection between bounds tests,unclamped endpoints and draw helper argument permutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationState.drawQ4Line(IIIIII)V"
+    },
+    {
+      "symbol": "M:u.a(ZZ)V",
+      "originalName": "a",
+      "to": "drawCurrentClientScreen",
+      "evidence": "Draw intro sequence,current sessions/menus or scrolling background using original state selection. Both draw callers read. Preserve second-flag static cleanup before selection,first-flag forwarding,global/null short circuit and draw call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationState.drawCurrentClientScreen(ZZ)V"
+    },
+    {
       "symbol": "M:u.b(I)V",
       "originalName": "b",
       "to": "clearStatics",
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ValidationState.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:u.c(I)V",
+      "originalName": "c",
+      "to": "resetFrameTiming",
+      "evidence": "Reset retained frame timer and both32entry timing histories,then original counter for int>120. Complete timer implementation and load-phase contexts read. Preserve timer call before array writes,partial array failure,original loop sizes/guards and narrow exception boundary around final counter write. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationState.resetFrameTiming(I)V"
     },
     {
       "symbol": "M:ua.a(I)V",
@@ -25778,6 +25882,86 @@
       "evidence": "Repeated forward indexOf from supplied start then previousMatch+1returns last matching index at/after start or-1. Color-markup consumer inspected. Preserve overlapping search,null exceptions,signed increment and empty-needle nontermination behavior;do not substitute String.lastIndexOf with backward start semantics. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I"
+    },
+    {
+      "symbol": "M:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;",
+      "originalName": "$cfr$intArgs$a$be17d4c2d3e3",
+      "to": "createAccountSuccessResultFullInts",
+      "evidence": "Create true-flag account success result with original underage boolean,retaining full int guard domain of generated helper. Exact narrow/wide body identity and success/underage consumers proved. Preserve int93comparison,off-guard static clear before allocation,constructor/publication and boolean write;do not narrow or delegate through byte cast. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.createAccountSuccessResultFullInts(IZ)LAccountRequestResult;"
+    },
+    {
+      "symbol": "M:ub.a(BZ)Lkj;",
+      "originalName": "a",
+      "to": "createAccountSuccessResult",
+      "evidence": "Create true-flag account success result with original underage boolean for byte entry point. Exact full-int companion and success/underage consumers proved. Preserve byte descriptor/all byte values,guard93branch,off-guard static clear before allocation and result flag writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.createAccountSuccessResult(BZ)LAccountRequestResult;"
+    },
+    {
+      "symbol": "M:ub.a(IIIIIII)V",
+      "originalName": "a",
+      "to": "layoutScrollPane",
+      "evidence": "Set retained scroll-pane position/size and,for original low guard,configure viewport/content/scrollbar layout. Complete child layout and all caller windows read. Preserve field assignment order,existing animation deltas,unrestricted sizes,guard cutoff and argument permutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.layoutScrollPane(IIIIIII)V"
+    },
+    {
+      "symbol": "M:ub.a(IIZ)V",
+      "originalName": "a",
+      "to": "layoutScrollPaneChildren",
+      "evidence": "Set viewport dimensions/content Xand,on false flag,content width and scrollbar layout. Complete scrollbar helper read. Preserve three unconditional writes before flag branch,live dimensions,content aliases,negative/overflow sizes and scrollbar call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.layoutScrollPaneChildren(IIZ)V"
+    },
+    {
+      "symbol": "M:ub.a(IIZIIIZ)Z",
+      "originalName": "a",
+      "to": "updateScrollLayoutInternal",
+      "evidence": "Choose original forced or hover/not-suppressed layout flag,layout child stack,apply scroll input and return flag unless invalid guard forces false. Complete layout/scroll helpers read. Preserve all boolean roles,child layout before input,guard check after mutation and original step/viewport arguments. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z"
+    },
+    {
+      "symbol": "M:ub.a(IIZIZI)Z",
+      "originalName": "a",
+      "to": "updateScrollLayout",
+      "evidence": "Forward pane scroll/layout update with retained viewport height and original guard. Friends/ignore/lobby caller contexts read. Preserve high-guard true return before mutations,argument permutation,content identity and returned layout flag. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.updateScrollLayout(IIZIZI)Z"
+    },
+    {
+      "symbol": "M:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V",
+      "originalName": "a",
+      "to": "configureSharedMenuStyle",
+      "evidence": "Retain shared menu fonts and configure original text metrics,painter/row frames,geometry settings and highlight colours. Complete five delegated configuration helpers and account-choice caller read. Preserve all shared aliases,unrestricted ints,guard clear amid calls,allocation/call order and partial publications. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V"
+    },
+    {
+      "symbol": "M:ub.a(IZBI)V",
+      "originalName": "a",
+      "to": "processScrollInput",
+      "evidence": "Forward wheel/line/page scroll inputs using retained viewport height,with original byte-dependent caption clear. Complete target and game/chat callers read. Preserve clear timing,boolean clamp-order flag,guard10forwarding and live viewport read. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.processScrollInput(IZBI)V"
+    },
+    {
+      "symbol": "M:ub.a(IZIBI)V",
+      "originalName": "a",
+      "to": "applyScrollInput",
+      "evidence": "Apply original arrow/page repeat,wheel and thumb drag to retained vertical offset/animation state,clamp in selected order and update scrollbar geometry. Complete repeat/drag/geometry helpers read. Preserve repeat counters,all arithmetic/overflow,negative ranges,clamp-order asymmetry,guard-derived calls and final guard-dependent geometry update. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.applyScrollInput(IZIBI)V"
+    },
+    {
+      "symbol": "M:ub.f(B)V",
+      "originalName": "f",
+      "to": "tickIntroSequence",
+      "evidence": "Load intro resources,handle original skip/exit input,advance transitions/scene updates and glow envelope,then hit-test skip button. Complete179line body and intro draw contexts read. Preserve all RNGdraws,phase fallthrough,wrong-byte recursion,full-int key helper,frame/asset writes and original hover/click coordinate differences. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.tickIntroSequence(B)V"
     },
     {
       "symbol": "M:ub.g(I)V",
@@ -237681,7 +237865,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#0",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#0",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -237692,7 +237876,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#1",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#1",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -237703,7 +237887,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#2",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#2",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -237714,7 +237898,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#3",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#3",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -237725,7 +237909,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#4",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#4",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -237736,7 +237920,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#5",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#5",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -237747,7 +237931,7 @@
     },
     {
       "symbol": "L:o.a(BLvg;)I#6",
-      "renamedSymbol": "L:WidgetTheme.getTextHeight(BLUiWidget;)I#6",
+      "renamedSymbol": "L:WidgetTheme.getTextWidth(BLUiWidget;)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -238814,7 +238998,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#0",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#0",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -238825,7 +239009,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#1",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#1",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#1",
       "originalName": "stackIn_1_0",
       "renamedName": "stackIn_1_0",
       "declaration": {
@@ -238836,7 +239020,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#2",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#2",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -238847,7 +239031,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#3",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#3",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#3",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -238858,7 +239042,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#4",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#4",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#4",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -238869,7 +239053,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#5",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#5",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -238880,7 +239064,7 @@
     },
     {
       "symbol": "L:o.a(ZLvg;)I#6",
-      "renamedSymbol": "L:WidgetTheme.getTextWidth(ZLUiWidget;)I#6",
+      "renamedSymbol": "L:WidgetTheme.getTextHeight(ZLUiWidget;)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -293792,7 +293976,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#0",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#0",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -293803,7 +293987,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#1",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#1",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -293814,7 +293998,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#10",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#10",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#10",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -293825,7 +294009,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#11",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#11",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -293836,7 +294020,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#12",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#12",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -293847,7 +294031,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#2",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#2",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -293858,7 +294042,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#3",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#3",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -293869,7 +294053,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#4",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#4",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -293880,7 +294064,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#5",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#5",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -293891,7 +294075,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#6",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#6",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -293902,7 +294086,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#7",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#7",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#7",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -293913,7 +294097,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#8",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#8",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#8",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -293924,7 +294108,7 @@
     },
     {
       "symbol": "L:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#9",
-      "renamedSymbol": "L:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#9",
+      "renamedSymbol": "L:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#9",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -294078,7 +294262,7 @@
     },
     {
       "symbol": "L:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#0",
-      "renamedSymbol": "L:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#0",
+      "renamedSymbol": "L:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -294089,7 +294273,7 @@
     },
     {
       "symbol": "L:tp.b(B)V#0",
-      "renamedSymbol": "L:SliderPainter.b(B)V#0",
+      "renamedSymbol": "L:SliderPainter.advanceTutorialLine(B)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -294100,7 +294284,7 @@
     },
     {
       "symbol": "L:tp.b(B)V#1",
-      "renamedSymbol": "L:SliderPainter.b(B)V#1",
+      "renamedSymbol": "L:SliderPainter.advanceTutorialLine(B)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -294111,7 +294295,7 @@
     },
     {
       "symbol": "L:tp.b(B)V#2",
-      "renamedSymbol": "L:SliderPainter.b(B)V#2",
+      "renamedSymbol": "L:SliderPainter.advanceTutorialLine(B)V#2",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -302394,7 +302578,7 @@
     },
     {
       "symbol": "L:ts.a(I)V#0",
-      "renamedSymbol": "L:TextHotspotWidget.a(I)V#0",
+      "renamedSymbol": "L:TextHotspotWidget.drawIntroSequence(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -302405,7 +302589,7 @@
     },
     {
       "symbol": "L:ts.a(I)V#1",
-      "renamedSymbol": "L:TextHotspotWidget.a(I)V#1",
+      "renamedSymbol": "L:TextHotspotWidget.drawIntroSequence(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -302526,7 +302710,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#0",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#0",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -302537,7 +302721,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#1",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#1",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -302548,7 +302732,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#10",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#10",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -302559,7 +302743,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#2",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#2",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#2",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -302570,7 +302754,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#3",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#3",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -302581,7 +302765,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#4",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#4",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -302592,7 +302776,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#5",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#5",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -302603,7 +302787,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#6",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#6",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#6",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -302614,7 +302798,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#7",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#7",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#7",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -302625,7 +302809,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#8",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#8",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#8",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -302636,7 +302820,7 @@
     },
     {
       "symbol": "L:ts.a(IZLjava/lang/String;)V#9",
-      "renamedSymbol": "L:TextHotspotWidget.a(IZLjava/lang/String;)V#9",
+      "renamedSymbol": "L:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -302779,7 +302963,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#0",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#0",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -302790,7 +302974,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#1",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#1",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -302801,7 +302985,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#2",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#2",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -302812,7 +302996,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#3",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#3",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -302823,7 +303007,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#4",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#4",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -302834,7 +303018,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#5",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#5",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -302845,7 +303029,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#6",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#6",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -302856,7 +303040,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#7",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#7",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#7",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -302867,7 +303051,7 @@
     },
     {
       "symbol": "L:ts.a(ZI)Z#8",
-      "renamedSymbol": "L:TextHotspotWidget.a(ZI)Z#8",
+      "renamedSymbol": "L:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#8",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -302878,7 +303062,7 @@
     },
     {
       "symbol": "L:ts.b(IIB)Lql;#0",
-      "renamedSymbol": "L:TextHotspotWidget.b(IIB)LTextHotspotRegion;#0",
+      "renamedSymbol": "L:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -302889,7 +303073,7 @@
     },
     {
       "symbol": "L:ts.b(IIB)Lql;#1",
-      "renamedSymbol": "L:TextHotspotWidget.b(IIB)LTextHotspotRegion;#1",
+      "renamedSymbol": "L:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -302900,7 +303084,7 @@
     },
     {
       "symbol": "L:ts.b(IIB)Lql;#2",
-      "renamedSymbol": "L:TextHotspotWidget.b(IIB)LTextHotspotRegion;#2",
+      "renamedSymbol": "L:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -302911,7 +303095,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#0",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#0",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -302922,7 +303106,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#1",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#1",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -302933,7 +303117,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#10",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#10",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#10",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -302944,7 +303128,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#11",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#11",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#11",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -302955,7 +303139,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#12",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#12",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#12",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -302966,7 +303150,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#13",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#13",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#13",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -302977,7 +303161,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#14",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#14",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#14",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -302988,7 +303172,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#15",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#15",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#15",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -302999,7 +303183,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#16",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#16",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#16",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -303010,7 +303194,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#17",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#17",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#17",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -303021,7 +303205,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#18",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#18",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#18",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -303032,7 +303216,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#19",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#19",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#19",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -303043,7 +303227,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#2",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#2",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -303054,7 +303238,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#20",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#20",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#20",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -303065,7 +303249,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#21",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#21",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#21",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -303076,7 +303260,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#22",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#22",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#22",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -303087,7 +303271,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#23",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#23",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#23",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -303098,7 +303282,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#24",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#24",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#24",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -303109,7 +303293,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#25",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#25",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#25",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -303120,7 +303304,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#26",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#26",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#26",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -303131,7 +303315,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#27",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#27",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#27",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -303142,7 +303326,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#28",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#28",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#28",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -303153,7 +303337,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#29",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#29",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#29",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -303164,7 +303348,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#3",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#3",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -303175,7 +303359,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#30",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#30",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#30",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -303186,7 +303370,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#31",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#31",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#31",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -303197,7 +303381,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#32",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#32",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#32",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -303208,7 +303392,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#33",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#33",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#33",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -303219,7 +303403,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#34",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#34",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#34",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -303230,7 +303414,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#35",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#35",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#35",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -303241,7 +303425,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#36",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#36",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#36",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -303252,7 +303436,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#4",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#4",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -303263,7 +303447,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#5",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#5",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -303274,7 +303458,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#6",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#6",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -303285,7 +303469,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#7",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#7",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#7",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -303296,7 +303480,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#8",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#8",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -303307,7 +303491,7 @@
     },
     {
       "symbol": "L:ts.e(Z)V#9",
-      "renamedSymbol": "L:TextHotspotWidget.e(Z)V#9",
+      "renamedSymbol": "L:TextHotspotWidget.rebuildHotspotRegions(Z)V#9",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -303318,7 +303502,7 @@
     },
     {
       "symbol": "L:u.a(IIIIII)V#0",
-      "renamedSymbol": "L:ValidationState.a(IIIIII)V#0",
+      "renamedSymbol": "L:ValidationState.drawQ4Line(IIIIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -303329,7 +303513,7 @@
     },
     {
       "symbol": "L:u.a(IIIIII)V#1",
-      "renamedSymbol": "L:ValidationState.a(IIIIII)V#1",
+      "renamedSymbol": "L:ValidationState.drawQ4Line(IIIIII)V#1",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -303340,7 +303524,7 @@
     },
     {
       "symbol": "L:u.a(IIIIII)V#2",
-      "renamedSymbol": "L:ValidationState.a(IIIIII)V#2",
+      "renamedSymbol": "L:ValidationState.drawQ4Line(IIIIII)V#2",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -303351,7 +303535,7 @@
     },
     {
       "symbol": "L:u.a(IIIIII)V#3",
-      "renamedSymbol": "L:ValidationState.a(IIIIII)V#3",
+      "renamedSymbol": "L:ValidationState.drawQ4Line(IIIIII)V#3",
       "originalName": "var6Lifetime1Lifetime1",
       "renamedName": "var6Lifetime1Lifetime1",
       "declaration": {
@@ -303362,7 +303546,7 @@
     },
     {
       "symbol": "L:u.a(ZZ)V#0",
-      "renamedSymbol": "L:ValidationState.a(ZZ)V#0",
+      "renamedSymbol": "L:ValidationState.drawCurrentClientScreen(ZZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -303373,7 +303557,7 @@
     },
     {
       "symbol": "L:u.c(I)V#0",
-      "renamedSymbol": "L:ValidationState.c(I)V#0",
+      "renamedSymbol": "L:ValidationState.resetFrameTiming(I)V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -303384,7 +303568,7 @@
     },
     {
       "symbol": "L:u.c(I)V#1",
-      "renamedSymbol": "L:ValidationState.c(I)V#1",
+      "renamedSymbol": "L:ValidationState.resetFrameTiming(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -303395,7 +303579,7 @@
     },
     {
       "symbol": "L:u.c(I)V#2",
-      "renamedSymbol": "L:ValidationState.c(I)V#2",
+      "renamedSymbol": "L:ValidationState.resetFrameTiming(I)V#2",
       "originalName": "var1_intLifetime1",
       "renamedName": "var1_intLifetime1",
       "declaration": {
@@ -303406,7 +303590,7 @@
     },
     {
       "symbol": "L:u.c(I)V#3",
-      "renamedSymbol": "L:ValidationState.c(I)V#3",
+      "renamedSymbol": "L:ValidationState.resetFrameTiming(I)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -304275,7 +304459,7 @@
     },
     {
       "symbol": "L:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;#0",
-      "renamedSymbol": "L:ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(IZ)LAccountRequestResult;#0",
+      "renamedSymbol": "L:ScrollPane.createAccountSuccessResultFullInts(IZ)LAccountRequestResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -304286,7 +304470,7 @@
     },
     {
       "symbol": "L:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;#1",
-      "renamedSymbol": "L:ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(IZ)LAccountRequestResult;#1",
+      "renamedSymbol": "L:ScrollPane.createAccountSuccessResultFullInts(IZ)LAccountRequestResult;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -304308,7 +304492,7 @@
     },
     {
       "symbol": "L:ub.a(BZ)Lkj;#0",
-      "renamedSymbol": "L:ScrollPane.a(BZ)LAccountRequestResult;#0",
+      "renamedSymbol": "L:ScrollPane.createAccountSuccessResult(BZ)LAccountRequestResult;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -304319,7 +304503,7 @@
     },
     {
       "symbol": "L:ub.a(BZ)Lkj;#1",
-      "renamedSymbol": "L:ScrollPane.a(BZ)LAccountRequestResult;#1",
+      "renamedSymbol": "L:ScrollPane.createAccountSuccessResult(BZ)LAccountRequestResult;#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -304330,7 +304514,7 @@
     },
     {
       "symbol": "L:ub.a(IIZIIIZ)Z#0",
-      "renamedSymbol": "L:ScrollPane.a(IIZIIIZ)Z#0",
+      "renamedSymbol": "L:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -304341,7 +304525,7 @@
     },
     {
       "symbol": "L:ub.a(IIZIIIZ)Z#1",
-      "renamedSymbol": "L:ScrollPane.a(IIZIIIZ)Z#1",
+      "renamedSymbol": "L:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#1",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -304352,7 +304536,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#0",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#0",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -304363,7 +304547,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#1",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#1",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#1",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -304374,7 +304558,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#10",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#10",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#10",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -304385,7 +304569,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#11",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#11",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -304396,7 +304580,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#12",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#12",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#12",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -304407,7 +304591,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#13",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#13",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -304418,7 +304602,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#2",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#2",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#2",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -304429,7 +304613,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#3",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#3",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -304440,7 +304624,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#4",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#4",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -304451,7 +304635,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#5",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#5",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#5",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -304462,7 +304646,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#6",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#6",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#6",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -304473,7 +304657,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#7",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#7",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#7",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -304484,7 +304668,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#8",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#8",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#8",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -304495,7 +304679,7 @@
     },
     {
       "symbol": "L:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#9",
-      "renamedSymbol": "L:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#9",
+      "renamedSymbol": "L:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#9",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -304506,7 +304690,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#0",
-      "renamedSymbol": "L:ScrollPane.f(B)V#0",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -304517,7 +304701,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#1",
-      "renamedSymbol": "L:ScrollPane.f(B)V#1",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#1",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -304528,7 +304712,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#2",
-      "renamedSymbol": "L:ScrollPane.f(B)V#2",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#2",
       "originalName": "stackIn_88_0",
       "renamedName": "stackIn_88_0",
       "declaration": {
@@ -304539,7 +304723,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#3",
-      "renamedSymbol": "L:ScrollPane.f(B)V#3",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -304550,7 +304734,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#4",
-      "renamedSymbol": "L:ScrollPane.f(B)V#4",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#4",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -304561,7 +304745,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#5",
-      "renamedSymbol": "L:ScrollPane.f(B)V#5",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#5",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -304572,7 +304756,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#6",
-      "renamedSymbol": "L:ScrollPane.f(B)V#6",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -304583,7 +304767,7 @@
     },
     {
       "symbol": "L:ub.f(B)V#7",
-      "renamedSymbol": "L:ScrollPane.f(B)V#7",
+      "renamedSymbol": "L:ScrollPane.tickIntroSequence(B)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -348572,9 +348756,9 @@
     },
     {
       "symbol": "M:o.a(BLvg;)I",
-      "renamedSymbol": "M:WidgetTheme.getTextHeight(BLUiWidget;)I",
+      "renamedSymbol": "M:WidgetTheme.getTextWidth(BLUiWidget;)I",
       "originalName": "a",
-      "renamedName": "getTextHeight",
+      "renamedName": "getTextWidth",
       "declaration": {
         "file": "o.java",
         "start": 480,
@@ -348748,9 +348932,9 @@
     },
     {
       "symbol": "M:o.a(ZLvg;)I",
-      "renamedSymbol": "M:WidgetTheme.getTextWidth(ZLUiWidget;)I",
+      "renamedSymbol": "M:WidgetTheme.getTextHeight(ZLUiWidget;)I",
       "originalName": "a",
-      "renamedName": "getTextWidth",
+      "renamedName": "getTextHeight",
       "declaration": {
         "file": "o.java",
         "start": 18303,
@@ -351575,9 +351759,9 @@
     },
     {
       "symbol": "M:pj.a(BLvg;)I",
-      "renamedSymbol": "M:WidgetMetrics.getTextHeight(BLUiWidget;)I",
+      "renamedSymbol": "M:WidgetMetrics.getTextWidth(BLUiWidget;)I",
       "originalName": "a",
-      "renamedName": "getTextHeight",
+      "renamedName": "getTextWidth",
       "declaration": {
         "file": "pj.java",
         "start": 547,
@@ -351663,9 +351847,9 @@
     },
     {
       "symbol": "M:pj.a(ZLvg;)I",
-      "renamedSymbol": "M:WidgetMetrics.getTextWidth(ZLUiWidget;)I",
+      "renamedSymbol": "M:WidgetMetrics.getTextHeight(ZLUiWidget;)I",
       "originalName": "a",
-      "renamedName": "getTextWidth",
+      "renamedName": "getTextHeight",
       "declaration": {
         "file": "pj.java",
         "start": 234,
@@ -358659,9 +358843,9 @@
     },
     {
       "symbol": "M:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;",
-      "renamedSymbol": "M:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;",
+      "renamedSymbol": "M:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadIndexedSpritesByName",
       "declaration": {
         "file": "tp.java",
         "start": 2874,
@@ -358681,9 +358865,9 @@
     },
     {
       "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
-      "renamedSymbol": "M:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V",
+      "renamedSymbol": "M:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createContextMenuController",
       "declaration": {
         "file": "tp.java",
         "start": 4753,
@@ -358692,9 +358876,9 @@
     },
     {
       "symbol": "M:tp.b(B)V",
-      "renamedSymbol": "M:SliderPainter.b(B)V",
+      "renamedSymbol": "M:SliderPainter.advanceTutorialLine(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "advanceTutorialLine",
       "declaration": {
         "file": "tp.java",
         "start": 6146,
@@ -359264,9 +359448,9 @@
     },
     {
       "symbol": "M:ts.a(I)V",
-      "renamedSymbol": "M:TextHotspotWidget.a(I)V",
+      "renamedSymbol": "M:TextHotspotWidget.drawIntroSequence(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawIntroSequence",
       "declaration": {
         "file": "ts.java",
         "start": 8474,
@@ -359275,9 +359459,9 @@
     },
     {
       "symbol": "M:ts.a(IIBI)V",
-      "renamedSymbol": "M:TextHotspotWidget.a(IIBI)V",
+      "renamedSymbol": "M:TextHotspotWidget.setBoundsWithTextHeight(IIBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBoundsWithTextHeight",
       "declaration": {
         "file": "ts.java",
         "start": 8214,
@@ -359341,9 +359525,9 @@
     },
     {
       "symbol": "M:ts.a(IZLjava/lang/String;)V",
-      "renamedSymbol": "M:TextHotspotWidget.a(IZLjava/lang/String;)V",
+      "renamedSymbol": "M:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setHotspotTooltip",
       "declaration": {
         "file": "ts.java",
         "start": 970,
@@ -359363,9 +359547,9 @@
     },
     {
       "symbol": "M:ts.a(ZI)Z",
-      "renamedSymbol": "M:TextHotspotWidget.a(ZI)Z",
+      "renamedSymbol": "M:TextHotspotWidget.pollAccountSocketConnection(ZI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountSocketConnection",
       "declaration": {
         "file": "ts.java",
         "start": 4452,
@@ -359374,9 +359558,9 @@
     },
     {
       "symbol": "M:ts.b(IIB)Lql;",
-      "renamedSymbol": "M:TextHotspotWidget.b(IIB)LTextHotspotRegion;",
+      "renamedSymbol": "M:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "findHotspotAt",
       "declaration": {
         "file": "ts.java",
         "start": 14633,
@@ -359396,9 +359580,9 @@
     },
     {
       "symbol": "M:ts.e(Z)V",
-      "renamedSymbol": "M:TextHotspotWidget.e(Z)V",
+      "renamedSymbol": "M:TextHotspotWidget.rebuildHotspotRegions(Z)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "rebuildHotspotRegions",
       "declaration": {
         "file": "ts.java",
         "start": 9580,
@@ -359407,9 +359591,9 @@
     },
     {
       "symbol": "M:u.a(I)I",
-      "renamedSymbol": "M:ValidationState.a(I)I",
+      "renamedSymbol": "M:ValidationState.pollArchiveServices(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollArchiveServices",
       "declaration": {
         "file": "u.java",
         "start": 3143,
@@ -359418,9 +359602,9 @@
     },
     {
       "symbol": "M:u.a(IIIIII)V",
-      "renamedSymbol": "M:ValidationState.a(IIIIII)V",
+      "renamedSymbol": "M:ValidationState.drawQ4Line(IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawQ4Line",
       "declaration": {
         "file": "u.java",
         "start": 1297,
@@ -359429,9 +359613,9 @@
     },
     {
       "symbol": "M:u.a(ZZ)V",
-      "renamedSymbol": "M:ValidationState.a(ZZ)V",
+      "renamedSymbol": "M:ValidationState.drawCurrentClientScreen(ZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawCurrentClientScreen",
       "declaration": {
         "file": "u.java",
         "start": 349,
@@ -359451,9 +359635,9 @@
     },
     {
       "symbol": "M:u.c(I)V",
-      "renamedSymbol": "M:ValidationState.c(I)V",
+      "renamedSymbol": "M:ValidationState.resetFrameTiming(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetFrameTiming",
       "declaration": {
         "file": "u.java",
         "start": 2461,
@@ -359550,9 +359734,9 @@
     },
     {
       "symbol": "M:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;",
-      "renamedSymbol": "M:ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(IZ)LAccountRequestResult;",
+      "renamedSymbol": "M:ScrollPane.createAccountSuccessResultFullInts(IZ)LAccountRequestResult;",
       "originalName": "$cfr$intArgs$a$be17d4c2d3e3",
-      "renamedName": "$cfr$intArgs$a$be17d4c2d3e3",
+      "renamedName": "createAccountSuccessResultFullInts",
       "declaration": {
         "file": "ub.java",
         "start": 14858,
@@ -359572,9 +359756,9 @@
     },
     {
       "symbol": "M:ub.a(BZ)Lkj;",
-      "renamedSymbol": "M:ScrollPane.a(BZ)LAccountRequestResult;",
+      "renamedSymbol": "M:ScrollPane.createAccountSuccessResult(BZ)LAccountRequestResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createAccountSuccessResult",
       "declaration": {
         "file": "ub.java",
         "start": 7726,
@@ -359583,9 +359767,9 @@
     },
     {
       "symbol": "M:ub.a(IIIIIII)V",
-      "renamedSymbol": "M:ScrollPane.a(IIIIIII)V",
+      "renamedSymbol": "M:ScrollPane.layoutScrollPane(IIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutScrollPane",
       "declaration": {
         "file": "ub.java",
         "start": 2559,
@@ -359594,9 +359778,9 @@
     },
     {
       "symbol": "M:ub.a(IIZ)V",
-      "renamedSymbol": "M:ScrollPane.a(IIZ)V",
+      "renamedSymbol": "M:ScrollPane.layoutScrollPaneChildren(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutScrollPaneChildren",
       "declaration": {
         "file": "ub.java",
         "start": 4066,
@@ -359605,9 +359789,9 @@
     },
     {
       "symbol": "M:ub.a(IIZIIIZ)Z",
-      "renamedSymbol": "M:ScrollPane.a(IIZIIIZ)Z",
+      "renamedSymbol": "M:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateScrollLayoutInternal",
       "declaration": {
         "file": "ub.java",
         "start": 3168,
@@ -359616,9 +359800,9 @@
     },
     {
       "symbol": "M:ub.a(IIZIZI)Z",
-      "renamedSymbol": "M:ScrollPane.a(IIZIZI)Z",
+      "renamedSymbol": "M:ScrollPane.updateScrollLayout(IIZIZI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateScrollLayout",
       "declaration": {
         "file": "ub.java",
         "start": 2897,
@@ -359627,9 +359811,9 @@
     },
     {
       "symbol": "M:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V",
-      "renamedSymbol": "M:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V",
+      "renamedSymbol": "M:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureSharedMenuStyle",
       "declaration": {
         "file": "ub.java",
         "start": 4569,
@@ -359638,9 +359822,9 @@
     },
     {
       "symbol": "M:ub.a(IZBI)V",
-      "renamedSymbol": "M:ScrollPane.a(IZBI)V",
+      "renamedSymbol": "M:ScrollPane.processScrollInput(IZBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processScrollInput",
       "declaration": {
         "file": "ub.java",
         "start": 2236,
@@ -359649,9 +359833,9 @@
     },
     {
       "symbol": "M:ub.a(IZIBI)V",
-      "renamedSymbol": "M:ScrollPane.a(IZIBI)V",
+      "renamedSymbol": "M:ScrollPane.applyScrollInput(IZIBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyScrollInput",
       "declaration": {
         "file": "ub.java",
         "start": 281,
@@ -359660,9 +359844,9 @@
     },
     {
       "symbol": "M:ub.f(B)V",
-      "renamedSymbol": "M:ScrollPane.f(B)V",
+      "renamedSymbol": "M:ScrollPane.tickIntroSequence(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "tickIntroSequence",
       "declaration": {
         "file": "ub.java",
         "start": 9045,
@@ -425330,7 +425514,7 @@
     },
     {
       "symbol": "P:o.a(BLvg;)I#0",
-      "renamedSymbol": "P:WidgetTheme.getTextHeight(BLUiWidget;)I#0",
+      "renamedSymbol": "P:WidgetTheme.getTextWidth(BLUiWidget;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425341,7 +425525,7 @@
     },
     {
       "symbol": "P:o.a(BLvg;)I#1",
-      "renamedSymbol": "P:WidgetTheme.getTextHeight(BLUiWidget;)I#1",
+      "renamedSymbol": "P:WidgetTheme.getTextWidth(BLUiWidget;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425957,7 +426141,7 @@
     },
     {
       "symbol": "P:o.a(ZLvg;)I#0",
-      "renamedSymbol": "P:WidgetTheme.getTextWidth(ZLUiWidget;)I#0",
+      "renamedSymbol": "P:WidgetTheme.getTextHeight(ZLUiWidget;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425968,7 +426152,7 @@
     },
     {
       "symbol": "P:o.a(ZLvg;)I#1",
-      "renamedSymbol": "P:WidgetTheme.getTextWidth(ZLUiWidget;)I#1",
+      "renamedSymbol": "P:WidgetTheme.getTextHeight(ZLUiWidget;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -432128,7 +432312,7 @@
     },
     {
       "symbol": "P:pj.a(BLvg;)I#0",
-      "renamedSymbol": "P:WidgetMetrics.getTextHeight(BLUiWidget;)I#0",
+      "renamedSymbol": "P:WidgetMetrics.getTextWidth(BLUiWidget;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -432139,7 +432323,7 @@
     },
     {
       "symbol": "P:pj.a(BLvg;)I#1",
-      "renamedSymbol": "P:WidgetMetrics.getTextHeight(BLUiWidget;)I#1",
+      "renamedSymbol": "P:WidgetMetrics.getTextWidth(BLUiWidget;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -432425,7 +432609,7 @@
     },
     {
       "symbol": "P:pj.a(ZLvg;)I#0",
-      "renamedSymbol": "P:WidgetMetrics.getTextWidth(ZLUiWidget;)I#0",
+      "renamedSymbol": "P:WidgetMetrics.getTextHeight(ZLUiWidget;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -432436,7 +432620,7 @@
     },
     {
       "symbol": "P:pj.a(ZLvg;)I#1",
-      "renamedSymbol": "P:WidgetMetrics.getTextWidth(ZLUiWidget;)I#1",
+      "renamedSymbol": "P:WidgetMetrics.getTextHeight(ZLUiWidget;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -449728,7 +449912,7 @@
     },
     {
       "symbol": "P:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#0",
-      "renamedSymbol": "P:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#0",
+      "renamedSymbol": "P:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -449739,7 +449923,7 @@
     },
     {
       "symbol": "P:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#1",
-      "renamedSymbol": "P:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#1",
+      "renamedSymbol": "P:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -449750,7 +449934,7 @@
     },
     {
       "symbol": "P:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#2",
-      "renamedSymbol": "P:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#2",
+      "renamedSymbol": "P:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -449761,7 +449945,7 @@
     },
     {
       "symbol": "P:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;#3",
-      "renamedSymbol": "P:SliderPainter.a(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#3",
+      "renamedSymbol": "P:SliderPainter.loadIndexedSpritesByName(Ljava/lang/String;LArchive;Ljava/lang/String;B)[LIndexedSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -449827,7 +450011,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#0",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#0",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -449838,7 +450022,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#1",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#1",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -449849,7 +450033,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#2",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#2",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -449860,7 +450044,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#3",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#3",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -449871,7 +450055,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#4",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#4",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -449882,7 +450066,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#5",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#5",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -449893,7 +450077,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#6",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#6",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -449904,7 +450088,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#7",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#7",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -449915,7 +450099,7 @@
     },
     {
       "symbol": "P:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V#8",
-      "renamedSymbol": "P:SliderPainter.a([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#8",
+      "renamedSymbol": "P:SliderPainter.createContextMenuController([IJLjava/lang/String;Ljava/lang/String;ILScrollPane;LAnimatedPanel;II)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -449926,7 +450110,7 @@
     },
     {
       "symbol": "P:tp.b(B)V#0",
-      "renamedSymbol": "P:SliderPainter.b(B)V#0",
+      "renamedSymbol": "P:SliderPainter.advanceTutorialLine(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451312,7 +451496,7 @@
     },
     {
       "symbol": "P:ts.a(I)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(I)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.drawIntroSequence(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451323,7 +451507,7 @@
     },
     {
       "symbol": "P:ts.a(IIBI)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIBI)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.setBoundsWithTextHeight(IIBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451334,7 +451518,7 @@
     },
     {
       "symbol": "P:ts.a(IIBI)V#1",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIBI)V#1",
+      "renamedSymbol": "P:TextHotspotWidget.setBoundsWithTextHeight(IIBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -451345,7 +451529,7 @@
     },
     {
       "symbol": "P:ts.a(IIBI)V#2",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIBI)V#2",
+      "renamedSymbol": "P:TextHotspotWidget.setBoundsWithTextHeight(IIBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -451356,7 +451540,7 @@
     },
     {
       "symbol": "P:ts.a(IIBI)V#3",
-      "renamedSymbol": "P:TextHotspotWidget.a(IIBI)V#3",
+      "renamedSymbol": "P:TextHotspotWidget.setBoundsWithTextHeight(IIBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -451587,7 +451771,7 @@
     },
     {
       "symbol": "P:ts.a(IZLjava/lang/String;)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(IZLjava/lang/String;)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451598,7 +451782,7 @@
     },
     {
       "symbol": "P:ts.a(IZLjava/lang/String;)V#1",
-      "renamedSymbol": "P:TextHotspotWidget.a(IZLjava/lang/String;)V#1",
+      "renamedSymbol": "P:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -451609,7 +451793,7 @@
     },
     {
       "symbol": "P:ts.a(IZLjava/lang/String;)V#2",
-      "renamedSymbol": "P:TextHotspotWidget.a(IZLjava/lang/String;)V#2",
+      "renamedSymbol": "P:TextHotspotWidget.setHotspotTooltip(IZLjava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -451642,7 +451826,7 @@
     },
     {
       "symbol": "P:ts.a(ZI)Z#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(ZI)Z#0",
+      "renamedSymbol": "P:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451653,7 +451837,7 @@
     },
     {
       "symbol": "P:ts.a(ZI)Z#1",
-      "renamedSymbol": "P:TextHotspotWidget.a(ZI)Z#1",
+      "renamedSymbol": "P:TextHotspotWidget.pollAccountSocketConnection(ZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -451664,7 +451848,7 @@
     },
     {
       "symbol": "P:ts.b(IIB)Lql;#0",
-      "renamedSymbol": "P:TextHotspotWidget.b(IIB)LTextHotspotRegion;#0",
+      "renamedSymbol": "P:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451675,7 +451859,7 @@
     },
     {
       "symbol": "P:ts.b(IIB)Lql;#1",
-      "renamedSymbol": "P:TextHotspotWidget.b(IIB)LTextHotspotRegion;#1",
+      "renamedSymbol": "P:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -451686,7 +451870,7 @@
     },
     {
       "symbol": "P:ts.b(IIB)Lql;#2",
-      "renamedSymbol": "P:TextHotspotWidget.b(IIB)LTextHotspotRegion;#2",
+      "renamedSymbol": "P:TextHotspotWidget.findHotspotAt(IIB)LTextHotspotRegion;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -451708,7 +451892,7 @@
     },
     {
       "symbol": "P:ts.e(Z)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.e(Z)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.rebuildHotspotRegions(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451719,7 +451903,7 @@
     },
     {
       "symbol": "P:u.a(I)I#0",
-      "renamedSymbol": "P:ValidationState.a(I)I#0",
+      "renamedSymbol": "P:ValidationState.pollArchiveServices(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451730,7 +451914,7 @@
     },
     {
       "symbol": "P:u.a(IIIIII)V#0",
-      "renamedSymbol": "P:ValidationState.a(IIIIII)V#0",
+      "renamedSymbol": "P:ValidationState.drawQ4Line(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451741,7 +451925,7 @@
     },
     {
       "symbol": "P:u.a(IIIIII)V#1",
-      "renamedSymbol": "P:ValidationState.a(IIIIII)V#1",
+      "renamedSymbol": "P:ValidationState.drawQ4Line(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -451752,7 +451936,7 @@
     },
     {
       "symbol": "P:u.a(IIIIII)V#2",
-      "renamedSymbol": "P:ValidationState.a(IIIIII)V#2",
+      "renamedSymbol": "P:ValidationState.drawQ4Line(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -451763,7 +451947,7 @@
     },
     {
       "symbol": "P:u.a(IIIIII)V#3",
-      "renamedSymbol": "P:ValidationState.a(IIIIII)V#3",
+      "renamedSymbol": "P:ValidationState.drawQ4Line(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -451774,7 +451958,7 @@
     },
     {
       "symbol": "P:u.a(IIIIII)V#4",
-      "renamedSymbol": "P:ValidationState.a(IIIIII)V#4",
+      "renamedSymbol": "P:ValidationState.drawQ4Line(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -451785,7 +451969,7 @@
     },
     {
       "symbol": "P:u.a(IIIIII)V#5",
-      "renamedSymbol": "P:ValidationState.a(IIIIII)V#5",
+      "renamedSymbol": "P:ValidationState.drawQ4Line(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -451796,7 +451980,7 @@
     },
     {
       "symbol": "P:u.a(ZZ)V#0",
-      "renamedSymbol": "P:ValidationState.a(ZZ)V#0",
+      "renamedSymbol": "P:ValidationState.drawCurrentClientScreen(ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451807,7 +451991,7 @@
     },
     {
       "symbol": "P:u.a(ZZ)V#1",
-      "renamedSymbol": "P:ValidationState.a(ZZ)V#1",
+      "renamedSymbol": "P:ValidationState.drawCurrentClientScreen(ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -451829,7 +452013,7 @@
     },
     {
       "symbol": "P:u.c(I)V#0",
-      "renamedSymbol": "P:ValidationState.c(I)V#0",
+      "renamedSymbol": "P:ValidationState.resetFrameTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452049,7 +452233,7 @@
     },
     {
       "symbol": "P:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;#0",
-      "renamedSymbol": "P:ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(IZ)LAccountRequestResult;#0",
+      "renamedSymbol": "P:ScrollPane.createAccountSuccessResultFullInts(IZ)LAccountRequestResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452060,7 +452244,7 @@
     },
     {
       "symbol": "P:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;#1",
-      "renamedSymbol": "P:ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(IZ)LAccountRequestResult;#1",
+      "renamedSymbol": "P:ScrollPane.createAccountSuccessResultFullInts(IZ)LAccountRequestResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452115,7 +452299,7 @@
     },
     {
       "symbol": "P:ub.a(BZ)Lkj;#0",
-      "renamedSymbol": "P:ScrollPane.a(BZ)LAccountRequestResult;#0",
+      "renamedSymbol": "P:ScrollPane.createAccountSuccessResult(BZ)LAccountRequestResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452126,7 +452310,7 @@
     },
     {
       "symbol": "P:ub.a(BZ)Lkj;#1",
-      "renamedSymbol": "P:ScrollPane.a(BZ)LAccountRequestResult;#1",
+      "renamedSymbol": "P:ScrollPane.createAccountSuccessResult(BZ)LAccountRequestResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452137,7 +452321,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#0",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452148,7 +452332,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#1",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452159,7 +452343,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#2",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452170,7 +452354,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#3",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#3",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452181,7 +452365,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#4",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#4",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -452192,7 +452376,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#5",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#5",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -452203,7 +452387,7 @@
     },
     {
       "symbol": "P:ub.a(IIIIIII)V#6",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#6",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPane(IIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -452214,7 +452398,7 @@
     },
     {
       "symbol": "P:ub.a(IIZ)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IIZ)V#0",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPaneChildren(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452225,7 +452409,7 @@
     },
     {
       "symbol": "P:ub.a(IIZ)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IIZ)V#1",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPaneChildren(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452236,7 +452420,7 @@
     },
     {
       "symbol": "P:ub.a(IIZ)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IIZ)V#2",
+      "renamedSymbol": "P:ScrollPane.layoutScrollPaneChildren(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452247,7 +452431,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#0",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#0",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452258,7 +452442,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#1",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#1",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452269,7 +452453,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#2",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#2",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452280,7 +452464,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#3",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#3",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452291,7 +452475,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#4",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#4",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -452302,7 +452486,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#5",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#5",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -452313,7 +452497,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIIIZ)Z#6",
-      "renamedSymbol": "P:ScrollPane.a(IIZIIIZ)Z#6",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayoutInternal(IIZIIIZ)Z#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -452324,7 +452508,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIZI)Z#0",
-      "renamedSymbol": "P:ScrollPane.a(IIZIZI)Z#0",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayout(IIZIZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452335,7 +452519,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIZI)Z#1",
-      "renamedSymbol": "P:ScrollPane.a(IIZIZI)Z#1",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayout(IIZIZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452346,7 +452530,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIZI)Z#2",
-      "renamedSymbol": "P:ScrollPane.a(IIZIZI)Z#2",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayout(IIZIZI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452357,7 +452541,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIZI)Z#3",
-      "renamedSymbol": "P:ScrollPane.a(IIZIZI)Z#3",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayout(IIZIZI)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452368,7 +452552,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIZI)Z#4",
-      "renamedSymbol": "P:ScrollPane.a(IIZIZI)Z#4",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayout(IIZIZI)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -452379,7 +452563,7 @@
     },
     {
       "symbol": "P:ub.a(IIZIZI)Z#5",
-      "renamedSymbol": "P:ScrollPane.a(IIZIZI)Z#5",
+      "renamedSymbol": "P:ScrollPane.updateScrollLayout(IIZIZI)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -452390,7 +452574,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#0",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#0",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452401,7 +452585,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#1",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#1",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452412,7 +452596,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#10",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#10",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -452423,7 +452607,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#11",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#11",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -452434,7 +452618,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#12",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#12",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -452445,7 +452629,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#13",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#13",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -452456,7 +452640,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#14",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#14",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -452467,7 +452651,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#15",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#15",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -452478,7 +452662,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#16",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#16",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -452489,7 +452673,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#17",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#17",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#17",
       "originalName": "param17",
       "renamedName": "param17",
       "declaration": {
@@ -452500,7 +452684,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#18",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#18",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#18",
       "originalName": "param18",
       "renamedName": "param18",
       "declaration": {
@@ -452511,7 +452695,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#19",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#19",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#19",
       "originalName": "param19",
       "renamedName": "param19",
       "declaration": {
@@ -452522,7 +452706,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#2",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#2",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452533,7 +452717,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#3",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#3",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452544,7 +452728,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#4",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#4",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -452555,7 +452739,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#5",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#5",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -452566,7 +452750,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#6",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#6",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -452577,7 +452761,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#7",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#7",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -452588,7 +452772,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#8",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#8",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -452599,7 +452783,7 @@
     },
     {
       "symbol": "P:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V#9",
-      "renamedSymbol": "P:ScrollPane.a(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#9",
+      "renamedSymbol": "P:ScrollPane.configureSharedMenuStyle(ILBitmapFont;LTiledNineSlicePainter;IIILBitmapFont;IIIILTiledNineSlicePainter;IIIIIIILTiledNineSlicePainter;)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -452610,7 +452794,7 @@
     },
     {
       "symbol": "P:ub.a(IZBI)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IZBI)V#0",
+      "renamedSymbol": "P:ScrollPane.processScrollInput(IZBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452621,7 +452805,7 @@
     },
     {
       "symbol": "P:ub.a(IZBI)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IZBI)V#1",
+      "renamedSymbol": "P:ScrollPane.processScrollInput(IZBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452632,7 +452816,7 @@
     },
     {
       "symbol": "P:ub.a(IZBI)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IZBI)V#2",
+      "renamedSymbol": "P:ScrollPane.processScrollInput(IZBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452643,7 +452827,7 @@
     },
     {
       "symbol": "P:ub.a(IZBI)V#3",
-      "renamedSymbol": "P:ScrollPane.a(IZBI)V#3",
+      "renamedSymbol": "P:ScrollPane.processScrollInput(IZBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452654,7 +452838,7 @@
     },
     {
       "symbol": "P:ub.a(IZIBI)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IZIBI)V#0",
+      "renamedSymbol": "P:ScrollPane.applyScrollInput(IZIBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452665,7 +452849,7 @@
     },
     {
       "symbol": "P:ub.a(IZIBI)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IZIBI)V#1",
+      "renamedSymbol": "P:ScrollPane.applyScrollInput(IZIBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452676,7 +452860,7 @@
     },
     {
       "symbol": "P:ub.a(IZIBI)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IZIBI)V#2",
+      "renamedSymbol": "P:ScrollPane.applyScrollInput(IZIBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -452687,7 +452871,7 @@
     },
     {
       "symbol": "P:ub.a(IZIBI)V#3",
-      "renamedSymbol": "P:ScrollPane.a(IZIBI)V#3",
+      "renamedSymbol": "P:ScrollPane.applyScrollInput(IZIBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -452698,7 +452882,7 @@
     },
     {
       "symbol": "P:ub.a(IZIBI)V#4",
-      "renamedSymbol": "P:ScrollPane.a(IZIBI)V#4",
+      "renamedSymbol": "P:ScrollPane.applyScrollInput(IZIBI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -452709,7 +452893,7 @@
     },
     {
       "symbol": "P:ub.f(B)V#0",
-      "renamedSymbol": "P:ScrollPane.f(B)V#0",
+      "renamedSymbol": "P:ScrollPane.tickIntroSequence(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -461656,7 +461840,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "1fa54cbf8a73318ddbe50cf428d5bf24f401d33bc7a465d57820aa63c85838f0",
+      "outputSha256": "6b4e0b05858e4bd054ab51dccbad99cfd2e757025f53645c96138df991543480",
       "edits": [
         {
           "start": 86,
@@ -465350,6 +465534,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 22163,
+          "end": 22164,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
+        },
+        {
           "start": 22223,
           "end": 22225,
           "symbol": "C:ti",
@@ -465462,6 +465653,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 22533,
+          "end": 22534,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
+        },
+        {
           "start": 22593,
           "end": 22595,
           "symbol": "C:nh",
@@ -465502,6 +465700,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 22703,
+          "end": 22704,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
         },
         {
           "start": 22771,
@@ -465581,6 +465786,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 22958,
+          "end": 22959,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
+        },
+        {
           "start": 23026,
           "end": 23028,
           "symbol": "C:oi",
@@ -465635,6 +465847,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 23149,
+          "end": 23150,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
         },
         {
           "start": 23226,
@@ -465740,6 +465959,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 23701,
+          "end": 23702,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
         },
         {
           "start": 23719,
@@ -466216,6 +466442,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 25634,
+          "end": 25635,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
         },
         {
           "start": 25756,
@@ -472728,6 +472961,13 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 39703,
+          "end": 39704,
+          "symbol": "M:ub.f(B)V",
+          "original": "f",
+          "renamed": "tickIntroSequence"
+        },
+        {
           "start": 39768,
           "end": 39770,
           "symbol": "C:nh",
@@ -473526,6 +473766,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 43764,
+          "end": 43765,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
+        },
+        {
           "start": 43790,
           "end": 43792,
           "symbol": "C:oi",
@@ -473918,6 +474165,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 45554,
+          "end": 45555,
+          "symbol": "M:u.a(ZZ)V",
+          "original": "a",
+          "renamed": "drawCurrentClientScreen"
+        },
+        {
           "start": 45593,
           "end": 45595,
           "symbol": "C:vr",
@@ -474175,6 +474429,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 46423,
+          "end": 46424,
+          "symbol": "M:u.a(ZZ)V",
+          "original": "a",
+          "renamed": "drawCurrentClientScreen"
         },
         {
           "start": 46463,
@@ -475170,7 +475431,7 @@
       "original": "aa.java",
       "renamed": "AccountCreationForm.java",
       "inputSha256": "35dc0e643c81c3b478fa5541e86482b3c744b465d03d2bd7253bf9b8357b149a",
-      "outputSha256": "589c9ea325262895489bef7e219dfaf95fa901f2ccbb3ab4defda59dfb88a593",
+      "outputSha256": "719fdbaeb3955f5f9828cb0aa5505ecc983780c427330a6adaf22fa4849e461b",
       "edits": [
         {
           "start": 50,
@@ -476293,11 +476554,25 @@
           "renamed": "TextHotspotWidget"
         },
         {
+          "start": 12301,
+          "end": 12302,
+          "symbol": "M:ts.a(IZLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "setHotspotTooltip"
+        },
+        {
           "start": 12312,
           "end": 12314,
           "symbol": "C:bk",
           "original": "bk",
           "renamed": "ChatCompositionSupport"
+        },
+        {
+          "start": 12346,
+          "end": 12347,
+          "symbol": "M:ts.a(IZLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "setHotspotTooltip"
         },
         {
           "start": 12357,
@@ -476312,6 +476587,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "WidgetListener"
+        },
+        {
+          "start": 12435,
+          "end": 12436,
+          "symbol": "M:ts.a(IIBI)V",
+          "original": "a",
+          "renamed": "setBoundsWithTextHeight"
         },
         {
           "start": 12543,
@@ -478950,7 +479232,7 @@
       "original": "ah.java",
       "renamed": "ValidationMessageWidget.java",
       "inputSha256": "da3b8dcc959422bf9921139a82a0ab8deafd3c631840f1bf898810d0b0baabc7",
-      "outputSha256": "5bc899ff1d15f42bd472667c82d63133037ccaf50799c5f0e98efb63fbb8406a",
+      "outputSha256": "a6b54aa177997733316a7ea10ba700b2303f40e7c5a2729aa19e66d4c004d635",
       "edits": [
         {
           "start": 50,
@@ -479273,6 +479555,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 3122,
+          "end": 3123,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
         },
         {
           "start": 3160,
@@ -479611,6 +479900,13 @@
           "renamed": "AnimatedPanel"
         },
         {
+          "start": 5742,
+          "end": 5743,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
+        },
+        {
           "start": 5780,
           "end": 5781,
           "symbol": "M:ts.a(IIII)V",
@@ -479940,6 +480236,13 @@
           "renamed": "getMessage"
         },
         {
+          "start": 8659,
+          "end": 8660,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
+        },
+        {
           "start": 8697,
           "end": 8698,
           "symbol": "M:ts.a(IIII)V",
@@ -480176,6 +480479,13 @@
           "symbol": "M:bi.c(III)V",
           "original": "c",
           "renamed": "drawAdditive"
+        },
+        {
+          "start": 10671,
+          "end": 10672,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
         },
         {
           "start": 10705,
@@ -480940,7 +481250,7 @@
       "original": "aj.java",
       "renamed": "ClientContextMenuSupport.java",
       "inputSha256": "2d709599ff573a98e95bfd8d677dfa9ed1980d9fc9e3410cfff62d03c3781b6e",
-      "outputSha256": "47a211ce336a21f376f60ed6d527fdf49dc472878e9e8ecd7628e105c56ea705",
+      "outputSha256": "4d9dce2ab6db5c69cd8107ba0b5d36361b5f6ee4ffd7aff2285ae7cc88363b38",
       "edits": [
         {
           "start": 50,
@@ -481039,6 +481349,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 2315,
+          "end": 2316,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 2370,
@@ -483694,7 +484011,7 @@
       "original": "am.java",
       "renamed": "SocialListPanel.java",
       "inputSha256": "6f2e8b14e09cf7fb8ff50cebbfe74640acbb111c21fc17f7ef864540d2f3e4ed",
-      "outputSha256": "39c9e5a5005c27735898cfa662e30a7f24e0abece556929dd8582adbab4bffcf",
+      "outputSha256": "545ce07846a9ae2c7a9e5caf7eb5497f52d612831859c5c0cf763170068dec7f",
       "edits": [
         {
           "start": 50,
@@ -483912,6 +484229,13 @@
           "symbol": "M:am.a(IIII)V",
           "original": "a",
           "renamed": "layoutSocialListControls"
+        },
+        {
+          "start": 1956,
+          "end": 1957,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
         },
         {
           "start": 2388,
@@ -504832,7 +505156,7 @@
       "original": "cj.java",
       "renamed": "TutorialAi.java",
       "inputSha256": "f7f2e7fd7e23761ef62db22c2417304497070dbd325eec89fd9acf3663e8238f",
-      "outputSha256": "d492a3509a422ef0b7f192f611181760078d94bdf1b712b784cb4cfb397959fd",
+      "outputSha256": "dcbc9e97216f3f3454bc861b1333676bde5bad77c662ce181b1914782c6d7fc0",
       "edits": [
         {
           "start": 50,
@@ -505365,6 +505689,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 8024,
+          "end": 8025,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 8080,
@@ -520809,7 +521140,7 @@
       "original": "di.java",
       "renamed": "FleetTrailPoint.java",
       "inputSha256": "fd8e83ffb38f4d4a0d13dc804f92389a188a5c9559da34d60304b86b8b7fb614",
-      "outputSha256": "7f7c72f9deae1c93d72792fa98a88136d8294a6c7daa2106ad270feb1e230343",
+      "outputSha256": "66baac0c6c15936c53f45721d63340eaa18817c76319bdb4e2293b8908219218",
       "edits": [
         {
           "start": 50,
@@ -521855,6 +522186,13 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 9872,
+          "end": 9873,
+          "symbol": "M:ub.a(IIZIZI)Z",
+          "original": "a",
+          "renamed": "updateScrollLayout"
+        },
+        {
           "start": 9955,
           "end": 9957,
           "symbol": "C:wg",
@@ -522126,6 +522464,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 12450,
+          "end": 12451,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 12515,
@@ -522640,7 +522985,7 @@
       "original": "dm.java",
       "renamed": "ObjectList.java",
       "inputSha256": "2ed4fe489c7e8fffbec5f404e1d4bcee016418274f2c02c98d01145565d8755a",
-      "outputSha256": "1fb69cbf8064576dc256d31bcc98b48bddf63b5715986fa3d95336a45e924863",
+      "outputSha256": "2e24ac296363480741efa9ffb79e07e550cc647a1f16202c52e3d25ce12936e2",
       "edits": [
         {
           "start": 50,
@@ -522935,6 +523280,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 4577,
+          "end": 4578,
+          "symbol": "M:ub.a(IIZIZI)Z",
+          "original": "a",
+          "renamed": "updateScrollLayout"
         },
         {
           "start": 4774,
@@ -552641,7 +552993,7 @@
       "original": "en.java",
       "renamed": "LobbyLayoutSupport.java",
       "inputSha256": "3c69ca02e4526f19b78e5b8b82ec9c39eb0976a9f7076e25c041ec6f94024098",
-      "outputSha256": "39a41fe104b75f17fb44d2e15f616c80ba0753242b231a7e4a1c77c5d8f69d4b",
+      "outputSha256": "e213f9a358238e06518dc580241debf9c48723eec800823683a124a526257060",
       "edits": [
         {
           "start": 50,
@@ -552915,6 +553267,13 @@
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "EmailValidationError"
+        },
+        {
+          "start": 1993,
+          "end": 1994,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
         },
         {
           "start": 1995,
@@ -566270,7 +566629,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "c2d2d030cf8343b8643b86b6f83b7e3b5fd983c4c9ae03d00c11541eac30276d",
+      "outputSha256": "00e98bbfa7b83647ce4bbbd4d5e33270cc4ccd343cdc1bd9bfb5625d8679aa35",
       "edits": [
         {
           "start": 50,
@@ -567272,6 +567631,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 15121,
+          "end": 15122,
+          "symbol": "M:ub.a(IIZIZI)Z",
+          "original": "a",
+          "renamed": "updateScrollLayout"
         },
         {
           "start": 15205,
@@ -592868,7 +593234,7 @@
       "original": "hr.java",
       "renamed": "ChatPanelLayoutSupport.java",
       "inputSha256": "ecd8823d3d90f5996e78a990115fe2939dad4c6d9c721c5b948e6d9fe56a7f87",
-      "outputSha256": "6737eeda550b6b740eef508681df0742cc08732dd07fa03e3e78c55f3b936ea8",
+      "outputSha256": "545a8570adb544b3a3a0035cc6425fb4759e4bb7a7f3bf0deb814e043abd1b2b",
       "edits": [
         {
           "start": 50,
@@ -593044,6 +593410,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 4168,
+          "end": 4169,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
         },
         {
           "start": 4249,
@@ -636307,7 +636680,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "963baf987018c2deb6c80e850eb75b1c6cf1c2291176c4fe06f7cd30bac427a7",
+      "outputSha256": "60a5346aea6f2ad1807f0c63dc98a63fd2941dae039c7592f1b1737bac0aed0c",
       "edits": [
         {
           "start": 50,
@@ -646560,6 +646933,13 @@
           "renamed": "DateValidationSupport"
         },
         {
+          "start": 164241,
+          "end": 164242,
+          "symbol": "M:ub.a(IZBI)V",
+          "original": "a",
+          "renamed": "processScrollInput"
+        },
+        {
           "start": 164248,
           "end": 164250,
           "symbol": "C:so",
@@ -649938,6 +650318,13 @@
           "renamed": "addChild"
         },
         {
+          "start": 202222,
+          "end": 202223,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
+        },
+        {
           "start": 202274,
           "end": 202276,
           "symbol": "C:ge",
@@ -651568,7 +651955,7 @@
       "original": "ks.java",
       "renamed": "AccountBooleanRequest.java",
       "inputSha256": "1d65cff926ff95ef9c7e0dada53990f50621f9e26c892bd53e04715a563af666",
-      "outputSha256": "fa827d5c108d0af262dafe8ff3a23a102960f05102e4905dd094608cbecee871",
+      "outputSha256": "822da74e87fc4de932fece5c4a4360563ba87e69f6a18d04f4f508f0821f31d5",
       "edits": [
         {
           "start": 50,
@@ -652598,6 +652985,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 9451,
+          "end": 9452,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 9529,
@@ -661744,7 +662138,7 @@
       "original": "m.java",
       "renamed": "StrongCacheEntry.java",
       "inputSha256": "492546d3d7eaeeb255e29a66044fcc133b8f66fb639c6dfa84303195c9c498b2",
-      "outputSha256": "a7bf7f15313645dc48bad35087cfdc201da5cdbd4715de99e8ec6fed41b8da8a",
+      "outputSha256": "7567ef468aed2319fcc7494c02d19eb875e7975d6b1759338c9b71c870030b71",
       "edits": [
         {
           "start": 50,
@@ -662501,6 +662895,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 9650,
+          "end": 9651,
+          "symbol": "M:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;",
+          "original": "a",
+          "renamed": "loadIndexedSpritesByName"
         },
         {
           "start": 9727,
@@ -676370,7 +676771,7 @@
       "original": "nd.java",
       "renamed": "IntroGlowPoint.java",
       "inputSha256": "989531981dae27a3d39c6c7c129e4f363db3a70d8def2c91cae94cf65e0cf748",
-      "outputSha256": "c5781944fa33f1c21a20e27425e478aebc7abea191c8df54502d19e5811df214",
+      "outputSha256": "4bd92e2312276cfd54294b5d766a6dd14cc65b1b8e0254ce18400140cddc3673",
       "edits": [
         {
           "start": 50,
@@ -676436,6 +676837,13 @@
           "renamed": "SliderPainter"
         },
         {
+          "start": 787,
+          "end": 788,
+          "symbol": "M:tp.b(B)V",
+          "original": "b",
+          "renamed": "advanceTutorialLine"
+        },
+        {
           "start": 923,
           "end": 925,
           "symbol": "C:sq",
@@ -676462,6 +676870,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 1055,
+          "end": 1056,
+          "symbol": "M:tp.b(B)V",
+          "original": "b",
+          "renamed": "advanceTutorialLine"
         },
         {
           "start": 1092,
@@ -676602,6 +677017,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 4008,
+          "end": 4009,
+          "symbol": "M:tp.b(B)V",
+          "original": "b",
+          "renamed": "advanceTutorialLine"
         },
         {
           "start": 4125,
@@ -683774,7 +684196,7 @@
       "original": "o.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "a3117040d0ba6cf6d1b93a8896b95cf37b7123f15e0d5307927e1ccdf6207591",
-      "outputSha256": "c08d6bbf84e2ceb42b4d53a6f81bb965781659522984354563c8c27c4815e06f",
+      "outputSha256": "2a7e94343c576848e244c8f8276a5fd067f0c8136383c4e360846a98ae1fb5f5",
       "edits": [
         {
           "start": 44,
@@ -683816,7 +684238,7 @@
           "end": 481,
           "symbol": "M:o.a(BLvg;)I",
           "original": "a",
-          "renamed": "getTextHeight"
+          "renamed": "getTextWidth"
         },
         {
           "start": 495,
@@ -684929,7 +685351,7 @@
           "end": 18304,
           "symbol": "M:o.a(ZLvg;)I",
           "original": "a",
-          "renamed": "getTextWidth"
+          "renamed": "getTextHeight"
         },
         {
           "start": 18321,
@@ -696814,7 +697236,7 @@
       "original": "p.java",
       "renamed": "CachedArchiveSource.java",
       "inputSha256": "0bd645edaf7535411bdb64f924bff8a02da1b048411cb440b6fef342f236e4ad",
-      "outputSha256": "5ca0b3ee21872df7d4a161f6697bbea7ebb0b76da9e375b13359db239b5f30ce",
+      "outputSha256": "9006bb240f71a62c6efdaa75e089fe300c047fabd485492e5128ea55910d3348",
       "edits": [
         {
           "start": 50,
@@ -697468,6 +697890,13 @@
           "symbol": "C:ls",
           "original": "ls",
           "renamed": "GalaxyMapLayoutSupport"
+        },
+        {
+          "start": 8290,
+          "end": 8291,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
         },
         {
           "start": 8292,
@@ -700090,7 +700519,7 @@
       "original": "pe.java",
       "renamed": "UnderageAccountInfoPanel.java",
       "inputSha256": "a4a5152f8cc51eb372158637f2a67b697aae86b5aefab5afc739b4f89a8568fc",
-      "outputSha256": "355ebf80882451d27ae80e38679d968ac6dda343753d87852d18dcd69e4fc173",
+      "outputSha256": "2ebbcaffc2e5863308732cc1456e6d7cc60d3ccaffd90542b7a50de0dc12bef8",
       "edits": [
         {
           "start": 50,
@@ -700331,11 +700760,25 @@
           "renamed": "TextHotspotWidget"
         },
         {
+          "start": 2178,
+          "end": 2179,
+          "symbol": "M:ts.a(IZLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "setHotspotTooltip"
+        },
+        {
           "start": 2189,
           "end": 2191,
           "symbol": "C:bk",
           "original": "bk",
           "renamed": "ChatCompositionSupport"
+        },
+        {
+          "start": 2225,
+          "end": 2226,
+          "symbol": "M:ts.a(IZLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "setHotspotTooltip"
         },
         {
           "start": 2236,
@@ -700350,6 +700793,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "WidgetListener"
+        },
+        {
+          "start": 2371,
+          "end": 2372,
+          "symbol": "M:ts.a(IIBI)V",
+          "original": "a",
+          "renamed": "setBoundsWithTextHeight"
         },
         {
           "start": 2482,
@@ -703961,7 +704411,7 @@
       "original": "pj.java",
       "renamed": "WidgetMetrics.java",
       "inputSha256": "87937191eb99a688ff3bbc91ec939be5418b3715b6df53b7461e67147ab2a84f",
-      "outputSha256": "8d4ddba5a5b98d198e4cdd0b747eeabf236eee931f83f75734f65dcd7ee4dd35",
+      "outputSha256": "36e9da7506c134bc0214730261ddc658e957cae545249dd8921fe83db7c2973a",
       "edits": [
         {
           "start": 48,
@@ -704010,7 +704460,7 @@
           "end": 235,
           "symbol": "M:pj.a(ZLvg;)I",
           "original": "a",
-          "renamed": "getTextWidth"
+          "renamed": "getTextHeight"
         },
         {
           "start": 252,
@@ -704073,7 +704523,7 @@
           "end": 548,
           "symbol": "M:pj.a(BLvg;)I",
           "original": "a",
-          "renamed": "getTextHeight"
+          "renamed": "getTextWidth"
         },
         {
           "start": 562,
@@ -708789,7 +709239,7 @@
       "original": "qg.java",
       "renamed": "TutorialVictoryChecker.java",
       "inputSha256": "dc73629de9da07802f7e0a91365174cf563bc2aa669114b9208ed1ea098e3d0d",
-      "outputSha256": "e81b1bfeabe8fc524852eb9dfaca39f49f4ef36c438e3c96e2cb4281fb6b5645",
+      "outputSha256": "f6413251a096985078da21b3530fe682a7cb9c0b26750ae994bac52c057ca52f",
       "edits": [
         {
           "start": 50,
@@ -709406,6 +709856,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 10361,
+          "end": 10362,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 10468,
@@ -712000,7 +712457,7 @@
       "original": "ql.java",
       "renamed": "TextHotspotRegion.java",
       "inputSha256": "58d279db97c1b952941fb788fecc1761092a4bbbca6aa9e63508778107166572",
-      "outputSha256": "b227c9313c7dc28943f3443f744f1f2408e35904f1a358e199eb7e815d901cc5",
+      "outputSha256": "c4eb85f1cffdddc323346bf7cbc022c8527ec7357a575f80ce0e3fd52f7f9b83",
       "edits": [
         {
           "start": 50,
@@ -712113,6 +712570,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 1077,
+          "end": 1078,
+          "symbol": "M:tp.b(B)V",
+          "original": "b",
+          "renamed": "advanceTutorialLine"
         },
         {
           "start": 1112,
@@ -729567,7 +730031,7 @@
       "original": "rq.java",
       "renamed": "LinkPainter.java",
       "inputSha256": "8e61072f3a33239667a0d782b76701b00119a418b9fe10f6fbe54fc7be1404e9",
-      "outputSha256": "b2c932702ce57bbc57714b683ae4d27be6f28978e76ec8b016422a66c4cd5f53",
+      "outputSha256": "526b934ab568a2e85dc12f2d2a91f53cee5ce1dbd72cb43af23caa8e834bd5d4",
       "edits": [
         {
           "start": 50,
@@ -730007,6 +730471,13 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 6458,
+          "end": 6459,
+          "symbol": "M:ub.a(IIZIZI)Z",
+          "original": "a",
+          "renamed": "updateScrollLayout"
+        },
+        {
           "start": 6542,
           "end": 6543,
           "symbol": "C:d",
@@ -730376,6 +730847,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 11045,
+          "end": 11046,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 11092,
@@ -736357,7 +736835,7 @@
       "original": "sh.java",
       "renamed": "SolMapReader.java",
       "inputSha256": "0740a169845de1d7a06ce0018f7b5d52f33cdd49b6a3d4176d832ef40b2d1d4e",
-      "outputSha256": "3dd472c952221778ddbfd5694073977e9157181e637ec4a3b55a75ea27b21dfd",
+      "outputSha256": "c9ea0b2cb9d4a3b21b123750f225d37daab99baea434f56533664948bb7c211b",
       "edits": [
         {
           "start": 50,
@@ -737207,6 +737685,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 8537,
+          "end": 8538,
+          "symbol": "M:ub.a(IZBI)V",
+          "original": "a",
+          "renamed": "processScrollInput"
+        },
+        {
           "start": 8629,
           "end": 8631,
           "symbol": "C:ji",
@@ -737240,7 +737725,7 @@
       "original": "si.java",
       "renamed": "QuickChatCategoryDefinition.java",
       "inputSha256": "e86a3642f3646dd6591980e4be7e6fb6fa981d25876ff9af582f53a789a2152f",
-      "outputSha256": "bcd2a2e1fe934c5151a16c7938670514125e1cfd00c33aeab22d9db9a16afe34",
+      "outputSha256": "1f258d38f0722b143788fa83fb22271139565b44a2752c5e31f7c288a5393f20",
       "edits": [
         {
           "start": 50,
@@ -737395,6 +737880,13 @@
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 2251,
+          "end": 2252,
+          "symbol": "M:ts.a(ZI)Z",
+          "original": "a",
+          "renamed": "pollAccountSocketConnection"
         },
         {
           "start": 2355,
@@ -760071,7 +760563,7 @@
       "original": "tc.java",
       "renamed": "DialogRoot.java",
       "inputSha256": "ab7dfb13d40b0a7e162ec9e295e3c6236547ee2112212a09dfcc9c1733bb4fa1",
-      "outputSha256": "b5a4af00be150d2d452411e0a5d1093dcbc782217f4c6f0403d3a7267d7c1be6",
+      "outputSha256": "1cc7ffb2db02f227f0676befd69b5db719352a234fec28797761aa58e9bcb06c",
       "edits": [
         {
           "start": 50,
@@ -761871,6 +762363,13 @@
           "symbol": "C:qs",
           "original": "qs",
           "renamed": "SingleChildWidget"
+        },
+        {
+          "start": 19935,
+          "end": 19936,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
         },
         {
           "start": 19942,
@@ -766424,7 +766923,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "97dc60e4940ba19935b2e9e45c7aee319310f332976c7338b8dbe7f1fa9c6e9c",
+      "outputSha256": "aea458ddac9d0015e52492759e8ecb23d8158541100acff831422c4469735dfd",
       "edits": [
         {
           "start": 53,
@@ -768450,6 +768949,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 12804,
+          "end": 12805,
+          "symbol": "M:u.a(I)I",
+          "original": "a",
+          "renamed": "pollArchiveServices"
+        },
+        {
           "start": 12860,
           "end": 12862,
           "symbol": "C:qj",
@@ -769178,6 +769684,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 15777,
+          "end": 15778,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
+        },
+        {
           "start": 15836,
           "end": 15838,
           "symbol": "C:es",
@@ -769547,6 +770060,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 17002,
+          "end": 17003,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
         },
         {
           "start": 17020,
@@ -771167,7 +771687,7 @@
       "original": "tp.java",
       "renamed": "SliderPainter.java",
       "inputSha256": "ecd59c1108326c6ffe52d0a667df4b0c1d920eb272cb188c9cc6035792413b57",
-      "outputSha256": "88491680b05c06b6b61f07b2cc2333c6c88c91e0b02969dbb545dc983b9f3944",
+      "outputSha256": "3756e29debc360260b4f0736d44e243a885dfbe956dbd225228540c4a194aedc",
       "edits": [
         {
           "start": 50,
@@ -771345,6 +771865,13 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 2874,
+          "end": 2875,
+          "symbol": "M:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;",
+          "original": "a",
+          "renamed": "loadIndexedSpritesByName"
+        },
+        {
           "start": 2891,
           "end": 2893,
           "symbol": "C:bc",
@@ -771392,6 +771919,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 4753,
+          "end": 4754,
+          "symbol": "M:tp.a([IJLjava/lang/String;Ljava/lang/String;ILub;Lqr;II)V",
+          "original": "a",
+          "renamed": "createContextMenuController"
         },
         {
           "start": 4824,
@@ -771469,6 +772003,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 6146,
+          "end": 6147,
+          "symbol": "M:tp.b(B)V",
+          "original": "b",
+          "renamed": "advanceTutorialLine"
         },
         {
           "start": 6253,
@@ -771694,7 +772235,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "b7c1158d8d499ff13f98ab9864cff876f8b7c9c731904b87433fac9669064402",
+      "outputSha256": "d9216d40bba23f36eb9290a06acf64e341e9b47bd630fb05eb57f640b679b538",
       "edits": [
         {
           "start": 71,
@@ -778902,6 +779443,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 131744,
+          "end": 131745,
+          "symbol": "M:u.a(IIIIII)V",
+          "original": "a",
+          "renamed": "drawQ4Line"
+        },
+        {
           "start": 131946,
           "end": 131947,
           "symbol": "M:tr.a(IIII)V",
@@ -779961,7 +780509,7 @@
       "original": "ts.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "c284a3828a79230529ebb15549254c4e3ad858121f987e41ee1f9e97dd528948",
-      "outputSha256": "ea4a041d387798d5ac59510ae5502de76d9dee655160825d16d51615141203f9",
+      "outputSha256": "ae4218797820821ab6d104d47172218bded52b85be886c3b97a20acc49282ec3",
       "edits": [
         {
           "start": 63,
@@ -780083,6 +780631,20 @@
           "renamed": "drawDottedRectangleOutline"
         },
         {
+          "start": 970,
+          "end": 971,
+          "symbol": "M:ts.a(IZLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "setHotspotTooltip"
+        },
+        {
+          "start": 1963,
+          "end": 1964,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
+        },
+        {
           "start": 2480,
           "end": 2481,
           "symbol": "C:r",
@@ -780146,6 +780708,13 @@
           "renamed": "setBounds"
         },
         {
+          "start": 3158,
+          "end": 3159,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
+        },
+        {
           "start": 3210,
           "end": 3211,
           "symbol": "M:ts.a(IIII)V",
@@ -780186,6 +780755,13 @@
           "symbol": "M:ts.a(B)V",
           "original": "a",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 4452,
+          "end": 4453,
+          "symbol": "M:ts.a(ZI)Z",
+          "original": "a",
+          "renamed": "pollAccountSocketConnection"
         },
         {
           "start": 4574,
@@ -780510,6 +781086,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 8214,
+          "end": 8215,
+          "symbol": "M:ts.a(IIBI)V",
+          "original": "a",
+          "renamed": "setBoundsWithTextHeight"
+        },
+        {
           "start": 8280,
           "end": 8281,
           "symbol": "M:ts.a(IIBII)V",
@@ -780528,7 +781111,7 @@
           "end": 8322,
           "symbol": "M:pj.a(ZLvg;)I",
           "original": "a",
-          "renamed": "getTextWidth"
+          "renamed": "getTextHeight"
         },
         {
           "start": 8330,
@@ -780536,6 +781119,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 8474,
+          "end": 8475,
+          "symbol": "M:ts.a(I)V",
+          "original": "a",
+          "renamed": "drawIntroSequence"
         },
         {
           "start": 8591,
@@ -780753,6 +781343,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 9580,
+          "end": 9581,
+          "symbol": "M:ts.e(Z)V",
+          "original": "e",
+          "renamed": "rebuildHotspotRegions"
         },
         {
           "start": 9862,
@@ -781014,6 +781611,13 @@
           "renamed": "TextHotspotRegion"
         },
         {
+          "start": 14633,
+          "end": 14634,
+          "symbol": "M:ts.b(IIB)Lql;",
+          "original": "b",
+          "renamed": "findHotspotAt"
+        },
+        {
           "start": 14682,
           "end": 14684,
           "symbol": "C:ql",
@@ -781098,6 +781702,13 @@
           "renamed": "LobbyRoomControlsSupport"
         },
         {
+          "start": 16198,
+          "end": 16199,
+          "symbol": "M:ts.b(IIB)Lql;",
+          "original": "b",
+          "renamed": "findHotspotAt"
+        },
+        {
           "start": 16311,
           "end": 16312,
           "symbol": "C:r",
@@ -781133,6 +781744,13 @@
           "renamed": "TextHotspotRegion"
         },
         {
+          "start": 16699,
+          "end": 16700,
+          "symbol": "M:ts.b(IIB)Lql;",
+          "original": "b",
+          "renamed": "findHotspotAt"
+        },
+        {
           "start": 16830,
           "end": 16832,
           "symbol": "C:op",
@@ -781152,7 +781770,7 @@
       "original": "u.java",
       "renamed": "ValidationState.java",
       "inputSha256": "8a7c71dba6689d49699ae0350b71e1d8fc6f9ac6cbb5c0c88f338b610509927b",
-      "outputSha256": "805773aa1fb085d7689616513aab71ad9052e351e5ece9343ffda45d3a3e3783",
+      "outputSha256": "bec3fb0cdf591bf56eb83bb202e2207f24957d30fa63eea16dfda8c69ac7dcdb",
       "edits": [
         {
           "start": 50,
@@ -781174,6 +781792,13 @@
           "symbol": "M:u.b(I)V",
           "original": "b",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 349,
+          "end": 350,
+          "symbol": "M:u.a(ZZ)V",
+          "original": "a",
+          "renamed": "drawCurrentClientScreen"
         },
         {
           "start": 474,
@@ -781202,6 +781827,13 @@
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 532,
+          "end": 533,
+          "symbol": "M:ts.a(I)V",
+          "original": "a",
+          "renamed": "drawIntroSequence"
         },
         {
           "start": 584,
@@ -781274,6 +781906,13 @@
           "renamed": "TextHotspotWidget"
         },
         {
+          "start": 905,
+          "end": 906,
+          "symbol": "M:ts.a(I)V",
+          "original": "a",
+          "renamed": "drawIntroSequence"
+        },
+        {
           "start": 953,
           "end": 955,
           "symbol": "C:ce",
@@ -781330,6 +781969,13 @@
           "renamed": "drawClientSessionsAndMenus"
         },
         {
+          "start": 1297,
+          "end": 1298,
+          "symbol": "M:u.a(IIIIII)V",
+          "original": "a",
+          "renamed": "drawQ4Line"
+        },
+        {
           "start": 1839,
           "end": 1841,
           "symbol": "C:gf",
@@ -781372,6 +782018,13 @@
           "renamed": "drawLine"
         },
         {
+          "start": 2461,
+          "end": 2462,
+          "symbol": "M:u.c(I)V",
+          "original": "c",
+          "renamed": "resetFrameTiming"
+        },
+        {
           "start": 2599,
           "end": 2601,
           "symbol": "C:oe",
@@ -781412,6 +782065,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 3143,
+          "end": 3144,
+          "symbol": "M:u.a(I)I",
+          "original": "a",
+          "renamed": "pollArchiveServices"
         },
         {
           "start": 3167,
@@ -782417,7 +783077,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "a9aeb1581c1a30ee6874fa74a35dcee225db13e5ab3d0882df90ff01001a4152",
+      "outputSha256": "0615f9a2afbfaca12048792384432df0fedcce96ee6cca2f54dcd79b0b99203f",
       "edits": [
         {
           "start": 50,
@@ -782462,6 +783122,69 @@
           "renamed": "AnimatedPanel"
         },
         {
+          "start": 281,
+          "end": 282,
+          "symbol": "M:ub.a(IZIBI)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
+          "start": 2236,
+          "end": 2237,
+          "symbol": "M:ub.a(IZBI)V",
+          "original": "a",
+          "renamed": "processScrollInput"
+        },
+        {
+          "start": 2338,
+          "end": 2339,
+          "symbol": "M:ub.a(IZIBI)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
+          "start": 2475,
+          "end": 2476,
+          "symbol": "M:ub.a(IZIBI)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
+          "start": 2559,
+          "end": 2560,
+          "symbol": "M:ub.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "layoutScrollPane"
+        },
+        {
+          "start": 2818,
+          "end": 2819,
+          "symbol": "M:ub.a(IIZ)V",
+          "original": "a",
+          "renamed": "layoutScrollPaneChildren"
+        },
+        {
+          "start": 2897,
+          "end": 2898,
+          "symbol": "M:ub.a(IIZIZI)Z",
+          "original": "a",
+          "renamed": "updateScrollLayout"
+        },
+        {
+          "start": 3062,
+          "end": 3063,
+          "symbol": "M:ub.a(IIZIIIZ)Z",
+          "original": "a",
+          "renamed": "updateScrollLayoutInternal"
+        },
+        {
+          "start": 3168,
+          "end": 3169,
+          "symbol": "M:ub.a(IIZIIIZ)Z",
+          "original": "a",
+          "renamed": "updateScrollLayoutInternal"
+        },
+        {
           "start": 3375,
           "end": 3376,
           "symbol": "M:qr.a(IZZI)V",
@@ -782469,11 +783192,39 @@
           "renamed": "layoutChildren"
         },
         {
+          "start": 3442,
+          "end": 3443,
+          "symbol": "M:ub.a(IZIBI)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
           "start": 3819,
           "end": 3820,
           "symbol": "M:qr.a(IZZI)V",
           "original": "a",
           "renamed": "layoutChildren"
+        },
+        {
+          "start": 3893,
+          "end": 3894,
+          "symbol": "M:ub.a(IZIBI)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
+          "start": 4066,
+          "end": 4067,
+          "symbol": "M:ub.a(IIZ)V",
+          "original": "a",
+          "renamed": "layoutScrollPaneChildren"
+        },
+        {
+          "start": 4569,
+          "end": 4570,
+          "symbol": "M:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V",
+          "original": "a",
+          "renamed": "configureSharedMenuStyle"
         },
         {
           "start": 4583,
@@ -782609,6 +783360,13 @@
           "renamed": "AccountRequestResult"
         },
         {
+          "start": 7726,
+          "end": 7727,
+          "symbol": "M:ub.a(BZ)Lkj;",
+          "original": "a",
+          "renamed": "createAccountSuccessResult"
+        },
+        {
           "start": 7767,
           "end": 7769,
           "symbol": "C:kj",
@@ -782728,6 +783486,13 @@
           "renamed": "clearStatics"
         },
         {
+          "start": 9045,
+          "end": 9046,
+          "symbol": "M:ub.f(B)V",
+          "original": "f",
+          "renamed": "tickIntroSequence"
+        },
+        {
           "start": 9378,
           "end": 9380,
           "symbol": "C:mf",
@@ -782782,6 +783547,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 9645,
+          "end": 9646,
+          "symbol": "M:ub.f(B)V",
+          "original": "f",
+          "renamed": "tickIntroSequence"
         },
         {
           "start": 9689,
@@ -783505,6 +784277,13 @@
           "renamed": "AccountRequestResult"
         },
         {
+          "start": 14858,
+          "end": 14885,
+          "symbol": "M:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;",
+          "original": "$cfr$intArgs$a$be17d4c2d3e3",
+          "renamed": "createAccountSuccessResultFullInts"
+        },
+        {
           "start": 14924,
           "end": 14926,
           "symbol": "C:kj",
@@ -783538,7 +784317,7 @@
       "original": "uc.java",
       "renamed": "HorizontalGradientComponent.java",
       "inputSha256": "cb262019e474ab24eecfe670a539bf298da37eca43e068b89f5782b9dc8967ea",
-      "outputSha256": "c19af6f622ee411309a44583e886849ef49fcbdac6b4aaf723cf544ba9bf31f1",
+      "outputSha256": "cfdbf605b11f7a2dede421b6adda18091fb2c2b215812df7063f56b8467a1750",
       "edits": [
         {
           "start": 50,
@@ -783861,6 +784640,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 5482,
+          "end": 5483,
+          "symbol": "M:ub.a(ILnq;Lv;IIILnq;IIIILv;IIIIIIILv;)V",
+          "original": "a",
+          "renamed": "configureSharedMenuStyle"
         },
         {
           "start": 5501,
@@ -784734,7 +785520,7 @@
       "original": "ui.java",
       "renamed": "SolVictoryChecker.java",
       "inputSha256": "0a254280ba5263fd45e7a1ba3a37758f2f2a2a4640c41a461ebee5c449a71ccb",
-      "outputSha256": "0f18c2bf78d088eaeedeb66f7d96240b73da721977411f08b2415be1faca9060",
+      "outputSha256": "21b985e43db4bda10e1f1edb4c1cd72c249e1639b097b604cdfef4738be328d0",
       "edits": [
         {
           "start": 50,
@@ -785253,6 +786039,13 @@
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 13331,
+          "end": 13332,
+          "symbol": "M:ts.a(ZI)Z",
+          "original": "a",
+          "renamed": "pollAccountSocketConnection"
         },
         {
           "start": 13444,
@@ -792297,7 +793090,7 @@
       "original": "va.java",
       "renamed": "GraphicsSettings.java",
       "inputSha256": "72a96c4bf30a8a4750ddf5ccfe9844c3c9443a4ba06a1f64a8ac37ea1f6f793f",
-      "outputSha256": "d50311b951f8ed9367c1cb7f4a1ed297cf31ec5fee75930c812d4453e2957fd7",
+      "outputSha256": "375ac6b0c243c5beafbd207988f421eb671c42a2344e1603c82f74a51d961d33",
       "edits": [
         {
           "start": 50,
@@ -792508,6 +793301,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 3758,
+          "end": 3785,
+          "symbol": "M:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;",
+          "original": "$cfr$intArgs$a$be17d4c2d3e3",
+          "renamed": "createAccountSuccessResultFullInts"
         },
         {
           "start": 4545,
@@ -795791,7 +796591,7 @@
       "original": "vg.java",
       "renamed": "UiWidget.java",
       "inputSha256": "2c84d20e0e2d70d69aad4017a405741e91c777e512217e1995a2d4f8bb562b5f",
-      "outputSha256": "a33335639c3e5a60e71c5f8d182675297e5f5a4619ca4a8b5f85f999324944f4",
+      "outputSha256": "b654a6785f7c02ca8bca70d3ce4ecfdc1902fa87689d544026bf252828073e1e",
       "edits": [
         {
           "start": 65,
@@ -796757,14 +797557,14 @@
           "end": 19071,
           "symbol": "M:pj.a(BLvg;)I",
           "original": "a",
-          "renamed": "getTextHeight"
+          "renamed": "getTextWidth"
         },
         {
           "start": 19123,
           "end": 19124,
           "symbol": "M:pj.a(ZLvg;)I",
           "original": "a",
-          "renamed": "getTextWidth"
+          "renamed": "getTextHeight"
         },
         {
           "start": 19220,
@@ -819705,7 +820505,7 @@
       "original": "vl.java",
       "renamed": "SolMapGenerator.java",
       "inputSha256": "061dbfcb76bfc3c9d2bfed457d94cb3ceb11bea34bd294f6af818f2a4682c0b1",
-      "outputSha256": "ca4ff7b7132c9b1362cf0112c52eb8dd68813498518829163acb2cace058cdd6",
+      "outputSha256": "ee255c46281a3df469880b4b539aedb25f4f2393d6049d9766f0965e0f0fa9ef",
       "edits": [
         {
           "start": 71,
@@ -820175,6 +820975,13 @@
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "SliderPainter"
+        },
+        {
+          "start": 5858,
+          "end": 5859,
+          "symbol": "M:tp.a(Ljava/lang/String;Lbc;Ljava/lang/String;B)[Lnk;",
+          "original": "a",
+          "renamed": "loadIndexedSpritesByName"
         },
         {
           "start": 5920,
@@ -830039,7 +830846,7 @@
       "original": "wo.java",
       "renamed": "LoginResultSupport.java",
       "inputSha256": "d7e8fbd0e7466f48fc7c80f57d11034766f786bcc0a787fbe07fb3f8ce9e4889",
-      "outputSha256": "1e2d63b93f743768c2ca430f07fa4cb46437254a3d55f2d65160334b0fbe7603",
+      "outputSha256": "4f2fb3ff0c3f72770b18773693204e5e5239f7a01b675c7b42adec69817f42a8",
       "edits": [
         {
           "start": 50,
@@ -830187,6 +830994,13 @@
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 1483,
+          "end": 1510,
+          "symbol": "M:ub.$cfr$intArgs$a$be17d4c2d3e3(IZ)Lkj;",
+          "original": "$cfr$intArgs$a$be17d4c2d3e3",
+          "renamed": "createAccountSuccessResultFullInts"
         },
         {
           "start": 1582,
@@ -830895,10 +831709,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "e60a98d497fe7523d21601e8b0b28c90a69f125a69dcfc5641b9ab7dd1783dca",
+    "rulesSha256": "8a457f52042b62473ff8f287de9deb1fa4c75c277e0b802bd12565571fa54659",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "cf43bcb1cea7caab905a2ac3d7c5a83e7579cab884fc2077e706d9a499950048",
+    "outputTreeSha256": "6a078e83fd4eb560f1ab2af27b984d2c3ac4d0ef9e3568e42329a6bacd4721cb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

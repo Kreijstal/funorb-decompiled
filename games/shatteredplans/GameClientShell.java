@@ -412,7 +412,7 @@ abstract class GameClientShell extends GameApplet {
           TutorialTextSupport.field_g == 0) {
           stackIn_24_0 = (TutorialTextSupport.field_g != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          TutorialTextSupport.field_g = ValidationState.a(-95);
+          TutorialTextSupport.field_g = ValidationState.pollArchiveServices(-95);
           if (var3Lifetime1 != 0 &&
             TutorialTextSupport.field_g == 0 &&
             SoundPlayback.field_i == 11 &&
@@ -508,7 +508,7 @@ abstract class GameClientShell extends GameApplet {
               if (StarAnnotation.field_j.ensureGroupLoadedByName("", 51)) {
                 TutorialMapGenerator.loadClientText(StarAnnotation.field_j, true);
                 StarAnnotation.field_j = null;
-                ValidationState.c(126);
+                ValidationState.resetFrameTiming(126);
               }
             } else {
               StarAnnotation.field_j = null;
@@ -546,7 +546,7 @@ abstract class GameClientShell extends GameApplet {
           LinkPainter.field_g = null;
           GalaxyMap.field_g = null;
           KeyboardStateSupport.inspectAppletUsernameParameter((java.applet.Applet) (this), 4289);
-          ValidationState.c(124);
+          ValidationState.resetFrameTiming(124);
           DefensiveAi.field_p = 10;
         }
         if (DefensiveAi.field_p == 10) {

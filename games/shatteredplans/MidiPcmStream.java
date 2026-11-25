@@ -455,7 +455,7 @@ final class MidiPcmStream extends PcmStream {
           stackIn_3_1 = (UniformNineSliceFactory.field_c * 4 + 8) * param5;
           stackIn_3_2 = (2 + UniformNineSliceFactory.field_c) * 2;
           stackIn_4_3 = (DerelictVictoryChecker.field_l == SingleChildWidget.field_y);
-          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).updateScrollLayout(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = SingleChildWidget.field_y.field_xb.field_M;
           if (param1 <= 109) {
             MidiPcmStream.a((IndexedSprite[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);

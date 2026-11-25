@@ -11,7 +11,7 @@ final class ScrollPane extends AnimatedPanel {
     static String field_Cb;
     static String field_Eb;
 
-    private final void a(int param0, boolean param1, int param2, byte param3, int param4) {
+    private final void applyScrollInput(int param0, boolean param1, int param2, byte param3, int param4) {
         if (this.field_Ab.h(param3 - 125)) {
           this.field_xb.field_w = this.field_xb.field_w + param2;
         }
@@ -52,40 +52,40 @@ final class ScrollPane extends AnimatedPanel {
         this.field_Ab.a(this.field_zb.field_mb, 20, this.field_xb.field_mb, -this.field_xb.field_db);
     }
 
-    final void a(int param0, boolean param1, byte param2, int param3) {
+    final void processScrollInput(int param0, boolean param1, byte param2, int param3) {
         if (param2 <= -109) {
-          this.a(param0, param1, param3, (byte) 10, this.field_zb.field_mb);
+          this.applyScrollInput(param0, param1, param3, (byte) 10, this.field_zb.field_mb);
           return;
         }
         field_Cb = (String) null;
-        this.a(param0, param1, param3, (byte) 10, this.field_zb.field_mb);
+        this.applyScrollInput(param0, param1, param3, (byte) 10, this.field_zb.field_mb);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void layoutScrollPane(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_hb = param2;
         this.field_K = param0;
         this.field_db = param1;
         this.field_mb = param5;
         if (param4 < -121) {
-          this.a(param6, param3, false);
+          this.layoutScrollPaneChildren(param6, param3, false);
           return;
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, boolean param4, int param5) {
+    final boolean updateScrollLayout(int param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         if (param3 > -71) {
           return true;
         }
-        return this.a(param5, param1, param2, -116, param0, this.field_zb.field_mb, param4);
+        return this.updateScrollLayoutInternal(param5, param1, param2, -116, param0, this.field_zb.field_mb, param4);
     }
 
-    private final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
+    private final boolean updateScrollLayoutInternal(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var8Lifetime1;
         if (param2) {
           var8 = 1;
           this.field_xb.layoutChildren(this.field_zb.field_mb, true, var8 != 0, param0);
-          this.a(param4, false, param1, (byte) 10, param5);
+          this.applyScrollInput(param4, false, param1, (byte) 10, param5);
           if (param3 > -113) {
             return false;
           }
@@ -101,14 +101,14 @@ final class ScrollPane extends AnimatedPanel {
           }
         }
         this.field_xb.layoutChildren(this.field_zb.field_mb, true, var8Lifetime1 != 0, param0);
-        this.a(param4, false, param1, (byte) 10, param5);
+        this.applyScrollInput(param4, false, param1, (byte) 10, param5);
         if (param3 > -113) {
           return false;
         }
         return var8Lifetime1 != 0;
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void layoutScrollPaneChildren(int param0, int param1, boolean param2) {
         this.field_zb.field_mb = this.field_mb;
         this.field_zb.field_K = -param1 + (this.field_K - param0);
         this.field_xb.field_hb = 0;
@@ -119,7 +119,7 @@ final class ScrollPane extends AnimatedPanel {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, TiledNineSlicePainter param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, TiledNineSlicePainter param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, TiledNineSlicePainter param19) {
+    final static void configureSharedMenuStyle(int param0, BitmapFont param1, TiledNineSlicePainter param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, TiledNineSlicePainter param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, TiledNineSlicePainter param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -183,7 +183,7 @@ final class ScrollPane extends AnimatedPanel {
         }
     }
 
-    final static AccountRequestResult a(byte param0, boolean param1) {
+    final static AccountRequestResult createAccountSuccessResult(byte param0, boolean param1) {
         AccountRequestResult var2 = null;
         AccountRequestResult var2Lifetime1;
         if (param0 == 93) {
@@ -223,7 +223,7 @@ final class ScrollPane extends AnimatedPanel {
         field_Eb = (String) null;
     }
 
-    final static void f(byte param0) {
+    final static void tickIntroSequence(byte param0) {
         int fieldTemp$0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_88_0 = 0;
@@ -243,7 +243,7 @@ final class ScrollPane extends AnimatedPanel {
             }
           }
           if (param0 != 93) {
-            ScrollPane.f((byte) -67);
+            ScrollPane.tickIntroSequence((byte) -67);
           }
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (TextReplacementEntry.field_j == 13) {
@@ -410,7 +410,7 @@ final class ScrollPane extends AnimatedPanel {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static AccountRequestResult $cfr$intArgs$a$be17d4c2d3e3(int param0, boolean param1) {
+    final static AccountRequestResult createAccountSuccessResultFullInts(int param0, boolean param1) {
         AccountRequestResult var2 = null;
         AccountRequestResult var2Lifetime1;
         if (param0 == 93) {

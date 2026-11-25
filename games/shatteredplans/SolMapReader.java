@@ -262,7 +262,7 @@ final class SolMapReader implements MapGenerator {
         if (ShatteredPlansClient.field_K) {
           DateInputWidget.field_I.field_xb.field_w = var9Lifetime1 - DateInputWidget.field_I.field_xb.field_db;
         }
-        DateInputWidget.field_I.a(param1 * 2 * param3, true, (byte) -114, param3);
+        DateInputWidget.field_I.processScrollInput(param1 * 2 * param3, true, (byte) -114, param3);
         stackIn_46_0 = (var9Lifetime1 == DateInputWidget.field_I.field_xb.field_w + DateInputWidget.field_I.field_xb.field_db);
         ShatteredPlansClient.field_K = stackIn_46_0;
         return (ChatHistoryEntry) (var4);

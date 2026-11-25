@@ -50,7 +50,7 @@ final class SocialListPanel extends AnimatedPanel {
     final void layoutSocialListControls(int param0, int param1, int param2, int param3) {
         int var5 = (this.field_K + param0) / 2;
         int var6 = this.field_mb - param3;
-        this.field_Db.a(this.field_K, 0, 0, param0, param2 ^ -126, var6 - param0, param1);
+        this.field_Db.layoutScrollPane(this.field_K, 0, 0, param0, param2 ^ -126, var6 - param0, param1);
         this.field_Fb.field_mb = param3;
         this.field_Fb.field_hb = param2;
         this.field_Fb.field_K = -param0 + var5;

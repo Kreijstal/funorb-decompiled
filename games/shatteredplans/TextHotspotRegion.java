@@ -39,7 +39,7 @@ final class TextHotspotRegion extends IntrusiveNode {
             return;
           }
           PlayerStats.field_k = 0;
-          SliderPainter.b((byte) 93);
+          SliderPainter.advanceTutorialLine((byte) 93);
           var9 = new ObjectList();
           var3 = IntroGlowPoint.readTutorialScene((byte) -106);
           while (var3 != null) {

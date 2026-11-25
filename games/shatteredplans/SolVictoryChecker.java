@@ -384,7 +384,7 @@ final class SolVictoryChecker extends VictoryChecker {
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             if (ClientLobbyResources.field_f == null &&
-              !TextHotspotWidget.a(param2, -2)) {
+              !TextHotspotWidget.pollAccountSocketConnection(param2, -2)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
