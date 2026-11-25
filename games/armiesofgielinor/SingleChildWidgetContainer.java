@@ -115,7 +115,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         }
     }
 
-    StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         StringBuilder stackIn_6_0 = null;
@@ -178,7 +178,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             discarded$13 = param3.append(' ');
           }
           if (null != this.child) {
-            this.child.a(param1 + 1, param3, 26477, param0);
+            this.child.appendDebugTree(param1 + 1, param3, 26477, param0);
           } else {
             discarded$12 = param3.append("null");
           }

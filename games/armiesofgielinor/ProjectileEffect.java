@@ -51,7 +51,7 @@ final class ProjectileEffect {
               var5 = -((var8 * 4 + (-24 + this.remainingTicks)) * 5) + (this.field_g + AttackEvent.nextBoundedInt(false, var8 + 1, PreferencesWriteRequest.field_n));
               var6 = this.field_d;
             }
-            GrowableIntArray.$cfr$intArgs$a$e0bc7fdb2979(var7, -(var8 * 40) + 400, 56, GradientUiRenderer.particlePalettes[param0 + 1], -(5 * var8) + 63, var5, var6);
+            GrowableIntArray.drawProjectedPaletteCircleWithIntGuard(var7, -(var8 * 40) + 400, 56, GradientUiRenderer.particlePalettes[param0 + 1], -(5 * var8) + 63, var5, var6);
             continue;
           }
           break;

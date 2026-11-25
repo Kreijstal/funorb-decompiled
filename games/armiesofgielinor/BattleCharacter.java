@@ -592,7 +592,7 @@ final class BattleCharacter {
                 } else {
                   stackIn_49_6 = -1;
                 }
-                GrowableIntArray.$cfr$intArgs$a$e0bc7fdb2979(stackIn_42_0, stackIn_43_1, stackIn_45_2, stackIn_45_3, stackIn_46_4, stackIn_48_5 * stackIn_49_6, this.destinationY);
+                GrowableIntArray.drawProjectedPaletteCircleWithIntGuard(stackIn_42_0, stackIn_43_1, stackIn_45_2, stackIn_45_3, stackIn_46_4, stackIn_48_5 * stackIn_49_6, this.destinationY);
               }
               var12++;
             }

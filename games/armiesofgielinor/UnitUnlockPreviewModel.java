@@ -228,7 +228,7 @@ final class UnitUnlockPreviewModel {
         var14 = var14 + KeyedLoginCredentials.field_g[this.field_f];
         var15.scaleGeometry(param0, param0, param0);
         if (param5) {
-          GrowableIntArray.a(124, var15);
+          GrowableIntArray.assignSharedFaceColorArrays(124, var15);
         }
         var15.drawPerspective(var8, var9, var10, var11, var12, var14, var13);
     }

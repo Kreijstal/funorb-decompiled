@@ -13,12 +13,12 @@ class IntrusiveNode {
     static boolean field_h;
     long key;
 
-    final static int a(int param0, int param1) {
+    final static int getCampaignMissionCount(int param0, int param1) {
         int var2 = -103 / ((27 - param0) / 46);
         return GameUiOverlaySupport.campaigns[param1].missions.length;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawMovementAndSpellRangeOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_38_0 = 0;
         int var6;
         int[] var7;
@@ -192,7 +192,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final static void a(int param0, PowerOfTwoSupport param1, byte param2) {
+    final static void sendFourIntRequest(int param0, PowerOfTwoSupport param1, byte param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -204,7 +204,7 @@ class IntrusiveNode {
           var5.writeByte(1, param1.field_r);
           var5.writeSignedSmart((byte) 60, param1.field_l);
           if (param2 != 105) {
-            IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 58, (String) null, -67L);
+            IntrusiveNode.setBrowserCookie((java.applet.Applet) null, (String) null, (byte) 58, (String) null, -67L);
           }
           var5.writeInt((byte) -54, param1.field_w);
           var5.writeInt((byte) -53, param1.field_m);
@@ -240,7 +240,7 @@ class IntrusiveNode {
         this.next = null;
     }
 
-    final static void a(java.applet.Applet param0, String param1, byte param2, String param3, long param4) {
+    final static void setBrowserCookie(java.applet.Applet param0, String param1, byte param2, String param3, long param4) {
         try {
           RuntimeException stackIn_10_0 = null;
           StringBuilder stackIn_10_1 = null;
@@ -312,14 +312,14 @@ class IntrusiveNode {
         }
     }
 
-    final static int a(int param0, boolean param1, boolean param2, int param3) {
+    final static int pollAccountFlowAction(int param0, boolean param1, boolean param2, int param3) {
         if (!param2) {
-          IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 39, (String) null, -75L);
+          IntrusiveNode.setBrowserCookie((java.applet.Applet) null, (String) null, (byte) 39, (String) null, -75L);
         }
         return LogoFaceSortSupport.pollAccountFlowAction(-3);
     }
 
-    final static int b(int param0) {
+    final static int serviceResourceConnection(int param0) {
         CheckMarkWidgetPainter.field_c.serviceProviders(18199);
         if (!ScrollWidgetContainer.field_T.poll(true)) {
           return IntroSequence.pollResourceConnection((byte) -120);

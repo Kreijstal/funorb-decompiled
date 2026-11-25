@@ -461,7 +461,7 @@ final class QuickChatCategoryRepository {
             ActionRequest.unitModels[var3] = array$0;
             DiskCacheRequest.unitProjectionVariants[var3] = false;
             var8 = ActionRequest.field_m[var3][0];
-            var10 = ArrayWidgetContainer.a(var8, 235, var9);
+            var10 = ArrayWidgetContainer.loadUntexturedMesh(var8, 235, var9);
             var5 = var10;
             if (var10 != null) {
               if (76 == var3) {
@@ -487,7 +487,7 @@ final class QuickChatCategoryRepository {
           }
           for (var3Lifetime1 = 0; var3Lifetime1 < FullscreenConfirmationDialog.field_W.length; var3Lifetime1++) {
             var11 = FullscreenConfirmationDialog.field_W[var3Lifetime1];
-            var12 = ArrayWidgetContainer.a(var11, 235, var9);
+            var12 = ArrayWidgetContainer.loadUntexturedMesh(var11, 235, var9);
             var5Lifetime1 = var12;
             stackIn_23_0 = var12;
             if (stackIn_23_0.faceRenderTypes != null) {

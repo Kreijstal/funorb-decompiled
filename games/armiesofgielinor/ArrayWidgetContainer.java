@@ -57,7 +57,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         }
     }
 
-    final static MeshData a(String param0, int param1, String param2) {
+    final static MeshData loadUntexturedMesh(String param0, int param1, String param2) {
         MeshData var3 = null;
         RuntimeException var3_ref = null;
         MeshData stackIn_6_0 = null;
@@ -69,7 +69,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 235) {
-            ArrayWidgetContainer.a(124);
+            ArrayWidgetContainer.increaseEffectsGain(124);
           }
           var3 = MeshData.load(SummonEvent.field_B, param0, param2);
           if (var3 != null) {
@@ -97,7 +97,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         }
     }
 
-    final static void a(boolean param0, boolean param1, Unit param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawUnitInfoPanel(boolean param0, boolean param1, Unit param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_35_0 = 0;
         int stackIn_44_0 = 0;
         RgbSprite[] stackIn_54_0 = null;
@@ -519,7 +519,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         }
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -531,7 +531,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         try {
           if (this.a(param3, param0, (byte) 55, param1)) {
             this.a(param0, param3, true, param1);
-            this.a(param3, -121, param1, param0);
+            this.appendChildDebugTrees(param3, -121, param1, param0);
           }
           if (param2 != 26477) {
             this.handleKey((Widget) null, -91, '￨', -125);
@@ -580,7 +580,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             return false;
           }
           if (obfuscationGuard <= 79) {
-            ArrayWidgetContainer.b(45, -36);
+            ArrayWidgetContainer.playSpellSound(45, -36);
           }
           childIndex = this.children.length - 1;
           while (0 <= childIndex) {
@@ -672,7 +672,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
 
     abstract void layoutChildren(byte obfuscationGuard);
 
-    private final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    private final void appendChildDebugTrees(Hashtable param0, int param1, StringBuilder param2, int param3) {
         int var6 = 0;
         StringBuilder discarded$6 = null;
         int var8 = 0;
@@ -704,7 +704,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
               discarded$8 = param2.append(' ');
             }
             if (var7 != null) {
-              var7.a(param3 + 1, param2, 26477, param0);
+              var7.appendDebugTree(param3 + 1, param2, 26477, param0);
             } else {
               discarded$7 = param2.append("null");
             }
@@ -730,7 +730,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void playSpellSound(int param0, int param1) {
         if (param1 < 0) {
           return;
         }
@@ -1018,7 +1018,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         }
     }
 
-    final static void a(int param0) {
+    final static void increaseEffectsGain(int param0) {
         int var1 = 0;
         if (ResourceProtocolClient.effectsGain >= 224) {
           EffectsGainSupport.setEffectsGain(256, (byte) -60);

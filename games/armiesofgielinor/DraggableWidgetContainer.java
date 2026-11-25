@@ -177,7 +177,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         StringBuilder discarded$62 = null;
         StringBuilder discarded$63 = null;
         RuntimeException var5 = null;

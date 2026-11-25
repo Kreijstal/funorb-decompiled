@@ -8,7 +8,7 @@ abstract class ArchiveProvider {
     static ClientUiComponent field_d;
     static String field_c;
 
-    final static ArgbSprite a(byte param0, RgbSprite param1) {
+    final static ArgbSprite downsampleQuarterSizeArgb(byte param0, RgbSprite param1) {
         int var9 = 0;
         int var19 = 0;
         ArgbSprite stackIn_24_0 = null;
@@ -48,7 +48,7 @@ abstract class ArchiveProvider {
           var6 = var3 >> 2;
           if (param0 != 107) {
             var21 = (String) null;
-            ArchiveProvider.a((String) null, (byte) 84);
+            ArchiveProvider.validateEmailDomain((String) null, (byte) 84);
           }
           var7 = new ArgbSprite(var5, var6);
           var23 = var7.pixels;
@@ -113,13 +113,13 @@ abstract class ArchiveProvider {
         field_a = null;
         if (param0) {
           RgbSprite var2 = (RgbSprite) null;
-          ArchiveProvider.a((byte) 24, (RgbSprite) null);
+          ArchiveProvider.downsampleQuarterSizeArgb((byte) 24, (RgbSprite) null);
         }
         mapRepository = null;
         field_d = null;
     }
 
-    final static ProceduralMapSupport a(String param0, byte param1) {
+    final static ProceduralMapSupport validateEmailDomain(String param0, byte param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

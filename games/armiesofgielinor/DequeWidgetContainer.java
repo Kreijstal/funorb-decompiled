@@ -324,7 +324,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
         return null != this.getFocusedChild((byte) 94) ? true : false;
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_6_0 = null;
@@ -399,7 +399,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
             for (var7 = 0; param3 >= var7; var7++) {
               discarded$4 = param2.append(' ');
             }
-            var6.a(1 + param3, param2, 26477, param0);
+            var6.appendDebugTree(1 + param3, param2, 26477, param0);
             var6 = (Widget) (var5.next(50));
           }
           return;

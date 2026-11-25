@@ -149,7 +149,7 @@ class InteractiveWidget extends Widget {
         field_F = null;
     }
 
-    final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         StringBuilder activeAppendResult = null;
         StringBuilder disabledAppendResult = null;
         RuntimeException failure = null;
@@ -293,7 +293,7 @@ class InteractiveWidget extends Widget {
             return;
           }
           guardTable = (Hashtable) null;
-          this.a(78, (StringBuilder) null, 126, (Hashtable) null);
+          this.appendDebugTree(78, (StringBuilder) null, 126, (Hashtable) null);
           return;
         }
         this.focused = false;
@@ -302,7 +302,7 @@ class InteractiveWidget extends Widget {
             return;
           }
           unfocusedGuardTable = (Hashtable) null;
-          this.a(78, (StringBuilder) null, 126, (Hashtable) null);
+          this.appendDebugTree(78, (StringBuilder) null, 126, (Hashtable) null);
           return;
         }
         if (this.listener instanceof WidgetFocusListener) {
@@ -311,14 +311,14 @@ class InteractiveWidget extends Widget {
             return;
           }
           noListenerGuardTable = (Hashtable) null;
-          this.a(78, (StringBuilder) null, 126, (Hashtable) null);
+          this.appendDebugTree(78, (StringBuilder) null, 126, (Hashtable) null);
           return;
         }
         if (obfuscationGuard == 1) {
           return;
         }
         nonFocusListenerGuardTable = (Hashtable) null;
-        this.a(78, (StringBuilder) null, 126, (Hashtable) null);
+        this.appendDebugTree(78, (StringBuilder) null, 126, (Hashtable) null);
     }
 
     public InteractiveWidget() {

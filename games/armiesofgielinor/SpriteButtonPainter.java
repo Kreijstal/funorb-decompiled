@@ -210,7 +210,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
     }
 
     static {
-        CachedArchiveProvider.a((byte) -81, 50);
+        CachedArchiveProvider.ensureClassInitialized((byte) -81, 50);
         field_z = new int[]{20, 10, 5};
         field_w = "Store";
     }

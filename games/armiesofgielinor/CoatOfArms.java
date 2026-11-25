@@ -187,7 +187,7 @@ final class CoatOfArms {
           }
           MatchSetupPanel.drawCoatOfArms(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
           NumericDateInputWidget.field_P.bindAsRasterTarget();
-          stackIn_5_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
+          stackIn_5_0 = ArchiveProvider.downsampleQuarterSizeArgb((byte) 107, DropTargetWidgetContainer.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

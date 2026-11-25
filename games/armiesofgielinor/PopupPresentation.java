@@ -217,7 +217,7 @@ final class PopupPresentation implements EventPresentation {
           }
           if (param3.eventKind == 25) {
             this.field_n = 7;
-            ArrayWidgetContainer.b(-55, 46);
+            ArrayWidgetContainer.playSpellSound(-55, 46);
           } else {
             if (param3.eventKind == 26) {
               this.field_n = 7;

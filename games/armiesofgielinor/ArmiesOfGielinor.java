@@ -1410,7 +1410,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           NetworkResourceRequest.releaseStatics(obfuscationGuard ^ 29322);
           SectorCacheStore.releaseStatics(1);
           DiskCacheRequest.releaseStatics(obfuscationGuard ^ -61);
-          CachedArchiveProvider.e(obfuscationGuard - 56);
+          CachedArchiveProvider.releaseStatics(obfuscationGuard - 56);
           AccountNameSelectionSupport.releaseStatics(236611664);
           ResourceRequest.releaseStatics((byte) -126);
           LeapYearSupport.releaseStatics((byte) -5);
@@ -1496,7 +1496,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ScrollWidgetContainer.releaseStatics(false);
           SpriteScrollBar.releaseStatics((byte) 68);
           DirectByteStorage.releaseStatics(1);
-          GrowableIntArray.a((byte) -28);
+          GrowableIntArray.releaseStatics((byte) -28);
           BitmapTextLayout.releaseStatics(true);
           DraggableWidgetContainer.releaseStatics(0);
           DropTargetWidgetContainer.releaseStatics(obfuscationGuard ^ -36);

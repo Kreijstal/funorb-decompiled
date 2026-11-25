@@ -103,7 +103,7 @@ class Widget extends IntrusiveNode {
           if (this.painter != null) {
             discarded$4 = param3.append(" renderer=");
             if (this.painter instanceof Widget) {
-              param3 = this.a(1 + param0, param3, 26477, param1);
+              param3 = this.appendDebugTree(1 + param0, param3, 26477, param1);
               if (var6 != 0) {
                 discarded$5 = param3.append(this.painter);
               }
@@ -114,7 +114,7 @@ class Widget extends IntrusiveNode {
           if (null != this.listener) {
             discarded$6 = param3.append(" listener=");
             if (this.listener instanceof Widget) {
-              param3 = this.a(1 + param0, param3, 26477, param1);
+              param3 = this.appendDebugTree(1 + param0, param3, 26477, param1);
               if (var6 == 0) {
                 return;
               }
@@ -258,7 +258,7 @@ class Widget extends IntrusiveNode {
         return !this.hovered ? null : this.tooltipText;
     }
 
-    StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
+    StringBuilder appendDebugTree(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -647,7 +647,7 @@ class Widget extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a(0, new StringBuilder(), 26477, new Hashtable()).toString();
+        return this.appendDebugTree(0, new StringBuilder(), 26477, new Hashtable()).toString();
     }
 
     void setBounds(int x, int width, int y, int obfuscationGuard, int height) {

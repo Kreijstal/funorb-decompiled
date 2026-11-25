@@ -28,7 +28,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     private boolean field_l;
     private long field_v;
 
-    final void b(int param0) {
+    final void serviceBackgroundGroups(int param0) {
         ResourceRequest discarded$3 = null;
         ResourceRequest discarded$2 = null;
         ResourceRequest discarded$1 = null;
@@ -63,7 +63,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               while (var3 != null) {
                 var4 = (int)var3.key;
                 if (0 == this.field_C[var4]) {
-                  discarded$3 = this.a(1, var4, 1);
+                  discarded$3 = this.getValidatedGroupRequest(1, var4, 1);
                 }
                 if (this.field_C[var4] == 0) {
                   var2_int = 0;
@@ -79,7 +79,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
                 if (250 > this.field_A.queuedCount) {
                   if (this.field_C[this.field_s] == 0) {
-                    discarded$2 = this.a(1, this.field_s, 1);
+                    discarded$2 = this.getValidatedGroupRequest(1, this.field_s, 1);
                   }
                   if (this.field_C[this.field_s] == 0) {
                     var6 = new IntrusiveNode();
@@ -106,7 +106,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 while (var3Lifetime1 != null) {
                   var4Lifetime1 = (int)var3Lifetime1.key;
                   if (1 != this.field_C[var4Lifetime1]) {
-                    discarded$1 = this.a(1, var4Lifetime1, 2);
+                    discarded$1 = this.getValidatedGroupRequest(1, var4Lifetime1, 2);
                   }
                   if (this.field_C[var4Lifetime1] != 1) {
                     var2_intLifetime1 = 0;
@@ -123,7 +123,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                         break scanLoop1;
                       }
                       if (this.field_C[this.field_s] != 1) {
-                        discarded$0 = this.a(1, this.field_s, 2);
+                        discarded$0 = this.getValidatedGroupRequest(1, this.field_s, 2);
                       }
                       if (this.field_C[this.field_s] != 1) {
                         var7 = new IntrusiveNode();
@@ -270,7 +270,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    private final ResourceRequest a(int param0, int param1, int param2) {
+    private final ResourceRequest getValidatedGroupRequest(int param0, int param1, int param2) {
         ResourceRequest stackIn_3_0 = null;
         Object stackIn_76_0 = null;
         Object stackIn_84_0 = null;
@@ -461,10 +461,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void ensureClassInitialized(byte param0, int param1) {
         try {
           if (param0 > -43) {
-            CachedArchiveProvider.e(41);
+            CachedArchiveProvider.releaseStatics(41);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bm.J(" + param0 + ',' + param1 + ')');
@@ -479,13 +479,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
         byte[] stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.a(1, groupId, 0);
+          var3 = this.getValidatedGroupRequest(1, groupId, 0);
           if (var3 == null) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
           if (obfuscationGuard != 4) {
-            this.b(-9);
+            this.serviceBackgroundGroups(-9);
           }
           var4 = var3.getBytes((byte) -113);
           var3.unlink(121);
@@ -524,7 +524,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         spellMenuRoot = null;
         if (param0 > -33) {
@@ -538,7 +538,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final void c(int param0) {
+    final void prefetchAllGroups(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -560,7 +560,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final void d(int param0) {
+    final void servicePrefetchRequests(int param0) {
         ResourceRequest discarded$0 = null;
         ResourceRequest discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -585,10 +585,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (var4 < this.index.groupCapacity) {
                 if (this.index.fileCounts[var4] != 0) {
                   if (0 == this.field_C[var4]) {
-                    discarded$0 = this.a(1, var4, 1);
+                    discarded$0 = this.getValidatedGroupRequest(1, var4, 1);
                   }
                   if (this.field_C[var4] == -1) {
-                    discarded$1 = this.a(1, var4, 2);
+                    discarded$1 = this.getValidatedGroupRequest(1, var4, 2);
                   }
                   if (1 == this.field_C[var4]) {
                     var2.unlink(-121);

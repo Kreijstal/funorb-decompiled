@@ -21,7 +21,7 @@ final class GrowableIntArray {
         this.set(value, this.lastIndex + 1, obfuscationGuard ^ -27002);
     }
 
-    final static void a(int param0, ModelMesh param1) {
+    final static void assignSharedFaceColorArrays(int param0, ModelMesh param1) {
         try {
           if (param0 <= 123) {
             field_c = false;
@@ -46,7 +46,7 @@ final class GrowableIntArray {
 
     final int size(int obfuscationGuard) {
         if (obfuscationGuard > -54) {
-          GrowableIntArray.b((byte) 62);
+          GrowableIntArray.canSendSessionPackets((byte) 62);
           return 1 + this.lastIndex;
         }
         return 1 + this.lastIndex;
@@ -73,14 +73,14 @@ final class GrowableIntArray {
         this.lastIndex = this.lastIndex - 1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 == -28) {
           field_f = null;
           return;
         }
         int[] var2 = (int[]) null;
-        GrowableIntArray.$cfr$intArgs$a$e0bc7fdb2979(3, 71, -110, (int[]) null, 86, 72, -80);
+        GrowableIntArray.drawProjectedPaletteCircleWithIntGuard(3, 71, -110, (int[]) null, 86, 72, -80);
         field_f = null;
     }
 
@@ -135,7 +135,7 @@ final class GrowableIntArray {
         return var3;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean canSendSessionPackets(byte param0) {
         int var1 = -84 % ((-51 - param0) / 32);
         if (null == MoveAttackRequest.sessionSocket) {
           return false;
@@ -146,7 +146,7 @@ final class GrowableIntArray {
         return false;
     }
 
-    final static void a(int param0, int param1, byte param2, int[] param3, int param4, int param5, int param6) {
+    final static void drawProjectedPaletteCircle(int param0, int param1, byte param2, int[] param3, int param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -168,7 +168,7 @@ final class GrowableIntArray {
           var10 = TriangleRasterizer.cosineTable[150];
           if (param2 != 56) {
             var15 = (ModelMesh) null;
-            GrowableIntArray.a(104, (ModelMesh) null);
+            GrowableIntArray.assignSharedFaceColorArrays(104, (ModelMesh) null);
           }
           var11 = -(param6 * var9) + var10 * param0 >> 16;
           var12 = param0 * var9 + param6 * var10 >> 16;
@@ -199,7 +199,7 @@ final class GrowableIntArray {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e0bc7fdb2979(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6) {
+    final static void drawProjectedPaletteCircleWithIntGuard(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -221,7 +221,7 @@ final class GrowableIntArray {
           var10 = TriangleRasterizer.cosineTable[150];
           if (param2 != 56) {
             var15 = (ModelMesh) null;
-            GrowableIntArray.a(104, (ModelMesh) null);
+            GrowableIntArray.assignSharedFaceColorArrays(104, (ModelMesh) null);
           }
           var11 = -(param6 * var9) + var10 * param0 >> 16;
           var12 = param0 * var9 + param6 * var10 >> 16;

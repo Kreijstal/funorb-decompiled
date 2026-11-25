@@ -50,7 +50,7 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
             }
             var8 = CheckMarkWidgetPainter.field_c.openProvider(param3, (SectorCacheStore) (var7), param0, 0, (SectorCacheStore) (var6));
             if (param4) {
-              var8.c(31637);
+              var8.prefetchAllGroups(31637);
             }
             stackIn_17_0 = new ResourceArchive(var8, param1, param5);
             return stackIn_17_0;

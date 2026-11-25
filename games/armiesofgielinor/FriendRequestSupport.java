@@ -56,7 +56,7 @@ final class FriendRequestSupport {
         try {
           var5 = (PowerOfTwoSupport) (PrintVictoryConditionsConsoleCommand.field_F.first((byte) 94));
           while (var5 != null) {
-            IntrusiveNode.a(param0, var5, (byte) 105);
+            IntrusiveNode.sendFourIntRequest(param0, var5, (byte) 105);
             var5 = (PowerOfTwoSupport) (PrintVictoryConditionsConsoleCommand.field_F.next((byte) 123));
           }
           if (!param1) {

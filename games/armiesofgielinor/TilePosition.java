@@ -86,7 +86,7 @@ final class TilePosition extends IntrusiveNode {
         try {
           var3 = "rvnadlm";
           var4 = -1L;
-          IntrusiveNode.a(param1, var3, (byte) 120, var2, var4);
+          IntrusiveNode.setBrowserCookie(param1, var3, (byte) 120, var2, var4);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

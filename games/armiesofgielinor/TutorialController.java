@@ -241,7 +241,7 @@ final class TutorialController {
                     if (UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int] > -1) {
                       if (BufferedSocket.field_j >= 2 &&
                         CampaignLookupSupport.heldKeys[82]) {
-                        ArrayWidgetContainer.b(119, UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int]);
+                        ArrayWidgetContainer.playSpellSound(119, UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int]);
                         return;
                       }
                       if (ClientContextMenu.field_k != 0) {
@@ -1827,7 +1827,7 @@ final class TutorialController {
                                                                     }
                                                                     if (this.selectionState.isIncrementKeyPressed(-98) &&
                                                                       ResourceProtocolClient.effectsGain < 256) {
-                                                                      ArrayWidgetContainer.a(30);
+                                                                      ArrayWidgetContainer.increaseEffectsGain(30);
                                                                       var5 = 1;
                                                                     }
                                                                     if (var5 == 0) {
@@ -3518,7 +3518,7 @@ final class TutorialController {
                     var10 = 1;
                     var6Lifetime1 = ConsoleValue.field_b;
                   }
-                  this.drawCampaignScoreRow((byte) 63, var11, var9[var11] / IntrusiveNode.a(-49, var4), var5Lifetime1, var6Lifetime1, var12);
+                  this.drawCampaignScoreRow((byte) 63, var11, var9[var11] / IntrusiveNode.getCampaignMissionCount(-49, var4), var5Lifetime1, var6Lifetime1, var12);
                   var7 = null;
                 }
                 var5Lifetime1 += 25;
@@ -3528,7 +3528,7 @@ final class TutorialController {
                 if (var10 == 0 &&
                   null != UnitAnimationSelectionSupport.playerProfile) {
                   var6Lifetime1Lifetime1 = ConsoleValue.field_b;
-                  this.drawCampaignScoreRow((byte) 63, -1, UnitAnimationSelectionSupport.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, StructureGlowRenderer.localAccountName);
+                  this.drawCampaignScoreRow((byte) 63, -1, UnitAnimationSelectionSupport.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.getCampaignMissionCount(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, StructureGlowRenderer.localAccountName);
                 }
                 if (var13 != 0) {
                   var7 = SocketResourceClient.field_s;

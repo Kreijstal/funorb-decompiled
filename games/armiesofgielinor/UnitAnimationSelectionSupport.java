@@ -58,7 +58,7 @@ final class UnitAnimationSelectionSupport {
         BufferedSocket.disableKeyboard((byte) 41);
         LoginMethod.a(-15291);
         DequeWidgetContainer.j(-118);
-        if (GrowableIntArray.b((byte) -88)) {
+        if (GrowableIntArray.canSendSessionPackets((byte) -88)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);
           SessionIoSupport.flushSessionPacketsWithIntGuard(124, 0);
         }

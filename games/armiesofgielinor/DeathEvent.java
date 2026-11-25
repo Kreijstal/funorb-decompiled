@@ -158,7 +158,7 @@ final class DeathEvent extends GameEvent {
           MatchSetupPanel.drawCoatOfArms(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);
           NumericDateInputWidget.field_P.bindAsRasterTarget();
           if (param3 == 17813) {
-            stackIn_4_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
+            stackIn_4_0 = ArchiveProvider.downsampleQuarterSizeArgb((byte) 107, DropTargetWidgetContainer.field_J);
             return (RgbSprite) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (RgbSprite) null;

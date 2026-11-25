@@ -68,7 +68,7 @@ final class LocalAccountNameSupport {
             }
             var5 = SpriteDropdownMenu.a(var3, 15026);
             if (var5 == null) {
-              return ArchiveProvider.a(var4, (byte) 104);
+              return ArchiveProvider.validateEmailDomain(var4, (byte) 104);
             }
             stackIn_14_0 = var5;
             return stackIn_14_0;

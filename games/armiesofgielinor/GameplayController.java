@@ -3035,7 +3035,7 @@ final class GameplayController {
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
-              ArrayWidgetContainer.a(false, true, this.field_W, 0, 253, this.field_fb, this.field_i, 0);
+              ArrayWidgetContainer.drawUnitInfoPanel(false, true, this.field_W, 0, 253, this.field_fb, this.field_i, 0);
             }
           }
           if (this.selectedTileIndex > -1) {
@@ -3043,7 +3043,7 @@ final class GameplayController {
           }
           if (null != this.selectedUnit) {
             stackIn_95_0 = (~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer);
-            ArrayWidgetContainer.a(stackIn_95_0, true, this.selectedUnit, this.field_qb, 253, this.field_fb, this.field_fb, 0);
+            ArrayWidgetContainer.drawUnitInfoPanel(stackIn_95_0, true, this.selectedUnit, this.field_qb, 253, this.field_fb, this.field_fb, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

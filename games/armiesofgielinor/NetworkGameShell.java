@@ -214,7 +214,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (obfuscationGuard >= -68) {
             this.forceDisconnect = true;
           }
-          actionCode = IntrusiveNode.a(MouseWheelSource.field_d, alternateUiMode, true, ConsoleExpression.field_m);
+          actionCode = IntrusiveNode.pollAccountFlowAction(MouseWheelSource.field_d, alternateUiMode, true, ConsoleExpression.field_m);
           if (actionCode == 0) {
             throw new IllegalStateException();
           }
@@ -549,7 +549,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           0 == ModalDialogHost.field_K) {
           previousResourceFailure = (ModalDialogHost.field_K != -1) ? 0 : 1;
           hadResourceFailure = previousResourceFailure;
-          ModalDialogHost.field_K = IntrusiveNode.b(86);
+          ModalDialogHost.field_K = IntrusiveNode.serviceResourceConnection(86);
           if (hadResourceFailure != 0 &&
             ModalDialogHost.field_K == 0 &&
             11 == SoundCache.field_b &&

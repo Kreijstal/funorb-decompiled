@@ -164,7 +164,7 @@ final class LoginMethod {
 
     final void persistLoginMethod(int obfuscationGuard, java.applet.Applet applet) {
         try {
-          IntrusiveNode.a(applet, this.cookieValue, (byte) 29, "jagex-last-login-method", 31536000L);
+          IntrusiveNode.setBrowserCookie(applet, this.cookieValue, (byte) 29, "jagex-last-login-method", 31536000L);
           if (obfuscationGuard != -137) {
             LoginMethod.a((byte) 95);
           }

@@ -156,7 +156,7 @@ final class ArchiveMasterIndex {
         }
         for (var2 = 0; this.providers.length > var2; var2++) {
           if (null != this.providers[var2]) {
-            this.providers[var2].d(-71);
+            this.providers[var2].servicePrefetchRequests(-71);
           }
         }
         if (obfuscationGuard != 18199) {
@@ -166,7 +166,7 @@ final class ArchiveMasterIndex {
         var2Lifetime1 = var4;
         while (var4 < this.providers.length) {
           if (this.providers[var4] != null) {
-            this.providers[var4].b(-26132);
+            this.providers[var4].serviceBackgroundGroups(-26132);
           }
           var4++;
         }
