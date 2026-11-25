@@ -362,7 +362,7 @@ final class PasswordValidator extends TextFieldValidator {
                       if (0 != (1 << var18 & SentenceCaseSupport.field_a[AccountRegistrationForm.field_X][var9_int])) {
                         if (var13Lifetime1 != 0 &&
                           var12 != null) {
-                          var12 = EmailCheckResult.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), FixedSquareRootSupport.field_a[var18]});
+                          var12 = EmailCheckResult.formatTemplate(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), FixedSquareRootSupport.field_a[var18]});
                         } else {
                           var12 = FixedSquareRootSupport.field_a[var18];
                         }
@@ -375,10 +375,10 @@ final class PasswordValidator extends TextFieldValidator {
                   }
                 }
               } else {
-                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int])});
+                var12 = EmailCheckResult.formatTemplate(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int])});
               }
               if (var12 != null) {
-                var19 = EmailCheckResult.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
+                var19 = EmailCheckResult.formatTemplate(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
                 var12 = var19;
                 var13Lifetime1Lifetime1 = DateInputWidget.field_E.textWidth(var19);
                 if (var13Lifetime1Lifetime1 + param4 > IgnoreListLookupSupport.a(true, 620)) {

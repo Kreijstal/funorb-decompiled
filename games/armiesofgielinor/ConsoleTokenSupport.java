@@ -558,7 +558,7 @@ final class ConsoleTokenSupport {
         return;
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isValidDecimalInt(int param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;

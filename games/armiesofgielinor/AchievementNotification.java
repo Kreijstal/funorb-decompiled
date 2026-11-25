@@ -491,12 +491,12 @@ final class AchievementNotification extends IntrusiveNode {
                 var31 = var31 + GradientSpanBlendSupport.field_d * var39Lifetime1;
               }
               if (var12.invitationReceived) {
-                var12.field_Ib.text = EmailCheckResult.a(4800, ToastMessage.field_n, new String[]{var32});
+                var12.field_Ib.text = EmailCheckResult.formatTemplate(4800, ToastMessage.field_n, new String[]{var32});
                 var12.field_Ib.setBounds(GradientSpanBlendSupport.field_d, -20500, -(2 * MusicPatchNode.field_l) + var12.width, var31, MusicPatchNode.field_l);
                 var31 = var31 + GradientSpanBlendSupport.field_d;
               }
               if (var12.joinRequestSent) {
-                var12.field_sc.text = EmailCheckResult.a(4800, GameplayController.field_A, new String[]{var32});
+                var12.field_sc.text = EmailCheckResult.formatTemplate(4800, GameplayController.field_A, new String[]{var32});
                 var12.field_sc.setBounds(GradientSpanBlendSupport.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var31, MusicPatchNode.field_l);
                 var31 = var31 + GradientSpanBlendSupport.field_d;
               }
@@ -658,7 +658,7 @@ final class AchievementNotification extends IntrusiveNode {
               var14.field_m = true;
               var14.unlink(param0 ^ 35);
             } else {
-              LoginCredentials.a((Throwable) null, 78, "A1: " + CampaignProgress.b(false));
+              LoginCredentials.a((Throwable) null, 78, "A1: " + CampaignProgress.formatPacketDiagnostic(false));
               TextSplitSupport.closeSessionSocket((byte) -127);
             }
           }

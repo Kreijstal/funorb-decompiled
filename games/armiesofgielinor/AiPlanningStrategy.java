@@ -73,7 +73,7 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder1) {
             AiWeightProfile.field_d.inputEnabled = true;
-            CalendarSupport.field_c.text = EmailCheckResult.a(4800, DisplayModeOptionPainter.field_A, new String[]{EmailValidator.currentLocationLabel});
+            CalendarSupport.field_c.text = EmailCheckResult.formatTemplate(4800, DisplayModeOptionPainter.field_A, new String[]{EmailValidator.currentLocationLabel});
             ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first((byte) 109));
@@ -171,11 +171,11 @@ abstract class AiPlanningStrategy {
                       !NodeIterator.field_a) {
                       if (!MonotonicClockSupport.field_d) {
                         var17 = FullscreenMembershipDialog.activeContextMenu;
-                        var18 = EmailCheckResult.a(4800, MusicPatchNode.field_k, new String[]{var16});
+                        var18 = EmailCheckResult.formatTemplate(4800, MusicPatchNode.field_k, new String[]{var16});
                         var17.menu.addTextAction(8, var18, (byte) -115);
                       }
                       var17Lifetime1 = FullscreenMembershipDialog.activeContextMenu;
-                      var18Lifetime1 = EmailCheckResult.a(4800, DeployRequest.field_w, new String[]{var16});
+                      var18Lifetime1 = EmailCheckResult.formatTemplate(4800, DeployRequest.field_w, new String[]{var16});
                       var17Lifetime1.menu.addTextAction(18, var18Lifetime1, (byte) -100);
                     }
                     var5 = var7;

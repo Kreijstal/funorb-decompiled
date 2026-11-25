@@ -101,7 +101,7 @@ final class RatingLeaderboardRequest extends IntrusiveNode {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String prefixLocalChatBadge(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -111,7 +111,7 @@ final class RatingLeaderboardRequest extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = ResourceArchive.c(TilePosition.field_l, -76, BufferedSocket.field_j);
+          var2_int = ResourceArchive.getChatPrivilegeBadgeType(TilePosition.field_l, -76, BufferedSocket.field_j);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

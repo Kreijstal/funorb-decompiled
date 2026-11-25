@@ -89,7 +89,7 @@ final class CalendarSupport {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         AlphaWidgetContainer.d(false);
         if (GlobalSpell.field_g >= 0) {
-          ReloadPageSupport.field_g.text = EmailCheckResult.a(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
+          ReloadPageSupport.field_g.text = EmailCheckResult.formatTemplate(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
           stackIn_56_0 = NumericDateInputWidget.field_T;
           stackIn_56_1 = true;
           stackIn_57_2 = (param0) && (!param1) && (!WhirlpoolHasher.field_g) && (ToggleWidget.currentRoom == null) && (null == NumericDateInputWidget.roomSetup);

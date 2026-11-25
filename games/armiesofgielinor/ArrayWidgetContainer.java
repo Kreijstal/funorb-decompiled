@@ -178,7 +178,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           }
           if (var11 != var12) {
             SoftwareRaster.fillRectangleBlended(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
-            GradientUiRenderer.drawCenteredSolidText(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
+            GradientUiRenderer.drawCenteredSolidText(EmailCheckResult.formatTemplate(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
           } else {
             SoftwareRaster.fillRectangleBlended(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
             GradientUiRenderer.drawCenteredSolidText(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);

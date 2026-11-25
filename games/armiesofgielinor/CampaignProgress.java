@@ -39,7 +39,7 @@ final class CampaignProgress {
         return var4;
     }
 
-    final static String b(boolean param0) {
+    final static String formatPacketDiagnostic(boolean param0) {
         int var2 = 0;
         String var1;
         int var3;
@@ -140,7 +140,7 @@ final class CampaignProgress {
     final static void beginCredentialLogin(String password, int obfuscationGuard, String accountIdentifier) {
         try {
           if (obfuscationGuard != 0) {
-            CampaignProgress.b(false);
+            CampaignProgress.formatPacketDiagnostic(false);
           }
           LoginCredentialStagingSupport.stageLoginCredentials(false, (byte) 32, accountIdentifier, password);
         } catch (RuntimeException runtimeException) {

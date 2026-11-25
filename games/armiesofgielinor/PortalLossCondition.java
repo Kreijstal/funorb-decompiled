@@ -66,7 +66,7 @@ final class PortalLossCondition implements MatchCondition {
         return "Defeat: Total Portal Loss";
     }
 
-    final static String a(CipherPacketBuffer param0, int param1, byte param2) {
+    final static String readOptionalBitStreamString(CipherPacketBuffer param0, int param1, byte param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_2_0 = null;

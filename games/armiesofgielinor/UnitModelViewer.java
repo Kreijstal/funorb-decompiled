@@ -169,11 +169,11 @@ final class UnitModelViewer {
         this.advancePreview((byte) -95);
     }
 
-    final static char a(int param0, char param1) {
+    final static char toClientTitleCase(int param0, char param1) {
         if (param1 != 181 &&
           param1 != 402) {
           if (param0 != 98) {
-            UnitModelViewer.a(39, 'ﾫ');
+            UnitModelViewer.toClientTitleCase(39, 'ﾫ');
           }
           return Character.toTitleCase(param1);
         }

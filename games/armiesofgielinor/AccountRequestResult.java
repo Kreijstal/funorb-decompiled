@@ -170,12 +170,12 @@ final class AccountRequestResult {
           if (PowerOfTwoSupport.outgoingChatChannel == 2 &&
             !ToggleWidget.isChatRecipientAvailable(6)) {
             if (!FriendLookupSupport.isFriend(62, AccountRequestState.chatRecipientNameKey)) {
-              var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_h, new String[]{RegistrationAgreementPane.chatRecipientName});
+              var2 = EmailCheckResult.formatTemplate(4800, DiskCacheWorker.field_h, new String[]{RegistrationAgreementPane.chatRecipientName});
               if (var10 != 0) {
-                var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
+                var2 = EmailCheckResult.formatTemplate(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
               }
             } else {
-              var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
+              var2 = EmailCheckResult.formatTemplate(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
             }
             if (BattleTutorial.quickChatMenuVisible) {
               LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
@@ -191,14 +191,14 @@ final class AccountRequestResult {
             PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
             var3 = StructureGlowRenderer.localAccountName;
-            var3 = RatingLeaderboardRequest.a(-121, var3);
+            var3 = RatingLeaderboardRequest.prefixLocalChatBadge(-121, var3);
             var4 = "";
             var5 = "|";
             var6 = PowerOfTwoSupport.outgoingChatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{RegistrationAgreementPane.chatRecipientName});
-              var8 = EmailCheckResult.a(4800, SpectateRoomRequestSupport.field_l, new String[]{var3});
+              var4 = EmailCheckResult.formatTemplate(4800, LabeledWidgetContainer.field_Q, new String[]{RegistrationAgreementPane.chatRecipientName});
+              var8 = EmailCheckResult.formatTemplate(4800, SpectateRoomRequestSupport.field_l, new String[]{var3});
               var7 = DebouncedValidator.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
@@ -213,7 +213,7 @@ final class AccountRequestResult {
                   var6 = 1;
                   if (!TextCursor.field_f ||
                     TeleportAction.field_C == null) {
-                    var4 = "[" + EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
+                    var4 = "[" + EmailCheckResult.formatTemplate(4800, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TeleportAction.field_C + "] ";
                     }
@@ -262,7 +262,7 @@ final class AccountRequestResult {
               DebouncedValidator.field_b.heldButtonMatches = false;
             }
             if (DebouncedValidator.field_b.heldButtonMatches) {
-              var1 = EmailCheckResult.a(4800, MusicPatchPcmStream.field_q, new String[]{var3, RegistrationAgreementPane.chatRecipientName});
+              var1 = EmailCheckResult.formatTemplate(4800, MusicPatchPcmStream.field_q, new String[]{var3, RegistrationAgreementPane.chatRecipientName});
             }
           }
           stackIn_96_0 = var1;

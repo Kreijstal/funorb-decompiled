@@ -23,7 +23,7 @@ final class SummonAction extends PreparedAction {
           this.summoningBonus = battlefield.a(WhirlpoolHasher.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, WhirlpoolHasher.unitDefinitions[this.unitType][2]);
           if (obfuscationGuard != 64) {
             CharSequence var4 = (CharSequence) null;
-            SummonAction.a(-2, (CharSequence) null, false);
+            SummonAction.getAccountNameShapeError(-2, (CharSequence) null, false);
           }
           battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(this.unitType, this.tileX, this.tileY, this.summoningBonus, this.actingPlayer)));
         } catch (RuntimeException runtimeException) {
@@ -31,7 +31,7 @@ final class SummonAction extends PreparedAction {
         }
     }
 
-    final static String a(int param0, CharSequence param1, boolean param2) {
+    final static String getAccountNameShapeError(int param0, CharSequence param1, boolean param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;

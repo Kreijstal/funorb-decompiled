@@ -69,7 +69,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
               return (String) (validDiagnostic);
             }
           } else {
-            yearRangeDiagnostic = EmailCheckResult.a(4800, CampaignMenu.field_r, new String[]{"1890", Integer.toString(-3 + currentYear)});
+            yearRangeDiagnostic = EmailCheckResult.formatTemplate(4800, CampaignMenu.field_r, new String[]{"1890", Integer.toString(-3 + currentYear)});
             return yearRangeDiagnostic;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

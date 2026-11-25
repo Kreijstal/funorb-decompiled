@@ -59,7 +59,7 @@ final class SpellCastAction extends PreparedAction {
           var5.updateBits((byte) -57, (long)(8 * param1), var4);
           if (param0 != -18423) {
             var8 = (String) null;
-            SpellCastAction.a(44, (byte) 45, (String) null);
+            SpellCastAction.composeAnimationName(44, (byte) 45, (String) null);
           }
           var6 = new byte[64];
           var5.finishDigest(var6, 0, true);
@@ -79,7 +79,7 @@ final class SpellCastAction extends PreparedAction {
         }
     }
 
-    final static String a(int param0, byte param1, String param2) {
+    final static String composeAnimationName(int param0, byte param1, String param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

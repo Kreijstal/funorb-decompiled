@@ -66,7 +66,7 @@ final class FriendLookupSupport {
         }
     }
 
-    final static String a(byte param0, int param1, String[][] param2, int param3) {
+    final static String resolveAnimationNameEntry(byte param0, int param1, String[][] param2, int param3) {
         String var4 = null;
         Object var5 = null;
         int var6 = 0;
@@ -85,7 +85,7 @@ final class FriendLookupSupport {
             var5 = var4;
           } else {
             if (CampaignMenuButton.a(30, var4)) {
-              var5 = SpellCastAction.a(param3, (byte) 78, var4);
+              var5 = SpellCastAction.composeAnimationName(param3, (byte) 78, var4);
             } else {
               if (!FocusProxyWidget.isSingleSpace(var4, false)) {
                 var5 = null;

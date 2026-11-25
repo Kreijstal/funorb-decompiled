@@ -95,11 +95,11 @@ final class LocalCoatSupport {
         }
     }
 
-    final static String a(int param0, byte param1, int param2) {
+    final static String formatOrdinal(int param0, byte param1, int param2) {
         if (param1 != 22) {
           return (String) null;
         }
-        return SoundCache.a(param2, 0, (byte) -123, param0);
+        return SoundCache.formatOrdinalForLanguage(param2, 0, (byte) -123, param0);
     }
 
     final static void a(byte param0, int param1) {

@@ -20,7 +20,7 @@ final class RadialSummonItem {
         return ScreenWipeTransition.campaignPacketWord2;
     }
 
-    final static String a(int param0) {
+    final static String getLoginPassword(int param0) {
         if (param0 != -1) {
           return (String) null;
         }

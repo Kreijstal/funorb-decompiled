@@ -38,7 +38,7 @@ final class QuickChatPhrase extends DualLinkedNode {
         }
     }
 
-    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
+    final static String getGuestSavePrompt(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
         if (param0) {
           var4 += 4;

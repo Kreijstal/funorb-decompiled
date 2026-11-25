@@ -44,35 +44,35 @@ final class LobbyNotificationSupport {
         RuntimeException var3 = null;
         try {
           if (param2 == 1) {
-            stackIn_2_0 = EmailCheckResult.a(4800, GrowthEvent.field_B, new String[]{param1});
+            stackIn_2_0 = EmailCheckResult.formatTemplate(4800, GrowthEvent.field_B, new String[]{param1});
             return stackIn_2_0;
           }
           if (2 == param2) {
-            stackIn_6_0 = EmailCheckResult.a(4800, CommunityTabGroup.field_d, new String[]{param1});
+            stackIn_6_0 = EmailCheckResult.formatTemplate(4800, CommunityTabGroup.field_d, new String[]{param1});
             return stackIn_6_0;
           }
           if (param2 == 3) {
-            stackIn_9_0 = EmailCheckResult.a(4800, IterableNodeHashTable.field_b, new String[]{param1});
+            stackIn_9_0 = EmailCheckResult.formatTemplate(4800, IterableNodeHashTable.field_b, new String[]{param1});
             return stackIn_9_0;
           }
           if (param2 == 4) {
-            stackIn_13_0 = EmailCheckResult.a(4800, DropdownOptionList.field_X, new String[]{param1});
+            stackIn_13_0 = EmailCheckResult.formatTemplate(4800, DropdownOptionList.field_X, new String[]{param1});
             return stackIn_13_0;
           }
           if (param2 == 5) {
-            stackIn_16_0 = EmailCheckResult.a(4800, FixInvisibleUnitsConsoleCommand.field_H, new String[]{param1});
+            stackIn_16_0 = EmailCheckResult.formatTemplate(4800, FixInvisibleUnitsConsoleCommand.field_H, new String[]{param1});
             return stackIn_16_0;
           }
           if (param2 == 6) {
-            stackIn_20_0 = EmailCheckResult.a(4800, MatchingTextValidator.field_j, new String[]{param1});
+            stackIn_20_0 = EmailCheckResult.formatTemplate(4800, MatchingTextValidator.field_j, new String[]{param1});
             return stackIn_20_0;
           }
           if (param2 == 7) {
-            stackIn_24_0 = EmailCheckResult.a(4800, AlphaWidgetContainer.field_I, new String[]{param1});
+            stackIn_24_0 = EmailCheckResult.formatTemplate(4800, AlphaWidgetContainer.field_I, new String[]{param1});
             return stackIn_24_0;
           }
           if (param2 == 8) {
-            stackIn_27_0 = EmailCheckResult.a(4800, AccountNamePrompt.field_Nb, new String[]{param1});
+            stackIn_27_0 = EmailCheckResult.formatTemplate(4800, AccountNamePrompt.field_Nb, new String[]{param1});
             return stackIn_27_0;
           }
           if (param0) {
@@ -80,17 +80,17 @@ final class LobbyNotificationSupport {
             return stackIn_30_0;
           }
           if (param2 == 11) {
-            stackIn_33_0 = EmailCheckResult.a(4800, Spell.field_a, new String[]{param1});
+            stackIn_33_0 = EmailCheckResult.formatTemplate(4800, Spell.field_a, new String[]{param1});
             return stackIn_33_0;
           }
           if (param2 == 12) {
-            stackIn_37_0 = EmailCheckResult.a(4800, DirectByteStorage.field_i, new String[]{param1});
+            stackIn_37_0 = EmailCheckResult.formatTemplate(4800, DirectByteStorage.field_i, new String[]{param1});
             return stackIn_37_0;
           }
           if (param2 != 13) {
             return null;
           }
-          stackIn_41_0 = EmailCheckResult.a(4800, EventPresenterFactory.field_f, new String[]{param1});
+          stackIn_41_0 = EmailCheckResult.formatTemplate(4800, EventPresenterFactory.field_f, new String[]{param1});
           return stackIn_41_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -16,14 +16,14 @@ final class VineGrowthAction extends PreparedAction {
         try {
           battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(this.tileX, this.tileY, this.originX, this.originY, this.strength, this.actingPlayer)));
           if (obfuscationGuard != 64) {
-            VineGrowthAction.a(53, false, (String[][]) null);
+            VineGrowthAction.getFirstExplicitAnimationName(53, false, (String[][]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pe.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(int param0, boolean param1, String[][] param2) {
+    final static String getFirstExplicitAnimationName(int param0, boolean param1, String[][] param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_6_0 = null;

@@ -74,7 +74,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           candidateName = (CharSequence) ((Object) text);
-          syntaxMessage = SummonRequest.a(candidateName, false);
+          syntaxMessage = SummonRequest.getAccountNameValidationError(candidateName, false);
           if (syntaxMessage != null) {
             syntaxDiagnostic = syntaxMessage;
             return syntaxDiagnostic;

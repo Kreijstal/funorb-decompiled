@@ -20,7 +20,7 @@ final class MusicPatchEnvelope {
 
     final static PcmStreamMixer getEffectsMixer(int obfuscationGuard) {
         if (obfuscationGuard != 18757) {
-          MusicPatchEnvelope.a((byte) 23, -125L);
+          MusicPatchEnvelope.formatGmtDateTime((byte) 23, -125L);
           return AnimationSkeleton.effectsMixer;
         }
         return AnimationSkeleton.effectsMixer;
@@ -95,7 +95,7 @@ final class MusicPatchEnvelope {
         }
     }
 
-    final static String a(byte param0, long param1) {
+    final static String formatGmtDateTime(byte param0, long param1) {
         int var8 = 0;
         int var9 = 0;
         PopupPresentation.field_c.setTime(new Date(param1));
@@ -121,7 +121,7 @@ final class MusicPatchEnvelope {
           NineSliceSpriteSupport.sendPreferencesRead(param1, 0);
           return var2;
         }
-        MusicPatchEnvelope.a((byte) -111, -125L);
+        MusicPatchEnvelope.formatGmtDateTime((byte) -111, -125L);
         var2Lifetime1 = new PreferencesReadRequest();
         AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
         NineSliceSpriteSupport.sendPreferencesRead(param1, 0);
@@ -157,7 +157,7 @@ final class MusicPatchEnvelope {
           }
           ignoredAccount = IgnoreListLookupSupport.findIgnoredAccount(displayName, -122);
           if (ignoredAccount == null) {
-            stackIn_10_0 = EmailCheckResult.a(4800, CacheEntry.field_x, new String[]{displayName});
+            stackIn_10_0 = EmailCheckResult.formatTemplate(4800, CacheEntry.field_x, new String[]{displayName});
             return stackIn_10_0;
           }
           ignoredAccount.unlink(-124);

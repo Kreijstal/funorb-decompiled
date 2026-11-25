@@ -86,7 +86,7 @@ class FocusProxyWidget extends InteractiveWidget {
               stackIn_17_5 = MusicPatchEnvelope.field_f[var6];
             }
             stackIn_13_2[stackIn_16_4] = stackIn_17_5;
-            stackIn_18_0 = EmailCheckResult.a(stackIn_13_0, stackIn_13_1, stackIn_13_2);
+            stackIn_18_0 = EmailCheckResult.formatTemplate(stackIn_13_0, stackIn_13_1, stackIn_13_2);
             return stackIn_18_0;
           }
           if (SpellDefinitionTable.spellDefinitions[spellId][4] == 0 &&
@@ -115,7 +115,7 @@ class FocusProxyWidget extends InteractiveWidget {
               stackIn_33_5 = MusicPatchEnvelope.field_f[var6Lifetime1].toLowerCase();
             }
             stackIn_29_2[stackIn_32_4] = stackIn_33_5;
-            stackIn_34_0 = EmailCheckResult.a(stackIn_29_0, stackIn_29_1, stackIn_29_2);
+            stackIn_34_0 = EmailCheckResult.formatTemplate(stackIn_29_0, stackIn_29_1, stackIn_29_2);
             return stackIn_34_0;
           }
           if (SpellDefinitionTable.spellDefinitions[spellId][4] != 3) {
@@ -145,7 +145,7 @@ class FocusProxyWidget extends InteractiveWidget {
             stackIn_45_5 = MusicPatchEnvelope.field_f[var6Lifetime2].toLowerCase();
           }
           stackIn_41_2[stackIn_44_4] = stackIn_45_5;
-          stackIn_46_0 = EmailCheckResult.a(stackIn_41_0, stackIn_41_1, stackIn_41_2);
+          stackIn_46_0 = EmailCheckResult.formatTemplate(stackIn_41_0, stackIn_41_1, stackIn_41_2);
           return stackIn_46_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

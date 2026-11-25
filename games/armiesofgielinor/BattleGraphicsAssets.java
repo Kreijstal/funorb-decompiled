@@ -33,7 +33,7 @@ final class BattleGraphicsAssets {
           }
           return;
         }
-        BattleGraphicsAssets.a(38);
+        BattleGraphicsAssets.getDefaultAccountIdentifier(38);
         var1Lifetime1 = 352;
         stackIn_5_0 = SectorCacheStore.field_j[AccountRegistrationForm.field_X].length;
         stackIn_6_1 = (ByteArrayPoolSupport.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
@@ -46,14 +46,14 @@ final class BattleGraphicsAssets {
         }
     }
 
-    final static String a(int param0) {
+    final static String getDefaultAccountIdentifier(int param0) {
         String var1 = "";
         if (param0 <= -69) {
           if (null != ContextActionMenu.loginForm) {
             var1 = ContextActionMenu.loginForm.getAccountIdentifier(-15056);
           }
           if (var1.length() == 0) {
-            var1 = ProceduralMapSupport.b(true);
+            var1 = ProceduralMapSupport.getLocalAccountNameOrEmpty(true);
           }
           if (var1.length() == 0) {
             var1 = HighscoreAccountEntry.field_a;
@@ -65,7 +65,7 @@ final class BattleGraphicsAssets {
           var1 = ContextActionMenu.loginForm.getAccountIdentifier(-15056);
         }
         if (var1.length() == 0) {
-          var1 = ProceduralMapSupport.b(true);
+          var1 = ProceduralMapSupport.getLocalAccountNameOrEmpty(true);
         }
         if (var1.length() == 0) {
           var1 = HighscoreAccountEntry.field_a;

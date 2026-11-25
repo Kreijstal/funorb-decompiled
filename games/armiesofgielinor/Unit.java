@@ -598,7 +598,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
                     if (0 >= encodedLength) {
                       return;
                     }
-                    this.displayName = PortalLossCondition.a(packet, encodedLength, (byte) -122);
+                    this.displayName = PortalLossCondition.readOptionalBitStreamString(packet, encodedLength, (byte) -122);
                     return;
                   }
                   if (fieldName.equals("tag")) {

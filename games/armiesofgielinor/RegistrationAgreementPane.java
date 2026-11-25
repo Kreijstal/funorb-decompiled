@@ -42,14 +42,14 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         try {
           if (hotspotId != 0) {
             if (hotspotId == 1) {
-              BitmapTextLayout.a("privacy.ws", (byte) -77);
+              BitmapTextLayout.requestUrlNavigation("privacy.ws", (byte) -77);
             } else {
               if (hotspotId == 2) {
-                BitmapTextLayout.a("conduct.ws", (byte) -117);
+                BitmapTextLayout.requestUrlNavigation("conduct.ws", (byte) -117);
               }
             }
           } else {
-            BitmapTextLayout.a("terms.ws", (byte) -98);
+            BitmapTextLayout.requestUrlNavigation("terms.ws", (byte) -98);
           }
           if (obfuscationGuard > 102) {
             return;
@@ -190,7 +190,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           this.dialog = dialog;
           this.continueButton = new InteractiveWidget(ProgressMessageDialog.field_kb, (WidgetListener) null);
           this.continueButton.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
-          var7 = EmailCheckResult.a(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
+          var7 = EmailCheckResult.formatTemplate(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
           var3 = 20;
           var4 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
           this.agreementText = new HotspotTextWidget(var7, var4);

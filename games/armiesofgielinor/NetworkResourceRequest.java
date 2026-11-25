@@ -88,9 +88,9 @@ final class NetworkResourceRequest extends ResourceRequest {
           }
           var5_int = HuffmanCodec.a((byte) -105, param1);
           if (param1 != var5_int) {
-            var6_ref_String = VineGrowthAction.a(var5_int, false, param0);
+            var6_ref_String = VineGrowthAction.getFirstExplicitAnimationName(var5_int, false, param0);
             if (var6_ref_String != null) {
-              var7 = SpellCastAction.a(var5_int, (byte) 83, var6_ref_String);
+              var7 = SpellCastAction.composeAnimationName(var5_int, (byte) 83, var6_ref_String);
               stackIn_7_0 = var7;
               return stackIn_7_0;
             }

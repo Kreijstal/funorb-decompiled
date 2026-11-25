@@ -153,7 +153,7 @@ final class SelectionMenuLayoutSupport {
               MusicPatchNode.field_G[1] = 5;
             }
           } else {
-            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, IgnoreListLookupSupport.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.formatTemplate(4800, IgnoreListLookupSupport.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(SocketFactory.field_b[var5])) {
@@ -170,7 +170,7 @@ final class SelectionMenuLayoutSupport {
             KeyboardInputListener.field_d = new String[var3_int + (-var4 - 1)];
             ArrayBlockSupport.copyObjects(SocketFactory.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
-            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.formatTemplate(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(SocketFactory.field_b[var5])) {
                 continue;

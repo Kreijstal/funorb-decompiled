@@ -89,9 +89,9 @@ final class LobbyRoomControlSupport {
             var7.width = 0;
             if (!ToggleWidget.isCurrentRoomOwner(false)) {
               var9_ref_String = ToggleWidget.currentRoom.ownerName;
-              AccountRegistrationForm.field_F.text = EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
+              AccountRegistrationForm.field_F.text = EmailCheckResult.formatTemplate(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
               MarkerSliderWidget.field_N.setBounds(40, param3 - 20500, PasswordLengthSupport.field_c.width, -40 + PasswordLengthSupport.field_c.height, 0);
-              MarkerSliderWidget.field_N.text = EmailCheckResult.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
+              MarkerSliderWidget.field_N.text = EmailCheckResult.formatTemplate(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
               var8 = MarkerSliderWidget.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
@@ -118,7 +118,7 @@ final class LobbyRoomControlSupport {
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = EmailCheckResult.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
+                  var10_ref_String = EmailCheckResult.formatTemplate(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
                 }
                 if (0 == (16 & KeyboardInputListener.field_b) &&
                   !ChannelGainProfile.field_f) {
@@ -343,7 +343,7 @@ final class LobbyRoomControlSupport {
                   FixedSquareRootSupport.field_d.inputEnabled = false;
                   if (FixedSquareRootSupport.field_d.hovered) {
                     if (DebugConsole.field_w.tabs.activeTab != 0) {
-                      DialogMessagePane.field_I = EmailCheckResult.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
+                      DialogMessagePane.field_I = EmailCheckResult.formatTemplate(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
                       if (var19 != 0) {
                         DialogMessagePane.field_I = ResourceArchive.field_f;
                       }
@@ -387,7 +387,7 @@ final class LobbyRoomControlSupport {
                   if (stackIn_155_0 != 0) {
                     var13_ref = QuickChatCategoryMenuSupport.field_h;
                     if (var12 == 0) {
-                      var14 = EmailCheckResult.a(4800, ClientRecoverySupport.field_c, new String[]{(String) (var11)});
+                      var14 = EmailCheckResult.formatTemplate(4800, ClientRecoverySupport.field_c, new String[]{(String) (var11)});
                       if (var19 != 0) {
                         var14 = LobbyRoom.field_Jb + (String) (var11);
                       }
@@ -397,7 +397,7 @@ final class LobbyRoomControlSupport {
                   } else {
                     var13_ref = FullscreenFocusCanvas.field_f;
                     if (var12 == 0) {
-                      var14 = EmailCheckResult.a(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
+                      var14 = EmailCheckResult.formatTemplate(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
                       if (var19 != 0) {
                         var14 = MaskedTextEntryPainter.field_x + (String) (var11);
                       }
@@ -415,9 +415,9 @@ final class LobbyRoomControlSupport {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.text = EmailCheckResult.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
+              var8.text = EmailCheckResult.formatTemplate(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
-            PrintVictoryConditionsConsoleCommand.field_E.text = EmailCheckResult.a(4800, DialWidget.field_T, new String[]{Integer.toString(ToggleWidget.currentRoom.playerCount), Integer.toString(ToggleWidget.currentRoom.playerCapacity)});
+            PrintVictoryConditionsConsoleCommand.field_E.text = EmailCheckResult.formatTemplate(4800, DialWidget.field_T, new String[]{Integer.toString(ToggleWidget.currentRoom.playerCount), Integer.toString(ToggleWidget.currentRoom.playerCapacity)});
           }
           stackIn_173_0 = BitmapTextWidgetPainter.field_a;
           stackIn_173_1 = true;

@@ -795,7 +795,7 @@ class Widget extends IntrusiveNode {
             }
             break;
           }
-          var5 = QuickChatCategoryRepository.b(2);
+          var5 = QuickChatCategoryRepository.getVisibleTooltipText(2);
           var7 = var5;
           var9 = var7;
           var5 = var9;
@@ -813,7 +813,7 @@ class Widget extends IntrusiveNode {
             }
             break;
           }
-          var5 = QuickChatCategoryRepository.b(2);
+          var5 = QuickChatCategoryRepository.getVisibleTooltipText(2);
           var12 = var5;
           var5 = var12;
           var12Lifetime1 = var5;

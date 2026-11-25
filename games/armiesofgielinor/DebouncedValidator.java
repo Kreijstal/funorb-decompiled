@@ -19,7 +19,7 @@ abstract class DebouncedValidator implements ValidationSource {
         RuntimeException var3_ref = null;
         try {
           var4 = -107 / ((obfuscationGuard - 41) / 55);
-          var3 = IconTextComponent.a(true, name);
+          var3 = IconTextComponent.reverseString(true, name);
           if (password.indexOf(name) != -1) {
             return true;
           }

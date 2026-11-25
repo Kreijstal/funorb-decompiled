@@ -115,7 +115,7 @@ final class TutorialController {
             return;
           }
           var4 = ValidationStatusWidget.field_V;
-          var4 = var4 + " " + SpriteFramedLabel.a(EmailCheckResult.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
+          var4 = var4 + " " + SpriteFramedLabel.a(EmailCheckResult.formatTemplate(param0 ^ 4800, QuickChatPhrase.getGuestSavePrompt(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
           GradientUiRenderer.drawHollowGradientFrame(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           PowerOfTwoSupport.field_n.drawParagraph(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
@@ -542,7 +542,7 @@ final class TutorialController {
           do {
             if (!(var3 <= LocalCoatSupport.field_b)) {
               var3 = -UnitAnimationSelectionSupport.playerProfile.progressionCredit - UnitAnimationSelectionSupport.playerProfile.runeCredit + var2_int;
-              GradientUiRenderer.drawCenteredGradientText(EmailCheckResult.a(4800, ClientStateChecksumSupport.field_e, new String[]{Integer.toString(1 + LocalCoatSupport.field_b)}), IgnoreListLookupSupport.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
+              GradientUiRenderer.drawCenteredGradientText(EmailCheckResult.formatTemplate(4800, ClientStateChecksumSupport.field_e, new String[]{Integer.toString(1 + LocalCoatSupport.field_b)}), IgnoreListLookupSupport.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
               break;
             }
             var2_int = var2_int + NodeDeque.unlockLevelCosts[var3];
@@ -550,11 +550,11 @@ final class TutorialController {
           } while (var4 == 0);
           boolean decompiledSharedTail1 = !(UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0) <= LocalCoatSupport.field_b);
           if (!decompiledSharedTail1) {
-            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.formatTemplate(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
             decompiledSharedTail1 = (var4 != 0);
           }
           if (decompiledSharedTail1) {
-            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.a(4800, LocalAccountNameSupport.field_g, new String[]{this.c(-38, var2_int)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.formatTemplate(4800, LocalAccountNameSupport.field_g, new String[]{this.c(-38, var2_int)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
           if (UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
             GradientUiRenderer.drawCenteredGradientText(this.c(-38, NodeDeque.unlockLevelCosts[LocalCoatSupport.field_b]), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
@@ -2290,7 +2290,7 @@ final class TutorialController {
           } else {
             stackIn_7_1 = LobbyControlResources.field_f;
           }
-          stackIn_8_0 = EmailCheckResult.a(stackIn_6_0, stackIn_7_1, new String[]{Integer.toString(param1)});
+          stackIn_8_0 = EmailCheckResult.formatTemplate(stackIn_6_0, stackIn_7_1, new String[]{Integer.toString(param1)});
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2375,7 +2375,7 @@ final class TutorialController {
           var16 = 1;
           var17 = 0;
           if (var7 == 0) {
-            GradientUiRenderer.drawWrappedCenteredGradientText(EmailCheckResult.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(UnitAnimationSelectionSupport.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
+            GradientUiRenderer.drawWrappedCenteredGradientText(EmailCheckResult.formatTemplate(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(UnitAnimationSelectionSupport.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
           }
           stackIn_24_0 = DateInputWidget.field_E;
           stackIn_24_1 = var5;
@@ -2389,7 +2389,7 @@ final class TutorialController {
           }
           ((BinaryBitmapFont) (Object) stackIn_24_0).drawParagraph(stackIn_24_1, stackIn_24_2, stackIn_24_3 - (stackIn_24_4 - stackIn_25_5), -20 + var8, var13, var14, var15, var16, var17, var9);
           if (var7 == 0) {
-            DateInputWidget.field_E.drawParagraph(EmailCheckResult.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + SpellDefinitionTable.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
+            DateInputWidget.field_E.drawParagraph(EmailCheckResult.formatTemplate(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + SpellDefinitionTable.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
           GradientUiRenderer.drawWrappedCenteredGradientText(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
           BattleCharacter.field_h[var6].drawTransparent(-20 + (var8 >> 1), 12 + var11);
@@ -2717,7 +2717,7 @@ final class TutorialController {
           if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), IgnoreListLookupSupport.a(true, 30 + (50 * var5_int + 30)), 10, false)) {
             AccountNameSelectionForm.field_F = param0.iconIndex + 400;
             if (!param1) {
-              MonotonicClockSupport.field_f = EmailCheckResult.a(4800, IndexedDecodedSpriteSupport.field_a, new String[]{param0.label});
+              MonotonicClockSupport.field_f = EmailCheckResult.formatTemplate(4800, IndexedDecodedSpriteSupport.field_a, new String[]{param0.label});
               if (var6 != 0) {
                 MonotonicClockSupport.field_f = param0.label;
               }
@@ -5468,7 +5468,7 @@ final class TutorialController {
           }
           var9 = param5;
           GradientUiRenderer.drawGradientText(var9, IgnoreListLookupSupport.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param4, true);
-          var9Lifetime1 = AiInfluenceMap.a(param0 + 10539, param2);
+          var9Lifetime1 = AiInfluenceMap.intToString(param0 + 10539, param2);
           GradientUiRenderer.drawCenteredGradientText(var9Lifetime1, IgnoreListLookupSupport.a(true, var8[4]), MatchConditionEntry.a(param3, (byte) 94), param4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5868,14 +5868,14 @@ final class TutorialController {
             var11 = var8;
             var8 = WhirlpoolHasher.unitDefinitions[75][6];
             var9 = WhirlpoolHasher.unitDefinitions[75][7];
-            stackIn_9_0 = EmailCheckResult.a(param1 ^ 4808, EmailValidator.field_l, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var11), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
+            stackIn_9_0 = EmailCheckResult.formatTemplate(param1 ^ 4808, EmailValidator.field_l, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var11), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
             return stackIn_9_0;
           }
           if (~var8 != ~var9) {
-            stackIn_7_0 = EmailCheckResult.a(4800, ContextualRuntimeException.field_e, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
+            stackIn_7_0 = EmailCheckResult.formatTemplate(4800, ContextualRuntimeException.field_e, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
             return stackIn_7_0;
           }
-          stackIn_5_0 = EmailCheckResult.a(4800, Unit.field_y, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var10)});
+          stackIn_5_0 = EmailCheckResult.formatTemplate(4800, Unit.field_y, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var10)});
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -28,7 +28,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
             nameCount = suggestions.length;
             this.names = new String[nameCount];
             for (nameIndex = 0; nameIndex < nameCount; nameIndex++) {
-              this.names[nameIndex] = ProxyAuthenticationRequiredException.a(GrowthEvent.bitwiseXor(obfuscationGuard, 116), (CharSequence) ((Object) suggestions[nameIndex])).replace(' ', ' ');
+              this.names[nameIndex] = ProxyAuthenticationRequiredException.normalizeBase37DisplayName(GrowthEvent.bitwiseXor(obfuscationGuard, 116), (CharSequence) ((Object) suggestions[nameIndex])).replace(' ', ' ');
             }
             buttonPainter = new LinkButtonPainter(ArmiesOfGielinor.field_J, 0, 1);
             this.buttons = new InteractiveWidget[nameCount + 1];

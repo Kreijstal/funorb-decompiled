@@ -52,7 +52,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         try {
           if (obfuscationGuard != -1) {
             guardText = (CharSequence) null;
-            ProxyAuthenticationRequiredException.a(99, (CharSequence) null);
+            ProxyAuthenticationRequiredException.normalizeBase37DisplayName(99, (CharSequence) null);
           }
           if (!platformService.supportsFullscreen(false)) {
             return null;
@@ -109,7 +109,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeBase37DisplayName(int param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
@@ -123,7 +123,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = BattleViewportResizeHandler.decodeBase37DisplayName(0, DraggableWidgetContainer.a(param1, 0));
+          var2 = BattleViewportResizeHandler.decodeBase37DisplayName(0, DraggableWidgetContainer.encodeBase37Name(param1, 0));
           if (var2 == null) {
             var2 = "";
           }

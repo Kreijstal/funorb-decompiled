@@ -99,7 +99,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (obfuscationGuard >= -15) {
           this.memberLaunch = true;
         }
-        connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.a(-1), CombatPresentation.getAccountNameIdentifier(-4938), true);
+        connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), true);
         if (connectionResult == -1) {
           return -1;
         }
@@ -231,7 +231,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           }
           if (2 == actionCode) {
-            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
+            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.getLoginPassword(-1));
             if (actionTwoResult != -1) {
               CampaignMenuEntry.a(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -247,7 +247,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             if (normalUiMode) {
               MaskedTextEntryPainter.field_C = false;
             } else {
-              connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.a(-1), CombatPresentation.getAccountNameIdentifier(-4938), false);
+              connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), false);
               if (connectionResult != -1) {
                 if (connectionResult != 0) {
                   KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
@@ -292,7 +292,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             ReloadPageSupport.reloadPage((byte) -118, CombatEvent.d((byte) 7));
           }
           if (actionCode == 12) {
-            ActionSpell.a(CombatEvent.d((byte) -123), -69, GridWidgetContainer.j(-129));
+            ActionSpell.a(CombatEvent.d((byte) -123), -69, GridWidgetContainer.getPendingNavigationUrl(-129));
           }
           if (actionCode == 13) {
             try {
@@ -433,7 +433,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                       MusicPatchEnvelope.b((byte) 119);
                       break regionExit1;
                     default:
-                      LoginCredentials.a((Throwable) null, obfuscationGuard ^ -100, "MGS1: " + CampaignProgress.b(false));
+                      LoginCredentials.a((Throwable) null, obfuscationGuard ^ -100, "MGS1: " + CampaignProgress.formatPacketDiagnostic(false));
                       TextSplitSupport.closeSessionSocket((byte) -124);
                       break regionExit1;
                   }
@@ -465,7 +465,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           return;
         }
-        LoginCredentials.a((Throwable) null, -115, "MGS2: " + CampaignProgress.b(false));
+        LoginCredentials.a((Throwable) null, -115, "MGS2: " + CampaignProgress.formatPacketDiagnostic(false));
         TextSplitSupport.closeSessionSocket((byte) -126);
     }
 

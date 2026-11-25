@@ -280,7 +280,7 @@ final class DamageEvent extends GameEvent {
           }
           friend = GzipDecoder.findFriend(name, (byte) -34);
           if (friend == null) {
-            stackIn_10_0 = EmailCheckResult.a(4800, TaggedMapData.field_d, new String[]{name});
+            stackIn_10_0 = EmailCheckResult.formatTemplate(4800, TaggedMapData.field_d, new String[]{name});
             return stackIn_10_0;
           }
           SharedUiLoadingSupport.friendEntries.startForwardAt(true, friend);

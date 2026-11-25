@@ -56,7 +56,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                 if (encodedLength <= 0) {
                   return;
                 }
-                this.name = PortalLossCondition.a(packet, encodedLength, (byte) -82);
+                this.name = PortalLossCondition.readOptionalBitStreamString(packet, encodedLength, (byte) -82);
                 return;
               }
               if (!fieldName.equals("key")) {
@@ -122,7 +122,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                     if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.description = PortalLossCondition.a(packet, encodedLength, (byte) -119);
+                                    this.description = PortalLossCondition.readOptionalBitStreamString(packet, encodedLength, (byte) -119);
                                     return;
                                   }
                                   if (fieldName.equals("gt")) {
@@ -202,7 +202,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                 }
               } else {
                 if (encodedLength > 0) {
-                  PortalLossCondition.a(packet, encodedLength, (byte) -82);
+                  PortalLossCondition.readOptionalBitStreamString(packet, encodedLength, (byte) -82);
                   return;
                 }
               }

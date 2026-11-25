@@ -10,7 +10,7 @@ final class DeployRequest extends ActionRequest {
     static String field_w;
     private int tileY;
 
-    final static String a(String param0, byte param1) {
+    final static String toInitialCapitalCase(String param0, byte param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -32,7 +32,7 @@ final class DeployRequest extends ActionRequest {
           for (var4 = 0; var2_int > var4; var4++) {
             var5 = param0.charAt(var4);
             if (var4 == 0) {
-              var5 = UnitModelViewer.a(98, (char) var5);
+              var5 = UnitModelViewer.toClientTitleCase(98, (char) var5);
             } else {
               var5 = Character.toLowerCase((char) var5);
             }

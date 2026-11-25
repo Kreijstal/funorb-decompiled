@@ -111,18 +111,18 @@ final class TabbedPanel extends ClientUiComponent {
           if (param1.playing && (2 == param1.spectatorMode ||
             !(BufferedSocket.field_j < 2))) {
             var8 = FullscreenMembershipDialog.activeContextMenu;
-            var9 = EmailCheckResult.a(4800, SectorCacheStore.field_k, new String[]{param3});
+            var9 = EmailCheckResult.formatTemplate(4800, SectorCacheStore.field_k, new String[]{param3});
             var8.menu.addTextAction(10, var9, (byte) -118);
           }
           FullscreenMembershipDialog.activeContextMenu.addRoomAdmissionActions((byte) 96);
           if (param2) {
             if (MembershipExpansionScreen.watchedRoomId != FullscreenMembershipDialog.activeContextMenu.roomId) {
               var12 = FullscreenMembershipDialog.activeContextMenu;
-              var13 = EmailCheckResult.a(4800, PrivateTextRecipientSupport.field_a, new String[]{param3});
+              var13 = EmailCheckResult.formatTemplate(4800, PrivateTextRecipientSupport.field_a, new String[]{param3});
               var12.menu.addTextAction(15, var13, (byte) -105);
             } else {
               var10 = FullscreenMembershipDialog.activeContextMenu;
-              var11 = EmailCheckResult.a(4800, EventPresenterFactory.field_g, new String[]{param3});
+              var11 = EmailCheckResult.formatTemplate(4800, EventPresenterFactory.field_g, new String[]{param3});
               var10.menu.addTextAction(16, var11, (byte) -103);
             }
           }
@@ -258,7 +258,7 @@ final class TabbedPanel extends ClientUiComponent {
             var6 = param1;
           } else {
             var8 = (CharSequence) ((Object) param1);
-            var4_long = DraggableWidgetContainer.a(var8, param2 - 10);
+            var4_long = DraggableWidgetContainer.encodeBase37Name(var8, param2 - 10);
           }
           stackIn_6_0 = CheckMarkWidgetPainter.a((String) (var6), param3, param0, param2 ^ 11, var4_long);
           return stackIn_6_0;

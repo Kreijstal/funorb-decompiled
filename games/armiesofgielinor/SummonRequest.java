@@ -13,7 +13,7 @@ final class SummonRequest extends ActionRequest {
     static String field_w;
     static String field_D;
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String getAccountNameValidationError(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -24,7 +24,7 @@ final class SummonRequest extends ActionRequest {
           if (param1) {
             SummonRequest.a((byte) 111);
           }
-          stackIn_3_0 = Bzip2State.a(false, param0, (byte) -95);
+          stackIn_3_0 = Bzip2State.getAccountNameValidationError(false, param0, (byte) -95);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class SummonRequest extends ActionRequest {
         field_y = null;
         if (param0 >= -42) {
           CharSequence var2 = (CharSequence) null;
-          SummonRequest.a((CharSequence) null, true);
+          SummonRequest.getAccountNameValidationError((CharSequence) null, true);
         }
         field_z = null;
         field_D = null;

@@ -163,7 +163,7 @@ final class AttackEvent extends GameEvent {
         if (null != GameClock.loginProgressDialog) {
           GameClock.loginProgressDialog.closeDialog(true);
         }
-        String var1 = BattleGraphicsAssets.a(-123);
+        String var1 = BattleGraphicsAssets.getDefaultAccountIdentifier(-123);
         ContextActionMenu.loginForm = new LoginForm(var1, (String) null, true, false, false);
         if (param0 >= 75) {
           KingBlackDragonEvent.field_C.showDialog(BattleViewportResizeHandler.loginDialog, 0);

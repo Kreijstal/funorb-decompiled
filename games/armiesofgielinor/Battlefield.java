@@ -7227,7 +7227,7 @@ final class Battlefield {
           if (obfuscationGuard != -26) {
             return true;
           }
-          var3 = IconTextComponent.a(true, name);
+          var3 = IconTextComponent.reverseString(true, name);
           stackIn_8_0 = (password.indexOf(name) != -1) || (password.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -146,7 +146,7 @@ final class LocalAccountSupport {
           var5_int = param2[param0].length;
           for (var6 = param1; var6 < var5_int; var6++) {
             var7 = var6;
-            var8 = FriendLookupSupport.a((byte) 103, var7, param2, param0);
+            var8 = FriendLookupSupport.resolveAnimationNameEntry((byte) 103, var7, param2, param0);
             var9 = ReloadPageSupport.indexOfString(var8, param3, (byte) 118);
             BestScoreStrategy.unitAnimationVariants[param4][param0][var7] = var9;
           }
@@ -252,7 +252,7 @@ final class LocalAccountSupport {
             TextSplitSupport.closeSessionSocket((byte) -125);
             return;
           }
-          LoginCredentials.a((Throwable) null, 70, "LR1: " + CampaignProgress.b(false));
+          LoginCredentials.a((Throwable) null, 70, "LR1: " + CampaignProgress.formatPacketDiagnostic(false));
           TextSplitSupport.closeSessionSocket((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

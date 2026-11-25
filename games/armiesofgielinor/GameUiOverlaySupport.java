@@ -31,7 +31,7 @@ final class GameUiOverlaySupport {
           var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {
-              LoginCredentials.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
+              LoginCredentials.a((Throwable) null, 76, "A1: " + CampaignProgress.formatPacketDiagnostic(false));
               TextSplitSupport.closeSessionSocket((byte) -128);
               return;
             }

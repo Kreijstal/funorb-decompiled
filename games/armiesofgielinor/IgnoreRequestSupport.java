@@ -45,7 +45,7 @@ final class IgnoreRequestSupport {
             return stackIn_11_0;
           }
           if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
-            stackIn_14_0 = EmailCheckResult.a(4800, TextLineLayout.field_k, new String[]{name});
+            stackIn_14_0 = EmailCheckResult.formatTemplate(4800, TextLineLayout.field_k, new String[]{name});
             return stackIn_14_0;
           }
           if (PreferencesReadRequest.ignoreCount >= 100) {
@@ -53,7 +53,7 @@ final class IgnoreRequestSupport {
             return stackIn_17_0;
           }
           if (FriendLookupSupport.isFriend(89, name)) {
-            stackIn_20_0 = EmailCheckResult.a(4800, PopupPresentation.field_p, new String[]{name});
+            stackIn_20_0 = EmailCheckResult.formatTemplate(4800, PopupPresentation.field_p, new String[]{name});
             return stackIn_20_0;
           }
           packet = EmailValidator.outgoingPacket;

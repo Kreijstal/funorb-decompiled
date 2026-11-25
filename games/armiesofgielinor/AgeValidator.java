@@ -171,12 +171,12 @@ final class AgeValidator extends TextFieldValidator {
             field_k = (int[]) null;
           }
           syntaxText = (CharSequence) ((Object) text);
-          if (!ConsoleTokenSupport.a(-66, syntaxText)) {
+          if (!ConsoleTokenSupport.isValidDecimalInt(-66, syntaxText)) {
             invalidSyntaxState = ProceduralMapSupport.validationInvalid;
             return invalidSyntaxState;
           }
           numericText = (CharSequence) ((Object) text);
-          age = HuffmanCodec.a(46, numericText);
+          age = HuffmanCodec.parseDecimalInt(46, numericText);
           if (age > 0 &&
             age <= 130) {
             return MembershipExpansionScreen.validationValid;

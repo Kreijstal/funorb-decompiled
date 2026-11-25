@@ -507,7 +507,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         }
     }
 
-    final static String j(int param0) {
+    final static String getPendingNavigationUrl(int param0) {
         if (param0 != -129) {
           heldPointerButton = -78;
         }

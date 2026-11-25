@@ -249,12 +249,12 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         discarded$0 = UpkeepEvent.chatTextBuffer.append((char) var4);
         var5Lifetime1 = 485;
         var17 = StructureGlowRenderer.localAccountName;
-        var16 = RatingLeaderboardRequest.a(param1 - 47, var17);
+        var16 = RatingLeaderboardRequest.prefixLocalChatBadge(param1 - 47, var17);
         var18 = var16;
         if (PowerOfTwoSupport.outgoingChatChannel == 2) {
           var56 = (CharSequence) ((Object) RegistrationAgreementPane.chatRecipientName);
-          var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ProxyAuthenticationRequiredException.a(16, var56)});
-          var8 = EmailCheckResult.a(4800, SpectateRoomRequestSupport.field_l, new String[]{var16});
+          var20 = EmailCheckResult.formatTemplate(4800, LabeledWidgetContainer.field_Q, new String[]{ProxyAuthenticationRequiredException.normalizeBase37DisplayName(16, var56)});
+          var8 = EmailCheckResult.formatTemplate(4800, SpectateRoomRequestSupport.field_l, new String[]{var16});
           var9 = IntrusiveNode.field_e.textWidth(var20);
           var10 = IntrusiveNode.field_e.textWidth(var8);
           if (var9 > var10) {
@@ -293,7 +293,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           return true;
         }
         if (!TextCursor.field_f) {
-          var7Lifetime1 = "[" + EmailCheckResult.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
+          var7Lifetime1 = "[" + EmailCheckResult.formatTemplate(param1 ^ -4859, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime1);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
@@ -310,7 +310,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           }
           return true;
         }
-        var7Lifetime2 = "[" + EmailCheckResult.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
+        var7Lifetime2 = "[" + EmailCheckResult.formatTemplate(param1 ^ -4859, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
         var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime2);
         if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {

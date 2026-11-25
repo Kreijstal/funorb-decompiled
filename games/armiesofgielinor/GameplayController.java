@@ -201,7 +201,7 @@ final class GameplayController {
             SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
             GradientUiRenderer.drawCenteredTextBackdrop(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
             GradientUiRenderer.drawCenteredGradientText(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
-            GradientUiRenderer.drawCenteredGradientText(AiInfluenceMap.a(10602, var17), IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
+            GradientUiRenderer.drawCenteredGradientText(AiInfluenceMap.intToString(10602, var17), IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
             if (var7 != 0) {
               param0 += 58;
               SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(113 + param0, (byte) 94), -var10 + var11, 12303155);
@@ -267,7 +267,7 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder0 = true;
           if (!this.battlefield.field_V) {
-            var9_ref_String = LocalCoatSupport.a(ConsoleExpression.field_m, (byte) 22, var8_int);
+            var9_ref_String = LocalCoatSupport.formatOrdinal(ConsoleExpression.field_m, (byte) 22, var8_int);
             DateInputWidget.field_E.textWidth(var9_ref_String);
             stackIn_7_0 = DateInputWidget.field_E;
             stackIn_7_1 = var9_ref_String;
@@ -404,7 +404,7 @@ final class GameplayController {
                 ~var2_int == ~this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)) {
                 stackIn_33_0 = DeployEvent.field_y;
               } else {
-                stackIn_33_0 = EmailCheckResult.a(param0 - 20367, SoundCache.field_i, new String[]{var3});
+                stackIn_33_0 = EmailCheckResult.formatTemplate(param0 - 20367, SoundCache.field_i, new String[]{var3});
               }
             }
             var4 = stackIn_33_0;
@@ -4026,7 +4026,7 @@ final class GameplayController {
             if (!ValidatedTextWidget.field_Z) {
               boolean decompiledSharedTail0 = !(LobbyNotificationSupport.field_d > 1);
               if (!decompiledSharedTail0) {
-                MarkerSliderPainter.field_k = EmailCheckResult.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(LobbyNotificationSupport.field_d)});
+                MarkerSliderPainter.field_k = EmailCheckResult.formatTemplate(4800, MovementPlanner.field_s, new String[]{Integer.toString(LobbyNotificationSupport.field_d)});
                 decompiledSharedTail0 = (var10 != 0);
               }
               if (decompiledSharedTail0) {
@@ -4284,19 +4284,19 @@ final class GameplayController {
           DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
           if (34 != param1) {
             if (WhirlpoolHasher.unitDefinitions[param1][6] != WhirlpoolHasher.unitDefinitions[param1][7]) {
-              DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
+              DateInputWidget.field_E.drawRightAligned(EmailCheckResult.formatTemplate(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
               if (var11 != 0) {
                 DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
-                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.formatTemplate(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             } else {
               DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
               if (var11 != 0) {
-                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.formatTemplate(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             }
           } else {
-            DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+            DateInputWidget.field_E.drawRightAligned(EmailCheckResult.formatTemplate(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
           }
           FixedSquareRootSupport.field_b.bindRasterTarget(5605);
           SpellConfirmationDialog.field_j.addOutline(1);
@@ -4409,12 +4409,12 @@ final class GameplayController {
           var3_int = this.battlefield.getSpellCastDelay(-124, this.controlledPlayerId, param0);
           var4 = -60 % ((param1 + 52) / 49);
           if (var3_int > 0) {
-            stackIn_4_0 = EmailCheckResult.a(4800, NameSuggestionList.field_I, new String[]{Integer.toString(var3_int - (-this.battlefield.playerTurnCounts[this.controlledPlayerId] - 1))});
+            stackIn_4_0 = EmailCheckResult.formatTemplate(4800, NameSuggestionList.field_I, new String[]{Integer.toString(var3_int - (-this.battlefield.playerTurnCounts[this.controlledPlayerId] - 1))});
             return stackIn_4_0;
           }
           if (this.battlefield.runeCapOption != 4 &&
             this.battlefield.remainingRuneCap[this.controlledPlayerId] < SpellDefinitionTable.spellDefinitions[param0][0]) {
-            stackIn_10_0 = EmailCheckResult.a(4800, MovementPlanner.field_v, new String[]{Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId]), Integer.toString(SpellDefinitionTable.spellDefinitions[param0][0])});
+            stackIn_10_0 = EmailCheckResult.formatTemplate(4800, MovementPlanner.field_v, new String[]{Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId]), Integer.toString(SpellDefinitionTable.spellDefinitions[param0][0])});
             return stackIn_10_0;
           }
           stackIn_12_0 = null;
@@ -6301,7 +6301,7 @@ final class GameplayController {
                               if (var20 != 0) {
                                 var2 = IntroSequence.field_a;
                                 var2 = PointerInputHandler.field_e;
-                                var2 = EmailCheckResult.a(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                                var2 = EmailCheckResult.formatTemplate(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                               }
                             }
                           }
@@ -6309,7 +6309,7 @@ final class GameplayController {
                           var2 = IntroSequence.field_a;
                           if (var20 != 0) {
                             var2 = PointerInputHandler.field_e;
-                            var2 = EmailCheckResult.a(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                            var2 = EmailCheckResult.formatTemplate(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                           }
                         }
                       }
@@ -6317,11 +6317,11 @@ final class GameplayController {
                   } else {
                     var2 = PointerInputHandler.field_e;
                     if (var20 != 0) {
-                      var2 = EmailCheckResult.a(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                      var2 = EmailCheckResult.formatTemplate(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                     }
                   }
                 } else {
-                  var2 = EmailCheckResult.a(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                  var2 = EmailCheckResult.formatTemplate(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                 }
                 if (decompiledFrameCompleted2) {
                   stackIn_252_0 = -162;
@@ -6349,11 +6349,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail5 = (var9 != 0);
                     if (!decompiledSharedTail5) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.battlefield.currentPlayer]), Integer.toString(this.battlefield.turnLimit)});
+                      var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.battlefield.currentPlayer]), Integer.toString(this.battlefield.turnLimit)});
                       decompiledSharedTail5 = (var20 != 0);
                     }
                     if (decompiledSharedTail5) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9])});
+                      var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9])});
                     }
                   }
                   decompiledFrameRemainder10 = (~this.battlefield.rankedParticipants[0] != ~this.battlefield.currentPlayer);
@@ -6366,7 +6366,7 @@ final class GameplayController {
                     }
                     decompiledFrameRemainder10 = !(var9 <= 0);
                     if (decompiledFrameRemainder10) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
+                      var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
                       decompiledFrameRemainder10 = (var20 != 0);
                     }
                   }
@@ -6379,11 +6379,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail4 = (var9 != 0);
                     if (!decompiledSharedTail4) {
-                      var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.controlledPlayerId]), Integer.toString(this.battlefield.turnLimit)});
+                      var2 = EmailCheckResult.formatTemplate(4800, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.controlledPlayerId]), Integer.toString(this.battlefield.turnLimit)});
                       decompiledSharedTail4 = (var20 != 0);
                     }
                     if (decompiledSharedTail4) {
-                      var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)][var9 - 1]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1])});
+                      var2 = EmailCheckResult.formatTemplate(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)][var9 - 1]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1])});
                     }
                   }
                   if (this.battlefield.rankedParticipants[0] != this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, param0 - 121) &&
@@ -6394,7 +6394,7 @@ final class GameplayController {
                       var9++;
                     }
                     if (0 < var9) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
+                      var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
                     }
                   }
                 }
@@ -6411,7 +6411,7 @@ final class GameplayController {
                 var16_ref_String = Integer.toString(var14);
                 if (null != DiskCacheWorker.field_f ||
                   !(DiskCacheWorker.field_f.length <= 8)) {
-                  var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[8], new String[]{var15_ref_String, var16_ref_String});
+                  var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, DiskCacheWorker.field_f[8], new String[]{var15_ref_String, var16_ref_String});
                   if (var20 != 0) {
                     var2 = null;
                   }
@@ -6441,9 +6441,9 @@ final class GameplayController {
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 502, 550, 12, 32)) {
                     if (0 < this.selectedUnit.bonusStrength) {
-                      var2 = EmailCheckResult.a(4800, QuinticFadeSupport.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength), Integer.toString(this.selectedUnit.bonusStrength)});
+                      var2 = EmailCheckResult.formatTemplate(4800, QuinticFadeSupport.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength), Integer.toString(this.selectedUnit.bonusStrength)});
                     }
-                    var2 = EmailCheckResult.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
+                    var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 312, 342, 39, 79)) {
                     var2 = GrowableIntArray.field_f[BitCountSupport.bitCount((byte) -109, 3 & ~var13)];
@@ -6486,11 +6486,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail3 = (~var18 == ~var17);
                     if (!decompiledSharedTail3) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, AttackRangeOverlaySupport.field_a, new String[]{Integer.toString(var17), Integer.toString(var18)});
+                      var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, AttackRangeOverlaySupport.field_a, new String[]{Integer.toString(var17), Integer.toString(var18)});
                       decompiledSharedTail3 = (var20 != 0);
                     }
                     if (decompiledSharedTail3) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, FullscreenStatusDialog.field_Y, new String[]{Integer.toString(var17)});
+                      var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, FullscreenStatusDialog.field_Y, new String[]{Integer.toString(var17)});
                     }
                   }
                   var16 = 0;
@@ -6532,13 +6532,13 @@ final class GameplayController {
                         }
                         if (stackIn_424_0 != stackIn_424_1) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - (var16 & 3) * 30, 517 - (3 & var16) * 30, 30 * (var16 >> 2) + 39, 79 + 30 * (var16 >> 2))) {
-                            var2 = EmailCheckResult.a(param0 + 4680, PaletteRegionMap.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
+                            var2 = EmailCheckResult.formatTemplate(param0 + 4680, PaletteRegionMap.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
                           }
                           var16++;
                         }
                         if (this.selectedUnit.equipmentDescriptor > -1) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - 30 * (var16 & 3), (var16 >> 2) * 30 + 39, 79 + (var16 >> 2) * 30)) {
-                            var2 = EmailCheckResult.a(4800, ManaEvent.field_y[this.selectedUnit.getEquipmentId((byte) 81)], new String[]{UnitAnimationSelectionSupport.field_b[this.selectedUnit.getEquipmentCategory(20640)]});
+                            var2 = EmailCheckResult.formatTemplate(4800, ManaEvent.field_y[this.selectedUnit.getEquipmentId((byte) 81)], new String[]{UnitAnimationSelectionSupport.field_b[this.selectedUnit.getEquipmentCategory(20640)]});
                           }
                           var16++;
                         }
@@ -6551,7 +6551,7 @@ final class GameplayController {
                         if (this.selectedUnit.immobilizedTurns > 0) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - (var16 & 3) * 30, 39 + (var16 >> 2) * 30, 30 * (var16 >> 2) + 79)) {
                             if (this.selectedUnit.immobilizedTurns > 1) {
-                              stackIn_457_0 = EmailCheckResult.a(4800, PrintCoatConsoleCommand.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
+                              stackIn_457_0 = EmailCheckResult.formatTemplate(4800, PrintCoatConsoleCommand.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
                             } else {
                               stackIn_457_0 = PrintCoatConsoleCommand.field_E[0];
                             }
@@ -6686,9 +6686,9 @@ final class GameplayController {
                       if (var20 != 0) {
                         if (this.controlledPlayerId == var13_ref_ne.ownerPlayer) {
                           var2 = GlobalSpell.field_e;
-                          var2 = EmailCheckResult.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                          var2 = EmailCheckResult.formatTemplate(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                         } else {
-                          var2 = EmailCheckResult.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                          var2 = EmailCheckResult.formatTemplate(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                         }
                       }
                     } else {
@@ -6698,7 +6698,7 @@ final class GameplayController {
                         decompiledSharedTail2 = (var20 != 0);
                       }
                       if (decompiledSharedTail2) {
-                        var2 = EmailCheckResult.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                        var2 = EmailCheckResult.formatTemplate(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                       }
                     }
                   }
@@ -6751,7 +6751,7 @@ final class GameplayController {
                     var14 = stackIn_617_0;
                   }
                   if (0 < var14) {
-                    var2 = EmailCheckResult.a(4800, PreferencesReadRequest.field_t, new String[]{Integer.toString(var14)});
+                    var2 = EmailCheckResult.formatTemplate(4800, PreferencesReadRequest.field_t, new String[]{Integer.toString(var14)});
                     if (var20 != 0) {
                       var2 = DisplayModeOptionPainter.field_x;
                     }
@@ -6766,7 +6766,7 @@ final class GameplayController {
                     decompiledSharedTail1 = (var20 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var2 = EmailCheckResult.a(4800, AccountNameSelectionSupport.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
+                    var2 = EmailCheckResult.formatTemplate(4800, AccountNameSelectionSupport.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
                   }
                 }
                 var14 = 23;
@@ -6908,7 +6908,7 @@ final class GameplayController {
                     var19 = var13_ref_int__[var16];
                     var4 = 1;
                     if (var19 > -1) {
-                      var2 = EmailCheckResult.a(param0 + 4680, PointerInputHandler.field_c, new String[]{NetworkGameShell.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
+                      var2 = EmailCheckResult.formatTemplate(param0 + 4680, PointerInputHandler.field_c, new String[]{NetworkGameShell.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
                     }
                   }
                   var16++;
@@ -6960,14 +6960,14 @@ final class GameplayController {
                 var15_ref_int__ = this.battlefield.chosenGods[this.controlledPlayerId];
                 if (3 == var15_ref_int__.length) {
                   if (TabbedPanel.a(var14 + 55, var13 + 40, 25, false)) {
-                    var2 = EmailCheckResult.a(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
+                    var2 = EmailCheckResult.formatTemplate(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
                   }
                   if (TabbedPanel.a(var14, 80 + var13, 25, false)) {
-                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
+                    var2 = EmailCheckResult.formatTemplate(4800, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
                   }
                   decompiledFrameRemainder4 = !(!TabbedPanel.a(var14, var13, 25, false));
                   if (decompiledFrameRemainder4) {
-                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
+                    var2 = EmailCheckResult.formatTemplate(4800, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
                     decompiledFrameRemainder4 = (var20 != 0);
                   }
                 }
@@ -6985,7 +6985,7 @@ final class GameplayController {
                       break;
                     }
                     if (stackIn_798_0) {
-                      var2 = EmailCheckResult.a(param0 + 4680, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[var15_ref_int__[var18] + 1]});
+                      var2 = EmailCheckResult.formatTemplate(param0 + 4680, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[var15_ref_int__[var18] + 1]});
                     }
                     var17 = var17 + var16;
                     var18++;
@@ -7827,7 +7827,7 @@ final class GameplayController {
           var7 = Integer.toString(var5);
           var8 = Integer.toString(this.battlefield.getStructureIncome(-99, param1));
           if (!this.battlefield.field_r) {
-            stackIn_4_0 = param0 + " - " + EmailCheckResult.a(param2 + 255074220, ConsoleCommand.field_w, new String[]{var8});
+            stackIn_4_0 = param0 + " - " + EmailCheckResult.formatTemplate(param2 + 255074220, ConsoleCommand.field_w, new String[]{var8});
             return stackIn_4_0;
           }
           if (param2 != -255069420) {
@@ -7835,15 +7835,15 @@ final class GameplayController {
           }
           var9 = this.a((byte) -70, param1);
           if (var9 == 1) {
-            stackIn_10_0 = param0 + " - " + EmailCheckResult.a(4800, ProgressDialog.field_bb, new String[]{var6, var7, var8});
+            stackIn_10_0 = param0 + " - " + EmailCheckResult.formatTemplate(4800, ProgressDialog.field_bb, new String[]{var6, var7, var8});
             return stackIn_10_0;
           }
           if (var9 <= 3 &&
             var9 > 1) {
-            stackIn_16_0 = param0 + " - " + EmailCheckResult.a(4800, TutorialLayout.field_c, new String[]{var6, var7, var8, Integer.toString(var9)});
+            stackIn_16_0 = param0 + " - " + EmailCheckResult.formatTemplate(4800, TutorialLayout.field_c, new String[]{var6, var7, var8, Integer.toString(var9)});
             return stackIn_16_0;
           }
-          stackIn_18_0 = param0 + " - " + EmailCheckResult.a(4800, TextEntryWidgetPainter.field_v, new String[]{var6, var7, var8});
+          stackIn_18_0 = param0 + " - " + EmailCheckResult.formatTemplate(4800, TextEntryWidgetPainter.field_v, new String[]{var6, var7, var8});
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8981,7 +8981,7 @@ final class GameplayController {
               if (!this.field_a) {
                 var3 = this.battlefield.g(-1);
                 if (var3 > 0) {
-                  MusicPatchEnvelope.a(this.field_Nb, EmailCheckResult.a(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
+                  MusicPatchEnvelope.a(this.field_Nb, EmailCheckResult.formatTemplate(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
                 }
               }
             }
@@ -10115,18 +10115,18 @@ final class GameplayController {
             var3 = 1 << var2_int;
             if (var4 == 0) {
               if ((this.field_hb & var3) != 0) {
-                LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, AccountRequestResult.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
               } else {
                 if ((this.field_ob & var3) != 0) {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               if (0 != (var3 & this.field_x) &&
                 0 == (this.battlefield.eliminatedPlayerMask & var3)) {
                 if (0 == (var3 & this.battlefield.field_C)) {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 } else {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, MusicTrackSelectionSupport.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, MusicTrackSelectionSupport.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               var2_int++;
@@ -10419,7 +10419,7 @@ final class GameplayController {
           var6_int = 200;
           var7 = ActionRequest.field_l[param0];
           if (this.battlefield.runeCapOption != 4) {
-            var7 = var7 + EmailCheckResult.a(4800, BattleViewportResizeHandler.field_f, new String[]{Integer.toString(SpellDefinitionTable.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
+            var7 = var7 + EmailCheckResult.formatTemplate(4800, BattleViewportResizeHandler.field_f, new String[]{Integer.toString(SpellDefinitionTable.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
           }
           var8 = DateInputWidget.field_E.getParagraphHeight(var7, var6_int - 20, 0);
           var9 = (NineSliceFrame.field_e.getParagraphHeight(MusicPatchEnvelope.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
@@ -11899,7 +11899,7 @@ final class GameplayController {
               (param3 + var8) > AiPlanningStrategy.pointerX &&
               HighscoreAccountEntry.pointerY >= param4 &&
               HighscoreAccountEntry.pointerY <= (24 + param4)) {
-              var11 = EmailCheckResult.a(4800, ResourceClientSetupSupport.field_b, new String[]{Integer.toString(var7 + UnitAnimationSelectionSupport.playerProfile.progressionCredit)});
+              var11 = EmailCheckResult.formatTemplate(4800, ResourceClientSetupSupport.field_b, new String[]{Integer.toString(var7 + UnitAnimationSelectionSupport.playerProfile.progressionCredit)});
               var12 = AiPlanningStrategy.pointerX;
               var13 = HighscoreAccountEntry.pointerY;
               var14 = DateInputWidget.field_E.getWrappedWidth(var11, 320);

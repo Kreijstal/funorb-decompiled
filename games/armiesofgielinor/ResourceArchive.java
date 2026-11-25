@@ -271,7 +271,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final static int c(int param0, int param1, int param2) {
+    final static int getChatPrivilegeBadgeType(int param0, int param1, int param2) {
         int var3 = -33 % ((param1 - 33) / 62);
         if (2 > param2) {
           if (5 > param0) {
@@ -368,7 +368,7 @@ final class ResourceArchive {
         }
         allGroupsAvailable = 1;
         if (obfuscationGuard != -27927) {
-          ResourceArchive.c(((int[]) (this.packedGroups[1]))[2], 24, 50);
+          ResourceArchive.getChatPrivilegeBadgeType(((int[]) (this.packedGroups[1]))[2], 24, 50);
         }
         for (groupOrdinal = 0; this.index.groupIds.length > groupOrdinal; groupOrdinal++) {
           groupId = this.index.groupIds[groupOrdinal];

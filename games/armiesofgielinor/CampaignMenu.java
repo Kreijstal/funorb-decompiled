@@ -104,7 +104,7 @@ final class CampaignMenu {
               1 != score) {
               return;
             }
-            entry.statusText = AiInfluenceMap.a(10602, score);
+            entry.statusText = AiInfluenceMap.intToString(10602, score);
             entry.score = score;
             return;
           }
@@ -234,8 +234,8 @@ final class CampaignMenu {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(111);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
-          var5 = EmailCheckResult.a(4800, AccountRequestResult.field_e, new String[]{var3.name, Integer.toString(var4)});
-          var6 = EmailCheckResult.a(4800, BufferedSocket.field_h, new String[]{var5});
+          var5 = EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_e, new String[]{var3.name, Integer.toString(var4)});
+          var6 = EmailCheckResult.formatTemplate(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
             var8 = NineSliceFrame.field_e.textWidth(ResourceClientSetupSupport.field_c) / 2 + 26;
@@ -722,7 +722,7 @@ final class CampaignMenu {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(97);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, param0 - 26);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
-          var5 = EmailCheckResult.a(4800, DateOfBirthValidator.field_f, new String[]{Integer.toString(var4)});
+          var5 = EmailCheckResult.formatTemplate(4800, DateOfBirthValidator.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
           if (!decompiledSharedTail0) {
             var6 = this.field_c.width;
@@ -1063,7 +1063,7 @@ final class CampaignMenu {
                 stackIn_38_5 = this.selectedMissionEntry.statusText;
               }
               stackIn_37_3[stackIn_37_4] = stackIn_38_5;
-              var17_ref_String = EmailCheckResult.a(stackIn_37_0, stackIn_37_1, stackIn_37_2);
+              var17_ref_String = EmailCheckResult.formatTemplate(stackIn_37_0, stackIn_37_1, stackIn_37_2);
               var16Lifetime1 = PowerOfTwoSupport.field_n.drawParagraph(var17_ref_String, IgnoreListLookupSupport.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
               var18Lifetime1 = PowerOfTwoSupport.field_n.getWrappedWidth(var17_ref_String, var4Lifetime1);
               var19_intLifetime1 = this.selectedMissionEntry.score;
@@ -1415,7 +1415,7 @@ final class CampaignMenu {
           entry = new CampaignMenuEntry(mission);
           score = EffectsGainSupport.getProfileMissionScore(this.campaignIndex, obfuscationGuard - 119, entry.entryId);
           if (~score < obfuscationGuard) {
-            entry.statusText = AiInfluenceMap.a(10602, score);
+            entry.statusText = AiInfluenceMap.intToString(10602, score);
             entry.score = score;
           }
           this.missionEntries.put(entry, (long)entry.entryId, 122);
@@ -1863,7 +1863,7 @@ final class CampaignMenu {
               var6_int++;
             }
             if (decompiledFrameCompleted0) {
-              var3.statusText = EmailCheckResult.a(4800, ConsoleExpression.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
+              var3.statusText = EmailCheckResult.formatTemplate(4800, ConsoleExpression.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
               var6 = DisplayModeOptionPainter.field_w[var3.entryId];
               var7 = new RgbSprite(var6.canvasWidth, var6.canvasHeight);
               CombatSandbox.a(var7, 3);
@@ -2358,7 +2358,7 @@ final class CampaignMenu {
                   var11.left = 45;
                   var12 = QuickChatPhrase.getCampaignMission(var10_ref_sl.campaignIndex, var10_ref_sl.missionId, 0);
                   var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.snapshotBytes, false);
-                  var14 = EmailCheckResult.a(4800, AccountRequestResult.field_e, new String[]{var12.name, Integer.toString(var13_int)});
+                  var14 = EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.title = var12.campaign.name;
                   var11.selectable = true;
                   var11.mission = var12;

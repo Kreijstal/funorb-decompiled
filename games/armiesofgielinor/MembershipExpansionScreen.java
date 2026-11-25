@@ -60,8 +60,8 @@ final class MembershipExpansionScreen {
         try {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
-            ConsoleTokenSupport.a(-84, (CharSequence) ((Object) var7))) {
-            this.field_r = HuffmanCodec.a(param1 + 2, (CharSequence) ((Object) var7));
+            ConsoleTokenSupport.isValidDecimalInt(-84, (CharSequence) ((Object) var7))) {
+            this.field_r = HuffmanCodec.parseDecimalInt(param1 + 2, (CharSequence) ((Object) var7));
           } else {
             this.field_r = 2;
           }

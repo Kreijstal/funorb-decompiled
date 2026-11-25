@@ -192,7 +192,7 @@ abstract class TileableNoiseGenerator {
             }
             if (LogoMesh.field_k[0][2].hovered) {
               if (!ToggleWidget.isCurrentRoomOwner(false)) {
-                DialogMessagePane.field_I = EmailCheckResult.a(4800, FriendRequestSupport.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
+                DialogMessagePane.field_I = EmailCheckResult.formatTemplate(4800, FriendRequestSupport.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
               } else {
                 DialogMessagePane.field_I = ActionSpell.field_f;
               }
@@ -517,13 +517,13 @@ abstract class TileableNoiseGenerator {
                     if (thresholdTwoFailed != 0) {
                       var22_int = SoundPanSupport.field_d[optionIndex][choiceValue] - SummonAction.field_s;
                       if (var22_int != 1) {
-                        restrictionMessage = EmailCheckResult.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
+                        restrictionMessage = EmailCheckResult.formatTemplate(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
                       } else {
                         restrictionMessage = LoginAndTutorialSetupSupport.field_a;
                       }
                     }
                     if (thresholdOneFailed != 0) {
-                      featureMessage = EmailCheckResult.a(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(GameAppletShell.field_e[optionIndex][choiceValue])});
+                      featureMessage = EmailCheckResult.formatTemplate(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(GameAppletShell.field_e[optionIndex][choiceValue])});
                       restrictionMessageReference = featureMessage;
                       var25 = restrictionMessageReference;
                       restrictionMessageReference = var25;
@@ -581,7 +581,7 @@ abstract class TileableNoiseGenerator {
                     }
                   }
                   if (multipleRestrictionNames == 0) {
-                    restrictionMessage = EmailCheckResult.a(4800, AlphanumericTextSupport.field_e, new String[]{(String) (restrictionMessageReference)});
+                    restrictionMessage = EmailCheckResult.formatTemplate(4800, AlphanumericTextSupport.field_e, new String[]{(String) (restrictionMessageReference)});
                   } else {
                     restrictionMessage = AudioShutdownSupport.field_a + (String) (restrictionMessageReference);
                   }

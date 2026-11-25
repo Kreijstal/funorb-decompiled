@@ -209,7 +209,7 @@ final class BitmapTextLayout extends TextLayout {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void requestUrlNavigation(String param0, byte param1) {
         try {
           TextFieldValidator.field_f = param0;
           AccountIdentifierStatus.setAccountFlowAction(120, 12);

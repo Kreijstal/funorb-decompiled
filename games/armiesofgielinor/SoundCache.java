@@ -327,7 +327,7 @@ final class SoundCache {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != DraggableWidgetContainer.a(var3, 0)) {
+            if (0L != DraggableWidgetContainer.encodeBase37Name(var3, 0)) {
               return;
             }
           }
@@ -383,7 +383,7 @@ final class SoundCache {
         }
     }
 
-    final static String a(int param0, int param1, byte param2, int param3) {
+    final static String formatOrdinalForLanguage(int param0, int param1, byte param2, int param3) {
         int var4;
         int var5;
         int var5Lifetime1;

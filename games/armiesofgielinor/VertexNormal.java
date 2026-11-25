@@ -220,11 +220,11 @@ final class VertexNormal {
               var12.admissionButton.matchedButtonTextColour = var24_int;
               if (UnitRecordWriter.field_a != param4) {
                 if (var12.invitationSent) {
-                  var12.nameComponent.text = EmailCheckResult.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
+                  var12.nameComponent.text = EmailCheckResult.formatTemplate(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
                   var12.cancelRejectButton.text = ManaStarParticle.field_s;
                 } else {
                   if (var12.joinRequested) {
-                    var12.nameComponent.text = EmailCheckResult.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
+                    var12.nameComponent.text = EmailCheckResult.formatTemplate(param1 + 4545, DeployEvent.field_G, new String[]{var20});
                     var12.admissionButton.text = LeaderEscortCondition.field_g;
                     var12.cancelRejectButton.text = SpellConfirmationDialog.field_l;
                   } else {
@@ -323,7 +323,7 @@ final class VertexNormal {
               if (ChannelBaseVolumeConsoleCommand.localAccountId != var12.accountId) {
                 if (var5_int != 0 &&
                   !var12.packedFlag0) {
-                  var24Lifetime2 = EmailCheckResult.a(param1 + 4545, TickCounter.field_b, new String[]{var20});
+                  var24Lifetime2 = EmailCheckResult.formatTemplate(param1 + 4545, TickCounter.field_b, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -334,23 +334,23 @@ final class VertexNormal {
                     if (var6 <= var12.rating) {
                       if ((~var12.optionUnlockMask & var8) != 0) {
                         var25_int = AnimationFrameSetCacheEntry.highestOneBit(true, ~var12.optionUnlockMask & var8);
-                        var24Lifetime2 = EmailCheckResult.a(4800, LoginKind.field_f, new String[]{var20});
+                        var24Lifetime2 = EmailCheckResult.formatTemplate(4800, LoginKind.field_f, new String[]{var20});
                         if (0 < var25_int &&
                           FullscreenStatusToken.field_c != null &&
                           FullscreenStatusToken.field_c.length >= var25_int &&
                           FullscreenStatusToken.field_c[var25_int - 1] != null) {
-                          var24Lifetime2 = EmailCheckResult.a(4800, FullscreenStatusToken.field_c[-1 + var25_int][2], new String[]{var20});
+                          var24Lifetime2 = EmailCheckResult.formatTemplate(4800, FullscreenStatusToken.field_c[-1 + var25_int][2], new String[]{var20});
                         }
                       }
                     } else {
-                      var24Lifetime2 = EmailCheckResult.a(4800, MusicTrackSelectionSupport.field_g, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.formatTemplate(4800, MusicTrackSelectionSupport.field_g, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.ratedGamesPlayed + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = EmailCheckResult.a(4800, BattlefieldTheme.field_r, new String[]{var20});
+                      var24Lifetime2 = EmailCheckResult.formatTemplate(4800, BattlefieldTheme.field_r, new String[]{var20});
                     }
-                    var24Lifetime2 = EmailCheckResult.a(4800, AccountNamePrompt.field_Ib, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = EmailCheckResult.formatTemplate(4800, AccountNamePrompt.field_Ib, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -363,7 +363,7 @@ final class VertexNormal {
                     if (var25_int == 1) {
                       var24Lifetime2 = FullscreenMembershipDialog.field_Y;
                     }
-                    var24Lifetime2 = EmailCheckResult.a(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = EmailCheckResult.formatTemplate(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.rating) {
                       if (0 != (var8 & ~var12.optionUnlockMask)) {
@@ -377,7 +377,7 @@ final class VertexNormal {
                         }
                       }
                     } else {
-                      var24Lifetime2 = EmailCheckResult.a(4800, MonotonicClockSupport.field_b, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.formatTemplate(4800, MonotonicClockSupport.field_b, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -449,11 +449,11 @@ final class VertexNormal {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + IterableDualNodeDeque.field_d + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + EmailCheckResult.a(4800, DualNodeHashTable.field_c, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + EmailCheckResult.formatTemplate(4800, DualNodeHashTable.field_c, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + EmailCheckResult.a(4800, BufferedFile.field_e, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + EmailCheckResult.formatTemplate(4800, BufferedFile.field_e, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + MusicCrossfadeStream.field_u + (String) (var25);
                   }
@@ -461,7 +461,7 @@ final class VertexNormal {
                 if (param4 == UnitRecordWriter.field_a &&
                   !ToggleWidget.isCurrentRoomOwner(false)) {
                   var27 = ToggleWidget.currentRoom.ownerName;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + EmailCheckResult.a(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + EmailCheckResult.formatTemplate(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});
                 }
                 DialogMessagePane.field_I = (String) (var24Lifetime2);
               }

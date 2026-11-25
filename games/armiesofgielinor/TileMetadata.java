@@ -40,7 +40,7 @@ final class TileMetadata implements TaggedFieldReader {
             if (0 >= encodedLength) {
               return;
             }
-            this.displayName = PortalLossCondition.a(packet, encodedLength, (byte) -115);
+            this.displayName = PortalLossCondition.readOptionalBitStreamString(packet, encodedLength, (byte) -115);
           } else {
             if (!fieldName.equals("mf")) {
               if (fieldName.equals("ownr")) {

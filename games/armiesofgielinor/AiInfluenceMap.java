@@ -175,7 +175,7 @@ final class AiInfluenceMap {
         field_j = null;
     }
 
-    final static String a(int param0, int param1) {
+    final static String intToString(int param0, int param1) {
         if (param0 != 10602) {
           CipherPacketBuffer var3 = (CipherPacketBuffer) null;
           AiInfluenceMap.writeTieredSignedInt(12, 72, -87, -119, -83, -86, (CipherPacketBuffer) null);

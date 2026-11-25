@@ -18,7 +18,7 @@ final class QuickChatCategoryRepository {
         }
     }
 
-    final static String b(int param0) {
+    final static String getVisibleTooltipText(int param0) {
         if (param0 != 2) {
           field_f = false;
         }
@@ -280,7 +280,7 @@ final class QuickChatCategoryRepository {
                                     ChannelBaseVolumeConsoleCommand.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     break regionExit1;
                                   default:
-                                    LoginCredentials.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
+                                    LoginCredentials.a((Throwable) null, 118, "L1: " + CampaignProgress.formatPacketDiagnostic(false));
                                     TextSplitSupport.closeSessionSocket((byte) -124);
                                     break regionExit1;
                                 }
@@ -395,7 +395,7 @@ final class QuickChatCategoryRepository {
             }
           }
           if (obfuscationGuard >= -36) {
-            QuickChatCategoryRepository.b(122);
+            QuickChatCategoryRepository.getVisibleTooltipText(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

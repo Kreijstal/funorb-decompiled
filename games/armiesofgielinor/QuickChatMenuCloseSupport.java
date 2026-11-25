@@ -54,7 +54,7 @@ final class QuickChatMenuCloseSupport {
         try {
           name = SpriteFramedLabel.a(name, '_', 3, "");
           var4 = 90 / ((39 - obfuscationGuard) / 35);
-          var3 = IconTextComponent.a(true, password);
+          var3 = IconTextComponent.reverseString(true, password);
           stackIn_5_0 = (name.indexOf(password) != -1) || (name.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

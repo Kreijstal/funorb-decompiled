@@ -93,7 +93,7 @@ final class TrianglePulse {
         this.value = this.maximum + this.minimum >> 1;
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String joinCharSequenceSlice(CharSequence[] param0, int param1, int param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$3 = null;

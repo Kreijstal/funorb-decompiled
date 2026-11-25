@@ -121,7 +121,7 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param0 != 14) {
             return null;
           }
-          stackIn_27_0 = EmailCheckResult.a(param1 ^ 4806, ActionSpell.field_i, new String[]{param2});
+          stackIn_27_0 = EmailCheckResult.formatTemplate(param1 ^ 4806, ActionSpell.field_i, new String[]{param2});
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -308,7 +308,7 @@ final class LeaderEscortCondition implements MatchCondition {
             TextSplitSupport.closeSessionSocket((byte) -126);
             return;
           }
-          LoginCredentials.a((Throwable) null, 76, "HS1: " + CampaignProgress.b(false));
+          LoginCredentials.a((Throwable) null, 76, "HS1: " + CampaignProgress.formatPacketDiagnostic(false));
           TextSplitSupport.closeSessionSocket((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

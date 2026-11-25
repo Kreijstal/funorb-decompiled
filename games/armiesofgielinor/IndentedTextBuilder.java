@@ -89,7 +89,7 @@ final class IndentedTextBuilder {
             String var4 = (String) null;
             this.appendLine((byte) 62, (String) null);
           }
-          this.appendLine((byte) 19, SpellCastEvent.a(593277313, (CharSequence[]) ((Object) parts)));
+          this.appendLine((byte) 19, SpellCastEvent.joinCharSequences(593277313, (CharSequence[]) ((Object) parts)));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gn.D(" + (parts != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

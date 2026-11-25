@@ -135,7 +135,7 @@ final class SpellCastEvent extends GameEvent {
         }
     }
 
-    final static String g(int param0) {
+    final static String pollSharedUiLoadingCaption(int param0) {
         if (!(StrongCacheEntry.field_E >= 2)) {
           return BattleUnitRenderer.field_c;
         }
@@ -412,7 +412,7 @@ final class SpellCastEvent extends GameEvent {
               var4_int = var4_int != 0 | this.enqueuePresenterAt(var10, 15, param2, param0, var9) ? 1 : 0;
             }
           }
-          LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, RadialSummonItem.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], MusicPatchEnvelope.field_f[this.spell.spellId]}), param2.field_Nb);
+          LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, RadialSummonItem.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], MusicPatchEnvelope.field_f[this.spell.spellId]}), param2.field_Nb);
           stackIn_39_0 = var4_int;
           return stackIn_39_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -446,7 +446,7 @@ final class SpellCastEvent extends GameEvent {
         }
     }
 
-    final static String a(int param0, CharSequence[] param1) {
+    final static String joinCharSequences(int param0, CharSequence[] param1) {
         RuntimeException var2 = null;
         Unit var3 = null;
         String stackIn_3_0 = null;
@@ -459,7 +459,7 @@ final class SpellCastEvent extends GameEvent {
             var3 = (Unit) null;
             SpellCastEvent.computeMovementStepCost(73, (MapTile[]) null, true, -35, 53, 62, 17, (Unit) null, 87, false, false);
           }
-          stackIn_3_0 = TrianglePulse.a(param1, 0, param1.length, 0);
+          stackIn_3_0 = TrianglePulse.joinCharSequenceSlice(param1, 0, param1.length, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

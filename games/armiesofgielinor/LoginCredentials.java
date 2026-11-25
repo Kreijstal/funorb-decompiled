@@ -47,9 +47,9 @@ abstract class LoginCredentials {
             if (!message.systemMessage) {
               if (0 == message.privateMessageIdHigh16 &&
                 message.privateMessageIdLow24 == 0) {
-                var3_ref = EmailCheckResult.a(obfuscationGuard + 4697, LabeledWidgetContainer.field_Q, new String[]{(String) (var2)});
+                var3_ref = EmailCheckResult.formatTemplate(obfuscationGuard + 4697, LabeledWidgetContainer.field_Q, new String[]{(String) (var2)});
               } else {
-                var3_ref = EmailCheckResult.a(obfuscationGuard + 4697, SpectateRoomRequestSupport.field_l, new String[]{(String) (var2)});
+                var3_ref = EmailCheckResult.formatTemplate(obfuscationGuard + 4697, SpectateRoomRequestSupport.field_l, new String[]{(String) (var2)});
               }
             }
           } else {
@@ -58,7 +58,7 @@ abstract class LoginCredentials {
               var3_ref = "[" + ClientConnectionState.field_c + "] ";
             }
             if (message.channelId == 1) {
-              var3_ref = "[" + EmailCheckResult.a(obfuscationGuard + 4697, CampaignMenu.field_m, new String[]{message.channelLabel}) + "] ";
+              var3_ref = "[" + EmailCheckResult.formatTemplate(obfuscationGuard + 4697, CampaignMenu.field_m, new String[]{message.channelLabel}) + "] ";
             }
             if (4 == message.channelId &&
               null != TeleportAction.field_C) {

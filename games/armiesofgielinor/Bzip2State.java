@@ -99,7 +99,7 @@ final class Bzip2State {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1, byte param2) {
+    final static String getAccountNameValidationError(boolean param0, CharSequence param1, byte param2) {
         String var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -112,7 +112,7 @@ final class Bzip2State {
         RuntimeException var3_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = SummonAction.a(-127, param1, param0);
+          var3 = SummonAction.getAccountNameShapeError(-127, param1, param0);
           if (param2 > -34) {
             Bzip2State.releaseStatics((byte) -25);
           }

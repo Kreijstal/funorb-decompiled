@@ -207,7 +207,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         MaskedTextEntryPainter dupTemp$1 = new MaskedTextEntryPainter(10000536);
         this.passwordConfirmationInput.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.passwordInput.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = EmailCheckResult.a(4800, StateChangeEvent.field_D, new String[]{this.getLinkOpenMarkup(150), this.getLinkCloseMarkup(29406)});
+        String var2 = EmailCheckResult.formatTemplate(4800, StateChangeEvent.field_D, new String[]{this.getLinkOpenMarkup(150), this.getLinkCloseMarkup(29406)});
         int var3 = 20;
         var3 = var3 + this.a(FullscreenMembershipDialog.field_X, var3, 170, (byte) 18, this.emailInput);
         var3 = var3 + (this.a(false, 170, this.emailConfirmationInput, TrianglePulse.field_j, 20, "", var3) + 5);
@@ -319,13 +319,13 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
             field_F = (ClientUiComponent) null;
           }
           if (0 == hotspotId) {
-            BitmapTextLayout.a("terms.ws", (byte) -106);
+            BitmapTextLayout.requestUrlNavigation("terms.ws", (byte) -106);
           } else {
             if (hotspotId == 1) {
-              BitmapTextLayout.a("privacy.ws", (byte) -81);
+              BitmapTextLayout.requestUrlNavigation("privacy.ws", (byte) -81);
             } else {
               if (hotspotId == 2) {
-                BitmapTextLayout.a("conduct.ws", (byte) -98);
+                BitmapTextLayout.requestUrlNavigation("conduct.ws", (byte) -98);
               }
             }
           }

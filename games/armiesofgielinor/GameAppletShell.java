@@ -438,7 +438,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     MaskedTextEntryPainter.redrawRequested = false;
                     var3_int = 1;
                   }
-                  NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
+                  NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.pollSharedUiLoadingCaption(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
                 }
               }
             } else {
@@ -451,7 +451,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   MaskedTextEntryPainter.redrawRequested = false;
                   var3_int = 1;
                 }
-                NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
+                NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.pollSharedUiLoadingCaption(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
               }
             }
           } else {
@@ -460,7 +460,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               MaskedTextEntryPainter.redrawRequested = false;
               var3_int = 1;
             }
-            NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
+            NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.pollSharedUiLoadingCaption(-15862), var3_int != 0, ArchiveMasterIndex.getLoadingProgressPercent(false));
           }
           if (param0) {
             field_m = (String) null;
@@ -550,8 +550,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (ConsoleTokenSupport.a(-45, (CharSequence) ((Object) var4)) &&
-                        !(HuffmanCodec.a(107, (CharSequence) ((Object) var4)) >= 10)) {
+                      if (ConsoleTokenSupport.isValidDecimalInt(-45, (CharSequence) ((Object) var4)) &&
+                        !(HuffmanCodec.parseDecimalInt(107, (CharSequence) ((Object) var4)) >= 10)) {
                         this.reportGameError("wrongjava", (byte) -101);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }

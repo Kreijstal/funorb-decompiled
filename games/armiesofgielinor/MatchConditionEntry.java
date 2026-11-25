@@ -112,7 +112,7 @@ final class MatchConditionEntry extends IntrusiveNode {
               MatchConditionEntry.a((byte) -118);
             }
             if (updateType != 4) {
-              LoginCredentials.a((Throwable) null, -66, "F1: " + CampaignProgress.b(false));
+              LoginCredentials.a((Throwable) null, -66, "F1: " + CampaignProgress.formatPacketDiagnostic(false));
               TextSplitSupport.closeSessionSocket((byte) -125);
               return;
             }

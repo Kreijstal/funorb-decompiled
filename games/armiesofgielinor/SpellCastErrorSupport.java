@@ -95,19 +95,19 @@ final class SpellCastErrorSupport {
             return stackIn_4_0;
           }
           if (0 < battlefield.getSpellCastDelay(20, actingPlayer, spellId)) {
-            stackIn_8_0 = EmailCheckResult.a(4800, NameSuggestionList.field_I, new String[]{Integer.toString(SpellDefinitionTable.spellDefinitions[spellId][1] + 1)});
+            stackIn_8_0 = EmailCheckResult.formatTemplate(4800, NameSuggestionList.field_I, new String[]{Integer.toString(SpellDefinitionTable.spellDefinitions[spellId][1] + 1)});
             return stackIn_8_0;
           }
           if (SpellDefinitionTable.spellDefinitions[spellId][3] == 4) {
             if (SpellDefinitionTable.spellDefinitions[spellId][5] == 1) {
               if (0 == battlefield.godFavourLevels[actingPlayer][SpellDefinitionTable.spellDefinitions[spellId][6]]) {
-                stackIn_21_0 = EmailCheckResult.a(4800, RegionAnchor.field_n, new String[]{NetworkGameShell.field_q[1 + SpellDefinitionTable.spellDefinitions[spellId][6]]});
+                stackIn_21_0 = EmailCheckResult.formatTemplate(4800, RegionAnchor.field_n, new String[]{NetworkGameShell.field_q[1 + SpellDefinitionTable.spellDefinitions[spellId][6]]});
                 return stackIn_21_0;
               }
               if (battlefield.godFavourLevels[actingPlayer][SpellDefinitionTable.spellDefinitions[spellId][6]] < 5) {
                 return null;
               }
-              stackIn_25_0 = EmailCheckResult.a(4800, IndexedDecodedSpriteSupport.field_b, new String[]{NetworkGameShell.field_q[SpellDefinitionTable.spellDefinitions[spellId][6] + 1]});
+              stackIn_25_0 = EmailCheckResult.formatTemplate(4800, IndexedDecodedSpriteSupport.field_b, new String[]{NetworkGameShell.field_q[SpellDefinitionTable.spellDefinitions[spellId][6] + 1]});
               return stackIn_25_0;
             }
             if (SpellDefinitionTable.spellDefinitions[spellId][5] != 2) {
@@ -234,7 +234,7 @@ final class SpellCastErrorSupport {
                     return stackIn_96_0;
                   }
                   if (var7.packedFlag32) {
-                    stackIn_100_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                    stackIn_100_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                     return stackIn_100_0;
                   }
                 } else {
@@ -245,7 +245,7 @@ final class SpellCastErrorSupport {
                         return stackIn_110_0;
                       }
                       if (var7.packedFlag32) {
-                        stackIn_113_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                        stackIn_113_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                         return stackIn_113_0;
                       }
                     } else {
@@ -265,7 +265,7 @@ final class SpellCastErrorSupport {
                           }
                         } else {
                           if (var7.meleeLifeSteal) {
-                            stackIn_123_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                            stackIn_123_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                             return stackIn_123_0;
                           }
                         }
@@ -275,7 +275,7 @@ final class SpellCastErrorSupport {
                           return stackIn_117_0;
                         }
                         if (var7.packedFlag32) {
-                          stackIn_120_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                          stackIn_120_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                           return stackIn_120_0;
                         }
                       }
@@ -286,7 +286,7 @@ final class SpellCastErrorSupport {
                       return stackIn_103_0;
                     }
                     if (var7.packedFlag32) {
-                      stackIn_107_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                      stackIn_107_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                       return stackIn_107_0;
                     }
                   }
@@ -297,7 +297,7 @@ final class SpellCastErrorSupport {
                   return stackIn_89_0;
                 }
                 if (var7.packedFlag32) {
-                  stackIn_92_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                  stackIn_92_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                   return stackIn_92_0;
                 }
               }
@@ -320,7 +320,7 @@ final class SpellCastErrorSupport {
               if (SpellDefinitionTable.spellDefinitions[spellId][4] == 2 &&
                 19 == SpellDefinitionTable.spellDefinitions[spellId][5]) {
                 if (SpellDefinitionTable.spellDefinitions[spellId][6] < WhirlpoolHasher.unitDefinitions[var7.unitType][2]) {
-                  stackIn_154_0 = EmailCheckResult.a(4800, ToastMessage.field_s, new String[]{Integer.toString(SpellDefinitionTable.spellDefinitions[spellId][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[var7.unitType][2])});
+                  stackIn_154_0 = EmailCheckResult.formatTemplate(4800, ToastMessage.field_s, new String[]{Integer.toString(SpellDefinitionTable.spellDefinitions[spellId][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[var7.unitType][2])});
                   return stackIn_154_0;
                 }
                 if (var7.packedFlag256) {
@@ -341,7 +341,7 @@ final class SpellCastErrorSupport {
               if (SpellDefinitionTable.spellDefinitions[spellId][4] == 1) {
                 if (var7.getEquipmentId((byte) 81) == SpellDefinitionTable.spellDefinitions[spellId][6] &&
                   var7.getEquipmentCategory(20640) == SpellDefinitionTable.spellDefinitions[spellId][5]) {
-                  stackIn_172_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                  stackIn_172_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                   return stackIn_172_0;
                 }
                 if (SpellDefinitionTable.spellDefinitions[spellId][5] == 0) {
@@ -411,12 +411,12 @@ final class SpellCastErrorSupport {
               if (SpellDefinitionTable.spellDefinitions[spellId][4] == 0 &&
                 SpellDefinitionTable.spellDefinitions[spellId][6] == var7.statusEffectValue &&
                 var7.statusEffectType == SpellDefinitionTable.spellDefinitions[spellId][5]) {
-                stackIn_230_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                stackIn_230_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                 return stackIn_230_0;
               }
               if (SpellDefinitionTable.spellDefinitions[spellId][4] == 3) {
                 if (SpellDefinitionTable.spellDefinitions[spellId][5] == var7.accessoryType) {
-                  stackIn_236_0 = EmailCheckResult.a(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
+                  stackIn_236_0 = EmailCheckResult.formatTemplate(4800, TurnSkipToggleSupport.field_b, new String[]{MusicPatchEnvelope.field_f[spellId]});
                   return stackIn_236_0;
                 }
                 if (3 == SpellDefinitionTable.spellDefinitions[spellId][5] && (4 == var7.getUnitCategory(0) ||

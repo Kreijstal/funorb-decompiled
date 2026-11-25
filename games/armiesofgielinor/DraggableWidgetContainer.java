@@ -253,7 +253,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long encodeBase37Name(CharSequence param0, int param1) {
         int var5 = 0;
         long var2_long = 0L;
         int var4 = 0;

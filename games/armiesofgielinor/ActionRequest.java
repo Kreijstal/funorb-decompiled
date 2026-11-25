@@ -54,7 +54,7 @@ abstract class ActionRequest extends IntrusiveNode {
           if (1 == messageParts.length) {
             stackIn_3_0 = messageParts[0];
           } else {
-            stackIn_3_0 = SpellCastEvent.a(593277313, (CharSequence[]) ((Object) messageParts));
+            stackIn_3_0 = SpellCastEvent.joinCharSequences(593277313, (CharSequence[]) ((Object) messageParts));
           }
           var4 = stackIn_3_0;
           var4 = "Illegal move (" + actionKind + "); player " + this.actingPlayer + ": " + var4 + ".";

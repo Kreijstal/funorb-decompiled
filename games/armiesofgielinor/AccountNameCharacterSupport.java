@@ -153,7 +153,7 @@ final class AccountNameCharacterSupport {
               if (param0.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + MusicPatchEnvelope.a((byte) -82, MonotonicClockSupport.monotonicMillis(-118) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + MusicPatchEnvelope.formatGmtDateTime((byte) -82, MonotonicClockSupport.monotonicMillis(-118) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               AppletScriptBridge.evaluateScript((byte) -52, param1, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

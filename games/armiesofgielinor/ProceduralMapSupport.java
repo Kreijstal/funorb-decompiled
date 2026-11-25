@@ -23,7 +23,7 @@ final class ProceduralMapSupport {
         return left & right;
     }
 
-    final static String b(boolean param0) {
+    final static String getLocalAccountNameOrEmpty(boolean param0) {
         if (!param0) {
           ProceduralMapSupport.a(true);
           if (null != StructureGlowRenderer.localAccountName) {

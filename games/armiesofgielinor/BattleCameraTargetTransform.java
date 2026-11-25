@@ -142,7 +142,7 @@ final class BattleCameraTargetTransform {
           LoginCredentialStagingSupport.field_b[19] = PlayerProfile.field_e;
           LoginCredentialStagingSupport.field_b[9] = GradientSpanBlendSupport.field_e;
           LoginCredentialStagingSupport.field_b[20] = CorpseConditionMarker.field_x;
-          CheckMarkWidgetPainter.field_a[10] = EmailCheckResult.a(4800, CheckMarkWidgetPainter.field_a[10], new String[]{Integer.toString(20)});
+          CheckMarkWidgetPainter.field_a[10] = EmailCheckResult.formatTemplate(4800, CheckMarkWidgetPainter.field_a[10], new String[]{Integer.toString(20)});
           EmailValidator.battleHintMessages = new String[6];
           EmailValidator.battleHintMessages[3] = FriendLookupSupport.field_f;
           EmailValidator.battleHintMessages[0] = DeployAction.field_C;
@@ -303,7 +303,7 @@ final class BattleCameraTargetTransform {
               } else {
                 stackIn_36_2 = ConsoleCommand.field_x;
               }
-              stackIn_35_0.text = EmailCheckResult.a(stackIn_35_1, stackIn_36_2, new String[]{FixedSquareRootSupport.field_d.text});
+              stackIn_35_0.text = EmailCheckResult.formatTemplate(stackIn_35_1, stackIn_36_2, new String[]{FixedSquareRootSupport.field_d.text});
               SocialListPanel.field_Lb.inputEnabled = true;
               EmptyWidgetPainter.field_a = true;
               MarkerSliderWidget.field_N.text = ScreenWipeTransition.field_i;

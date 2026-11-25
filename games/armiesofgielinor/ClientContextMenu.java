@@ -234,7 +234,7 @@ final class ClientContextMenu {
               ToggleWidget.currentRoom.completedDurationMillis < 0) {
               return;
             }
-            this.menu.addTextAction(1, EmailCheckResult.a(4800, DraggableWidgetContainer.field_R, new String[]{var5}), (byte) -103);
+            this.menu.addTextAction(1, EmailCheckResult.formatTemplate(4800, DraggableWidgetContainer.field_R, new String[]{var5}), (byte) -103);
             return;
           }
           if (var11 == null) {
@@ -247,16 +247,16 @@ final class ClientContextMenu {
             return;
           }
           if (var11.invitationSent) {
-            this.menu.addTextAction(1, EmailCheckResult.a(4800, AccountRegistrationDialog.field_zb, new String[]{var5}), (byte) -124);
+            this.menu.addTextAction(1, EmailCheckResult.formatTemplate(4800, AccountRegistrationDialog.field_zb, new String[]{var5}), (byte) -124);
           } else {
             if (!includeJoinRequests) {
-              this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
+              this.menu.addTextAction(0, EmailCheckResult.formatTemplate(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
             } else {
               if (!var11.joinRequested) {
-                this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
+                this.menu.addTextAction(0, EmailCheckResult.formatTemplate(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
               } else {
-                this.menu.addTextAction(0, EmailCheckResult.a(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
-                this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, SelectionMenuLayoutSupport.field_g, new String[]{var5}), (byte) -113);
+                this.menu.addTextAction(0, EmailCheckResult.formatTemplate(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
+                this.menu.addTextAction(1, EmailCheckResult.formatTemplate(obfuscationGuard - 19099, SelectionMenuLayoutSupport.field_g, new String[]{var5}), (byte) -113);
               }
             }
           }
@@ -283,7 +283,7 @@ final class ClientContextMenu {
             ToggleWidget.currentRoom.completedDurationMillis < 0) {
             return;
           }
-          this.menu.addTextAction(1, EmailCheckResult.a(4800, DraggableWidgetContainer.field_R, new String[]{var5}), (byte) -103);
+          this.menu.addTextAction(1, EmailCheckResult.formatTemplate(4800, DraggableWidgetContainer.field_R, new String[]{var5}), (byte) -103);
           return;
         }
         if (var10 == null) {
@@ -296,16 +296,16 @@ final class ClientContextMenu {
           return;
         }
         if (var10.invitationSent) {
-          this.menu.addTextAction(1, EmailCheckResult.a(4800, AccountRegistrationDialog.field_zb, new String[]{var5}), (byte) -124);
+          this.menu.addTextAction(1, EmailCheckResult.formatTemplate(4800, AccountRegistrationDialog.field_zb, new String[]{var5}), (byte) -124);
         } else {
           if (!includeJoinRequests) {
-            this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
+            this.menu.addTextAction(0, EmailCheckResult.formatTemplate(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
           } else {
             if (!var10.joinRequested) {
-              this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
+              this.menu.addTextAction(0, EmailCheckResult.formatTemplate(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
             } else {
-              this.menu.addTextAction(0, EmailCheckResult.a(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
-              this.menu.addTextAction(1, EmailCheckResult.a(obfuscationGuard - 19099, SelectionMenuLayoutSupport.field_g, new String[]{var5}), (byte) -113);
+              this.menu.addTextAction(0, EmailCheckResult.formatTemplate(4800, ManaStarParticle.field_x, new String[]{var5}), (byte) -126);
+              this.menu.addTextAction(1, EmailCheckResult.formatTemplate(obfuscationGuard - 19099, SelectionMenuLayoutSupport.field_g, new String[]{var5}), (byte) -113);
             }
           }
         }
@@ -331,38 +331,38 @@ final class ClientContextMenu {
           }
           var3 = var6.ownerName;
           if (var6.invitationReceived) {
-            this.menu.addTextAction(2, EmailCheckResult.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
-            this.menu.addTextAction(3, EmailCheckResult.a(4800, DialWidgetPainter.field_a, new String[]{var3}), (byte) -120);
+            this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
+            this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, DialWidgetPainter.field_a, new String[]{var3}), (byte) -120);
             return;
           }
           if (var6.joinable) {
-            this.menu.addTextAction(2, EmailCheckResult.a(4800, RasterViewportResizeHandler.field_e, new String[]{var3}), (byte) -114);
+            this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, RasterViewportResizeHandler.field_e, new String[]{var3}), (byte) -114);
             if (var6.joinRequestSent) {
-              this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
+              this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
             }
             return;
           }
           if (!var6.joinRequestSent &&
             var6.allowsAdmissionRequests) {
             if (!var6.playing) {
-              this.menu.addTextAction(2, EmailCheckResult.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+              this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               if (var6.joinRequestSent) {
-                this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
+                this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
             if (!var6.joinable) {
               if (var6.joinRequestSent) {
-                this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
+                this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
-            this.menu.addTextAction(2, EmailCheckResult.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+            this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
           }
           if (!var6.joinRequestSent) {
             return;
           }
-          this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
+          this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
           return;
         }
         discarded$0 = this.dispatchChatAction(107, -75, (byte) 100);
@@ -375,20 +375,20 @@ final class ClientContextMenu {
         }
         var3 = var7.ownerName;
         if (var7.invitationReceived) {
-          this.menu.addTextAction(2, EmailCheckResult.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
-          this.menu.addTextAction(3, EmailCheckResult.a(4800, DialWidgetPainter.field_a, new String[]{var3}), (byte) -120);
+          this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
+          this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, DialWidgetPainter.field_a, new String[]{var3}), (byte) -120);
           return;
         }
         if (var7.joinable) {
-          this.menu.addTextAction(2, EmailCheckResult.a(4800, RasterViewportResizeHandler.field_e, new String[]{var3}), (byte) -114);
+          this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, RasterViewportResizeHandler.field_e, new String[]{var3}), (byte) -114);
         } else {
           if (!var7.joinRequestSent &&
             var7.allowsAdmissionRequests) {
             if (!var7.playing) {
-              this.menu.addTextAction(2, EmailCheckResult.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+              this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
             } else {
               if (var7.joinable) {
-                this.menu.addTextAction(2, EmailCheckResult.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+                this.menu.addTextAction(2, EmailCheckResult.formatTemplate(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               }
             }
           }
@@ -396,7 +396,7 @@ final class ClientContextMenu {
         if (!var7.joinRequestSent) {
           return;
         }
-        this.menu.addTextAction(3, EmailCheckResult.a(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
+        this.menu.addTextAction(3, EmailCheckResult.formatTemplate(4800, PasswordLoginCredentials.field_j, new String[]{var3}), (byte) -119);
         return;
     }
 
@@ -529,31 +529,31 @@ final class ClientContextMenu {
             var6 = IndexedSpriteBase.isIgnoredAccount(this.accountName, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.menu.addTextAction(4, EmailCheckResult.a(4800, TileableNoiseGenerator.field_l, new String[]{var7}), (byte) -125);
-              this.menu.addTextAction(6, EmailCheckResult.a(4800, ToastMessage.field_o, new String[]{var7}), (byte) -100);
+              this.menu.addTextAction(4, EmailCheckResult.formatTemplate(4800, TileableNoiseGenerator.field_l, new String[]{var7}), (byte) -125);
+              this.menu.addTextAction(6, EmailCheckResult.formatTemplate(4800, ToastMessage.field_o, new String[]{var7}), (byte) -100);
               if (quickChatContext != null &&
                 chatChannel != 2 &&
                 !NodeIterator.field_a) {
                 this.quickChatContext = quickChatContext;
-                this.menu.addTextAction(19, EmailCheckResult.a(4800, EmailConfirmationValidator.field_m, new String[]{var7}), (byte) -115);
+                this.menu.addTextAction(19, EmailCheckResult.formatTemplate(4800, EmailConfirmationValidator.field_m, new String[]{var7}), (byte) -115);
               }
             }
             if (var5 != null) {
               if (!PrivateTextRecipientSupport.isActivePrivateTextRecipient((byte) 111, this.accountName) &&
                 !NodeIterator.field_a) {
                 if (!MonotonicClockSupport.field_d) {
-                  this.menu.addTextAction(8, EmailCheckResult.a(4800, MusicPatchNode.field_k, new String[]{var7}), (byte) -114);
+                  this.menu.addTextAction(8, EmailCheckResult.formatTemplate(4800, MusicPatchNode.field_k, new String[]{var7}), (byte) -114);
                 }
-                this.menu.addTextAction(18, EmailCheckResult.a(obfuscationGuard ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
+                this.menu.addTextAction(18, EmailCheckResult.formatTemplate(obfuscationGuard ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
                 if (quickChatContext != null) {
                   this.quickChatContext = quickChatContext;
-                  this.menu.addTextAction(19, EmailCheckResult.a(4800, EmailConfirmationValidator.field_m, new String[]{var7}), (byte) -115);
+                  this.menu.addTextAction(19, EmailCheckResult.formatTemplate(4800, EmailConfirmationValidator.field_m, new String[]{var7}), (byte) -115);
                 }
               }
-              this.menu.addTextAction(5, EmailCheckResult.a(4800, AccountNameSelectionForm.field_K, new String[]{var7}), (byte) -111);
+              this.menu.addTextAction(5, EmailCheckResult.formatTemplate(4800, AccountNameSelectionForm.field_K, new String[]{var7}), (byte) -111);
             }
             if (var6 != 0) {
-              this.menu.addTextAction(7, EmailCheckResult.a(4800, ToggleTurnSkipConsoleCommand.field_E, new String[]{var7}), (byte) -102);
+              this.menu.addTextAction(7, EmailCheckResult.formatTemplate(4800, ToggleTurnSkipConsoleCommand.field_E, new String[]{var7}), (byte) -102);
             }
           }
           if (obfuscationGuard != 7) {
@@ -580,7 +580,7 @@ final class ClientContextMenu {
           ~this.accountId != ~ChannelBaseVolumeConsoleCommand.localAccountId) {
           var3 = this.getTargetDisplayName(96);
           String var2 = var3;
-          this.menu.addTextAction(17, EmailCheckResult.a(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);
+          this.menu.addTextAction(17, EmailCheckResult.formatTemplate(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);
         }
         if (obfuscationGuard >= 42) {
           return;

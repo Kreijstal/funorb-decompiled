@@ -105,7 +105,7 @@ abstract class BitmapFont extends DualLinkedNode {
                               if (!(!tag.startsWith("img="))) {
                                 try {
                                   indexText = (CharSequence) ((Object) tag.substring(4));
-                                  spriteIndex = HuffmanCodec.a(49, indexText);
+                                  spriteIndex = HuffmanCodec.parseDecimalInt(49, indexText);
                                   width = width + this.inlineSprites[spriteIndex].canvasWidth;
                                   previousGlyph = 0;
                                 } catch (java.lang.Exception caughtParameter) {
@@ -218,7 +218,7 @@ abstract class BitmapFont extends DualLinkedNode {
                                 if (tag.startsWith("img=")) {
                                   try {
                                     indexText = (CharSequence) ((Object) tag.substring(4));
-                                    spriteIndex = HuffmanCodec.a(25, indexText);
+                                    spriteIndex = HuffmanCodec.parseDecimalInt(25, indexText);
                                     lineWidth = lineWidth + this.inlineSprites[spriteIndex].canvasWidth;
                                     previousGlyph = 0;
                                   } catch (java.lang.Exception caughtParameter) {
@@ -452,7 +452,7 @@ abstract class BitmapFont extends DualLinkedNode {
                 }
               } else {
                 alphaText = (CharSequence) ((Object) tag.substring(6));
-                textAlpha = HuffmanCodec.a(34, alphaText);
+                textAlpha = HuffmanCodec.parseDecimalInt(34, alphaText);
               }
             } else {
               textColour = defaultTextColour;
@@ -813,7 +813,7 @@ abstract class BitmapFont extends DualLinkedNode {
                               } else {
                                 try {
                                   indexText = (CharSequence) ((Object) tag.substring(4));
-                                  glyphHeightOrSpriteIndex = HuffmanCodec.a(12, indexText);
+                                  glyphHeightOrSpriteIndex = HuffmanCodec.parseDecimalInt(12, indexText);
                                   sprite = this.inlineSprites[glyphHeightOrSpriteIndex];
                                   if (this.inlineSpriteBaselines == null) {
                                     spriteBaseline = sprite.canvasHeight;

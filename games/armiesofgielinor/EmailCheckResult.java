@@ -11,7 +11,7 @@ final class EmailCheckResult {
         field_a = null;
         if (!param0) {
           String[] var2 = (String[]) null;
-          EmailCheckResult.a(70, (String) null, (String[]) null);
+          EmailCheckResult.formatTemplate(70, (String) null, (String[]) null);
         }
     }
 
@@ -29,7 +29,7 @@ final class EmailCheckResult {
         return this.accepted;
     }
 
-    final static String a(int param0, String param1, String[] param2) {
+    final static String formatTemplate(int param0, String param1, String[] param2) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -69,7 +69,7 @@ final class EmailCheckResult {
                 break;
               }
               var7_ref_String = param1.substring(2 + var6_int, var5);
-              if (!ConsoleTokenSupport.a(param0 ^ -4846, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ConsoleTokenSupport.isValidDecimalInt(param0 ^ -4846, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -79,7 +79,7 @@ final class EmailCheckResult {
                 continue;
               }
               var5++;
-              var8 = HuffmanCodec.a(param0 ^ 4761, (CharSequence) ((Object) var7_ref_String));
+              var8 = HuffmanCodec.parseDecimalInt(param0 ^ 4761, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (param2[var8].length() - (var5 - var6_int));
               continue;
             }
@@ -105,7 +105,7 @@ final class EmailCheckResult {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!ConsoleTokenSupport.a(-110, (CharSequence) ((Object) var9))) {
+            if (!ConsoleTokenSupport.isValidDecimalInt(-110, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -115,7 +115,7 @@ final class EmailCheckResult {
               continue;
             }
             var5Lifetime1++;
-            var10 = HuffmanCodec.a(90, (CharSequence) ((Object) var9));
+            var10 = HuffmanCodec.parseDecimalInt(90, (CharSequence) ((Object) var9));
             discarded$1 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$2 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

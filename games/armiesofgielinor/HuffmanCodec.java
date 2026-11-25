@@ -60,12 +60,12 @@ final class HuffmanCodec {
             DropTargetWidgetContainer.field_J.bindAsRasterTarget();
             SoftwareRaster.clearPixels();
             IndexedSpriteColourSupport.drawIndexedSpriteGrayscaleTint(SectorCacheStore.field_j[3][0], 0, 0, param1);
-            GradientUiRenderer.drawCenteredSolidText(DeployRequest.a(param2, (byte) 42), CoatOfArmsOverlaySupport.field_e[3][0] >> 1, 20 + (CoatOfArmsOverlaySupport.field_e[3][1] >> 1), 2, true);
+            GradientUiRenderer.drawCenteredSolidText(DeployRequest.toInitialCapitalCase(param2, (byte) 42), CoatOfArmsOverlaySupport.field_e[3][0] >> 1, 20 + (CoatOfArmsOverlaySupport.field_e[3][1] >> 1), 2, true);
             NumericDateInputWidget.field_P.bindAsRasterTarget();
             DropTargetWidgetContainer.field_J.drawHalfSize(param0, param5);
           } else {
             IndexedSpriteColourSupport.drawIndexedSpriteGrayscaleTint(SectorCacheStore.field_j[3][0], param0, param5, param1);
-            GradientUiRenderer.drawCenteredSolidText(DeployRequest.a(param2, (byte) 42), (CoatOfArmsOverlaySupport.field_e[3][0] >> 1) + param0, 20 + (CoatOfArmsOverlaySupport.field_e[3][1] >> 1) + param5, 2, true);
+            GradientUiRenderer.drawCenteredSolidText(DeployRequest.toInitialCapitalCase(param2, (byte) 42), (CoatOfArmsOverlaySupport.field_e[3][0] >> 1) + param0, 20 + (CoatOfArmsOverlaySupport.field_e[3][1] >> 1) + param5, 2, true);
           }
           int var6_int = 67 % ((param4 - 48) / 53);
         } catch (RuntimeException runtimeException) {
@@ -73,7 +73,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int parseDecimalInt(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

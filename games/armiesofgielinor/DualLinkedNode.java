@@ -126,11 +126,11 @@ class DualLinkedNode extends IntrusiveNode {
           var1 = SpriteControlNode.field_n;
           if (var1 > 0) {
             if (1 != var1) {
-              BestScoreStrategy.field_h = EmailCheckResult.a(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
+              BestScoreStrategy.field_h = EmailCheckResult.formatTemplate(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
             } else {
               BestScoreStrategy.field_h = TrianglePulse.field_a;
             }
-            BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) UnitAirAttackSupport.field_a)});
+            BestScoreStrategy.field_h = SpellCastEvent.joinCharSequences(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) UnitAirAttackSupport.field_a)});
           }
           GameClock.loginProgressDialog.closeDialog(true);
           ResourceClientSetupSupport.showRecoveryProgress(56);
@@ -145,11 +145,11 @@ class DualLinkedNode extends IntrusiveNode {
           var1 = SpriteControlNode.field_n;
           if (var1 > 0) {
             if (1 != var1) {
-              BestScoreStrategy.field_h = EmailCheckResult.a(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
+              BestScoreStrategy.field_h = EmailCheckResult.formatTemplate(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
             } else {
               BestScoreStrategy.field_h = TrianglePulse.field_a;
             }
-            BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) UnitAirAttackSupport.field_a)});
+            BestScoreStrategy.field_h = SpellCastEvent.joinCharSequences(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) UnitAirAttackSupport.field_a)});
           }
           GameClock.loginProgressDialog.closeDialog(true);
           ResourceClientSetupSupport.showRecoveryProgress(56);

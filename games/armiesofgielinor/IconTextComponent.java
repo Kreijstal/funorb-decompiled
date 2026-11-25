@@ -93,7 +93,7 @@ final class IconTextComponent extends ClientUiComponent {
         this.layoutContent((byte) -81, iconTextGap, padding);
     }
 
-    final static String a(boolean param0, String param1) {
+    final static String reverseString(boolean param0, String param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
