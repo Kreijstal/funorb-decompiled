@@ -84572,12 +84572,60 @@
       "renamedSymbol": "M:GameCanvas.readCompressedChatText(IBLPacketBuffer;)Ljava/lang/String;"
     },
     {
+      "symbol": "M:lf.a(B)V",
+      "originalName": "a",
+      "to": "cacheActionAnimationFrameCount",
+      "evidence": "lf.java: For action states1/3, lazily counts frameChanged events in the first selected attack/ranged sequence variant, cached by state. Preserve all metadata bounds/null checks, current-slot requirement, shared frame-set selection, temporary AnimationPlayer, cap10000and ordered zero-cache fallbacks;this is a frame-change count,not elapsed duration. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.cacheActionAnimationFrameCount(B)V"
+    },
+    {
+      "symbol": "M:lf.a(I)V",
+      "originalName": "a",
+      "to": "selectCurrentFrameSet",
+      "evidence": "lf.java: Selects shared current frame set from animation player frameId high16bits and ArchiveLoadStep cache lookup. Preserve lookup and setter before late integer guard;bad guard changes no earlier side effects. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.selectCurrentFrameSet(I)V"
+    },
+    {
       "symbol": "M:lf.a(IB)V",
       "originalName": "a",
       "to": "setAnimationState",
       "evidence": "lf.java: Assigns the animation state while preserving the guard side effect.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BattleCharacter.setAnimationState(IB)V"
+    },
+    {
+      "symbol": "M:lf.a(II)V",
+      "originalName": "a",
+      "to": "selectAnimationSlot",
+      "evidence": "lf.java: Selects valid slot0..8 when changed or forced,coerces invalid current slot to0,then reloads sequence and resets tick/effect flag. Preserve caller-supplied complement comparison,ignored invalid requested slots,field write order and guard-induced recursive reloads. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.selectAnimationSlot(II)V"
+    },
+    {
+      "symbol": "M:lf.a(IIIIIIB)V",
+      "originalName": "a",
+      "to": "initializeParticles",
+      "evidence": "lf.java: Initializes particle kind,16.16positions,lifetimes and random velocity arrays. Preserve mirror sign,overflow,Math.sin casts, every bounded-RNG call/order and bad-byte velocity-array clear before loop. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.initializeParticles(IIIIIIB)V"
+    },
+    {
+      "symbol": "M:lf.a(IIIIIIIII)[Lwk;",
+      "originalName": "a",
+      "to": "createBeveledFrameSprites",
+      "evidence": "lf.java: Creates nine beveled frame sprites with background fill,highlight/shadow edges and accent strips,including fixed64x64center. ByteStorage wrapper supplies standard thin-frame dimensions. Preserve allocation/write/overlap order,guard-triggered font clear,arbitrary dimensions and full signed primitive domains. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;"
+    },
+    {
+      "symbol": "M:lf.a(IIZ)V",
+      "originalName": "a",
+      "to": "drawAnimatedCharacter",
+      "evidence": "lf.java: Applies current frame to model,scales special model indices75/76,computes facing and draws perspective character plus optional particle pass. Preserve unused int argument,late bad-guard character advance,boolean-controlled model helper and particle suppression,mirroring,alpha caps and all original helper bindings. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.drawAnimatedCharacter(IIZ)V"
     },
     {
       "symbol": "M:lf.a(Lcf;Lbv;Lkl;B)Lom;",
@@ -84604,12 +84652,36 @@
       "renamedSymbol": "M:BattleCharacter.isAtDestination(I)Z"
     },
     {
+      "symbol": "M:lf.c(B)V",
+      "originalName": "c",
+      "to": "startRangedAttack",
+      "evidence": "lf.java: Sets state3 and forces animation-slot reload. Sole caller selects an idle attacker for a remaining projectile;state3maps to slot4whose explicit label is ranged. Preserve state setter before force flag and noncanonical-byte nine-slice factory call with invalid arguments. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.startRangedAttack(B)V"
+    },
+    {
       "symbol": "M:lf.c(I)V",
       "originalName": "c",
       "to": "releaseStatics",
       "evidence": "lf.java: Only nulls static references, apart from guard arithmetic or an obfuscator self-call; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BattleCharacter.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:lf.d(B)V",
+      "originalName": "d",
+      "to": "advanceFrame",
+      "evidence": "lf.java: Advances action-frame cache,movement/animation mapping,delayed animation,exact tick effect triggers,completion flags and particle gravity. Preserve original overflow/sqrt/guard/RNG/effect order,movement of destination coordinates,all obfuscation branches and single-fire flags. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.advanceFrame(B)V"
+    },
+    {
+      "symbol": "M:lf.d(I)V",
+      "originalName": "d",
+      "to": "reloadAnimationSequence",
+      "evidence": "lf.java: Selects model animation sequence for current slot then selects shared current frame set. Preserve int guard checked after both calls and bad-guard call back to slot selection with-77,60. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleCharacter.reloadAnimationSequence(I)V"
     },
     {
       "symbol": "M:lg.a(BLvh;[B)V",
@@ -92676,12 +92748,84 @@
       "renamedSymbol": "M:CombatViewTransition.isExpanded(B)Z"
     },
     {
+      "symbol": "M:sr.a(BI)I",
+      "originalName": "a",
+      "to": "getInterpolationSign",
+      "evidence": "sr.java: Returns +1for zero/nonnegative delta and-1for negative delta so size/position interpolation can use absolute widths. Preserve byte-71branch and noncanonical call to begin-collapse helper before computing sign. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.getInterpolationSign(BI)I"
+    },
+    {
+      "symbol": "M:sr.a(I)V",
+      "originalName": "a",
+      "to": "interpolateSize",
+      "evidence": "sr.java: Interpolates current width/height from start/end size arrays using transition tick and duration. Preserve guard division first,original signed multiplication/overflow and possible zero-duration division. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.interpolateSize(I)V"
+    },
+    {
+      "symbol": "M:sr.a(II)V",
+      "originalName": "a",
+      "to": "beginCollapseTransition",
+      "evidence": "sr.java: Starts fading/shrinking viewport-sized sprite toward16x16at camera-projected tile. Preserve progress reversal,state write/projection order and noncanonical guard calling isExpanded with byte-51after all writes. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.beginCollapseTransition(II)V"
+    },
+    {
+      "symbol": "M:sr.a(IIIB)I",
+      "originalName": "a",
+      "to": "getTerrainCategoryAt",
+      "evidence": "sr.java: Returns flattened terrain category with caller fallback when either coordinate is out of bounds. In-bounds lookup requires byte<-91;other byte returns-54. Preserve all early bounds checks and original indexing/overflow before array access. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.getTerrainCategoryAt(IIIB)I"
+    },
+    {
+      "symbol": "M:sr.a(IIIII)I",
+      "originalName": "a",
+      "to": "interpolateInt",
+      "evidence": "sr.java: Integer interpolation between caller endpoints;denominator is floored at1. Preserve mode1fast branch,arbitrary numerator/endpoint values and overflow;noncanonical mode calls begin-collapse(9,-1)before denominator processing. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.interpolateInt(IIIII)I"
+    },
+    {
+      "symbol": "M:sr.a(ILwk;)V",
+      "originalName": "a",
+      "to": "drawTransitionSprite",
+      "evidence": "sr.java: Draws scaled transition sprite centered on interpolated position,using opaque path at alpha256and opacity otherwise. Preserve unused sprite/center reads,guard division,Exception printStackTrace swallowing and outer RuntimeException context. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V"
+    },
+    {
       "symbol": "M:sr.b(B)V",
       "originalName": "b",
       "to": "releaseStatics",
       "evidence": "sr.java: Only nulls static references, apart from guard arithmetic and guard-conditioned calls to other statics of its owner; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CombatViewTransition.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:sr.b(I)V",
+      "originalName": "b",
+      "to": "finishTransition",
+      "evidence": "sr.java: Snaps current dimensions,alpha and position to configured endpoints. Preserve ordered array writes,guard<=-41branch and bad-guard nulling start-size array before position writes. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.finishTransition(I)V"
+    },
+    {
+      "symbol": "M:sr.b(II)V",
+      "originalName": "b",
+      "to": "beginExpandTransition",
+      "evidence": "sr.java: Starts fading/expanding16x16sprite from projected tile to viewport center. Preserve initial tick0/alpha0to256,size/endpoint order,camera read order and guard division after flag write but before destination-center writes. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.beginExpandTransition(II)V"
+    },
+    {
+      "symbol": "M:sr.c(I)V",
+      "originalName": "c",
+      "to": "advanceFrame",
+      "evidence": "sr.java: Advances size,alpha and interpolated screen position;active expanding/collapsing branches refresh viewport center at different endpoints and snap when complete. Preserve complete-before-guard recentering,full int arithmetic,nonzero sign behavior and tick/snap ordering. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatViewTransition.advanceFrame(I)V"
     },
     {
       "symbol": "M:sr.c(II)I",
@@ -392518,7 +392662,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#0",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#0",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#0",
       "originalName": "stackIn_57_0",
       "renamedName": "stackIn_57_0",
       "declaration": {
@@ -392529,7 +392673,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#1",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#1",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -392540,7 +392684,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#2",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#2",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -392551,7 +392695,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#3",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#3",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -392562,7 +392706,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#4",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#4",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -392573,7 +392717,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#5",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#5",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -392584,7 +392728,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#6",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#6",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -392595,7 +392739,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#7",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#7",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -392606,7 +392750,7 @@
     },
     {
       "symbol": "L:lf.a(B)V#8",
-      "renamedSymbol": "L:BattleCharacter.a(B)V#8",
+      "renamedSymbol": "L:BattleCharacter.cacheActionAnimationFrameCount(B)V#8",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -392617,7 +392761,7 @@
     },
     {
       "symbol": "L:lf.a(I)V#0",
-      "renamedSymbol": "L:BattleCharacter.a(I)V#0",
+      "renamedSymbol": "L:BattleCharacter.selectCurrentFrameSet(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -392628,7 +392772,7 @@
     },
     {
       "symbol": "L:lf.a(I)V#1",
-      "renamedSymbol": "L:BattleCharacter.a(I)V#1",
+      "renamedSymbol": "L:BattleCharacter.selectCurrentFrameSet(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -392639,7 +392783,7 @@
     },
     {
       "symbol": "L:lf.a(II)V#0",
-      "renamedSymbol": "L:BattleCharacter.a(II)V#0",
+      "renamedSymbol": "L:BattleCharacter.selectAnimationSlot(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -392650,7 +392794,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIB)V#0",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIB)V#0",
+      "renamedSymbol": "L:BattleCharacter.initializeParticles(IIIIIIB)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -392661,7 +392805,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIB)V#1",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIB)V#1",
+      "renamedSymbol": "L:BattleCharacter.initializeParticles(IIIIIIB)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -392672,7 +392816,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#0",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#0",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#0",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -392683,7 +392827,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#1",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#1",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -392694,7 +392838,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#10",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#10",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#10",
       "originalName": "var11Lifetime3",
       "renamedName": "var11Lifetime3",
       "declaration": {
@@ -392705,7 +392849,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#11",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#11",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#11",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -392716,7 +392860,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#12",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#12",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#12",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -392727,7 +392871,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#13",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#13",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#13",
       "originalName": "var12Lifetime3",
       "renamedName": "var12Lifetime3",
       "declaration": {
@@ -392738,7 +392882,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#14",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#14",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#14",
       "originalName": "var12Lifetime4",
       "renamedName": "var12Lifetime4",
       "declaration": {
@@ -392749,7 +392893,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#15",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#15",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#15",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -392760,7 +392904,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#2",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#2",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -392771,7 +392915,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#3",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#3",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#3",
       "originalName": "var11_ref_wk__",
       "renamedName": "var11_ref_wk__",
       "declaration": {
@@ -392782,7 +392926,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#4",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#4",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -392793,7 +392937,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#5",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#5",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -392804,7 +392948,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#6",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#6",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -392815,7 +392959,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#7",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#7",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#7",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -392826,7 +392970,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#8",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#8",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#8",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -392837,7 +392981,7 @@
     },
     {
       "symbol": "L:lf.a(IIIIIIIII)[Lwk;#9",
-      "renamedSymbol": "L:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#9",
+      "renamedSymbol": "L:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#9",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -392848,7 +392992,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#0",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#0",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#0",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -392859,7 +393003,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#1",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#1",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#1",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -392870,7 +393014,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#10",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#10",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#10",
       "originalName": "stackIn_30_5",
       "renamedName": "stackIn_30_5",
       "declaration": {
@@ -392881,7 +393025,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#11",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#11",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#11",
       "originalName": "stackIn_30_6",
       "renamedName": "stackIn_30_6",
       "declaration": {
@@ -392892,7 +393036,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#12",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#12",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#12",
       "originalName": "stackIn_31_7",
       "renamedName": "stackIn_31_7",
       "declaration": {
@@ -392903,7 +393047,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#13",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#13",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#13",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -392914,7 +393058,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#14",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#14",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#14",
       "originalName": "stackIn_43_1",
       "renamedName": "stackIn_43_1",
       "declaration": {
@@ -392925,7 +393069,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#15",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#15",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#15",
       "originalName": "stackIn_45_2",
       "renamedName": "stackIn_45_2",
       "declaration": {
@@ -392936,7 +393080,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#16",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#16",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#16",
       "originalName": "stackIn_45_3",
       "renamedName": "stackIn_45_3",
       "declaration": {
@@ -392947,7 +393091,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#17",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#17",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#17",
       "originalName": "stackIn_46_4",
       "renamedName": "stackIn_46_4",
       "declaration": {
@@ -392958,7 +393102,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#18",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#18",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#18",
       "originalName": "stackIn_48_5",
       "renamedName": "stackIn_48_5",
       "declaration": {
@@ -392969,7 +393113,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#19",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#19",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#19",
       "originalName": "stackIn_49_6",
       "renamedName": "stackIn_49_6",
       "declaration": {
@@ -392980,7 +393124,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#2",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#2",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#2",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -392991,7 +393135,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#20",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#20",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#20",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -393002,7 +393146,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#21",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#21",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#21",
       "originalName": "stackIn_58_1",
       "renamedName": "stackIn_58_1",
       "declaration": {
@@ -393013,7 +393157,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#22",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#22",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#22",
       "originalName": "stackIn_59_2",
       "renamedName": "stackIn_59_2",
       "declaration": {
@@ -393024,7 +393168,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#23",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#23",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#23",
       "originalName": "stackIn_61_3",
       "renamedName": "stackIn_61_3",
       "declaration": {
@@ -393035,7 +393179,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#24",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#24",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#24",
       "originalName": "stackIn_62_4",
       "renamedName": "stackIn_62_4",
       "declaration": {
@@ -393046,7 +393190,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#25",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#25",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#25",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -393057,7 +393201,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#26",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#26",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#26",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -393068,7 +393212,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#27",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#27",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#27",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -393079,7 +393223,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#28",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#28",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#28",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -393090,7 +393234,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#29",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#29",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#29",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -393101,7 +393245,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#3",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#3",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#3",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -393112,7 +393256,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#30",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#30",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#30",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -393123,7 +393267,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#31",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#31",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#31",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -393134,7 +393278,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#32",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#32",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#32",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -393145,7 +393289,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#33",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#33",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#33",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -393156,7 +393300,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#34",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#34",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#34",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -393167,7 +393311,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#35",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#35",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#35",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -393178,7 +393322,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#36",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#36",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#36",
       "originalName": "var9Lifetime1Lifetime1",
       "renamedName": "var9Lifetime1Lifetime1",
       "declaration": {
@@ -393189,7 +393333,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#4",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#4",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#4",
       "originalName": "stackIn_26_1",
       "renamedName": "stackIn_26_1",
       "declaration": {
@@ -393200,7 +393344,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#5",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#5",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#5",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -393211,7 +393355,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#6",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#6",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#6",
       "originalName": "stackIn_26_3",
       "renamedName": "stackIn_26_3",
       "declaration": {
@@ -393222,7 +393366,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#7",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#7",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#7",
       "originalName": "stackIn_26_4",
       "renamedName": "stackIn_26_4",
       "declaration": {
@@ -393233,7 +393377,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#8",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#8",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#8",
       "originalName": "stackIn_26_5",
       "renamedName": "stackIn_26_5",
       "declaration": {
@@ -393244,7 +393388,7 @@
     },
     {
       "symbol": "L:lf.a(IIZ)V#9",
-      "renamedSymbol": "L:BattleCharacter.a(IIZ)V#9",
+      "renamedSymbol": "L:BattleCharacter.drawAnimatedCharacter(IIZ)V#9",
       "originalName": "stackIn_27_6",
       "renamedName": "stackIn_27_6",
       "declaration": {
@@ -393431,7 +393575,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#0",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#0",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -393442,7 +393586,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#1",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#1",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -393453,7 +393597,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#10",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#10",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#10",
       "originalName": "stackIn_84_0",
       "renamedName": "stackIn_84_0",
       "declaration": {
@@ -393464,7 +393608,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#11",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#11",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#11",
       "originalName": "stackIn_84_1",
       "renamedName": "stackIn_84_1",
       "declaration": {
@@ -393475,7 +393619,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#12",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#12",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#12",
       "originalName": "stackIn_85_2",
       "renamedName": "stackIn_85_2",
       "declaration": {
@@ -393486,7 +393630,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#13",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#13",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#13",
       "originalName": "stackIn_90_0",
       "renamedName": "stackIn_90_0",
       "declaration": {
@@ -393497,7 +393641,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#14",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#14",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#14",
       "originalName": "stackIn_90_1",
       "renamedName": "stackIn_90_1",
       "declaration": {
@@ -393508,7 +393652,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#15",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#15",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#15",
       "originalName": "stackIn_91_2",
       "renamedName": "stackIn_91_2",
       "declaration": {
@@ -393519,7 +393663,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#16",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#16",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#16",
       "originalName": "stackIn_97_0",
       "renamedName": "stackIn_97_0",
       "declaration": {
@@ -393530,7 +393674,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#17",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#17",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#17",
       "originalName": "stackIn_98_1",
       "renamedName": "stackIn_98_1",
       "declaration": {
@@ -393541,7 +393685,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#18",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#18",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#18",
       "originalName": "stackIn_100_0",
       "renamedName": "stackIn_100_0",
       "declaration": {
@@ -393552,7 +393696,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#19",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#19",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#19",
       "originalName": "stackIn_100_1",
       "renamedName": "stackIn_100_1",
       "declaration": {
@@ -393563,7 +393707,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#2",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#2",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#2",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -393574,7 +393718,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#20",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#20",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#20",
       "originalName": "stackIn_101_2",
       "renamedName": "stackIn_101_2",
       "declaration": {
@@ -393585,7 +393729,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#21",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#21",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#21",
       "originalName": "stackIn_108_0",
       "renamedName": "stackIn_108_0",
       "declaration": {
@@ -393596,7 +393740,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#22",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#22",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#22",
       "originalName": "stackIn_108_1",
       "renamedName": "stackIn_108_1",
       "declaration": {
@@ -393607,7 +393751,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#23",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#23",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#23",
       "originalName": "stackIn_109_2",
       "renamedName": "stackIn_109_2",
       "declaration": {
@@ -393618,7 +393762,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#24",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#24",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#24",
       "originalName": "stackIn_111_0",
       "renamedName": "stackIn_111_0",
       "declaration": {
@@ -393629,7 +393773,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#25",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#25",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#25",
       "originalName": "stackIn_112_1",
       "renamedName": "stackIn_112_1",
       "declaration": {
@@ -393640,7 +393784,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#26",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#26",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#26",
       "originalName": "stackIn_118_0",
       "renamedName": "stackIn_118_0",
       "declaration": {
@@ -393651,7 +393795,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#27",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#27",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#27",
       "originalName": "stackIn_118_1",
       "renamedName": "stackIn_118_1",
       "declaration": {
@@ -393662,7 +393806,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#28",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#28",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#28",
       "originalName": "stackIn_119_2",
       "renamedName": "stackIn_119_2",
       "declaration": {
@@ -393673,7 +393817,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#29",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#29",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#29",
       "originalName": "stackIn_125_0",
       "renamedName": "stackIn_125_0",
       "declaration": {
@@ -393684,7 +393828,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#3",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#3",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#3",
       "originalName": "stackIn_56_0",
       "renamedName": "stackIn_56_0",
       "declaration": {
@@ -393695,7 +393839,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#30",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#30",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#30",
       "originalName": "stackIn_126_1",
       "renamedName": "stackIn_126_1",
       "declaration": {
@@ -393706,7 +393850,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#31",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#31",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#31",
       "originalName": "stackIn_131_0",
       "renamedName": "stackIn_131_0",
       "declaration": {
@@ -393717,7 +393861,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#32",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#32",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#32",
       "originalName": "stackIn_132_1",
       "renamedName": "stackIn_132_1",
       "declaration": {
@@ -393728,7 +393872,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#33",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#33",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#33",
       "originalName": "stackIn_147_0",
       "renamedName": "stackIn_147_0",
       "declaration": {
@@ -393739,7 +393883,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#34",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#34",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#34",
       "originalName": "stackIn_148_1",
       "renamedName": "stackIn_148_1",
       "declaration": {
@@ -393750,7 +393894,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#35",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#35",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#35",
       "originalName": "stackIn_152_0",
       "renamedName": "stackIn_152_0",
       "declaration": {
@@ -393761,7 +393905,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#36",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#36",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#36",
       "originalName": "stackIn_153_1",
       "renamedName": "stackIn_153_1",
       "declaration": {
@@ -393772,7 +393916,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#37",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#37",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#37",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -393783,7 +393927,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#38",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#38",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#38",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -393794,7 +393938,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#39",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#39",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#39",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -393805,7 +393949,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#4",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#4",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#4",
       "originalName": "stackIn_57_1",
       "renamedName": "stackIn_57_1",
       "declaration": {
@@ -393816,7 +393960,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#40",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#40",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#40",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -393827,7 +393971,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#41",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#41",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#41",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -393838,7 +393982,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#42",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#42",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#42",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -393849,7 +393993,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#43",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#43",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#43",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -393860,7 +394004,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#44",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#44",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#44",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -393871,7 +394015,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#45",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#45",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#45",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -393882,7 +394026,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#5",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#5",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#5",
       "originalName": "stackIn_66_0",
       "renamedName": "stackIn_66_0",
       "declaration": {
@@ -393893,7 +394037,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#6",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#6",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#6",
       "originalName": "stackIn_66_1",
       "renamedName": "stackIn_66_1",
       "declaration": {
@@ -393904,7 +394048,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#7",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#7",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#7",
       "originalName": "stackIn_67_2",
       "renamedName": "stackIn_67_2",
       "declaration": {
@@ -393915,7 +394059,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#8",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#8",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#8",
       "originalName": "stackIn_80_0",
       "renamedName": "stackIn_80_0",
       "declaration": {
@@ -393926,7 +394070,7 @@
     },
     {
       "symbol": "L:lf.d(B)V#9",
-      "renamedSymbol": "L:BattleCharacter.d(B)V#9",
+      "renamedSymbol": "L:BattleCharacter.advanceFrame(B)V#9",
       "originalName": "stackIn_81_1",
       "renamedName": "stackIn_81_1",
       "declaration": {
@@ -478923,7 +479067,7 @@
     },
     {
       "symbol": "L:sr.a(I)V#0",
-      "renamedSymbol": "L:CombatViewTransition.a(I)V#0",
+      "renamedSymbol": "L:CombatViewTransition.interpolateSize(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -478934,7 +479078,7 @@
     },
     {
       "symbol": "L:sr.a(IIIII)I#0",
-      "renamedSymbol": "L:CombatViewTransition.a(IIIII)I#0",
+      "renamedSymbol": "L:CombatViewTransition.interpolateInt(IIIII)I#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -478945,7 +479089,7 @@
     },
     {
       "symbol": "L:sr.a(IIIII)I#1",
-      "renamedSymbol": "L:CombatViewTransition.a(IIIII)I#1",
+      "renamedSymbol": "L:CombatViewTransition.interpolateInt(IIIII)I#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -478956,7 +479100,7 @@
     },
     {
       "symbol": "L:sr.a(IIIII)I#2",
-      "renamedSymbol": "L:CombatViewTransition.a(IIIII)I#2",
+      "renamedSymbol": "L:CombatViewTransition.interpolateInt(IIIII)I#2",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -478967,7 +479111,7 @@
     },
     {
       "symbol": "L:sr.a(IIIII)I#3",
-      "renamedSymbol": "L:CombatViewTransition.a(IIIII)I#3",
+      "renamedSymbol": "L:CombatViewTransition.interpolateInt(IIIII)I#3",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -478978,7 +479122,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#0",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#0",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -478989,7 +479133,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#1",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#1",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -479000,7 +479144,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#10",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#10",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -479011,7 +479155,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#11",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#11",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#11",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -479022,7 +479166,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#12",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#12",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#12",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -479033,7 +479177,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#13",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#13",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#13",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -479044,7 +479188,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#14",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#14",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#14",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -479055,7 +479199,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#15",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#15",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#15",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -479066,7 +479210,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#16",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#16",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -479077,7 +479221,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#17",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#17",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#17",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -479088,7 +479232,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#2",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#2",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -479099,7 +479243,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#3",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#3",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -479110,7 +479254,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#4",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#4",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -479121,7 +479265,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#5",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#5",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -479132,7 +479276,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#6",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#6",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -479143,7 +479287,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#7",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#7",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#7",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -479154,7 +479298,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#8",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#8",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#8",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -479165,7 +479309,7 @@
     },
     {
       "symbol": "L:sr.a(ILwk;)V#9",
-      "renamedSymbol": "L:CombatViewTransition.a(ILRgbSprite;)V#9",
+      "renamedSymbol": "L:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#9",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -479176,7 +479320,7 @@
     },
     {
       "symbol": "L:sr.b(II)V#0",
-      "renamedSymbol": "L:CombatViewTransition.b(II)V#0",
+      "renamedSymbol": "L:CombatViewTransition.beginExpandTransition(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -479187,7 +479331,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#0",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#0",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -479198,7 +479342,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#1",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#1",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -479209,7 +479353,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#2",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#2",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -479220,7 +479364,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#3",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#3",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#3",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -479231,7 +479375,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#4",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#4",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#4",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -479242,7 +479386,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#5",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#5",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#5",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -479253,7 +479397,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#6",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#6",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#6",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -479264,7 +479408,7 @@
     },
     {
       "symbol": "L:sr.c(I)V#7",
-      "renamedSymbol": "L:CombatViewTransition.c(I)V#7",
+      "renamedSymbol": "L:CombatViewTransition.advanceFrame(I)V#7",
       "originalName": "var3Lifetime3",
       "renamedName": "var3Lifetime3",
       "declaration": {
@@ -555098,9 +555242,9 @@
     },
     {
       "symbol": "M:lf.a(B)V",
-      "renamedSymbol": "M:BattleCharacter.a(B)V",
+      "renamedSymbol": "M:BattleCharacter.cacheActionAnimationFrameCount(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "cacheActionAnimationFrameCount",
       "declaration": {
         "file": "lf.java",
         "start": 22174,
@@ -555109,9 +555253,9 @@
     },
     {
       "symbol": "M:lf.a(I)V",
-      "renamedSymbol": "M:BattleCharacter.a(I)V",
+      "renamedSymbol": "M:BattleCharacter.selectCurrentFrameSet(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "selectCurrentFrameSet",
       "declaration": {
         "file": "lf.java",
         "start": 26409,
@@ -555131,9 +555275,9 @@
     },
     {
       "symbol": "M:lf.a(II)V",
-      "renamedSymbol": "M:BattleCharacter.a(II)V",
+      "renamedSymbol": "M:BattleCharacter.selectAnimationSlot(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "selectAnimationSlot",
       "declaration": {
         "file": "lf.java",
         "start": 11107,
@@ -555142,9 +555286,9 @@
     },
     {
       "symbol": "M:lf.a(IIIIIIB)V",
-      "renamedSymbol": "M:BattleCharacter.a(IIIIIIB)V",
+      "renamedSymbol": "M:BattleCharacter.initializeParticles(IIIIIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeParticles",
       "declaration": {
         "file": "lf.java",
         "start": 12166,
@@ -555153,9 +555297,9 @@
     },
     {
       "symbol": "M:lf.a(IIIIIIIII)[Lwk;",
-      "renamedSymbol": "M:BattleCharacter.a(IIIIIIIII)[LRgbSprite;",
+      "renamedSymbol": "M:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createBeveledFrameSprites",
       "declaration": {
         "file": "lf.java",
         "start": 13123,
@@ -555164,9 +555308,9 @@
     },
     {
       "symbol": "M:lf.a(IIZ)V",
-      "renamedSymbol": "M:BattleCharacter.a(IIZ)V",
+      "renamedSymbol": "M:BattleCharacter.drawAnimatedCharacter(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAnimatedCharacter",
       "declaration": {
         "file": "lf.java",
         "start": 16640,
@@ -555208,9 +555352,9 @@
     },
     {
       "symbol": "M:lf.c(B)V",
-      "renamedSymbol": "M:BattleCharacter.c(B)V",
+      "renamedSymbol": "M:BattleCharacter.startRangedAttack(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "startRangedAttack",
       "declaration": {
         "file": "lf.java",
         "start": 26626,
@@ -555230,9 +555374,9 @@
     },
     {
       "symbol": "M:lf.d(B)V",
-      "renamedSymbol": "M:BattleCharacter.d(B)V",
+      "renamedSymbol": "M:BattleCharacter.advanceFrame(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "advanceFrame",
       "declaration": {
         "file": "lf.java",
         "start": 955,
@@ -555241,9 +555385,9 @@
     },
     {
       "symbol": "M:lf.d(I)V",
-      "renamedSymbol": "M:BattleCharacter.d(I)V",
+      "renamedSymbol": "M:BattleCharacter.reloadAnimationSequence(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "reloadAnimationSequence",
       "declaration": {
         "file": "lf.java",
         "start": 11962,
@@ -571939,9 +572083,9 @@
     },
     {
       "symbol": "M:sr.a(BI)I",
-      "renamedSymbol": "M:CombatViewTransition.a(BI)I",
+      "renamedSymbol": "M:CombatViewTransition.getInterpolationSign(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getInterpolationSign",
       "declaration": {
         "file": "sr.java",
         "start": 7347,
@@ -571950,9 +572094,9 @@
     },
     {
       "symbol": "M:sr.a(I)V",
-      "renamedSymbol": "M:CombatViewTransition.a(I)V",
+      "renamedSymbol": "M:CombatViewTransition.interpolateSize(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "interpolateSize",
       "declaration": {
         "file": "sr.java",
         "start": 7003,
@@ -571961,9 +572105,9 @@
     },
     {
       "symbol": "M:sr.a(II)V",
-      "renamedSymbol": "M:CombatViewTransition.a(II)V",
+      "renamedSymbol": "M:CombatViewTransition.beginCollapseTransition(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "beginCollapseTransition",
       "declaration": {
         "file": "sr.java",
         "start": 1069,
@@ -571972,9 +572116,9 @@
     },
     {
       "symbol": "M:sr.a(IIIB)I",
-      "renamedSymbol": "M:CombatViewTransition.a(IIIB)I",
+      "renamedSymbol": "M:CombatViewTransition.getTerrainCategoryAt(IIIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getTerrainCategoryAt",
       "declaration": {
         "file": "sr.java",
         "start": 473,
@@ -571983,9 +572127,9 @@
     },
     {
       "symbol": "M:sr.a(IIIII)I",
-      "renamedSymbol": "M:CombatViewTransition.a(IIIII)I",
+      "renamedSymbol": "M:CombatViewTransition.interpolateInt(IIIII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "interpolateInt",
       "declaration": {
         "file": "sr.java",
         "start": 4028,
@@ -571994,9 +572138,9 @@
     },
     {
       "symbol": "M:sr.a(ILwk;)V",
-      "renamedSymbol": "M:CombatViewTransition.a(ILRgbSprite;)V",
+      "renamedSymbol": "M:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawTransitionSprite",
       "declaration": {
         "file": "sr.java",
         "start": 1703,
@@ -572016,9 +572160,9 @@
     },
     {
       "symbol": "M:sr.b(I)V",
-      "renamedSymbol": "M:CombatViewTransition.b(I)V",
+      "renamedSymbol": "M:CombatViewTransition.finishTransition(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "finishTransition",
       "declaration": {
         "file": "sr.java",
         "start": 8132,
@@ -572027,9 +572171,9 @@
     },
     {
       "symbol": "M:sr.b(II)V",
-      "renamedSymbol": "M:CombatViewTransition.b(II)V",
+      "renamedSymbol": "M:CombatViewTransition.beginExpandTransition(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "beginExpandTransition",
       "declaration": {
         "file": "sr.java",
         "start": 7538,
@@ -572038,9 +572182,9 @@
     },
     {
       "symbol": "M:sr.c(I)V",
-      "renamedSymbol": "M:CombatViewTransition.c(I)V",
+      "renamedSymbol": "M:CombatViewTransition.advanceFrame(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "advanceFrame",
       "declaration": {
         "file": "sr.java",
         "start": 4640,
@@ -647542,7 +647686,7 @@
     },
     {
       "symbol": "P:lf.a(B)V#0",
-      "renamedSymbol": "P:BattleCharacter.a(B)V#0",
+      "renamedSymbol": "P:BattleCharacter.cacheActionAnimationFrameCount(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647553,7 +647697,7 @@
     },
     {
       "symbol": "P:lf.a(I)V#0",
-      "renamedSymbol": "P:BattleCharacter.a(I)V#0",
+      "renamedSymbol": "P:BattleCharacter.selectCurrentFrameSet(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647586,7 +647730,7 @@
     },
     {
       "symbol": "P:lf.a(II)V#0",
-      "renamedSymbol": "P:BattleCharacter.a(II)V#0",
+      "renamedSymbol": "P:BattleCharacter.selectAnimationSlot(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647597,7 +647741,7 @@
     },
     {
       "symbol": "P:lf.a(II)V#1",
-      "renamedSymbol": "P:BattleCharacter.a(II)V#1",
+      "renamedSymbol": "P:BattleCharacter.selectAnimationSlot(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -647608,7 +647752,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#0",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#0",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647619,7 +647763,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#1",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#1",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -647630,7 +647774,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#2",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#2",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -647641,7 +647785,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#3",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#3",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -647652,7 +647796,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#4",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#4",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -647663,7 +647807,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#5",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#5",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -647674,7 +647818,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIB)V#6",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIB)V#6",
+      "renamedSymbol": "P:BattleCharacter.initializeParticles(IIIIIIB)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -647685,7 +647829,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#0",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#0",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647696,7 +647840,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#1",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#1",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -647707,7 +647851,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#2",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#2",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -647718,7 +647862,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#3",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#3",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -647729,7 +647873,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#4",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#4",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -647740,7 +647884,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#5",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#5",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -647751,7 +647895,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#6",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#6",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -647762,7 +647906,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#7",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#7",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -647773,7 +647917,7 @@
     },
     {
       "symbol": "P:lf.a(IIIIIIIII)[Lwk;#8",
-      "renamedSymbol": "P:BattleCharacter.a(IIIIIIIII)[LRgbSprite;#8",
+      "renamedSymbol": "P:BattleCharacter.createBeveledFrameSprites(IIIIIIIII)[LRgbSprite;#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -647784,7 +647928,7 @@
     },
     {
       "symbol": "P:lf.a(IIZ)V#0",
-      "renamedSymbol": "P:BattleCharacter.a(IIZ)V#0",
+      "renamedSymbol": "P:BattleCharacter.drawAnimatedCharacter(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647795,7 +647939,7 @@
     },
     {
       "symbol": "P:lf.a(IIZ)V#1",
-      "renamedSymbol": "P:BattleCharacter.a(IIZ)V#1",
+      "renamedSymbol": "P:BattleCharacter.drawAnimatedCharacter(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -647806,7 +647950,7 @@
     },
     {
       "symbol": "P:lf.a(IIZ)V#2",
-      "renamedSymbol": "P:BattleCharacter.a(IIZ)V#2",
+      "renamedSymbol": "P:BattleCharacter.drawAnimatedCharacter(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -647883,7 +648027,7 @@
     },
     {
       "symbol": "P:lf.c(B)V#0",
-      "renamedSymbol": "P:BattleCharacter.c(B)V#0",
+      "renamedSymbol": "P:BattleCharacter.startRangedAttack(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647905,7 +648049,7 @@
     },
     {
       "symbol": "P:lf.d(B)V#0",
-      "renamedSymbol": "P:BattleCharacter.d(B)V#0",
+      "renamedSymbol": "P:BattleCharacter.advanceFrame(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -647916,7 +648060,7 @@
     },
     {
       "symbol": "P:lf.d(I)V#0",
-      "renamedSymbol": "P:BattleCharacter.d(I)V#0",
+      "renamedSymbol": "P:BattleCharacter.reloadAnimationSequence(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -689859,7 +690003,7 @@
     },
     {
       "symbol": "P:sr.a(BI)I#0",
-      "renamedSymbol": "P:CombatViewTransition.a(BI)I#0",
+      "renamedSymbol": "P:CombatViewTransition.getInterpolationSign(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -689870,7 +690014,7 @@
     },
     {
       "symbol": "P:sr.a(BI)I#1",
-      "renamedSymbol": "P:CombatViewTransition.a(BI)I#1",
+      "renamedSymbol": "P:CombatViewTransition.getInterpolationSign(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -689881,7 +690025,7 @@
     },
     {
       "symbol": "P:sr.a(I)V#0",
-      "renamedSymbol": "P:CombatViewTransition.a(I)V#0",
+      "renamedSymbol": "P:CombatViewTransition.interpolateSize(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -689892,7 +690036,7 @@
     },
     {
       "symbol": "P:sr.a(II)V#0",
-      "renamedSymbol": "P:CombatViewTransition.a(II)V#0",
+      "renamedSymbol": "P:CombatViewTransition.beginCollapseTransition(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -689903,7 +690047,7 @@
     },
     {
       "symbol": "P:sr.a(II)V#1",
-      "renamedSymbol": "P:CombatViewTransition.a(II)V#1",
+      "renamedSymbol": "P:CombatViewTransition.beginCollapseTransition(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -689914,7 +690058,7 @@
     },
     {
       "symbol": "P:sr.a(IIIB)I#0",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIB)I#0",
+      "renamedSymbol": "P:CombatViewTransition.getTerrainCategoryAt(IIIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -689925,7 +690069,7 @@
     },
     {
       "symbol": "P:sr.a(IIIB)I#1",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIB)I#1",
+      "renamedSymbol": "P:CombatViewTransition.getTerrainCategoryAt(IIIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -689936,7 +690080,7 @@
     },
     {
       "symbol": "P:sr.a(IIIB)I#2",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIB)I#2",
+      "renamedSymbol": "P:CombatViewTransition.getTerrainCategoryAt(IIIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -689947,7 +690091,7 @@
     },
     {
       "symbol": "P:sr.a(IIIB)I#3",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIB)I#3",
+      "renamedSymbol": "P:CombatViewTransition.getTerrainCategoryAt(IIIB)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -689958,7 +690102,7 @@
     },
     {
       "symbol": "P:sr.a(IIIII)I#0",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIII)I#0",
+      "renamedSymbol": "P:CombatViewTransition.interpolateInt(IIIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -689969,7 +690113,7 @@
     },
     {
       "symbol": "P:sr.a(IIIII)I#1",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIII)I#1",
+      "renamedSymbol": "P:CombatViewTransition.interpolateInt(IIIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -689980,7 +690124,7 @@
     },
     {
       "symbol": "P:sr.a(IIIII)I#2",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIII)I#2",
+      "renamedSymbol": "P:CombatViewTransition.interpolateInt(IIIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -689991,7 +690135,7 @@
     },
     {
       "symbol": "P:sr.a(IIIII)I#3",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIII)I#3",
+      "renamedSymbol": "P:CombatViewTransition.interpolateInt(IIIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -690002,7 +690146,7 @@
     },
     {
       "symbol": "P:sr.a(IIIII)I#4",
-      "renamedSymbol": "P:CombatViewTransition.a(IIIII)I#4",
+      "renamedSymbol": "P:CombatViewTransition.interpolateInt(IIIII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -690013,7 +690157,7 @@
     },
     {
       "symbol": "P:sr.a(ILwk;)V#0",
-      "renamedSymbol": "P:CombatViewTransition.a(ILRgbSprite;)V#0",
+      "renamedSymbol": "P:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -690024,7 +690168,7 @@
     },
     {
       "symbol": "P:sr.a(ILwk;)V#1",
-      "renamedSymbol": "P:CombatViewTransition.a(ILRgbSprite;)V#1",
+      "renamedSymbol": "P:CombatViewTransition.drawTransitionSprite(ILRgbSprite;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -690046,7 +690190,7 @@
     },
     {
       "symbol": "P:sr.b(I)V#0",
-      "renamedSymbol": "P:CombatViewTransition.b(I)V#0",
+      "renamedSymbol": "P:CombatViewTransition.finishTransition(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -690057,7 +690201,7 @@
     },
     {
       "symbol": "P:sr.b(II)V#0",
-      "renamedSymbol": "P:CombatViewTransition.b(II)V#0",
+      "renamedSymbol": "P:CombatViewTransition.beginExpandTransition(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -690068,7 +690212,7 @@
     },
     {
       "symbol": "P:sr.b(II)V#1",
-      "renamedSymbol": "P:CombatViewTransition.b(II)V#1",
+      "renamedSymbol": "P:CombatViewTransition.beginExpandTransition(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -690079,7 +690223,7 @@
     },
     {
       "symbol": "P:sr.c(I)V#0",
-      "renamedSymbol": "P:CombatViewTransition.c(I)V#0",
+      "renamedSymbol": "P:CombatViewTransition.advanceFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1397293,7 +1397437,7 @@
       "original": "lf.java",
       "renamed": "BattleCharacter.java",
       "inputSha256": "dfe09d011d37fd52ab6386f3697ce9ed5b06d2b0212802ebd3bbac2f70977c40",
-      "outputSha256": "512562b880d59a8792cda314dd2dd1509c900d031589c70bfba80aab74ccf196",
+      "outputSha256": "c0052405694e50b655d59d28a8ea0a3a793927999dd5cac573c7cab63596d1f9",
       "edits": [
         {
           "start": 71,
@@ -1397422,11 +1397566,25 @@
           "renamed": "runeCapsByOption"
         },
         {
+          "start": 955,
+          "end": 956,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
+        },
+        {
           "start": 2277,
           "end": 2284,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 2307,
+          "end": 2308,
+          "symbol": "M:lf.a(B)V",
+          "original": "a",
+          "renamed": "cacheActionAnimationFrameCount"
         },
         {
           "start": 2403,
@@ -1397455,6 +1397613,13 @@
           "symbol": "F:lf.field_s:I",
           "original": "field_s",
           "renamed": "destinationY"
+        },
+        {
+          "start": 2516,
+          "end": 2517,
+          "symbol": "M:lf.a(II)V",
+          "original": "a",
+          "renamed": "selectAnimationSlot"
         },
         {
           "start": 2623,
@@ -1397812,6 +1397977,13 @@
           "symbol": "F:lf.field_D:I",
           "original": "field_D",
           "renamed": "animationState"
+        },
+        {
+          "start": 5286,
+          "end": 5287,
+          "symbol": "M:lf.a(II)V",
+          "original": "a",
+          "renamed": "selectAnimationSlot"
         },
         {
           "start": 5335,
@@ -1398332,6 +1398504,13 @@
           "renamed": "unitType"
         },
         {
+          "start": 9470,
+          "end": 9471,
+          "symbol": "M:lf.a(I)V",
+          "original": "a",
+          "renamed": "selectCurrentFrameSet"
+        },
+        {
           "start": 9642,
           "end": 9649,
           "symbol": "F:lf.field_D:I",
@@ -1398437,6 +1398616,20 @@
           "renamed": "ResourceClientErrorSupport"
         },
         {
+          "start": 11107,
+          "end": 11108,
+          "symbol": "M:lf.a(II)V",
+          "original": "a",
+          "renamed": "selectAnimationSlot"
+        },
+        {
+          "start": 11597,
+          "end": 11598,
+          "symbol": "M:lf.d(I)V",
+          "original": "d",
+          "renamed": "reloadAnimationSequence"
+        },
+        {
           "start": 11700,
           "end": 11701,
           "symbol": "M:lf.b(I)Z",
@@ -1398456,6 +1398649,13 @@
           "symbol": "P:lf.b(I)Z#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 11798,
+          "end": 11799,
+          "symbol": "M:lf.d(I)V",
+          "original": "d",
+          "renamed": "reloadAnimationSequence"
         },
         {
           "start": 11844,
@@ -1398486,6 +1398686,13 @@
           "renamed": "destinationY"
         },
         {
+          "start": 11962,
+          "end": 11963,
+          "symbol": "M:lf.d(I)V",
+          "original": "d",
+          "renamed": "reloadAnimationSequence"
+        },
+        {
           "start": 11999,
           "end": 12000,
           "symbol": "M:vj.a(ILqb;)V",
@@ -1398512,6 +1398719,27 @@
           "symbol": "F:lf.field_G:I",
           "original": "field_G",
           "renamed": "modelIndex"
+        },
+        {
+          "start": 12064,
+          "end": 12065,
+          "symbol": "M:lf.a(I)V",
+          "original": "a",
+          "renamed": "selectCurrentFrameSet"
+        },
+        {
+          "start": 12122,
+          "end": 12123,
+          "symbol": "M:lf.a(II)V",
+          "original": "a",
+          "renamed": "selectAnimationSlot"
+        },
+        {
+          "start": 12166,
+          "end": 12167,
+          "symbol": "M:lf.a(IIIIIIB)V",
+          "original": "a",
+          "renamed": "initializeParticles"
         },
         {
           "start": 12313,
@@ -1398638,6 +1398866,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 13123,
+          "end": 13124,
+          "symbol": "M:lf.a(IIIIIIIII)[Lwk;",
+          "original": "a",
+          "renamed": "createBeveledFrameSprites"
         },
         {
           "start": 13284,
@@ -1398871,6 +1399106,13 @@
           "renamed": "pixels"
         },
         {
+          "start": 16640,
+          "end": 16641,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 16782,
           "end": 16784,
           "symbol": "C:gd",
@@ -1398953,6 +1399195,13 @@
           "symbol": "M:gd.b(III)V",
           "original": "b",
           "renamed": "scaleGeometry"
+        },
+        {
+          "start": 18042,
+          "end": 18043,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
         },
         {
           "start": 18208,
@@ -1399212,6 +1399461,13 @@
           "symbol": "P:lf.c(I)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 22174,
+          "end": 22175,
+          "symbol": "M:lf.a(B)V",
+          "original": "a",
+          "renamed": "cacheActionAnimationFrameCount"
         },
         {
           "start": 22247,
@@ -1399662,6 +1399918,13 @@
           "renamed": "AnimationPlayer"
         },
         {
+          "start": 24240,
+          "end": 24241,
+          "symbol": "M:lf.a(I)V",
+          "original": "a",
+          "renamed": "selectCurrentFrameSet"
+        },
+        {
           "start": 24286,
           "end": 24287,
           "symbol": "M:vj.a(ILqb;)V",
@@ -1399858,6 +1400121,13 @@
           "renamed": "animationState"
         },
         {
+          "start": 26409,
+          "end": 26410,
+          "symbol": "M:lf.a(I)V",
+          "original": "a",
+          "renamed": "selectCurrentFrameSet"
+        },
+        {
           "start": 26457,
           "end": 26464,
           "symbol": "F:vj.field_i:I",
@@ -1399900,6 +1400170,13 @@
           "renamed": "setCurrentFrameSet"
         },
         {
+          "start": 26626,
+          "end": 26627,
+          "symbol": "M:lf.c(B)V",
+          "original": "c",
+          "renamed": "startRangedAttack"
+        },
+        {
           "start": 26656,
           "end": 26657,
           "symbol": "M:lf.a(IB)V",
@@ -1399912,6 +1400189,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 26745,
+          "end": 26746,
+          "symbol": "M:lf.a(IIIIIIIII)[Lwk;",
+          "original": "a",
+          "renamed": "createBeveledFrameSprites"
         },
         {
           "start": 26826,
@@ -1400381,6 +1400665,13 @@
           "symbol": "C:lb",
           "original": "lb",
           "renamed": "ResourceClientErrorSupport"
+        },
+        {
+          "start": 30284,
+          "end": 30285,
+          "symbol": "M:lf.d(I)V",
+          "original": "d",
+          "renamed": "reloadAnimationSequence"
         },
         {
           "start": 30551,
@@ -1427544,7 +1427835,7 @@
       "original": "mg.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "542ffc0ddaf5691532152888fa2c445744b269af9d28f68bed1ec5fc2e249358",
-      "outputSha256": "1d57b50da8e4f582fcc0cea68c9e701d643c1a475b6820c70a9ec98fb364843a",
+      "outputSha256": "3ef521c9fc7904180a6881522acaa82ca8ad93162964f5dfdd67c8070b818860",
       "edits": [
         {
           "start": 53,
@@ -1427617,6 +1427908,13 @@
           "renamed": "BattleCharacter"
         },
         {
+          "start": 420,
+          "end": 421,
+          "symbol": "M:lf.a(IIIIIIIII)[Lwk;",
+          "original": "a",
+          "renamed": "createBeveledFrameSprites"
+        },
+        {
           "start": 489,
           "end": 491,
           "symbol": "C:mg",
@@ -1427629,6 +1427927,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 543,
+          "end": 544,
+          "symbol": "M:lf.a(IIIIIIIII)[Lwk;",
+          "original": "a",
+          "renamed": "createBeveledFrameSprites"
         },
         {
           "start": 624,
@@ -1545482,7 +1545787,7 @@
       "original": "oo.java",
       "renamed": "MembershipExpansionScreen.java",
       "inputSha256": "0f5d484f1d6e8ae2cd6f733834b60e2d34328bcc8143ee6bbcdb8f62f5064db3",
-      "outputSha256": "0cc247ca5f38c0ea054144ab268725a1c215e2c28370cdc2310f050474716234",
+      "outputSha256": "daf9f828c3f44353d9bc3c78451348073379062c02bdd12fbeaf14ebda6646b4",
       "edits": [
         {
           "start": 50,
@@ -1548075,11 +1548380,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 27449,
+          "end": 27450,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 27512,
           "end": 27514,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 27515,
+          "end": 27516,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 27603,
@@ -1548089,11 +1548408,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 27606,
+          "end": 27607,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 27664,
           "end": 27666,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 27667,
+          "end": 27668,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 27792,
@@ -1582308,7 +1582641,7 @@
       "original": "po.java",
       "renamed": "QuickChatShortcutSupport.java",
       "inputSha256": "2823884075419cd27da520b2171819f772cafdfc0e647f11ee2d58384cd723f8",
-      "outputSha256": "6798c4750e26406ebd7744e77b283e543e136fb7b6f99072d3ae5473162f7c43",
+      "outputSha256": "a536800449d84212b5a4fc5e6c23ffa42ea07001f97ed5e2b6e364e6407ad685",
       "edits": [
         {
           "start": 50,
@@ -1582367,6 +1582700,13 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 475,
+          "end": 476,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 521,
           "end": 523,
           "symbol": "C:sr",
@@ -1582374,11 +1582714,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 524,
+          "end": 525,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 564,
           "end": 566,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 567,
+          "end": 568,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 617,
@@ -1582416,6 +1582770,13 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 679,
+          "end": 680,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 726,
           "end": 728,
           "symbol": "C:sr",
@@ -1582423,11 +1582784,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 729,
+          "end": 730,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 768,
           "end": 770,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 771,
+          "end": 772,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 822,
@@ -1582465,6 +1582840,13 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 890,
+          "end": 891,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 936,
           "end": 938,
           "symbol": "C:sr",
@@ -1582472,11 +1582854,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 939,
+          "end": 940,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 978,
           "end": 980,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 981,
+          "end": 982,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 1026,
@@ -1582514,6 +1582910,13 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 1094,
+          "end": 1095,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 1140,
           "end": 1142,
           "symbol": "C:sr",
@@ -1582521,11 +1582924,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 1143,
+          "end": 1144,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 1182,
           "end": 1184,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 1185,
+          "end": 1186,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 1232,
@@ -1696120,7 +1696537,7 @@
       "original": "sk.java",
       "renamed": "CombatPresentation.java",
       "inputSha256": "d348f5700e4adb0886ee3fa4a96191d2cfee0e806df01cc69a585fbafbe17d42",
-      "outputSha256": "8c635b6317af59f93fdbb06000477b6476ef9156297e5de6c69c33623b087a6f",
+      "outputSha256": "5a7738299b9ee88999e8491d69ba47ce880c91fe30f586a3ea35cdccdbb4e831",
       "edits": [
         {
           "start": 71,
@@ -1696621,6 +1697038,13 @@
           "renamed": "BattleCharacter"
         },
         {
+          "start": 11654,
+          "end": 11655,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 12053,
           "end": 12055,
           "symbol": "C:cu",
@@ -1696636,6 +1697060,13 @@
           "kind": "label"
         },
         {
+          "start": 12356,
+          "end": 12357,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 12936,
           "end": 12938,
           "symbol": "C:lf",
@@ -1696643,11 +1697074,25 @@
           "renamed": "BattleCharacter"
         },
         {
+          "start": 12963,
+          "end": 12964,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 13143,
           "end": 13145,
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 13170,
+          "end": 13171,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 14043,
@@ -1697952,6 +1698397,13 @@
           "renamed": "MatchConditionEntry"
         },
         {
+          "start": 33536,
+          "end": 33537,
+          "symbol": "M:sr.b(II)V",
+          "original": "b",
+          "renamed": "beginExpandTransition"
+        },
+        {
           "start": 33543,
           "end": 33550,
           "symbol": "F:ag.field_G:I",
@@ -1698216,6 +1698668,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 36102,
+          "end": 36103,
+          "symbol": "M:sr.c(I)V",
+          "original": "c",
+          "renamed": "advanceFrame"
         },
         {
           "start": 36196,
@@ -1698674,6 +1699133,13 @@
           "renamed": "attackers"
         },
         {
+          "start": 41514,
+          "end": 41515,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
+        },
+        {
           "start": 41592,
           "end": 41599,
           "symbol": "F:sk.field_s:[Llf;",
@@ -1698686,6 +1699152,13 @@
           "symbol": "F:sk.field_s:[Llf;",
           "original": "field_s",
           "renamed": "attackers"
+        },
+        {
+          "start": 41656,
+          "end": 41657,
+          "symbol": "M:lf.a(IIIIIIB)V",
+          "original": "a",
+          "renamed": "initializeParticles"
         },
         {
           "start": 41673,
@@ -1698751,6 +1699224,13 @@
           "renamed": "defenders"
         },
         {
+          "start": 42420,
+          "end": 42421,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
+        },
+        {
           "start": 42506,
           "end": 42513,
           "symbol": "F:sk.field_i:[Llf;",
@@ -1698763,6 +1699243,13 @@
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 42574,
+          "end": 42575,
+          "symbol": "M:lf.a(IIIIIIB)V",
+          "original": "a",
+          "renamed": "initializeParticles"
         },
         {
           "start": 42590,
@@ -1699022,6 +1699509,13 @@
           "renamed": "BattleCharacter"
         },
         {
+          "start": 46326,
+          "end": 46327,
+          "symbol": "M:lf.c(B)V",
+          "original": "c",
+          "renamed": "startRangedAttack"
+        },
+        {
           "start": 46571,
           "end": 46573,
           "symbol": "C:ig",
@@ -1699120,6 +1699614,13 @@
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 48615,
+          "end": 48616,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 49277,
@@ -1699292,6 +1699793,13 @@
           "renamed": "attackers"
         },
         {
+          "start": 54197,
+          "end": 54198,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 54470,
           "end": 54477,
           "symbol": "F:sk.field_s:[Llf;",
@@ -1699327,6 +1699835,13 @@
           "renamed": "defenders"
         },
         {
+          "start": 54730,
+          "end": 54731,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 55045,
           "end": 55052,
           "symbol": "F:sk.field_s:[Llf;",
@@ -1699334,11 +1699849,25 @@
           "renamed": "attackers"
         },
         {
+          "start": 55077,
+          "end": 55078,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 55397,
           "end": 55404,
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 55429,
+          "end": 55430,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 55926,
@@ -1699363,6 +1699892,13 @@
           "renamed": "attackers"
         },
         {
+          "start": 56175,
+          "end": 56176,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 56604,
           "end": 56611,
           "symbol": "F:sk.field_i:[Llf;",
@@ -1699383,6 +1699919,13 @@
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 56843,
+          "end": 56844,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 57127,
@@ -1699407,6 +1699950,13 @@
           "renamed": "defenders"
         },
         {
+          "start": 57581,
+          "end": 57582,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 57712,
           "end": 57714,
           "symbol": "B:sk.d(Z)V#1",
@@ -1699420,6 +1699970,13 @@
           "symbol": "F:sk.field_s:[Llf;",
           "original": "field_s",
           "renamed": "attackers"
+        },
+        {
+          "start": 57902,
+          "end": 57903,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 58193,
@@ -1699466,6 +1700023,13 @@
           "renamed": "defenders"
         },
         {
+          "start": 59632,
+          "end": 59633,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 59789,
           "end": 59796,
           "symbol": "F:sk.field_s:[Llf;",
@@ -1699501,6 +1700065,13 @@
           "renamed": "defenders"
         },
         {
+          "start": 60016,
+          "end": 60017,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 60253,
           "end": 60260,
           "symbol": "F:sk.field_s:[Llf;",
@@ -1699508,11 +1700079,25 @@
           "renamed": "attackers"
         },
         {
+          "start": 60285,
+          "end": 60286,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 60507,
           "end": 60514,
           "symbol": "F:sk.field_s:[Llf;",
           "original": "field_s",
           "renamed": "attackers"
+        },
+        {
+          "start": 60539,
+          "end": 60540,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 60938,
@@ -1699527,6 +1700112,13 @@
           "symbol": "F:sk.field_s:[Llf;",
           "original": "field_s",
           "renamed": "attackers"
+        },
+        {
+          "start": 61066,
+          "end": 61067,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 61372,
@@ -1699569,6 +1700161,13 @@
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 62063,
+          "end": 62064,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
         },
         {
           "start": 62103,
@@ -1699941,11 +1700540,25 @@
           "renamed": "attackers"
         },
         {
+          "start": 74716,
+          "end": 74717,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 74975,
           "end": 74982,
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 75007,
+          "end": 75008,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 76387,
@@ -1699997,11 +1700610,25 @@
           "renamed": "attackers"
         },
         {
+          "start": 77483,
+          "end": 77484,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 77654,
           "end": 77661,
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 77686,
+          "end": 77687,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 77853,
@@ -1700016,6 +1700643,13 @@
           "symbol": "F:sk.field_i:[Llf;",
           "original": "field_i",
           "renamed": "defenders"
+        },
+        {
+          "start": 78056,
+          "end": 78057,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 78259,
@@ -1704744,6 +1705378,13 @@
           "renamed": "MatchConditionEntry"
         },
         {
+          "start": 109409,
+          "end": 109410,
+          "symbol": "M:sr.a(ILwk;)V",
+          "original": "a",
+          "renamed": "drawTransitionSprite"
+        },
+        {
           "start": 109421,
           "end": 109428,
           "symbol": "F:sk.field_H:Lwk;",
@@ -1704978,6 +1705619,13 @@
           "renamed": "attackers"
         },
         {
+          "start": 116998,
+          "end": 116999,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
+        },
+        {
           "start": 117038,
           "end": 117045,
           "symbol": "F:sk.field_s:[Llf;",
@@ -1704997,6 +1705645,13 @@
           "symbol": "F:sk.field_s:[Llf;",
           "original": "field_s",
           "renamed": "attackers"
+        },
+        {
+          "start": 117254,
+          "end": 117255,
+          "symbol": "M:lf.a(IIIIIIB)V",
+          "original": "a",
+          "renamed": "initializeParticles"
         },
         {
           "start": 117271,
@@ -1705258,6 +1705913,13 @@
           "renamed": "attackers"
         },
         {
+          "start": 123775,
+          "end": 123776,
+          "symbol": "M:lf.a(IIIIIIB)V",
+          "original": "a",
+          "renamed": "initializeParticles"
+        },
+        {
           "start": 123790,
           "end": 123791,
           "symbol": "C:u",
@@ -1705305,6 +1705967,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 124101,
+          "end": 124102,
+          "symbol": "M:lf.a(IIIIIIB)V",
+          "original": "a",
+          "renamed": "initializeParticles"
         },
         {
           "start": 124117,
@@ -1705672,11 +1706341,32 @@
           "renamed": "draw"
         },
         {
+          "start": 136275,
+          "end": 136276,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
+          "start": 136519,
+          "end": 136520,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
+        },
+        {
           "start": 136766,
           "end": 136767,
           "symbol": "M:km.a(ZIZI)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 137943,
+          "end": 137944,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 138105,
@@ -1705691,6 +1706381,13 @@
           "symbol": "M:km.a(ZIZI)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 138507,
+          "end": 138508,
+          "symbol": "M:lf.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawAnimatedCharacter"
         },
         {
           "start": 138732,
@@ -1705945,6 +1706642,13 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 143561,
+          "end": 143562,
+          "symbol": "M:lf.d(B)V",
+          "original": "d",
+          "renamed": "advanceFrame"
+        },
+        {
           "start": 144171,
           "end": 144173,
           "symbol": "C:ig",
@@ -1706139,6 +1706843,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 147946,
+          "end": 147947,
+          "symbol": "M:sr.a(II)V",
+          "original": "a",
+          "renamed": "beginCollapseTransition"
         },
         {
           "start": 148003,
@@ -1714244,7 +1714955,7 @@
       "original": "sr.java",
       "renamed": "CombatViewTransition.java",
       "inputSha256": "a0ae9ddfb2ba7834259aa3e59a0feeb5374c6a4ecc1e76f16afd08ade31d8bcf",
-      "outputSha256": "014478bbfcd4b6b048b8f005fba8b34ea5be72fc444112d15993ec095245aee8",
+      "outputSha256": "801d9156680cf698b5d7763d5eaf885a1fbf0893557e7d5547073279a5e93d52",
       "edits": [
         {
           "start": 50,
@@ -1714280,6 +1714991,13 @@
           "symbol": "F:sr.field_k:Lv;",
           "original": "field_k",
           "renamed": "camera"
+        },
+        {
+          "start": 473,
+          "end": 474,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 660,
@@ -1714336,6 +1715054,13 @@
           "symbol": "F:sr.field_n:I",
           "original": "field_n",
           "renamed": "transitionFactor"
+        },
+        {
+          "start": 1069,
+          "end": 1070,
+          "symbol": "M:sr.a(II)V",
+          "original": "a",
+          "renamed": "beginCollapseTransition"
         },
         {
           "start": 1357,
@@ -1714415,6 +1715140,13 @@
           "renamed": "isExpanded"
         },
         {
+          "start": 1703,
+          "end": 1704,
+          "symbol": "M:sr.a(ILwk;)V",
+          "original": "a",
+          "renamed": "drawTransitionSprite"
+        },
+        {
           "start": 1717,
           "end": 1719,
           "symbol": "C:wk",
@@ -1714469,6 +1715201,27 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 4028,
+          "end": 4029,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 4412,
+          "end": 4413,
+          "symbol": "M:sr.a(II)V",
+          "original": "a",
+          "renamed": "beginCollapseTransition"
+        },
+        {
+          "start": 4640,
+          "end": 4641,
+          "symbol": "M:sr.c(I)V",
+          "original": "c",
+          "renamed": "advanceFrame"
         },
         {
           "start": 4929,
@@ -1714527,11 +1715280,60 @@
           "renamed": "height"
         },
         {
+          "start": 5248,
+          "end": 5249,
+          "symbol": "M:sr.a(I)V",
+          "original": "a",
+          "renamed": "interpolateSize"
+        },
+        {
           "start": 5272,
           "end": 5279,
           "symbol": "F:sr.field_n:I",
           "original": "field_n",
           "renamed": "transitionFactor"
+        },
+        {
+          "start": 5287,
+          "end": 5288,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 5441,
+          "end": 5442,
+          "symbol": "M:sr.a(BI)I",
+          "original": "a",
+          "renamed": "getInterpolationSign"
+        },
+        {
+          "start": 5576,
+          "end": 5577,
+          "symbol": "M:sr.a(BI)I",
+          "original": "a",
+          "renamed": "getInterpolationSign"
+        },
+        {
+          "start": 5669,
+          "end": 5670,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 5754,
+          "end": 5755,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 5971,
+          "end": 5972,
+          "symbol": "M:sr.b(I)V",
+          "original": "b",
+          "renamed": "finishTransition"
         },
         {
           "start": 6045,
@@ -1714562,11 +1715364,88 @@
           "renamed": "width"
         },
         {
+          "start": 6134,
+          "end": 6135,
+          "symbol": "M:sr.a(I)V",
+          "original": "a",
+          "renamed": "interpolateSize"
+        },
+        {
           "start": 6156,
           "end": 6163,
           "symbol": "F:sr.field_n:I",
           "original": "field_n",
           "renamed": "transitionFactor"
+        },
+        {
+          "start": 6171,
+          "end": 6172,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 6339,
+          "end": 6340,
+          "symbol": "M:sr.a(BI)I",
+          "original": "a",
+          "renamed": "getInterpolationSign"
+        },
+        {
+          "start": 6513,
+          "end": 6514,
+          "symbol": "M:sr.a(BI)I",
+          "original": "a",
+          "renamed": "getInterpolationSign"
+        },
+        {
+          "start": 6629,
+          "end": 6630,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 6730,
+          "end": 6731,
+          "symbol": "M:sr.a(IIIII)I",
+          "original": "a",
+          "renamed": "interpolateInt"
+        },
+        {
+          "start": 6955,
+          "end": 6956,
+          "symbol": "M:sr.b(I)V",
+          "original": "b",
+          "renamed": "finishTransition"
+        },
+        {
+          "start": 7003,
+          "end": 7004,
+          "symbol": "M:sr.a(I)V",
+          "original": "a",
+          "renamed": "interpolateSize"
+        },
+        {
+          "start": 7347,
+          "end": 7348,
+          "symbol": "M:sr.a(BI)I",
+          "original": "a",
+          "renamed": "getInterpolationSign"
+        },
+        {
+          "start": 7467,
+          "end": 7468,
+          "symbol": "M:sr.a(II)V",
+          "original": "a",
+          "renamed": "beginCollapseTransition"
+        },
+        {
+          "start": 7538,
+          "end": 7539,
+          "symbol": "M:sr.b(II)V",
+          "original": "b",
+          "renamed": "beginExpandTransition"
         },
         {
           "start": 7799,
@@ -1714637,6 +1715516,13 @@
           "symbol": "F:bi.field_g:I",
           "original": "field_g",
           "renamed": "height"
+        },
+        {
+          "start": 8132,
+          "end": 8133,
+          "symbol": "M:sr.b(I)V",
+          "original": "b",
+          "renamed": "finishTransition"
         },
         {
           "start": 8204,
@@ -1714721,6 +1715607,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 8809,
+          "end": 8810,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 8860,
@@ -1774786,7 +1775679,7 @@
       "original": "ui.java",
       "renamed": "DualNodeDeque.java",
       "inputSha256": "e07f01dcc776b9419cec5a3195948db09544d44dba36c2c367094aea48d7c067",
-      "outputSha256": "39647059765ad912c2edc6b91abdf1847e4d1c6a52f956db150c8dc85b2bc98e",
+      "outputSha256": "d40445a2f6708e3bb160262514392151e5a315a18ce49c8988ebc6f9316aec84",
       "edits": [
         {
           "start": 50,
@@ -1775545,11 +1776438,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 4553,
+          "end": 4554,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 4660,
           "end": 4662,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 4663,
+          "end": 4664,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 4769,
@@ -1775559,11 +1776466,25 @@
           "renamed": "CombatViewTransition"
         },
         {
+          "start": 4772,
+          "end": 4773,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
+        },
+        {
           "start": 4873,
           "end": 4875,
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "CombatViewTransition"
+        },
+        {
+          "start": 4876,
+          "end": 4877,
+          "symbol": "M:sr.a(IIIB)I",
+          "original": "a",
+          "renamed": "getTerrainCategoryAt"
         },
         {
           "start": 5372,
@@ -1903338,10 +1904259,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "b7edd9a7a9107620f13b41b6e477aade55287726356edc28a43e5a3b895be2ca",
+    "rulesSha256": "a9efc16c2c51f71922e51f44397d6823f749289e291f9ff6708e4a238cee37ea",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "0e35c0b6cf2dd413d80d482fd5a7cc14d64451a6831e0f3cfefde49f54ca29fa",
+    "outputTreeSha256": "141b5233a7cd3d1c873950310e89dc0698060021508a7993686a3f3db413bc3a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -340,7 +340,7 @@ final class CombatPresentation implements EventPresentation {
                 while (true) {
                   if (stackIn_55_0 != stackIn_55_1) {
                     stackIn_58_0 = param1[var5[var6]];
-                    ((BattleCharacter) (Object) stackIn_58_0).a(this.field_C, param2 ^ -56, false);
+                    ((BattleCharacter) (Object) stackIn_58_0).drawAnimatedCharacter(this.field_C, param2 ^ -56, false);
                   }
                   var6++;
                   if (var9 != 0) {
@@ -361,7 +361,7 @@ final class CombatPresentation implements EventPresentation {
                     break scanLoop1;
                   }
                   if (stackIn_58_0 != null) {
-                    param1[var5[var6]].a(this.field_C, -84, true);
+                    param1[var5[var6]].drawAnimatedCharacter(this.field_C, -84, true);
                   }
                   var6++;
                 }
@@ -379,7 +379,7 @@ final class CombatPresentation implements EventPresentation {
                 stackIn_55_1 = param1[var5[var6]];
                 if (stackIn_55_0 != stackIn_55_1) {
                   stackIn_58_0 = param1[var5[var6]];
-                  ((BattleCharacter) (Object) stackIn_58_0).a(this.field_C, param2 ^ -56, false);
+                  ((BattleCharacter) (Object) stackIn_58_0).drawAnimatedCharacter(this.field_C, param2 ^ -56, false);
                 }
                 var6++;
               }
@@ -387,7 +387,7 @@ final class CombatPresentation implements EventPresentation {
             break;
           }
           while (true) {
-            ((BattleCharacter) (Object) stackIn_58_0).a(this.field_C, param2 ^ -56, false);
+            ((BattleCharacter) (Object) stackIn_58_0).drawAnimatedCharacter(this.field_C, param2 ^ -56, false);
             do {
               var6++;
               if (var9 != 0) {
@@ -861,7 +861,7 @@ final class CombatPresentation implements EventPresentation {
                 if (decompiledSharedTail0) {
                   this.field_t = var3.targetDeltaX + var3.attackerX + this.battlefield.mapWidth * (var3.targetDeltaY + var3.attackerY);
                 }
-                MatchConditionEntry.field_p.b(var3.attackerY * this.battlefield.mapWidth + var3.attackerX, obfuscationGuard ^ 65);
+                MatchConditionEntry.field_p.beginExpandTransition(var3.attackerY * this.battlefield.mapWidth + var3.attackerX, obfuscationGuard ^ 65);
                 decompiledFrameRemainder3 = false;
               }
               else {
@@ -931,7 +931,7 @@ final class CombatPresentation implements EventPresentation {
         try {
           this.e(2);
           if (MatchConditionEntry.field_p != null) {
-            MatchConditionEntry.field_p.c(1959107777);
+            MatchConditionEntry.field_p.advanceFrame(1959107777);
           }
           boolean decompiledFrameRemainder0 = true;
           this.phaseFrame = this.phaseFrame + 1;
@@ -1083,10 +1083,10 @@ final class CombatPresentation implements EventPresentation {
               stackIn_80_0 = this.attackers[var3];
               if (var4 == 0) {
                 if (stackIn_80_0 != null) {
-                  this.attackers[var3].d((byte) 113);
+                  this.attackers[var3].advanceFrame((byte) 113);
                   if (this.field_E &&
                     this.attackers[var3].field_e) {
-                    this.attackers[var3].a(0, 30, 0, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
+                    this.attackers[var3].initializeParticles(0, 30, 0, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
                     this.attackers[var3].field_e = false;
                   }
                   if (this.attackers[var3].field_d) {
@@ -1106,10 +1106,10 @@ final class CombatPresentation implements EventPresentation {
                 if (this.defenders.length > var3) {
                   if (var4 == 0) {
                     if (null != this.defenders[var3]) {
-                      this.defenders[var3].d((byte) 113);
+                      this.defenders[var3].advanceFrame((byte) 113);
                       if (this.field_P &&
                         this.defenders[var3].field_e) {
-                        this.defenders[var3].a(0, 30, 0, 10, MatchConditionEntry.field_o[this.field_a][1], ValidationStatusWidget.field_T[this.field_a][1], (byte) 122);
+                        this.defenders[var3].initializeParticles(0, 30, 0, 10, MatchConditionEntry.field_o[this.field_a][1], ValidationStatusWidget.field_T[this.field_a][1], (byte) 122);
                         this.defenders[var3].field_e = false;
                       }
                       if (this.defenders[var3].field_d) {
@@ -1220,7 +1220,7 @@ final class CombatPresentation implements EventPresentation {
             var4 = var3[AttackEvent.nextBoundedInt(false, var2_int, ConsoleTokenSupport.field_b)];
             stackIn_25_0 = this.attackers[var4];
           }
-          ((BattleCharacter) (Object) stackIn_25_0).c((byte) 102);
+          ((BattleCharacter) (Object) stackIn_25_0).startRangedAttack((byte) 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1286,7 +1286,7 @@ final class CombatPresentation implements EventPresentation {
                 if (var7 != 0) {
                   while (true) {
                     if (stackIn_124_0 != stackIn_124_1) {
-                      this.defenders[var3[var5]].a(this.field_C, -92, false);
+                      this.defenders[var3[var5]].drawAnimatedCharacter(this.field_C, -92, false);
                     }
                     var5++;
                     decompiledFrameCompleted0 = false;
@@ -1414,7 +1414,7 @@ final class CombatPresentation implements EventPresentation {
                             if (this.field_w <= var6Lifetime3) {
                               incrementValue$2 = var5;
                               var5++;
-                              this.attackers[var2[incrementValue$2]].a(this.field_C, -91, true);
+                              this.attackers[var2[incrementValue$2]].drawAnimatedCharacter(this.field_C, -91, true);
                               if (var7 == 0) {
                                 continue;
                               }
@@ -1423,21 +1423,21 @@ final class CombatPresentation implements EventPresentation {
                               if (this.attackers[var2[var5]].destinationY <= this.defenders[var3[var6Lifetime3]].destinationY) {
                                 incrementValue$3 = var6Lifetime3;
                                 var6Lifetime3++;
-                                this.defenders[var3[incrementValue$3]].a(this.field_C, -38, true);
+                                this.defenders[var3[incrementValue$3]].drawAnimatedCharacter(this.field_C, -38, true);
                                 if (var7 == 0) {
                                   continue;
                                 }
                               }
                               incrementValue$4 = var5;
                               var5++;
-                              this.attackers[var2[incrementValue$4]].a(this.field_C, -106, true);
+                              this.attackers[var2[incrementValue$4]].drawAnimatedCharacter(this.field_C, -106, true);
                               if (var7 == 0) {
                                 continue;
                               }
                             }
                             incrementValue$5 = var6Lifetime3;
                             var6Lifetime3++;
-                            this.defenders[var3[incrementValue$5]].a(this.field_C, -64, true);
+                            this.defenders[var3[incrementValue$5]].drawAnimatedCharacter(this.field_C, -64, true);
                             if (var7 == 0) {
                               continue;
                             }
@@ -1453,7 +1453,7 @@ final class CombatPresentation implements EventPresentation {
                               break scanLoop3;
                             }
                             if (stackIn_171_0 != null) {
-                              this.attackers[var2[var5]].a(this.field_C, -86, true);
+                              this.attackers[var2[var5]].drawAnimatedCharacter(this.field_C, -86, true);
                             }
                             var5++;
                           }
@@ -1468,7 +1468,7 @@ final class CombatPresentation implements EventPresentation {
                             break scanLoop3;
                           }
                           if (stackIn_171_0 != null) {
-                            this.defenders[var3[var5]].a(this.field_C, -46, true);
+                            this.defenders[var3[var5]].drawAnimatedCharacter(this.field_C, -46, true);
                           }
                           var5++;
                         }
@@ -1486,7 +1486,7 @@ final class CombatPresentation implements EventPresentation {
                       stackIn_124_0Lifetime1 = null;
                       stackIn_124_1Lifetime1 = this.defenders[var3[var5]];
                       if (stackIn_124_0Lifetime1 != stackIn_124_1Lifetime1) {
-                        this.defenders[var3[var5]].a(this.field_C, -92, false);
+                        this.defenders[var3[var5]].drawAnimatedCharacter(this.field_C, -92, false);
                       }
                       var5++;
                     }
@@ -1496,7 +1496,7 @@ final class CombatPresentation implements EventPresentation {
                 }
                 while (true) {
                   if (stackIn_171_0 != null) {
-                    this.attackers[var2[var5]].a(this.field_C, -65, false);
+                    this.attackers[var2[var5]].drawAnimatedCharacter(this.field_C, -65, false);
                   }
                   var5++;
                   if (var7 != 0) {
@@ -1544,7 +1544,7 @@ final class CombatPresentation implements EventPresentation {
                 if (var5Lifetime1 >= this.field_y) {
                   incrementValue$6 = var6Lifetime1;
                   var6Lifetime1++;
-                  this.defenders[var3[incrementValue$6]].a(this.field_C, -74, false);
+                  this.defenders[var3[incrementValue$6]].drawAnimatedCharacter(this.field_C, -74, false);
                   if (var7 == 0) {
                     continue;
                   }
@@ -1552,21 +1552,21 @@ final class CombatPresentation implements EventPresentation {
                 if (this.attackers[var2[var5Lifetime1]].destinationY <= this.defenders[var3[var6Lifetime1]].destinationY) {
                   incrementValue$7 = var6Lifetime1;
                   var6Lifetime1++;
-                  this.defenders[var3[incrementValue$7]].a(this.field_C, -120, false);
+                  this.defenders[var3[incrementValue$7]].drawAnimatedCharacter(this.field_C, -120, false);
                   if (var7 == 0) {
                     continue;
                   }
                 }
                 incrementValue$8 = var5Lifetime1;
                 var5Lifetime1++;
-                this.attackers[var2[incrementValue$8]].a(this.field_C, -65, false);
+                this.attackers[var2[incrementValue$8]].drawAnimatedCharacter(this.field_C, -65, false);
                 if (var7 == 0) {
                   continue;
                 }
               }
               incrementValue$9 = var5Lifetime1;
               var5Lifetime1++;
-              this.attackers[var2[incrementValue$9]].a(this.field_C, -52, false);
+              this.attackers[var2[incrementValue$9]].drawAnimatedCharacter(this.field_C, -52, false);
               if (var7 == 0) {
                 continue;
               }
@@ -1583,7 +1583,7 @@ final class CombatPresentation implements EventPresentation {
             }
             stackIn_171_0Lifetime1 = this.attackers[var2[var5Lifetime2]];
             if (stackIn_171_0Lifetime1 != null) {
-              this.attackers[var2[var5Lifetime2]].a(this.field_C, -65, false);
+              this.attackers[var2[var5Lifetime2]].drawAnimatedCharacter(this.field_C, -65, false);
             }
             var5Lifetime2++;
           }
@@ -1610,7 +1610,7 @@ final class CombatPresentation implements EventPresentation {
           while (!(decompiledNaturalLoopExit1 = (var3 >= this.defenders.length))) {
             if (var4 == 0) {
               if (null != this.defenders[var3]) {
-                this.defenders[var3].d((byte) 113);
+                this.defenders[var3].advanceFrame((byte) 113);
                 if (this.defenders[var3].field_d) {
                   if (this.defenders[var3].field_H) {
                     this.defenders[var3] = null;
@@ -1962,13 +1962,13 @@ final class CombatPresentation implements EventPresentation {
                   if (!decompiledSharedTail0) {
                     incrementValue$4 = var6;
                     var6++;
-                    this.attackers[var2[incrementValue$4]].a(this.field_C, param0 ^ 58, true);
+                    this.attackers[var2[incrementValue$4]].drawAnimatedCharacter(this.field_C, param0 ^ 58, true);
                     decompiledSharedTail0 = (var12 != 0);
                   }
                   if (decompiledSharedTail0) {
                     incrementValue$5 = var7;
                     var7++;
-                    this.defenders[var3[incrementValue$5]].a(this.field_C, param0 - 97, true);
+                    this.defenders[var3[incrementValue$5]].drawAnimatedCharacter(this.field_C, param0 - 97, true);
                   }
                 }
                 if (var12 == 0) {
@@ -2040,11 +2040,11 @@ final class CombatPresentation implements EventPresentation {
                 if (var10 < var11) {
                   incrementValue$6 = var6;
                   var6++;
-                  this.attackers[var2[incrementValue$6]].a(this.field_C, param0 - 93, false);
+                  this.attackers[var2[incrementValue$6]].drawAnimatedCharacter(this.field_C, param0 - 93, false);
                   if (var12 != 0) {
                     incrementValue$7 = var7;
                     var7++;
-                    this.defenders[var3[incrementValue$7]].a(this.field_C, param0 - 51, false);
+                    this.defenders[var3[incrementValue$7]].drawAnimatedCharacter(this.field_C, param0 - 51, false);
                     incrementValue$8 = var8;
                     var8++;
                     this.field_D[var4[incrementValue$8]].draw(true, -8, false, this.field_C);
@@ -2052,7 +2052,7 @@ final class CombatPresentation implements EventPresentation {
                 } else {
                   incrementValue$7 = var7;
                   var7++;
-                  this.defenders[var3[incrementValue$7]].a(this.field_C, param0 - 51, false);
+                  this.defenders[var3[incrementValue$7]].drawAnimatedCharacter(this.field_C, param0 - 51, false);
                   if (var12 != 0) {
                     incrementValue$8 = var8;
                     var8++;
@@ -2812,7 +2812,7 @@ final class CombatPresentation implements EventPresentation {
           GradientUiRenderer.drawHollowGradientFrame(0, 0, PowerOfTwoSupport.field_k, IgnoreRequestSupport.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
           FixedSquareRootSupport.field_b.bindRasterTarget(5605);
           if (null != MatchConditionEntry.field_p) {
-            MatchConditionEntry.field_p.a(-66, this.framebuffer);
+            MatchConditionEntry.field_p.drawTransitionSprite(-66, this.framebuffer);
             if (var9 == 0) {
               return;
             }
@@ -3020,12 +3020,12 @@ final class CombatPresentation implements EventPresentation {
                 break scanLoop1;
               }
               if (stackIn_19_0 != this.attackers[var2_int]) {
-                this.attackers[var2_int].d((byte) 113);
+                this.attackers[var2_int].advanceFrame((byte) 113);
                 if (this.attackers[var2_int].field_l) {
                   this.attackers[var2_int].field_l = false;
                   this.a((byte) -84, var2_int);
                   if (this.field_h) {
-                    this.attackers[var2_int].a(0, 30, 1, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
+                    this.attackers[var2_int].initializeParticles(0, 30, 1, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
                   }
                 }
               }
@@ -3225,14 +3225,14 @@ final class CombatPresentation implements EventPresentation {
                 break;
               }
               this.attackers[var3Lifetime1 - 1].setAnimationState(2, (byte) -108);
-              this.attackers[var3Lifetime1 - 1].a(0, 30, 1, 0, MatchConditionEntry.field_o[this.field_c][0], ValidationStatusWidget.field_T[this.field_c][0], (byte) 122);
+              this.attackers[var3Lifetime1 - 1].initializeParticles(0, 30, 1, 0, MatchConditionEntry.field_o[this.field_c][0], ValidationStatusWidget.field_T[this.field_c][0], (byte) 122);
               this.attackers[var3Lifetime1 - 1].field_d = true;
               this.defenders[0].setAnimationState(1, (byte) -109);
               stackIn_43_0 = this.defenders[0];
             }
             break;
           }
-          ((BattleCharacter) (Object) stackIn_43_0).a(0, 30, 1, 20, MatchConditionEntry.field_o[this.field_a][1], ValidationStatusWidget.field_T[this.field_a][1], (byte) 122);
+          ((BattleCharacter) (Object) stackIn_43_0).initializeParticles(0, 30, 1, 20, MatchConditionEntry.field_o[this.field_a][1], ValidationStatusWidget.field_T[this.field_a][1], (byte) 122);
           this.field_v = this.field_v - 1;
           this.field_I = 20 + AttackEvent.nextBoundedInt(false, 20, ConsoleTokenSupport.field_b);
           return;
@@ -3577,14 +3577,14 @@ final class CombatPresentation implements EventPresentation {
                   }
                   incrementValue$2 = var9;
                   var9++;
-                  param1[var7[incrementValue$2]].a(this.field_C, -91, true);
+                  param1[var7[incrementValue$2]].drawAnimatedCharacter(this.field_C, -91, true);
                   if (var12 == 0) {
                     continue;
                   }
                 }
                 incrementValue$3 = var9;
                 var9++;
-                param1[var7[incrementValue$3]].a(this.field_C, param2 ^ -55, true);
+                param1[var7[incrementValue$3]].drawAnimatedCharacter(this.field_C, param2 ^ -55, true);
                 if (var12 == 0) {
                   continue;
                 }
@@ -3627,7 +3627,7 @@ final class CombatPresentation implements EventPresentation {
               if (var6_int >= var8.length) {
                 incrementValue$5 = var9;
                 var9++;
-                param1[var7[incrementValue$5]].a(this.field_C, -65, false);
+                param1[var7[incrementValue$5]].drawAnimatedCharacter(this.field_C, -65, false);
                 if (var12 == 0) {
                   continue;
                 }
@@ -3642,7 +3642,7 @@ final class CombatPresentation implements EventPresentation {
               }
               incrementValue$7 = var9;
               var9++;
-              param1[var7[incrementValue$7]].a(this.field_C, -70, false);
+              param1[var7[incrementValue$7]].drawAnimatedCharacter(this.field_C, -70, false);
               if (var12 == 0) {
                 continue;
               }
@@ -3786,7 +3786,7 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
             if (param0[var3_int] != null) {
-              param0[var3_int].d((byte) 113);
+              param0[var3_int].advanceFrame((byte) 113);
             }
             var3_int++;
           }
@@ -3912,7 +3912,7 @@ final class CombatPresentation implements EventPresentation {
           }
           if (this.phaseFrame == 1) {
             if (null != MatchConditionEntry.field_p) {
-              MatchConditionEntry.field_p.a(param0 ^ -24, this.field_t);
+              MatchConditionEntry.field_p.beginCollapseTransition(param0 ^ -24, this.field_t);
             }
             MembershipExpansionScreen.selectActiveBattleMusic(-387);
           }

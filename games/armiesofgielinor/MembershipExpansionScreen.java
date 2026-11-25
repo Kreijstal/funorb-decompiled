@@ -714,12 +714,12 @@ final class MembershipExpansionScreen {
         try {
           var7_int = -43 % ((param6 - 19) / 62);
           var8 = 0;
-          if (CombatViewTransition.a(param3 - 1, param5, 2, (byte) -113) == 2 ||
-            4 == CombatViewTransition.a(-1 + param3, param5, 2, (byte) -104)) {
+          if (CombatViewTransition.getTerrainCategoryAt(param3 - 1, param5, 2, (byte) -113) == 2 ||
+            4 == CombatViewTransition.getTerrainCategoryAt(-1 + param3, param5, 2, (byte) -104)) {
             var8++;
           }
-          if (CombatViewTransition.a(param3, 1 + param5, 2, (byte) -113) == 2 ||
-            CombatViewTransition.a(param3, 1 + param5, 2, (byte) -100) == 4) {
+          if (CombatViewTransition.getTerrainCategoryAt(param3, 1 + param5, 2, (byte) -113) == 2 ||
+            CombatViewTransition.getTerrainCategoryAt(param3, 1 + param5, 2, (byte) -100) == 4) {
             var8 += 2;
           }
           if ((var8 & 1) > 0) {

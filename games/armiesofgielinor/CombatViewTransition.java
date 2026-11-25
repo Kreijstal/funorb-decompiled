@@ -19,7 +19,7 @@ final class CombatViewTransition {
     private int[] field_d;
     private int[] field_f;
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int getTerrainCategoryAt(int param0, int param1, int param2, byte param3) {
         if (param0 < 0) {
           return param2;
         }
@@ -43,7 +43,7 @@ final class CombatViewTransition {
         return this.transitionFactor == 256 ? true : false;
     }
 
-    final void a(int param0, int param1) {
+    final void beginCollapseTransition(int param0, int param1) {
         this.field_e = 256;
         this.field_i[0] = 16;
         this.field_i[1] = 16;
@@ -62,7 +62,7 @@ final class CombatViewTransition {
         }
     }
 
-    final void a(int param0, RgbSprite param1) {
+    final void drawTransitionSprite(int param0, RgbSprite param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -118,7 +118,7 @@ final class CombatViewTransition {
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int interpolateInt(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
@@ -131,7 +131,7 @@ final class CombatViewTransition {
           var7 = var6 * param1 / param3 + param2;
           return var7;
         }
-        this.a(9, -1);
+        this.beginCollapseTransition(9, -1);
         if (param3 <= 0) {
           param3 = 1;
         }
@@ -140,7 +140,7 @@ final class CombatViewTransition {
         return var7Lifetime1;
     }
 
-    final void c(int param0) {
+    final void advanceFrame(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -160,59 +160,59 @@ final class CombatViewTransition {
         if (this.field_h) {
           this.field_a[0] = FixedSquareRootSupport.field_b.width >> 1;
           this.field_a[1] = FixedSquareRootSupport.field_b.height >> 1;
-          this.a(-120);
-          this.transitionFactor = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
+          this.interpolateSize(-120);
+          this.transitionFactor = this.interpolateInt(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
           var2 = this.field_i[0] - this.field_g[0];
-          var3 = this.a((byte) -71, var2);
+          var3 = this.getInterpolationSign((byte) -71, var2);
           var2 = var3 * var2;
           var4 = -this.field_g[0] + this.field_d[0];
-          var3Lifetime3 = this.a((byte) -71, var4);
+          var3Lifetime3 = this.getInterpolationSign((byte) -71, var4);
           var4 = var3Lifetime3 * var4;
-          this.field_f[0] = this.a(1, var4, this.field_b[0], var2, this.field_a[0]);
-          this.field_f[1] = this.a(1, var4, this.field_b[1], var2, this.field_a[1]);
+          this.field_f[0] = this.interpolateInt(1, var4, this.field_b[0], var2, this.field_a[0]);
+          this.field_f[1] = this.interpolateInt(1, var4, this.field_b[1], var2, this.field_a[1]);
           if (this.field_o > this.field_j) {
             this.field_j = this.field_j + 1;
           }
           if (this.field_o == this.field_j) {
-            this.b(-85);
+            this.finishTransition(-85);
           }
           return;
         }
         this.field_b[1] = FixedSquareRootSupport.field_b.height >> 1;
         this.field_b[0] = FixedSquareRootSupport.field_b.width >> 1;
-        this.a(-120);
-        this.transitionFactor = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
+        this.interpolateSize(-120);
+        this.transitionFactor = this.interpolateInt(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
         var2Lifetime1 = this.field_i[0] - this.field_g[0];
-        var3Lifetime1 = this.a((byte) -71, var2Lifetime1);
+        var3Lifetime1 = this.getInterpolationSign((byte) -71, var2Lifetime1);
         var2Lifetime1 = var3Lifetime1 * var2Lifetime1;
         var4Lifetime1 = -this.field_g[0] + this.field_d[0];
-        var3Lifetime2 = this.a((byte) -71, var4Lifetime1);
+        var3Lifetime2 = this.getInterpolationSign((byte) -71, var4Lifetime1);
         var4Lifetime1 = var3Lifetime2 * var4Lifetime1;
-        this.field_f[0] = this.a(1, var4Lifetime1, this.field_b[0], var2Lifetime1, this.field_a[0]);
-        this.field_f[1] = this.a(1, var4Lifetime1, this.field_b[1], var2Lifetime1, this.field_a[1]);
+        this.field_f[0] = this.interpolateInt(1, var4Lifetime1, this.field_b[0], var2Lifetime1, this.field_a[0]);
+        this.field_f[1] = this.interpolateInt(1, var4Lifetime1, this.field_b[1], var2Lifetime1, this.field_a[1]);
         if (this.field_o > this.field_j) {
           this.field_j = this.field_j + 1;
         }
         if (this.field_o == this.field_j) {
-          this.b(-85);
+          this.finishTransition(-85);
         }
     }
 
-    private final void a(int param0) {
+    private final void interpolateSize(int param0) {
         int var2 = -77 / ((param0 + 64) / 53);
         this.field_d[0] = (this.field_i[0] * this.field_j + (-this.field_j + this.field_o) * this.field_g[0]) / this.field_o;
         this.field_d[1] = (this.field_i[1] * this.field_j + this.field_g[1] * (-this.field_j + this.field_o)) / this.field_o;
     }
 
-    private final int a(byte param0, int param1) {
+    private final int getInterpolationSign(byte param0, int param1) {
         if (param0 == -71) {
           return param1 >= 0 ? 1 : -1;
         }
-        this.a(-4, 101);
+        this.beginCollapseTransition(-4, 101);
         return param1 >= 0 ? 1 : -1;
     }
 
-    final void b(int param0, int param1) {
+    final void beginExpandTransition(int param0, int param1) {
         this.field_j = 0;
         this.field_g[1] = 16;
         this.field_e = 0;
@@ -229,7 +229,7 @@ final class CombatViewTransition {
         this.field_a[1] = FixedSquareRootSupport.field_b.height >> 1;
     }
 
-    private final void b(int param0) {
+    private final void finishTransition(int param0) {
         this.field_d[0] = this.field_i[0];
         this.transitionFactor = this.field_m;
         this.field_d[1] = this.field_i[1];
@@ -253,7 +253,7 @@ final class CombatViewTransition {
     public static void releaseStatics(byte obfuscationGuard) {
         field_p = null;
         if (obfuscationGuard != 120) {
-          CombatViewTransition.a(51, -118, -11, (byte) 113);
+          CombatViewTransition.getTerrainCategoryAt(51, -118, -11, (byte) 113);
         }
     }
 

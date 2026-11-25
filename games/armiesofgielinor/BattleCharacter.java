@@ -41,7 +41,7 @@ final class BattleCharacter {
     static int[] runeCapsByOption;
     static int field_t;
 
-    final void d(byte param0) {
+    final void advanceFrame(byte param0) {
         int var8 = 0;
         int stackIn_9_0 = 0;
         int stackIn_10_1 = 0;
@@ -88,13 +88,13 @@ final class BattleCharacter {
         int var9;
         int var6Lifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.a((byte) -118);
+        this.cacheActionAnimationFrameCount((byte) -118);
         this.field_J = this.field_J + 1;
         var2 = 8;
         var3 = -this.currentX + this.destinationX;
         var4 = -this.currentY + this.destinationY;
         if (param0 != 113) {
-          this.a(78, -75);
+          this.selectAnimationSlot(78, -75);
         }
         var5 = (int)Math.sqrt((double)(var4 * var4 + var3 * var3));
         if (this.animationState == 4) {
@@ -180,7 +180,7 @@ final class BattleCharacter {
             }
           }
         }
-        this.a(var6Lifetime1, 0);
+        this.selectAnimationSlot(var6Lifetime1, 0);
         var7 = this.field_x.advance(param0 ^ -13) ? 1 : 0;
         if (1 != this.animationState) {
         }
@@ -286,7 +286,7 @@ final class BattleCharacter {
           stackIn_132_1 = (!this.field_u) ? 1 : -1;
           AchievementNotification.a(stackIn_131_0, stackIn_132_1 * this.destinationX, param0 + 399, 5, this.unitType);
         }
-        this.a(param0 ^ -313055231);
+        this.selectCurrentFrameSet(param0 ^ -313055231);
         if (var7 != 0) {
           this.field_J = 0;
           if (this.field_y != 5) {
@@ -330,7 +330,7 @@ final class BattleCharacter {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void selectAnimationSlot(int param0, int param1) {
         int var3;
         var3 = 0;
         if ((param0 != this.field_y ||
@@ -348,7 +348,7 @@ final class BattleCharacter {
           var3 = 1;
         }
         if (var3 != 0) {
-          this.d(-82);
+          this.reloadAnimationSequence(-82);
           this.field_J = 0;
           this.field_B = false;
         }
@@ -357,21 +357,21 @@ final class BattleCharacter {
     final boolean isAtDestination(int obfuscationGuard) {
         boolean stackIn_6_0 = false;
         if (obfuscationGuard != 2166) {
-          this.d(-90);
+          this.reloadAnimationSequence(-90);
         }
         stackIn_6_0 = (this.currentX == this.destinationX) && (this.currentY == this.destinationY);
         return stackIn_6_0;
     }
 
-    private final void d(int param0) {
+    private final void reloadAnimationSequence(int param0) {
         this.field_x.selectSequence(-1, UnitAnimationSelectionSupport.selectUnitAnimation(this.field_y, 176, true, this.modelIndex));
-        this.a(-313055120);
+        this.selectCurrentFrameSet(-313055120);
         if (param0 > -77) {
-          this.a(-77, 60);
+          this.selectAnimationSlot(-77, 60);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final void initializeParticles(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         int var8 = 0;
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_w = param2;
@@ -387,7 +387,7 @@ final class BattleCharacter {
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] createBeveledFrameSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         RgbSprite[] var10;
@@ -455,7 +455,7 @@ final class BattleCharacter {
         return var10Lifetime1;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void drawAnimatedCharacter(int param0, int param1, boolean param2) {
         int stackIn_12_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_20_1 = 0;
@@ -506,7 +506,7 @@ final class BattleCharacter {
         }
         var5 = 0;
         if (param1 >= -30) {
-          this.d((byte) -56);
+          this.advanceFrame((byte) -56);
         }
         stackIn_12_0 = (this.field_u) ? 1536 : 512;
         var6 = stackIn_12_0;
@@ -622,7 +622,7 @@ final class BattleCharacter {
         }
     }
 
-    private final void a(byte param0) {
+    private final void cacheActionAnimationFrameCount(byte param0) {
         int stackIn_57_0 = 0;
         int var2;
         AnimationPlayer var3;
@@ -675,7 +675,7 @@ final class BattleCharacter {
                           BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] >= 0 &&
                           BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]].length) {
                           var3 = new AnimationPlayer();
-                          this.a(-313055120);
+                          this.selectCurrentFrameSet(-313055120);
                           var3.selectSequence(-1, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]][BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0]]);
                           var4 = 0;
                           var5 = 0;
@@ -737,7 +737,7 @@ final class BattleCharacter {
         this.animationState = animationState;
     }
 
-    private final void a(int param0) {
+    private final void selectCurrentFrameSet(int param0) {
         int var2 = this.field_x.frameId >> 16;
         AnimationFrameSet var3 = ArchiveLoadStep.findCachedFrameSet(var2, true);
         MusicPatch.setCurrentFrameSet(var3, (byte) -34);
@@ -746,11 +746,11 @@ final class BattleCharacter {
         }
     }
 
-    final void c(byte param0) {
+    final void startRangedAttack(byte param0) {
         this.setAnimationState(3, (byte) -91);
         this.field_E = true;
         if (param0 != 102) {
-          BattleCharacter.a(-71, 76, -87, 82, -108, 110, 13, -61, -101);
+          BattleCharacter.createBeveledFrameSprites(-71, 76, -87, 82, -108, 110, 13, -61, -101);
         }
     }
 
@@ -849,7 +849,7 @@ final class BattleCharacter {
         this.field_y = 0;
         this.field_r = new int[ResourceClientErrorSupport.field_a];
         this.field_o = new int[ResourceClientErrorSupport.field_a];
-        this.d(-104);
+        this.reloadAnimationSequence(-104);
         this.field_F = new int[4];
         for (var8 = 0; var8 < this.field_F.length; var8++) {
           this.field_F[var8] = -1;
