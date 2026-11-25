@@ -33,7 +33,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           var6 = param0.getParameter("currency");
           if (var6 != null &&
             TextFieldWidget.a(0, (CharSequence) ((Object) var6))) {
-            DefensiveAi.a((CharSequence) ((Object) var6), param3 + 5);
+            DefensiveAi.parseDecimalInteger((CharSequence) ((Object) var6), param3 + 5);
           }
           ImageProducerRasterBuffer.field_l = new Sprite[param4.length];
           if (param3 != -3) {

@@ -48,7 +48,7 @@ final class DefensiveAi extends StandardAi {
         }
     }
 
-    final static void j(int param0) {
+    final static void recordTutorialEnterKey(int param0) {
         if (param0 != 25140) {
           return;
         }
@@ -58,7 +58,7 @@ final class DefensiveAi extends StandardAi {
         }
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int parseDecimalInteger(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -210,7 +210,7 @@ final class DefensiveAi extends StandardAi {
     final int getDefenceFleetBudget(int param0, byte param1) {
         if (param1 > -25) {
           CharSequence var4 = (CharSequence) null;
-          DefensiveAi.a((CharSequence) null, -24);
+          DefensiveAi.parseDecimalInteger((CharSequence) null, -24);
         }
         if (param0 < 5) {
           return param0;

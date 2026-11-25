@@ -46,7 +46,7 @@ final class BattleSnapshot extends IntrusiveNode {
           if (param0 != -14145) {
             BattleSnapshot.getCurrentYear(-71);
           }
-          Star.f((byte) -101);
+          Star.popRasterState((byte) -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

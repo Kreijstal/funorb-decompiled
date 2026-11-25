@@ -142,7 +142,7 @@ final class PlayerContextMenuController {
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (8 == param0) {
-          FocusableWidget.a(-125, this.field_b, this.field_k);
+          FocusableWidget.openPrivateChatInput(-125, this.field_b, this.field_k);
         } else {
           if (param0 == 18) {
             DialPainter.a((byte) 49, this.field_k, this.field_b);

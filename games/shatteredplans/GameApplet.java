@@ -288,7 +288,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (TextFieldWidget.a(0, (CharSequence) ((Object) var4)) &&
-                        !(DefensiveAi.a((CharSequence) ((Object) var4), 2) >= 10)) {
+                        !(DefensiveAi.parseDecimalInteger((CharSequence) ((Object) var4), 2) >= 10)) {
                         this.fail((byte) -113, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }

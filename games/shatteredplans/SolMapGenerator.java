@@ -194,7 +194,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           var12 = new Sprite(var17.field_z - 2 * var9, var9);
           var12.bindAsRenderTarget();
           var17.drawOpaque(-var9, 0);
-          Star.f((byte) 67);
+          Star.popRasterState((byte) 67);
           AttackTask.field_q = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

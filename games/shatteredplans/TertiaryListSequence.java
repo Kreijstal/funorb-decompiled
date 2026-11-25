@@ -19,7 +19,7 @@ final class TertiaryListSequence extends NodeSequence {
         return (IntrusiveNode) ((Object) this.field_i.startForward(true));
     }
 
-    final static String a(byte param0, long param1) {
+    final static String decodeBase37DisplayName(byte param0, long param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -85,7 +85,7 @@ final class TertiaryListSequence extends NodeSequence {
         return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
     }
 
-    final static void a(int param0) {
+    final static void clearDecodedSpriteData(int param0) {
         IntroTextLine.field_q = (byte[][]) null;
         IntHashIndex.field_g = null;
         if (param0 == 0) {

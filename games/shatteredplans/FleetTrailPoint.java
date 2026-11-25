@@ -245,7 +245,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           stackIn_29_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_28_0).drawFullRaster(stackIn_29_1, 115);
         }
-        Star.f((byte) 123);
+        Star.popRasterState((byte) 123);
     }
 
     FleetTrailPoint() {

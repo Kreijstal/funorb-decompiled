@@ -75,7 +75,7 @@ class StandardMapGenerator implements MapGenerator {
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            var5.a(param0.field_j, (byte) 82);
+            var5.chooseStarType(param0.field_j, (byte) 82);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

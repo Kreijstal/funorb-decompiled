@@ -42,7 +42,7 @@ final class IntroLogoSupport {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, 256 - var5);
         }
-        Star.f((byte) -47);
+        Star.popRasterState((byte) -47);
         if (param1 != 28318) {
           return;
         }

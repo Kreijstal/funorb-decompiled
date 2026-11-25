@@ -98,12 +98,12 @@ final class ConquestVictoryChecker extends VictoryChecker {
           var1[var2] = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], SocialListSetupSupport.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], IntroTextLine.field_q[var2], ProgressDialog.field_fb);
         }
         if (param0) {
-          TertiaryListSequence.a(0);
+          TertiaryListSequence.clearDecodedSpriteData(0);
           return var1;
         }
         String var4 = (String) null;
         ConquestVictoryChecker.loadSoundEffectDefinition((byte) 73, 51, (String) null);
-        TertiaryListSequence.a(0);
+        TertiaryListSequence.clearDecodedSpriteData(0);
         return var1;
     }
 

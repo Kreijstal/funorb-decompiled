@@ -88,7 +88,7 @@ final class DerelictMapReader implements MapGenerator {
         field_i = null;
     }
 
-    final static Sprite a(int param0, int param1) {
+    final static Sprite getAchievementGlowSprite(int param0, int param1) {
         Sprite dupTemp$0 = null;
         Sprite var3 = null;
         Sprite var2 = MapView.field_sb[param0];
@@ -108,7 +108,7 @@ final class DerelictMapReader implements MapGenerator {
         return var2;
     }
 
-    final static int a(int param0) {
+    final static int packChatFilterSettings(int param0) {
         if (param0 != 0) {
           DerelictMapReader.clearStatics(false);
         }

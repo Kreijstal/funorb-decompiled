@@ -13,7 +13,7 @@ final class CheckboxWidget extends FocusableWidget {
         }
     }
 
-    final static void a(int param0) {
+    final static void beginCoverageScan(int param0) {
         StandardMapReader.field_g = null;
         SolVictoryChecker.field_p = PairedIntSortSupport.field_a;
         if (param0 != -15365) {

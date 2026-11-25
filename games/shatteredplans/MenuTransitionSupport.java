@@ -98,7 +98,7 @@ final class MenuTransitionSupport {
 
     final static IndexedSprite createDecodedIndexedSprite(byte param0) {
         IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], IntroTextLine.field_q[0], ProgressDialog.field_fb);
-        TertiaryListSequence.a(0);
+        TertiaryListSequence.clearDecodedSpriteData(0);
         if (param0 > 82) {
           return var1;
         }

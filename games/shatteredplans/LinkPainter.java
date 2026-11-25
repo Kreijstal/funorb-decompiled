@@ -132,7 +132,7 @@ final class LinkPainter implements WidgetPainter {
             stackIn_13_0 = param0 + param0;
             break;
           }
-          TertiaryListSequence.a(stackIn_13_0);
+          TertiaryListSequence.clearDecodedSpriteData(stackIn_13_0);
           stackIn_14_0 = var1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -83,7 +83,7 @@ abstract class Dialog extends WidgetContainer {
         SoftwareRasterizer.clear();
         this.drawFrame(0, 103, 0);
         super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
-        Star.f((byte) -50);
+        Star.popRasterState((byte) -50);
         ArchiveIndex.field_r.drawAlpha(this.field_m + param3, this.field_q + param2, this.field_G);
     }
 

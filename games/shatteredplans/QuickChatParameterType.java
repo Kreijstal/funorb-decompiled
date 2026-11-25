@@ -266,7 +266,7 @@ final class QuickChatParameterType {
           var3[var4_int] = ProgressDialog.field_fb[KeyboardStateSupport.intAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
-        TertiaryListSequence.a(0);
+        TertiaryListSequence.clearDecodedSpriteData(0);
         return var4;
     }
 

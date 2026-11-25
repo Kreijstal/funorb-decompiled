@@ -1013,7 +1013,7 @@ class AnimatedPanel extends PanelNode {
           DiskArchiveRequest.field_z.bindAsRenderTarget();
           var6.drawOpaque(0, -PlacementOrder.field_q.field_w);
           DiskArchiveRequest.field_z.field_x = PlacementOrder.field_q.field_w;
-          Star.f((byte) 85);
+          Star.popRasterState((byte) 85);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qr.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

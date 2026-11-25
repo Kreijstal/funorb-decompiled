@@ -15,7 +15,7 @@ final class IntNode extends IntrusiveNode {
 
     final static void requestDisplayNameChange(int param0, String param1) {
         try {
-          ClientRasterSupport.setClientStatusText(param1, (byte) -70);
+          ClientRasterSupport.setRequestedDisplayName(param1, (byte) -70);
           ByteArrayNode.a(ClientException.field_c, 72, false);
           if (param0 != 8192) {
             String var3 = (String) null;

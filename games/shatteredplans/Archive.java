@@ -794,7 +794,7 @@ final class Archive {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param1 != null);
-            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(VictoryChecker.a(63, var9, var9.length)).append(" ").append(VictoryChecker.a(59, var9, var9.length - 2)).append(" ").append(this.field_f.field_f[param2]).append(" ").append(this.field_f.field_c).toString());
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(VictoryChecker.crc32(63, var9, var9.length)).append(" ").append(VictoryChecker.crc32(59, var9, var9.length - 2)).append(" ").append(this.field_f.field_f[param2]).append(" ").append(this.field_f.field_c).toString());
           }
           if (this.field_j) {
             this.field_m[param2] = null;

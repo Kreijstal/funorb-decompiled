@@ -193,7 +193,7 @@ final class GradientMenuLabel extends MenuComponent {
         var2.writeOpcode(param1, 255);
         var2.writeByte(2, (byte) -59);
         var2.writeByte(4, (byte) -84);
-        var2.writeByte(DerelictMapReader.a(0), (byte) -76);
+        var2.writeByte(DerelictMapReader.packChatFilterSettings(0), (byte) -76);
     }
 
     final void drawComponent(int param0) {

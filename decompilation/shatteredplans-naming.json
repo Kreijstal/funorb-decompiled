@@ -14260,6 +14260,14 @@
       "renamedSymbol": "M:FocusableWidget.updateHover(IILUiWidget;B)V"
     },
     {
+      "symbol": "M:kg.a(IJLjava/lang/String;)V",
+      "originalName": "a",
+      "to": "openPrivateChatInput",
+      "evidence": "For int<-41retain recipient display name, set chat target mode2, normalize account name, retain supplied long recipient ID and activate text input. Complete chat context-menu handler and normalization helper read. Preserve original write/helper order, null names/normalization result, full long domain and early guard return. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V"
+    },
+    {
       "symbol": "M:kg.d(Z)V",
       "originalName": "d",
       "to": "clearStatics",
@@ -14274,6 +14282,14 @@
       "evidence": "Empty hook for losing focus; FocusableWidget clears its focus flag and notifies the listener. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FocusableWidget.blur(B)V"
+    },
+    {
+      "symbol": "M:kg.f(B)V",
+      "originalName": "f",
+      "to": "clearIntroTextLines",
+      "evidence": "Clear retained intro-text intrusive deque when nonnull, then for byte>-122clear report-abuse caption. Intro text queue producer excerpt and intro initialization caller read. Preserve null no-op, deque identity and late byte guard side effect. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FocusableWidget.clearIntroTextLines(B)V"
     },
     {
       "symbol": "M:kg.f(I)Z",
@@ -14378,6 +14394,22 @@
       "evidence": "Clear deque and caption first; guard1 clears remaining caption/sprites and returns. Other integers recurse with-84 before later clears. Preserve partial cleanup and unbounded recursion behavior. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountRequestResult.releaseAccountRequestStatics(I)V"
+    },
+    {
+      "symbol": "M:kl.a(BIIIIII)V",
+      "originalName": "a",
+      "to": "drawLoadingProgressBar",
+      "evidence": "Draw white/black bevel frame with coloured filled span, five-pixel transition band and fixed green background gradient. Intro loading caller supplies group progress. Complete114line body read;preserve upper-only fill clamp, signed colour arithmetic and division by height-4, row/pixel call order, byte guard caption clear between row groups and all partial raster writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AttackTask.drawLoadingProgressBar(BIIIIII)V"
+    },
+    {
+      "symbol": "M:kl.d(B)Z",
+      "originalName": "d",
+      "to": "isGuestOrNonMember",
+      "evidence": "Return guest mode or retained membership entitlement<=0. Existing guest flag assignments and option-menu caller inspected. Preserve short-circuit global reads and byte<95recursive nontermination before predicate evaluation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AttackTask.isGuestOrNonMember(B)Z"
     },
     {
       "symbol": "M:kl.d(I)V",
@@ -15484,6 +15516,14 @@
       "renamedSymbol": "M:ArchiveSource.getGroupProgress(IB)I"
     },
     {
+      "symbol": "M:lc.a(IBLjava/lang/String;)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "formatLobbyPlayerStatus",
+      "evidence": "Map original lobby-player status codes1..8,11..13 to retained captions formatted with supplied player name;unsupported codes and byte>-60return null. Complete81line body, row consumer and actual caption initializers read. Preserve exact status mapping,null replacement behavior,byte-first return and original helper exceptions. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:lc.a(II)I",
       "originalName": "a",
       "to": "bitCount",
@@ -15498,6 +15538,14 @@
       "evidence": "Assigns null to 6 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArchiveSource.clearStatics(Z)V"
+    },
+    {
+      "symbol": "M:lc.b(I)V",
+      "originalName": "b",
+      "to": "advanceIntroLogoFrame",
+      "evidence": "Increment shared intro/logo frame counter through original duplicate boundary branches. Intro setup/frame draw and shell update excerpts read. Preserve all comparisons and repeated static reads against delay/250boundaries, overflow, and wrong-int discarded status-format call before increment;no simplification. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSource.advanceIntroLogoFrame(I)V"
     },
     {
       "symbol": "M:ld.a(I)V",
@@ -15612,6 +15660,14 @@
       "renamedSymbol": "M:SocketConnector.connect(I)Ljava/net/Socket;"
     },
     {
+      "symbol": "M:lk.a(I)V",
+      "originalName": "a",
+      "to": "beginCoverageScan",
+      "evidence": "Clear current coverage span and initialize scan row from retained minimum row. Complete coverage fill consumer and span scanner excerpt read. Preserve current-span write before row read/write and optional late static cleanup;does not clear span storage. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CheckboxWidget.beginCoverageScan(I)V"
+    },
+    {
       "symbol": "M:lk.a(IIIB)V",
       "originalName": "a",
       "to": "fireAction",
@@ -15676,6 +15732,14 @@
       "renamedSymbol": "M:Star.addNeighbour(BLStar;)V"
     },
     {
+      "symbol": "M:ln.a(Ljava/util/Random;B)V",
+      "originalName": "a",
+      "to": "chooseStarType",
+      "evidence": "Choose retained star type6for first resource<0, type1when all four resource entries nonzero, otherwise weight six types from original resource arithmetic and supplied Random helper. Complete map generator caller and resource field layout read. Preserve both early return paths before byte guard/RNG, weight allocation and overflow, original bad-byte neighbour removal callback, negative/zero totals, helper invocation and selected type write order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Star.chooseStarType(Ljava/util/Random;B)V"
+    },
+    {
       "symbol": "M:ln.a(Lln;B)V",
       "originalName": "a",
       "to": "removeNeighbour",
@@ -15708,12 +15772,28 @@
       "renamedSymbol": "M:Star.clearStatics(I)V"
     },
     {
+      "symbol": "M:ln.f(B)V",
+      "originalName": "f",
+      "to": "popRasterState",
+      "evidence": "Evaluate byte division, pop pooled RasterStateFrame, throw on empty stack, restore target/dimensions then clip, clear saved pixel reference and append frame to pool. Complete deque/target/clip helpers and all incoming windows read. Preserve stack removal before restoration failures, clamping/derived raster state, frame alias, pool insertion and original exception timing. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Star.popRasterState(B)V"
+    },
+    {
       "symbol": "M:lo.a(ILln;)V",
       "originalName": "a",
       "to": "addStar",
       "evidence": "Appends the star to the territory's deque. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CombinedTerritory.addStar(ILStar;)V"
+    },
+    {
+      "symbol": "M:lo.a(Lbc;BI)Lbr;",
+      "originalName": "a",
+      "to": "loadMusicPatch",
+      "evidence": "Read single-file archive bytes and return newly constructed MusicPatch, or null when bytes absent. MIDI patch cache caller read. Preserve byte-derived arithmetic before archive access, exact file ID, buffer alias, allocation and wrapper ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;"
     },
     {
       "symbol": "M:lo.a(Lpf;I)V",
@@ -15762,6 +15842,14 @@
       "evidence": "Starts a forward traversal of the star deque. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CombinedTerritory.firstStar(I)LStar;"
+    },
+    {
+      "symbol": "M:lo.k(I)V",
+      "originalName": "k",
+      "to": "resetProduction",
+      "evidence": "Replace territory resource and resource-order arrays with fresh four-int arrays, set supplied production value, clear unplaced fleets and placement star. Complete releasePlayerStars caller and production/resource panel excerpt read. Preserve allocation/assignment order, arbitrary int production and retained membership/owner/collection references. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombinedTerritory.resetProduction(I)V"
     },
     {
       "symbol": "M:lo.l(I)V",
@@ -15948,6 +16036,14 @@
       "renamedSymbol": "M:DefensiveAi.getDefenceFleetBudget(IB)I"
     },
     {
+      "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+      "originalName": "a",
+      "to": "parseDecimalInteger",
+      "evidence": "For int2call complete radix10 parser allowing leading plus and signed decimal result;otherwise return-125without reading input. Complete parser and parseIntegerOrAuto consumer read. Preserve full CharSequence behavior, overflow and NumberFormatException wrapping, whitespace rejection and guard behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I"
+    },
+    {
       "symbol": "M:ma.b(BLln;)I",
       "originalName": "b",
       "to": "estimateDefenceFleetDemand",
@@ -15986,6 +16082,14 @@
       "evidence": "Assigns null to 4 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DefensiveAi.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ma.j(I)V",
+      "originalName": "j",
+      "to": "recordTutorialEnterKey",
+      "evidence": "For sentinel25140and queued key84append enter event to tutorial string deque through complete helper. Game key consumer read. Preserve event ordering, exact key code/caption and no-op on other ints or keys. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DefensiveAi.recordTutorialEnterKey(I)V"
     },
     {
       "symbol": "M:mb.a(ZLjava/lang/String;)Ljava/lang/String;",
@@ -16076,12 +16180,28 @@
       "renamedSymbol": "M:VictoryChecker.isLoser(BLPlayer;)Z"
     },
     {
+      "symbol": "M:me.a(I)Z",
+      "originalName": "a",
+      "to": "isCaretBlinkOn",
+      "evidence": "Return retained focus/fullscreen-canvas predicate and tick bit8clear. Complete focus predicate, focus transfer excerpt and caret/menu callers read. Preserve int<19sentinel mutation before predicate, short-circuit focus/tick reads and original eight-tick phase. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VictoryChecker.isCaretBlinkOn(I)Z"
+    },
+    {
       "symbol": "M:me.a(ILob;)V",
       "originalName": "a",
       "to": "writeScores",
       "evidence": "Writes the checker's per-player counters to the packet.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VictoryChecker.writeScores(ILPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:me.a(I[BI)I",
+      "originalName": "a",
+      "to": "crc32",
+      "evidence": "Delegate to complete CRC32 helper for byte prefix from0to supplied exclusive limit. Complete ArchiveIndex constructor consumer and archive diagnostic windows read. Preserve invalid-int recursive nontermination, unrestricted length/null input behavior, zero result for empty/negative range and original wrappers. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VictoryChecker.crc32(I[BI)I"
     },
     {
       "symbol": "M:me.a(Ldc;B)Z",
@@ -16154,6 +16274,14 @@
       "evidence": "Reads a star index from the packet and returns the star of the map.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FleetMove.readStar(LGameState;LPacketBuffer;I)LStar;"
+    },
+    {
+      "symbol": "M:mg.d(II)Lqh;",
+      "originalName": "d",
+      "to": "createDiplomacyWindow",
+      "evidence": "Allocate and retain diplomacy MenuWindow with original title capitalization and geometry, append close button and player-count-sized list, retain ListContent and return window. GameScreen setup call and Diplomacy caption initializer read. Preserve signed count/height arithmetic, locale-sensitive uppercase, repeated globals, allocations and supplied int as insertion guard. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FleetMove.createDiplomacyWindow(II)LMenuWindow;"
     },
     {
       "symbol": "M:mg.e(I)I",
@@ -16450,6 +16578,22 @@
       "evidence": "Interface method that builds and returns a GalaxyMap. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DerelictMapReader.generate(B)LGalaxyMap;"
+    },
+    {
+      "symbol": "M:mr.a(I)I",
+      "originalName": "a",
+      "to": "packChatFilterSettings",
+      "evidence": "Return lobby,game and private chat filters packed with original addition and shifts0,2,4. Complete packet writer and inverse settings excerpt read. Preserve unrestricted ints, addition/overflow rather than substituted OR/masks, and wrong-int static cleanup before reads. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DerelictMapReader.packChatFilterSettings(I)I"
+    },
+    {
+      "symbol": "M:mr.a(II)Lbi;",
+      "originalName": "a",
+      "to": "getAchievementGlowSprite",
+      "evidence": "Return cached achievement glow;on miss allocate256square sprite, store cache entry, push raster target,draw retained icon at64,64,apply original12x12filter and pop. Achievement menu excerpts read. Preserve cache identity and early cache write, null/index failures, original filter parameters, no finally restoration and late int sentinel side effect. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DerelictMapReader.getAchievementGlowSprite(II)LSprite;"
     },
     {
       "symbol": "M:mr.a(Z)V",
@@ -18254,10 +18398,10 @@
     {
       "symbol": "M:oo.a(Ljava/lang/String;B)V",
       "originalName": "a",
-      "to": "setClientStatusText",
-      "evidence": "Store supplied text to retained shared status first, then evaluate original byte remainder inside wrapped try. Preserve text identity, all guards and partial write before arithmetic failure. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
+      "to": "setRequestedDisplayName",
+      "evidence": "Store requested display name then evaluate original byte remainder inside wrapped try. Complete display-name request caller, validated form submit and login packet flag16/marked-string/response clear excerpts establish role. Correct prior generic status alias. Preserve text identity including null, unrestricted byte domains, original arithmetic failure after store and exception wrapper. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ClientRasterSupport.setClientStatusText(Ljava/lang/String;B)V"
+      "renamedSymbol": "M:ClientRasterSupport.setRequestedDisplayName(Ljava/lang/String;B)V"
     },
     {
       "symbol": "M:op.a(IIILts;)V",
@@ -18586,6 +18730,22 @@
       "evidence": "Abstract: returns the first node of the wrapped container and starts a traversal. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TertiaryListSequence.first(B)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:pd.a(BJ)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "decodeBase37DisplayName",
+      "evidence": "Reject nonpositive,out-of-range or multiple-of37IDs;decode exact base37 alphabet, turn underscores into NBSP and capitalize word starts and initial character. Complete formatter consumer and alphabet initializer read. Preserve range upper bound6582952005840035281, byte division only after validity check, StringBuilder allocation/case operations and invalid input nulls. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:pd.a(I)V",
+      "originalName": "a",
+      "to": "clearDecodedSpriteData",
+      "evidence": "Release shared decoded sprite pixel/alpha planes,palette,offsets and dimensions arrays after sprite/font construction. All cleanup incoming windows read. Preserve first two global clears before optional TertiaryListSequence static cleanup, remaining clear order and retained arrays already passed to constructors. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, all guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial mutations and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TertiaryListSequence.clearDecodedSpriteData(I)V"
     },
     {
       "symbol": "M:pd.a(Z)Loh;",
@@ -191019,7 +191179,7 @@
     },
     {
       "symbol": "L:kg.a(IJLjava/lang/String;)V#0",
-      "renamedSymbol": "L:FocusableWidget.a(IJLjava/lang/String;)V#0",
+      "renamedSymbol": "L:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -191030,7 +191190,7 @@
     },
     {
       "symbol": "L:kg.a(IJLjava/lang/String;)V#1",
-      "renamedSymbol": "L:FocusableWidget.a(IJLjava/lang/String;)V#1",
+      "renamedSymbol": "L:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -192900,7 +193060,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#0",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#0",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#0",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -192911,7 +193071,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#1",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#1",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -192922,7 +193082,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#10",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#10",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#10",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -192933,7 +193093,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#11",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#11",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#11",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -192944,7 +193104,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#12",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#12",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#12",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -192955,7 +193115,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#13",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#13",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#13",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -192966,7 +193126,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#14",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#14",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#14",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -192977,7 +193137,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#15",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#15",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#15",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -192988,7 +193148,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#16",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#16",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#16",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -192999,7 +193159,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#17",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#17",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#17",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -193010,7 +193170,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#18",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#18",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#18",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -193021,7 +193181,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#19",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#19",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#19",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -193032,7 +193192,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#2",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#2",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#2",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -193043,7 +193203,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#20",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#20",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#20",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -193054,7 +193214,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#21",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#21",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#21",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -193065,7 +193225,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#22",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#22",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#22",
       "originalName": "var13Lifetime2",
       "renamedName": "var13Lifetime2",
       "declaration": {
@@ -193076,7 +193236,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#23",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#23",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#23",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -193087,7 +193247,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#24",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#24",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#24",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -193098,7 +193258,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#25",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#25",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#25",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -193109,7 +193269,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#26",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#26",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#26",
       "originalName": "var15Lifetime2",
       "renamedName": "var15Lifetime2",
       "declaration": {
@@ -193120,7 +193280,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#27",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#27",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#27",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -193131,7 +193291,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#28",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#28",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#28",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -193142,7 +193302,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#29",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#29",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#29",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -193153,7 +193313,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#3",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#3",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -193164,7 +193324,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#30",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#30",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#30",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -193175,7 +193335,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#31",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#31",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#31",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -193186,7 +193346,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#4",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#4",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -193197,7 +193357,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#5",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#5",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -193208,7 +193368,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#6",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#6",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -193219,7 +193379,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#7",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#7",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#7",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -193230,7 +193390,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#8",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#8",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -193241,7 +193401,7 @@
     },
     {
       "symbol": "L:kl.a(BIIIIII)V#9",
-      "renamedSymbol": "L:AttackTask.a(BIIIIII)V#9",
+      "renamedSymbol": "L:AttackTask.drawLoadingProgressBar(BIIIIII)V#9",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -193252,7 +193412,7 @@
     },
     {
       "symbol": "L:kl.d(B)Z#0",
-      "renamedSymbol": "L:AttackTask.d(B)Z#0",
+      "renamedSymbol": "L:AttackTask.isGuestOrNonMember(B)Z#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -215912,7 +216072,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -215923,7 +216083,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -215934,7 +216094,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#10",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#10",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#10",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -215945,7 +216105,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#11",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#11",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#11",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -215956,7 +216116,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#12",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#12",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#12",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -215967,7 +216127,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#13",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#13",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#13",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -215978,7 +216138,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#14",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#14",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#14",
       "originalName": "stackIn_46_2",
       "renamedName": "stackIn_46_2",
       "declaration": {
@@ -215989,7 +216149,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#15",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#15",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -216000,7 +216160,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#16",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#16",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#16",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -216011,7 +216171,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#17",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#17",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -216022,7 +216182,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -216033,7 +216193,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -216044,7 +216204,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -216055,7 +216215,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#5",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -216066,7 +216226,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#6",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -216077,7 +216237,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#7",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -216088,7 +216248,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#8",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -216099,7 +216259,7 @@
     },
     {
       "symbol": "L:lc.a(IBLjava/lang/String;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#9",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -216110,7 +216270,7 @@
     },
     {
       "symbol": "L:lc.b(I)V#0",
-      "renamedSymbol": "L:ArchiveSource.b(I)V#0",
+      "renamedSymbol": "L:ArchiveSource.advanceIntroLogoFrame(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -217529,7 +217689,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#0",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#0",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#0",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -217540,7 +217700,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#1",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#1",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#1",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -217551,7 +217711,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#10",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#10",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -217562,7 +217722,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#11",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#11",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -217573,7 +217733,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#12",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#12",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#12",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -217584,7 +217744,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#13",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#13",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -217595,7 +217755,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#14",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#14",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#14",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -217606,7 +217766,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#15",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#15",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -217617,7 +217777,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#2",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#2",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#2",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -217628,7 +217788,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#3",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#3",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -217639,7 +217799,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#4",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#4",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -217650,7 +217810,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#5",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#5",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -217661,7 +217821,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#6",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#6",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -217672,7 +217832,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#7",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#7",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -217683,7 +217843,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#8",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#8",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -217694,7 +217854,7 @@
     },
     {
       "symbol": "L:ln.a(Ljava/util/Random;B)V#9",
-      "renamedSymbol": "L:Star.a(Ljava/util/Random;B)V#9",
+      "renamedSymbol": "L:Star.chooseStarType(Ljava/util/Random;B)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -217980,7 +218140,7 @@
     },
     {
       "symbol": "L:ln.f(B)V#0",
-      "renamedSymbol": "L:Star.f(B)V#0",
+      "renamedSymbol": "L:Star.popRasterState(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -217991,7 +218151,7 @@
     },
     {
       "symbol": "L:ln.f(B)V#1",
-      "renamedSymbol": "L:Star.f(B)V#1",
+      "renamedSymbol": "L:Star.popRasterState(B)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -218024,7 +218184,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#0",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#0",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -218035,7 +218195,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#1",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#1",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -218046,7 +218206,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#10",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#10",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -218057,7 +218217,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#2",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#2",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -218068,7 +218228,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#3",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#3",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -218079,7 +218239,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#4",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#4",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#4",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -218090,7 +218250,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#5",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#5",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#5",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -218101,7 +218261,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#6",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#6",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#6",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -218112,7 +218272,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#7",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#7",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#7",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -218123,7 +218283,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#8",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#8",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#8",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -218134,7 +218294,7 @@
     },
     {
       "symbol": "L:lo.a(Lbc;BI)Lbr;#9",
-      "renamedSymbol": "L:CombinedTerritory.a(LArchive;BI)LMusicPatch;#9",
+      "renamedSymbol": "L:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -221346,7 +221506,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#0",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#0",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -221357,7 +221517,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#1",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#1",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -221368,7 +221528,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#2",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#2",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -221379,7 +221539,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#3",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#3",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -221390,7 +221550,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#4",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#4",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -221401,7 +221561,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#5",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#5",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -221412,7 +221572,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#6",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#6",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -221423,7 +221583,7 @@
     },
     {
       "symbol": "L:ma.a(Ljava/lang/CharSequence;I)I#7",
-      "renamedSymbol": "L:DefensiveAi.a(Ljava/lang/CharSequence;I)I#7",
+      "renamedSymbol": "L:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -223436,7 +223596,7 @@
     },
     {
       "symbol": "L:me.a(I)Z#0",
-      "renamedSymbol": "L:VictoryChecker.a(I)Z#0",
+      "renamedSymbol": "L:VictoryChecker.isCaretBlinkOn(I)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -223447,7 +223607,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#0",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#0",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -223458,7 +223618,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#1",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#1",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -223469,7 +223629,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#2",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#2",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -223480,7 +223640,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#3",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#3",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -223491,7 +223651,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#4",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#4",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -223502,7 +223662,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#5",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#5",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -223513,7 +223673,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#6",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#6",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -223524,7 +223684,7 @@
     },
     {
       "symbol": "L:me.a(I[BI)I#7",
-      "renamedSymbol": "L:VictoryChecker.a(I[BI)I#7",
+      "renamedSymbol": "L:VictoryChecker.crc32(I[BI)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225064,7 +225224,7 @@
     },
     {
       "symbol": "L:mg.d(II)Lqh;#0",
-      "renamedSymbol": "L:FleetMove.d(II)LMenuWindow;#0",
+      "renamedSymbol": "L:FleetMove.createDiplomacyWindow(II)LMenuWindow;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -225075,7 +225235,7 @@
     },
     {
       "symbol": "L:mg.d(II)Lqh;#1",
-      "renamedSymbol": "L:FleetMove.d(II)LMenuWindow;#1",
+      "renamedSymbol": "L:FleetMove.createDiplomacyWindow(II)LMenuWindow;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -225086,7 +225246,7 @@
     },
     {
       "symbol": "L:mg.d(II)Lqh;#2",
-      "renamedSymbol": "L:FleetMove.d(II)LMenuWindow;#2",
+      "renamedSymbol": "L:FleetMove.createDiplomacyWindow(II)LMenuWindow;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -227066,7 +227226,7 @@
     },
     {
       "symbol": "L:mr.a(II)Lbi;#0",
-      "renamedSymbol": "L:DerelictMapReader.a(II)LSprite;#0",
+      "renamedSymbol": "L:DerelictMapReader.getAchievementGlowSprite(II)LSprite;#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -227077,7 +227237,7 @@
     },
     {
       "symbol": "L:mr.a(II)Lbi;#1",
-      "renamedSymbol": "L:DerelictMapReader.a(II)LSprite;#1",
+      "renamedSymbol": "L:DerelictMapReader.getAchievementGlowSprite(II)LSprite;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -227088,7 +227248,7 @@
     },
     {
       "symbol": "L:mr.a(II)Lbi;#2",
-      "renamedSymbol": "L:DerelictMapReader.a(II)LSprite;#2",
+      "renamedSymbol": "L:DerelictMapReader.getAchievementGlowSprite(II)LSprite;#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -244226,7 +244386,7 @@
     },
     {
       "symbol": "L:oo.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "L:ClientRasterSupport.setClientStatusText(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "L:ClientRasterSupport.setRequestedDisplayName(Ljava/lang/String;B)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -244237,7 +244397,7 @@
     },
     {
       "symbol": "L:oo.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "L:ClientRasterSupport.setClientStatusText(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "L:ClientRasterSupport.setRequestedDisplayName(Ljava/lang/String;B)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -248395,7 +248555,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#0",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#0",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -248406,7 +248566,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#1",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#1",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -248417,7 +248577,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#2",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#2",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -248428,7 +248588,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#3",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#3",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -248439,7 +248599,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#4",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#4",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -248450,7 +248610,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#5",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#5",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -248461,7 +248621,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#6",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#6",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#6",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -248472,7 +248632,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#7",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#7",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -248483,7 +248643,7 @@
     },
     {
       "symbol": "L:pd.a(BJ)Ljava/lang/String;#8",
-      "renamedSymbol": "L:TertiaryListSequence.a(BJ)Ljava/lang/String;#8",
+      "renamedSymbol": "L:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -339816,9 +339976,9 @@
     },
     {
       "symbol": "M:kg.a(IJLjava/lang/String;)V",
-      "renamedSymbol": "M:FocusableWidget.a(IJLjava/lang/String;)V",
+      "renamedSymbol": "M:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openPrivateChatInput",
       "declaration": {
         "file": "kg.java",
         "start": 6309,
@@ -339849,9 +340009,9 @@
     },
     {
       "symbol": "M:kg.f(B)V",
-      "renamedSymbol": "M:FocusableWidget.f(B)V",
+      "renamedSymbol": "M:FocusableWidget.clearIntroTextLines(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "clearIntroTextLines",
       "declaration": {
         "file": "kg.java",
         "start": 6100,
@@ -340058,9 +340218,9 @@
     },
     {
       "symbol": "M:kl.a(BIIIIII)V",
-      "renamedSymbol": "M:AttackTask.a(BIIIIII)V",
+      "renamedSymbol": "M:AttackTask.drawLoadingProgressBar(BIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawLoadingProgressBar",
       "declaration": {
         "file": "kl.java",
         "start": 8019,
@@ -340069,9 +340229,9 @@
     },
     {
       "symbol": "M:kl.d(B)Z",
-      "renamedSymbol": "M:AttackTask.d(B)Z",
+      "renamedSymbol": "M:AttackTask.isGuestOrNonMember(B)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "isGuestOrNonMember",
       "declaration": {
         "file": "kl.java",
         "start": 7604,
@@ -341917,9 +342077,9 @@
     },
     {
       "symbol": "M:lc.a(IBLjava/lang/String;)Ljava/lang/String;",
-      "renamedSymbol": "M:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;",
+      "renamedSymbol": "M:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "formatLobbyPlayerStatus",
       "declaration": {
         "file": "lc.java",
         "start": 708,
@@ -341950,9 +342110,9 @@
     },
     {
       "symbol": "M:lc.b(I)V",
-      "renamedSymbol": "M:ArchiveSource.b(I)V",
+      "renamedSymbol": "M:ArchiveSource.advanceIntroLogoFrame(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "advanceIntroLogoFrame",
       "declaration": {
         "file": "lc.java",
         "start": 3814,
@@ -342346,9 +342506,9 @@
     },
     {
       "symbol": "M:lk.a(I)V",
-      "renamedSymbol": "M:CheckboxWidget.a(I)V",
+      "renamedSymbol": "M:CheckboxWidget.beginCoverageScan(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "beginCoverageScan",
       "declaration": {
         "file": "lk.java",
         "start": 509,
@@ -342456,9 +342616,9 @@
     },
     {
       "symbol": "M:ln.a(Ljava/util/Random;B)V",
-      "renamedSymbol": "M:Star.a(Ljava/util/Random;B)V",
+      "renamedSymbol": "M:Star.chooseStarType(Ljava/util/Random;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "chooseStarType",
       "declaration": {
         "file": "ln.java",
         "start": 4564,
@@ -342511,9 +342671,9 @@
     },
     {
       "symbol": "M:ln.f(B)V",
-      "renamedSymbol": "M:Star.f(B)V",
+      "renamedSymbol": "M:Star.popRasterState(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "popRasterState",
       "declaration": {
         "file": "ln.java",
         "start": 8816,
@@ -342544,9 +342704,9 @@
     },
     {
       "symbol": "M:lo.a(Lbc;BI)Lbr;",
-      "renamedSymbol": "M:CombinedTerritory.a(LArchive;BI)LMusicPatch;",
+      "renamedSymbol": "M:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadMusicPatch",
       "declaration": {
         "file": "lo.java",
         "start": 356,
@@ -342621,9 +342781,9 @@
     },
     {
       "symbol": "M:lo.k(I)V",
-      "renamedSymbol": "M:CombinedTerritory.k(I)V",
+      "renamedSymbol": "M:CombinedTerritory.resetProduction(I)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "resetProduction",
       "declaration": {
         "file": "lo.java",
         "start": 157,
@@ -342995,9 +343155,9 @@
     },
     {
       "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
-      "renamedSymbol": "M:DefensiveAi.a(Ljava/lang/CharSequence;I)I",
+      "renamedSymbol": "M:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "parseDecimalInteger",
       "declaration": {
         "file": "ma.java",
         "start": 1879,
@@ -343061,9 +343221,9 @@
     },
     {
       "symbol": "M:ma.j(I)V",
-      "renamedSymbol": "M:DefensiveAi.j(I)V",
+      "renamedSymbol": "M:DefensiveAi.recordTutorialEnterKey(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "recordTutorialEnterKey",
       "declaration": {
         "file": "ma.java",
         "start": 1688,
@@ -343391,9 +343551,9 @@
     },
     {
       "symbol": "M:me.a(I)Z",
-      "renamedSymbol": "M:VictoryChecker.a(I)Z",
+      "renamedSymbol": "M:VictoryChecker.isCaretBlinkOn(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isCaretBlinkOn",
       "declaration": {
         "file": "me.java",
         "start": 414,
@@ -343413,9 +343573,9 @@
     },
     {
       "symbol": "M:me.a(I[BI)I",
-      "renamedSymbol": "M:VictoryChecker.a(I[BI)I",
+      "renamedSymbol": "M:VictoryChecker.crc32(I[BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "crc32",
       "declaration": {
         "file": "me.java",
         "start": 5457,
@@ -343633,9 +343793,9 @@
     },
     {
       "symbol": "M:mg.d(II)Lqh;",
-      "renamedSymbol": "M:FleetMove.d(II)LMenuWindow;",
+      "renamedSymbol": "M:FleetMove.createDiplomacyWindow(II)LMenuWindow;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "createDiplomacyWindow",
       "declaration": {
         "file": "mg.java",
         "start": 637,
@@ -344183,9 +344343,9 @@
     },
     {
       "symbol": "M:mr.a(I)I",
-      "renamedSymbol": "M:DerelictMapReader.a(I)I",
+      "renamedSymbol": "M:DerelictMapReader.packChatFilterSettings(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "packChatFilterSettings",
       "declaration": {
         "file": "mr.java",
         "start": 3195,
@@ -344194,9 +344354,9 @@
     },
     {
       "symbol": "M:mr.a(II)Lbi;",
-      "renamedSymbol": "M:DerelictMapReader.a(II)LSprite;",
+      "renamedSymbol": "M:DerelictMapReader.getAchievementGlowSprite(II)LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getAchievementGlowSprite",
       "declaration": {
         "file": "mr.java",
         "start": 2664,
@@ -347450,9 +347610,9 @@
     },
     {
       "symbol": "M:oo.a(Ljava/lang/String;B)V",
-      "renamedSymbol": "M:ClientRasterSupport.setClientStatusText(Ljava/lang/String;B)V",
+      "renamedSymbol": "M:ClientRasterSupport.setRequestedDisplayName(Ljava/lang/String;B)V",
       "originalName": "a",
-      "renamedName": "setClientStatusText",
+      "renamedName": "setRequestedDisplayName",
       "declaration": {
         "file": "oo.java",
         "start": 473,
@@ -348044,9 +348204,9 @@
     },
     {
       "symbol": "M:pd.a(BJ)Ljava/lang/String;",
-      "renamedSymbol": "M:TertiaryListSequence.a(BJ)Ljava/lang/String;",
+      "renamedSymbol": "M:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeBase37DisplayName",
       "declaration": {
         "file": "pd.java",
         "start": 485,
@@ -348055,9 +348215,9 @@
     },
     {
       "symbol": "M:pd.a(I)V",
-      "renamedSymbol": "M:TertiaryListSequence.a(I)V",
+      "renamedSymbol": "M:TertiaryListSequence.clearDecodedSpriteData(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearDecodedSpriteData",
       "declaration": {
         "file": "pd.java",
         "start": 2422,
@@ -407774,7 +407934,7 @@
     },
     {
       "symbol": "P:kg.a(IJLjava/lang/String;)V#0",
-      "renamedSymbol": "P:FocusableWidget.a(IJLjava/lang/String;)V#0",
+      "renamedSymbol": "P:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -407785,7 +407945,7 @@
     },
     {
       "symbol": "P:kg.a(IJLjava/lang/String;)V#1",
-      "renamedSymbol": "P:FocusableWidget.a(IJLjava/lang/String;)V#1",
+      "renamedSymbol": "P:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -407796,7 +407956,7 @@
     },
     {
       "symbol": "P:kg.a(IJLjava/lang/String;)V#2",
-      "renamedSymbol": "P:FocusableWidget.a(IJLjava/lang/String;)V#2",
+      "renamedSymbol": "P:FocusableWidget.openPrivateChatInput(IJLjava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -407829,7 +407989,7 @@
     },
     {
       "symbol": "P:kg.f(B)V#0",
-      "renamedSymbol": "P:FocusableWidget.f(B)V#0",
+      "renamedSymbol": "P:FocusableWidget.clearIntroTextLines(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -408445,7 +408605,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#0",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#0",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -408456,7 +408616,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#1",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#1",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -408467,7 +408627,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#2",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#2",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -408478,7 +408638,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#3",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#3",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -408489,7 +408649,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#4",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#4",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -408500,7 +408660,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#5",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#5",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -408511,7 +408671,7 @@
     },
     {
       "symbol": "P:kl.a(BIIIIII)V#6",
-      "renamedSymbol": "P:AttackTask.a(BIIIIII)V#6",
+      "renamedSymbol": "P:AttackTask.drawLoadingProgressBar(BIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -408522,7 +408682,7 @@
     },
     {
       "symbol": "P:kl.d(B)Z#0",
-      "renamedSymbol": "P:AttackTask.d(B)Z#0",
+      "renamedSymbol": "P:AttackTask.isGuestOrNonMember(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -412559,7 +412719,7 @@
     },
     {
       "symbol": "P:lc.a(IBLjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -412570,7 +412730,7 @@
     },
     {
       "symbol": "P:lc.a(IBLjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -412581,7 +412741,7 @@
     },
     {
       "symbol": "P:lc.a(IBLjava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ArchiveSource.a(IBLjava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ArchiveSource.formatLobbyPlayerStatus(IBLjava/lang/String;)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -412625,7 +412785,7 @@
     },
     {
       "symbol": "P:lc.b(I)V#0",
-      "renamedSymbol": "P:ArchiveSource.b(I)V#0",
+      "renamedSymbol": "P:ArchiveSource.advanceIntroLogoFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413494,7 +413654,7 @@
     },
     {
       "symbol": "P:lk.a(I)V#0",
-      "renamedSymbol": "P:CheckboxWidget.a(I)V#0",
+      "renamedSymbol": "P:CheckboxWidget.beginCoverageScan(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413758,7 +413918,7 @@
     },
     {
       "symbol": "P:ln.a(Ljava/util/Random;B)V#0",
-      "renamedSymbol": "P:Star.a(Ljava/util/Random;B)V#0",
+      "renamedSymbol": "P:Star.chooseStarType(Ljava/util/Random;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413769,7 +413929,7 @@
     },
     {
       "symbol": "P:ln.a(Ljava/util/Random;B)V#1",
-      "renamedSymbol": "P:Star.a(Ljava/util/Random;B)V#1",
+      "renamedSymbol": "P:Star.chooseStarType(Ljava/util/Random;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -413846,7 +414006,7 @@
     },
     {
       "symbol": "P:ln.f(B)V#0",
-      "renamedSymbol": "P:Star.f(B)V#0",
+      "renamedSymbol": "P:Star.popRasterState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413901,7 +414061,7 @@
     },
     {
       "symbol": "P:lo.a(Lbc;BI)Lbr;#0",
-      "renamedSymbol": "P:CombinedTerritory.a(LArchive;BI)LMusicPatch;#0",
+      "renamedSymbol": "P:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413912,7 +414072,7 @@
     },
     {
       "symbol": "P:lo.a(Lbc;BI)Lbr;#1",
-      "renamedSymbol": "P:CombinedTerritory.a(LArchive;BI)LMusicPatch;#1",
+      "renamedSymbol": "P:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -413923,7 +414083,7 @@
     },
     {
       "symbol": "P:lo.a(Lbc;BI)Lbr;#2",
-      "renamedSymbol": "P:CombinedTerritory.a(LArchive;BI)LMusicPatch;#2",
+      "renamedSymbol": "P:CombinedTerritory.loadMusicPatch(LArchive;BI)LMusicPatch;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -414011,7 +414171,7 @@
     },
     {
       "symbol": "P:lo.k(I)V#0",
-      "renamedSymbol": "P:CombinedTerritory.k(I)V#0",
+      "renamedSymbol": "P:CombinedTerritory.resetProduction(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -415199,7 +415359,7 @@
     },
     {
       "symbol": "P:ma.a(Ljava/lang/CharSequence;I)I#0",
-      "renamedSymbol": "P:DefensiveAi.a(Ljava/lang/CharSequence;I)I#0",
+      "renamedSymbol": "P:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -415210,7 +415370,7 @@
     },
     {
       "symbol": "P:ma.a(Ljava/lang/CharSequence;I)I#1",
-      "renamedSymbol": "P:DefensiveAi.a(Ljava/lang/CharSequence;I)I#1",
+      "renamedSymbol": "P:DefensiveAi.parseDecimalInteger(Ljava/lang/CharSequence;I)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -415309,7 +415469,7 @@
     },
     {
       "symbol": "P:ma.j(I)V#0",
-      "renamedSymbol": "P:DefensiveAi.j(I)V#0",
+      "renamedSymbol": "P:DefensiveAi.recordTutorialEnterKey(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416376,7 +416536,7 @@
     },
     {
       "symbol": "P:me.a(I)Z#0",
-      "renamedSymbol": "P:VictoryChecker.a(I)Z#0",
+      "renamedSymbol": "P:VictoryChecker.isCaretBlinkOn(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416409,7 +416569,7 @@
     },
     {
       "symbol": "P:me.a(I[BI)I#0",
-      "renamedSymbol": "P:VictoryChecker.a(I[BI)I#0",
+      "renamedSymbol": "P:VictoryChecker.crc32(I[BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416420,7 +416580,7 @@
     },
     {
       "symbol": "P:me.a(I[BI)I#1",
-      "renamedSymbol": "P:VictoryChecker.a(I[BI)I#1",
+      "renamedSymbol": "P:VictoryChecker.crc32(I[BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -416431,7 +416591,7 @@
     },
     {
       "symbol": "P:me.a(I[BI)I#2",
-      "renamedSymbol": "P:VictoryChecker.a(I[BI)I#2",
+      "renamedSymbol": "P:VictoryChecker.crc32(I[BI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -416893,7 +417053,7 @@
     },
     {
       "symbol": "P:mg.d(II)Lqh;#0",
-      "renamedSymbol": "P:FleetMove.d(II)LMenuWindow;#0",
+      "renamedSymbol": "P:FleetMove.createDiplomacyWindow(II)LMenuWindow;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -416904,7 +417064,7 @@
     },
     {
       "symbol": "P:mg.d(II)Lqh;#1",
-      "renamedSymbol": "P:FleetMove.d(II)LMenuWindow;#1",
+      "renamedSymbol": "P:FleetMove.createDiplomacyWindow(II)LMenuWindow;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -417916,7 +418076,7 @@
     },
     {
       "symbol": "P:mr.a(I)I#0",
-      "renamedSymbol": "P:DerelictMapReader.a(I)I#0",
+      "renamedSymbol": "P:DerelictMapReader.packChatFilterSettings(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -417927,7 +418087,7 @@
     },
     {
       "symbol": "P:mr.a(II)Lbi;#0",
-      "renamedSymbol": "P:DerelictMapReader.a(II)LSprite;#0",
+      "renamedSymbol": "P:DerelictMapReader.getAchievementGlowSprite(II)LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -417938,7 +418098,7 @@
     },
     {
       "symbol": "P:mr.a(II)Lbi;#1",
-      "renamedSymbol": "P:DerelictMapReader.a(II)LSprite;#1",
+      "renamedSymbol": "P:DerelictMapReader.getAchievementGlowSprite(II)LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426892,7 +427052,7 @@
     },
     {
       "symbol": "P:oo.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "P:ClientRasterSupport.setClientStatusText(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "P:ClientRasterSupport.setRequestedDisplayName(Ljava/lang/String;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426903,7 +427063,7 @@
     },
     {
       "symbol": "P:oo.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "P:ClientRasterSupport.setClientStatusText(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "P:ClientRasterSupport.setRequestedDisplayName(Ljava/lang/String;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -428069,7 +428229,7 @@
     },
     {
       "symbol": "P:pd.a(BJ)Ljava/lang/String;#0",
-      "renamedSymbol": "P:TertiaryListSequence.a(BJ)Ljava/lang/String;#0",
+      "renamedSymbol": "P:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428080,7 +428240,7 @@
     },
     {
       "symbol": "P:pd.a(BJ)Ljava/lang/String;#1",
-      "renamedSymbol": "P:TertiaryListSequence.a(BJ)Ljava/lang/String;#1",
+      "renamedSymbol": "P:TertiaryListSequence.decodeBase37DisplayName(BJ)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -428091,7 +428251,7 @@
     },
     {
       "symbol": "P:pd.a(I)V#0",
-      "renamedSymbol": "P:TertiaryListSequence.a(I)V#0",
+      "renamedSymbol": "P:TertiaryListSequence.clearDecodedSpriteData(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -458840,7 +459000,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "44f72438d2761ff0ace6574b5a1c0cb4cda8b9eea293631ce975c2d468bbdc19",
+      "outputSha256": "cf5c654428c3c2e1c101342c89baaea989756aa86f65ebcabd0aa16544f3e2bd",
       "edits": [
         {
           "start": 86,
@@ -471179,6 +471339,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 47124,
+          "end": 47125,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 47166,
           "end": 47168,
           "symbol": "C:eb",
@@ -475658,7 +475825,7 @@
       "original": "ah.java",
       "renamed": "ValidationMessageWidget.java",
       "inputSha256": "da3b8dcc959422bf9921139a82a0ab8deafd3c631840f1bf898810d0b0baabc7",
-      "outputSha256": "3d2a192039346bc7929f37e64d9f221eca705ef64411a55663a71be12aab9596",
+      "outputSha256": "f23e12d112ac9c02fbd39738c7ffae471e0872d7ebfd6d6ed14a48ca9c5780e9",
       "edits": [
         {
           "start": 50,
@@ -476144,6 +476311,13 @@
           "renamed": "Star"
         },
         {
+          "start": 4320,
+          "end": 4321,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 4360,
           "end": 4361,
           "symbol": "M:bi.c(III)V",
@@ -476268,6 +476442,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 5455,
+          "end": 5456,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 5493,
@@ -476466,6 +476647,13 @@
           "renamed": "Star"
         },
         {
+          "start": 7048,
+          "end": 7049,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 7088,
           "end": 7089,
           "symbol": "M:bi.c(III)V",
@@ -476590,6 +476778,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 8291,
+          "end": 8292,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 8329,
@@ -476830,6 +477025,13 @@
           "renamed": "Star"
         },
         {
+          "start": 10438,
+          "end": 10439,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 10476,
           "end": 10477,
           "symbol": "M:bi.c(III)V",
@@ -476970,6 +477172,13 @@
           "renamed": "Star"
         },
         {
+          "start": 11612,
+          "end": 11613,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 11650,
           "end": 11651,
           "symbol": "M:bi.c(III)V",
@@ -477094,6 +477303,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 12781,
+          "end": 12782,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 12817,
@@ -485146,7 +485362,7 @@
       "original": "bc.java",
       "renamed": "Archive.java",
       "inputSha256": "0251dde79a293019ee424a736ad340cd2fc69eff2c0fcd6b301f6a7cd2cc9dde",
-      "outputSha256": "4d12dd9a8da9e55c902e84945364291dcc1f2e12ac3af3ee0abc457813ed32a2",
+      "outputSha256": "96bd7a86f665535c2afe36867224515663b7c9946b3c376b640d4ae16a3a5dcf",
       "edits": [
         {
           "start": 50,
@@ -486283,11 +486499,25 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 27459,
+          "end": 27460,
+          "symbol": "M:me.a(I[BI)I",
+          "original": "a",
+          "renamed": "crc32"
+        },
+        {
           "start": 27504,
           "end": 27506,
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 27507,
+          "end": 27508,
+          "symbol": "M:me.a(I[BI)I",
+          "original": "a",
+          "renamed": "crc32"
         },
         {
           "start": 27983,
@@ -487691,7 +487921,7 @@
       "original": "bg.java",
       "renamed": "LoginMethodPreference.java",
       "inputSha256": "89993fb668ee114c8917c9fa897882529c07440335e376bb043cb5ab1abbc0a5",
-      "outputSha256": "cdd4f5eb3976eeb2a18b20f4fc1acca444704a9b064e7ddb314a88f1700e1bed",
+      "outputSha256": "dcb84eb3e7fe46bb548bbfcbb02871022e312229b4ebf11c0abfe3ede98017f7",
       "edits": [
         {
           "start": 50,
@@ -487790,6 +488020,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 1842,
+          "end": 1843,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 2309,
@@ -498785,7 +499022,7 @@
       "original": "cg.java",
       "renamed": "OpacityWidget.java",
       "inputSha256": "cda0d8116778e9c5b6a074208577ec1de1b7219639d67831d41a604d8275e933",
-      "outputSha256": "2e29b3db40ce6c02b7b7f9cfae8090c4422b0e2e152c7a8c368286904ab30711",
+      "outputSha256": "8946b9c3a7399499c1f3dc57abd3d7e49c3526f8de15edade455023ab1cb5ed5",
       "edits": [
         {
           "start": 50,
@@ -498940,6 +499177,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 2032,
+          "end": 2033,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 2062,
@@ -500524,7 +500768,7 @@
       "original": "ci.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "f40b227ca99424af2a84dcbfbc7d7fb579b6b9de9d001ba2def5d18139f15ace",
-      "outputSha256": "5368dd7bac4bb456da8185f342deb2f04c2345490340cd4f09680e5cc9b64988",
+      "outputSha256": "d00d31bff7e06616bb18a3570222ae348cce4c8b7180a2b5f890fa737ee324ed",
       "edits": [
         {
           "start": 50,
@@ -500756,6 +501000,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 9881,
+          "end": 9882,
+          "symbol": "M:me.a(I[BI)I",
+          "original": "a",
+          "renamed": "crc32"
         },
         {
           "start": 10161,
@@ -508966,7 +509217,7 @@
       "original": "dc.java",
       "renamed": "GameState.java",
       "inputSha256": "6080a56f2dfaff26eb61e31c3c1b2746f3c0d343fea377ca2b9dede9f9e07c6d",
-      "outputSha256": "977a313fb346b00316c445e388dd527f7660d3c97f352e134fcd1e3346856c3e",
+      "outputSha256": "15c4d5774873121454103f976fedb1585e04365b7e8369f5d21ceaf86a5f1d7b",
       "edits": [
         {
           "start": 71,
@@ -513475,6 +513726,13 @@
           "renamed": "clear"
         },
         {
+          "start": 95780,
+          "end": 95781,
+          "symbol": "M:lo.k(I)V",
+          "original": "k",
+          "renamed": "resetProduction"
+        },
+        {
           "start": 96252,
           "end": 96253,
           "symbol": "C:r",
@@ -516523,7 +516781,7 @@
       "original": "di.java",
       "renamed": "FleetTrailPoint.java",
       "inputSha256": "fd8e83ffb38f4d4a0d13dc804f92389a188a5c9559da34d60304b86b8b7fb614",
-      "outputSha256": "ba2b8d738e0420f9a664b77e06934e810cc84f0079f4175831ab51eceeb61b6f",
+      "outputSha256": "58a413f16aa9d127b725f423cda745f6fda3180937331653a636794ad899169f",
       "edits": [
         {
           "start": 50,
@@ -517464,6 +517722,13 @@
           "renamed": "Star"
         },
         {
+          "start": 8687,
+          "end": 8688,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 8713,
           "end": 8715,
           "symbol": "M:di.<init>()V",
@@ -518333,7 +518598,7 @@
       "original": "dm.java",
       "renamed": "ObjectList.java",
       "inputSha256": "2ed4fe489c7e8fffbec5f404e1d4bcee016418274f2c02c98d01145565d8755a",
-      "outputSha256": "f62b156762b37f82df7fbafd117329aaa69911a76afec967c18dde3497e70102",
+      "outputSha256": "81cdd7ff96fffc4b22511c5ddd173940d6a1fc7227c4510e6c79f5e00d46e555",
       "edits": [
         {
           "start": 50,
@@ -519090,6 +519355,13 @@
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "ArchiveSource"
+        },
+        {
+          "start": 11050,
+          "end": 11051,
+          "symbol": "M:lc.a(IBLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatLobbyPlayerStatus"
         },
         {
           "start": 11297,
@@ -524097,7 +524369,7 @@
       "original": "ed.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "70753d50fffe89448d786478aa4dd3728b55d4dcdbb4e9ec4456e02a52f82168",
-      "outputSha256": "bd625311d2a37d7a21c08a573c44201f5d800da74f82d7c135c5dbc5f927356a",
+      "outputSha256": "df7aec4ce898ca294c69d963ac956eb3d3efe10c13c689c89ca1d693de9af41a",
       "edits": [
         {
           "start": 50,
@@ -524520,6 +524792,13 @@
           "renamed": "TertiaryListSequence"
         },
         {
+          "start": 4986,
+          "end": 4987,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
+        },
+        {
           "start": 5010,
           "end": 5012,
           "symbol": "C:bi",
@@ -524728,6 +525007,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 6058,
+          "end": 6059,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 6080,
@@ -550975,7 +551261,7 @@
       "original": "fc.java",
       "renamed": "PlayerContextMenuController.java",
       "inputSha256": "444e7285b57f0940a014e8c7d64bf6342e77edff17f1517860a86a0342c2b8d1",
-      "outputSha256": "405599149d9a244fc90d62f991253adb6a1f37bdd94ee0e70bd697740037289a",
+      "outputSha256": "b285932e7e5a04cf19aa5f87154941962d84fbe2b7c892809190168a8dc85399",
       "edits": [
         {
           "start": 50,
@@ -551417,6 +551703,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "FocusableWidget"
+        },
+        {
+          "start": 4184,
+          "end": 4185,
+          "symbol": "M:kg.a(IJLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "openPrivateChatInput"
         },
         {
           "start": 4280,
@@ -557840,7 +558133,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "30ceebef1edc5310930c00ef2df3121ed91e8df610cb638d9d9b7cab8038f353",
+      "outputSha256": "30ecb1e23724882e675dd6e70f5b1c8ecabef36c0867ec013ffdedd369bad4e7",
       "edits": [
         {
           "start": 50,
@@ -558352,6 +558645,13 @@
           "symbol": "C:lo",
           "original": "lo",
           "renamed": "CombinedTerritory"
+        },
+        {
+          "start": 8905,
+          "end": 8906,
+          "symbol": "M:lo.a(Lbc;BI)Lbr;",
+          "original": "a",
+          "renamed": "loadMusicPatch"
         },
         {
           "start": 8998,
@@ -562322,7 +562622,7 @@
       "original": "gd.java",
       "renamed": "IntroLoadingSupport.java",
       "inputSha256": "218988e0d019053c1cc9727ef02460a32e3d19ee6218ded410c07eb398b9fa2d",
-      "outputSha256": "d2eac37966e94af06b6cedecbdb78c7ea2dd97ac7bd8168d2dd8dcda3e4f9002",
+      "outputSha256": "b0bbcee2c60c14218f2967f156a399a8f6653e7146ee9073e4cc78cae1f9b194",
       "edits": [
         {
           "start": 50,
@@ -562512,6 +562812,13 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "AttackTask"
+        },
+        {
+          "start": 849,
+          "end": 850,
+          "symbol": "M:kl.a(BIIIIII)V",
+          "original": "a",
+          "renamed": "drawLoadingProgressBar"
         },
         {
           "start": 972,
@@ -568842,7 +569149,7 @@
       "original": "gn.java",
       "renamed": "StatefulWidgetTheme.java",
       "inputSha256": "15098b5f6647d50b3af68643175ec0e0658a8dc5f770cf2b4508f8e10f430969",
-      "outputSha256": "ecb7f9e2eaf4d338a32fa5a429d413eb8c21f52acbaba10f692857ba7d16578c",
+      "outputSha256": "5dea4bc1a28ffb6a3e64b8e061b9bdfa9ea7cb1b7bb8ac3c2e421ffce39ca52e",
       "edits": [
         {
           "start": 50,
@@ -570161,6 +570468,13 @@
           "renamed": "Star"
         },
         {
+          "start": 15396,
+          "end": 15397,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 15462,
           "end": 15464,
           "symbol": "C:bi",
@@ -571330,7 +571644,7 @@
       "original": "gq.java",
       "renamed": "QuickChatParameterType.java",
       "inputSha256": "ce401473a3b9659b21f4128dad97ad4741f59dc19bbe38861b4585b9d0d924e0",
-      "outputSha256": "933f43c1afebf58dc9f8dcf747d28e793c6071b438d46283e9f7a3d447ce4151",
+      "outputSha256": "9d23d4540035a9ae0da34a5ec24a696cabfbd4ed7db5ac2f177a0122c05e8604",
       "edits": [
         {
           "start": 50,
@@ -572038,6 +572352,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 9852,
+          "end": 9853,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 9890,
@@ -574880,7 +575201,7 @@
       "original": "he.java",
       "renamed": "IntNode.java",
       "inputSha256": "ff36a710518558f5d4d8896bf9beed2d63012829ad6543c14df016bf39e08eca",
-      "outputSha256": "b57d303a747be2fe568684d8f7920c53ef0ace8a78b458aeb973a9c2a92a0b39",
+      "outputSha256": "d0f970aa13f9a926efa28e6d5ad87b9d7b9f7faaa4fe9acbfa5c3dbe18f87fa3",
       "edits": [
         {
           "start": 50,
@@ -574929,7 +575250,7 @@
           "end": 399,
           "symbol": "M:oo.a(Ljava/lang/String;B)V",
           "original": "a",
-          "renamed": "setClientStatusText"
+          "renamed": "setRequestedDisplayName"
         },
         {
           "start": 431,
@@ -582101,7 +582422,7 @@
       "original": "hl.java",
       "renamed": "ValidationIndicator.java",
       "inputSha256": "0bd0dd64298ac933565258bdc29b6ad79c8d18c7ab0e48a7c32a4496d91c2f20",
-      "outputSha256": "1ebd0361753b0ba85c8c3bbd620bc5a9051042cf3c8622bce87e1912d3892741",
+      "outputSha256": "cbd90dffd5003a61a375766773940738acdaa4c071362123016d0b2b7afb2afd",
       "edits": [
         {
           "start": 50,
@@ -582767,6 +583088,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 7767,
+          "end": 7768,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 7790,
@@ -584334,7 +584662,7 @@
       "original": "hs.java",
       "renamed": "StandardMapGenerator.java",
       "inputSha256": "c8779931d828265affe2c7a870850ee24a98993940af41dc536b2f5b0a30faee",
-      "outputSha256": "3047364cf2375a81fb298d09a6942a9cec9aa672b546767c6cfb9a990544411d",
+      "outputSha256": "38ff0719663f498dbe34eb380a6f4864c8910f62e5f1abe400cde452af454265",
       "edits": [
         {
           "start": 83,
@@ -584517,6 +584845,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 2329,
+          "end": 2330,
+          "symbol": "M:ln.a(Ljava/util/Random;B)V",
+          "original": "a",
+          "renamed": "chooseStarType"
         },
         {
           "start": 2822,
@@ -589173,7 +589508,7 @@
       "original": "ih.java",
       "renamed": "AccountNoticeKind.java",
       "inputSha256": "b2bd8bb082f01fa050afc8e1817c252e6db7d022a0532adfa664cf92db72dd82",
-      "outputSha256": "84c4ffb14fdb43279a5ce16bf778ff4bb875b34fa9fc3fe10618acf372794e25",
+      "outputSha256": "0f9762bf3e43c5fe98b668584a7728dd9d6d421bdb4e57061f71f95b5ceb220d",
       "edits": [
         {
           "start": 50,
@@ -589335,6 +589670,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 1558,
+          "end": 1559,
+          "symbol": "M:pd.a(BJ)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeBase37DisplayName"
         },
         {
           "start": 1572,
@@ -591118,7 +591460,7 @@
       "original": "in.java",
       "renamed": "SecondaryNodeHashTable.java",
       "inputSha256": "405c10445d470a22c88f6c43ab2d6cc7a0ed1f520977a798a88bfb5182a3a511",
-      "outputSha256": "e2dc91561b4cb5f95cbd59468ce00f287a182e99ac394e2ba19378b6b4e20941",
+      "outputSha256": "aaa72b63c88ccaed7015c5e83e8b3478eff3854d606df216d2eb4deef4ef0735",
       "edits": [
         {
           "start": 50,
@@ -591287,6 +591629,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 1777,
+          "end": 1778,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 2313,
@@ -599138,7 +599487,7 @@
       "original": "jj.java",
       "renamed": "ConquestVictoryChecker.java",
       "inputSha256": "7dd460fb217931e50a8f84cb4e76c021f08b54b48a8a7a0a4b80642450121fce",
-      "outputSha256": "4dd38e654c43802aca75cda06ffea7c15de781e730d6f1b4f8438a2c4d1b7d03",
+      "outputSha256": "8b4e30f0eeafe374b49b5dc6cdd5708499b039f33a8abc1d2410bbc0eed40f7f",
       "edits": [
         {
           "start": 50,
@@ -599407,6 +599756,13 @@
           "renamed": "TertiaryListSequence"
         },
         {
+          "start": 3560,
+          "end": 3561,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
+        },
+        {
           "start": 3644,
           "end": 3646,
           "symbol": "C:jj",
@@ -599426,6 +599782,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 3691,
+          "end": 3692,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 3729,
@@ -609390,7 +609753,7 @@
       "original": "kb.java",
       "renamed": "GradientMenuLabel.java",
       "inputSha256": "58cc5c04d0e33888b77d6a325b2ed8a646d3deef9bbb068a05fe480648bb96bb",
-      "outputSha256": "72d15945464a6a79f9cae83aae3bbac7380e0b08199350e74dbbab2c86dbc870",
+      "outputSha256": "3515d992e0e310ea03d5757b777fdefed088947e268a2abbfa16ff2189177589",
       "edits": [
         {
           "start": 50,
@@ -610581,6 +610944,13 @@
           "symbol": "C:mr",
           "original": "mr",
           "renamed": "DerelictMapReader"
+        },
+        {
+          "start": 8511,
+          "end": 8512,
+          "symbol": "M:mr.a(I)I",
+          "original": "a",
+          "renamed": "packChatFilterSettings"
         },
         {
           "start": 8552,
@@ -612020,7 +612390,7 @@
       "original": "kf.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a4098c3daad888d3277bbb28abdc6623e2cd1f5d96da28762e1d8698913bb778",
-      "outputSha256": "a224b07d89e0666f9341c680cc904a34d5e38381fb5ce7913a76e2e94bd4e9e2",
+      "outputSha256": "79ecb41be42b2d4bc86dce8f3c3f9483e04462435efc9c488c4a26094235c74f",
       "edits": [
         {
           "start": 60,
@@ -612364,6 +612734,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 10342,
+          "end": 10343,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 10418,
@@ -614331,7 +614708,7 @@
       "original": "kg.java",
       "renamed": "FocusableWidget.java",
       "inputSha256": "841a347596a3e240608831f4e85f1fc193b5fadacede7c3a89a3fca56943b6a7",
-      "outputSha256": "bae5d5170c03792a33adb34b7750dc250ec0ee9c9d69499af98728d971adace5",
+      "outputSha256": "92c02a3a19d18d3be6860bd21735259691ae107edfedc278c21421cc98e96623",
       "edits": [
         {
           "start": 65,
@@ -614593,6 +614970,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6100,
+          "end": 6101,
+          "symbol": "M:kg.f(B)V",
+          "original": "f",
+          "renamed": "clearIntroTextLines"
+        },
+        {
           "start": 6137,
           "end": 6139,
           "symbol": "C:cb",
@@ -614612,6 +614996,13 @@
           "symbol": "M:pf.a(I)V",
           "original": "a",
           "renamed": "clear"
+        },
+        {
+          "start": 6309,
+          "end": 6310,
+          "symbol": "M:kg.a(IJLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "openPrivateChatInput"
         },
         {
           "start": 6468,
@@ -614885,6 +615276,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "FocusableWidget"
+        },
+        {
+          "start": 9498,
+          "end": 9499,
+          "symbol": "M:kg.f(B)V",
+          "original": "f",
+          "renamed": "clearIntroTextLines"
         },
         {
           "start": 9545,
@@ -616487,7 +616885,7 @@
       "original": "kl.java",
       "renamed": "AttackTask.java",
       "inputSha256": "767de246aa5b73f2c03e1c1e770b926068ba0c1ee79b835440b07775a607cf52",
-      "outputSha256": "5931a669caf37c410aae1e10cc99230978cbc71209427cc8d8dd05c12245ac7b",
+      "outputSha256": "18b70d17f7e4f1d855c26e5833671c8448aee1f7816f5419f1c21a5eec325e65",
       "edits": [
         {
           "start": 50,
@@ -616714,11 +617112,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 7604,
+          "end": 7605,
+          "symbol": "M:kl.d(B)Z",
+          "original": "d",
+          "renamed": "isGuestOrNonMember"
+        },
+        {
           "start": 7695,
           "end": 7697,
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "AttackTask"
+        },
+        {
+          "start": 7698,
+          "end": 7699,
+          "symbol": "M:kl.d(B)Z",
+          "original": "d",
+          "renamed": "isGuestOrNonMember"
         },
         {
           "start": 7745,
@@ -616747,6 +617159,20 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "AttackTask"
+        },
+        {
+          "start": 7941,
+          "end": 7942,
+          "symbol": "M:kl.d(B)Z",
+          "original": "d",
+          "renamed": "isGuestOrNonMember"
+        },
+        {
+          "start": 8019,
+          "end": 8020,
+          "symbol": "M:kl.a(BIIIIII)V",
+          "original": "a",
+          "renamed": "drawLoadingProgressBar"
         },
         {
           "start": 9083,
@@ -626729,7 +627155,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "c8c2b4699cb10475d1098bfc9211de83f8c8d1714aa86be6aad20a7d2dc92e9d",
+      "outputSha256": "b88f5b3f034416499f8c0e9420954b1b6b7278405e746182abf02447ff13a110",
       "edits": [
         {
           "start": 50,
@@ -627647,6 +628073,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 16329,
+          "end": 16330,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 16394,
@@ -632854,6 +633287,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 102767,
+          "end": 102768,
+          "symbol": "M:ma.j(I)V",
+          "original": "j",
+          "renamed": "recordTutorialEnterKey"
         },
         {
           "start": 102813,
@@ -639049,6 +639489,13 @@
           "renamed": "FleetMove"
         },
         {
+          "start": 195956,
+          "end": 195957,
+          "symbol": "M:mg.d(II)Lqh;",
+          "original": "d",
+          "renamed": "createDiplomacyWindow"
+        },
+        {
           "start": 196008,
           "end": 196009,
           "symbol": "M:kq.i(I)V",
@@ -645051,7 +645498,7 @@
       "original": "lc.java",
       "renamed": "ArchiveSource.java",
       "inputSha256": "ce85fa34fda16250f025bd1bfe80f3d97c2ff7f1c945563fff69cb91e449a41c",
-      "outputSha256": "d8004a4c7c12a23f08407d368392001844d2a29773c2ed682f8188f73708871e",
+      "outputSha256": "20f82efe08552be9f48d332d7198c9ed0dfeb8ca49476129c5849a27637d6057",
       "edits": [
         {
           "start": 53,
@@ -645073,6 +645520,13 @@
           "symbol": "M:lc.a(II)I",
           "original": "a",
           "renamed": "bitCount"
+        },
+        {
+          "start": 708,
+          "end": 709,
+          "symbol": "M:lc.a(IBLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatLobbyPlayerStatus"
         },
         {
           "start": 1587,
@@ -645320,11 +645774,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3814,
+          "end": 3815,
+          "symbol": "M:lc.b(I)V",
+          "original": "b",
+          "renamed": "advanceIntroLogoFrame"
+        },
+        {
           "start": 3907,
           "end": 3909,
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "ArchiveSource"
+        },
+        {
+          "start": 3910,
+          "end": 3911,
+          "symbol": "M:lc.a(IBLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatLobbyPlayerStatus"
         },
         {
           "start": 3958,
@@ -647971,7 +648439,7 @@
       "original": "lk.java",
       "renamed": "CheckboxWidget.java",
       "inputSha256": "470883a6268a3e50fc7dac225f0dd8b57381fa02f05d21e40a00c5433a5e10b7",
-      "outputSha256": "fb25463bdf4a8600267b2d7f9796f078da0a02c2331051a9156e1873a8029f97",
+      "outputSha256": "1b3b54823c3428a0d4403605a4b52dae18b029cb327876069afbfa18c29dd621",
       "edits": [
         {
           "start": 50,
@@ -648014,6 +648482,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 509,
+          "end": 510,
+          "symbol": "M:lk.a(I)V",
+          "original": "a",
+          "renamed": "beginCoverageScan"
         },
         {
           "start": 533,
@@ -648401,7 +648876,7 @@
       "original": "ln.java",
       "renamed": "Star.java",
       "inputSha256": "be1e64b83986b0c176263eb919bc03fc97f9ac1c6b3192164a2440f9f2dafb1b",
-      "outputSha256": "26ec8aac527e35beda97d2c844e0073dd2d91696699a2e26adbb3c78fea6b5a2",
+      "outputSha256": "a808f3382c3a07af6526bf8e820963d3a040680d492585e70d622f11006f0b7a",
       "edits": [
         {
           "start": 71,
@@ -648691,6 +649166,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 4564,
+          "end": 4565,
+          "symbol": "M:ln.a(Ljava/util/Random;B)V",
+          "original": "a",
+          "renamed": "chooseStarType"
+        },
+        {
           "start": 4892,
           "end": 4894,
           "symbol": "C:ln",
@@ -648817,6 +649299,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 8816,
+          "end": 8817,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 8888,
           "end": 8890,
           "symbol": "C:cl",
@@ -648913,7 +649402,7 @@
       "original": "lo.java",
       "renamed": "CombinedTerritory.java",
       "inputSha256": "5fb7e018a3328608828e7abc011c603494dacbf933347ce857ccf21acfe2f33a",
-      "outputSha256": "460b60cc8f5a81a5a4f5d2002ad181ce0c7f6d1ef144fd7cfa0a3e050eb8d5de",
+      "outputSha256": "3a267266baa7c651d2e11bf2b810928b8038944ec0abf6bf543427e524c19a8a",
       "edits": [
         {
           "start": 50,
@@ -648937,11 +649426,25 @@
           "renamed": "DualLinkDeque"
         },
         {
+          "start": 157,
+          "end": 158,
+          "symbol": "M:lo.k(I)V",
+          "original": "k",
+          "renamed": "resetProduction"
+        },
+        {
           "start": 353,
           "end": 355,
           "symbol": "C:br",
           "original": "br",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 356,
+          "end": 357,
+          "symbol": "M:lo.a(Lbc;BI)Lbr;",
+          "original": "a",
+          "renamed": "loadMusicPatch"
         },
         {
           "start": 358,
@@ -649040,6 +649543,13 @@
           "symbol": "C:lo",
           "original": "lo",
           "renamed": "CombinedTerritory"
+        },
+        {
+          "start": 1849,
+          "end": 1850,
+          "symbol": "M:lo.a(Lbc;BI)Lbr;",
+          "original": "a",
+          "renamed": "loadMusicPatch"
         },
         {
           "start": 1852,
@@ -655926,7 +656436,7 @@
       "original": "ma.java",
       "renamed": "DefensiveAi.java",
       "inputSha256": "9190025e1513d4f1f319a9242865fb33e3cb2a5ef9e94c5796df2ebbccf4cb39",
-      "outputSha256": "045bb6c30ceeeb805ba3b7203e5c827b64ac160a4447c9f29b291050d2f99ed4",
+      "outputSha256": "becdbcae2477f46a3de62bd35807ec5515d7b53df68cf7562e1cb8f1d300a3c0",
       "edits": [
         {
           "start": 50,
@@ -655999,6 +656509,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1688,
+          "end": 1689,
+          "symbol": "M:ma.j(I)V",
+          "original": "j",
+          "renamed": "recordTutorialEnterKey"
+        },
+        {
           "start": 1775,
           "end": 1777,
           "symbol": "C:oq",
@@ -656011,6 +656528,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 1879,
+          "end": 1880,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 2262,
@@ -656279,6 +656803,13 @@
           "renamed": "DefensiveAi"
         },
         {
+          "start": 7241,
+          "end": 7242,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
+        },
+        {
           "start": 7463,
           "end": 7464,
           "symbol": "M:ma.b(BLln;)I",
@@ -656319,7 +656850,7 @@
       "original": "mb.java",
       "renamed": "AgeValidator.java",
       "inputSha256": "ef5781174717942f6ec6a941acbd845707a430f4eb5cd5206ec3e08b751bf33f",
-      "outputSha256": "3bb350ddda216a9d3d87e633ce2913e55153773116fd5d978781b43e5610a2c2",
+      "outputSha256": "e76bc5de78d3de057e8e1ba683759e47855460f6f79ac6a8ca8ad8a17b6293a5",
       "edits": [
         {
           "start": 50,
@@ -656630,6 +657161,13 @@
           "renamed": "DefensiveAi"
         },
         {
+          "start": 8372,
+          "end": 8373,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
+        },
+        {
           "start": 8485,
           "end": 8486,
           "symbol": "C:p",
@@ -656769,7 +657307,7 @@
       "original": "md.java",
       "renamed": "StripedProgressWidget.java",
       "inputSha256": "2e554a21872f3bf46ffae515f88464fda482d64d721fd79041ef0db91f520983",
-      "outputSha256": "55c6168004815693779342b81a9247b2b8663e25e3d924993baf1c8b5a619d3e",
+      "outputSha256": "14529130082e34149ca447179c1ebbd496822c2c25cc72b5e3886b7682108e56",
       "edits": [
         {
           "start": 50,
@@ -656910,6 +657448,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 2078,
+          "end": 2079,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 2188,
@@ -657059,6 +657604,13 @@
           "renamed": "Star"
         },
         {
+          "start": 5642,
+          "end": 5643,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 5671,
           "end": 5673,
           "symbol": "C:gf",
@@ -657106,6 +657658,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 5910,
+          "end": 5911,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 5950,
@@ -657162,6 +657721,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 6369,
+          "end": 6370,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 6409,
@@ -657267,6 +657833,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 9001,
+          "end": 9002,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 9050,
@@ -657906,6 +658479,13 @@
           "renamed": "Star"
         },
         {
+          "start": 11692,
+          "end": 11693,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 12117,
           "end": 12119,
           "symbol": "C:md",
@@ -657981,7 +658561,7 @@
       "original": "me.java",
       "renamed": "VictoryChecker.java",
       "inputSha256": "a125e633ae70e34cda68278f7d3ee4e0bc8e57db1e9ec5968c42e6c6541be62c",
-      "outputSha256": "71038a7e66f1eb81119b88f9dc50efb9f598b5adc811a104ee357122ef3512de",
+      "outputSha256": "e80395c48b13b10ea34b6fac5f4ca4be87353d2e788a7a82cc73e5fa3c671e5f",
       "edits": [
         {
           "start": 53,
@@ -658038,6 +658618,13 @@
           "symbol": "C:ob",
           "original": "ob",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 414,
+          "end": 415,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
         },
         {
           "start": 551,
@@ -658236,6 +658823,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 5305,
+          "end": 5306,
+          "symbol": "M:me.a(I[BI)I",
+          "original": "a",
+          "renamed": "crc32"
+        },
+        {
           "start": 5397,
           "end": 5398,
           "symbol": "M:me.a(BLdc;Lkq;)V",
@@ -658257,11 +658851,25 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 5457,
+          "end": 5458,
+          "symbol": "M:me.a(I[BI)I",
+          "original": "a",
+          "renamed": "crc32"
+        },
+        {
           "start": 5865,
           "end": 5867,
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 5868,
+          "end": 5869,
+          "symbol": "M:me.a(I[BI)I",
+          "original": "a",
+          "renamed": "crc32"
         },
         {
           "start": 5933,
@@ -659579,7 +660187,7 @@
       "original": "mg.java",
       "renamed": "FleetMove.java",
       "inputSha256": "1482d378778ded4eb32f27fc37ccd1936cc46dfc07856040a37324bdb4d1c7fd",
-      "outputSha256": "b5593228a0c63d4074d0b4eb609a74d9b99c1e415cf5e53407e0f5f446c6cec1",
+      "outputSha256": "9a783f48fc46f879d9f2d994bf549816e0cd7ea9f1616e9edeef80e5563193c9",
       "edits": [
         {
           "start": 50,
@@ -659678,6 +660286,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 637,
+          "end": 638,
+          "symbol": "M:mg.d(II)Lqh;",
+          "original": "d",
+          "renamed": "createDiplomacyWindow"
         },
         {
           "start": 673,
@@ -663062,7 +663677,7 @@
       "original": "mr.java",
       "renamed": "DerelictMapReader.java",
       "inputSha256": "5c79ce46dc43a59d522cc188c00785d7f57ee11d9dcc9657c844ccdee1c62b5d",
-      "outputSha256": "f594c56b67a3411ef218958a3dce2eab10858cb12bf409fd3d0f4c426035e70a",
+      "outputSha256": "65d3e4dce4bf9c0c678aca367757e6dba554120984f1959d45ed6ccfc5296c2a",
       "edits": [
         {
           "start": 50,
@@ -663282,6 +663897,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2664,
+          "end": 2665,
+          "symbol": "M:mr.a(II)Lbi;",
+          "original": "a",
+          "renamed": "getAchievementGlowSprite"
+        },
+        {
           "start": 2700,
           "end": 2702,
           "symbol": "C:bi",
@@ -663371,6 +663993,13 @@
           "symbol": "M:cg.i(I)V",
           "original": "i",
           "renamed": "popLegacyRasterState"
+        },
+        {
+          "start": 3195,
+          "end": 3196,
+          "symbol": "M:mr.a(I)I",
+          "original": "a",
+          "renamed": "packChatFilterSettings"
         },
         {
           "start": 3248,
@@ -667286,7 +667915,7 @@
       "original": "nh.java",
       "renamed": "PointsVictoryChecker.java",
       "inputSha256": "32c8c0a94f0ae7f21a38491eb1fc5bf18d6fe3f042e029f6d9668a5ceac0128f",
-      "outputSha256": "8f78eccb9055cc0d322f8fa6906fc305174472434feb0c11e1cf9814b8ceb952",
+      "outputSha256": "bca10a652b866fe3eac83f579781bcfa1076dbba3163114322d9c6792337dac8",
       "edits": [
         {
           "start": 50,
@@ -667364,6 +667993,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 1219,
+          "end": 1220,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 1288,
@@ -671050,7 +671686,7 @@
       "original": "nq.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "84e8dbecf406c1c125292e1aa5d36e635cbb73b2b3512ae62e69651ba0742b69",
-      "outputSha256": "3a2649ae7f89b6fcf97571fd3d231c745eb574471253e8a4dd3256be4bcd7a88",
+      "outputSha256": "be9ecd3d21199edba84fd921ae94828afe9820eb07b682180b3237d1b6e67a14",
       "edits": [
         {
           "start": 53,
@@ -671191,6 +671827,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 6105,
+          "end": 6106,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 6635,
@@ -671359,6 +672002,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 14319,
+          "end": 14320,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 14522,
@@ -671606,6 +672256,13 @@
           "renamed": "DefensiveAi"
         },
         {
+          "start": 22921,
+          "end": 22922,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
+        },
+        {
           "start": 23501,
           "end": 23502,
           "symbol": "M:nq.a(C)I",
@@ -671688,6 +672345,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 29556,
+          "end": 29557,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 30944,
@@ -672614,7 +673278,7 @@
       "original": "o.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "a3117040d0ba6cf6d1b93a8896b95cf37b7123f15e0d5307927e1ccdf6207591",
-      "outputSha256": "fc65c4ece9115ce71d432a709c376c4958603f0fa747062f4eead2ec43afa62c",
+      "outputSha256": "578ad996d2b7cfd1c0e3e9e88b23babe79f4a56adfa690d758f27f7560d21fb3",
       "edits": [
         {
           "start": 44,
@@ -672825,6 +673489,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 2905,
+          "end": 2906,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 3003,
@@ -673133,6 +673804,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 9500,
+          "end": 9501,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 9607,
@@ -673875,6 +674553,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 24495,
+          "end": 24496,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 25064,
@@ -682295,7 +682980,7 @@
       "original": "on.java",
       "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "bf5d8e2bc8bd9ed34f4a20a1718c0b5db016c0150ae5d6bf2b4b223959222b20",
-      "outputSha256": "9efd43107a3d6ad29d7f97bc7490d3d4b682c72c1b9a7ed679f652d0904c9095",
+      "outputSha256": "93789e4ccd934b91a7ef15ddaf2543fa3cbd4405d357ff05c780bfa55ecf0d95",
       "edits": [
         {
           "start": 50,
@@ -682914,6 +683599,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 7077,
+          "end": 7078,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 7099,
           "end": 7101,
           "symbol": "C:qr",
@@ -682940,6 +683632,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 7289,
+          "end": 7290,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
         },
         {
           "start": 7314,
@@ -683005,6 +683704,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 7769,
+          "end": 7770,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 7789,
           "end": 7791,
           "symbol": "C:qr",
@@ -683031,6 +683737,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 7968,
+          "end": 7969,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
         },
         {
           "start": 7991,
@@ -683103,6 +683816,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 8566,
+          "end": 8567,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 8584,
           "end": 8586,
           "symbol": "C:qr",
@@ -683129,6 +683849,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 8753,
+          "end": 8754,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
         },
         {
           "start": 8774,
@@ -683187,6 +683914,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 9115,
+          "end": 9116,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 9133,
           "end": 9135,
           "symbol": "C:qr",
@@ -683213,6 +683947,13 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "VictoryChecker"
+        },
+        {
+          "start": 9302,
+          "end": 9303,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
         },
         {
           "start": 9323,
@@ -683243,6 +683984,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 9537,
+          "end": 9538,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 9553,
           "end": 9555,
           "symbol": "C:qr",
@@ -683271,6 +684019,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 9712,
+          "end": 9713,
+          "symbol": "M:me.a(I)Z",
+          "original": "a",
+          "renamed": "isCaretBlinkOn"
+        },
+        {
           "start": 9731,
           "end": 9733,
           "symbol": "C:kh",
@@ -683297,7 +684052,7 @@
       "original": "oo.java",
       "renamed": "ClientRasterSupport.java",
       "inputSha256": "8d9f8124e80a08bd389e486daf00b42940ec1d42a2f16aa5deb9eefe8ba65e94",
-      "outputSha256": "1da9e07ce80f36f36aa6a6be8d947d2d937d7be4f3df5748f63ac4530af612a2",
+      "outputSha256": "8a385f58f9c5ffe69de680440d55636c11c2a8c2416adb6d87ceccaad7311858",
       "edits": [
         {
           "start": 50,
@@ -683402,7 +684157,7 @@
           "end": 474,
           "symbol": "M:oo.a(Ljava/lang/String;B)V",
           "original": "a",
-          "renamed": "setClientStatusText"
+          "renamed": "setRequestedDisplayName"
         },
         {
           "start": 529,
@@ -687900,7 +688655,7 @@
       "original": "pd.java",
       "renamed": "TertiaryListSequence.java",
       "inputSha256": "36257518e4ca355154e06adc1c3eda0f55d9614e41f28c60c63612a00d24a972",
-      "outputSha256": "afda3860674f76e6b724a84871ae7777eac991a1579a3b82de9d51cf49ee36ff",
+      "outputSha256": "6962760b618c6d9e3c2513a25e79afb017c9e4d2995987807029f3d4d8f36877",
       "edits": [
         {
           "start": 50,
@@ -688008,6 +688763,13 @@
           "renamed": "startForward"
         },
         {
+          "start": 485,
+          "end": 486,
+          "symbol": "M:pd.a(BJ)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeBase37DisplayName"
+        },
+        {
           "start": 1285,
           "end": 1286,
           "symbol": "C:k",
@@ -688097,6 +688859,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2422,
+          "end": 2423,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 2446,
@@ -695976,7 +696745,7 @@
       "original": "qf.java",
       "renamed": "SoundEffectDefinition.java",
       "inputSha256": "291068786772e48a3faeeda1b201291fd43643cb7b85c205574f55d1a611a7dd",
-      "outputSha256": "6389bc310dbb3fccd14c52878e50e01e3378a353eb57818c6d82d3e5c6e87e92",
+      "outputSha256": "95f487ab614913a7b06a41d5eefa3186035904dad39abac424ceef0a814cb9f1",
       "edits": [
         {
           "start": 71,
@@ -696369,6 +697138,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "FocusableWidget"
+        },
+        {
+          "start": 2278,
+          "end": 2279,
+          "symbol": "M:kg.f(B)V",
+          "original": "f",
+          "renamed": "clearIntroTextLines"
         },
         {
           "start": 2322,
@@ -702344,7 +703120,7 @@
       "original": "qr.java",
       "renamed": "AnimatedPanel.java",
       "inputSha256": "f219693ef275888de47ae02be33a5e640656d150113bf01898124b153da23b8b",
-      "outputSha256": "dfea5a305d40444ff53deee52d5b59987ceac18c5f4771d1406862a39207cb84",
+      "outputSha256": "d27ea374e6a9d609a05dc27767148fb33f16cd85568bcf10e4802a618eefbef0",
       "edits": [
         {
           "start": 44,
@@ -703852,6 +704628,13 @@
           "renamed": "Star"
         },
         {
+          "start": 35941,
+          "end": 35942,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
+        },
+        {
           "start": 36025,
           "end": 36026,
           "symbol": "C:r",
@@ -704803,7 +705586,7 @@
       "original": "r.java",
       "renamed": "UrlLoader.java",
       "inputSha256": "f00cbff469999e7268a699f889ad7147f63bd197ea501e4b6398a73f49f107bf",
-      "outputSha256": "dc4c06126c1e9b1973843fe10054ad33cbc644400e9fc7d4fcce3d56893d02dd",
+      "outputSha256": "4fa1d4daeb54c654d2653a9af680532c0953c15abdd7c0a3a218a8ff5343e3fe",
       "edits": [
         {
           "start": 69,
@@ -705427,6 +706210,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 6077,
+          "end": 6078,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 6162,
@@ -708308,7 +709098,7 @@
       "original": "re.java",
       "renamed": "QuickChatPhraseRegistry.java",
       "inputSha256": "72352cbd9118ce76895a4d5aa67e65ebdad5ed6b119e7fa2267d646f4998e13f",
-      "outputSha256": "aed0cc0b1b199d6655dd429359b90c58e9772935cf05460f8f2a5941b7d1d06e",
+      "outputSha256": "cd2f911d6169166ffb2bfab4f9ecd6dfcf9e7bda6c59f13806d373521a79e2d9",
       "edits": [
         {
           "start": 50,
@@ -708493,6 +709283,13 @@
           "renamed": "DefensiveAi"
         },
         {
+          "start": 2919,
+          "end": 2920,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
+        },
+        {
           "start": 3163,
           "end": 3165,
           "symbol": "C:qr",
@@ -708526,6 +709323,13 @@
           "symbol": "C:ma",
           "original": "ma",
           "renamed": "DefensiveAi"
+        },
+        {
+          "start": 4203,
+          "end": 4204,
+          "symbol": "M:ma.a(Ljava/lang/CharSequence;I)I",
+          "original": "a",
+          "renamed": "parseDecimalInteger"
         },
         {
           "start": 5106,
@@ -716391,7 +717195,7 @@
       "original": "rq.java",
       "renamed": "LinkPainter.java",
       "inputSha256": "8e61072f3a33239667a0d782b76701b00119a418b9fe10f6fbe54fc7be1404e9",
-      "outputSha256": "67ee7be1ee2214c99ffd4ff9e703a4d043b22f05454a34b67924aad8d802dc9e",
+      "outputSha256": "16c076e399950d1b495412449c5d47fbebdc40336aa5c98f33bcc9d7ba2ecc0a",
       "edits": [
         {
           "start": 50,
@@ -716682,6 +717486,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 4808,
+          "end": 4809,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 5091,
@@ -718350,7 +719161,7 @@
       "original": "s.java",
       "renamed": "GzipInflater.java",
       "inputSha256": "14b87494c544c8ba5c1611892a32c7d74cfe3065e254948ca896c78b65ed9569",
-      "outputSha256": "ad599610ece5e8364308dc429633123ac971757db1ab3918ae8e15a05ad73c0c",
+      "outputSha256": "43d73a8787564ed716efd1aaf4fa0618d71f13e83315518a9abadc8ecf249e0b",
       "edits": [
         {
           "start": 71,
@@ -718976,6 +719787,13 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "AttackTask"
+        },
+        {
+          "start": 6345,
+          "end": 6346,
+          "symbol": "M:kl.d(B)Z",
+          "original": "d",
+          "renamed": "isGuestOrNonMember"
         },
         {
           "start": 6374,
@@ -726994,7 +727812,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "0b68085fca9fcb21ac3261ec9c67b85f3ecf3182bbe6978b6f162f0696eb79a2",
+      "outputSha256": "b812d26d634701ebfa0fa16c4ed3faa08f6dc63855656ee00d96a186c39b0548",
       "edits": [
         {
           "start": 50,
@@ -735056,6 +735874,13 @@
           "renamed": "DerelictMapReader"
         },
         {
+          "start": 72436,
+          "end": 72437,
+          "symbol": "M:mr.a(II)Lbi;",
+          "original": "a",
+          "renamed": "getAchievementGlowSprite"
+        },
+        {
           "start": 72573,
           "end": 72575,
           "symbol": "C:pc",
@@ -735327,6 +736152,13 @@
           "symbol": "C:mr",
           "original": "mr",
           "renamed": "DerelictMapReader"
+        },
+        {
+          "start": 74803,
+          "end": 74804,
+          "symbol": "M:mr.a(II)Lbi;",
+          "original": "a",
+          "renamed": "getAchievementGlowSprite"
         },
         {
           "start": 74835,
@@ -738822,7 +739654,7 @@
       "original": "sn.java",
       "renamed": "IntroLogoSupport.java",
       "inputSha256": "c5d3e388d2642b696a6e566b46412522727a34ec1cbcda626382a75002756b0e",
-      "outputSha256": "3aa971492caac7b1d5a0e9cfbd09603024dc4dbc005d248467a0fd2811bf69e4",
+      "outputSha256": "30337f83a2c7185ae21cac47b0cb798e9569c4c296a0fb5a4672ead3f869e224",
       "edits": [
         {
           "start": 50,
@@ -738991,6 +739823,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 1067,
+          "end": 1068,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 1153,
@@ -742231,7 +743070,7 @@
       "original": "ta.java",
       "renamed": "MenuTransitionSupport.java",
       "inputSha256": "73732b64e10db806f07507e76b061212f1b9e18c1ecf0986447d65f5886ab5bf",
-      "outputSha256": "6cc5c8b2fed6369b77ae9035981fb709a31a237123c9cabfb3bce77455cc1810",
+      "outputSha256": "e4f98051141cf14c29d38ac5432b1265745b8b53780424e8bbb6f801841f96f9",
       "edits": [
         {
           "start": 50,
@@ -742519,6 +743358,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 3541,
+          "end": 3542,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 3615,
@@ -749906,7 +750752,7 @@
       "original": "ti.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "d8c3c311ca5eb88fb82f5ff2c3675375aca856738a10037a63cf649861a9b8fb",
-      "outputSha256": "4198514a1ba7bd43f180d2c9644c8abaf718a7c5e27c28e93922e64388c090c9",
+      "outputSha256": "6e9b2a47ca50be6e91930778d05658e6bff7e192f874d7f2d60046e1b070b80a",
       "edits": [
         {
           "start": 71,
@@ -750397,6 +751243,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 3502,
+          "end": 3503,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 3632,
@@ -752135,7 +752988,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "c4835746f586340be64719b23db40c8d311d4257b931a919df726b3a57a53b3e",
+      "outputSha256": "ca74578152d2ffd043e738da200b942227f4d69978a6e7c5a660f99dacd76f5c",
       "edits": [
         {
           "start": 53,
@@ -755482,6 +756335,13 @@
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "ArchiveSource"
+        },
+        {
+          "start": 19771,
+          "end": 19772,
+          "symbol": "M:lc.b(I)V",
+          "original": "b",
+          "renamed": "advanceIntroLogoFrame"
         },
         {
           "start": 19845,
@@ -768633,7 +769493,7 @@
       "original": "uc.java",
       "renamed": "HorizontalGradientComponent.java",
       "inputSha256": "cb262019e474ab24eecfe670a539bf298da37eca43e068b89f5782b9dc8967ea",
-      "outputSha256": "9dd1de8771867bb972d1c0a950ab5505fa6539162cd01e433e8a5e69f846bb07",
+      "outputSha256": "1cc868cdc1221d9b504bca0b795dc27b04570a665a6b14e5307a570e6de0a4b8",
       "edits": [
         {
           "start": 50,
@@ -768865,6 +769725,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 4247,
+          "end": 4248,
+          "symbol": "M:pd.a(I)V",
+          "original": "a",
+          "renamed": "clearDecodedSpriteData"
         },
         {
           "start": 4758,
@@ -769794,7 +770661,7 @@
       "original": "ui.java",
       "renamed": "SolVictoryChecker.java",
       "inputSha256": "0a254280ba5263fd45e7a1ba3a37758f2f2a2a4640c41a461ebee5c449a71ccb",
-      "outputSha256": "a34d97a885c75a69ad57f03e937bddc5189de93fc9c50896adfb25499abe7a1c",
+      "outputSha256": "2b619303a243f3d561b8bf07b5b84f11df80e24b6c8aee002ca575e053c7fd16",
       "edits": [
         {
           "start": 50,
@@ -771370,6 +772237,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 18125,
+          "end": 18126,
+          "symbol": "M:pd.a(BJ)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeBase37DisplayName"
         },
         {
           "start": 18139,
@@ -799361,7 +800235,7 @@
       "original": "vl.java",
       "renamed": "SolMapGenerator.java",
       "inputSha256": "061dbfcb76bfc3c9d2bfed457d94cb3ceb11bea34bd294f6af818f2a4682c0b1",
-      "outputSha256": "b5344f57b40e628559d8385f6df51648e589894b0f8a0b3134df9e649aa09358",
+      "outputSha256": "ef2ef7deb7ee95367b76208346bfb6e3b306726dfd747a4a5e24a50492908756",
       "edits": [
         {
           "start": 71,
@@ -800020,6 +800894,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 7309,
+          "end": 7310,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 7333,
@@ -801155,7 +802036,7 @@
       "original": "vn.java",
       "renamed": "BattleSnapshot.java",
       "inputSha256": "da6f4f7540567e6af357d84bd91427010133ff6408158f92d710942a31a5ff46",
-      "outputSha256": "53cea9b106ad27ad0b3e1f1f0b129f741fc7783e9a87c2ad5b7c21d49ba35d62",
+      "outputSha256": "87c2a0c150df664c28d9ec06b5527bf91dba449e72e1205efa1ddabc2c196359",
       "edits": [
         {
           "start": 71,
@@ -801310,6 +802191,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 1197,
+          "end": 1198,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 1443,
@@ -801871,7 +802759,7 @@
       "original": "vp.java",
       "renamed": "TertiaryLinkNode.java",
       "inputSha256": "42f630c403b51c05c3f4d052e44371a561e2df2f704b8af7922163617b0735f3",
-      "outputSha256": "ff2e6a68e05573a7f57066ecae929587e7edb407390f50a54a0521f39b6628e4",
+      "outputSha256": "44e71440a3fa45c657914d53c4c2a23aa5d0e92b8e61b8a02505dc76d3f77b97",
       "edits": [
         {
           "start": 44,
@@ -801935,6 +802823,13 @@
           "symbol": "C:lk",
           "original": "lk",
           "renamed": "CheckboxWidget"
+        },
+        {
+          "start": 1038,
+          "end": 1039,
+          "symbol": "M:lk.a(I)V",
+          "original": "a",
+          "renamed": "beginCoverageScan"
         },
         {
           "start": 1139,
@@ -803100,7 +803995,7 @@
       "original": "w.java",
       "renamed": "Dialog.java",
       "inputSha256": "6042a3f10f29e620916ab0f4c99c0c93e073be6934598a175d993ec0a6af251c",
-      "outputSha256": "4dcacc4c35fe6a0a068b748d6bf40b4bf76bc40f211755daaae7b7bb77999550",
+      "outputSha256": "e3fee104e3a5e3eaa0a1728e4d23d4390636454b12ecfd13ab036275f01966ff",
       "edits": [
         {
           "start": 53,
@@ -803381,6 +804276,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "Star"
+        },
+        {
+          "start": 2679,
+          "end": 2680,
+          "symbol": "M:ln.f(B)V",
+          "original": "f",
+          "renamed": "popRasterState"
         },
         {
           "start": 2702,
@@ -810397,10 +811299,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "0103bee68aafd40245d27eb1a7c7cf53954945a79dabbfc967ec924bf7b37080",
+    "rulesSha256": "e9171498318be07c65faf7824e0cb6fa511a555fd096994e3027a148b274b045",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "70986de63d7be1754c2d7e97e1dee8b17e49feb93c1f06e3fed3a1f954c4a831",
+    "outputTreeSha256": "e567a38e3b9155aafd328ac0aff74b6e7c97a7986ec4299e79bfdab7b78adb8f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -1441,7 +1441,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
         if (!TutorialAi.field_x ||
           !Wormhole.field_i) {
-          AnimatedPanel.a(VictoryChecker.a(30), (byte) 111);
+          AnimatedPanel.a(VictoryChecker.isCaretBlinkOn(30), (byte) 111);
         }
         if (FullscreenFocusCanvas.field_b > 0) {
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);

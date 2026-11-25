@@ -159,7 +159,7 @@ final class Star extends DualLinkNode {
         }
     }
 
-    final void a(Random param0, byte param1) {
+    final void chooseStarType(Random param0, byte param1) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -286,7 +286,7 @@ final class Star extends DualLinkNode {
         }
     }
 
-    final static void f(byte param0) {
+    final static void popRasterState(byte param0) {
         int var2 = -118 / ((3 - param0) / 49);
         RasterStateFrame var1 = (RasterStateFrame) (MenuTransitionSupport.field_b.pollLast(true));
         if (var1 == null) {

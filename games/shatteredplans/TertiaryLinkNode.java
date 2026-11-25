@@ -37,7 +37,7 @@ class TertiaryLinkNode extends DualLinkNode {
             TertiaryLinkNode.a((String) null, 69);
           }
           var2_int = 16711935 & param1;
-          CheckboxWidget.a(param0 ^ 27840);
+          CheckboxWidget.beginCoverageScan(param0 ^ 27840);
           var3 = param1 & 65280;
           while (true) {
             dupTemp$0 = CheckboxPainter.a((byte) -92);

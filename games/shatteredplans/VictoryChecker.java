@@ -17,7 +17,7 @@ abstract class VictoryChecker {
 
     abstract void readScores(PacketBuffer param0, byte param1);
 
-    final static boolean a(int param0) {
+    final static boolean isCaretBlinkOn(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 19) {
           field_e = 28;
@@ -166,14 +166,14 @@ abstract class VictoryChecker {
     final Player[] getWinners(byte param0) {
         if (param0 != -23) {
           byte[] var3 = (byte[]) null;
-          VictoryChecker.a(-73, (byte[]) null, -98);
+          VictoryChecker.crc32(-73, (byte[]) null, -98);
         }
         return this.field_g;
     }
 
     abstract void showResults(byte param0, GameState param1, GameScreen param2);
 
-    final static int a(int param0, byte[] param1, int param2) {
+    final static int crc32(int param0, byte[] param1, int param2) {
         RuntimeException var3 = null;
         byte[] var4 = null;
         int stackIn_3_0 = 0;
@@ -184,7 +184,7 @@ abstract class VictoryChecker {
         try {
           if (param0 < 50) {
             var4 = (byte[]) null;
-            VictoryChecker.a(-118, (byte[]) null, -21);
+            VictoryChecker.crc32(-118, (byte[]) null, -21);
           }
           stackIn_3_0 = RasterTargetSupport.crc32(param2, param1, (byte) -53, 0);
           return stackIn_3_0;

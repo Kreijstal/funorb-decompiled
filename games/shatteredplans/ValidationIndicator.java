@@ -233,7 +233,7 @@ final class ValidationIndicator extends FocusableWidget {
           IntValueWriteRequest.pushSpriteRaster((byte) -107, SoundEffectSupport.field_e);
         }
         var14.drawRotatedAbout(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
-        Star.f((byte) -94);
+        Star.popRasterState((byte) -94);
         SoundEffectSupport.field_e.drawAdditive(var5 - var14.field_o, -var14.field_p + var6, 256);
         return;
     }

@@ -444,7 +444,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
             }
           }
           this.baseStyle.paintStyle(param1, true, param0, param3, this);
-          Star.f((byte) 124);
+          Star.popRasterState((byte) 124);
           if (param4 != 12) {
             var10 = (Sprite) null;
             this.setAllStateOverlaySprite(100, (Sprite) null);

@@ -296,7 +296,7 @@ final class ObjectList {
               }
               var19 = var19 + UniformNineSliceFactory.field_c;
             }
-            var23 = ArchiveSource.a(var12.field_Eb, (byte) -87, var20);
+            var23 = ArchiveSource.formatLobbyPlayerStatus(var12.field_Eb, (byte) -87, var20);
             var24 = var23;
             var30 = var24;
             var25 = var30;

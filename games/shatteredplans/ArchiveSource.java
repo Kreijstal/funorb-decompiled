@@ -21,7 +21,7 @@ abstract class ArchiveSource {
         return param1 & 255;
     }
 
-    final static String a(int param0, byte param1, String param2) {
+    final static String formatLobbyPlayerStatus(int param0, byte param1, String param2) {
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -103,10 +103,10 @@ abstract class ArchiveSource {
         }
     }
 
-    final static void b(int param0) {
+    final static void advanceIntroLogoFrame(int param0) {
         if (param0 > -63) {
           String var2 = (String) null;
-          ArchiveSource.a(-68, (byte) 83, (String) null);
+          ArchiveSource.formatLobbyPlayerStatus(-68, (byte) 83, (String) null);
           if (LobbyOptionSupport.field_j == -ClientContextMenuSupport.field_c + 0) {
             LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
             return;

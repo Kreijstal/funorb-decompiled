@@ -54,7 +54,7 @@ final class StripedProgressWidget extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var8 + this.field_H, var7, this.field_H, var13Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_H + var8, var7, this.field_H, var13Lifetime1);
         }
-        Star.f((byte) 111);
+        Star.popRasterState((byte) 111);
         return var15;
     }
 
@@ -144,13 +144,13 @@ final class StripedProgressWidget extends UiWidget {
           for (var6 = -this.field_P + param2; var5_int > var6; var6 = var6 + param0.field_z) {
             param0.draw(var6, param1);
           }
-          Star.f((byte) -64);
+          Star.popRasterState((byte) -64);
           if (SoftwareRasterizer.field_i <= param2 + this.field_R.field_z) {
             IntValueWriteRequest.pushSpriteRaster((byte) -90, this.field_S);
             param0.draw(-this.field_P, 0);
             param0.draw(-this.field_P + this.field_H * 2, 0);
             this.field_N.drawMultiply(0, 0);
-            Star.f((byte) -91);
+            Star.popRasterState((byte) -91);
             this.field_S.draw(param2, param1);
           }
           if (SoftwareRasterizer.field_l >= -this.field_R.field_z + var5_int) {
@@ -160,7 +160,7 @@ final class StripedProgressWidget extends UiWidget {
             param0.draw(-var7, 0);
             param0.draw(this.field_H * 2 - var7, 0);
             this.field_R.drawMultiply(0, 0);
-            Star.f((byte) 111);
+            Star.popRasterState((byte) 111);
             this.field_S.draw(-this.field_R.field_z + var5_int, param1);
             return;
           }
@@ -224,7 +224,7 @@ final class StripedProgressWidget extends UiWidget {
         if (this.field_y < 65536) {
           BufferedSocket.pushIntersectedClip(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
           this.a(this.field_z[1], var6, var5, -1);
-          Star.f((byte) -78);
+          Star.popRasterState((byte) -78);
         }
     }
 
@@ -276,7 +276,7 @@ final class StripedProgressWidget extends UiWidget {
             SoftwareRasterizer.setPixel(var6, var5, var9 << 8 | var9 | var9 << 16);
           }
         }
-        Star.f((byte) 110);
+        Star.popRasterState((byte) 110);
         return var3;
     }
 

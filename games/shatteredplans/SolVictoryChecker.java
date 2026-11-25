@@ -507,7 +507,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 }
               } else {
                 try {
-                  BrowserJavaScriptBridge.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{TertiaryListSequence.a((byte) -67, TertiaryListSequence.field_l)}, -116);
+                  BrowserJavaScriptBridge.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{TertiaryListSequence.decodeBase37DisplayName((byte) -67, TertiaryListSequence.field_l)}, -116);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

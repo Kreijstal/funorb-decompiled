@@ -168,7 +168,7 @@ class FocusableWidget extends UiWidget {
         var2Lifetime3 = -38 % ((param0 + 84) / 33);
     }
 
-    final static void f(byte param0) {
+    final static void clearIntroTextLines(byte param0) {
         if (null != DirectByteArrayStorage.field_h) {
           DirectByteArrayStorage.field_h.clear(0);
         }
@@ -178,7 +178,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    final static void a(int param0, long param1, String param2) {
+    final static void openPrivateChatInput(int param0, long param1, String param2) {
         CharSequence var5 = null;
         if (param0 >= -41) {
           return;
@@ -269,7 +269,7 @@ class FocusableWidget extends UiWidget {
     public static void clearStatics(boolean param0) {
         field_C = null;
         if (!param0) {
-          FocusableWidget.f((byte) -56);
+          FocusableWidget.clearIntroTextLines((byte) -56);
         }
     }
 

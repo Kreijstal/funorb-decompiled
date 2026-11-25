@@ -62,7 +62,7 @@ final class OpacityWidget extends SingleChildWidget {
           var6 = new Sprite(this.field_z.field_x, this.field_z.field_n);
           IntValueWriteRequest.pushSpriteRaster((byte) 114, var6);
           this.field_z.drawLayer(param0, param1, 0, 0);
-          Star.f((byte) -78);
+          Star.popRasterState((byte) -78);
           var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.alpha);
           return;
         }

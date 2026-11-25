@@ -59,7 +59,7 @@ final class SecondaryNodeHashTable {
             field_f = (Sprite) null;
           }
           var2 = new CoverageBitmapFont(param1, StatusMessagePanel.field_H, SocialListSetupSupport.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, ProgressDialog.field_fb, IntroTextLine.field_q);
-          TertiaryListSequence.a(param0 - 15);
+          TertiaryListSequence.clearDecodedSpriteData(param0 - 15);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

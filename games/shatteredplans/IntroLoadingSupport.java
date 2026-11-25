@@ -24,7 +24,7 @@ final class IntroLoadingSupport {
         AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, -128 + (FleetTrailPoint.field_m << 1), -GraphicsSettings.field_d[1].field_z + 640 >> 1, GraphicsSettings.field_d[1], var1 + GraphicsSettings.field_d[1].field_w, 256);
         if (!EmailValidator.field_r) {
           var2 = DerelictVictoryChecker.field_n.getGroupProgressByName("intro", (byte) 53);
-          AttackTask.a((byte) 73, 455, 15, 16711680, 10, var2, 100);
+          AttackTask.drawLoadingProgressBar((byte) 73, 455, 15, 16711680, 10, var2, 100);
         }
         if (param0 <= -63) {
           return;

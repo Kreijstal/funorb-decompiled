@@ -647,7 +647,7 @@ abstract class GameClientShell extends GameApplet {
                 ChatAreaLayoutSupport.updateLoginUi(0, BattleExplosionVisual.field_o);
               }
             } else {
-              ArchiveSource.b(-82);
+              ArchiveSource.advanceIntroLogoFrame(-82);
             }
           }
         }

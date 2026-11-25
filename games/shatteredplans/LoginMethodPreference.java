@@ -62,7 +62,7 @@ final class LoginMethodPreference {
             field_c = (int[]) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_6_0 = DefensiveAi.a(var3, 2);
+          stackIn_6_0 = DefensiveAi.parseDecimalInteger(var3, 2);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

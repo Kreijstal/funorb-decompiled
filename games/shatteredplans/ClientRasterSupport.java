@@ -20,7 +20,7 @@ final class ClientRasterSupport {
         TutorialTextSupport.setPendingUiAction((byte) -127, 4);
     }
 
-    final static void setClientStatusText(String param0, byte param1) {
+    final static void setRequestedDisplayName(String param0, byte param1) {
         try {
           DraggableWidget.field_H = param0;
           int var2_int = 81 % ((param1 - 0) / 43);

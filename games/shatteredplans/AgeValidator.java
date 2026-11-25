@@ -210,7 +210,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = DefensiveAi.a(var5, param0 + 11198);
+          var3_int = DefensiveAi.parseDecimalInteger(var5, param0 + 11198);
           if (0 < var3_int &&
             130 >= var3_int) {
             stackIn_12_0 = CachedArchiveSource.field_g;

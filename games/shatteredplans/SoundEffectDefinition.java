@@ -92,7 +92,7 @@ final class SoundEffectDefinition {
         NameSuggestionsPanel.field_L = 0;
         MusicTrack var2 = (MusicTrack) null;
         QuickChatCategoryRegistry.transitionMusicTrack(32767, (MusicTrack) null, true, 50);
-        FocusableWidget.f((byte) -123);
+        FocusableWidget.clearIntroTextLines((byte) -123);
     }
 
     final static int randomBelow(byte param0, int param1, Random param2) {

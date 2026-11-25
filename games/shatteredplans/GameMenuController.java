@@ -1937,7 +1937,7 @@ final class GameMenuController {
               if (var5 == 0) {
                 stackIn_24_0 = DiplomacyNotice.field_k;
               } else {
-                stackIn_24_0 = DerelictMapReader.a(var6, -106);
+                stackIn_24_0 = DerelictMapReader.getAchievementGlowSprite(var6, -106);
               }
               var8Lifetime2 = stackIn_24_0;
               if (var5 == 0) {
@@ -2006,7 +2006,7 @@ final class GameMenuController {
           var8Lifetime1 = DiplomacyNotice.field_k;
         } else {
           var7 = CellVertex.field_j[var6];
-          var8Lifetime1 = DerelictMapReader.a(var6, -94);
+          var8Lifetime1 = DerelictMapReader.getAchievementGlowSprite(var6, -94);
         }
         RandomAccessCacheFile.pushLegacyRasterState(-106);
         DisplayModeInfo.field_h.bindAsRenderTarget();

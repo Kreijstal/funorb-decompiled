@@ -133,7 +133,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             var3 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9);
           }
-          TertiaryListSequence.a(0);
+          TertiaryListSequence.clearDecodedSpriteData(0);
           return (Sprite) (var3);
         }
         MouseInputHandler.a(79);
@@ -154,7 +154,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9Lifetime1);
         }
-        TertiaryListSequence.a(0);
+        TertiaryListSequence.clearDecodedSpriteData(0);
         return (Sprite) (var3Lifetime1);
     }
 

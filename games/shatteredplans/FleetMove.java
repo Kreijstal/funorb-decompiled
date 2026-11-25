@@ -29,7 +29,7 @@ final class FleetMove extends QuaternaryLinkNode {
         }
     }
 
-    final static MenuWindow d(int param0, int param1) {
+    final static MenuWindow createDiplomacyWindow(int param0, int param1) {
         ServerIntArrayRequest.field_n = new MenuWindow(420, 60, 200, param0 + ClientException.field_a * param1, DropTargetWidget.field_B.toUpperCase());
         MenuButton var2 = new MenuButton(-16 + (ServerIntArrayRequest.field_n.field_k + 200), 2 + ServerIntArrayRequest.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var2.field_h = ServerIntArrayRequest.field_n;

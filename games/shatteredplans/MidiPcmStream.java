@@ -263,7 +263,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.key;
             var12 = (MusicPatch) (this.field_Q.get((long)var9, -25064));
             if (var12 == null) {
-              var13 = CombinedTerritory.a(param0, (byte) 125, var9);
+              var13 = CombinedTerritory.loadMusicPatch(param0, (byte) 125, var9);
               if (var13 != null) {
                 this.field_Q.put(var13, 87, (long)var9);
                 if (!var13.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {

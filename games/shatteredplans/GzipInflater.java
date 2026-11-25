@@ -189,7 +189,7 @@ final class GzipInflater {
         }
         try {
           UsernameAvailabilityValidator.a(param0 ^ -2, LoginMethodPreference.field_c, 8);
-          if (!AttackTask.d((byte) 104)) {
+          if (!AttackTask.isGuestOrNonMember((byte) 104)) {
             UsernameAvailabilityValidator.a(-1, IterableNodeHashTable.field_h, 1);
             UsernameAvailabilityValidator.a(-1, SecondaryNodeDeque.field_b, 2);
             UsernameAvailabilityValidator.a(param0 ^ -2, ChatPanelLayoutSupport.field_e, 3);

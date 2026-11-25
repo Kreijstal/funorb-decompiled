@@ -2520,7 +2520,7 @@ final class GameState {
           }
           param0.field_i.clear(0);
           if (param0.field_m != null) {
-            param0.field_m.k(0);
+            param0.field_m.resetProduction(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

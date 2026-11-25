@@ -465,7 +465,7 @@ final class GameScreen {
             return;
           }
           if (param0.equalsIgnoreCase("capture1")) {
-            var2_intLifetime1 = DefensiveAi.a((CharSequence) ((Object) param0.substring(9)), 2);
+            var2_intLifetime1 = DefensiveAi.parseDecimalInteger((CharSequence) ((Object) param0.substring(9)), 2);
             SpriteResourceSupport.field_d = TextReplacementEntry.field_a.field_P.field_g.field_e[var2_intLifetime1];
             PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
             return;
@@ -2671,7 +2671,7 @@ final class GameScreen {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_s.field_W) {
-            DefensiveAi.j(param0 ^ -25141);
+            DefensiveAi.recordTutorialEnterKey(param0 ^ -25141);
           }
           if (TextReplacementEntry.field_j == 84) {
             this.field_s.field_z.endReplay(param0 - 18640);
@@ -5074,7 +5074,7 @@ final class GameScreen {
             this.field_j = ProjectsWindowSupport.createProjectsWindow((byte) 127);
             this.field_y.addLast((byte) -113, this.field_j);
           }
-          this.field_J = FleetMove.d(28, this.field_s.field_P.field_r);
+          this.field_J = FleetMove.createDiplomacyWindow(28, this.field_s.field_P.field_r);
           this.buildDiplomacyPanel(6);
           this.field_y.addLast((byte) -113, this.field_J);
           this.field_cb = DisplayModeInfo.a(this.field_s.field_P.field_r, -1);

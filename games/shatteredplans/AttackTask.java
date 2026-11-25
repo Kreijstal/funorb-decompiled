@@ -218,10 +218,10 @@ final class AttackTask extends AiTask {
         }
     }
 
-    final static boolean d(byte param0) {
+    final static boolean isGuestOrNonMember(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 < 95) {
-          AttackTask.d((byte) -4);
+          AttackTask.isGuestOrNonMember((byte) -4);
         }
         stackIn_7_0 = (Dialog.d(true)) || !(0 < StarAnnotation.field_m);
         return stackIn_7_0;
@@ -231,12 +231,12 @@ final class AttackTask extends AiTask {
         field_s = null;
         field_q = null;
         if (param0 > -53) {
-          AttackTask.d((byte) 123);
+          AttackTask.isGuestOrNonMember((byte) 123);
         }
         field_r = null;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawLoadingProgressBar(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var18 = 0;

@@ -124,7 +124,7 @@ final class HorizontalGradientComponent extends MenuComponent {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var2 = new BinaryBitmapFont(param0, StatusMessagePanel.field_H, SocialListSetupSupport.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, IntroTextLine.field_q);
-          TertiaryListSequence.a(param1 ^ param1);
+          TertiaryListSequence.clearDecodedSpriteData(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -6,7 +6,7 @@ final class CombinedTerritory extends Territory {
     static String field_A;
     static int field_B;
 
-    final void k(int param0) {
+    final void resetProduction(int param0) {
         this.field_u = new int[4];
         this.field_r = param0;
         this.field_x = 0;
@@ -14,7 +14,7 @@ final class CombinedTerritory extends Territory {
         this.field_w = new int[4];
     }
 
-    final static MusicPatch a(Archive param0, byte param1, int param2) {
+    final static MusicPatch loadMusicPatch(Archive param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -54,7 +54,7 @@ final class CombinedTerritory extends Territory {
           return (Star) (this.field_z.startForward(-127));
         }
         Archive var3 = (Archive) null;
-        CombinedTerritory.a((Archive) null, (byte) -92, -64);
+        CombinedTerritory.loadMusicPatch((Archive) null, (byte) -92, -64);
         return (Star) (this.field_z.startForward(-127));
     }
 

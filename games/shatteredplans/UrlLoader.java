@@ -181,7 +181,7 @@ final class UrlLoader implements Runnable {
           }
           AllianceExpiredEvent.field_h.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
-          Star.f((byte) -70);
+          Star.popRasterState((byte) -70);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
         }
