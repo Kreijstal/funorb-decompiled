@@ -739,7 +739,7 @@ final class BufferedCacheFile {
         try {
           var5_int = RecklessAi.bitLength(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
-          ValidationMessageWidget.g((byte) 111);
+          ValidationMessageWidget.clearFaceDepthBucketCounts((byte) 111);
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
@@ -891,7 +891,7 @@ final class BufferedCacheFile {
         try {
           var5_int = RecklessAi.bitLength(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
-          ValidationMessageWidget.g((byte) 111);
+          ValidationMessageWidget.clearFaceDepthBucketCounts((byte) 111);
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {

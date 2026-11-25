@@ -104,7 +104,7 @@ final class MenuButton extends MenuComponent {
         RuntimeException var20 = null;
         try {
           StrongCacheEntry.a((byte) -52, param17, param10, param15, param8);
-          IndexedSpriteState.a(27770, param8);
+          IndexedSpriteState.initializeSocialListPanels(27770, param8);
           if (param16 > -113) {
             MenuButton.clearStatics(125);
           }

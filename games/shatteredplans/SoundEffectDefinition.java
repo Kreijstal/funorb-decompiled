@@ -32,7 +32,7 @@ final class SoundEffectDefinition {
           if (param0 != 0) {
             SoundEffectDefinition.handleOverlayInput(-33, 11, -33, 82);
           }
-          if (DefendTask.d(97)) {
+          if (DefendTask.handleSocialNameInput(97)) {
             return true;
           }
           if (ListContent.a(4, param1, param3, param2)) {
@@ -48,7 +48,7 @@ final class SoundEffectDefinition {
           if (param0 != 0) {
             SoundEffectDefinition.handleOverlayInput(-33, 11, -33, 82);
           }
-          if (DefendTask.d(97)) {
+          if (DefendTask.handleSocialNameInput(97)) {
             return true;
           }
           if (ListContent.a(4, param1, param3, param2)) {
@@ -62,7 +62,7 @@ final class SoundEffectDefinition {
           return true;
         }
         if (param0 == 0) {
-          if (DefendTask.d(97)) {
+          if (DefendTask.handleSocialNameInput(97)) {
             return true;
           }
           if (ListContent.a(4, param1, param3, param2)) {
@@ -71,7 +71,7 @@ final class SoundEffectDefinition {
           return false;
         }
         SoundEffectDefinition.handleOverlayInput(-33, 11, -33, 82);
-        if (DefendTask.d(97)) {
+        if (DefendTask.handleSocialNameInput(97)) {
           return true;
         }
         if (!ListContent.a(4, param1, param3, param2)) {

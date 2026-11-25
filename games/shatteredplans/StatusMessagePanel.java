@@ -78,7 +78,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
               } else {
                 PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
                 if (null != PlayerEliminatedEvent.field_h) {
-                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.x + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.y + LobbyRoomControlsSupport.field_b, -30872);
+                  PlayerEliminatedEvent.field_h.onPointerClick(-PlayerEliminatedEvent.field_h.x + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.y + LobbyRoomControlsSupport.field_b, -30872);
                 }
               }
               BattleSnapshot.field_s = null;
@@ -93,7 +93,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
                 }
               }
               if (ContentDialog.field_bb != null) {
-                ContentDialog.field_bb.c(LobbyRoomControlsSupport.field_b - ContentDialog.field_bb.y, 2, -ContentDialog.field_bb.x + TertiaryListSequence.field_k);
+                ContentDialog.field_bb.onPointerDrag(LobbyRoomControlsSupport.field_b - ContentDialog.field_bb.y, 2, -ContentDialog.field_bb.x + TertiaryListSequence.field_k);
               }
             }
           } else {

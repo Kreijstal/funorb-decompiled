@@ -1949,7 +1949,7 @@ final class GameMenuController {
               var9_ref_biLifetime1 = var30;
               var10_ref_bi = new Sprite(48, 48);
               RasterTargetSupport.pushSpriteRenderTarget(var10_ref_bi, 112);
-              var30.c(0, 0, 48, 48);
+              var30.drawDownscaledAreaAveraged(0, 0, 48, 48);
               OpacityWidget.popLegacyRasterState(0);
               var8Lifetime2.drawScaledAdditive(var4 - 32, var3 - 32, 96, 96, var7_int << 1);
               var10_ref_bi.drawAdditive(var4 - 8, -8 + var3, 256);
@@ -2092,10 +2092,10 @@ final class GameMenuController {
               }
               var25 = var20Lifetime1 + var24 - 24;
               for (var26 = 0; var22Lifetime1 > var26; var26++) {
-                IntHashIndex.field_b.c(var2Lifetime2 + 10, var23Lifetime1 + (var26 * (var25 - var23Lifetime1) / (var22Lifetime1 - 1) - 16), 32, 32);
+                IntHashIndex.field_b.drawDownscaledAreaAveraged(var2Lifetime2 + 10, var23Lifetime1 + (var26 * (var25 - var23Lifetime1) / (var22Lifetime1 - 1) - 16), 32, 32);
               }
             } else {
-              IntHashIndex.field_b.c(10 + var2Lifetime2, var20Lifetime1 + ((var21 >> 1) - 16), 32, 32);
+              IntHashIndex.field_b.drawDownscaledAreaAveraged(10 + var2Lifetime2, var20Lifetime1 + ((var21 >> 1) - 16), 32, 32);
             }
           }
         }

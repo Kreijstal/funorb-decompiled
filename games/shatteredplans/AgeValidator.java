@@ -55,7 +55,7 @@ final class AgeValidator extends TextFieldValidator {
           SpriteResourceSupport.setSharedWidgetMetrics(param20, param5, param3 + 26883, param10, param7);
           BattleEvent.setUiCenter(param2, param8, param3);
           ChatAreaLayoutSupport.configureQuickChatRows(-4440, param19, param13, param14, param9, param12);
-          StatusContent.a(param4, param15, param1, (byte) 106);
+          StatusContent.checkPainterConfigurationGuard(param4, param15, param1, (byte) 106);
           StatefulWidgetTheme.setMenuTextColours(param0, param18, false, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

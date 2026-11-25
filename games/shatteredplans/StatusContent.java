@@ -35,18 +35,18 @@ final class StatusContent implements MenuContent {
         return new String(var6);
     }
 
-    final static void a(int param0, TiledNineSlicePainter param1, int param2, byte param3) {
+    final static void checkPainterConfigurationGuard(int param0, TiledNineSlicePainter param1, int param2, byte param3) {
         try {
           if (param3 <= 92) {
             TiledNineSlicePainter var5 = (TiledNineSlicePainter) null;
-            StatusContent.a(-96, (TiledNineSlicePainter) null, -95, (byte) -3);
+            StatusContent.checkPainterConfigurationGuard(-96, (TiledNineSlicePainter) null, -95, (byte) -3);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static void a(IntrusiveDeque param0, int param1) {
+    final static void removeEmptyCandidateLinks(IntrusiveDeque param0, int param1) {
         CandidateLink var2 = null;
         int var3 = 0;
         RuntimeException stackIn_12_0 = null;

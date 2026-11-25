@@ -12,7 +12,7 @@ abstract class IndexedSpriteState {
     static QuickChatHelpPanel field_h;
     static long field_e;
 
-    final static void a(int param0, Archive param1) {
+    final static void initializeSocialListPanels(int param0, Archive param1) {
         AnimatedPanel var5 = null;
         AnimatedPanel var6 = null;
         AnimatedPanel var3 = null;
@@ -48,7 +48,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutAnimatedChatPanel(int param0) {
         int var1 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = 30 / ((param0 - 69) / 54);
         int var2 = var1 - LabeledChildWidget.field_J * LabeledChildWidget.field_J;
@@ -61,7 +61,7 @@ abstract class IndexedSpriteState {
         field_f = null;
         if (param0 != 1) {
           Archive var2 = (Archive) null;
-          IndexedSpriteState.a(30, (Archive) null);
+          IndexedSpriteState.initializeSocialListPanels(30, (Archive) null);
           field_h = null;
           return;
         }

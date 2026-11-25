@@ -263,7 +263,7 @@ final class GalaxyMap {
           var5 = this.field_e;
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
-            FilledMenuPanel.a(2232, param2, var7.name);
+            FilledMenuPanel.writeByteLengthString(2232, param2, var7.name);
             param2.writeShort(var7.field_A, param0 ^ -170);
             param2.writeShort(var7.field_S, 255);
             param2.writeByte(var7.field_z, (byte) -92);

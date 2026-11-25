@@ -268,12 +268,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           if (2 == TextReplacementEntry.field_a.field_P.field_g.field_e.length) {
             if (QuickChatHelpSupport.field_d == TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_y) {
               if (SocketArchiveNetworkClient.markTutorialEventSeen("combatSuccess", -116)) {
-                DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatSuccess", -21502));
+                DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("combatSuccess", -21502));
                 if (var5 != 0) {
                   var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
                     SocketArchiveNetworkClient.markTutorialEventSeen("combatFailed", -116)) {
-                    DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
+                    DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
                   }
                 }
               }
@@ -281,7 +281,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
                 SocketArchiveNetworkClient.markTutorialEventSeen("combatFailed", -116)) {
-                DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
+                DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
               }
             }
             var1Lifetime1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
@@ -292,7 +292,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           }
           if (TextReplacementEntry.field_a.field_P.field_z &&
             TextReplacementEntry.field_a.field_P.field_k != QuickChatHelpSupport.field_d.field_x) {
-            DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
+            DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
           }
           var1_array = TextReplacementEntry.field_a.field_P.field_g.field_e;
           var2 = 0;

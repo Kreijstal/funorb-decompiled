@@ -88,7 +88,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (LabeledChildWidget.field_J <= 0) {
             return;
           }
-          IndexedSpriteState.a(127);
+          IndexedSpriteState.layoutAnimatedChatPanel(127);
           DateValidationSupport.field_c.a(param3, -20429);
           if (null != RasterSpanFactory.field_c) {
             if (LoginMethodPreference.field_g) {

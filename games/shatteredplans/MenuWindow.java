@@ -224,7 +224,7 @@ final class MenuWindow extends MenuComponent {
           DerelictMapGenerator.field_m = BattleExplosionVisual.field_q.field_d;
         }
         if (!(LabeledChildWidget.field_J <= 0)) {
-          IndexedSpriteState.a(125);
+          IndexedSpriteState.layoutAnimatedChatPanel(125);
         }
         if (param0 < 57) {
           field_B = (String) null;

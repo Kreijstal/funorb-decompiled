@@ -40,13 +40,13 @@ final class StatefulWidgetTheme extends WidgetTheme {
             return QuickChatPhraseDefinition.handleQuickChatKey(param1 ^ 9952, param0, param3);
           }
           if (TextReplacementEntry.field_j == 80 &&
-            FilledMenuPanel.d((byte) 108)) {
+            FilledMenuPanel.isFreeChatAllowed((byte) 108)) {
             MeshData.field_h = true;
             return true;
           }
           return false;
         }
-        if (!FilledMenuPanel.d((byte) -97)) {
+        if (!FilledMenuPanel.isFreeChatAllowed((byte) -97)) {
           return false;
         }
         int var4 = ByteArrayStorage.a(param0, param2, false) ? 1 : 0;

@@ -13,7 +13,7 @@ final class DefendTask extends AiTask {
     static boolean[] field_t;
     static boolean[] field_q;
 
-    final static void a(int param0, TutorialScene param1) {
+    final static void pushTutorialScene(int param0, TutorialScene param1) {
         TutorialScene var3 = null;
         TutorialScene var2 = null;
         int fieldTemp$0 = 0;
@@ -128,7 +128,7 @@ final class DefendTask extends AiTask {
         field_v = null;
     }
 
-    final static boolean d(int param0) {
+    final static boolean handleSocialNameInput(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 15) {
           return true;

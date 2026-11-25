@@ -919,7 +919,7 @@ final class MapView extends MapViewState {
             }
             var30 = stackIn_6_0;
             var11 = var30;
-            var30.c(-1 + var9, -1 + var10, var8, var8);
+            var30.drawDownscaledAreaAveraged(-1 + var9, -1 + var10, var8, var8);
             if (var4.field_j != null) {
               stackIn_9_0 = var4.field_j.field_o;
             } else {

@@ -4732,6 +4732,14 @@
       "renamedSymbol": "M:HitRegion.clearStatics(B)V"
     },
     {
+      "symbol": "M:a.a(I)Lqr;",
+      "originalName": "a",
+      "to": "getLobbyRoomListContent",
+      "evidence": "Return the retained lobby room ScrollPane content panel. Lobby setup and room-entry consumer excerpts read. Preserve original panel identity,null failures and wrong-guard static cleanup before the same getter path. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HitRegion.getLobbyRoomListContent(I)LAnimatedPanel;"
+    },
+    {
       "symbol": "M:a.a(II)I",
       "originalName": "a",
       "to": "signedBitLength",
@@ -4754,6 +4762,22 @@
       "evidence": "Returns this hit region when containsPoint succeeds, otherwise null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:HitRegion.hitTest(III)LHitRegion;"
+    },
+    {
+      "symbol": "M:a.c(III)V",
+      "originalName": "c",
+      "to": "onPointerDrag",
+      "evidence": "Pointer-drag hook called with relative coordinates after drag detection in complete panel pointer updater. Current valid-guard path is a no-op;wrong middle guard assigns y109. Preserve unused coordinate arguments,descriptor/final modifier and exact guard behavior;do not add movement. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HitRegion.onPointerDrag(III)V"
+    },
+    {
+      "symbol": "M:a.d(III)V",
+      "originalName": "d",
+      "to": "onPointerClick",
+      "evidence": "Pointer-click hook called with relative coordinates on release when dragging has not suppressed the click. Complete pointer updater read. Current valid-guard path is a no-op;wrong final guard assigns height-77. Preserve all int inputs and current inert behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HitRegion.onPointerClick(III)V"
     },
     {
       "symbol": "M:aa.a(B)V",
@@ -4860,6 +4884,22 @@
       "renamedSymbol": "M:AccountValidationText.clearStatics(B)V"
     },
     {
+      "symbol": "M:ac.a(ILsq;)V",
+      "originalName": "a",
+      "to": "pushTutorialScene",
+      "evidence": "Push current tutorial continuation,choosing current scene or its next scene from current flag,then call original target setter for supplied scene. Complete target setter,transition consumer and event callers read. Preserve guard!=1early return,conditional null push,counter increment before array write,stack bounds/partial state and target setter refusal behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DefendTask.pushTutorialScene(ILTutorialScene;)V"
+    },
+    {
+      "symbol": "M:ac.d(I)Z",
+      "originalName": "d",
+      "to": "handleSocialNameInput",
+      "evidence": "If retained social-name input panel exists,forward current key to handleNameKey and return its result;otherwise false. Complete317line name editor and overlay dispatcher read. Preserve int<15true without panel access,short circuit,byte guard and editor side effects. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DefendTask.handleSocialNameInput(I)Z"
+    },
+    {
       "symbol": "M:ac.e(I)V",
       "originalName": "e",
       "to": "clearStatics",
@@ -4882,6 +4922,22 @@
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:StatusContent.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ad.a(ILv;IB)V",
+      "originalName": "a",
+      "to": "checkPainterConfigurationGuard",
+      "evidence": "Retain existing UI configuration guard hook:normal byte>92path has no effect;other bytes recurse with fixed invalid arguments. Complete configureSharedUiResources caller read. Preserve all unused arguments,recursive failure and RuntimeException wrapping;do not invent missing painter or metric assignments. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V"
+    },
+    {
+      "symbol": "M:ad.a(Lpf;I)V",
+      "originalName": "a",
+      "to": "removeEmptyCandidateLinks",
+      "evidence": "Traverse supplied CandidateLink deque and unlink entries whose upper float bound is<=lower bound. Candidate constructors and StarLinkPlanner caller windows read. Preserve IEEE NaN/signed-zero comparisons,iterator state,unlink timing,wrong-int caption clear and wrapping. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V"
     },
     {
       "symbol": "M:ae.a(B)V",
@@ -4978,6 +5034,22 @@
       "evidence": "Returns the tooltip string when the hover flag is set. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ValidationMessageWidget.getTooltip(Z)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:ah.g(B)V",
+      "originalName": "g",
+      "to": "clearFaceDepthBucketCounts",
+      "evidence": "Zero retained1024entry face-depth bucket counter array using original eight-write unrolled loop. Complete mesh face-bucketing consumer and array initializer read. Preserve captured array identity,byte-derived modulo before length/read/writes,partial writes on non-multiple-of8arrays and wrapper failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V"
+    },
+    {
+      "symbol": "M:ah.h(I)I",
+      "originalName": "h",
+      "to": "getMenuSpanHeight",
+      "evidence": "Return retained menu height computed from menu row count,spacing and text metrics. Height producer excerpt and complete centered menu panel helper read. Preserve unrestricted stored int and <=92caption clear before return. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationMessageWidget.getMenuSpanHeight(I)I"
     },
     {
       "symbol": "M:ah.i(I)V",
@@ -5468,6 +5540,22 @@
       "renamedSymbol": "M:PcmSampleStream.hasEnded()Z"
     },
     {
+      "symbol": "M:al.g(I)V",
+      "originalName": "g",
+      "to": "fadeOut",
+      "evidence": "Schedule PCM volume,left and right gains toward zero with original duration clamp and MIN_VALUEtarget sentinel,or immediately zero/unlink on original branches. Complete gain/target helpers and MIDI removal caller read. Preserve synchronized modifier,all signed duration/gain domains,overflow/division behavior,step write order and unlink timing. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.fadeOut(I)V"
+    },
+    {
+      "symbol": "M:al.h()Z",
+      "originalName": "h",
+      "to": "finishVolumeRamp",
+      "evidence": "After a mixing ramp segment,finish exact target gains or schedule signed unit-step corrections;return true only when fade sentinel reaches zero and stream unlinks. Complete forward/backward mixing segment callers and gain/target helpers read. Preserve private modifier,no new locking,target sentinel,correction duration minimum,overflow and partial field updates. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.finishVolumeRamp()Z"
+    },
+    {
       "symbol": "M:al.h(I)V",
       "originalName": "h",
       "to": "setPosition",
@@ -5844,6 +5932,14 @@
       "renamedSymbol": "M:FleetVisual.clearStatics(I)V"
     },
     {
+      "symbol": "M:as.a(IIILv;)V",
+      "originalName": "a",
+      "to": "setMenuPainterAndMetrics",
+      "evidence": "Retain shared menu painter and two metric values for styled menu configuration. Complete ScrollPane configuration wrapper and styled account menu consumer excerpt read. Preserve original field assignment order,nullable painter,argument permutation and late non20guard caption clear. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V"
+    },
+    {
       "symbol": "M:as.a(Lpf;IBI)Lvd;",
       "originalName": "a",
       "to": "findMenuComponentAt",
@@ -5858,6 +5954,22 @@
       "evidence": "Visibility/guard, square or rounded fill, packed color/alpha branches; preserve arithmetic right shift and original threshold. Complete additional override body read; same name across all13 menu implementations. Preserve descriptors/modifiers, dispatch and every clip/guard/overflow/read/call order. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FilledMenuPanel.drawComponent(I)V"
+    },
+    {
+      "symbol": "M:b.a(ILob;Ljava/lang/String;)V",
+      "originalName": "a",
+      "to": "writeByteLengthString",
+      "evidence": "Write byte length min255,UTF-16String length,then low byte of each included char to supplied packet. Galaxy serialization caller window read. Preserve bad-guard no-op before string access,UTF-16unit truncation without encoding conversion,prefix/body write order and partial cursor failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V"
+    },
+    {
+      "symbol": "M:b.d(B)Z",
+      "originalName": "d",
+      "to": "isFreeChatAllowed",
+      "evidence": "Return negation of retained server chat-restriction flag after original byte-derived modulo. Complete chat key dispatcher and restricted-text versus Quick Chat consumer excerpts read. Preserve packet-controlled flag semantics,full byte domain and arithmetic failure before flag read. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FilledMenuPanel.isFreeChatAllowed(B)Z"
     },
     {
       "symbol": "M:ba.a(I)V",
@@ -6452,6 +6564,14 @@
       "renamedSymbol": "M:Sprite.drawAdditive(III)V"
     },
     {
+      "symbol": "M:bi.c(IIII)V",
+      "originalName": "c",
+      "to": "drawDownscaledAreaAveraged",
+      "evidence": "Draw sprite using clipped destination cells and original16subpixel area-weighted RGB averages,substituting destination colour for transparent/uncovered source area. Complete144line body and map/achievement caller windows read. Preserve size rejection,arbitrary zero/negative dimensions,integer rounding/overflow,source offsets,zero-area destination cursor behavior,and output zero-to1substitution. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.drawDownscaledAreaAveraged(IIII)V"
+    },
+    {
       "symbol": "M:bi.c(IIIII)V",
       "originalName": "c",
       "to": "drawScaledAdditive",
@@ -6482,6 +6602,14 @@
       "evidence": "Tints the grey pixels with the red, green and blue of a colour argument.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.drawTinted(III)V"
+    },
+    {
+      "symbol": "M:bi.d(IIIII)V",
+      "originalName": "d",
+      "to": "writeBilinearPixel",
+      "evidence": "Sample up to four sprite texels with12bit coordinate fractions,discard transparent weights,then write weighted colour when coverage>=128. Rotation caller windows read. Preserve all original neighbor bounds/read order,weight truncation,128/256thresholds,normalization paths,integer overflow and zero-to1substitution;no background blend or bounds repair. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.writeBilinearPixel(IIIII)V"
     },
     {
       "symbol": "M:bi.e()V",
@@ -6716,6 +6844,14 @@
       "renamedSymbol": "M:ButtonListener.onButtonClicked(LFocusableWidget;IIII)V"
     },
     {
+      "symbol": "M:bq.a(I)V",
+      "originalName": "a",
+      "to": "layoutAnimatedChatPanel",
+      "evidence": "Compute original quadratic chat panel Yposition from retained transition age/duration and layout root plus Quick Chat menu. Complete chat update,closing tick,layout callers and setTarget helper read. Preserve squared int overflow,zero denominator behavior,guard division,640x120target and original call/argument order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSpriteState.layoutAnimatedChatPanel(I)V"
+    },
+    {
       "symbol": "M:bq.a(II)V",
       "originalName": "a",
       "to": "draw",
@@ -6730,6 +6866,14 @@
       "evidence": "Clips the indexed sprite bounds and calls blendPaletteRowsWithAlpha with the requested alpha. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IndexedSpriteState.drawAlpha(III)V"
+    },
+    {
+      "symbol": "M:bq.a(ILbc;)V",
+      "originalName": "a",
+      "to": "initializeSocialListPanels",
+      "evidence": "Load display-name-changed sprite,allocate retained friend/ignore SocialListPanels and surrounding widgets,install children,and copy retained row styles. Setup caller window read. Preserve sprite and widget aliases,allocation/global publication/child order,guard-derived child argument,late help clear and style write order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V"
     },
     {
       "symbol": "M:bq.b(I)V",
@@ -77156,7 +77300,7 @@
     },
     {
       "symbol": "L:ac.a(ILsq;)V#0",
-      "renamedSymbol": "L:DefendTask.a(ILTutorialScene;)V#0",
+      "renamedSymbol": "L:DefendTask.pushTutorialScene(ILTutorialScene;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -77167,7 +77311,7 @@
     },
     {
       "symbol": "L:ac.a(ILsq;)V#1",
-      "renamedSymbol": "L:DefendTask.a(ILTutorialScene;)V#1",
+      "renamedSymbol": "L:DefendTask.pushTutorialScene(ILTutorialScene;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -77178,7 +77322,7 @@
     },
     {
       "symbol": "L:ac.a(ILsq;)V#2",
-      "renamedSymbol": "L:DefendTask.a(ILTutorialScene;)V#2",
+      "renamedSymbol": "L:DefendTask.pushTutorialScene(ILTutorialScene;)V#2",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -77189,7 +77333,7 @@
     },
     {
       "symbol": "L:ac.a(ILsq;)V#3",
-      "renamedSymbol": "L:DefendTask.a(ILTutorialScene;)V#3",
+      "renamedSymbol": "L:DefendTask.pushTutorialScene(ILTutorialScene;)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -77200,7 +77344,7 @@
     },
     {
       "symbol": "L:ac.d(I)Z#0",
-      "renamedSymbol": "L:DefendTask.d(I)Z#0",
+      "renamedSymbol": "L:DefendTask.handleSocialNameInput(I)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -77266,7 +77410,7 @@
     },
     {
       "symbol": "L:ad.a(ILv;IB)V#0",
-      "renamedSymbol": "L:StatusContent.a(ILTiledNineSlicePainter;IB)V#0",
+      "renamedSymbol": "L:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -77277,7 +77421,7 @@
     },
     {
       "symbol": "L:ad.a(ILv;IB)V#1",
-      "renamedSymbol": "L:StatusContent.a(ILTiledNineSlicePainter;IB)V#1",
+      "renamedSymbol": "L:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -77288,7 +77432,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#0",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#0",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -77299,7 +77443,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#1",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#1",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -77310,7 +77454,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#2",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#2",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -77321,7 +77465,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#3",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#3",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -77332,7 +77476,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#4",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#4",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -77343,7 +77487,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#5",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#5",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -77354,7 +77498,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#6",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#6",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#6",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -77365,7 +77509,7 @@
     },
     {
       "symbol": "L:ad.a(Lpf;I)V#7",
-      "renamedSymbol": "L:StatusContent.a(LIntrusiveDeque;I)V#7",
+      "renamedSymbol": "L:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -78905,7 +79049,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#0",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#0",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -78916,7 +79060,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#1",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#1",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -78927,7 +79071,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#2",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#2",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -78938,7 +79082,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#3",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#3",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -78949,7 +79093,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#4",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#4",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -78960,7 +79104,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#5",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#5",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -78971,7 +79115,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#6",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#6",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -78982,7 +79126,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#7",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#7",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#7",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -78993,7 +79137,7 @@
     },
     {
       "symbol": "L:ah.g(B)V#8",
-      "renamedSymbol": "L:ValidationMessageWidget.g(B)V#8",
+      "renamedSymbol": "L:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -81710,7 +81854,7 @@
     },
     {
       "symbol": "L:al.g(I)V#0",
-      "renamedSymbol": "L:PcmSampleStream.g(I)V#0",
+      "renamedSymbol": "L:PcmSampleStream.fadeOut(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -81721,7 +81865,7 @@
     },
     {
       "symbol": "L:al.g(I)V#1",
-      "renamedSymbol": "L:PcmSampleStream.g(I)V#1",
+      "renamedSymbol": "L:PcmSampleStream.fadeOut(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -81732,7 +81876,7 @@
     },
     {
       "symbol": "L:al.h()Z#0",
-      "renamedSymbol": "L:PcmSampleStream.h()Z#0",
+      "renamedSymbol": "L:PcmSampleStream.finishVolumeRamp()Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -81743,7 +81887,7 @@
     },
     {
       "symbol": "L:al.h()Z#1",
-      "renamedSymbol": "L:PcmSampleStream.h()Z#1",
+      "renamedSymbol": "L:PcmSampleStream.finishVolumeRamp()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -81754,7 +81898,7 @@
     },
     {
       "symbol": "L:al.h()Z#2",
-      "renamedSymbol": "L:PcmSampleStream.h()Z#2",
+      "renamedSymbol": "L:PcmSampleStream.finishVolumeRamp()Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -83085,7 +83229,7 @@
     },
     {
       "symbol": "L:as.a(IIILv;)V#0",
-      "renamedSymbol": "L:FleetVisual.a(IIILTiledNineSlicePainter;)V#0",
+      "renamedSymbol": "L:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -83239,7 +83383,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#0",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#0",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -83250,7 +83394,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#1",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#1",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -83261,7 +83405,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#10",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#10",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -83272,7 +83416,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#2",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#2",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -83283,7 +83427,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#3",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#3",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -83294,7 +83438,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#4",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#4",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#4",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -83305,7 +83449,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#5",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#5",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#5",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -83316,7 +83460,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#6",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#6",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#6",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -83327,7 +83471,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#7",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#7",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#7",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -83338,7 +83482,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#8",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#8",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -83349,7 +83493,7 @@
     },
     {
       "symbol": "L:b.a(ILob;Ljava/lang/String;)V#9",
-      "renamedSymbol": "L:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#9",
+      "renamedSymbol": "L:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -83360,7 +83504,7 @@
     },
     {
       "symbol": "L:b.d(B)Z#0",
-      "renamedSymbol": "L:FilledMenuPanel.d(B)Z#0",
+      "renamedSymbol": "L:FilledMenuPanel.isFreeChatAllowed(B)Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -91082,7 +91226,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#0",
-      "renamedSymbol": "L:Sprite.c(IIII)V#0",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -91093,7 +91237,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#1",
-      "renamedSymbol": "L:Sprite.c(IIII)V#1",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -91104,7 +91248,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#10",
-      "renamedSymbol": "L:Sprite.c(IIII)V#10",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -91115,7 +91259,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#11",
-      "renamedSymbol": "L:Sprite.c(IIII)V#11",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -91126,7 +91270,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#12",
-      "renamedSymbol": "L:Sprite.c(IIII)V#12",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -91137,7 +91281,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#13",
-      "renamedSymbol": "L:Sprite.c(IIII)V#13",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -91148,7 +91292,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#14",
-      "renamedSymbol": "L:Sprite.c(IIII)V#14",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -91159,7 +91303,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#15",
-      "renamedSymbol": "L:Sprite.c(IIII)V#15",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -91170,7 +91314,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#16",
-      "renamedSymbol": "L:Sprite.c(IIII)V#16",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -91181,7 +91325,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#17",
-      "renamedSymbol": "L:Sprite.c(IIII)V#17",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#17",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -91192,7 +91336,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#18",
-      "renamedSymbol": "L:Sprite.c(IIII)V#18",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#18",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -91203,7 +91347,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#19",
-      "renamedSymbol": "L:Sprite.c(IIII)V#19",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#19",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -91214,7 +91358,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#2",
-      "renamedSymbol": "L:Sprite.c(IIII)V#2",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#2",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -91225,7 +91369,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#20",
-      "renamedSymbol": "L:Sprite.c(IIII)V#20",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#20",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -91236,7 +91380,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#21",
-      "renamedSymbol": "L:Sprite.c(IIII)V#21",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#21",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -91247,7 +91391,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#22",
-      "renamedSymbol": "L:Sprite.c(IIII)V#22",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#22",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -91258,7 +91402,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#23",
-      "renamedSymbol": "L:Sprite.c(IIII)V#23",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#23",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -91269,7 +91413,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#24",
-      "renamedSymbol": "L:Sprite.c(IIII)V#24",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#24",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -91280,7 +91424,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#25",
-      "renamedSymbol": "L:Sprite.c(IIII)V#25",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#25",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -91291,7 +91435,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#26",
-      "renamedSymbol": "L:Sprite.c(IIII)V#26",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#26",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -91302,7 +91446,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#27",
-      "renamedSymbol": "L:Sprite.c(IIII)V#27",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#27",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -91313,7 +91457,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#28",
-      "renamedSymbol": "L:Sprite.c(IIII)V#28",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#28",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -91324,7 +91468,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#29",
-      "renamedSymbol": "L:Sprite.c(IIII)V#29",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#29",
       "originalName": "var29Lifetime1",
       "renamedName": "var29Lifetime1",
       "declaration": {
@@ -91335,7 +91479,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#3",
-      "renamedSymbol": "L:Sprite.c(IIII)V#3",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -91346,7 +91490,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#30",
-      "renamedSymbol": "L:Sprite.c(IIII)V#30",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#30",
       "originalName": "var29Lifetime2",
       "renamedName": "var29Lifetime2",
       "declaration": {
@@ -91357,7 +91501,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#4",
-      "renamedSymbol": "L:Sprite.c(IIII)V#4",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -91368,7 +91512,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#5",
-      "renamedSymbol": "L:Sprite.c(IIII)V#5",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -91379,7 +91523,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#6",
-      "renamedSymbol": "L:Sprite.c(IIII)V#6",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -91390,7 +91534,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#7",
-      "renamedSymbol": "L:Sprite.c(IIII)V#7",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -91401,7 +91545,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#8",
-      "renamedSymbol": "L:Sprite.c(IIII)V#8",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -91412,7 +91556,7 @@
     },
     {
       "symbol": "L:bi.c(IIII)V#9",
-      "renamedSymbol": "L:Sprite.c(IIII)V#9",
+      "renamedSymbol": "L:Sprite.drawDownscaledAreaAveraged(IIII)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -91775,7 +91919,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#0",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#0",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -91786,7 +91930,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#1",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#1",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#1",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -91797,7 +91941,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#10",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#10",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -91808,7 +91952,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#11",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#11",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -91819,7 +91963,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#12",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#12",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -91830,7 +91974,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#13",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#13",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -91841,7 +91985,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#14",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#14",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -91852,7 +91996,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#15",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#15",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#15",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -91863,7 +92007,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#16",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#16",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#16",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -91874,7 +92018,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#2",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#2",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#2",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -91885,7 +92029,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#3",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#3",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#3",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -91896,7 +92040,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#4",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#4",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -91907,7 +92051,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#5",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#5",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -91918,7 +92062,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#6",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#6",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -91929,7 +92073,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#7",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#7",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -91940,7 +92084,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#8",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#8",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -91951,7 +92095,7 @@
     },
     {
       "symbol": "L:bi.d(IIIII)V#9",
-      "renamedSymbol": "L:Sprite.d(IIIII)V#9",
+      "renamedSymbol": "L:Sprite.writeBilinearPixel(IIIII)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -94217,7 +94361,7 @@
     },
     {
       "symbol": "L:bq.a(I)V#0",
-      "renamedSymbol": "L:IndexedSpriteState.a(I)V#0",
+      "renamedSymbol": "L:IndexedSpriteState.layoutAnimatedChatPanel(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -94228,7 +94372,7 @@
     },
     {
       "symbol": "L:bq.a(I)V#1",
-      "renamedSymbol": "L:IndexedSpriteState.a(I)V#1",
+      "renamedSymbol": "L:IndexedSpriteState.layoutAnimatedChatPanel(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -94239,7 +94383,7 @@
     },
     {
       "symbol": "L:bq.a(I)V#2",
-      "renamedSymbol": "L:IndexedSpriteState.a(I)V#2",
+      "renamedSymbol": "L:IndexedSpriteState.layoutAnimatedChatPanel(I)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -94250,7 +94394,7 @@
     },
     {
       "symbol": "L:bq.a(I)V#3",
-      "renamedSymbol": "L:IndexedSpriteState.a(I)V#3",
+      "renamedSymbol": "L:IndexedSpriteState.layoutAnimatedChatPanel(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -94261,7 +94405,7 @@
     },
     {
       "symbol": "L:bq.a(ILbc;)V#0",
-      "renamedSymbol": "L:IndexedSpriteState.a(ILArchive;)V#0",
+      "renamedSymbol": "L:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -94272,7 +94416,7 @@
     },
     {
       "symbol": "L:bq.a(ILbc;)V#1",
-      "renamedSymbol": "L:IndexedSpriteState.a(ILArchive;)V#1",
+      "renamedSymbol": "L:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -94283,7 +94427,7 @@
     },
     {
       "symbol": "L:bq.a(ILbc;)V#2",
-      "renamedSymbol": "L:IndexedSpriteState.a(ILArchive;)V#2",
+      "renamedSymbol": "L:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -94294,7 +94438,7 @@
     },
     {
       "symbol": "L:bq.a(ILbc;)V#3",
-      "renamedSymbol": "L:IndexedSpriteState.a(ILArchive;)V#3",
+      "renamedSymbol": "L:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -321939,9 +322083,9 @@
     },
     {
       "symbol": "M:a.a(I)Lqr;",
-      "renamedSymbol": "M:HitRegion.a(I)LAnimatedPanel;",
+      "renamedSymbol": "M:HitRegion.getLobbyRoomListContent(I)LAnimatedPanel;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getLobbyRoomListContent",
       "declaration": {
         "file": "a.java",
         "start": 561,
@@ -321983,9 +322127,9 @@
     },
     {
       "symbol": "M:a.c(III)V",
-      "renamedSymbol": "M:HitRegion.c(III)V",
+      "renamedSymbol": "M:HitRegion.onPointerDrag(III)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "onPointerDrag",
       "declaration": {
         "file": "a.java",
         "start": 427,
@@ -321994,9 +322138,9 @@
     },
     {
       "symbol": "M:a.d(III)V",
-      "renamedSymbol": "M:HitRegion.d(III)V",
+      "renamedSymbol": "M:HitRegion.onPointerClick(III)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "onPointerClick",
       "declaration": {
         "file": "a.java",
         "start": 741,
@@ -322236,9 +322380,9 @@
     },
     {
       "symbol": "M:ac.a(ILsq;)V",
-      "renamedSymbol": "M:DefendTask.a(ILTutorialScene;)V",
+      "renamedSymbol": "M:DefendTask.pushTutorialScene(ILTutorialScene;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pushTutorialScene",
       "declaration": {
         "file": "ac.java",
         "start": 353,
@@ -322247,9 +322391,9 @@
     },
     {
       "symbol": "M:ac.d(I)Z",
-      "renamedSymbol": "M:DefendTask.d(I)Z",
+      "renamedSymbol": "M:DefendTask.handleSocialNameInput(I)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "handleSocialNameInput",
       "declaration": {
         "file": "ac.java",
         "start": 4366,
@@ -322291,9 +322435,9 @@
     },
     {
       "symbol": "M:ad.a(ILv;IB)V",
-      "renamedSymbol": "M:StatusContent.a(ILTiledNineSlicePainter;IB)V",
+      "renamedSymbol": "M:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "checkPainterConfigurationGuard",
       "declaration": {
         "file": "ad.java",
         "start": 906,
@@ -322302,9 +322446,9 @@
     },
     {
       "symbol": "M:ad.a(Lpf;I)V",
-      "renamedSymbol": "M:StatusContent.a(LIntrusiveDeque;I)V",
+      "renamedSymbol": "M:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeEmptyCandidateLinks",
       "declaration": {
         "file": "ad.java",
         "start": 1346,
@@ -322533,9 +322677,9 @@
     },
     {
       "symbol": "M:ah.g(B)V",
-      "renamedSymbol": "M:ValidationMessageWidget.g(B)V",
+      "renamedSymbol": "M:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "clearFaceDepthBucketCounts",
       "declaration": {
         "file": "ah.java",
         "start": 13895,
@@ -322544,9 +322688,9 @@
     },
     {
       "symbol": "M:ah.h(I)I",
-      "renamedSymbol": "M:ValidationMessageWidget.h(I)I",
+      "renamedSymbol": "M:ValidationMessageWidget.getMenuSpanHeight(I)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "getMenuSpanHeight",
       "declaration": {
         "file": "ah.java",
         "start": 944,
@@ -323259,9 +323403,9 @@
     },
     {
       "symbol": "M:al.g(I)V",
-      "renamedSymbol": "M:PcmSampleStream.g(I)V",
+      "renamedSymbol": "M:PcmSampleStream.fadeOut(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "fadeOut",
       "declaration": {
         "file": "al.java",
         "start": 20183,
@@ -323270,9 +323414,9 @@
     },
     {
       "symbol": "M:al.h()Z",
-      "renamedSymbol": "M:PcmSampleStream.h()Z",
+      "renamedSymbol": "M:PcmSampleStream.finishVolumeRamp()Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "finishVolumeRamp",
       "declaration": {
         "file": "al.java",
         "start": 55602,
@@ -323864,9 +324008,9 @@
     },
     {
       "symbol": "M:as.a(IIILv;)V",
-      "renamedSymbol": "M:FleetVisual.a(IIILTiledNineSlicePainter;)V",
+      "renamedSymbol": "M:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setMenuPainterAndMetrics",
       "declaration": {
         "file": "as.java",
         "start": 2058,
@@ -323908,9 +324052,9 @@
     },
     {
       "symbol": "M:b.a(ILob;Ljava/lang/String;)V",
-      "renamedSymbol": "M:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V",
+      "renamedSymbol": "M:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeByteLengthString",
       "declaration": {
         "file": "b.java",
         "start": 1329,
@@ -323919,9 +324063,9 @@
     },
     {
       "symbol": "M:b.d(B)Z",
-      "renamedSymbol": "M:FilledMenuPanel.d(B)Z",
+      "renamedSymbol": "M:FilledMenuPanel.isFreeChatAllowed(B)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "isFreeChatAllowed",
       "declaration": {
         "file": "b.java",
         "start": 165,
@@ -324931,9 +325075,9 @@
     },
     {
       "symbol": "M:bi.c(IIII)V",
-      "renamedSymbol": "M:Sprite.c(IIII)V",
+      "renamedSymbol": "M:Sprite.drawDownscaledAreaAveraged(IIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawDownscaledAreaAveraged",
       "declaration": {
         "file": "bi.java",
         "start": 52214,
@@ -324986,9 +325130,9 @@
     },
     {
       "symbol": "M:bi.d(IIIII)V",
-      "renamedSymbol": "M:Sprite.d(IIIII)V",
+      "renamedSymbol": "M:Sprite.writeBilinearPixel(IIIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "writeBilinearPixel",
       "declaration": {
         "file": "bi.java",
         "start": 35393,
@@ -325393,9 +325537,9 @@
     },
     {
       "symbol": "M:bq.a(I)V",
-      "renamedSymbol": "M:IndexedSpriteState.a(I)V",
+      "renamedSymbol": "M:IndexedSpriteState.layoutAnimatedChatPanel(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutAnimatedChatPanel",
       "declaration": {
         "file": "bq.java",
         "start": 1783,
@@ -325426,9 +325570,9 @@
     },
     {
       "symbol": "M:bq.a(ILbc;)V",
-      "renamedSymbol": "M:IndexedSpriteState.a(ILArchive;)V",
+      "renamedSymbol": "M:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeSocialListPanels",
       "declaration": {
         "file": "bq.java",
         "start": 258,
@@ -361484,7 +361628,7 @@
     },
     {
       "symbol": "P:a.a(I)Lqr;#0",
-      "renamedSymbol": "P:HitRegion.a(I)LAnimatedPanel;#0",
+      "renamedSymbol": "P:HitRegion.getLobbyRoomListContent(I)LAnimatedPanel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361583,7 +361727,7 @@
     },
     {
       "symbol": "P:a.c(III)V#0",
-      "renamedSymbol": "P:HitRegion.c(III)V#0",
+      "renamedSymbol": "P:HitRegion.onPointerDrag(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361594,7 +361738,7 @@
     },
     {
       "symbol": "P:a.c(III)V#1",
-      "renamedSymbol": "P:HitRegion.c(III)V#1",
+      "renamedSymbol": "P:HitRegion.onPointerDrag(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -361605,7 +361749,7 @@
     },
     {
       "symbol": "P:a.c(III)V#2",
-      "renamedSymbol": "P:HitRegion.c(III)V#2",
+      "renamedSymbol": "P:HitRegion.onPointerDrag(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -361616,7 +361760,7 @@
     },
     {
       "symbol": "P:a.d(III)V#0",
-      "renamedSymbol": "P:HitRegion.d(III)V#0",
+      "renamedSymbol": "P:HitRegion.onPointerClick(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361627,7 +361771,7 @@
     },
     {
       "symbol": "P:a.d(III)V#1",
-      "renamedSymbol": "P:HitRegion.d(III)V#1",
+      "renamedSymbol": "P:HitRegion.onPointerClick(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -361638,7 +361782,7 @@
     },
     {
       "symbol": "P:a.d(III)V#2",
-      "renamedSymbol": "P:HitRegion.d(III)V#2",
+      "renamedSymbol": "P:HitRegion.onPointerClick(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -362298,7 +362442,7 @@
     },
     {
       "symbol": "P:ac.a(ILsq;)V#0",
-      "renamedSymbol": "P:DefendTask.a(ILTutorialScene;)V#0",
+      "renamedSymbol": "P:DefendTask.pushTutorialScene(ILTutorialScene;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -362309,7 +362453,7 @@
     },
     {
       "symbol": "P:ac.a(ILsq;)V#1",
-      "renamedSymbol": "P:DefendTask.a(ILTutorialScene;)V#1",
+      "renamedSymbol": "P:DefendTask.pushTutorialScene(ILTutorialScene;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -362320,7 +362464,7 @@
     },
     {
       "symbol": "P:ac.d(I)Z#0",
-      "renamedSymbol": "P:DefendTask.d(I)Z#0",
+      "renamedSymbol": "P:DefendTask.handleSocialNameInput(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -362386,7 +362530,7 @@
     },
     {
       "symbol": "P:ad.a(ILv;IB)V#0",
-      "renamedSymbol": "P:StatusContent.a(ILTiledNineSlicePainter;IB)V#0",
+      "renamedSymbol": "P:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -362397,7 +362541,7 @@
     },
     {
       "symbol": "P:ad.a(ILv;IB)V#1",
-      "renamedSymbol": "P:StatusContent.a(ILTiledNineSlicePainter;IB)V#1",
+      "renamedSymbol": "P:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -362408,7 +362552,7 @@
     },
     {
       "symbol": "P:ad.a(ILv;IB)V#2",
-      "renamedSymbol": "P:StatusContent.a(ILTiledNineSlicePainter;IB)V#2",
+      "renamedSymbol": "P:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -362419,7 +362563,7 @@
     },
     {
       "symbol": "P:ad.a(ILv;IB)V#3",
-      "renamedSymbol": "P:StatusContent.a(ILTiledNineSlicePainter;IB)V#3",
+      "renamedSymbol": "P:StatusContent.checkPainterConfigurationGuard(ILTiledNineSlicePainter;IB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -362430,7 +362574,7 @@
     },
     {
       "symbol": "P:ad.a(Lpf;I)V#0",
-      "renamedSymbol": "P:StatusContent.a(LIntrusiveDeque;I)V#0",
+      "renamedSymbol": "P:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -362441,7 +362585,7 @@
     },
     {
       "symbol": "P:ad.a(Lpf;I)V#1",
-      "renamedSymbol": "P:StatusContent.a(LIntrusiveDeque;I)V#1",
+      "renamedSymbol": "P:StatusContent.removeEmptyCandidateLinks(LIntrusiveDeque;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -362881,7 +363025,7 @@
     },
     {
       "symbol": "P:ah.g(B)V#0",
-      "renamedSymbol": "P:ValidationMessageWidget.g(B)V#0",
+      "renamedSymbol": "P:ValidationMessageWidget.clearFaceDepthBucketCounts(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -362892,7 +363036,7 @@
     },
     {
       "symbol": "P:ah.h(I)I#0",
-      "renamedSymbol": "P:ValidationMessageWidget.h(I)I#0",
+      "renamedSymbol": "P:ValidationMessageWidget.getMenuSpanHeight(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -366247,7 +366391,7 @@
     },
     {
       "symbol": "P:al.g(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.g(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.fadeOut(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -367402,7 +367546,7 @@
     },
     {
       "symbol": "P:as.a(IIILv;)V#0",
-      "renamedSymbol": "P:FleetVisual.a(IIILTiledNineSlicePainter;)V#0",
+      "renamedSymbol": "P:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -367413,7 +367557,7 @@
     },
     {
       "symbol": "P:as.a(IIILv;)V#1",
-      "renamedSymbol": "P:FleetVisual.a(IIILTiledNineSlicePainter;)V#1",
+      "renamedSymbol": "P:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -367424,7 +367568,7 @@
     },
     {
       "symbol": "P:as.a(IIILv;)V#2",
-      "renamedSymbol": "P:FleetVisual.a(IIILTiledNineSlicePainter;)V#2",
+      "renamedSymbol": "P:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -367435,7 +367579,7 @@
     },
     {
       "symbol": "P:as.a(IIILv;)V#3",
-      "renamedSymbol": "P:FleetVisual.a(IIILTiledNineSlicePainter;)V#3",
+      "renamedSymbol": "P:FleetVisual.setMenuPainterAndMetrics(IIILTiledNineSlicePainter;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -367567,7 +367711,7 @@
     },
     {
       "symbol": "P:b.a(ILob;Ljava/lang/String;)V#0",
-      "renamedSymbol": "P:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#0",
+      "renamedSymbol": "P:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -367578,7 +367722,7 @@
     },
     {
       "symbol": "P:b.a(ILob;Ljava/lang/String;)V#1",
-      "renamedSymbol": "P:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#1",
+      "renamedSymbol": "P:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -367589,7 +367733,7 @@
     },
     {
       "symbol": "P:b.a(ILob;Ljava/lang/String;)V#2",
-      "renamedSymbol": "P:FilledMenuPanel.a(ILPacketBuffer;Ljava/lang/String;)V#2",
+      "renamedSymbol": "P:FilledMenuPanel.writeByteLengthString(ILPacketBuffer;Ljava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -367600,7 +367744,7 @@
     },
     {
       "symbol": "P:b.d(B)Z#0",
-      "renamedSymbol": "P:FilledMenuPanel.d(B)Z#0",
+      "renamedSymbol": "P:FilledMenuPanel.isFreeChatAllowed(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -371802,7 +371946,7 @@
     },
     {
       "symbol": "P:bi.c(IIII)V#0",
-      "renamedSymbol": "P:Sprite.c(IIII)V#0",
+      "renamedSymbol": "P:Sprite.drawDownscaledAreaAveraged(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -371813,7 +371957,7 @@
     },
     {
       "symbol": "P:bi.c(IIII)V#1",
-      "renamedSymbol": "P:Sprite.c(IIII)V#1",
+      "renamedSymbol": "P:Sprite.drawDownscaledAreaAveraged(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -371824,7 +371968,7 @@
     },
     {
       "symbol": "P:bi.c(IIII)V#2",
-      "renamedSymbol": "P:Sprite.c(IIII)V#2",
+      "renamedSymbol": "P:Sprite.drawDownscaledAreaAveraged(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -371835,7 +371979,7 @@
     },
     {
       "symbol": "P:bi.c(IIII)V#3",
-      "renamedSymbol": "P:Sprite.c(IIII)V#3",
+      "renamedSymbol": "P:Sprite.drawDownscaledAreaAveraged(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -371956,7 +372100,7 @@
     },
     {
       "symbol": "P:bi.d(IIIII)V#0",
-      "renamedSymbol": "P:Sprite.d(IIIII)V#0",
+      "renamedSymbol": "P:Sprite.writeBilinearPixel(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -371967,7 +372111,7 @@
     },
     {
       "symbol": "P:bi.d(IIIII)V#1",
-      "renamedSymbol": "P:Sprite.d(IIIII)V#1",
+      "renamedSymbol": "P:Sprite.writeBilinearPixel(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -371978,7 +372122,7 @@
     },
     {
       "symbol": "P:bi.d(IIIII)V#2",
-      "renamedSymbol": "P:Sprite.d(IIIII)V#2",
+      "renamedSymbol": "P:Sprite.writeBilinearPixel(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -371989,7 +372133,7 @@
     },
     {
       "symbol": "P:bi.d(IIIII)V#3",
-      "renamedSymbol": "P:Sprite.d(IIIII)V#3",
+      "renamedSymbol": "P:Sprite.writeBilinearPixel(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -372000,7 +372144,7 @@
     },
     {
       "symbol": "P:bi.d(IIIII)V#4",
-      "renamedSymbol": "P:Sprite.d(IIIII)V#4",
+      "renamedSymbol": "P:Sprite.writeBilinearPixel(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -372792,7 +372936,7 @@
     },
     {
       "symbol": "P:bq.a(I)V#0",
-      "renamedSymbol": "P:IndexedSpriteState.a(I)V#0",
+      "renamedSymbol": "P:IndexedSpriteState.layoutAnimatedChatPanel(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -372858,7 +373002,7 @@
     },
     {
       "symbol": "P:bq.a(ILbc;)V#0",
-      "renamedSymbol": "P:IndexedSpriteState.a(ILArchive;)V#0",
+      "renamedSymbol": "P:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -372869,7 +373013,7 @@
     },
     {
       "symbol": "P:bq.a(ILbc;)V#1",
-      "renamedSymbol": "P:IndexedSpriteState.a(ILArchive;)V#1",
+      "renamedSymbol": "P:IndexedSpriteState.initializeSocialListPanels(ILArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -459344,7 +459488,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "c5c2282ad71b12d3d0d167cdc17fc43a312759b4b46a7310c1f5af89d605057d",
+      "outputSha256": "c1ee5a09a98bbd80bf574f8b0816e0e721c8e955405d182ad712e14faaa0adc9",
       "edits": [
         {
           "start": 86,
@@ -460676,6 +460820,13 @@
           "symbol": "C:a",
           "original": "a",
           "renamed": "HitRegion"
+        },
+        {
+          "start": 9706,
+          "end": 9707,
+          "symbol": "M:a.a(I)Lqr;",
+          "original": "a",
+          "renamed": "getLobbyRoomListContent"
         },
         {
           "start": 9716,
@@ -472040,6 +472191,13 @@
           "renamed": "ValidationMessageWidget"
         },
         {
+          "start": 48855,
+          "end": 48856,
+          "symbol": "M:ah.h(I)I",
+          "original": "h",
+          "renamed": "getMenuSpanHeight"
+        },
+        {
           "start": 48887,
           "end": 48889,
           "symbol": "C:rg",
@@ -472276,7 +472434,7 @@
       "original": "a.java",
       "renamed": "HitRegion.java",
       "inputSha256": "7f84be9e745459d7e54c6ca4624215f0830d4b362954b0159dec5d2dd306f8c6",
-      "outputSha256": "1a06134f8cdfaa7a417374914ca8c4733942f1810eae925fcc8fea05345209bc",
+      "outputSha256": "55d355ea71a953c89f827b5d000d063c9666d1423a2c6e22ce74542ebcf8265c",
       "edits": [
         {
           "start": 53,
@@ -472349,6 +472507,13 @@
           "renamed": "signedBitLength"
         },
         {
+          "start": 427,
+          "end": 428,
+          "symbol": "M:a.c(III)V",
+          "original": "c",
+          "renamed": "onPointerDrag"
+        },
+        {
           "start": 509,
           "end": 516,
           "symbol": "F:a.field_h:I",
@@ -472361,6 +472526,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 561,
+          "end": 562,
+          "symbol": "M:a.a(I)Lqr;",
+          "original": "a",
+          "renamed": "getLobbyRoomListContent"
         },
         {
           "start": 618,
@@ -472389,6 +472561,13 @@
           "symbol": "C:qs",
           "original": "qs",
           "renamed": "SingleChildWidget"
+        },
+        {
+          "start": 741,
+          "end": 742,
+          "symbol": "M:a.d(III)V",
+          "original": "d",
+          "renamed": "onPointerClick"
         },
         {
           "start": 828,
@@ -474841,7 +475020,7 @@
       "original": "ac.java",
       "renamed": "DefendTask.java",
       "inputSha256": "7278f728959888b322d7a79d12980559dab6c74cb67829d136b32ddccb08f628",
-      "outputSha256": "37aecaa63247bc95b48eb0ac4ec6388aa72547981bc4a00c95731fcf6362169d",
+      "outputSha256": "1cafcac0831e8bed9b742900e00fab8c1046ae147b31db24c42f1d06bd5b4372",
       "edits": [
         {
           "start": 50,
@@ -474870,6 +475049,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 353,
+          "end": 354,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
         },
         {
           "start": 367,
@@ -475047,6 +475233,13 @@
           "renamed": "clearStatics"
         },
         {
+          "start": 4366,
+          "end": 4367,
+          "symbol": "M:ac.d(I)Z",
+          "original": "d",
+          "renamed": "handleSocialNameInput"
+        },
+        {
           "start": 4502,
           "end": 4504,
           "symbol": "C:lg",
@@ -475073,7 +475266,7 @@
       "original": "ad.java",
       "renamed": "StatusContent.java",
       "inputSha256": "77c6571a250421e94840559f3a35021801480483bc4a081cff38782e8d901b81",
-      "outputSha256": "29f020bf573d1caf0b0a8a2556c0e01c49d5b958d3dc0258b0a45e5d5a1af9d8",
+      "outputSha256": "9201d2566c3c3b2fb6951909c4749fb197015c0b4a3e16c8898ed0b7827c45af",
       "edits": [
         {
           "start": 50,
@@ -475139,6 +475332,13 @@
           "renamed": "repeatChar"
         },
         {
+          "start": 906,
+          "end": 907,
+          "symbol": "M:ad.a(ILv;IB)V",
+          "original": "a",
+          "renamed": "checkPainterConfigurationGuard"
+        },
+        {
           "start": 920,
           "end": 921,
           "symbol": "C:v",
@@ -475167,6 +475367,13 @@
           "renamed": "StatusContent"
         },
         {
+          "start": 1047,
+          "end": 1048,
+          "symbol": "M:ad.a(ILv;IB)V",
+          "original": "a",
+          "renamed": "checkPainterConfigurationGuard"
+        },
+        {
           "start": 1055,
           "end": 1056,
           "symbol": "C:v",
@@ -475186,6 +475393,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 1346,
+          "end": 1347,
+          "symbol": "M:ad.a(Lpf;I)V",
+          "original": "a",
+          "renamed": "removeEmptyCandidateLinks"
         },
         {
           "start": 1348,
@@ -476211,7 +476425,7 @@
       "original": "ah.java",
       "renamed": "ValidationMessageWidget.java",
       "inputSha256": "da3b8dcc959422bf9921139a82a0ab8deafd3c631840f1bf898810d0b0baabc7",
-      "outputSha256": "f23e12d112ac9c02fbd39738c7ffae471e0872d7ebfd6d6ed14a48ca9c5780e9",
+      "outputSha256": "fe8e144b8b737ea676cd2c43760ed9dd179e0279eb4c6313660c4cc637918646",
       "edits": [
         {
           "start": 50,
@@ -476282,6 +476496,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 944,
+          "end": 945,
+          "symbol": "M:ah.h(I)I",
+          "original": "h",
+          "renamed": "getMenuSpanHeight"
         },
         {
           "start": 1040,
@@ -477731,6 +477952,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 13895,
+          "end": 13896,
+          "symbol": "M:ah.g(B)V",
+          "original": "g",
+          "renamed": "clearFaceDepthBucketCounts"
         },
         {
           "start": 14239,
@@ -479470,7 +479698,7 @@
       "original": "al.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "9f2f142bfd1e5a456e149dd79134a2231f46e5e225e8fc3d55a00137bee23a07",
-      "outputSha256": "aaae30908c525aee3c2e235f89215d36f29445adab5dcaead299ab42110c6af7",
+      "outputSha256": "7a76664262a1d5bc1617ce46afe1f88ff84094a5f88b3f1728eeaa67984a5387",
       "edits": [
         {
           "start": 50,
@@ -479746,6 +479974,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 5088,
+          "end": 5089,
+          "symbol": "M:al.h()Z",
+          "original": "h",
+          "renamed": "finishVolumeRamp"
+        },
+        {
           "start": 5151,
           "end": 5152,
           "symbol": "M:al.i()I",
@@ -479884,6 +480119,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 20183,
+          "end": 20184,
+          "symbol": "M:al.g(I)V",
+          "original": "g",
+          "renamed": "fadeOut"
         },
         {
           "start": 20290,
@@ -480670,6 +480912,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 54025,
+          "end": 54026,
+          "symbol": "M:al.h()Z",
+          "original": "h",
+          "renamed": "finishVolumeRamp"
+        },
+        {
           "start": 54090,
           "end": 54091,
           "symbol": "M:al.a(II[B[IIIIIIILal;II)I",
@@ -480682,6 +480931,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 55602,
+          "end": 55603,
+          "symbol": "M:al.h()Z",
+          "original": "h",
+          "renamed": "finishVolumeRamp"
         },
         {
           "start": 55743,
@@ -483350,7 +483606,7 @@
       "original": "as.java",
       "renamed": "FleetVisual.java",
       "inputSha256": "61dbaed629ed0aa5a4025d23742fa0d3fdc16cdbb41521f63f3c91bfc9839409",
-      "outputSha256": "ba97c23d244d116d4b3ad912437c3bd6ade1f95ff385610a06d0e980fb1d82ae",
+      "outputSha256": "829f54e8f37d7e8a76edef4d27296b3a49c3f786a08e966e4d69c91ea692ad84",
       "edits": [
         {
           "start": 50,
@@ -483486,6 +483742,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 2058,
+          "end": 2059,
+          "symbol": "M:as.a(IIILv;)V",
+          "original": "a",
+          "renamed": "setMenuPainterAndMetrics"
+        },
+        {
           "start": 2096,
           "end": 2097,
           "symbol": "C:v",
@@ -483575,7 +483838,7 @@
       "original": "b.java",
       "renamed": "FilledMenuPanel.java",
       "inputSha256": "77847bb07c369af9d261cab2b20f0575b05064af22576c696760d470f41d98d3",
-      "outputSha256": "6114efa7191bec9ddcd48089ad922baac1b018db7a5daebcee7409ee4e040171",
+      "outputSha256": "7ca5c1f51894a820d11d04213f4169cd0eef0c09711c1d02341573be687dd864",
       "edits": [
         {
           "start": 50,
@@ -483590,6 +483853,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 165,
+          "end": 166,
+          "symbol": "M:b.d(B)Z",
+          "original": "d",
+          "renamed": "isFreeChatAllowed"
         },
         {
           "start": 244,
@@ -483667,6 +483937,13 @@
           "symbol": "M:gf.a(IIIIII)V",
           "original": "a",
           "renamed": "fillRoundedRect"
+        },
+        {
+          "start": 1329,
+          "end": 1330,
+          "symbol": "M:b.a(ILob;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "writeByteLengthString"
         },
         {
           "start": 1343,
@@ -489191,7 +489468,7 @@
       "original": "bi.java",
       "renamed": "Sprite.java",
       "inputSha256": "34e6c73a298804d4f30da12b3c6e9c3c2ff7d8c20826ecc757c161b497c52077",
-      "outputSha256": "377a7269af75ee2e3b0fabdae9ab6b4fd2c5284c1ddfe48189f87b8b94a8fc9e",
+      "outputSha256": "8609f5a0e25f2251a612ca34e657a96c16552892e76c5a15a100d3b42cbd83a6",
       "edits": [
         {
           "start": 44,
@@ -489808,6 +490085,13 @@
           "symbol": "M:bi.b()V",
           "original": "b",
           "renamed": "flipVertical"
+        },
+        {
+          "start": 35393,
+          "end": 35394,
+          "symbol": "M:bi.d(IIIII)V",
+          "original": "d",
+          "renamed": "writeBilinearPixel"
         },
         {
           "start": 38327,
@@ -490503,6 +490787,13 @@
           "renamed": "setTarget"
         },
         {
+          "start": 52214,
+          "end": 52215,
+          "symbol": "M:bi.c(IIII)V",
+          "original": "c",
+          "renamed": "drawDownscaledAreaAveraged"
+        },
+        {
           "start": 53307,
           "end": 53309,
           "symbol": "C:gf",
@@ -490795,6 +491086,34 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 70336,
+          "end": 70337,
+          "symbol": "M:bi.d(IIIII)V",
+          "original": "d",
+          "renamed": "writeBilinearPixel"
+        },
+        {
+          "start": 73002,
+          "end": 73003,
+          "symbol": "M:bi.d(IIIII)V",
+          "original": "d",
+          "renamed": "writeBilinearPixel"
+        },
+        {
+          "start": 75755,
+          "end": 75756,
+          "symbol": "M:bi.d(IIIII)V",
+          "original": "d",
+          "renamed": "writeBilinearPixel"
+        },
+        {
+          "start": 78385,
+          "end": 78386,
+          "symbol": "M:bi.d(IIIII)V",
+          "original": "d",
+          "renamed": "writeBilinearPixel"
         },
         {
           "start": 78987,
@@ -493476,7 +493795,7 @@
       "original": "bq.java",
       "renamed": "IndexedSpriteState.java",
       "inputSha256": "af4a51e00ba3cfd3eb6c8e9d3807a51d24d9db77819186fe54a00efc1d02ab94",
-      "outputSha256": "9966e6f258a75dac338c2d7ee4647252609244dbe7ddd84eedea2b49cafdaf7d",
+      "outputSha256": "639d9c7180c57947ef717461f15945b3487c9f2d302596169ed26910aaf7b763",
       "edits": [
         {
           "start": 53,
@@ -493491,6 +493810,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "QuickChatHelpPanel"
+        },
+        {
+          "start": 258,
+          "end": 259,
+          "symbol": "M:bq.a(ILbc;)V",
+          "original": "a",
+          "renamed": "initializeSocialListPanels"
         },
         {
           "start": 272,
@@ -493934,6 +494260,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1783,
+          "end": 1784,
+          "symbol": "M:bq.a(I)V",
+          "original": "a",
+          "renamed": "layoutAnimatedChatPanel"
+        },
+        {
           "start": 1818,
           "end": 1820,
           "symbol": "C:ed",
@@ -494065,6 +494398,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 2287,
+          "end": 2288,
+          "symbol": "M:bq.a(ILbc;)V",
+          "original": "a",
+          "renamed": "initializeSocialListPanels"
         },
         {
           "start": 2294,
@@ -496800,7 +497140,7 @@
       "original": "cc.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "fe203fb395d05186f908d9b8e344c102f70d7f7955191c1ac2e43b62816b0bf3",
-      "outputSha256": "68ec9619abd85e0381207056ff79863c837d7688d68fbc4f5b44863aaf869e66",
+      "outputSha256": "117a4c97361f478b3620ae940a065c55157dce696579fce45ae3e0d8f331d5b0",
       "edits": [
         {
           "start": 69,
@@ -497004,6 +497344,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 3087,
+          "end": 3088,
+          "symbol": "M:bq.a(I)V",
+          "original": "a",
+          "renamed": "layoutAnimatedChatPanel"
         },
         {
           "start": 3105,
@@ -498308,7 +498655,7 @@
       "original": "cf.java",
       "renamed": "StatusMessagePanel.java",
       "inputSha256": "e453a8ac352a05cd7fbe855212bb01977d3dfbebdfec9536c2e915ddc6a7f69b",
-      "outputSha256": "6f96a3aa4c34e3379f0df4293b4cb384ad68777070d016e7fc844761717633d8",
+      "outputSha256": "3ab10b1f75e8bc378958157d62b4d30112b9ef2558c4b30cee40455959d68fff",
       "edits": [
         {
           "start": 50,
@@ -498563,6 +498910,13 @@
           "renamed": "PlayerEliminatedEvent"
         },
         {
+          "start": 2919,
+          "end": 2920,
+          "symbol": "M:a.d(III)V",
+          "original": "d",
+          "renamed": "onPointerClick"
+        },
+        {
           "start": 2922,
           "end": 2924,
           "symbol": "C:ca",
@@ -498729,6 +499083,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "ContentDialog"
+        },
+        {
+          "start": 3563,
+          "end": 3564,
+          "symbol": "M:a.c(III)V",
+          "original": "c",
+          "renamed": "onPointerDrag"
         },
         {
           "start": 3565,
@@ -542135,7 +542496,7 @@
       "original": "ej.java",
       "renamed": "BufferedCacheFile.java",
       "inputSha256": "20584980b792da4e864cb06e35db22126633b9468307e79f17848c947cf9d551",
-      "outputSha256": "f889cf67ccebe48b4557d3328b5df21550e34693761e38c7fc377b66db7a3d41",
+      "outputSha256": "ea041373f6bda8c43d1179a07561f92ae3170f560b9bf87c6c31d45f0004f791",
       "edits": [
         {
           "start": 69,
@@ -543062,6 +543423,13 @@
           "renamed": "ValidationMessageWidget"
         },
         {
+          "start": 28362,
+          "end": 28363,
+          "symbol": "M:ah.g(B)V",
+          "original": "g",
+          "renamed": "clearFaceDepthBucketCounts"
+        },
+        {
           "start": 28496,
           "end": 28498,
           "symbol": "C:mf",
@@ -543263,6 +543631,13 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "ValidationMessageWidget"
+        },
+        {
+          "start": 34139,
+          "end": 34140,
+          "symbol": "M:ah.g(B)V",
+          "original": "g",
+          "renamed": "clearFaceDepthBucketCounts"
         },
         {
           "start": 34273,
@@ -554484,7 +554859,7 @@
       "original": "fe.java",
       "renamed": "MenuButton.java",
       "inputSha256": "38b55f05036f70827b9faf99d2bb4da1c6281b6ac1f51b6e8a1aa2e27f0aa27e",
-      "outputSha256": "c33f7882b9673d711ded471a580130568bef0f0337904d759fc2ccfb6cb4caef",
+      "outputSha256": "0c49a60deb1c5fb8080ed470606a839bb9acf587e27aaa14ce52dc3327725c97",
       "edits": [
         {
           "start": 50,
@@ -554730,6 +555105,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 3822,
+          "end": 3823,
+          "symbol": "M:bq.a(ILbc;)V",
+          "original": "a",
+          "renamed": "initializeSocialListPanels"
         },
         {
           "start": 3884,
@@ -558673,7 +559055,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "ea4817479c17649d5b8430626c600bd116f1df1b54d3581f5cd406d600049d5f",
+      "outputSha256": "2f9f1bacf2de193d38c5a61084f4d78b7e3851e3248c4ea35e4086716625cd2e",
       "edits": [
         {
           "start": 50,
@@ -561217,6 +561599,13 @@
           "renamed": "startForward"
         },
         {
+          "start": 40918,
+          "end": 40919,
+          "symbol": "M:al.g(I)V",
+          "original": "g",
+          "renamed": "fadeOut"
+        },
+        {
           "start": 40920,
           "end": 40922,
           "symbol": "C:ap",
@@ -562531,6 +562920,13 @@
           "symbol": "M:ga.a(Lqq;B)I",
           "original": "a",
           "renamed": "computePan"
+        },
+        {
+          "start": 64889,
+          "end": 64890,
+          "symbol": "M:al.g(I)V",
+          "original": "g",
+          "renamed": "fadeOut"
         },
         {
           "start": 64967,
@@ -566282,7 +566678,7 @@
       "original": "gi.java",
       "renamed": "LoginRequestSupport.java",
       "inputSha256": "6a72108ad7440108707754e081f3617f2d4762a1edea6bf3d8c24da610efd8fb",
-      "outputSha256": "a51533525ca71fae203868fe06214bb605f18312b24cf579cd46ff67c264680e",
+      "outputSha256": "c37f8a701e53fb9f8e4b0d184dbf58f1b0b3c9ced184688cb666ff231272d754",
       "edits": [
         {
           "start": 50,
@@ -566565,6 +566961,13 @@
           "renamed": "DefendTask"
         },
         {
+          "start": 3448,
+          "end": 3449,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
+        },
+        {
           "start": 3453,
           "end": 3454,
           "symbol": "C:n",
@@ -566598,6 +567001,13 @@
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "DefendTask"
+        },
+        {
+          "start": 3568,
+          "end": 3569,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
         },
         {
           "start": 3573,
@@ -569731,7 +570141,7 @@
       "original": "gn.java",
       "renamed": "StatefulWidgetTheme.java",
       "inputSha256": "15098b5f6647d50b3af68643175ec0e0658a8dc5f770cf2b4508f8e10f430969",
-      "outputSha256": "401f2d62c7d3aea2915098125f6a8458715da9944909b1067f3a8b2d26d948f7",
+      "outputSha256": "5aa30fc86ce9634415067898f4dcce155f2319b8fb2d3d94ff3ae7d7035e6946",
       "edits": [
         {
           "start": 50,
@@ -569979,6 +570389,13 @@
           "renamed": "FilledMenuPanel"
         },
         {
+          "start": 1155,
+          "end": 1156,
+          "symbol": "M:b.d(B)Z",
+          "original": "d",
+          "renamed": "isFreeChatAllowed"
+        },
+        {
           "start": 1184,
           "end": 1186,
           "symbol": "C:sr",
@@ -569991,6 +570408,13 @@
           "symbol": "C:b",
           "original": "b",
           "renamed": "FilledMenuPanel"
+        },
+        {
+          "start": 1289,
+          "end": 1290,
+          "symbol": "M:b.d(B)Z",
+          "original": "d",
+          "renamed": "isFreeChatAllowed"
         },
         {
           "start": 1359,
@@ -644245,7 +644669,7 @@
       "original": "l.java",
       "renamed": "GalaxyMap.java",
       "inputSha256": "c888073a557c82216292a7c3f02a0f4645eef36f4b9455707640bf58745b1092",
-      "outputSha256": "d6896559271a23d960e2fc1d08c6589a70e6eba5754c5d21e91a0c13d0be1c78",
+      "outputSha256": "06ca82c6350cd770365ac35524a4f2d2bf6d3c2e681c1d4aad32b9865a866262",
       "edits": [
         {
           "start": 71,
@@ -644794,6 +645218,13 @@
           "symbol": "C:b",
           "original": "b",
           "renamed": "FilledMenuPanel"
+        },
+        {
+          "start": 8842,
+          "end": 8843,
+          "symbol": "M:b.a(ILob;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "writeByteLengthString"
         },
         {
           "start": 8863,
@@ -657593,7 +658024,7 @@
       "original": "mb.java",
       "renamed": "AgeValidator.java",
       "inputSha256": "ef5781174717942f6ec6a941acbd845707a430f4eb5cd5206ec3e08b751bf33f",
-      "outputSha256": "2d2982e99c765e9d14b3672542fc18603cbf326a10e6345abee4ed94fae92611",
+      "outputSha256": "dbf244c3b6f843294f201edfe122f1bbf00041d217acfaed8c4b7e11ba5bc56c",
       "edits": [
         {
           "start": 50,
@@ -657755,6 +658186,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "StatusContent"
+        },
+        {
+          "start": 2345,
+          "end": 2346,
+          "symbol": "M:ad.a(ILv;IB)V",
+          "original": "a",
+          "renamed": "checkPainterConfigurationGuard"
         },
         {
           "start": 2395,
@@ -689931,7 +690369,7 @@
       "original": "pe.java",
       "renamed": "UnderageAccountInfoPanel.java",
       "inputSha256": "a4a5152f8cc51eb372158637f2a67b697aae86b5aefab5afc739b4f89a8568fc",
-      "outputSha256": "65cae57e90cd98e3ed0c68459cde9a4dacebbceff82ee24244177c01fed04b43",
+      "outputSha256": "61745072492c73a85f310bdb8d8c6cb09e56b7836efe7272f6dfbf3f9d2e5ef9",
       "edits": [
         {
           "start": 50,
@@ -690571,6 +691009,13 @@
           "renamed": "DefendTask"
         },
         {
+          "start": 10385,
+          "end": 10386,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
+        },
+        {
           "start": 10390,
           "end": 10391,
           "symbol": "C:n",
@@ -690620,6 +691065,13 @@
           "renamed": "DefendTask"
         },
         {
+          "start": 10647,
+          "end": 10648,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
+        },
+        {
           "start": 10652,
           "end": 10653,
           "symbol": "C:n",
@@ -690667,6 +691119,13 @@
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "DefendTask"
+        },
+        {
+          "start": 10934,
+          "end": 10935,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
         },
         {
           "start": 10939,
@@ -690772,6 +691231,13 @@
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "DefendTask"
+        },
+        {
+          "start": 11465,
+          "end": 11466,
+          "symbol": "M:ac.a(ILsq;)V",
+          "original": "a",
+          "renamed": "pushTutorialScene"
         },
         {
           "start": 11470,
@@ -697740,7 +698206,7 @@
       "original": "qf.java",
       "renamed": "SoundEffectDefinition.java",
       "inputSha256": "291068786772e48a3faeeda1b201291fd43643cb7b85c205574f55d1a611a7dd",
-      "outputSha256": "95f487ab614913a7b06a41d5eefa3186035904dad39abac424ceef0a814cb9f1",
+      "outputSha256": "7ca4f1361b439b5b549e0f73be70cb49aaf894cc4af6db0d9ba285ac7c0a0337",
       "edits": [
         {
           "start": 71,
@@ -697848,6 +698314,13 @@
           "renamed": "DefendTask"
         },
         {
+          "start": 788,
+          "end": 789,
+          "symbol": "M:ac.d(I)Z",
+          "original": "d",
+          "renamed": "handleSocialNameInput"
+        },
+        {
           "start": 848,
           "end": 850,
           "symbol": "C:ph",
@@ -697911,6 +698384,13 @@
           "renamed": "DefendTask"
         },
         {
+          "start": 1177,
+          "end": 1178,
+          "symbol": "M:ac.d(I)Z",
+          "original": "d",
+          "renamed": "handleSocialNameInput"
+        },
+        {
           "start": 1237,
           "end": 1239,
           "symbol": "C:ph",
@@ -697960,6 +698440,13 @@
           "renamed": "DefendTask"
         },
         {
+          "start": 1499,
+          "end": 1500,
+          "symbol": "M:ac.d(I)Z",
+          "original": "d",
+          "renamed": "handleSocialNameInput"
+        },
+        {
           "start": 1559,
           "end": 1561,
           "symbol": "C:ph",
@@ -697986,6 +698473,13 @@
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "DefendTask"
+        },
+        {
+          "start": 1712,
+          "end": 1713,
+          "symbol": "M:ac.d(I)Z",
+          "original": "d",
+          "renamed": "handleSocialNameInput"
         },
         {
           "start": 1767,
@@ -699156,7 +699650,7 @@
       "original": "qh.java",
       "renamed": "MenuWindow.java",
       "inputSha256": "0960f0e3db3c856cd76c5017fc57c59f250212a2958314c4fd56e5c391974b71",
-      "outputSha256": "3714cfb71f89d6d37419268f3da3860705070b45f4da35270139f27fcf5cf65e",
+      "outputSha256": "ffe10b301df127ecc81d6cef5dd4997fbf809d0ee5b3fa4c7aadc2bdb5446b8a",
       "edits": [
         {
           "start": 50,
@@ -700060,6 +700554,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 9406,
+          "end": 9407,
+          "symbol": "M:bq.a(I)V",
+          "original": "a",
+          "renamed": "layoutAnimatedChatPanel"
         },
         {
           "start": 9518,
@@ -708474,7 +708975,7 @@
       "original": "rc.java",
       "renamed": "MusicVoiceMixer.java",
       "inputSha256": "48be184cd7a7d4ea8aa1228653fffd874a1346ecdf42e6c8bc438172d6a40145",
-      "outputSha256": "daf24e45543222123b597959afcd3944f97b568a3de4084223fefda75f8d7756",
+      "outputSha256": "7a962203b561574677037488e650f6ae60b0275192083f58118d483cf8ce84c5",
       "edits": [
         {
           "start": 50,
@@ -709819,6 +710320,13 @@
           "symbol": "M:al.f(I)V",
           "original": "f",
           "renamed": "setLoopMode"
+        },
+        {
+          "start": 15306,
+          "end": 15307,
+          "symbol": "M:al.g(I)V",
+          "original": "g",
+          "renamed": "fadeOut"
         },
         {
           "start": 15335,
@@ -729080,7 +729588,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "b812d26d634701ebfa0fa16c4ed3faa08f6dc63855656ee00d96a186c39b0548",
+      "outputSha256": "3e1bd7cdd189ae6cf1013afe25bd57e33bcda82dd6e0cae8a6a0347bb2c4ca4f",
       "edits": [
         {
           "start": 50,
@@ -737184,6 +737692,13 @@
           "renamed": "pushSpriteRenderTarget"
         },
         {
+          "start": 72857,
+          "end": 72858,
+          "symbol": "M:bi.c(IIII)V",
+          "original": "c",
+          "renamed": "drawDownscaledAreaAveraged"
+        },
+        {
           "start": 72888,
           "end": 72890,
           "symbol": "C:cg",
@@ -738255,11 +738770,25 @@
           "renamed": "IntHashIndex"
         },
         {
+          "start": 79898,
+          "end": 79899,
+          "symbol": "M:bi.c(IIII)V",
+          "original": "c",
+          "renamed": "drawDownscaledAreaAveraged"
+        },
+        {
           "start": 80061,
           "end": 80063,
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "IntHashIndex"
+        },
+        {
+          "start": 80072,
+          "end": 80073,
+          "symbol": "M:bi.c(IIII)V",
+          "original": "c",
+          "renamed": "drawDownscaledAreaAveraged"
         },
         {
           "start": 80185,
@@ -743763,7 +744292,7 @@
       "original": "t.java",
       "renamed": "StarLinkPlanner.java",
       "inputSha256": "af80c8d7bd0221b06baab1bfa3253974ea5918a7154a909be96e94152cd0f34d",
-      "outputSha256": "0c77951fb467e67b94fbf59de3785cbe34b240d321aa8cfbc5bcb4a046626ac8",
+      "outputSha256": "b50ce246ec53ea6377b129c215b8fbab71fd4fd1a8f9259949306746e9b09333",
       "edits": [
         {
           "start": 50,
@@ -744011,6 +744540,13 @@
           "renamed": "StatusContent"
         },
         {
+          "start": 2488,
+          "end": 2489,
+          "symbol": "M:ad.a(Lpf;I)V",
+          "original": "a",
+          "renamed": "removeEmptyCandidateLinks"
+        },
+        {
           "start": 2545,
           "end": 2546,
           "symbol": "M:pf.e(I)I",
@@ -744212,6 +744748,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "StatusContent"
+        },
+        {
+          "start": 4770,
+          "end": 4771,
+          "symbol": "M:ad.a(Lpf;I)V",
+          "original": "a",
+          "renamed": "removeEmptyCandidateLinks"
         },
         {
           "start": 4799,
@@ -750166,7 +750709,7 @@
       "original": "te.java",
       "renamed": "ChatAreaLayoutSupport.java",
       "inputSha256": "2cec91c64838541d98f775045da019fae35e233c6691125b1056abf0d6c3a5b7",
-      "outputSha256": "aed0790e3e2d95a12dc33236b03f52bb879858b7cd99ac12e2ac699c4cb43dfb",
+      "outputSha256": "e10742d5b2db5df2b434c369a61e1e45b41e7b84b2363d5b196ebca0e3c475e3",
       "edits": [
         {
           "start": 50,
@@ -750209,6 +750752,13 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 325,
+          "end": 326,
+          "symbol": "M:bq.a(I)V",
+          "original": "a",
+          "renamed": "layoutAnimatedChatPanel"
         },
         {
           "start": 341,
@@ -759218,7 +759768,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "e0839ab304baf0331b57614403a44404837413b26acc6b00fe25f756f76a713f",
+      "outputSha256": "9da26eeec2f566fde23a95b77658a374b84fa96208ba960e1dd20a1b84e21039",
       "edits": [
         {
           "start": 71,
@@ -761144,6 +761694,13 @@
           "symbol": "C:wa",
           "original": "wa",
           "renamed": "RasterCoverageSpan"
+        },
+        {
+          "start": 35407,
+          "end": 35408,
+          "symbol": "M:bi.c(IIII)V",
+          "original": "c",
+          "renamed": "drawDownscaledAreaAveraged"
         },
         {
           "start": 35584,
@@ -769731,7 +770288,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "ba79a788291c691dec68ccfaab5a407dc24cdb424cf9aa0cb3843370ced7b1d7",
+      "outputSha256": "3d87fe1ca1b3dadb2b9d63ed0a2576454fed8f711f3e5d6101a29fd1f147dc90",
       "edits": [
         {
           "start": 50,
@@ -769851,6 +770408,13 @@
           "symbol": "C:as",
           "original": "as",
           "renamed": "FleetVisual"
+        },
+        {
+          "start": 5492,
+          "end": 5493,
+          "symbol": "M:as.a(IIILv;)V",
+          "original": "a",
+          "renamed": "setMenuPainterAndMetrics"
         },
         {
           "start": 5544,
@@ -812672,10 +813236,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "fdda43661bc8a78533ea964d68c4d7f4a7140ab70a6291672bf1d5e78dd58cb2",
+    "rulesSha256": "c39c98c4e869be5320d18d7860084b0d3af9c42f1fb8e6a86f9967ed25d19238",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "29a315af0fff45a6de97d90ad0258443e5fc1a696a6114c1f5335d97c75a21f8",
+    "outputTreeSha256": "c8c96de602b209f427d398e9bd52dccbad1519a99d203e5462b232758783d731",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

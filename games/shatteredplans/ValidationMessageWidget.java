@@ -26,7 +26,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
         }
     }
 
-    final static int h(int param0) {
+    final static int getMenuSpanHeight(int param0) {
         if (param0 <= 92) {
           field_S = (String) null;
           return DiskCacheWorker.field_b;
@@ -372,7 +372,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
         }
     }
 
-    final static void g(byte param0) {
+    final static void clearFaceDepthBucketCounts(byte param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;

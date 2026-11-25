@@ -1047,7 +1047,7 @@ final class MidiPcmStream extends PcmStream {
           if (param0 < 0 ||
             param0 == var3.field_y) {
             if (var3.field_K != null) {
-              var3.field_K.g(PcmPlayerService.field_j / 100);
+              var3.field_K.fadeOut(PcmPlayerService.field_j / 100);
               if (var3.field_K.isRamping()) {
                 this.field_l.field_o.addChild(var3.field_K);
               }
@@ -1694,7 +1694,7 @@ final class MidiPcmStream extends PcmStream {
             param3.field_K.rampVolume(param3.field_p, this.computeVolume(param3, -1481279096), this.computePan(param3, (byte) 122));
             return false;
           }
-          param3.field_K.g(param3.field_p);
+          param3.field_K.fadeOut(param3.field_p);
           if (param1 == null) {
             param3.field_K.skip(param4);
           } else {

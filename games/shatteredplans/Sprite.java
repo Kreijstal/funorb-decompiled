@@ -901,7 +901,7 @@ class Sprite extends SpriteState {
         this.field_x = this.field_p - this.field_w - this.field_x;
     }
 
-    private final void d(int param0, int param1, int param2, int param3, int param4) {
+    private final void writeBilinearPixel(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
@@ -1398,7 +1398,7 @@ class Sprite extends SpriteState {
         SoftwareRasterizer.setTarget(this.field_B, this.field_z, this.field_w);
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void drawDownscaledAreaAveraged(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var12 = 0;
         int var31 = 0;
@@ -1923,7 +1923,7 @@ class Sprite extends SpriteState {
                     if (var37 >> 12 < this.field_z) {
                       var34 = var38 >> 12;
                       if (var38 >> 12 < this.field_w) {
-                        this.d(var23, var33, var34, var37, var38);
+                        this.writeBilinearPixel(var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
                         var38 = var38 + var27;
@@ -1987,7 +1987,7 @@ class Sprite extends SpriteState {
                     var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < this.field_z) {
                       var34Lifetime3 = var38Lifetime3 >> 12;
-                      this.d(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
+                      this.writeBilinearPixel(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
                       var38Lifetime3 = var38Lifetime3 + var27;
@@ -2052,7 +2052,7 @@ class Sprite extends SpriteState {
                     var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < this.field_w) {
                       var33Lifetime1 = var37Lifetime1 >> 12;
-                      this.d(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
+                      this.writeBilinearPixel(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
                       var38Lifetime1 = var38Lifetime1 + var27;
@@ -2116,7 +2116,7 @@ class Sprite extends SpriteState {
                   var38Lifetime2 >= -4096) {
                   var33Lifetime2 = var37Lifetime2 >> 12;
                   var34Lifetime2 = var38Lifetime2 >> 12;
-                  this.d(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
+                  this.writeBilinearPixel(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
                   var38Lifetime2 = var38Lifetime2 + var27;

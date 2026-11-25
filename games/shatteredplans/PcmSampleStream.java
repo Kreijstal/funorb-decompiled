@@ -123,7 +123,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_v != 0) {
             return param1;
           }
-        } while (!this.h());
+        } while (!this.finishVolumeRamp());
         return param3;
     }
 
@@ -509,7 +509,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_t = param0;
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void fadeOut(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -1459,7 +1459,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_v != 0) {
             return param1;
           }
-        } while (!this.h());
+        } while (!this.finishVolumeRamp());
         return param3;
     }
 
@@ -1500,7 +1500,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    private final boolean h() {
+    private final boolean finishVolumeRamp() {
         int var1;
         int var2;
         int var3;

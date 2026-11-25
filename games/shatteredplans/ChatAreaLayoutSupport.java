@@ -14,7 +14,7 @@ final class ChatAreaLayoutSupport {
     }
 
     final static void layoutChatPanels(boolean param0) {
-        IndexedSpriteState.a(127);
+        IndexedSpriteState.layoutAnimatedChatPanel(127);
         ChatPanelLayoutSupport.layoutSharedChatPanel(BoundsRect.field_m[0].field_o, UniformNineSliceFactory.field_c, DateValidationSupport.field_a, 113, UnderageAccountInfoPanel.field_K, MusicVoiceMixer.field_l);
         if (!param0) {
           TiledNineSlicePainter var2 = (TiledNineSlicePainter) null;

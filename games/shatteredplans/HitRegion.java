@@ -19,13 +19,13 @@ abstract class HitRegion extends IntrusiveNode {
         field_i = null;
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void onPointerDrag(int param0, int param1, int param2) {
         if (param1 != 2) {
           this.y = 109;
         }
     }
 
-    final static AnimatedPanel a(int param0) {
+    final static AnimatedPanel getLobbyRoomListContent(int param0) {
         if (param0 != 20605) {
           HitRegion.clearStatics((byte) -50);
           return SingleChildWidget.field_y.field_xb;
@@ -33,7 +33,7 @@ abstract class HitRegion extends IntrusiveNode {
         return SingleChildWidget.field_y.field_xb;
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void onPointerClick(int param0, int param1, int param2) {
         if (param2 != -30872) {
           this.height = -77;
         }

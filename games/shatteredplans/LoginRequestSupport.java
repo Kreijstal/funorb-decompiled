@@ -104,11 +104,11 @@ final class LoginRequestSupport {
           }
           if (MeshData.hasTutorialFlag(0, "unplaced")) {
             if (SocketArchiveNetworkClient.markTutorialEventSeen("unplaced", -126)) {
-              DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("unplaced", -21502));
+              DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("unplaced", -21502));
             }
           } else {
             if (MeshData.hasTutorialFlag(0, "losegame")) {
-              DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
+              DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
             }
           }
           ClientContextMenuSupport.field_a.clear(0);

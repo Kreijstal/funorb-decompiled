@@ -373,7 +373,7 @@ final class MusicVoiceMixer extends PcmStream {
               if (0 > param2.field_A.field_k[param2.field_H]) {
                 param2.field_K.setLoopMode(-1);
               }
-              var11.g(var9);
+              var11.fadeOut(var9);
               var11.fill(param0, param1, param5 - param1);
               if (!var11.isRamping()) {
                 continue;

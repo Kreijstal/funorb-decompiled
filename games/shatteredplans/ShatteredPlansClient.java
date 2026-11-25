@@ -287,7 +287,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             if (BufferedCacheFile.field_e == 14) {
               DiskCacheWorker.commitMenuTransition(1048576);
-              BytePayloadNode.a(HitRegion.a(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.m(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
+              BytePayloadNode.a(HitRegion.getLobbyRoomListContent(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.m(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
               SocialListSetupSupport.initializeSocialLists((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.a(83));
               EmailValidator.field_p = true;
               StripedProgressWidget.field_Q = false;
@@ -1483,7 +1483,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 SoftwareRasterizer.restoreClip(var18);
               }
             } else {
-              TextHotspotWidget.drawCenteredMenuPanel(QuickChatParameterType.getMenuSpanWidth(-118), param0 - 2, ValidationMessageWidget.h(param0 + 107));
+              TextHotspotWidget.drawCenteredMenuPanel(QuickChatParameterType.getMenuSpanWidth(-118), param0 - 2, ValidationMessageWidget.getMenuSpanHeight(param0 + 107));
               ClientException.drawAccountChoiceMenu(94);
             }
           }

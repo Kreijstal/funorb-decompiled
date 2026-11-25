@@ -89,7 +89,7 @@ final class StarLinkPlanner {
               ProgressDialog.a(var24[var11], param0, -10000, var24[var13_int]);
             }
           }
-          StatusContent.a(var6, param1 ^ -24926);
+          StatusContent.removeEmptyCandidateLinks(var6, param1 ^ -24926);
           var9Lifetime1 = var6.size(0);
           var25 = new IntrusiveDeque();
           var12 = (CandidateLink) (var6.startForward(0));
@@ -138,7 +138,7 @@ final class StarLinkPlanner {
                 var21++;
               }
             }
-            StatusContent.a(var6, -24925);
+            StatusContent.removeEmptyCandidateLinks(var6, -24925);
             ValidationIndicator.a(var6, true);
             var15 = new ObjectList();
             var16_ref = (CandidateLink) (var6.startForward(param1 ^ 1));
