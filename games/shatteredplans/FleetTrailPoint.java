@@ -63,7 +63,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               SpriteWipeSupport.field_a.position = 0;
               TextInputPainter.field_t = param0[ArchiveNetworkClient.field_b];
             }
-            if (!uc.d((byte) -50)) {
+            if (!HorizontalGradientComponent.readPacketPayload((byte) -50)) {
               return false;
             }
             if (ArchiveRequest.field_o == 0) {
@@ -290,7 +290,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           if (2 != ClientInputSupport.field_b &&
             1 != ClientInputSupport.field_b) {
             wg.field_a.field_s = false;
-            wg.field_a.field_Db.field_zb.field_z = tb.field_c;
+            wg.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
             MatchingTextValidator.a(false, wg.field_a.field_Eb);
             return;
           }

@@ -118,11 +118,11 @@ final class DropTargetWidget extends SingleChildWidget {
         if (!LinkPainter.field_g.ensureGroupLoadedByName("commonui", 77)) {
           return SpriteState.field_r + " - " + LinkPainter.field_g.getGroupProgressByName("commonui", (byte) 65) + "%";
         }
-        if (!tq.field_f.isIndexLoaded((byte) -69)) {
+        if (!StringList.field_f.isIndexLoaded((byte) -69)) {
           return LinkPainter.field_h;
         }
-        if (!tq.field_f.ensureGroupLoadedByName("commonui", -91)) {
-          return IntrusiveDequeCursor.field_h + " - " + tq.field_f.getGroupProgressByName("commonui", (byte) 28) + "%";
+        if (!StringList.field_f.ensureGroupLoadedByName("commonui", -91)) {
+          return IntrusiveDequeCursor.field_h + " - " + StringList.field_f.getGroupProgressByName("commonui", (byte) 28) + "%";
         }
         int var1 = 32 % ((param0 - 15) / 52);
         if (!GalaxyMap.field_g.isIndexLoaded((byte) -2)) {

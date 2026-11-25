@@ -398,7 +398,7 @@ final class EmailValidator extends TextFieldValidator {
           if (null == NameSuggestionsPanel.field_K) {
             stackIn_10_0 = null;
             stackIn_10_1 = null;
-            stackIn_10_3 = tm.field_i;
+            stackIn_10_3 = NotificationEntry.field_i;
           } else {
             stackIn_10_0 = null;
             stackIn_10_1 = null;

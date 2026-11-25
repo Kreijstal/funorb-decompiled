@@ -90,8 +90,8 @@ final class BattleEvent extends IntrusiveNode {
         return null != GameAssetSetupSupport.field_a ? true : false;
     }
 
-    final static tq c(int param0, int param1) {
-        tq var2 = new tq(param0, false);
+    final static StringList c(int param0, int param1) {
+        StringList var2 = new StringList(param0, false);
         if (param1 != 0) {
           field_u = (AnimatedPanel) null;
         }

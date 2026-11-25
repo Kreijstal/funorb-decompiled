@@ -801,7 +801,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("turn_name", 112);
                 if (null != var2) {
-                  tq.field_i = IterableNodeHashTable.a(var2, 17746);
+                  StringList.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("turn_name_first", 114);
                 if (null != var2) {
@@ -1131,7 +1131,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_animation_damaged", 103);
                 if (null != var2) {
-                  tb.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyUiSetupSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_animation_retreating", 125);
                 if (null != var2) {
@@ -1664,7 +1664,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_aggressiveness", 115);
                 if (null != var2) {
-                  ss.field_d = IterableNodeHashTable.a(var2, 17746);
+                  MenuTextResources.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_solidity", 106);
                 if (var2 != null) {
@@ -1732,7 +1732,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_solidity", 104);
                 if (var2 != null) {
-                  ta.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MenuTransitionSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("rated_membersonly", 109);
                 if (var2 != null) {
@@ -2050,7 +2050,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipDiplomacyButtonHide", 112);
                 if (null != var2) {
-                  te.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ChatAreaLayoutSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipFleetInfoButtonHide", 104);
                 if (var2 != null) {

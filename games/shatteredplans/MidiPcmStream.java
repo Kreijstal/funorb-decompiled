@@ -791,22 +791,22 @@ final class MidiPcmStream extends PcmStream {
                 var31 = var31 + var39Lifetime1 * UniformNineSliceFactory.field_c;
               }
               if (var12.field_Jb) {
-                var12.field_Sb.field_z = QuickChatCategoryRegistry.a(tq.field_a, 4371, new String[]{var32});
-                var12.field_Sb.setTarget(var12.field_K - tg.field_a * 2, UniformNineSliceFactory.field_c, (byte) 80, var31, tg.field_a);
+                var12.field_Sb.field_z = QuickChatCategoryRegistry.a(StringList.field_a, 4371, new String[]{var32});
+                var12.field_Sb.setTarget(var12.field_K - DateValidationSupport.field_a * 2, UniformNineSliceFactory.field_c, (byte) 80, var31, DateValidationSupport.field_a);
                 var31 = var31 + UniformNineSliceFactory.field_c;
               }
               if (var12.field_Yb) {
                 var12.field_Hb.field_z = QuickChatCategoryRegistry.a(wj.field_n, 4371, new String[]{var32});
-                var12.field_Hb.setTarget(-(2 * tg.field_a) + var12.field_K, UniformNineSliceFactory.field_c, (byte) 91, var31, tg.field_a);
+                var12.field_Hb.setTarget(-(2 * DateValidationSupport.field_a) + var12.field_K, UniformNineSliceFactory.field_c, (byte) 91, var31, DateValidationSupport.field_a);
                 var31 = var31 + UniformNineSliceFactory.field_c;
               }
             }
             var33 = StarLink.a(var12.field_hc, -11, var32);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -tg.field_a - tg.field_a + var12.field_K);
+              var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -DateValidationSupport.field_a - DateValidationSupport.field_a + var12.field_K);
               var12.field_ic.field_z = var33;
               var12.field_ic.field_I = 256 * var12.field_Nb / AccountBooleanRequest.field_i;
-              var12.field_ic.setTarget(var12.field_K - tg.field_a * 2, UniformNineSliceFactory.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
+              var12.field_ic.setTarget(var12.field_K - DateValidationSupport.field_a * 2, UniformNineSliceFactory.field_c * var34_intLifetime1, (byte) 112, var31, DateValidationSupport.field_a);
               var31 = var31 + var34_intLifetime1 * UniformNineSliceFactory.field_c;
             }
             if (var7_int == 0) {

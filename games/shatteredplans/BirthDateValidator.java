@@ -135,7 +135,7 @@ final class BirthDateValidator extends DebouncedValidator implements TextFieldLi
           var5 = BattleSnapshot.getCurrentYear(-13299);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
-            if (tg.a(var2_int, var3, (byte) -126, var4)) {
+            if (DateValidationSupport.isValidDate(var2_int, var3, (byte) -126, var4)) {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
@@ -176,7 +176,7 @@ final class BirthDateValidator extends DebouncedValidator implements TextFieldLi
             stackIn_7_0 = ArchiveSourceManager.field_b;
             return stackIn_7_0;
           }
-          if (!tg.a(var2_int, var3, (byte) -127, var4)) {
+          if (!DateValidationSupport.isValidDate(var2_int, var3, (byte) -127, var4)) {
             stackIn_10_0 = ArchiveSourceManager.field_b;
             return stackIn_10_0;
           }

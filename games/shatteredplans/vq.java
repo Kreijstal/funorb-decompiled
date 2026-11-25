@@ -171,7 +171,7 @@ final class vq {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!ServerIntArrayRequest.isValidAccountName((byte) -109, var6)) {
-            stackIn_3_0 = tm.field_j;
+            stackIn_3_0 = NotificationEntry.field_j;
             return stackIn_3_0;
           }
           if (SocialNameInputPanel.isLocalPlayerName(param1, (byte) -105)) {

@@ -184,7 +184,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
                 var5.addActionButton(SoundEffectSupport.field_b, (byte) 100, 11);
                 var5.addActionButton(ProductionContent.field_g, (byte) 100, 17);
               } else {
-                var5.addActionButton(ss.field_e, (byte) 106, -1);
+                var5.addActionButton(MenuTextResources.field_e, (byte) 106, -1);
               }
             } else {
               var5.appendButton((WidgetListener) (this), param0 ^ 108, QuickChatParameterType.field_b);

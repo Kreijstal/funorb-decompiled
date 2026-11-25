@@ -176,7 +176,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final static MenuList a(int param0, int param1, Player param2, int param3) {
         RuntimeException var4 = null;
-        uc var5 = null;
+        HorizontalGradientComponent var5 = null;
         SpriteButton var6 = null;
         MenuLabel var7 = null;
         MenuList var8 = null;
@@ -187,7 +187,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new MenuList(0, 0, 182, GradientMenuLabel.field_y.field_o + 4);
-          var5 = new uc(0, var8.field_i / 2 - 3, param3, 6, 0, param2.field_k);
+          var5 = new HorizontalGradientComponent(0, var8.field_i / 2 - 3, param3, 6, 0, param2.field_k);
           var8.addChild(var5, 8);
           if (param1 != -30577) {
             field_r = 123;

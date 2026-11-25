@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends IntrusiveNode {
+final class NotificationEntry extends IntrusiveNode {
     private int field_m;
     private int field_q;
     private int field_s;
@@ -20,7 +20,7 @@ final class tm extends IntrusiveNode {
         field_j = null;
         if (param0 != -30032) {
           short[] var2 = (short[]) null;
-          tm.a((byte) -113, (CipherPacketBuffer) null, 17, (short[]) null);
+          NotificationEntry.readPackedShortArray((byte) -113, (CipherPacketBuffer) null, 17, (short[]) null);
         }
         field_k = null;
         field_t = null;
@@ -30,7 +30,7 @@ final class tm extends IntrusiveNode {
         field_o = null;
     }
 
-    final void a(int param0) {
+    final void tick(int param0) {
         int var2 = 0;
         if (this.field_n) {
           this.field_q = 256;
@@ -55,7 +55,7 @@ final class tm extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         if (this.field_q == 0) {
           return;
         }
@@ -64,27 +64,27 @@ final class tm extends IntrusiveNode {
           field_r = (Sprite) null;
         }
         if (this.field_q != 256) {
-          ss.field_b.drawStringAlpha(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);
+          MenuTextResources.field_b.drawStringAlpha(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);
         } else {
-          ss.field_b.drawString(this.field_l, 100, 14 + param1, 16777215, -1);
+          MenuTextResources.field_b.drawString(this.field_l, 100, 14 + param1, 16777215, -1);
         }
     }
 
-    tm(String param0, boolean param1) {
+    NotificationEntry(String param0, boolean param1) {
         int var3_int = 0;
         try {
           this.field_n = param1 ? true : false;
           this.field_q = 256;
           this.field_l = param0;
           this.field_m = !this.field_n ? 0 : 500;
-          var3_int = 20 + ss.field_b.stringWidth(this.field_l);
+          var3_int = 20 + MenuTextResources.field_b.stringWidth(this.field_l);
           this.field_s = Math.max(400, var3_int);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static short[] a(byte param0, CipherPacketBuffer param1, int param2, short[] param3) {
+    final static short[] readPackedShortArray(byte param0, CipherPacketBuffer param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -103,7 +103,7 @@ final class tm extends IntrusiveNode {
         try {
           if (param0 != 39) {
             var9 = (short[]) null;
-            tm.a((byte) -7, (CipherPacketBuffer) null, 123, (short[]) null);
+            NotificationEntry.readPackedShortArray((byte) -7, (CipherPacketBuffer) null, 123, (short[]) null);
           }
           var4_int = param1.b((byte) 101, param2);
           if (var4_int == 0) {

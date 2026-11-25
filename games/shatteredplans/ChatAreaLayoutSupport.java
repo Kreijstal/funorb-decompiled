@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te {
+final class ChatAreaLayoutSupport {
     static String field_a;
     static int field_c;
     static String field_b;
 
-    final static void a(int param0, int param1) {
+    final static void updateLoginUi(int param0, int param1) {
         if (param0 != 0) {
           return;
         }
         uo.a((byte) -75);
     }
 
-    final static void a(boolean param0) {
+    final static void layoutChatPanels(boolean param0) {
         IndexedSpriteState.a(127);
-        ChatPanelLayoutSupport.layoutSharedChatPanel(BoundsRect.field_m[0].field_o, UniformNineSliceFactory.field_c, tg.field_a, 113, UnderageAccountInfoPanel.field_K, MusicVoiceMixer.field_l);
+        ChatPanelLayoutSupport.layoutSharedChatPanel(BoundsRect.field_m[0].field_o, UniformNineSliceFactory.field_c, DateValidationSupport.field_a, 113, UnderageAccountInfoPanel.field_K, MusicVoiceMixer.field_l);
         if (!param0) {
           v var2 = (v) null;
-          te.a(-28, (v) null, 8, (v) null, 98, -88);
+          ChatAreaLayoutSupport.configureQuickChatRows(-28, (v) null, 8, (v) null, 98, -88);
         }
     }
 
@@ -30,7 +30,7 @@ final class te {
         field_a = null;
     }
 
-    final static void a(int param0, v param1, int param2, v param3, int param4, int param5) {
+    final static void configureQuickChatRows(int param0, v param1, int param2, v param3, int param4, int param5) {
         try {
           Wormhole.field_l = param3;
           GameMenuController.field_b = param5;

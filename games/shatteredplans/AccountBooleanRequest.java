@@ -152,16 +152,16 @@ final class AccountBooleanRequest {
         return this.field_g;
     }
 
-    final static tm queueClientNotification(int param0, boolean param1, String param2) {
-        tm var3 = null;
+    final static NotificationEntry queueClientNotification(int param0, boolean param1, String param2) {
+        NotificationEntry var3 = null;
         RuntimeException var3_ref = null;
-        tm stackIn_6_0 = null;
+        NotificationEntry stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new tm(param2, param1);
+          var3 = new NotificationEntry(param2, param1);
           if (param0 > -86) {
             field_c = (String) null;
           }

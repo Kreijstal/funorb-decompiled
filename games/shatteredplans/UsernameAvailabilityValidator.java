@@ -265,33 +265,33 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           var4 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
           var5 = new MeshData();
           var5.field_x = (short)param0.b((byte) 115, 16);
-          var5.field_w = tm.a((byte) 39, param0, 16, var5.field_w);
-          var5.field_z = tm.a((byte) 39, param0, 16, var5.field_z);
-          var5.field_f = tm.a((byte) 39, param0, 16, var5.field_f);
+          var5.field_w = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_w);
+          var5.field_z = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_z);
+          var5.field_f = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_f);
           var5.field_u = (short)param0.b((byte) 99, 16);
-          var5.field_s = tm.a((byte) 39, param0, 16, var5.field_s);
+          var5.field_s = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_s);
           var6 = 99 % ((-48 - param1) / 42);
-          var5.field_i = tm.a((byte) 39, param0, 16, var5.field_i);
-          var5.field_B = tm.a((byte) 39, param0, 16, var5.field_B);
+          var5.field_i = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_i);
+          var5.field_B = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_B);
           if (var3 != 0) {
             var5.field_e = (short)param0.b((byte) 82, 16);
-            var5.field_I = tm.a((byte) 39, param0, 16, var5.field_I);
-            var5.field_y = tm.a((byte) 39, param0, 16, var5.field_y);
-            var5.field_v = tm.a((byte) 39, param0, 16, var5.field_v);
-            var5.field_M = tm.a((byte) 39, param0, 16, var5.field_M);
-            var5.field_P = tm.a((byte) 39, param0, 16, var5.field_P);
-            var5.field_n = tm.a((byte) 39, param0, 16, var5.field_n);
+            var5.field_I = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_I);
+            var5.field_y = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_y);
+            var5.field_v = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_v);
+            var5.field_M = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_M);
+            var5.field_P = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_P);
+            var5.field_n = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_n);
           }
           if (var4 != 0) {
             param0.b((byte) 98, 16);
-            var5.field_C = tm.a((byte) 39, param0, 16, var5.field_C);
-            var5.field_g = tm.a((byte) 39, param0, 16, var5.field_g);
-            var5.field_L = tm.a((byte) 39, param0, 16, var5.field_L);
-            var5.field_J = tm.a((byte) 39, param0, 16, var5.field_J);
-            var5.field_G = tm.a((byte) 39, param0, 16, var5.field_G);
+            var5.field_C = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_C);
+            var5.field_g = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_g);
+            var5.field_L = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_L);
+            var5.field_J = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_J);
+            var5.field_G = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_G);
           }
           if (PacketBooleanSupport.readBoolean(param0, (byte) -95)) {
-            var5.field_b = tm.a((byte) 39, param0, 16, var5.field_b);
+            var5.field_b = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_b);
           }
           if (PacketBooleanSupport.readBoolean(param0, (byte) -95)) {
             var5.field_p = DualLinkNode.a(16, false, param0, var5.field_p);

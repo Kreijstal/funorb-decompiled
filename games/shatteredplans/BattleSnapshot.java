@@ -37,7 +37,7 @@ final class BattleSnapshot extends IntrusiveNode {
           var1_int = -RasterBuffer.field_a + 480;
           for (var2 = 0; PlacementEvent.field_l.length > var2; var2++) {
             if (null != PlacementEvent.field_l[var2]) {
-              PlacementEvent.field_l[var2].a(-208410008, var1_int);
+              PlacementEvent.field_l[var2].draw(-208410008, var1_int);
               var1_int -= 18;
               continue;
             }
@@ -87,10 +87,10 @@ final class BattleSnapshot extends IntrusiveNode {
             return false;
           }
           var2Lifetime1 = var1_int * WeightedLruCache.field_g.field_j;
-          if (var2Lifetime1 <= te.field_c) {
+          if (var2Lifetime1 <= ChatAreaLayoutSupport.field_c) {
             return true;
           }
-          te.field_c = var2Lifetime1;
+          ChatAreaLayoutSupport.field_c = var2Lifetime1;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,7 +209,7 @@ final class BattleSnapshot extends IntrusiveNode {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
-            var5 = uc.a(-77, var3);
+            var5 = HorizontalGradientComponent.validateEmailLocalPart(-77, var3);
             if (var5 == null) {
               stackIn_13_0 = AccountConnectionPhase.validateDomainName(var4, (byte) 111);
               return stackIn_13_0;

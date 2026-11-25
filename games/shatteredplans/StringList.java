@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq {
+final class StringList {
     private int field_e;
     static Archive field_f;
     private boolean field_c;
@@ -14,7 +14,7 @@ final class tq {
     static String field_k;
     static wj field_b;
 
-    private final int a(int param0, int param1) {
+    private final int capacityForIndex(int param0, int param1) {
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -36,23 +36,23 @@ final class tq {
         return var3;
     }
 
-    final void a(String param0, int param1) {
+    final void add(String param0, int param1) {
         try {
           if (param1 >= -122) {
             this.field_c = false;
           }
-          this.a(95, this.field_e + 1, param0);
+          this.set(95, this.field_e + 1, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(int param0, int param1, String param2) {
+    private final void set(int param0, int param1, String param2) {
         if (param1 > this.field_e) {
           this.field_e = param1;
         }
         if (param1 >= this.field_d.length) {
-          this.a((byte) -45, param1);
+          this.ensureCapacity((byte) -45, param1);
         }
         if (param0 != 95) {
           return;
@@ -82,16 +82,16 @@ final class tq {
         return var1.toString();
     }
 
-    private final void a(byte param0, int param1) {
+    private final void ensureCapacity(byte param0, int param1) {
         if (param0 != -45) {
           return;
         }
-        String[] var3 = new String[this.a(param1, 231)];
+        String[] var3 = new String[this.capacityForIndex(param1, 231)];
         ArrayOperations.copyObjects(this.field_d, 0, var3, 0, this.field_d.length);
         this.field_d = var3;
     }
 
-    final String[] a(int param0) {
+    final String[] toArray(int param0) {
         String[] var2 = new String[this.field_e + 1];
         if (param0 != 220) {
           this.field_e = 1;
@@ -113,7 +113,7 @@ final class tq {
         field_b = null;
     }
 
-    tq(int param0, boolean param1) {
+    StringList(int param0, boolean param1) {
         this.field_d = new String[]{};
         this.field_e = -1;
         this.field_c = false;

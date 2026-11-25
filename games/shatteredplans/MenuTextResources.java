@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ss {
+final class MenuTextResources {
     static QuickChatParameterType field_c;
     static int[] field_a;
     static String field_d;

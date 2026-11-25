@@ -299,7 +299,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           }
           MusicVoiceMixer.field_l = 2;
           GzipInflater.field_i = 11;
-          tg.field_a = 4;
+          DateValidationSupport.field_a = 4;
           UniformNineSliceFactory.field_c = 15;
           TextLayout.field_b = 2;
           var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
@@ -395,8 +395,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           QuickChatCategoryRegistry.field_h.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(73, "lobby", param4, "tab_inactive"), 127);
           QuickChatCategoryRegistry.field_h.field_lb = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(100, "lobby", param4, "tab_mouseover"), 85);
           QuickChatCategoryRegistry.field_h.field_sb = var14;
-          tm.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
-          tm.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
+          NotificationEntry.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
+          NotificationEntry.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
           IconTextPanel.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
           IconTextPanel.field_Eb.field_F = Wormhole.a(16, 3, 290, 11579568, 6052956, -1);
           IsaacBackedRandom.field_a = new AnimatedPanel(0L, var15);

@@ -238,10 +238,10 @@ final class LobbyUiSupport {
           if (!LinkPainter.field_g.ensureGroupLoadedByName("commonui", 60)) {
             return 40;
           }
-          if (!tq.field_f.isIndexLoaded((byte) -109)) {
+          if (!StringList.field_f.isIndexLoaded((byte) -109)) {
             return 50;
           }
-          if (!tq.field_f.ensureGroupLoadedByName("commonui", -112)) {
+          if (!StringList.field_f.ensureGroupLoadedByName("commonui", -112)) {
             return 60;
           }
           if (!GalaxyMap.field_g.isIndexLoaded((byte) -85)) {
@@ -268,10 +268,10 @@ final class LobbyUiSupport {
           if (!LinkPainter.field_g.ensureGroupLoadedByName("commonui", 127)) {
             return 57;
           }
-          if (!tq.field_f.isIndexLoaded((byte) -90)) {
+          if (!StringList.field_f.isIndexLoaded((byte) -90)) {
             return 71;
           }
-          if (!tq.field_f.ensureGroupLoadedByName("commonui", -105)) {
+          if (!StringList.field_f.ensureGroupLoadedByName("commonui", -105)) {
             return 80;
           }
           if (!GalaxyMap.field_g.isIndexLoaded((byte) -95)) {

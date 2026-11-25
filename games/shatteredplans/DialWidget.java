@@ -218,7 +218,7 @@ final class DialWidget extends FocusableWidget {
               var20 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var19 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var21 = ((PacketBuffer) ((Object) var1)).readString(-1);
-              var22 = ta.a(115, var3_long);
+              var22 = MenuTransitionSupport.findLobbyPlayer(115, var3_long);
               var8_ref_mj = var22;
               stackIn_12_0 = (var19.equals("")) ? 0 : 1;
               var9 = stackIn_12_0;
@@ -245,7 +245,7 @@ final class DialWidget extends FocusableWidget {
             if (var2 == 6) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(29);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-53);
-              var31 = ta.a(-98, var3_longLifetime1);
+              var31 = MenuTransitionSupport.findLobbyPlayer(-98, var3_longLifetime1);
               if (var31 == null) {
                 return;
               }
@@ -397,7 +397,7 @@ final class DialWidget extends FocusableWidget {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(127);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-119);
-                var14 = ta.a(126, var3_longLifetime2);
+                var14 = MenuTransitionSupport.findLobbyPlayer(126, var3_longLifetime2);
                 var25 = var14;
                 if (var14 == null) {
                   return;
@@ -418,7 +418,7 @@ final class DialWidget extends FocusableWidget {
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(127);
-              var29 = ta.a(121, var3_longLifetime2Lifetime1);
+              var29 = MenuTransitionSupport.findLobbyPlayer(121, var3_longLifetime2Lifetime1);
               if (var29 != null) {
                 if (var2 != 14) {
                   if (!var29.field_Vb) {

@@ -202,9 +202,9 @@ final class LobbyRoomEntry extends AnimatedPanel {
           }
         }
         if (!param5) {
-          tm.field_h = (PlayerReportPanel.field_Mb - 640) / 2;
+          NotificationEntry.field_h = (PlayerReportPanel.field_Mb - 640) / 2;
         } else {
-          tm.field_h = StatefulWidgetTheme.field_t;
+          NotificationEntry.field_h = StatefulWidgetTheme.field_t;
         }
         EmailValidator.a(true, param5);
         if (PlacementOrder.field_t > param9) {

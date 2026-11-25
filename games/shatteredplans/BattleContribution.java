@@ -220,7 +220,7 @@ final class BattleContribution extends IntrusiveNode {
           if (ReflectionQueueSupport.isAsciiAlphanumeric(param1, false)) {
             return true;
           }
-          var6 = tq.field_g;
+          var6 = StringList.field_g;
           var2 = var6;
           for (var3 = param0; var6.length > var3; var3++) {
             var4 = var6[var3];

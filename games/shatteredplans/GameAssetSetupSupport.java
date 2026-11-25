@@ -85,7 +85,7 @@ final class GameAssetSetupSupport {
           MusicCrossfadeStream.field_F = var9[2];
           HuffmanCodec.field_e = var9[0];
           wl.field_d = var9[4];
-          tm.field_r = var9[1];
+          NotificationEntry.field_r = var9[1];
           var21 = va.a("hud_icons_red", param6 + 8, "", param0);
           AlignedMenuLabel.field_D = var21[0];
           Wormhole.field_h = var21[3];
@@ -130,7 +130,7 @@ final class GameAssetSetupSupport {
           NameSuggestionsPanel.field_H = MessageKind.a(true, param0, "", "planet_burnt");
           StarSoundState.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
           NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
-          ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
+          MenuTransitionSupport.field_a = MessageKind.a(true, param0, "", "planet_exotic");
           BytePayloadNode.field_k = MessageKind.a(true, param0, "", "planet_gas");
           TextReplacementContext.field_c = MessageKind.a(true, param0, "", "planet_ringed");
           InvalidMapConnectionException.field_d = MessageKind.a(true, param0, "", "planet_rock");

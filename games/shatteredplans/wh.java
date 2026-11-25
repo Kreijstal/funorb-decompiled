@@ -24,7 +24,7 @@ final class wh {
             var1 = new RasterStateFrame();
           }
           var1.setRasterState(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
-          ta.field_b.addLast((byte) -113, var1);
+          MenuTransitionSupport.field_b.addLast((byte) -113, var1);
           return;
         }
         Sprite[] var2 = (Sprite[]) null;
@@ -34,7 +34,7 @@ final class wh {
           var1Lifetime1 = new RasterStateFrame();
         }
         var1Lifetime1.setRasterState(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
-        ta.field_b.addLast((byte) -113, var1Lifetime1);
+        MenuTransitionSupport.field_b.addLast((byte) -113, var1Lifetime1);
     }
 
     public static void clearStatics(boolean param0) {
@@ -101,7 +101,7 @@ final class wh {
         try {
           var3 = new String[]{param0, SoundPlayback.field_o, WidgetStateStyle.field_b};
           var4 = new AnimatedPanel[]{param1, OpacityWidget.field_A, (AnimatedPanel) ((Object) wg.field_a)};
-          this.field_d = new TabbedPanel(0L, QuickChatCategoryRegistry.field_h, var3, tm.field_t, var4, 0);
+          this.field_d = new TabbedPanel(0L, QuickChatCategoryRegistry.field_h, var3, NotificationEntry.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

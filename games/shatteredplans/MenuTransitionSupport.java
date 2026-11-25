@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta {
+final class MenuTransitionSupport {
     static AnimatedPanel field_d;
     static IntrusiveDeque field_b;
     static Sprite field_a;
     static String field_c;
     static String field_e;
 
-    final static void a(String param0, TextLayoutLine param1, int param2, int param3, BitmapFont param4) {
+    final static void fillCharacterPositions(String param0, TextLayoutLine param1, int param2, int param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -26,7 +26,7 @@ final class ta {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param2 != 27329) {
-            ta.a(62, -55L);
+            MenuTransitionSupport.findLobbyPlayer(62, -55L);
           }
           var5_int = 0;
           var6 = -1;
@@ -74,7 +74,7 @@ final class ta {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawClientInterface(boolean param0, int param1) {
         if (WeightedLruCache.a(-104)) {
           param0 = false;
         }
@@ -96,13 +96,13 @@ final class ta {
         field_c = (String) null;
     }
 
-    final static IndexedSprite c(byte param0) {
+    final static IndexedSprite createDecodedIndexedSprite(byte param0) {
         IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], IntroTextLine.field_q[0], ProgressDialog.field_fb);
         TertiaryListSequence.a(0);
         if (param0 > 82) {
           return var1;
         }
-        ta.a(113);
+        MenuTransitionSupport.isAccountNameRequestPending(113);
         return var1;
     }
 
@@ -117,12 +117,12 @@ final class ta {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountNameRequestPending(int param0) {
         int var1 = 94 / ((param0 + 29) / 49);
         return MatchingTextValidator.field_s == ue.field_a ? true : false;
     }
 
-    final static void b(byte param0) {
+    final static void queueAnimationPreferences(byte param0) {
         byte[] var1;
         byte[] var2;
         byte[] var1Lifetime1;
@@ -134,7 +134,7 @@ final class ta {
           if (StringNode.field_j == -1) {
             return;
           }
-          if (StringNode.field_j == uc.field_A) {
+          if (StringNode.field_j == HorizontalGradientComponent.field_A) {
             return;
           }
           var2 = new byte[2];
@@ -142,17 +142,17 @@ final class ta {
           var2[0] = (byte) 0;
           var2[1] = (byte)StringNode.field_j;
           UrlLoader.a(var2, (byte) -78, 6);
-          uc.field_A = StringNode.field_j;
+          HorizontalGradientComponent.field_A = StringNode.field_j;
           return;
         }
-        ta.a(true, -56);
+        MenuTransitionSupport.drawClientInterface(true, -56);
         if (Dialog.d(true)) {
           return;
         }
         if (StringNode.field_j == -1) {
           return;
         }
-        if (StringNode.field_j == uc.field_A) {
+        if (StringNode.field_j == HorizontalGradientComponent.field_A) {
           return;
         }
         var2Lifetime1 = new byte[2];
@@ -160,15 +160,15 @@ final class ta {
         var2Lifetime1[0] = (byte) 0;
         var2Lifetime1[1] = (byte)StringNode.field_j;
         UrlLoader.a(var2Lifetime1, (byte) -78, 6);
-        uc.field_A = StringNode.field_j;
+        HorizontalGradientComponent.field_A = StringNode.field_j;
     }
 
-    final static LobbyPlayerEntry a(int param0, long param1) {
+    final static LobbyPlayerEntry findLobbyPlayer(int param0, long param1) {
         int var3 = -91 % ((59 - param0) / 56);
         return (LobbyPlayerEntry) (ShatteredPlansClient.field_H.get(65280, param1));
     }
 
-    final static void a(int param0, int param1, byte param2, boolean param3) {
+    final static void beginMenuTransition(int param0, int param1, byte param2, boolean param3) {
         int var4 = 0;
         int var4Lifetime1;
         if (param1 == PlayerRankingRequest.field_o) {
@@ -187,7 +187,7 @@ final class ta {
           }
           BirthDateConfirmationForm.field_Q = 0;
           if (param2 != 96) {
-            ta.b((byte) 9);
+            MenuTransitionSupport.queueAnimationPreferences((byte) 9);
             return;
           }
           return;
@@ -203,7 +203,7 @@ final class ta {
         if (param2 == 96) {
           return;
         }
-        ta.b((byte) 9);
+        MenuTransitionSupport.queueAnimationPreferences((byte) 9);
     }
 
     static {

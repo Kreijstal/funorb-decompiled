@@ -13,7 +13,7 @@ final class ProjectsContent implements MenuContent {
     final static void b(byte param0) {
         int var2 = 0;
         ChatHistoryEntry var1 = null;
-        tm var2_ref_tm = null;
+        NotificationEntry var2_ref_tm = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -30,7 +30,7 @@ final class ProjectsContent implements MenuContent {
           }
           if (RasterBuffer.field_a >= 18) {
             RasterBuffer.field_a = 18;
-            var2_ref_tm = (tm) (ByteArrayReadRequest.field_p.pollFirst(35));
+            var2_ref_tm = (NotificationEntry) (ByteArrayReadRequest.field_p.pollFirst(35));
             if (var2_ref_tm != null) {
               NanoFrameTimer.a(var2_ref_tm, true);
             }
@@ -40,7 +40,7 @@ final class ProjectsContent implements MenuContent {
           }
           for (var2 = 0; var2 < PlacementEvent.field_l.length; var2++) {
             if (PlacementEvent.field_l[var2] != null) {
-              PlacementEvent.field_l[var2].a(256);
+              PlacementEvent.field_l[var2].tick(256);
             }
           }
           return;

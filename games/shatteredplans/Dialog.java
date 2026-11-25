@@ -200,8 +200,8 @@ abstract class Dialog extends WidgetContainer {
 
     final static void f(byte param0) {
         BufferedCacheFile.c(0);
-        if (tm.field_i != null) {
-          StandardMapGenerator.attachInputListeners(tm.field_i, (byte) -101);
+        if (NotificationEntry.field_i != null) {
+          StandardMapGenerator.attachInputListeners(NotificationEntry.field_i, (byte) -101);
         }
         IconTextPanel.releaseKeyboardInput(-96);
         CheckboxWidgetPainter.releaseMouseHandler(false);

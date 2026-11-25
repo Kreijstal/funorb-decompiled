@@ -177,7 +177,7 @@ final class PlayerReportPanel extends AnimatedPanel {
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_nb.stringWidth(tq.field_k);
+            var17Lifetime2 = param6.field_nb.stringWidth(StringList.field_k);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -210,7 +210,7 @@ final class PlayerReportPanel extends AnimatedPanel {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.appendReportSectionHeading(param6, var28[1], tq.field_k, var16Lifetime2, -49, var18Lifetime4);
+            var18Lifetime4 = this.appendReportSectionHeading(param6, var28[1], StringList.field_k, var16Lifetime2, -49, var18Lifetime4);
             var18Lifetime4 = this.appendReportOption((byte) -16, var28[1], this.field_Hb[16], var18Lifetime4, var16Lifetime2);
             var18Lifetime4 = this.appendReportOption((byte) -126, var28[1], this.field_Hb[17], var18Lifetime4, var16Lifetime2);
             var18Lifetime4 = this.appendReportOption((byte) 115, var28[1], this.field_Hb[18], var18Lifetime4, var16Lifetime2);

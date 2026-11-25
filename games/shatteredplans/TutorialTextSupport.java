@@ -34,7 +34,7 @@ final class TutorialTextSupport {
         int var7Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          te.field_c = 0;
+          ChatAreaLayoutSupport.field_c = 0;
           if (param0 == null) {
             WidgetStyle.field_m = (Sprite[][]) null;
             BirthDateConfirmationForm.field_L = null;

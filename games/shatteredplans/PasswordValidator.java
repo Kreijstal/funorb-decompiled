@@ -89,10 +89,10 @@ final class PasswordValidator extends TextFieldValidator {
             return;
           }
           IndexedSpriteState.a(127);
-          tg.field_c.a(param3, -20429);
+          DateValidationSupport.field_c.a(param3, -20429);
           if (null != wi.field_c) {
             if (LoginMethodPreference.field_g) {
-              wi.field_c.a(tg.field_c.field_B, param3, tg.field_c.field_N, (byte) 0);
+              wi.field_c.a(DateValidationSupport.field_c.field_B, param3, DateValidationSupport.field_c.field_N, (byte) 0);
             } else {
               wi.field_c = null;
             }
@@ -111,7 +111,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (ClientClockSupport.field_c.field_rb != 0) {
             DialogRoot.field_G = new PlayerReportPanel(ClientClockSupport.field_c.field_B, ClientClockSupport.field_c.field_N, ClientClockSupport.field_c.field_K, ClientClockSupport.field_c.field_mb, param1, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, ClientInputSupport.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
           }
-          var9 = SolMapReader.a(false, param2, tg.field_a, UniformNineSliceFactory.field_c);
+          var9 = SolMapReader.a(false, param2, DateValidationSupport.field_a, UniformNineSliceFactory.field_c);
           if (var9 != null) {
             AccountBooleanRequest.openChatPlayerContextMenu(var9, 0);
           }

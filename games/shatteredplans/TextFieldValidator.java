@@ -118,20 +118,20 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         BirthDateConfirmationForm var2Lifetime1;
         if (param0 < 96) {
           field_l = (AnimatedPanel) null;
-          tg.field_c.drawFullRaster(param1, -43);
+          DateValidationSupport.field_c.drawFullRaster(param1, -43);
           var2 = wi.field_c;
           if (var2 != null) {
-            var2.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
+            var2.draw(DateValidationSupport.field_c.field_N, DateValidationSupport.field_c.field_B, (byte) -66);
             return;
           }
           return;
         }
-        tg.field_c.drawFullRaster(param1, -43);
+        DateValidationSupport.field_c.drawFullRaster(param1, -43);
         var2Lifetime1 = wi.field_c;
         if (var2Lifetime1 == null) {
           return;
         }
-        var2Lifetime1.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
+        var2Lifetime1.draw(DateValidationSupport.field_c.field_N, DateValidationSupport.field_c.field_B, (byte) -66);
     }
 
     public static void clearStatics(byte param0) {

@@ -108,11 +108,11 @@ final class MenuButton extends MenuComponent {
           if (param16 > -113) {
             MenuButton.clearStatics(125);
           }
-          tb.a(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
+          LobbyUiSetupSupport.initializeLobbyWidgets(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
           DiskArchiveRequest.a(param7, (byte) -81, param0, param8);
           DisplayNameForm.l(1062);
           SecondaryNodeHashTable.a((byte) -83);
-          te.a(true);
+          ChatAreaLayoutSupport.layoutChatPanels(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

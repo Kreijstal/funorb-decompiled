@@ -53,8 +53,8 @@ abstract class IndexedSpriteState {
         int var3 = 30 / ((param0 - 69) / 54);
         int var2 = var1 - LabeledChildWidget.field_J * LabeledChildWidget.field_J;
         int var4 = NodeHashTableIterator.field_f + var2 * (-NodeHashTableIterator.field_f + DerelictMapGenerator.field_m) / var1;
-        tg.field_c.setTarget(640, 120, (byte) 121, var4, tm.field_h);
-        SocketArchiveNetworkClient.a(-24 + DerelictMapGenerator.field_m, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
+        DateValidationSupport.field_c.setTarget(640, 120, (byte) 121, var4, NotificationEntry.field_h);
+        SocketArchiveNetworkClient.a(-24 + DerelictMapGenerator.field_m, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
     public static void clearStatics(int param0) {

@@ -57,7 +57,7 @@ final class AccountInputSupport {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new AccountFieldValue(BoundsRect.d(-98), ta.a(33));
+          return new AccountFieldValue(BoundsRect.d(-98), MenuTransitionSupport.isAccountNameRequestPending(33));
         }
         return (AccountFieldValue) null;
     }

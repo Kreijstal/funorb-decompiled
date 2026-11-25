@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-final class tg {
+final class DateValidationSupport {
     static Random field_b;
     static int[] field_d;
     static int field_a;
     static AnimatedPanel field_c;
 
-    final static boolean a(int param0, int param1, byte param2, int param3) {
+    final static boolean isValidDate(int param0, int param1, byte param2, int param3) {
         if (param2 >= -91) {
           Sprite var5 = (Sprite) null;
-          tg.a(-57, (Sprite) null, (byte) 36, -126);
+          DateValidationSupport.lightenThroughSpriteMask(-57, (Sprite) null, (byte) 36, -126);
           if (param1 < 0) {
             return false;
           }
@@ -49,7 +49,7 @@ final class tg {
         int var1 = 95 % ((param0 + 56) / 38);
     }
 
-    final static void a(int param0, Sprite param1, byte param2, int param3) {
+    final static void lightenThroughSpriteMask(int param0, Sprite param1, byte param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         RuntimeException stackIn_27_0 = null;

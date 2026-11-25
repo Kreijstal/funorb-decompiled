@@ -79,7 +79,7 @@ final class LoginRequestSupport {
         try {
           if (PanelNode.field_q == WeightedLruCache.field_g) {
             if (null != WeightedLruCache.field_g) {
-              te.field_c = te.field_c + 16;
+              ChatAreaLayoutSupport.field_c = ChatAreaLayoutSupport.field_c + 16;
               var5 = WeightedLruCache.field_g.field_f;
               var1 = var5;
               if (var1 != null) {

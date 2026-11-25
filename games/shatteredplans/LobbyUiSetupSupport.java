@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb {
+final class LobbyUiSetupSupport {
     static String field_b;
     static String field_c;
     static AnimatedPanel[] field_a;
 
-    final static void a(int param0, int[] param1, String[][] param2, String[][] param3, Archive param4, String[] param5, String[] param6, Sprite[][] param7, int param8, Sprite[][] param9, int param10, String[] param11, byte[] param12, int param13, byte[] param14) {
+    final static void initializeLobbyWidgets(int param0, int[] param1, String[][] param2, String[][] param3, Archive param4, String[] param5, String[] param6, Sprite[][] param7, int param8, Sprite[][] param9, int param10, String[] param11, byte[] param12, int param13, byte[] param14) {
         IconLabelPanel[] array$0 = null;
         IconLabelPanel[] array$1 = null;
         IconLabelPanel[] array$2 = null;
@@ -99,12 +99,12 @@ final class tb {
           PairedIntSortSupport.field_c = new AnimatedPanel(0L, SpriteState.field_u);
           PairedIntSortSupport.field_c.field_y = 1;
           QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
-          IconLabelPanel.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
+          IconLabelPanel.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, HorizontalGradientComponent.field_z.toUpperCase());
           SoundEffectDefinition.field_e = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, GameMenuController.field_c);
           GameSession.field_e = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, FleetTrailPoint.field_j);
           WeightedCacheEntry.field_t = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, QuickChatMenu.field_Lb);
-          ta.field_d = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, ValidatedTextInputWidget.field_T);
+          MenuTransitionSupport.field_d = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, ValidatedTextInputWidget.field_T);
           IsaacBackedRandom.field_c = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, WidgetContainer.field_z);
           AccountHandshakeSupport.field_b = new AnimatedPanel(0L, QuickChatMenu.field_Cb, DerelictMapGenerator.field_o);
           SingleChildWidget.field_y = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
@@ -131,7 +131,7 @@ final class tb {
           SoundEffectDefinition.field_e.addChild(4, GameSession.field_e);
           SoundEffectDefinition.field_e.addChild(param13 ^ -7962, WeightedCacheEntry.field_t);
           if (AccountStatusDialog.field_pb) {
-            SoundEffectDefinition.field_e.addChild(4, ta.field_d);
+            SoundEffectDefinition.field_e.addChild(4, MenuTransitionSupport.field_d);
           }
           SoundEffectDefinition.field_e.addChild(4, IsaacBackedRandom.field_c);
           SoundEffectDefinition.field_e.addChild(4, AccountHandshakeSupport.field_b);
@@ -164,7 +164,7 @@ final class tb {
             BattleExplosionVisual.field_t.addChild(4, MenuComponent.field_q);
           }
           BattleExplosionVisual.field_t.addChild(param13 + 7970, EmailValidationError.field_a);
-          DialPainter.field_g = new AnimatedPanel(0L, AlignedMenuLabel.field_E, tm.field_o.toUpperCase());
+          DialPainter.field_g = new AnimatedPanel(0L, AlignedMenuLabel.field_E, NotificationEntry.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, SoundEffectSupport.field_d);
           NameSuggestionsPanel.field_D = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           StarAnnotation.field_l = new AnimatedPanel(0L, DiplomacyRowSupport.field_b, MessageKind.field_e.toUpperCase());
@@ -176,7 +176,7 @@ final class tb {
             ByteArrayNode.field_p[0][1 + var17_int] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, uk.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
           }
           if (param13 != -7966) {
-            tb.clearStatics(-52);
+            LobbyUiSetupSupport.clearStatics(-52);
           }
           if (DiplomacyRowSupport.field_a.length >= 2) {
             QuickChatCategoryRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, wl.field_b);

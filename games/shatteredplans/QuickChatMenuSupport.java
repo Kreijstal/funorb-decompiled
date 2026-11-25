@@ -243,7 +243,7 @@ final class QuickChatMenuSupport {
             }
           }
           for (var3 = 0; var3 < InvalidMapConnectionException.field_f.length; var3++) {
-            var4 = ss.field_a[var3];
+            var4 = MenuTextResources.field_a[var3];
             if (0 <= var4) {
               if (GameState.field_l.field_c == var4) {
                 var5 = StarAnnotation.field_n;

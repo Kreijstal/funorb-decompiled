@@ -180,7 +180,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             }
           }
           if (StarAbandonedEvent.field_m == Wormhole.field_j &&
-            uc.d((byte) -28)) {
+            HorizontalGradientComponent.readPacketPayload((byte) -28)) {
             if (BufferedCacheFile.field_e == 255) {
               var9_ref_String = SpriteWipeSupport.field_a.readNullableString(1910283844);
               if (var9_ref_String != null) {

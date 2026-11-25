@@ -32,7 +32,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = tm.field_i.getGraphics();
+            var9 = NotificationEntry.field_i.getGraphics();
             if (TextLayoutLine.field_a == null) {
               TextLayoutLine.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -45,7 +45,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             }
             try {
               if (IterableNodeHashTable.field_a == null) {
-                IterableNodeHashTable.field_a = tm.field_i.createImage(304, 34);
+                IterableNodeHashTable.field_a = NotificationEntry.field_i.createImage(304, 34);
               }
               var10 = IterableNodeHashTable.field_a.getGraphics();
               var10.setColor(param4);
@@ -81,7 +81,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            tm.field_i.repaint();
+            NotificationEntry.field_i.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

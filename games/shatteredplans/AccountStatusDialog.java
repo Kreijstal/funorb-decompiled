@@ -176,7 +176,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
             } else {
               stackIn_10_0 = var6;
               if (!this.field_tb) {
-                stackIn_11_1 = ss.field_e;
+                stackIn_11_1 = MenuTextResources.field_e;
               } else {
                 stackIn_11_1 = TextHotspotWidget.field_E;
               }

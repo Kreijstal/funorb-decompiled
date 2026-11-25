@@ -101,7 +101,7 @@ final class ChatPanelLayoutSupport {
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var6_int = param4 + 2 + 485 + 8 + param2 + 8;
-          StatusContent.field_c.setTarget(var6_int - 6, -6 + tg.field_c.field_mb, (byte) 82, 3, 3);
+          StatusContent.field_c.setTarget(var6_int - 6, -6 + DateValidationSupport.field_c.field_mb, (byte) 82, 3, 3);
           var7 = StatusContent.field_c.field_mb - 5;
           TaskAi.field_o.setTarget(487 + (param2 + param4), param1, (byte) 69, -param1 + var7, 5);
           uq.field_j.setTarget(-OpacityWidget.field_C.field_K - param2 + TaskAi.field_o.field_K, param1, (byte) 116, 0, param2);
@@ -111,7 +111,7 @@ final class ChatPanelLayoutSupport {
           if (wi.field_c != null) {
             wi.field_c.setBounds(DateInputWidget.field_I.field_db, DateInputWidget.field_I.field_mb, (byte) 117, DateInputWidget.field_I.field_hb, DateInputWidget.field_I.field_K);
           }
-          var8 = -var6_int - param2 + tg.field_c.field_K;
+          var8 = -var6_int - param2 + DateValidationSupport.field_c.field_K;
           var9 = var8 / 2;
           if (param3 <= 19) {
             return;
@@ -121,14 +121,14 @@ final class ChatPanelLayoutSupport {
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != TextReplacementEntry.field_b[var12]) {
-              var13 = (-4 + tg.field_c.field_mb) * var11 / (QuickChatParameterType.field_d + 1) + 3;
+              var13 = (-4 + DateValidationSupport.field_c.field_mb) * var11 / (QuickChatParameterType.field_d + 1) + 3;
               var11++;
-              var7Lifetime1 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + QuickChatParameterType.field_d) + 3 - 2;
+              var7Lifetime1 = -var13 + var11 * (-4 + DateValidationSupport.field_c.field_mb) / (1 + QuickChatParameterType.field_d) + 3 - 2;
               if (5 <= var12) {
                 ClientClockSupport.field_c.setTarget(var8, var7Lifetime1, (byte) 46, var13, var6_int);
               } else {
                 TextReplacementEntry.field_b[var12].setTarget(var8, var7Lifetime1, (byte) 115, var13, var6_int);
-                tb.field_a[var12].setTarget(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
+                LobbyUiSetupSupport.field_a[var12].setTarget(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
                 DerelictMapReader.field_d[var12].setTarget(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
                 DiplomacyNotice.field_n[var12].setTarget(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
               }

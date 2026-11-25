@@ -50,7 +50,7 @@ final class SoundEffectSupport {
     final static void readClientBytePreference(byte[] param0, byte param1) {
         try {
           if (param0[0] >= 0) {
-            uc.field_A = param0[1];
+            HorizontalGradientComponent.field_A = param0[1];
           }
           int var2_int = -79 / ((-55 - param1) / 60);
         } catch (RuntimeException runtimeException) {

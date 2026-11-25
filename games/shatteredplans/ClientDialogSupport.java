@@ -33,7 +33,7 @@ final class ClientDialogSupport {
         try {
           var7 = (CharSequence) ((Object) param0);
           if (!ServerIntArrayRequest.isValidAccountName((byte) -118, var7)) {
-            stackIn_2_0 = tm.field_j;
+            stackIn_2_0 = NotificationEntry.field_j;
             return stackIn_2_0;
           }
           if (ClientInputSupport.field_b != 2) {

@@ -58,7 +58,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             return null;
           }
           if (param0 < -71) {
-            stackIn_7_0 = ta.c((byte) 118);
+            stackIn_7_0 = MenuTransitionSupport.createDecodedIndexedSprite((byte) 118);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite) null;

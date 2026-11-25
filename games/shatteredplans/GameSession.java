@@ -219,11 +219,11 @@ final class GameSession implements AiHost {
           if (!this.field_f) {
             IntroRenderSupport.clearChatHistory(117);
             var3_int = param1 ? 1 : 0;
-            ta.a(0, 0, (byte) 96, var3_int != 0);
+            MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, var3_int != 0);
           }
           if (-1 != StringNode.field_j &&
-            ~StringNode.field_j != ~uc.field_A) {
-            ta.b((byte) -69);
+            ~StringNode.field_j != ~HorizontalGradientComponent.field_A) {
+            MenuTransitionSupport.queueAnimationPreferences((byte) -69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -960,7 +960,7 @@ final class GameSession implements AiHost {
           if (61 == BufferedCacheFile.field_e) {
             var2_intLifetime2 = SpriteWipeSupport.field_a.readSignedByte(-2852);
             this.field_P.declareWinner(var2_intLifetime2, 3);
-            ta.a(0, -1, (byte) 96, false);
+            MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, false);
             this.field_b = false;
             this.field_Y.hidePanels(-4956);
             boolean decompiledSharedTail0 = ((this.field_n == null ||
@@ -2699,7 +2699,7 @@ final class GameSession implements AiHost {
               }
             }
             var3_int = var2_intLifetime1;
-            ta.a(0, var3_int, (byte) 96, false);
+            MenuTransitionSupport.beginMenuTransition(0, var3_int, (byte) 96, false);
             return;
           }
           if (param0 > -80) {
@@ -3681,7 +3681,7 @@ final class GameSession implements AiHost {
             stackIn_88_0 = 0;
             stackIn_88_1 = -1;
           }
-          ta.a(stackIn_88_0, stackIn_88_1, (byte) 96, false);
+          MenuTransitionSupport.beginMenuTransition(stackIn_88_0, stackIn_88_1, (byte) 96, false);
           this.field_b = false;
           this.field_Y.hidePanels(-4956);
           if ((this.field_n == null ||

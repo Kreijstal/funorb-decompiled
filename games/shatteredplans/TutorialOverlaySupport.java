@@ -58,12 +58,12 @@ final class TutorialOverlaySupport {
           if (WeightedLruCache.field_g == PanelNode.field_q) {
             var1_int = AccountFieldValue.field_f + 13;
             var2 = 6 + ByteArrayNode.field_k;
-            var3 = te.field_c;
+            var3 = ChatAreaLayoutSupport.field_c;
             if (BirthDateConfirmationForm.field_L != null) {
-              if (te.field_c <= 0) {
+              if (ChatAreaLayoutSupport.field_c <= 0) {
                 return;
               }
-              SpriteWipeSupport.drawAdditiveSpriteWipe(te.field_c, var1_int, (byte) 101, 16, BirthDateConfirmationForm.field_L[0], var2);
+              SpriteWipeSupport.drawAdditiveSpriteWipe(ChatAreaLayoutSupport.field_c, var1_int, (byte) 101, 16, BirthDateConfirmationForm.field_L[0], var2);
               for (var4 = 1; BirthDateConfirmationForm.field_L.length > var4; var4++) {
                 var3 = var3 - WeightedLruCache.field_g.field_j;
                 if (var3 <= 0) {
@@ -115,7 +115,7 @@ final class TutorialOverlaySupport {
                     }
                   }
                   if (0 > var3) {
-                    te.field_c = te.field_c - var3;
+                    ChatAreaLayoutSupport.field_c = ChatAreaLayoutSupport.field_c - var3;
                     var3 = 0;
                   }
                 }

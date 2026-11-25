@@ -40,17 +40,17 @@ final class ProjectsWindowSupport {
     }
 
     final static MenuWindow createProjectsWindow(byte param0) {
-        tm.field_k = new MenuWindow(250, 60, 150, 186, MouseWheelInput.field_c.toUpperCase());
-        MenuButton var1 = new MenuButton(-16 + (tm.field_k.field_k + tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (Sprite) null, "X", 16711680);
-        var1.field_h = tm.field_k;
-        tm.field_k.addChild(var1, 8);
-        MenuList var2 = new MenuList(9 + tm.field_k.field_k, 20 + tm.field_k.field_t, 132, 158);
-        tm.field_k.addChild(var2, 8);
-        tm.field_k.field_z = var2;
+        NotificationEntry.field_k = new MenuWindow(250, 60, 150, 186, MouseWheelInput.field_c.toUpperCase());
+        MenuButton var1 = new MenuButton(-16 + (NotificationEntry.field_k.field_k + NotificationEntry.field_k.field_m), NotificationEntry.field_k.field_t + 2, 11, 11, -1, (Sprite) null, "X", 16711680);
+        var1.field_h = NotificationEntry.field_k;
+        NotificationEntry.field_k.addChild(var1, 8);
+        MenuList var2 = new MenuList(9 + NotificationEntry.field_k.field_k, 20 + NotificationEntry.field_k.field_t, 132, 158);
+        NotificationEntry.field_k.addChild(var2, 8);
+        NotificationEntry.field_k.field_z = var2;
         ProjectsContent var3 = new ProjectsContent();
         int var4 = -110 % ((param0 + 14) / 61);
-        tm.field_k.field_x = (MenuContent) ((Object) var3);
-        return tm.field_k;
+        NotificationEntry.field_k.field_x = (MenuContent) ((Object) var3);
+        return NotificationEntry.field_k;
     }
 
     public static void clearStatics(byte param0) {

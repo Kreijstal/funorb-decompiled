@@ -22,7 +22,7 @@ final class ClientOverlayDrawSupport {
     }
 
     final static void drawSharedClientOverlays(boolean param0, byte param1) {
-        ta.a(param0, 121);
+        MenuTransitionSupport.drawClientInterface(param0, 121);
         if (param1 != -27) {
           ClientOverlayDrawSupport.clearStatics(11);
           PlayerOverlaySupport.drawInterfaceOverlays(true, param0);

@@ -288,7 +288,7 @@ final class Star extends DualLinkNode {
 
     final static void f(byte param0) {
         int var2 = -118 / ((3 - param0) / 49);
-        RasterStateFrame var1 = (RasterStateFrame) (ta.field_b.pollLast(true));
+        RasterStateFrame var1 = (RasterStateFrame) (MenuTransitionSupport.field_b.pollLast(true));
         if (var1 == null) {
           throw new IllegalStateException();
         }

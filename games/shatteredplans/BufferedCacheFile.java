@@ -466,7 +466,7 @@ final class BufferedCacheFile {
           if (param0 != 0) {
             field_j = (String) null;
           }
-          tm.field_i.requestFocus();
+          NotificationEntry.field_i.requestFocus();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

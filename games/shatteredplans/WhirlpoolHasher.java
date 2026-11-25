@@ -254,7 +254,7 @@ final class WhirlpoolHasher {
             }
             var14Lifetime2 = stackIn_15_0;
             var15 = var61[var13] * param6 - (-(param1 * var62[var13]) - var63[var13] * param4) >> 8;
-            stackIn_17_0 = uc.field_w;
+            stackIn_17_0 = HorizontalGradientComponent.field_w;
             if (0 > var15) {
               stackIn_18_1 = -var15;
             } else {

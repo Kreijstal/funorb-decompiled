@@ -8,7 +8,7 @@ final class PlacementEvent extends IntrusiveNode {
     static String field_m;
     int field_h;
     static int field_k;
-    static tm[] field_l;
+    static NotificationEntry[] field_l;
 
     public static void clearStatics(byte param0) {
         field_l = null;

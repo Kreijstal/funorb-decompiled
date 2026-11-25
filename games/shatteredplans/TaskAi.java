@@ -858,7 +858,7 @@ final class TaskAi implements Ai {
           if (!PanelNode.field_o &&
             0 >= StarAnnotation.field_m && (!(RasterTargetSupport.field_b >= 2) ||
             !FleetTrailPoint.field_p[12])) {
-            uc.field_B = true;
+            HorizontalGradientComponent.field_B = true;
             decompiledFrameRemainder0 = false;
           }
           else {

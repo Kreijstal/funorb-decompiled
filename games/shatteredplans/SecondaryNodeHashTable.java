@@ -450,15 +450,15 @@ final class SecondaryNodeHashTable {
     final static MenuWindow a(int param0, boolean param1) {
         MenuButton var2 = null;
         MenuList var3 = null;
-        tq.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, AccountNoticeKind.field_a.toUpperCase());
+        StringList.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, AccountNoticeKind.field_a.toUpperCase());
         if (param1) {
-          var2 = new MenuButton(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
-          var2.field_h = tq.field_j;
-          tq.field_j.addChild(var2, 8);
-          var3 = new MenuList(tq.field_j.field_k + 9, tq.field_j.field_t + 20, 182, param0);
-          tq.field_j.addChild(var3, 8);
-          tq.field_j.field_z = var3;
-          return tq.field_j;
+          var2 = new MenuButton(StringList.field_j.field_k + 200 - 16, 2 + StringList.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+          var2.field_h = StringList.field_j;
+          StringList.field_j.addChild(var2, 8);
+          var3 = new MenuList(StringList.field_j.field_k + 9, StringList.field_j.field_t + 20, 182, param0);
+          StringList.field_j.addChild(var3, 8);
+          StringList.field_j.field_z = var3;
+          return StringList.field_j;
         }
         return (MenuWindow) null;
     }

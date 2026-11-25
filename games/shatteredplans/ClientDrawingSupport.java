@@ -254,7 +254,7 @@ final class ClientDrawingSupport {
           Object[] var2 = (Object[]) null;
           ClientDrawingSupport.quickSort(-35, -18, (int[]) null, (byte) 95, (Object[]) null);
         }
-        return tg.field_b.nextInt();
+        return DateValidationSupport.field_b.nextInt();
     }
 
     final synchronized static byte[] allocateByteArray(int param0, int param1) {

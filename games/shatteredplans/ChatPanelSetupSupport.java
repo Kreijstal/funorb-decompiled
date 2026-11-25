@@ -87,9 +87,9 @@ final class ChatPanelSetupSupport {
           var13[2] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          tg.field_c = new AnimatedPanel(0L, param7);
+          DateValidationSupport.field_c = new AnimatedPanel(0L, param7);
           StatusContent.field_c = new AnimatedPanel(0L, param6);
-          tg.field_c.addChild(4, StatusContent.field_c);
+          DateValidationSupport.field_c.addChild(4, StatusContent.field_c);
           var17 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var17.field_M = new IntrusiveDeque();
           DateInputWidget.field_I = new ScrollPane(0L, var17, param1, param4);
@@ -104,7 +104,7 @@ final class ChatPanelSetupSupport {
           OpacityWidget.field_C.field_F = var16;
           TaskAi.field_o.addChild(4, OpacityWidget.field_C);
           DerelictMapReader.field_d = new AnimatedPanel[5];
-          tb.field_a = new AnimatedPanel[5];
+          LobbyUiSetupSupport.field_a = new AnimatedPanel[5];
           DiplomacyNotice.field_n = new AnimatedPanel[5];
           TextReplacementEntry.field_b = new AnimatedPanel[5];
           var18 = 0;
@@ -131,16 +131,16 @@ final class ChatPanelSetupSupport {
               }
               if (decompiledFrameRemainder0) {
                 TextReplacementEntry.field_b[var18] = new AnimatedPanel(0L, param5);
-                tb.field_a[var18] = new AnimatedPanel(0L, BoundsRect.field_k, var19);
+                LobbyUiSetupSupport.field_a[var18] = new AnimatedPanel(0L, BoundsRect.field_k, var19);
                 DerelictMapReader.field_d[var18] = new AnimatedPanel(0L, (AnimatedPanel) null);
                 DerelictMapReader.field_d[var18].field_G = 1;
                 DiplomacyNotice.field_n[var18] = new AnimatedPanel(0L, BoundsRect.field_k);
                 DiplomacyNotice.field_n[var18].field_G = 1;
-                TextReplacementEntry.field_b[var18].addChild(4, tb.field_a[var18]);
+                TextReplacementEntry.field_b[var18].addChild(4, LobbyUiSetupSupport.field_a[var18]);
                 TextReplacementEntry.field_b[var18].addChild(4, DerelictMapReader.field_d[var18]);
                 TextReplacementEntry.field_b[var18].addChild(4, DiplomacyNotice.field_n[var18]);
                 TextReplacementEntry.field_b[var18].markDirty((byte) -126);
-                tg.field_c.addChild(4, TextReplacementEntry.field_b[var18]);
+                DateValidationSupport.field_c.addChild(4, TextReplacementEntry.field_b[var18]);
                 QuickChatParameterType.field_d = QuickChatParameterType.field_d + 1;
               }
               var18++;
@@ -151,7 +151,7 @@ final class ChatPanelSetupSupport {
           if (decompiledNaturalLoopExit0) {
             ClientClockSupport.field_c = new AnimatedPanel(0L, param0);
             ClientClockSupport.field_c.field_z = TooltipSupport.field_c;
-            tg.field_c.addChild(4, ClientClockSupport.field_c);
+            DateValidationSupport.field_c.addChild(4, ClientClockSupport.field_c);
             stackIn_34_0 = DirectByteArrayStorage.b((byte) -121) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&

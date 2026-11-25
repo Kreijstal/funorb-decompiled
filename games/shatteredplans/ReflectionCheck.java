@@ -27,19 +27,19 @@ final class ReflectionCheck extends IntrusiveNode {
         try {
           wn.c();
           we.field_e = 11;
-          uc.field_w = new int[260];
+          HorizontalGradientComponent.field_w = new int[260];
           if (param0 != -47) {
             var5 = (TutorialScene) null;
             ReflectionCheck.a((String[]) null, (TutorialScene) null, 48);
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            uc.field_w[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+            HorizontalGradientComponent.field_w[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
           var6 = 256;
           var1_intLifetime1 = var6;
-          while (var6 < uc.field_w.length) {
-            uc.field_w[var6] = 255;
+          while (var6 < HorizontalGradientComponent.field_w.length) {
+            HorizontalGradientComponent.field_w[var6] = 255;
             var6++;
           }
           return;

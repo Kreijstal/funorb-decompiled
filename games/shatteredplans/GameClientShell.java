@@ -195,7 +195,7 @@ abstract class GameClientShell extends GameApplet {
         IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         TutorialConditionalText.initializePunctuationKeyMap((byte) 100);
         ClientContextMenuSupport.field_b = OpacityWidget.createMouseWheelHandler(true);
-        QuickChatCategoryRegistry.a(tm.field_i, false);
+        QuickChatCategoryRegistry.a(NotificationEntry.field_i, false);
         ConquestVictoryChecker.field_k = param2;
         LeaderboardSortSupport.field_a = param5;
         ArchiveRequest.field_p = param1;
@@ -495,11 +495,11 @@ abstract class GameClientShell extends GameApplet {
             StarAnnotation.field_j = SoundCache.a(LeaderboardSortSupport.field_a, 124);
           }
           LinkPainter.field_g = TextReplacementContext.createArchive(-1, true, 1, ArchiveRequest.field_p, false);
-          tq.field_f = TextReplacementContext.createArchive(-1, true, 1, SliderPainter.field_j, false);
+          StringList.field_f = TextReplacementContext.createArchive(-1, true, 1, SliderPainter.field_j, false);
           GalaxyMap.field_g = TextReplacementContext.createArchive(-1, true, 1, ConquestVictoryChecker.field_k, false);
           DefensiveAi.field_p = 2;
           AttackTask.field_s = LinkPainter.field_g;
-          TextReplacementContext.field_f = tq.field_f;
+          TextReplacementContext.field_f = StringList.field_f;
         }
         if (DefensiveAi.field_p == 2) {
           if (null != StarAnnotation.field_j &&
@@ -519,13 +519,13 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (DefensiveAi.field_p == 3 &&
-          ClientUiLoadingSupport.areCommonUiArchivesReady(LinkPainter.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
+          ClientUiLoadingSupport.areCommonUiArchivesReady(LinkPainter.field_g, -7526, StringList.field_f, GalaxyMap.field_g) &&
           uq.a(GalaxyMap.field_g, 0)) {
           AnimatedPanel.f(-98);
           GameScreen.c(28164);
-          DerelictMapGenerator.field_r = tb.field_c;
+          DerelictMapGenerator.field_r = LobbyUiSetupSupport.field_c;
           UiTextSupport.field_a = false;
-          DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, tq.field_f);
+          DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, StringList.field_f);
           if (TextFieldWidget.field_D ||
             null != ChatPanelLayoutSupport.field_b) {
             stackIn_106_0 = ChatPanelLayoutSupport.field_b;
@@ -542,7 +542,7 @@ abstract class GameClientShell extends GameApplet {
             StripedProgressWidget.field_M = DateInputWidget.a(-123);
           }
           DiskCacheWorker.a(AccountStatusDialog.field_rb, StripedProgressWidget.field_M, 1000, GalaxyMap.field_g);
-          tq.field_f = null;
+          StringList.field_f = null;
           LinkPainter.field_g = null;
           GalaxyMap.field_g = null;
           we.a((java.applet.Applet) (this), 4289);
@@ -584,9 +584,9 @@ abstract class GameClientShell extends GameApplet {
         }
         if (!param0 &&
           IntrusiveDeque.field_c) {
-          StandardMapGenerator.attachInputListeners(tm.field_i, (byte) 125);
+          StandardMapGenerator.attachInputListeners(NotificationEntry.field_i, (byte) 125);
           this.createCanvas(0);
-          QuickChatCategoryRegistry.a(tm.field_i, false);
+          QuickChatCategoryRegistry.a(NotificationEntry.field_i, false);
         }
         if (ud.field_c[8]) {
           MenuComponent.d(2147483647);
@@ -644,7 +644,7 @@ abstract class GameClientShell extends GameApplet {
               if (SoundPlayback.field_i == 0) {
                 discarded$2 = this.a(false, 1, false);
               } else {
-                te.a(0, BattleExplosionVisual.field_o);
+                ChatAreaLayoutSupport.updateLoginUi(0, BattleExplosionVisual.field_o);
               }
             } else {
               ArchiveSource.b(-82);

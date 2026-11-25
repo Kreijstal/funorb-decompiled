@@ -39,7 +39,7 @@ class MenuLabel extends MenuComponent {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        tq var6 = null;
+        StringList var6 = null;
         String[] stackIn_3_0 = null;
         String[] stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
@@ -57,7 +57,7 @@ class MenuLabel extends MenuComponent {
           var4 = 0;
           while (true) {
             if (var4 >= param0.length) {
-              stackIn_20_0 = var6.a(220);
+              stackIn_20_0 = var6.toArray(220);
               return stackIn_20_0;
             }
             while (var4 < param0.length) {
@@ -68,7 +68,7 @@ class MenuLabel extends MenuComponent {
               }
               break;
             }
-            var6.a(StellarBombEvent.a(param0, -var3 + var4, var3, -118), -126);
+            var6.add(StellarBombEvent.a(param0, -var3 + var4, var3, -118), -126);
             while (param0.length > var4) {
               if (13 == param0[var4] ||
                 param0[var4] == 10) {

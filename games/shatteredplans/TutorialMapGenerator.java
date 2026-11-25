@@ -986,7 +986,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_all_games", 511);
                 if (null != var2) {
-                  uc.field_z = IterableNodeHashTable.a(var2, 17746);
+                  HorizontalGradientComponent.field_z = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_status", 511);
                 if (var2 != null) {
@@ -1098,7 +1098,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("join_xs_game", 511);
                 if (var2 != null) {
-                  ta.field_c = IterableNodeHashTable.a(var2, 17746);
+                  MenuTransitionSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("join_request_xs_game", 511);
                 if (var2 != null) {
@@ -1346,7 +1346,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("you_are_invited_to_xs_game", 511);
                 if (null != var2) {
-                  tq.field_a = IterableNodeHashTable.a(var2, 17746);
+                  StringList.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("asking_to_join_xs_game", 511);
                 if (var2 != null) {
@@ -1394,7 +1394,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("loading", 511);
                 if (var2 != null) {
-                  tb.field_c = IterableNodeHashTable.a(var2, 17746);
+                  LobbyUiSetupSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("offline", 511);
                 if (var2 != null) {
@@ -1688,7 +1688,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
             void loadAccountRulesAndMenuText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("rule_pillar_1", 511);
                 if (var2 != null) {
-                  tq.field_k = IterableNodeHashTable.a(var2, 17746);
+                  StringList.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_0", 511);
                 if (null != var2) {
@@ -1856,7 +1856,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("back", 511);
                 if (var2 != null) {
-                  ss.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MenuTextResources.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("exitfullscreenmode", 511);
                 if (null != var2) {
@@ -2392,7 +2392,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("invalid_name", 511);
                 if (var2 != null) {
-                  tm.field_j = IterableNodeHashTable.a(var2, 17746);
+                  NotificationEntry.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("cannot_add_yourself", 511);
                 if (null != var2) {
@@ -2742,7 +2742,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("endgame", 511);
                 if (null != var2) {
-                  uc.field_y = IterableNodeHashTable.a(var2, 17746);
+                  HorizontalGradientComponent.field_y = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("endtutorial", 511);
                 if (var2 != null) {
@@ -2802,7 +2802,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("canceldraw", 511);
                 if (null != var2) {
-                  te.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ChatAreaLayoutSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("acceptdraw", 511);
                 if (null != var2) {
@@ -2814,7 +2814,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("returntolobby", 511);
                 if (var2 != null) {
-                  tm.field_o = IterableNodeHashTable.a(var2, 17746);
+                  NotificationEntry.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("cont", 511);
                 if (null != var2) {

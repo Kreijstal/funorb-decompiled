@@ -43,7 +43,7 @@ final class uk {
             return stackIn_24_0;
           }
           if (var2_int == 2) {
-            stackIn_26_0 = ta.field_a;
+            stackIn_26_0 = MenuTransitionSupport.field_a;
             return stackIn_26_0;
           }
           if (3 == var2_int) {

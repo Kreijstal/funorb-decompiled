@@ -177,7 +177,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static tq g(int param0) {
+    final static StringList g(int param0) {
         int var1 = 4 / ((-7 - param0) / 37);
         return BattleEvent.c(1, 0);
     }

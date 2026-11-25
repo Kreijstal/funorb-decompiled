@@ -102,7 +102,7 @@ final class Bzip2State {
           MidiPcmStream.field_L = IconTextPanel.field_zb + uq.field_h;
           RecklessAi.field_r = IconTextPanel.field_zb + TerritoryResourcePanelSupport.field_a;
           TextReplacementEntry.field_i = new String[33];
-          TextReplacementEntry.field_i[14] = tm.field_o;
+          TextReplacementEntry.field_i[14] = NotificationEntry.field_o;
           TextReplacementEntry.field_i[0] = wm.field_f;
           TextReplacementEntry.field_i[7] = IntroLogoSupport.field_b;
           TextReplacementEntry.field_i[4] = ClientDrawingSupport.field_e;
@@ -113,7 +113,7 @@ final class Bzip2State {
           if (param0 < 6) {
             field_u = (Random) null;
           }
-          TextReplacementEntry.field_i[10] = uc.field_y;
+          TextReplacementEntry.field_i[10] = HorizontalGradientComponent.field_y;
           TextReplacementEntry.field_i[9] = null;
           TextReplacementEntry.field_i[6] = EmailValidationError.field_e;
           TextReplacementEntry.field_i[2] = StarLinkPlanner.field_a;
@@ -140,7 +140,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[7] = DialWidget.field_J;
           QuickChatPhraseRegistry.field_g[11] = StarSoundState.field_l;
           QuickChatPhraseRegistry.field_g[3] = DialogRoot.field_D;
-          QuickChatPhraseRegistry.field_g[14] = ss.field_d;
+          QuickChatPhraseRegistry.field_g[14] = MenuTextResources.field_d;
           QuickChatPhraseRegistry.field_g[5] = ClientException.field_g;
           QuickChatPhraseRegistry.field_g[8] = GameAssetSetupSupport.field_d;
           QuickChatPhraseRegistry.field_g[4] = CheckboxWidget.field_D;
@@ -154,7 +154,7 @@ final class Bzip2State {
           ChatCompositionSupport.field_b[6] = LobbyLayoutSupport.field_e;
           ChatCompositionSupport.field_b[11] = vo.field_a;
           ChatCompositionSupport.field_b[0] = MenuLabel.field_v;
-          ChatCompositionSupport.field_b[15] = ta.field_e;
+          ChatCompositionSupport.field_b[15] = MenuTransitionSupport.field_e;
           ChatCompositionSupport.field_b[13] = ClientRasterSupport.field_d;
           ChatCompositionSupport.field_b[4] = vs.field_c;
           ChatCompositionSupport.field_b[12] = vs.field_b;

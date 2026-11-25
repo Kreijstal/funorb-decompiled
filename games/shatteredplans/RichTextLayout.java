@@ -35,7 +35,7 @@ final class RichTextLayout extends TextLayout {
           var7 = param3.stringWidth(param1);
           var8.field_b[param2] = -(var7 >> 1) + param4;
           var8.field_b[param1.length()] = param4 + (var7 >> 1);
-          ta.a(param1, var8, 27329, 0, param3);
+          MenuTransitionSupport.fillCharacterPositions(param1, var8, 27329, 0, param3);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "la.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -150,7 +150,7 @@ final class RichTextLayout extends TextLayout {
               } else {
                 stackIn_39_3 = 0;
               }
-              ta.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_39_3, param6);
+              MenuTransitionSupport.fillCharacterPositions(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_39_3, param6);
             }
             this.field_d[var12Lifetime1] = var14;
             var11 = var11 + param7;
@@ -252,7 +252,7 @@ final class RichTextLayout extends TextLayout {
           var8 = var7;
           var7.field_b[0] = param4;
           var8.field_b[param3.length()] = param0.stringWidth(param3) + param4;
-          ta.a(param3, var8, param2 + 27333, 0, param0);
+          MenuTransitionSupport.fillCharacterPositions(param3, var8, param2 + 27333, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "la.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -282,7 +282,7 @@ final class RichTextLayout extends TextLayout {
           var10 = var9;
           var10.field_b[0] = -param2.stringWidth(param3) + param4;
           var10.field_b[param3.length()] = param4;
-          ta.a(param3, var10, 27329, 0, param2);
+          MenuTransitionSupport.fillCharacterPositions(param3, var10, 27329, 0, param2);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "la.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

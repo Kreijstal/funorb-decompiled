@@ -1374,7 +1374,7 @@ final class GameMenuController {
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
                 this.drawInstructionProjectIcon(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
                 var11Lifetime3 = var11Lifetime3 + (IconTextPanel.field_Cb.field_J + var21Lifetime1);
-                var17Lifetime1 = wg.field_e.expandPlaceholders(5607, tb.field_b);
+                var17Lifetime1 = wg.field_e.expandPlaceholders(5607, LobbyUiSetupSupport.field_b);
                 var18Lifetime1 = wg.field_e.expandPlaceholders(5607, wq.field_c);
                 var19Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var17Lifetime1, new int[]{var14}, var16);
                 var20Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var18Lifetime1, new int[]{var15}, var16);
@@ -1614,10 +1614,10 @@ final class GameMenuController {
                 continue;
               }
               var2 = MusicPatch.field_m;
-              ta.a(0, var2, (byte) 96, false);
+              MenuTransitionSupport.beginMenuTransition(0, var2, (byte) 96, false);
               continue;
             }
-            ta.a(0, -1, (byte) 96, false);
+            MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, false);
           }
           if (this.field_a == 6 ||
             this.field_a == 7) {
@@ -2257,45 +2257,45 @@ final class GameMenuController {
           if (var5 == 0) {
             this.field_g = param0;
             var5 = param1 ? 1 : 0;
-            ta.a(PlayerRankingRequest.field_o, 12, (byte) 96, var5 != 0);
+            MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 12, (byte) 96, var5 != 0);
           } else {
             if (30 == var5) {
               this.field_g = param0;
               var5 = param1 ? 1 : 0;
               var6 = var5;
-              ta.a(0, -4, (byte) 96, var6 != 0);
+              MenuTransitionSupport.beginMenuTransition(0, -4, (byte) 96, var6 != 0);
             } else {
               if (var5 == 1) {
                 if (Dialog.d(true)) {
                   var5 = 0;
-                  uc.a(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, var5);
+                  HorizontalGradientComponent.showStyledAccountChoiceMenu(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, var5);
                 } else {
                   this.field_g = param0;
                   var5 = param1 ? 1 : 0;
                   var6 = var5;
-                  ta.a(PlayerRankingRequest.field_o, -6, (byte) 96, var6 != 0);
+                  MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -6, (byte) 96, var6 != 0);
                 }
               } else {
                 if (var5 == 2) {
                   this.field_g = param0;
                   var5 = param1 ? 1 : 0;
-                  ta.a(0, -1, (byte) 96, var5 != 0);
+                  MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var5 != 0);
                 } else {
                   if (8 == var5) {
                     this.field_g = param0;
                     var5 = param1 ? 1 : 0;
-                    ta.a(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
+                    MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
                   } else {
                     if (var5 == 25) {
                       this.field_g = param0;
                       var5 = param1 ? 1 : 0;
-                      ta.a(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
+                      MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
                       uo.field_e = true;
                     } else {
                       if (var5 == 23) {
                         this.field_g = param0;
                         var5 = param1 ? 1 : 0;
-                        ta.a(PlayerRankingRequest.field_o, 8, (byte) 96, var5 != 0);
+                        MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 8, (byte) 96, var5 != 0);
                       } else {
                         if (var5 != 31) {
                           if (var5 != 5) {
@@ -2304,12 +2304,12 @@ final class GameMenuController {
                                 this.field_g = param0;
                                 var5 = MusicPatch.field_m;
                                 var6 = param1 ? 1 : 0;
-                                ta.a(PlayerRankingRequest.field_o, var5, (byte) 96, var6 != 0);
+                                MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, var5, (byte) 96, var6 != 0);
                               } else {
                                 if (var5 == 4) {
                                   this.field_g = param0;
                                   var5 = param1 ? 1 : 0;
-                                  ta.a(PlayerRankingRequest.field_o, 5, (byte) 96, var5 != 0);
+                                  MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 5, (byte) 96, var5 != 0);
                                 } else {
                                   if (var5 != 21 &&
                                     var5 != 22) {
@@ -2334,19 +2334,19 @@ final class GameMenuController {
                                         this.field_g = param0;
                                         PasswordInputPainter.field_x.c(false);
                                         var5 = param1 ? 1 : 0;
-                                        ta.a(0, -1, (byte) 96, var5 != 0);
+                                        MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var5 != 0);
                                       } else {
                                         if (var5 == 12) {
                                           this.field_g = param0;
                                           PasswordInputPainter.field_x.d(-7970);
                                           var5 = param1 ? 1 : 0;
-                                          ta.a(0, -1, (byte) 96, var5 != 0);
+                                          MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var5 != 0);
                                         } else {
                                           if (13 == var5) {
                                             this.field_g = param0;
                                             PasswordInputPainter.field_x.sendReady(-123);
                                             var5 = param1 ? 1 : 0;
-                                            ta.a(0, -1, (byte) 96, var5 != 0);
+                                            MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var5 != 0);
                                           } else {
                                             if (14 != var5) {
                                               if (var5 != 15 &&
@@ -2374,7 +2374,7 @@ final class GameMenuController {
                                                         this.field_g = param0;
                                                         var5 = param1 ? 1 : 0;
                                                         var6 = var5;
-                                                        ta.a(0, -5, (byte) 96, var6 != 0);
+                                                        MenuTransitionSupport.beginMenuTransition(0, -5, (byte) 96, var6 != 0);
                                                       }
                                                     } else {
                                                       if (var5 == 20) {
@@ -2383,7 +2383,7 @@ final class GameMenuController {
                                                       } else {
                                                         if (27 == var5) {
                                                           var5 = param1 ? 1 : 0;
-                                                          ta.a(PlayerRankingRequest.field_o, -3, (byte) 96, var5 != 0);
+                                                          MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -3, (byte) 96, var5 != 0);
                                                         } else {
                                                           if (var5 == 28) {
                                                             PlacementEvent.field_k = PlacementEvent.field_k + 1;
@@ -2439,7 +2439,7 @@ final class GameMenuController {
                                               this.field_g = param0;
                                               if (v.field_b) {
                                                 var5 = param1 ? 1 : 0;
-                                                ta.a(PlayerRankingRequest.field_o, -7, (byte) 96, var5 != 0);
+                                                MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -7, (byte) 96, var5 != 0);
                                               }
                                               if (MusicEnvelope.field_d) {
                                                 RoundedMenuPanel.writeSpectateRequest(0, 11, true);
@@ -2455,17 +2455,17 @@ final class GameMenuController {
                             } else {
                               this.field_g = param0;
                               var5 = param1 ? 1 : 0;
-                              ta.a(PlayerRankingRequest.field_o, 7, (byte) 96, var5 != 0);
+                              MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 7, (byte) 96, var5 != 0);
                             }
                           } else {
                             this.field_g = param0;
                             var5 = param1 ? 1 : 0;
-                            ta.a(PlayerRankingRequest.field_o, 6, (byte) 96, var5 != 0);
+                            MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 6, (byte) 96, var5 != 0);
                           }
                         } else {
                           this.field_g = param0;
                           var5 = param1 ? 1 : 0;
-                          ta.a(PlayerRankingRequest.field_o, 13, (byte) 96, var5 != 0);
+                          MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 13, (byte) 96, var5 != 0);
                         }
                       }
                     }

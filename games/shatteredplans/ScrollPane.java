@@ -315,8 +315,8 @@ final class ScrollPane extends AnimatedPanel {
               SolVictoryChecker.field_m = MusicEnvelope.field_i;
               NameSuggestionsPanel.field_L = 0;
               if (SolVictoryChecker.field_m == -1) {
-                uc.field_v = 50;
-                ta.a(0, 0, (byte) 96, false);
+                HorizontalGradientComponent.field_v = 50;
+                MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, false);
                 DiskCacheWorker.a(param0 + 1048483);
                 BattleContribution.d(true);
               }

@@ -77,9 +77,9 @@ final class DialogRoot extends SingleChildWidget {
             if (LobbyOptionSupport.field_c.field_o != null) {
               SoundEffectSupport.readClientBytePreference(LobbyOptionSupport.field_c.field_o, (byte) 30);
             }
-            ta.b((byte) -69);
+            MenuTransitionSupport.queueAnimationPreferences((byte) -69);
             if (StringNode.field_j == -1) {
-              StringNode.field_j = uc.field_A;
+              StringNode.field_j = HorizontalGradientComponent.field_A;
             }
             MusicCrossfadeStream.field_q = true;
           }
@@ -519,7 +519,7 @@ final class DialogRoot extends SingleChildWidget {
         BattleSnapshot.field_y.setTarget(68, 30, (byte) 64, 5, 5);
         GameSession.field_e.setTarget(78, 30, (byte) 42, 5, 75);
         WeightedCacheEntry.field_t.setTarget(48, 30, (byte) 61, 5, 155);
-        ta.field_d.setTarget(48, 30, (byte) 39, 5, 205);
+        MenuTransitionSupport.field_d.setTarget(48, 30, (byte) 39, 5, 205);
         int var2 = !AccountStatusDialog.field_pb ? 200 : 250;
         IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
         AccountHandshakeSupport.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);

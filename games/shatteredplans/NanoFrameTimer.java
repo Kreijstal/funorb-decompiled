@@ -161,12 +161,12 @@ final class NanoFrameTimer extends FrameTimer {
           WhirlpoolHasher.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
           return;
         }
-        tm var8 = (tm) null;
-        NanoFrameTimer.a((tm) null, false);
+        NotificationEntry var8 = (NotificationEntry) null;
+        NanoFrameTimer.a((NotificationEntry) null, false);
         WhirlpoolHasher.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
     }
 
-    final static void a(tm param0, boolean param1) {
+    final static void a(NotificationEntry param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2_int = PlacementEvent.field_l.length - 1;
         if (!param1) {

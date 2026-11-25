@@ -161,7 +161,7 @@ final class RoundedMenuPanel extends MenuComponent {
         try {
           var8 = (CharSequence) ((Object) param3);
           if (!ServerIntArrayRequest.isValidAccountName((byte) -80, var8)) {
-            stackIn_3_0 = tm.field_j;
+            stackIn_3_0 = NotificationEntry.field_j;
             return stackIn_3_0;
           }
           if (ClientInputSupport.field_b != 2) {

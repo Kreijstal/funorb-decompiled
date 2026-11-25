@@ -31,7 +31,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 == 1) {
-            stackIn_7_0 = uc.a(param0.getFile(param3, -1, param4), 0);
+            stackIn_7_0 = HorizontalGradientComponent.createDecodedBitmapFont(param0.getFile(param3, -1, param4), 0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (BinaryBitmapFont) null;
@@ -167,9 +167,9 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
           LobbyOptionSupport.field_f.h(10, param0 + 253);
           GzipInflater.field_d = false;
         }
-        if (uc.field_B) {
-          uc.a(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 240, 8, IntroGlowPoint.field_i, true, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, 1);
-          uc.field_B = false;
+        if (HorizontalGradientComponent.field_B) {
+          HorizontalGradientComponent.showStyledAccountChoiceMenu(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 240, 8, IntroGlowPoint.field_i, true, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, 1);
+          HorizontalGradientComponent.field_B = false;
         }
     }
 
@@ -229,7 +229,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        NanoFrameTimer.a(param0, param3, param2, -77, UniformNineSliceFactory.field_c, MusicVoiceMixer.field_l, tg.field_a);
+        NanoFrameTimer.a(param0, param3, param2, -77, UniformNineSliceFactory.field_c, MusicVoiceMixer.field_l, DateValidationSupport.field_a);
         if (param1 != 8) {
           Archive var5 = (Archive) null;
           StatusMessagePanel.a((Archive) null, -64, (Archive) null, 13, 77);

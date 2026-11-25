@@ -255,13 +255,13 @@ final class ObjectList {
                 SecondaryNodeDequeIterator.a((byte) -97) &&
                 ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
-                  var26 = var12.field_Jb.measureWidthUnbounded(false) + 2 * tg.field_a;
+                  var26 = var12.field_Jb.measureWidthUnbounded(false) + 2 * DateValidationSupport.field_a;
                   var12.field_Jb.setTarget(var26, UniformNineSliceFactory.field_c, (byte) 80, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_z) {
                   if (param2 != EmailValidationError.field_a) {
-                    var26Lifetime2 = var12.field_Mb.measureWidthUnbounded(false) + tg.field_a * 2;
+                    var26Lifetime2 = var12.field_Mb.measureWidthUnbounded(false) + DateValidationSupport.field_a * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
@@ -302,10 +302,10 @@ final class ObjectList {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_xb.field_nb.lineCount(var23, var12.field_K - tg.field_a - tg.field_a);
+              var24_intLifetime1 = var12.field_xb.field_nb.lineCount(var23, var12.field_K - DateValidationSupport.field_a - DateValidationSupport.field_a);
               var12.field_xb.field_z = var23;
               var12.field_xb.field_I = 256 * var12.field_Gb / AccountBooleanRequest.field_i;
-              var12.field_xb.setTarget(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * UniformNineSliceFactory.field_c, (byte) 96, var19, tg.field_a);
+              var12.field_xb.setTarget(-(2 * DateValidationSupport.field_a) + var12.field_K, var24_intLifetime1 * UniformNineSliceFactory.field_c, (byte) 96, var19, DateValidationSupport.field_a);
               var19 = var19 + UniformNineSliceFactory.field_c * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {

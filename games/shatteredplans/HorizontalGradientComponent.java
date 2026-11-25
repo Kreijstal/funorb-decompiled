@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends MenuComponent {
+final class HorizontalGradientComponent extends MenuComponent {
     static int field_v;
     static String field_z;
     static String field_y;
@@ -11,7 +11,7 @@ final class uc extends MenuComponent {
     private int field_u;
     static int[] field_w;
 
-    final static EmailValidationError a(int param0, String param1) {
+    final static EmailValidationError validateEmailLocalPart(int param0, String param1) {
         EmailValidationError stackIn_4_0 = null;
         EmailValidationError stackIn_7_0 = null;
         EmailValidationError stackIn_11_0 = null;
@@ -109,7 +109,7 @@ final class uc extends MenuComponent {
         }
     }
 
-    final static BinaryBitmapFont a(byte[] param0, int param1) {
+    final static BinaryBitmapFont createDecodedBitmapFont(byte[] param0, int param1) {
         BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -146,15 +146,15 @@ final class uc extends MenuComponent {
         field_w = null;
         if (param0 <= 61) {
           byte[] var2 = (byte[]) null;
-          uc.a((byte[]) null, -44);
+          HorizontalGradientComponent.createDecodedBitmapFont((byte[]) null, -44);
         }
         field_y = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, Sprite[] param7, byte param8, int param9, Sprite[] param10, BitmapFont param11, boolean param12, int param13, int param14) {
+    final static void showStyledAccountChoiceMenu(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, Sprite[] param7, byte param8, int param9, Sprite[] param10, BitmapFont param11, boolean param12, int param13, int param14) {
         try {
           if (param8 != -87) {
-            uc.clearStatics((byte) -47);
+            HorizontalGradientComponent.clearStatics((byte) -47);
           }
           ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new v(param10), param2, AccountNoticeKind.field_b, wo.field_a, param13, param0, DualLinkDequeSequence.field_l, StellarBombEvent.field_j, new v(param7));
           GradientMenuLabel.showAccountChoiceMenu(param6, true, param12, param14, param5);
@@ -163,7 +163,7 @@ final class uc extends MenuComponent {
         }
     }
 
-    final static boolean d(byte param0) {
+    final static boolean readPacketPayload(byte param0) {
         if (-1 == TextInputPainter.field_t) {
           if (!StarAnnotation.a(-57, 1)) {
             return false;
@@ -180,12 +180,12 @@ final class uc extends MenuComponent {
         }
         if (param0 > -25) {
           BitmapFont var2 = (BitmapFont) null;
-          uc.a(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (BitmapFont) null, true, 22, -30);
+          HorizontalGradientComponent.showStyledAccountChoiceMenu(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (BitmapFont) null, true, 22, -30);
         }
         return StarAnnotation.a(-78, TextInputPainter.field_t);
     }
 
-    uc(int param0, int param1, int param2, int param3, int param4, int param5) {
+    HorizontalGradientComponent(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(param0, param1, param2, param3);
         this.field_u = param5;
         this.field_x = param4;

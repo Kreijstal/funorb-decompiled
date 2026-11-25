@@ -38,7 +38,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if ((PasswordInputPainter.field_x.field_P.field_y & 1 << PasswordInputPainter.field_x.field_h) != 0) {
-          TextReplacementEntry.field_i[11] = te.field_a;
+          TextReplacementEntry.field_i[11] = ChatAreaLayoutSupport.field_a;
         } else {
           if (PasswordInputPainter.field_x.field_P.field_y == 0) {
             TextReplacementEntry.field_i[11] = QuickChatMenuSupport.field_c;
@@ -250,7 +250,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
             if (!this.field_D) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ss.field_e;
+              stackIn_19_3 = MenuTextResources.field_e;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;

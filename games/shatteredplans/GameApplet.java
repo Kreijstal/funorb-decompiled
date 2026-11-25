@@ -346,7 +346,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 GameState.d(22943);
                 this.createCanvas(0);
-                BattleExplosionVisual.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
+                BattleExplosionVisual.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) NotificationEntry.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
                 this.initialise(-1);
                 ClientRuntimeState.field_d = ProjectsWindowSupport.createFrameTimer(115);
                 do {
@@ -367,7 +367,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(DerelictVictoryChecker.field_p > var3)) {
                       this.runDraw((byte) 58);
-                      ud.a(-22, ValidatedTextInputWidget.field_W, tm.field_i);
+                      ud.a(-22, ValidatedTextInputWidget.field_W, NotificationEntry.field_i);
                       break;
                     }
                     this.runUpdate((byte) -23);
@@ -829,17 +829,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             LobbyOptionResources.field_a = LobbyOptionResources.field_a - 50;
             TextReplacementEntry.field_e = true;
-            tm.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
-            tm.field_i.setVisible(true);
+            NotificationEntry.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
+            NotificationEntry.field_i.setVisible(true);
             if (uf.field_b != null &&
               null == OpacityWidget.field_K) {
               var6 = uf.field_b.getInsets();
-              tm.field_i.setLocation(var6.left + NanoFrameTimer.field_k, var6.top + StatefulWidgetTheme.field_B);
+              NotificationEntry.field_i.setLocation(var6.left + NanoFrameTimer.field_k, var6.top + StatefulWidgetTheme.field_B);
               if (ShatteredPlansClient.field_F) {
-                tm.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
+                NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
               }
             } else {
-              tm.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
+              NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
             }
           }
           this.draw(1);
@@ -969,10 +969,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 > -15) {
             return;
           }
-          if (null != tm.field_i) {
+          if (null != NotificationEntry.field_i) {
             try {
-              tm.field_i.removeFocusListener((java.awt.event.FocusListener) (this));
-              tm.field_i.getParent().remove((java.awt.Component) ((Object) tm.field_i));
+              NotificationEntry.field_i.removeFocusListener((java.awt.event.FocusListener) (this));
+              NotificationEntry.field_i.getParent().remove((java.awt.Component) ((Object) NotificationEntry.field_i));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -1040,10 +1040,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (null != tm.field_i) {
-            tm.field_i.removeFocusListener((java.awt.event.FocusListener) (this));
-            tm.field_i.getParent().setBackground(java.awt.Color.black);
-            tm.field_i.getParent().remove((java.awt.Component) ((Object) tm.field_i));
+          if (null != NotificationEntry.field_i) {
+            NotificationEntry.field_i.removeFocusListener((java.awt.event.FocusListener) (this));
+            NotificationEntry.field_i.getParent().setBackground(java.awt.Color.black);
+            NotificationEntry.field_i.getParent().remove((java.awt.Component) ((Object) NotificationEntry.field_i));
           }
           if (param0 != 0) {
             this.runDraw((byte) -79);
@@ -1074,21 +1074,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = OpacityWidget.field_K;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          tm.field_i = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) tm.field_i));
-          tm.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
-          tm.field_i.setVisible(true);
+          NotificationEntry.field_i = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) NotificationEntry.field_i));
+          NotificationEntry.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
+          NotificationEntry.field_i.setVisible(true);
           if (uf.field_b == var2) {
             var3 = uf.field_b.getInsets();
-            tm.field_i.setLocation(NanoFrameTimer.field_k + var3.left, var3.top + StatefulWidgetTheme.field_B);
+            NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k + var3.left, var3.top + StatefulWidgetTheme.field_B);
             if (var4 != 0) {
-              tm.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
+              NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
             }
           } else {
-            tm.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
+            NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
           }
-          tm.field_i.addFocusListener((java.awt.event.FocusListener) (this));
-          tm.field_i.requestFocus();
+          NotificationEntry.field_i.addFocusListener((java.awt.event.FocusListener) (this));
+          NotificationEntry.field_i.requestFocus();
           MusicPatch.field_i = true;
           FourIntSubmissionRequest.field_q = true;
           TextReplacementEntry.field_e = true;

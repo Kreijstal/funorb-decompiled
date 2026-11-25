@@ -447,7 +447,7 @@ final class SolVictoryChecker extends VictoryChecker {
               }
             }
             if (SolMapReader.field_c == Wormhole.field_j &&
-              uc.d((byte) -46)) {
+              HorizontalGradientComponent.readPacketPayload((byte) -46)) {
               TertiaryListSequence.field_l = SpriteWipeSupport.field_a.readLong(46);
               FleetTrailPoint.field_q = param3;
               RasterTargetSupport.field_b = SpriteWipeSupport.field_a.readUnsignedByte(-85);
@@ -525,7 +525,7 @@ final class SolVictoryChecker extends VictoryChecker {
               return stackIn_81_0;
             }
             if (Wormhole.field_j == Player.field_l &&
-              uc.d((byte) -33)) {
+              HorizontalGradientComponent.readPacketPayload((byte) -33)) {
               TabbedPanel.closeClientSocket(-114);
               if (BufferedCacheFile.field_e == 7 &&
                 !BufferedSocket.field_j) {

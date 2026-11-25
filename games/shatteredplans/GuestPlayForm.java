@@ -165,14 +165,14 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
 
     final static void a(BitmapFont param0, boolean param1) {
         try {
-          ss.field_b = param0;
+          MenuTextResources.field_b = param0;
           if (!param1) {
             String var3 = (String) null;
             GuestPlayForm.a(-64, -115, (String) null, (String) null, 39);
           }
           StandardMapGenerator.field_j = DialWidget.i(0);
           ByteArrayReadRequest.field_p = new IntrusiveDeque();
-          PlacementEvent.field_l = new tm[7];
+          PlacementEvent.field_l = new NotificationEntry[7];
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

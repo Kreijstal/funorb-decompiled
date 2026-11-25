@@ -300,7 +300,7 @@ final class DiskCacheWorker implements Runnable {
           SecondaryNodeHashTable.field_g = null;
         }
         if (uo.field_e) {
-          tq.field_b = null;
+          StringList.field_b = null;
           GameKeyHandler.field_a = new IntrusiveDeque();
           vq.field_a = 0;
           uo.field_e = false;

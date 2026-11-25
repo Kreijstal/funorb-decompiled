@@ -37,7 +37,7 @@ final class AlternateLoginCredentials extends TargetedChatMessage {
 
     final MessageKind getKind(byte param0) {
         int var2 = -78 / ((param0 + 7) / 41);
-        return tm.field_p;
+        return NotificationEntry.field_p;
     }
 
     static {

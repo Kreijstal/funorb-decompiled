@@ -410,7 +410,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         try {
           var10 = (CharSequence) ((Object) param2);
           if (!ServerIntArrayRequest.isValidAccountName((byte) -67, var10)) {
-            stackIn_3_0 = tm.field_j;
+            stackIn_3_0 = NotificationEntry.field_j;
             return stackIn_3_0;
           }
           if (2 != ClientInputSupport.field_b) {

@@ -193,10 +193,10 @@ final class LinkPainter implements WidgetPainter {
             if (ClientInputSupport.field_b == 1) {
               ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = GameSession.field_X;
               if (var19 != 0) {
-                ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = tb.field_c;
+                ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
               }
             } else {
-              ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = tb.field_c;
+              ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
             }
             MatchingTextValidator.a(!param0, ClientPacketFlushSupport.field_a.field_Eb);
             decompiledFrameRemainder0 = (var19 != 0);

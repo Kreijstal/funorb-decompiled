@@ -2417,7 +2417,7 @@ final class GameScreen {
         try {
           if (PlacementOrder.field_t > 0 &&
             IntrusiveDequeCursor.field_b) {
-            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, DateValidationSupport.field_c.field_N);
             BattleExplosionVisual.field_v.drawFullRaster(param1, -66);
           }
           if (param0 != -57) {
@@ -2428,7 +2428,7 @@ final class GameScreen {
             return;
           }
           if (IntrusiveNodeHashTable.field_e) {
-            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, DateValidationSupport.field_c.field_N);
             MouseInputHandler.field_d.drawFullRaster(param1, -83);
           }
           return;
@@ -2791,7 +2791,7 @@ final class GameScreen {
             stackIn_10_0 = this.field_O.field_db;
             return stackIn_10_0;
           }
-          stackIn_8_0 = tg.field_c.field_db;
+          stackIn_8_0 = DateValidationSupport.field_c.field_db;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3258,7 +3258,7 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder2 = true;
           if (null == PlacementOrder.field_w &&
-            LobbyRoomControlsSupport.field_b < tg.field_c.field_db && (null == this.field_O ||
+            LobbyRoomControlsSupport.field_b < DateValidationSupport.field_c.field_db && (null == this.field_O ||
             !(LobbyRoomControlsSupport.field_b >= this.field_O.field_db))) {
             stackIn_34_0 = 0;
             decompiledFrameRemainder2 = false;
@@ -3387,7 +3387,7 @@ final class GameScreen {
               }
               if (decompiledSharedTail1) {
                 this.a(113, this.field_J);
-                this.field_n.field_o = te.field_b;
+                this.field_n.field_o = ChatAreaLayoutSupport.field_b;
                 this.field_J.field_s = true;
               }
               this.field_J.field_A = false;
@@ -4267,7 +4267,7 @@ final class GameScreen {
             if (var11 == 0) {
               if (null != var9_ref_nf.field_j) {
                 this.field_E.field_xb.addChild(4, var9_ref_nf.field_j);
-                var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), 15, (byte) 79, var7, tg.field_a);
+                var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), 15, (byte) 79, var7, DateValidationSupport.field_a);
                 var7 += 15;
               }
               var8++;
@@ -4317,7 +4317,7 @@ final class GameScreen {
           var4 = uq.field_k;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(InvalidMapConnectionException.field_f.length > var3_int)))) {
-            var5 = ss.field_a[var3_int];
+            var5 = MenuTextResources.field_a[var3_int];
             stackIn_16_0 = -1;
             stackIn_16_1 = ~var5;
             if (var8 == 0) {
@@ -5097,7 +5097,7 @@ final class GameScreen {
           this.field_W = new ToggleButton(513 + MusicCrossfadeStream.field_F.field_z, 25, TurnEventLog.field_d.field_z, TurnEventLog.field_d.field_w, -1, TurnEventLog.field_d, (String) null, 0, -1, Wormhole.field_h, (String) null, 0);
           this.field_W.field_o = wm.field_a;
           this.field_y.addLast((byte) -113, this.field_W);
-          this.field_mb = new ToggleButton(HuffmanCodec.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, LobbyCommandSupport.field_b, (String) null, 0);
+          this.field_mb = new ToggleButton(HuffmanCodec.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, NotificationEntry.field_r.field_z, NotificationEntry.field_r.field_w, -1, NotificationEntry.field_r, (String) null, 0, -1, LobbyCommandSupport.field_b, (String) null, 0);
           this.field_mb.field_o = StarLinkPlanner.field_b;
           this.field_y.addLast((byte) -113, this.field_mb);
           if (this.field_nb != null) {

@@ -49,7 +49,7 @@ final class PlayerContextMenuController {
           this.field_b = 56L;
           return;
         }
-        var7 = ta.a(-77, this.field_b);
+        var7 = MenuTransitionSupport.findLobbyPlayer(-77, this.field_b);
         var4 = MutableIntPairNode.findRoomMember(-115, this.field_b);
         var5 = this.getDisplayName(param1 ^ 16744);
         if (var4 != null) {
@@ -492,7 +492,7 @@ final class PlayerContextMenuController {
             return;
           }
           if (var6.field_cc) {
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(ta.field_c, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(MenuTransitionSupport.field_c, 4371, new String[]{var3}));
             if (var6.field_Yb) {
               this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
             }
@@ -534,7 +534,7 @@ final class PlayerContextMenuController {
             return;
           }
           if (var7.field_cc) {
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(ta.field_c, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(MenuTransitionSupport.field_c, 4371, new String[]{var3}));
           } else {
             if (!var7.field_Yb &&
               var7.field_mc) {
