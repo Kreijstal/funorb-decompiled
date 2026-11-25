@@ -305,9 +305,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var7 = TextFieldWidget.loadBinaryBitmapFontByName(115, "largefont", param4, param2, "lobby");
           ImageProducerRasterBuffer.field_p = TextFieldWidget.loadBinaryBitmapFontByName(117, "generalfont", param4, param2, "lobby");
           ContextActionMenu.field_xb = TextFieldWidget.loadBinaryBitmapFontByName(123, "chatfont", param4, param2, "lobby");
-          var7.a(var5, var24);
-          ImageProducerRasterBuffer.field_p.a(var5, var24);
-          ContextActionMenu.field_xb.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          ImageProducerRasterBuffer.field_p.setInlineSprites(var5, var24);
+          ContextActionMenu.field_xb.setInlineSprites(var5, var24);
           var8 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var8.field_nb = (BitmapFont) ((Object) var7);
           var8.field_x = 16777215;

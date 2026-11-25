@@ -50,7 +50,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3) {
+    final static void pollQuickChatOverlays(boolean param0, int param1, boolean param2, int param3) {
         QuickChatHelpPanelSupport.pollQuickChatHelpPanel(param0, (byte) -26);
         MapView.pollQuickChatMenu(param3, param0, param2, param1);
     }
@@ -74,7 +74,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             var7 = var14.getLineIndexOfCharacter((byte) 81, param0);
             var8 = var13.field_d[var7];
             var9 = var14.a(true, param0);
-            var10 = this.b((byte) -14, param4, var9, param1);
+            var10 = this.computeTextX((byte) -14, param4, var9, param1);
             var11 = this.getTextY(param3, param4, 68) + Math.max(0, var8.field_e);
             var12 = this.getTextY(param3, param4, -122) + Math.min(this.getInnerHeight(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
             BufferedSocket.pushIntersectedClip(-6187, param4.field_x + (param1 + param4.field_m), param4.field_n + (param4.field_q + param3), param4.field_q + param3, param1 + param4.field_m);
@@ -105,7 +105,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           if (this.field_d) {
             ((RichTextLayout) (param0.field_j)).a(this.getDisplayText(true, param0), 0, this.field_r, this.field_l, this.getInnerWidth(124, param0), this.getInnerHeight(param0, 0), this.field_c, this.field_j);
           } else {
-            this.b((byte) 104, param0);
+            this.layoutSingleLineText((byte) 104, param0);
           }
           stackIn_10_0 = param0.field_j;
           return stackIn_10_0;
@@ -153,7 +153,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    private final int a(byte param0, UiWidget param1, int param2, int param3) {
+    private final int computeTextY(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -235,7 +235,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
                 }
               }
               var15 = stackIn_19_0;
-              MusicVoice.field_I.a(var15 - var14, this.field_e >>> 24, this.field_e, this.b((byte) -14, param5, var14, param2), var13.field_c, param4 ^ -107, var13.field_e + (param1 + param5.field_q) + (this.field_b + param5.field_l));
+              MusicVoice.field_I.a(var15 - var14, this.field_e >>> 24, this.field_e, this.computeTextX((byte) -14, param5, var14, param2), var13.field_c, param4 ^ -107, var13.field_e + (param1 + param5.field_q) + (this.field_b + param5.field_l));
             }
             Star.popRasterState((byte) -49);
           }
@@ -259,9 +259,9 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    private final void a(int param0, UiWidget param1, int param2, int param3) {
+    private final void drawDefaultWidgetText(int param0, UiWidget param1, int param2, int param3) {
         try {
-          this.a(param2, param3, this.field_p, 2, param1, this.field_h, 0, 0);
+          this.drawWidgetText(param2, param3, this.field_p, 2, param1, this.field_h, 0, 0);
           int var5_int = 20 / ((param0 - 54) / 41);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -278,7 +278,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -86 % ((param2 + 15) / 62);
-          stackIn_1_0 = this.a((byte) 97, param1, 0, param0);
+          stackIn_1_0 = this.computeTextY((byte) 97, param1, 0, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -294,7 +294,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    final static void a(int param0) {
+    final static void requestQuitToWebsite(int param0) {
         if (param0 != 0) {
           WidgetTheme.clearStatics((byte) 47);
           TutorialTextSupport.setPendingUiAction((byte) -127, 17);
@@ -316,7 +316,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             var5 = (UiWidget) null;
             this.drawCaret(123, 88, -66, 47, (UiWidget) null);
           }
-          stackIn_3_0 = this.b((byte) -14, param1, 0, param2);
+          stackIn_3_0 = this.computeTextX((byte) -14, param1, 0, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -390,7 +390,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    final static String a(byte param0, int param1, String param2) {
+    final static String requestRemoveFriend(byte param0, int param1, String param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -489,7 +489,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    private final void b(byte param0, UiWidget param1) {
+    private final void layoutSingleLineText(byte param0, UiWidget param1) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -562,7 +562,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
+    private final void drawWidgetText(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -584,7 +584,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           var9_int = this.getInnerWidth(123, param4);
           var10 = this.getInnerHeight(param4, 0);
           if (this.field_d) {
-            this.field_c.a(this.getDisplayText(true, param4), this.b((byte) -14, param4, param7, param0), this.a((byte) -43, param4, param6, param1), var9_int, var10, param2, param5, this.field_r, this.field_l, this.field_j);
+            this.field_c.drawParagraph(this.getDisplayText(true, param4), this.computeTextX((byte) -14, param4, param7, param0), this.computeTextY((byte) -43, param4, param6, param1), var9_int, var10, param2, param5, this.field_r, this.field_l, this.field_j);
           } else {
             var12 = this.field_l;
             if (var12 != 0) {
@@ -603,16 +603,16 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_c.drawCentred(this.getDisplayText(true, param4), (var9_int >> 1) + this.b((byte) -14, param4, param7, param0), var11 + this.a((byte) 121, param4, param6, param1), param2, param5);
+                this.field_c.drawCentred(this.getDisplayText(true, param4), (var9_int >> 1) + this.computeTextX((byte) -14, param4, param7, param0), var11 + this.computeTextY((byte) 121, param4, param6, param1), param2, param5);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_c.drawRightAligned(this.getDisplayText(true, param4), var9_int + this.b((byte) -14, param4, param7, param0), this.a((byte) 75, param4, param6, param1) + var11, param2, param5);
+                  this.field_c.drawRightAligned(this.getDisplayText(true, param4), var9_int + this.computeTextX((byte) -14, param4, param7, param0), this.computeTextY((byte) 75, param4, param6, param1) + var11, param2, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_c.drawString(this.getDisplayText(true, param4), this.b((byte) -14, param4, param7, param0), var11 + this.a((byte) 100, param4, param6, param1), param2, param5);
+              this.field_c.drawString(this.getDisplayText(true, param4), this.computeTextX((byte) -14, param4, param7, param0), var11 + this.computeTextY((byte) 100, param4, param6, param1), param2, param5);
             }
           }
           Star.popRasterState((byte) -104);
@@ -631,7 +631,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    private final int b(byte param0, UiWidget param1, int param2, int param3) {
+    private final int computeTextX(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -716,7 +716,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           if (param4 != 12) {
             this.field_o = 64;
           }
-          this.a(102, param0, param1, param3);
+          this.drawDefaultWidgetText(102, param0, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "o.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

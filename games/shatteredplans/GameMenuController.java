@@ -149,8 +149,8 @@ final class GameMenuController {
           return 0;
         }
         if (GameRules.field_c != PlayerRankingRequest.field_o &&
-          PointsVictoryChecker.a((byte) -76, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -76, PlayerRankingRequest.field_o)) {
+          PointsVictoryChecker.isMenuScreen((byte) -76, GameRules.field_c) &&
+          PointsVictoryChecker.isMenuScreen((byte) -76, PlayerRankingRequest.field_o)) {
           var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 121, 32);
           var4 = (int)((double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]) * var2);
           var5 = -(((int)(var2 * (double)(-TutorialVictoryChecker.field_r[GameRules.field_c] + TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
@@ -163,7 +163,7 @@ final class GameMenuController {
     }
 
     final void clearMenuActivation(int param0, int param1) {
-        if (PointsVictoryChecker.a((byte) -74, param1)) {
+        if (PointsVictoryChecker.isMenuScreen((byte) -74, param1)) {
           if (this.field_g == -1) {
           }
           LobbyPlayerEntry.field_Hb[param1].field_g = -1;
@@ -181,8 +181,8 @@ final class GameMenuController {
           PlayerRankingRequest.field_o != this.field_a) {
           return 0;
         }
-        if (PlayerRankingRequest.field_o != GameRules.field_c && PointsVictoryChecker.a((byte) -82, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -126, PlayerRankingRequest.field_o)) {
+        if (PlayerRankingRequest.field_o != GameRules.field_c && PointsVictoryChecker.isMenuScreen((byte) -82, GameRules.field_c) &&
+          PointsVictoryChecker.isMenuScreen((byte) -126, PlayerRankingRequest.field_o)) {
           var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 118, 32);
           var4 = (int)((-var2 + 1.0) * (double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]));
           var5 = -(((int)(var2 * (double)(TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o] - TutorialVictoryChecker.field_r[GameRules.field_c])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
@@ -313,7 +313,7 @@ final class GameMenuController {
             var19 = (var13 - var16 >> 1) + 8 + param1;
             var20 = new Sprite(var17_int, var16);
             RasterTargetSupport.pushSpriteRenderTarget(var20, 125);
-            IconTextPanel.field_Cb.a(var15_ref_String, 1 + IconTextPanel.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
+            IconTextPanel.field_Cb.drawTransposedString(var15_ref_String, 1 + IconTextPanel.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
             OpacityWidget.popLegacyRasterState(0);
             var20.drawAdditive(var18, var19, 256 * var14_intLifetime1 / 12);
           }
@@ -335,7 +335,7 @@ final class GameMenuController {
           var16Lifetime1 = IconTextPanel.field_Cb.field_q + IconTextPanel.field_Cb.field_J;
           var17 = new Sprite(var16Lifetime1, var15);
           RasterTargetSupport.pushSpriteRenderTarget(var17, 82);
-          IconTextPanel.field_Cb.a(var14, IconTextPanel.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
+          IconTextPanel.field_Cb.drawTransposedString(var14, IconTextPanel.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
           OpacityWidget.popLegacyRasterState(param2 ^ 7552);
           var18Lifetime1 = var6 - 14;
           var19Lifetime1 = (-var15 + var11Lifetime1 >> 1) + 16 + param1;
@@ -551,7 +551,7 @@ final class GameMenuController {
         if (IntrusiveDequeCursor.field_c == 32) {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
           AccountRequestState.field_b.drawCentred(AdditiveSpriteWipeSupport.field_b, (var2 >> 1) + var4, AccountRequestState.field_b.field_J + 10 + var5, 2805974, -1);
-          IconTextPanel.field_Cb.a(GameSpriteResources.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(GameSpriteResources.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, IconTextPanel.field_Cb.field_J);
         }
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
@@ -642,7 +642,7 @@ final class GameMenuController {
             return;
           }
           param4 = -(IconTextPanel.field_Cb.field_J * var13 >> 1) + param3;
-          IconTextPanel.field_Cb.a(param1, 5 + param5, param4, param6, var13 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param9, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(param1, 5 + param5, param4, param6, var13 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param9, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1183,18 +1183,18 @@ final class GameMenuController {
                 OpacityWidget.popLegacyRasterState(0);
                 var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
                 var42 = WhirlpoolHasher.field_n;
-                var10Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = RasterStateFrame.field_n % 200;
                 ProgressDialog.drawFleetTrail(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
                 this.drawInstructionFleet(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
                 var43 = LoginForm.field_N;
-                var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
                 AccountRequestResult.field_f[RasterStateFrame.field_n % AccountRequestResult.field_f.length].draw(5 + param3, 42 + param0);
                 var44 = IntArrayReadRequest.field_n;
                 var5 = var44;
-                var10Lifetime2Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2Lifetime2 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2Lifetime2 * 4) * var8 >> 2);
                 return;
               }
@@ -1246,7 +1246,7 @@ final class GameMenuController {
                   }
                 }
                 var32 = DebouncedValidator.field_a;
-                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + 4 * var14) >> 2);
                 var15 = RasterStateFrame.field_n % 50;
                 if (var15 >= 25) {
@@ -1265,7 +1265,7 @@ final class GameMenuController {
                   SoftwareRasterizer.drawHorizontalLine(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
                 }
                 var33 = WhirlpoolHasher.field_l;
-                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 var16_intLifetime2 = RasterStateFrame.field_n / 100 % 3;
                 var17_intLifetime1 = RasterStateFrame.field_n % 100;
@@ -1323,7 +1323,7 @@ final class GameMenuController {
                   var10_ref_om.drawAdditive(15 + param3, param0 + 15, var18_intLifetime1);
                 }
                 var36 = DraggableWidget.field_F;
-                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 if (null != ClientRasterSupport.field_b) {
                   var19Lifetime2 = RasterStateFrame.field_n % 50;
@@ -1345,13 +1345,13 @@ final class GameMenuController {
                 SoftwareRasterizer.drawVerticalLine(9 + param3, param0 + 10, 35, 16777215);
                 SoftwareRasterizer.drawHorizontalLine(param3 + 10, param0 + 44, 40, 16777215);
                 var37 = ScrollPane.field_Cb;
-                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (var14 * 4 + 3) >> 2);
                 return;
               }
               if (param2 == 7) {
                 var9Lifetime2 = RasterStateFrame.field_n % 200;
-                var10Lifetime3 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime3 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((2 * var10Lifetime3 + 3) * var8 >> 1);
                 var11Lifetime3 = param0;
                 var12Lifetime2 = param3 + 125;
@@ -1367,8 +1367,8 @@ final class GameMenuController {
                 var10Lifetime3Lifetime1 = stackIn_96_0;
                 var10Lifetime3Lifetime2 = 3;
                 var21Lifetime1 = var8 + var8 * var10Lifetime3Lifetime2;
-                IconTextPanel.field_Cb.a(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
-                IconTextPanel.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.drawParagraph(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.drawParagraph(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 ProgressDialog.drawFleetTrail(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
                 this.drawInstructionFleet(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
@@ -1381,8 +1381,8 @@ final class GameMenuController {
                 stackIn_99_0 = (var20Lifetime1Lifetime1 >= var19Lifetime1Lifetime1) ? var20Lifetime1Lifetime1 : var19Lifetime1Lifetime1;
                 var10Lifetime3Lifetime3 = stackIn_99_0;
                 var21Lifetime1Lifetime1 = var8 * var10Lifetime3Lifetime3 + var8;
-                IconTextPanel.field_Cb.a(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
-                IconTextPanel.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.drawParagraph(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.drawParagraph(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 ProgressDialog.drawFleetTrail(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
                 this.drawInstructionFleet(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
                 this.drawInstructionProjectIcon(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
@@ -1393,7 +1393,7 @@ final class GameMenuController {
                 if (40 > var21Lifetime1Lifetime2) {
                   var21Lifetime1Lifetime2 = 40;
                 }
-                IconTextPanel.field_Cb.a(var17Lifetime2, var12Lifetime2, var11Lifetime3, 200, var21Lifetime1Lifetime2, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.drawParagraph(var17Lifetime2, var12Lifetime2, var11Lifetime3, 200, var21Lifetime1Lifetime2, 16777215, -1, 0, 1, var8);
                 var23Lifetime1 = -(var9Lifetime2 / 24) + 15;
                 var24Lifetime1 = -(var9Lifetime2 / 17) + 10;
                 if (var24Lifetime1 < 0) {
@@ -1427,23 +1427,23 @@ final class GameMenuController {
               }
               if (8 == param2) {
                 var38 = StandardMapGenerator.field_g;
-                var9Lifetime3 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(param3 + 15, 20, 0, param0 + (IconTextPanel.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
                 var39 = WidgetStyle.field_b;
-                var9Lifetime3Lifetime1 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3Lifetime1 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(15 + param3, 20, 1, param0 + (IconTextPanel.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
                 var40 = ClientOverlayDrawSupport.field_f;
                 var5 = var40;
                 var5 = var40;
-                var9Lifetime3Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3Lifetime2 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(15 + param3, 20, 2, (IconTextPanel.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
                 var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
-                var9Lifetime3Lifetime3 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3Lifetime3 = IconTextPanel.field_Cb.drawParagraph(ClientLobbyResources.field_e.expandPlaceholders(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * IconTextPanel.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime3 + 3) >> 2);
                 return;
@@ -1686,7 +1686,7 @@ final class GameMenuController {
           this.field_a != PlayerRankingRequest.field_o) {
           return 0;
         }
-        if (PointsVictoryChecker.a((byte) -124, GameRules.field_c) && PointsVictoryChecker.a((byte) -75, PlayerRankingRequest.field_o) &&
+        if (PointsVictoryChecker.isMenuScreen((byte) -124, GameRules.field_c) && PointsVictoryChecker.isMenuScreen((byte) -75, PlayerRankingRequest.field_o) &&
           GameRules.field_c != PlayerRankingRequest.field_o) {
           var2 = TutorialVictoryChecker.field_p[GameRules.field_c].length * TutorialVictoryChecker.field_l[GameRules.field_c] + (TutorialVictoryChecker.field_t[GameRules.field_c] + 10);
           var3 = TutorialVictoryChecker.field_t[PlayerRankingRequest.field_o] + TutorialVictoryChecker.field_l[PlayerRankingRequest.field_o] * TutorialVictoryChecker.field_p[PlayerRankingRequest.field_o].length + 10;
@@ -2042,9 +2042,9 @@ final class GameMenuController {
           var6 != 24) {
           AccountRequestState.field_b.drawString(AwtEventQueueSupport.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + AccountRequestState.field_b.field_J), 2805974, -1);
           var21_ref_String = "(" + QuickChatPhraseRegistry.replaceNumberedPlaceholders(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
-          var22 = IconTextPanel.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
-          var22 = var22 + (1 + IconTextPanel.field_Cb.a(ContextActionMenu.field_Qb[var6], 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
-          IconTextPanel.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          var22 = IconTextPanel.field_Cb.drawParagraph(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          var22 = var22 + (1 + IconTextPanel.field_Cb.drawParagraph(ContextActionMenu.field_Qb[var6], 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
+          IconTextPanel.field_Cb.drawParagraph(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
         } else {
           if (var6 == 24) {
             AccountRequestState.field_b.drawString(AwtEventQueueSupport.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + AccountRequestState.field_b.field_J, 2805974, -1);
@@ -2055,16 +2055,16 @@ final class GameMenuController {
               var21_ref_String = "(" + AccountRequestResult.field_i + "???)";
               var22_ref_String = ClientOverlaySupport.field_c;
             }
-            var23 = IconTextPanel.field_Cb.a(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
-            var23 = var23 + (1 + IconTextPanel.field_Cb.a(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * IconTextPanel.field_Cb.field_J + (var20 - (-14 - IconTextPanel.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
-            IconTextPanel.field_Cb.a(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * IconTextPanel.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+            var23 = IconTextPanel.field_Cb.drawParagraph(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+            var23 = var23 + (1 + IconTextPanel.field_Cb.drawParagraph(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * IconTextPanel.field_Cb.field_J + (var20 - (-14 - IconTextPanel.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
+            IconTextPanel.field_Cb.drawParagraph(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * IconTextPanel.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           } else {
             if (!ClientRuntimeState.field_e) {
               AccountRequestState.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, AccountRequestState.field_b.field_J + (6 + var20), 2805974, -1);
-              IconTextPanel.field_Cb.a(IntArrayReadRequest.field_l, 10 + var2Lifetime1, var20 + 14 + IconTextPanel.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+              IconTextPanel.field_Cb.drawParagraph(IntArrayReadRequest.field_l, 10 + var2Lifetime1, var20 + 14 + IconTextPanel.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
             } else {
               AccountRequestState.field_b.drawString(WeightedLruCache.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + AccountRequestState.field_b.field_J, 2805974, -1);
-              IconTextPanel.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+              IconTextPanel.field_Cb.drawParagraph(SocketConnector.field_c, 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
             }
           }
         }
@@ -2511,8 +2511,8 @@ final class GameMenuController {
           this.drawErrorPanel((byte) 113);
         }
         if (PlayerRankingRequest.field_o != GameRules.field_c &&
-          PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -88, PlayerRankingRequest.field_o)) {
+          PointsVictoryChecker.isMenuScreen((byte) -119, GameRules.field_c) &&
+          PointsVictoryChecker.isMenuScreen((byte) -88, PlayerRankingRequest.field_o)) {
           return QuickChatPhraseRegistry.interpolateSmoothStep(TutorialVictoryChecker.field_m[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_m[PlayerRankingRequest.field_o], 0);
         }
         return TutorialVictoryChecker.field_m[this.field_a];
@@ -2664,7 +2664,7 @@ final class GameMenuController {
           }
           var13Lifetime1 = WidgetStateStyle.wrapTextToSharedBuffer(-9615, param4, IconTextPanel.field_Cb, new int[]{param6});
           param1 = -(var13Lifetime1 * IconTextPanel.field_Cb.field_J >> 1) + param3;
-          IconTextPanel.field_Cb.a(param4, param2 + 5, param1, param6, var13Lifetime1 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param0, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(param4, param2 + 5, param1, param6, var13Lifetime1 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param0, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2816,8 +2816,8 @@ final class GameMenuController {
         if (PlayerRankingRequest.field_o == GameRules.field_c) {
           return TutorialVictoryChecker.field_r[GameRules.field_c];
         }
-        if (PointsVictoryChecker.a((byte) -103, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -125, PlayerRankingRequest.field_o)) {
+        if (PointsVictoryChecker.isMenuScreen((byte) -103, GameRules.field_c) &&
+          PointsVictoryChecker.isMenuScreen((byte) -125, PlayerRankingRequest.field_o)) {
           return QuickChatPhraseRegistry.interpolateSmoothStep(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o], 0);
         }
         double var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 109, param0);

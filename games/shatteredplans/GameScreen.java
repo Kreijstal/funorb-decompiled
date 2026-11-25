@@ -1677,7 +1677,7 @@ final class GameScreen {
         int var8 = 0;
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
-          IconTextPanel.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           var6 = UiWidget.field_t.field_z * 2 + IconTextPanel.field_Cb.stringWidth("= " + ServerRequestRetrySupport.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + IconTextPanel.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (IconTextPanel.field_Cb.field_J + param1);
@@ -1712,7 +1712,7 @@ final class GameScreen {
         int var6 = 0;
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
-          IconTextPanel.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           var6 = StarSoundState.field_j.field_z + IconTextPanel.field_Cb.stringWidth("= " + ServerRequestRetrySupport.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + IconTextPanel.field_Cb.field_J + param2, var6 + 15, StarSoundState.field_j.field_w + 10, 5, 0, 128);
           StarSoundState.field_j.draw(param0 + (param3 - var6) / 2, IconTextPanel.field_Cb.field_J + (param2 + 20));
@@ -2444,7 +2444,7 @@ final class GameScreen {
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[0];
           int var6 = 107 / ((10 - param2) / 56);
-          IconTextPanel.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -4819,7 +4819,7 @@ final class GameScreen {
         int var7 = 0;
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
-          IconTextPanel.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          IconTextPanel.field_Cb.drawParagraph(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           var6 = 20 + param3 + IconTextPanel.field_Cb.field_J + 9;
           var7 = 64 + IconTextPanel.field_Cb.stringWidth("= " + QuickChatPhraseRegistry.replaceNumberedPlaceholders(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}));
           IntArrayReadRequest.field_k.drawScaled((-var7 + param1) / 2 + param0, -24 + var6, 64, 64);

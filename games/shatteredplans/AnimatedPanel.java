@@ -971,7 +971,7 @@ class AnimatedPanel extends PanelNode {
                 this.field_nb.drawCentredAlpha(var23Lifetime2, var21 + this.field_B + this.field_kb + (this.field_K - this.field_kb * 2) / 2, this.field_N + var22 + this.field_nb.field_J, var18, -1, this.field_I);
               } else {
                 if (this.field_y != 2) {
-                  this.field_nb.a(var23Lifetime2, this.field_kb + this.field_B + var21, var22 + this.field_N, this.field_K - 2 * this.field_kb, this.field_mb, var18, -1, this.field_I, this.field_y, this.field_G, this.field_Y);
+                  this.field_nb.drawParagraphAlpha(var23Lifetime2, this.field_kb + this.field_B + var21, var22 + this.field_N, this.field_K - 2 * this.field_kb, this.field_mb, var18, -1, this.field_I, this.field_y, this.field_G, this.field_Y);
                 } else {
                   this.field_nb.drawRightAlignedAlpha(var23Lifetime2, this.field_K + (-(this.field_kb * 2) + var21) + (this.field_B + this.field_kb), var22 + (this.field_N + this.field_nb.field_J), var18, -1, this.field_I);
                 }
@@ -980,7 +980,7 @@ class AnimatedPanel extends PanelNode {
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_nb.a(var23Lifetime2, var21 + (this.field_kb + this.field_B), this.field_N + var22, this.field_K - 2 * this.field_kb, this.field_mb, var18, -1, this.field_I, this.field_y, this.field_G, this.field_Y);
+            this.field_nb.drawParagraphAlpha(var23Lifetime2, var21 + (this.field_kb + this.field_B), this.field_N + var22, this.field_K - 2 * this.field_kb, this.field_mb, var18, -1, this.field_I, this.field_y, this.field_G, this.field_Y);
           }
         }
         if (null != this.field_M) {

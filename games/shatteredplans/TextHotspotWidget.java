@@ -265,7 +265,7 @@ class TextHotspotWidget extends FocusableWidget {
         if (var1 < 80) {
           var1 = 80;
         }
-        PointsVictoryChecker.a(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, MenuInputState.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
+        PointsVictoryChecker.drawGradientTextButton(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, MenuInputState.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
     }
 
     final void e(boolean param0) {

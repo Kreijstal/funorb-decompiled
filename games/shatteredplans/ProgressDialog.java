@@ -225,7 +225,7 @@ final class ProgressDialog extends ResizingDialog {
         CipherPacketBuffer.field_p.drawCentred(this.field_eb, (this.field_x >> 1) + param0, param1 + param2, 16777215, -1);
         if (null != this.field_gb) {
           SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 113, 260, 8421504);
-          CipherPacketBuffer.field_p.a(this.field_gb, param0 + 20, 8 + (param2 + 120), 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_p.field_J);
+          CipherPacketBuffer.field_p.drawParagraph(this.field_gb, param0 + 20, 8 + (param2 + 120), 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_p.field_J);
         }
     }
 

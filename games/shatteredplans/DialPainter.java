@@ -157,7 +157,7 @@ final class DialPainter implements WidgetPainter {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_d != null) {
             var13 = this.field_h + var14.field_E + var14.field_M;
-            this.field_d.a(param0.field_s, var13 + param1 + param0.field_m, param3 + (param0.field_q + this.field_j), -var13 - (this.field_h - param0.field_x), -(this.field_h << 1) + param0.field_n, this.field_i, this.field_k, 1, 1, 0);
+            this.field_d.drawParagraph(param0.field_s, var13 + param1 + param0.field_m, param3 + (param0.field_q + this.field_j), -var13 - (this.field_h - param0.field_x), -(this.field_h << 1) + param0.field_n, this.field_i, this.field_k, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

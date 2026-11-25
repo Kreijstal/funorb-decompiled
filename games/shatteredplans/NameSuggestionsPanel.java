@@ -60,7 +60,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
         BitmapFont var5 = StatefulWidgetTheme.field_u;
         if (this.field_G != null) {
-          var5.a(DebouncedValidator.field_c, param3 + this.field_m, this.field_q + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_J);
+          var5.drawParagraph(DebouncedValidator.field_c, param3 + this.field_m, this.field_q + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_J);
         }
     }
 

@@ -273,7 +273,7 @@ final class CheckboxPainter implements WidgetPainter {
           }
           if (this.field_i != null) {
             var10 = this.field_q + this.field_e + this.field_h;
-            this.field_i.a(param0.field_s, var10 + (param0.field_m + param1), this.field_g + (param3 + param0.field_q), param0.field_x - var10 - this.field_q, -(this.field_q << 1) + param0.field_n, this.field_f, this.field_d, this.field_o, this.field_r, 0);
+            this.field_i.drawParagraph(param0.field_s, var10 + (param0.field_m + param1), this.field_g + (param3 + param0.field_q), param0.field_x - var10 - this.field_q, -(this.field_q << 1) + param0.field_n, this.field_f, this.field_d, this.field_o, this.field_r, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

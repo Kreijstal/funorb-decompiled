@@ -268,7 +268,7 @@ final class DiskCacheWorker implements Runnable {
         if (GameRules.field_c == PlayerRankingRequest.field_o) {
           return;
         }
-        if (PointsVictoryChecker.a((byte) -92, GameRules.field_c)) {
+        if (PointsVictoryChecker.isMenuScreen((byte) -92, GameRules.field_c)) {
           LobbyPlayerEntry.field_Hb[GameRules.field_c].releaseHighscoreRequest((byte) 119);
         }
         TutorialAi.field_x = Wormhole.field_i;

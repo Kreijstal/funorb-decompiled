@@ -156,7 +156,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                 BufferedCacheFile.field_e = var9Lifetime1;
                 TextInputPainter.field_t = -1;
               } else {
-                StarAnnotation.readServerBytes(119, CandidateLink.a(-85));
+                StarAnnotation.readServerBytes(119, CandidateLink.getAccountBooleanResponseSize(-85));
                 SpriteWipeSupport.field_d = new Boolean(EmailValidationError.readBooleanByte((byte) -24, SpriteWipeSupport.field_a));
                 SpriteWipeSupport.field_a.position = 0;
               }

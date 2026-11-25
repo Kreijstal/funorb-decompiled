@@ -9,7 +9,7 @@ final class PointsVictoryChecker extends VictoryChecker {
     private int[] field_o;
     static int field_p;
 
-    final static void a(java.applet.Applet param0, int param1, int param2, byte param3, String[] param4, int param5) {
+    final static void initializePromotionResources(java.applet.Applet param0, int param1, int param2, byte param3, String[] param4, int param5) {
         int var7 = 0;
         String var6 = null;
         int var8 = 0;
@@ -37,7 +37,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           }
           ImageProducerRasterBuffer.field_l = new Sprite[param4.length];
           if (param3 != -3) {
-            PointsVictoryChecker.b((byte) -94);
+            PointsVictoryChecker.clearPointsVictoryStatics((byte) -94);
           }
           for (var7 = 0; var7 < param4.length; var7++) {
             ImageProducerRasterBuffer.field_l[var7] = new Sprite(317, 34);
@@ -63,7 +63,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isMenuScreen(byte param0, int param1) {
         if (param0 >= -72) {
           return false;
         }
@@ -83,7 +83,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 0) {
           var10 = (String) null;
-          PointsVictoryChecker.a(-33, (BitmapFont) null, 126, 13, -76, 49, (String) null, true, -106, 108, -72, 85);
+          PointsVictoryChecker.drawGradientTextButton(-33, (BitmapFont) null, 126, 13, -76, 49, (String) null, true, -106, 108, -72, 85);
         }
         if (null != this.field_g) {
           return this.field_g;
@@ -152,7 +152,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, String param6, boolean param7, int param8, int param9, int param10, int param11) {
+    final static void drawGradientTextButton(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, String param6, boolean param7, int param8, int param9, int param10, int param11) {
         Sprite var13 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -225,7 +225,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearPointsVictoryStatics(byte param0) {
         field_l = null;
         if (param0 != 59) {
           field_m = -92L;
@@ -234,7 +234,7 @@ final class PointsVictoryChecker extends VictoryChecker {
 
     final int resultsPanelHeight(boolean param0) {
         if (param0) {
-          PointsVictoryChecker.a((byte) 114, 82);
+          PointsVictoryChecker.isMenuScreen((byte) 114, 82);
         }
         return PasswordValidator.field_n * this.field_o.length + IconTextPanel.field_Cb.field_J;
     }
@@ -361,7 +361,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void configureMenuTextMetrics(int param0, int param1, int param2, int param3, int param4) {
         ClientUiResourceState.field_b = param2;
         MenuButton.field_A = param3;
         KeyboardStateSupport.field_c = param0;
@@ -435,7 +435,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           }
           var5Lifetime2 = 0;
           if (param0 >= -9) {
-            PointsVictoryChecker.a(56, -93, 96, 4, 73);
+            PointsVictoryChecker.configureMenuTextMetrics(56, -93, 96, 4, 73);
           }
           var25 = this.field_o;
           var19 = var25;

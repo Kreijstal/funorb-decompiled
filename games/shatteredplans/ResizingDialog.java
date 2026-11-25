@@ -205,7 +205,7 @@ abstract class ResizingDialog extends Dialog {
                 var5 = ClientDialogSupport.requestAddFriend(var4, param2, (byte) -62);
               }
               if (MapViewState.field_b == 1) {
-                var5 = WidgetTheme.a((byte) -88, param2, var4);
+                var5 = WidgetTheme.requestRemoveFriend((byte) -88, param2, var4);
               }
               if (MapViewState.field_b == 2) {
                 var5 = ReflectionCheckDecoder.requestAddIgnore(2, var4, param2);

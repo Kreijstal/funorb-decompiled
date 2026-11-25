@@ -683,7 +683,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                                   ValidationState.c(122);
                                   return false;
                                 }
-                                ClientDialogSupport.setLoadingProgress(75.0f, 2, CandidateLink.a(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
+                                ClientDialogSupport.setLoadingProgress(75.0f, 2, CandidateLink.formatArchiveLoadingProgress(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
                                 return false;
                               }
                               ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", GameSpriteResources.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
@@ -845,7 +845,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         MapView.clearStatics(0);
         ConquestVictoryChecker.clearStatics(45);
         DerelictVictoryChecker.clearStatics((byte) -64);
-        PointsVictoryChecker.b((byte) 59);
+        PointsVictoryChecker.clearPointsVictoryStatics((byte) 59);
         VictoryChecker.clearStatics(true);
         ClientOverlayDrawSupport.clearStatics(30);
         ServerRequestRetrySupport.clearStatics(param0 ^ -24162);
@@ -1168,7 +1168,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 if (AccountStatusDialog.field_ob) {
                   MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -6, (byte) 96, false);
                 }
-                if (PointsVictoryChecker.a((byte) -111, PlayerRankingRequest.field_o)) {
+                if (PointsVictoryChecker.isMenuScreen((byte) -111, PlayerRankingRequest.field_o)) {
                   DiskCacheWorker.commitMenuTransition(1048576);
                 }
                 GzipInflater.a(1);
@@ -1207,7 +1207,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   if (GameRules.field_c == -3) {
                     ScrollPane.f((byte) 93);
                   } else {
-                    if (PointsVictoryChecker.a((byte) -121, GameRules.field_c)) {
+                    if (PointsVictoryChecker.isMenuScreen((byte) -121, GameRules.field_c)) {
                       LobbyPlayerEntry.field_Hb[GameRules.field_c].updateMenu(2664);
                     }
                   }
@@ -1227,7 +1227,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               }
             } else {
               if (BirthDateConfirmationForm.field_Q != 0 ||
-                !PointsVictoryChecker.a((byte) -76, GameRules.field_c) ||
+                !PointsVictoryChecker.isMenuScreen((byte) -76, GameRules.field_c) ||
                 LobbyPlayerEntry.field_Hb[GameRules.field_c].advanceCloseAnimation((byte) 95)) {
                 BirthDateConfirmationForm.field_Q = BirthDateConfirmationForm.field_Q + 1;
               }
@@ -1401,16 +1401,16 @@ public final class ShatteredPlansClient extends GameClientShell {
             -2 != GameRules.field_c) {
             ShatteredPlansClient.n((byte) 67);
           }
-          if (PointsVictoryChecker.a((byte) -105, GameRules.field_c) &&
-            !PointsVictoryChecker.a((byte) -123, PlayerRankingRequest.field_o)) {
+          if (PointsVictoryChecker.isMenuScreen((byte) -105, GameRules.field_c) &&
+            !PointsVictoryChecker.isMenuScreen((byte) -123, PlayerRankingRequest.field_o)) {
             LobbyPlayerEntry.field_Hb[GameRules.field_c].drawFadeTransition(94, 128 * BirthDateConfirmationForm.field_Q / 32);
           } else {
-            if (!PointsVictoryChecker.a((byte) -75, GameRules.field_c) &&
-              PointsVictoryChecker.a((byte) -127, PlayerRankingRequest.field_o)) {
+            if (!PointsVictoryChecker.isMenuScreen((byte) -75, GameRules.field_c) &&
+              PointsVictoryChecker.isMenuScreen((byte) -127, PlayerRankingRequest.field_o)) {
               LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].drawFadeTransition(89, -(BirthDateConfirmationForm.field_Q * 128 / 32) + 128);
             } else {
-              if (PointsVictoryChecker.a((byte) -125, GameRules.field_c) &&
-                PointsVictoryChecker.a((byte) -74, PlayerRankingRequest.field_o)) {
+              if (PointsVictoryChecker.isMenuScreen((byte) -125, GameRules.field_c) &&
+                PointsVictoryChecker.isMenuScreen((byte) -74, PlayerRankingRequest.field_o)) {
                 LobbyPlayerEntry.field_Hb[GameRules.field_c].drawMenuTransition(PlayerRankingRequest.field_o, -6469, 128 * BirthDateConfirmationForm.field_Q / 32);
               }
             }
@@ -1423,7 +1423,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               GameRules.field_c != -2) {
               ShatteredPlansClient.n((byte) 67);
             }
-            if (PointsVictoryChecker.a((byte) -99, GameRules.field_c)) {
+            if (PointsVictoryChecker.isMenuScreen((byte) -99, GameRules.field_c)) {
               LobbyPlayerEntry.field_Hb[GameRules.field_c].drawMenu(-121);
             }
           } else {

@@ -136,7 +136,7 @@ final class ScrollPane extends AnimatedPanel {
         try {
           MusicEnvelope.field_g = param1;
           FourIntSubmissionRequest.field_k = param6;
-          PointsVictoryChecker.a(param10, param3, param0, param12, 2);
+          PointsVictoryChecker.configureMenuTextMetrics(param10, param3, param0, param12, 2);
           FleetVisual.setMenuPainterAndMetrics(param17, param9 + 20, param18, param2);
           RasterSpanFactory.configureMenuRowFrames(param5, (byte) 67, param19, param7, param11, param15);
           if (param9 != 0) {

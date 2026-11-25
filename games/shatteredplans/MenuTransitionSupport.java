@@ -176,9 +176,9 @@ final class MenuTransitionSupport {
         }
         PlayerRankingRequest.field_o = param1;
         MusicPatch.field_m = param0;
-        if (PointsVictoryChecker.a((byte) -94, GameRules.field_c)) {
+        if (PointsVictoryChecker.isMenuScreen((byte) -94, GameRules.field_c)) {
           LobbyPlayerEntry.field_Hb[GameRules.field_c].clearMenuActivation(-30492, PlayerRankingRequest.field_o);
-          if (PointsVictoryChecker.a((byte) -73, PlayerRankingRequest.field_o)) {
+          if (PointsVictoryChecker.isMenuScreen((byte) -73, PlayerRankingRequest.field_o)) {
             var4 = 0;
             if (11 == PlayerRankingRequest.field_o) {
               var4 = -1;
@@ -192,7 +192,7 @@ final class MenuTransitionSupport {
           }
           return;
         }
-        if (PointsVictoryChecker.a((byte) -73, PlayerRankingRequest.field_o)) {
+        if (PointsVictoryChecker.isMenuScreen((byte) -73, PlayerRankingRequest.field_o)) {
           var4Lifetime1 = 0;
           if (11 == PlayerRankingRequest.field_o) {
             var4Lifetime1 = -1;

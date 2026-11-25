@@ -163,7 +163,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_J != null) {
-          StatefulWidgetTheme.field_u.a(this.field_J, 20 + (param3 + this.field_m), 15 + this.field_q + param2, -40 + this.field_x, this.field_n, 16777215, -1, 1, 0, StatefulWidgetTheme.field_u.field_J);
+          StatefulWidgetTheme.field_u.drawParagraph(this.field_J, 20 + (param3 + this.field_m), 15 + this.field_q + param2, -40 + this.field_x, this.field_n, 16777215, -1, 1, 0, StatefulWidgetTheme.field_u.field_J);
         }
         if (this.field_Q != null) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param2, this.field_x - 20, 4210752);
@@ -383,7 +383,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
             } else {
               if (this.field_P == param0) {
                 if (this.field_L) {
-                  WidgetTheme.a(0);
+                  WidgetTheme.requestQuitToWebsite(0);
                 } else {
                   if (this.field_D) {
                     WeightedLruCache.b((byte) -125);

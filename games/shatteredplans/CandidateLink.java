@@ -18,14 +18,14 @@ final class CandidateLink extends IntrusiveNode {
     float field_s;
     static String field_n;
 
-    final static int a(int param0) {
+    final static int getAccountBooleanResponseSize(int param0) {
         if (param0 >= -77) {
           return 20;
         }
         return 1;
     }
 
-    final static void a(ChatHistoryEntry param0, int param1) {
+    final static void acceptReceivedChatMessage(ChatHistoryEntry param0, int param1) {
         int var2_int = 0;
         ChatHistoryEntry var3 = null;
         int var4 = 0;
@@ -39,7 +39,7 @@ final class CandidateLink extends IntrusiveNode {
         try {
           if (param1 != 2) {
             var5 = (ChatHistoryEntry) null;
-            CandidateLink.a((ChatHistoryEntry) null, 0);
+            CandidateLink.acceptReceivedChatMessage((ChatHistoryEntry) null, 0);
           }
           if (param0.field_k == null) {
             return;
@@ -77,7 +77,7 @@ final class CandidateLink extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, Archive param1, int param2, String param3) {
+    final static String formatArchiveLoadingProgress(String param0, Archive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;

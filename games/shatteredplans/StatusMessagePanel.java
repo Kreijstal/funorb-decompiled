@@ -268,7 +268,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, param1 ^ 0, param2, param3);
-        this.field_J.a(this.field_L, param3 + (this.field_m + 14), 10 + this.field_q + param2, this.field_x - 28, this.field_n, 16777215, -1, 0, 0, this.field_J.field_J);
+        this.field_J.drawParagraph(this.field_L, param3 + (this.field_m + 14), 10 + this.field_q + param2, this.field_x - 28, this.field_n, 16777215, -1, 0, 0, this.field_J.field_J);
         if (param1 != -11857) {
           field_D = 28;
         }

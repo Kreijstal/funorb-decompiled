@@ -12,7 +12,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param3 + this.field_m;
         int var6 = param2 + this.field_q;
-        StatefulWidgetTheme.field_u.a(StarLink.field_j, var5 + 20, var6 + 20, this.field_x - 40, -50 + this.field_n, 16777215, -1, 1, 0, StatefulWidgetTheme.field_u.field_J);
+        StatefulWidgetTheme.field_u.drawParagraph(StarLink.field_j, var5 + 20, var6 + 20, this.field_x - 40, -50 + this.field_n, 16777215, -1, 1, 0, StatefulWidgetTheme.field_u.field_J);
         super.drawLayer(param0, param1, param2, param3);
     }
 

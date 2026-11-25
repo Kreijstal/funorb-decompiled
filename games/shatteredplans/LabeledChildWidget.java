@@ -217,7 +217,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           return;
         }
         int var7 = !this.field_I ? 0 : -(2 * this.field_K) + (-this.field_H + this.field_x);
-        this.field_G.a(this.field_L, var5 + var7 + this.field_K, var6 + this.field_K, this.field_H - this.field_K, this.field_n - this.field_K * 2, this.field_D, -1, !this.field_I ? 2 : 0, 1, this.field_G.field_J);
+        this.field_G.drawParagraph(this.field_L, var5 + var7 + this.field_K, var6 + this.field_K, this.field_H - this.field_K, this.field_n - this.field_K * 2, this.field_D, -1, !this.field_I ? 2 : 0, 1, this.field_G.field_J);
     }
 
     static {

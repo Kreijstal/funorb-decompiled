@@ -266,7 +266,7 @@ abstract class GameClientShell extends GameApplet {
                             }
                             stackIn_32_0 = (var2 == 12);
                             var3 = DelayedInboundPacket.readChatMessage(stackIn_32_0, -1);
-                            CandidateLink.a(var3, 2);
+                            CandidateLink.acceptReceivedChatMessage(var3, 2);
                           } else {
                             GradientMenuLabel.readLocalPlayerName(-92);
                           }
@@ -559,7 +559,7 @@ abstract class GameClientShell extends GameApplet {
         if (DefensiveAi.field_p == 11) {
           if (StandardAi.field_e != null && (!StandardAi.field_e.isIndexLoaded((byte) -88) ||
             !StandardAi.field_e.preloadAll(-1))) {
-            ClientDialogSupport.setLoadingProgress(0.0f, 2, CandidateLink.a(DialPainter.field_a, StandardAi.field_e, -80, AccountStatusDialog.field_xb));
+            ClientDialogSupport.setLoadingProgress(0.0f, 2, CandidateLink.formatArchiveLoadingProgress(DialPainter.field_a, StandardAi.field_e, -80, AccountStatusDialog.field_xb));
             decompiledFrameRemainder0 = false;
           }
           else {

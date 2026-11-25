@@ -202,7 +202,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (param0 == 5) {
-          var6 = WidgetTheme.a((byte) -107, param1, this.field_k);
+          var6 = WidgetTheme.requestRemoveFriend((byte) -107, param1, this.field_k);
           if (var6 == null) {
             return true;
           }

@@ -349,7 +349,7 @@ final class WidgetStyle {
           }
           SoftwareRasterizer.drawRect(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
           SoftwareRasterizer.fillRect(1 + var12, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + var6 - 2, this.field_k);
-          this.field_h.a(param0, this.field_d + var12, this.field_t + var13Lifetime1, var9, var10, this.field_p, -1, param3, 0, var7);
+          this.field_h.drawParagraph(param0, this.field_d + var12, this.field_t + var13Lifetime1, var9, var10, this.field_p, -1, param3, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
