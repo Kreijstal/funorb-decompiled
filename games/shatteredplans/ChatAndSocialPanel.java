@@ -101,7 +101,7 @@ final class ChatAndSocialPanel {
         try {
           var3 = new String[]{param0, SoundPlayback.field_o, WidgetStateStyle.field_b};
           var4 = new AnimatedPanel[]{param1, OpacityWidget.field_A, (AnimatedPanel) ((Object) ClientLobbyResources.field_a)};
-          this.field_d = new TabbedPanel(0L, QuickChatCategoryRegistry.field_h, var3, NotificationEntry.field_t, var4, 0);
+          this.field_d = new TabbedPanel(0L, QuickChatPhraseRegistry.field_h, var3, NotificationEntry.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

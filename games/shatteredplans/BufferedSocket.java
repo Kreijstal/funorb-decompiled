@@ -301,7 +301,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static void setQuickChatPlaceholder(int param0, QuickChatPhraseDefinition param1) {
+    final static void setQuickChatPlaceholder(int param0, QuickChatCategoryDefinition param1) {
         try {
           param1.field_s = new char[]{(char)63};
           if (param0 >= -39) {

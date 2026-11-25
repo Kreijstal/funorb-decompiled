@@ -183,7 +183,7 @@ final class ReflectionCheckDecoder {
             return stackIn_10_0;
           }
           if (IntrusiveNodeHashTable.isIgnoredPlayer(param1, true)) {
-            stackIn_13_0 = QuickChatCategoryRegistry.a(UiTextSupport.field_c, 4371, new String[]{param1});
+            stackIn_13_0 = QuickChatPhraseRegistry.a(UiTextSupport.field_c, 4371, new String[]{param1});
             return stackIn_13_0;
           }
           if (100 <= GameSpriteResources.field_e) {
@@ -191,7 +191,7 @@ final class ReflectionCheckDecoder {
             return stackIn_17_0;
           }
           if (DebouncedValidator.isFriendPlayer(param0 - 30108, param1)) {
-            stackIn_21_0 = QuickChatCategoryRegistry.a(MusicVoice.field_N, 4371, new String[]{param1});
+            stackIn_21_0 = QuickChatPhraseRegistry.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }
           var5 = LobbyOptionSupport.field_f;

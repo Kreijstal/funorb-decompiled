@@ -171,14 +171,14 @@ abstract class FrameTimer {
                         var18 = -1 + RasterViewportState.field_c - var17;
                       }
                       if (var17 >= 0) {
-                        QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
+                        QuickChatPhraseDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       } else {
-                        QuickChatCategoryDefinition.a(var16Lifetime2, param6, -1, param4, var17 + var18);
+                        QuickChatPhraseDefinition.a(var16Lifetime2, param6, -1, param4, var17 + var18);
                       }
                     } else {
                       if (var17 >= 0 &&
                         var17 < RasterViewportState.field_c) {
-                        QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
+                        QuickChatPhraseDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       }
                     }
                   }
@@ -220,16 +220,16 @@ abstract class FrameTimer {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     RasterViewportState.field_c > var16Lifetime1) {
-                    QuickChatCategoryDefinition.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
+                    QuickChatPhraseDefinition.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 + var17Lifetime1 >= RasterViewportState.field_c) {
                     var17Lifetime1 = -1 + RasterViewportState.field_c - var16Lifetime1;
                   }
                   if (var16Lifetime1 < 0) {
-                    QuickChatCategoryDefinition.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
+                    QuickChatPhraseDefinition.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
                   } else {
-                    QuickChatCategoryDefinition.a(var16Lifetime1 + var15Lifetime1, param6, -1, param4, var17Lifetime1);
+                    QuickChatPhraseDefinition.a(var16Lifetime1 + var15Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 }
               }

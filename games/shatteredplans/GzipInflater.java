@@ -110,7 +110,7 @@ final class GzipInflater {
             }
             ClientInputSupport.field_b = 1;
             var3 = var1.readString(-1);
-            QuickChatPhraseRegistry.field_d = ((String) (var3)).intern();
+            QuickChatCategoryRegistry.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-71);
             RoundedMenuPanel.readChatFilterSettings(-82, var4);
             return;

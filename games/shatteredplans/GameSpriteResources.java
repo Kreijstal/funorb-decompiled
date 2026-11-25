@@ -36,7 +36,7 @@ final class GameSpriteResources {
             AccountRequestState.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
           PasswordInputPainter.field_v = EmailValidator.a(param1, "", "win", false);
-          QuickChatCategoryDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
+          QuickChatPhraseDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
             GameSpriteResources.loadGameBackdropSprites((byte) -117, (Archive) null);

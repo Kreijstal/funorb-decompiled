@@ -1972,7 +1972,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipTotalFleetProduction", 125);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_w = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryDefinition.field_w = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipPlaceFleets", 117);
                 if (null != var2) {

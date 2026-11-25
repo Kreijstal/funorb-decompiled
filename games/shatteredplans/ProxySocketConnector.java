@@ -351,7 +351,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 > -3) {
             field_h = (String) null;
           }
-          stackIn_6_0 = QuickChatCategoryRegistry.a("<col=<%0>>" + param0.name + "</col>", 4371, new String[]{Integer.toString(var2_int, 16)});
+          stackIn_6_0 = QuickChatPhraseRegistry.a("<col=<%0>>" + param0.name + "</col>", 4371, new String[]{Integer.toString(var2_int, 16)});
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

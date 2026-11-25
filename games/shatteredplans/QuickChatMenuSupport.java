@@ -312,7 +312,7 @@ final class QuickChatMenuSupport {
               TextHotspotRegion.field_n.drawString(var6, var8Lifetime1, var1_int + LobbyCommandSupport.field_g, var5, -1);
               var1_int = var1_int + (SpriteResourceSupport.field_b + (GameMenuController.field_b + ArchiveNetworkClient.field_i));
             } else {
-              PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
+              PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatPhraseDefinition.field_v + var1_int, var5, -1);
               var1_int = var1_int + AccountFieldValue.field_d;
             }
           }

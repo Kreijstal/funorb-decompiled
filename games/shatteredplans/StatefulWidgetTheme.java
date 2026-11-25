@@ -25,7 +25,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 != -9861) {
           AnimatedPanel var5 = (AnimatedPanel) null;
-          StatefulWidgetTheme.a(122, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
+          StatefulWidgetTheme.a(122, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         if (IndexedSpriteState.field_h != null &&
           13 == TextReplacementEntry.field_j) {
@@ -33,11 +33,11 @@ final class StatefulWidgetTheme extends WidgetTheme {
           return true;
         }
         if (!MeshData.field_h) {
-          if (QuickChatCategoryDefinition.field_t ||
+          if (QuickChatPhraseDefinition.field_t ||
             TextReplacementEntry.field_j == 9 ||
             TextReplacementEntry.field_j == 10 ||
             TextReplacementEntry.field_j == 11) {
-            return QuickChatCategoryDefinition.a(param1 ^ 9952, param0, param3);
+            return QuickChatPhraseDefinition.a(param1 ^ 9952, param0, param3);
           }
           if (TextReplacementEntry.field_j == 80 &&
             FilledMenuPanel.d((byte) 108)) {
@@ -192,12 +192,12 @@ final class StatefulWidgetTheme extends WidgetTheme {
         field_x = null;
         if (!param0) {
           AnimatedPanel var2 = (AnimatedPanel) null;
-          StatefulWidgetTheme.a(-46, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
+          StatefulWidgetTheme.a(-46, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         field_y = null;
     }
 
-    final static QuickChatMenu a(int param0, QuickChatPhraseDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+    final static QuickChatMenu a(int param0, QuickChatCategoryDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -223,10 +223,10 @@ final class StatefulWidgetTheme extends WidgetTheme {
         int[] var10 = null;
         QuickChatMenu[] var11 = null;
         int var12 = 0;
-        QuickChatPhraseDefinition var13_ref_si = null;
+        QuickChatCategoryDefinition var13_ref_si = null;
         int var13 = 0;
         int var15 = 0;
-        QuickChatCategoryDefinition var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;

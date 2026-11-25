@@ -206,7 +206,7 @@ final class ArchiveSourceManager {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = QuickChatCategoryDefinition.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
+        var15 = QuickChatPhraseDefinition.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (~var5[var7 + 1] != ~var15[var7]) {
             throw new RuntimeException();

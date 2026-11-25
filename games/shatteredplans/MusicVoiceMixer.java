@@ -195,9 +195,9 @@ final class MusicVoiceMixer extends PcmStream {
           var21.addChild(var13, 8);
           var14 = new SpriteButton(20 - (-(4 * ObjectList.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
           var21.addChild(var14, 8);
-          var14.field_o = QuickChatPhraseDefinition.field_w;
-          var13.field_o = QuickChatPhraseDefinition.field_w;
-          var11.field_o = QuickChatPhraseDefinition.field_w;
+          var14.field_o = QuickChatCategoryDefinition.field_w;
+          var13.field_o = QuickChatCategoryDefinition.field_w;
+          var11.field_o = QuickChatCategoryDefinition.field_w;
           var15 = new MenuLabel(54 + ObjectList.field_d[0].field_z * 4, var7.field_i + (var8 + ObjectList.field_d[0].field_w), "=");
           var21.addChild(var15, 8);
           var24_ref = new ToggleButton(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, IntValueWriteRequest.field_i.field_z, IntValueWriteRequest.field_i.field_w, -1, IntValueWriteRequest.field_i, (String) null, -1, -1, AccountHandshakeSupport.field_a, (String) null, -1);
@@ -212,7 +212,7 @@ final class MusicVoiceMixer extends PcmStream {
           if (1 == param1.field_x) {
             stackIn_18_3 = StatusContent.field_a;
           } else {
-            stackIn_18_3 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(param1.field_x)});
+            stackIn_18_3 = QuickChatPhraseRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(param1.field_x)});
           }
           dupTemp$0 = ((StringBuilder) (Object) stackIn_17_2).append(stackIn_18_3).toString();
           stackIn_17_1.field_o = dupTemp$0;

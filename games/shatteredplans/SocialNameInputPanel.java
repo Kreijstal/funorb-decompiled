@@ -531,7 +531,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
     final static void closeQuickChatMenus(byte param0) {
         String[] var2 = null;
         String[] var2Lifetime1;
-        QuickChatCategoryDefinition.field_t = false;
+        QuickChatPhraseDefinition.field_t = false;
         if (DerelictMapReader.field_h != null) {
           DerelictMapReader.field_h.h(0);
           if (0 != ProductionContent.field_h) {

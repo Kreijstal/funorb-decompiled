@@ -92,9 +92,9 @@ final class TextHotspotRegion extends IntrusiveNode {
           if (param0 != -26848) {
             TextHotspotRegion.clearStatics((byte) 108);
           }
-          QuickChatCategoryDefinition.field_u = QuickChatCategoryDefinition.field_u - 1;
-          if (QuickChatCategoryDefinition.field_u == 0) {
-            QuickChatCategoryDefinition.field_u = 200;
+          QuickChatPhraseDefinition.field_u = QuickChatPhraseDefinition.field_u - 1;
+          if (QuickChatPhraseDefinition.field_u == 0) {
+            QuickChatPhraseDefinition.field_u = 200;
             var1 = (SoundPlayback) (ProgressDialog.field_ab.startForward(param0 ^ -26848));
             while (var1 != null) {
               if (!var1.field_n.isLinked(2048)) {

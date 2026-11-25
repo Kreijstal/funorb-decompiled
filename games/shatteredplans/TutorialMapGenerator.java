@@ -874,7 +874,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game", 511);
                 if (null != var2) {
-                  QuickChatPhraseRegistry.field_c = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryRegistry.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_private", 511);
                 if (var2 != null) {
@@ -1042,7 +1042,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_options_ratedgametype", 511);
                 if (var2 != null) {
-                  QuickChatPhraseRegistry.field_e = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryRegistry.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("yes", 511);
                 if (null != var2) {
@@ -1418,7 +1418,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("multiconst_open", 511);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_q = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryDefinition.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("no_options_available", 511);
                 if (null != var2) {
@@ -1848,7 +1848,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("invalidpass", 511);
                 if (null != var2) {
-                  QuickChatCategoryDefinition.field_p = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_p = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("retry", 511);
                 if (null != var2) {
@@ -3664,31 +3664,31 @@ final class TutorialMapGenerator extends StandardMapGenerator {
             void loadSubscriptionText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,1", 511);
                 if (null != var2) {
-                  QuickChatCategoryDefinition.field_x[1] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,2", 511);
                 if (var2 != null) {
-                  QuickChatCategoryDefinition.field_x[2] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,3", 511);
                 if (var2 != null) {
-                  QuickChatCategoryDefinition.field_x[3] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,4", 511);
                 if (null != var2) {
-                  QuickChatCategoryDefinition.field_x[4] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,5", 511);
                 if (null != var2) {
-                  QuickChatCategoryDefinition.field_x[5] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,6", 511);
                 if (var2 != null) {
-                  QuickChatCategoryDefinition.field_x[6] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,7", 511);
                 if (var2 != null) {
-                  QuickChatCategoryDefinition.field_x[7] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,0", 511);
                 if (null != var2) {

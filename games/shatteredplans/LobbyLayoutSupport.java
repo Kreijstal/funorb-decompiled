@@ -87,8 +87,8 @@ final class LobbyLayoutSupport {
               !(FleetMove.field_A <= 1))) {
               if (!param1 &&
                 var6 == 3) {
-                var7_ref_qr = QuickChatCategoryRegistry.field_g[var6];
-                QuickChatCategoryRegistry.field_g[var6].field_mb = 0;
+                var7_ref_qr = QuickChatPhraseRegistry.field_g[var6];
+                QuickChatPhraseRegistry.field_g[var6].field_mb = 0;
                 var7_ref_qr.field_K = 0;
                 for (var8 = 0; var8 < ByteArrayNode.field_p[var6].length; var8++) {
                   if (ByteArrayNode.field_p[var6][var8] != null) {
@@ -99,10 +99,10 @@ final class LobbyLayoutSupport {
                 }
               } else if (param1 &&
                 var6 == 0) {
-                dupTemp$0 = QuickChatCategoryRegistry.field_g[var6];
+                dupTemp$0 = QuickChatPhraseRegistry.field_g[var6];
                 var14 = dupTemp$0;
                 var7_ref_qr = dupTemp$0;
-                QuickChatCategoryRegistry.field_g[var6].field_mb = 0;
+                QuickChatPhraseRegistry.field_g[var6].field_mb = 0;
                 var14.field_K = 0;
                 for (var8 = 0; ByteArrayNode.field_p[var6].length > var8; var8++) {
                   if (null != ByteArrayNode.field_p[var6][var8]) {
@@ -127,8 +127,8 @@ final class LobbyLayoutSupport {
                 }
                 var7 = stackIn_59_0;
                 if (var7 != 0) {
-                  var8_ref_qr = QuickChatCategoryRegistry.field_g[var6];
-                  QuickChatCategoryRegistry.field_g[var6].field_mb = 0;
+                  var8_ref_qr = QuickChatPhraseRegistry.field_g[var6];
+                  QuickChatPhraseRegistry.field_g[var6].field_mb = 0;
                   var8_ref_qr.field_K = 0;
                   for (var9 = 0; var9 < ByteArrayNode.field_p[var6].length; var9++) {
                     if (null != ByteArrayNode.field_p[var6][var9]) {
@@ -138,7 +138,7 @@ final class LobbyLayoutSupport {
                     }
                   }
                 } else {
-                  QuickChatCategoryRegistry.field_g[var6].setTarget(103, var3, (byte) 74, var5, 5);
+                  QuickChatPhraseRegistry.field_g[var6].setTarget(103, var3, (byte) 74, var5, 5);
                   var8 = 110;
                   if (param1) {
                     ByteArrayNode.field_p[var6][0].setIconLabelBounds(50, var3, var5, 2, TextLayout.field_b, 38, var8);
@@ -163,10 +163,10 @@ final class LobbyLayoutSupport {
           }
           MouseInputHandler.field_d.setTarget(360, -10 + SoftwareRasterizer.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + SoftwareRasterizer.field_b >> 1);
           ValidationIndicator.field_K.setTarget(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
-          QuickChatPhraseRegistry.field_a.setTarget(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
-          QuickChatPhraseRegistry.field_a.field_F = Wormhole.a(16, 3, QuickChatPhraseRegistry.field_a.field_mb, 11579568, 8421504, 1);
-          MenuList.field_v.setTarget(QuickChatPhraseRegistry.field_a.field_K - 10, -2 + QuickChatPhraseRegistry.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
-          ClientRasterSupport.field_c.setTarget(80, 24, (byte) 108, -5 + QuickChatPhraseRegistry.field_a.field_mb - 24, (QuickChatPhraseRegistry.field_a.field_K - 80) / 2);
+          QuickChatCategoryRegistry.field_a.setTarget(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
+          QuickChatCategoryRegistry.field_a.field_F = Wormhole.a(16, 3, QuickChatCategoryRegistry.field_a.field_mb, 11579568, 8421504, 1);
+          MenuList.field_v.setTarget(QuickChatCategoryRegistry.field_a.field_K - 10, -2 + QuickChatCategoryRegistry.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
+          ClientRasterSupport.field_c.setTarget(80, 24, (byte) 108, -5 + QuickChatCategoryRegistry.field_a.field_mb - 24, (QuickChatCategoryRegistry.field_a.field_K - 80) / 2);
           CachedArchiveSource.layoutLobbyPlayerList(18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

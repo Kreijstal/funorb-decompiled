@@ -66,18 +66,18 @@ final class ClientContextMenuSupport {
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(RasterTargetSupport.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;
-            var8 = QuickChatCategoryRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
+            var8 = QuickChatPhraseRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.addItem(1, 10, var8);
           }
           DerelictVictoryChecker.field_m.addRoomJoinActions(false);
           if (param0) {
             if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
               var11 = DerelictVictoryChecker.field_m;
-              var12 = QuickChatCategoryRegistry.a(SpriteResourceSupport.field_e, 4371, new String[]{param3});
+              var12 = QuickChatPhraseRegistry.a(SpriteResourceSupport.field_e, 4371, new String[]{param3});
               var11.field_j.addItem(1, 16, var12);
             } else {
               var9 = DerelictVictoryChecker.field_m;
-              var10 = QuickChatCategoryRegistry.a(DirectByteArrayStorage.field_g, 4371, new String[]{param3});
+              var10 = QuickChatPhraseRegistry.a(DirectByteArrayStorage.field_g, 4371, new String[]{param3});
               var9.field_j.addItem(1, 15, var10);
             }
           }

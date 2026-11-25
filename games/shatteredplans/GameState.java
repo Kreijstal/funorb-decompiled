@@ -395,7 +395,7 @@ final class GameState {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                QuickChatCategoryRegistry.field_a = 1 + (int)(var3.longValue() / 1048576L);
+                QuickChatPhraseRegistry.field_a = 1 + (int)(var3.longValue() / 1048576L);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -1191,7 +1191,7 @@ final class GameState {
         if (0 >= this.field_O) {
           return ArrayWidgetGroup.field_H;
         }
-        return QuickChatCategoryRegistry.a(StringList.field_i, 4371, new String[]{QuickChatCategoryRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
+        return QuickChatPhraseRegistry.a(StringList.field_i, 4371, new String[]{QuickChatPhraseRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
     }
 
     final static void resetChatRateLimit(int param0) {

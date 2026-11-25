@@ -84,7 +84,7 @@ final class GameSession implements AiHost {
           var4 = param0.name + ": ";
           var5 = DateInputWidget.field_I.field_K;
           if (this.field_f) {
-            var5 = var5 - QuickChatHelpSupport.field_f.stringWidth("[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
+            var5 = var5 - QuickChatHelpSupport.field_f.stringWidth("[" + QuickChatPhraseRegistry.a(IntNode.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
           if (this.field_f) {
             stackIn_16_0 = 0;
@@ -967,12 +967,12 @@ final class GameSession implements AiHost {
               (this.field_P.field_w & 1 << this.field_h) == 0) &&
               !(this.field_P.field_x.isLoser((byte) 123, this.field_n)));
             if (!decompiledSharedTail0) {
-              QuickChatPhraseRegistry.a(param0 ^ 18008, ChatAndSocialPanel.field_b, false, 10);
+              QuickChatCategoryRegistry.a(param0 ^ 18008, ChatAndSocialPanel.field_b, false, 10);
               decompiledSharedTail0 = (var11 != 0);
             }
             if ((decompiledSharedTail0) &&
               (this.field_P.field_z)) {
-              QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
+              QuickChatCategoryRegistry.a(32767, PlacementEvent.field_n, false, 10);
             }
             if (GameMenuController.field_e &&
               (1 << this.field_h & this.field_P.field_e) == 0) {
@@ -1961,15 +1961,15 @@ final class GameSession implements AiHost {
         try {
           if (this.field_n != param0) {
             if (param1 == this.field_n) {
-              var4 = QuickChatCategoryRegistry.a(AiTask.field_h, 4371, new String[]{param0.name});
+              var4 = QuickChatPhraseRegistry.a(AiTask.field_h, 4371, new String[]{param0.name});
               this.field_H.addFirst(new DiplomacyNotice(param0, (Player) null, var4), 0);
               if (ShatteredPlansClient.field_F) {
-                var4 = QuickChatCategoryRegistry.a(AwtEventQueueSupport.field_b, 4371, new String[]{param1.name});
+                var4 = QuickChatPhraseRegistry.a(AwtEventQueueSupport.field_b, 4371, new String[]{param1.name});
                 this.field_H.addFirst(new DiplomacyNotice(param1, (Player) null, var4), 0);
               }
             }
           } else {
-            var4 = QuickChatCategoryRegistry.a(AwtEventQueueSupport.field_b, 4371, new String[]{param1.name});
+            var4 = QuickChatPhraseRegistry.a(AwtEventQueueSupport.field_b, 4371, new String[]{param1.name});
             this.field_H.addFirst(new DiplomacyNotice(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
@@ -3387,28 +3387,28 @@ final class GameSession implements AiHost {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_n == param0) {
-            var4 = QuickChatCategoryRegistry.a(ClientOverlayDrawSupport.field_a, 4371, new String[]{param2.name});
+            var4 = QuickChatPhraseRegistry.a(ClientOverlayDrawSupport.field_a, 4371, new String[]{param2.name});
             this.field_H.addFirst(new DiplomacyNotice(param0, param2, var4), 0);
             if (var5 != 0) {
               if (param2 == this.field_n) {
-                var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
+                var4 = QuickChatPhraseRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
                 this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
-                var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatPhraseRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
               } else {
-                var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatPhraseRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
               }
             }
           } else {
             boolean decompiledSharedTail0 = (param2 != this.field_n);
             if (!decompiledSharedTail0) {
-              var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
+              var4 = QuickChatPhraseRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
               this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
+              var4 = QuickChatPhraseRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
               this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
             }
           }
@@ -3687,13 +3687,13 @@ final class GameSession implements AiHost {
           if ((this.field_n == null ||
             (1 << this.field_h & this.field_P.field_w) == 0) && !this.field_P.field_x.isLoser((byte) -123, this.field_n)) {
             if (this.field_P.field_z) {
-              QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
+              QuickChatCategoryRegistry.a(32767, PlacementEvent.field_n, false, 10);
               if (var6 != 0) {
-                QuickChatPhraseRegistry.a(32767, ChatAndSocialPanel.field_b, false, 10);
+                QuickChatCategoryRegistry.a(32767, ChatAndSocialPanel.field_b, false, 10);
               }
             }
           } else {
-            QuickChatPhraseRegistry.a(32767, ChatAndSocialPanel.field_b, false, 10);
+            QuickChatCategoryRegistry.a(32767, ChatAndSocialPanel.field_b, false, 10);
           }
           if (GameMenuController.field_e &&
             (this.field_P.field_e & 1 << this.field_h) == 0) {

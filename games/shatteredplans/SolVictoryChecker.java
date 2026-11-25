@@ -287,7 +287,7 @@ final class SolVictoryChecker extends VictoryChecker {
           }
           var19 = new MenuLabel[3];
           var7_array = var19;
-          var7_array[0] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatCategoryRegistry.a(ChatPanelLayoutSupport.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
+          var7_array[0] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatPhraseRegistry.a(ChatPanelLayoutSupport.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
           if (var16 == null) {
             var7_array[1] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, TutorialAi.field_t);
             var7_array[2] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, (String) null);
@@ -462,7 +462,7 @@ final class SolVictoryChecker extends VictoryChecker {
               GraphicsSettings.field_j = stackIn_44_0;
               if (!param2) {
                 stackIn_48_0 = ((4 & var7) != 0);
-                QuickChatPhraseDefinition.field_v = stackIn_48_0;
+                QuickChatCategoryDefinition.field_v = stackIn_48_0;
                 stackIn_51_0 = ((var7 & 8) != 0);
                 LoginMethodPreference.field_g = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
@@ -498,7 +498,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 SettingsCookieSupport.writeSettingsCookie(-25602, var6, GameScreen.getHostApplet((byte) 125));
               }
               if (StarAnnotation.field_m <= 0 &&
-                !QuickChatPhraseDefinition.field_v) {
+                !QuickChatCategoryDefinition.field_v) {
                 try {
                   BrowserJavaScriptBridge.callJavaScript("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

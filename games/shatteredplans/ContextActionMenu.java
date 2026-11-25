@@ -43,7 +43,7 @@ final class ContextActionMenu extends AnimatedPanel {
     }
 
     final static void appendRankingRow(int param0, int param1, int param2, int param3, int param4, int param5) {
-        QuickChatCategoryRegistry.field_d[UiSpriteSupport.field_c] = param4;
+        QuickChatPhraseRegistry.field_d[UiSpriteSupport.field_c] = param4;
         ProxyAuthenticationRequiredException.field_d[UiSpriteSupport.field_c] = UiSpriteSupport.field_c;
         GameApplet.field_f[UiSpriteSupport.field_c] = param1;
         if (!(ClientRenderSupport.field_b >= param1)) {

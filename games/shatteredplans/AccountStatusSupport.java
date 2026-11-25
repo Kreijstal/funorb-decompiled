@@ -50,7 +50,7 @@ final class AccountStatusSupport {
             if (8 == param1) {
               param1 = 2;
               if (TertiaryNodeList.field_b) {
-                param2 = QuickChatCategoryDefinition.field_p;
+                param2 = QuickChatPhraseDefinition.field_p;
               } else {
                 param2 = AccountCreationForm.field_N;
               }
@@ -63,7 +63,7 @@ final class AccountStatusSupport {
             }
             if (var3_int != 0) {
               if (ClientRuntimeState.field_f) {
-                param2 = QuickChatCategoryRegistry.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
+                param2 = QuickChatPhraseRegistry.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
               }
               if (ToggleButton.field_D) {
                 param2 = ProgressDialog.field_ib;

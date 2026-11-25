@@ -138,7 +138,7 @@ final class BattleContribution extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        QuickChatPhraseDefinition var4 = null;
+        QuickChatCategoryDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -155,8 +155,8 @@ final class BattleContribution extends IntrusiveNode {
           }
           param0.field_k = 0;
           param0.field_j = false;
-          GameScreen.field_A = new QuickChatPhraseRegistry(var3_int, param0, param0);
-          ClientCapabilitySupport.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new RoundedFrameSupport());
+          GameScreen.field_A = new QuickChatCategoryRegistry(var3_int, param0, param0);
+          ClientCapabilitySupport.field_c = new QuickChatPhraseRegistry(var3_int, param0, param0, new RoundedFrameSupport());
           var4 = MeshMaterial.findFirstEnabledQuickChatPhrase(false);
           if (var4 == null) {
             GameKeyHandler.a(-29901, (Throwable) null, "QC2");

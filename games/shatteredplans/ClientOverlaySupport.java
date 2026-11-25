@@ -11,14 +11,14 @@ final class ClientOverlaySupport {
         if (param0 != 640) {
           ClientOverlaySupport.hasClientOverlay(78);
           if (null == IndexedSpriteState.field_h) {
-            return QuickChatCategoryDefinition.field_t ? true : false;
+            return QuickChatPhraseDefinition.field_t ? true : false;
           }
           return true;
         }
         if (null != IndexedSpriteState.field_h) {
           return true;
         }
-        if (!QuickChatCategoryDefinition.field_t) {
+        if (!QuickChatPhraseDefinition.field_t) {
           return false;
         }
         return true;

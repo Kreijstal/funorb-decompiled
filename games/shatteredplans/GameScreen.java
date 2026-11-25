@@ -62,7 +62,7 @@ final class GameScreen {
     private int field_kb;
     private ToggleButton field_n;
     static String field_i;
-    static QuickChatPhraseRegistry field_A;
+    static QuickChatCategoryRegistry field_A;
     private IntrusiveDeque field_y;
     private ToggleButton field_W;
     private int field_Q;
@@ -113,7 +113,7 @@ final class GameScreen {
                 } else {
                   stackIn_22_0 = new StringBuilder().append(IntroTextLine.field_j).append(" ");
                   if (var7.field_x != 1) {
-                    stackIn_23_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var7.field_x)});
+                    stackIn_23_1 = QuickChatPhraseRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var7.field_x)});
                   } else {
                     stackIn_23_1 = StatusContent.field_a;
                   }
@@ -197,7 +197,7 @@ final class GameScreen {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.showStatusText(10, 0, QuickChatCategoryRegistry.a(RematchMenuSupport.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
+              this.showStatusText(10, 0, QuickChatPhraseRegistry.a(RematchMenuSupport.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
               if (var9 == 0) {
                 return;
               }
@@ -633,10 +633,10 @@ final class GameScreen {
                 if ((1 << this.field_s.field_n.field_x & param1.field_A) == 0) {
                   if (0 == (1 << param1.field_x & this.field_s.field_n.field_A)) {
                     var5.setLabel((byte) 2, 3375155, FullscreenFocusCanvas.field_e);
-                    var7.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param1.name});
+                    var7.field_o = QuickChatPhraseRegistry.a(AudioService.field_f, 4371, new String[]{param1.name});
                     var9 = (MenuComponent) (var7.field_l.startForward(0));
                     while (null != var9) {
-                      var9.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param1.name});
+                      var9.field_o = QuickChatPhraseRegistry.a(AudioService.field_f, 4371, new String[]{param1.name});
                       var9 = (MenuComponent) (var7.field_l.nextForward((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted4 = false;
@@ -650,10 +650,10 @@ final class GameScreen {
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameCompleted4)) {
                     var5.setLabel((byte) -54, 3375155, ContentDialog.field_hb);
-                    var7.field_o = QuickChatCategoryRegistry.a(StatefulWidgetTheme.field_x, 4371, new String[]{param1.name});
+                    var7.field_o = QuickChatPhraseRegistry.a(StatefulWidgetTheme.field_x, 4371, new String[]{param1.name});
                     var9 = (MenuComponent) (var7.field_l.startForward(0));
                     while (null != var9) {
-                      var9.field_o = QuickChatCategoryRegistry.a(StatefulWidgetTheme.field_x, 4371, new String[]{param1.name});
+                      var9.field_o = QuickChatPhraseRegistry.a(StatefulWidgetTheme.field_x, 4371, new String[]{param1.name});
                       var9 = (MenuComponent) (var7.field_l.nextForward((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted3 = false;
@@ -669,10 +669,10 @@ final class GameScreen {
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
                   var5.setLabel((byte) -109, 3375155, LobbyRoomEntry.field_gc);
-                  var7.field_o = QuickChatCategoryRegistry.a(EmailValidator.field_u, 4371, new String[]{param1.name});
+                  var7.field_o = QuickChatPhraseRegistry.a(EmailValidator.field_u, 4371, new String[]{param1.name});
                   var9 = (MenuComponent) (var7.field_l.startForward(0));
                   while (var9 != null) {
-                    var9.field_o = QuickChatCategoryRegistry.a(EmailValidator.field_u, 4371, new String[]{param1.name});
+                    var9.field_o = QuickChatPhraseRegistry.a(EmailValidator.field_u, 4371, new String[]{param1.name});
                     var9 = (MenuComponent) (var7.field_l.nextForward((byte) -71));
                     if (var11 != 0) {
                       decompiledFrameCompleted2 = false;
@@ -688,7 +688,7 @@ final class GameScreen {
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameCompleted2)) {
                 var8_int = this.field_s.field_n.field_k;
-                var5.setLabel((byte) -83, 9386040, QuickChatCategoryRegistry.a(ClientOverlayDrawSupport.field_e, 4371, new String[]{Integer.toString(param1.field_f[this.field_s.field_n.field_x])}));
+                var5.setLabel((byte) -83, 9386040, QuickChatPhraseRegistry.a(ClientOverlayDrawSupport.field_e, 4371, new String[]{Integer.toString(param1.field_f[this.field_s.field_n.field_x])}));
                 var7.field_o = null;
                 var9 = (MenuComponent) (var7.field_l.startForward(0));
                 while (var9 != null) {
@@ -956,7 +956,7 @@ final class GameScreen {
             var3_int = param1;
           }
           boolean decompiledFrameRemainder1 = true;
-          var4 = QuickChatCategoryRegistry.a(20, 32, var3_int, 550, 0);
+          var4 = QuickChatPhraseRegistry.a(20, 32, var3_int, 550, 0);
           IntroLogoSupport.scaleRectangleBrightness(640, 101, 480, 192 + (-var3_int + 32 << 6) / 32, 0, 0);
           var5 = (640 - var4) / 2;
           var6 = 80;
@@ -1017,7 +1017,7 @@ final class GameScreen {
             var10 = stackIn_43_0;
           }
           if (var10 != 0) {
-            stackIn_48_0 = QuickChatCategoryDefinition.field_s;
+            stackIn_48_0 = QuickChatPhraseDefinition.field_s;
           } else {
             stackIn_48_0 = PasswordInputPainter.field_v;
           }
@@ -1202,7 +1202,7 @@ final class GameScreen {
                 var28 = var27Lifetime1 + (20 + var6);
                 var29 = this.field_fb - 1 << 10;
                 if (this.field_kb != 0) {
-                  var29 = -1024 + QuickChatCategoryRegistry.a(this.field_H << 10, 32, this.field_kb, this.field_fb << 10, 0);
+                  var29 = -1024 + QuickChatPhraseRegistry.a(this.field_H << 10, 32, this.field_kb, this.field_fb << 10, 0);
                 }
                 boolean decompiledFrameCompleted1 = true;
                 boolean decompiledFrameCompleted0 = true;
@@ -1229,7 +1229,7 @@ final class GameScreen {
                         stackIn_156_0 = 0;
                         var38 = stackIn_156_0;
                         while (var38 < (var36 - var31)) {
-                          var39 = QuickChatCategoryRegistry.a(var32, -var31 + var36, var38, var33_int, 0);
+                          var39 = QuickChatPhraseRegistry.a(var32, -var31 + var36, var38, var33_int, 0);
                           SoftwareRasterizer.drawLineAlphaExclusive(var31 - (-var38 + 1), var34, var31 + var38, var39, var19Lifetime2, this.field_Q);
                           var34 = var39;
                           var38++;
@@ -1272,7 +1272,7 @@ final class GameScreen {
                       stackIn_173_0Lifetime1 = 0;
                       var38Lifetime1 = stackIn_173_0Lifetime1;
                       while (var38Lifetime1 < (var36Lifetime1 - var31Lifetime2)) {
-                        var39Lifetime1 = QuickChatCategoryRegistry.a(var32Lifetime2, var36Lifetime1 - var31Lifetime2, var38Lifetime1, var33_intLifetime1, 0);
+                        var39Lifetime1 = QuickChatPhraseRegistry.a(var32Lifetime2, var36Lifetime1 - var31Lifetime2, var38Lifetime1, var33_intLifetime1, 0);
                         SoftwareRasterizer.drawLine(-1 + var31Lifetime2 + var38Lifetime1, var34Lifetime2, var38Lifetime1 + var31Lifetime2, var39Lifetime1, var19Lifetime2Lifetime1);
                         var34Lifetime2 = var39Lifetime1;
                         var38Lifetime1++;
@@ -1383,7 +1383,7 @@ final class GameScreen {
             this.refreshChatPanel(-128);
           }
           MidiPcmStream.a(var9, param1, param2, (byte) -63, 190);
-          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.field_g[param4], 10 + param2, param1 + IconTextPanel.field_Cb.field_J, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.field_g[param4], 10 + param2, param1 + IconTextPanel.field_Cb.field_J, 16777215, -1);
           var10 = 210;
           var11 = var10 / (6 + var6_int);
           var12 = 2 * var11 + 12;
@@ -1413,7 +1413,7 @@ final class GameScreen {
               var17 = var14;
               var19 = 256;
             }
-            var20 = IconTextPanel.field_Cb.field_J + param1 + QuickChatCategoryRegistry.a(var17, 32, this.field_p[param0], var18, 0);
+            var20 = IconTextPanel.field_Cb.field_J + param1 + QuickChatPhraseRegistry.a(var17, 32, this.field_p[param0], var18, 0);
             this.drawPlayerRow(param4, var20, var16, var19, (byte) 58, 10 + param2);
             var16++;
           }
@@ -1496,7 +1496,7 @@ final class GameScreen {
           if (var2_int < 32) {
             var3 = var2_int;
           }
-          var4 = QuickChatCategoryRegistry.a(20, 32, var3, 550, 0);
+          var4 = QuickChatPhraseRegistry.a(20, 32, var3, 550, 0);
           var5 = (-var4 + 640) / 2;
           var6 = 80;
           var7 = -10 + (320 + var5 + 40);
@@ -1681,20 +1681,20 @@ final class GameScreen {
           var6 = UiWidget.field_t.field_z * 2 + IconTextPanel.field_Cb.stringWidth("= " + ServerRequestRetrySupport.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + IconTextPanel.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (IconTextPanel.field_Cb.field_J + param1);
-          var8 = UiWidget.field_t.field_z + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
+          var8 = UiWidget.field_t.field_z + IconTextPanel.field_Cb.stringWidth("= " + QuickChatPhraseRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
           ArrayWidgetGroup.field_z.draw((-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.draw((-var8 + param0) / 2 + param3, var7 - 9);
           SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ContextActionMenu.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ContextActionMenu.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
           SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ContextActionMenu.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
-          IconTextPanel.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
+          IconTextPanel.field_Cb.drawString("= " + QuickChatPhraseRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
           SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ContextActionMenu.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           SoftwareRasterizer.addRadialGlowQ4(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ContextActionMenu.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          IconTextPanel.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
+          IconTextPanel.field_Cb.drawString("= " + QuickChatPhraseRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((-var6 + param0) / 2 + param3 - 5, var7 - 9);
@@ -2365,7 +2365,7 @@ final class GameScreen {
             var8 = stackIn_140_0;
             if (this.field_s.field_n == null &&
               var6Lifetime2 == 0) {
-              var8 = QuickChatCategoryRegistry.a(TertiaryLinkNode.field_t, 4371, new String[]{this.field_s.field_P.field_v[this.field_s.field_P.field_k].name});
+              var8 = QuickChatPhraseRegistry.a(TertiaryLinkNode.field_t, 4371, new String[]{this.field_s.field_P.field_v[this.field_s.field_P.field_k].name});
             }
           }
           if (this.field_s.field_n != null &&
@@ -2530,7 +2530,7 @@ final class GameScreen {
             } else {
               stackIn_15_0 = new StringBuilder().append(ContentDialog.field_lb).append(" ");
               if (var4.field_x != 1) {
-                stackIn_16_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var4.field_x)});
+                stackIn_16_1 = QuickChatPhraseRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var4.field_x)});
               } else {
                 stackIn_16_1 = StatusContent.field_a;
               }
@@ -2854,7 +2854,7 @@ final class GameScreen {
             var2_int = this.field_u;
           }
           boolean decompiledFrameRemainder0 = true;
-          var3 = QuickChatCategoryRegistry.a(21, 32, var2_int, 450, 0);
+          var3 = QuickChatPhraseRegistry.a(21, 32, var2_int, 450, 0);
           IntroLogoSupport.scaleRectangleBrightness(640, -84, 480, (-var2_int + 32 << 6) / 32 + 192, 0, 0);
           var4 = (640 - var3) / 2;
           var5 = 80;
@@ -2931,7 +2931,7 @@ final class GameScreen {
             var12.draw(5 + (var4 + IconTextPanel.field_Cb.field_J / 2) + (var11.field_z - NodeSequence.field_b[0].field_z / 2), 10 + var5 + IconTextPanel.field_Cb.field_J);
             NodeSequence.field_b[var10].drawAlpha(-(NodeSequence.field_b[0].field_z / 2) + (var11.field_z + IconTextPanel.field_Cb.field_J / 2) + (var4 + 5), IconTextPanel.field_Cb.field_J + (var5 + 10), 64);
           }
-          var13 = QuickChatCategoryRegistry.a(ProgressDialog.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
+          var13 = QuickChatPhraseRegistry.a(ProgressDialog.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
           var14 = 10 + NodeSequence.field_b[0].field_w + (var5 + (20 + AccountRequestState.field_b.field_J));
           AccountRequestState.field_b.drawCentred(var13, 320, var14, 16777215, -1);
           var15 = -32 + this.field_u;
@@ -3030,7 +3030,7 @@ final class GameScreen {
               var8 = new int[var3];
               var9 = 0;
               while (var3 > var9) {
-                var8[var9] = QuickChatCategoryRegistry.a(var6[var9], 32, this.field_kb, var7[var9], CandidateLink.intXor(param0, 410));
+                var8[var9] = QuickChatPhraseRegistry.a(var6[var9], 32, this.field_kb, var7[var9], CandidateLink.intXor(param0, 410));
                 var9++;
               }
               var4[var5] = var8;
@@ -3100,7 +3100,7 @@ final class GameScreen {
             return stackIn_2_0;
           }
           if (param0 < 123) {
-            field_A = (QuickChatPhraseRegistry) null;
+            field_A = (QuickChatCategoryRegistry) null;
           }
           stackIn_7_0 = TextHotspotWidget.field_G;
           return (java.applet.Applet) ((Object) stackIn_7_0);
@@ -3766,7 +3766,7 @@ final class GameScreen {
               decompiledSharedTail1 = (var7 != 0);
             }
             if (decompiledSharedTail1) {
-              this.showStatusText(10, 0, QuickChatCategoryRegistry.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
+              this.showStatusText(10, 0, QuickChatPhraseRegistry.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
             }
             if (var7 != 0) {
               this.field_bb.setSelected(false);
@@ -3806,7 +3806,7 @@ final class GameScreen {
                     if ((1 << var5 & this.field_s.field_i) == 0) {
                       if (0 == (var3.field_e & 1 << var5)) {
                         if ((var3.field_f & 1 << var5) != 0) {
-                          var6_ref = QuickChatCategoryRegistry.a(ArrayWidgetGroup.field_y, 4371, new String[]{(String) (var6_ref)});
+                          var6_ref = QuickChatPhraseRegistry.a(ArrayWidgetGroup.field_y, 4371, new String[]{(String) (var6_ref)});
                           break regionExit2;
                         }
                         if ((this.field_s.field_P.field_w & 1 << var5) != 0) {
@@ -3815,7 +3815,7 @@ final class GameScreen {
                         }
                         if (!var3.field_z &&
                           (var3.field_y & 1 << var5) != 0) {
-                          var6_ref = QuickChatCategoryRegistry.a(PacketBuffer.field_i, 4371, new String[]{(String) (var6_ref)});
+                          var6_ref = QuickChatPhraseRegistry.a(PacketBuffer.field_i, 4371, new String[]{(String) (var6_ref)});
                           break regionExit2;
                         } else {
                           var6_ref = null;
@@ -3823,15 +3823,15 @@ final class GameScreen {
                         }
                       }
                       if (!this.field_s.field_M) {
-                        var6_ref = QuickChatCategoryRegistry.a(LobbyRoomControlsSupport.field_d, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatPhraseRegistry.a(LobbyRoomControlsSupport.field_d, 4371, new String[]{(String) (var6_ref)});
                       } else {
-                        var6_ref = QuickChatCategoryRegistry.a(QuickChatMenu.field_Fb, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatPhraseRegistry.a(QuickChatMenu.field_Fb, 4371, new String[]{(String) (var6_ref)});
                       }
                     } else {
                       if ((var3.field_f & 1 << var5) != 0) {
-                        var6_ref = QuickChatCategoryRegistry.a(ProxyAuthenticationRequiredException.field_f, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatPhraseRegistry.a(ProxyAuthenticationRequiredException.field_f, 4371, new String[]{(String) (var6_ref)});
                       } else {
-                        var6_ref = QuickChatCategoryRegistry.a(NameSuggestionsPanel.field_M, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatPhraseRegistry.a(NameSuggestionsPanel.field_M, 4371, new String[]{(String) (var6_ref)});
                       }
                     }
                     break regionExit2;
@@ -4114,7 +4114,7 @@ final class GameScreen {
             var6Lifetime1 = 12 + 2 * var5Lifetime2;
             var7 = -(8 * var5Lifetime2) + var4;
             this.field_ob[this.field_w] = var6Lifetime1 + var7;
-            var8 = QuickChatCategoryRegistry.a(0, 32, this.field_p[this.field_w], var7, 0);
+            var8 = QuickChatPhraseRegistry.a(0, 32, this.field_p[this.field_w], var7, 0);
             var7 = var7 - var8;
             var9 = new int[4];
             var10 = 0;
@@ -4133,7 +4133,7 @@ final class GameScreen {
                 break;
               }
               if (stackIn_69_0 != stackIn_69_1) {
-                var12 = QuickChatCategoryRegistry.a(0, 32, this.field_p[var11], 1024, 0);
+                var12 = QuickChatPhraseRegistry.a(0, 32, this.field_p[var11], 1024, 0);
                 var9[var11] = var12;
                 var10 = var10 + var12;
               }
@@ -4188,7 +4188,7 @@ final class GameScreen {
             stackIn_80_0 = 20;
             stackIn_80_1 = 32;
           }
-          var5Lifetime1 = QuickChatCategoryRegistry.a(stackIn_80_0, stackIn_80_1, this.field_b, 550, param0 - 3);
+          var5Lifetime1 = QuickChatPhraseRegistry.a(stackIn_80_0, stackIn_80_1, this.field_b, 550, param0 - 3);
           this.field_F.moveTo((byte) 85, 20 + (640 - var5Lifetime1) / 2, this.field_hb.field_t);
           this.field_lb.moveTo((byte) 45, 5 + (this.field_hb.field_m + (-var5Lifetime1 + 640) / 2) + 20, this.field_gb.field_t);
           this.field_m.moveTo((byte) 107, 2 * (this.field_hb.field_m + 5) + (640 - var5Lifetime1) / 2 + 20, this.field_db.field_t);
@@ -4799,7 +4799,7 @@ final class GameScreen {
             stackIn_28_1 = 1;
           }
           if (stackIn_28_0 != stackIn_28_1) {
-            this.showStatusText(10, 0, QuickChatCategoryRegistry.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
+            this.showStatusText(10, 0, QuickChatPhraseRegistry.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
             if (var4 == 0) {
               return;
             }
@@ -4821,22 +4821,22 @@ final class GameScreen {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
           IconTextPanel.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           var6 = 20 + param3 + IconTextPanel.field_Cb.field_J + 9;
-          var7 = 64 + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}));
+          var7 = 64 + IconTextPanel.field_Cb.stringWidth("= " + QuickChatPhraseRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}));
           IntArrayReadRequest.field_k.drawScaled((-var7 + param1) / 2 + param0, -24 + var6, 64, 64);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), param0 - (-((param1 - var7) / 2) - 75), var6 + 7, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), param0 - (-((param1 - var7) / 2) - 75), var6 + 7, 16777215, -1);
           IconTextPanel.field_Cb.drawString("=", param0 + (param1 - var7) / 2 + 64, 13 + var6, 16777215, -1);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
           var6 += 44;
           IntrusiveNodeHashTable.field_h.drawScaled((-var7 + param1) / 2 + param0, var6 - 24, 64, 64);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 75 + ((-var7 + param1) / 2 + param0), 7 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 75 + ((-var7 + param1) / 2 + param0), 7 + var6, 16777215, -1);
           int var8 = 27 / ((param2 + 51) / 59);
           IconTextPanel.field_Cb.drawString("=", (-var7 + param1) / 2 + (param0 + 64), 13 + var6, 16777215, -1);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
           var6 += 52;
           CanvasResizeController.field_t.drawScaled(param0 + (param1 - var7) / 2, var6 - 24, 64, 64);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(5)}), 75 + ((-var7 + param1) / 2 + param0), var6 + 7, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(5)}), 75 + ((-var7 + param1) / 2 + param0), var6 + 7, 16777215, -1);
           IconTextPanel.field_Cb.drawString("=", 64 + param0 + (-var7 + param1) / 2, 13 + var6, 16777215, -1);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -4977,7 +4977,7 @@ final class GameScreen {
                 if (var8.field_x != 0) {
                   stackIn_17_0 = new StringBuilder().append(IntroTextLine.field_j).append(" ");
                   if (var8.field_x != 1) {
-                    stackIn_18_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
+                    stackIn_18_1 = QuickChatPhraseRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
                   } else {
                     stackIn_18_1 = StatusContent.field_a;
                   }
@@ -4993,7 +4993,7 @@ final class GameScreen {
                 if (var8.field_x != 0) {
                   stackIn_30_0 = new StringBuilder().append(ContentDialog.field_lb).append(" ");
                   if (var8.field_x != 1) {
-                    stackIn_31_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
+                    stackIn_31_1 = QuickChatPhraseRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
                   } else {
                     stackIn_31_1 = StatusContent.field_a;
                   }
@@ -5154,9 +5154,9 @@ final class GameScreen {
               if (var6 != 0) {
                 if (stackIn_45_0 > stackIn_45_1) {
                   var4 = this.field_s.field_P.field_v[var3];
-                  HighscoreQueryRequest.putTextReplacement("playercol" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-                  HighscoreQueryRequest.putTextReplacement("player" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
-                  HighscoreQueryRequest.putTextReplacement("playerhome" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
+                  HighscoreQueryRequest.putTextReplacement("playercol" + var3, 1904, QuickChatPhraseRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
+                  HighscoreQueryRequest.putTextReplacement("player" + var3, 1904, QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+                  HighscoreQueryRequest.putTextReplacement("playerhome" + var3, 1904, QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
                   var3++;
                   return;
                 }
@@ -5241,9 +5241,9 @@ final class GameScreen {
                 break;
               }
               var4 = this.field_s.field_P.field_v[var3];
-              HighscoreQueryRequest.putTextReplacement("playercol" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-              HighscoreQueryRequest.putTextReplacement("player" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
-              HighscoreQueryRequest.putTextReplacement("playerhome" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
+              HighscoreQueryRequest.putTextReplacement("playercol" + var3, 1904, QuickChatPhraseRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
+              HighscoreQueryRequest.putTextReplacement("player" + var3, 1904, QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+              HighscoreQueryRequest.putTextReplacement("playerhome" + var3, 1904, QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
               var3++;
               if (var6 != 0) {
                 return;

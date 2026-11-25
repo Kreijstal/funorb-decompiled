@@ -730,7 +730,7 @@ final class MapView extends MapViewState {
     final static void pollQuickChatMenu(int param0, boolean param1, boolean param2, int param3) {
         int var4;
         int var5;
-        if (!QuickChatCategoryDefinition.field_t) {
+        if (!QuickChatPhraseDefinition.field_t) {
           return;
         }
         SectorCacheStore.field_f.a(param1, -20429);
@@ -1971,11 +1971,11 @@ final class MapView extends MapViewState {
                 }
                 if (var8 < 25) {
                   if (125 >= this.field_t) {
-                    QuickChatCategoryRegistry.a(var9, 25, this.field_t, 0, 0);
+                    QuickChatPhraseRegistry.a(var9, 25, this.field_t, 0, 0);
                   } else {
-                    QuickChatCategoryRegistry.a(0, 25, -125 + this.field_t, -var9, 0);
+                    QuickChatPhraseRegistry.a(0, 25, -125 + this.field_t, -var9, 0);
                   }
-                  var9 = QuickChatCategoryRegistry.a(var9 / 2, 25, var8, var9, 0);
+                  var9 = QuickChatPhraseRegistry.a(var9 / 2, 25, var8, var9, 0);
                 }
               }
             }
@@ -2007,11 +2007,11 @@ final class MapView extends MapViewState {
                 }
                 if (25 > var9Lifetime1) {
                   if (this.field_t > 125) {
-                    var10 = QuickChatCategoryRegistry.a(0, 25, this.field_t - 125, -var11, 0);
+                    var10 = QuickChatPhraseRegistry.a(0, 25, this.field_t - 125, -var11, 0);
                   } else {
-                    var10 = QuickChatCategoryRegistry.a(var11, 25, this.field_t, 0, 0);
+                    var10 = QuickChatPhraseRegistry.a(var11, 25, this.field_t, 0, 0);
                   }
-                  var11 = QuickChatCategoryRegistry.a(var11 / 2, 25, var9Lifetime1, var11, 0);
+                  var11 = QuickChatPhraseRegistry.a(var11 / 2, 25, var9Lifetime1, var11, 0);
                 }
                 GarrisonTask.field_p[4].drawScaled(this.field_i[var8Lifetime1] - var11, -var11 + (this.field_J[var8Lifetime1] + var10), 2 * var11, var11 * 2);
               }
@@ -2825,11 +2825,11 @@ final class MapView extends MapViewState {
             }
             if (25 > var6) {
               if (125 < var5) {
-                QuickChatCategoryRegistry.a(0, 25, var5 - 125, -var8, 0);
+                QuickChatPhraseRegistry.a(0, 25, var5 - 125, -var8, 0);
               } else {
-                QuickChatCategoryRegistry.a(var8, 25, var5, 0, 0);
+                QuickChatPhraseRegistry.a(var8, 25, var5, 0, 0);
               }
-              var8 = QuickChatCategoryRegistry.a(var8 / 2, 25, var6, var8, 0);
+              var8 = QuickChatPhraseRegistry.a(var8 / 2, 25, var6, var8, 0);
             }
             SocketArchiveNetworkClient.fillPolygonAlpha(0, 18117, this.field_D[var7], 64);
           }
@@ -2862,11 +2862,11 @@ final class MapView extends MapViewState {
             var9 = 0;
             if (var6Lifetime1 < 25) {
               if (var5Lifetime1 <= 125) {
-                var9 = QuickChatCategoryRegistry.a(var8Lifetime1, 25, var5Lifetime1, 0, 0);
+                var9 = QuickChatPhraseRegistry.a(var8Lifetime1, 25, var5Lifetime1, 0, 0);
               } else {
-                var9 = QuickChatCategoryRegistry.a(0, 25, -125 + var5Lifetime1, -var8Lifetime1, 0);
+                var9 = QuickChatPhraseRegistry.a(0, 25, -125 + var5Lifetime1, -var8Lifetime1, 0);
               }
-              var8Lifetime1 = QuickChatCategoryRegistry.a(var8Lifetime1 / 2, 25, var6Lifetime1, var8Lifetime1, 0);
+              var8Lifetime1 = QuickChatPhraseRegistry.a(var8Lifetime1 / 2, 25, var6Lifetime1, var8Lifetime1, 0);
             }
             if (var4Lifetime1.field_o != -1) {
               GarrisonTask.field_p[var4Lifetime1.field_o].drawScaled(-var8Lifetime1 + this.field_i[var7Lifetime1], this.field_J[var7Lifetime1] + var9 - var8Lifetime1, var8Lifetime1 * 2, var8Lifetime1 * 2);
@@ -3142,7 +3142,7 @@ final class MapView extends MapViewState {
               if (var5 == null) {
                 this.field_o.showStatusText(10, 0, ScrollPane.field_Bb);
               } else {
-                this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(GameSoundSetupSupport.field_c, 4371, new String[]{UiTextSupport.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
+                this.field_o.showStatusText(10, 0, QuickChatPhraseRegistry.a(GameSoundSetupSupport.field_c, 4371, new String[]{UiTextSupport.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
               }
             }
           }
@@ -3208,11 +3208,11 @@ final class MapView extends MapViewState {
                 }
                 if (25 > var10_int) {
                   if (this.field_t > 125) {
-                    QuickChatCategoryRegistry.a(0, 25, -125 + this.field_t, -var11, 0);
+                    QuickChatPhraseRegistry.a(0, 25, -125 + this.field_t, -var11, 0);
                   } else {
-                    QuickChatCategoryRegistry.a(var11, 25, this.field_t, 0, 0);
+                    QuickChatPhraseRegistry.a(var11, 25, this.field_t, 0, 0);
                   }
-                  var11 = QuickChatCategoryRegistry.a(var11 / 2, 25, var10_int, var11, 0);
+                  var11 = QuickChatPhraseRegistry.a(var11 / 2, 25, var10_int, var11, 0);
                 }
               }
             }
@@ -3258,11 +3258,11 @@ final class MapView extends MapViewState {
                 }
                 if (var11Lifetime1 < 25) {
                   if (this.field_t > 125) {
-                    var12 = QuickChatCategoryRegistry.a(0, 25, -125 + this.field_t, -var13, 0);
+                    var12 = QuickChatPhraseRegistry.a(0, 25, -125 + this.field_t, -var13, 0);
                   } else {
-                    var12 = QuickChatCategoryRegistry.a(var13, 25, this.field_t, 0, 0);
+                    var12 = QuickChatPhraseRegistry.a(var13, 25, this.field_t, 0, 0);
                   }
-                  var13 = QuickChatCategoryRegistry.a(var13 / 2, 25, var11Lifetime1, var13, 0);
+                  var13 = QuickChatPhraseRegistry.a(var13 / 2, 25, var11Lifetime1, var13, 0);
                 }
                 var10.drawScaled(-var13 + this.field_i[var7Lifetime1], this.field_J[var7Lifetime1] + var12 - var13, 2 * var13, 2 * var13);
               }

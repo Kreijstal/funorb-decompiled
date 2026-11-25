@@ -6,20 +6,20 @@ final class MeshMaterial {
     int field_a;
     static String field_c;
 
-    final static QuickChatPhraseDefinition findFirstEnabledQuickChatPhrase(boolean param0) {
+    final static QuickChatCategoryDefinition findFirstEnabledQuickChatPhrase(boolean param0) {
         int var1_int = 0;
         int var3 = 0;
-        QuickChatPhraseDefinition stackIn_3_0 = null;
-        QuickChatPhraseRegistry stackIn_6_0 = null;
-        QuickChatPhraseDefinition stackIn_8_0 = null;
+        QuickChatCategoryDefinition stackIn_3_0 = null;
+        QuickChatCategoryRegistry stackIn_6_0 = null;
+        QuickChatCategoryDefinition stackIn_8_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
-        QuickChatPhraseDefinition var2 = null;
+        QuickChatCategoryDefinition var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1_int = 0;
           if (param0) {
-            stackIn_3_0 = (QuickChatPhraseDefinition) null;
+            stackIn_3_0 = (QuickChatCategoryDefinition) null;
             return stackIn_3_0;
           }
         } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
@@ -30,7 +30,7 @@ final class MeshMaterial {
         stackIn_6_0 = GameScreen.field_A;
         try {
           while (true) {
-            var2 = ((QuickChatPhraseRegistry) (Object) stackIn_6_0).a(var1_int, (byte) 100);
+            var2 = ((QuickChatCategoryRegistry) (Object) stackIn_6_0).a(var1_int, (byte) 100);
             if (var2.field_y) {
               stackIn_8_0 = var2;
               return stackIn_8_0;

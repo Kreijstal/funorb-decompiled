@@ -127,7 +127,7 @@ final class ChatPanelSetupSupport {
                   var19 = CellVertex.field_e;
                 }
               } else {
-                var19 = QuickChatPhraseRegistry.field_c;
+                var19 = QuickChatCategoryRegistry.field_c;
               }
               if (decompiledFrameRemainder0) {
                 TextReplacementEntry.field_b[var18] = new AnimatedPanel(0L, param5);

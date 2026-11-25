@@ -120,7 +120,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           if (var10 != 0 &&
             param0 <= 3 &&
             0 < param0) {
-            var13_ref2Lifetime1 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(IconTextPanel.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, IconTextPanel.field_Cb.field_J, QuickChatCategoryRegistry.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
+            var13_ref2Lifetime1 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(IconTextPanel.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, IconTextPanel.field_Cb.field_J, QuickChatPhraseRegistry.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
             var17.addChild(var13_ref2Lifetime1, 8);
           }
           var13_refLifetime1 = new SpriteButton(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
@@ -128,13 +128,13 @@ final class LobbyRoomEntry extends AnimatedPanel {
           if ((param7.field_w & 1 << param4.field_x) == 0) {
             if (1 != param3) {
               if (param5 == 1) {
-                var14 = QuickChatCategoryRegistry.a(ValidatedTextInputWidget.field_S, 4371, new String[]{Integer.toString(param3)});
+                var14 = QuickChatPhraseRegistry.a(ValidatedTextInputWidget.field_S, 4371, new String[]{Integer.toString(param3)});
               } else {
-                var14 = QuickChatCategoryRegistry.a(AlternateLoginCredentials.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
+                var14 = QuickChatPhraseRegistry.a(AlternateLoginCredentials.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
               }
             } else {
               if (param5 != 1) {
-                var14 = QuickChatCategoryRegistry.a(ChatMessage.field_b, 4371, new String[]{Integer.toString(param5)});
+                var14 = QuickChatPhraseRegistry.a(ChatMessage.field_b, 4371, new String[]{Integer.toString(param5)});
               } else {
                 var14 = Archive.field_a;
               }

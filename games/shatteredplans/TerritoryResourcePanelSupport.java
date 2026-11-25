@@ -11,7 +11,7 @@ final class TerritoryResourcePanelSupport {
         DualLinkNode var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         DualLinkNode var1Lifetime1;
-        QuickChatPhraseRegistry.field_d = null;
+        QuickChatCategoryRegistry.field_d = null;
         UrlLoader.field_c = 0;
         GameSpriteResources.field_e = 0;
         if (!param0) {
@@ -109,9 +109,9 @@ final class TerritoryResourcePanelSupport {
           var13.addChild(var8, 8);
           var9 = new SpriteButton(40 + 4 * (Player.field_a[0].field_z + 5), 5 + var5.field_i, TurnEventLog.field_d);
           var13.addChild(var9, 8);
-          var9.field_o = QuickChatPhraseDefinition.field_w;
-          var8.field_o = QuickChatPhraseDefinition.field_w;
-          var6.field_o = QuickChatPhraseDefinition.field_w;
+          var9.field_o = QuickChatCategoryDefinition.field_w;
+          var8.field_o = QuickChatCategoryDefinition.field_w;
+          var6.field_o = QuickChatCategoryDefinition.field_w;
           stackIn_13_0 = var13;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

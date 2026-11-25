@@ -552,8 +552,8 @@ public final class ShatteredPlansClient extends GameClientShell {
         ClientLobbyResources.field_e.putReplacement("<col=FF8080>", 27275, "highlight");
         ClientLobbyResources.field_e.putReplacement("<col=2F5FBF>", 27275, "glossary");
         for (var2_int = 0; var2_int < 4; var2_int++) {
-          ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(SoundPlayback.field_k[var2_int], 16), MusicCrossfadeStream.field_x[var2_int].toLowerCase()}), 27275, "resource" + var2_int);
-          ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[var2_int], 16), MusicCrossfadeStream.field_x[var2_int]}), 27275, "Resource" + var2_int);
+          ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(SoundPlayback.field_k[var2_int], 16), MusicCrossfadeStream.field_x[var2_int].toLowerCase()}), 27275, "resource" + var2_int);
+          ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[var2_int], 16), MusicCrossfadeStream.field_x[var2_int]}), 27275, "Resource" + var2_int);
         }
         ClientLobbyResources.field_e.putReplacement(field_L, 27275, "territories");
         ClientLobbyResources.field_e.putReplacement(ObjectList.field_c, 27275, "uioptions");
@@ -566,17 +566,17 @@ public final class ShatteredPlansClient extends GameClientShell {
         ClientLobbyResources.field_e.putReplacement(Integer.toString(SoundPlayback.field_k[2], 16), 27275, "colenergy");
         ClientLobbyResources.field_e.putReplacement(Integer.toString(SoundPlayback.field_k[3], 16), 27275, "colexotics");
         String var2 = "<col=<%0>><%1></col>";
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0].toLowerCase()}), 27275, "project_metal");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[param0].toLowerCase()}), 27275, "project_biomass");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2].toLowerCase()}), 27275, "project_energy");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0]}), 27275, "Project_Metal");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[1]}), param0 + 27274, "Project_Biomass");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2]}), 27275, "Project_Energy");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3]}), param0 ^ 27274, "Project_Exotics");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0].toUpperCase()}), 27275, "PROJECT_METAL");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[1].toUpperCase()}), 27275, "PROJECT_BIOMASS");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2].toUpperCase()}), param0 ^ 27274, "PROJECT_ENERGY");
-        ClientLobbyResources.field_e.putReplacement(QuickChatCategoryRegistry.a(var2, param0 + 4370, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3].toUpperCase()}), 27275, "PROJECT_EXOTICS");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0].toLowerCase()}), 27275, "project_metal");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[param0].toLowerCase()}), 27275, "project_biomass");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2].toLowerCase()}), 27275, "project_energy");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0]}), 27275, "Project_Metal");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[1]}), param0 + 27274, "Project_Biomass");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2]}), 27275, "Project_Energy");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3]}), param0 ^ 27274, "Project_Exotics");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0].toUpperCase()}), 27275, "PROJECT_METAL");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[1].toUpperCase()}), 27275, "PROJECT_BIOMASS");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2].toUpperCase()}), param0 ^ 27274, "PROJECT_ENERGY");
+        ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.a(var2, param0 + 4370, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3].toUpperCase()}), 27275, "PROJECT_EXOTICS");
     }
 
     private final boolean c(int param0, boolean param1) {
@@ -642,7 +642,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           PaddedContentDialog.setTargetFrameRate(50, (byte) 52);
           UsernameAvailabilityValidator.b(param0 ^ -86, 50);
           ValidationState.c(122);
-          QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 1048576);
+          QuickChatCategoryRegistry.a(32767, PaddedContentDialog.field_nb, true, 1048576);
           return true;
         }
         if (AttackTask.field_s.isIndexLoaded((byte) 127) &&
@@ -671,7 +671,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                                 GameSpriteResources.field_h.preloadAll(-1)) {
                                 if (RichTextLayout.field_k.isIndexLoaded((byte) -87) &&
                                   RichTextLayout.field_k.preloadAll(-1)) {
-                                  QuickChatCategoryDefinition.e(-23771);
+                                  QuickChatPhraseDefinition.e(-23771);
                                   ClientDialogSupport.setLoadingProgress(65.0f, 2, SocialNameInputPanel.field_xb);
                                   this.draw(param0 - 81);
                                   if (!param1) {
@@ -975,10 +975,10 @@ public final class ShatteredPlansClient extends GameClientShell {
         RoundedFrameSupport.clearStatics((byte) 72);
         ChatPanelLayoutSupport.clearStatics(5);
         QuickChatMenu.clearStatics(param0 ^ 2556);
-        QuickChatPhraseRegistry.clearStatics(true);
-        QuickChatCategoryRegistry.clearStatics((byte) 125);
-        QuickChatPhraseDefinition.clearStatics((byte) -117);
-        QuickChatCategoryDefinition.clearStatics((byte) -50);
+        QuickChatCategoryRegistry.clearStatics(true);
+        QuickChatPhraseRegistry.clearStatics((byte) 125);
+        QuickChatCategoryDefinition.clearStatics((byte) -117);
+        QuickChatPhraseDefinition.clearStatics((byte) -50);
         WeightedLruCache.a(false);
         SocketConnector.clearStatics((byte) 23);
         ProxyAuthenticationRequiredException.clearStatics(101);
@@ -1189,9 +1189,9 @@ public final class ShatteredPlansClient extends GameClientShell {
                 TextReplacementEntry.openRequiredLoginForm(param0);
               } else {
                 if (!AccountStatusDialog.field_ob) {
-                  QuickChatPhraseDefinition.f((byte) -91);
+                  QuickChatCategoryDefinition.f((byte) -91);
                 } else {
-                  QuickChatPhraseDefinition.f((byte) -91);
+                  QuickChatCategoryDefinition.f((byte) -91);
                 }
               }
               ClientOverlayDrawSupport.field_g = NanoFrameTimer.field_d;
@@ -1471,7 +1471,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     var9 = 32;
                   }
                 }
-                var10 = QuickChatCategoryRegistry.a(0, 32, var9, var5_int, param0 ^ 1);
+                var10 = QuickChatPhraseRegistry.a(0, 32, var9, var5_int, param0 ^ 1);
                 var11 = 10 + (var5_int - var10 >> 1);
                 var18 = new int[4];
                 SoftwareRasterizer.saveClip(var18);

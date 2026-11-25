@@ -234,13 +234,13 @@ final class ObjectList {
               var12.field_Jb.field_jb = var24_int;
               if (EmailValidationError.field_a != param2) {
                 if (var12.field_Tb) {
-                  var12.field_Ab.field_z = QuickChatCategoryRegistry.a(WidgetTheme.field_q, 4371, new String[]{var20});
+                  var12.field_Ab.field_z = QuickChatPhraseRegistry.a(WidgetTheme.field_q, 4371, new String[]{var20});
                   var12.field_Mb.field_z = LobbyRoomEntry.field_bc;
                 } else {
                   if (!var12.field_Vb) {
                     var12.field_Jb.field_z = PlayerStats.field_p;
                   } else {
-                    var12.field_Ab.field_z = QuickChatCategoryRegistry.a(FleetMove.field_E, 4371, new String[]{var20});
+                    var12.field_Ab.field_z = QuickChatPhraseRegistry.a(FleetMove.field_E, 4371, new String[]{var20});
                     var12.field_Jb.field_z = WidgetTheme.field_m;
                     var12.field_Mb.field_z = ValidationIndicator.field_J;
                   }
@@ -336,7 +336,7 @@ final class ObjectList {
               if (UsernameAvailabilityValidator.field_p != var12.field_Ib) {
                 if (var5_int != 0 &&
                   !var12.field_Ub) {
-                  var24Lifetime2 = QuickChatCategoryRegistry.a(LobbyRoomEntry.field_kc, param1 ^ 4371, new String[]{var20});
+                  var24Lifetime2 = QuickChatPhraseRegistry.a(LobbyRoomEntry.field_kc, param1 ^ 4371, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -347,23 +347,23 @@ final class ObjectList {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
                         var25_int = DualLinkDeque.highestOneBit(param1 + 38, var8 & ~var12.field_Wb);
-                        var24Lifetime2 = QuickChatCategoryRegistry.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
+                        var24Lifetime2 = QuickChatPhraseRegistry.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
                         if (0 < var25_int &&
                           null != PlacementOrder.field_s &&
                           var25_int <= PlacementOrder.field_s.length &&
                           PlacementOrder.field_s[var25_int - 1] != null) {
-                          var24Lifetime2 = QuickChatCategoryRegistry.a(PlacementOrder.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
+                          var24Lifetime2 = QuickChatPhraseRegistry.a(PlacementOrder.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
                         }
                       }
                     } else {
-                      var24Lifetime2 = QuickChatCategoryRegistry.a(TutorialOverlaySupport.field_b, 4371, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = QuickChatPhraseRegistry.a(TutorialOverlaySupport.field_b, 4371, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Fb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = QuickChatCategoryRegistry.a(NanoFrameTimer.field_i, 4371, new String[]{var20});
+                      var24Lifetime2 = QuickChatPhraseRegistry.a(NanoFrameTimer.field_i, 4371, new String[]{var20});
                     }
-                    var24Lifetime2 = QuickChatCategoryRegistry.a(ProductionContent.field_b, 4371, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = QuickChatPhraseRegistry.a(ProductionContent.field_b, 4371, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -376,7 +376,7 @@ final class ObjectList {
                     if (var25_int == 1) {
                       var24Lifetime2 = PlayerContextMenuController.field_d;
                     }
-                    var24Lifetime2 = QuickChatCategoryRegistry.a(FleetVisual.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = QuickChatPhraseRegistry.a(FleetVisual.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
@@ -390,7 +390,7 @@ final class ObjectList {
                         }
                       }
                     } else {
-                      var24Lifetime2 = QuickChatCategoryRegistry.a(LobbyOptionResources.field_f, 4371, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = QuickChatPhraseRegistry.a(LobbyOptionResources.field_f, 4371, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -462,19 +462,19 @@ final class ObjectList {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(AwtEventQueueSupport.field_d, 4371, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + QuickChatPhraseRegistry.a(AwtEventQueueSupport.field_d, 4371, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + Territory.field_y + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_e, param1 + 4371, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + QuickChatPhraseRegistry.a(ReflectionQueueSupport.field_e, param1 + 4371, new String[]{(String) (var25)});
                   }
                 }
                 if (EmailValidationError.field_a == param2 &&
                   !SecondaryNodeDequeIterator.a((byte) -126)) {
                   var27 = MenuInputState.field_a.field_Xb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(SocialListEntry.field_Gb, 4371, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatPhraseRegistry.a(SocialListEntry.field_Gb, 4371, new String[]{var27});
                 }
                 DualLinkDequeSequence.field_k = (String) (var24Lifetime2);
               }

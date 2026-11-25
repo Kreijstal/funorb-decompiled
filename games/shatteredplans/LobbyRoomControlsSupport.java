@@ -198,7 +198,7 @@ final class LobbyRoomControlsSupport {
               } else {
                 stackIn_29_1 = SpriteStripButtonPainter.field_v;
               }
-              stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{IntValueWriteRequest.field_j.field_z});
+              stackIn_28_0.field_z = QuickChatPhraseRegistry.a(stackIn_29_1, 4371, new String[]{IntValueWriteRequest.field_j.field_z});
               DualLinkDequeSequence.field_f.field_z = ClientLobbyResources.field_b;
               DialPainter.field_g.field_s = true;
               ClientLobbyResources.field_d = true;

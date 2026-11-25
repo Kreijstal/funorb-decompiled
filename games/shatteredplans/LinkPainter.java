@@ -203,7 +203,7 @@ final class LinkPainter implements WidgetPainter {
           }
           if (decompiledFrameRemainder0) {
             OpacityWidget.field_A.field_s = true;
-            RecklessAi.field_p.field_z = QuickChatCategoryRegistry.a(DelegatingCanvas.field_b, 4371, new String[]{QuickChatPhraseRegistry.field_d});
+            RecklessAi.field_p.field_z = QuickChatPhraseRegistry.a(DelegatingCanvas.field_b, 4371, new String[]{QuickChatCategoryRegistry.field_d});
             ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.startForward(0));
@@ -227,7 +227,7 @@ final class LinkPainter implements WidgetPainter {
                   if (var7.field_xb == null) {
                     var10 = 13369344;
                     var11 = 16737894;
-                  } else if (QuickChatPhraseRegistry.field_d == var7.field_xb) {
+                  } else if (QuickChatCategoryRegistry.field_d == var7.field_xb) {
                     var11 = 6750054;
                     var10 = 52224;
                   } else {
@@ -291,11 +291,11 @@ final class LinkPainter implements WidgetPainter {
                         !LoginMethodPreference.field_g) {
                         if (!HighscoreResponseSupport.field_b) {
                           var17 = DerelictVictoryChecker.field_m;
-                          var18 = QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
+                          var18 = QuickChatPhraseRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
                           var17.field_j.addItem(1, 8, var18);
                         }
                         var17Lifetime1 = DerelictVictoryChecker.field_m;
-                        var18Lifetime1 = QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var16});
+                        var18Lifetime1 = QuickChatPhraseRegistry.a(AchievementProgress.field_e, 4371, new String[]{var16});
                         var17Lifetime1.field_j.addItem(1, 18, var18Lifetime1);
                       }
                       var5 = var7;
@@ -388,7 +388,7 @@ final class LinkPainter implements WidgetPainter {
           var2 = CheckboxPainter.field_n;
           if (var2 > 0) {
             if (1 != var2) {
-              GameClientShell.field_z = QuickChatCategoryRegistry.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
+              GameClientShell.field_z = QuickChatPhraseRegistry.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
             }
             if (1 == var2 ||
               var3 != 0) {

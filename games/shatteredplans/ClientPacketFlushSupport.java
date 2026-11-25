@@ -28,14 +28,14 @@ final class ClientPacketFlushSupport {
             var5 = (Random) null;
             ClientPacketFlushSupport.randomInclusive((byte) -70, 114, 120, (Random) null);
           }
-          if (QuickChatPhraseRegistry.field_d == param1.field_xb) {
+          if (QuickChatCategoryRegistry.field_d == param1.field_xb) {
             var3_int -= 200;
           } else {
             if (null == param1.field_xb) {
               var3_int += 200;
             }
           }
-          if (param0.field_xb == QuickChatPhraseRegistry.field_d) {
+          if (param0.field_xb == QuickChatCategoryRegistry.field_d) {
             var3_int += 200;
           } else {
             if (param0.field_xb == null) {

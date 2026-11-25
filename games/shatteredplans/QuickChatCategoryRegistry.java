@@ -1,210 +1,131 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.io.*;
+
 final class QuickChatCategoryRegistry {
-    static int[] field_d;
-    private Archive field_c;
-    private Archive field_e;
-    static AnimatedPanel[] field_g;
-    static int field_b;
-    private WeightedLruCache field_f;
-    static AnimatedPanel field_h;
-    static int field_a;
+    static String field_e;
+    private Archive field_f;
+    private Archive field_h;
+    private WeightedLruCache field_b;
+    static AnimatedPanel field_a;
+    static String field_d;
+    static String field_c;
+    static String[] field_g;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
-        if (param4 != 0) {
-          String[] var6 = (String[]) null;
-          QuickChatCategoryRegistry.a((String) null, -43, (String[]) null);
-        }
-        return (int)((double)(-param0 + param3) * UiSpriteSupport.smoothStep(param2, (byte) 114, param1)) + param0;
-    }
-
-    final static void a(java.awt.Canvas param0, boolean param1) {
-        ClientClockSupport.attachKeyboardInput((java.awt.Component) ((Object) param0), -9194);
-        if (param1) {
-          return;
-        }
-        try {
-          WidgetStateStyle.attachMouseListeners((byte) -58, (java.awt.Component) ((Object) param0));
-          if (ClientContextMenuSupport.field_b != null) {
-            ClientContextMenuSupport.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
-          }
-        } catch (RuntimeException runtimeException) {
-          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "re.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
-        }
-    }
-
-    final static String a(String param0, int param1, String[] param2) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        String stackIn_30_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_34_2 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_37_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        StringBuilder var6 = null;
-        int var7 = 0;
-        String var7_ref_String = null;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var5Lifetime1;
-        int var8Lifetime1;
-        var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        try {
-          var3_int = param0.length();
-          var4 = var3_int;
-          var5 = 0;
-          while (true) {
-            var6_int = param0.indexOf("<%", var5);
-            if (var6_int >= 0) {
-              for (var5 = var6_int + 2; var5 < var3_int; var5++) {
-                if (TooltipSupport.isDigit((byte) -83, param0.charAt(var5))) {
-                  continue;
-                }
-                break;
-              }
-              var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!TextFieldWidget.a(0, (CharSequence) ((Object) var7_ref_String))) {
-                continue;
-              }
-              if (var5 >= var3_int) {
-                continue;
-              }
-              if (param0.charAt(var5) != 62) {
-                continue;
-              }
-              var5++;
-              var8 = DefensiveAi.a((CharSequence) ((Object) var7_ref_String), 2);
-              var4 = var4 + (param2[var8].length() - var5 + var6_int);
-              continue;
-            }
-            break;
-          }
-          if (param1 != 4371) {
-            field_g = (AnimatedPanel[]) null;
-          }
-          var6 = new StringBuilder(var4);
-          var5Lifetime1 = 0;
-          var7 = 0;
-          while (true) {
-            var8Lifetime1 = param0.indexOf("<%", var5Lifetime1);
-            if (var8Lifetime1 < 0) {
-              discarded$2 = var6.append(param0.substring(var7));
-              stackIn_30_0 = var6.toString();
-              return stackIn_30_0;
-            }
-            for (var5Lifetime1 = 2 + var8Lifetime1; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (TooltipSupport.isDigit((byte) 115, param0.charAt(var5Lifetime1))) {
-                continue;
-              }
-              break;
-            }
-            var9 = param0.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!TextFieldWidget.a(0, (CharSequence) ((Object) var9))) {
-              continue;
-            }
-            if (var5Lifetime1 >= var3_int) {
-              continue;
-            }
-            if (param0.charAt(var5Lifetime1) != 62) {
-              continue;
-            }
-            var5Lifetime1++;
-            var10 = DefensiveAi.a((CharSequence) ((Object) var9), 2);
-            discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
-            discarded$1 = var6.append(param2[var10]);
-            var7 = var5Lifetime1;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_33_0 = var3;
-          stackIn_33_1 = new StringBuilder().append("re.C(");
-          if (param0 == null) {
-            stackIn_34_2 = "null";
-          } else {
-            stackIn_34_2 = "{...}";
-          }
-          stackIn_36_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_37_2 = "null";
-          } else {
-            stackIn_37_2 = "{...}";
-          }
-          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
-        }
-    }
-
-    final QuickChatCategoryDefinition a(byte param0, int param1) {
-        byte[] var4 = null;
-        QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.field_f.get((long)param1, 0));
-        if (param0 != 47) {
-          return (QuickChatCategoryDefinition) null;
-        }
-        if (var3 != null) {
-          return var3;
-        }
-        if (param1 >= 32768) {
-          var4 = this.field_c.getFile(1, -1, 32767 & param1);
-        } else {
-          var4 = this.field_e.getFile(1, param0 - 48, param1);
-        }
-        var3 = new QuickChatCategoryDefinition();
-        if (var4 != null) {
-          var3.decode(new PacketBuffer(var4), 0);
-        }
-        if (32768 <= param1) {
-          var3.e((byte) -117);
-        }
-        this.field_f.put((long)param1, var3, (byte) -108);
-        return var3;
-    }
-
-    public static void clearStatics(byte param0) {
+    public static void clearStatics(boolean param0) {
         field_g = null;
-        field_d = null;
-        if (param0 <= 105) {
-          return;
+        field_c = null;
+        field_e = null;
+        if (!param0) {
+          QuickChatCategoryRegistry.clearStatics(false);
         }
-        field_h = null;
+        field_d = null;
+        field_a = null;
     }
 
-    QuickChatCategoryRegistry(int param0, Archive param1, Archive param2, RoundedFrameMarker param3) {
+    final static void a(int param0, PacketBuffer param1) {
+        try {
+          int var4 = 0;
+          byte[] var2 = null;
+          int var3_int = 0;
+          int var5 = 0;
+          byte[] var6 = null;
+          RuntimeException stackIn_19_0 = null;
+          StringBuilder stackIn_19_1 = null;
+          String stackIn_20_2 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var2_ref = null;
+          Exception var3 = null;
+          var5 = ShatteredPlansClient.field_F ? 1 : 0;
+          try {
+            var6 = new byte[param0];
+            var2 = var6;
+            if (ClientRandomSupport.field_a != null) {
+              try {
+                ClientRandomSupport.field_a.seek((byte) 95, 0L);
+                ClientRandomSupport.field_a.readFully(var6, true);
+                for (var3_int = 0; var3_int < 24; var3_int++) {
+                  if (var2[var3_int] == 0) {
+                    continue;
+                  }
+                  break;
+                }
+                if (var3_int >= 24) {
+                  throw new IOException();
+                }
+                param1.writeBytes(0, 24, var2, 22186);
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var3 = (Exception) (Object) decompiledCaughtException;
+                for (var4 = 0; var4 < 24; var4++) {
+                  var2[var4] = (byte)-1;
+                }
+                decompiledRegionSelector0 = 1;
+              }
+              if (decompiledRegionSelector0 == 0) {
+                return;
+              }
+            }
+            param1.writeBytes(0, 24, var2, 22186);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_19_0 = var2_ref;
+            stackIn_19_1 = new StringBuilder().append("jo.B(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_20_2 = "null";
+            } else {
+              stackIn_20_2 = "{...}";
+            }
+            throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void a(int param0, MusicTrack param1, boolean param2, int param3) {
+        try {
+          if (param0 != 32767) {
+            MusicTrack var5 = (MusicTrack) null;
+            QuickChatCategoryRegistry.a(6, (MusicTrack) null, false, -66);
+          }
+          ValidationState.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
+        } catch (RuntimeException runtimeException) {
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jo.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    QuickChatCategoryRegistry(int param0, Archive param1, Archive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_f = new WeightedLruCache(64);
+        this.field_b = new WeightedLruCache(64);
         try {
-          this.field_e = param1;
-          this.field_c = param2;
-          if (null != this.field_e) {
-            this.field_e.getFileCount(1, -26268);
+          this.field_h = param2;
+          this.field_f = param1;
+          if (this.field_f != null) {
+            this.field_f.getFileCount(0, -26268);
           }
-          if (this.field_c != null) {
-            this.field_c.getFileCount(1, -26268);
+          if (this.field_h != null) {
+            this.field_h.getFileCount(0, -26268);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = runtimeException;
-          stackIn_8_1 = new StringBuilder().append("re.<init>(").append(param0).append(',');
+          stackIn_8_1 = new StringBuilder().append("jo.<init>(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -216,55 +137,39 @@ final class QuickChatCategoryRegistry {
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
-            stackIn_15_2 = "null";
-          } else {
-            stackIn_15_2 = "{...}";
-          }
-          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final static Sprite[] a(Sprite[] param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        Sprite var3 = null;
-        int var4 = 0;
-        Sprite[] stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        try {
-          for (var2_int = 0; param0.length > var2_int; var2_int++) {
-            var3 = param0[var2_int];
-            param0[var2_int].field_x = 0;
-            var3.field_t = 0;
-            param0[var2_int].field_o = param0[var2_int].field_z;
-            param0[var2_int].field_p = param0[var2_int].field_w;
-          }
-          if (param1 <= 32) {
-            QuickChatCategoryRegistry.clearStatics((byte) 21);
-          }
-          stackIn_7_0 = (Sprite[]) (param0);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("re.D(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
-          } else {
-            stackIn_11_2 = "{...}";
-          }
-          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+    final QuickChatCategoryDefinition a(int param0, byte param1) {
+        byte[] var4 = null;
+        if (param1 != 100) {
+          MusicTrack var5 = (MusicTrack) null;
+          QuickChatCategoryRegistry.a(71, (MusicTrack) null, true, -32);
         }
+        QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.field_b.get((long)param0, param1 - 100));
+        if (var3 != null) {
+          return var3;
+        }
+        if (param0 < 32768) {
+          var4 = this.field_f.getFile(0, -1, param0);
+        } else {
+          var4 = this.field_h.getFile(0, param1 ^ -101, param0 & 32767);
+        }
+        QuickChatCategoryDefinition var6 = new QuickChatCategoryDefinition();
+        if (var4 != null) {
+          var6.decode(new PacketBuffer(var4), -1);
+        }
+        if (param0 >= 32768) {
+          var6.e(-81);
+        }
+        this.field_b.put((long)param0, var6, (byte) -108);
+        return var6;
     }
 
     static {
-        field_a = 64;
+        field_g = new String[16];
+        field_c = "Game";
+        field_e = "Match by...";
     }
 }

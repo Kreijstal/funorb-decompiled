@@ -60,7 +60,7 @@ final class LobbyUiSetupSupport {
         int var17_intLifetime4;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          QuickChatPhraseDefinition.field_o = param5;
+          QuickChatCategoryDefinition.field_o = param5;
           LobbyOptionResources.field_d = param14;
           SoundPlayback.field_l = param11;
           MenuLabel.field_x = param10;
@@ -78,7 +78,7 @@ final class LobbyUiSetupSupport {
           LegacyAi.field_s = HighscoreResponseSupport.loadSpriteSetByName(71, "lobby", param4, "allowspectators");
           LobbyOptionResources.field_e = new String[5];
           LobbyOptionResources.field_e[0] = EmailSyntaxValidator.field_p;
-          LobbyOptionResources.field_e[4] = QuickChatPhraseDefinition.field_q;
+          LobbyOptionResources.field_e[4] = QuickChatCategoryDefinition.field_q;
           LobbyOptionResources.field_e[3] = GalaxyMapLayoutSupport.field_b;
           LobbyOptionResources.field_e[1] = SpriteResourceSupport.field_a;
           LobbyOptionResources.field_e[2] = MouseWheelInput.field_e;
@@ -168,9 +168,9 @@ final class LobbyUiSetupSupport {
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, SoundEffectSupport.field_d);
           NameSuggestionsPanel.field_D = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           StarAnnotation.field_l = new AnimatedPanel(0L, DiplomacyRowSupport.field_b, MessageKind.field_e.toUpperCase());
-          QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
+          QuickChatPhraseRegistry.field_g = new AnimatedPanel[4 + param0];
           ByteArrayNode.field_p = new IconLabelPanel[4 + param0][];
-          QuickChatCategoryRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, SocialListPanel.field_Ab);
+          QuickChatPhraseRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, SocialListPanel.field_Ab);
           ByteArrayNode.field_p[0] = new IconLabelPanel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             ByteArrayNode.field_p[0][1 + var17_int] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, MapStateReader.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
@@ -179,7 +179,7 @@ final class LobbyUiSetupSupport {
             LobbyUiSetupSupport.clearStatics(-52);
           }
           if (DiplomacyRowSupport.field_a.length >= 2) {
-            QuickChatCategoryRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, OrderableInsertionSupport.field_b);
+            QuickChatPhraseRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, OrderableInsertionSupport.field_b);
             array$0 = new IconLabelPanel[1 + DiplomacyRowSupport.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
             ByteArrayNode.field_p[1][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
@@ -187,19 +187,19 @@ final class LobbyUiSetupSupport {
               ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, Integer.toString(DiplomacyRowSupport.field_a[var17_intLifetime1]));
             }
           }
-          QuickChatCategoryRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, TutorialScene.field_s);
+          QuickChatPhraseRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, TutorialScene.field_s);
           ByteArrayNode.field_p[2] = new IconLabelPanel[]{new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r), new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[0], LobbyRoomDecoder.field_c), new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[1], IntNode.field_j)};
           if (FleetMove.field_A > 1) {
-            QuickChatCategoryRegistry.field_g[3] = new AnimatedPanel(0L, ObjectList.field_h, QuickChatPhraseRegistry.field_e);
+            QuickChatPhraseRegistry.field_g[3] = new AnimatedPanel(0L, ObjectList.field_h, QuickChatCategoryRegistry.field_e);
             array$1 = new IconLabelPanel[1 + FleetMove.field_A];
             ByteArrayNode.field_p[3] = array$1;
             ByteArrayNode.field_p[3][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < FleetMove.field_A; var17_intLifetime2++) {
-              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, QuickChatPhraseDefinition.field_o[var17_intLifetime2]);
+              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, QuickChatCategoryDefinition.field_o[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
-            QuickChatCategoryRegistry.field_g[4 + var17_intLifetime3] = new AnimatedPanel(0L, ObjectList.field_h, SoundPlayback.field_l[var17_intLifetime3]);
+            QuickChatPhraseRegistry.field_g[4 + var17_intLifetime3] = new AnimatedPanel(0L, ObjectList.field_h, SoundPlayback.field_l[var17_intLifetime3]);
             array$2 = new IconLabelPanel[1 + KeyboardStateSupport.intAnd(255, (int) BattleExplosionVisual.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
             ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
@@ -226,8 +226,8 @@ final class LobbyUiSetupSupport {
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param0; var17_intLifetime4++) {
-            if (QuickChatCategoryRegistry.field_g[var17_intLifetime4] != null) {
-              QuickChatCategoryRegistry.field_g[var17_intLifetime4].field_Y = 11;
+            if (QuickChatPhraseRegistry.field_g[var17_intLifetime4] != null) {
+              QuickChatPhraseRegistry.field_g[var17_intLifetime4].field_Y = 11;
             }
             if (null != ByteArrayNode.field_p[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < ByteArrayNode.field_p[var17_intLifetime4].length; var18Lifetime1++) {
@@ -253,7 +253,7 @@ final class LobbyUiSetupSupport {
             if ((var18Lifetime2 != 1 ||
               !(DiplomacyRowSupport.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(FleetMove.field_A <= 1))) {
-              NameSuggestionsPanel.field_D.addChild(4, QuickChatCategoryRegistry.field_g[var18Lifetime2]);
+              NameSuggestionsPanel.field_D.addChild(4, QuickChatPhraseRegistry.field_g[var18Lifetime2]);
               for (var19 = 0; var19 < ByteArrayNode.field_p[var18Lifetime2].length; var19++) {
                 if (null != ByteArrayNode.field_p[var18Lifetime2][var19]) {
                   NameSuggestionsPanel.field_D.addChild(4, ByteArrayNode.field_p[var18Lifetime2][var19]);

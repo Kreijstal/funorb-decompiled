@@ -142,8 +142,8 @@ class MenuComponent extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        if (null != QuickChatCategoryRegistry.field_d) {
-          if (param1 <= QuickChatCategoryRegistry.field_d.length) {
+        if (null != QuickChatPhraseRegistry.field_d) {
+          if (param1 <= QuickChatPhraseRegistry.field_d.length) {
             if (null == GameApplet.field_f ||
               !(param1 <= GameApplet.field_f.length)) {
               GameApplet.field_f = new int[param1 * 2];
@@ -173,7 +173,7 @@ class MenuComponent extends IntrusiveNode {
               IntValueWriteRequest.field_p = new boolean[2 * param1];
             }
           } else {
-            QuickChatCategoryRegistry.field_d = new int[param1 * 2];
+            QuickChatPhraseRegistry.field_d = new int[param1 * 2];
             if (null == GameApplet.field_f ||
               !(param1 <= GameApplet.field_f.length)) {
               GameApplet.field_f = new int[param1 * 2];
@@ -216,7 +216,7 @@ class MenuComponent extends IntrusiveNode {
             }
           }
         } else {
-          QuickChatCategoryRegistry.field_d = new int[param1 * 2];
+          QuickChatPhraseRegistry.field_d = new int[param1 * 2];
           if (null == GameApplet.field_f) {
             GameApplet.field_f = new int[param1 * 2];
             if (null == LobbyRoomEntry.field_zb ||

@@ -74,7 +74,7 @@ final class RasterSpanFactory {
             RasterSpanFactory.configureMenuRowFrames(-18, (byte) 102, (TiledNineSlicePainter) null, 64, (TiledNineSlicePainter) null, 60);
           }
           var5 = (String) null;
-          stackIn_3_0 = QuickChatPhraseDefinition.pollAccountRequest(0, 0, param0, param1, 120, (String) null, false);
+          stackIn_3_0 = QuickChatCategoryDefinition.pollAccountRequest(0, 0, param0, param1, 120, (String) null, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

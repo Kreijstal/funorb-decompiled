@@ -201,9 +201,9 @@ final class LobbyRoomInteractionSupport {
             var7.field_K = 0;
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = MenuInputState.field_a.field_Xb;
-              ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
+              ArchiveSourceManager.field_f.field_z = QuickChatPhraseRegistry.a(IntNode.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               DualLinkDequeSequence.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
-              DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(QuickChatParameterType.field_a, 4371, new String[]{var9_ref_String});
+              DualLinkDequeSequence.field_f.field_z = QuickChatPhraseRegistry.a(QuickChatParameterType.field_a, 4371, new String[]{var9_ref_String});
               var8 = DualLinkDequeSequence.field_f;
             } else {
               ArchiveSourceManager.field_f.field_z = DiplomacyNotice.field_m.toUpperCase();
@@ -219,7 +219,7 @@ final class LobbyRoomInteractionSupport {
               TextFieldWidget.field_I.field_F = IsaacBackedRandom.field_a.field_F;
               if (0 < ValidationMessageWidget.field_X) {
                 if (ValidationMessageWidget.field_X != 1) {
-                  var10_ref_String = QuickChatCategoryRegistry.a(AudioService.field_e, 4371, new String[]{Integer.toString(ValidationMessageWidget.field_X)});
+                  var10_ref_String = QuickChatPhraseRegistry.a(AudioService.field_e, 4371, new String[]{Integer.toString(ValidationMessageWidget.field_X)});
                 } else {
                   var10_ref_String = SolVictoryChecker.field_k;
                 }
@@ -392,7 +392,7 @@ final class LobbyRoomInteractionSupport {
                       if (DiplomacyNotice.field_h.field_d.field_zb == 0) {
                         DualLinkDequeSequence.field_k = IntrusiveDequeCursor.field_a;
                       } else {
-                        DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(HighscoreQueryRequest.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
+                        DualLinkDequeSequence.field_k = QuickChatPhraseRegistry.a(HighscoreQueryRequest.field_l, param0 ^ 4356, new String[]{QuickChatCategoryRegistry.field_c});
                       }
                     }
                   }
@@ -418,7 +418,7 @@ final class LobbyRoomInteractionSupport {
                   if (var10 != 0) {
                     var13_ref = StripedProgressWidget.field_I;
                     if (var12Lifetime2 == 0) {
-                      var14 = QuickChatCategoryRegistry.a(UrlLoader.field_f, 4371, new String[]{(String) (var11)});
+                      var14 = QuickChatPhraseRegistry.a(UrlLoader.field_f, 4371, new String[]{(String) (var11)});
                     } else {
                       var14 = LobbyRoomDecoder.field_b + (String) (var11);
                     }
@@ -427,7 +427,7 @@ final class LobbyRoomInteractionSupport {
                     if (var12Lifetime2 != 0) {
                       var14 = MusicPatch.field_l + (String) (var11);
                     } else {
-                      var14 = QuickChatCategoryRegistry.a(LobbyOptionSupport.field_h, 4371, new String[]{(String) (var11)});
+                      var14 = QuickChatPhraseRegistry.a(LobbyOptionSupport.field_h, 4371, new String[]{(String) (var11)});
                     }
                   }
                   DualLinkDequeSequence.field_k = "<col=A00000>" + var13_ref + "<br>" + var14;
@@ -440,9 +440,9 @@ final class LobbyRoomInteractionSupport {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_z = QuickChatCategoryRegistry.a(ClientRuntimeState.field_b, 4371, new String[]{Integer.toString(var9)});
+              var8.field_z = QuickChatPhraseRegistry.a(ClientRuntimeState.field_b, 4371, new String[]{Integer.toString(var9)});
             }
-            DefendTask.field_x.field_z = QuickChatCategoryRegistry.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(MenuInputState.field_a.field_Lb), Integer.toString(MenuInputState.field_a.field_Eb)});
+            DefendTask.field_x.field_z = QuickChatPhraseRegistry.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(MenuInputState.field_a.field_Lb), Integer.toString(MenuInputState.field_a.field_Eb)});
           }
           stackIn_159_0 = SocialListPanel.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);

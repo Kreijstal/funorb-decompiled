@@ -45,49 +45,49 @@ abstract class ArchiveSource {
             return stackIn_2_0;
           }
           if (param0 == 1) {
-            stackIn_5_0 = QuickChatCategoryRegistry.a(IsaacBackedRandom.field_e, 4371, new String[]{param2});
+            stackIn_5_0 = QuickChatPhraseRegistry.a(IsaacBackedRandom.field_e, 4371, new String[]{param2});
             return stackIn_5_0;
           }
           if (param0 == 2) {
-            stackIn_8_0 = QuickChatCategoryRegistry.a(CachedArchiveSource.field_y, 4371, new String[]{param2});
+            stackIn_8_0 = QuickChatPhraseRegistry.a(CachedArchiveSource.field_y, 4371, new String[]{param2});
             return stackIn_8_0;
           }
           if (3 == param0) {
-            stackIn_12_0 = QuickChatCategoryRegistry.a(ValidatedTextInputWidget.field_Y, 4371, new String[]{param2});
+            stackIn_12_0 = QuickChatPhraseRegistry.a(ValidatedTextInputWidget.field_Y, 4371, new String[]{param2});
             return stackIn_12_0;
           }
           if (4 == param0) {
-            stackIn_15_0 = QuickChatCategoryRegistry.a(BattleSnapshot.field_p, 4371, new String[]{param2});
+            stackIn_15_0 = QuickChatPhraseRegistry.a(BattleSnapshot.field_p, 4371, new String[]{param2});
             return stackIn_15_0;
           }
           if (param0 == 5) {
-            stackIn_18_0 = QuickChatCategoryRegistry.a(BirthDateConfirmationForm.field_N, 4371, new String[]{param2});
+            stackIn_18_0 = QuickChatPhraseRegistry.a(BirthDateConfirmationForm.field_N, 4371, new String[]{param2});
             return stackIn_18_0;
           }
           if (6 == param0) {
-            stackIn_22_0 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_E, 4371, new String[]{param2});
+            stackIn_22_0 = QuickChatPhraseRegistry.a(VerticalMenuSlider.field_E, 4371, new String[]{param2});
             return stackIn_22_0;
           }
           if (7 == param0) {
-            stackIn_26_0 = QuickChatCategoryRegistry.a(GameScreen.field_i, 4371, new String[]{param2});
+            stackIn_26_0 = QuickChatPhraseRegistry.a(GameScreen.field_i, 4371, new String[]{param2});
             return stackIn_26_0;
           }
           if (param0 == 8) {
-            stackIn_30_0 = QuickChatCategoryRegistry.a(GuestPlayForm.field_F, 4371, new String[]{param2});
+            stackIn_30_0 = QuickChatPhraseRegistry.a(GuestPlayForm.field_F, 4371, new String[]{param2});
             return stackIn_30_0;
           }
           if (11 == param0) {
-            stackIn_34_0 = QuickChatCategoryRegistry.a(GzipInflater.field_b, 4371, new String[]{param2});
+            stackIn_34_0 = QuickChatPhraseRegistry.a(GzipInflater.field_b, 4371, new String[]{param2});
             return stackIn_34_0;
           }
           if (param0 == 12) {
-            stackIn_38_0 = QuickChatCategoryRegistry.a(BirthDateValidator.field_l, 4371, new String[]{param2});
+            stackIn_38_0 = QuickChatPhraseRegistry.a(BirthDateValidator.field_l, 4371, new String[]{param2});
             return stackIn_38_0;
           }
           if (param0 != 13) {
             return null;
           }
-          stackIn_42_0 = QuickChatCategoryRegistry.a(SpriteWipeSupport.field_c, 4371, new String[]{param2});
+          stackIn_42_0 = QuickChatPhraseRegistry.a(SpriteWipeSupport.field_c, 4371, new String[]{param2});
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -158,7 +158,7 @@ final class SoundPlayback extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.a(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
@@ -175,7 +175,7 @@ final class SoundPlayback extends IntrusiveNode {
             QuickChatMenuSupport.field_b = new String[-1 + (var3_int - var4)];
             ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, QuickChatMenuSupport.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
                 continue;

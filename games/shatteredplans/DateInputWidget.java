@@ -161,7 +161,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           while (var3 < args.length) {
             var4 = args[var3];
             if (var2_int != -1) {
-              args[var3] = QuickChatCategoryRegistry.a("<col=<%0>>", CandidateLink.intXor(param1, 4397), new String[]{Integer.toString(var2_int, 16)}) + var4;
+              args[var3] = QuickChatPhraseRegistry.a("<col=<%0>>", CandidateLink.intXor(param1, 4397), new String[]{Integer.toString(var2_int, 16)}) + var4;
             }
             var5 = SectorCacheStore.findLastSubstringFrom(var4, "<col=", 0);
             var6 = SectorCacheStore.findLastSubstringFrom(var4, "</col>", param1 - 62);

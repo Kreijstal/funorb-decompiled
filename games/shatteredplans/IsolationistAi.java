@@ -169,9 +169,9 @@ final class IsolationistAi extends StandardAi {
             if (!param1.field_h) {
               if (param1.field_l == 0 &&
                 param1.field_e == 0) {
-                var3 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatPhraseRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
               } else {
-                var3 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatPhraseRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{(String) (var2)});
               }
             }
           } else {
@@ -180,7 +180,7 @@ final class IsolationistAi extends StandardAi {
               var3 = "[" + MessageKind.field_a + "] ";
             }
             if (param1.field_n == 1) {
-              var3 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{param1.field_o}) + "] ";
+              var3 = "[" + QuickChatPhraseRegistry.a(IntNode.field_q, 4371, new String[]{param1.field_o}) + "] ";
             }
             if (param1.field_n == 4 &&
               AiTask.field_m != null) {

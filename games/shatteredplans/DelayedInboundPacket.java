@@ -27,7 +27,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        QuickChatCategoryDefinition var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var8 = SpriteWipeSupport.field_a;
         var3 = var8.readUnsignedByte(param1 ^ 113);

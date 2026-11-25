@@ -143,9 +143,9 @@ final class MenuPointerSupport extends IntrusiveNode {
           stackIn_13_1 = 0;
           stackIn_13_2 = var4;
           stackIn_13_3 = var6;
-          if (0 <= QuickChatCategoryDefinition.field_r) {
-            if (QuickChatCategoryDefinition.field_r <= 256) {
-              stackIn_16_4 = QuickChatCategoryDefinition.field_r;
+          if (0 <= QuickChatPhraseDefinition.field_r) {
+            if (QuickChatPhraseDefinition.field_r <= 256) {
+              stackIn_16_4 = QuickChatPhraseDefinition.field_r;
             } else {
               stackIn_16_4 = 256;
             }

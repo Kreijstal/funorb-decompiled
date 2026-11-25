@@ -70,7 +70,7 @@ abstract class ChatMessage {
 
     final static void b(int param0) {
         if (param0 == 20975) {
-          if (QuickChatCategoryDefinition.field_t) {
+          if (QuickChatPhraseDefinition.field_t) {
             SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
             SectorCacheStore.field_f.drawFullRaster(false, -104);
           }
@@ -78,7 +78,7 @@ abstract class ChatMessage {
         }
         String var2 = (String) null;
         ChatMessage.a((String) null, (byte) -111, (String) null);
-        if (QuickChatCategoryDefinition.field_t) {
+        if (QuickChatPhraseDefinition.field_t) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
           SectorCacheStore.field_f.drawFullRaster(false, -104);
         }

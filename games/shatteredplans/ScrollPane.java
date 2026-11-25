@@ -275,31 +275,31 @@ final class ScrollPane extends AnimatedPanel {
           }
           var1_int = RasterStateFrame.field_n - ValidationState.field_a;
           if (0 > var1_int) {
-            QuickChatCategoryDefinition.field_r = 0;
+            QuickChatPhraseDefinition.field_r = 0;
           } else {
             if (var1_int < 10) {
-              QuickChatCategoryDefinition.field_r = var1_int * 25;
+              QuickChatPhraseDefinition.field_r = var1_int * 25;
             } else {
               if (var1_int >= 15) {
                 if (20 > var1_int) {
-                  QuickChatCategoryDefinition.field_r = -150 + 25 * var1_int;
+                  QuickChatPhraseDefinition.field_r = -150 + 25 * var1_int;
                 } else {
                   if (var1_int < 25) {
-                    QuickChatCategoryDefinition.field_r = 750 - var1_int * 25;
+                    QuickChatPhraseDefinition.field_r = 750 - var1_int * 25;
                   } else {
                     if (var1_int >= 30) {
                       if (var1_int < 40) {
-                        QuickChatCategoryDefinition.field_r = 1000 - var1_int * 25;
+                        QuickChatPhraseDefinition.field_r = 1000 - var1_int * 25;
                       } else {
-                        QuickChatCategoryDefinition.field_r = 0;
+                        QuickChatPhraseDefinition.field_r = 0;
                       }
                     } else {
-                      QuickChatCategoryDefinition.field_r = 25 * var1_int - 400;
+                      QuickChatPhraseDefinition.field_r = 25 * var1_int - 400;
                     }
                   }
                 }
               } else {
-                QuickChatCategoryDefinition.field_r = 500 - 25 * var1_int;
+                QuickChatPhraseDefinition.field_r = 500 - 25 * var1_int;
               }
             }
           }

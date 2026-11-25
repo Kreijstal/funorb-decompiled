@@ -5,7 +5,7 @@ final class ClientCapabilitySupport {
     static PlatformTaskDispatcher field_a;
     static String field_d;
     static String field_b;
-    static QuickChatCategoryRegistry field_c;
+    static QuickChatPhraseRegistry field_c;
 
     final static boolean matchesClientCapabilityGuard(int param0) {
         if (param0 != -12165) {

@@ -237,7 +237,7 @@ final class TutorialStageSupport {
               TextReplacementEntry.field_a.addPlayer(2, (Player) (var5));
               TextReplacementEntry.field_a.field_z.setPlayers(-128, TextReplacementEntry.field_a.field_P.field_v);
               TextReplacementEntry.field_a.field_Y.updatePlayerList(TextReplacementEntry.field_a.field_P.field_v, 1);
-              PopupPlacementSupport.field_m.putReplacement(QuickChatCategoryRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
+              PopupPlacementSupport.field_m.putReplacement(QuickChatPhraseRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }
             TutorialTextSupport.buildTutorialTextSprites(WeightedLruCache.field_g, -1);
             return;

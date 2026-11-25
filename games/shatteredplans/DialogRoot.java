@@ -458,7 +458,7 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DiplomacyNotice.field_h = !param1 ? new ChatAndSocialPanel(QuickChatPhraseRegistry.field_c, BattleExplosionVisual.field_t) : new ChatAndSocialPanel(SocialListEntry.field_yb, IntrusiveNode.field_c);
+        DiplomacyNotice.field_h = !param1 ? new ChatAndSocialPanel(QuickChatCategoryRegistry.field_c, BattleExplosionVisual.field_t) : new ChatAndSocialPanel(SocialListEntry.field_yb, IntrusiveNode.field_c);
         SocialListPanel.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
         SocialListPanel.field_xb.addChild(4, DiplomacyNotice.field_h.field_d);
         SocialListPanel.field_xb.addChild(4, DialPainter.field_g);
@@ -466,11 +466,11 @@ final class DialogRoot extends SingleChildWidget {
         if (!param0) {
           DialogRoot.isNameSeparator('x', 117);
         }
-        QuickChatPhraseRegistry.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
+        QuickChatCategoryRegistry.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
         MouseInputHandler.field_d.addChild(4, ValidationIndicator.field_K);
-        MouseInputHandler.field_d.addChild(4, QuickChatPhraseRegistry.field_a);
-        QuickChatPhraseRegistry.field_a.addChild(4, MenuList.field_v);
-        QuickChatPhraseRegistry.field_a.addChild(4, ClientRasterSupport.field_c);
+        MouseInputHandler.field_d.addChild(4, QuickChatCategoryRegistry.field_a);
+        QuickChatCategoryRegistry.field_a.addChild(4, MenuList.field_v);
+        QuickChatCategoryRegistry.field_a.addChild(4, ClientRasterSupport.field_c);
         LobbyLayoutSupport.layoutLobbyRoomPanels(15471, param1);
     }
 

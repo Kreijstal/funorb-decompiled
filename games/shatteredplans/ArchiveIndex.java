@@ -269,7 +269,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_u = QuickChatCategoryDefinition.a(param0, param0.length, -26131, 0);
+            this.field_u = QuickChatPhraseDefinition.a(param0, param0.length, -26131, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_u[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

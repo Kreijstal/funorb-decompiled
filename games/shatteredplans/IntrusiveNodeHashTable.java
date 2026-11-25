@@ -116,7 +116,7 @@ final class IntrusiveNodeHashTable {
           HighscoreResponseSupport.field_h = param3;
           ClientCapabilitySupport.field_a = param6;
           StandardMapReader.field_d = param7;
-          QuickChatPhraseDefinition.field_u = param0;
+          QuickChatCategoryDefinition.field_u = param0;
           IntList.field_i = param1;
           if (param5 != 1491341222) {
             field_j = (String) null;

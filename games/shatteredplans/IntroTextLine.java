@@ -40,7 +40,7 @@ final class IntroTextLine extends IntrusiveNode {
           DualLinkDeque.field_a.drawColourised(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
           Dialog.field_D.drawColourised(var1_intLifetime1, 0, 4227327);
-          GameSpriteResources.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatCategoryDefinition.field_r / 8);
+          GameSpriteResources.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatPhraseDefinition.field_r / 8);
           var7 = MenuButton.field_y;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
@@ -51,8 +51,8 @@ final class IntroTextLine extends IntrusiveNode {
           }
           var1_intLifetime2 = -250 + var2 / 4;
           QuickChatMenu.field_Jb.drawColourised(var1_intLifetime2, 120, 8421631);
-          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatCategoryDefinition.field_r / 4);
-          MeshData.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
+          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatPhraseDefinition.field_r / 4);
+          MeshData.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatPhraseDefinition.field_r);
           var3Lifetime1 = MenuButton.field_H;
           var8 = 0;
           var4Lifetime1 = var8;

@@ -279,7 +279,7 @@ final class DiskCacheWorker implements Runnable {
         }
         if (0 == PlayerRankingRequest.field_o &&
           !ValidationState.field_b.a(PaddedContentDialog.field_nb, (byte) -23)) {
-          QuickChatPhraseRegistry.a(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
+          QuickChatCategoryRegistry.a(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
         }
         if (PlayerRankingRequest.field_o == -6) {
           LobbyOptionSupport.field_f.writeOpcode(9, 255);

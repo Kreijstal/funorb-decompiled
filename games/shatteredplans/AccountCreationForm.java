@@ -288,7 +288,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         PasswordInputPainter dupTemp$1 = new PasswordInputPainter(10000536);
         this.field_H.field_p = (WidgetPainter) ((Object) dupTemp$1);
         this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = QuickChatCategoryRegistry.a(AccountNoticeDialog.field_Y, 4371, new String[]{this.linkStartTag(-63), this.linkEndTag(15)});
+        String var2 = QuickChatPhraseRegistry.a(AccountNoticeDialog.field_Y, 4371, new String[]{this.linkStartTag(-63), this.linkEndTag(15)});
         int var3 = 20;
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
