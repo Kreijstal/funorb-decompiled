@@ -1172,6 +1172,14 @@
       "renamedSymbol": "C:MoveOrder"
     },
     {
+      "symbol": "C:go",
+      "originalName": "go",
+      "to": "SpriteState",
+      "evidence": "Complete original class, concrete sprite constructors and rotation dispatch reviewed. Abstract DualLinkNode sprite state stores full dimensions, trim offsets and pixel extents; converts sprite center/destination to fixed-point before dispatching nearest rotation. Preserve mixed-in theme/invite/status-effect statics, guard-dependent writes/calls and all original execution order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SpriteState"
+    },
+    {
       "symbol": "C:gp",
       "originalName": "gp",
       "to": "DreamsAnimation",
@@ -6468,12 +6476,36 @@
       "renamedSymbol": "M:gna.reverseLowBits(III)I"
     },
     {
+      "symbol": "M:go.a(IBI)V",
+      "originalName": "a",
+      "to": "registerStatusEffectDefinition",
+      "evidence": "Source-purpose review: Stores new rs(statusId,iconIndex) in pna.field_zb[statusId],then conditionally clears invite text. rs constructor indexes55status name/description arrays,UI callers use icon index -1 as absence. Guard andarray/allocation evaluation unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SpriteState.registerStatusEffectDefinition(IBI)V"
+    },
+    {
+      "symbol": "M:go.a(IIIII)V",
+      "originalName": "a",
+      "to": "drawRotated",
+      "evidence": "Source-purpose review: Builds full sprite half-width/height center in16ths,adjusts destination low bits,dispatches abstract nearest rotation;nonmagicguard writes field_p=-3 beforedispatch. Dimensions confirmed in the original concrete sprite constructors.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SpriteState.drawRotated(IIIII)V"
+    },
+    {
       "symbol": "M:go.a(IIIIII)V",
       "originalName": "a",
       "to": "rotateNearest",
       "evidence": "Body is token-identical to the reviewed ArgbSprite method of the same name in other FunOrb games. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:go.rotateNearest(IIIIII)V"
+      "renamedSymbol": "M:SpriteState.rotateNearest(IIIIII)V"
+    },
+    {
+      "symbol": "M:go.e(I)V",
+      "originalName": "e",
+      "to": "releaseStatics",
+      "evidence": "Source-purpose review: Clears widget theme and invite text;param<93 first invokes status-effect registration. Keep complete int domain,first call/clear/exception order,do not treat as a pure cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SpriteState.releaseStatics(I)V"
     },
     {
       "symbol": "M:gp.c(B)Z",
@@ -17425,9 +17457,9 @@
     },
     {
       "symbol": "C:go",
-      "renamedSymbol": "C:go",
+      "renamedSymbol": "C:SpriteState",
       "originalName": "go",
-      "renamedName": "go",
+      "renamedName": "SpriteState",
       "declaration": {
         "file": "go.java",
         "start": 53,
@@ -39271,7 +39303,7 @@
     },
     {
       "symbol": "F:go.field_n:I",
-      "renamedSymbol": "F:go.field_n:I",
+      "renamedSymbol": "F:SpriteState.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -39282,7 +39314,7 @@
     },
     {
       "symbol": "F:go.field_o:I",
-      "renamedSymbol": "F:go.field_o:I",
+      "renamedSymbol": "F:SpriteState.field_o:I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -39293,7 +39325,7 @@
     },
     {
       "symbol": "F:go.field_p:I",
-      "renamedSymbol": "F:go.field_p:I",
+      "renamedSymbol": "F:SpriteState.field_p:I",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -39304,7 +39336,7 @@
     },
     {
       "symbol": "F:go.field_q:I",
-      "renamedSymbol": "F:go.field_q:I",
+      "renamedSymbol": "F:SpriteState.field_q:I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -39315,7 +39347,7 @@
     },
     {
       "symbol": "F:go.field_r:Ljava/lang/String;",
-      "renamedSymbol": "F:go.field_r:Ljava/lang/String;",
+      "renamedSymbol": "F:SpriteState.field_r:Ljava/lang/String;",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -39326,7 +39358,7 @@
     },
     {
       "symbol": "F:go.field_s:Lqh;",
-      "renamedSymbol": "F:go.field_s:LWidgetTheme;",
+      "renamedSymbol": "F:SpriteState.field_s:LWidgetTheme;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -39337,7 +39369,7 @@
     },
     {
       "symbol": "F:go.field_t:I",
-      "renamedSymbol": "F:go.field_t:I",
+      "renamedSymbol": "F:SpriteState.field_t:I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -39348,7 +39380,7 @@
     },
     {
       "symbol": "F:go.field_u:I",
-      "renamedSymbol": "F:go.field_u:I",
+      "renamedSymbol": "F:SpriteState.field_u:I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -159468,7 +159500,7 @@
     },
     {
       "symbol": "L:go.a(IIIII)V#0",
-      "renamedSymbol": "L:go.a(IIIII)V#0",
+      "renamedSymbol": "L:SpriteState.drawRotated(IIIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -159479,7 +159511,7 @@
     },
     {
       "symbol": "L:go.a(IIIII)V#1",
-      "renamedSymbol": "L:go.a(IIIII)V#1",
+      "renamedSymbol": "L:SpriteState.drawRotated(IIIII)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -159490,7 +159522,7 @@
     },
     {
       "symbol": "L:go.a(IIIII)V#2",
-      "renamedSymbol": "L:go.a(IIIII)V#2",
+      "renamedSymbol": "L:SpriteState.drawRotated(IIIII)V#2",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -159501,7 +159533,7 @@
     },
     {
       "symbol": "L:go.a(IIIII)V#3",
-      "renamedSymbol": "L:go.a(IIIII)V#3",
+      "renamedSymbol": "L:SpriteState.drawRotated(IIIII)V#3",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -389698,9 +389730,9 @@
     },
     {
       "symbol": "M:go.<init>()V",
-      "renamedSymbol": "M:go.<init>()V",
+      "renamedSymbol": "M:SpriteState.<init>()V",
       "originalName": "go",
-      "renamedName": "go",
+      "renamedName": "SpriteState",
       "declaration": {
         "file": "go.java",
         "start": 758,
@@ -389709,9 +389741,9 @@
     },
     {
       "symbol": "M:go.a(IBI)V",
-      "renamedSymbol": "M:go.a(IBI)V",
+      "renamedSymbol": "M:SpriteState.registerStatusEffectDefinition(IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "registerStatusEffectDefinition",
       "declaration": {
         "file": "go.java",
         "start": 482,
@@ -389720,9 +389752,9 @@
     },
     {
       "symbol": "M:go.a(IIIII)V",
-      "renamedSymbol": "M:go.a(IIIII)V",
+      "renamedSymbol": "M:SpriteState.drawRotated(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawRotated",
       "declaration": {
         "file": "go.java",
         "start": 787,
@@ -389731,7 +389763,7 @@
     },
     {
       "symbol": "M:go.a(IIIIII)V",
-      "renamedSymbol": "M:go.rotateNearest(IIIIII)V",
+      "renamedSymbol": "M:SpriteState.rotateNearest(IIIIII)V",
       "originalName": "a",
       "renamedName": "rotateNearest",
       "declaration": {
@@ -389742,9 +389774,9 @@
     },
     {
       "symbol": "M:go.e(I)V",
-      "renamedSymbol": "M:go.e(I)V",
+      "renamedSymbol": "M:SpriteState.releaseStatics(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "go.java",
         "start": 245,
@@ -470988,7 +471020,7 @@
     },
     {
       "symbol": "P:go.a(IBI)V#0",
-      "renamedSymbol": "P:go.a(IBI)V#0",
+      "renamedSymbol": "P:SpriteState.registerStatusEffectDefinition(IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -470999,7 +471031,7 @@
     },
     {
       "symbol": "P:go.a(IBI)V#1",
-      "renamedSymbol": "P:go.a(IBI)V#1",
+      "renamedSymbol": "P:SpriteState.registerStatusEffectDefinition(IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -471010,7 +471042,7 @@
     },
     {
       "symbol": "P:go.a(IBI)V#2",
-      "renamedSymbol": "P:go.a(IBI)V#2",
+      "renamedSymbol": "P:SpriteState.registerStatusEffectDefinition(IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -471021,7 +471053,7 @@
     },
     {
       "symbol": "P:go.a(IIIII)V#0",
-      "renamedSymbol": "P:go.a(IIIII)V#0",
+      "renamedSymbol": "P:SpriteState.drawRotated(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -471032,7 +471064,7 @@
     },
     {
       "symbol": "P:go.a(IIIII)V#1",
-      "renamedSymbol": "P:go.a(IIIII)V#1",
+      "renamedSymbol": "P:SpriteState.drawRotated(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -471043,7 +471075,7 @@
     },
     {
       "symbol": "P:go.a(IIIII)V#2",
-      "renamedSymbol": "P:go.a(IIIII)V#2",
+      "renamedSymbol": "P:SpriteState.drawRotated(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -471054,7 +471086,7 @@
     },
     {
       "symbol": "P:go.a(IIIII)V#3",
-      "renamedSymbol": "P:go.a(IIIII)V#3",
+      "renamedSymbol": "P:SpriteState.drawRotated(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -471065,7 +471097,7 @@
     },
     {
       "symbol": "P:go.a(IIIII)V#4",
-      "renamedSymbol": "P:go.a(IIIII)V#4",
+      "renamedSymbol": "P:SpriteState.drawRotated(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -471076,7 +471108,7 @@
     },
     {
       "symbol": "P:go.a(IIIIII)V#0",
-      "renamedSymbol": "P:go.rotateNearest(IIIIII)V#0",
+      "renamedSymbol": "P:SpriteState.rotateNearest(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -471087,7 +471119,7 @@
     },
     {
       "symbol": "P:go.a(IIIIII)V#1",
-      "renamedSymbol": "P:go.rotateNearest(IIIIII)V#1",
+      "renamedSymbol": "P:SpriteState.rotateNearest(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -471098,7 +471130,7 @@
     },
     {
       "symbol": "P:go.a(IIIIII)V#2",
-      "renamedSymbol": "P:go.rotateNearest(IIIIII)V#2",
+      "renamedSymbol": "P:SpriteState.rotateNearest(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -471109,7 +471141,7 @@
     },
     {
       "symbol": "P:go.a(IIIIII)V#3",
-      "renamedSymbol": "P:go.rotateNearest(IIIIII)V#3",
+      "renamedSymbol": "P:SpriteState.rotateNearest(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -471120,7 +471152,7 @@
     },
     {
       "symbol": "P:go.a(IIIIII)V#4",
-      "renamedSymbol": "P:go.rotateNearest(IIIIII)V#4",
+      "renamedSymbol": "P:SpriteState.rotateNearest(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -471131,7 +471163,7 @@
     },
     {
       "symbol": "P:go.a(IIIIII)V#5",
-      "renamedSymbol": "P:go.rotateNearest(IIIIII)V#5",
+      "renamedSymbol": "P:SpriteState.rotateNearest(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -471142,7 +471174,7 @@
     },
     {
       "symbol": "P:go.e(I)V#0",
-      "renamedSymbol": "P:go.e(I)V#0",
+      "renamedSymbol": "P:SpriteState.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -569662,7 +569694,7 @@
       "original": "BachelorFridge.java",
       "renamed": "BachelorFridge.java",
       "inputSha256": "391cd94920e6e97d6195a3bd3359d3980815a7177a0ef225101f995702613a8b",
-      "outputSha256": "858ac383bcde5d2bb99267cf6ca2876ad2bfae30bc68ac9bba9943771ec32eaa",
+      "outputSha256": "5145f24a400f69d6f68a40d65a974e9f2e7d3fd1d3bcbb7d13fe00c28858641f",
       "edits": [
         {
           "start": 80,
@@ -571475,6 +571507,20 @@
           "end": 23972,
           "symbol": "M:gma.a(I)V",
           "original": "a",
+          "renamed": "releaseStatics"
+        },
+        {
+          "start": 24011,
+          "end": 24013,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 24014,
+          "end": 24015,
+          "symbol": "M:go.e(I)V",
+          "original": "e",
           "renamed": "releaseStatics"
         },
         {
@@ -599044,7 +599090,7 @@
       "original": "baa.java",
       "renamed": "BananarangAnimation.java",
       "inputSha256": "4fbe379613713d0554100f2bbea748b58a5e54df1ab2f0fa1bf2c06860685446",
-      "outputSha256": "a686539dbcc6d43975efa89dee7b34f343abf9530805b9ca2b07de3990b418bd",
+      "outputSha256": "3956e17165a49d6989663ff811c34e3a651bbbfd08ca4c746a8e16d5bdbe15a8",
       "edits": [
         {
           "start": 71,
@@ -599663,6 +599709,13 @@
           "renamed": "screen"
         },
         {
+          "start": 15187,
+          "end": 15188,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
+        },
+        {
           "start": 15325,
           "end": 15327,
           "symbol": "C:kv",
@@ -599682,6 +599735,13 @@
           "symbol": "F:ana.field_q:Lgj;",
           "original": "field_q",
           "renamed": "screen"
+        },
+        {
+          "start": 15821,
+          "end": 15822,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
         }
       ]
     },
@@ -648667,10 +648727,17 @@
     },
     {
       "original": "go.java",
-      "renamed": "go.java",
+      "renamed": "SpriteState.java",
       "inputSha256": "49344e392977fdfc7b26c296a4dac502a6deab22e2616697a06e5092292bd922",
-      "outputSha256": "8408f3f533c830fe5e5c49ddf6000de3f0e8748c3db59539d78df436209d8624",
+      "outputSha256": "5ee0211af03bb6abbc59ab9ed4026fb8308773073b838e98177e2e52bba30db3",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
         {
           "start": 64,
           "end": 66,
@@ -648686,6 +648753,34 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 245,
+          "end": 246,
+          "symbol": "M:go.e(I)V",
+          "original": "e",
+          "renamed": "releaseStatics"
+        },
+        {
+          "start": 298,
+          "end": 300,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 301,
+          "end": 302,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 482,
+          "end": 483,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
           "start": 558,
           "end": 560,
           "symbol": "C:rs",
@@ -648698,6 +648793,20 @@
           "symbol": "M:go.a(IIIIII)V",
           "original": "a",
           "renamed": "rotateNearest"
+        },
+        {
+          "start": 758,
+          "end": 760,
+          "symbol": "M:go.<init>()V",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 787,
+          "end": 788,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
         },
         {
           "start": 1169,
@@ -668686,7 +668795,7 @@
       "original": "it.java",
       "renamed": "it.java",
       "inputSha256": "1a88acebf6c32ea9e77a0366e3488597a357449fcbcc12b8152491f1c721f80f",
-      "outputSha256": "171fcfd3ff1e6a50a9834393a80dc6a1f471700ec89470dad4a18330348d7a10",
+      "outputSha256": "d51f1643219eb65a1cbd67561b1e733dc8ce3c99e27a870788565081d5fc85fd",
       "edits": [
         {
           "start": 353,
@@ -668715,6 +668824,13 @@
           "symbol": "M:it.d(I)V",
           "original": "d",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 1131,
+          "end": 1132,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
         },
         {
           "start": 1417,
@@ -678653,7 +678769,7 @@
       "original": "jla.java",
       "renamed": "jla.java",
       "inputSha256": "edd2120d7208a8a6dfc061b69eff23f8f8fc32e2b4fa83b857c4d94b6f863a27",
-      "outputSha256": "d87325e33293ac2eea163b568b82dc23813cfd8267add2962b098426342dc4d5",
+      "outputSha256": "e0cce3a84dd5a4eaffe3da6283a45c9cccfc7fdb501d1030cbed0eb0ab1ac135",
       "edits": [
         {
           "start": 126,
@@ -681542,6 +681658,20 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 65914,
+          "end": 65915,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
+        },
+        {
+          "start": 66058,
+          "end": 66059,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
         },
         {
           "start": 66154,
@@ -695466,7 +695596,7 @@
       "original": "kv.java",
       "renamed": "Sprite.java",
       "inputSha256": "cb2250c6808cb7dd3310a9541c3e2f50593da846b157b40e9f72f6682434f218",
-      "outputSha256": "fc4a6d6b2146514bd25ca4a4e0fbf9a11c8f2cb264742cbfb52a2004151acc1f",
+      "outputSha256": "539f51c229c7ed6b45847fa339a129c97a6779cf3f43b641f6323bfddb786a42",
       "edits": [
         {
           "start": 44,
@@ -695474,6 +695604,13 @@
           "symbol": "C:kv",
           "original": "kv",
           "renamed": "Sprite"
+        },
+        {
+          "start": 55,
+          "end": 57,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
         },
         {
           "start": 1246,
@@ -703893,7 +704030,7 @@
       "original": "lia.java",
       "renamed": "lia.java",
       "inputSha256": "1cfe5e983345caf4d3ed37029e10c3b53ac83e63360b3f20260fa6e44bd10634",
-      "outputSha256": "1fabfae9e7ab28e3199638e7824e1f79bf3ca180d587fd70ef724927b21c5971",
+      "outputSha256": "35c279ffe2fde7f420ee224fca955fd063db513fdfc860332ae8a60ccbb3da6c",
       "edits": [
         {
           "start": 62,
@@ -704064,11 +704201,95 @@
           "renamed": "WidgetTheme"
         },
         {
+          "start": 2664,
+          "end": 2666,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2688,
+          "end": 2690,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
           "start": 2705,
           "end": 2707,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 2721,
+          "end": 2723,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2764,
+          "end": 2766,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2798,
+          "end": 2800,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2838,
+          "end": 2840,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2873,
+          "end": 2875,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2907,
+          "end": 2909,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2941,
+          "end": 2943,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2981,
+          "end": 2983,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 3024,
+          "end": 3026,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 3073,
+          "end": 3075,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
         },
         {
           "start": 3107,
@@ -716188,7 +716409,7 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "d39443cff699bbb6ed1e0e914ca931232fcfcd89cd80a3b05a0604c2cdef1ce3",
-      "outputSha256": "11bb4f3c84642c1f13c976987f0ee7be7812611d219ac082c1addbf0ef3cd9d6",
+      "outputSha256": "e30e75d19af8f7b070ac4819ac805d4e1f90198464e674d85a97a4afa5031a9b",
       "edits": [
         {
           "start": 67,
@@ -716801,6 +717022,13 @@
           "renamed": "OneAnimation"
         },
         {
+          "start": 12323,
+          "end": 12324,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
+        },
+        {
           "start": 12393,
           "end": 12395,
           "symbol": "C:ur",
@@ -717173,6 +717401,13 @@
           "renamed": "OneAnimation"
         },
         {
+          "start": 18286,
+          "end": 18287,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
+        },
+        {
           "start": 18404,
           "end": 18406,
           "symbol": "C:hd",
@@ -717409,6 +717644,13 @@
           "symbol": "C:gq",
           "original": "gq",
           "renamed": "OneAnimation"
+        },
+        {
+          "start": 22332,
+          "end": 22333,
+          "symbol": "M:go.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRotated"
         },
         {
           "start": 22441,
@@ -733124,7 +733366,7 @@
       "original": "og.java",
       "renamed": "og.java",
       "inputSha256": "dc6f6f99b50cd5835c5ff593ed42ad5d31835b487a5792b636eec16c4d9c0a5c",
-      "outputSha256": "f8462cfacb920adf3560096692646f5df9e2b25bc47994a6575b65f4fde170e4",
+      "outputSha256": "c94edf81e267a2a7704b7572fe21b0156b916c9b4f0c96c26de9864d9b6b90c1",
       "edits": [
         {
           "start": 66,
@@ -733139,6 +733381,776 @@
           "symbol": "C:kv",
           "original": "kv",
           "renamed": "Sprite"
+        },
+        {
+          "start": 357,
+          "end": 359,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 360,
+          "end": 361,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 391,
+          "end": 393,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 394,
+          "end": 395,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 425,
+          "end": 427,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 428,
+          "end": 429,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 459,
+          "end": 461,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 462,
+          "end": 463,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 492,
+          "end": 494,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 495,
+          "end": 496,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 526,
+          "end": 528,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 529,
+          "end": 530,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 560,
+          "end": 562,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 563,
+          "end": 564,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 594,
+          "end": 596,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 597,
+          "end": 598,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 628,
+          "end": 630,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 631,
+          "end": 632,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 666,
+          "end": 668,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 669,
+          "end": 670,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 700,
+          "end": 702,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 703,
+          "end": 704,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 735,
+          "end": 737,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 738,
+          "end": 739,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 770,
+          "end": 772,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 773,
+          "end": 774,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 805,
+          "end": 807,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 808,
+          "end": 809,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 840,
+          "end": 842,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 843,
+          "end": 844,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 875,
+          "end": 877,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 878,
+          "end": 879,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 910,
+          "end": 912,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 913,
+          "end": 914,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 945,
+          "end": 947,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 948,
+          "end": 949,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 980,
+          "end": 982,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 983,
+          "end": 984,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1015,
+          "end": 1017,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1018,
+          "end": 1019,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1050,
+          "end": 1052,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1053,
+          "end": 1054,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1085,
+          "end": 1087,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1088,
+          "end": 1089,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1120,
+          "end": 1122,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1123,
+          "end": 1124,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1155,
+          "end": 1157,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1158,
+          "end": 1159,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1190,
+          "end": 1192,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1193,
+          "end": 1194,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1225,
+          "end": 1227,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1228,
+          "end": 1229,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1260,
+          "end": 1262,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1263,
+          "end": 1264,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1295,
+          "end": 1297,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1298,
+          "end": 1299,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1330,
+          "end": 1332,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1333,
+          "end": 1334,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1364,
+          "end": 1366,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1367,
+          "end": 1368,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1399,
+          "end": 1401,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1402,
+          "end": 1403,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1433,
+          "end": 1435,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1436,
+          "end": 1437,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1467,
+          "end": 1469,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1470,
+          "end": 1471,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1502,
+          "end": 1504,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1505,
+          "end": 1506,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1536,
+          "end": 1538,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1539,
+          "end": 1540,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1570,
+          "end": 1572,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1573,
+          "end": 1574,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1605,
+          "end": 1607,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1608,
+          "end": 1609,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1640,
+          "end": 1642,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1643,
+          "end": 1644,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1675,
+          "end": 1677,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1678,
+          "end": 1679,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1709,
+          "end": 1711,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1712,
+          "end": 1713,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1744,
+          "end": 1746,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1747,
+          "end": 1748,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1778,
+          "end": 1780,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1781,
+          "end": 1782,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1813,
+          "end": 1815,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1816,
+          "end": 1817,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1847,
+          "end": 1849,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1850,
+          "end": 1851,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1882,
+          "end": 1884,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1885,
+          "end": 1886,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1917,
+          "end": 1919,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1920,
+          "end": 1921,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1952,
+          "end": 1954,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1955,
+          "end": 1956,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 1987,
+          "end": 1989,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 1990,
+          "end": 1991,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2022,
+          "end": 2024,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2025,
+          "end": 2026,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2057,
+          "end": 2059,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2060,
+          "end": 2061,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2092,
+          "end": 2094,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2095,
+          "end": 2096,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2127,
+          "end": 2129,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2130,
+          "end": 2131,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2162,
+          "end": 2164,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2165,
+          "end": 2166,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2197,
+          "end": 2199,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2200,
+          "end": 2201,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
+        },
+        {
+          "start": 2232,
+          "end": 2234,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
+        },
+        {
+          "start": 2235,
+          "end": 2236,
+          "symbol": "M:go.a(IBI)V",
+          "original": "a",
+          "renamed": "registerStatusEffectDefinition"
         }
       ]
     },
@@ -788991,7 +790003,7 @@
       "original": "u.java",
       "renamed": "StickyEvent.java",
       "inputSha256": "5617ea770c9b9ce8cb8fc4796aed60b2186951d82a64293922efc41bc4789758",
-      "outputSha256": "8d067d2f04ba21a3a1e20eacae1eb54663b71f7d2f0896f8d3f8c26e5fd20b71",
+      "outputSha256": "19e4ae80c888f5e8715aec9f788c6c2e98dd354fda16705ea71b95e8884d5a64",
       "edits": [
         {
           "start": 50,
@@ -789468,6 +790480,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "HailSpecial"
+        },
+        {
+          "start": 27463,
+          "end": 27465,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
         },
         {
           "start": 28753,
@@ -808188,7 +809207,7 @@
       "original": "vt.java",
       "renamed": "vt.java",
       "inputSha256": "7676253a89e5318db80f32ba14ae02b9d832359a7ceac7cbb966988ca63af227",
-      "outputSha256": "ad612a63d5002b7d9fc16fab53130b6d3aca9a460dd3584fafc281a65969f21b",
+      "outputSha256": "4ce54871f80bbdb5efa338338442ef58da61ad60890a0e5ab0d20e60140e724b",
       "edits": [
         {
           "start": 156,
@@ -808399,6 +809418,13 @@
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "FullHealSpecial"
+        },
+        {
+          "start": 7891,
+          "end": 7893,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "SpriteState"
         },
         {
           "start": 8008,
@@ -817705,10 +818731,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "ebe1cacb3098901d7eb96e2d7c6dab388632d80f126fc9a77547ee1570e7a857",
+    "rulesSha256": "3a79a9f45c45f99e2c992bf8285cfc8f44ed136fcbd585f0054e1ef419e91e0f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "2731623060b8a6c68d08f39b45bb6a6bd6adafc4b3abef423a260e0c9b4e1407",
+    "outputTreeSha256": "f0aebf297e3bbc9af02927428da458682434bb8e0398ac39c56846cefe694726",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

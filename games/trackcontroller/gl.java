@@ -54,7 +54,7 @@ final class gl extends ok {
         RuntimeException var4 = null;
         var5 = TrackController.field_F ? 1 : 0;
         try {
-          fd.field_h = cj.field_e;
+          IndexedSpriteState.field_h = cj.field_e;
           if (param2 != 255) {
             if (param2 < 100) {
               MouseWheelInput.field_c = wg.createAccountErrorResult((byte) 54, param2, param0);

@@ -142,7 +142,7 @@ final class dh extends IntrusiveNode {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = ok.a(RandomAccessCacheFile.a(var22[var7] << 24, -16777216), CrossfadingMidiPcmStream.field_z[RandomAccessCacheFile.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new d(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ab.field_a, CrossfadingMidiPcmStream.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var16));
           }
         }
         ff.b(param0 + 46);

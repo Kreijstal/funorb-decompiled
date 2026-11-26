@@ -1921,7 +1921,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "waitingfor_fonts");
                 if (null != var2) {
-                  fd.field_f = ta.a(32200, var2);
+                  IndexedSpriteState.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "waitingfor_soundeffects");
                 if (null != var2) {

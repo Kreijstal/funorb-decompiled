@@ -540,6 +540,14 @@
       "renamedSymbol": "C:VorbisFloor"
     },
     {
+      "symbol": "C:mj",
+      "originalName": "mj",
+      "to": "PalettedBitmapFont",
+      "evidence": "Complete original class, constructors, both clipped glyph wrappers and both palette blitters reviewed. BitmapFont subclass stores byte-indexed glyph rasters and palette slots; draws nonzero indices through selected RGB palette, with optional explicit alpha, and dispatches alternate monochrome rendering via the boolean flag. Preserve allocation/replacement order, clipping, signed arithmetic shifts, row strides and zero-index skips.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PalettedBitmapFont"
+    },
+    {
       "symbol": "C:ng",
       "originalName": "ng",
       "to": "IntrusiveDeque",
@@ -2513,7 +2521,7 @@
       "to": "drawGlyphAlpha",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:mj.a(IIIIIIIZ)V. Pinned original body SHA256 4296d1bd169c84b395b4a70f7358a6f8b14d446bc087ebef0ecf449cfe6f722d. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:mj.drawGlyphAlpha(IIIIIIIZ)V"
+      "renamedSymbol": "M:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V"
     },
     {
       "symbol": "M:mj.a(IIIIIIZ)V",
@@ -2521,7 +2529,23 @@
       "to": "drawGlyph",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:mj.a(IIIIIIZ)V. Pinned original body SHA256 26ccd9baf3a674e009f82ffbea53913eb239c38f82211e45677f7cdebde177d1. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:mj.drawGlyph(IIIIIIZ)V"
+      "renamedSymbol": "M:PalettedBitmapFont.drawGlyph(IIIIIIZ)V"
+    },
+    {
+      "symbol": "M:mj.a(I[I[B[IIIIIII)V",
+      "originalName": "a",
+      "to": "blitPaletteGlyph",
+      "evidence": "Source-purpose review: Unrolled4pixels+remainder perrow;nonzero unsigned byte selects paletteRGB,zero skips destination;preserves row strides andsource accesses.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V"
+    },
+    {
+      "symbol": "M:mj.a(I[I[B[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitPaletteGlyphAlpha",
+      "evidence": "Source-purpose review: Nonzero unsigned glyph index selects paletteRGB,blends with destination using provided alpha and256-alpha;zero only advancesdestination. Preserve signed >>8,not >>>8,andfull alpha inputdomain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V"
     },
     {
       "symbol": "M:n.b(I)V",
@@ -5710,9 +5734,9 @@
     },
     {
       "symbol": "C:mj",
-      "renamedSymbol": "C:mj",
+      "renamedSymbol": "C:PalettedBitmapFont",
       "originalName": "mj",
-      "renamedName": "mj",
+      "renamedName": "PalettedBitmapFont",
       "declaration": {
         "file": "mj.java",
         "start": 50,
@@ -19130,7 +19154,7 @@
     },
     {
       "symbol": "F:mj.field_N:[[B",
-      "renamedSymbol": "F:mj.field_N:[[B",
+      "renamedSymbol": "F:PalettedBitmapFont.field_N:[[B",
       "originalName": "field_N",
       "renamedName": "field_N",
       "declaration": {
@@ -19141,7 +19165,7 @@
     },
     {
       "symbol": "F:mj.field_O:[[I",
-      "renamedSymbol": "F:mj.field_O:[[I",
+      "renamedSymbol": "F:PalettedBitmapFont.field_O:[[I",
       "originalName": "field_O",
       "renamedName": "field_O",
       "declaration": {
@@ -25125,7 +25149,7 @@
     },
     {
       "symbol": "F:tb.field_a:Lmj;",
-      "renamedSymbol": "F:tb.field_a:Lmj;",
+      "renamedSymbol": "F:tb.field_a:LPalettedBitmapFont;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -65506,7 +65530,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#0",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#0",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -65517,7 +65541,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#1",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#1",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -65528,7 +65552,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#2",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#2",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -65539,7 +65563,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#3",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#3",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -65550,7 +65574,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#4",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#4",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -65561,7 +65585,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#5",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#5",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -65572,7 +65596,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#6",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#6",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -65583,7 +65607,7 @@
     },
     {
       "symbol": "L:fl.a([BB)Lmj;#7",
-      "renamedSymbol": "L:fl.a([BB)Lmj;#7",
+      "renamedSymbol": "L:fl.a([BB)LPalettedBitmapFont;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -71589,7 +71613,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#0",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#0",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -71600,7 +71624,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#1",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#1",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -71611,7 +71635,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#10",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#10",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#10",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -71622,7 +71646,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#11",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#11",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#11",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -71633,7 +71657,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#12",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#12",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#12",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -71644,7 +71668,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#13",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#13",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -71655,7 +71679,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#14",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#14",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -71666,7 +71690,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#2",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#2",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -71677,7 +71701,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#3",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#3",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -71688,7 +71712,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#4",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#4",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -71699,7 +71723,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#5",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#5",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -71710,7 +71734,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#6",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#6",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -71721,7 +71745,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#7",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#7",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#7",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -71732,7 +71756,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#8",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#8",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#8",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -71743,7 +71767,7 @@
     },
     {
       "symbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#9",
-      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#9",
+      "renamedSymbol": "L:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#9",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -71754,7 +71778,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#0",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#0",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -71765,7 +71789,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#1",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#1",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -71776,7 +71800,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#2",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#2",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -71787,7 +71811,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#3",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#3",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -71798,7 +71822,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#4",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#4",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -71809,7 +71833,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#5",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#5",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -71820,7 +71844,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#6",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#6",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#6",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -71831,7 +71855,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#7",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#7",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#7",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -71842,7 +71866,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#8",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#8",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -71853,7 +71877,7 @@
     },
     {
       "symbol": "L:hc.a(BLsh;Lsh;II)Lmj;#9",
-      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)Lmj;#9",
+      "renamedSymbol": "L:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -101069,7 +101093,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#0",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#0",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -101080,7 +101104,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#1",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#1",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -101091,7 +101115,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#2",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#2",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -101102,7 +101126,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#3",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#3",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -101113,7 +101137,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#4",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#4",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -101124,7 +101148,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#5",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#5",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#5",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -101135,7 +101159,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIIZ)V#6",
-      "renamedSymbol": "L:mj.drawGlyphAlpha(IIIIIIIZ)V#6",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#6",
       "originalName": "var13Lifetime2",
       "renamedName": "var13Lifetime2",
       "declaration": {
@@ -101146,7 +101170,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#0",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#0",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -101157,7 +101181,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#1",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#1",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -101168,7 +101192,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#2",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#2",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -101179,7 +101203,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#3",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#3",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -101190,7 +101214,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#4",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#4",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -101201,7 +101225,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#5",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#5",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -101212,7 +101236,7 @@
     },
     {
       "symbol": "L:mj.a(IIIIIIZ)V#6",
-      "renamedSymbol": "L:mj.drawGlyph(IIIIIIZ)V#6",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -101223,7 +101247,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#0",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#0",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -101234,7 +101258,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#1",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#1",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -101245,7 +101269,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#10",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#10",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#10",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -101256,7 +101280,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#11",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#11",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#11",
       "originalName": "dupTemp$13",
       "renamedName": "dupTemp$13",
       "declaration": {
@@ -101267,7 +101291,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#12",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#12",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#12",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -101278,7 +101302,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#13",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#13",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#13",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -101289,7 +101313,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#14",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#14",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#14",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -101300,7 +101324,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#15",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#15",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#15",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -101311,7 +101335,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#16",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#16",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#16",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -101322,7 +101346,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#17",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#17",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#17",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -101333,7 +101357,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#18",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#18",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#18",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -101344,7 +101368,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#2",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#2",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#2",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -101355,7 +101379,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#3",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#3",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#3",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -101366,7 +101390,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#4",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#4",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#4",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -101377,7 +101401,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#5",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#5",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#5",
       "originalName": "dupTemp$7",
       "renamedName": "dupTemp$7",
       "declaration": {
@@ -101388,7 +101412,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#6",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#6",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#6",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -101399,7 +101423,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#7",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#7",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#7",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -101410,7 +101434,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#8",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#8",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#8",
       "originalName": "dupTemp$10",
       "renamedName": "dupTemp$10",
       "declaration": {
@@ -101421,7 +101445,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIII)V#9",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIII)V#9",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#9",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -101432,7 +101456,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -101443,7 +101467,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#1",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -101454,7 +101478,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$16",
       "renamedName": "incrementValue$16",
       "declaration": {
@@ -101465,7 +101489,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#3",
       "originalName": "dupTemp$17",
       "renamedName": "dupTemp$17",
       "declaration": {
@@ -101476,7 +101500,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$18",
       "renamedName": "incrementValue$18",
       "declaration": {
@@ -101487,7 +101511,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -101498,7 +101522,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -101509,7 +101533,7 @@
     },
     {
       "symbol": "L:mj.a(I[I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:mj.a(I[I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#7",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -157488,7 +157512,7 @@
     },
     {
       "symbol": "M:fl.a([BB)Lmj;",
-      "renamedSymbol": "M:fl.a([BB)Lmj;",
+      "renamedSymbol": "M:fl.a([BB)LPalettedBitmapFont;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -158610,7 +158634,7 @@
     },
     {
       "symbol": "M:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;",
-      "renamedSymbol": "M:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;",
+      "renamedSymbol": "M:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -158632,7 +158656,7 @@
     },
     {
       "symbol": "M:hc.a(BLsh;Lsh;II)Lmj;",
-      "renamedSymbol": "M:hc.a(BLsh;Lsh;II)Lmj;",
+      "renamedSymbol": "M:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -164220,9 +164244,9 @@
     },
     {
       "symbol": "M:mj.<init>([B[I[I[I[I[I[[B)V",
-      "renamedSymbol": "M:mj.<init>([B[I[I[I[I[I[[B)V",
+      "renamedSymbol": "M:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V",
       "originalName": "mj",
-      "renamedName": "mj",
+      "renamedName": "PalettedBitmapFont",
       "declaration": {
         "file": "mj.java",
         "start": 3058,
@@ -164231,7 +164255,7 @@
     },
     {
       "symbol": "M:mj.a(IIIIIIIZ)V",
-      "renamedSymbol": "M:mj.drawGlyphAlpha(IIIIIIIZ)V",
+      "renamedSymbol": "M:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V",
       "originalName": "a",
       "renamedName": "drawGlyphAlpha",
       "declaration": {
@@ -164242,7 +164266,7 @@
     },
     {
       "symbol": "M:mj.a(IIIIIIZ)V",
-      "renamedSymbol": "M:mj.drawGlyph(IIIIIIZ)V",
+      "renamedSymbol": "M:PalettedBitmapFont.drawGlyph(IIIIIIZ)V",
       "originalName": "a",
       "renamedName": "drawGlyph",
       "declaration": {
@@ -164253,9 +164277,9 @@
     },
     {
       "symbol": "M:mj.a(I[I[B[IIIIIII)V",
-      "renamedSymbol": "M:mj.a(I[I[B[IIIIIII)V",
+      "renamedSymbol": "M:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitPaletteGlyph",
       "declaration": {
         "file": "mj.java",
         "start": 156,
@@ -164264,9 +164288,9 @@
     },
     {
       "symbol": "M:mj.a(I[I[B[IIIIIIII)V",
-      "renamedSymbol": "M:mj.a(I[I[B[IIIIIIII)V",
+      "renamedSymbol": "M:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitPaletteGlyphAlpha",
       "declaration": {
         "file": "mj.java",
         "start": 5091,
@@ -190268,7 +190292,7 @@
     },
     {
       "symbol": "P:fl.a([BB)Lmj;#0",
-      "renamedSymbol": "P:fl.a([BB)Lmj;#0",
+      "renamedSymbol": "P:fl.a([BB)LPalettedBitmapFont;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190279,7 +190303,7 @@
     },
     {
       "symbol": "P:fl.a([BB)Lmj;#1",
-      "renamedSymbol": "P:fl.a([BB)Lmj;#1",
+      "renamedSymbol": "P:fl.a([BB)LPalettedBitmapFont;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192578,7 +192602,7 @@
     },
     {
       "symbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#0",
-      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#0",
+      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192589,7 +192613,7 @@
     },
     {
       "symbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#1",
-      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#1",
+      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192600,7 +192624,7 @@
     },
     {
       "symbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#2",
-      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#2",
+      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -192611,7 +192635,7 @@
     },
     {
       "symbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#3",
-      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#3",
+      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -192622,7 +192646,7 @@
     },
     {
       "symbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#4",
-      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)Lmj;#4",
+      "renamedSymbol": "P:hb.a(Lsh;Ljava/lang/String;Ljava/lang/String;Lsh;I)LPalettedBitmapFont;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -192633,7 +192657,7 @@
     },
     {
       "symbol": "P:hc.a(BLsh;Lsh;II)Lmj;#0",
-      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)Lmj;#0",
+      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -192644,7 +192668,7 @@
     },
     {
       "symbol": "P:hc.a(BLsh;Lsh;II)Lmj;#1",
-      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)Lmj;#1",
+      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -192655,7 +192679,7 @@
     },
     {
       "symbol": "P:hc.a(BLsh;Lsh;II)Lmj;#2",
-      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)Lmj;#2",
+      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -192666,7 +192690,7 @@
     },
     {
       "symbol": "P:hc.a(BLsh;Lsh;II)Lmj;#3",
-      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)Lmj;#3",
+      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -192677,7 +192701,7 @@
     },
     {
       "symbol": "P:hc.a(BLsh;Lsh;II)Lmj;#4",
-      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)Lmj;#4",
+      "renamedSymbol": "P:hc.a(BLsh;Lsh;II)LPalettedBitmapFont;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -206757,7 +206781,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#0",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#0",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206768,7 +206792,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#1",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#1",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206779,7 +206803,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#2",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#2",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -206790,7 +206814,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#3",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#3",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -206801,7 +206825,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#4",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#4",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -206812,7 +206836,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#5",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#5",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -206823,7 +206847,7 @@
     },
     {
       "symbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#6",
-      "renamedSymbol": "P:mj.<init>([B[I[I[I[I[I[[B)V#6",
+      "renamedSymbol": "P:PalettedBitmapFont.<init>([B[I[I[I[I[I[[B)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -206834,7 +206858,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#0",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#0",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206845,7 +206869,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#1",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#1",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206856,7 +206880,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#2",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#2",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -206867,7 +206891,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#3",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#3",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -206878,7 +206902,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#4",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#4",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -206889,7 +206913,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#5",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#5",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -206900,7 +206924,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#6",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#6",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -206911,7 +206935,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIIZ)V#7",
-      "renamedSymbol": "P:mj.drawGlyphAlpha(IIIIIIIZ)V#7",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -206922,7 +206946,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#0",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#0",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206933,7 +206957,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#1",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#1",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206944,7 +206968,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#2",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#2",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -206955,7 +206979,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#3",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#3",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -206966,7 +206990,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#4",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#4",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -206977,7 +207001,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#5",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#5",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -206988,7 +207012,7 @@
     },
     {
       "symbol": "P:mj.a(IIIIIIZ)V#6",
-      "renamedSymbol": "P:mj.drawGlyph(IIIIIIZ)V#6",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -206999,7 +207023,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#0",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#0",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207010,7 +207034,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#1",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#1",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207021,7 +207045,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#2",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#2",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207032,7 +207056,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#3",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#3",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207043,7 +207067,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#4",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#4",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -207054,7 +207078,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#5",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#5",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -207065,7 +207089,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#6",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#6",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -207076,7 +207100,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#7",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#7",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -207087,7 +207111,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#8",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#8",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -207098,7 +207122,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIII)V#9",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIII)V#9",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyph(I[I[B[IIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -207109,7 +207133,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207120,7 +207144,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207131,7 +207155,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#10",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#10",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -207142,7 +207166,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207153,7 +207177,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207164,7 +207188,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -207175,7 +207199,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -207186,7 +207210,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -207197,7 +207221,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -207208,7 +207232,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -207219,7 +207243,7 @@
     },
     {
       "symbol": "P:mj.a(I[I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:mj.a(I[I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:PalettedBitmapFont.blitPaletteGlyphAlpha(I[I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -245904,8 +245928,36 @@
       "original": "fl.java",
       "renamed": "fl.java",
       "inputSha256": "b5360f3f03257c91d96a7510aee770c6f53d01902e2d58af2797aaaaf9d406b5",
-      "outputSha256": "9e2e07c08c18878367add28b74b2356f5460f7d588a91ad41f21bf8066c4c7da",
+      "outputSha256": "1091d8f1d3f5f665114c8c8549b55606f8dcbfa767f3b1234b4f643ec1ea615e",
       "edits": [
+        {
+          "start": 179,
+          "end": 181,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 222,
+          "end": 224,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 288,
+          "end": 290,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 678,
+          "end": 680,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
         {
           "start": 772,
           "end": 774,
@@ -248084,7 +248136,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "7b0b5383d2237fe84fbb50df31bbc1e908924cfe3de1fb9ad2feaa7b7d3dccaf",
-      "outputSha256": "ffb92ea719484a674e9f855c1c7ac5a541ddcbdb388a439261f63a1921bdd004",
+      "outputSha256": "20d0a64cd9e06c7ff2a9d90f50c54e1221ca5afa4a6d50c6876774178a0df8ee",
       "edits": [
         {
           "start": 106,
@@ -248129,6 +248181,20 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 2689,
+          "end": 2691,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 2854,
+          "end": 2856,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
           "start": 4719,
           "end": 4720,
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
@@ -248141,7 +248207,7 @@
       "original": "hc.java",
       "renamed": "hc.java",
       "inputSha256": "db8caf7d89e37e450b2b637dfbab01ff3920fe0e0ba4988e0e98f6ca73dff1c4",
-      "outputSha256": "b81b4ba7ee4835a231d3289716d0f9731d7afc0de7bd13786872908642f108d4",
+      "outputSha256": "a46c94f729d78b887493150a85adeb2c7dbcd9ec208708e1a5f6f23a293ebf06",
       "edits": [
         {
           "start": 456,
@@ -248450,6 +248516,27 @@
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8290,
+          "end": 8292,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 8437,
+          "end": 8439,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 8846,
+          "end": 8848,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
         },
         {
           "start": 9746,
@@ -258784,16 +258871,37 @@
     },
     {
       "original": "mj.java",
-      "renamed": "mj.java",
+      "renamed": "PalettedBitmapFont.java",
       "inputSha256": "a6b4740d0387bfa0a7a51f2142223ca24bb6f08023e3bafcc21f17d9c74ff8fe",
-      "outputSha256": "acd3b53ed6d2bc572e7592f701d686decf5a7926da28532ef7a2da73b6de4b34",
+      "outputSha256": "ac8ca7fd02594dbc5df5875a050ca02e359bf86d062008d8cf1e14760e3c9158",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
         {
           "start": 61,
           "end": 63,
           "symbol": "C:le",
           "original": "le",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 156,
+          "end": 157,
+          "symbol": "M:mj.a(I[I[B[IIIIIII)V",
+          "original": "a",
+          "renamed": "blitPaletteGlyph"
+        },
+        {
+          "start": 3058,
+          "end": 3060,
+          "symbol": "M:mj.<init>([B[I[I[I[I[I[[B)V",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
         },
         {
           "start": 3384,
@@ -258894,6 +259002,20 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 4768,
+          "end": 4770,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 4771,
+          "end": 4772,
+          "symbol": "M:mj.a(I[I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitPaletteGlyphAlpha"
+        },
+        {
           "start": 4776,
           "end": 4778,
           "symbol": "C:lf",
@@ -258913,6 +259035,13 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 5091,
+          "end": 5092,
+          "symbol": "M:mj.a(I[I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitPaletteGlyphAlpha"
         },
         {
           "start": 6266,
@@ -259011,6 +259140,20 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7632,
+          "end": 7634,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 7635,
+          "end": 7636,
+          "symbol": "M:mj.a(I[I[B[IIIIIII)V",
+          "original": "a",
+          "renamed": "blitPaletteGlyph"
         },
         {
           "start": 7640,
@@ -270663,8 +270806,22 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "eea44465a5df9db7dce14f3384ddda0490a387ea53ce38188d621e21201a3242",
-      "outputSha256": "d857fce6a95294f1878bbe1bcb81601f054588581a9eb182cff76347b03f7c2b",
+      "outputSha256": "b94122f6b44aff68fab25882440b0a6ec214aba3fa4d1c659b078f8de0a1d662",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 1103,
+          "end": 1105,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
+        },
         {
           "start": 2095,
           "end": 2097,
@@ -270748,6 +270905,13 @@
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 6778,
+          "end": 6780,
+          "symbol": "C:mj",
+          "original": "mj",
+          "renamed": "PalettedBitmapFont"
         },
         {
           "start": 6860,
@@ -279672,10 +279836,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/lexicominos"
     },
-    "rulesSha256": "e33dfe8b4a90935653b30e5ee48fa2e611a406156f75893f37cbf70aeb9f3dd3",
+    "rulesSha256": "0aeeab954fffeec7518c41c3f3362d52626f1a71560c6868b88285e9501a61b9",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
-    "outputTreeSha256": "b841536ea391af4d5e547103979bfa5c05228b795009d250e82f3fe7760678b6",
+    "outputTreeSha256": "06ab90c5a832b94a1471eaad4e68c7b476db3adcb5704d413db9cf290f6d1a17",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -219,7 +219,7 @@ final class vt extends tia {
               } else {
                 if (!var12.field_wb) {
                   if (!var12.field_Ob) {
-                    var12.field_Fb.field_Z = go.field_r;
+                    var12.field_Fb.field_Z = SpriteState.field_r;
                   } else {
                     var12.field_Ib.field_Z = lga.a(true, new String[]{var20}, HailSpecial.field_p);
                     var12.field_Fb.field_Z = mc.field_i;

@@ -375,7 +375,7 @@ public final class TrackController extends GameShell {
         ab.a((byte) 98);
         gk.a(69);
         DualLinkNode.d(-126);
-        fd.a((byte) 111);
+        IndexedSpriteState.releaseStatics((byte) 111);
         SpriteState.clearStaticReferences((byte) 12);
         LevelGrid.a((byte) 107);
         MovingBlock.a((byte) 41);
@@ -783,19 +783,19 @@ public final class TrackController extends GameShell {
             if (el.field_L.c(111) &&
               el.field_L.b("basic", (byte) -3)) {
               if (!el.field_L.b("comic12", (byte) -3)) {
-                ud.a(128, 3.0f, wf.a("comic12", fd.field_f, v.field_c, el.field_L, 43));
+                ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, el.field_L, 43));
                 return false;
               }
               if (!el.field_L.b("kartika13", (byte) -3)) {
-                ud.a(param0 - 339, 3.0f, wf.a("kartika13", fd.field_f, v.field_c, el.field_L, param0 - 431));
+                ud.a(param0 - 339, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, el.field_L, param0 - 431));
                 return false;
               }
               if (!fb.field_b.b("comic12", (byte) -3)) {
-                ud.a(param0 ^ 339, 3.0f, wf.a("comic12", fd.field_f, v.field_c, fb.field_b, param0 ^ 399));
+                ud.a(param0 ^ 339, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, fb.field_b, param0 ^ 399));
                 return false;
               }
               if (!fb.field_b.b("kartika13", (byte) -3)) {
-                ud.a(128, 3.0f, wf.a("kartika13", fd.field_f, v.field_c, fb.field_b, 62));
+                ud.a(128, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, fb.field_b, 62));
                 return false;
               }
               if (rl.field_D.c(param0 - 374) &&
@@ -872,7 +872,7 @@ public final class TrackController extends GameShell {
                       ud.a(128, 40.0f, wf.a("", IntrusiveNode.field_f, ql.field_q, j.field_h, 23));
                       return false;
                     }
-                    ud.a(param0 - 339, 31.0f, wf.a("", fd.field_f, v.field_c, si.field_c, param0 - 394));
+                    ud.a(param0 - 339, 31.0f, wf.a("", IndexedSpriteState.field_f, v.field_c, si.field_c, param0 - 394));
                     return false;
                   }
                   ud.a(128, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 119));
@@ -1104,7 +1104,7 @@ public final class TrackController extends GameShell {
           var26.a();
           cl.a(var25, 0, var8_ref_qj.field_v, 0, var8_ref_qj.field_s, param0 ^ 471);
           var8_ref_qj.drawTransparent(0, 0);
-          fd.field_d = ab.a("", -15383, "exhibit", sg.field_a);
+          IndexedSpriteState.field_d = ab.a("", -15383, "exhibit", sg.field_a);
           var8Lifetime2 = ba.field_b.field_G + 26;
           dupTemp$1 = new Sprite(156, var8Lifetime2);
           ai.field_a = dupTemp$1;

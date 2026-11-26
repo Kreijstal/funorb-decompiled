@@ -220,6 +220,14 @@
       "renamedSymbol": "C:GameShell"
     },
     {
+      "symbol": "C:d",
+      "originalName": "d",
+      "to": "ArgbSprite",
+      "evidence": "Complete original class, both constructors, all drawing wrappers and pixel kernels reviewed. Sprite subclass composites ARGB pixels with unsigned top-byte alpha; includes clipping/mirrored draws, global alpha, additive intensity, grayscale tint/ramp and coverage-weighted 2x2/4x4 reductions. Preserve unchanged arithmetic, allocation, read/write/skip order and full primitive domains.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ArgbSprite"
+    },
+    {
       "symbol": "C:da",
       "originalName": "da",
       "to": "SocketArchiveRequestConnection",
@@ -258,6 +266,14 @@
       "evidence": "Long key plus two reciprocal links; base of buffers, streams and widgets.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IntrusiveNode"
+    },
+    {
+      "symbol": "C:fd",
+      "originalName": "fd",
+      "to": "IndexedSpriteState",
+      "evidence": "Complete original abstract class and concrete indexed-sprite field consumers/constructors reviewed. Stores full dimensions, trimmed dimensions and offsets for a palette-indexed sprite; declares draw/drawAlpha implemented by IndexedSprite. Preserve unrelated request/font-loading statics, diagnostic string, sentinel division and partial cleanup order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IndexedSpriteState"
     },
     {
       "symbol": "C:fh",
@@ -1945,7 +1961,7 @@
       "to": "drawHalfSize",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:d.d(II)V. Pinned original body SHA256 2fa5d57c6f22cc489f31cb949cf346719cb69c8d025e2379365c728116a1fba2. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:d.drawHalfSize(II)V"
+      "renamedSymbol": "M:ArgbSprite.drawHalfSize(II)V"
     },
     {
       "symbol": "M:d.e(II)V",
@@ -1953,7 +1969,7 @@
       "to": "drawTransparent",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:d.e(II)V. Pinned original body SHA256 3a2d2bd1679a2bcaeb182d87661285fab23aca8a7389370565d8adf125c34919. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:d.drawTransparent(II)V"
+      "renamedSymbol": "M:ArgbSprite.drawTransparent(II)V"
     },
     {
       "symbol": "M:d.h(II)V",
@@ -1961,7 +1977,7 @@
       "to": "drawOpaque",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:d.h(II)V. Pinned original body SHA256 3a2d2bd1679a2bcaeb182d87661285fab23aca8a7389370565d8adf125c34919. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:d.drawOpaque(II)V"
+      "renamedSymbol": "M:ArgbSprite.drawOpaque(II)V"
     },
     {
       "symbol": "M:da.e(I)V",
@@ -2180,12 +2196,20 @@
       "renamedSymbol": "M:IntrusiveNode.isLinked(I)Z"
     },
     {
+      "symbol": "M:fd.a(B)V",
+      "originalName": "a",
+      "to": "releaseStatics",
+      "evidence": "Source-purpose review: Clears account state before sentinel-guard division,then sprite/font text. Division can throw after firstclear;preserve byte-domain exception andpartial-write order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSpriteState.releaseStatics(B)V"
+    },
+    {
       "symbol": "M:fd.a(II)V",
       "originalName": "a",
       "to": "draw",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:fd.a(II)V. Original abstract declaration and full override closure retained. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fd.draw(II)V"
+      "renamedSymbol": "M:IndexedSpriteState.draw(II)V"
     },
     {
       "symbol": "M:fd.a(III)V",
@@ -2193,7 +2217,7 @@
       "to": "drawAlpha",
       "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:fd.a(III)V. Original abstract declaration and full override closure retained. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fd.drawAlpha(III)V"
+      "renamedSymbol": "M:IndexedSpriteState.drawAlpha(III)V"
     },
     {
       "symbol": "M:fh.a([BI)V",
@@ -4919,9 +4943,9 @@
     },
     {
       "symbol": "C:d",
-      "renamedSymbol": "C:d",
+      "renamedSymbol": "C:ArgbSprite",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "ArgbSprite",
       "declaration": {
         "file": "d.java",
         "start": 50,
@@ -5249,9 +5273,9 @@
     },
     {
       "symbol": "C:fd",
-      "renamedSymbol": "C:fd",
+      "renamedSymbol": "C:IndexedSpriteState",
       "originalName": "fd",
-      "renamedName": "fd",
+      "renamedName": "IndexedSpriteState",
       "declaration": {
         "file": "fd.java",
         "start": 53,
@@ -12157,7 +12181,7 @@
     },
     {
       "symbol": "F:fd.field_a:I",
-      "renamedSymbol": "F:fd.field_a:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -12168,7 +12192,7 @@
     },
     {
       "symbol": "F:fd.field_b:I",
-      "renamedSymbol": "F:fd.field_b:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -12179,7 +12203,7 @@
     },
     {
       "symbol": "F:fd.field_c:I",
-      "renamedSymbol": "F:fd.field_c:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -12190,7 +12214,7 @@
     },
     {
       "symbol": "F:fd.field_d:Lqj;",
-      "renamedSymbol": "F:fd.field_d:LSprite;",
+      "renamedSymbol": "F:IndexedSpriteState.field_d:LSprite;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -12201,7 +12225,7 @@
     },
     {
       "symbol": "F:fd.field_e:I",
-      "renamedSymbol": "F:fd.field_e:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -12212,7 +12236,7 @@
     },
     {
       "symbol": "F:fd.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:fd.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:IndexedSpriteState.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -12223,7 +12247,7 @@
     },
     {
       "symbol": "F:fd.field_g:I",
-      "renamedSymbol": "F:fd.field_g:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -12234,7 +12258,7 @@
     },
     {
       "symbol": "F:fd.field_h:Lle;",
-      "renamedSymbol": "F:fd.field_h:LAccountRequestState;",
+      "renamedSymbol": "F:IndexedSpriteState.field_h:LAccountRequestState;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -12245,7 +12269,7 @@
     },
     {
       "symbol": "F:fd.field_i:Z",
-      "renamedSymbol": "F:fd.field_i:Z",
+      "renamedSymbol": "F:IndexedSpriteState.field_i:Z",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -12256,7 +12280,7 @@
     },
     {
       "symbol": "F:fd.field_j:I",
-      "renamedSymbol": "F:fd.field_j:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -12267,7 +12291,7 @@
     },
     {
       "symbol": "F:fd.field_k:I",
-      "renamedSymbol": "F:fd.field_k:I",
+      "renamedSymbol": "F:IndexedSpriteState.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -12278,7 +12302,7 @@
     },
     {
       "symbol": "F:fd.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:fd.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:IndexedSpriteState.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -21452,7 +21476,7 @@
     },
     {
       "symbol": "F:oh.field_L:[Lfd;",
-      "renamedSymbol": "F:BitmapFont.field_L:[Lfd;",
+      "renamedSymbol": "F:BitmapFont.field_L:[LIndexedSpriteState;",
       "originalName": "field_L",
       "renamedName": "field_L",
       "declaration": {
@@ -45861,7 +45885,7 @@
     },
     {
       "symbol": "L:d.a(III)V#0",
-      "renamedSymbol": "L:d.a(III)V#0",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -45872,7 +45896,7 @@
     },
     {
       "symbol": "L:d.a(III)V#1",
-      "renamedSymbol": "L:d.a(III)V#1",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -45883,7 +45907,7 @@
     },
     {
       "symbol": "L:d.a(III)V#2",
-      "renamedSymbol": "L:d.a(III)V#2",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -45894,7 +45918,7 @@
     },
     {
       "symbol": "L:d.a(III)V#3",
-      "renamedSymbol": "L:d.a(III)V#3",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -45905,7 +45929,7 @@
     },
     {
       "symbol": "L:d.a(III)V#4",
-      "renamedSymbol": "L:d.a(III)V#4",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -45916,7 +45940,7 @@
     },
     {
       "symbol": "L:d.a(III)V#5",
-      "renamedSymbol": "L:d.a(III)V#5",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -45927,7 +45951,7 @@
     },
     {
       "symbol": "L:d.a(III)V#6",
-      "renamedSymbol": "L:d.a(III)V#6",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -45938,7 +45962,7 @@
     },
     {
       "symbol": "L:d.a(III)V#7",
-      "renamedSymbol": "L:d.a(III)V#7",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -45949,7 +45973,7 @@
     },
     {
       "symbol": "L:d.a(III)V#8",
-      "renamedSymbol": "L:d.a(III)V#8",
+      "renamedSymbol": "L:ArgbSprite.a(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -45960,7 +45984,7 @@
     },
     {
       "symbol": "L:d.b(II)V#0",
-      "renamedSymbol": "L:d.b(II)V#0",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -45971,7 +45995,7 @@
     },
     {
       "symbol": "L:d.b(II)V#1",
-      "renamedSymbol": "L:d.b(II)V#1",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -45982,7 +46006,7 @@
     },
     {
       "symbol": "L:d.b(II)V#10",
-      "renamedSymbol": "L:d.b(II)V#10",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -45993,7 +46017,7 @@
     },
     {
       "symbol": "L:d.b(II)V#11",
-      "renamedSymbol": "L:d.b(II)V#11",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -46004,7 +46028,7 @@
     },
     {
       "symbol": "L:d.b(II)V#12",
-      "renamedSymbol": "L:d.b(II)V#12",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -46015,7 +46039,7 @@
     },
     {
       "symbol": "L:d.b(II)V#13",
-      "renamedSymbol": "L:d.b(II)V#13",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -46026,7 +46050,7 @@
     },
     {
       "symbol": "L:d.b(II)V#14",
-      "renamedSymbol": "L:d.b(II)V#14",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -46037,7 +46061,7 @@
     },
     {
       "symbol": "L:d.b(II)V#15",
-      "renamedSymbol": "L:d.b(II)V#15",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -46048,7 +46072,7 @@
     },
     {
       "symbol": "L:d.b(II)V#16",
-      "renamedSymbol": "L:d.b(II)V#16",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -46059,7 +46083,7 @@
     },
     {
       "symbol": "L:d.b(II)V#17",
-      "renamedSymbol": "L:d.b(II)V#17",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -46070,7 +46094,7 @@
     },
     {
       "symbol": "L:d.b(II)V#18",
-      "renamedSymbol": "L:d.b(II)V#18",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -46081,7 +46105,7 @@
     },
     {
       "symbol": "L:d.b(II)V#19",
-      "renamedSymbol": "L:d.b(II)V#19",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#19",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -46092,7 +46116,7 @@
     },
     {
       "symbol": "L:d.b(II)V#2",
-      "renamedSymbol": "L:d.b(II)V#2",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -46103,7 +46127,7 @@
     },
     {
       "symbol": "L:d.b(II)V#20",
-      "renamedSymbol": "L:d.b(II)V#20",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#20",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -46114,7 +46138,7 @@
     },
     {
       "symbol": "L:d.b(II)V#21",
-      "renamedSymbol": "L:d.b(II)V#21",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#21",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -46125,7 +46149,7 @@
     },
     {
       "symbol": "L:d.b(II)V#22",
-      "renamedSymbol": "L:d.b(II)V#22",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#22",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -46136,7 +46160,7 @@
     },
     {
       "symbol": "L:d.b(II)V#23",
-      "renamedSymbol": "L:d.b(II)V#23",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#23",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -46147,7 +46171,7 @@
     },
     {
       "symbol": "L:d.b(II)V#24",
-      "renamedSymbol": "L:d.b(II)V#24",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#24",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -46158,7 +46182,7 @@
     },
     {
       "symbol": "L:d.b(II)V#25",
-      "renamedSymbol": "L:d.b(II)V#25",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#25",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -46169,7 +46193,7 @@
     },
     {
       "symbol": "L:d.b(II)V#26",
-      "renamedSymbol": "L:d.b(II)V#26",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#26",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -46180,7 +46204,7 @@
     },
     {
       "symbol": "L:d.b(II)V#27",
-      "renamedSymbol": "L:d.b(II)V#27",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#27",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -46191,7 +46215,7 @@
     },
     {
       "symbol": "L:d.b(II)V#28",
-      "renamedSymbol": "L:d.b(II)V#28",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#28",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -46202,7 +46226,7 @@
     },
     {
       "symbol": "L:d.b(II)V#29",
-      "renamedSymbol": "L:d.b(II)V#29",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#29",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -46213,7 +46237,7 @@
     },
     {
       "symbol": "L:d.b(II)V#3",
-      "renamedSymbol": "L:d.b(II)V#3",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -46224,7 +46248,7 @@
     },
     {
       "symbol": "L:d.b(II)V#4",
-      "renamedSymbol": "L:d.b(II)V#4",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -46235,7 +46259,7 @@
     },
     {
       "symbol": "L:d.b(II)V#5",
-      "renamedSymbol": "L:d.b(II)V#5",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#5",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -46246,7 +46270,7 @@
     },
     {
       "symbol": "L:d.b(II)V#6",
-      "renamedSymbol": "L:d.b(II)V#6",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -46257,7 +46281,7 @@
     },
     {
       "symbol": "L:d.b(II)V#7",
-      "renamedSymbol": "L:d.b(II)V#7",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -46268,7 +46292,7 @@
     },
     {
       "symbol": "L:d.b(II)V#8",
-      "renamedSymbol": "L:d.b(II)V#8",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -46279,7 +46303,7 @@
     },
     {
       "symbol": "L:d.b(II)V#9",
-      "renamedSymbol": "L:d.b(II)V#9",
+      "renamedSymbol": "L:ArgbSprite.b(II)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -46290,7 +46314,7 @@
     },
     {
       "symbol": "L:d.b(III[I[IIIIIIIIII)V#0",
-      "renamedSymbol": "L:d.b(III[I[IIIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.b(III[I[IIIIIIIIII)V#0",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -46301,7 +46325,7 @@
     },
     {
       "symbol": "L:d.b(III[I[IIIIIIIIII)V#1",
-      "renamedSymbol": "L:d.b(III[I[IIIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.b(III[I[IIIIIIIIII)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -46312,7 +46336,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#0",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -46323,7 +46347,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -46334,7 +46358,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#2",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -46345,7 +46369,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#3",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -46356,7 +46380,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#4",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -46367,7 +46391,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#5",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -46378,7 +46402,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#6",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -46389,7 +46413,7 @@
     },
     {
       "symbol": "L:d.b([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "L:d.b([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "L:ArgbSprite.b([I[IIIIIIIIIII)V#7",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -46400,7 +46424,7 @@
     },
     {
       "symbol": "L:d.c(III)V#0",
-      "renamedSymbol": "L:d.c(III)V#0",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -46411,7 +46435,7 @@
     },
     {
       "symbol": "L:d.c(III)V#1",
-      "renamedSymbol": "L:d.c(III)V#1",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -46422,7 +46446,7 @@
     },
     {
       "symbol": "L:d.c(III)V#2",
-      "renamedSymbol": "L:d.c(III)V#2",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -46433,7 +46457,7 @@
     },
     {
       "symbol": "L:d.c(III)V#3",
-      "renamedSymbol": "L:d.c(III)V#3",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -46444,7 +46468,7 @@
     },
     {
       "symbol": "L:d.c(III)V#4",
-      "renamedSymbol": "L:d.c(III)V#4",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -46455,7 +46479,7 @@
     },
     {
       "symbol": "L:d.c(III)V#5",
-      "renamedSymbol": "L:d.c(III)V#5",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -46466,7 +46490,7 @@
     },
     {
       "symbol": "L:d.c(III)V#6",
-      "renamedSymbol": "L:d.c(III)V#6",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -46477,7 +46501,7 @@
     },
     {
       "symbol": "L:d.c(III)V#7",
-      "renamedSymbol": "L:d.c(III)V#7",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -46488,7 +46512,7 @@
     },
     {
       "symbol": "L:d.c(III)V#8",
-      "renamedSymbol": "L:d.c(III)V#8",
+      "renamedSymbol": "L:ArgbSprite.c(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -46499,7 +46523,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -46510,7 +46534,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -46521,7 +46545,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#2",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -46532,7 +46556,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#3",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -46543,7 +46567,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#4",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -46554,7 +46578,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#5",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#5",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -46565,7 +46589,7 @@
     },
     {
       "symbol": "L:d.c([I[IIIIIIIII)V#6",
-      "renamedSymbol": "L:d.c([I[IIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#6",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -46576,7 +46600,7 @@
     },
     {
       "symbol": "L:d.d(II)V#0",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#0",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -46587,7 +46611,7 @@
     },
     {
       "symbol": "L:d.d(II)V#1",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#1",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -46598,7 +46622,7 @@
     },
     {
       "symbol": "L:d.d(II)V#10",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#10",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -46609,7 +46633,7 @@
     },
     {
       "symbol": "L:d.d(II)V#11",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#11",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -46620,7 +46644,7 @@
     },
     {
       "symbol": "L:d.d(II)V#12",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#12",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -46631,7 +46655,7 @@
     },
     {
       "symbol": "L:d.d(II)V#13",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#13",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -46642,7 +46666,7 @@
     },
     {
       "symbol": "L:d.d(II)V#14",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#14",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -46653,7 +46677,7 @@
     },
     {
       "symbol": "L:d.d(II)V#15",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#15",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -46664,7 +46688,7 @@
     },
     {
       "symbol": "L:d.d(II)V#16",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#16",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -46675,7 +46699,7 @@
     },
     {
       "symbol": "L:d.d(II)V#17",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#17",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -46686,7 +46710,7 @@
     },
     {
       "symbol": "L:d.d(II)V#18",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#18",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -46697,7 +46721,7 @@
     },
     {
       "symbol": "L:d.d(II)V#19",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#19",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -46708,7 +46732,7 @@
     },
     {
       "symbol": "L:d.d(II)V#2",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#2",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -46719,7 +46743,7 @@
     },
     {
       "symbol": "L:d.d(II)V#20",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#20",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -46730,7 +46754,7 @@
     },
     {
       "symbol": "L:d.d(II)V#21",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#21",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#21",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -46741,7 +46765,7 @@
     },
     {
       "symbol": "L:d.d(II)V#22",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#22",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#22",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -46752,7 +46776,7 @@
     },
     {
       "symbol": "L:d.d(II)V#23",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#23",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -46763,7 +46787,7 @@
     },
     {
       "symbol": "L:d.d(II)V#24",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#24",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -46774,7 +46798,7 @@
     },
     {
       "symbol": "L:d.d(II)V#25",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#25",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#25",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -46785,7 +46809,7 @@
     },
     {
       "symbol": "L:d.d(II)V#26",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#26",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#26",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -46796,7 +46820,7 @@
     },
     {
       "symbol": "L:d.d(II)V#27",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#27",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#27",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -46807,7 +46831,7 @@
     },
     {
       "symbol": "L:d.d(II)V#28",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#28",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#28",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -46818,7 +46842,7 @@
     },
     {
       "symbol": "L:d.d(II)V#3",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#3",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -46829,7 +46853,7 @@
     },
     {
       "symbol": "L:d.d(II)V#4",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#4",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#4",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -46840,7 +46864,7 @@
     },
     {
       "symbol": "L:d.d(II)V#5",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#5",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#5",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -46851,7 +46875,7 @@
     },
     {
       "symbol": "L:d.d(II)V#6",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#6",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#6",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -46862,7 +46886,7 @@
     },
     {
       "symbol": "L:d.d(II)V#7",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#7",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#7",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -46873,7 +46897,7 @@
     },
     {
       "symbol": "L:d.d(II)V#8",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#8",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -46884,7 +46908,7 @@
     },
     {
       "symbol": "L:d.d(II)V#9",
-      "renamedSymbol": "L:d.drawHalfSize(II)V#9",
+      "renamedSymbol": "L:ArgbSprite.drawHalfSize(II)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -46895,7 +46919,7 @@
     },
     {
       "symbol": "L:d.d(III)V#0",
-      "renamedSymbol": "L:d.d(III)V#0",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -46906,7 +46930,7 @@
     },
     {
       "symbol": "L:d.d(III)V#1",
-      "renamedSymbol": "L:d.d(III)V#1",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -46917,7 +46941,7 @@
     },
     {
       "symbol": "L:d.d(III)V#2",
-      "renamedSymbol": "L:d.d(III)V#2",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -46928,7 +46952,7 @@
     },
     {
       "symbol": "L:d.d(III)V#3",
-      "renamedSymbol": "L:d.d(III)V#3",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -46939,7 +46963,7 @@
     },
     {
       "symbol": "L:d.d(III)V#4",
-      "renamedSymbol": "L:d.d(III)V#4",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -46950,7 +46974,7 @@
     },
     {
       "symbol": "L:d.d(III)V#5",
-      "renamedSymbol": "L:d.d(III)V#5",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -46961,7 +46985,7 @@
     },
     {
       "symbol": "L:d.d(III)V#6",
-      "renamedSymbol": "L:d.d(III)V#6",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -46972,7 +46996,7 @@
     },
     {
       "symbol": "L:d.d(III)V#7",
-      "renamedSymbol": "L:d.d(III)V#7",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -46983,7 +47007,7 @@
     },
     {
       "symbol": "L:d.d(III)V#8",
-      "renamedSymbol": "L:d.d(III)V#8",
+      "renamedSymbol": "L:ArgbSprite.d(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -46994,7 +47018,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -47005,7 +47029,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -47016,7 +47040,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -47027,7 +47051,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47038,7 +47062,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#4",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -47049,7 +47073,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#5",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -47060,7 +47084,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIII)V#6",
-      "renamedSymbol": "L:d.d([I[IIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -47071,7 +47095,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -47082,7 +47106,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -47093,7 +47117,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#10",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#10",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#10",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -47104,7 +47128,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#11",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#11",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#11",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -47115,7 +47139,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#12",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#12",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#12",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -47126,7 +47150,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#13",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#13",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#13",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -47137,7 +47161,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#14",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#14",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#14",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -47148,7 +47172,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -47159,7 +47183,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -47170,7 +47194,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -47181,7 +47205,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#5",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -47192,7 +47216,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#6",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -47203,7 +47227,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#7",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#7",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -47214,7 +47238,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#8",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#8",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#8",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -47225,7 +47249,7 @@
     },
     {
       "symbol": "L:d.d([I[IIIIIIIII)V#9",
-      "renamedSymbol": "L:d.d([I[IIIIIIIII)V#9",
+      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#9",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -47236,7 +47260,7 @@
     },
     {
       "symbol": "L:d.e(II)V#0",
-      "renamedSymbol": "L:d.drawTransparent(II)V#0",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47247,7 +47271,7 @@
     },
     {
       "symbol": "L:d.e(II)V#1",
-      "renamedSymbol": "L:d.drawTransparent(II)V#1",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#1",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -47258,7 +47282,7 @@
     },
     {
       "symbol": "L:d.e(II)V#2",
-      "renamedSymbol": "L:d.drawTransparent(II)V#2",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#2",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -47269,7 +47293,7 @@
     },
     {
       "symbol": "L:d.e(II)V#3",
-      "renamedSymbol": "L:d.drawTransparent(II)V#3",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -47280,7 +47304,7 @@
     },
     {
       "symbol": "L:d.e(II)V#4",
-      "renamedSymbol": "L:d.drawTransparent(II)V#4",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -47291,7 +47315,7 @@
     },
     {
       "symbol": "L:d.e(II)V#5",
-      "renamedSymbol": "L:d.drawTransparent(II)V#5",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -47302,7 +47326,7 @@
     },
     {
       "symbol": "L:d.e(II)V#6",
-      "renamedSymbol": "L:d.drawTransparent(II)V#6",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -47313,7 +47337,7 @@
     },
     {
       "symbol": "L:d.e(II)V#7",
-      "renamedSymbol": "L:d.drawTransparent(II)V#7",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -47324,7 +47348,7 @@
     },
     {
       "symbol": "L:d.e(II)V#8",
-      "renamedSymbol": "L:d.drawTransparent(II)V#8",
+      "renamedSymbol": "L:ArgbSprite.drawTransparent(II)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -47335,7 +47359,7 @@
     },
     {
       "symbol": "L:d.e(III)V#0",
-      "renamedSymbol": "L:d.e(III)V#0",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -47346,7 +47370,7 @@
     },
     {
       "symbol": "L:d.e(III)V#1",
-      "renamedSymbol": "L:d.e(III)V#1",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -47357,7 +47381,7 @@
     },
     {
       "symbol": "L:d.e(III)V#2",
-      "renamedSymbol": "L:d.e(III)V#2",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -47368,7 +47392,7 @@
     },
     {
       "symbol": "L:d.e(III)V#3",
-      "renamedSymbol": "L:d.e(III)V#3",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -47379,7 +47403,7 @@
     },
     {
       "symbol": "L:d.e(III)V#4",
-      "renamedSymbol": "L:d.e(III)V#4",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -47390,7 +47414,7 @@
     },
     {
       "symbol": "L:d.e(III)V#5",
-      "renamedSymbol": "L:d.e(III)V#5",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -47401,7 +47425,7 @@
     },
     {
       "symbol": "L:d.e(III)V#6",
-      "renamedSymbol": "L:d.e(III)V#6",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -47412,7 +47436,7 @@
     },
     {
       "symbol": "L:d.e(III)V#7",
-      "renamedSymbol": "L:d.e(III)V#7",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -47423,7 +47447,7 @@
     },
     {
       "symbol": "L:d.e(III)V#8",
-      "renamedSymbol": "L:d.e(III)V#8",
+      "renamedSymbol": "L:ArgbSprite.e(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47434,7 +47458,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -47445,7 +47469,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -47456,7 +47480,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -47467,7 +47491,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47478,7 +47502,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#4",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -47489,7 +47513,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#5",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -47500,7 +47524,7 @@
     },
     {
       "symbol": "L:d.e([I[IIIIIIII)V#6",
-      "renamedSymbol": "L:d.e([I[IIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -47511,7 +47535,7 @@
     },
     {
       "symbol": "L:d.f(II)V#0",
-      "renamedSymbol": "L:d.f(II)V#0",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47522,7 +47546,7 @@
     },
     {
       "symbol": "L:d.f(II)V#1",
-      "renamedSymbol": "L:d.f(II)V#1",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#1",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -47533,7 +47557,7 @@
     },
     {
       "symbol": "L:d.f(II)V#2",
-      "renamedSymbol": "L:d.f(II)V#2",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#2",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -47544,7 +47568,7 @@
     },
     {
       "symbol": "L:d.f(II)V#3",
-      "renamedSymbol": "L:d.f(II)V#3",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -47555,7 +47579,7 @@
     },
     {
       "symbol": "L:d.f(II)V#4",
-      "renamedSymbol": "L:d.f(II)V#4",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -47566,7 +47590,7 @@
     },
     {
       "symbol": "L:d.f(II)V#5",
-      "renamedSymbol": "L:d.f(II)V#5",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -47577,7 +47601,7 @@
     },
     {
       "symbol": "L:d.f(II)V#6",
-      "renamedSymbol": "L:d.f(II)V#6",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -47588,7 +47612,7 @@
     },
     {
       "symbol": "L:d.f(II)V#7",
-      "renamedSymbol": "L:d.f(II)V#7",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -47599,7 +47623,7 @@
     },
     {
       "symbol": "L:d.f(II)V#8",
-      "renamedSymbol": "L:d.f(II)V#8",
+      "renamedSymbol": "L:ArgbSprite.f(II)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -47610,7 +47634,7 @@
     },
     {
       "symbol": "L:d.g(II)V#0",
-      "renamedSymbol": "L:d.g(II)V#0",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47621,7 +47645,7 @@
     },
     {
       "symbol": "L:d.g(II)V#1",
-      "renamedSymbol": "L:d.g(II)V#1",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#1",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -47632,7 +47656,7 @@
     },
     {
       "symbol": "L:d.g(II)V#2",
-      "renamedSymbol": "L:d.g(II)V#2",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#2",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -47643,7 +47667,7 @@
     },
     {
       "symbol": "L:d.g(II)V#3",
-      "renamedSymbol": "L:d.g(II)V#3",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -47654,7 +47678,7 @@
     },
     {
       "symbol": "L:d.g(II)V#4",
-      "renamedSymbol": "L:d.g(II)V#4",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -47665,7 +47689,7 @@
     },
     {
       "symbol": "L:d.g(II)V#5",
-      "renamedSymbol": "L:d.g(II)V#5",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -47676,7 +47700,7 @@
     },
     {
       "symbol": "L:d.g(II)V#6",
-      "renamedSymbol": "L:d.g(II)V#6",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -47687,7 +47711,7 @@
     },
     {
       "symbol": "L:d.g(II)V#7",
-      "renamedSymbol": "L:d.g(II)V#7",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -47698,7 +47722,7 @@
     },
     {
       "symbol": "L:d.g(II)V#8",
-      "renamedSymbol": "L:d.g(II)V#8",
+      "renamedSymbol": "L:ArgbSprite.g(II)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -47709,7 +47733,7 @@
     },
     {
       "symbol": "L:d.h(II)V#0",
-      "renamedSymbol": "L:d.drawOpaque(II)V#0",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -47720,7 +47744,7 @@
     },
     {
       "symbol": "L:d.h(II)V#1",
-      "renamedSymbol": "L:d.drawOpaque(II)V#1",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#1",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -47731,7 +47755,7 @@
     },
     {
       "symbol": "L:d.h(II)V#2",
-      "renamedSymbol": "L:d.drawOpaque(II)V#2",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#2",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -47742,7 +47766,7 @@
     },
     {
       "symbol": "L:d.h(II)V#3",
-      "renamedSymbol": "L:d.drawOpaque(II)V#3",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -47753,7 +47777,7 @@
     },
     {
       "symbol": "L:d.h(II)V#4",
-      "renamedSymbol": "L:d.drawOpaque(II)V#4",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -47764,7 +47788,7 @@
     },
     {
       "symbol": "L:d.h(II)V#5",
-      "renamedSymbol": "L:d.drawOpaque(II)V#5",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -47775,7 +47799,7 @@
     },
     {
       "symbol": "L:d.h(II)V#6",
-      "renamedSymbol": "L:d.drawOpaque(II)V#6",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -47786,7 +47810,7 @@
     },
     {
       "symbol": "L:d.h(II)V#7",
-      "renamedSymbol": "L:d.drawOpaque(II)V#7",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -47797,7 +47821,7 @@
     },
     {
       "symbol": "L:d.h(II)V#8",
-      "renamedSymbol": "L:d.drawOpaque(II)V#8",
+      "renamedSymbol": "L:ArgbSprite.drawOpaque(II)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -56443,7 +56467,7 @@
     },
     {
       "symbol": "L:fd.a(B)V#0",
-      "renamedSymbol": "L:fd.a(B)V#0",
+      "renamedSymbol": "L:IndexedSpriteState.releaseStatics(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -146390,9 +146414,9 @@
     },
     {
       "symbol": "M:d.<init>(II)V",
-      "renamedSymbol": "M:d.<init>(II)V",
+      "renamedSymbol": "M:ArgbSprite.<init>(II)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "ArgbSprite",
       "declaration": {
         "file": "d.java",
         "start": 18223,
@@ -146401,9 +146425,9 @@
     },
     {
       "symbol": "M:d.<init>(IIIIII[I)V",
-      "renamedSymbol": "M:d.<init>(IIIIII[I)V",
+      "renamedSymbol": "M:ArgbSprite.<init>(IIIIII[I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "ArgbSprite",
       "declaration": {
         "file": "d.java",
         "start": 25981,
@@ -146412,7 +146436,7 @@
     },
     {
       "symbol": "M:d.a(III)V",
-      "renamedSymbol": "M:d.a(III)V",
+      "renamedSymbol": "M:ArgbSprite.a(III)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -146423,7 +146447,7 @@
     },
     {
       "symbol": "M:d.b(II)V",
-      "renamedSymbol": "M:d.b(II)V",
+      "renamedSymbol": "M:ArgbSprite.b(II)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -146434,7 +146458,7 @@
     },
     {
       "symbol": "M:d.b(III[I[IIIIIIIIII)V",
-      "renamedSymbol": "M:d.b(III[I[IIIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.b(III[I[IIIIIIIIII)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -146445,7 +146469,7 @@
     },
     {
       "symbol": "M:d.b([I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:d.b([I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.b([I[IIIIIIIIIII)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -146456,7 +146480,7 @@
     },
     {
       "symbol": "M:d.c(III)V",
-      "renamedSymbol": "M:d.c(III)V",
+      "renamedSymbol": "M:ArgbSprite.c(III)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -146467,7 +146491,7 @@
     },
     {
       "symbol": "M:d.c([I[IIIIIIIII)V",
-      "renamedSymbol": "M:d.c([I[IIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.c([I[IIIIIIIII)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -146478,7 +146502,7 @@
     },
     {
       "symbol": "M:d.d(II)V",
-      "renamedSymbol": "M:d.drawHalfSize(II)V",
+      "renamedSymbol": "M:ArgbSprite.drawHalfSize(II)V",
       "originalName": "d",
       "renamedName": "drawHalfSize",
       "declaration": {
@@ -146489,7 +146513,7 @@
     },
     {
       "symbol": "M:d.d(III)V",
-      "renamedSymbol": "M:d.d(III)V",
+      "renamedSymbol": "M:ArgbSprite.d(III)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -146500,7 +146524,7 @@
     },
     {
       "symbol": "M:d.d([I[IIIIIIII)V",
-      "renamedSymbol": "M:d.d([I[IIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.d([I[IIIIIIII)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -146511,7 +146535,7 @@
     },
     {
       "symbol": "M:d.d([I[IIIIIIIII)V",
-      "renamedSymbol": "M:d.d([I[IIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.d([I[IIIIIIIII)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -146522,7 +146546,7 @@
     },
     {
       "symbol": "M:d.e(II)V",
-      "renamedSymbol": "M:d.drawTransparent(II)V",
+      "renamedSymbol": "M:ArgbSprite.drawTransparent(II)V",
       "originalName": "e",
       "renamedName": "drawTransparent",
       "declaration": {
@@ -146533,7 +146557,7 @@
     },
     {
       "symbol": "M:d.e(III)V",
-      "renamedSymbol": "M:d.e(III)V",
+      "renamedSymbol": "M:ArgbSprite.e(III)V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -146544,7 +146568,7 @@
     },
     {
       "symbol": "M:d.e([I[IIIIIIII)V",
-      "renamedSymbol": "M:d.e([I[IIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.e([I[IIIIIIII)V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -146555,7 +146579,7 @@
     },
     {
       "symbol": "M:d.f(II)V",
-      "renamedSymbol": "M:d.f(II)V",
+      "renamedSymbol": "M:ArgbSprite.f(II)V",
       "originalName": "f",
       "renamedName": "f",
       "declaration": {
@@ -146566,7 +146590,7 @@
     },
     {
       "symbol": "M:d.g(II)V",
-      "renamedSymbol": "M:d.g(II)V",
+      "renamedSymbol": "M:ArgbSprite.g(II)V",
       "originalName": "g",
       "renamedName": "g",
       "declaration": {
@@ -146577,7 +146601,7 @@
     },
     {
       "symbol": "M:d.h(II)V",
-      "renamedSymbol": "M:d.drawOpaque(II)V",
+      "renamedSymbol": "M:ArgbSprite.drawOpaque(II)V",
       "originalName": "h",
       "renamedName": "drawOpaque",
       "declaration": {
@@ -148777,9 +148801,9 @@
     },
     {
       "symbol": "M:fd.a(B)V",
-      "renamedSymbol": "M:fd.a(B)V",
+      "renamedSymbol": "M:IndexedSpriteState.releaseStatics(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "fd.java",
         "start": 344,
@@ -148788,7 +148812,7 @@
     },
     {
       "symbol": "M:fd.a(II)V",
-      "renamedSymbol": "M:fd.draw(II)V",
+      "renamedSymbol": "M:IndexedSpriteState.draw(II)V",
       "originalName": "a",
       "renamedName": "draw",
       "declaration": {
@@ -148799,7 +148823,7 @@
     },
     {
       "symbol": "M:fd.a(III)V",
-      "renamedSymbol": "M:fd.drawAlpha(III)V",
+      "renamedSymbol": "M:IndexedSpriteState.drawAlpha(III)V",
       "originalName": "a",
       "renamedName": "drawAlpha",
       "declaration": {
@@ -175551,7 +175575,7 @@
     },
     {
       "symbol": "P:d.<init>(II)V#0",
-      "renamedSymbol": "P:d.<init>(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.<init>(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175562,7 +175586,7 @@
     },
     {
       "symbol": "P:d.<init>(II)V#1",
-      "renamedSymbol": "P:d.<init>(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.<init>(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175573,7 +175597,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#0",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#0",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175584,7 +175608,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#1",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#1",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175595,7 +175619,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#2",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#2",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175606,7 +175630,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#3",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#3",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175617,7 +175641,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#4",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#4",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175628,7 +175652,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#5",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#5",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175639,7 +175663,7 @@
     },
     {
       "symbol": "P:d.<init>(IIIIII[I)V#6",
-      "renamedSymbol": "P:d.<init>(IIIIII[I)V#6",
+      "renamedSymbol": "P:ArgbSprite.<init>(IIIIII[I)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175650,7 +175674,7 @@
     },
     {
       "symbol": "P:d.a(III)V#0",
-      "renamedSymbol": "P:d.a(III)V#0",
+      "renamedSymbol": "P:ArgbSprite.a(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175661,7 +175685,7 @@
     },
     {
       "symbol": "P:d.a(III)V#1",
-      "renamedSymbol": "P:d.a(III)V#1",
+      "renamedSymbol": "P:ArgbSprite.a(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175672,7 +175696,7 @@
     },
     {
       "symbol": "P:d.a(III)V#2",
-      "renamedSymbol": "P:d.a(III)V#2",
+      "renamedSymbol": "P:ArgbSprite.a(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175683,7 +175707,7 @@
     },
     {
       "symbol": "P:d.b(II)V#0",
-      "renamedSymbol": "P:d.b(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.b(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175694,7 +175718,7 @@
     },
     {
       "symbol": "P:d.b(II)V#1",
-      "renamedSymbol": "P:d.b(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.b(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175705,7 +175729,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#0",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175716,7 +175740,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#1",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175727,7 +175751,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#10",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#10",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -175738,7 +175762,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#11",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#11",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -175749,7 +175773,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#12",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#12",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -175760,7 +175784,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#13",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#13",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -175771,7 +175795,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#2",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175782,7 +175806,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#3",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175793,7 +175817,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#4",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175804,7 +175828,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#5",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175815,7 +175839,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#6",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175826,7 +175850,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#7",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175837,7 +175861,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#8",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175848,7 +175872,7 @@
     },
     {
       "symbol": "P:d.b(III[I[IIIIIIIIII)V#9",
-      "renamedSymbol": "P:d.b(III[I[IIIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -175859,7 +175883,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175870,7 +175894,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175881,7 +175905,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -175892,7 +175916,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -175903,7 +175927,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175914,7 +175938,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175925,7 +175949,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175936,7 +175960,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175947,7 +175971,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175958,7 +175982,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175969,7 +175993,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175980,7 +176004,7 @@
     },
     {
       "symbol": "P:d.b([I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:d.b([I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.b([I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -175991,7 +176015,7 @@
     },
     {
       "symbol": "P:d.c(III)V#0",
-      "renamedSymbol": "P:d.c(III)V#0",
+      "renamedSymbol": "P:ArgbSprite.c(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176002,7 +176026,7 @@
     },
     {
       "symbol": "P:d.c(III)V#1",
-      "renamedSymbol": "P:d.c(III)V#1",
+      "renamedSymbol": "P:ArgbSprite.c(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176013,7 +176037,7 @@
     },
     {
       "symbol": "P:d.c(III)V#2",
-      "renamedSymbol": "P:d.c(III)V#2",
+      "renamedSymbol": "P:ArgbSprite.c(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176024,7 +176048,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176035,7 +176059,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176046,7 +176070,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176057,7 +176081,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -176068,7 +176092,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -176079,7 +176103,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -176090,7 +176114,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -176101,7 +176125,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -176112,7 +176136,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -176123,7 +176147,7 @@
     },
     {
       "symbol": "P:d.c([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:d.c([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -176134,7 +176158,7 @@
     },
     {
       "symbol": "P:d.d(II)V#0",
-      "renamedSymbol": "P:d.drawHalfSize(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.drawHalfSize(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176145,7 +176169,7 @@
     },
     {
       "symbol": "P:d.d(II)V#1",
-      "renamedSymbol": "P:d.drawHalfSize(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.drawHalfSize(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176156,7 +176180,7 @@
     },
     {
       "symbol": "P:d.d(III)V#0",
-      "renamedSymbol": "P:d.d(III)V#0",
+      "renamedSymbol": "P:ArgbSprite.d(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176167,7 +176191,7 @@
     },
     {
       "symbol": "P:d.d(III)V#1",
-      "renamedSymbol": "P:d.d(III)V#1",
+      "renamedSymbol": "P:ArgbSprite.d(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176178,7 +176202,7 @@
     },
     {
       "symbol": "P:d.d(III)V#2",
-      "renamedSymbol": "P:d.d(III)V#2",
+      "renamedSymbol": "P:ArgbSprite.d(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176189,7 +176213,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176200,7 +176224,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176211,7 +176235,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176222,7 +176246,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -176233,7 +176257,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -176244,7 +176268,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -176255,7 +176279,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -176266,7 +176290,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -176277,7 +176301,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:d.d([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -176288,7 +176312,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176299,7 +176323,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176310,7 +176334,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176321,7 +176345,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -176332,7 +176356,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -176343,7 +176367,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -176354,7 +176378,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -176365,7 +176389,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -176376,7 +176400,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -176387,7 +176411,7 @@
     },
     {
       "symbol": "P:d.d([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:d.d([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -176398,7 +176422,7 @@
     },
     {
       "symbol": "P:d.e(II)V#0",
-      "renamedSymbol": "P:d.drawTransparent(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.drawTransparent(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176409,7 +176433,7 @@
     },
     {
       "symbol": "P:d.e(II)V#1",
-      "renamedSymbol": "P:d.drawTransparent(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.drawTransparent(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176420,7 +176444,7 @@
     },
     {
       "symbol": "P:d.e(III)V#0",
-      "renamedSymbol": "P:d.e(III)V#0",
+      "renamedSymbol": "P:ArgbSprite.e(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176431,7 +176455,7 @@
     },
     {
       "symbol": "P:d.e(III)V#1",
-      "renamedSymbol": "P:d.e(III)V#1",
+      "renamedSymbol": "P:ArgbSprite.e(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176442,7 +176466,7 @@
     },
     {
       "symbol": "P:d.e(III)V#2",
-      "renamedSymbol": "P:d.e(III)V#2",
+      "renamedSymbol": "P:ArgbSprite.e(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176453,7 +176477,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176464,7 +176488,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176475,7 +176499,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176486,7 +176510,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -176497,7 +176521,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -176508,7 +176532,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -176519,7 +176543,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -176530,7 +176554,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -176541,7 +176565,7 @@
     },
     {
       "symbol": "P:d.e([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:d.e([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -176552,7 +176576,7 @@
     },
     {
       "symbol": "P:d.f(II)V#0",
-      "renamedSymbol": "P:d.f(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.f(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176563,7 +176587,7 @@
     },
     {
       "symbol": "P:d.f(II)V#1",
-      "renamedSymbol": "P:d.f(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.f(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176574,7 +176598,7 @@
     },
     {
       "symbol": "P:d.g(II)V#0",
-      "renamedSymbol": "P:d.g(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.g(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176585,7 +176609,7 @@
     },
     {
       "symbol": "P:d.g(II)V#1",
-      "renamedSymbol": "P:d.g(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.g(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176596,7 +176620,7 @@
     },
     {
       "symbol": "P:d.h(II)V#0",
-      "renamedSymbol": "P:d.drawOpaque(II)V#0",
+      "renamedSymbol": "P:ArgbSprite.drawOpaque(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -176607,7 +176631,7 @@
     },
     {
       "symbol": "P:d.h(II)V#1",
-      "renamedSymbol": "P:d.drawOpaque(II)V#1",
+      "renamedSymbol": "P:ArgbSprite.drawOpaque(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -181634,7 +181658,7 @@
     },
     {
       "symbol": "P:fd.a(B)V#0",
-      "renamedSymbol": "P:fd.a(B)V#0",
+      "renamedSymbol": "P:IndexedSpriteState.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -181645,7 +181669,7 @@
     },
     {
       "symbol": "P:fd.a(II)V#0",
-      "renamedSymbol": "P:fd.draw(II)V#0",
+      "renamedSymbol": "P:IndexedSpriteState.draw(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -181656,7 +181680,7 @@
     },
     {
       "symbol": "P:fd.a(II)V#1",
-      "renamedSymbol": "P:fd.draw(II)V#1",
+      "renamedSymbol": "P:IndexedSpriteState.draw(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -181667,7 +181691,7 @@
     },
     {
       "symbol": "P:fd.a(III)V#0",
-      "renamedSymbol": "P:fd.drawAlpha(III)V#0",
+      "renamedSymbol": "P:IndexedSpriteState.drawAlpha(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -181678,7 +181702,7 @@
     },
     {
       "symbol": "P:fd.a(III)V#1",
-      "renamedSymbol": "P:fd.drawAlpha(III)V#1",
+      "renamedSymbol": "P:IndexedSpriteState.drawAlpha(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -181689,7 +181713,7 @@
     },
     {
       "symbol": "P:fd.a(III)V#2",
-      "renamedSymbol": "P:fd.drawAlpha(III)V#2",
+      "renamedSymbol": "P:IndexedSpriteState.drawAlpha(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -220886,7 +220910,7 @@
       "original": "TrackController.java",
       "renamed": "TrackController.java",
       "inputSha256": "49d744ca886e6641bafaca916524c2cb5d5fa26126d63ff119698b88cb016b28",
-      "outputSha256": "2cc03f05c5b68cee929668eca69c8df2a3ed6eefdb2304737859e1a96b6ecdb0",
+      "outputSha256": "186a7a65d0bea466db740d51a9beb4fe2cd724f552ff9eaef4cb941f2eba8f29",
       "edits": [
         {
           "start": 100,
@@ -221909,6 +221933,20 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 11375,
+          "end": 11377,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 11378,
+          "end": 11379,
+          "symbol": "M:fd.a(B)V",
+          "original": "a",
+          "renamed": "releaseStatics"
         },
         {
           "start": 11401,
@@ -223094,6 +223132,34 @@
           "renamed": "Sprite"
         },
         {
+          "start": 22382,
+          "end": 22384,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 22587,
+          "end": 22589,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 22798,
+          "end": 22800,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 23004,
+          "end": 23006,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 24420,
           "end": 24421,
           "symbol": "M:TrackController.a(I)V",
@@ -223141,6 +223207,13 @@
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 27625,
+          "end": 27627,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 28416,
@@ -223708,6 +223781,13 @@
           "symbol": "M:qj.e(II)V",
           "original": "e",
           "renamed": "drawTransparent"
+        },
+        {
+          "start": 37671,
+          "end": 37673,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 37802,
@@ -234428,10 +234508,17 @@
     },
     {
       "original": "d.java",
-      "renamed": "d.java",
+      "renamed": "ArgbSprite.java",
       "inputSha256": "5c2caf2c0a7487a7a30cb2a22cc7c4e2988164b1b5b766ff19ad5c39fda74bab",
-      "outputSha256": "876e4251a6c1458c45d142b2b504159ae3376b40a763eaed3c5075313b206de0",
+      "outputSha256": "209db5c7a7f77a29ad718a396b7b7080556ca1de4d6648237ebd5e627d0efaa9",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
         {
           "start": 60,
           "end": 62,
@@ -234627,6 +234714,13 @@
           "symbol": "F:ll.field_e:I",
           "original": "field_e",
           "renamed": "clipRight"
+        },
+        {
+          "start": 1416,
+          "end": 1417,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 1420,
@@ -234830,6 +234924,13 @@
           "symbol": "F:ll.field_e:I",
           "original": "field_e",
           "renamed": "clipRight"
+        },
+        {
+          "start": 3846,
+          "end": 3847,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 3850,
@@ -235040,6 +235141,13 @@
           "symbol": "F:ll.field_e:I",
           "original": "field_e",
           "renamed": "clipRight"
+        },
+        {
+          "start": 5274,
+          "end": 5275,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 5278,
@@ -235413,6 +235521,13 @@
           "renamed": "clipRight"
         },
         {
+          "start": 13625,
+          "end": 13626,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
+        {
           "start": 13629,
           "end": 13631,
           "symbol": "C:ll",
@@ -235616,6 +235731,13 @@
           "renamed": "clipRight"
         },
         {
+          "start": 18122,
+          "end": 18123,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
+        {
           "start": 18135,
           "end": 18137,
           "symbol": "C:ll",
@@ -235635,6 +235757,13 @@
           "symbol": "F:qj.field_z:[I",
           "original": "field_z",
           "renamed": "pixels"
+        },
+        {
+          "start": 18223,
+          "end": 18224,
+          "symbol": "M:d.<init>(II)V",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 18578,
@@ -235817,6 +235946,13 @@
           "symbol": "F:ll.field_e:I",
           "original": "field_e",
           "renamed": "clipRight"
+        },
+        {
+          "start": 19694,
+          "end": 19695,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 19698,
@@ -236183,6 +236319,13 @@
           "renamed": "clipRight"
         },
         {
+          "start": 24421,
+          "end": 24422,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
+        {
           "start": 24425,
           "end": 24427,
           "symbol": "C:ll",
@@ -236386,6 +236529,13 @@
           "renamed": "clipRight"
         },
         {
+          "start": 25892,
+          "end": 25893,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
+        {
           "start": 25896,
           "end": 25898,
           "symbol": "C:ll",
@@ -236405,6 +236555,13 @@
           "symbol": "F:qj.field_z:[I",
           "original": "field_z",
           "renamed": "pixels"
+        },
+        {
+          "start": 25981,
+          "end": 25982,
+          "symbol": "M:d.<init>(IIIIII[I)V",
+          "original": "d",
+          "renamed": "ArgbSprite"
         }
       ]
     },
@@ -236412,7 +236569,7 @@
       "original": "da.java",
       "renamed": "SocketArchiveRequestConnection.java",
       "inputSha256": "a7b71151284e1c1226adce764b06eaf7dec7fc8bf88231b269bd446c1392b393",
-      "outputSha256": "dcbd1174558c744b039dab0bdcb00a71f9893d62fc5371889696c76cfafb9c90",
+      "outputSha256": "b13c9ec894b4a6764338e7960cc2597b35b91eeba13ff59095ae775fd1741510",
       "edits": [
         {
           "start": 69,
@@ -236751,6 +236908,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 5670,
+          "end": 5672,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 5917,
           "end": 5918,
           "symbol": "M:be.h(I)I",
@@ -236854,6 +237018,13 @@
           "symbol": "C:hk",
           "original": "hk",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 6966,
+          "end": 6968,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 7047,
@@ -238256,7 +238427,7 @@
       "original": "dd.java",
       "renamed": "dd.java",
       "inputSha256": "0f9e96fe9a912cbbaf0332dcde66f93d81ae780840895bcfbf5a2a50a1e57fba",
-      "outputSha256": "116bb1b513202bfde23c80b7cf06bcd701d7f17edcc7da23dfb6d19bf5768456",
+      "outputSha256": "de8641344ba24ce854dd0008a51048cca3216d09e78e2f6682be5ea331b643ce",
       "edits": [
         {
           "start": 148,
@@ -238322,11 +238493,32 @@
           "renamed": "DiskArchiveStore"
         },
         {
+          "start": 1040,
+          "end": 1042,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 1155,
           "end": 1157,
           "symbol": "C:nj",
           "original": "nj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1187,
+          "end": 1189,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 1225,
+          "end": 1227,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 1238,
@@ -239590,7 +239782,7 @@
       "original": "dh.java",
       "renamed": "dh.java",
       "inputSha256": "ce2fb62ffac9630e521bd21319b926778a4c7df06410eb3240549db3b74bf56f",
-      "outputSha256": "5342a70abe453c8d26eb55ca4e649432ee5d2dce843b5de18d951134b2defb91",
+      "outputSha256": "b25498ee1169dff2e4ace0f54435e1f6ef750d435b2901c5ef46d1594113d8f8",
       "edits": [
         {
           "start": 61,
@@ -239710,6 +239902,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "Sprite"
+        },
+        {
+          "start": 5263,
+          "end": 5264,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 5277,
@@ -240890,7 +241089,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "b4842a2829bfdab064a5eb110f3b941ccb6b322942021730edfb2fc19b7d6423",
-      "outputSha256": "acf60e6383d310c2c535b737ca94685d67bb3629785caa3b78d013021b047f28",
+      "outputSha256": "c0e02f21cc42ca111fae4e1d09ec279039e2d913e998c3f06e663a22f3a21af8",
       "edits": [
         {
           "start": 61,
@@ -241031,6 +241230,13 @@
           "symbol": "C:pc",
           "original": "pc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 3150,
+          "end": 3152,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 3357,
@@ -242666,10 +242872,17 @@
     },
     {
       "original": "fd.java",
-      "renamed": "fd.java",
+      "renamed": "IndexedSpriteState.java",
       "inputSha256": "7748e41a806c5ef96d609b2feb4e6d72bbcc0cef15b0d622c975a9394fce7752",
-      "outputSha256": "bfaf64e2e72282c83e343b7410f0c98e79b6e94d30791cffe9111b1bb3b8d5f1",
+      "outputSha256": "b8df88788e9ef0bde4c41b57e67a18c09debe5625f3680dd318f7ba0c28cb62f",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
         {
           "start": 216,
           "end": 218,
@@ -242683,6 +242896,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "Sprite"
+        },
+        {
+          "start": 344,
+          "end": 345,
+          "symbol": "M:fd.a(B)V",
+          "original": "a",
+          "renamed": "releaseStatics"
         },
         {
           "start": 505,
@@ -246167,7 +246387,7 @@
       "original": "gl.java",
       "renamed": "gl.java",
       "inputSha256": "b2ba58e959e4ebf56e5f8b670fb39451da8f967ca9e513929840791c1840ce32",
-      "outputSha256": "62a2e5e8bd56e0dd11fcaf475542ddb10f91bdcf7b17fcea7a4d056913c021ea",
+      "outputSha256": "7bf32f144659a3a290cd5105f45fa7e42d2073b07d0fdbf21a2858738a2b7e28",
       "edits": [
         {
           "start": 154,
@@ -246196,6 +246416,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "GameShell"
+        },
+        {
+          "start": 1609,
+          "end": 1611,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 1711,
@@ -249846,7 +250073,7 @@
       "original": "ia.java",
       "renamed": "ia.java",
       "inputSha256": "460662b07cf1c34c59d48c48addf14cc7ca3807d27a21d21d946ba331577394b",
-      "outputSha256": "36d2757d60e17f8b36284fedff86142d587d4e90e25fbe7c1095ad648969654f",
+      "outputSha256": "25a85250e43831da47b7818b7d8a4b2a7addbc5fc1407215342ae72b690c1f98",
       "edits": [
         {
           "start": 66,
@@ -249903,6 +250130,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 1557,
+          "end": 1559,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 1906,
@@ -253845,7 +254079,7 @@
       "original": "jf.java",
       "renamed": "jf.java",
       "inputSha256": "e707ce08723fddc606d3b69630f43a4d01625b0d4f7dd8278cf78220929c7e36",
-      "outputSha256": "209c9c41e6dc50facd80111533fa33ac9687442827d4fcb6b2bc34a4ce64e3e0",
+      "outputSha256": "7e9e885d9ca54f1943be7843e525fcdede260e4e15d28a652003e24e8007e359",
       "edits": [
         {
           "start": 61,
@@ -253867,6 +254101,13 @@
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 399,
+          "end": 401,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 412,
@@ -256825,8 +257066,15 @@
       "original": "l.java",
       "renamed": "l.java",
       "inputSha256": "d0f74dff02b4abc8c7266119e27ab15558f38fd4c7ad0622bef55f93e57d13fa",
-      "outputSha256": "7d07d8e54f1e71307ccbfff6985a1c5e8c9a21259b6e4f5b63ae917dedc4b2a3",
+      "outputSha256": "31616c0ba05db0bec5494898e68f6e66022bba6f68020f305fe7acefe7183547",
       "edits": [
+        {
+          "start": 217,
+          "end": 219,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
         {
           "start": 1954,
           "end": 1956,
@@ -263412,7 +263660,7 @@
       "original": "mg.java",
       "renamed": "GameScreen.java",
       "inputSha256": "1d966ea7c21f0b236b9e7fb8a64f352ad290f268c5dd3bfb6366fc020599c70c",
-      "outputSha256": "4cb611240da4586d5bc1082ff30db064183a169e88f9593b952f3b60e0b870b6",
+      "outputSha256": "f21fabf8ac75917bd121279592f39d6b8f072db001a3c537d830a53e3d0edde8",
       "edits": [
         {
           "start": 50,
@@ -264992,6 +265240,13 @@
           "symbol": "F:bk.field_E:Loh;",
           "original": "field_E",
           "renamed": "font"
+        },
+        {
+          "start": 39640,
+          "end": 39642,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 39651,
@@ -268859,7 +269114,7 @@
       "original": "ng.java",
       "renamed": "IndexedSprite.java",
       "inputSha256": "558d4cb3eca357d360084025997c3ae4c7d92f9ff539ab88cf2d86d2eeafbc61",
-      "outputSha256": "e8802b624e33556f329cd1e7d07132f5e09092f321e1d1da566dcf5799f262a7",
+      "outputSha256": "0877300dc46813e6a15b1720dadb8b896c5d8aaf6bf2f199c0712aac37a04bdc",
       "edits": [
         {
           "start": 50,
@@ -268867,6 +269122,13 @@
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 121,
@@ -271539,7 +271801,7 @@
       "original": "oe.java",
       "renamed": "oe.java",
       "inputSha256": "d4639ba3f3f6d74169d59464148ed7837c4dfa5c23628a4989d2d8a1e5489ad2",
-      "outputSha256": "5bca774b24310da02920c17f82afc71c211cfdebe5a0f49c88b9549aa7804c16",
+      "outputSha256": "ab787e559d812f5c125521b5f5deeec2bc1523fa66869b9cd58aed83553c786f",
       "edits": [
         {
           "start": 141,
@@ -271610,6 +271872,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "Archive"
+        },
+        {
+          "start": 3953,
+          "end": 3955,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 3966,
@@ -272144,7 +272413,7 @@
       "original": "oh.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "f97b42d54ad135f12c4f91f44a2bbf0e30f50d77fa0c6edc317fedad726f1f19",
-      "outputSha256": "607acf955ec882fa6992f8af802293a867b6322b5b8bbd5ef210ebc842ec941b",
+      "outputSha256": "47132c1b163c3ea498d9acbeef5d303628658fa15443869886c78ba104ac4851",
       "edits": [
         {
           "start": 53,
@@ -272159,6 +272428,20 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 327,
+          "end": 329,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 1527,
+          "end": 1529,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 3424,
@@ -272292,6 +272575,13 @@
           "symbol": "M:oh.a(Ljava/lang/String;)I",
           "original": "a",
           "renamed": "stringWidth"
+        },
+        {
+          "start": 27708,
+          "end": 27710,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 30216,
@@ -274652,7 +274942,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "8f61c5b49967c9e6e29e151006b0fea81eec33457b300e9709ac0ca0e633f3fa",
-      "outputSha256": "999a1806918697071cc5f8a651fdc51982391cb9fafc6f8598dc47ef74e7b738",
+      "outputSha256": "a939da206b10d20714f9b4357e5020d518687e1b04bea7afbea736325d42764e",
       "edits": [
         {
           "start": 646,
@@ -274660,6 +274950,13 @@
           "symbol": "M:be.h(I)I",
           "original": "h",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 664,
+          "end": 666,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 740,
@@ -274688,6 +274985,13 @@
           "symbol": "M:be.f(B)J",
           "original": "f",
           "renamed": "readLong"
+        },
+        {
+          "start": 854,
+          "end": 856,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 901,
@@ -274725,6 +275029,13 @@
           "renamed": "readString"
         },
         {
+          "start": 1275,
+          "end": 1277,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 1309,
           "end": 1310,
           "symbol": "M:be.d(B)I",
@@ -274737,6 +275048,13 @@
           "symbol": "M:be.g(I)Ljava/lang/String;",
           "original": "g",
           "renamed": "readString"
+        },
+        {
+          "start": 1377,
+          "end": 1379,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 1413,
@@ -275369,7 +275687,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "39db76e4e8d9d1576685c6e0fcb71c64f835f247cc1b0131e2503469b1550b9d",
-      "outputSha256": "bed7b07663ac79e386cece0e8333eef60003d70fa49274252d349b257c176526",
+      "outputSha256": "b697a95e5fbeb3df3bee312d42940cab4d44e8ee594ac81d80a2117a4ca5697c",
       "edits": [
         {
           "start": 1601,
@@ -275447,6 +275765,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "NodeHashTable"
+        },
+        {
+          "start": 2554,
+          "end": 2556,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 2707,
@@ -279950,7 +280275,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "fd4806af1b5bb3c3577b4fa8ae278f4645c7325e8f338db2e668379c45b4f8bb",
-      "outputSha256": "9fa23e483e50c49a9e6021409b6cf3a3770cc00c782011cd2d3ee85b0c5e44de",
+      "outputSha256": "69190ee6074664af44c4ef3336e58e55376314589f644af87a0935623db48ca2",
       "edits": [
         {
           "start": 61,
@@ -279960,11 +280285,25 @@
           "renamed": "ButtonWidget"
         },
         {
+          "start": 372,
+          "end": 374,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 405,
           "end": 407,
           "symbol": "C:bf",
           "original": "bf",
           "renamed": "WhirlpoolDigest"
+        },
+        {
+          "start": 494,
+          "end": 496,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 525,
@@ -281017,7 +281356,7 @@
       "original": "rd.java",
       "renamed": "rd.java",
       "inputSha256": "7dd312a496da086042578dbb11fab55931cbc7e7f5e61a88af6c3c149d3ff0e0",
-      "outputSha256": "5f42d9647eb6e07845dc7eeddeff6fee7061a51d2ee27fb67000c8bfb387a4c7",
+      "outputSha256": "dad1f4b8727f9c6c92a3e8811d3d489f72c5549ae3f37f5bff25bb363501a45b",
       "edits": [
         {
           "start": 228,
@@ -281342,6 +281681,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 10687,
+          "end": 10688,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
+        {
+          "start": 10711,
+          "end": 10712,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
+        },
+        {
           "start": 10895,
           "end": 10897,
           "symbol": "C:qj",
@@ -281396,6 +281749,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "Sprite"
+        },
+        {
+          "start": 12191,
+          "end": 12192,
+          "symbol": "C:d",
+          "original": "d",
+          "renamed": "ArgbSprite"
         },
         {
           "start": 12273,
@@ -281550,7 +281910,7 @@
       "original": "re.java",
       "renamed": "GameApplet.java",
       "inputSha256": "f0e397977ac1a0f4a9efefe99bd28839a0a5341e0a41ba14154d28437d7222fa",
-      "outputSha256": "e88de75b0421c83a35dfec435540a039a95aa06e04d9aeea7324c2592ec4894e",
+      "outputSha256": "5cbc75e1017933682e6631a13c918e55639bbe80e8e3a49ad2855a11801009dc",
       "edits": [
         {
           "start": 60,
@@ -281691,6 +282051,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 4425,
+          "end": 4427,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 4562,
@@ -283045,7 +283412,7 @@
       "original": "ri.java",
       "renamed": "ActiveLevel.java",
       "inputSha256": "edabddc46b2e6a2367a80c44d28b3fdaca9b91c3c81158c5ccacf75c054d42b8",
-      "outputSha256": "4dd240457cd027c9742634be20c24ffb4c9a08f7e72fc92097187ebc70aaec39",
+      "outputSha256": "91c634522d267441e5a653751a3f3e308dd62cf13442ce2f12b7257bf979a76a",
       "edits": [
         {
           "start": 50,
@@ -285880,6 +286247,13 @@
           "renamed": "drawGrid"
         },
         {
+          "start": 47044,
+          "end": 47046,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 47055,
           "end": 47056,
           "symbol": "M:qj.e(II)V",
@@ -286025,6 +286399,13 @@
           "symbol": "F:sl.field_h:I",
           "original": "field_h",
           "renamed": "tickCount"
+        },
+        {
+          "start": 48439,
+          "end": 48441,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 48450,
@@ -288547,7 +288928,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "f8ee2a92c2d52359d95b227838766cf09d51eef90becfbd92ea7d42bebc1d97e",
-      "outputSha256": "229ddac8612d256c722bcc64f4e652aa4d7531d3ecd933e2f4da83cbfec75cfa",
+      "outputSha256": "f4d88fa01ab66be859261fee7c6275b5b0cf694997aa41a5e541585e348a235c",
       "edits": [
         {
           "start": 75,
@@ -288828,6 +289209,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 71552,
+          "end": 71554,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 71715,
@@ -299542,7 +299930,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "59245621dcf10f911bfd4f03ff8e03ec1f0e1a50efc62144c5159e503bde2486",
-      "outputSha256": "884d5bcf76a48b17b78b99410c75a3e07fbf9aa8d2203509bb37621ec3fe9ef7",
+      "outputSha256": "986cb3156821542e89a431beeb7060c3ff64e692f3efce49ae9ab3914cc7c02d",
       "edits": [
         {
           "start": 158,
@@ -299566,6 +299954,13 @@
           "renamed": "DiskArchiveStore"
         },
         {
+          "start": 819,
+          "end": 821,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
+        },
+        {
           "start": 892,
           "end": 894,
           "symbol": "C:og",
@@ -299585,6 +299980,13 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 1284,
+          "end": 1286,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "IndexedSpriteState"
         },
         {
           "start": 1319,
@@ -300498,10 +300900,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "68e204d1497d4498db2cc0179974cf35316eee1298f0ddb5ad3bf95545adcdb4",
+    "rulesSha256": "df8e629864b8975ed27db9be59874e430ee8aca6222d10b0896e469d65f5d201",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "127339c85dc17bfa5a8ecc9dc4c7fc8014f6f98b39343ee23d192ebdd93278ad",
+    "outputTreeSha256": "ca8620561c0e87ff48e2eb38025829d8b7ae70f3dd100112660c3ae0ac3647f6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

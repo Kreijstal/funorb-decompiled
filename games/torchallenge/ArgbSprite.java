@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class el extends Sprite {
+final class ArgbSprite extends Sprite {
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
@@ -97,7 +97,7 @@ final class el extends Sprite {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          el.c(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -202,7 +202,7 @@ final class el extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          el.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -373,7 +373,7 @@ final class el extends Sprite {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          el.c(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -450,7 +450,7 @@ final class el extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          el.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -500,7 +500,7 @@ final class el extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          el.f(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.f(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -569,7 +569,7 @@ final class el extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          el.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -615,7 +615,7 @@ final class el extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          el.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1346,12 +1346,12 @@ final class el extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          el.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    el(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -1396,7 +1396,7 @@ final class el extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          el.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1442,7 +1442,7 @@ final class el extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          el.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1620,7 +1620,7 @@ final class el extends Sprite {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          el.d(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1689,7 +1689,7 @@ final class el extends Sprite {
         }
     }
 
-    el(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
@@ -1830,7 +1830,7 @@ final class el extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          el.e(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }

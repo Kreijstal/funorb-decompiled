@@ -77,11 +77,11 @@ final class hb {
         ka.a(2);
     }
 
-    final static mj a(sh param0, String param1, String param2, sh param3, int param4) {
+    final static PalettedBitmapFont a(sh param0, String param1, String param2, sh param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        mj stackIn_3_0 = null;
+        PalettedBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

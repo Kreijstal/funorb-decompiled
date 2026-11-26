@@ -98,7 +98,7 @@ final class q {
 
     q(boolean param0) {
         this.field_h = NodeHashTable.field_h;
-        this.field_e = fd.field_e;
+        this.field_e = IndexedSpriteState.field_e;
         if (!param0) {
           this.field_i = null;
         } else {

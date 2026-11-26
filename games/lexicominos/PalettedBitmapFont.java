@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends BitmapFont {
+final class PalettedBitmapFont extends BitmapFont {
     private byte[][] field_N;
     private int[][] field_O;
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteGlyph(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;
@@ -92,7 +92,7 @@ final class mj extends BitmapFont {
         }
     }
 
-    mj(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
+    PalettedBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_N = new byte[256][];
         this.field_N = param6;
@@ -140,7 +140,7 @@ final class mj extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            mj.a(0, SoftwareRasterizer.field_b, this.field_N[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
+            PalettedBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.field_b, this.field_N[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -148,7 +148,7 @@ final class mj extends BitmapFont {
         }
     }
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitPaletteGlyphAlpha(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$16 = 0;
@@ -219,7 +219,7 @@ final class mj extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            mj.a(0, SoftwareRasterizer.field_b, this.field_N[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
+            PalettedBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.field_b, this.field_N[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
           } else {
             BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           }

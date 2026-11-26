@@ -693,7 +693,7 @@ public final class BachelorFridge extends NetworkGameClient {
         vi.releaseStatics(-117);
         gma.releaseStatics(-5377);
         on.e(-29639);
-        go.e(98);
+        SpriteState.releaseStatics(98);
         lt.b((byte) -104);
         ae.releaseStatics(30317);
         ala.releaseStatics(-84);

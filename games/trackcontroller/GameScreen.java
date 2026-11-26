@@ -1181,7 +1181,7 @@ final class GameScreen {
                         bk.font.a(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
                       } else {
                         qh.field_b.a(100, (byte) -127, 67);
-                        fd.field_d.drawTransparent(-367, -162);
+                        IndexedSpriteState.field_d.drawTransparent(-367, -162);
                       }
                       cl.a(nd.field_L, 566, 46, 57, 46, param0 + 5);
                       stackIn_73_0 = (RandomAccessCacheFile.field_b != 0) ? 15252224 : 8110658;

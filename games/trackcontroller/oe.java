@@ -108,7 +108,7 @@ final class oe {
           sa.field_Q.a(false, true);
           ak.a(param3, param1, param2, 127);
           jh.a(-128);
-          fd.field_h = DiskArchiveStore.field_f;
+          IndexedSpriteState.field_h = DiskArchiveStore.field_f;
           if (param4 != -28484) {
             CharSequence var6 = (CharSequence) null;
             oe.a((CharSequence) null, (byte) 110, true);

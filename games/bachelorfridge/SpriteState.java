@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class go extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     int field_t;
     int field_q;
     static WidgetTheme field_s;
@@ -11,9 +11,9 @@ abstract class go extends DualLinkNode {
     int field_u;
     static String field_r;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 93) {
-          go.a(-26, (byte) -48, 12);
+          SpriteState.registerStatusEffectDefinition(-26, (byte) -48, 12);
           field_s = null;
           field_r = null;
           return;
@@ -22,7 +22,7 @@ abstract class go extends DualLinkNode {
         field_r = null;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void registerStatusEffectDefinition(int param0, byte param1, int param2) {
         pna.field_zb[param2] = new StatusEffectInfo(param2, param0);
         if (param1 >= -125) {
           field_r = (String) null;
@@ -31,10 +31,10 @@ abstract class go extends DualLinkNode {
 
     abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    go() {
+    SpriteState() {
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawRotated(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;

@@ -10,7 +10,7 @@ final class l extends di {
     }
 
     final static String h(int param0) {
-        if (fd.field_h == oe.field_b) {
+        if (IndexedSpriteState.field_h == oe.field_b) {
           return th.field_n;
         }
         if (param0 != 0) {

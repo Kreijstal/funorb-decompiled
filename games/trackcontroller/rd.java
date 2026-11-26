@@ -296,8 +296,8 @@ final class rd {
         ic var17 = null;
         gi var4 = null;
         Sprite[] var5 = null;
-        d var16 = null;
-        d var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         gi var6 = null;
         gi var7 = null;
@@ -336,7 +336,7 @@ final class rd {
           var4.a((byte) 118, 1).a(param0 - 13421653, CrossfadingMidiPcmStream.a(11184810, 13421772, 10066329, param0 ^ 13421773));
           var4.a((byte) 118, 3).a(125, CrossfadingMidiPcmStream.a(8947848, 10066329, 7829367, 1)).a(255, 1).a((byte) 85, 1);
           var5 = new Sprite[9];
-          var16 = new d(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
             var16.pixels[var7_int] = 1077952576;

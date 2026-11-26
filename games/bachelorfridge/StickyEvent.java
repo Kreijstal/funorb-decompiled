@@ -699,7 +699,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "invite");
                 if (null != var2) {
-                  go.field_r = qq.a(var2, param0);
+                  SpriteState.field_r = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "status_concluded");
                 if (null != var2) {

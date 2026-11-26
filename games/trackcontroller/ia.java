@@ -54,7 +54,7 @@ final class ia {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (oe.field_b != fd.field_h) {
+          if (oe.field_b != IndexedSpriteState.field_h) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }

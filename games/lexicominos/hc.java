@@ -221,10 +221,10 @@ final class hc extends ui {
         }
     }
 
-    final static mj a(byte param0, sh param1, sh param2, int param3, int param4) {
+    final static PalettedBitmapFont a(byte param0, sh param1, sh param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        mj stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -234,7 +234,7 @@ final class hc extends ui {
         try {
           if (!nb.a(param4, param3, (byte) 124, param1)) {
             stackIn_2_0 = null;
-            return (mj) (stackIn_2_0);
+            return (PalettedBitmapFont) (stackIn_2_0);
           }
           if (param0 < 97) {
             field_eb = (sh) null;

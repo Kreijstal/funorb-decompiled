@@ -21,7 +21,7 @@ final class wf {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (DiskArchiveStore.field_f != fd.field_h) {
+          if (DiskArchiveStore.field_f != IndexedSpriteState.field_h) {
             return false;
           }
           var8 = new AccountCreationResultPanel(gl.field_E, param4);
@@ -38,7 +38,7 @@ final class wf {
           th.field_n = param1;
           MouseWheelInput.field_c = null;
           v.field_e = param5;
-          fd.field_h = oe.field_b;
+          IndexedSpriteState.field_h = oe.field_b;
           SocketArchiveRequestConnection.field_o = param6;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

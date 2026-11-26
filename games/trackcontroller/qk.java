@@ -14,12 +14,12 @@ final class qk extends ButtonWidget {
     final static String b(boolean param0) {
         if (param0) {
           qk.j(125);
-          if (oe.field_b == fd.field_h) {
+          if (oe.field_b == IndexedSpriteState.field_h) {
             return WhirlpoolDigest.field_f;
           }
           return lf.field_T;
         }
-        if (oe.field_b == fd.field_h) {
+        if (oe.field_b == IndexedSpriteState.field_h) {
           return WhirlpoolDigest.field_f;
         }
         return lf.field_T;

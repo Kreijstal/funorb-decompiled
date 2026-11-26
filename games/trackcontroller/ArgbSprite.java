@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d extends Sprite {
+final class ArgbSprite extends Sprite {
     final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
@@ -43,7 +43,7 @@ final class d extends Sprite {
           var5 <= 0) {
           return;
         }
-        d.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -110,7 +110,7 @@ final class d extends Sprite {
           var5 <= 0) {
           return;
         }
-        d.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void drawTransparent(int param0, int param1) {
@@ -154,7 +154,7 @@ final class d extends Sprite {
           var5 <= 0) {
           return;
         }
-        d.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -389,7 +389,7 @@ final class d extends Sprite {
           var6 <= 0) {
           return;
         }
-        d.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -515,10 +515,10 @@ final class d extends Sprite {
           var6 <= 0) {
           return;
         }
-        d.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
-    d(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
@@ -563,7 +563,7 @@ final class d extends Sprite {
           var5 <= 0) {
           return;
         }
-        d.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1) {
@@ -703,7 +703,7 @@ final class d extends Sprite {
           var6 <= 0) {
           return;
         }
-        d.b(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.b(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     final void e(int param0, int param1, int param2) {
@@ -747,10 +747,10 @@ final class d extends Sprite {
           var6 <= 0) {
           return;
         }
-        d.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    d(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 }

@@ -340,7 +340,7 @@ final class mk {
             regionExit1: {
               var6_int = BuffVendorAnimation.field_A[var5][0];
               var7 = BuffVendorAnimation.field_A[var5][1];
-              OneAnimation.field_E.a(0, var7, var6_int, -1049413117, 4096);
+              OneAnimation.field_E.drawRotated(0, var7, var6_int, -1049413117, 4096);
               var8_ref_oha = WhirlpoolDigest.field_e[IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]]];
               if (!(var8_ref_oha instanceof tv)) {
                 if (var8_ref_oha instanceof SpecialMoveDefinition) {
@@ -454,7 +454,7 @@ final class mk {
                 a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, (1 + var4) * 16, 16 * var5 + 16, 0, 4096);
               }
               boolean decompiledFrameRemainder2 = true;
-              OneAnimation.field_E.a(0, var5, var4, -1049413117, 4096);
+              OneAnimation.field_E.drawRotated(0, var5, var4, -1049413117, 4096);
               if (!(var7 instanceof tv)) {
                 if (!(var7 instanceof SpecialMoveDefinition)) {
                   if (!(var7 instanceof a)) {
@@ -505,7 +505,7 @@ final class mk {
                   a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, var4 * 16 + 16, (1 + var5) * 16, 0, 4096);
                 }
                 boolean decompiledFrameRemainder1 = true;
-                OneAnimation.field_E.a(0, var5, var4, -1049413117, 4096);
+                OneAnimation.field_E.drawRotated(0, var5, var4, -1049413117, 4096);
                 if (var7 instanceof tv) {
                   nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(var4 - (1 + (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1)), -1 + (var5 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1)), 51233);
                 } else {

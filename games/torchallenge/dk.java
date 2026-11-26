@@ -165,8 +165,8 @@ final class dk {
         bc var18 = null;
         ga var4 = null;
         Sprite[] var5 = null;
-        el var17 = null;
-        el var19 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         ga var6 = null;
         ga var7 = null;
@@ -209,7 +209,7 @@ final class dk {
           var4.a(1, -27140).a((byte) -27, v.a(13421772, 67, 11184810, 10066329));
           var4.a(3, param1 ^ 15719).a((byte) -62, v.a(10066329, param1 + 22463, 8947848, 7829367)).a(1, (byte) 118).a(1, param1 + 22373);
           var5 = new Sprite[9];
-          var17 = new el(32, 32);
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var19.pixels.length > var7_int; var7_int++) {
             var17.pixels[var7_int] = 1077952576;

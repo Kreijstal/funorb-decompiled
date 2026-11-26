@@ -16,7 +16,7 @@ final class jf extends IntrusiveNode {
           return;
         }
         rk.field_X = DiskArchiveStore.field_f;
-        fd.field_h = DiskArchiveStore.field_f;
+        IndexedSpriteState.field_h = DiskArchiveStore.field_f;
     }
 
     public static void d(int param0) {

@@ -7,10 +7,10 @@ final class fl {
     static String field_d;
     static String[] field_a;
 
-    final static mj a(byte[] param0, byte param1) {
-        mj var2 = null;
+    final static PalettedBitmapFont a(byte[] param0, byte param1) {
+        PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        mj stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -22,7 +22,7 @@ final class fl {
           if (param1 != -116) {
             field_b = (String) null;
           }
-          var2 = new mj(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
+          var2 = new PalettedBitmapFont(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
           GzipDecompressor.a(12428);
           stackIn_6_0 = var2;
           return stackIn_6_0;

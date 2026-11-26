@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class tb {
-    static mj field_a;
+    static PalettedBitmapFont field_a;
     static volatile int field_b;
 
     abstract long b(int param0);
@@ -31,7 +31,7 @@ abstract class tb {
           }
           return stackIn_7_0;
         }
-        field_a = (mj) null;
+        field_a = (PalettedBitmapFont) null;
         var4Lifetime1 = param1.indexOf(param0);
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var4Lifetime1 == -1))) {
@@ -177,7 +177,7 @@ abstract class tb {
         long var4 = 0L;
         long var4Lifetime1;
         if (param0 < 5) {
-          field_a = (mj) null;
+          field_a = (PalettedBitmapFont) null;
           var4 = this.b(255);
           if (0L < var4) {
             ge.sleepMillis(0, var4);

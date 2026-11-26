@@ -29,14 +29,14 @@ class dd extends ic {
     }
 
     final static AccountServiceResult pollAccountCreationResult(byte param0) {
-        if (DiskArchiveStore.field_f == fd.field_h) {
+        if (DiskArchiveStore.field_f == IndexedSpriteState.field_h) {
           throw new IllegalStateException();
         }
         if (param0 <= 82) {
           return (AccountServiceResult) null;
         }
-        if (fd.field_h == cj.field_e) {
-          fd.field_h = DiskArchiveStore.field_f;
+        if (IndexedSpriteState.field_h == cj.field_e) {
+          IndexedSpriteState.field_h = DiskArchiveStore.field_f;
           return MouseWheelInput.field_c;
         }
         return null;

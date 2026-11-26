@@ -76,19 +76,19 @@ final class lia extends EventEffect {
         if (param0 != 5) {
           field_j = (lm) null;
         }
-        if (null == go.field_s) {
-          go.field_s = new WidgetTheme();
-          go.field_s.a(jca.field_a, true);
-          go.field_s.field_k = 0;
-          go.field_s.field_f = 2763306;
-          go.field_s.field_n = 14;
-          go.field_s.field_d = 4;
-          go.field_s.field_p = 6;
-          go.field_s.field_e = 7697781;
-          go.field_s.field_m = oc.field_l;
-          go.field_s.field_c = 5;
+        if (null == SpriteState.field_s) {
+          SpriteState.field_s = new WidgetTheme();
+          SpriteState.field_s.a(jca.field_a, true);
+          SpriteState.field_s.field_k = 0;
+          SpriteState.field_s.field_f = 2763306;
+          SpriteState.field_s.field_n = 14;
+          SpriteState.field_s.field_d = 4;
+          SpriteState.field_s.field_p = 6;
+          SpriteState.field_s.field_e = 7697781;
+          SpriteState.field_s.field_m = oc.field_l;
+          SpriteState.field_s.field_c = 5;
         }
-        return go.field_s;
+        return SpriteState.field_s;
     }
 
     final void write(PacketBuffer param0, byte param1) {

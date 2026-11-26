@@ -1870,12 +1870,12 @@ class jla {
             var6 = -16384;
           }
           if (param0) {
-            et.field_p.a(var6, var5_int, var4, -1049413117, 2048);
+            et.field_p.drawRotated(var6, var5_int, var4, -1049413117, 2048);
             if (var16 == 0) {
               return;
             }
           }
-          sia.field_j.a(var6, var5_int, var4, -1049413117, 2048);
+          sia.field_j.drawRotated(var6, var5_int, var4, -1049413117, 2048);
           return;
         }
         var4Lifetime1 = BufferedSocket.field_b[this.field_b][param1];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fd {
+abstract class IndexedSpriteState {
     int field_c;
     int field_j;
     static String field_f;
@@ -15,7 +15,7 @@ abstract class fd {
     int field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         int var1 = -32 / ((51 - param0) / 54);
         field_d = null;

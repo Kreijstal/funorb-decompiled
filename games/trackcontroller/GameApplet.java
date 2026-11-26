@@ -119,7 +119,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_15_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (oe.field_b == fd.field_h) {
+          if (oe.field_b == IndexedSpriteState.field_h) {
             stackIn_2_0 = fi.field_l;
             return stackIn_2_0;
           }

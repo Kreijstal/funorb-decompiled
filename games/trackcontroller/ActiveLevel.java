@@ -1406,7 +1406,7 @@ final class ActiveLevel extends LevelGrid {
           this.b(true, param0 - 53447);
           stackIn_7_1 = !(this.field_z);
           super.drawGrid(stackIn_7_1, 0, true);
-          fd.field_d.drawTransparent(0, 0);
+          IndexedSpriteState.field_d.drawTransparent(0, 0);
           var2_int = kf.mouseX - 467;
           var3 = fg.mouseY - 138;
           if (var2_int >= 0) {
@@ -1452,7 +1452,7 @@ final class ActiveLevel extends LevelGrid {
           var2_int = Math.min(255, -this.field_v + this.tickCount << 2);
           this.a(467, (byte) -121, (this.tickCount - this.field_v << 2) + 229);
           var3 = 255 - var2_int;
-          fd.field_d.drawTransparent(0, -this.field_v + this.tickCount << 2);
+          IndexedSpriteState.field_d.drawTransparent(0, -this.field_v + this.tickCount << 2);
           if (var3 > 0) {
             ai.field_a.d(0, 0, var3);
             WhirlpoolDigest.field_o.d(0, 0, var3);

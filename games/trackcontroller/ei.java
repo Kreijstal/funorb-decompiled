@@ -91,7 +91,7 @@ final class ei extends IntrusiveNode {
           return gj.field_e + " - " + field_i.a("commonui", 0) + "%";
         }
         if (!ha.field_x.c(-50)) {
-          return fd.field_f;
+          return IndexedSpriteState.field_f;
         }
         if (!ha.field_x.b("commonui", (byte) -3)) {
           return v.field_c + " - " + ha.field_x.a("commonui", 0) + "%";

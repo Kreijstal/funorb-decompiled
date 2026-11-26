@@ -56,7 +56,7 @@ final class de {
               for (var7 = 0; var3 > var7; var7++) {
                 var6[var7] = p.a(jh.a(255, (int) var28[var7]) << 24, td.field_m[jh.a(255, (int) var26[var7])]);
               }
-              var1[var2] = (Sprite) ((Object) new el(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var16));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var16));
             }
           }
         } else {
@@ -80,7 +80,7 @@ final class de {
               for (var7 = 0; var3 > var7; var7++) {
                 var6[var7] = p.a(jh.a(255, (int) var31[var7]) << 24, td.field_m[jh.a(255, (int) var29[var7])]);
               }
-              var1[var2] = (Sprite) ((Object) new el(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var16));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var16));
             }
           }
         }

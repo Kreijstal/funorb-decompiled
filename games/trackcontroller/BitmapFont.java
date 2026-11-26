@@ -12,7 +12,7 @@ abstract class BitmapFont extends DualLinkNode {
     private int[] field_D;
     private int[] field_K;
     private byte[] field_J;
-    private fd[] field_L;
+    private IndexedSpriteState[] field_L;
     private int[] field_E;
     private static int field_p;
     private static int field_s;
@@ -45,7 +45,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        fd var11_ref_fd = null;
+        IndexedSpriteState var11_ref_fd = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -769,7 +769,7 @@ abstract class BitmapFont extends DualLinkNode {
         Exception var13_ref_Exception = null;
         int var14 = 0;
         int var15 = 0;
-        fd var16_ref_fd = null;
+        IndexedSpriteState var16_ref_fd = null;
         int var16 = 0;
         int var17 = 0;
         Object var18 = null;

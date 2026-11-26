@@ -158,7 +158,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               }
               if (!param1) {
                 stackIn_47_0 = ((4 & var7) != 0);
-                fd.field_i = stackIn_47_0;
+                IndexedSpriteState.field_i = stackIn_47_0;
                 stackIn_50_0 = ((8 & var7) != 0);
                 fi.field_o = stackIn_50_0;
                 if (fi.field_o) {
@@ -191,7 +191,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 dh.a(-19136, var6, CachedArchiveSource.b((byte) 77));
               }
               if (SocketConnector.field_d <= 0 &&
-                !fd.field_i) {
+                !IndexedSpriteState.field_i) {
                 try {
                   sj.a((byte) -128, "unzap", CachedArchiveSource.b((byte) 77));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

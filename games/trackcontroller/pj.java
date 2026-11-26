@@ -22,12 +22,12 @@ final class pj extends db {
         var8 = ne.field_a;
         var2 = var8;
         var3 = var8.readUnsignedByte(16383);
-        fd.field_e = 127 & var3;
+        IndexedSpriteState.field_e = 127 & var3;
         stackIn_5_0 = (0 != (128 & var3));
         ClientException.field_b = stackIn_5_0;
         NodeHashTable.field_h = var8.readUnsignedByte(16383);
         lg.field_a = var8.readLong((byte) 84);
-        if (fd.field_e == 2) {
+        if (IndexedSpriteState.field_e == 2) {
           jb.field_d = var8.readUnsignedShort((byte) -124);
           ka.field_c = var8.readUnsignedMedium(8);
         } else {
@@ -42,11 +42,11 @@ final class pj extends db {
         } else {
           o.field_b = ai.field_c;
         }
-        if (fd.field_e == 1) {
+        if (IndexedSpriteState.field_e == 1) {
           var8.readUnsignedShort((byte) -117);
           var8.readString(0);
         } else {
-          if (fd.field_e == 4) {
+          if (IndexedSpriteState.field_e == 4) {
             var8.readUnsignedShort((byte) -117);
             var8.readString(0);
           }
