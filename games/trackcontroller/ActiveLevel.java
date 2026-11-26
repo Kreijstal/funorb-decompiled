@@ -506,7 +506,7 @@ final class ActiveLevel extends LevelGrid {
                 var11 = var12;
               }
               if (var9 == 0) {
-                bb.field_b[var12].b(467, 26 + var6 + 71 + 10);
+                bb.field_b[var12].drawQuarterSize(467, 26 + var6 + 71 + 10);
                 bk.font.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
               }
               var9--;
@@ -517,7 +517,7 @@ final class ActiveLevel extends LevelGrid {
             var12Lifetime1 = (var2 - var3) % 300;
             var13 = var6 + (var12Lifetime1 * var12Lifetime1 >> 2);
             cl.a(nd.field_L, 457, 124, 71 + var13, 176, 4);
-            bb.field_b[var11].b(467, 26 + (81 + var13));
+            bb.field_b[var11].drawQuarterSize(467, 26 + (81 + var13));
             bk.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
           }
           j.field_b[2].drawTransparent(466, var6);
@@ -1454,8 +1454,8 @@ final class ActiveLevel extends LevelGrid {
           var3 = 255 - var2_int;
           IndexedSpriteState.field_d.drawTransparent(0, -this.field_v + this.tickCount << 2);
           if (var3 > 0) {
-            ai.field_a.d(0, 0, var3);
-            WhirlpoolDigest.field_o.d(0, 0, var3);
+            ai.field_a.drawTransparentWithOpacity(0, 0, var3);
+            WhirlpoolDigest.field_o.drawTransparentWithOpacity(0, 0, var3);
           }
         }
         this.a(false);
@@ -1487,9 +1487,9 @@ final class ActiveLevel extends LevelGrid {
         }
         if (this.phase == 1 &&
           this.field_G != -1) {
-          this.field_ab.d(16 + this.field_x * 26, this.field_G * 26 + 48, 127);
+          this.field_ab.drawTransparentWithOpacity(16 + this.field_x * 26, this.field_G * 26 + 48, 127);
           if (this.field_U != -1) {
-            ii.tileSprites[51].d(16 + this.field_r * 26, 48 + this.field_U * 26, 127);
+            ii.tileSprites[51].drawTransparentWithOpacity(16 + this.field_r * 26, 48 + this.field_U * 26, 127);
           }
         }
         var2_ref = ButtonWidget.field_E;

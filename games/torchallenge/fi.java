@@ -125,7 +125,7 @@ final class fi {
         }
     }
 
-    final static void a() {
+    final static void initializeScanlineSpans() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -165,7 +165,7 @@ final class fi {
         field_h = var0 - 1;
     }
 
-    final static boolean b() {
+    final static boolean nextScanlineSpan() {
         int var0;
         int var1;
         int var2;

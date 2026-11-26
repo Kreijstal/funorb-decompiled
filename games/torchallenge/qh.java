@@ -90,7 +90,7 @@ final class qh extends kj implements tl, sg {
         sf.a(var10, ph.field_h, 0, var5Lifetime2, 0, var4Lifetime2 / 2 + 1, (byte) -55);
         uk.field_N.d();
         var10.drawTransparent(var2Lifetime2, var3Lifetime2);
-        var10.d(var2Lifetime2 + var4Lifetime2 / 2 - 2, var3Lifetime2);
+        var10.drawFlippedHorizontal(var2Lifetime2 + var4Lifetime2 / 2 - 2, var3Lifetime2);
         var7 = di.field_t[vj.field_c].fullHeight;
         var6 = di.field_t[vj.field_c].fullWidth;
         var8 = null;

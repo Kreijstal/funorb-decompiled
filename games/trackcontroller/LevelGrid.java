@@ -183,13 +183,13 @@ abstract class LevelGrid {
               var5 != 2) {
               switch (var5) {
                 case 4:
-                  ii.tileSprites[ActiveLevel.field_H[this.field_m]].g(param0, param1);
+                  ii.tileSprites[ActiveLevel.field_H[this.field_m]].drawFlippedHorizontal(param0, param1);
                   break regionExit1;
                 case 3:
                   ii.tileSprites[ActiveLevel.field_H[this.field_m]].drawTransparent(param0, param1);
                   break regionExit1;
                 case 6:
-                  ii.tileSprites[ki.field_c[this.field_m]].f(param0, param1);
+                  ii.tileSprites[ki.field_c[this.field_m]].drawFlippedVertical(param0, param1);
                   break regionExit1;
                 default:
                   break regionExit1;

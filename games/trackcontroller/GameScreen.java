@@ -855,11 +855,11 @@ final class GameScreen {
           boolean decompiledFrameRemainder0 = true;
           if (stackIn_9_0) {
             if ((1 << var8 & var5) != 0) {
-              bb.field_b[var8].b(var3, var4);
+              bb.field_b[var8].drawQuarterSize(var3, var4);
             } else {
               decompiledFrameRemainder0 = !(param0);
               if (decompiledFrameRemainder0) {
-                vj.field_a.b(var3, var4);
+                vj.field_a.drawQuarterSize(var3, var4);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -1186,11 +1186,11 @@ final class GameScreen {
                       cl.a(nd.field_L, 566, 46, 57, 46, param0 + 5);
                       stackIn_73_0 = (RandomAccessCacheFile.field_b != 0) ? 15252224 : 8110658;
                       var4 = stackIn_73_0;
-                      ii.tileSprites[52].c(576, 67, var4);
+                      ii.tileSprites[52].drawTinted(576, 67, var4);
                       cl.a(nd.field_L, 566, 46, 421, 46, 4);
                       stackIn_76_0 = (RandomAccessCacheFile.field_b != 1) ? 15252224 : 8110658;
                       var4 = stackIn_76_0;
-                      ii.tileSprites[53].c(576, 431, var4);
+                      ii.tileSprites[53].drawTinted(576, 431, var4);
                       var5 = this.a(kf.mouseX, 2600, fg.mouseY);
                       var6 = 269 - (-(26 * (1 - qh.field_b.levelIndex)) - mb.field_b);
                       var7 = 359;

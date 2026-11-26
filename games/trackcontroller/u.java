@@ -37,7 +37,7 @@ final class u extends IntrusiveNode {
             if (v.field_g.length - 1 == var3) {
               var7 = var7 + (1 + var2) * var4 / v.field_g[var3];
             }
-            var6.d(-(var6.field_s / 2) + this.field_j, -(var6.field_v / 2) + this.field_m, var7);
+            var6.drawTransparentWithOpacity(-(var6.field_s / 2) + this.field_j, -(var6.field_v / 2) + this.field_m, var7);
           }
           return;
         }

@@ -108,7 +108,7 @@ final class ll {
           if (param1 == 2 &&
             !je.field_i) {
             cj.field_c.d();
-            je.field_g.e(0, 0, param8);
+            je.field_g.drawTransparentWithIntensity(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.drawTransparent(0, 0);
             SectorCacheStore.field_f.bindAsTarget(119);
@@ -117,9 +117,9 @@ final class ll {
           SoftwareRasterizer.a(vd.field_e);
           SoftwareRasterizer.a(var21, param0, var22, param9);
           if (2 != param1) {
-            var16.d(var20, param7, var18, var16.fullHeight);
+            var16.drawScaled(var20, param7, var18, var16.fullHeight);
           } else {
-            cj.field_c.d(var20, param7, var18, cj.field_c.fullHeight);
+            cj.field_c.drawScaled(var20, param7, var18, cj.field_c.fullHeight);
           }
           if (1 == param1 ||
             param1 == 2) {
@@ -127,14 +127,14 @@ final class ll {
               if (var14 >= c.field_b.storedWidth >> 1) {
                 c.field_b.drawTransparent(param11 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
+                c.field_b.drawScaled(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
             if (2 == var13) {
               if (c.field_b.storedWidth >> 1 <= var14) {
                 c.field_b.drawTransparent(param2 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
+                c.field_b.drawScaled(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
           }
@@ -185,7 +185,7 @@ final class ll {
           if (param1 == 2 &&
             !je.field_i) {
             cj.field_c.d();
-            je.field_g.e(0, 0, param8);
+            je.field_g.drawTransparentWithIntensity(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.drawTransparent(0, 0);
             SectorCacheStore.field_f.bindAsTarget(119);
@@ -194,9 +194,9 @@ final class ll {
           SoftwareRasterizer.a(vd.field_e);
           SoftwareRasterizer.a(var21Lifetime1, param0, var22Lifetime1, param9);
           if (2 != param1) {
-            var16.d(var20Lifetime1, param7, var18Lifetime1, var16.fullHeight);
+            var16.drawScaled(var20Lifetime1, param7, var18Lifetime1, var16.fullHeight);
           } else {
-            cj.field_c.d(var20Lifetime1, param7, var18Lifetime1, cj.field_c.fullHeight);
+            cj.field_c.drawScaled(var20Lifetime1, param7, var18Lifetime1, cj.field_c.fullHeight);
           }
           if (1 == param1 ||
             param1 == 2) {
@@ -204,14 +204,14 @@ final class ll {
               if (var14 >= c.field_b.storedWidth >> 1) {
                 c.field_b.drawTransparent(param11 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
+                c.field_b.drawScaled(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
             if (2 == var13) {
               if (c.field_b.storedWidth >> 1 <= var14) {
                 c.field_b.drawTransparent(param2 - (c.field_b.fullWidth >> 1), param7);
               } else {
-                c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
+                c.field_b.drawScaled(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
           }
@@ -262,7 +262,7 @@ final class ll {
         if (param1 == 2 &&
           !je.field_i) {
           cj.field_c.d();
-          je.field_g.e(0, 0, param8);
+          je.field_g.drawTransparentWithIntensity(0, 0, param8);
           od.a(cj.field_c, 33, 30, 68, 90);
           var16.drawTransparent(0, 0);
           SectorCacheStore.field_f.bindAsTarget(119);
@@ -271,15 +271,15 @@ final class ll {
         SoftwareRasterizer.a(vd.field_e);
         SoftwareRasterizer.a(var21Lifetime2, param0, var22Lifetime2, param9);
         if (2 != param1) {
-          var16.d(var20Lifetime2, param7, var18Lifetime2, var16.fullHeight);
+          var16.drawScaled(var20Lifetime2, param7, var18Lifetime2, var16.fullHeight);
         } else {
-          cj.field_c.d(var20Lifetime2, param7, var18Lifetime2, cj.field_c.fullHeight);
+          cj.field_c.drawScaled(var20Lifetime2, param7, var18Lifetime2, cj.field_c.fullHeight);
         }
         if (1 == param1 ||
           param1 == 2) {
           if (1 == var13) {
             if (var14 < c.field_b.storedWidth >> 1) {
-              c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
+              c.field_b.drawScaled(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
             } else {
               c.field_b.drawTransparent(param11 - (c.field_b.fullWidth >> 1), param7);
             }
@@ -288,7 +288,7 @@ final class ll {
             if (c.field_b.storedWidth >> 1 <= var14) {
               c.field_b.drawTransparent(param2 - (c.field_b.fullWidth >> 1), param7);
             } else {
-              c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
+              c.field_b.drawScaled(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
             }
           }
         }

@@ -177,29 +177,29 @@ final class ch {
             SoftwareRasterizer.a(hb.field_a);
             if (param6[0] != null) {
               SoftwareRasterizer.a(param1, param2, var17, var19);
-              param6[0].d(param1, param2, param0);
+              param6[0].drawTransparentWithOpacity(param1, param2, param0);
               SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param6[2]) {
               SoftwareRasterizer.a(var18, param2, var11, var19);
-              param6[2].d(var14, param2, param0);
+              param6[2].drawTransparentWithOpacity(var14, param2, param0);
               SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[6] != null) {
               SoftwareRasterizer.a(param1, var20, var17, var12);
-              param6[6].d(param1, var16, param0);
+              param6[6].drawTransparentWithOpacity(param1, var16, param0);
               SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[8] != null) {
               SoftwareRasterizer.a(var18, var20, var11, var12);
-              param6[8].d(var14, var16, param0);
+              param6[8].drawTransparentWithOpacity(var14, var16, param0);
               SoftwareRasterizer.b(hb.field_a);
             }
             if (param6[1] != null &&
               0 != param6[1].fullWidth) {
               SoftwareRasterizer.a(var17, param2, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param6[1].fullWidth) {
-                param6[1].d(var21, param2, param0);
+                param6[1].drawTransparentWithOpacity(var21, param2, param0);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
@@ -207,7 +207,7 @@ final class ch {
               param6[7].fullWidth != 0) {
               SoftwareRasterizer.a(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param6[7].fullWidth) {
-                param6[7].d(var21Lifetime1, var16, param0);
+                param6[7].drawTransparentWithOpacity(var21Lifetime1, var16, param0);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
@@ -215,7 +215,7 @@ final class ch {
               0 != param6[3].fullHeight) {
               SoftwareRasterizer.a(param1, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param6[3].fullHeight) {
-                param6[3].d(param1, var21Lifetime2, param0);
+                param6[3].drawTransparentWithOpacity(param1, var21Lifetime2, param0);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
@@ -223,7 +223,7 @@ final class ch {
               0 != param6[5].fullHeight) {
               SoftwareRasterizer.a(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param6[5].fullHeight) {
-                param6[5].d(var14, var21Lifetime3, param0);
+                param6[5].drawTransparentWithOpacity(var14, var21Lifetime3, param0);
               }
               SoftwareRasterizer.b(hb.field_a);
             }
@@ -235,7 +235,7 @@ final class ch {
               SoftwareRasterizer.a(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param6[4].fullHeight) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param6[4].fullWidth) {
-                  param6[4].d(var22, var21Lifetime4, param0);
+                  param6[4].drawTransparentWithOpacity(var22, var21Lifetime4, param0);
                 }
               }
               SoftwareRasterizer.b(hb.field_a);

@@ -611,7 +611,7 @@ final class od {
             param7.rotateCounterclockwise();
           }
           param6.d();
-          param7.e(var22, var23);
+          param7.drawScanlineMasked(var22, var23);
           SectorCacheStore.field_f.bindAsTarget(-86);
         }
         param6.d();

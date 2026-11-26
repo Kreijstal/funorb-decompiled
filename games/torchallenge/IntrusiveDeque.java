@@ -141,7 +141,7 @@ final class IntrusiveDeque {
             SoftwareRasterizer.a(ck.field_c);
             var11 = new Sprite(4 + le.field_e.storedWidth, le.field_e.storedHeight + 4);
             var11.d();
-            le.field_e.f(2, 2, vh.field_h);
+            le.field_e.drawTinted(2, 2, vh.field_h);
             ih.a(var11.storedWidth, 0, 4, var11.storedHeight, 2, var11, 0, 1);
             le.field_e = var11;
             dh.field_ab = le.field_e.i();
@@ -310,14 +310,14 @@ final class IntrusiveDeque {
             }
             var2Lifetime4 = (stackIn_52_0 * ga.$cfr$intArgs$a$f0c91481eb80(stackIn_52_1, stackIn_52_2 << stackIn_53_3) >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              NodeHashTableIterator.field_b.b(230, 389, var2Lifetime4);
-              NodeHashTableIterator.field_b.b(232, 389, var2Lifetime4);
-              NodeHashTableIterator.field_b.b(232, 391, var2Lifetime4);
-              NodeHashTableIterator.field_b.b(230, 391, var2Lifetime4);
-              var1.b(1, 1, var2Lifetime4);
-              var1.b(-1, 1, var2Lifetime4);
-              var1.b(1, -1, var2Lifetime4);
-              var1.b(-1, -1, var2Lifetime4);
+              NodeHashTableIterator.field_b.drawAdditiveWithIntensity(230, 389, var2Lifetime4);
+              NodeHashTableIterator.field_b.drawAdditiveWithIntensity(232, 389, var2Lifetime4);
+              NodeHashTableIterator.field_b.drawAdditiveWithIntensity(232, 391, var2Lifetime4);
+              NodeHashTableIterator.field_b.drawAdditiveWithIntensity(230, 391, var2Lifetime4);
+              var1.drawAdditiveWithIntensity(1, 1, var2Lifetime4);
+              var1.drawAdditiveWithIntensity(-1, 1, var2Lifetime4);
+              var1.drawAdditiveWithIntensity(1, -1, var2Lifetime4);
+              var1.drawAdditiveWithIntensity(-1, -1, var2Lifetime4);
             }
             stackIn_59_0 = (ByteStorage.field_c.field_j == 0);
             tj.a(stackIn_59_0, 5106, bi.field_i, wc.field_b);
@@ -342,17 +342,17 @@ final class IntrusiveDeque {
               if (var2Lifetime5 > 0) {
                 if (-le.field_e.storedWidth + 269 < LocalizedStrings.field_u &&
                   LocalizedStrings.field_u < 269) {
-                  le.field_e.b(269 + (-le.field_e.fullWidth - 1), -1 + var1_int, var2Lifetime5);
-                  le.field_e.b(1 - le.field_e.fullWidth + 269, -1 + var1_int, var2Lifetime5);
-                  le.field_e.b(268 - le.field_e.fullWidth, 1 + var1_int, var2Lifetime5);
-                  le.field_e.b(1 + (-le.field_e.fullWidth + 269), var1_int + 1, var2Lifetime5);
+                  le.field_e.drawAdditiveWithIntensity(269 + (-le.field_e.fullWidth - 1), -1 + var1_int, var2Lifetime5);
+                  le.field_e.drawAdditiveWithIntensity(1 - le.field_e.fullWidth + 269, -1 + var1_int, var2Lifetime5);
+                  le.field_e.drawAdditiveWithIntensity(268 - le.field_e.fullWidth, 1 + var1_int, var2Lifetime5);
+                  le.field_e.drawAdditiveWithIntensity(1 + (-le.field_e.fullWidth + 269), var1_int + 1, var2Lifetime5);
                 } else {
                   if (586 < LocalizedStrings.field_u &&
                     LocalizedStrings.field_u < le.field_e.storedWidth + 586) {
-                    dh.field_ab.b(585, var1_int - 1, var2Lifetime5);
-                    dh.field_ab.b(587, var1_int - 1, var2Lifetime5);
-                    dh.field_ab.b(585, 1 + var1_int, var2Lifetime5);
-                    dh.field_ab.b(587, 1 + var1_int, var2Lifetime5);
+                    dh.field_ab.drawAdditiveWithIntensity(585, var1_int - 1, var2Lifetime5);
+                    dh.field_ab.drawAdditiveWithIntensity(587, var1_int - 1, var2Lifetime5);
+                    dh.field_ab.drawAdditiveWithIntensity(585, 1 + var1_int, var2Lifetime5);
+                    dh.field_ab.drawAdditiveWithIntensity(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }

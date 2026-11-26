@@ -75,14 +75,14 @@ final class sf {
           param1[2].drawTransparent(-var9 + var7_int, param2);
           param1[6].drawTransparent(param4, var8 - var10);
           param1[8].drawTransparent(var7_int - var9, -var10 + var8);
-          param1[1].d(var9 + param4, param2, -(2 * var9) + param5, var10);
-          param1[7].d(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
-          param1[3].d(param4, param2 + var10, var9, param3 - var10 * 2);
+          param1[1].drawScaled(var9 + param4, param2, -(2 * var9) + param5, var10);
+          param1[7].drawScaled(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
+          param1[3].drawScaled(param4, param2 + var10, var9, param3 - var10 * 2);
           if (param6 != -55) {
             field_a = (ResourceArchive) null;
           }
-          param1[5].d(var7_int - var9, param2 + var10, var9, param3 - var10 * 2);
-          param1[4].d(param4 + var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);
+          param1[5].drawScaled(var7_int - var9, param2 + var10, var9, param3 - var10 * 2);
+          param1[4].drawScaled(param4 + var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);
           SectorCacheStore.field_f.bindAsTarget(-47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

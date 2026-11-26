@@ -42,14 +42,14 @@ final class hi extends AsyncRequest {
           SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, -var5 + 256);
           GameShell.m(119);
           if (150 <= fb.field_a) {
-            ej.field_d.d(var3 + 15, 10 + var4, var5);
+            ej.field_d.drawTransparentWithOpacity(var3 + 15, 10 + var4, var5);
           } else {
             kj.field_l.drawHalfSize(var3, var4);
           }
         } else {
           GameShell.m(119);
           if (150 <= fb.field_a) {
-            ej.field_d.d(var3 + 15, 10 + var4, var5);
+            ej.field_d.drawTransparentWithOpacity(var3 + 15, 10 + var4, var5);
             var6 = fb.field_a - 125;
             var7 = 43 / ((param1 + 18) / 54);
             if (var6 <= 0) {
@@ -59,7 +59,7 @@ final class hi extends AsyncRequest {
                 if (var6 < 20) {
                   var8 = 256 * var6 / 20;
                 }
-                jd.field_g.d(15 + var3, var4 + 10, var8 * var5 >> 8);
+                jd.field_g.drawTransparentWithOpacity(15 + var3, var4 + 10, var8 * var5 >> 8);
               }
             } else {
               if (var6 >= 50) {
@@ -69,41 +69,41 @@ final class hi extends AsyncRequest {
                   if (var6 < 20) {
                     var8 = 256 * var6 / 20;
                   }
-                  jd.field_g.d(15 + var3, var4 + 10, var8 * var5 >> 8);
+                  jd.field_g.drawTransparentWithOpacity(15 + var3, var4 + 10, var8 * var5 >> 8);
                 }
               } else {
                 if (var6 < 20) {
                   var8 = 256 * var6 / 20;
-                  ha.field_E.a(var3, var4, var8);
+                  ha.field_E.drawAdditiveWithIntensity(var3, var4, var8);
                   var6 = fb.field_a - 140;
                   if (var6 > 0) {
                     var8 = 256;
                     if (var6 < 20) {
                       var8 = 256 * var6 / 20;
                     }
-                    jd.field_g.d(15 + var3, var4 + 10, var8 * var5 >> 8);
+                    jd.field_g.drawTransparentWithOpacity(15 + var3, var4 + 10, var8 * var5 >> 8);
                   }
                 } else {
                   if (30 > var6) {
-                    ha.field_E.a(var3, var4, 256);
+                    ha.field_E.drawAdditiveWithIntensity(var3, var4, 256);
                     var6 = fb.field_a - 140;
                     if (var6 > 0) {
                       var8 = 256;
                       if (var6 < 20) {
                         var8 = 256 * var6 / 20;
                       }
-                      jd.field_g.d(15 + var3, var4 + 10, var8 * var5 >> 8);
+                      jd.field_g.drawTransparentWithOpacity(15 + var3, var4 + 10, var8 * var5 >> 8);
                     }
                   } else {
                     var8 = (-(256 * var6) + 12800) / 20;
-                    ha.field_E.a(var3, var4, var8);
+                    ha.field_E.drawAdditiveWithIntensity(var3, var4, var8);
                     var6 = fb.field_a - 140;
                     if (var6 > 0) {
                       var8 = 256;
                       if (var6 < 20) {
                         var8 = 256 * var6 / 20;
                       }
-                      jd.field_g.d(15 + var3, var4 + 10, var8 * var5 >> 8);
+                      jd.field_g.drawTransparentWithOpacity(15 + var3, var4 + 10, var8 * var5 >> 8);
                     }
                   }
                 }
@@ -119,13 +119,13 @@ final class hi extends AsyncRequest {
           var6Lifetime1 < 50) {
           if (var6Lifetime1 < 20) {
             var8Lifetime1 = 256 * var6Lifetime1 / 20;
-            ha.field_E.a(var3, var4, var8Lifetime1);
+            ha.field_E.drawAdditiveWithIntensity(var3, var4, var8Lifetime1);
           } else {
             if (30 > var6Lifetime1) {
-              ha.field_E.a(var3, var4, 256);
+              ha.field_E.drawAdditiveWithIntensity(var3, var4, 256);
             } else {
               var8Lifetime1 = (-(256 * var6Lifetime1) + 12800) / 20;
-              ha.field_E.a(var3, var4, var8Lifetime1);
+              ha.field_E.drawAdditiveWithIntensity(var3, var4, var8Lifetime1);
             }
           }
         }
@@ -135,7 +135,7 @@ final class hi extends AsyncRequest {
           if (var6Lifetime2 < 20) {
             var8Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          jd.field_g.d(15 + var3, var4 + 10, var8Lifetime2 * var5 >> 8);
+          jd.field_g.drawTransparentWithOpacity(15 + var3, var4 + 10, var8Lifetime2 * var5 >> 8);
         }
         return;
     }

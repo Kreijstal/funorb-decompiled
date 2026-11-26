@@ -94,7 +94,7 @@ abstract class lb extends DualLinkNode {
                   var14 = SecondaryNodeDeque.field_a[vj.field_c][var12];
                   var7 = dl.field_n[0];
                   var8 = dl.field_n[2];
-                  var14.d(var7, var8, 160);
+                  var14.drawTransparentWithOpacity(var7, var8, 160);
                 }
               }
             }

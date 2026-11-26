@@ -107,20 +107,20 @@ final class ua extends ButtonWidget {
           }
           var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -this.field_J << 10, 4096);
           GameShell.m(-74);
-          bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
+          bl.field_a.drawAdditiveWithIntensity(-var16.field_s + var5, -var16.field_v + var6, 256);
           return;
         }
         if (AsyncRequest.field_t != var8) {
           if (var8 == ef.field_b) {
             var13 = TrackController.field_D[2];
-            var13.a(-(var13.field_t >> 1) + var5, var6 - (var13.field_q >> 1), 256);
+            var13.drawAdditiveWithIntensity(-(var13.field_t >> 1) + var5, var6 - (var13.field_q >> 1), 256);
             return;
           }
           if (TrackController.field_G != var8) {
             return;
           }
           var14 = TrackController.field_D[1];
-          var14.a(-(var14.field_t >> 1) + var5, -(var14.field_q >> 1) + var6, 256);
+          var14.drawAdditiveWithIntensity(-(var14.field_t >> 1) + var5, -(var14.field_q >> 1) + var6, 256);
           return;
         }
         var15 = TrackController.field_D[0];
@@ -145,7 +145,7 @@ final class ua extends ButtonWidget {
         }
         var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -this.field_J << 10, 4096);
         GameShell.m(-74);
-        bl.field_a.a(-var15.field_s + var5, -var15.field_v + var6, 256);
+        bl.field_a.drawAdditiveWithIntensity(-var15.field_s + var5, -var15.field_v + var6, 256);
     }
 
     ua(eh param0) {

@@ -201,7 +201,7 @@ abstract class v extends b {
           v.a((String) null, 32, (String) null, (ResourceArchive) null);
         }
         if (jc.field_c >= 150) {
-          hf.field_a.d(var3 + 15, var4 + 10, var5);
+          hf.field_a.drawTransparentWithOpacity(var3 + 15, var4 + 10, var5);
         } else {
           bd.field_t.drawHalfSize(var3, var4);
         }
@@ -210,13 +210,13 @@ abstract class v extends b {
           var6 < 50) {
           if (var6 < 20) {
             var7 = 256 * var6 / 20;
-            ul.field_k.b(var3, var4, var7);
+            ul.field_k.drawAdditiveWithIntensity(var3, var4, var7);
           } else {
             if (var6 >= 30) {
               var7 = (12800 - var6 * 256) / 20;
-              ul.field_k.b(var3, var4, var7);
+              ul.field_k.drawAdditiveWithIntensity(var3, var4, var7);
             } else {
-              ul.field_k.b(var3, var4, 256);
+              ul.field_k.drawAdditiveWithIntensity(var3, var4, 256);
             }
           }
         }
@@ -226,7 +226,7 @@ abstract class v extends b {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          td.field_o.d(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
+          td.field_o.drawTransparentWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

@@ -43,10 +43,10 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitTransparentRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitAlphaRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -69,7 +69,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void drawFlippedHorizontal(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -110,7 +110,7 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitFlippedHorizontalRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void drawTransparent(int param0, int param1) {
@@ -154,10 +154,10 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitTransparentRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveIntensityRows(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -183,7 +183,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitGrayscaleTintedRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$1 = 0;
         int var12;
         int var13;
@@ -221,7 +221,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitTransparentRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -348,7 +348,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawTransparentWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -389,10 +389,10 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitAlphaRows(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitColorRampRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -446,7 +446,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitFlippedHorizontalRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -474,7 +474,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAdditiveWithIntensity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -515,14 +515,14 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.blitAdditiveIntensityRows(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
-    final void f(int param0, int param1) {
+    final void drawFlippedVertical(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -563,10 +563,10 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitTransparentRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void b(int param0, int param1) {
+    final void drawQuarterSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;
@@ -662,7 +662,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -703,10 +703,10 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.b(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.blitGrayscaleTintedRows(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawColorRamp(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -747,7 +747,7 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitColorRampRows(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {

@@ -145,14 +145,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var6_int = param4[0].field_s;
             var7 = param4[2].field_s;
             var8 = param4[1].field_s;
-            param4[0].e(param5, param0, param2);
-            param4[2].e(-var7 + (param3 + param5), param0, param2);
+            param4[0].drawColorRamp(param5, param0, param2);
+            param4[2].drawColorRamp(-var7 + (param3 + param5), param0, param2);
             SoftwareRasterizer.a(Archive.field_g);
             SoftwareRasterizer.b(param5 + var6_int, param0, -var7 + param5 + param3, param4[1].field_v + param0);
             var9 = param5 + var6_int;
             var10 = param5 + (param3 - var7);
             for (param5 = var9; param5 < var10; param5 = param5 + var8) {
-              param4[1].e(param5, param0, param2);
+              param4[1].drawColorRamp(param5, param0, param2);
             }
             SoftwareRasterizer.b(Archive.field_g);
             return;

@@ -183,17 +183,17 @@ final class wk extends ic {
           if (var5 < 0) {
             cg.field_g.d();
             SoftwareRasterizer.b();
-            var13.d(0, 0);
+            var13.drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(117);
             var7Lifetime2 = cg.field_g;
           }
-          var7Lifetime2.b(var1_int - var6, -var6 + var2, 256);
+          var7Lifetime2.drawAdditiveWithIntensity(var1_int - var6, -var6 + var2, 256);
           var14 = we.field_m[1 + var3Lifetime1];
           var7Lifetime3 = var14;
           if (var5 >= 0) {
             var14.drawTransparent(var1_int, var2);
           } else {
-            var14.d(var1_int, var2);
+            var14.drawFlippedHorizontal(var1_int, var2);
           }
           var4Lifetime1 = ql.field_l[1];
           var2Lifetime1 = dg.field_M[var4Lifetime1][1][1];
@@ -204,11 +204,11 @@ final class wk extends ic {
           if (var5Lifetime1 < 0) {
             cg.field_g.d();
             SoftwareRasterizer.b();
-            var15Lifetime2.d(0, 0);
+            var15Lifetime2.drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(126);
             var7Lifetime4 = cg.field_g;
           }
-          var7Lifetime4.b(-var6 + var1_intLifetime1, -var6 + var2Lifetime1, 256);
+          var7Lifetime4.drawAdditiveWithIntensity(-var6 + var1_intLifetime1, -var6 + var2Lifetime1, 256);
           var16 = we.field_m[var4Lifetime1 + 1];
           var7Lifetime5 = var16;
           if (!param0) {
@@ -218,7 +218,7 @@ final class wk extends ic {
           if (var5Lifetime1 >= 0) {
             var16.drawTransparent(var1_intLifetime1, var2Lifetime1);
           } else {
-            var16.d(var1_intLifetime1, var2Lifetime1);
+            var16.drawFlippedHorizontal(var1_intLifetime1, var2Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

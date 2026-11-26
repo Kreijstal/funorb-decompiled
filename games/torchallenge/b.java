@@ -32,7 +32,7 @@ abstract class b extends kj {
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
-          nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+          nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
         if (this.field_p > nb.field_a.storedWidth) {
@@ -42,7 +42,7 @@ abstract class b extends kj {
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
-          nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+          nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
         if (nb.field_a.storedHeight >= this.field_l) {
@@ -51,7 +51,7 @@ abstract class b extends kj {
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
-          nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+          nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
           return;
         }
         nb.field_a = new Sprite(this.field_p, this.field_l);
@@ -60,7 +60,7 @@ abstract class b extends kj {
         this.c(103, 0, 0);
         super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
         ie.b((byte) -9);
-        nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+        nb.field_a.drawTransparentWithOpacity(param1 + this.field_m, this.field_i + param0, this.field_P);
     }
 
     final void b(int param0, int param1, int param2) {

@@ -738,12 +738,12 @@ final class GameScreen {
               }
               qf.field_c[var10].drawTransparent(var5_int, var6 + var23);
               if (kj.field_I[var27]) {
-                hb.field_c.h(var5_int + var15, var16 + var6 + var23);
+                hb.field_c.drawQuarterSize(var5_int + var15, var16 + var6 + var23);
               } else if (pa.field_s[ok.field_b][var27]) {
                 ib.field_M[2].drawTransparent(var5_int, var23 + var6);
                 tf.field_x.a(Integer.toString(1 + var27), var5_int + (ib.field_M[2].fullWidth >> 1), var23 - 2 + (9 + (ib.field_M[2].fullHeight >> 1)) + var6, var17, -1);
               } else {
-                je.field_b.h(-1 + (var5_int + var15), var23 + (var6 + var16));
+                je.field_b.drawQuarterSize(-1 + (var5_int + var15), var23 + (var6 + var16));
               }
               var26 = 0;
               var28_int = 0;
@@ -1371,7 +1371,7 @@ final class GameScreen {
                 e.a((byte) -36, var25);
                 SoftwareRasterizer.setClip(0, var21, 640, 480 - var21);
               }
-              vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
+              vj.field_d[ok.field_b].drawAdditiveWithIntensity(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
             }
             param9.a(var17_intLifetime2, var18Lifetime2, var24Lifetime2, 16777215);
           }
@@ -1383,7 +1383,7 @@ final class GameScreen {
                   e.a((byte) -101, var25);
                   SoftwareRasterizer.setClip(0, var21, 640, 480 - var21);
                 }
-                vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
+                vj.field_d[ok.field_b].drawAdditiveWithIntensity(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
               }
               param9.drawTransparent(var17_intLifetime2, var18Lifetime2);
               if (var26 != 0) {
@@ -1392,9 +1392,9 @@ final class GameScreen {
                     e.a((byte) -116, var25);
                     SoftwareRasterizer.setClip(0, var21, 640, -var21 + 480);
                   }
-                  vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
+                  vj.field_d[ok.field_b].drawAdditiveWithIntensity(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
                 }
-                param9.e(var17_intLifetime2, var18Lifetime2, var19Lifetime1);
+                param9.drawTransparentWithIntensity(var17_intLifetime2, var18Lifetime2, var19Lifetime1);
               }
             } else {
               if (0 == rj.field_g) {
@@ -1402,9 +1402,9 @@ final class GameScreen {
                   e.a((byte) -116, var25);
                   SoftwareRasterizer.setClip(0, var21, 640, -var21 + 480);
                 }
-                vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
+                vj.field_d[ok.field_b].drawAdditiveWithIntensity(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
               }
-              param9.e(var17_intLifetime2, var18Lifetime2, var19Lifetime1);
+              param9.drawTransparentWithIntensity(var17_intLifetime2, var18Lifetime2, var19Lifetime1);
             }
           }
           SoftwareRasterizer.b(pf.field_g);
@@ -1544,7 +1544,7 @@ final class GameScreen {
           var3 = vj.field_d[ok.field_b];
           var4 = 320 + (320 - var3.fullWidth) / 2;
           var5 = lg.field_d[1][param0];
-          var3.b(var4 - 8, -8 + var5, 256);
+          var3.drawAdditiveWithIntensity(var4 - 8, -8 + var5, 256);
           var3Lifetime1 = we.field_m[ok.field_b + 1];
           var3Lifetime1.drawTransparent(var4, var5);
           return;
@@ -1690,7 +1690,7 @@ final class GameScreen {
             }
             if (!(var21Lifetime1 < 0) ||
               var27 != 0) {
-              param14.e(var16_int, var17, var21Lifetime1);
+              param14.drawTransparentWithIntensity(var16_int, var17, var21Lifetime1);
               if (var27 != 0) {
                 if (var21Lifetime1 >= 0) {
                   param3.a(var16_int, var17, var21Lifetime1, 1);
@@ -1735,7 +1735,7 @@ final class GameScreen {
                 return;
               }
             }
-            param9.e(var16_intLifetime1, var17Lifetime1, var22Lifetime1);
+            param9.drawTransparentWithIntensity(var16_intLifetime1, var17Lifetime1, var22Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1871,15 +1871,15 @@ final class GameScreen {
                   (decompiledFrameRemainder0 = (!(nb.a(var20, (byte) 119)) ||
                   var3_int != 0))) {
                   if (v.a(var20, 5)) {
-                    je.field_b.h(var15, var16);
+                    je.field_b.drawQuarterSize(var15, var16);
                   } else if (0 < UiComponent.field_o) {
-                    je.field_b.h(var15, var16);
+                    je.field_b.drawQuarterSize(var15, var16);
                   } else {
-                    hb.field_c.h(var15, var16);
+                    hb.field_c.drawQuarterSize(var15, var16);
                   }
                 }
               } else {
-                tf.field_j[var20].h(var15, var16);
+                tf.field_j[var20].drawQuarterSize(var15, var16);
               }
               if (decompiledFrameRemainder0) {
                 if (var15 <= LocalizedStrings.field_u &&
@@ -2938,7 +2938,7 @@ final class GameScreen {
                 break;
               }
               var3_intLifetime1Lifetime1 = stackIn_222_0;
-              oj.field_d.d(0, 0, var3_intLifetime1Lifetime1);
+              oj.field_d.drawTransparentWithOpacity(0, 0, var3_intLifetime1Lifetime1);
             }
           }
           if (decompiledFrameCompleted0) {
@@ -3333,7 +3333,7 @@ final class GameScreen {
             var9Lifetime1 = m.field_g[1];
             var8Lifetime1 = m.field_g[0];
             SectorCacheStore.field_f.bindAsTarget(-54);
-            LevelEntity.field_E.d(var8Lifetime1, var9Lifetime1, var16Lifetime1);
+            LevelEntity.field_E.drawTransparentWithOpacity(var8Lifetime1, var9Lifetime1, var16Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4495,7 +4495,7 @@ final class GameScreen {
                 return;
               }
             }
-            param8.e(var17_intLifetime2, var18Lifetime2, var21Lifetime1);
+            param8.drawTransparentWithIntensity(var17_intLifetime2, var18Lifetime2, var21Lifetime1);
             if (var24 == 0) {
               return;
             }
@@ -4510,12 +4510,12 @@ final class GameScreen {
           var18Lifetime2 = var18Lifetime2 + (-var20 + param8.fullHeight >> 1);
           var17_intLifetime2 = var17_intLifetime2 + (-var19 + param8.fullWidth >> 1);
           if (var21Lifetime1 < 0) {
-            param8.d(var17_intLifetime2, var18Lifetime2, var19, var20);
+            param8.drawScaled(var17_intLifetime2, var18Lifetime2, var19, var20);
             if (var24 == 0) {
               return;
             }
           }
-          param8.a(var17_intLifetime2, var18Lifetime2, var19, var20, var21Lifetime1);
+          param8.drawScaledWithIntensity(var17_intLifetime2, var18Lifetime2, var19, var20, var21Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4865,7 +4865,7 @@ final class GameScreen {
             GzipDecoder.drawNineSlice(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
             SoftwareRasterizer.a(pf.field_g);
             SoftwareRasterizer.setClip(var33, var34, var35 + var33, var36 + var34);
-            var11.d(var29, var30, var31, var32);
+            var11.drawScaled(var29, var30, var31, var32);
             SoftwareRasterizer.b(pf.field_g);
             var12[0].drawTransparent(var33 - var8, var34 - var8);
             var12[2].drawTransparent(var8 + var33 + var35 - var12[2].fullWidth, -var8 + var34);
@@ -4962,7 +4962,7 @@ final class GameScreen {
               oj.field_d.d();
               jj.field_a[ok.field_b].drawTransparent(var2_int, var3);
               SectorCacheStore.field_f.bindAsTarget(113);
-              oj.field_d.d(0, 0, var7);
+              oj.field_d.drawTransparentWithOpacity(0, 0, var7);
             }
             var13++;
           }
@@ -6500,7 +6500,7 @@ final class GameScreen {
             if (0 > ResourceArchive.field_n[param7].field_a) {
               param4 += 16;
             }
-            jj.field_a[param7].d(param4, param1, var13);
+            jj.field_a[param7].drawTransparentWithOpacity(param4, param1, var13);
             if (var15 != 0) {
               if (var10 == 0) {
                 ResourceArchive.field_n[param7].a((Sprite) null, param1, ResourceArchive.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);

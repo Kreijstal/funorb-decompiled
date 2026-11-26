@@ -269,10 +269,10 @@ final class tk extends ng {
           jh.field_c != var8) {
           if (SpriteLoader.field_c == var8) {
             var14 = ub.field_f[2];
-            var14.b(var5 - (var14.storedWidth >> 1), var6 - (var14.storedHeight >> 1), 256);
+            var14.drawAdditiveWithIntensity(var5 - (var14.storedWidth >> 1), var6 - (var14.storedHeight >> 1), 256);
           } else if (var8 == tf.field_w) {
             var13 = ub.field_f[1];
-            var13.b(-(var13.storedWidth >> 1) + var5, var6 - (var13.storedHeight >> 1), 256);
+            var13.drawAdditiveWithIntensity(-(var13.storedWidth >> 1) + var5, var6 - (var13.storedHeight >> 1), 256);
           }
         } else {
           var12 = ub.field_f[0];
@@ -289,7 +289,7 @@ final class tk extends ng {
           }
           var12.b(112, 144, var12.fullWidth << 4, var12.fullHeight << 4, -this.field_S << 10, 4096);
           ie.b((byte) -9);
-          lh.field_v.b(var5 - var12.fullWidth, var6 - var12.fullHeight, 256);
+          lh.field_v.drawAdditiveWithIntensity(var5 - var12.fullWidth, var6 - var12.fullHeight, 256);
         }
     }
 

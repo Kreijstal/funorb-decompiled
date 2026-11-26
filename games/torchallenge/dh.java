@@ -155,14 +155,14 @@ final class dh extends df {
             jh.field_c != var6) {
             if (SpriteLoader.field_c == var6) {
               var19 = ub.field_f[2];
-              var19.b(var9, -(var19.storedHeight >> 1) + var10, 256);
+              var19.drawAdditiveWithIntensity(var9, -(var19.storedHeight >> 1) + var10, 256);
               return;
             }
             if (var6 != tf.field_w) {
               return;
             }
             var20 = ub.field_f[1];
-            var20.b(var9, var10 - (var20.storedHeight >> 1), 256);
+            var20.drawAdditiveWithIntensity(var9, var10 - (var20.storedHeight >> 1), 256);
             return;
           }
           var21 = ub.field_f[0];
@@ -180,7 +180,7 @@ final class dh extends df {
           }
           var21.b(112, 144, var21.fullWidth << 4, var21.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
-          this.field_Z.b(-(var21.fullWidth >> 1) + var9, var10 - var21.fullHeight, 256);
+          this.field_Z.drawAdditiveWithIntensity(-(var21.fullWidth >> 1) + var9, var10 - var21.fullHeight, 256);
           return;
         }
         if (var6 != jh.field_c) {
@@ -201,14 +201,14 @@ final class dh extends df {
             jh.field_c != var6) {
             if (SpriteLoader.field_c == var6) {
               var38 = ub.field_f[2];
-              var38.b(var9Lifetime1, -(var38.storedHeight >> 1) + var10Lifetime1, 256);
+              var38.drawAdditiveWithIntensity(var9Lifetime1, -(var38.storedHeight >> 1) + var10Lifetime1, 256);
               return;
             }
             if (var6 != tf.field_w) {
               return;
             }
             var39 = ub.field_f[1];
-            var39.b(var9Lifetime1, var10Lifetime1 - (var39.storedHeight >> 1), 256);
+            var39.drawAdditiveWithIntensity(var9Lifetime1, var10Lifetime1 - (var39.storedHeight >> 1), 256);
             return;
           }
           var40 = ub.field_f[0];
@@ -233,7 +233,7 @@ final class dh extends df {
           }
           var40.b(112, 144, var40.fullWidth << 4, var40.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
-          this.field_Z.b(-(var40.fullWidth >> 1) + var9Lifetime1, var10Lifetime1 - var40.fullHeight, 256);
+          this.field_Z.drawAdditiveWithIntensity(-(var40.fullWidth >> 1) + var9Lifetime1, var10Lifetime1 - var40.fullHeight, 256);
           return;
         }
         var23 = hb.field_h;
@@ -262,20 +262,20 @@ final class dh extends df {
           }
           var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
-          this.field_Z.b(-(var25.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var25.fullHeight, 256);
+          this.field_Z.drawAdditiveWithIntensity(-(var25.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var25.fullHeight, 256);
           return;
         }
         if (jh.field_c != var6Lifetime1) {
           if (SpriteLoader.field_c == var6Lifetime1) {
             var27 = ub.field_f[2];
-            var27.b(var9Lifetime2, -(var27.storedHeight >> 1) + var10Lifetime2, 256);
+            var27.drawAdditiveWithIntensity(var9Lifetime2, -(var27.storedHeight >> 1) + var10Lifetime2, 256);
             return;
           }
           if (var6Lifetime1 != tf.field_w) {
             return;
           }
           var30 = ub.field_f[1];
-          var30.b(var9Lifetime2, var10Lifetime2 - (var30.storedHeight >> 1), 256);
+          var30.drawAdditiveWithIntensity(var9Lifetime2, var10Lifetime2 - (var30.storedHeight >> 1), 256);
           return;
         }
         var32 = ub.field_f[0];
@@ -301,7 +301,7 @@ final class dh extends df {
         }
         var32.b(112, 144, var32.fullWidth << 4, var32.fullHeight << 4, -this.field_X << 10, 4096);
         ie.b((byte) -9);
-        this.field_Z.b(-(var32.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var32.fullHeight, 256);
+        this.field_Z.drawAdditiveWithIntensity(-(var32.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var32.fullHeight, 256);
         return;
     }
 

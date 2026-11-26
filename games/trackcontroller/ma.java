@@ -182,7 +182,7 @@ final class ma implements t {
           var8 = TrackController.field_D[1];
           if (param1 instanceof ButtonWidget &&
             ((ButtonWidget) (param1)).field_G) {
-            var8.a((param1.field_x - var8.field_s >> 1) + (1 + var6_int), var7 + 1 + (param1.field_u - var8.field_v >> 1), 256);
+            var8.drawAdditiveWithIntensity((param1.field_x - var8.field_s >> 1) + (1 + var6_int), var7 + 1 + (param1.field_u - var8.field_v >> 1), 256);
           }
           if (param1.h(-111)) {
             BufferedSocket.a(param1.field_u - 4, -28846, param1.field_x - 4, var7 + 2, var6_int + 2);

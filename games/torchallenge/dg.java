@@ -630,7 +630,7 @@ final class dg extends kj implements tl, sg, tb {
         fa.field_q.pixels = SoftwareRasterizer.pixels;
         SoftwareRasterizer.a(pf.field_g);
         SoftwareRasterizer.setClip(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-        fa.field_q.e(0, 0, param0);
+        fa.field_q.drawTransparentWithIntensity(0, 0, param0);
         SoftwareRasterizer.b(pf.field_g);
     }
 

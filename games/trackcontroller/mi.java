@@ -111,10 +111,10 @@ final class mi extends el {
           var6Lifetime1 != AsyncRequest.field_t) {
           if (ef.field_b == var6Lifetime1) {
             var16 = TrackController.field_D[2];
-            var16.a(var9, var10 - (var16.field_q >> 1), 256);
+            var16.drawAdditiveWithIntensity(var9, var10 - (var16.field_q >> 1), 256);
           } else if (TrackController.field_G == var6Lifetime1) {
             var15 = TrackController.field_D[1];
-            var15.a(var9, -(var15.field_q >> 1) + var10, 256);
+            var15.drawAdditiveWithIntensity(var9, -(var15.field_q >> 1) + var10, 256);
           }
         } else {
           var14 = TrackController.field_D[0];
@@ -131,7 +131,7 @@ final class mi extends el {
           }
           var14.a(112, 144, var14.field_s << 4, var14.field_v << 4, -this.field_Q << 10, 4096);
           GameShell.m(57);
-          this.field_P.a(-(var14.field_s >> 1) + var9, var10 - var14.field_v, 256);
+          this.field_P.drawAdditiveWithIntensity(-(var14.field_s >> 1) + var9, var10 - var14.field_v, 256);
         }
     }
 

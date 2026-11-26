@@ -637,7 +637,7 @@ public final class TorChallenge extends GameClientBase {
               var3_ref_ka.fullHeight = SoftwareRasterizer.height;
               var3_ref_ka.storedHeight = SoftwareRasterizer.height;
               var4 = 256 * (hk.field_e + 1 - 16) / 16;
-              var3_ref_ka.e(0, 0, var4);
+              var3_ref_ka.drawTransparentWithIntensity(0, 0, var4);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -656,7 +656,7 @@ public final class TorChallenge extends GameClientBase {
               var3_ref_kaLifetime1.fullHeight = SoftwareRasterizer.height;
               var3_ref_kaLifetime1.storedHeight = SoftwareRasterizer.height;
               var4Lifetime1 = (-(255 * hk.field_e) + 3825) / 15;
-              var3_ref_kaLifetime1.e(0, 0, var4Lifetime1);
+              var3_ref_kaLifetime1.drawTransparentWithIntensity(0, 0, var4Lifetime1);
               decompiledFrameRemainder0 = (var5 != 0);
             }
           }

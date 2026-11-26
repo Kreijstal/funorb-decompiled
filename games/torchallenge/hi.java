@@ -352,7 +352,7 @@ final class hi extends ic {
         FullscreenFocusCanvas.a(-13, var5);
         this.field_A.a(0, 0, param2, param3);
         ie.b((byte) -9);
-        var5.d(param1 + this.field_m, param0 + this.field_i, this.field_H);
+        var5.drawTransparentWithOpacity(param1 + this.field_m, param0 + this.field_i, this.field_H);
     }
 
     static {

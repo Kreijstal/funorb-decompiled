@@ -32,7 +32,7 @@ final class gl extends ok {
           mb.a((byte) -12, var6);
           this.field_B.a(param0, 0, 0, param3 + 0);
           GameShell.m(param3 - 29294);
-          var6.d(this.field_p + param1, this.field_m + param2, this.field_H);
+          var6.drawTransparentWithOpacity(this.field_p + param1, this.field_m + param2, this.field_H);
           return;
         }
     }

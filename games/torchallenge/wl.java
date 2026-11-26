@@ -534,7 +534,7 @@ final class wl {
           var10 = var16 + 1;
           var8 = var15;
           GzipDecoder.drawNineSlice(var14, var12, var11, (byte) -78, var9, var7);
-          tf.field_j[var20_ref.field_i].h(var8 + var7, var10 + var9);
+          tf.field_j[var20_ref.field_i].drawQuarterSize(var8 + var7, var10 + var9);
           var6 = 24;
           var8Lifetime1 = var15 + 40;
           var3 = BufferedSocket.field_n[var20_ref.field_i];

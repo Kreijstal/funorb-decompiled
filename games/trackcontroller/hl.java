@@ -125,7 +125,7 @@ abstract class hl extends td {
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
-          CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+          CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
         if (this.field_x > CachedArchiveSource.field_p.field_t) {
@@ -135,7 +135,7 @@ abstract class hl extends td {
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
-          CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+          CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
         if (this.field_u > CachedArchiveSource.field_p.field_q) {
@@ -145,7 +145,7 @@ abstract class hl extends td {
           this.b(0, 20, 0);
           super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
           GameShell.m(119);
-          CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+          CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
           return;
         }
         mb.a((byte) -116, CachedArchiveSource.field_p);
@@ -153,7 +153,7 @@ abstract class hl extends td {
         this.b(0, 20, 0);
         super.a(param0, -param1 - this.field_p, -param2 - this.field_m, param3);
         GameShell.m(119);
-        CachedArchiveSource.field_p.d(param1 + this.field_p, param2 + this.field_m, this.field_G);
+        CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
     }
 
     public static void l(int param0) {
