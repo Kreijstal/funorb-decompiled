@@ -702,7 +702,7 @@ final class MidiPcmStream extends PcmStream {
               return;
             }
           }
-          this.field_z = this.field_n.a();
+          this.field_z = this.field_n.nextTrack();
           this.field_m = this.field_n.field_a[this.field_z];
           this.field_U = this.field_n.d(this.field_m);
           return;
@@ -1702,7 +1702,7 @@ final class MidiPcmStream extends PcmStream {
                     }
                     if (this.field_D &&
                       0 != var3) {
-                      this.field_n.a(var4);
+                      this.field_n.reset(var4);
                     } else {
                       this.a(true, (byte) -87);
                       this.field_n.g();
@@ -1721,7 +1721,7 @@ final class MidiPcmStream extends PcmStream {
               break;
             }
             if (decompiledFrameCompleted0) {
-              var2 = this.field_n.a();
+              var2 = this.field_n.nextTrack();
               var3 = this.field_n.field_a[var2];
               var4 = this.field_n.d(var3);
               continue;

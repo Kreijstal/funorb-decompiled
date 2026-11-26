@@ -89,12 +89,12 @@ final class qh extends kj implements tl, sg {
         var10 = new Sprite(1 + var4Lifetime2 / 2, var5Lifetime2);
         sf.a(var10, ph.field_h, 0, var5Lifetime2, 0, var4Lifetime2 / 2 + 1, (byte) -55);
         uk.field_N.d();
-        var10.g(var2Lifetime2, var3Lifetime2);
+        var10.drawTransparent(var2Lifetime2, var3Lifetime2);
         var10.d(var2Lifetime2 + var4Lifetime2 / 2 - 2, var3Lifetime2);
         var7 = di.field_t[vj.field_c].fullHeight;
         var6 = di.field_t[vj.field_c].fullWidth;
         var8 = null;
-        di.field_t[vj.field_c].g(var2Lifetime2 + (-var6 + var4Lifetime2 / 2) / 2 + 2, (var5Lifetime2 - var7) / 2 + var3Lifetime2);
+        di.field_t[vj.field_c].drawTransparent(var2Lifetime2 + (-var6 + var4Lifetime2 / 2) / 2 + 2, (var5Lifetime2 - var7) / 2 + var3Lifetime2);
         if (0 != param0 &&
           param0 != 2) {
           if (param0 == 1) {
@@ -108,7 +108,7 @@ final class qh extends kj implements tl, sg {
           var3Lifetime3 = rf.field_eb[vj.field_c][1];
           var2Lifetime3 = rf.field_eb[vj.field_c][0];
           uk.field_N.d();
-          ie.field_f[vj.field_c][0].g(var2Lifetime3, var3Lifetime3);
+          ie.field_f[vj.field_c][0].drawTransparent(var2Lifetime3, var3Lifetime3);
           IterableNodeHashTable.field_h = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
           ac.field_a = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
           IterableNodeHashTable.field_h.d();
@@ -119,7 +119,7 @@ final class qh extends kj implements tl, sg {
           var3Lifetime4 = nh.field_db[1];
           var2Lifetime4 = nh.field_db[0];
           uk.field_N.d();
-          wf.field_b.g(var2Lifetime4, var3Lifetime4);
+          wf.field_b.drawTransparent(var2Lifetime4, var3Lifetime4);
         }
         SectorCacheStore.field_f.bindAsTarget(-53);
     }

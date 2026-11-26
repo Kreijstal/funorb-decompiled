@@ -473,7 +473,7 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     private final void b(int param0, int param1) {
         field_y = -1;
@@ -488,7 +488,7 @@ abstract class BitmapFont extends DualLinkNode {
         field_D = 0;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int[] var12;
@@ -688,22 +688,22 @@ abstract class BitmapFont extends DualLinkNode {
               } else {
                 if (field_I != 256) {
                   if (field_z != -1) {
-                    this.a(var8, param1 + this.field_B[var8] + 1, param2 + this.field_M[var8] + 1, var9, var10, field_z, field_I, true);
+                    this.drawGlyphAlpha(var8, param1 + this.field_B[var8] + 1, param2 + this.field_M[var8] + 1, var9, var10, field_z, field_I, true);
                   }
-                  this.a(var8, param1 + this.field_B[var8], param2 + this.field_M[var8], var9, var10, field_F, field_I, false);
+                  this.drawGlyphAlpha(var8, param1 + this.field_B[var8], param2 + this.field_M[var8], var9, var10, field_F, field_I, false);
                 } else {
                   if (field_z != -1) {
-                    this.a(var8, param1 + this.field_B[var8] + 1, param2 + this.field_M[var8] + 1, var9, var10, field_z, true);
+                    this.drawGlyph(var8, param1 + this.field_B[var8] + 1, param2 + this.field_M[var8] + 1, var9, var10, field_z, true);
                   }
-                  this.a(var8, param1 + this.field_B[var8], param2 + this.field_M[var8], var9, var10, field_F, false);
+                  this.drawGlyph(var8, param1 + this.field_B[var8], param2 + this.field_M[var8], var9, var10, field_F, false);
                 }
               }
               param1 = param1 + this.field_K[var8];
               if (field_y != -1) {
-                SoftwareRasterizer.a(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_y);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_y);
               }
               if (field_w != -1) {
-                SoftwareRasterizer.a(var11, param2 + this.field_C + 1, param1 - var11, field_w);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_C + 1, param1 - var11, field_w);
               }
               var5 = var8;
             }
@@ -819,7 +819,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 != 32) {
           param2 = param2 - this.field_C;
           var5 = ua.a(true, param0) & 255;
-          this.a(var5, param1 + this.field_B[var5] - (this.field_K[var5] >> 1), param2 + this.field_M[var5], this.field_s[var5], this.field_x[var5], param3, false);
+          this.drawGlyph(var5, param1 + this.field_B[var5] - (this.field_K[var5] >> 1), param2 + this.field_M[var5], this.field_s[var5], this.field_x[var5], param3, false);
         }
     }
 
@@ -828,7 +828,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 != 32) {
           param2 = param2 - this.field_C;
           var6 = ua.a(true, param0) & 255;
-          this.a(var6, param1 + this.field_B[var6] - (this.field_K[var6] >> 1), param2 + this.field_M[var6], this.field_s[var6], this.field_x[var6], param3, param4, false);
+          this.drawGlyphAlpha(var6, param1 + this.field_B[var6] - (this.field_K[var6] >> 1), param2 + this.field_M[var6], this.field_s[var6], this.field_x[var6], param3, param4, false);
         }
     }
 

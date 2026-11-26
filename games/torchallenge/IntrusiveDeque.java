@@ -156,7 +156,7 @@ final class IntrusiveDeque {
             ek.field_G.a(wi.field_b, var6, 200, 16777215, -1);
             ih.a(var12.storedWidth, 0, 4, var12.storedHeight, 3, var12, 0, 1);
             me.field_e.d();
-            var12.g(-me.field_e.offsetX + 18, -me.field_e.offsetY + 241);
+            var12.drawTransparent(-me.field_e.offsetX + 18, -me.field_e.offsetY + 241);
             for (var7 = 0; hb.field_g.length > var7; var7++) {
               SecondaryNodeDeque.field_i[var7].d();
               ek.field_G.a(hb.field_g[var7], 3, 3, SecondaryNodeDeque.field_i[var7].storedWidth - 6, SecondaryNodeDeque.field_i[var7].storedHeight - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
@@ -234,7 +234,7 @@ final class IntrusiveDeque {
             tk.field_R.a(var14, si.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
             ih.a(var9.fullWidth, 0, 4, var9.fullHeight, 3, var9, 0, 1);
             vk.field_d.d();
-            var9.g(0, 0);
+            var9.drawTransparent(0, 0);
             cf.field_c = new Sprite(640, 480);
             cf.field_c.d();
             vk.field_d.b(rl.field_f + (vk.field_d.fullWidth >> 1), (vk.field_d.fullHeight >> 1) + bh.field_t, ImageProducerRasterBuffer.field_u, 4096);
@@ -256,7 +256,7 @@ final class IntrusiveDeque {
             ek.field_G.a(var17, 3, 3, var16.storedWidth - 6, var16.storedHeight - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
             ih.a(var16.storedWidth, 0, 4, var16.storedHeight, 3, var16, 0, 1);
             ResourceArchive.field_f.d();
-            var16.g(199 - ResourceArchive.field_f.offsetX, 83 - ResourceArchive.field_f.offsetY);
+            var16.drawTransparent(199 - ResourceArchive.field_f.offsetX, 83 - ResourceArchive.field_f.offsetY);
             SoftwareRasterizer.setTarget(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.b(ck.field_c);
           }
@@ -274,7 +274,7 @@ final class IntrusiveDeque {
             ek.field_G.c(ImageProducerRasterBuffer.field_r, -ResourceArchive.field_f.offsetX + var7Lifetime2, ek.field_G.field_x + (155 - ResourceArchive.field_f.offsetY + ek.field_G.field_K), 16777215, -1);
             ih.a(var4, -ResourceArchive.field_f.offsetX + (var7Lifetime2 - 4), 4, 50, 3, ResourceArchive.field_f, -ResourceArchive.field_f.offsetY + 155, 1);
             var8Lifetime1 = -((ProxySocketConnector.field_m.fullHeight - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-ResourceArchive.field_f.offsetY + 155);
-            ProxySocketConnector.field_m.g(var6Lifetime2 - ResourceArchive.field_f.offsetX, var8Lifetime1);
+            ProxySocketConnector.field_m.drawTransparent(var6Lifetime2 - ResourceArchive.field_f.offsetX, var8Lifetime1);
             SoftwareRasterizer.setTarget(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.b(ck.field_c);
             ProxySocketConnector.field_m = null;
@@ -283,23 +283,23 @@ final class IntrusiveDeque {
           SoftwareRasterizer.a(16, 16, 608, 112, 15, gf.field_u, ea.field_c);
           SoftwareRasterizer.a(231, 144, 393, 232, 15, gf.field_u, ea.field_c);
           if (IntrusiveNode.field_b != null) {
-            IntrusiveNode.field_b.g(0, 0);
+            IntrusiveNode.field_b.drawTransparent(0, 0);
           }
           if (null != me.field_e) {
-            me.field_e.g(0, 0);
+            me.field_e.drawTransparent(0, 0);
           }
-          ResourceArchive.field_f.g(0, 0);
+          ResourceArchive.field_f.drawTransparent(0, 0);
           if (cf.field_c != null) {
-            cf.field_c.g(0, 0);
+            cf.field_c.drawTransparent(0, 0);
           }
           if (null != NodeHashTableIterator.field_b &&
             null != ub.field_e) {
-            NodeHashTableIterator.field_b.g(231, 390);
+            NodeHashTableIterator.field_b.drawTransparent(231, 390);
             var1 = GzipDecoder.field_b;
             if (0 == ByteStorage.field_c.field_j) {
               var1 = dg.field_R;
             }
-            var1.g(0, 0);
+            var1.drawTransparent(0, 0);
             stackIn_52_0 = 40;
             stackIn_52_1 = 124;
             stackIn_52_2 = ub.field_h;
@@ -324,8 +324,8 @@ final class IntrusiveDeque {
           }
           if (null != NodeHashTableIterator.field_b &&
             ub.field_e != null) {
-            NodeHashTableIterator.field_b.g(434, 390);
-            SocketConnector.field_h.g(0, 0);
+            NodeHashTableIterator.field_b.drawTransparent(434, 390);
+            SocketConnector.field_h.drawTransparent(0, 0);
             if (ByteStorage.field_c.field_j == 1) {
               ii.a(NodeHashTableIterator.field_b.storedWidth - 4, 7 * NodeHashTableIterator.field_b.storedHeight / 12, 64, 4, 436, 392);
             }
@@ -334,8 +334,8 @@ final class IntrusiveDeque {
           }
           if (le.field_e != null) {
             var1_int = 357 - le.field_e.fullHeight / 2;
-            le.field_e.g(-le.field_e.fullWidth + 269, var1_int);
-            dh.field_ab.g(586, var1_int);
+            le.field_e.drawTransparent(-le.field_e.fullWidth + 269, var1_int);
+            dh.field_ab.drawTransparent(586, var1_int);
             if (var1_int < ph.field_d &&
               ph.field_d < le.field_e.storedHeight + var1_int) {
               var2Lifetime5 = (ga.$cfr$intArgs$a$f0c91481eb80(5, ub.field_h << 4) * 40 >> 16) + 40;
@@ -358,10 +358,10 @@ final class IntrusiveDeque {
               }
             }
             DualLinkNode.c(-128);
-            SecondaryNodeDeque.field_i[DirectByteStorage.field_j].g(269, 340);
+            SecondaryNodeDeque.field_i[DirectByteStorage.field_j].drawTransparent(269, 340);
           } else {
             DualLinkNode.c(-128);
-            SecondaryNodeDeque.field_i[DirectByteStorage.field_j].g(269, 340);
+            SecondaryNodeDeque.field_i[DirectByteStorage.field_j].drawTransparent(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

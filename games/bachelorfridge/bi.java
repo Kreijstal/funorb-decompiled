@@ -170,7 +170,7 @@ abstract class bi extends jla {
           if (var5 != 0) {
             var11.draw(-(var11.field_n >> 1) + var9, -22 + var10);
           } else {
-            var11.b(-(var11.field_n >> 1) + var9, -22 + var10, 128);
+            var11.drawTransparentWithIntensity(-(var11.field_n >> 1) + var9, -22 + var10, 128);
           }
           ((BitmapFont) ((Object) var7)).a(var6, var9, var10 + 6, var8, -1);
           return;

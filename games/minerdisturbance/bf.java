@@ -49,14 +49,14 @@ final class bf {
           var3 = NodeHashTableIterator.field_e + ClientException.field_d;
           var4 = var2 / 32 * 32 - li.field_c;
           var5 = -ClientException.field_d + 32 * (var3 / 32);
-          SoftwareRasterizer.e(var4, var5, 8, 16711680);
-          SoftwareRasterizer.g(var4, var5, 8, 16711680);
-          SoftwareRasterizer.e(var4, var5 + 32, 8, 16711680);
-          SoftwareRasterizer.g(var4, 24 + var5, 8, 16711680);
-          SoftwareRasterizer.e(var4 + 24, var5, 8, 16711680);
-          SoftwareRasterizer.g(var4 + 32, var5, 8, 16711680);
-          SoftwareRasterizer.e(var4 + 24, var5, 8, 16711680);
-          SoftwareRasterizer.g(var4 + 32, var5 + 24, 8, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(var4, var5, 8, 16711680);
+          SoftwareRasterizer.drawVerticalLine(var4, var5, 8, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(var4, var5 + 32, 8, 16711680);
+          SoftwareRasterizer.drawVerticalLine(var4, 24 + var5, 8, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(var4 + 24, var5, 8, 16711680);
+          SoftwareRasterizer.drawVerticalLine(var4 + 32, var5, 8, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(var4 + 24, var5, 8, 16711680);
+          SoftwareRasterizer.drawVerticalLine(var4 + 32, var5 + 24, 8, 16711680);
         }
         if (param0 < -57) {
           return;

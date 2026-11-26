@@ -89,7 +89,7 @@ final class d {
           SocketConnector.field_g.c(field_a, var5, 461, 16777215, -1);
           var5 = var5 + (SocketConnector.field_g.b(field_a) + 1);
           for (var6 = 0; uf.field_p > var6; var6++) {
-            var4.a(var5, -(var4.field_r * 12 / var4.field_q) + 470, 12, var4.field_r * 12 / var4.field_q);
+            var4.drawScaledAveraged(var5, -(var4.field_r * 12 / var4.field_q) + 470, 12, var4.field_r * 12 / var4.field_q);
             var5 += 22;
           }
           if (param1 != -48) {

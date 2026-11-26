@@ -343,14 +343,14 @@ final class wb extends am {
             }
             var2Lifetime4 = (cd.a(stackIn_52_0, stackIn_52_1 << stackIn_53_2) * 40 >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              vk.field_s.a(230, 389, var2Lifetime4);
-              vk.field_s.a(232, 389, var2Lifetime4);
-              vk.field_s.a(232, 391, var2Lifetime4);
-              vk.field_s.a(230, 391, var2Lifetime4);
-              var1.a(1, 1, var2Lifetime4);
-              var1.a(-1, 1, var2Lifetime4);
-              var1.a(1, -1, var2Lifetime4);
-              var1.a(-1, -1, var2Lifetime4);
+              vk.field_s.drawAdditive(230, 389, var2Lifetime4);
+              vk.field_s.drawAdditive(232, 389, var2Lifetime4);
+              vk.field_s.drawAdditive(232, 391, var2Lifetime4);
+              vk.field_s.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_58_0 = we.field_h;
             stackIn_58_1 = na.field_E;
@@ -381,17 +381,17 @@ final class wb extends am {
               if (0 < var2Lifetime5) {
                 if (n.field_t > -qc.field_db.field_s + 269 &&
                   n.field_t < 269) {
-                  qc.field_db.a(-1 - qc.field_db.field_w + 269, var1_int - 1, var2Lifetime5);
-                  qc.field_db.a(-qc.field_db.field_w + 270, -1 + var1_int, var2Lifetime5);
-                  qc.field_db.a(-1 + (269 - qc.field_db.field_w), var1_int + 1, var2Lifetime5);
-                  qc.field_db.a(-qc.field_db.field_w + 269 + 1, 1 + var1_int, var2Lifetime5);
+                  qc.field_db.drawAdditive(-1 - qc.field_db.field_w + 269, var1_int - 1, var2Lifetime5);
+                  qc.field_db.drawAdditive(-qc.field_db.field_w + 270, -1 + var1_int, var2Lifetime5);
+                  qc.field_db.drawAdditive(-1 + (269 - qc.field_db.field_w), var1_int + 1, var2Lifetime5);
+                  qc.field_db.drawAdditive(-qc.field_db.field_w + 269 + 1, 1 + var1_int, var2Lifetime5);
                 } else {
                   if (n.field_t > 586 &&
                     n.field_t < qc.field_db.field_s + 586) {
-                    p.field_w.a(585, var1_int - 1, var2Lifetime5);
-                    p.field_w.a(587, var1_int - 1, var2Lifetime5);
-                    p.field_w.a(585, 1 + var1_int, var2Lifetime5);
-                    p.field_w.a(587, 1 + var1_int, var2Lifetime5);
+                    p.field_w.drawAdditive(585, var1_int - 1, var2Lifetime5);
+                    p.field_w.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                    p.field_w.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                    p.field_w.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }

@@ -234,12 +234,12 @@ final class gl {
             gl.a((String) null, -104, (String) null);
           }
           while (var3 < 15) {
-            var2.d(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
             var3++;
           }
           tg.field_I.a();
-          var1.f(0, 0);
+          var1.drawHalfSize(0, 0);
           MidiPcmStream.e(4096);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gl.H(" + param0 + ')');

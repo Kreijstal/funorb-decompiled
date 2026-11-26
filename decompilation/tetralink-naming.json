@@ -16118,10 +16118,10 @@
     {
       "symbol": "M:oh.d(III)V",
       "originalName": "d",
-      "to": "drawTransparentWithOpacity",
-      "evidence": "Body is token-identical (modulo identifiers) to the reviewed Arcanists Sprite.drawTransparentWithOpacity; the classes pair by method shapes.",
+      "to": "drawTransparentWithIntensity",
+      "evidence": "Corrected source-purpose evidence: Public wrapper calls RGB-intensity kernel or ARGB RGB-intensity-before-original-alpha kernel. Exact original source kernels executed with intensities0/128/256;destination/transparent-skip expectations prove argument does not scale alpha. Preserve whole override family and all operations. Original identity M:oh.d(III)V retained;identifier-only change.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Sprite.drawTransparentWithOpacity(III)V"
+      "renamedSymbol": "M:Sprite.drawTransparentWithIntensity(III)V"
     },
     {
       "symbol": "M:oh.e(II)V",
@@ -20150,10 +20150,10 @@
     {
       "symbol": "M:ue.d(III)V",
       "originalName": "d",
-      "to": "drawTransparentWithOpacity",
-      "evidence": "Draws with alpha and opacity, delegating to drawTransparent at full opacity.",
+      "to": "drawTransparentWithIntensity",
+      "evidence": "Corrected source-purpose evidence: Public wrapper calls RGB-intensity kernel or ARGB RGB-intensity-before-original-alpha kernel. Exact original source kernels executed with intensities0/128/256;destination/transparent-skip expectations prove argument does not scale alpha. Preserve whole override family and all operations. Original identity M:ue.d(III)V retained;identifier-only change.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ArgbSprite.drawTransparentWithOpacity(III)V"
+      "renamedSymbol": "M:ArgbSprite.drawTransparentWithIntensity(III)V"
     },
     {
       "symbol": "M:ue.d([I[IIIIIIIII)V",
@@ -170709,7 +170709,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#0",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#0",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -170720,7 +170720,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#1",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#1",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -170731,7 +170731,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#2",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#2",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -170742,7 +170742,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#3",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#3",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -170753,7 +170753,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#4",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#4",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -170764,7 +170764,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#5",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#5",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -170775,7 +170775,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#6",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#6",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -170786,7 +170786,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#7",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#7",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -170797,7 +170797,7 @@
     },
     {
       "symbol": "L:oh.d(III)V#8",
-      "renamedSymbol": "L:Sprite.drawTransparentWithOpacity(III)V#8",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -206349,7 +206349,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#0",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#0",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -206360,7 +206360,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#1",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#1",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -206371,7 +206371,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#2",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#2",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -206382,7 +206382,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#3",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#3",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -206393,7 +206393,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#4",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#4",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -206404,7 +206404,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#5",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#5",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -206415,7 +206415,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#6",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#6",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -206426,7 +206426,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#7",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#7",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -206437,7 +206437,7 @@
     },
     {
       "symbol": "L:ue.d(III)V#8",
-      "renamedSymbol": "L:ArgbSprite.drawTransparentWithOpacity(III)V#8",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -239987,9 +239987,9 @@
     },
     {
       "symbol": "M:oh.d(III)V",
-      "renamedSymbol": "M:Sprite.drawTransparentWithOpacity(III)V",
+      "renamedSymbol": "M:Sprite.drawTransparentWithIntensity(III)V",
       "originalName": "d",
-      "renamedName": "drawTransparentWithOpacity",
+      "renamedName": "drawTransparentWithIntensity",
       "declaration": {
         "file": "oh.java",
         "start": 25250,
@@ -246356,9 +246356,9 @@
     },
     {
       "symbol": "M:ue.d(III)V",
-      "renamedSymbol": "M:ArgbSprite.drawTransparentWithOpacity(III)V",
+      "renamedSymbol": "M:ArgbSprite.drawTransparentWithIntensity(III)V",
       "originalName": "d",
-      "renamedName": "drawTransparentWithOpacity",
+      "renamedName": "drawTransparentWithIntensity",
       "declaration": {
         "file": "ue.java",
         "start": 7747,
@@ -301070,7 +301070,7 @@
     },
     {
       "symbol": "P:oh.d(III)V#0",
-      "renamedSymbol": "P:Sprite.drawTransparentWithOpacity(III)V#0",
+      "renamedSymbol": "P:Sprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -301081,7 +301081,7 @@
     },
     {
       "symbol": "P:oh.d(III)V#1",
-      "renamedSymbol": "P:Sprite.drawTransparentWithOpacity(III)V#1",
+      "renamedSymbol": "P:Sprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -301092,7 +301092,7 @@
     },
     {
       "symbol": "P:oh.d(III)V#2",
-      "renamedSymbol": "P:Sprite.drawTransparentWithOpacity(III)V#2",
+      "renamedSymbol": "P:Sprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -317438,7 +317438,7 @@
     },
     {
       "symbol": "P:ue.d(III)V#0",
-      "renamedSymbol": "P:ArgbSprite.drawTransparentWithOpacity(III)V#0",
+      "renamedSymbol": "P:ArgbSprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -317449,7 +317449,7 @@
     },
     {
       "symbol": "P:ue.d(III)V#1",
-      "renamedSymbol": "P:ArgbSprite.drawTransparentWithOpacity(III)V#1",
+      "renamedSymbol": "P:ArgbSprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -317460,7 +317460,7 @@
     },
     {
       "symbol": "P:ue.d(III)V#2",
-      "renamedSymbol": "P:ArgbSprite.drawTransparentWithOpacity(III)V#2",
+      "renamedSymbol": "P:ArgbSprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -375290,7 +375290,7 @@
       "original": "cl.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "b5a2352bc3998dbe7a3414df3a37b2218dad2a2c588f71ba142a9965990b447f",
-      "outputSha256": "3253c44836fa71bfaee474d6d29e101379a78782b1aede2fa09d5a47700559fb",
+      "outputSha256": "bd8e7feebd0b6de442cedf76dc99fe0eee44c3d007ecf8de9a74403bc7120e0f",
       "edits": [
         {
           "start": 50,
@@ -377672,7 +377672,7 @@
           "end": 21150,
           "symbol": "M:oh.d(III)V",
           "original": "d",
-          "renamed": "drawTransparentWithOpacity"
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 21173,
@@ -511718,7 +511718,7 @@
       "original": "oh.java",
       "renamed": "Sprite.java",
       "inputSha256": "945b86cabc049ef8567b22987d4b242814d16205757f808f5353253b7441abcb",
-      "outputSha256": "52fcb5aef618c2012aa8c1736135e508cd8046e99a67eeaf6292030cc11238c6",
+      "outputSha256": "11dbf3807bb0519e1f17ce30ffec8aebe4dc64af58314cb4d355f9a7bb6dd35d",
       "edits": [
         {
           "start": 44,
@@ -512362,7 +512362,7 @@
           "end": 25251,
           "symbol": "M:oh.d(III)V",
           "original": "d",
-          "renamed": "drawTransparentWithOpacity"
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 25413,
@@ -563492,7 +563492,7 @@
       "original": "ue.java",
       "renamed": "ArgbSprite.java",
       "inputSha256": "0279add5a1d052e3baa4267d18bd29051969fa4b4221ff01df063f40cdc88827",
-      "outputSha256": "7ec63709f41223cfa4343a43aa1e5d59f166f333ca2a8d7b43b73478a97d9542",
+      "outputSha256": "47ac56f52cb6c2b705f5490a267ef51da7cce85c097c837739d87632185aa210",
       "edits": [
         {
           "start": 50,
@@ -563982,7 +563982,7 @@
           "end": 7748,
           "symbol": "M:ue.d(III)V",
           "original": "d",
-          "renamed": "drawTransparentWithOpacity"
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 7910,
@@ -586831,10 +586831,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tetralink"
     },
-    "rulesSha256": "7dc9916264b4fdb92a71fbeac8c9d637b1bacbf506d8b7c43432f8288d8d9eec",
+    "rulesSha256": "8ceb87fc952227e266ae1d3abd81c5de85341d76ce9024caaa550433897aad0e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
-    "outputTreeSha256": "1472691a4f64bc475b8cb6fa83371a1af6d6fba87eb0c58213adf1835122ef12",
+    "outputTreeSha256": "487229225988c9cd310494c941464bfa0e88bdc0e1859984c37882a61d9eaaac",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -192,7 +192,7 @@ final class dl extends jla {
         int var9 = this.a(param1, true) + this.b(param1, param2 + 40) >> 1;
         int var10 = this.a(param1, (byte) -48) + (this.a(-123, param1) >> 1);
         if (var5 == 0) {
-          var11.b(var9 - (var11.field_n >> 1), var10 - 22, 128);
+          var11.drawTransparentWithIntensity(var9 - (var11.field_n >> 1), var10 - 22, 128);
         } else {
           var11.draw(var9 - (var11.field_n >> 1), var10 - 22);
         }

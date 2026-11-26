@@ -1047,7 +1047,7 @@ final class bi {
             var5 = hq.field_h[var3Lifetime2];
             var6 = var4Lifetime3 * var5.field_s / 1000;
             var7 = var5.field_t * var4Lifetime3 / 1000;
-            var5.b((-var6 + 640) / 2, (480 - var7) / 2, var6, var7);
+            var5.drawScaled((-var6 + 640) / 2, (480 - var7) / 2, var6, var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

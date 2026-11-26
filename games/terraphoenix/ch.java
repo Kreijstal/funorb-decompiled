@@ -48,7 +48,7 @@ final class ch {
             }
             cc.field_i[param0].a(192, 128, 164 + this.field_i + (-64 + var7_int), var8 + (2 + param5 + 50), (byte) 21);
           }
-          SoftwareRasterizer.c(this.field_i + 57, 62, 323 + this.field_i, 415);
+          SoftwareRasterizer.setClip(this.field_i + 57, 62, 323 + this.field_i, 415);
           AccountRequestState.field_f.b(od.field_c[param0].field_j, 65 + this.field_i, 82 + param5, param1, -1);
           if (param4) {
             if (param0 == 17) {
@@ -221,13 +221,13 @@ final class ch {
         var10 = Terraphoenix.field_V;
         try {
           this.field_b = false;
-          SoftwareRasterizer.c(0, 0, 640, this.field_i / 4 + 56);
+          SoftwareRasterizer.setClip(0, 0, 640, this.field_i / 4 + 56);
           em.field_c.d(0, this.field_i / 4 + 0);
-          SoftwareRasterizer.c(0, 56, 356 + this.field_i, 422);
+          SoftwareRasterizer.setClip(0, 56, 356 + this.field_i, 422);
           em.field_c.d(0 + this.field_i, 0);
-          SoftwareRasterizer.c(356 - this.field_i, 56, 640, 422);
+          SoftwareRasterizer.setClip(356 - this.field_i, 56, 640, 422);
           em.field_c.d(0 - this.field_i, 0);
-          SoftwareRasterizer.c(0, -this.field_i + 422, 640, 480);
+          SoftwareRasterizer.setClip(0, -this.field_i + 422, 640, 480);
           em.field_c.d(0, -this.field_i + 0);
           SoftwareRasterizer.c();
           qh.field_b.b(-qh.field_b.field_r + 624, -qh.field_b.field_t + (464 - this.field_i));
@@ -384,18 +384,18 @@ final class ch {
           if (param1.field_jb <= 0) {
             var5 = 128;
           }
-          SoftwareRasterizer.c(57 + this.field_i, 62, 323 + this.field_i, 415);
+          SoftwareRasterizer.setClip(57 + this.field_i, 62, 323 + this.field_i, 415);
           var3_int = -param1.field_G + 62;
           if (param1.field_hb == 2) {
             if (!od.field_c[17].field_t &&
               param1.field_I.field_a[17] > 0) {
-              bj.field_g.c(this.field_i + 57, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(this.field_i + 57, var3_int, var5);
               this.a(17, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (!sj.field_a[2].field_l &&
               4 < param1.field_Bb) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(false, (byte) 124, 2, var3_int, param1, 16777215);
               var3_int += 92;
             }
@@ -403,7 +403,7 @@ final class ch {
               !sj.field_a[3].field_l &&
               sj.field_a[2].field_l &&
               od.field_c[17].field_t) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(false, (byte) 29, 3, var3_int, param1, 16777215);
               var3_int += 92;
             }
@@ -411,34 +411,34 @@ final class ch {
           if (param1.field_hb == 3 &&
             !od.field_c[11].field_t &&
             param1.field_I.field_a[11] > 0) {
-            bj.field_g.c(57 + this.field_i, var3_int, var5);
+            bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
             this.a(11, 16777215, 319, param1, false, var3_int);
             var3_int += 92;
           }
           if (param1.field_hb == 4) {
             if (!od.field_c[6].field_t) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(6, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (param1.field_jb > 0 &&
               !od.field_c[7].field_t &&
               od.field_c[6].field_t) {
-              bj.field_g.c(this.field_i + 57, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(this.field_i + 57, var3_int, var5);
               this.a(7, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (param1.field_jb > 0 &&
               !od.field_c[10].field_t &&
               od.field_c[9].field_t) {
-              bj.field_g.c(this.field_i + 57, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(this.field_i + 57, var3_int, var5);
               this.a(10, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (0 < param1.field_jb &&
               !od.field_c[16].field_t &&
               od.field_c[13].field_t) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(16, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
@@ -446,34 +446,34 @@ final class ch {
           if (param1.field_hb == 5) {
             if (!od.field_c[8].field_t &&
               param1.field_I.field_a[8] > 0) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(8, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (!od.field_c[9].field_t &&
               param1.field_I.field_a[9] > 0) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(9, 16777215, param0 + 3569, param1, false, var3_int);
               var3_int += 92;
             }
             if (!od.field_c[12].field_t &&
               od.field_c[8].field_t &&
               param1.field_I.field_a[12] > 0) {
-              bj.field_g.c(this.field_i + 57, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(this.field_i + 57, var3_int, var5);
               this.a(12, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (!od.field_c[13].field_t &&
               od.field_c[8].field_t &&
               0 < param1.field_I.field_a[13]) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(13, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
             if (!od.field_c[14].field_t &&
               od.field_c[12].field_t &&
               param1.field_I.field_a[14] > 0) {
-              bj.field_g.c(57 + this.field_i, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, var5);
               this.a(14, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
@@ -481,7 +481,7 @@ final class ch {
               od.field_c[11].field_t &&
               od.field_c[12].field_t &&
               param1.field_I.field_a[15] > 0) {
-              bj.field_g.c(this.field_i + 57, var3_int, var5);
+              bj.field_g.drawTransparentWithIntensity(this.field_i + 57, var3_int, var5);
               this.a(15, 16777215, 319, param1, false, var3_int);
               var3_int += 92;
             }
@@ -549,7 +549,7 @@ final class ch {
                 }
               }
               if (decompiledFrameRemainder0) {
-                BattleState.field_g.c(this.field_i + 57, var3_int, 384);
+                BattleState.field_g.drawTransparentWithIntensity(this.field_i + 57, var3_int, 384);
                 this.a(var6_int, 16777215, param0 + 3569, param1, true, var3_int);
                 var3_int += 92;
               }
@@ -558,7 +558,7 @@ final class ch {
           for (var6_int = sj.field_a.length - 1; var6_int >= 0; var6_int--) {
             if (sj.field_a[var6_int].field_l &&
               2 == param1.field_hb) {
-              BattleState.field_g.c(57 + this.field_i, var3_int, 384);
+              BattleState.field_g.drawTransparentWithIntensity(57 + this.field_i, var3_int, 384);
               this.a(true, (byte) -128, var6_int, var3_int, param1, 0);
               var3_int += 92;
             }
@@ -572,7 +572,7 @@ final class ch {
           if (var3_int > 353) {
             var6_int = 116137 / var3_int;
             var7 = param1.field_G * (329 - var6_int) / (var3_int - 353);
-            jg.field_hb.b(this.field_i + 337, var7 + 74, jg.field_hb.field_r, var6_int, 7381200);
+            jg.field_hb.drawScaledTinted(this.field_i + 337, var7 + 74, jg.field_hb.field_r, var6_int, 7381200);
             if (1 == oh.field_f && (param1.field_J ||
               !(337 + this.field_i > ef.field_j) &&
               !(jg.field_hb.field_r + 337 + this.field_i <= ef.field_j)) && (MouseWheelInput.field_b >= 64 &&
@@ -624,8 +624,8 @@ final class ch {
             }
             var7 = AccountRequestState.field_f.c(var6, 263);
             SoftwareRasterizer.d(-this.field_i + 360, -(14 * var7) + 307 + 8, 268, 14 * var7 + 14 - 10, 0, 96);
-            SoftwareRasterizer.g(-this.field_i + 360, 307 - 14 * var7 + 8, 268, 16777215, 192);
-            SoftwareRasterizer.g(360 - this.field_i, 318, 268, 16777215, 192);
+            SoftwareRasterizer.drawHorizontalLineAlpha(-this.field_i + 360, 307 - 14 * var7 + 8, 268, 16777215, 192);
+            SoftwareRasterizer.drawHorizontalLineAlpha(360 - this.field_i, 318, 268, 16777215, 192);
             ji.a(-this.field_i + 362, 14, 16777215, -60 + (397 - 14 * var7), var6, (byte) 88, -this.field_i + 625);
           } else {
             if (param1.field_D > 0) {
@@ -645,8 +645,8 @@ final class ch {
                 param1.a(vc.field_f, 124, 0, 16777215, -this.field_i + 493, param0 - 28085, od.field_c[var6_int].field_k);
                 var7 = AccountRequestState.field_f.c(od.field_c[var6_int].field_i, 263);
                 SoftwareRasterizer.d(360 - this.field_i, -90 + (397 - 14 * var7 + 8), 268, 14 * var7 + 4, 0, 96);
-                SoftwareRasterizer.g(360 - this.field_i, 397 + (-(var7 * 14) - 90) + 8, 268, 16777215, 192);
-                SoftwareRasterizer.g(360 - this.field_i, 318, 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(360 - this.field_i, 397 + (-(var7 * 14) - 90) + 8, 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(360 - this.field_i, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, 397 - (var7 * 14 + 60), od.field_c[var6_int].field_i, (byte) 89, -this.field_i + 625);
               } else {
                 bl.field_b[1].b(357 - this.field_i, 386);
@@ -662,8 +662,8 @@ final class ch {
                 param1.a(vc.field_f, 154, 0, 16777215, 493 - this.field_i + 64, -31335, od.field_c[var6_int].field_r);
                 var7 = AccountRequestState.field_f.c(od.field_c[var6_int].field_e, 263);
                 SoftwareRasterizer.d(-this.field_i + 360, -(var7 * 14) + 397 - 82, 268, 14 + (var7 * 14 - 10), 0, 96);
-                SoftwareRasterizer.g(-this.field_i + 360, 307 - (var7 * 14 - 8), 268, 16777215, 192);
-                SoftwareRasterizer.g(360 - this.field_i, 318, 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(-this.field_i + 360, 307 - (var7 * 14 - 8), 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(360 - this.field_i, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, -60 + (397 - 14 * var7), od.field_c[var6_int].field_e, (byte) 98, 625 - this.field_i);
                 if (var6_int != 5 &&
                   var6_int != 11) {
@@ -752,8 +752,8 @@ final class ch {
                 AccountRequestState.field_f.b(ai.field_e + sj.field_a[var6_int].field_f, 362 - this.field_i, 377, 0, -1);
                 var7 = AccountRequestState.field_f.c(sj.field_a[var6_int].field_k, 263);
                 SoftwareRasterizer.d(360 - this.field_i, -82 + (397 - 14 * var7), 268, 4 + var7 * 14, 0, 96);
-                SoftwareRasterizer.g(360 - this.field_i, -90 + (397 - var7 * 14) + 8, 268, 16777215, 192);
-                SoftwareRasterizer.g(-this.field_i + 360, 318, 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(360 - this.field_i, -90 + (397 - var7 * 14) + 8, 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(-this.field_i + 360, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, -60 - var7 * 14 + 397, sj.field_a[var6_int].field_k, (byte) 103, -this.field_i + 625);
               } else {
                 if (0 < param1.field_jb) {
@@ -770,8 +770,8 @@ final class ch {
                 param1.a(vc.field_f, 124, 0, 16777215, -this.field_i + 493, -31335, sj.field_a[var6_int].field_b);
                 var7 = AccountRequestState.field_f.c(sj.field_a[var6_int].field_k, 263);
                 SoftwareRasterizer.d(360 - this.field_i, -90 + (397 + (-(14 * var7) + 8)), 268, -10 + (14 * var7 + 14), 0, 96);
-                SoftwareRasterizer.g(-this.field_i + 360, -90 + (397 - (14 * var7 - 8)), 268, 16777215, 192);
-                SoftwareRasterizer.g(-this.field_i + 360, 318, 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(-this.field_i + 360, -90 + (397 - (14 * var7 - 8)), 268, 16777215, 192);
+                SoftwareRasterizer.drawHorizontalLineAlpha(-this.field_i + 360, 318, 268, 16777215, 192);
                 ji.a(362 - this.field_i, 14, 16777215, 337 - 14 * var7, sj.field_a[var6_int].field_a, (byte) 122, 625 - this.field_i);
               }
             }
@@ -829,7 +829,7 @@ final class ch {
         if (kf.field_f >= 150) {
           hd.field_l.a(var3 + 15, 10 + var4, var5);
         } else {
-          jg.field_ib.f(var3, var4);
+          jg.field_ib.drawHalfSize(var3, var4);
         }
         var6 = -125 + kf.field_f;
         if (0 < var6 &&
@@ -837,13 +837,13 @@ final class ch {
           if (var6 >= 20) {
             if (var6 >= 30) {
               var7 = (50 - var6) * 256 / 20;
-              s.field_a.d(var3, var4, var7);
+              s.field_a.drawAdditive(var3, var4, var7);
             } else {
-              s.field_a.d(var3, var4, 256);
+              s.field_a.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = var6 * 256 / 20;
-            s.field_a.d(var3, var4, var7);
+            s.field_a.drawAdditive(var3, var4, var7);
           }
         }
         var6Lifetime1 = -140 + kf.field_f;
@@ -928,7 +928,7 @@ final class ch {
           }
           SoftwareRasterizer.i(59 + this.field_i, param3 + 2, this.field_i + 321, 66 + param3);
           kb.field_a[param2].a(0, 128, 190 + this.field_i, param3 + 2 + 32, (byte) 21);
-          SoftwareRasterizer.c(this.field_i + 57, 62, this.field_i + 323, 415);
+          SoftwareRasterizer.setClip(this.field_i + 57, 62, this.field_i + 323, 415);
           AccountRequestState.field_f.b(sj.field_a[param2].field_m, 65 + this.field_i, 82 + param3, 0, -1);
           if (param0) {
             AccountRequestState.field_f.a(ImageProducerRasterBuffer.field_n + (sj.field_a[param2].field_g + sj.field_a[param2].field_d), this.field_i + 319, 16 + param3, 0, -1);

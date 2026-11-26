@@ -139,14 +139,14 @@ final class pk extends kj {
             SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
               var20 = PacketBuffer.field_k[2];
-              var20.a(var9, -(var20.field_t >> 1) + var10, 256);
+              var20.drawAdditive(var9, -(var20.field_t >> 1) + var10, 256);
               return;
             }
             if (var6 != ph.field_g) {
               return;
             }
             var19 = PacketBuffer.field_k[1];
-            var19.a(var9, var10 - (var19.field_t >> 1), 256);
+            var19.drawAdditive(var9, var10 - (var19.field_t >> 1), 256);
             return;
           }
           var21 = PacketBuffer.field_k[0];
@@ -171,7 +171,7 @@ final class pk extends kj {
           }
           var21.b(112, 144, var21.field_q << 4, var21.field_r << 4, -this.field_Z << 10, 4096);
           MidiPcmStream.e(4096);
-          this.field_W.a(-(var21.field_q >> 1) + var9, var10 - var21.field_r, 256);
+          this.field_W.drawAdditive(-(var21.field_q >> 1) + var9, var10 - var21.field_r, 256);
           return;
         }
         if (SpriteState.field_u == var6) {
@@ -189,14 +189,14 @@ final class pk extends kj {
             SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
               var25 = PacketBuffer.field_k[2];
-              var25.a(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
+              var25.drawAdditive(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
             if (var6 != ph.field_g) {
               return;
             }
             var24 = PacketBuffer.field_k[1];
-            var24.a(var9Lifetime1, var10Lifetime1 - (var24.field_t >> 1), 256);
+            var24.drawAdditive(var9Lifetime1, var10Lifetime1 - (var24.field_t >> 1), 256);
             return;
           }
           var26 = PacketBuffer.field_k[0];
@@ -221,7 +221,7 @@ final class pk extends kj {
           }
           var26.b(112, 144, var26.field_q << 4, var26.field_r << 4, -this.field_Z << 10, 4096);
           MidiPcmStream.e(4096);
-          this.field_W.a(-(var26.field_q >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_r, 256);
+          this.field_W.drawAdditive(-(var26.field_q >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_r, 256);
           return;
         }
         var27 = this.field_U.c(-111);
@@ -239,13 +239,13 @@ final class pk extends kj {
             SpriteState.field_u != var6Lifetime1) {
             if (rg.field_f == var6Lifetime1) {
               var30 = PacketBuffer.field_k[2];
-              var30.a(var9Lifetime2, -(var30.field_t >> 1) + var10Lifetime2, 256);
+              var30.drawAdditive(var9Lifetime2, -(var30.field_t >> 1) + var10Lifetime2, 256);
             } else {
               if (var6Lifetime1 != ph.field_g) {
                 return;
               }
               var29 = PacketBuffer.field_k[1];
-              var29.a(var9Lifetime2, var10Lifetime2 - (var29.field_t >> 1), 256);
+              var29.drawAdditive(var9Lifetime2, var10Lifetime2 - (var29.field_t >> 1), 256);
             }
             return;
           }
@@ -272,7 +272,7 @@ final class pk extends kj {
           }
           var31.b(112, 144, var31.field_q << 4, var31.field_r << 4, -this.field_Z << 10, 4096);
           MidiPcmStream.e(4096);
-          this.field_W.a(-(var31.field_q >> 1) + var9Lifetime2, var10Lifetime2 - var31.field_r, 256);
+          this.field_W.drawAdditive(-(var31.field_q >> 1) + var9Lifetime2, var10Lifetime2 - var31.field_r, 256);
           return;
         }
         var32 = this.field_V;
@@ -289,14 +289,14 @@ final class pk extends kj {
           SpriteState.field_u != var6Lifetime2) {
           if (rg.field_f == var6Lifetime2) {
             var35 = PacketBuffer.field_k[2];
-            var35.a(var9Lifetime3, -(var35.field_t >> 1) + var10Lifetime3, 256);
+            var35.drawAdditive(var9Lifetime3, -(var35.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           if (var6Lifetime2 != ph.field_g) {
             return;
           }
           var34 = PacketBuffer.field_k[1];
-          var34.a(var9Lifetime3, var10Lifetime3 - (var34.field_t >> 1), 256);
+          var34.drawAdditive(var9Lifetime3, var10Lifetime3 - (var34.field_t >> 1), 256);
           return;
         }
         var36 = PacketBuffer.field_k[0];
@@ -321,7 +321,7 @@ final class pk extends kj {
         }
         var36.b(112, 144, var36.field_q << 4, var36.field_r << 4, -this.field_Z << 10, 4096);
         MidiPcmStream.e(4096);
-        this.field_W.a(-(var36.field_q >> 1) + var9Lifetime3, var10Lifetime3 - var36.field_r, 256);
+        this.field_W.drawAdditive(-(var36.field_q >> 1) + var9Lifetime3, var10Lifetime3 - var36.field_r, 256);
         return;
     }
 

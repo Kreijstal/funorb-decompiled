@@ -194,7 +194,7 @@ final class rk extends wd {
         super.b(param0, param1, param2);
         p.field_a.b(this.field_cb, (this.field_x >> 1) + param0, 103 + param2, 16777215, -1);
         if (null != this.field_db) {
-          SoftwareRasterizer.a(param0 + 20, 120 + (param2 - 7), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + (param2 - 7), 260, 8421504);
           p.field_a.a(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, p.field_a.field_G);
         }
     }

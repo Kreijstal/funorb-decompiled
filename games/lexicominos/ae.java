@@ -23,8 +23,8 @@ final class ae extends kf {
         RuntimeException decompiledCaughtException = null;
         var10 = Lexicominos.field_L ? 1 : 0;
         try {
-          SoftwareRasterizer.a(param4, param2, param1 + 1, 10000536);
-          SoftwareRasterizer.a(param4, param2 + param3, param1 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param4, param2, param1 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param4, param2 + param3, param1 + 1, 12105912);
           var5_int = 1;
           if (SoftwareRasterizer.field_c > var5_int + param2) {
             var5_int = SoftwareRasterizer.field_c - param2;

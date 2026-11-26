@@ -31,7 +31,7 @@ class jla {
             var2 = 0;
             while (true) {
               if (SuperSpeedAllAnimation.field_z.length > var2) {
-                vla.field_r[var2] = SuperSpeedAllAnimation.field_z[var2].b();
+                vla.field_r[var2] = SuperSpeedAllAnimation.field_z[var2].copyFlippedHorizontal();
                 var2++;
                 if (var11 == 0) {
                   continue;
@@ -44,7 +44,7 @@ class jla {
             }
             var2 = 0;
             while (var2 < AttackUpAllAnimation.field_y.length) {
-              vu.field_k[var2] = AttackUpAllAnimation.field_y[var2].b();
+              vu.field_k[var2] = AttackUpAllAnimation.field_y[var2].copyFlippedHorizontal();
               var2++;
               if (var11 != 0) {
                 decompiledFrameCompleted0 = false;

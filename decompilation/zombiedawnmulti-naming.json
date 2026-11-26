@@ -23150,10 +23150,10 @@
     {
       "symbol": "M:ri.a()V",
       "originalName": "a",
-      "to": "flipHorizontally",
-      "evidence": "Body matches the reviewed IndexedSprite.flipHorizontally in Arcanists (token similarity 0.96).",
+      "to": "flipVertically",
+      "evidence": "Corrected source-purpose evidence: Exact original Java constructor/method source executed on2x3pixel grid with unequal trim/full dimensions confirms row reversal and vertical trim update;horizontal controls Arcanists/Pool pass. Original identity M:ri.a()V retained;identifier-only change.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:IndexedSprite.flipHorizontally()V"
+      "renamedSymbol": "M:IndexedSprite.flipVertically()V"
     },
     {
       "symbol": "M:ri.a(II)V",
@@ -223255,7 +223255,7 @@
     },
     {
       "symbol": "L:ri.a()V#0",
-      "renamedSymbol": "L:IndexedSprite.flipHorizontally()V#0",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -223266,7 +223266,7 @@
     },
     {
       "symbol": "L:ri.a()V#1",
-      "renamedSymbol": "L:IndexedSprite.flipHorizontally()V#1",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -223277,7 +223277,7 @@
     },
     {
       "symbol": "L:ri.a()V#2",
-      "renamedSymbol": "L:IndexedSprite.flipHorizontally()V#2",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -223288,7 +223288,7 @@
     },
     {
       "symbol": "L:ri.a()V#3",
-      "renamedSymbol": "L:IndexedSprite.flipHorizontally()V#3",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -223299,7 +223299,7 @@
     },
     {
       "symbol": "L:ri.a()V#4",
-      "renamedSymbol": "L:IndexedSprite.flipHorizontally()V#4",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -303467,9 +303467,9 @@
     },
     {
       "symbol": "M:ri.a()V",
-      "renamedSymbol": "M:IndexedSprite.flipHorizontally()V",
+      "renamedSymbol": "M:IndexedSprite.flipVertically()V",
       "originalName": "a",
-      "renamedName": "flipHorizontally",
+      "renamedName": "flipVertically",
       "declaration": {
         "file": "ri.java",
         "start": 121,
@@ -406519,7 +406519,7 @@
       "original": "ZombieDawnMulti.java",
       "renamed": "ZombieDawnMulti.java",
       "inputSha256": "46e43ab989a823126f48f90eb4a2c5b3a6040796bb5b30c1590e15e83f7d0ab2",
-      "outputSha256": "faba1eae52b167244b9d8d8f05a0de0fbddff5a796691c3afe24632fdb592c43",
+      "outputSha256": "c5e5fad55e4ab5bc85341c844ea0c207ca0ca3fe149dce14b17eec117955231d",
       "edits": [
         {
           "start": 81,
@@ -418076,7 +418076,7 @@
           "end": 58621,
           "symbol": "M:ri.a()V",
           "original": "a",
-          "renamed": "flipHorizontally"
+          "renamed": "flipVertically"
         },
         {
           "start": 58639,
@@ -722628,7 +722628,7 @@
       "original": "ri.java",
       "renamed": "IndexedSprite.java",
       "inputSha256": "a1a2dfaf9891c4cb8edb3e74e4a11c8c0eb1a0819aa9e9283be1cc0b7b6f29bf",
-      "outputSha256": "b3e136cb4b59c2278cdceac626610cba3cad0764fa0a0fa24281030f43411081",
+      "outputSha256": "5830af31116df9f88b020905b8b4f3bd569dfe14647058432084237cd31274ba",
       "edits": [
         {
           "start": 50,
@@ -722663,7 +722663,7 @@
           "end": 122,
           "symbol": "M:ri.a()V",
           "original": "a",
-          "renamed": "flipHorizontally"
+          "renamed": "flipVertically"
         },
         {
           "start": 502,
@@ -814538,10 +814538,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/zombiedawnmulti"
     },
-    "rulesSha256": "7f2f7c392e5b822b47f81a1960cccc01417bd5875a599ea000ca319d91d5a192",
+    "rulesSha256": "318381fe1539551b2c2c011753f18116462803b84e3050169857b98964593e73",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db",
-    "outputTreeSha256": "2b61b365d1181205d53c6a0762e0e72cd35e1cac4798bdb3420702b7458b574f",
+    "outputTreeSha256": "821043410bac5e2a0d3b2a87148f1843f3d55bd2611212716d8eadbbf07c41f8",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

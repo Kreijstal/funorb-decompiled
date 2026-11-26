@@ -808,7 +808,7 @@ final class mh {
         ne.field_a[11] = ne.field_a[11] << 2;
         ne.field_a[9] = ne.field_a[9] << 2;
         im.field_L.b(1);
-        SoftwareRasterizer.g(0, 0, 160, 120);
+        SoftwareRasterizer.setClip(0, 0, 160, 120);
         var12 = wi.field_a[param1];
         if (var7.a(false) != 1 ||
           hi.field_h[var12] == null) {
@@ -1276,15 +1276,15 @@ final class mh {
             boolean decompiledFrameRemainder0 = true;
             if (stackIn_24_0) {
               if (0 != (1 << var13 & var5)) {
-                tj.field_n[var13].e(var3, var4);
+                tj.field_n[var13].drawQuarterSize(var3, var4);
               } else {
                 decompiledFrameRemainder0 = !(param0);
                 if (decompiledFrameRemainder0) {
                   if (wp.field_w <= 0 &&
                     m.field_y[var13]) {
-                    pe.field_J.e(var3, var4);
+                    pe.field_J.drawQuarterSize(var3, var4);
                   } else {
-                    VolumeScaledPcmStream.field_o.e(var3, var4);
+                    VolumeScaledPcmStream.field_o.drawQuarterSize(var3, var4);
                   }
                 }
               }
@@ -2549,7 +2549,7 @@ final class mh {
               stackIn_43_0Lifetime1 = -1;
               if (var8 == 0) {
                 if (stackIn_43_0Lifetime1 != ~(1 << var7 & SocketConnector.field_f)) {
-                  tj.field_n[var7].e(var4, 93);
+                  tj.field_n[var7].drawQuarterSize(var4, 93);
                   var4 = var4 + var6_int;
                 }
                 var7++;
@@ -2561,7 +2561,7 @@ final class mh {
           }
           if (this.field_h == 4) {
             var2 = cm.field_m + 298 * a.field_e;
-            SoftwareRasterizer.g(47, 120, 583, 418);
+            SoftwareRasterizer.setClip(47, 120, 583, 418);
             var3 = 120 - var2;
             var4Lifetime2 = 0;
             while (var4Lifetime2 < hg.field_b.length) {
@@ -2583,7 +2583,7 @@ final class mh {
           if (decompiledFrameCompleted0) {
             if (this.field_h == 5) {
               bj.field_L[eq.field_b].a(115, 111);
-              SoftwareRasterizer.g(0, 150, 640, 480);
+              SoftwareRasterizer.setClip(0, 150, 640, 480);
               qd.field_c[eq.field_b].a(0, 0);
               SoftwareRasterizer.a();
             } else {
@@ -2605,13 +2605,13 @@ final class mh {
                 SoftwareRasterizer.c(414, 216, 160, 120, 16777215);
                 SoftwareRasterizer.c(413, 215, 162, 122, 0);
                 var3 = 195;
-                SoftwareRasterizer.b(37, var3, 554, 3355443);
-                SoftwareRasterizer.b(35, var3 + 1, 558, 15116313);
-                SoftwareRasterizer.b(37, 2 + var3, 554, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(37, var3, 554, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(35, var3 + 1, 558, 15116313);
+                SoftwareRasterizer.drawHorizontalLine(37, 2 + var3, 554, 3355443);
                 var4Lifetime3 = 350;
-                SoftwareRasterizer.b(37, var4Lifetime3, 554, 3355443);
-                SoftwareRasterizer.b(35, var4Lifetime3 + 1, 558, 15116313);
-                SoftwareRasterizer.b(37, 2 + var4Lifetime3, 554, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(37, var4Lifetime3, 554, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(35, var4Lifetime3 + 1, 558, 15116313);
+                SoftwareRasterizer.drawHorizontalLine(37, 2 + var4Lifetime3, 554, 3355443);
               } else {
                 if (this.field_h != 6 &&
                   this.field_h != 8) {
@@ -2660,13 +2660,13 @@ final class mh {
                 var2Lifetime3 = stackIn_96_0;
                 this.a(var2Lifetime3 != 0, (byte) -128);
                 var3 = 168;
-                SoftwareRasterizer.b(33, var3, 573, 3355443);
-                SoftwareRasterizer.b(31, 1 + var3, 577, 15116313);
-                SoftwareRasterizer.b(33, 2 + var3, 573, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(33, var3, 573, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(31, 1 + var3, 577, 15116313);
+                SoftwareRasterizer.drawHorizontalLine(33, 2 + var3, 573, 3355443);
                 var4Lifetime3 = 373;
-                SoftwareRasterizer.b(33, var4Lifetime3, 573, 3355443);
-                SoftwareRasterizer.b(31, 1 + var4Lifetime3, 577, 15116313);
-                SoftwareRasterizer.b(33, var4Lifetime3 + 2, 573, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(33, var4Lifetime3, 573, 3355443);
+                SoftwareRasterizer.drawHorizontalLine(31, 1 + var4Lifetime3, 577, 15116313);
+                SoftwareRasterizer.drawHorizontalLine(33, var4Lifetime3 + 2, 573, 3355443);
               }
             }
           }

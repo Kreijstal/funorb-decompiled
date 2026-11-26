@@ -511,7 +511,7 @@ public final class TorChallenge extends GameClientBase {
                     si.field_F = new Sprite(kj.field_C[0].fullWidth, kj.field_C[0].fullHeight);
                     si.field_F.d();
                     SoftwareRasterizer.f(33, 30, 68, 90, param0);
-                    kj.field_C[1].g(0, 0);
+                    kj.field_C[1].drawTransparent(0, 0);
                     SectorCacheStore.field_f.bindAsTarget(101);
                     dk.field_c = new Sprite[4][9];
                     var9 = 0;
@@ -796,8 +796,8 @@ public final class TorChallenge extends GameClientBase {
           }
           if (0 == param7 &&
             (64 & ic.field_E[var14][param2]) > 0) {
-            SoftwareRasterizer.f(var10, param1, var9, param4);
-            re.field_v[1][param6].a(var10, param1);
+            SoftwareRasterizer.setClip(var10, param1, var9, param4);
+            re.field_v[1][param6].drawOpaque(var10, param1);
             SoftwareRasterizer.b(ae.field_y);
             if (var16 == 0) {
               return;
@@ -806,8 +806,8 @@ public final class TorChallenge extends GameClientBase {
           if (param7 != 0) {
             if (param7 == 1 &&
               0 < (64 & ic.field_E[var15][param2])) {
-              SoftwareRasterizer.f(var8_int, param1, var11, param4);
-              re.field_v[1][param6].a(var8_int, param1);
+              SoftwareRasterizer.setClip(var8_int, param1, var11, param4);
+              re.field_v[1][param6].drawOpaque(var8_int, param1);
               SoftwareRasterizer.b(ae.field_y);
               if (var16 == 0) {
                 return;
@@ -815,7 +815,7 @@ public final class TorChallenge extends GameClientBase {
             }
             SoftwareRasterizer.f(var11, param1, -var11 + var9, var13, 0);
             SoftwareRasterizer.a(var8_int, param1, var11, param4);
-            re.field_v[0][param6].a(var8_int, param1);
+            re.field_v[0][param6].drawOpaque(var8_int, param1);
             SoftwareRasterizer.b(ae.field_y);
             if (var16 == 0) {
               return;
@@ -823,7 +823,7 @@ public final class TorChallenge extends GameClientBase {
           }
           SoftwareRasterizer.f(var8_int, param1, var10 - var8_int, var13, 0);
           SoftwareRasterizer.a(var10, param1, var9, param4);
-          re.field_v[0][param6].a(var10, param1);
+          re.field_v[0][param6].drawOpaque(var10, param1);
           SoftwareRasterizer.b(ae.field_y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -807,7 +807,7 @@ class UiWidget extends IntrusiveNode {
                   var15[1 + var13] == 0 ||
                   !(var16 >= param4.field_t - 1) &&
                   var15[param4.field_p + var13] == 0)) {
-                  SoftwareRasterizer.e(var17, var16, param3, param6);
+                  SoftwareRasterizer.fillCircle(var17, var16, param3, param6);
                 }
                 var13++;
                 var17++;

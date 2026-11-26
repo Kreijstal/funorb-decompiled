@@ -83,14 +83,14 @@ final class bj extends rb {
               var6 != IsaacCipher.field_h) {
               if (var6 == so.field_u) {
                 var33 = wj.field_h[2];
-                var33.a(var9, -(var33.field_t >> 1) + var10, 256);
+                var33.drawAdditive(var9, -(var33.field_t >> 1) + var10, 256);
                 return;
               }
               if (var6 != so.field_s) {
                 return;
               }
               var32 = wj.field_h[1];
-              var32.a(var9, -(var32.field_t >> 1) + var10, 256);
+              var32.drawAdditive(var9, -(var32.field_t >> 1) + var10, 256);
               return;
             }
             var34 = wj.field_h[0];
@@ -115,7 +115,7 @@ final class bj extends rb {
             }
             var34.c(112, 144, var34.field_w << 4, var34.field_u << 4, -this.field_H << 10, 4096);
             r.a(126);
-            this.field_G.a(var9 - (var34.field_w >> 1), var10 - var34.field_u, 256);
+            this.field_G.drawAdditive(var9 - (var34.field_w >> 1), var10 - var34.field_u, 256);
             return;
           }
           if (!var25.equals(this.text)) {
@@ -131,14 +131,14 @@ final class bj extends rb {
             var6 != IsaacCipher.field_h) {
             if (var6 == so.field_u) {
               var28 = wj.field_h[2];
-              var28.a(var9Lifetime2, -(var28.field_t >> 1) + var10Lifetime2, 256);
+              var28.drawAdditive(var9Lifetime2, -(var28.field_t >> 1) + var10Lifetime2, 256);
               return;
             }
             if (var6 != so.field_s) {
               return;
             }
             var27 = wj.field_h[1];
-            var27.a(var9Lifetime2, -(var27.field_t >> 1) + var10Lifetime2, 256);
+            var27.drawAdditive(var9Lifetime2, -(var27.field_t >> 1) + var10Lifetime2, 256);
             return;
           }
           var29 = wj.field_h[0];
@@ -164,7 +164,7 @@ final class bj extends rb {
           }
           var29.c(112, 144, var29.field_w << 4, var29.field_u << 4, -this.field_H << 10, 4096);
           r.a(126);
-          this.field_G.a(var9Lifetime2 - (var29.field_w >> 1), var10Lifetime2 - var29.field_u, 256);
+          this.field_G.drawAdditive(var9Lifetime2 - (var29.field_w >> 1), var10Lifetime2 - var29.field_u, 256);
           return;
         }
         var18 = rg.field_C;
@@ -181,13 +181,13 @@ final class bj extends rb {
           var6Lifetime1 != IsaacCipher.field_h) {
           if (var6Lifetime1 == so.field_u) {
             var21 = wj.field_h[2];
-            var21.a(var9Lifetime1, -(var21.field_t >> 1) + var10Lifetime1, 256);
+            var21.drawAdditive(var9Lifetime1, -(var21.field_t >> 1) + var10Lifetime1, 256);
           } else {
             if (var6Lifetime1 != so.field_s) {
               return;
             }
             var20 = wj.field_h[1];
-            var20.a(var9Lifetime1, -(var20.field_t >> 1) + var10Lifetime1, 256);
+            var20.drawAdditive(var9Lifetime1, -(var20.field_t >> 1) + var10Lifetime1, 256);
           }
           return;
         }
@@ -214,7 +214,7 @@ final class bj extends rb {
         }
         var22.c(112, 144, var22.field_w << 4, var22.field_u << 4, -this.field_H << 10, 4096);
         r.a(126);
-        this.field_G.a(var9Lifetime1 - (var22.field_w >> 1), var10Lifetime1 - var22.field_u, 256);
+        this.field_G.drawAdditive(var9Lifetime1 - (var22.field_w >> 1), var10Lifetime1 - var22.field_u, 256);
     }
 
     public static void f(byte param0) {

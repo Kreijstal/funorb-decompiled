@@ -325,7 +325,7 @@ final class BattleUnit {
           } else {
             stackIn_25_1 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_23_0[stackIn_25_1 + var3 + 1]).a().b();
+          var6 = ((IndexedSprite) (Object) stackIn_23_0[stackIn_25_1 + var3 + 1]).copyFlippedHorizontal().toRgbSprite();
         }
         if (this.field_U == 1) {
           stackIn_31_0 = DualLinkNode.field_k;
@@ -335,7 +335,7 @@ final class BattleUnit {
           } else {
             stackIn_32_1 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_31_0[stackIn_32_1 + 0 + var3]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_31_0[stackIn_32_1 + 0 + var3]).toRgbSprite();
         }
         if (this.field_U == 2) {
           stackIn_38_0 = DualLinkNode.field_k;
@@ -345,7 +345,7 @@ final class BattleUnit {
           } else {
             stackIn_39_1 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_38_0[stackIn_39_1 + 1 + var3]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_38_0[stackIn_39_1 + 1 + var3]).toRgbSprite();
         }
         if (this.field_U == 3) {
           stackIn_45_0 = DualLinkNode.field_k;
@@ -355,7 +355,7 @@ final class BattleUnit {
           } else {
             stackIn_46_1 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_45_0[stackIn_46_1 + (2 + var3)]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_45_0[stackIn_46_1 + (2 + var3)]).toRgbSprite();
         }
         if (this.field_U == 4) {
           stackIn_52_0 = DualLinkNode.field_k;
@@ -367,7 +367,7 @@ final class BattleUnit {
           } else {
             stackIn_54_3 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_52_0[stackIn_52_1 + (stackIn_52_2 + stackIn_54_3)]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_52_0[stackIn_52_1 + (stackIn_52_2 + stackIn_54_3)]).toRgbSprite();
         }
         if (this.field_U == 5) {
           stackIn_60_0 = DualLinkNode.field_k;
@@ -379,7 +379,7 @@ final class BattleUnit {
           } else {
             stackIn_62_3 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_60_0[stackIn_60_1 + (stackIn_60_2 + stackIn_62_3)]).b();
+          var6 = ((IndexedSprite) (Object) stackIn_60_0[stackIn_60_1 + (stackIn_60_2 + stackIn_62_3)]).toRgbSprite();
         }
         if (this.field_U == 6) {
           stackIn_67_0 = DualLinkNode.field_k;
@@ -391,7 +391,7 @@ final class BattleUnit {
           } else {
             stackIn_69_3 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_67_0[stackIn_67_1 + (stackIn_67_2 + stackIn_69_3)]).a().b();
+          var6 = ((IndexedSprite) (Object) stackIn_67_0[stackIn_67_1 + (stackIn_67_2 + stackIn_69_3)]).copyFlippedHorizontal().toRgbSprite();
         }
         if (this.field_U == 7) {
           stackIn_75_0 = DualLinkNode.field_k;
@@ -401,7 +401,7 @@ final class BattleUnit {
           } else {
             stackIn_76_1 = 0;
           }
-          var6 = ((IndexedSprite) (Object) stackIn_75_0[stackIn_76_1 + 2 + var3]).a().b();
+          var6 = ((IndexedSprite) (Object) stackIn_75_0[stackIn_76_1 + 2 + var3]).copyFlippedHorizontal().toRgbSprite();
         }
         if (this.field_B == 1) {
           stackIn_83_0 = (this.f((byte) -117)) ? 1 : 0;
@@ -422,28 +422,28 @@ final class BattleUnit {
               var3 = 8;
             }
             if (this.field_U == 0) {
-              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e)].a().b();
+              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e)].copyFlippedHorizontal().toRgbSprite();
             }
             if (this.field_U == 1) {
-              var6 = ByteStorage.field_a[0 + var3 + this.field_e].b();
+              var6 = ByteStorage.field_a[0 + var3 + this.field_e].toRgbSprite();
             }
             if (this.field_U == 2) {
-              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e)].b();
+              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e)].toRgbSprite();
             }
             if (this.field_U == 3) {
-              var6 = ByteStorage.field_a[this.field_e + (var3 + 24)].b();
+              var6 = ByteStorage.field_a[this.field_e + (var3 + 24)].toRgbSprite();
             }
             if (4 == this.field_U) {
-              var6 = ByteStorage.field_a[this.field_e + 36 + var3].b();
+              var6 = ByteStorage.field_a[this.field_e + 36 + var3].toRgbSprite();
             }
             if (this.field_U == 5) {
-              var6 = ByteStorage.field_a[var3 + 48 + this.field_e].b();
+              var6 = ByteStorage.field_a[var3 + 48 + this.field_e].toRgbSprite();
             }
             if (6 == this.field_U) {
-              var6 = ByteStorage.field_a[var3 + (36 + this.field_e)].a().b();
+              var6 = ByteStorage.field_a[var3 + (36 + this.field_e)].copyFlippedHorizontal().toRgbSprite();
             }
             if (this.field_U == 7) {
-              var6 = ByteStorage.field_a[24 + (var3 + this.field_e)].a().b();
+              var6 = ByteStorage.field_a[24 + (var3 + this.field_e)].copyFlippedHorizontal().toRgbSprite();
             }
             var7 = 0;
           }
@@ -457,28 +457,28 @@ final class BattleUnit {
               var3 = 8;
             }
             if (0 == this.field_U) {
-              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e - 60)].a().b();
+              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e - 60)].copyFlippedHorizontal().toRgbSprite();
             }
             if (this.field_U == 1) {
-              var6 = ByteStorage.field_a[60 + var3 + (0 + this.field_e)].b();
+              var6 = ByteStorage.field_a[60 + var3 + (0 + this.field_e)].toRgbSprite();
             }
             if (this.field_U == 2) {
-              var6 = ByteStorage.field_a[this.field_e + var3 + 72].b();
+              var6 = ByteStorage.field_a[this.field_e + var3 + 72].toRgbSprite();
             }
             if (this.field_U == 3) {
-              var6 = ByteStorage.field_a[60 + (var3 + 24 + this.field_e)].b();
+              var6 = ByteStorage.field_a[60 + (var3 + 24 + this.field_e)].toRgbSprite();
             }
             if (this.field_U == 4) {
-              var6 = ByteStorage.field_a[60 + var3 + 36 + this.field_e].b();
+              var6 = ByteStorage.field_a[60 + var3 + 36 + this.field_e].toRgbSprite();
             }
             if (5 == this.field_U) {
-              var6 = ByteStorage.field_a[60 + (this.field_e + 48 + var3)].b();
+              var6 = ByteStorage.field_a[60 + (this.field_e + 48 + var3)].toRgbSprite();
             }
             if (this.field_U == 6) {
-              var6 = ByteStorage.field_a[var3 + (36 + (this.field_e + 60))].a().b();
+              var6 = ByteStorage.field_a[var3 + (36 + (this.field_e + 60))].copyFlippedHorizontal().toRgbSprite();
             }
             if (7 == this.field_U) {
-              var6 = ByteStorage.field_a[this.field_e + (24 + (var3 + 60))].a().b();
+              var6 = ByteStorage.field_a[this.field_e + (24 + (var3 + 60))].copyFlippedHorizontal().toRgbSprite();
             }
             var7 = 0;
           }
@@ -492,7 +492,7 @@ final class BattleUnit {
             if (30 < this.field_A) {
               var9 = 2;
             }
-            var11 = lf.field_e[var9].b();
+            var11 = lf.field_e[var9].toRgbSprite();
             this.a(var5, 13, 25317, var11, -6);
             var6 = null;
           }
@@ -522,7 +522,7 @@ final class BattleUnit {
               stackIn_175_0 = di.field_f;
               stackIn_175_1 = 3;
               stackIn_176_2 = (var7 != 0) ? 5 : 0;
-              ((IndexedSprite) (Object) stackIn_175_0[stackIn_175_1 + stackIn_176_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_175_0[stackIn_175_1 + stackIn_176_2]).copyFlippedHorizontal().a(0, 0);
             }
           }
         }
@@ -541,7 +541,7 @@ final class BattleUnit {
               stackIn_190_0 = wa.field_r;
               stackIn_190_1 = 1 + var3;
               stackIn_191_2 = (var7 != 0) ? 15 : 0;
-              ((IndexedSprite) (Object) stackIn_190_0[stackIn_190_1 + stackIn_191_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_190_0[stackIn_190_1 + stackIn_191_2]).copyFlippedHorizontal().a(0, 0);
             }
             if (1 == var8) {
               stackIn_196_0 = wa.field_r;
@@ -577,14 +577,14 @@ final class BattleUnit {
             if (var8 == 6) {
               stackIn_223_0 = wa.field_r;
               stackIn_224_1 = (var7 != 0) ? 15 : 0;
-              ((IndexedSprite) (Object) stackIn_223_0[stackIn_224_1 + var3 + 3]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_223_0[stackIn_224_1 + var3 + 3]).copyFlippedHorizontal().a(0, 0);
             }
             if (var8 == 7) {
               stackIn_228_0 = wa.field_r;
               stackIn_228_1 = 2;
               stackIn_228_2 = var3;
               stackIn_229_3 = (var7 == 0) ? 0 : 15;
-              ((IndexedSprite) (Object) stackIn_228_0[stackIn_228_1 + (stackIn_228_2 + stackIn_229_3)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_228_0[stackIn_228_1 + (stackIn_228_2 + stackIn_229_3)]).copyFlippedHorizontal().a(0, 0);
             }
           }
           if (2 == this.field_Z.field_m.field_f) {
@@ -592,7 +592,7 @@ final class BattleUnit {
               stackIn_234_0 = f.field_i;
               stackIn_234_1 = 1 + var3;
               stackIn_235_2 = (var7 == 0) ? 0 : 15;
-              ((IndexedSprite) (Object) stackIn_234_0[stackIn_234_1 + stackIn_235_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_234_0[stackIn_234_1 + stackIn_235_2]).copyFlippedHorizontal().a(0, 0);
             }
             if (var8 == 1) {
               stackIn_240_0 = f.field_i;
@@ -629,12 +629,12 @@ final class BattleUnit {
               stackIn_268_1 = 3;
               stackIn_268_2 = -var3;
               stackIn_269_3 = (var7 == 0) ? 0 : 15;
-              ((IndexedSprite) (Object) stackIn_268_0[stackIn_268_1 - (stackIn_268_2 - stackIn_269_3)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_268_0[stackIn_268_1 - (stackIn_268_2 - stackIn_269_3)]).copyFlippedHorizontal().a(0, 0);
             }
             if (7 == var8) {
               stackIn_274_0 = f.field_i;
               stackIn_275_1 = (var7 == 0) ? 0 : 15;
-              ((IndexedSprite) (Object) stackIn_274_0[stackIn_275_1 + var3 + 2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_274_0[stackIn_275_1 + var3 + 2]).copyFlippedHorizontal().a(0, 0);
             }
           }
           if (this.field_Z.field_m.field_f == 3) {
@@ -643,7 +643,7 @@ final class BattleUnit {
               stackIn_282_1 = var3;
               stackIn_282_2 = 1;
               stackIn_283_3 = (var7 != 0) ? 15 : 0;
-              ((IndexedSprite) (Object) stackIn_282_0[stackIn_282_1 + (stackIn_282_2 + stackIn_283_3)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_282_0[stackIn_282_1 + (stackIn_282_2 + stackIn_283_3)]).copyFlippedHorizontal().a(0, 0);
             }
             if (1 == var8) {
               stackIn_288_0 = pc.field_c;
@@ -676,12 +676,12 @@ final class BattleUnit {
               stackIn_317_0 = pc.field_c;
               stackIn_317_1 = 3 + var3;
               stackIn_318_2 = (var7 != 0) ? 15 : 0;
-              ((IndexedSprite) (Object) stackIn_317_0[stackIn_317_1 + stackIn_318_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_317_0[stackIn_317_1 + stackIn_318_2]).copyFlippedHorizontal().a(0, 0);
             }
             if (var8 == 7) {
               stackIn_323_0 = pc.field_c;
               stackIn_324_1 = (var7 != 0) ? 15 : 0;
-              ((IndexedSprite) (Object) stackIn_323_0[stackIn_324_1 + (var3 + 2)]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_323_0[stackIn_324_1 + (var3 + 2)]).copyFlippedHorizontal().a(0, 0);
             }
           }
           if (this.field_Z.field_b != null &&
@@ -689,7 +689,7 @@ final class BattleUnit {
             if (var8 == 0) {
               stackIn_332_0 = di.field_f;
               stackIn_333_1 = (var7 == 0) ? 0 : 5;
-              ((IndexedSprite) (Object) stackIn_332_0[stackIn_333_1 + 1]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_332_0[stackIn_333_1 + 1]).copyFlippedHorizontal().a(0, 0);
             }
             if (1 == var8) {
               stackIn_337_0 = di.field_f;
@@ -712,12 +712,12 @@ final class BattleUnit {
               stackIn_353_0 = di.field_f;
               stackIn_353_1 = 2;
               stackIn_354_2 = (var7 == 0) ? 0 : 5;
-              ((IndexedSprite) (Object) stackIn_353_0[stackIn_353_1 + stackIn_354_2]).a().a(0, 0);
+              ((IndexedSprite) (Object) stackIn_353_0[stackIn_353_1 + stackIn_354_2]).copyFlippedHorizontal().a(0, 0);
             }
           }
         }
         if (var8 == 0) {
-          me.field_l[1 + 5 * this.field_nb.field_g].a().a(0, var4);
+          me.field_l[1 + 5 * this.field_nb.field_g].copyFlippedHorizontal().a(0, var4);
         }
         if (var8 == 1) {
           me.field_l[this.field_nb.field_g * 5].a(0, var4);
@@ -736,10 +736,10 @@ final class BattleUnit {
         }
         var9Lifetime1 = 124 / ((13 - param0) / 46);
         if (var8 == 6) {
-          me.field_l[5 * this.field_nb.field_g + 3].a().a(0, var4);
+          me.field_l[5 * this.field_nb.field_g + 3].copyFlippedHorizontal().a(0, var4);
         }
         if (var8 == 7) {
-          me.field_l[5 * this.field_nb.field_g + 2].a().a(0, var4);
+          me.field_l[5 * this.field_nb.field_g + 2].copyFlippedHorizontal().a(0, var4);
         }
         if (this == this.tile.map.state.field_q) {
           NodeHashTableIterator.a((byte) -86, var12, 16777215);
@@ -1840,7 +1840,7 @@ final class BattleUnit {
         }
         this.a(var5, 0, 25317, GameShell.field_p, 0);
         if (0 == var6) {
-          me.field_l[5 * this.field_nb.field_g + 1].a().a(0, var4);
+          me.field_l[5 * this.field_nb.field_g + 1].copyFlippedHorizontal().a(0, var4);
         }
         if (var6 == 1) {
           me.field_l[this.field_nb.field_g * 5].a(0, var4);
@@ -1858,10 +1858,10 @@ final class BattleUnit {
           me.field_l[5 * this.field_nb.field_g + 4].a(0, var4);
         }
         if (var6 == 6) {
-          me.field_l[5 * this.field_nb.field_g + 3].a().a(0, var4);
+          me.field_l[5 * this.field_nb.field_g + 3].copyFlippedHorizontal().a(0, var4);
         }
         if (7 == var6) {
-          me.field_l[2 + 5 * this.field_nb.field_g].a().a(0, var4);
+          me.field_l[2 + 5 * this.field_nb.field_g].copyFlippedHorizontal().a(0, var4);
         }
         k.field_f.a(0);
         return var2;

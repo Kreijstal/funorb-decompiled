@@ -32,18 +32,18 @@ abstract class SpriteState extends DualLinkNode {
         param1 = (15 & var6) + (param1 << 4);
         param4 = (15 & var7) + (param4 << 4);
         if (param0 <= -68) {
-          this.a(var6, var7, param1, param4, param3, param2);
+          this.rotateNearest(var6, var7, param1, param4, param3, param2);
           return;
         }
         this.field_B = -126;
-        this.a(var6, var7, param1, param4, param3, param2);
+        this.rotateNearest(var6, var7, param1, param4, param3, param2);
     }
 
     static int a(int param0, int param1) {
         return param0 | param1;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     SpriteState() {
     }

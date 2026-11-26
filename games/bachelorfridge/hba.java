@@ -126,7 +126,7 @@ final class hba extends AttackEvent {
           kka.field_f = var11[0];
           hna.field_h = var11[1];
           de.field_F = var11[2];
-          de.field_F.d();
+          de.field_F.flipVertically();
           DelegatingCanvas.field_c = var11[3];
           nv.field_wb = var11[5];
           BuffVendorAnimation.field_C = var11[4];
@@ -184,12 +184,12 @@ final class hba extends AttackEvent {
           IncomingAnimation.field_v = RageSpecial.a(29611, "basic", "fly_small", param1);
           hb.field_k = new IndexedSprite[2];
           for (var6_intLifetime4 = 0; var6_intLifetime4 < IncomingAnimation.field_v.length; var6_intLifetime4++) {
-            hb.field_k[var6_intLifetime4] = IncomingAnimation.field_v[var6_intLifetime4].b();
+            hb.field_k[var6_intLifetime4] = IncomingAnimation.field_v[var6_intLifetime4].copyFlippedHorizontal();
           }
           SleepAnimation.field_y = RageSpecial.a(29611, "basic", "maggot_small", param1);
           ik.field_h = new IndexedSprite[SleepAnimation.field_y.length];
           for (var6_intLifetime5 = 0; var6_intLifetime5 < SleepAnimation.field_y.length; var6_intLifetime5++) {
-            ik.field_h[var6_intLifetime5] = SleepAnimation.field_y[var6_intLifetime5].b();
+            ik.field_h[var6_intLifetime5] = SleepAnimation.field_y[var6_intLifetime5].copyFlippedHorizontal();
           }
           SetFriendlyEffect.field_k = FullHealEvent.a("target", param1, "basic", (byte) -124);
           bfa.field_b = pi.a(param1, -8845, "basic", "select_drop");

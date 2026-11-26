@@ -19,14 +19,14 @@ abstract class af {
           so.b(119);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
           }
           if (!param0) {
             af.a(-61);
           }
           ff.field_c.e();
-          var1.c(0, 0);
+          var1.drawHalfSize(0, 0);
           r.a(126);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');

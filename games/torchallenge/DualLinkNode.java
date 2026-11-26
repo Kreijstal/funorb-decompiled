@@ -133,7 +133,7 @@ class DualLinkNode extends IntrusiveNode {
           var7Lifetime1 = var6;
           var1 = var6;
           if (var6 != null) {
-            var6.g(245, 199);
+            var6.drawTransparent(245, 199);
           } else {
             if (ek.field_G != null) {
               ek.field_G.a(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

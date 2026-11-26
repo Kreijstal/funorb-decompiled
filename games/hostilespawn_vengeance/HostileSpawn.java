@@ -2311,9 +2311,9 @@ public final class HostileSpawn extends NetworkGameClient {
           CrossfadingMidiPcmStream.field_v.f(0.5f);
           CrossfadingMidiPcmStream.field_v.b(0.699999988079071f);
           CrossfadingMidiPcmStream.field_v.e(30.0f);
-          CrossfadingMidiPcmStream.field_v.c(0.4000000059604645f);
+          CrossfadingMidiPcmStream.field_v.setWetGain(0.4000000059604645f);
           CrossfadingMidiPcmStream.field_v.a(0.6000000238418579f);
-          CrossfadingMidiPcmStream.field_v.d(0.30000001192092896f);
+          CrossfadingMidiPcmStream.field_v.setStereoWidth(0.30000001192092896f);
           eb.field_e.setRootStream(CrossfadingMidiPcmStream.field_v);
           wj.field_O = wj.field_O / 4;
           uj.field_p = new oc();

@@ -68,8 +68,8 @@ final class fb implements rd {
           SoftwareRasterizer.d(var8, var9, this.field_r, this.field_h, 5592405);
           SoftwareRasterizer.a(var8, var9, this.field_r, this.field_h, var7);
           if (var11.field_C) {
-            SoftwareRasterizer.b(var8, var9, var8 + this.field_r, var9 + this.field_h, 1);
-            SoftwareRasterizer.b(this.field_r + var8, var9, var8, var9 + this.field_h, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_r, var9 + this.field_h, 1);
+            SoftwareRasterizer.drawLine(this.field_r + var8, var9, var8, var9 + this.field_h, 1);
           }
           if (null != this.field_b) {
             var10 = this.field_k + (this.field_q + this.field_r);

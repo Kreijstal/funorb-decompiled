@@ -310,7 +310,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void e(int param0, int param1) {
+    void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -402,7 +402,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawMultiply(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -712,7 +712,7 @@ class Sprite extends SpriteState {
         throw new IllegalArgumentException();
     }
 
-    void h(int param0, int param1) {
+    void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -758,7 +758,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void copyNonzeroPixelsReversed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -920,7 +920,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.copyNonzeroPixelsReversed(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1066,7 +1066,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.field_r >> 1);
         param1 = param1 + (this.field_o >> 1);
         int var3 = param0 < SoftwareRasterizer.clipLeft ? SoftwareRasterizer.clipLeft - param0 << 1 : 0;
@@ -1100,7 +1100,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawMask(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

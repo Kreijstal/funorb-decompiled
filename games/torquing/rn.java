@@ -54,9 +54,9 @@ final class rn implements WidgetRenderer {
           var7 = -(2 * var12.field_F) + param4.width;
           var8 = param4.x + param2 + var12.field_F;
           var9 = var12.field_C + (param1 + param4.y);
-          SoftwareRasterizer.a(var8, var9, var7 + var8, var9, this.field_g);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_g);
           for (var10 = var12.a(0) - 1; 0 <= var10; var10--) {
-            SoftwareRasterizer.d(var8 + var7 * var12.b(var10, 0) / var12.a((byte) -108), var9, this.field_k, this.field_h);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.b(var10, 0) / var12.a((byte) -108), var9, this.field_k, this.field_h);
           }
           if (this.field_c == null) {
             return;

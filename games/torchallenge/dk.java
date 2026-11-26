@@ -124,12 +124,12 @@ final class dk {
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
         if (param2 < -85) {
-          SoftwareRasterizer.d(param3, param1, param0, param5, param4);
+          SoftwareRasterizer.drawLine(param3, param1, param0, param5, param4);
           return;
         }
         String var8 = (String) null;
         this.a((String) null, 29, 47, -117);
-        SoftwareRasterizer.d(param3, param1, param0, param5, param4);
+        SoftwareRasterizer.drawLine(param3, param1, param0, param5, param4);
     }
 
     final void a(int param0, String param1, int param2, int param3) {

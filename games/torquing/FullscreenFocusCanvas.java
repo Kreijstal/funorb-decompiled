@@ -13,22 +13,22 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        SoftwareRasterizer.b(5 + param0, 7 + param3, 157, param4);
-        SoftwareRasterizer.b(162 + param0, 8 + param3, 2, param4);
-        SoftwareRasterizer.a(param0 + 163, 9 + param3, 2, param4);
-        SoftwareRasterizer.b(4 + param0, param3 + 11, 159, param4);
-        SoftwareRasterizer.a(3 + param0, 9 + param3, 2, param4);
-        SoftwareRasterizer.b(param0 + 4, 8 + param3, 1, param4);
+        SoftwareRasterizer.drawHorizontalLine(5 + param0, 7 + param3, 157, param4);
+        SoftwareRasterizer.drawHorizontalLine(162 + param0, 8 + param3, 2, param4);
+        SoftwareRasterizer.drawVerticalLine(param0 + 163, 9 + param3, 2, param4);
+        SoftwareRasterizer.drawHorizontalLine(4 + param0, param3 + 11, 159, param4);
+        SoftwareRasterizer.drawVerticalLine(3 + param0, 9 + param3, 2, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 4, 8 + param3, 1, param4);
         if (param1 <= -124) {
-          SoftwareRasterizer.b(param0 + 5, param3 + 8, 157, param2);
-          SoftwareRasterizer.b(param0 + 4, 9 + param3, 159, param2);
-          SoftwareRasterizer.b(4 + param0, 10 + param3, 159, param2);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 5, param3 + 8, 157, param2);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 4, 9 + param3, 159, param2);
+          SoftwareRasterizer.drawHorizontalLine(4 + param0, 10 + param3, 159, param2);
           return;
         }
         field_f = (PlatformTaskDispatcher) null;
-        SoftwareRasterizer.b(param0 + 5, param3 + 8, 157, param2);
-        SoftwareRasterizer.b(param0 + 4, 9 + param3, 159, param2);
-        SoftwareRasterizer.b(4 + param0, 10 + param3, 159, param2);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 5, param3 + 8, 157, param2);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 4, 9 + param3, 159, param2);
+        SoftwareRasterizer.drawHorizontalLine(4 + param0, 10 + param3, 159, param2);
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {

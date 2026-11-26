@@ -63,21 +63,21 @@ final class qg implements ad {
           }
           var7 = param1 - (-param2.field_u - var14.field_M);
           var8 = var14.field_R + param2.field_t + param3;
-          SoftwareRasterizer.c(var7, var8, var14.field_J, this.field_l);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_J, this.field_l);
           if (var14.field_K != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_K) / (double)var14.field_N;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_J);
             var12 = (int)(Math.cos(var9) * (double)var14.field_J);
-            SoftwareRasterizer.c(var11 + var7, var12 + var8, 1, this.field_a);
+            SoftwareRasterizer.fillCircle(var11 + var7, var12 + var8, 1, this.field_a);
           }
-          SoftwareRasterizer.c(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_S * 3.141592653589793 * 2.0 / (double)var14.field_N;
           if (param0 != 12088) {
             qg.clearStaticReferences(-31);
           }
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_J);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_J);
-          SoftwareRasterizer.d(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_c) {
             var13 = var14.field_M + var14.field_J + this.field_i;
             this.field_c.a(param2.field_s, param2.field_u + param1 + var13, this.field_h + param3 + param2.field_t, param2.field_v - this.field_i - var13, param2.field_q - (this.field_i << 1), this.field_j, this.field_k, 1, 1, 0);

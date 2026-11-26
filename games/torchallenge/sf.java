@@ -71,10 +71,10 @@ final class sf {
           var9 = param1[0].fullWidth;
           var10 = param1[0].fullHeight;
           param0.d();
-          param1[0].g(param4, param2);
-          param1[2].g(-var9 + var7_int, param2);
-          param1[6].g(param4, var8 - var10);
-          param1[8].g(var7_int - var9, -var10 + var8);
+          param1[0].drawTransparent(param4, param2);
+          param1[2].drawTransparent(-var9 + var7_int, param2);
+          param1[6].drawTransparent(param4, var8 - var10);
+          param1[8].drawTransparent(var7_int - var9, -var10 + var8);
           param1[1].d(var9 + param4, param2, -(2 * var9) + param5, var10);
           param1[7].d(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
           param1[3].d(param4, param2 + var10, var9, param3 - var10 * 2);

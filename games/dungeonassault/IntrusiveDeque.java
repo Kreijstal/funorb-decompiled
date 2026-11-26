@@ -109,9 +109,9 @@ final class IntrusiveDeque {
         bf.field_h.f(param4);
         bf.field_h.e(param1);
         bf.field_h.d(param6);
-        bf.field_h.a(param3);
+        bf.field_h.setWetGain(param3);
         bf.field_h.b(param0);
-        bf.field_h.c(param2);
+        bf.field_h.setStereoWidth(param2);
         if (param5 != 0) {
           field_b = 91;
           return;

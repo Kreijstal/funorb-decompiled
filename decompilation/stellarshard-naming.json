@@ -2868,6 +2868,30 @@
       "renamedSymbol": "M:p.onScheduledEvent(LPcmStreamMixer;)I"
     },
     {
+      "symbol": "M:pb.a(IIII[I[IIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitScaledAdditiveRows",
+      "evidence": "Source-purpose review: Nearest16.16scaledsampling,skipzeros,saturatingaddRGB into destination;retain negated width/height loop domains,strides/overflow. Original identity M:pb.a(IIII[I[IIIIIIIIIII)V. Pinned original body SHA256 c9e35ceee165fb7420d1a0df4bfe6a3f92dddc5f0100bfeb1748146c05100fb1. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:pb.a(IIII[I[IIIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitScaledAdditiveIntensityRows",
+      "evidence": "Source-purpose review: Same additive scaledkernel,RGBintensitymultiply before saturation;retainunsignedshifts/masks. Original identity M:pb.a(IIII[I[IIIIIIIIIIII)V. Pinned original body SHA256 cfad84b83217e5772f152ba82e9f28768a845293624eb841256c60c51802d278. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:pb.c(IIII)Z",
+      "originalName": "c",
+      "to": "isOpaqueAt",
+      "evidence": "Source-purpose review: Four args are sprite origin and testpoint;subtracttrim/origin,boundscheck,return sourcepixel!=0. Original identity M:pb.c(IIII)Z. Pinned original body SHA256 0307d1dc579f7b0c44b714d1ce994c4a1f4af5b8db216371b06abaa75eee885a. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.isOpaqueAt(IIII)Z"
+    },
+    {
       "symbol": "M:pd.b(B)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -106762,7 +106786,7 @@
     },
     {
       "symbol": "L:pb.a(IIII[I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -106773,7 +106797,7 @@
     },
     {
       "symbol": "L:pb.a(IIII[I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -106784,7 +106808,7 @@
     },
     {
       "symbol": "L:pb.a(IIII[I[IIIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -106795,7 +106819,7 @@
     },
     {
       "symbol": "L:pb.a(IIII[I[IIIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#1",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -108588,7 +108612,7 @@
     },
     {
       "symbol": "L:pb.c(IIII)Z#0",
-      "renamedSymbol": "L:Sprite.c(IIII)Z#0",
+      "renamedSymbol": "L:Sprite.isOpaqueAt(IIII)Z#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -170408,9 +170432,9 @@
     },
     {
       "symbol": "M:pb.a(IIII[I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(IIII[I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitScaledAdditiveRows",
       "declaration": {
         "file": "pb.java",
         "start": 79411,
@@ -170419,9 +170443,9 @@
     },
     {
       "symbol": "M:pb.a(IIII[I[IIIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(IIII[I[IIIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitScaledAdditiveIntensityRows",
       "declaration": {
         "file": "pb.java",
         "start": 54095,
@@ -170639,9 +170663,9 @@
     },
     {
       "symbol": "M:pb.c(IIII)Z",
-      "renamedSymbol": "M:Sprite.c(IIII)Z",
+      "renamedSymbol": "M:Sprite.isOpaqueAt(IIII)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "isOpaqueAt",
       "declaration": {
         "file": "pb.java",
         "start": 90387,
@@ -213781,7 +213805,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213792,7 +213816,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213803,7 +213827,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -213814,7 +213838,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -213825,7 +213849,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -213836,7 +213860,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -213847,7 +213871,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#14",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#14",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -213858,7 +213882,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#15",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#15",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -213869,7 +213893,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213880,7 +213904,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213891,7 +213915,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -213902,7 +213926,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -213913,7 +213937,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -213924,7 +213948,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -213935,7 +213959,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -213946,7 +213970,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -213957,7 +213981,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213968,7 +213992,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213979,7 +214003,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -213990,7 +214014,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -214001,7 +214025,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -214012,7 +214036,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -214023,7 +214047,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#14",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#14",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -214034,7 +214058,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#15",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#15",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -214045,7 +214069,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#16",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#16",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -214056,7 +214080,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -214067,7 +214091,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -214078,7 +214102,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -214089,7 +214113,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -214100,7 +214124,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -214111,7 +214135,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -214122,7 +214146,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -214133,7 +214157,7 @@
     },
     {
       "symbol": "P:pb.a(IIII[I[IIIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -215629,7 +215653,7 @@
     },
     {
       "symbol": "P:pb.c(IIII)Z#0",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#0",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -215640,7 +215664,7 @@
     },
     {
       "symbol": "P:pb.c(IIII)Z#1",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#1",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -215651,7 +215675,7 @@
     },
     {
       "symbol": "P:pb.c(IIII)Z#2",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#2",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -215662,7 +215686,7 @@
     },
     {
       "symbol": "P:pb.c(IIII)Z#3",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#3",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -263298,7 +263322,7 @@
       "original": "pb.java",
       "renamed": "Sprite.java",
       "inputSha256": "582f4d99d71bd70b27149f817feaf50d166ff2b04e8148949d3e237c49c02d4a",
-      "outputSha256": "0bc5fbb23d5aa11d8290782554cb4f4c8f810deaf1359d62fb61fd1834aa8a35",
+      "outputSha256": "9e5001064554634d4cbfacabaaca1c47773f0c8cc16b08c1b3b6ec45cbd6ffd0",
       "edits": [
         {
           "start": 44,
@@ -263378,11 +263402,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 51001,
+          "end": 51002,
+          "symbol": "M:pb.a(IIII[I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveRows"
+        },
+        {
           "start": 51148,
           "end": 51150,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 51151,
+          "end": 51152,
+          "symbol": "M:pb.a(IIII[I[IIIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveIntensityRows"
         },
         {
           "start": 52044,
@@ -263411,6 +263449,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 54095,
+          "end": 54096,
+          "symbol": "M:pb.a(IIII[I[IIIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveIntensityRows"
         },
         {
           "start": 75860,
@@ -263453,6 +263498,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 79411,
+          "end": 79412,
+          "symbol": "M:pb.a(IIII[I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveRows"
         },
         {
           "start": 88006,
@@ -263517,6 +263569,13 @@
           "original": "L10",
           "renamed": "scanLoop4",
           "kind": "label"
+        },
+        {
+          "start": 90387,
+          "end": 90388,
+          "symbol": "M:pb.c(IIII)Z",
+          "original": "c",
+          "renamed": "isOpaqueAt"
         },
         {
           "start": 90925,
@@ -284945,7 +285004,7 @@
       "original": "vl.java",
       "renamed": "vl.java",
       "inputSha256": "e88dc87b5ac48fbebf4631cfe14fbece4a14c830963e2b7a95e29818b662c040",
-      "outputSha256": "930fa798c32cbdefe4e7d5a82d4c39f63307857d9f431d07f7544f879969d025",
+      "outputSha256": "bb5ad3399c51b8e10f7afc946a28917787e6d8cec2f78014c977b5fa9c5d8936",
       "edits": [
         {
           "start": 200,
@@ -285219,6 +285278,13 @@
           "symbol": "M:qe.b(I)Lpb;",
           "original": "b",
           "renamed": "currentSprite"
+        },
+        {
+          "start": 18244,
+          "end": 18245,
+          "symbol": "M:pb.c(IIII)Z",
+          "original": "c",
+          "renamed": "isOpaqueAt"
         },
         {
           "start": 18259,
@@ -287696,10 +287762,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "a0f48e22c02ac32eaf3347751597ca90a827276087b67a952eb7ad2216de6102",
+    "rulesSha256": "22b38697669847079f3c21dbf1d0920345b310e28bc6b099d3d92c50a761f0c0",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "d94bc9b66482c3b773df1b59df96b204d5576be55512317b4b85dda7ae37b685",
+    "outputTreeSha256": "2b181169681c22381b15f09b7e23103abcdef36ec3c6547452543453296c31e8",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

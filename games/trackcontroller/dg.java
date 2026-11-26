@@ -125,16 +125,16 @@ final class dg extends UiWidget {
           var5_int = this.field_x + param2;
           mb.a(param2 + this.field_O.field_t, param3, param3 + this.field_u, (byte) -103, var5_int - this.field_O.field_t);
           for (var6 = -this.field_M + param2; var5_int > var6; var6 = var6 + param0.field_t) {
-            param0.e(var6, param3);
+            param0.drawTransparent(var6, param3);
           }
           GameShell.m(40);
           if (SoftwareRasterizer.clipLeft <= param2 + this.field_O.field_t) {
             mb.a((byte) -72, this.field_G);
-            param0.e(-this.field_M, 0);
-            param0.e(2 * this.field_K - this.field_M, 0);
-            this.field_R.c(0, 0);
+            param0.drawTransparent(-this.field_M, 0);
+            param0.drawTransparent(2 * this.field_K - this.field_M, 0);
+            this.field_R.drawMultiply(0, 0);
             GameShell.m(53);
-            this.field_G.e(param2, param3);
+            this.field_G.drawTransparent(param2, param3);
           }
           if (var5_int - this.field_O.field_t > SoftwareRasterizer.clipRight) {
             return;
@@ -142,11 +142,11 @@ final class dg extends UiWidget {
           mb.a((byte) -57, this.field_G);
           for (var7 = this.field_x - this.field_O.field_t + this.field_M; var7 > this.field_K * 2; var7 = var7 - this.field_K * 2) {
           }
-          param0.e(-var7, 0);
-          param0.e(-var7 + this.field_K * 2, 0);
-          this.field_O.c(0, 0);
+          param0.drawTransparent(-var7, 0);
+          param0.drawTransparent(-var7 + this.field_K * 2, 0);
+          this.field_O.drawMultiply(0, 0);
           GameShell.m(-122);
-          this.field_G.e(var5_int - this.field_O.field_t, param3);
+          this.field_G.drawTransparent(var5_int - this.field_O.field_t, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,13 +186,13 @@ final class dg extends UiWidget {
             var10 = var6 - var5;
             var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
             var12 = var11 < 256 ? (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> 8 : var8 | var9;
-            SoftwareRasterizer.a(var7, var6, this.field_K, var12);
+            SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_K, var12);
             var8Lifetime1 = 16711935 & param0;
-            SoftwareRasterizer.a(var7 - this.field_K * 2, var6, this.field_K, var12);
+            SoftwareRasterizer.drawHorizontalLine(var7 - this.field_K * 2, var6, this.field_K, var12);
             var9Lifetime1 = param0 & 65280;
             var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (16711680 & var9Lifetime1 * var11 | var11 * var8Lifetime1 & -16711936) >>> 8;
-            SoftwareRasterizer.a(var7 + this.field_K, var6, this.field_K, var12Lifetime1);
-            SoftwareRasterizer.a(-this.field_K + var7, var6, this.field_K, var12Lifetime1);
+            SoftwareRasterizer.drawHorizontalLine(var7 + this.field_K, var6, this.field_K, var12Lifetime1);
+            SoftwareRasterizer.drawHorizontalLine(-this.field_K + var7, var6, this.field_K, var12Lifetime1);
           }
           GameShell.m(-88);
           return var14;

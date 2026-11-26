@@ -22,9 +22,9 @@ abstract class fd {
         field_f = null;
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     static {
         field_z = "fd.B(";

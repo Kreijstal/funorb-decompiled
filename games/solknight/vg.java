@@ -50,7 +50,7 @@ class vg extends pj {
         }
         MidiPcmStream.e(4096);
         if (BufferedSocket.field_h < 150) {
-          tg.field_J.f(var3, var4);
+          tg.field_J.drawHalfSize(var3, var4);
         } else {
           IntrusiveNode.field_e.c(15 + var3, var4 + 10, var5);
         }
@@ -59,13 +59,13 @@ class vg extends pj {
           var6 < 50) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            tg.field_I.a(var3, var4, var7);
+            tg.field_I.drawAdditive(var3, var4, var7);
           } else {
             if (30 <= var6) {
               var7 = (-(256 * var6) + 12800) / 20;
-              tg.field_I.a(var3, var4, var7);
+              tg.field_I.drawAdditive(var3, var4, var7);
             } else {
-              tg.field_I.a(var3, var4, 256);
+              tg.field_I.drawAdditive(var3, var4, 256);
             }
           }
         }

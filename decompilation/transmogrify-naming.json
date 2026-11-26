@@ -1460,6 +1460,14 @@
       "renamedSymbol": "M:PcmSampleStream.skipFrames(I)V"
     },
     {
+      "symbol": "M:bb.g()Z",
+      "originalName": "g",
+      "to": "updateRamp",
+      "evidence": "Source-purpose review: Ramp completion check,refreshorunlink MININT whenalltargets reached,else scheduleunitstep/minimumduration;actual gainadvance happens in mixing caller. Retain guard5 and no source changes. Original identity M:bb.g()Z. Pinned original body SHA256 51f4cb2b996eebd400f4959545666c5006670639c9750b5b00c7e4c453860966. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.updateRamp()Z"
+    },
+    {
       "symbol": "M:bb.j()V",
       "originalName": "j",
       "to": "cancelRamp",
@@ -38279,7 +38287,7 @@
     },
     {
       "symbol": "L:bb.g()Z#0",
-      "renamedSymbol": "L:PcmSampleStream.g()Z#0",
+      "renamedSymbol": "L:PcmSampleStream.updateRamp()Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -38290,7 +38298,7 @@
     },
     {
       "symbol": "L:bb.g()Z#1",
-      "renamedSymbol": "L:PcmSampleStream.g()Z#1",
+      "renamedSymbol": "L:PcmSampleStream.updateRamp()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -38301,7 +38309,7 @@
     },
     {
       "symbol": "L:bb.g()Z#2",
-      "renamedSymbol": "L:PcmSampleStream.g()Z#2",
+      "renamedSymbol": "L:PcmSampleStream.updateRamp()Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -149566,9 +149574,9 @@
     },
     {
       "symbol": "M:bb.g()Z",
-      "renamedSymbol": "M:PcmSampleStream.g()Z",
+      "renamedSymbol": "M:PcmSampleStream.updateRamp()Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "updateRamp",
       "declaration": {
         "file": "bb.java",
         "start": 43518,
@@ -231213,7 +231221,7 @@
       "original": "bb.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "c3e05b928b7533ceed62fcd8e10ed7cb64a7ee18ea01c4a09bb345843fad5147",
-      "outputSha256": "649ed487cec75489f4b6fa668036462740c3b14ff18bfaee711d3a4e9fb4ae91",
+      "outputSha256": "6937cac58c9a6220c511740516e7a319948a4b3480009d41fafe637376e72cc0",
       "edits": [
         {
           "start": 50,
@@ -231410,6 +231418,13 @@
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 10295,
+          "end": 10296,
+          "symbol": "M:bb.g()Z",
+          "original": "g",
+          "renamed": "updateRamp"
         },
         {
           "start": 10605,
@@ -231748,6 +231763,13 @@
           "renamed": "AudioOutput"
         },
         {
+          "start": 43518,
+          "end": 43519,
+          "symbol": "M:bb.g()Z",
+          "original": "g",
+          "renamed": "updateRamp"
+        },
+        {
           "start": 43659,
           "end": 43661,
           "symbol": "C:bb",
@@ -231935,6 +231957,13 @@
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 49760,
+          "end": 49761,
+          "symbol": "M:bb.g()Z",
+          "original": "g",
+          "renamed": "updateRamp"
         },
         {
           "start": 49965,
@@ -282967,10 +282996,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/transmogrify"
     },
-    "rulesSha256": "faf8421e1021cf9384379728aa5c3b3b17934a0fc4ba5628aa9716de71c49c5b",
+    "rulesSha256": "73e8104cf778b4db851f9f4dda920b900c3bb040e7c7d609ca8eeaf9b905f298",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
-    "outputTreeSha256": "34e09f0e08bafdc0654482e3b5857e99dcd448d85158cac21997519bd16b36f6",
+    "outputTreeSha256": "a31ce62aaf8661dcfc6691d16df7d1fc3ba711920c434bf335937367c307360d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -67,8 +67,8 @@ final class mk implements ad {
           SoftwareRasterizer.b(var8, var9, this.field_i, this.field_j, 5592405);
           SoftwareRasterizer.e(var8, var9, this.field_i, this.field_j, var7);
           if (var11.field_H) {
-            SoftwareRasterizer.d(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
-            SoftwareRasterizer.d(this.field_i + var8, var9, var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, var9 + this.field_j, 1);
           }
           if (null != this.field_n) {
             var10 = this.field_l + this.field_i + this.field_c;

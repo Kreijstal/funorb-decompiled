@@ -993,7 +993,7 @@ final class wd extends oa {
 
     private final void d(int param0) {
         if (this.field_o[param0] != null) {
-          this.field_o[param0].h(AudioOutput.field_n >> 7);
+          this.field_o[param0].fadeOutAndUnlink(AudioOutput.field_n >> 7);
           this.field_o[param0] = null;
         }
     }

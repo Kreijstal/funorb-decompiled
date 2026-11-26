@@ -159,11 +159,11 @@ final class gf {
               var13 = var8;
               for (var14 = 0; var14 <= 5; var14++) {
                 if (je.field_O.a(var7Lifetime1, var13, (byte) 61)) {
-                  SoftwareRasterizer.a(var9, var10Lifetime1, var9 + 8, var10Lifetime1 + 8);
+                  SoftwareRasterizer.setClip(var9, var10Lifetime1, var9 + 8, var10Lifetime1 + 8);
                   if (this.field_i >= 0) {
                     var6.f(var2_intLifetime1, var3Lifetime1);
                   } else {
-                    var6.h(var2_intLifetime1, var3Lifetime1);
+                    var6.drawHorizontalFlip(var2_intLifetime1, var3Lifetime1);
                   }
                 }
                 var13++;
@@ -211,7 +211,7 @@ final class gf {
             this.b(false);
           }
           if (17 == this.field_h) {
-            te.field_d[0].c(-16 + var2_int, var3, 128);
+            te.field_d[0].drawTransparentWithIntensity(-16 + var2_int, var3, 128);
           } else {
             if (6 != this.field_h) {
               if (this.field_h != 7 &&
@@ -251,7 +251,7 @@ final class gf {
                       a.field_a[var4].f(var2_int, var3);
                       return;
                     }
-                    a.field_a[var4].h(var2_int, var3);
+                    a.field_a[var4].drawHorizontalFlip(var2_int, var3);
                     return;
                   }
                   if (21 == this.field_h) {
@@ -264,7 +264,7 @@ final class gf {
                     }
                     var5_ref_ea = stackIn_55_0;
                     if (0 > this.field_i) {
-                      var5_ref_ea.h(var2_int, -var5_ref_ea.field_A + (32 + var3));
+                      var5_ref_ea.drawHorizontalFlip(var2_int, -var5_ref_ea.field_A + (32 + var3));
                       return;
                     }
                     var5_ref_ea.f(var2_int, var3 + (32 - var5_ref_ea.field_A));
@@ -284,7 +284,7 @@ final class gf {
                     }
                     var6 = stackIn_87_0;
                     if (this.field_i < 0) {
-                      var6.h(var2_int, -var6.field_A + 32 + var3);
+                      var6.drawHorizontalFlip(var2_int, -var6.field_A + 32 + var3);
                       return;
                     }
                     var6.f(var2_int, 32 + (var3 - var6.field_A));
@@ -300,7 +300,7 @@ final class gf {
                       if (var4Lifetime3 > 255) {
                         var4Lifetime3 = 255;
                       }
-                      a.field_a[-12 + (this.field_h + 37)].c(var2_int, var3, var4Lifetime3);
+                      a.field_a[-12 + (this.field_h + 37)].drawTransparentWithIntensity(var2_int, var3, var4Lifetime3);
                       return;
                     }
                   } else {
@@ -339,7 +339,7 @@ final class gf {
                     te.field_d[this.field_b / 10 % 3 + 2].f(-16 + var2_int - 3 * this.field_b / 250, this.field_b * 3 / 250 + var3);
                   }
                 } else {
-                  te.field_d[0].c(var2_int - 16, var3, 128);
+                  te.field_d[0].drawTransparentWithIntensity(var2_int - 16, var3, 128);
                 }
               }
             }

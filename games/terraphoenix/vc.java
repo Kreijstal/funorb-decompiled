@@ -108,11 +108,11 @@ abstract class vc {
           af.d(-2766);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.e(4, 4, 0, 0, 540, 140);
           }
           s.field_a.a();
-          var1.f(0, 0);
+          var1.drawHalfSize(0, 0);
           MessageKeys.a(!param0 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "vc.M(" + param0 + ')');

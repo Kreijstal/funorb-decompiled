@@ -56,20 +56,20 @@ final class ub extends lg {
           }
           var16.c(112, 144, var16.field_w << 4, var16.field_u << 4, -this.field_H << 10, 4096);
           r.a(123);
-          ByteStorage.field_b.a(-var16.field_w + var5, -var16.field_u + var6, 256);
+          ByteStorage.field_b.drawAdditive(-var16.field_w + var5, -var16.field_u + var6, 256);
           return;
         }
         if (IsaacCipher.field_h != var8) {
           if (var8 == so.field_u) {
             var14 = wj.field_h[2];
-            var14.a(-(var14.field_s >> 1) + var5, var6 - (var14.field_t >> 1), 256);
+            var14.drawAdditive(-(var14.field_s >> 1) + var5, var6 - (var14.field_t >> 1), 256);
             return;
           }
           if (so.field_s != var8) {
             return;
           }
           var13 = wj.field_h[1];
-          var13.a(var5 - (var13.field_s >> 1), -(var13.field_t >> 1) + var6, 256);
+          var13.drawAdditive(var5 - (var13.field_s >> 1), -(var13.field_t >> 1) + var6, 256);
           return;
         }
         var15 = wj.field_h[0];
@@ -94,7 +94,7 @@ final class ub extends lg {
         }
         var15.c(112, 144, var15.field_w << 4, var15.field_u << 4, -this.field_H << 10, 4096);
         r.a(123);
-        ByteStorage.field_b.a(-var15.field_w + var5, -var15.field_u + var6, 256);
+        ByteStorage.field_b.drawAdditive(-var15.field_w + var5, -var15.field_u + var6, 256);
     }
 
     final static void sleepMillis(int param0, long param1) {

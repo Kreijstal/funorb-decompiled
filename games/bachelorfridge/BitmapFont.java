@@ -246,9 +246,9 @@ abstract class BitmapFont extends DualLinkNode {
                   this.drawGlyphAlpha(var8, param1 + this.field_r[var8], param2 + this.field_y[var8], var9, var10, field_I, field_G, false);
                 } else {
                   if (field_D != -1) {
-                    this.a(var8, param1 + this.field_r[var8] + 1, param2 + this.field_y[var8] + 1, var9, var10, field_D, true);
+                    this.drawGlyph(var8, param1 + this.field_r[var8] + 1, param2 + this.field_y[var8] + 1, var9, var10, field_D, true);
                   }
-                  this.a(var8, param1 + this.field_r[var8], param2 + this.field_y[var8], var9, var10, field_I, false);
+                  this.drawGlyph(var8, param1 + this.field_r[var8], param2 + this.field_y[var8], var9, var10, field_I, false);
                 }
               }
               param1 = param1 + this.field_o[var8];
@@ -459,7 +459,7 @@ abstract class BitmapFont extends DualLinkNode {
         field_q = 0;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     final void b(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {

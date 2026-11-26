@@ -263,11 +263,11 @@ final class cj extends rb {
             field_e = (AccountRequestState) null;
           }
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawMask(-2, -2, 16777215);
             SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           ha.field_E.a();
-          var1.d(0, 0);
+          var1.drawHalfSize(0, 0);
           GameShell.m(124);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.R(" + param0 + ')');

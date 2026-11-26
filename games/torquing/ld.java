@@ -47,18 +47,18 @@ final class ld implements WidgetRenderer {
           SoftwareRasterizer.d(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_h);
           var7 = param2 + param4.x + var6.field_G;
           var8 = var6.field_F + (param1 + param4.y);
-          SoftwareRasterizer.d(var7, var8, var6.field_C, this.field_a);
+          SoftwareRasterizer.fillCircle(var7, var8, var6.field_C, this.field_a);
           if (var6.field_I != -1) {
             var9 = 2.0 * ((double)var6.field_I * 3.141592653589793) / (double)var6.field_E;
             var11 = (int)(-Math.sin(var9) * (double)var6.field_C);
             var12 = (int)(Math.cos(var9) * (double)var6.field_C);
-            SoftwareRasterizer.d(var11 + var7, var12 + var8, 1, this.field_g);
+            SoftwareRasterizer.fillCircle(var11 + var7, var12 + var8, 1, this.field_g);
           }
-          SoftwareRasterizer.d(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var6.field_D) / (double)var6.field_E;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var6.field_C);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var6.field_C);
-          SoftwareRasterizer.a(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_j != null) {
             var13 = this.field_c + var6.field_C + var6.field_G;
             this.field_j.a(param4.text, var13 + (param2 + param4.x), this.field_d + (param1 + param4.y), -this.field_c - var13 + param4.width, -(this.field_c << 1) + param4.height, this.field_i, this.field_f, 1, 1, 0);

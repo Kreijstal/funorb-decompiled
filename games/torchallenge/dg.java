@@ -629,7 +629,7 @@ final class dg extends kj implements tl, sg, tb {
         fieldTemp$0.storedWidth = SoftwareRasterizer.width;
         fa.field_q.pixels = SoftwareRasterizer.pixels;
         SoftwareRasterizer.a(pf.field_g);
-        SoftwareRasterizer.f(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+        SoftwareRasterizer.setClip(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         fa.field_q.e(0, 0, param0);
         SoftwareRasterizer.b(pf.field_g);
     }

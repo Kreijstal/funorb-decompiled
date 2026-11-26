@@ -191,7 +191,7 @@ final class wk extends ic {
           var14 = we.field_m[1 + var3Lifetime1];
           var7Lifetime3 = var14;
           if (var5 >= 0) {
-            var14.g(var1_int, var2);
+            var14.drawTransparent(var1_int, var2);
           } else {
             var14.d(var1_int, var2);
           }
@@ -216,7 +216,7 @@ final class wk extends ic {
             wk.createAccountSuggestionsResult((String[]) null, -30);
           }
           if (var5Lifetime1 >= 0) {
-            var16.g(var1_intLifetime1, var2Lifetime1);
+            var16.drawTransparent(var1_intLifetime1, var2Lifetime1);
           } else {
             var16.d(var1_intLifetime1, var2Lifetime1);
           }

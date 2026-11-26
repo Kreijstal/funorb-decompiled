@@ -232,7 +232,7 @@ final class vh {
             for (var24 = 0; var20 > var24; var24++) {
               for (var25 = 0; var19 > var25; var25++) {
                 if (var18[var23++] != 0) {
-                  SoftwareRasterizer.e(param1 + var25, var24 + param1, param1, 2);
+                  SoftwareRasterizer.fillCircle(param1 + var25, var24 + param1, param1, 2);
                 }
               }
             }

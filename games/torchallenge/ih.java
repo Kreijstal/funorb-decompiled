@@ -248,19 +248,19 @@ final class ih extends kj implements sg {
                 if (var18 != 0) {
                   if (var17 > 0 &&
                     0 == var15[-1 + var13]) {
-                    SoftwareRasterizer.e(var17, var16, param4, param7);
+                    SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                   } else {
                     if (var16 > 0 &&
                       var15[var13 - param5.storedWidth] == 0) {
-                      SoftwareRasterizer.e(var17, var16, param4, param7);
+                      SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                     } else {
                       if (var17 < param5.storedWidth - 1 &&
                         var15[var13 + 1] == 0) {
-                        SoftwareRasterizer.e(var17, var16, param4, param7);
+                        SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                       } else {
                         if (var16 < -1 + param5.storedHeight &&
                           var15[param5.storedWidth + var13] == 0) {
-                          SoftwareRasterizer.e(var17, var16, param4, param7);
+                          SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                         }
                       }
                     }
@@ -270,7 +270,7 @@ final class ih extends kj implements sg {
               }
               var13 = var13 + var14;
             }
-            var21.g(-param5.offsetX, -param5.offsetY);
+            var21.drawTransparent(-param5.offsetX, -param5.offsetY);
             SoftwareRasterizer.setTarget(var30, var10, var11);
             SoftwareRasterizer.b(var29);
             return;

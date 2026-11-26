@@ -1086,7 +1086,7 @@ public final class MinerDisturbance extends ob {
                 return;
               }
             }
-            a.field_a[var6].h(var4Lifetime2 - 4, var5 - 4);
+            a.field_a[var6].drawHorizontalFlip(var4Lifetime2 - 4, var5 - 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4058,7 +4058,7 @@ public final class MinerDisturbance extends ob {
                   ef.field_b[var8_int] = new Sprite(32, 32);
                   ef.field_b[var8_int].g();
                   ef.field_b[3].b(-106, 16, 4096, (int)(0.5 + 65535.0 * var4 / var2_double), 16);
-                  ef.field_b[var8_int].f(1);
+                  ef.field_b[var8_int].addOutline(1);
                   var4 = var4 - var6;
                 }
                 var8_int++;
@@ -4066,7 +4066,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (decompiledFrameRemainder0) {
-              ef.field_b[3].f(1);
+              ef.field_b[3].addOutline(1);
               ResourceArchive.field_e.a((byte) -45);
               ha.field_c = jn.a("unachieved", -29553, "basic", ob.field_q);
               cb.field_e = jn.a("orbcoin", -29553, "basic", ob.field_q);
@@ -4145,7 +4145,7 @@ public final class MinerDisturbance extends ob {
               }
               te.field_e[0][var8_int] = new Sprite(wc.field_c[0][var8_int].field_x, wc.field_c[0][var8_int].field_A);
               te.field_e[0][var8_int].g();
-              wc.field_c[0][var8_int].h(0, 0);
+              wc.field_c[0][var8_int].drawHorizontalFlip(0, 0);
               var8_int++;
             } while (var13 == 0);
             var8_int = 0;
@@ -4214,7 +4214,7 @@ public final class MinerDisturbance extends ob {
               }
               te.field_e[1][var8_int] = new Sprite(wc.field_c[1][var8_int].field_x, wc.field_c[1][var8_int].field_A);
               te.field_e[1][var8_int].g();
-              wc.field_c[1][var8_int].h(0, 0);
+              wc.field_c[1][var8_int].drawHorizontalFlip(0, 0);
               var8_int++;
             } while (var13 == 0);
             var8_int = 0;
@@ -4223,7 +4223,7 @@ public final class MinerDisturbance extends ob {
                 fl.field_j = tb.a("instruction_pics", "", fl.field_f, 1);
                 break;
               }
-              nb.field_a[var8_int] = (Sprite) ((Object) ((ArgbSprite) (te.field_c[var8_int])).h());
+              nb.field_a[var8_int] = (Sprite) ((Object) ((ArgbSprite) (te.field_c[var8_int])).copyArgb());
               ((ArgbSprite) (nb.field_a[var8_int])).d(0, -40, -40, -40);
               var8_int++;
             } while (var13 == 0);
@@ -5159,7 +5159,7 @@ public final class MinerDisturbance extends ob {
               ei.field_M.f(7, 472, var2_int);
             }
             var2_int = 640 * MidiPcmStream.field_Z / 64;
-            SoftwareRasterizer.a(0, 0, var2_int, 480);
+            SoftwareRasterizer.setClip(0, 0, var2_int, 480);
           }
           boolean decompiledFrameRemainder12 = true;
           var2_int = 73;
@@ -5428,10 +5428,10 @@ public final class MinerDisturbance extends ob {
             ArchiveIndex.a(30, 420, 15, 360, (byte) 113, qf.field_o[cm.field_o]);
             var8 = 75;
             dl.field_d[cm.field_o].f(60, var8);
-            dl.field_d[cm.field_o].b(60, 285);
-            dl.field_d[cm.field_o].h(270, var8);
+            dl.field_d[cm.field_o].drawVerticalFlip(60, 285);
+            dl.field_d[cm.field_o].drawHorizontalFlip(270, var8);
             dl.field_d[cm.field_o].d();
-            dl.field_d[cm.field_o].h(270, 285);
+            dl.field_d[cm.field_o].drawHorizontalFlip(270, 285);
             var2_int = 100;
             var3 = 295;
             dl.field_d[cm.field_o].d();
@@ -5553,10 +5553,10 @@ public final class MinerDisturbance extends ob {
             var11 = Math.abs(nk.field_w - 320) / 2;
             var12 = 0;
             while (307 > var12) {
-              SoftwareRasterizer.g(var11 + 40 + var12, 450 - var12, 10, 16777215, 140);
-              SoftwareRasterizer.g(var11 + 60 + var12, 450 - var12, 40, 16777215, 140);
-              SoftwareRasterizer.g(var11 + 107 + var12, -var12 + 450, 30, 16777215, 140);
-              SoftwareRasterizer.g(var11 + var12 + 152, 450 - var12, 6, 16777215, 140);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var11 + 40 + var12, 450 - var12, 10, 16777215, 140);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var11 + 60 + var12, 450 - var12, 40, 16777215, 140);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var11 + 107 + var12, -var12 + 450, 30, 16777215, 140);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var11 + var12 + 152, 450 - var12, 6, 16777215, 140);
               var12++;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -5920,7 +5920,7 @@ public final class MinerDisturbance extends ob {
         try {
           var3 = 596 - (s.field_L[1].field_x >> 1);
           s.field_L[0].f(var3, -s.field_L[0].field_A + 76);
-          SoftwareRasterizer.a(var3, 76, s.field_L[1].field_x + 580, 76 - (-this.field_G + this.field_W));
+          SoftwareRasterizer.setClip(var3, 76, s.field_L[1].field_x + 580, 76 - (-this.field_G + this.field_W));
           var4 = 76 + this.field_G;
           var5 = -li.field_c + (32 * ca.field_k + sk.field_d / 10);
           var6 = -ClientException.field_d + (hf.field_t * 32 + IsaacRandom.field_i / 10);
@@ -6089,7 +6089,7 @@ public final class MinerDisturbance extends ob {
                   continue;
                 }
               } else {
-                SoftwareRasterizer.c(580 + (ca.field_k + 2), -this.field_W + (hf.field_t + 76), 2, 16777215);
+                SoftwareRasterizer.fillCircle(580 + (ca.field_k + 2), -this.field_W + (hf.field_t + 76), 2, 16777215);
                 SoftwareRasterizer.d(ca.field_k + 580 + 2, 76 - this.field_W + hf.field_t, 3, 0);
                 SoftwareRasterizer.a();
                 s.field_L[2].f(var3, Math.max(this.field_G - this.field_W, 0) + 76);
@@ -7160,7 +7160,7 @@ public final class MinerDisturbance extends ob {
             mm.field_a.b(var4_ref_String, var5, pk.field_b.field_I + var3_int, var7_int, -1);
           }
           ck.field_a.g(15, 369);
-          SoftwareRasterizer.a(19, 373, 69, 463);
+          SoftwareRasterizer.setClip(19, 373, 69, 463);
           var2_int = -this.field_H + (373 - (-90 - ma.field_O.field_A));
           var3_int = -this.field_H + 373;
           do {
@@ -7174,7 +7174,7 @@ public final class MinerDisturbance extends ob {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (this.field_S >= 1) {
-            SoftwareRasterizer.d(this.field_F, 453, this.field_D[this.field_I] + 44, 452 - this.field_cb, 1);
+            SoftwareRasterizer.drawLine(this.field_F, 453, this.field_D[this.field_I] + 44, 452 - this.field_cb, 1);
             var3_int = this.field_I - 1;
             if (var3_int < 0) {
               var3_int = -1 + this.field_D.length;
@@ -7188,7 +7188,7 @@ public final class MinerDisturbance extends ob {
                 stackIn_47_1 = ~var5;
                 if (var10 != 0) {
                   if (stackIn_47_0 < stackIn_47_1) {
-                    SoftwareRasterizer.g(19, var5, 50, 1, var4);
+                    SoftwareRasterizer.drawHorizontalLineAlpha(19, var5, 50, 1, var4);
                     var4 -= 20;
                     var5++;
                     break scanLoop1;
@@ -7199,7 +7199,7 @@ public final class MinerDisturbance extends ob {
                   if (stackIn_47_0 == stackIn_47_1) {
                     var5 = 0;
                   }
-                  SoftwareRasterizer.d(this.field_D[var5] + 44, 453 + (-(1 * var4) - this.field_cb), this.field_D[var3_int] + 44, -(1 * (1 + var4)) - this.field_cb + 453, 1);
+                  SoftwareRasterizer.drawLine(this.field_D[var5] + 44, 453 + (-(1 * var4) - this.field_cb), this.field_D[var3_int] + 44, -(1 * (1 + var4)) - this.field_cb + 453, 1);
                   if (0 >= var3_int) {
                     var3_int = this.field_D.length - 1;
                   } else {
@@ -7218,7 +7218,7 @@ public final class MinerDisturbance extends ob {
                   if (stackIn_47_0Lifetime1 >= stackIn_47_1Lifetime1) {
                     break;
                   }
-                  SoftwareRasterizer.g(19, var5, 50, 1, var4);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(19, var5, 50, 1, var4);
                   var4 -= 20;
                   var5++;
                   if (var10 != 0) {
@@ -7235,7 +7235,7 @@ public final class MinerDisturbance extends ob {
                 ol.field_a.f(this.field_D[this.field_I] + (-(ol.field_a.field_x >> 1) + 44), -(ol.field_a.field_A >> 1) + 453);
                 break;
               }
-              SoftwareRasterizer.g(19, var5, 50, 1, var4);
+              SoftwareRasterizer.drawHorizontalLineAlpha(19, var5, 50, 1, var4);
               var4 += 20;
               var5++;
             } while (var10 == 0);
@@ -7246,7 +7246,7 @@ public final class MinerDisturbance extends ob {
             var4 = 373;
             while (true) {
               if (382 > var4) {
-                SoftwareRasterizer.g(19, var4, 50, 1, var3_int);
+                SoftwareRasterizer.drawHorizontalLineAlpha(19, var4, 50, 1, var3_int);
                 var3_int -= 20;
                 var4++;
                 if (var10 == 0) {
@@ -7259,7 +7259,7 @@ public final class MinerDisturbance extends ob {
             }
             var4 = 454;
             while (var4 < 463) {
-              SoftwareRasterizer.g(19, var4, 50, 1, var3_int);
+              SoftwareRasterizer.drawHorizontalLineAlpha(19, var4, 50, 1, var3_int);
               var3_int += 20;
               var4++;
               if (var10 != 0) {
@@ -7303,9 +7303,9 @@ public final class MinerDisturbance extends ob {
                   SoftwareRasterizer.f(var4, var5 + 6, 33 + var4, var5 + 32);
                   var9 = 65 + (int)(Math.sin(0.03 * (double)bf.field_d) * 130.0 + 0.5);
                   if (var9 > 0) {
-                    ff.field_c[var8].g(var4, var5, var9);
+                    ff.field_c[var8].drawAdditive(var4, var5, var9);
                   } else {
-                    ff.field_c[var8].c(var4, var5, var9 + 256);
+                    ff.field_c[var8].drawTransparentWithIntensity(var4, var5, var9 + 256);
                   }
                   SoftwareRasterizer.a(var7);
                 }
@@ -7313,7 +7313,7 @@ public final class MinerDisturbance extends ob {
                   SoftwareRasterizer.b(var7);
                   var9Lifetime1 = 32 - qd.field_K * 32 / 100;
                   SoftwareRasterizer.f(var4, var5 + 6, 33 + var4, var9Lifetime1 + (var5 + 6));
-                  ff.field_c[var8].c(var4, var5, 64);
+                  ff.field_c[var8].drawTransparentWithIntensity(var4, var5, 64);
                   SoftwareRasterizer.a(var7);
                 }
                 var6Lifetime1++;
@@ -7323,7 +7323,7 @@ public final class MinerDisturbance extends ob {
                   var5 += 33;
                   var4 = 4;
                   var6Lifetime1 = 0;
-                  SoftwareRasterizer.a(0, 39, 640, 480);
+                  SoftwareRasterizer.setClip(0, 39, 640, 480);
                   SoftwareRasterizer.b(var7);
                 }
               }
@@ -7336,7 +7336,7 @@ public final class MinerDisturbance extends ob {
             stackIn_128_0 = 0;
           }
           if (stackIn_128_0 != var5) {
-            SoftwareRasterizer.a(0, 45, 640, 480);
+            SoftwareRasterizer.setClip(0, 45, 640, 480);
           }
           ff.field_c[21].f(var4, var5);
           SoftwareRasterizer.a();

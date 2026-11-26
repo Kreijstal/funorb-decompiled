@@ -188,8 +188,8 @@ final class SynthInstrument {
           !(this.field_y.field_c[1] <= 0)) {
           this.field_q.a();
           var11Lifetime4 = this.field_q.a(param0 + 1);
-          var12Lifetime3 = this.field_y.a(0, (float)var11Lifetime4 / 65536.0f);
-          var13Lifetime2 = this.field_y.a(1, (float)var11Lifetime4 / 65536.0f);
+          var12Lifetime3 = this.field_y.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          var13Lifetime2 = this.field_y.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             var14Lifetime2 = 0;
             var15Lifetime2 = var13Lifetime2;
@@ -226,8 +226,8 @@ final class SynthInstrument {
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_y.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_y.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_y.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_y.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }

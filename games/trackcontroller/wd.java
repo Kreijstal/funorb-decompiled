@@ -212,7 +212,7 @@ abstract class wd extends hl {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.a(param0 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(param0 + var10, var8, var11 - var10, var9);
           }
           var7++;
           var8++;
@@ -228,12 +228,12 @@ abstract class wd extends hl {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          SoftwareRasterizer.a(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.a(-6 + param0 + this.field_x, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + param0 + this.field_x, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        MusicPatchPcmStream.field_n.e(param0 + this.field_x - 90, param2 + 10);
+        MusicPatchPcmStream.field_n.drawTransparent(param0 + this.field_x - 90, param2 + 10);
         hc.a(param0 + 5, param2 + 35, this.field_x - 10, wj.field_a, -22081);
         hc.a(param0, param2 + (this.field_u - 22), this.field_x, kf.field_d, param1 ^ -22101);
         var6Lifetime2 = 127;
@@ -244,8 +244,8 @@ abstract class wd extends hl {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          SoftwareRasterizer.a(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.a(param0 - (-this.field_x + 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0 - (-this.field_x + 6), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

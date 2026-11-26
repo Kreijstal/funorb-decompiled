@@ -11,7 +11,7 @@ final class AudioFilter {
     private int[][][] field_e;
     private static float[][] field_f;
 
-    final int a(int param0, float param1) {
+    final int computeCoefficients(int param0, float param1) {
         float var5 = 0.0f;
         float var6 = 0.0f;
         int var7 = 0;

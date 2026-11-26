@@ -186,7 +186,7 @@ final class aj {
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 126 % ((param0 - 40) / 51);
-        SoftwareRasterizer.e(param3, param1, param5, param2, param4);
+        SoftwareRasterizer.drawLine(param3, param1, param5, param2, param4);
     }
 
     final void a(int param0, BitmapFont param1) {

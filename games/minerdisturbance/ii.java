@@ -64,11 +64,11 @@ final class ii {
         }
         try {
           for (var3 = 0; var3 < 15; var3++) {
-            var2.e(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           lc.field_u.g();
-          var1.d(0, 0);
+          var1.drawHalfSize(0, 0);
           tk.b(true);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ')');

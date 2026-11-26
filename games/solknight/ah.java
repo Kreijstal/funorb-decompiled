@@ -104,7 +104,7 @@ final class ah {
           if (4 == kb.field_b) {
             var4 = 2 * var4 / 4;
           }
-          of.field_d.c(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
+          of.field_d.drawScaled(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
           if (k.field_c > 10) {
             BufferedSocket.field_b.a(rg.field_a, 320, 240, 16711680, -1);
           }
@@ -116,7 +116,7 @@ final class ah {
         }
         if (DirectByteStorage.field_d != 0 &&
           DirectByteStorage.field_d % 10 >= 5) {
-          ak.field_e[kb.field_b].d(var2 - ak.field_e[kb.field_b].field_q / 2, var3 - ak.field_e[kb.field_b].field_r / 2, 16777215);
+          ak.field_e[kb.field_b].drawSilhouette(var2 - ak.field_e[kb.field_b].field_q / 2, var3 - ak.field_e[kb.field_b].field_r / 2, 16777215);
         } else {
           ak.field_e[kb.field_b].a(128, var3, 90, 0, var2);
         }

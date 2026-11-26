@@ -822,7 +822,7 @@ final class ml {
                     this.b(param2, (byte) -125);
                   } else {
                     if (var5 == 11) {
-                      SoftwareRasterizer.a(-param2, 0, 640, 480);
+                      SoftwareRasterizer.setClip(-param2, 0, 640, 480);
                       wk.field_a.d(117);
                       SoftwareRasterizer.a();
                     } else {
@@ -1501,16 +1501,16 @@ final class ml {
             var16 = 20;
           }
           var17Lifetime1 = 134 + var16;
-          SoftwareRasterizer.c(2 + var10 + var17Lifetime1, 28 + var11, 4, var12);
-          SoftwareRasterizer.c(2 + (144 + var17Lifetime1) + var10, 28 + var11, 4, var12);
-          SoftwareRasterizer.c(-1 + (var10 + var17Lifetime1), var11 + 26, 3, var15Lifetime3);
+          SoftwareRasterizer.fillCircle(2 + var10 + var17Lifetime1, 28 + var11, 4, var12);
+          SoftwareRasterizer.fillCircle(2 + (144 + var17Lifetime1) + var10, 28 + var11, 4, var12);
+          SoftwareRasterizer.fillCircle(-1 + (var10 + var17Lifetime1), var11 + 26, 3, var15Lifetime3);
           SoftwareRasterizer.d(var17Lifetime1 + var10 - 1, 26 + var11, 4, 1);
-          SoftwareRasterizer.c(-1 + (var10 + var17Lifetime1 + 144), var11 + 26, 3, var15Lifetime3);
+          SoftwareRasterizer.fillCircle(-1 + (var10 + var17Lifetime1 + 144), var11 + 26, 3, var15Lifetime3);
           SoftwareRasterizer.d(143 + var10 + var17Lifetime1, var11 + 26, 4, 1);
           SoftwareRasterizer.e(var17Lifetime1 + var10, 23 + var11, 144, 10, var12);
-          SoftwareRasterizer.e(var10 + var17Lifetime1, var11 + 30, 144, 1);
+          SoftwareRasterizer.drawHorizontalLine(var10 + var17Lifetime1, var11 + 30, 144, 1);
           SoftwareRasterizer.e(var17Lifetime1 + var10, 23 + var11, 144, 7, var15Lifetime3);
-          SoftwareRasterizer.e(var17Lifetime1 + var10, 22 + var11, 144, 1);
+          SoftwareRasterizer.drawHorizontalLine(var17Lifetime1 + var10, 22 + var11, 144, 1);
           var18Lifetime1 = -2 + var17Lifetime1 + (var10 + ee.field_J * 144 / 256);
           SoftwareRasterizer.a(var18Lifetime1 - 1, 18 + var11, 6, 18, 1);
           SoftwareRasterizer.e(var18Lifetime1, var11 + 19, 4, 16, var15Lifetime3);
@@ -1522,16 +1522,16 @@ final class ml {
             var16Lifetime1 = 20;
           }
           var17Lifetime2 = 134 + var16Lifetime1;
-          SoftwareRasterizer.c(var17Lifetime2 + var10 + 2, 28 + var11, 4, var12);
-          SoftwareRasterizer.c(144 + var10 + var17Lifetime2 + 2, 28 + var11, 4, var12);
-          SoftwareRasterizer.c(-1 + var10 + var17Lifetime2, 26 + var11, 3, var15Lifetime4);
+          SoftwareRasterizer.fillCircle(var17Lifetime2 + var10 + 2, 28 + var11, 4, var12);
+          SoftwareRasterizer.fillCircle(144 + var10 + var17Lifetime2 + 2, 28 + var11, 4, var12);
+          SoftwareRasterizer.fillCircle(-1 + var10 + var17Lifetime2, 26 + var11, 3, var15Lifetime4);
           SoftwareRasterizer.d(var17Lifetime2 + var10 - 1, 26 + var11, 4, 1);
-          SoftwareRasterizer.c(var10 + var17Lifetime2 + 143, 26 + var11, 3, var15Lifetime4);
+          SoftwareRasterizer.fillCircle(var10 + var17Lifetime2 + 143, 26 + var11, 3, var15Lifetime4);
           SoftwareRasterizer.d(144 + (var10 + var17Lifetime2 - 1), 26 + var11, 4, 1);
           SoftwareRasterizer.e(var10 + var17Lifetime2, 23 + var11, 144, 10, var12);
-          SoftwareRasterizer.e(var17Lifetime2 + var10, 30 + var11, 144, 1);
+          SoftwareRasterizer.drawHorizontalLine(var17Lifetime2 + var10, 30 + var11, 144, 1);
           SoftwareRasterizer.e(var17Lifetime2 + var10, 23 + var11, 144, 7, var15Lifetime4);
-          SoftwareRasterizer.e(var10 + var17Lifetime2, var11 + 22, 144, 1);
+          SoftwareRasterizer.drawHorizontalLine(var10 + var17Lifetime2, var11 + 22, 144, 1);
           var18Lifetime2 = -2 + (144 * oc.field_f / 256 + var17Lifetime2) + var10;
           SoftwareRasterizer.a(-1 + var18Lifetime2, 18 + var11, 6, 18, 1);
           SoftwareRasterizer.e(var18Lifetime2, var11 + 19, 4, 16, var15Lifetime4);

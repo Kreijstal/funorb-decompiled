@@ -81,7 +81,7 @@ final class kc extends pj {
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
-            pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+            pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
           if (var9 > pk.field_Y.field_p) {
@@ -89,7 +89,7 @@ final class kc extends pj {
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
-            pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+            pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
           if (pk.field_Y.field_t >= var10) {
@@ -97,14 +97,14 @@ final class kc extends pj {
             SoftwareRasterizer.a();
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
-            pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+            pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
           pk.field_Y = new Sprite(var9, var10);
           cl.a(-116, pk.field_Y);
           var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
           MidiPcmStream.e(param3 + 4096);
-          pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+          pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
           return;
         }
         if (SpriteState.field_u == var8) {
@@ -116,7 +116,7 @@ final class kc extends pj {
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
-            pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+            pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
           if (var9Lifetime1 > pk.field_Y.field_p) {
@@ -124,7 +124,7 @@ final class kc extends pj {
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
-            pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+            pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
           if (pk.field_Y.field_t >= var10Lifetime1) {
@@ -132,24 +132,24 @@ final class kc extends pj {
             SoftwareRasterizer.a();
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
-            pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+            pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
           pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
           cl.a(-116, pk.field_Y);
           var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
           MidiPcmStream.e(param3 + 4096);
-          pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+          pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
           return;
         }
         if (var8 == rg.field_f) {
           var13 = PacketBuffer.field_k[2];
-          var13.a(var5 - (var13.field_p >> 1), -(var13.field_t >> 1) + var6, 256);
+          var13.drawAdditive(var5 - (var13.field_p >> 1), -(var13.field_t >> 1) + var6, 256);
           return;
         }
         if (var8 == ph.field_g) {
           var12 = PacketBuffer.field_k[1];
-          var12.a(-(var12.field_p >> 1) + var5, -(var12.field_t >> 1) + var6, 256);
+          var12.drawAdditive(-(var12.field_p >> 1) + var5, -(var12.field_t >> 1) + var6, 256);
           return;
         }
     }

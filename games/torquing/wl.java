@@ -1027,7 +1027,7 @@ final class wl extends sl {
 
     private final void b(int param0) {
         if (this.field_V[param0] != null) {
-          this.field_V[param0].h(AudioOutput.field_c >> 7);
+          this.field_V[param0].fadeOutAndRemove(AudioOutput.field_c >> 7);
           this.field_V[param0] = null;
         }
     }

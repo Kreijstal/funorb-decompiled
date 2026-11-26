@@ -43,13 +43,13 @@ final class md extends w {
           var10 = -var5 + var6;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 < 256 ? (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 8 : var8 | var9;
-          SoftwareRasterizer.a(var7, var6, this.field_I, var12);
-          SoftwareRasterizer.a(var7 - this.field_I * 2, var6, this.field_I, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_I, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_I * 2, var6, this.field_I, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = param0 & 16711935;
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (16711680 & var11 * var9Lifetime1 | -16711936 & var8Lifetime1 * var11) >>> 8;
-          SoftwareRasterizer.a(this.field_I + var7, var6, this.field_I, var12Lifetime1);
-          SoftwareRasterizer.a(-this.field_I + var7, var6, this.field_I, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_I + var7, var6, this.field_I, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_I + var7, var6, this.field_I, var12Lifetime1);
         }
         pd.a(-22949);
         return var14;

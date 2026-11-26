@@ -199,7 +199,7 @@ final class dq {
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.a(param3, param0, param5, param1, param4);
+        SoftwareRasterizer.drawLine(param3, param0, param5, param1, param4);
         if (param2) {
           String var8 = (String) null;
           this.a(62, (String) null, 56, 0);

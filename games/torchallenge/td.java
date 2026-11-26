@@ -114,11 +114,11 @@ final class td {
           AccountServiceResult.a(3);
           var2 = var1.c();
           for (var3 = 0; 15 > var3; var3++) {
-            var2.a(-2, -2, 16777215);
+            var2.drawMask(-2, -2, 16777215);
             SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
           }
           ul.field_k.d();
-          var1.f(0, 0);
+          var1.drawHalfSize(0, 0);
           if (param0 < 105) {
             field_q = (String) null;
           }

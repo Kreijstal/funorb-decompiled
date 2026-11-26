@@ -29,7 +29,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void addVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

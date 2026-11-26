@@ -1433,7 +1433,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
               ClientProtocolStage.field_e = MenuStyleHelpers.loadSpriteSheetByName(-117, "", TickClock.field_a, "help_arrow");
               StatefulTextPainter.field_u = MenuStyleHelpers.loadSpriteSheetByName(-119, "", TickClock.field_a, "info_help_button");
               RankingEntry.field_k = ClientProtocolStage.field_e.copy();
-              RankingEntry.field_k.flipHorizontally();
+              RankingEntry.field_k.flipVertically();
               ArchiveLoadSequence.field_m = ClientProtocolStage.field_e.copy();
               ArchiveLoadSequence.field_m.rotateClockwise();
               AttackEvent.field_n = ClientProtocolStage.field_e.copy();

@@ -146,11 +146,11 @@ final class fu extends AnimationNode {
           qs.field_l[13] = dupTemp$13;
           wo.field_k[13] = cl.a(ama.field_o, false);
           ClamsAnimation.field_y = BagpipeSpecial.a(param0, -1, "basic", "uparrow");
-          DefaultWidgetRenderer.field_b = ClamsAnimation.field_y.c();
-          DefaultWidgetRenderer.field_b.d();
+          DefaultWidgetRenderer.field_b = ClamsAnimation.field_y.copy();
+          DefaultWidgetRenderer.field_b.flipVertically();
           ada.field_l = BagpipeSpecial.a(param0, -1, "basic", "scrollarrow_hover");
-          oaa.field_a = ada.field_l.c();
-          oaa.field_a.d();
+          oaa.field_a = ada.field_l.copy();
+          oaa.field_a.flipVertically();
           fda.field_m = FullHealEvent.a("stain", param0, "basic", (byte) -64);
           pr.field_h = pi.a(param0, -8845, "basic", "stains");
           vv.field_c = pi.a(param0, -8845, "basic", "cursors");

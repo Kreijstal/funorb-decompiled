@@ -538,10 +538,10 @@ final class MenuScreen {
           field_c = (long[][]) null;
         }
         SoftwareRasterizer.g(param0, param1, 8, 16711680);
-        SoftwareRasterizer.b(param0 - 8, param1, 4, 16711680);
-        SoftwareRasterizer.b(param0 + 8 - 4, param1, 4, 16711680);
-        SoftwareRasterizer.h(param0, -8 + param1, 4, 16711680);
-        SoftwareRasterizer.h(param0, -4 + param1 + 8, 4, 16711680);
+        SoftwareRasterizer.drawHorizontalLine(param0 - 8, param1, 4, 16711680);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 8 - 4, param1, 4, 16711680);
+        SoftwareRasterizer.drawVerticalLine(param0, -8 + param1, 4, 16711680);
+        SoftwareRasterizer.drawVerticalLine(param0, -4 + param1 + 8, 4, 16711680);
     }
 
     final void c(int param0) {
@@ -809,10 +809,10 @@ final class MenuScreen {
             SoftwareRasterizer.a(320, 240, var2 * 56 / 64, 16777215, 128);
             SoftwareRasterizer.a(320, 240, 55 * var2 / 64, 16777215, 128);
             SoftwareRasterizer.a(320, 240, 54 * var2 / 64, 16777215, 128);
-            hj.field_n.c(320 - hj.field_n.field_q * 200 / hj.field_n.field_r, -440 + var3, hj.field_n.field_q * 400 / hj.field_n.field_r, 400);
+            hj.field_n.drawScaled(320 - hj.field_n.field_q * 200 / hj.field_n.field_r, -440 + var3, hj.field_n.field_q * 400 / hj.field_n.field_r, 400);
           } else {
             if (ClientException.field_b >= 250) {
-              hj.field_n.c(320 - 250 * hj.field_n.field_q / hj.field_n.field_r, -10, 500 * hj.field_n.field_q / hj.field_n.field_r, 500);
+              hj.field_n.drawScaled(320 - 250 * hj.field_n.field_q / hj.field_n.field_r, -10, 500 * hj.field_n.field_q / hj.field_n.field_r, 500);
               hj.field_p.d(320 - hj.field_p.field_q / 2, 3 * (480 - hj.field_p.field_r) / 5);
               if (330 <= ClientException.field_b) {
                 SoftwareRasterizer.a(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
@@ -847,8 +847,8 @@ final class MenuScreen {
           var9 = 110;
           var10 = 316;
           var11 = h.field_b.field_q * var10 / h.field_b.field_r;
-          h.field_b.c(var8, var9, var11, var10);
-          h.field_b.c(-var11 + (640 - var8), var9, var11, var10);
+          h.field_b.drawScaled(var8, var9, var11, var10);
+          h.field_b.drawScaled(-var11 + (640 - var8), var9, var11, var10);
         }
         regionExit1: {
           if (2 == this.field_d) {
@@ -885,8 +885,8 @@ final class MenuScreen {
                         BufferedSocket.field_b.a(Integer.toString(var15), 528, var11Lifetime1 + 155 - 103, 16777215, -1);
                         SocketConnector.field_g.a(var13_ref_String, 528, -103 + (160 + var11Lifetime1), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
                         BufferedSocket.field_b.a(var14_ref_String, 320, var11Lifetime1 + 229 - 103, 16776960, -1);
-                        h.field_b.c(45, var11Lifetime1 + 200 - 103, 100 * h.field_b.field_q / h.field_b.field_r, 100);
-                        h.field_b.c(-(100 * h.field_b.field_q / h.field_b.field_r) + 595, -103 + (var11Lifetime1 + 200), h.field_b.field_q * 100 / h.field_b.field_r, 100);
+                        h.field_b.drawScaled(45, var11Lifetime1 + 200 - 103, 100 * h.field_b.field_q / h.field_b.field_r, 100);
+                        h.field_b.drawScaled(-(100 * h.field_b.field_q / h.field_b.field_r) + 595, -103 + (var11Lifetime1 + 200), h.field_b.field_q * 100 / h.field_b.field_r, 100);
                         BufferedSocket.field_b.a(ti.field_a, 320, 277 - (-var11Lifetime1 + 103), 16727871, -1);
                         ah.field_i[this.field_d] = var8 + var11Lifetime1;
                       }
@@ -1112,19 +1112,19 @@ final class MenuScreen {
         for (var8 = 0; var8 < BufferedCacheFile.field_m.length; var8++) {
           regionExit1: {
             if ((var5 & 1 << var8) != 0) {
-              IterableNodeHashTable.field_f[var8].e(var3, var4);
+              IterableNodeHashTable.field_f[var8].drawQuarterSize(var3, var4);
             } else {
               if (param0) {
                 break regionExit1;
               }
               if (ob.field_l <= 0) {
                 if ((1 << var8 & 28032) != 0) {
-                  nb.field_a.e(var3, var4);
+                  nb.field_a.drawQuarterSize(var3, var4);
                 } else {
-                  jc.field_b.e(var3, var4);
+                  jc.field_b.drawQuarterSize(var3, var4);
                 }
               } else {
-                jc.field_b.e(var3, var4);
+                jc.field_b.drawQuarterSize(var3, var4);
               }
             }
             if (var3 <= PacketBuffer.field_j &&

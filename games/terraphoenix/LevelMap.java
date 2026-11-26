@@ -3023,7 +3023,7 @@ final class LevelMap {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                               }
-                              ((Sprite) (var16)).b(0, 0, 0);
+                              ((Sprite) (var16)).drawSilhouette(0, 0, 0);
                               k.field_f.a(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
@@ -3166,7 +3166,7 @@ final class LevelMap {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                               }
-                              ((Sprite) (var16Lifetime2)).b(0, 0, 0);
+                              ((Sprite) (var16Lifetime2)).drawSilhouette(0, 0, 0);
                               k.field_f.a(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
@@ -3266,7 +3266,7 @@ final class LevelMap {
                               NodeHashTableIterator.a((byte) -86, u.field_a, 32768);
                               NodeHashTableIterator.a((byte) -86, u.field_a, 16384);
                             }
-                            ((Sprite) (var16Lifetime1)).b(0, 0, 0);
+                            ((Sprite) (var16Lifetime1)).drawSilhouette(0, 0, 0);
                             k.field_f.a(0);
                             ug.field_b = -64 + var5;
                             hb.field_n = -(48 * eg.field_p) + (-124 + var6);
@@ -3408,10 +3408,10 @@ final class LevelMap {
             SoftwareRasterizer.f(var6, -11 + var7, 12, 12, 16777215);
             AccountRequestState.field_f.b(rj.field_b, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            rh.field_b[0].f(-2 + var6, -13 + var7);
+            rh.field_b[0].drawHalfSize(-2 + var6, -13 + var7);
             AccountRequestState.field_f.b(hm.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            rh.field_b[6].f(-2 + var6, -13 + var7);
+            rh.field_b[6].drawHalfSize(-2 + var6, -13 + var7);
             AccountRequestState.field_f.b(f.field_h, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
           }
@@ -3572,24 +3572,24 @@ final class LevelMap {
                       if (var19 != 0) {
                         SoftwareRasterizer.f(var6Lifetime1, var7Lifetime1, 5, 5, var19);
                         if (var19 == 16777215) {
-                          SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1 + 2, var6Lifetime1 + 2, var7Lifetime1, 0);
-                          SoftwareRasterizer.c(var6Lifetime1, 3 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
-                          SoftwareRasterizer.c(4 + var6Lifetime1, 2 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1, 0);
-                          SoftwareRasterizer.c(4 + var6Lifetime1, var7Lifetime1 + 3, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
+                          SoftwareRasterizer.drawLine(var6Lifetime1, var7Lifetime1 + 2, var6Lifetime1 + 2, var7Lifetime1, 0);
+                          SoftwareRasterizer.drawLine(var6Lifetime1, 3 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
+                          SoftwareRasterizer.drawLine(4 + var6Lifetime1, 2 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1, 0);
+                          SoftwareRasterizer.drawLine(4 + var6Lifetime1, var7Lifetime1 + 3, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
                         }
                         if (var19 == 16777214) {
-                          SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1 + 1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
-                          SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1, var6Lifetime1 + 2, 2 + var7Lifetime1, 0);
-                          SoftwareRasterizer.c(var6Lifetime1 + 4, 1 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
-                          SoftwareRasterizer.c(var6Lifetime1 + 4, var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 2, 0);
+                          SoftwareRasterizer.drawLine(var6Lifetime1, var7Lifetime1 + 1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
+                          SoftwareRasterizer.drawLine(var6Lifetime1, var7Lifetime1, var6Lifetime1 + 2, 2 + var7Lifetime1, 0);
+                          SoftwareRasterizer.drawLine(var6Lifetime1 + 4, 1 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 3, 0);
+                          SoftwareRasterizer.drawLine(var6Lifetime1 + 4, var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 2, 0);
                         }
-                        SoftwareRasterizer.f(var6Lifetime1 + 4, var7Lifetime1, 5, 2236962);
+                        SoftwareRasterizer.addVerticalLine(var6Lifetime1 + 4, var7Lifetime1, 5, 2236962);
                         SoftwareRasterizer.b(var6Lifetime1, 4 + var7Lifetime1, 4, 2236962);
                       }
                       if (var21 != 0) {
-                        SoftwareRasterizer.c(var6Lifetime1, var7Lifetime1, -1 + (5 + var6Lifetime1), -1 + (var7Lifetime1 + 5), 16711680);
-                        SoftwareRasterizer.c(var6Lifetime1, 1 + var7Lifetime1, 5 + var6Lifetime1 - 2, 5 + var7Lifetime1 - 1, 16711680);
-                        SoftwareRasterizer.c(5 + (var6Lifetime1 - 1), var7Lifetime1, -1 + (var6Lifetime1 + 5), var7Lifetime1, 16711680);
+                        SoftwareRasterizer.drawLine(var6Lifetime1, var7Lifetime1, -1 + (5 + var6Lifetime1), -1 + (var7Lifetime1 + 5), 16711680);
+                        SoftwareRasterizer.drawLine(var6Lifetime1, 1 + var7Lifetime1, 5 + var6Lifetime1 - 2, 5 + var7Lifetime1 - 1, 16711680);
+                        SoftwareRasterizer.drawLine(5 + (var6Lifetime1 - 1), var7Lifetime1, -1 + (var6Lifetime1 + 5), var7Lifetime1, 16711680);
                       }
                       if (var6Lifetime1 <= this.state.field_y &&
                         this.state.field_y < (5 + var6Lifetime1) &&
@@ -3601,10 +3601,10 @@ final class LevelMap {
                       if (var20.field_a ||
                         !var20.field_d) {
                         if (4 == (var20.field_i & 4)) {
-                          SoftwareRasterizer.g(var6Lifetime1 + 4, var7Lifetime1, 5, 16776960);
+                          SoftwareRasterizer.drawVerticalLine(var6Lifetime1 + 4, var7Lifetime1, 5, 16776960);
                         }
                         if ((var20.field_i & 8) == 8) {
-                          SoftwareRasterizer.d(var6Lifetime1, 4 + var7Lifetime1, 5, 16776960);
+                          SoftwareRasterizer.drawHorizontalLine(var6Lifetime1, 4 + var7Lifetime1, 5, 16776960);
                         }
                         if (-1 != var20.field_g) {
                           var23 = var15;
@@ -3614,8 +3614,8 @@ final class LevelMap {
                           if ((var20.field_i & 1) == 1) {
                             var23 = 16776960;
                           }
-                          SoftwareRasterizer.g(var6Lifetime1, var7Lifetime1, 5, var23);
-                          SoftwareRasterizer.g(-1 + var6Lifetime1, var7Lifetime1, 5, var23);
+                          SoftwareRasterizer.drawVerticalLine(var6Lifetime1, var7Lifetime1, 5, var23);
+                          SoftwareRasterizer.drawVerticalLine(-1 + var6Lifetime1, var7Lifetime1, 5, var23);
                         }
                         if (-1 != var20.field_k) {
                           var23Lifetime1 = var15;
@@ -3625,8 +3625,8 @@ final class LevelMap {
                           if ((2 & var20.field_i) == 2) {
                             var23Lifetime1 = 16776960;
                           }
-                          SoftwareRasterizer.d(var6Lifetime1, var7Lifetime1 - 1, 5, var23Lifetime1);
-                          SoftwareRasterizer.d(var6Lifetime1, var7Lifetime1, 5, var23Lifetime1);
+                          SoftwareRasterizer.drawHorizontalLine(var6Lifetime1, var7Lifetime1 - 1, 5, var23Lifetime1);
+                          SoftwareRasterizer.drawHorizontalLine(var6Lifetime1, var7Lifetime1, 5, var23Lifetime1);
                         }
                       }
                     }
@@ -3650,11 +3650,11 @@ final class LevelMap {
               var7Lifetime1Lifetime1 = -(sj.field_b * 5 / 64) + var5 + 5 * lg.field_c / 32;
               var6Lifetime1Lifetime1 = sj.field_b * 5 / 64 + (var4_int + 5 * lg.field_c / 32);
               var16_intLifetime1 = 48;
-              SoftwareRasterizer.c(var4_int, var5, var4_int + 5 * this.field_b, this.field_e * 5 + var5);
-              SoftwareRasterizer.c(-var16_intLifetime1 + (2 + var6Lifetime1Lifetime1), 2 + var7Lifetime1Lifetime1, 2 + var6Lifetime1Lifetime1, -var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, 16777215);
-              SoftwareRasterizer.c(var6Lifetime1Lifetime1 + 2, 2 + (var7Lifetime1Lifetime1 - var16_intLifetime1), var16_intLifetime1 + (var6Lifetime1Lifetime1 + 2), 2 + var7Lifetime1Lifetime1, 16777215);
-              SoftwareRasterizer.c(var6Lifetime1Lifetime1 + (2 + var16_intLifetime1), var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2, 2 + var7Lifetime1Lifetime1 + var16_intLifetime1, 16777215);
-              SoftwareRasterizer.c(2 + var6Lifetime1Lifetime1, var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2 - var16_intLifetime1, var7Lifetime1Lifetime1 + 2, 16777215);
+              SoftwareRasterizer.setClip(var4_int, var5, var4_int + 5 * this.field_b, this.field_e * 5 + var5);
+              SoftwareRasterizer.drawLine(-var16_intLifetime1 + (2 + var6Lifetime1Lifetime1), 2 + var7Lifetime1Lifetime1, 2 + var6Lifetime1Lifetime1, -var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, 16777215);
+              SoftwareRasterizer.drawLine(var6Lifetime1Lifetime1 + 2, 2 + (var7Lifetime1Lifetime1 - var16_intLifetime1), var16_intLifetime1 + (var6Lifetime1Lifetime1 + 2), 2 + var7Lifetime1Lifetime1, 16777215);
+              SoftwareRasterizer.drawLine(var6Lifetime1Lifetime1 + (2 + var16_intLifetime1), var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2, 2 + var7Lifetime1Lifetime1 + var16_intLifetime1, 16777215);
+              SoftwareRasterizer.drawLine(2 + var6Lifetime1Lifetime1, var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2 - var16_intLifetime1, var7Lifetime1Lifetime1 + 2, 16777215);
               SoftwareRasterizer.c();
             }
             var16_intLifetime1 = 0;
@@ -3692,25 +3692,25 @@ final class LevelMap {
                         var16.field_s) {
                         if (var16.field_C == 0 &&
                           null == var16.field_Z) {
-                          rh.field_b[6].c(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
+                          rh.field_b[6].drawQuarterSize(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
                         }
                         if (var16.field_Z != null &&
                           var16.tile != null &&
                           var16 == var16.tile.unit) {
-                          rh.field_b[0].c(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
+                          rh.field_b[0].drawQuarterSize(-2 + var6Lifetime1Lifetime2, -2 + var7Lifetime1Lifetime2);
                           if (var16 == this.state.field_q) {
-                            rh.field_b[0].f(var6Lifetime1Lifetime2 - 6, var7Lifetime1Lifetime2 - 6);
+                            rh.field_b[0].drawHalfSize(var6Lifetime1Lifetime2 - 6, var7Lifetime1Lifetime2 - 6);
                           }
                         }
                         if ((var16.field_C == 1)) {
                           if (var16.field_t != 0) {
                             if (var16.field_t != 9) {
-                              rh.field_b[2].c(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
+                              rh.field_b[2].drawQuarterSize(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
                             } else {
-                              rh.field_b[12].c(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
+                              rh.field_b[12].drawQuarterSize(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
                             }
                           } else {
-                            rh.field_b[1].c(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
+                            rh.field_b[1].drawQuarterSize(var6Lifetime1Lifetime2 - 2, -2 + var7Lifetime1Lifetime2);
                           }
                           if (((null != this.state.field_q)) &&
                             (!(!this.state.map.a((byte) -93, this.state.field_q, var16)))) {
@@ -3725,10 +3725,10 @@ final class LevelMap {
                           var7Lifetime1Lifetime2 = var5 + 5 * var16.field_gb;
                           var6Lifetime1Lifetime2 = 5 * var16.field_i + var4_int;
                           if (var16.field_C == 0) {
-                            rh.field_b[6].c(-2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 - 2);
+                            rh.field_b[6].drawQuarterSize(-2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 - 2);
                           }
                           if (1 == var16.field_C) {
-                            rh.field_b[3].c(var6Lifetime1Lifetime2 - 2, var7Lifetime1Lifetime2 - 2);
+                            rh.field_b[3].drawQuarterSize(var6Lifetime1Lifetime2 - 2, var7Lifetime1Lifetime2 - 2);
                           }
                         }
                       }
@@ -3757,23 +3757,23 @@ final class LevelMap {
                   var16Lifetime1.field_s) {
                   if (var16Lifetime1.field_C == 0 &&
                     var16Lifetime1.field_Z == null) {
-                    rh.field_b[6].c(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
+                    rh.field_b[6].drawQuarterSize(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
                   }
                   if (null != var16Lifetime1.field_Z) {
-                    rh.field_b[0].c(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
+                    rh.field_b[0].drawQuarterSize(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
                     if (this.state.field_q == var16Lifetime1) {
-                      rh.field_b[0].f(var6Lifetime1Lifetime3 - 6, -6 + var7Lifetime1Lifetime3);
+                      rh.field_b[0].drawHalfSize(var6Lifetime1Lifetime3 - 6, -6 + var7Lifetime1Lifetime3);
                     }
                   }
                   if ((var16Lifetime1.field_C == 1)) {
                     if (var16Lifetime1.field_t != 0) {
                       if (var16Lifetime1.field_t == 9) {
-                        rh.field_b[12].c(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
+                        rh.field_b[12].drawQuarterSize(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
                       } else {
-                        rh.field_b[2].c(var6Lifetime1Lifetime3 - 2, var7Lifetime1Lifetime3 - 2);
+                        rh.field_b[2].drawQuarterSize(var6Lifetime1Lifetime3 - 2, var7Lifetime1Lifetime3 - 2);
                       }
                     } else {
-                      rh.field_b[1].c(-2 + var6Lifetime1Lifetime3, -2 + var7Lifetime1Lifetime3);
+                      rh.field_b[1].drawQuarterSize(-2 + var6Lifetime1Lifetime3, -2 + var7Lifetime1Lifetime3);
                     }
                     if (((null != this.state.field_q)) &&
                       (!(!this.state.map.a((byte) -93, this.state.field_q, var16Lifetime1)))) {
@@ -3788,10 +3788,10 @@ final class LevelMap {
                     var6Lifetime1Lifetime3 = var4_int + 5 * var16Lifetime1.field_i;
                     var7Lifetime1Lifetime3 = var16Lifetime1.field_gb * 5 + var5;
                     if (var16Lifetime1.field_C == 0) {
-                      rh.field_b[6].c(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
+                      rh.field_b[6].drawQuarterSize(-2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 - 2);
                     }
                     if (1 == var16Lifetime1.field_C) {
-                      rh.field_b[3].c(var6Lifetime1Lifetime3 - 2, -2 + var7Lifetime1Lifetime3);
+                      rh.field_b[3].drawQuarterSize(var6Lifetime1Lifetime3 - 2, -2 + var7Lifetime1Lifetime3);
                     }
                   }
                 }

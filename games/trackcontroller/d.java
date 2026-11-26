@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class d extends Sprite {
-    final void h(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -113,7 +113,7 @@ final class d extends Sprite {
         d.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void e(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -249,7 +249,7 @@ final class d extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;

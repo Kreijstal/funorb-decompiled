@@ -1840,7 +1840,7 @@ public final class StarCannon extends ag {
             var4[12 + var13] = fl.field_f[var13].c();
             var4[12 + var13].a();
             var4[24 + var13] = fl.field_f[var13].c();
-            var4[24 + var13].b();
+            var4[24 + var13].rotateCounterclockwise();
             var13++;
           }
           fl.field_f = var4;

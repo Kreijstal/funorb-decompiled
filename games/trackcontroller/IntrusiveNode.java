@@ -61,8 +61,8 @@ class IntrusiveNode {
           if (param3 > -14) {
             field_a = (String) null;
           }
-          SoftwareRasterizer.a(param4, param1, param0 + 1, 10000536);
-          SoftwareRasterizer.a(param4, param2 + param1, param0 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param4, param1, param0 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param4, param2 + param1, param0 + 1, 12105912);
           var5_int = 1;
           var6 = param2;
           if (var5_int + param1 < SoftwareRasterizer.clipTop) {

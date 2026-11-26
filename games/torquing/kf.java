@@ -141,8 +141,8 @@ final class kf extends UiWidget {
             stackIn_7_0 = var9 | var8;
           }
           var12 = stackIn_7_0;
-          SoftwareRasterizer.b(var7, var6, this.field_A, var12);
-          SoftwareRasterizer.b(var7 - this.field_A * 2, var6, this.field_A, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_A, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_A * 2, var6, this.field_A, var12);
           var8Lifetime1 = 16711935 & param1;
           var9Lifetime1 = 65280 & param1;
           if (256 <= var11) {
@@ -151,8 +151,8 @@ final class kf extends UiWidget {
             stackIn_10_0 = (var11 * var8Lifetime1 & -16711936 | 16711680 & var9Lifetime1 * var11) >>> 8;
           }
           var12Lifetime1 = stackIn_10_0;
-          SoftwareRasterizer.b(var7 + this.field_A, var6, this.field_A, var12Lifetime1);
-          SoftwareRasterizer.b(var7 - this.field_A, var6, this.field_A, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_A, var6, this.field_A, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_A, var6, this.field_A, var12Lifetime1);
         }
         if (param2 != 49) {
           this.c(-42, -27, (byte) -8);
@@ -267,7 +267,7 @@ final class kf extends UiWidget {
             GzipDecompressor.a((byte) -119, this.field_G);
             param1.d(-this.field_x, 0);
             param1.d(-this.field_x + 2 * this.field_A, 0);
-            this.field_H.a(0, 0);
+            this.field_H.drawMultiply(0, 0);
             r.a(124);
             this.field_G.d(param0, param3);
           }
@@ -277,7 +277,7 @@ final class kf extends UiWidget {
             }
             param1.d(-var7, 0);
             param1.d(2 * this.field_A - var7, 0);
-            this.field_E.a(0, 0);
+            this.field_E.drawMultiply(0, 0);
             r.a(125);
             this.field_G.d(-this.field_E.field_s + var5_int, param3);
             return;

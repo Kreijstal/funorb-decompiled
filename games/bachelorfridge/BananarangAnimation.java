@@ -208,7 +208,7 @@ final class BananarangAnimation extends EventAnimation {
             if (var7 > 256) {
               var7 = 256;
             }
-            SoftwareRasterizer.d(((int)var6.field_m * param5 >> 16) + param3, -2 + param4 - (((int)var6.field_j - (int)var6.field_l) * param5 >> 16), 5, param2);
+            SoftwareRasterizer.addVerticalLine(((int)var6.field_m * param5 >> 16) + param3, -2 + param4 - (((int)var6.field_j - (int)var6.field_l) * param5 >> 16), 5, param2);
             SoftwareRasterizer.fillCircleAlpha(param3 + (int)var6.field_m, (int)var6.field_l + param4 - 2, (-var6.field_n + 128) / 12, param2, 256 - var7 >> 3);
             var6 = (rea) (param0.nextForward(0));
           }

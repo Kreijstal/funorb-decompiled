@@ -213,10 +213,10 @@ public final class TrackController extends GameShell {
         if (BufferedCacheFile.field_e == null &&
           null == vd.field_G) {
           if (na.field_b < 80) {
-            cd.field_c.h(0, 0);
+            cd.field_c.drawOpaque(0, 0);
             var3 = 640 * na.field_b / 160;
             var4 = 480 * na.field_b / 160;
-            SoftwareRasterizer.e(320 - var3, -var4 + 240, var3 + 320, 240 + var4);
+            SoftwareRasterizer.setClip(320 - var3, -var4 + 240, var3 + 320, 240 + var4);
           }
           boolean decompiledFrameRemainder0 = true;
           db.a(480, 0, na.field_c, 640, 0, (byte) -128);
@@ -1023,12 +1023,12 @@ public final class TrackController extends GameShell {
           cd.field_c.a();
           for (var4 = 0; var4 < 480; var4 = var4 + na.field_c.field_v) {
             for (var5 = 0; var5 < 640; var5 = var5 + na.field_c.field_s) {
-              na.field_c.h(var5, var4);
+              na.field_c.drawOpaque(var5, var4);
             }
           }
           SoftwareRasterizer.b(20, 30, 600, 383, 3894145, 11980506);
           SoftwareRasterizer.f(0, 0, 640, 480, 0);
-          ab.a("", -15383, "titlescreen2", sg.field_a).e(0, 0);
+          ab.a("", -15383, "titlescreen2", sg.field_a).drawTransparent(0, 0);
           ia.field_b.a(-91);
           nd.field_L = ib.a(10, "", sg.field_a, "frame");
           DualLinkNode.field_l = ib.a(param0 - 457, "", sg.field_a, "buttonframe");
@@ -1095,7 +1095,7 @@ public final class TrackController extends GameShell {
             var24 = dupTemp$5;
             var24.a();
             cl.a(var25, 0, var23Lifetime1.field_v, 0, var23Lifetime1.field_s, 4);
-            var23Lifetime1.e(0, 0);
+            var23Lifetime1.drawTransparent(0, 0);
           }
           var8_ref_qj = ab.a("", -15383, "titlegameach", sg.field_a);
           dupTemp$0 = new Sprite(var8_ref_qj.field_s, var8_ref_qj.field_v);
@@ -1103,7 +1103,7 @@ public final class TrackController extends GameShell {
           var26 = dupTemp$0;
           var26.a();
           cl.a(var25, 0, var8_ref_qj.field_v, 0, var8_ref_qj.field_s, param0 ^ 471);
-          var8_ref_qj.e(0, 0);
+          var8_ref_qj.drawTransparent(0, 0);
           fd.field_d = ab.a("", -15383, "exhibit", sg.field_a);
           var8Lifetime2 = ba.field_b.field_G + 26;
           dupTemp$1 = new Sprite(156, var8Lifetime2);

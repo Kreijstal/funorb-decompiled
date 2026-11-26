@@ -454,7 +454,7 @@ final class vl {
             this.field_c < 48.0 + param1.x &&
             -48.0 + param1.y < this.field_k &&
             param1.y + 48.0 > this.field_k && (param2 ||
-            param1.currentSprite(param0 ^ -688).c((int)(param1.x - 48.0), (int)(param1.y - 48.0), (int)this.field_c, (int)this.field_k))) {
+            param1.currentSprite(param0 ^ -688).isOpaqueAt((int)(param1.x - 48.0), (int)(param1.y - 48.0), (int)this.field_c, (int)this.field_k))) {
             return true;
           }
           if (-4.0 + param1.x < this.field_c &&

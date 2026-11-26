@@ -96,7 +96,7 @@ final class jb extends IntrusiveNode {
           for (var18 = 0; CipherPacketBuffer.field_A.length > var18; var18++) {
             boolean decompiledFrameRemainder0 = true;
             if (nm.a(var18, var33, -827843803)) {
-              nj.field_c[var18].c(var12, var13);
+              nj.field_c[var18].drawQuarterSize(var12, var13);
             } else {
               decompiledFrameRemainder0 = !(param0);
               if ((decompiledFrameRemainder0) &&
@@ -104,10 +104,10 @@ final class jb extends IntrusiveNode {
                 if (pj.field_a <= 0) {
                   decompiledFrameRemainder0 = !(IntrusiveNode.field_e[var18]);
                   if (decompiledFrameRemainder0) {
-                    ha.field_c.c(var12, var13);
+                    ha.field_c.drawQuarterSize(var12, var13);
                   }
                 } else {
-                  ha.field_c.c(var12, var13);
+                  ha.field_c.drawQuarterSize(var12, var13);
                 }
               }
             }
@@ -263,7 +263,7 @@ final class jb extends IntrusiveNode {
               }
             }
             for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
-              cb.field_e.c(var25 * 10 + 165 + var19, var24);
+              cb.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
             }
             ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
             ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
@@ -383,7 +383,7 @@ final class jb extends IntrusiveNode {
           for (var18 = 0; CipherPacketBuffer.field_A.length > var18; var18++) {
             boolean decompiledFrameRemainder0 = true;
             if (nm.a(var18, var33, -827843803)) {
-              nj.field_c[var18].c(var12, var13);
+              nj.field_c[var18].drawQuarterSize(var12, var13);
             } else {
               decompiledFrameRemainder0 = !(param0);
               if ((decompiledFrameRemainder0) &&
@@ -391,10 +391,10 @@ final class jb extends IntrusiveNode {
                 if (pj.field_a <= 0) {
                   decompiledFrameRemainder0 = !(IntrusiveNode.field_e[var18]);
                   if (decompiledFrameRemainder0) {
-                    ha.field_c.c(var12, var13);
+                    ha.field_c.drawQuarterSize(var12, var13);
                   }
                 } else {
-                  ha.field_c.c(var12, var13);
+                  ha.field_c.drawQuarterSize(var12, var13);
                 }
               }
             }
@@ -550,7 +550,7 @@ final class jb extends IntrusiveNode {
               }
             }
             for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
-              cb.field_e.c(var25 * 10 + 165 + var19, var24);
+              cb.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
             }
             ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
             ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);

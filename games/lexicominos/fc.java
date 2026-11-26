@@ -1154,7 +1154,7 @@ final class fc {
           var10.a(17517, this.field_m, 0);
           var10 = (vf) (this.field_B.nextForward(2));
         }
-        SoftwareRasterizer.g(0, 8, 311, 450);
+        SoftwareRasterizer.setClip(0, 8, 311, 450);
         if (param0 < 46) {
           return;
         }
@@ -1282,7 +1282,7 @@ final class fc {
           var9Lifetime2 = var7;
           var7.d(0, 0);
         }
-        SoftwareRasterizer.g(125, 54, 221, 102);
+        SoftwareRasterizer.setClip(125, 54, 221, 102);
         if (this.field_L > 0 &&
           this.field_L < 30 &&
           this.field_L % 10 < 5) {
@@ -1291,7 +1291,7 @@ final class fc {
         this.field_Q.a(false, 13551);
         SoftwareRasterizer.b();
         this.c((byte) 72);
-        SoftwareRasterizer.g(60, 266 + this.field_M + 120, 252, 450);
+        SoftwareRasterizer.setClip(60, 266 + this.field_M + 120, 252, 450);
         va.field_m.d(0, 0);
         if (param0 <= 54) {
           this.field_r = -50;

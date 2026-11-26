@@ -119,7 +119,7 @@ final class ik extends IntrusiveNode {
         stackIn_23_0 = (param0 != 6) ? 16777215 : 1;
         var10Lifetime1 = stackIn_23_0;
         for (var11 = 0; this.field_s.length > var11; var11++) {
-          SoftwareRasterizer.d(-var3 + this.field_s[var11], -var5 + this.field_m[var11], this.field_o[var11], var10Lifetime1);
+          SoftwareRasterizer.fillCircle(-var3 + this.field_s[var11], -var5 + this.field_m[var11], this.field_o[var11], var10Lifetime1);
         }
         this.field_p = param0;
         if (param1) {

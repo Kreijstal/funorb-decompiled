@@ -40,12 +40,12 @@ final class sk implements WidgetActionListener {
           var7 = -(2 * var12.field_M) + param1.width;
           var8 = var12.field_M + param2 + param1.x;
           var9 = var12.field_K + (param0 + param1.y);
-          SoftwareRasterizer.c(var8, var9, var8 + var7, var9, this.field_j);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_j);
           if (param3 != -24381) {
             sk.clearStaticReferences(false);
           }
           for (var10 = -1 + var12.g(1); var10 >= 0; var10--) {
-            SoftwareRasterizer.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
+            SoftwareRasterizer.fillCircle(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
           }
           if (null == this.field_g) {
             return;

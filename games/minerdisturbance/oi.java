@@ -54,13 +54,13 @@ final class oi extends fe {
           var10 = var6 - var5;
           var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5)) + 128;
           var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var8 * var11 | 16711680 & var9 * var11) >>> 8;
-          SoftwareRasterizer.e(var7, var6, this.field_N, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_N, var12);
           var9Lifetime1 = 65280 & param1;
           var8Lifetime1 = param1 & 16711935;
-          SoftwareRasterizer.e(-(this.field_N * 2) + var7, var6, this.field_N, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_N * 2) + var7, var6, this.field_N, var12);
           var12Lifetime1 = var11 < 256 ? (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          SoftwareRasterizer.e(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
-          SoftwareRasterizer.e(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
         }
         tk.b(true);
         return var14;
@@ -185,7 +185,7 @@ final class oi extends fe {
             ArchiveProvider.a(this.field_M, 126);
             param3.f(-this.field_D, 0);
             param3.f(-this.field_D + this.field_N * 2, 0);
-            this.field_I.e(0, 0);
+            this.field_I.drawMultiply(0, 0);
             tk.b(true);
             this.field_M.f(param2, param1);
           }
@@ -195,7 +195,7 @@ final class oi extends fe {
             }
             param3.f(-var7, 0);
             param3.f(-var7 + 2 * this.field_N, 0);
-            this.field_F.e(0, 0);
+            this.field_F.drawMultiply(0, 0);
             tk.b(true);
             this.field_M.f(-this.field_F.field_y + var5_int, param1);
             return;

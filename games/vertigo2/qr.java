@@ -69,7 +69,7 @@ final class qr extends jq {
                 wg.field_g = wg.field_g + 1;
               }
               var10 = nb.a(var8_ref_tn, 106);
-              var11 = var10 + BitmapFont.b(var8_ref_tn.field_d);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_tn.field_d);
               var12 = mm.a(var8_ref_tn, 0);
               var8_ref_tn.field_e = new UiPanel(0L, np.field_Ib, var11);
               var8_ref_tn.field_e.field_A = var12;

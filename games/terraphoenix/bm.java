@@ -29,10 +29,10 @@ final class bm {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        SoftwareRasterizer.e(param1, param0, 16, 0);
+        SoftwareRasterizer.fillCircle(param1, param0, 16, 0);
         if (param2 >= 126) {
-          SoftwareRasterizer.e(param1, param0, 12, 16777215);
-          SoftwareRasterizer.e(param1, param0, 8, 0);
+          SoftwareRasterizer.fillCircle(param1, param0, 12, 16777215);
+          SoftwareRasterizer.fillCircle(param1, param0, 8, 0);
           return;
         }
     }

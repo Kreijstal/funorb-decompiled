@@ -435,7 +435,7 @@ final class gj {
             if (param3.field_i == 2) {
               var7 = var7 + (param1.field_l - this.field_e.fullHeight);
             }
-            this.field_e.g(var6_int, var7);
+            this.field_e.drawTransparent(var6_int, var7);
           }
           var6 = param3.a(param1, -6782);
           if (param4 != 44) {

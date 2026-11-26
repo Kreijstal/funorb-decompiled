@@ -1361,13 +1361,13 @@ public final class Lexicominos extends nk {
           }
           if (aa.field_j != -2 &&
             th.field_r != -2) {
-            SoftwareRasterizer.g(0, 0, 640, 20);
+            SoftwareRasterizer.setClip(0, 0, 640, 20);
             cb.field_n.b(0, 0);
-            SoftwareRasterizer.g(0, 460, 640, 480);
+            SoftwareRasterizer.setClip(0, 460, 640, 480);
             cb.field_n.b(0, 0);
-            SoftwareRasterizer.g(0, 20, 24, 460);
+            SoftwareRasterizer.setClip(0, 20, 24, 460);
             cb.field_n.b(0, 0);
-            SoftwareRasterizer.g(616, 20, 640, 460);
+            SoftwareRasterizer.setClip(616, 20, 640, 460);
             cb.field_n.b(0, 0);
             SoftwareRasterizer.b();
           }
@@ -2065,7 +2065,7 @@ public final class Lexicominos extends nk {
                   stackIn_3_0 = -1;
                   stackIn_3_1 = ~param1.field_y[incrementValue$0];
                   if (stackIn_3_0 != stackIn_3_1) {
-                    SoftwareRasterizer.c(8 + var8, var7_int + 8, 8, 16777215);
+                    SoftwareRasterizer.fillCircle(8 + var8, var7_int + 8, 8, 16777215);
                   }
                   var8++;
                 }
@@ -2091,7 +2091,7 @@ public final class Lexicominos extends nk {
                     continue scanLoop2;
                   }
                   if (stackIn_16_0 != stackIn_16_1) {
-                    SoftwareRasterizer.c(var8Lifetime1 + 8, var7_int + 8, 4, 8421504);
+                    SoftwareRasterizer.fillCircle(var8Lifetime1 + 8, var7_int + 8, 4, 8421504);
                   }
                   var8Lifetime1++;
                 }

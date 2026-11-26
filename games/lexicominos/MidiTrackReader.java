@@ -81,7 +81,7 @@ final class MidiTrackReader {
         this.field_f = new int[var2];
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_h = param0;
         int var3 = this.field_b.length;
@@ -167,7 +167,7 @@ final class MidiTrackReader {
         return this.field_b.length;
     }
 
-    final int a() {
+    final int nextTrack() {
         int var4 = 0;
         int var1;
         int var2;

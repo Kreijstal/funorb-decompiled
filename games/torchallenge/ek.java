@@ -80,7 +80,7 @@ final class ek extends UiComponent {
           var5_int = param0 + this.field_p;
           bc.a(this.field_l + param3, this.field_O.storedWidth + param0, param3, -this.field_O.storedWidth + var5_int, param1 - 13469);
           for (var6 = param0 - this.field_F; var6 < var5_int; var6 = var6 + param2.storedWidth) {
-            param2.g(var6, param3);
+            param2.drawTransparent(var6, param3);
           }
           if (param1 != 13470) {
             this.field_F = -127;
@@ -88,21 +88,21 @@ final class ek extends UiComponent {
           ie.b((byte) -9);
           if (SoftwareRasterizer.field_a <= this.field_O.storedWidth + param0) {
             FullscreenFocusCanvas.a(-86, this.field_E);
-            param2.g(-this.field_F, 0);
-            param2.g(-this.field_F + this.field_Q * 2, 0);
-            this.field_N.c(0, 0);
+            param2.drawTransparent(-this.field_F, 0);
+            param2.drawTransparent(-this.field_F + this.field_Q * 2, 0);
+            this.field_N.drawMultiply(0, 0);
             ie.b((byte) -9);
-            this.field_E.g(param0, param3);
+            this.field_E.drawTransparent(param0, param3);
           }
           if (SoftwareRasterizer.field_c >= -this.field_O.storedWidth + var5_int) {
             FullscreenFocusCanvas.a(param1 - 13345, this.field_E);
             for (var7 = this.field_F + (this.field_p - this.field_O.storedWidth); 2 * this.field_Q < var7; var7 = var7 - this.field_Q * 2) {
             }
-            param2.g(-var7, 0);
-            param2.g(2 * this.field_Q - var7, 0);
-            this.field_O.c(0, 0);
+            param2.drawTransparent(-var7, 0);
+            param2.drawTransparent(2 * this.field_Q - var7, 0);
+            this.field_O.drawMultiply(0, 0);
             ie.b((byte) -9);
-            this.field_E.g(-this.field_O.storedWidth + var5_int, param3);
+            this.field_E.drawTransparent(-this.field_O.storedWidth + var5_int, param3);
             return;
           }
           return;
@@ -320,13 +320,13 @@ final class ek extends UiComponent {
           var10 = -var5 + var6;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var9 * var11) >>> 8;
-          SoftwareRasterizer.b(var7, var6, this.field_Q, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_Q, var12);
           var9Lifetime1 = param1 & 65280;
-          SoftwareRasterizer.b(var7 - this.field_Q * 2, var6, this.field_Q, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_Q * 2, var6, this.field_Q, var12);
           var8Lifetime1 = 16711935 & param1;
           var12Lifetime1 = 256 > var11 ? (var11 * var9Lifetime1 & 16711680 | -16711936 & var8Lifetime1 * var11) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          SoftwareRasterizer.b(var7 + this.field_Q, var6, this.field_Q, var12Lifetime1);
-          SoftwareRasterizer.b(var7 - this.field_Q, var6, this.field_Q, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_Q, var6, this.field_Q, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_Q, var6, this.field_Q, var12Lifetime1);
         }
         ie.b((byte) -9);
         return var14;

@@ -107,7 +107,7 @@ abstract class ql extends al {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.a(param2 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(param2 + var10, var8, var11 - var10, var9);
           }
           var7++;
           var8++;
@@ -120,8 +120,8 @@ abstract class ql extends al {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.a(param2, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.a(this.field_j + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_j + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -137,8 +137,8 @@ abstract class ql extends al {
         while (var8Lifetime2 < var4Lifetime2) {
           var10Lifetime1 = var5Lifetime2 + var8Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
           var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 8 | var10Lifetime1 << 16);
-          SoftwareRasterizer.a(param2, var9Lifetime2, 6, var10Lifetime1);
-          SoftwareRasterizer.a(this.field_j + param2 - 6, var9Lifetime2, 6, var10Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var9Lifetime2, 6, var10Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_j + param2 - 6, var9Lifetime2, 6, var10Lifetime1);
           var8Lifetime2++;
           var9Lifetime2++;
         }

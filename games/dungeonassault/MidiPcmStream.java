@@ -145,7 +145,7 @@ final class MidiPcmStream extends PcmStream {
             if (param0 < 0 ||
               var3.field_p == param0) {
               if (null != var3.field_v) {
-                var3.field_v.f(AudioOutput.field_t / 100);
+                var3.field_v.fadeOutAndUnlink(AudioOutput.field_t / 100);
                 if (var3.field_v.e()) {
                   this.field_R.field_o.b(var3.field_v);
                 }
@@ -974,7 +974,7 @@ final class MidiPcmStream extends PcmStream {
             param3.field_v.a(param3.field_H, this.b(param3, 0), this.a(param3, false));
             return false;
           }
-          param3.field_v.f(param3.field_H);
+          param3.field_v.fadeOutAndUnlink(param3.field_H);
           if (param4 != null) {
             param3.field_v.mixInto(param4, param1, param2);
             if (var12 != 0) {

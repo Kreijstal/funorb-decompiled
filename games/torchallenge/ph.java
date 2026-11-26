@@ -57,9 +57,9 @@ final class ph implements j {
           var7 = param0.field_p - 2 * var13.field_W;
           var8 = param0.field_m + (param2 + var13.field_W);
           var9 = var13.field_Y + (param1 + param0.field_i);
-          SoftwareRasterizer.d(var8, var9, var7 + var8, var9, this.field_n);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_n);
           for (var10 = -1 + var13.d(true); var10 >= 0; var10--) {
-            SoftwareRasterizer.e(var8 + var7 * var13.a(-20, var10) / var13.a(-1), var9, this.field_k, this.field_c);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var13.a(-20, var10) / var13.a(-1), var9, this.field_k, this.field_c);
           }
           if (this.field_l != null) {
             this.field_l.a(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);

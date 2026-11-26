@@ -327,8 +327,8 @@ class tk extends lg {
         RuntimeException var5 = null;
         var10 = Torquing.field_u;
         try {
-          SoftwareRasterizer.b(param1, param0, 1 + param3, 10000536);
-          SoftwareRasterizer.b(param1, param0 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param0, 1 + param3, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param0 + param2, 1 + param3, 12105912);
           var5_int = 1;
           var6 = param2;
           if (var5_int + param0 < SoftwareRasterizer.field_c) {

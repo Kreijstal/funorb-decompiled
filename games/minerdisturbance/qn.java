@@ -101,7 +101,7 @@ final class qn extends hc {
             ArchiveProvider.a(ha.field_d, 127);
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
-            ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
+            ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
           if (ha.field_d.field_y < var9) {
@@ -109,7 +109,7 @@ final class qn extends hc {
             ArchiveProvider.a(ha.field_d, 127);
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
-            ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
+            ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
           if (ha.field_d.field_C >= var10) {
@@ -117,14 +117,14 @@ final class qn extends hc {
             SoftwareRasterizer.d();
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
-            ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
+            ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
           ha.field_d = new Sprite(var9, var10);
           ArchiveProvider.a(ha.field_d, 127);
           var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
           tk.b(true);
-          ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
+          ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
           return;
         }
         if (bm.field_o == var8) {
@@ -136,7 +136,7 @@ final class qn extends hc {
             ArchiveProvider.a(ha.field_d, 127);
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
-            ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
+            ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
           if (ha.field_d.field_y < var9Lifetime1) {
@@ -144,7 +144,7 @@ final class qn extends hc {
             ArchiveProvider.a(ha.field_d, 127);
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
-            ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
+            ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
           if (ha.field_d.field_C >= var10Lifetime1) {
@@ -152,26 +152,26 @@ final class qn extends hc {
             SoftwareRasterizer.d();
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
-            ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
+            ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
           ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
           ArchiveProvider.a(ha.field_d, 127);
           var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
           tk.b(true);
-          ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
+          ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
           return;
         }
         if (var8 == fg.field_d) {
           var13 = AccountServiceResult.field_g[2];
-          var13.g(-(var13.field_y >> 1) + var5, -(var13.field_C >> 1) + var6, 256);
+          var13.drawAdditive(-(var13.field_y >> 1) + var5, -(var13.field_C >> 1) + var6, 256);
           return;
         }
         if (var8 != sc.field_a) {
           return;
         }
         Sprite var12 = AccountServiceResult.field_g[1];
-        var12.g(-(var12.field_y >> 1) + var5, var6 - (var12.field_C >> 1), 256);
+        var12.drawAdditive(-(var12.field_y >> 1) + var5, var6 - (var12.field_C >> 1), 256);
     }
 
     qn(jm param0) {

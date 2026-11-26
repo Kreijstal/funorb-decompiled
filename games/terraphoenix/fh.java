@@ -243,7 +243,7 @@ final class fh {
         if (!param5) {
           return;
         }
-        SoftwareRasterizer.c(param1, param4, param2, param3, param0);
+        SoftwareRasterizer.drawLine(param1, param4, param2, param3, param0);
     }
 
     final void b(int param0, String param1, int param2, int param3) {

@@ -72,7 +72,7 @@ final class qh implements ad {
           var8 = AccountServiceResult.field_g[1];
           if (param2 instanceof hc &&
             ((hc) (param2)).field_H) {
-            var8.g((-var8.field_x + param2.field_v >> 1) + 1 + var6_int, var7 - (-1 - (-var8.field_A + param2.field_q >> 1)), 256);
+            var8.drawAdditive((-var8.field_x + param2.field_v >> 1) + 1 + var6_int, var7 - (-1 - (-var8.field_A + param2.field_q >> 1)), 256);
           }
           if (param2.k(73)) {
             se.c(2 + var6_int, 2, 2 + var7, param2.field_v - 4, param2.field_q - 4);

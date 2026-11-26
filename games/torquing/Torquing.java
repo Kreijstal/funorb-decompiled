@@ -845,7 +845,7 @@ public final class Torquing extends tg {
             var3_int = dd.field_c.field_t + dd.field_c.field_x;
             Model.field_r = new Sprite(var3_int, var3_int);
             Model.field_r.e();
-            dd.field_i.c(0, 0, var3_int, var3_int);
+            dd.field_i.drawScaledAveraged(0, 0, var3_int, var3_int);
             dd.field_i = null;
             mk.field_b.a(param1 + 4);
             s.field_t = pb.a("frame", -1, "", rg.field_v);
@@ -1714,7 +1714,7 @@ public final class Torquing extends tg {
                 } else {
                   var4 = var5 / 2 - 32;
                 }
-                tj.field_n[var3_ref_tj.field_k].e(8, var4);
+                tj.field_n[var3_ref_tj.field_k].drawQuarterSize(8, var4);
                 um.field_m.b(k.field_b[var3_ref_tj.field_k], 48, var4 + um.field_m.field_x, 0, -1);
                 i.field_N.b(k.field_b[var3_ref_tj.field_k], 48, var4 + um.field_m.field_x, 16777215, -1);
               }

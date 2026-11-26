@@ -47,7 +47,7 @@ abstract class SpriteState extends DualLinkNode {
         param4 = (15 & var6) + (param4 << 4);
         int var7 = this.field_u << 3;
         param3 = (param3 << 4) + (var7 & 15);
-        this.b(var6, var7, param4, param3, param2, param0);
+        this.rotateNearest(var6, var7, param4, param3, param2, param0);
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
@@ -72,7 +72,7 @@ abstract class SpriteState extends DualLinkNode {
         return var5;
     }
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static int a(byte param0, int param1, byte[] param2) {
         RuntimeException var3 = null;
@@ -102,18 +102,18 @@ abstract class SpriteState extends DualLinkNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        SoftwareRasterizer.b(2 + param3, param0 + 1, 4, param4);
-        SoftwareRasterizer.a(param3 + 6, 2 + param0, 4, param4);
-        SoftwareRasterizer.a(5 + param3, 6 + param0, 5, param4);
-        SoftwareRasterizer.a(param3 + 4, param0 + 11, 4, param4);
-        SoftwareRasterizer.b(param3 + 2, param0 + 15, 2, param4);
-        SoftwareRasterizer.a(1 + param3, param0 + 2, 9, param4);
+        SoftwareRasterizer.drawHorizontalLine(2 + param3, param0 + 1, 4, param4);
+        SoftwareRasterizer.drawVerticalLine(param3 + 6, 2 + param0, 4, param4);
+        SoftwareRasterizer.drawVerticalLine(5 + param3, 6 + param0, 5, param4);
+        SoftwareRasterizer.drawVerticalLine(param3 + 4, param0 + 11, 4, param4);
+        SoftwareRasterizer.drawHorizontalLine(param3 + 2, param0 + 15, 2, param4);
+        SoftwareRasterizer.drawVerticalLine(1 + param3, param0 + 2, 9, param4);
         int var5 = -89 / ((83 - param2) / 42);
-        SoftwareRasterizer.a(2 + param3, param0 + 11, 4, param4);
-        SoftwareRasterizer.a(2 + param3, param0 + 2, 9, param1);
-        SoftwareRasterizer.a(param3 + 3, 2 + param0, 13, param1);
-        SoftwareRasterizer.a(4 + param3, 2 + param0, 9, param1);
-        SoftwareRasterizer.a(param3 + 5, param0 + 2, 4, param1);
+        SoftwareRasterizer.drawVerticalLine(2 + param3, param0 + 11, 4, param4);
+        SoftwareRasterizer.drawVerticalLine(2 + param3, param0 + 2, 9, param1);
+        SoftwareRasterizer.drawVerticalLine(param3 + 3, 2 + param0, 13, param1);
+        SoftwareRasterizer.drawVerticalLine(4 + param3, 2 + param0, 9, param1);
+        SoftwareRasterizer.drawVerticalLine(param3 + 5, param0 + 2, 4, param1);
     }
 
     public static void a(boolean param0) {

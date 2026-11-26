@@ -54,18 +54,18 @@ final class gh implements t {
         }
         try {
           var8 = param2 + param1.field_m + var14.field_R;
-          SoftwareRasterizer.f(var7, var8, var14.field_I, this.field_a);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_I, this.field_a);
           if (var14.field_K != -1) {
             var9 = (double)var14.field_K * 3.141592653589793 * 2.0 / (double)var14.field_M;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
             var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-            SoftwareRasterizer.f(var7 + var11, var8 + var12, 1, this.field_i);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_i);
           }
-          SoftwareRasterizer.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_O * 3.141592653589793 * 2.0 / (double)var14.field_M;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
-          SoftwareRasterizer.e(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_d) {
             var13 = var14.field_I + (var14.field_S + this.field_b);
             this.field_d.a(param1.field_s, var13 + (param4 + param1.field_p), this.field_f + (param1.field_m + param2), -this.field_b - var13 + param1.field_x, -(this.field_b << 1) + param1.field_u, this.field_j, this.field_g, 1, 1, 0);

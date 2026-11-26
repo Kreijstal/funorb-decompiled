@@ -82,7 +82,7 @@ final class rl extends td implements se, ButtonListener {
           gk.field_c.a(this.field_M, param1 + this.field_p + 20, this.field_m + param2 + 15, this.field_x - 40, this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
         }
         if (this.field_O != null) {
-          SoftwareRasterizer.a(param1 + 10, 134 + param2, this.field_x - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param1 + 10, 134 + param2, this.field_x - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

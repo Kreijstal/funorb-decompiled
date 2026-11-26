@@ -132,7 +132,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_j == -2147483648 ? 0 : this.field_j;
     }
 
-    private final boolean l() {
+    private final boolean finishOrContinueVolumeRamp() {
         int var1;
         int var2;
         int var3;
@@ -706,7 +706,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_n != 0) {
             return param1;
           }
-        } while (!this.l());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 
@@ -1560,7 +1560,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_n != 0) {
             return param1;
           }
-        } while (!this.l());
+        } while (!this.finishOrContinueVolumeRamp());
         return param3;
     }
 

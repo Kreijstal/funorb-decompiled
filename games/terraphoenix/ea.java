@@ -55,8 +55,8 @@ final class ea implements WidgetActionListener {
           SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, 5592405);
           SoftwareRasterizer.f(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_C) {
-            SoftwareRasterizer.c(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
-            SoftwareRasterizer.c(this.field_i + var8, var9, var8, var9 + this.field_e, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
+            SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, var9 + this.field_e, 1);
           }
           if (this.field_h != null) {
             var10 = this.field_i + this.field_g + this.field_a;

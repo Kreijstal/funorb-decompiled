@@ -81,7 +81,7 @@ final class pb implements j {
           var8 = PacketBuffer.field_k[1];
           if (param4 instanceof pj &&
             ((pj) (param4)).field_F) {
-            var8.a((-var8.field_q + param4.field_t >> 1) + 1 + var6_int, (param4.field_x - var8.field_r >> 1) + (1 + var7), 256);
+            var8.drawAdditive((-var8.field_q + param4.field_t >> 1) + 1 + var6_int, (param4.field_x - var8.field_r >> 1) + (1 + var7), 256);
           }
           if (param4.b(true)) {
             ci.a(-4 + param4.field_t, 2 + var7, -4 + param4.field_x, 2 + var6_int, (byte) 122);

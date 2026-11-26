@@ -87,7 +87,7 @@ abstract class BitmapFont extends DualLinkNode {
         field_I = 0;
     }
 
-    final static String b(String param0) {
+    final static String escapeMarkup(String param0) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

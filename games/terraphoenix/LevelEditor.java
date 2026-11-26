@@ -558,7 +558,7 @@ final class LevelEditor {
             while (80 > var6) {
               var3Lifetime2 = -192 + (var5 * (var6 / 16) + 480);
               var2Lifetime2 = var4 * (var6 % 16);
-              kg.field_r[var6].a(var2Lifetime2, var3Lifetime2, var4, var5);
+              kg.field_r[var6].drawScaled(var2Lifetime2, var3Lifetime2, var4, var5);
               stackIn_37_0 = this.field_n;
               stackIn_37_1 = var6;
               if (var7 != 0) {

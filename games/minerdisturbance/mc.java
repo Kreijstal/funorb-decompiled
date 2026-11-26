@@ -832,10 +832,10 @@ final class mc {
         int var11Lifetime2;
         var20 = MinerDisturbance.field_ab;
         if (this.field_v != 0) {
-          vh.field_a[ah.field_f].c(this.field_v, 0, 100);
+          vh.field_a[ah.field_f].drawTransparentWithIntensity(this.field_v, 0, 100);
         } else {
           if (this.field_c <= 40) {
-            vh.field_a[ah.field_f].c(this.field_v, 0, 178 + (int)(60.0 * Math.sin((double)(this.field_c * 2)) + 18.0 * Math.cos((double)(3 * this.field_c))));
+            vh.field_a[ah.field_f].drawTransparentWithIntensity(this.field_v, 0, 178 + (int)(60.0 * Math.sin((double)(this.field_c * 2)) + 18.0 * Math.cos((double)(3 * this.field_c))));
           } else {
             vh.field_a[ah.field_f].g(this.field_v, 0);
           }
@@ -945,12 +945,12 @@ final class mc {
               var22.d(var18, var17, var12, var2Lifetime1, 100);
             } else {
               if (var13_int != 0) {
-                var15.c(var18, var17, var12, var2Lifetime1);
+                var15.drawScaled(var18, var17, var12, var2Lifetime1);
                 if (var21 == this.field_a) {
                   var15.e(var18, var17, var12, var2Lifetime1, this.field_k);
                 }
               } else {
-                var22.c(var18, var17, var12, var2Lifetime1);
+                var22.drawScaled(var18, var17, var12, var2Lifetime1);
                 if (var21 == this.field_a) {
                   var22.e(var18, var17, var12, var2Lifetime1, this.field_k);
                 }
@@ -976,11 +976,11 @@ final class mc {
               } else {
                 stackIn_74_1 = 16777215;
               }
-              ((Sprite) (Object) stackIn_73_0).f(stackIn_74_1);
+              ((Sprite) (Object) stackIn_73_0).addOutline(stackIn_74_1);
               ResourceArchive.field_e.a((byte) -45);
-              this.field_h.c(var18, var17, var12, var2Lifetime1);
+              this.field_h.drawScaled(var18, var17, var12, var2Lifetime1);
             } else {
-              NodeHashTableIterator.field_a.c(var18, var17, var12, var2Lifetime1);
+              NodeHashTableIterator.field_a.drawScaled(var18, var17, var12, var2Lifetime1);
             }
             var8_intLifetime1++;
           }
@@ -1037,7 +1037,7 @@ final class mc {
         }
         var11Lifetime2 = -101 / ((-70 - param0) / 32);
         ResourceArchive.field_e.a((byte) -45);
-        this.field_r.c(39 + (var7Lifetime2 - (this.field_p[21] >> 1)), 315, kd.field_r.field_x + this.field_p[21], kd.field_r.field_A);
+        this.field_r.drawScaled(39 + (var7Lifetime2 - (this.field_p[21] >> 1)), 315, kd.field_r.field_x + this.field_p[21], kd.field_r.field_A);
         ArchiveIndex.a(316, 113, var7Lifetime2 + 190, 414, (byte) 83, he.field_b);
         ArchiveIndex.a(391, 38, var7Lifetime2 + 39, 142, (byte) 109, he.field_b);
         if (this.field_v == 0) {

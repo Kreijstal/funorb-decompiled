@@ -86,7 +86,7 @@ final class si extends ic {
                     var1_intLifetime1 = ba.field_b[var15].fullWidth;
                     var10 = -var6 - var1_intLifetime1;
                     var11 = -var3Lifetime1 - var8;
-                    var12.g(var10, var11);
+                    var12.drawTransparent(var10, var11);
                   }
                 } else {
                   var14 = var12.fullHeight;
@@ -102,7 +102,7 @@ final class si extends ic {
                     var10 = var7 + (-var13 + var1_intLifetime1);
                   }
                   var11 = -var3Lifetime1 - var8;
-                  var12.g(var10, var11);
+                  var12.drawTransparent(var10, var11);
                 }
               } else {
                 var14 = var12.fullHeight;
@@ -118,7 +118,7 @@ final class si extends ic {
                 } else {
                   var11 = var9 + (-var14 + var3Lifetime1);
                 }
-                var12.g(var10, var11);
+                var12.drawTransparent(var10, var11);
               }
             } else {
               var14 = var12.fullHeight;
@@ -139,7 +139,7 @@ final class si extends ic {
                 var10 = -var6;
               }
               ji.field_p[var15].d();
-              var12.g(var10, var11);
+              var12.drawTransparent(var10, var11);
             }
           }
           SectorCacheStore.field_f.bindAsTarget(param0 - 188);

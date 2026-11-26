@@ -56,7 +56,7 @@ final class qi {
             if (param4.field_l == 2) {
               var7 = var7 + (param2.field_u - this.field_g.field_v);
             }
-            this.field_g.e(var6_int, var7);
+            this.field_g.drawTransparent(var6_int, var7);
           }
           var6 = param4.c((byte) 56, param2);
           if (param3 != -16711924) {

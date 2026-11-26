@@ -146,7 +146,7 @@ final class sj {
             var14 = new Sprite(2 + dj.field_a[var6_intLifetime2].field_m, dj.field_a[var6_intLifetime2].field_n + 1);
             var14.e();
             dj.field_a[var6_intLifetime2].c(1, 0);
-            var14.e(1);
+            var14.addOutline(1);
             dj.field_a[var6_intLifetime2] = var14;
           }
           ac.field_a.a((byte) 120);

@@ -183,10 +183,10 @@ final class u {
         BufferedSocket.b((byte) 66);
         hf.field_a = new Sprite(var3, 3 * var4 / 4);
         hf.field_a.d();
-        var2.a(0, 0);
+        var2.drawOpaque(0, 0);
         td.field_o = new Sprite(var3, var4 - hf.field_a.storedHeight);
         td.field_o.d();
-        var2.a(0, -hf.field_a.storedHeight);
+        var2.drawOpaque(0, -hf.field_a.storedHeight);
         if (!param0) {
           return;
         }

@@ -35,7 +35,7 @@ final class rd {
         if (param0 <= 73) {
           return;
         }
-        SoftwareRasterizer.e(param5, param4, param1, param2, param3);
+        SoftwareRasterizer.drawLine(param5, param4, param1, param2, param3);
     }
 
     private final void a(String param0, boolean param1, int param2, int param3) {

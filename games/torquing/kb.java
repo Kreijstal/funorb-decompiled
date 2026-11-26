@@ -45,7 +45,7 @@ final class kb implements WidgetRenderer {
           var8 = wj.field_h[1];
           if (param4 instanceof lg &&
             ((lg) (param4)).field_A) {
-            var8.a((-var8.field_w + param4.width >> 1) + 1 + var6_int, (-var8.field_u + param4.height >> 1) + var7 + 1, 256);
+            var8.drawAdditive((-var8.field_w + param4.width >> 1) + 1 + var6_int, (-var8.field_u + param4.height >> 1) + var7 + 1, 256);
           }
           if (!param4.g(2)) {
             return;

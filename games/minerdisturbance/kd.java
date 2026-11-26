@@ -299,25 +299,25 @@ final class kd {
         ba.field_K.a(0, 0);
         if (null != ah.field_d) {
           ah.field_d.f(9, 257);
-          ah.field_d.h(558, 257);
+          ah.field_d.drawHorizontalFlip(558, 257);
           if (257 < NodeHashTableIterator.field_e &&
             NodeHashTableIterator.field_e < 290) {
             var2Lifetime2 = 40 + (40 * ml.a(this.field_t << 4, (byte) -114) >> 16);
             if (0 < var2Lifetime2) {
               if (nk.field_w > 9 &&
                 82 > nk.field_w) {
-                ah.field_d.g(8, 256, var2Lifetime2);
-                ah.field_d.g(10, 256, var2Lifetime2);
-                ah.field_d.g(8, 258, var2Lifetime2);
-                ah.field_d.g(10, 258, var2Lifetime2);
+                ah.field_d.drawAdditive(8, 256, var2Lifetime2);
+                ah.field_d.drawAdditive(10, 256, var2Lifetime2);
+                ah.field_d.drawAdditive(8, 258, var2Lifetime2);
+                ah.field_d.drawAdditive(10, 258, var2Lifetime2);
               } else {
                 if (nk.field_w > 558 &&
                   nk.field_w < 631) {
                   ah.field_d.a();
-                  ah.field_d.g(557, 256, var2Lifetime2);
-                  ah.field_d.g(559, 256, var2Lifetime2);
-                  ah.field_d.g(557, 258, var2Lifetime2);
-                  ah.field_d.g(559, 258, var2Lifetime2);
+                  ah.field_d.drawAdditive(557, 256, var2Lifetime2);
+                  ah.field_d.drawAdditive(559, 256, var2Lifetime2);
+                  ah.field_d.drawAdditive(557, 258, var2Lifetime2);
+                  ah.field_d.drawAdditive(559, 258, var2Lifetime2);
                   ah.field_d.a();
                 }
               }
@@ -380,7 +380,7 @@ final class kd {
         try {
           ti.a((byte) 127);
           for (var9_int = param5; param6 > var9_int; var9_int++) {
-            SoftwareRasterizer.a(param7, var9_int, param0, 1 + var9_int);
+            SoftwareRasterizer.setClip(param7, var9_int, param0, 1 + var9_int);
             var10 = param4.length * var9_int / param6;
             var11 = param4[-1 + param4.length - var10];
             param2.a(param1, param7, param5, param0, param6, var11, -1, 1, 1, 0);
@@ -446,11 +446,11 @@ final class kd {
           var14 = 84 % ((42 - param0) / 57);
           var13 = new Sprite(var11_int, var12);
           ArchiveProvider.a(var13, 126);
-          param2.c((int)((float)(-param9) / param1), (int)((float)(-param5) / param1), (int)((float)param2.field_y / param1), (int)((float)param2.field_C / param1));
+          param2.drawScaled((int)((float)(-param9) / param1), (int)((float)(-param5) / param1), (int)((float)param2.field_y / param1), (int)((float)param2.field_C / param1));
           this.a(var11_int, param7, param4, (byte) 116, param3, 0, var12, 0);
           tk.b(true);
           ArchiveProvider.a(param2, 127);
-          var13.b(param9, param5, param6, param8);
+          var13.drawScaledAveraged(param9, param5, param6, param8);
           tk.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

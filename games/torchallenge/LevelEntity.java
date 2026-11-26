@@ -3770,14 +3770,14 @@ final class LevelEntity {
                         }
                         param0.d();
                         SoftwareRasterizer.b();
-                        c.field_c[var14][var9_int][var15].a(var11, var13, var16);
+                        c.field_c[var14][var9_int][var15].drawMask(var11, var13, var16);
                         if (var27 == 0) {
                           return;
                         }
                       }
                       param0.d();
                       SoftwareRasterizer.b();
-                      oa.field_e.a(var11, var13, param3[3]);
+                      oa.field_e.drawMask(var11, var13, param3[3]);
                       if (var27 == 0) {
                         return;
                       }
@@ -6780,7 +6780,7 @@ final class LevelEntity {
                                 break regionExit1;
                               }
                             }
-                            jc.field_i.g(var7_intLifetime1, var8Lifetime1);
+                            jc.field_i.drawTransparent(var7_intLifetime1, var8Lifetime1);
                             if (var15 == 0) {
                               break regionExit1;
                             }
@@ -6825,12 +6825,12 @@ final class LevelEntity {
                                 break regionExit1;
                               }
                             }
-                            jj.field_e.g(var7_intLifetime1, var8Lifetime1);
+                            jj.field_e.drawTransparent(var7_intLifetime1, var8Lifetime1);
                             if (var15 == 0) {
                               break regionExit1;
                             }
                           }
-                          jj.field_e.g(param2 + (-param2 + param5) - 96, param3);
+                          jj.field_e.drawTransparent(param2 + (-param2 + param5) - 96, param3);
                           if (var15 == 0) {
                             break regionExit1;
                           }
@@ -6844,7 +6844,7 @@ final class LevelEntity {
                             break regionExit1;
                           }
                         }
-                        jj.field_e.g(var7_intLifetime1, var8Lifetime1);
+                        jj.field_e.drawTransparent(var7_intLifetime1, var8Lifetime1);
                         if (var15 == 0) {
                           break regionExit1;
                         }
@@ -7152,7 +7152,7 @@ final class LevelEntity {
               if (ol.field_a &&
                 ~this.x == ~ol.field_g.field_l &&
                 ~this.y == ~ol.field_g.field_i) {
-                ((Sprite) (var11)).a(var4_int, var6, 16711680);
+                ((Sprite) (var11)).drawMask(var4_int, var6, 16711680);
                 decompiledFrameRemainder1 = (var19 != 0);
               }
               if (decompiledFrameRemainder1) {
@@ -7169,12 +7169,12 @@ final class LevelEntity {
                     SoftwareRasterizer.b();
                     ((Sprite) (var11)).a(0, 0, -(this.field_D * 5) + 255, 16777215);
                     SectorCacheStore.field_f.bindAsTarget(115);
-                    te.field_e.g(var4_int, var6);
+                    te.field_e.drawTransparent(var4_int, var6);
                     var11 = te.field_e;
                     decompiledFrameRemainder1 = (var19 != 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    ec.field_a[4].g(var4_int, var6);
+                    ec.field_a[4].drawTransparent(var4_int, var6);
                     decompiledFrameRemainder1 = (var19 != 0);
                   }
                 }
@@ -7182,13 +7182,13 @@ final class LevelEntity {
                   if (15 != this.type) {
                     if (0 < this.field_G &&
                       this.field_G % 4 >= 2) {
-                      ((Sprite) (var11)).a(var4_int, var6, 16777215);
+                      ((Sprite) (var11)).drawMask(var4_int, var6, 16777215);
                       decompiledFrameRemainder1 = (var19 != 0);
                     }
                     if (decompiledFrameRemainder1) {
-                      ((Sprite) (var11)).g(var4_int, var6);
+                      ((Sprite) (var11)).drawTransparent(var4_int, var6);
                       if (var19 != 0) {
-                        ((Sprite) (var11)).g(var4_int, var6);
+                        ((Sprite) (var11)).drawTransparent(var4_int, var6);
                         SoftwareRasterizer.b(bf.field_l);
                         stackIn_132_0 = ob.field_c;
                         stackIn_132_1 = var6;
@@ -7199,7 +7199,7 @@ final class LevelEntity {
                       }
                     }
                   } else {
-                    ((Sprite) (var11)).g(var4_int, var6);
+                    ((Sprite) (var11)).drawTransparent(var4_int, var6);
                     SoftwareRasterizer.b(bf.field_l);
                     stackIn_132_0 = ob.field_c;
                     stackIn_132_1 = var6;
@@ -7342,10 +7342,10 @@ final class LevelEntity {
               var11Lifetime1 = c.field_c[0][0][0];
               var12Lifetime1 = -(var5 - var4_int);
               var6 -= 32;
-              ((Sprite) (var11Lifetime1)).g(var4_int + var12Lifetime1, var6);
+              ((Sprite) (var11Lifetime1)).drawTransparent(var4_int + var12Lifetime1, var6);
               if (~ol.field_g.field_l == ~this.x &&
                 ol.field_g.field_i == this.y) {
-                ((Sprite) (var11Lifetime1)).a(var12Lifetime1 + var4_int, var6, 16711680);
+                ((Sprite) (var11Lifetime1)).drawMask(var12Lifetime1 + var4_int, var6, 16711680);
               }
             }
           }
@@ -9778,7 +9778,7 @@ final class LevelEntity {
           if (param2 < 12) {
             return;
           }
-          param4.a(oj.field_b.fullWidth >> 1, 0);
+          param4.drawOpaque(oj.field_b.fullWidth >> 1, 0);
           var9 = 0;
           do {
             if (var9 >= 3) {

@@ -195,12 +195,12 @@ final class gi {
         if (this.field_s == 6) {
           var3Lifetime2 = (int)((double)(-lg.field_c) + (-(((double)(this.field_x * 100) + this.field_t) / 100.0 * 48.0) + (16.0 * ((double)this.field_m + this.field_p / 100.0) + 16.0 * ((double)this.field_c + this.field_y / 100.0)))) + 240;
           var2Lifetime2 = (int)(32.0 * ((double)this.field_c + this.field_y / 100.0) - 32.0 * ((double)this.field_m + this.field_p / 100.0) - (double)sj.field_b) + 320;
-          SoftwareRasterizer.e(var2Lifetime2, var3Lifetime2, 3, 8421504);
+          SoftwareRasterizer.fillCircle(var2Lifetime2, var3Lifetime2, 3, 8421504);
         }
         if (7 == this.field_s) {
           var2Lifetime3 = (int)((double)(-sj.field_b) + (((double)this.field_c + this.field_y / 100.0) * 32.0 - 32.0 * ((double)this.field_m + this.field_p / 100.0))) + 320;
           var3Lifetime3 = 240 + (int)(-(48.0 * (((double)(this.field_x * 100) + this.field_t) / 100.0)) + ((this.field_y / 100.0 + (double)this.field_c) * 16.0 + (this.field_p / 100.0 + (double)this.field_m) * 16.0) - (double)lg.field_c);
-          SoftwareRasterizer.e(var2Lifetime3, var3Lifetime3, 3, 65535);
+          SoftwareRasterizer.fillCircle(var2Lifetime3, var3Lifetime3, 3, 65535);
         }
     }
 

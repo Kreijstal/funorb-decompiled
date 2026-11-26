@@ -396,14 +396,14 @@ final class we implements j {
             }
             var2Lifetime4 = (stackIn_50_0 * kb.a(stackIn_50_1 << stackIn_51_2, false) >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              IsaacRandom.field_d.a(230, 389, var2Lifetime4);
-              IsaacRandom.field_d.a(232, 389, var2Lifetime4);
-              IsaacRandom.field_d.a(232, 391, var2Lifetime4);
-              IsaacRandom.field_d.a(230, 391, var2Lifetime4);
-              var1.a(1, 1, var2Lifetime4);
-              var1.a(-1, 1, var2Lifetime4);
-              var1.a(1, -1, var2Lifetime4);
-              var1.a(-1, -1, var2Lifetime4);
+              IsaacRandom.field_d.drawAdditive(230, 389, var2Lifetime4);
+              IsaacRandom.field_d.drawAdditive(232, 389, var2Lifetime4);
+              IsaacRandom.field_d.drawAdditive(232, 391, var2Lifetime4);
+              IsaacRandom.field_d.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_55_0 = -50;
             stackIn_55_1 = sa.field_m;
@@ -439,17 +439,17 @@ final class we implements j {
               }
               if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
                 PacketBuffer.field_j < 269) {
-                kj.field_S.a(269 - kj.field_S.field_q - 1, -1 + var1_int, var2Lifetime5);
-                kj.field_S.a(1 + (-kj.field_S.field_q + 269), -1 + var1_int, var2Lifetime5);
-                kj.field_S.a(-1 + (-kj.field_S.field_q + 269), 1 + var1_int, var2Lifetime5);
-                kj.field_S.a(-kj.field_S.field_q + 269 + 1, 1 + var1_int, var2Lifetime5);
+                kj.field_S.drawAdditive(269 - kj.field_S.field_q - 1, -1 + var1_int, var2Lifetime5);
+                kj.field_S.drawAdditive(1 + (-kj.field_S.field_q + 269), -1 + var1_int, var2Lifetime5);
+                kj.field_S.drawAdditive(-1 + (-kj.field_S.field_q + 269), 1 + var1_int, var2Lifetime5);
+                kj.field_S.drawAdditive(-kj.field_S.field_q + 269 + 1, 1 + var1_int, var2Lifetime5);
               } else {
                 if (586 < PacketBuffer.field_j &&
                   PacketBuffer.field_j < kj.field_S.field_p + 586) {
-                  fh.field_f.a(585, -1 + var1_int, var2Lifetime5);
-                  fh.field_f.a(587, var1_int - 1, var2Lifetime5);
-                  fh.field_f.a(585, 1 + var1_int, var2Lifetime5);
-                  fh.field_f.a(587, var1_int + 1, var2Lifetime5);
+                  fh.field_f.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                  fh.field_f.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                  fh.field_f.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                  fh.field_f.drawAdditive(587, var1_int + 1, var2Lifetime5);
                 }
               }
             }
@@ -538,18 +538,18 @@ final class we implements j {
           }
           var7 = var14.field_N + param3 + param4.field_m;
           var8 = var14.field_P + param1 + param4.field_j;
-          SoftwareRasterizer.e(var7, var8, var14.field_O, this.field_a);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_O, this.field_a);
           if (var14.field_M != -1) {
             var9 = 2.0 * ((double)var14.field_M * 3.141592653589793) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_O);
             var12 = (int)(Math.cos(var9) * (double)var14.field_O);
-            SoftwareRasterizer.e(var11 + var7, var8 + var12, 1, this.field_g);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_g);
           }
-          SoftwareRasterizer.e(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_O);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_O);
-          SoftwareRasterizer.e(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var13 = var14.field_O + var14.field_N + this.field_j;
             this.field_k.a(param4.field_i, var13 + (param4.field_m + param3), this.field_d + (param4.field_j + param1), -var13 - (this.field_j - param4.field_t), -(this.field_j << 1) + param4.field_x, this.field_i, this.field_b, 1, 1, 0);

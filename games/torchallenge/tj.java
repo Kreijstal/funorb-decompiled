@@ -12,7 +12,7 @@ final class tj {
         int var4;
         int var4Lifetime1;
         int var4Lifetime1Lifetime1;
-        ub.field_e.g(param3, param2);
+        ub.field_e.drawTransparent(param3, param2);
         if (param1 != 5106) {
           tj.a(false, 10, 113, 16);
           if (!param0) {

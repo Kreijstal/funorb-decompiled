@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteState {
     byte[] pixelIndices;
     int[] palette;
 
-    final void flipHorizontally() {
+    final void flipVertically() {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;

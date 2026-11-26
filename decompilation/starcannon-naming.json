@@ -1508,6 +1508,22 @@
       "renamedSymbol": "M:PcmSampleStream.cancelRamp()V"
     },
     {
+      "symbol": "M:fj.h()Z",
+      "originalName": "h",
+      "to": "adjustRampOrStop",
+      "evidence": "Source-purpose review: Completion check derives gain targets,unlinks only when MININT fade completes,else recomputes unitstep ramp/minimumremainingduration. Preserve all int branches/guard4 unlink. Original identity M:fj.h()Z. Pinned original body SHA256 994ca834bf9bdf99ea84c8f7c19ef3edf73e14c7f41677dfea590fd839ef8540. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.adjustRampOrStop()Z"
+    },
+    {
+      "symbol": "M:fj.h(I)V",
+      "originalName": "h",
+      "to": "fadeOutAndUnlink",
+      "evidence": "Source-purpose review: Synchronized fadeOutAndUnlink variant withoriginalduplicatednonzerochannel branches,signedmaxgain clamp,MININTtarget,divisionsteporder and immediatezero-duration delegate/unlink guard4. Original identity M:fj.h(I)V. Pinned original body SHA256 7d02a4ec9dfa26ac1c851caf28af4d5dadf41302f8389d03e2ec0da0203d2282. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.fadeOutAndUnlink(I)V"
+    },
+    {
       "symbol": "M:fk.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1682,6 +1698,54 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 8314e14121ce8c1c181c8f85b33da56b9f191e011804ca0c21bf5378e04409e0.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DelegatingCanvas.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:hl.a(IIII[I[IIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitScaledAdditiveRows",
+      "evidence": "Source-purpose review: Nearest16.16scaledsampling,skipzeros,saturatingaddRGB into destination;retain negated width/height loop domains,strides/overflow. Original identity M:hl.a(IIII[I[IIIIIIIIIII)V. Pinned original body SHA256 c9e35ceee165fb7420d1a0df4bfe6a3f92dddc5f0100bfeb1748146c05100fb1. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:hl.a(IIII[I[IIIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitScaledAdditiveIntensityRows",
+      "evidence": "Source-purpose review: Same additive scaledkernel,RGBintensitymultiply before saturation;retainunsignedshifts/masks. Original identity M:hl.a(IIII[I[IIIIIIIIIIII)V. Pinned original body SHA256 cfad84b83217e5772f152ba82e9f28768a845293624eb841256c60c51802d278. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:hl.a([I[IIIIIIIII)V",
+      "originalName": "a",
+      "to": "copyNonzeroPixelsDimmed",
+      "evidence": "Source-purpose review: Pure nonzeroRGB dimcopy:unsigned final shift,sourcezero skips,no destinationcolour read;supports intensity wrapper semantics. Original identity M:hl.a([I[IIIIIIIII)V. Pinned original body SHA256 1e9e02f28cbbd6537c68cf802c9386f51a9e4604e585aae78212863bc54331db. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V"
+    },
+    {
+      "symbol": "M:hl.b()V",
+      "originalName": "b",
+      "to": "rotateCounterclockwise",
+      "evidence": "Source-purpose review: Counterclockwise pixel order:old columns descending,rows ascending;swapstored/full dimensions and rotate trim withfullwidth-minus-oldtrimX-width. All array/allocation order retained. Original identity M:hl.b()V. Pinned original body SHA256 729c013c39463813085416d304f6280a3b56abc5c7c85fc6530a77795c1e66c8. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.rotateCounterclockwise()V"
+    },
+    {
+      "symbol": "M:hl.b([I[IIIIIIII)V",
+      "originalName": "b",
+      "to": "copyNonzeroPixelsReversed",
+      "evidence": "Source-purpose review: Source cursor decrements while destination increments;nonzero source RGB copied,zero skips;unrolled and remainder loops retained. Original identity M:hl.b([I[IIIIIIII)V. Pinned original body SHA256 1dac872c50d5ca1a1c943dcc41550f363fe04af9e02edc06c6a7e93cfe0f2aeb. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:hl.c(IIII)Z",
+      "originalName": "c",
+      "to": "isOpaqueAt",
+      "evidence": "Source-purpose review: Four args are sprite origin and testpoint;subtracttrim/origin,boundscheck,return sourcepixel!=0. Original identity M:hl.c(IIII)Z. Pinned original body SHA256 15096e7f1643076c2f40f6aeb63de838ad922526bdcbe911bf70fd81b1c764a6. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.isOpaqueAt(IIII)Z"
     },
     {
       "symbol": "M:ib.a()V",
@@ -57426,7 +57490,7 @@
     },
     {
       "symbol": "L:fj.h()Z#0",
-      "renamedSymbol": "L:PcmSampleStream.h()Z#0",
+      "renamedSymbol": "L:PcmSampleStream.adjustRampOrStop()Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -57437,7 +57501,7 @@
     },
     {
       "symbol": "L:fj.h()Z#1",
-      "renamedSymbol": "L:PcmSampleStream.h()Z#1",
+      "renamedSymbol": "L:PcmSampleStream.adjustRampOrStop()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -57448,7 +57512,7 @@
     },
     {
       "symbol": "L:fj.h()Z#2",
-      "renamedSymbol": "L:PcmSampleStream.h()Z#2",
+      "renamedSymbol": "L:PcmSampleStream.adjustRampOrStop()Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -57459,7 +57523,7 @@
     },
     {
       "symbol": "L:fj.h(I)V#0",
-      "renamedSymbol": "L:PcmSampleStream.h(I)V#0",
+      "renamedSymbol": "L:PcmSampleStream.fadeOutAndUnlink(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -57470,7 +57534,7 @@
     },
     {
       "symbol": "L:fj.h(I)V#1",
-      "renamedSymbol": "L:PcmSampleStream.h(I)V#1",
+      "renamedSymbol": "L:PcmSampleStream.fadeOutAndUnlink(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -66556,7 +66620,7 @@
     },
     {
       "symbol": "L:hl.a(IIII[I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -66567,7 +66631,7 @@
     },
     {
       "symbol": "L:hl.a(IIII[I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -66578,7 +66642,7 @@
     },
     {
       "symbol": "L:hl.a(IIII[I[IIIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -66589,7 +66653,7 @@
     },
     {
       "symbol": "L:hl.a(IIII[I[IIIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#1",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -66919,7 +66983,7 @@
     },
     {
       "symbol": "L:hl.a([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -66930,7 +66994,7 @@
     },
     {
       "symbol": "L:hl.a([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -66941,7 +67005,7 @@
     },
     {
       "symbol": "L:hl.a([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -66952,7 +67016,7 @@
     },
     {
       "symbol": "L:hl.a([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -66963,7 +67027,7 @@
     },
     {
       "symbol": "L:hl.a([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -67084,7 +67148,7 @@
     },
     {
       "symbol": "L:hl.b()V#0",
-      "renamedSymbol": "L:Sprite.b()V#0",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67095,7 +67159,7 @@
     },
     {
       "symbol": "L:hl.b()V#1",
-      "renamedSymbol": "L:Sprite.b()V#1",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#1",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -67106,7 +67170,7 @@
     },
     {
       "symbol": "L:hl.b()V#2",
-      "renamedSymbol": "L:Sprite.b()V#2",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67117,7 +67181,7 @@
     },
     {
       "symbol": "L:hl.b()V#3",
-      "renamedSymbol": "L:Sprite.b()V#3",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -67128,7 +67192,7 @@
     },
     {
       "symbol": "L:hl.b()V#4",
-      "renamedSymbol": "L:Sprite.b()V#4",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -67139,7 +67203,7 @@
     },
     {
       "symbol": "L:hl.b()V#5",
-      "renamedSymbol": "L:Sprite.b()V#5",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#5",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -67150,7 +67214,7 @@
     },
     {
       "symbol": "L:hl.b()V#6",
-      "renamedSymbol": "L:Sprite.b()V#6",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#6",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -67161,7 +67225,7 @@
     },
     {
       "symbol": "L:hl.b()V#7",
-      "renamedSymbol": "L:Sprite.b()V#7",
+      "renamedSymbol": "L:Sprite.rotateCounterclockwise()V#7",
       "originalName": "var3Lifetime3",
       "renamedName": "var3Lifetime3",
       "declaration": {
@@ -68217,7 +68281,7 @@
     },
     {
       "symbol": "L:hl.b([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -68228,7 +68292,7 @@
     },
     {
       "symbol": "L:hl.b([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -68239,7 +68303,7 @@
     },
     {
       "symbol": "L:hl.b([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -68250,7 +68314,7 @@
     },
     {
       "symbol": "L:hl.b([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#3",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -68800,7 +68864,7 @@
     },
     {
       "symbol": "L:hl.c(IIII)Z#0",
-      "renamedSymbol": "L:Sprite.c(IIII)Z#0",
+      "renamedSymbol": "L:Sprite.isOpaqueAt(IIII)Z#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -149848,9 +149912,9 @@
     },
     {
       "symbol": "M:fj.h()Z",
-      "renamedSymbol": "M:PcmSampleStream.h()Z",
+      "renamedSymbol": "M:PcmSampleStream.adjustRampOrStop()Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "adjustRampOrStop",
       "declaration": {
         "file": "fj.java",
         "start": 41417,
@@ -149859,9 +149923,9 @@
     },
     {
       "symbol": "M:fj.h(I)V",
-      "renamedSymbol": "M:PcmSampleStream.h(I)V",
+      "renamedSymbol": "M:PcmSampleStream.fadeOutAndUnlink(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "fadeOutAndUnlink",
       "declaration": {
         "file": "fj.java",
         "start": 54180,
@@ -151619,9 +151683,9 @@
     },
     {
       "symbol": "M:hl.a(IIII[I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(IIII[I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitScaledAdditiveRows",
       "declaration": {
         "file": "hl.java",
         "start": 891,
@@ -151630,9 +151694,9 @@
     },
     {
       "symbol": "M:hl.a(IIII[I[IIIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(IIII[I[IIIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitScaledAdditiveIntensityRows",
       "declaration": {
         "file": "hl.java",
         "start": 41025,
@@ -151707,9 +151771,9 @@
     },
     {
       "symbol": "M:hl.a([I[IIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyNonzeroPixelsDimmed",
       "declaration": {
         "file": "hl.java",
         "start": 42318,
@@ -151740,9 +151804,9 @@
     },
     {
       "symbol": "M:hl.b()V",
-      "renamedSymbol": "M:Sprite.b()V",
+      "renamedSymbol": "M:Sprite.rotateCounterclockwise()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "rotateCounterclockwise",
       "declaration": {
         "file": "hl.java",
         "start": 81463,
@@ -151806,9 +151870,9 @@
     },
     {
       "symbol": "M:hl.b([I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.b([I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "copyNonzeroPixelsReversed",
       "declaration": {
         "file": "hl.java",
         "start": 45476,
@@ -151872,9 +151936,9 @@
     },
     {
       "symbol": "M:hl.c(IIII)Z",
-      "renamedSymbol": "M:Sprite.c(IIII)Z",
+      "renamedSymbol": "M:Sprite.isOpaqueAt(IIII)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "isOpaqueAt",
       "declaration": {
         "file": "hl.java",
         "start": 78387,
@@ -181099,7 +181163,7 @@
     },
     {
       "symbol": "P:fj.h(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.h(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.fadeOutAndUnlink(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185532,7 +185596,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185543,7 +185607,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -185554,7 +185618,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -185565,7 +185629,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -185576,7 +185640,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -185587,7 +185651,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -185598,7 +185662,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#14",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#14",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -185609,7 +185673,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#15",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#15",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -185620,7 +185684,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -185631,7 +185695,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -185642,7 +185706,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -185653,7 +185717,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -185664,7 +185728,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -185675,7 +185739,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -185686,7 +185750,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -185697,7 +185761,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -185708,7 +185772,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185719,7 +185783,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -185730,7 +185794,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -185741,7 +185805,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -185752,7 +185816,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -185763,7 +185827,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -185774,7 +185838,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#14",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#14",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -185785,7 +185849,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#15",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#15",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -185796,7 +185860,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#16",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#16",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -185807,7 +185871,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -185818,7 +185882,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -185829,7 +185893,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -185840,7 +185904,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -185851,7 +185915,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -185862,7 +185926,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -185873,7 +185937,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -185884,7 +185948,7 @@
     },
     {
       "symbol": "P:hl.a(IIII[I[IIIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -186577,7 +186641,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -186588,7 +186652,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -186599,7 +186663,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -186610,7 +186674,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -186621,7 +186685,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -186632,7 +186696,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -186643,7 +186707,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -186654,7 +186718,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -186665,7 +186729,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -186676,7 +186740,7 @@
     },
     {
       "symbol": "P:hl.a([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsDimmed([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -187182,7 +187246,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187193,7 +187257,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187204,7 +187268,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187215,7 +187279,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187226,7 +187290,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187237,7 +187301,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -187248,7 +187312,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -187259,7 +187323,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -187270,7 +187334,7 @@
     },
     {
       "symbol": "P:hl.b([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.copyNonzeroPixelsReversed([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -187578,7 +187642,7 @@
     },
     {
       "symbol": "P:hl.c(IIII)Z#0",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#0",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187589,7 +187653,7 @@
     },
     {
       "symbol": "P:hl.c(IIII)Z#1",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#1",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187600,7 +187664,7 @@
     },
     {
       "symbol": "P:hl.c(IIII)Z#2",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#2",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187611,7 +187675,7 @@
     },
     {
       "symbol": "P:hl.c(IIII)Z#3",
-      "renamedSymbol": "P:Sprite.c(IIII)Z#3",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -222221,7 +222285,7 @@
       "original": "StarCannon.java",
       "renamed": "StarCannon.java",
       "inputSha256": "5d7953b92a66316b6cb55430c1cf34597ffd73f1b8b9d3789659d962af38ef0a",
-      "outputSha256": "2827abb2ace23d3add774ac21c345fde604d89974bbefacc01351f88fa5035f9",
+      "outputSha256": "e7556c5cf4644ef7e1c237816770fe3afd99f85a41814404c663b71a53e666a3",
       "edits": [
         {
           "start": 489,
@@ -224298,6 +224362,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 76202,
+          "end": 76203,
+          "symbol": "M:hl.b()V",
+          "original": "b",
+          "renamed": "rotateCounterclockwise"
         },
         {
           "start": 76292,
@@ -229294,7 +229365,7 @@
       "original": "bf.java",
       "renamed": "bf.java",
       "inputSha256": "962e46241ac11d2229e6efe5e1b31073d32e1d0e314213a4e440650e3d6b9a9b",
-      "outputSha256": "7a0ac74f0cd8ee06a331e7a933c1cac45b15bc017f448c46ad59e04b618c6ba7",
+      "outputSha256": "6abc770abb17ed8fed8b2b5205c7aff55d0719235afb0eb8d2fb640d57edfc9c",
       "edits": [
         {
           "start": 61,
@@ -229400,6 +229471,13 @@
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 12856,
+          "end": 12857,
+          "symbol": "M:fj.h(I)V",
+          "original": "h",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 12936,
@@ -242072,7 +242150,7 @@
       "original": "fj.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "3584ce12d2e1280695563fda28e40a40da6c6f5d100479e081f09a27caa7ae1c",
-      "outputSha256": "2fa8c45d93cd54ecd90794cfd8fe2c79110f4040cdd440d0e454fbb8f0eb8f5b",
+      "outputSha256": "cb2dd739bda2359c87ff3c26f59ed85729ae38ae5c5dd271ebe182a804e6f780",
       "edits": [
         {
           "start": 50,
@@ -242516,6 +242594,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 21802,
+          "end": 21803,
+          "symbol": "M:fj.h()Z",
+          "original": "h",
+          "renamed": "adjustRampOrStop"
+        },
+        {
           "start": 21855,
           "end": 21857,
           "symbol": "C:fj",
@@ -242740,6 +242825,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 27769,
+          "end": 27770,
+          "symbol": "M:fj.h()Z",
+          "original": "h",
+          "renamed": "adjustRampOrStop"
+        },
+        {
           "start": 27949,
           "end": 27951,
           "symbol": "C:fj",
@@ -242859,6 +242951,13 @@
           "renamed": "recomputeGains"
         },
         {
+          "start": 41417,
+          "end": 41418,
+          "symbol": "M:fj.h()Z",
+          "original": "h",
+          "renamed": "adjustRampOrStop"
+        },
+        {
           "start": 41558,
           "end": 41560,
           "symbol": "C:fj",
@@ -242920,6 +243019,13 @@
           "symbol": "C:fj",
           "original": "fj",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 54180,
+          "end": 54181,
+          "symbol": "M:fj.h(I)V",
+          "original": "h",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 54308,
@@ -245849,7 +245955,7 @@
       "original": "hl.java",
       "renamed": "Sprite.java",
       "inputSha256": "2efa85afe12fe6469985b2a9d939129c0aed66c52cd00b60c6f8c45e305097e9",
-      "outputSha256": "a83278aa21fbc34a2c22391ac5561f19e169c071629c9d52dd72995f1d95c614",
+      "outputSha256": "7dbbd3b81417f2d021c5e3f7b393b09171c8df395a06c9474993c442c8892b8c",
       "edits": [
         {
           "start": 44,
@@ -245864,6 +245970,13 @@
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 891,
+          "end": 892,
+          "symbol": "M:hl.a(IIII[I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveRows"
         },
         {
           "start": 6725,
@@ -245908,6 +246021,27 @@
           "renamed": "Sprite"
         },
         {
+          "start": 41025,
+          "end": 41026,
+          "symbol": "M:hl.a(IIII[I[IIIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveIntensityRows"
+        },
+        {
+          "start": 42318,
+          "end": 42319,
+          "symbol": "M:hl.a([I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "copyNonzeroPixelsDimmed"
+        },
+        {
+          "start": 45476,
+          "end": 45477,
+          "symbol": "M:hl.b([I[IIIIIIII)V",
+          "original": "b",
+          "renamed": "copyNonzeroPixelsReversed"
+        },
+        {
           "start": 51762,
           "end": 51764,
           "symbol": "C:hl",
@@ -245929,11 +246063,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 56881,
+          "end": 56882,
+          "symbol": "M:hl.a(IIII[I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveRows"
+        },
+        {
           "start": 57028,
           "end": 57030,
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 57031,
+          "end": 57032,
+          "symbol": "M:hl.a(IIII[I[IIIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveIntensityRows"
         },
         {
           "start": 59590,
@@ -246042,6 +246190,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 75917,
+          "end": 75918,
+          "symbol": "M:hl.b([I[IIIIIIII)V",
+          "original": "b",
+          "renamed": "copyNonzeroPixelsReversed"
+        },
+        {
           "start": 77961,
           "end": 77963,
           "symbol": "C:hl",
@@ -246063,11 +246218,32 @@
           "renamed": "Sprite"
         },
         {
+          "start": 78387,
+          "end": 78388,
+          "symbol": "M:hl.c(IIII)Z",
+          "original": "c",
+          "renamed": "isOpaqueAt"
+        },
+        {
           "start": 81334,
           "end": 81336,
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "Sprite"
+        },
+        {
+          "start": 81337,
+          "end": 81338,
+          "symbol": "M:hl.a([I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "copyNonzeroPixelsDimmed"
+        },
+        {
+          "start": 81463,
+          "end": 81464,
+          "symbol": "M:hl.b()V",
+          "original": "b",
+          "renamed": "rotateCounterclockwise"
         },
         {
           "start": 84939,
@@ -249322,7 +249498,7 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "108da62551c91e2b290616fea4045f8fc06b9fd46b9e419db3ef8afbf05d66fa",
-      "outputSha256": "0b576f766373c4aa6508b749cd8301413eaef9499e47056e6ea1dc100feab22e",
+      "outputSha256": "dfa4a9b9dc1504899277ced69bee5947b5ab64d1f6e1984f2475831db160ed8e",
       "edits": [
         {
           "start": 143,
@@ -249545,6 +249721,13 @@
           "symbol": "C:gj",
           "original": "gj",
           "renamed": "MouseWheelSource"
+        },
+        {
+          "start": 31873,
+          "end": 31874,
+          "symbol": "M:fj.h(I)V",
+          "original": "h",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 32011,
@@ -270699,7 +270882,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "bec1c4b197a23eb94c3870a4180b1bd81df0c6ccf5a88dab07ce5a78c282307e",
-      "outputSha256": "c1f0c17af770fd5dacbf55143130808f6d1e0f119b281fcfc63faa1843a4d35e",
+      "outputSha256": "ce345afc4edeb64579b1cc478502b4cb7a45b4ed3f287c3b797cb23549278306",
       "edits": [
         {
           "start": 790,
@@ -270751,6 +270934,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 36693,
+          "end": 36694,
+          "symbol": "M:fj.h(I)V",
+          "original": "h",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 36695,
@@ -271511,10 +271701,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/starcannon"
     },
-    "rulesSha256": "4eb9518514ea7f54fab1bf20d2ff2a12ff32391038190d7522f71e447b857b78",
+    "rulesSha256": "af16dcceb9f615cb25a868d6f6cb8856077bd6c7844001ae196bd5890fc40cd6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
-    "outputTreeSha256": "8f8c90cf7f506fd0e5ede76caf0fcabafc3545baf6cd2ec974d261189af81c8f",
+    "outputTreeSha256": "620399d1ea4afc282699bb77d2f2cb62658bbad13658651543261ece9da2115b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

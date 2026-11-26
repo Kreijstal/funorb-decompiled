@@ -26,7 +26,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    private final static void blitScaledAdditiveRows(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
@@ -1057,7 +1057,7 @@ class Sprite extends SpriteState {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final static void blitScaledAdditiveIntensityRows(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
@@ -1086,7 +1086,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPixelsDimmed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -1185,7 +1185,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void copyNonzeroPixelsReversed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1532,9 +1532,9 @@ class Sprite extends SpriteState {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            Sprite.a(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.blitScaledAdditiveRows(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            Sprite.a(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.blitScaledAdditiveIntensityRows(0, 0, 0, var8, this.field_B, ki.field_a, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -2086,7 +2086,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.b(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.copyNonzeroPixelsReversed(ki.field_a, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2157,7 +2157,7 @@ class Sprite extends SpriteState {
         return var1;
     }
 
-    final boolean c(int param0, int param1, int param2, int param3) {
+    final boolean isOpaqueAt(int param0, int param1, int param2, int param3) {
         boolean stackIn_11_0 = false;
         param2 = param2 - (param0 + this.field_w);
         if (param2 < 0) {
@@ -2248,12 +2248,12 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.a(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.copyNonzeroPixelsDimmed(ki.field_a, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    final void b() {
+    final void rotateCounterclockwise() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;

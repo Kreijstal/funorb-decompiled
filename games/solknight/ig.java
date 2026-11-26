@@ -109,7 +109,7 @@ final class ig extends WidgetContainer implements ka {
             return stackIn_2_0;
           }
           var6 = new Sprite(param4, param5);
-          Sprite.a(param0, var6, param3, param2, 0, 0, param4, param5);
+          Sprite.copyRegion(param0, var6, param3, param2, 0, 0, param4, param5);
           stackIn_4_0 = var6;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

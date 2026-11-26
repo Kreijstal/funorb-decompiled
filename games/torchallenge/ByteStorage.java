@@ -214,7 +214,7 @@ abstract class ByteStorage {
             SoftwareRasterizer.b(sh.field_w);
           }
           od.a(param0, param1 + (479 - ResourceArchive.field_o[1].fullHeight), 1, 7, 6, ResourceArchive.field_o[1]);
-          uk.field_N.g(param0, param1);
+          uk.field_N.drawTransparent(param0, param1);
           if (param2 < 32) {
             return;
           }
@@ -260,7 +260,7 @@ abstract class ByteStorage {
                   var16 == var20Lifetime1) {
                   dl.field_j.a(var10 + param0, param1 + var11, -(5 * var17) + 255, 16777215);
                 } else {
-                  dl.field_j.g(param0 + var10, param1 + var11);
+                  dl.field_j.drawTransparent(param0 + var10, param1 + var11);
                 }
               }
               var10 = var10 + var12;
@@ -270,7 +270,7 @@ abstract class ByteStorage {
           else {
             if (!param3) {
               for (var20Lifetime1Lifetime1 = 0; var20Lifetime1Lifetime1 < var14 - 1; var20Lifetime1Lifetime1++) {
-                dl.field_j.g(var10 + param0, var11 + param1);
+                dl.field_j.drawTransparent(var10 + param0, var11 + param1);
                 var10 = var10 + var12;
               }
               if (var15 != 0 &&
@@ -278,7 +278,7 @@ abstract class ByteStorage {
                 dl.field_j.a(var10 + param0, var11 + param1, 255 - 5 * var17, 16777215);
               } else {
                 if (var14 > 0) {
-                  dl.field_j.g(param0 + var10, param1 + var11);
+                  dl.field_j.drawTransparent(param0 + var10, param1 + var11);
                 }
               }
             }
@@ -313,7 +313,7 @@ abstract class ByteStorage {
                   var24 >= be.field_d) {
                   mb.field_d[0].a(var10Lifetime1 + param0, param1 + var11Lifetime1, var23, 16777215);
                 } else {
-                  mb.field_d[0].g(var10Lifetime1 + param0, var11Lifetime1 + param1);
+                  mb.field_d[0].drawTransparent(var10Lifetime1 + param0, var11Lifetime1 + param1);
                 }
                 stackIn_82_0 = FullscreenFocusCanvas.field_b[var24];
                 stackIn_82_1 = var11Lifetime1 + param1;
@@ -328,7 +328,7 @@ abstract class ByteStorage {
             }
             for (var24Lifetime2 = var20Lifetime2Lifetime1; var21Lifetime3 > var24Lifetime2; var24Lifetime2++) {
               if (FullscreenFocusCanvas.field_b.length > var24Lifetime2) {
-                mb.field_d[2].g(param0 + var10Lifetime1, param1 + var11Lifetime1);
+                mb.field_d[2].drawTransparent(param0 + var10Lifetime1, param1 + var11Lifetime1);
                 var10Lifetime1 = var10Lifetime1 + (1 + var12Lifetime1);
                 continue;
               }
@@ -348,9 +348,9 @@ abstract class ByteStorage {
             var10Lifetime2 = -(ec.field_a[1].fullWidth >> 2) + ed.field_i[0] + 1;
             for (var20Lifetime3 = 0; 10 > var20Lifetime3; var20Lifetime3++) {
               if (db.field_B <= var20Lifetime3) {
-                ec.field_a[2].g(var10Lifetime2, var11Lifetime2);
+                ec.field_a[2].drawTransparent(var10Lifetime2, var11Lifetime2);
               } else {
-                ec.field_a[1].g(var10Lifetime2, var11Lifetime2);
+                ec.field_a[1].drawTransparent(var10Lifetime2, var11Lifetime2);
                 stackIn_101_0 = p.field_f[var20Lifetime3];
                 stackIn_101_1 = (ec.field_a[1].fullWidth >> 2) + var11Lifetime2;
                 stackIn_101_2 = ec.field_a[1].fullHeight >> 1;
@@ -366,7 +366,7 @@ abstract class ByteStorage {
             var20Lifetime4 = 8;
             var10Lifetime3 = oa.field_a[0] + 7;
             if (null != cj.field_f) {
-              rl.field_h[fh.field_e].g(var10Lifetime3, var11Lifetime3);
+              rl.field_h[fh.field_e].drawTransparent(var10Lifetime3, var11Lifetime3);
             }
             var11Lifetime3Lifetime1 = oa.field_a[1] + (oa.field_a[3] - mb.field_d[1].fullHeight >> 1);
             var10Lifetime3Lifetime1 = oa.field_a[0] - (-10 - rl.field_h[fh.field_e].fullWidth);
@@ -389,7 +389,7 @@ abstract class ByteStorage {
             var26 = var22Lifetime1 + (var20Lifetime4 - 1 + var12Lifetime3Lifetime1) * var23Lifetime1 / var24Lifetime1;
             SoftwareRasterizer.a(var25, var11Lifetime3Lifetime1, var26, var11Lifetime3Lifetime1 + var13Lifetime1);
             for (var27 = 0; var27 < var20Lifetime4; var27++) {
-              mb.field_d[1].g(var22Lifetime1, var11Lifetime3Lifetime1);
+              mb.field_d[1].drawTransparent(var22Lifetime1, var11Lifetime3Lifetime1);
               stackIn_118_0 = FullscreenFocusCanvas.field_b[var27];
               stackIn_118_1 = var11Lifetime3Lifetime1;
               stackIn_118_2 = mb.field_d[1].fullHeight;
@@ -405,7 +405,7 @@ abstract class ByteStorage {
             SoftwareRasterizer.a(var25Lifetime1, var11Lifetime3Lifetime1, var26Lifetime1, var13Lifetime1 + var11Lifetime3Lifetime1);
             var22Lifetime1Lifetime1 = var10Lifetime3Lifetime1 + 1;
             for (var27Lifetime1 = 0; var27Lifetime1 < var20Lifetime4; var27Lifetime1++) {
-              mb.field_d[2].g(var22Lifetime1Lifetime1, var11Lifetime3Lifetime1);
+              mb.field_d[2].drawTransparent(var22Lifetime1Lifetime1, var11Lifetime3Lifetime1);
               var22Lifetime1Lifetime1 = var22Lifetime1Lifetime1 + (var21Lifetime1 + 1);
             }
             SoftwareRasterizer.b(sh.field_w);

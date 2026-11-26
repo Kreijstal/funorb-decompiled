@@ -436,7 +436,7 @@ final class ti extends nb implements nf, jk {
           ql.field_Q.a(this.field_F, 20 + (this.field_t + param2), 15 + (param1 + this.field_o), this.field_j - 40, this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
         }
         if (this.field_H != null) {
-          SoftwareRasterizer.a(param2 + 10, param1 + 134, this.field_j - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param2 + 10, param1 + 134, this.field_j - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

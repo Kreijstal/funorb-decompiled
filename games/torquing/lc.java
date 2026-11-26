@@ -347,9 +347,9 @@ final class lc extends ro {
               if (var10 == 0) {
                 var36 = new Sprite(60, var15_int - (var14 + 31));
                 var21 = (-31 + (var15_int - var14)) / 2;
-                Sprite.a(var35, var36, 0, 0, 0, 0, 60, var21);
+                Sprite.copyRegion(var35, var36, 0, 0, 0, 0, 60, var21);
                 var22Lifetime1 = -var21 + var36.field_t;
-                Sprite.a(var35, var36, 0, var35.field_t - var22Lifetime1, 0, var21, 60, var22Lifetime1);
+                Sprite.copyRegion(var35, var36, 0, var35.field_t - var22Lifetime1, 0, var21, 60, var22Lifetime1);
                 var37 = new Sprite(var36.field_s, var36.field_t / 2);
                 var16_ref_t = var37;
                 var37.e();

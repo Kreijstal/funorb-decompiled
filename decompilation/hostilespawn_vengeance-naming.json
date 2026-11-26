@@ -1812,6 +1812,14 @@
       "renamedSymbol": "M:ReverbPcmStream.getSchedulingCost()I"
     },
     {
+      "symbol": "M:gd.c(F)V",
+      "originalName": "c",
+      "to": "setWetGain",
+      "evidence": "Source-purpose review: Synchronized retained wet gain setter,recomputes equal-power same/crosschannels via sqrt((1+/-width)*0.5);no rangeclamp orNaNnormalization. Original identity M:gd.c(F)V. Pinned original body SHA256 62c8e60a89d2bf8e23a8da7e8cdf7c4031e42546db2bf4132f49a04460794e1e. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReverbPcmStream.setWetGain(F)V"
+    },
+    {
       "symbol": "M:gd.c(I)V",
       "originalName": "c",
       "to": "skipFrames",
@@ -1826,6 +1834,14 @@
       "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Complete original-body SHA256 76f9031768ea18f435f9329ff3c221ff4878c7b292bead0252d2f223e52bcb58. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ReverbPcmStream.firstChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:gd.d(F)V",
+      "originalName": "d",
+      "to": "setStereoWidth",
+      "evidence": "Source-purpose review: Synchronized retained stereo width setter using same retainedwetgain/equalpower formulas;retainfloatdouble conversions/order. Original identity M:gd.d(F)V. Pinned original body SHA256 5cce7f051e9fc44e0921e0dc892b436eb470fd4f7563ced2da811e8acc1033b1. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReverbPcmStream.setStereoWidth(F)V"
     },
     {
       "symbol": "M:gd.i()V",
@@ -210389,9 +210405,9 @@
     },
     {
       "symbol": "M:gd.c(F)V",
-      "renamedSymbol": "M:ReverbPcmStream.c(F)V",
+      "renamedSymbol": "M:ReverbPcmStream.setWetGain(F)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "setWetGain",
       "declaration": {
         "file": "gd.java",
         "start": 13091,
@@ -210422,9 +210438,9 @@
     },
     {
       "symbol": "M:gd.d(F)V",
-      "renamedSymbol": "M:ReverbPcmStream.d(F)V",
+      "renamedSymbol": "M:ReverbPcmStream.setStereoWidth(F)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "setStereoWidth",
       "declaration": {
         "file": "gd.java",
         "start": 13644,
@@ -253102,7 +253118,7 @@
     },
     {
       "symbol": "P:gd.c(F)V#0",
-      "renamedSymbol": "P:ReverbPcmStream.c(F)V#0",
+      "renamedSymbol": "P:ReverbPcmStream.setWetGain(F)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -253124,7 +253140,7 @@
     },
     {
       "symbol": "P:gd.d(F)V#0",
-      "renamedSymbol": "P:ReverbPcmStream.d(F)V#0",
+      "renamedSymbol": "P:ReverbPcmStream.setStereoWidth(F)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -299218,7 +299234,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "dff28c1dec04f980c2cc592341b5d8acc350fbb5076fa414b73cd1e5e0801081",
+      "outputSha256": "b353d5434b75d86a5b69c3f2b5b8405c3dc46f6181528408d6c7dad6ede637ae",
       "edits": [
         {
           "start": 78,
@@ -302981,6 +302997,13 @@
           "renamed": "CrossfadingMidiPcmStream"
         },
         {
+          "start": 95629,
+          "end": 95630,
+          "symbol": "M:gd.c(F)V",
+          "original": "c",
+          "renamed": "setWetGain"
+        },
+        {
           "start": 95663,
           "end": 95665,
           "symbol": "C:kd",
@@ -302993,6 +303016,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "CrossfadingMidiPcmStream"
+        },
+        {
+          "start": 95719,
+          "end": 95720,
+          "symbol": "M:gd.d(F)V",
+          "original": "d",
+          "renamed": "setStereoWidth"
         },
         {
           "start": 95765,
@@ -321263,7 +321293,7 @@
       "original": "gd.java",
       "renamed": "ReverbPcmStream.java",
       "inputSha256": "bb469f727dee39795dc9fa51ec34df85c20a5d569d768ba4a7c526016340590a",
-      "outputSha256": "af9a95dada33eedba54818b6d7eae576b850b41274f7840a020c8616799d6df2",
+      "outputSha256": "561ed2e3e30f6cf300c1541308b2780cfaed7fa07128c497688a41dca7141342",
       "edits": [
         {
           "start": 50,
@@ -321539,11 +321569,25 @@
           "renamed": "getSchedulingCost"
         },
         {
+          "start": 13091,
+          "end": 13092,
+          "symbol": "M:gd.c(F)V",
+          "original": "c",
+          "renamed": "setWetGain"
+        },
+        {
           "start": 13524,
           "end": 13526,
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 13644,
+          "end": 13645,
+          "symbol": "M:gd.d(F)V",
+          "original": "d",
+          "renamed": "setStereoWidth"
         },
         {
           "start": 13910,
@@ -321656,6 +321700,20 @@
           "symbol": "M:gd.i()V",
           "original": "i",
           "renamed": "configureReverbChannels"
+        },
+        {
+          "start": 14867,
+          "end": 14868,
+          "symbol": "M:gd.c(F)V",
+          "original": "c",
+          "renamed": "setWetGain"
+        },
+        {
+          "start": 14973,
+          "end": 14974,
+          "symbol": "M:gd.d(F)V",
+          "original": "d",
+          "renamed": "setStereoWidth"
         }
       ]
     },
@@ -346713,7 +346771,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "56c5d35b47521bb20f32cb9ef7116c2ae21625190fde51f47f8d4788280499c8",
-      "outputSha256": "2a2935eb3cf0453da61730e0bbd36dfcc46365e3bd7b3c00d0402139915c1c9b",
+      "outputSha256": "9b14b90a2e2bfef422b1e3b2e30eaec58e4e27c221b2fe901448c70727dd71eb",
       "edits": [
         {
           "start": 2171,
@@ -348153,6 +348211,13 @@
           "renamed": "CrossfadingMidiPcmStream"
         },
         {
+          "start": 164230,
+          "end": 164231,
+          "symbol": "M:gd.d(F)V",
+          "original": "d",
+          "renamed": "setStereoWidth"
+        },
+        {
           "start": 164249,
           "end": 164251,
           "symbol": "C:vc",
@@ -348214,6 +348279,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "CrossfadingMidiPcmStream"
+        },
+        {
+          "start": 164999,
+          "end": 165000,
+          "symbol": "M:gd.c(F)V",
+          "original": "c",
+          "renamed": "setWetGain"
         },
         {
           "start": 165105,
@@ -358771,7 +358843,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "446521b20edcd033dab4d5f42e85bec8436e981cee505d1554c82e8583f89fd8",
-      "outputSha256": "747016eeefc54710bd7b5c99c1bd8f4be60996ce029000b3819919962becd3d0",
+      "outputSha256": "0c632ab9e847d1c6bf8e5d2ecba8674bd75393d81d9248f80dc1c162f486cddc",
       "edits": [
         {
           "start": 275,
@@ -358872,6 +358944,13 @@
           "renamed": "CrossfadingMidiPcmStream"
         },
         {
+          "start": 8786,
+          "end": 8787,
+          "symbol": "M:gd.d(F)V",
+          "original": "d",
+          "renamed": "setStereoWidth"
+        },
+        {
           "start": 8805,
           "end": 8807,
           "symbol": "C:vc",
@@ -358933,6 +359012,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "CrossfadingMidiPcmStream"
+        },
+        {
+          "start": 9602,
+          "end": 9603,
+          "symbol": "M:gd.c(F)V",
+          "original": "c",
+          "renamed": "setWetGain"
         },
         {
           "start": 9724,
@@ -359832,10 +359918,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "832117ae1d5a0d672c1a7926c79fe9d482102420e3dd5ec639b2878f86961971",
+    "rulesSha256": "60b84e0a7a9da673c0866edca105405da788e24db4c4ac24ed79e46f3b9e1c7c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "82136d38d4600d2094039ae8258dee39b9ae89e7797c93adf9b2ae066138d62a",
+    "outputTreeSha256": "5e314fc24a37496c978c467342eeeb5aa5a74c761a34379af56667abc07b1c6d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

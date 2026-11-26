@@ -15,10 +15,10 @@ final class cl {
           nk.b(false);
           ej.field_d = new Sprite(var3, var4 * 3 / 4);
           ej.field_d.a();
-          var2.h(0, 0);
+          var2.drawOpaque(0, 0);
           jd.field_g = new Sprite(var3, var4 - ej.field_d.field_q);
           jd.field_g.a();
-          var2.h(0, -ej.field_d.field_q);
+          var2.drawOpaque(0, -ej.field_d.field_q);
           jd.field_g.field_o = ej.field_d.field_q;
           if (param1 >= -64) {
             field_a = -73;
@@ -112,29 +112,29 @@ final class cl {
             }
             if (param0[0] != null) {
               SoftwareRasterizer.b(param1, param3, var16, var18);
-              param0[0].e(param1, param3);
+              param0[0].drawTransparent(param1, param3);
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[2] != null) {
               SoftwareRasterizer.b(var17, param3, var10, var18);
-              param0[2].e(var13, param3);
+              param0[2].drawTransparent(var13, param3);
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[6] != null) {
               SoftwareRasterizer.b(param1, var19, var16, var11);
-              param0[6].e(param1, var15);
+              param0[6].drawTransparent(param1, var15);
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[8] != null) {
               SoftwareRasterizer.b(var17, var19, var10, var11);
-              param0[8].e(var13, var15);
+              param0[8].drawTransparent(var13, var15);
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[1] != null &&
               param0[1].field_s != 0) {
               SoftwareRasterizer.b(var16, param3, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_s) {
-                param0[1].e(var20, param3);
+                param0[1].drawTransparent(var20, param3);
               }
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
@@ -142,7 +142,7 @@ final class cl {
               param0[7].field_s != 0) {
               SoftwareRasterizer.b(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param0[7].field_s) {
-                param0[7].e(var20Lifetime1, var15);
+                param0[7].drawTransparent(var20Lifetime1, var15);
               }
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
@@ -150,7 +150,7 @@ final class cl {
               param0[3].field_v != 0) {
               SoftwareRasterizer.b(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].field_v) {
-                param0[3].e(param1, var20Lifetime2);
+                param0[3].drawTransparent(param1, var20Lifetime2);
               }
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
@@ -158,7 +158,7 @@ final class cl {
               param0[5].field_v != 0) {
               SoftwareRasterizer.b(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param0[5].field_v) {
-                param0[5].e(var13, var20Lifetime3);
+                param0[5].drawTransparent(var13, var20Lifetime3);
               }
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
@@ -170,7 +170,7 @@ final class cl {
               SoftwareRasterizer.b(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_v) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_s) {
-                  param0[4].e(var21, var20Lifetime4);
+                  param0[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.b(WhirlpoolDigest.field_a);

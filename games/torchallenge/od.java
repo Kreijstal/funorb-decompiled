@@ -608,7 +608,7 @@ final class od {
             param7.e();
           }
           if (var21 == 270) {
-            param7.b();
+            param7.rotateCounterclockwise();
           }
           param6.d();
           param7.e(var22, var23);

@@ -1447,11 +1447,11 @@ final class rb {
                       if ((this.field_b[var12] ||
                         !param5[var10 >> 2][var11 + 1 >> 2].field_a) &&
                         !this.field_g[this.field_k + var12]) {
-                        SoftwareRasterizer.c(var7_int, var13 + 4, 3, 0);
+                        SoftwareRasterizer.fillCircle(var7_int, var13 + 4, 3, 0);
                       } else {
                         if (this.field_g[var12 - 1 + this.field_k]) {
-                          SoftwareRasterizer.a(-8 + var7_int, var13 - 8, var7_int, var13 + 8);
-                          SoftwareRasterizer.c(var7_int, var13 + 8, 6, 0);
+                          SoftwareRasterizer.setClip(-8 + var7_int, var13 - 8, var7_int, var13 + 8);
+                          SoftwareRasterizer.fillCircle(var7_int, var13 + 8, 6, 0);
                           SoftwareRasterizer.a();
                         }
                       }
@@ -1460,11 +1460,11 @@ final class rb {
                       if ((this.field_b[var12] ||
                         !param5[var10 >> 2][1 + var11 >> 2].field_a) &&
                         !this.field_g[var12 + this.field_k]) {
-                        SoftwareRasterizer.c(var7_int + 8, 4 + var13, 3, 0);
+                        SoftwareRasterizer.fillCircle(var7_int + 8, 4 + var13, 3, 0);
                       } else {
                         if (this.field_g[this.field_k + (var12 + 1)]) {
-                          SoftwareRasterizer.a(8 + var7_int, var13 - 8, 16 + var7_int, var13 + 8);
-                          SoftwareRasterizer.c(8 + var7_int, var13 + 8, 6, 0);
+                          SoftwareRasterizer.setClip(8 + var7_int, var13 - 8, 16 + var7_int, var13 + 8);
+                          SoftwareRasterizer.fillCircle(8 + var7_int, var13 + 8, 6, 0);
                           SoftwareRasterizer.a();
                         }
                       }
@@ -1473,9 +1473,9 @@ final class rb {
                     if (!this.field_g[var16] &&
                       !this.field_g[var16 + 1] &&
                       !this.field_g[var16 - 1]) {
-                      SoftwareRasterizer.g(var7_int, var13, 8, 16777113, 200);
-                      SoftwareRasterizer.g(var7_int, 1 + var13, 9, 16777113, 128);
-                      SoftwareRasterizer.g(var7_int, var13 + 2, 10, 16777113, 64);
+                      SoftwareRasterizer.drawHorizontalLineAlpha(var7_int, var13, 8, 16777113, 200);
+                      SoftwareRasterizer.drawHorizontalLineAlpha(var7_int, 1 + var13, 9, 16777113, 128);
+                      SoftwareRasterizer.drawHorizontalLineAlpha(var7_int, var13 + 2, 10, 16777113, 64);
                     }
                   }
                 }

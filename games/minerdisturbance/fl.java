@@ -46,9 +46,9 @@ final class fl implements ad {
           var7 = -(var12.field_J * 2) + param2.field_v;
           var8 = param1 + (param2.field_u + var12.field_J);
           var9 = var12.field_P + (param2.field_t + param3);
-          SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_m);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_m);
           for (var10 = var12.m(22302) - 1; var10 >= 0; var10--) {
-            SoftwareRasterizer.c(var7 * var12.a(var10, true) / var12.a((byte) -84) + var8, var9, this.field_a, this.field_i);
+            SoftwareRasterizer.fillCircle(var7 * var12.a(var10, true) / var12.a((byte) -84) + var8, var9, this.field_a, this.field_i);
           }
           if (this.field_k != null) {
             this.field_k.b(var12.field_s, var7 / 2 + var8, var12.field_P + (this.field_k.field_G + var9), this.field_e, this.field_g);

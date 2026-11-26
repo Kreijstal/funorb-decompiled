@@ -158,7 +158,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -239,7 +239,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void drawScaledAveraged(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var12 = 0;
         int var30 = 0;
@@ -376,7 +376,7 @@ class Sprite extends SpriteState {
         throw new IllegalArgumentException();
     }
 
-    final void a(int param0, int param1) {
+    final void drawMultiply(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -422,7 +422,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void e(int param0, int param1) {
+    void drawQuarterSize(int param0, int param1) {
         int var9 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -543,7 +543,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -1312,7 +1312,7 @@ class Sprite extends SpriteState {
         SoftwareRasterizer.a(this.field_y, this.field_s, this.field_t);
     }
 
-    final static void a(Sprite param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void copyRegion(Sprite param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param0 == param1) {
           throw new RuntimeException();
         }
@@ -1361,7 +1361,7 @@ class Sprite extends SpriteState {
         Sprite.b(param1.field_y, param0.field_y, 0, param3 * param0.field_s + param2, param5 * param1.field_s + param4, param6, param7, param1.field_s - param6, param0.field_s - param6);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawSilhouette(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1654,7 +1654,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2590,7 +2590,7 @@ class Sprite extends SpriteState {
         return;
     }
 
-    void c(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.field_v >> 1);
         param1 = param1 + (this.field_r >> 1);
         int var3 = param0 < SoftwareRasterizer.field_k ? SoftwareRasterizer.field_k - param0 << 1 : 0;

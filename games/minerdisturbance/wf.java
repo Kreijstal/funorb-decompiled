@@ -122,7 +122,7 @@ abstract class wf extends cc {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.e(param2 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(param2 + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -135,8 +135,8 @@ abstract class wf extends cc {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.e(param2, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.e(param2 + this.field_v - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2 + this.field_v - 6, var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -154,8 +154,8 @@ abstract class wf extends cc {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRasterizer.e(param2, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.e(-6 + this.field_v + param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + this.field_v + param2, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

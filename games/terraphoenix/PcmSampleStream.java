@@ -893,7 +893,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2) {
+    final static PcmSampleStream createAtRatePercent(PcmSample param0, int param1, int param2) {
         if (param0.field_k == null) {
           return null;
         }

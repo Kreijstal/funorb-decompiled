@@ -234,7 +234,7 @@ final class GameScreen {
         }
         var10 = bk.font;
         var11 = var10;
-        UiWidget.field_z[2].e(-UiWidget.field_z[2].field_t + 640 >> 1, 1);
+        UiWidget.field_z[2].drawTransparent(-UiWidget.field_z[2].field_t + 640 >> 1, 1);
         var3 = 74;
         if (rd.field_b == 0) {
           var3 += 20;
@@ -251,7 +251,7 @@ final class GameScreen {
               }
               SoftwareRasterizer.f(46, -1 + var3, 28, 28, 16763904);
               var6 = ii.tileSprites[var5];
-              var6.h(47, var3);
+              var6.drawOpaque(47, var3);
               var7 = 86;
               var8 = var10.a(MovingBlock.field_p[var4], var7, -6 + (var3 + 26) - var11.field_G, 606 - var7, 1000, 0, -1, 0, 0, 26);
               var3 = var3 + (var8 * 26 + 26);
@@ -471,7 +471,7 @@ final class GameScreen {
             var11 = bk.font.stringWidth(var7) - (-bk.font.charWidth(' ') - var10.field_s);
             var12 = param1 + (156 - var11 >> 1);
             bk.font.c(var7, var12, -2 + (bk.font.field_G + param2), var9Lifetime1, -1);
-            var10.e(var12 - (-var11 + var10.field_s), (1 - var10.field_v + 26 >> 1) + param2);
+            var10.drawTransparent(var12 - (-var11 + var10.field_s), (1 - var10.field_v + 26 >> 1) + param2);
           } else {
             bk.font.b(var7, 78 + param1, param2 - (-bk.font.field_G + 2), var9Lifetime1, -1);
           }
@@ -494,8 +494,8 @@ final class GameScreen {
             var11 = 0;
           }
           SoftwareRasterizer.c(param1 + (78 - (-var11 + 1)), -6 + param2 + 13, 3, 14, 8110658);
-          SoftwareRasterizer.g(var11 + (78 + param1) - 2, 13 + param2, 2, 16580608);
-          SoftwareRasterizer.g(2 + (param1 + 78 + var11), param2 + 13, 2, 16580608);
+          SoftwareRasterizer.drawVerticalLine(var11 + (78 + param1) - 2, 13 + param2, 2, 16580608);
+          SoftwareRasterizer.drawVerticalLine(2 + (param1 + 78 + var11), param2 + 13, 2, 16580608);
         }
     }
 
@@ -914,9 +914,9 @@ final class GameScreen {
             bk.font.b(kb.field_c, 320, 250, 7, -1);
           }
           if ((var5 & 1 << var7) != 0) {
-            bb.field_b[var7].e(256, 282);
+            bb.field_b[var7].drawTransparent(256, 282);
           } else {
-            vj.field_a.e(256, 282);
+            vj.field_a.drawTransparent(256, 282);
           }
           bk.font.a(gj.field_b[var7], 50, 302 - bk.font.field_G, 201, 1000, 0, -1, 0, 0, 26);
           var8Lifetime1 = 302;
@@ -926,7 +926,7 @@ final class GameScreen {
           bk.font.c(di.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
           var3Lifetime1 = var3Lifetime1 + bk.font.stringWidth(di.field_l);
           for (var9Lifetime1 = 0; rd.field_f[var7] > var9Lifetime1; var9Lifetime1++) {
-            mc.field_E.e(var3Lifetime1, -bk.font.field_G + var8Lifetime1);
+            mc.field_E.drawTransparent(var3Lifetime1, -bk.font.field_G + var8Lifetime1);
             var3Lifetime1 = var3Lifetime1 + mc.field_E.field_t / 3;
           }
           return;
@@ -1090,7 +1090,7 @@ final class GameScreen {
                 cl.a(ha.field_m, 11, 436, 38, 618, 4);
                 if (this.field_c == 10 ||
                   this.field_c == 11) {
-                  SoftwareRasterizer.e(19, 384, 621, 466);
+                  SoftwareRasterizer.setClip(19, 384, 621, 466);
                   cl.a(nd.field_L, 11, 436, 38, 618, param0 ^ -5);
                   SoftwareRasterizer.d();
                 }
@@ -1150,7 +1150,7 @@ final class GameScreen {
                 if (this.field_c != 8 &&
                   9 != this.field_c) {
                   if (this.field_c == 16) {
-                    UiWidget.field_z[5].e(640 - UiWidget.field_z[5].field_t >> 1, 1);
+                    UiWidget.field_z[5].drawTransparent(640 - UiWidget.field_z[5].field_t >> 1, 1);
                     this.a(true, param0 + 17461);
                     break scanLoop1;
                   }
@@ -1168,7 +1168,7 @@ final class GameScreen {
                         bk.font.b(ui.field_n, 320, var4, 5, -1);
                         break scanLoop1;
                       }
-                      UiWidget.field_z[3].e(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
+                      UiWidget.field_z[3].drawTransparent(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
                       if (qh.field_b.levelIndex > (1 + ArchiveIndex.field_i)) {
                         cl.a(nd.field_L, 90, 254, 57, 176, 4);
                         if (!jj.s(param0 + 54)) {
@@ -1181,7 +1181,7 @@ final class GameScreen {
                         bk.font.a(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
                       } else {
                         qh.field_b.a(100, (byte) -127, 67);
-                        fd.field_d.e(-367, -162);
+                        fd.field_d.drawTransparent(-367, -162);
                       }
                       cl.a(nd.field_L, 566, 46, 57, 46, param0 + 5);
                       stackIn_73_0 = (RandomAccessCacheFile.field_b != 0) ? 15252224 : 8110658;
@@ -1195,7 +1195,7 @@ final class GameScreen {
                       var6 = 269 - (-(26 * (1 - qh.field_b.levelIndex)) - mb.field_b);
                       var7 = 359;
                       var8 = 62 + bk.font.field_u;
-                      SoftwareRasterizer.e(var7, var8, var7 + 182 + 10, var8 + 390);
+                      SoftwareRasterizer.setClip(var7, var8, var7 + 182 + 10, var8 + 390);
                       var9 = gj.levels;
                       for (var10 = 0; var9.length > var10; var10++) {
                         var11 = var9[var10];
@@ -1227,7 +1227,7 @@ final class GameScreen {
                     this.c((byte) -114);
                     break scanLoop1;
                   }
-                  UiWidget.field_z[0].e(-UiWidget.field_z[0].field_t + 640 >> 1, 1);
+                  UiWidget.field_z[0].drawTransparent(-UiWidget.field_z[0].field_t + 640 >> 1, 1);
                   bk.font.b(qg.field_b, 320, bk.font.field_G + 154, 5, -1);
                   stackIn_99_0 = bk.font;
                   stackIn_100_1 = (0 != oe.field_e);
@@ -1247,24 +1247,24 @@ final class GameScreen {
                   ((BitmapFont) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.font.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
-                UiWidget.field_z[1].e(-UiWidget.field_z[1].field_t + 640 >> 1, 1);
+                UiWidget.field_z[1].drawTransparent(-UiWidget.field_z[1].field_t + 640 >> 1, 1);
                 stackIn_127_1 = 0;
                 stackIn_127_2 = 17460;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                UiWidget.field_z[4].e(-UiWidget.field_z[4].field_t + 640 >> 1, 1);
+                UiWidget.field_z[4].drawTransparent(-UiWidget.field_z[4].field_t + 640 >> 1, 1);
                 this.d(-25);
                 break scanLoop1;
               }
             }
             if (decompiledFrameRemainder0) {
-              UiWidget.field_z[0].e(41, 1);
+              UiWidget.field_z[0].drawTransparent(41, 1);
               break scanLoop1;
             }
           }
           if (decompiledFrameRemainder0) {
-            UiWidget.field_z[0].e(640 - UiWidget.field_z[0].field_t >> 1, 1);
+            UiWidget.field_z[0].drawTransparent(640 - UiWidget.field_z[0].field_t >> 1, 1);
             break scanLoop1;
           }
           this.a(stackIn_127_1 != 0, stackIn_127_2);

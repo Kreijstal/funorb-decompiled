@@ -211,7 +211,7 @@ final class fh {
           String var8 = (String) null;
           this.a(-18, 5, -60, (String) null);
         }
-        SoftwareRasterizer.b(param4, param5, param3, param1, param2);
+        SoftwareRasterizer.drawLine(param4, param5, param3, param1, param2);
     }
 
     private final void a(int param0, int param1, int param2, String param3) {

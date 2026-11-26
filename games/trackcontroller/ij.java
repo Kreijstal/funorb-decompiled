@@ -172,8 +172,8 @@ final class ij implements t {
           SoftwareRasterizer.a(var8, var9, this.field_l, this.field_m, 5592405);
           SoftwareRasterizer.c(var8, var9, this.field_l, this.field_m, var7);
           if (var11.field_G) {
-            SoftwareRasterizer.e(var8, var9, var8 + this.field_l, var9 + this.field_m, 1);
-            SoftwareRasterizer.e(var8 + this.field_l, var9, var8, var9 + this.field_m, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_l, var9 + this.field_m, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_m, 1);
           }
           if (this.field_i != null) {
             var10 = this.field_b + (this.field_l + this.field_c);

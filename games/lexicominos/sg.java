@@ -1719,7 +1719,7 @@ final class sg {
           if (null != this.field_m) {
             this.field_m.d(50);
             if (this.field_d == 11) {
-              SoftwareRasterizer.g(0, 8, 311, 450);
+              SoftwareRasterizer.setClip(0, 8, 311, 450);
               var2_intLifetime1 = -300 + (-88 + this.field_m.field_r);
               if (200 < var2_intLifetime1) {
                 var2_intLifetime1 = 200;

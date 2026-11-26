@@ -736,11 +736,11 @@ final class GameScreen {
                 var17 = 1;
                 var10 = 1;
               }
-              qf.field_c[var10].g(var5_int, var6 + var23);
+              qf.field_c[var10].drawTransparent(var5_int, var6 + var23);
               if (kj.field_I[var27]) {
                 hb.field_c.h(var5_int + var15, var16 + var6 + var23);
               } else if (pa.field_s[ok.field_b][var27]) {
-                ib.field_M[2].g(var5_int, var23 + var6);
+                ib.field_M[2].drawTransparent(var5_int, var23 + var6);
                 tf.field_x.a(Integer.toString(1 + var27), var5_int + (ib.field_M[2].fullWidth >> 1), var23 - 2 + (9 + (ib.field_M[2].fullHeight >> 1)) + var6, var17, -1);
               } else {
                 je.field_b.h(-1 + (var5_int + var15), var23 + (var6 + var16));
@@ -762,9 +762,9 @@ final class GameScreen {
                 var25 = 0;
               }
               if (var25 != 0) {
-                ib.field_M[3].g(var7 + var5_int - ib.field_M[var10].fullWidth, var6 + var23);
+                ib.field_M[3].drawTransparent(var7 + var5_int - ib.field_M[var10].fullWidth, var6 + var23);
               } else {
-                ib.field_M[var10].g(var7 + var5_int - ib.field_M[var10].fullWidth, var23 + var6);
+                ib.field_M[var10].drawTransparent(var7 + var5_int - ib.field_M[var10].fullWidth, var23 + var6);
               }
               var6 = var6 + (var9 + var8);
               var27++;
@@ -788,21 +788,21 @@ final class GameScreen {
           var7Lifetime2 = ue.field_j[2];
           var28 = we.field_m[ok.field_b + 1];
           SoftwareRasterizer.a(pf.field_g);
-          SoftwareRasterizer.f(var24 + var5_intLifetime1, var24 + var6Lifetime2, -var24 + (var7Lifetime2 + var5_intLifetime1), -var24 + var8Lifetime2 + var6Lifetime2);
+          SoftwareRasterizer.setClip(var24 + var5_intLifetime1, var24 + var6Lifetime2, -var24 + (var7Lifetime2 + var5_intLifetime1), -var24 + var8Lifetime2 + var6Lifetime2);
           var5_intLifetime1 = var5_intLifetime1 + (var7Lifetime2 - var28.fullWidth >> 1);
           var6Lifetime2 = (var8Lifetime2 - var28.fullHeight >> 1) + var6Lifetime2;
           if (ok.field_b == 0) {
             var5_intLifetime1 -= 32;
             var6Lifetime2 += 96;
           }
-          var28.g(var5_intLifetime1, var6Lifetime2);
+          var28.drawTransparent(var5_intLifetime1, var6Lifetime2);
           SoftwareRasterizer.b(pf.field_g);
           var5_intLifetime2 = ue.field_j[0];
           var6Lifetime3 = ue.field_j[1];
-          var22Lifetime1[0].g(var5_intLifetime2, var6Lifetime3);
-          var22Lifetime1[2].g(var5_intLifetime2 + var7Lifetime2 - var22Lifetime1[2].fullWidth, var6Lifetime3);
-          var22Lifetime1[6].g(var5_intLifetime2, var6Lifetime3 + (var8Lifetime2 - var22Lifetime1[6].fullHeight));
-          var22Lifetime1[8].g(-var22Lifetime1[2].fullWidth + var7Lifetime2 + var5_intLifetime2, -var22Lifetime1[6].fullHeight + var8Lifetime2 + var6Lifetime3);
+          var22Lifetime1[0].drawTransparent(var5_intLifetime2, var6Lifetime3);
+          var22Lifetime1[2].drawTransparent(var5_intLifetime2 + var7Lifetime2 - var22Lifetime1[2].fullWidth, var6Lifetime3);
+          var22Lifetime1[6].drawTransparent(var5_intLifetime2, var6Lifetime3 + (var8Lifetime2 - var22Lifetime1[6].fullHeight));
+          var22Lifetime1[8].drawTransparent(-var22Lifetime1[2].fullWidth + var7Lifetime2 + var5_intLifetime2, -var22Lifetime1[6].fullHeight + var8Lifetime2 + var6Lifetime3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1260,7 +1260,7 @@ final class GameScreen {
           if (var2_int != 1) {
             o.a(-1, true);
           }
-          SoftwareRasterizer.f(0, 0, 640, 480);
+          SoftwareRasterizer.setClip(0, 0, 640, 480);
           be.a(var2_int, (byte) -119, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1332,7 +1332,7 @@ final class GameScreen {
           SoftwareRasterizer.f(0, 0, 640, var21, 1);
           SoftwareRasterizer.f(0, 479 - var21, 640, var21, 1);
           var22 = 35 / ((param7 + 3) / 59);
-          SoftwareRasterizer.f(0, var21, 640, -var21 + 480);
+          SoftwareRasterizer.setClip(0, var21, 640, -var21 + 480);
           var18 = -param0[1];
           var17_int = -param0[0];
           if (var19Lifetime1 < 0) {
@@ -1348,10 +1348,10 @@ final class GameScreen {
             if (var19Lifetime1 >= 0) {
               param8.a(var17_intLifetime1, var18Lifetime1, var19Lifetime1, 1);
               if (var26 != 0) {
-                param8.g(var17_intLifetime1, var18Lifetime1);
+                param8.drawTransparent(var17_intLifetime1, var18Lifetime1);
               }
             } else {
-              param8.g(var17_intLifetime1, var18Lifetime1);
+              param8.drawTransparent(var17_intLifetime1, var18Lifetime1);
             }
           }
           var23 = 0;
@@ -1369,7 +1369,7 @@ final class GameScreen {
             if (rj.field_g == 0) {
               if (vj.field_d == null) {
                 e.a((byte) -36, var25);
-                SoftwareRasterizer.f(0, var21, 640, 480 - var21);
+                SoftwareRasterizer.setClip(0, var21, 640, 480 - var21);
               }
               vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
             }
@@ -1381,16 +1381,16 @@ final class GameScreen {
               if (0 == rj.field_g) {
                 if (null == vj.field_d) {
                   e.a((byte) -101, var25);
-                  SoftwareRasterizer.f(0, var21, 640, 480 - var21);
+                  SoftwareRasterizer.setClip(0, var21, 640, 480 - var21);
                 }
                 vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
               }
-              param9.g(var17_intLifetime2, var18Lifetime2);
+              param9.drawTransparent(var17_intLifetime2, var18Lifetime2);
               if (var26 != 0) {
                 if (0 == rj.field_g) {
                   if (vj.field_d == null) {
                     e.a((byte) -116, var25);
-                    SoftwareRasterizer.f(0, var21, 640, -var21 + 480);
+                    SoftwareRasterizer.setClip(0, var21, 640, -var21 + 480);
                   }
                   vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
                 }
@@ -1400,7 +1400,7 @@ final class GameScreen {
               if (0 == rj.field_g) {
                 if (vj.field_d == null) {
                   e.a((byte) -116, var25);
-                  SoftwareRasterizer.f(0, var21, 640, -var21 + 480);
+                  SoftwareRasterizer.setClip(0, var21, 640, -var21 + 480);
                 }
                 vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
               }
@@ -1510,9 +1510,9 @@ final class GameScreen {
             SoftwareRasterizer.b(pf.field_g);
             var3Lifetime2 = bg.field_I[var9][1];
             var2_intLifetime2 = bg.field_I[var9][0];
-            var7[0].g(var2_intLifetime2, var3Lifetime2);
+            var7[0].drawTransparent(var2_intLifetime2, var3Lifetime2);
             var2_intLifetime2 = -var7[0].fullWidth + var4 + var2_intLifetime2;
-            var7[2].g(var2_intLifetime2, var3Lifetime2);
+            var7[2].drawTransparent(var2_intLifetime2, var3Lifetime2);
             var2_intLifetime3 = bg.field_I[var9][0];
             var3Lifetime3 = lg.field_d[this.screenId][3] + lg.field_d[this.screenId][8];
             var5Lifetime1 = -var3Lifetime3 + (bg.field_I[var9][1] + bg.field_I[var9][3]);
@@ -1536,7 +1536,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         Sprite var3Lifetime1;
         try {
-          SoftwareRasterizer.f(0, 0, 640, 480);
+          SoftwareRasterizer.setClip(0, 0, 640, 480);
           var2_int = 8;
           if (vj.field_d == null) {
             e.a((byte) -24, var2_int);
@@ -1546,7 +1546,7 @@ final class GameScreen {
           var5 = lg.field_d[1][param0];
           var3.b(var4 - 8, -8 + var5, 256);
           var3Lifetime1 = we.field_m[ok.field_b + 1];
-          var3Lifetime1.g(var4, var5);
+          var3Lifetime1.drawTransparent(var4, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1686,7 +1686,7 @@ final class GameScreen {
           }
           if (param3 == null) {
             if (var21Lifetime1 < 0) {
-              param14.g(var16_int, var17);
+              param14.drawTransparent(var16_int, var17);
             }
             if (!(var21Lifetime1 < 0) ||
               var27 != 0) {
@@ -1730,7 +1730,7 @@ final class GameScreen {
           if (param2 > param13 &&
             param2 < param12) {
             if (0 > var22Lifetime1) {
-              param9.g(var16_intLifetime1, var17Lifetime1);
+              param9.drawTransparent(var16_intLifetime1, var17Lifetime1);
               if (var27 == 0) {
                 return;
               }
@@ -1974,27 +1974,27 @@ final class GameScreen {
           if (var23 == 0) {
             if (!v.a(var19, 5)) {
               if (UiComponent.field_o > 0) {
-                je.field_b.g(var15, var16);
+                je.field_b.drawTransparent(var15, var16);
                 if (var28 != 0) {
-                  hb.field_c.g(var15, var16);
-                  je.field_b.g(var15, var16);
-                  tf.field_j[var19].g(var15, var16);
+                  hb.field_c.drawTransparent(var15, var16);
+                  je.field_b.drawTransparent(var15, var16);
+                  tf.field_j[var19].drawTransparent(var15, var16);
                 }
               } else {
-                hb.field_c.g(var15, var16);
+                hb.field_c.drawTransparent(var15, var16);
                 if (var28 != 0) {
-                  je.field_b.g(var15, var16);
-                  tf.field_j[var19].g(var15, var16);
+                  je.field_b.drawTransparent(var15, var16);
+                  tf.field_j[var19].drawTransparent(var15, var16);
                 }
               }
             } else {
-              je.field_b.g(var15, var16);
+              je.field_b.drawTransparent(var15, var16);
               if (var28 != 0) {
-                tf.field_j[var19].g(var15, var16);
+                tf.field_j[var19].drawTransparent(var15, var16);
               }
             }
           } else {
-            tf.field_j[var19].g(var15, var16);
+            tf.field_j[var19].drawTransparent(var15, var16);
           }
           var24 = new String[16];
           var13 = 2 * var6Lifetime3;
@@ -2036,7 +2036,7 @@ final class GameScreen {
             if (var27 >= re.field_w[var19]) {
               return;
             }
-            hh.field_b.g(var15, var16);
+            hh.field_b.drawTransparent(var15, var16);
             var15 = var15 + hh.field_b.storedWidth / 3;
             var27++;
             if (var28 != 0) {
@@ -3191,10 +3191,10 @@ final class GameScreen {
             if (param2 == 0) {
               this.a(di.field_t[param6], param7, param0, false, param4, (ge) null);
               if (var10 != 0) {
-                di.field_t[param6].g(param0, param7);
+                di.field_t[param6].drawTransparent(param0, param7);
               }
             } else {
-              di.field_t[param6].g(param0, param7);
+              di.field_t[param6].drawTransparent(param0, param7);
             }
           }
           if (param3 != 13) {
@@ -3204,7 +3204,7 @@ final class GameScreen {
           if (param5 >= 0) {
             boolean decompiledSharedTail0 = (1 == param2);
             if (!decompiledSharedTail0) {
-              di.field_t[param5].g(param0, param7);
+              di.field_t[param5].drawTransparent(param0, param7);
               decompiledSharedTail0 = (var10 != 0);
             }
             if (decompiledSharedTail0) {
@@ -3214,7 +3214,7 @@ final class GameScreen {
           param0 += 30;
           if (0 <= param1) {
             if (param2 != 2) {
-              di.field_t[param1].g(param0, param7);
+              di.field_t[param1].drawTransparent(param0, param7);
               if (var10 == 0) {
                 return;
               }
@@ -3323,11 +3323,11 @@ final class GameScreen {
           GzipDecoder.drawNineSlice(ui.field_i, var11, var10, (byte) -74, var9, var8);
           var8 = bb.field_j[param3] + var8;
           var9 = var9 + 20;
-          var5.g(var8, var9);
+          var5.drawTransparent(var8, var9);
           if (param3 == 1) {
             var5Lifetime1 = pe.field_eb[param0 + 2];
             var8 = 269 + (-bb.field_j[param3] + var8);
-            var5Lifetime1.g(var8, var9);
+            var5Lifetime1.drawTransparent(var8, var9);
           }
           if (var16Lifetime1 >= 0) {
             var9Lifetime1 = m.field_g[1];
@@ -4470,10 +4470,10 @@ final class GameScreen {
             if (0 <= var21Lifetime1) {
               param0.a(var17_intLifetime1, var18Lifetime1, var21Lifetime1, 1);
               if (var24 != 0) {
-                param0.g(var17_intLifetime1, var18Lifetime1);
+                param0.drawTransparent(var17_intLifetime1, var18Lifetime1);
               }
             } else {
-              param0.g(var17_intLifetime1, var18Lifetime1);
+              param0.drawTransparent(var17_intLifetime1, var18Lifetime1);
             }
           }
           var22 = 0;
@@ -4490,7 +4490,7 @@ final class GameScreen {
               return;
             }
             if (var21Lifetime1 < 0) {
-              param8.g(var17_intLifetime2, var18Lifetime2);
+              param8.drawTransparent(var17_intLifetime2, var18Lifetime2);
               if (var24 == 0) {
                 return;
               }
@@ -4707,7 +4707,7 @@ final class GameScreen {
           var14Lifetime1 = param1 - var11Lifetime1 >> 1;
           param2 = var14Lifetime1 + param2;
           param6 = var13Lifetime1 + param6;
-          jj.field_a[param4].g(param2, param6);
+          jj.field_a[param4].drawTransparent(param2, param6);
           bd.field_l = var10Lifetime1 != 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4801,7 +4801,7 @@ final class GameScreen {
               var16_int = ue.field_j[3];
               var16_int = var16_int - var8 * 2;
               SoftwareRasterizer.a(pf.field_g);
-              SoftwareRasterizer.f(var13, var14, var15 + var13, var16_int + var14);
+              SoftwareRasterizer.setClip(var13, var14, var15 + var13, var16_int + var14);
               var15 = ue.field_j[2];
               var14 = ue.field_j[1];
               var13 = ue.field_j[0];
@@ -4812,12 +4812,12 @@ final class GameScreen {
                 var14 += 96;
                 var13 -= 32;
               }
-              var11.g(var13, var14);
+              var11.drawTransparent(var13, var14);
               SoftwareRasterizer.b(pf.field_g);
-              var12[0].g(var2_int, var3);
-              var12[2].g(var4 + var2_int - var12[2].fullWidth, var3);
-              var12[6].g(var2_int, -var12[6].fullHeight + var5 + var3);
-              var12[8].g(var4 + var2_int - var12[2].fullWidth, -var12[6].fullHeight + var5 + var3);
+              var12[0].drawTransparent(var2_int, var3);
+              var12[2].drawTransparent(var4 + var2_int - var12[2].fullWidth, var3);
+              var12[6].drawTransparent(var2_int, -var12[6].fullHeight + var5 + var3);
+              var12[8].drawTransparent(var4 + var2_int - var12[2].fullWidth, -var12[6].fullHeight + var5 + var3);
               if (var37 == 0) {
                 return;
               }
@@ -4864,13 +4864,13 @@ final class GameScreen {
             var36 = -(2 * var8) + (var24 + (var28 - var24) * (-(aa.field_f >> 2) + cd.field_b) / (aa.field_f >> 2));
             GzipDecoder.drawNineSlice(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
             SoftwareRasterizer.a(pf.field_g);
-            SoftwareRasterizer.f(var33, var34, var35 + var33, var36 + var34);
+            SoftwareRasterizer.setClip(var33, var34, var35 + var33, var36 + var34);
             var11.d(var29, var30, var31, var32);
             SoftwareRasterizer.b(pf.field_g);
-            var12[0].g(var33 - var8, var34 - var8);
-            var12[2].g(var8 + var33 + var35 - var12[2].fullWidth, -var8 + var34);
-            var12[6].g(var33 - var8, var36 + var34 + var8 - var12[6].fullHeight);
-            var12[8].g(-var12[2].fullWidth + var8 + (var33 + var35), -var12[6].fullHeight + var8 + (var36 + var34));
+            var12[0].drawTransparent(var33 - var8, var34 - var8);
+            var12[2].drawTransparent(var8 + var33 + var35 - var12[2].fullWidth, -var8 + var34);
+            var12[6].drawTransparent(var33 - var8, var36 + var34 + var8 - var12[6].fullHeight);
+            var12[8].drawTransparent(-var12[2].fullWidth + var8 + (var33 + var35), -var12[6].fullHeight + var8 + (var36 + var34));
             if (var37 == 0) {
               return;
             }
@@ -4928,7 +4928,7 @@ final class GameScreen {
               SoftwareRasterizer.a(pf.field_g);
               var3 = var3 + var10;
               SoftwareRasterizer.a(0, var3, 640, var9 - var12[7].fullHeight);
-              de.field_a.g(var2_int, var3);
+              de.field_a.drawTransparent(var2_int, var3);
               var17 = var13;
               switch ((var37 == 0
                 || var17 == 2
@@ -4960,7 +4960,7 @@ final class GameScreen {
               var3 = var3 + var10;
               this.a((byte) 42, var4, 0, var5, var13, false, 0);
               oj.field_d.d();
-              jj.field_a[ok.field_b].g(var2_int, var3);
+              jj.field_a[ok.field_b].drawTransparent(var2_int, var3);
               SectorCacheStore.field_f.bindAsTarget(113);
               oj.field_d.d(0, 0, var7);
             }
@@ -5002,7 +5002,7 @@ final class GameScreen {
               SoftwareRasterizer.a(pf.field_g);
               var3 = var3 + var10;
               SoftwareRasterizer.a(0, var3, 640, -var12[7].fullHeight + var9);
-              de.field_a.g(var2_int, var3);
+              de.field_a.drawTransparent(var2_int, var3);
               var17 = var13;
               switch (var17) {
                 case 0:
@@ -5374,7 +5374,7 @@ final class GameScreen {
               rj.field_g != 4 &&
               rj.field_g != 5) {
               this.b((byte) 46);
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.softenRaster();
               if (TorChallenge.field_F) {
                 cd.a(-1, -1, true, 119, false);
               }
@@ -5501,7 +5501,7 @@ final class GameScreen {
           if (0 == ma.field_j) {
             var3 = -(2 * var5 / 3) + (-ec.field_a[3].fullHeight + (-ui.field_i[7].fullHeight + 391 - var3)) / 2 + var3;
             var2_intLifetime1 = -(ec.field_a[3].fullWidth / 2) + var2_intLifetime1;
-            ec.field_a[3].g(var2_intLifetime1, var3);
+            ec.field_a[3].drawTransparent(var2_intLifetime1, var3);
             var3 = var3 + (ec.field_a[3].fullHeight + 18 + 4);
             var2_intLifetime1 = ec.field_a[3].fullWidth / 2 + var2_intLifetime1;
             ProxySocketConnector.field_p.a(gh.field_y, var2_intLifetime1, var3, 8015912, -1);
@@ -5645,7 +5645,7 @@ final class GameScreen {
                     }
                     var2_intLifetime1 = -(IterableNodeHashTable.field_h.fullWidth >> 1) + var2_intLifetime1;
                     kj.field_D = be.a(var17Lifetime1 != 0, var15_int, var13Lifetime1Lifetime1, var3, var2_intLifetime1, param0 ^ 19, kj.field_D, var16_intLifetime1);
-                    ie.field_f[var13Lifetime1Lifetime1][0].g(var2_intLifetime1, var3);
+                    ie.field_f[var13Lifetime1Lifetime1][0].drawTransparent(var2_intLifetime1, var3);
                     var3 = 10 + (129 + ui.field_i[0].fullHeight);
                     var2_intLifetime1 = -16 + (604 - ui.field_i[0].fullWidth - 90);
                     this.a(var2_intLifetime1, 2, var14Lifetime1Lifetime1, (byte) 13, 50, 1, 0, var3);
@@ -5698,24 +5698,24 @@ final class GameScreen {
                         var12Lifetime1Lifetime1 = ui.field_i[0].fullWidth + 63;
                         var2_intLifetime1 = (-dk.field_c[0][0].fullWidth + var4 / 4) / 2 + var12Lifetime1Lifetime1;
                         var3 = 16 + (var3 + (-dk.field_c[0][0].fullHeight + dk.field_c[3][0].fullHeight) / 2);
-                        dk.field_c[0][0].g(var2_intLifetime1, var3);
+                        dk.field_c[0][0].drawTransparent(var2_intLifetime1, var3);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1;
                         var7Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + dk.field_c[3][0].fullHeight + (var3 + (4 + var8));
                         ProxySocketConnector.field_p.a(k.field_a[0], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var3 = 16 + var11Lifetime2Lifetime2 + (-dk.field_c[1][0].fullHeight + dk.field_c[3][0].fullHeight) / 2;
                         var2_intLifetime1 = (var4 / 4 - dk.field_c[1][0].fullWidth) / 2 + (var4 / 4 + var12Lifetime1Lifetime1);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1 + var4 / 4;
-                        dk.field_c[1][0].g(var2_intLifetime1, var3);
+                        dk.field_c[1][0].drawTransparent(var2_intLifetime1, var3);
                         ProxySocketConnector.field_p.a(k.field_a[1], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var3 = 16 + (var11Lifetime2Lifetime2 + (dk.field_c[3][0].fullHeight - dk.field_c[2][0].fullHeight) / 2);
                         var2_intLifetime1 = (-dk.field_c[2][0].fullWidth + var4 / 4) / 2 + (var12Lifetime1Lifetime1 + var4 / 2);
                         var6Lifetime1 = var4 / 8 + (var12Lifetime1Lifetime1 + var4 / 2);
-                        dk.field_c[2][0].g(var2_intLifetime1, var3);
+                        dk.field_c[2][0].drawTransparent(var2_intLifetime1, var3);
                         ProxySocketConnector.field_p.a(k.field_a[2], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var2_intLifetime1 = 3 * var4 / 4 + (var12Lifetime1Lifetime1 + (var4 / 4 - dk.field_c[3][0].fullWidth) / 2);
                         var3 = var11Lifetime2Lifetime2 + (16 + (dk.field_c[3][0].fullHeight - dk.field_c[3][0].fullHeight) / 2);
                         var6Lifetime1 = var12Lifetime1Lifetime1 + var4 * 3 / 4 + var4 / 8;
-                        dk.field_c[3][0].g(var2_intLifetime1, var3);
+                        dk.field_c[3][0].drawTransparent(var2_intLifetime1, var3);
                         ProxySocketConnector.field_p.a(k.field_a[3], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         decompiledFrameRemainder0 = (var21 != 0);
                       }
@@ -5723,7 +5723,7 @@ final class GameScreen {
                         if (ma.field_j == 7) {
                           var2_intLifetime1 = (-ec.field_a[0].fullWidth + var4 / 2) / 2 + (-(var4 / 2) + var2_intLifetime1 - ec.field_a[0].fullWidth / 2);
                           var3 = 16 + var3;
-                          ec.field_a[0].g(var2_intLifetime1, var3);
+                          ec.field_a[0].drawTransparent(var2_intLifetime1, var3);
                           var6Lifetime1Lifetime1 = 8 + (var2_intLifetime1 + ec.field_a[0].fullWidth);
                           var7Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + ((ec.field_a[0].storedHeight - var8) / 2 + var3);
                           ProxySocketConnector.field_p.c(kl.field_d[0], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 8015912, -1);
@@ -5741,7 +5741,7 @@ final class GameScreen {
                             }
                             var12Lifetime1Lifetime1 = stackIn_169_0;
                             while (var12Lifetime1Lifetime1 < 5) {
-                              ec.field_a[1].g(var2_intLifetime1 + var12Lifetime1Lifetime1 * 30, var3);
+                              ec.field_a[1].drawTransparent(var2_intLifetime1 + var12Lifetime1Lifetime1 * 30, var3);
                               var12Lifetime1Lifetime1++;
                             }
                             var3 = var3 + (ec.field_a[1].storedHeight + 4);
@@ -5757,12 +5757,12 @@ final class GameScreen {
                             var2_intLifetime1 = 16 + (47 + ui.field_i[0].fullWidth);
                             var3 = 16 + var3;
                             var6Lifetime1Lifetime2 = (var4 / 4 - ec.field_a[6].fullWidth) / 2 + (var4 / 4 + var2_intLifetime1 - 16);
-                            ec.field_a[6].g(var6Lifetime1Lifetime2, var3);
+                            ec.field_a[6].drawTransparent(var6Lifetime1Lifetime2, var3);
                             var7Lifetime1Lifetime2 = SecondaryNodeDequeIterator.field_e.field_x + 8 + (ec.field_a[6].fullHeight + var3);
                             var6Lifetime1Lifetime2 = ec.field_a[6].fullHeight / 2 + var6Lifetime1Lifetime2;
                             ProxySocketConnector.field_p.a(kl.field_d[1], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             var6Lifetime1Lifetime2 = (-ec.field_a[7 + ok.field_b].fullWidth + var4 / 4) / 2 + var4 / 2 + (var2_intLifetime1 + 16);
-                            ec.field_a[7 + ok.field_b].g(var6Lifetime1Lifetime2, var3);
+                            ec.field_a[7 + ok.field_b].drawTransparent(var6Lifetime1Lifetime2, var3);
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[7 + ok.field_b].fullHeight / 2;
                             ProxySocketConnector.field_p.a(kl.field_d[2], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             decompiledFrameRemainder0 = (var21 != 0);
@@ -5772,7 +5772,7 @@ final class GameScreen {
                             var2_intLifetime1 = ui.field_i[0].fullWidth + 63;
                             var6Lifetime1Lifetime2 = (-ec.field_a[5].fullWidth + var4) / 2 + var2_intLifetime1;
                             var3 = var3 + 16;
-                            ec.field_a[5].g(var6Lifetime1Lifetime2, var3);
+                            ec.field_a[5].drawTransparent(var6Lifetime1Lifetime2, var3);
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[5].fullWidth / 2;
                             var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].fullHeight + SecondaryNodeDequeIterator.field_e.field_x);
                             ProxySocketConnector.field_p.a(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
@@ -5984,7 +5984,7 @@ final class GameScreen {
           }
           var15 = var7 - var12 >> 1;
           var16 = var8 - var13 >> 1;
-          de.field_a.g(-var15 + var6, -var16 + var5_int);
+          de.field_a.drawTransparent(-var15 + var6, -var16 + var5_int);
           var17 = 0;
           if (param2) {
             var17 = 1;
@@ -6028,7 +6028,7 @@ final class GameScreen {
               var25 != 0) {
               var24 = var24 / 256;
             }
-            dh.field_Y.g(-1 + var23 + var24, -2 + (dh.field_Y.fullHeight >> 1) + var5_int);
+            dh.field_Y.drawTransparent(-1 + var23 + var24, -2 + (dh.field_Y.fullHeight >> 1) + var5_int);
             if (var25 == 0) {
               return;
             }
@@ -6562,7 +6562,7 @@ final class GameScreen {
                 return;
               }
             }
-            param0.g(param2, param1);
+            param0.drawTransparent(param2, param1);
             if (var10 == 0) {
               return;
             }

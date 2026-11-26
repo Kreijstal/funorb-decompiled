@@ -44,7 +44,7 @@ final class hi extends AsyncRequest {
           if (150 <= fb.field_a) {
             ej.field_d.d(var3 + 15, 10 + var4, var5);
           } else {
-            kj.field_l.d(var3, var4);
+            kj.field_l.drawHalfSize(var3, var4);
           }
         } else {
           GameShell.m(119);
@@ -111,7 +111,7 @@ final class hi extends AsyncRequest {
             }
             return;
           }
-          kj.field_l.d(var3, var4);
+          kj.field_l.drawHalfSize(var3, var4);
         }
         var6Lifetime1 = fb.field_a - 125;
         var7Lifetime1 = 43 / ((param1 + 18) / 54);

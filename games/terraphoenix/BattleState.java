@@ -4283,7 +4283,7 @@ final class BattleState {
                           stackIn_329_3 = var8 + 10;
                           stackIn_329_4 = 73;
                         }
-                        SoftwareRasterizer.c(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_329_3 + stackIn_329_4);
+                        SoftwareRasterizer.setClip(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_329_3 + stackIn_329_4);
                         if (((oh) (var9_refLifetime2)).field_g == 0) {
                           cc.field_i[((oh) (var9_refLifetime2)).field_g].a(192, 93, var10_int + 81, var8 + 46, (byte) 21);
                           if (var19 != 0) {
@@ -4356,7 +4356,7 @@ final class BattleState {
                         }
                       }
                       if (null != this.field_q.field_b) {
-                        SoftwareRasterizer.c(547, 35 + var8, 595, 48 + var8 + 35);
+                        SoftwareRasterizer.setClip(547, 35 + var8, 595, 48 + var8 + 35);
                         var10 = cc.field_i[this.field_q.field_b.field_g].d();
                         var10.b();
                         if (this.field_q.field_b.field_g == 5) {
@@ -4556,10 +4556,10 @@ final class BattleState {
                       AccountRequestState.field_f.a(Integer.toString(var15Lifetime1), -5 + (var4Lifetime1Lifetime1 + var14Lifetime1), -5 + var8, var17Lifetime1, -1);
                     }
                     if (this.units[var11_intLifetime1Lifetime1].field_ob) {
-                      SoftwareRasterizer.e(89 - vl.field_c.field_r + var4Lifetime1Lifetime1 - (-var14Lifetime1 + 1), 383, 4, 16777215);
-                      SoftwareRasterizer.e(89 + (-vl.field_c.field_r + (var4Lifetime1Lifetime1 + var14Lifetime1)) + 1, 383, 4, 16777215);
-                      SoftwareRasterizer.e(-vl.field_c.field_r + var4Lifetime1Lifetime1 + (var14Lifetime1 + 89), 383, 3, 16711680);
-                      SoftwareRasterizer.e(var4Lifetime1Lifetime1 + (-vl.field_c.field_r + var14Lifetime1) + 89, 383, 2, 0);
+                      SoftwareRasterizer.fillCircle(89 - vl.field_c.field_r + var4Lifetime1Lifetime1 - (-var14Lifetime1 + 1), 383, 4, 16777215);
+                      SoftwareRasterizer.fillCircle(89 + (-vl.field_c.field_r + (var4Lifetime1Lifetime1 + var14Lifetime1)) + 1, 383, 4, 16777215);
+                      SoftwareRasterizer.fillCircle(-vl.field_c.field_r + var4Lifetime1Lifetime1 + (var14Lifetime1 + 89), 383, 3, 16711680);
+                      SoftwareRasterizer.fillCircle(var4Lifetime1Lifetime1 + (-vl.field_c.field_r + var14Lifetime1) + 89, 383, 2, 0);
                     }
                     if (this.units[var11_intLifetime1Lifetime1].field_v == this.units[var11_intLifetime1Lifetime1].field_jb &&
                       1 == this.units[var11_intLifetime1Lifetime1].field_B) {
@@ -4865,7 +4865,7 @@ final class BattleState {
               var9Lifetime1 = 472;
             }
             while (var8_ref_th != null) {
-              rh.field_b[11].a(0, -14 + var9Lifetime1, 16, 16);
+              rh.field_b[11].drawScaled(0, -14 + var9Lifetime1, 16, 16);
               stackIn_782_0 = var8_ref_th.field_h;
               if (var19 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -4913,7 +4913,7 @@ final class BattleState {
               }
               if (decompiledSharedTail0) {
                 AccountRequestState.field_f.a(this.client.field_Eb[0], 178, 6, 162, 33, 16777215, -1, 1, 1, 12);
-                SoftwareRasterizer.f(344, 10, 27, 4473924);
+                SoftwareRasterizer.addVerticalLine(344, 10, 27, 4473924);
                 AccountRequestState.field_f.a(this.client.field_Eb[1], 348, 6, 162, 33, 16777215, -1, 1, 1, 12);
               }
             }

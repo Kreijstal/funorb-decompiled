@@ -88,7 +88,7 @@ final class hb extends am {
                   var15[1 + var13] == 0 ||
                   !(-1 + param2.field_t <= var16) &&
                   0 == var15[var13 + param2.field_s])) {
-                  SoftwareRasterizer.d(var17, var16, param7, param5);
+                  SoftwareRasterizer.fillCircle(var17, var16, param7, param5);
                 }
                 var13++;
               }

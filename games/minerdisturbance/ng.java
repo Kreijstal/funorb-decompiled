@@ -53,8 +53,8 @@ final class ng {
         RuntimeException var5 = null;
         var11 = MinerDisturbance.field_ab;
         try {
-          SoftwareRasterizer.e(param3, param4, 1 + param1, 10000536);
-          SoftwareRasterizer.e(param3, param0 + param4, param1 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param4, 1 + param1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param0 + param4, param1 + 1, 12105912);
           var5_int = 1;
           if (var5_int + param4 < SoftwareRasterizer.field_d) {
             var5_int = -param4 + SoftwareRasterizer.field_d;

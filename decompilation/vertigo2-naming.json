@@ -1508,6 +1508,14 @@
       "renamedSymbol": "M:BitmapFont.clearStaticReferences()V"
     },
     {
+      "symbol": "M:cc.b(Ljava/lang/String;)Ljava/lang/String;",
+      "originalName": "b",
+      "to": "escapeMarkup",
+      "evidence": "Source-purpose review: Escape angle brackets to literal <lt>/<gt> withprecomputedStringBuildercapacity;allother UTF16chars unchanged;retainnull/overflow/allocation behavior. Original identity M:cc.b(Ljava/lang/String;)Ljava/lang/String;. Pinned original body SHA256 d968fdd001f8b443f18913f3302669d3037d62adfac14f656022cd2c607e3970. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:ce.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2994,6 +3002,14 @@
       "evidence": "Source-reviewed pure cleanup: only owned static reference null assignments, primitive parameter guards, return and braces after inert default locals. Each reference ownership and no-shadow binding proved against the current source/dictionary; guard order, partial cleanup and arithmetic-free predicates preserved. No scalar clearing or helper calls introduced.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Model.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:lg.d()V",
+      "originalName": "d",
+      "to": "buildVertexGroups",
+      "evidence": "Source-purpose review: Build256-label grouped indices for both vertexandsecond(face/skin) arrays,clear source labelarrays aftereach groupbuild;preserve invalidlabel failures/partialwrites/allocations. Original identity M:lg.d()V. Pinned original body SHA256 e2b9287ace0328df62af340e689678e50092b7de96feb6f4105bd7d3aa9f4a15. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Model.buildVertexGroups()V"
     },
     {
       "symbol": "M:li.b(I)Z",
@@ -81059,7 +81075,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -81070,7 +81086,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#1",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -81081,7 +81097,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#2",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -81092,7 +81108,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#3",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -81103,7 +81119,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#4",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -81114,7 +81130,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -81125,7 +81141,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -81136,7 +81152,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -81147,7 +81163,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -81158,7 +81174,7 @@
     },
     {
       "symbol": "L:cc.b(Ljava/lang/String;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#9",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -159874,7 +159890,7 @@
     },
     {
       "symbol": "L:lg.d()V#0",
-      "renamedSymbol": "L:Model.d()V#0",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#0",
       "originalName": "array$2",
       "renamedName": "array$2",
       "declaration": {
@@ -159885,7 +159901,7 @@
     },
     {
       "symbol": "L:lg.d()V#1",
-      "renamedSymbol": "L:Model.d()V#1",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -159896,7 +159912,7 @@
     },
     {
       "symbol": "L:lg.d()V#10",
-      "renamedSymbol": "L:Model.d()V#10",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -159907,7 +159923,7 @@
     },
     {
       "symbol": "L:lg.d()V#11",
-      "renamedSymbol": "L:Model.d()V#11",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#11",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -159918,7 +159934,7 @@
     },
     {
       "symbol": "L:lg.d()V#12",
-      "renamedSymbol": "L:Model.d()V#12",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#12",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -159929,7 +159945,7 @@
     },
     {
       "symbol": "L:lg.d()V#13",
-      "renamedSymbol": "L:Model.d()V#13",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#13",
       "originalName": "var4Lifetime1Lifetime1",
       "renamedName": "var4Lifetime1Lifetime1",
       "declaration": {
@@ -159940,7 +159956,7 @@
     },
     {
       "symbol": "L:lg.d()V#14",
-      "renamedSymbol": "L:Model.d()V#14",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#14",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -159951,7 +159967,7 @@
     },
     {
       "symbol": "L:lg.d()V#15",
-      "renamedSymbol": "L:Model.d()V#15",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -159962,7 +159978,7 @@
     },
     {
       "symbol": "L:lg.d()V#2",
-      "renamedSymbol": "L:Model.d()V#2",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#2",
       "originalName": "arrayValue$1",
       "renamedName": "arrayValue$1",
       "declaration": {
@@ -159973,7 +159989,7 @@
     },
     {
       "symbol": "L:lg.d()V#3",
-      "renamedSymbol": "L:Model.d()V#3",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#3",
       "originalName": "array$5",
       "renamedName": "array$5",
       "declaration": {
@@ -159984,7 +160000,7 @@
     },
     {
       "symbol": "L:lg.d()V#4",
-      "renamedSymbol": "L:Model.d()V#4",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#4",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -159995,7 +160011,7 @@
     },
     {
       "symbol": "L:lg.d()V#5",
-      "renamedSymbol": "L:Model.d()V#5",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#5",
       "originalName": "arrayValue$4",
       "renamedName": "arrayValue$4",
       "declaration": {
@@ -160006,7 +160022,7 @@
     },
     {
       "symbol": "L:lg.d()V#6",
-      "renamedSymbol": "L:Model.d()V#6",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -160017,7 +160033,7 @@
     },
     {
       "symbol": "L:lg.d()V#7",
-      "renamedSymbol": "L:Model.d()V#7",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160028,7 +160044,7 @@
     },
     {
       "symbol": "L:lg.d()V#8",
-      "renamedSymbol": "L:Model.d()V#8",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160039,7 +160055,7 @@
     },
     {
       "symbol": "L:lg.d()V#9",
-      "renamedSymbol": "L:Model.d()V#9",
+      "renamedSymbol": "L:Model.buildVertexGroups()V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -256157,9 +256173,9 @@
     },
     {
       "symbol": "M:cc.b(Ljava/lang/String;)Ljava/lang/String;",
-      "renamedSymbol": "M:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;",
+      "renamedSymbol": "M:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "escapeMarkup",
       "declaration": {
         "file": "cc.java",
         "start": 2371,
@@ -270666,9 +270682,9 @@
     },
     {
       "symbol": "M:lg.d()V",
-      "renamedSymbol": "M:Model.d()V",
+      "renamedSymbol": "M:Model.buildVertexGroups()V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "buildVertexGroups",
       "declaration": {
         "file": "lg.java",
         "start": 35777,
@@ -299299,7 +299315,7 @@
     },
     {
       "symbol": "P:cc.b(Ljava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:BitmapFont.b(Ljava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:BitmapFont.escapeMarkup(Ljava/lang/String;)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -388677,7 +388693,7 @@
       "original": "cc.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "8b693e5604ba3d0e3209c468a1e24bc5314fb8920cc785bcbb59e4caee86a195",
-      "outputSha256": "f38eb8ba51492f2ad2819927087be00d956a685a4325a92def75ad9751d88f8d",
+      "outputSha256": "de06dd61d69bbc5f1ba1533c250c156262f2c8493e8263a734e4d914a46c4c9d",
       "edits": [
         {
           "start": 53,
@@ -388699,6 +388715,13 @@
           "symbol": "M:cc.a()V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2371,
+          "end": 2372,
+          "symbol": "M:cc.b(Ljava/lang/String;)Ljava/lang/String;",
+          "original": "b",
+          "renamed": "escapeMarkup"
         },
         {
           "start": 4177,
@@ -402702,7 +402725,7 @@
       "original": "fc.java",
       "renamed": "fc.java",
       "inputSha256": "135551e8f0eff2e65fb063219a35bdbd47ee7909032e61bd534712088077e5d5",
-      "outputSha256": "13a09f79374a267a5bb13a43e6db3dada95ba4fe180b632ee612763abfd456c7",
+      "outputSha256": "7c6377f35218257e4d37d14e24eb49b7c6241468c76d57558a462bd44e8fed96",
       "edits": [
         {
           "start": 46359,
@@ -402763,6 +402786,13 @@
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "Model"
+        },
+        {
+          "start": 82510,
+          "end": 82511,
+          "symbol": "M:lg.d()V",
+          "original": "d",
+          "renamed": "buildVertexGroups"
         }
       ]
     },
@@ -424428,7 +424458,7 @@
       "original": "lg.java",
       "renamed": "Model.java",
       "inputSha256": "66d2e5ba57feece749decf4a3485715da36d303d4040dcc7c1b4e9d471b1dc81",
-      "outputSha256": "39d20954d2c08611fdb9e63233489c04d0b914a5f04b9c1cab92897b87d7d817",
+      "outputSha256": "1a8748119bfe7250932bfefc34b6f0a0bca268f4cba266d5e9176600503b6ced",
       "edits": [
         {
           "start": 50,
@@ -424450,6 +424480,13 @@
           "symbol": "M:qq.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 13544,
+          "end": 13545,
+          "symbol": "M:lg.d()V",
+          "original": "d",
+          "renamed": "buildVertexGroups"
         },
         {
           "start": 14205,
@@ -425248,6 +425285,13 @@
           "symbol": "M:lg.a()V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 35777,
+          "end": 35778,
+          "symbol": "M:lg.d()V",
+          "original": "d",
+          "renamed": "buildVertexGroups"
         },
         {
           "start": 38315,
@@ -443040,7 +443084,7 @@
       "original": "qr.java",
       "renamed": "qr.java",
       "inputSha256": "fdd72ba46abc39d4318e4bce78aa9cf83ec92a4fa86b17644a651748162ba9af",
-      "outputSha256": "016e27b5efbaebe2d29c9155fdc762534694c18124eebce08cc3973562eed2e2",
+      "outputSha256": "693ebad30318590f80467c059e30b815583fac6619536f227d38bad38c7f592a",
       "edits": [
         {
           "start": 201,
@@ -443090,6 +443134,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 2076,
+          "end": 2077,
+          "symbol": "M:cc.b(Ljava/lang/String;)Ljava/lang/String;",
+          "original": "b",
+          "renamed": "escapeMarkup"
         },
         {
           "start": 2184,
@@ -456317,7 +456368,7 @@
       "original": "ui.java",
       "renamed": "ui.java",
       "inputSha256": "4f6c4cef41ed8a352a7db794b6351fe1e5e2812c350dc2e2df74025e5f4d76a5",
-      "outputSha256": "d9456e359d66637e5911c3ea826320746dd4fdb76637293ef868e826dd0a1ddf",
+      "outputSha256": "96d4d4a0ccb1fb0abe44fe8ed70e776d5ef2e9bfbc27447070ca0f6954a8788b",
       "edits": [
         {
           "start": 85,
@@ -456700,6 +456751,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 12603,
+          "end": 12604,
+          "symbol": "M:cc.b(Ljava/lang/String;)Ljava/lang/String;",
+          "original": "b",
+          "renamed": "escapeMarkup"
         },
         {
           "start": 12605,
@@ -466337,10 +466395,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/vertigo2"
     },
-    "rulesSha256": "e971df625a8d6ad7900399219995036ff29f975a463f87c5f7752445b283edd4",
+    "rulesSha256": "9586ef4aa9ba202a71bbf4730e9a1f88c001dc7d4ab598d96d12bb217ef410d8",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
-    "outputTreeSha256": "8faf61aae561203506edb29518f89f4f63d94a823814ac57f460fb8b8e2bf87a",
+    "outputTreeSha256": "a63f6bcd01654ff43aa61cb68055e1941fd1cbdf8ae67071699af1ce63b11f4c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

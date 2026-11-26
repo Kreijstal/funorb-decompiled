@@ -53,7 +53,7 @@ final class jf {
         if (param0 != 540) {
           field_b = (String) null;
           if (150 > jh.field_z) {
-            field_a.c(var3, var4);
+            field_a.drawHalfSize(var3, var4);
           } else {
             cl.field_a.e(15 + var3, 10 + var4, var5);
           }
@@ -72,13 +72,13 @@ final class jf {
           if (50 > var6) {
             if (var6 < 20) {
               var7Lifetime8 = 256 * var6 / 20;
-              ff.field_c.a(var3, var4, var7Lifetime8);
+              ff.field_c.drawAdditive(var3, var4, var7Lifetime8);
             } else {
               if (var6 >= 30) {
                 var7Lifetime8 = (12800 - 256 * var6) / 20;
-                ff.field_c.a(var3, var4, var7Lifetime8);
+                ff.field_c.drawAdditive(var3, var4, var7Lifetime8);
               } else {
-                ff.field_c.a(var3, var4, 256);
+                ff.field_c.drawAdditive(var3, var4, 256);
               }
             }
             var6 = -140 + jh.field_z;
@@ -102,7 +102,7 @@ final class jf {
           return;
         }
         if (150 > jh.field_z) {
-          field_a.c(var3, var4);
+          field_a.drawHalfSize(var3, var4);
           var6Lifetime1 = jh.field_z - 125;
           if (var6Lifetime1 <= 0) {
             var6Lifetime1 = -140 + jh.field_z;
@@ -128,7 +128,7 @@ final class jf {
           }
           if (var6Lifetime1 < 20) {
             var7Lifetime1Lifetime2 = 256 * var6Lifetime1 / 20;
-            ff.field_c.a(var3, var4, var7Lifetime1Lifetime2);
+            ff.field_c.drawAdditive(var3, var4, var7Lifetime1Lifetime2);
             var6Lifetime1 = -140 + jh.field_z;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime2 = 256;
@@ -140,7 +140,7 @@ final class jf {
             return;
           }
           if (var6Lifetime1 < 30) {
-            ff.field_c.a(var3, var4, 256);
+            ff.field_c.drawAdditive(var3, var4, 256);
             var6Lifetime1 = -140 + jh.field_z;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime3 = 256;
@@ -152,7 +152,7 @@ final class jf {
             return;
           }
           var7Lifetime1Lifetime4 = (12800 - 256 * var6Lifetime1) / 20;
-          ff.field_c.a(var3, var4, var7Lifetime1Lifetime4);
+          ff.field_c.drawAdditive(var3, var4, var7Lifetime1Lifetime4);
           var6Lifetime1Lifetime1 = -140 + jh.field_z;
           if (var6Lifetime1Lifetime1 > 0) {
             var7Lifetime1Lifetime5 = 256;
@@ -189,7 +189,7 @@ final class jf {
         }
         if (var6Lifetime2 < 20) {
           var7Lifetime4 = 256 * var6Lifetime2 / 20;
-          ff.field_c.a(var3, var4, var7Lifetime4);
+          ff.field_c.drawAdditive(var3, var4, var7Lifetime4);
           var6Lifetime2 = -140 + jh.field_z;
           if (var6Lifetime2 > 0) {
             var7Lifetime4Lifetime1 = 256;
@@ -201,7 +201,7 @@ final class jf {
           return;
         }
         if (var6Lifetime2 < 30) {
-          ff.field_c.a(var3, var4, 256);
+          ff.field_c.drawAdditive(var3, var4, 256);
           var6Lifetime2 = -140 + jh.field_z;
           if (var6Lifetime2 > 0) {
             var7Lifetime5 = 256;
@@ -213,7 +213,7 @@ final class jf {
           return;
         }
         var7Lifetime6 = (12800 - 256 * var6Lifetime2) / 20;
-        ff.field_c.a(var3, var4, var7Lifetime6);
+        ff.field_c.drawAdditive(var3, var4, var7Lifetime6);
         var6Lifetime3 = -140 + jh.field_z;
         if (var6Lifetime3 > 0) {
           var7Lifetime7 = 256;

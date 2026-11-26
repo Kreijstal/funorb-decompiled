@@ -35,18 +35,18 @@ final class ib implements rd {
           SoftwareRasterizer.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_j);
           var7 = var14.field_L + (param1 + param3.field_t);
           var8 = var14.field_F + (param3.field_o + param0);
-          SoftwareRasterizer.c(var7, var8, var14.field_I, this.field_k);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_I, this.field_k);
           if (var14.field_H != -1) {
             var9 = 3.141592653589793 * (double)var14.field_H * 2.0 / (double)var14.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
             var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-            SoftwareRasterizer.c(var11 + var7, var8 + var12, 1, this.field_h);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_h);
           }
-          SoftwareRasterizer.c(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_G * 3.141592653589793 * 2.0 / (double)var14.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
-          SoftwareRasterizer.b(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_c) {
             var13 = var14.field_L - (-var14.field_I - this.field_d);
             this.field_c.a(param3.field_u, var13 + (param1 + param3.field_t), param3.field_o + param0 + this.field_f, param3.field_j - this.field_d - var13, param3.field_v - (this.field_d << 1), this.field_e, this.field_l, 1, 1, 0);

@@ -27,8 +27,8 @@ final class ah extends ng {
         RuntimeException var5 = null;
         var10 = Terraphoenix.field_V;
         try {
-          SoftwareRasterizer.d(param3, param4, 1 + param2, 10000536);
-          SoftwareRasterizer.d(param3, param4 + param0, 1 + param2, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param4, 1 + param2, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param4 + param0, 1 + param2, 12105912);
           var5_int = 1;
           if (var5_int + param4 < SoftwareRasterizer.field_d) {
             var5_int = -param4 + SoftwareRasterizer.field_d;

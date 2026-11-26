@@ -262,7 +262,7 @@ final class fg extends kj implements cc, sg {
           RasterBuffer.field_g.a(this.field_U, 20 + (param1 + this.field_m), 15 + this.field_i + param0, -40 + this.field_p, this.field_l, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
         }
         if (this.field_O != null) {
-          SoftwareRasterizer.b(10 + param1, 134 + param0, this.field_p - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param1, 134 + param0, this.field_p - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
         if (param2) {

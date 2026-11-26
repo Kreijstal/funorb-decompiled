@@ -285,7 +285,7 @@ final class BoardView {
               var12 = var10 * var8 / 44;
               var13 = var9 + 64 + var21.field_c;
               var14 = 32 + var21.field_a;
-              SoftwareRasterizer.d(var13, 0, var14 - var11, 65793 * var12);
+              SoftwareRasterizer.addVerticalLine(var13, 0, var14 - var11, 65793 * var12);
               if (0 != var11) {
                 for (var15 = -var11; var15 <= var11; var15++) {
                   SoftwareRasterizer.addPixel(var13, var14 + var15, var12 * 131329, (var11 - var15 << 8) / (2 * var11));
@@ -2290,7 +2290,7 @@ final class BoardView {
         for (var5 = -1 + this.field_z; var5 >= 0; var5--) {
           for (var6 = -1 + this.field_a; var6 >= 0; var6--) {
             var4 = this.a(var5, (byte) 100, var6);
-            if (this.field_p.a(var4.field_c, var4.field_a, param0, param2)) {
+            if (this.field_p.isOpaqueAt(var4.field_c, var4.field_a, param0, param2)) {
               return new aj(var6, var5);
             }
           }
@@ -2320,11 +2320,11 @@ final class BoardView {
           for (var4 = 0; var4 < this.field_z; var4++) {
             var7 = this.a(var4, (byte) 52, var3);
             if (lf.field_c != 0 &&
-              this.field_p.a(var7.field_c, var7.field_a, nfa.field_a, jc.field_r)) {
+              this.field_p.isOpaqueAt(var7.field_c, var7.field_a, nfa.field_a, jc.field_r)) {
               this.field_s = var3;
               this.field_h = var4;
             }
-            if (this.field_p.a(var7.field_c, var7.field_a, mk.field_p, gd.field_m)) {
+            if (this.field_p.isOpaqueAt(var7.field_c, var7.field_a, mk.field_p, gd.field_m)) {
               this.field_q = var3;
               this.field_r = var4;
             }

@@ -207,7 +207,7 @@ final class el extends Sprite {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -409,7 +409,7 @@ final class el extends Sprite {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -460,7 +460,7 @@ final class el extends Sprite {
         int var10Lifetime1;
         int var10Lifetime2;
         if (param2 == 256) {
-          this.g(param0, param1);
+          this.drawTransparent(param0, param1);
           return;
         }
         param0 = param0 + this.offsetX;
@@ -1355,7 +1355,7 @@ final class el extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void a(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

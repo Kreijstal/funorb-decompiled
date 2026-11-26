@@ -170,8 +170,8 @@ final class td implements j {
             field_e = (Sprite[]) null;
           }
           if (var11.field_F) {
-            SoftwareRasterizer.e(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
-            SoftwareRasterizer.e(this.field_k + var8, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(this.field_k + var8, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_g) {
             var10 = this.field_k + this.field_c + this.field_p;

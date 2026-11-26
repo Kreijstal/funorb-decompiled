@@ -41,9 +41,9 @@ final class jd implements t {
           var7 = -(2 * var12.field_I) + param1.field_x;
           var8 = param1.field_p + param4 + var12.field_I;
           var9 = var12.field_P + (param1.field_m + param2);
-          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_k);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_k);
           for (var10 = -1 + var12.c(true); var10 >= 0; var10--) {
-            SoftwareRasterizer.f(var12.a(param0 ^ 24968, var10) * var7 / var12.k(26856) + var8, var9, this.field_i, this.field_b);
+            SoftwareRasterizer.fillCircle(var12.a(param0 ^ 24968, var10) * var7 / var12.k(26856) + var8, var9, this.field_i, this.field_b);
           }
           if (param0 != -24969) {
             return;

@@ -486,7 +486,7 @@ final class ActiveLevel extends LevelGrid {
           bk.font.a(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
         }
         if (0 != this.field_s) {
-          j.field_b[1].e(466, var6);
+          j.field_b[1].drawTransparent(466, var6);
           cl.a(nd.field_L, 457, 124, var6 + 71, 176, 4);
           var7Lifetime1 = this.field_s;
           var8Lifetime1 = sc.countSetBits(var7Lifetime1, -1);
@@ -520,10 +520,10 @@ final class ActiveLevel extends LevelGrid {
             bb.field_b[var11].b(467, 26 + (81 + var13));
             bk.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
           }
-          j.field_b[2].e(466, var6);
+          j.field_b[2].drawTransparent(466, var6);
           return;
         }
-        j.field_b[0].e(466, var6);
+        j.field_b[0].drawTransparent(466, var6);
         return;
     }
 
@@ -1128,7 +1128,7 @@ final class ActiveLevel extends LevelGrid {
           } else if (this.tileFlags[9][9] == 0) {
             if (param0 &&
               this.tickCount % 30 < 15) {
-              ii.tileSprites[50].e(182 + this.field_a, this.field_f + 234);
+              ii.tileSprites[50].drawTransparent(182 + this.field_a, this.field_f + 234);
             }
             if (!param0) {
               var3Lifetime1 = va.field_a;
@@ -1136,7 +1136,7 @@ final class ActiveLevel extends LevelGrid {
           } else if (0 == this.tileFlags[7][9]) {
             if (param0 &&
               15 > this.tickCount % 30) {
-              ii.tileSprites[50].e(this.field_a + 182, 182 + this.field_f);
+              ii.tileSprites[50].drawTransparent(this.field_a + 182, 182 + this.field_f);
             }
             if (!param0) {
               var3Lifetime1 = jk.field_b;
@@ -1401,50 +1401,50 @@ final class ActiveLevel extends LevelGrid {
         int var3Lifetime2;
         var7 = TrackController.field_F ? 1 : 0;
         cl.a(ha.field_m, 6, 436, 38, 436, 4);
-        UiWidget.field_z[0].e(41, 1);
+        UiWidget.field_z[0].drawTransparent(41, 1);
         if (null == this.field_u) {
           this.b(true, param0 - 53447);
           stackIn_7_1 = !(this.field_z);
           super.drawGrid(stackIn_7_1, 0, true);
-          fd.field_d.e(0, 0);
+          fd.field_d.drawTransparent(0, 0);
           var2_int = kf.mouseX - 467;
           var3 = fg.mouseY - 138;
           if (var2_int >= 0) {
             if (26 + ba.field_b.field_G > var3) {
               if (var2_int < 156) {
                 if (var3 >= 0) {
-                  UiWidget.field_t.e(0, 0);
+                  UiWidget.field_t.drawTransparent(0, 0);
                 } else {
-                  ai.field_a.e(0, 0);
+                  ai.field_a.drawTransparent(0, 0);
                 }
               } else {
-                ai.field_a.e(0, 0);
+                ai.field_a.drawTransparent(0, 0);
               }
             } else {
-              ai.field_a.e(0, 0);
+              ai.field_a.drawTransparent(0, 0);
             }
           } else {
-            ai.field_a.e(0, 0);
+            ai.field_a.drawTransparent(0, 0);
           }
           var3 = fg.mouseY - 178;
           if (var2_int >= 0) {
             if (var3 < ba.field_b.field_G + 26) {
               if (var2_int < 156) {
                 if (var3 >= 0) {
-                  vl.field_K.e(0, 0);
+                  vl.field_K.drawTransparent(0, 0);
                 } else {
-                  WhirlpoolDigest.field_o.e(0, 0);
+                  WhirlpoolDigest.field_o.drawTransparent(0, 0);
                 }
               } else {
-                WhirlpoolDigest.field_o.e(0, 0);
+                WhirlpoolDigest.field_o.drawTransparent(0, 0);
               }
             } else {
               if (var3 >= 0) {
-                WhirlpoolDigest.field_o.e(0, 0);
+                WhirlpoolDigest.field_o.drawTransparent(0, 0);
               }
             }
           } else {
-            WhirlpoolDigest.field_o.e(0, 0);
+            WhirlpoolDigest.field_o.drawTransparent(0, 0);
           }
         } else {
           this.field_u.a(true);
@@ -1452,7 +1452,7 @@ final class ActiveLevel extends LevelGrid {
           var2_int = Math.min(255, -this.field_v + this.tickCount << 2);
           this.a(467, (byte) -121, (this.tickCount - this.field_v << 2) + 229);
           var3 = 255 - var2_int;
-          fd.field_d.e(0, -this.field_v + this.tickCount << 2);
+          fd.field_d.drawTransparent(0, -this.field_v + this.tickCount << 2);
           if (var3 > 0) {
             ai.field_a.d(0, 0, var3);
             WhirlpoolDigest.field_o.d(0, 0, var3);
@@ -1476,9 +1476,9 @@ final class ActiveLevel extends LevelGrid {
               stackIn_46_1 = 32;
             }
             var6 = stackIn_44_0 + stackIn_46_1;
-            SocketArchiveRequestConnection.avatarSprites[var6][var5].e(var3Lifetime1, var4);
+            SocketArchiveRequestConnection.avatarSprites[var6][var5].drawTransparent(var3Lifetime1, var4);
           } else {
-            ii.tileSprites[-65 & var2.tileValue].e(var3Lifetime1, var4);
+            ii.tileSprites[-65 & var2.tileValue].drawTransparent(var3Lifetime1, var4);
             if ((var2.tileValue & 64) != 0) {
               IntrusiveDequeCursor.a(var3Lifetime1, var2.tileValue, (byte) 91, var4);
             }

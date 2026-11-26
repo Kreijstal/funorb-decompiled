@@ -145,17 +145,17 @@ final class vl {
         var13 = Terraphoenix.field_V;
         try {
           param1.field_yb = false;
-          SoftwareRasterizer.c(0, 0, 640, 56 + this.field_f / 4);
+          SoftwareRasterizer.setClip(0, 0, 640, 56 + this.field_f / 4);
           vk.field_d.d(0, this.field_f / 4 + 0);
-          SoftwareRasterizer.c(0, 56, 356 + this.field_f, 369);
+          SoftwareRasterizer.setClip(0, 56, 356 + this.field_f, 369);
           vk.field_d.d(0 + this.field_f, 0);
-          SoftwareRasterizer.c(0, 369, 356 + this.field_f, 480);
+          SoftwareRasterizer.setClip(0, 369, 356 + this.field_f, 480);
           SoftwareRasterizer.f(0, 0, 640, 480, 0);
-          SoftwareRasterizer.c(356 - this.field_f, 56, 640, 369);
+          SoftwareRasterizer.setClip(356 - this.field_f, 56, 640, 369);
           vk.field_d.d(0 - this.field_f, 0);
-          SoftwareRasterizer.c(-this.field_f + 356, 369, 640, 480);
+          SoftwareRasterizer.setClip(-this.field_f + 356, 369, 640, 480);
           SoftwareRasterizer.f(0, 0, 640, 480, 0);
-          SoftwareRasterizer.c(0, -this.field_f + 369, 640, 480);
+          SoftwareRasterizer.setClip(0, -this.field_f + 369, 640, 480);
           vk.field_d.d(0, -this.field_f + 0);
           SoftwareRasterizer.c();
           qh.field_b.b(624 - qh.field_b.field_r, -qh.field_b.field_t + 464 - this.field_f);
@@ -254,7 +254,7 @@ final class vl {
           if (param1.field_hb == 5) {
             AccountRequestState.field_f.c(lb.field_c[5], this.field_f + 189, 79, 65280, -1);
           }
-          SoftwareRasterizer.c(this.field_f + 57, 84, 323 + this.field_f, 364);
+          SoftwareRasterizer.setClip(this.field_f + 57, 84, 323 + this.field_f, 364);
           var4 = 84 - param1.field_G;
           for (var6 = -1 + od.field_c.length; var6 >= 0; var6--) {
             boolean decompiledFrameRemainder0 = true;
@@ -332,7 +332,7 @@ final class vl {
                     ef.field_j < BattleState.field_g.field_r + (57 + this.field_f) &&
                     MouseWheelInput.field_b >= var4 &&
                     MouseWheelInput.field_b < var4 + BattleState.field_g.field_t) {
-                    BattleState.field_g.c(57 + this.field_f, var4, 384);
+                    BattleState.field_g.drawTransparentWithIntensity(57 + this.field_f, var4, 384);
                     param1.field_gb = 1 + var6;
                     if ((this.field_g != param1.field_gb)) {
                       this.field_g = param1.field_gb;
@@ -344,7 +344,7 @@ final class vl {
                     BattleState.field_g.b(57 + this.field_f, var4);
                   }
                 } else {
-                  BattleState.field_g.c(this.field_f + 57, var4, 128);
+                  BattleState.field_g.drawTransparentWithIntensity(this.field_f + 57, var4, 128);
                 }
                 SoftwareRasterizer.i(59 + this.field_f, 2 + var4, this.field_f + 321, var4 + 66);
                 if (var6 != 5 &&
@@ -358,7 +358,7 @@ final class vl {
                   var8 = 4;
                   cc.field_i[var6].a(192, 128, var7 + (this.field_f + 164) - 64, 50 + (var4 + 2 + var8), (byte) 21);
                 }
-                SoftwareRasterizer.c(this.field_f + 57, 84, this.field_f + 323, 364);
+                SoftwareRasterizer.setClip(this.field_f + 57, 84, this.field_f + 323, 364);
                 if (param1.field_I.field_a[var6] > 50) {
                   param1.field_I.field_a[var6] = 55;
                 }
@@ -369,7 +369,7 @@ final class vl {
                 if (od.field_c[var6].field_q &&
                   param1.field_Fb > 0 &&
                   param1.field_I.field_a[var6] < 50) {
-                  qc.field_f[7].c(59 + this.field_f, 2 + var4, (int)(120.0 * Math.cos(mm.field_f)) + 120);
+                  qc.field_f[7].drawTransparentWithIntensity(59 + this.field_f, 2 + var4, (int)(120.0 * Math.cos(mm.field_f)) + 120);
                   var7 = 1;
                   if (var6 == 3) {
                     var7 = 2;
@@ -512,7 +512,7 @@ final class vl {
                   ef.field_j < this.field_f + (57 + BattleState.field_g.field_r) &&
                   MouseWheelInput.field_b >= var4 &&
                   BattleState.field_g.field_t + var4 > MouseWheelInput.field_b) {
-                  BattleState.field_g.c(57 + this.field_f, var4, 384);
+                  BattleState.field_g.drawTransparentWithIntensity(57 + this.field_f, var4, 384);
                   param1.field_gb = -1 - var6;
                   if ((this.field_g != -param1.field_gb)) {
                     this.field_g = -param1.field_gb;
@@ -524,18 +524,18 @@ final class vl {
                   BattleState.field_g.b(this.field_f + 57, var4);
                 }
               } else {
-                BattleState.field_g.c(57 + this.field_f, var4, 128);
+                BattleState.field_g.drawTransparentWithIntensity(57 + this.field_f, var4, 128);
               }
               SoftwareRasterizer.i(this.field_f + 59, 2 + var4, this.field_f + 321, var4 + 66);
               kb.field_a[var6].a(0, 128, this.field_f + 190, 32 + (var4 + 2), (byte) 21);
-              SoftwareRasterizer.c(this.field_f + 57, 84, 323 + this.field_f, 364);
+              SoftwareRasterizer.setClip(this.field_f + 57, 84, 323 + this.field_f, 364);
               if (param1.field_I.field_d[var6] > 50) {
                 param1.field_I.field_d[var6] = 55;
               }
               if (sj.field_a[var6].field_e &&
                 param1.field_Fb > 0 &&
                 50 > param1.field_I.field_d[var6]) {
-                qc.field_f[7].c(this.field_f + 59, var4 + 2, 120 + (int)(120.0 * Math.cos(mm.field_f)));
+                qc.field_f[7].drawTransparentWithIntensity(this.field_f + 59, var4 + 2, 120 + (int)(120.0 * Math.cos(mm.field_f)));
                 var7 = 1;
                 if (var6 == 1 &&
                   sj.field_a[2].field_l) {
@@ -595,7 +595,7 @@ final class vl {
           if (var4 > 280) {
             var6 = 78120 / var4;
             var7 = param1.field_G * (-var6 + 279) / (var4 - 280);
-            jg.field_hb.a(this.field_f + 337, var7 + 73, jg.field_hb.field_r, var6);
+            jg.field_hb.drawScaled(this.field_f + 337, var7 + 73, jg.field_hb.field_r, var6);
             if ((!param1.field_J) &&
               (decompiledFrameRemainder1 = !(337 + this.field_f > ef.field_j))) {
               decompiledFrameRemainder1 = !(this.field_f + (337 + jg.field_hb.field_r) <= ef.field_j);
@@ -716,25 +716,25 @@ final class vl {
               var9_ref_ci = var16;
               var10 = -(3 * var16.field_p / 4) + (-(3 * var16.field_r / 8) + 398);
               var11 = -(var16.field_v * 3 / 4) + 213 - 3 * var16.field_t / 8;
-              var9_ref_ci.a(-this.field_f + var10, var11, 75, 150);
+              var9_ref_ci.drawScaled(-this.field_f + var10, var11, 75, 150);
             }
             if (param1.field_nb[param1.field_qb].field_A != null) {
               var17 = cc.field_i[param1.field_nb[param1.field_qb].field_A.field_g];
               var9_ref_ci = var17;
               var10 = -(var17.field_p * 3 / 4) + (-(3 * var17.field_r / 8) + 593);
               var11 = 194 - var17.field_t * 3 / 8 - 3 * var17.field_v / 4;
-              var9_ref_ci.a(-this.field_f + var10, var11, 75, 150);
+              var9_ref_ci.drawScaled(-this.field_f + var10, var11, 75, 150);
               AccountRequestState.field_f.c(param1.field_nb[param1.field_qb].field_A.field_d + " / " + od.field_c[param1.field_nb[param1.field_qb].field_A.field_g].field_o, -this.field_f + 593, 264, 65280, -1);
             }
             if (null != param1.field_nb[param1.field_qb].field_m) {
-              kb.field_a[param1.field_nb[param1.field_qb].field_m.field_f].a(-this.field_f + 453, 139, 87, 87);
+              kb.field_a[param1.field_nb[param1.field_qb].field_m.field_f].drawScaled(-this.field_f + 453, 139, 87, 87);
             }
             if (null != param1.field_nb[param1.field_qb].field_i) {
               var18 = cc.field_i[param1.field_nb[param1.field_qb].field_i.field_g].d();
               var18.b();
               var10 = -(var18.field_p * 3 / 4) + (597 - 3 * var18.field_r / 8);
               var11 = -(var18.field_v * 3 / 4) - 3 * var18.field_t / 8 + 297;
-              var18.a(-this.field_f + var10, var11, 150, 75);
+              var18.drawScaled(-this.field_f + var10, var11, 150, 75);
               AccountRequestState.field_f.c(Integer.toString(param1.field_nb[param1.field_qb].field_i.field_d), 602 - this.field_f, 335, 65280, -1);
               if (!(7 >= param1.field_nb[param1.field_qb].field_i.field_d) ||
                 !(param1.field_I.field_a[param1.field_nb[param1.field_qb].field_i.field_g] > 0)) {
@@ -752,7 +752,7 @@ final class vl {
             }
             param1.field_nb[param1.field_qb].d((byte) 37);
             AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_e), var9, 406 - this.field_f, 16777215, -1);
-            SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_t * 3 + var9, 640);
+            SoftwareRasterizer.setClip(var9, 0, param1.field_nb[param1.field_qb].field_t * 3 + var9, 640);
             tg.field_e.f(var10, 416 - this.field_f, 16711680);
             SoftwareRasterizer.c();
             AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9 + 1, -this.field_f + 426, 0, -1);
@@ -761,7 +761,7 @@ final class vl {
             AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (-this.field_f + 416 - 1), 0, -1);
             AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_t), var9, 10 + (416 - this.field_f), 16711680, -1);
             var11 = 65793 * (int)(Math.sin(mm.field_f) * 120.0) + 7895160;
-            SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_w * 3 + var9, 640);
+            SoftwareRasterizer.setClip(var9, 0, param1.field_nb[param1.field_qb].field_w * 3 + var9, 640);
             tg.field_e.f(var10, 432 - this.field_f, 255);
             if (param1.field_nb[param1.field_qb].field_w != param1.field_nb[param1.field_qb].field_s) {
               SoftwareRasterizer.d(var9, 432 - this.field_f, param1.field_nb[param1.field_qb].field_s * 3, 9, var11, 192);
@@ -780,7 +780,7 @@ final class vl {
               AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 10 + (432 - (this.field_f + 1)), 0, -1);
               AccountRequestState.field_f.b(Integer.toString(param1.field_nb[param1.field_qb].field_s), var9, 432 - (this.field_f - 10), 8421631, -1);
             }
-            SoftwareRasterizer.c(var9, 0, param1.field_nb[param1.field_qb].field_u * 3 + var9, 640);
+            SoftwareRasterizer.setClip(var9, 0, param1.field_nb[param1.field_qb].field_u * 3 + var9, 640);
             tg.field_e.f(var10, 448 - this.field_f, 16776960);
             if (param1.field_nb[param1.field_qb].field_w != param1.field_nb[param1.field_qb].field_s) {
               SoftwareRasterizer.d(var9, 448 - this.field_f, param1.field_nb[param1.field_qb].field_v * 3, 9, var11, 192);
@@ -796,7 +796,7 @@ final class vl {
             } else {
               AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_x + "/" + param1.field_nb[param1.field_qb].field_v, var9, 10 + (448 - this.field_f), var11, -1);
             }
-            SoftwareRasterizer.c(var9, 0, 3 * param1.field_nb[param1.field_qb].field_B + var9, 640);
+            SoftwareRasterizer.setClip(var9, 0, 3 * param1.field_nb[param1.field_qb].field_B + var9, 640);
             tg.field_e.f(var10, 464 - this.field_f, 16777215);
             SoftwareRasterizer.c();
             AccountRequestState.field_f.b(param1.field_nb[param1.field_qb].field_B + "%", 1 + var9, 10 + (-this.field_f + 464), 0, -1);

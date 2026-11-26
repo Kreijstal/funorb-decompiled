@@ -363,7 +363,7 @@ final class bf extends IntrusiveNode {
               }
             }
             if (ah.field_a != null) {
-              ah.field_a.h(6000);
+              ah.field_a.fadeOutAndUnlink(6000);
               ah.field_a = null;
             }
             if (null != AccountCreationResultPanel.field_tb) {

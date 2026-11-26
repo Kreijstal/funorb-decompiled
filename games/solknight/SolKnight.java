@@ -661,7 +661,7 @@ public final class SolKnight extends ab {
           var19 = new Sprite(152, 152);
           var20 = var19;
           var20.a();
-          ak.field_e[4].a(0, 0, 152, 152);
+          ak.field_e[4].drawScaledAveraged(0, 0, 152, 152);
           ai.a(10, SocketConnector.field_g, 31, 132, 132, 16776960, -122, 10, var20, 0, 5500);
           dd.field_c = SecondaryNodeDeque.a(fh.field_c, param0 ^ -18362, "uberframe", "");
           this.a(dd.field_c, (byte) 31);
@@ -681,28 +681,28 @@ public final class SolKnight extends ab {
           h.field_b = dupTemp$0;
           var7 = dupTemp$0;
           var7.a();
-          var5.a(var6 - 316 * var5.field_q / var5.field_r >> 1, 0, var5.field_q * 316 / var5.field_r, 316);
-          var21.a(0, 3 * (316 - 316 * var21.field_r / var5.field_r) / 5, var6, var21.field_r * 316 / var5.field_r);
+          var5.drawScaledAveraged(var6 - 316 * var5.field_q / var5.field_r >> 1, 0, var5.field_q * 316 / var5.field_r, 316);
+          var21.drawScaledAveraged(0, 3 * (316 - 316 * var21.field_r / var5.field_r) / 5, var6, var21.field_r * 316 / var5.field_r);
           var8 = 40;
           var9 = 191;
           var10 = -8 - var8 * var7.field_q / var7.field_r + var9;
           var11 = new Sprite(var9, var8);
           var11.a();
-          var7.a(0, 0, var8 * var7.field_q / var7.field_r, var8);
+          var7.drawScaledAveraged(0, 0, var8 * var7.field_q / var7.field_r, var8);
           var12 = var10 * qd.field_f[0].field_r / qd.field_f[0].field_q;
-          qd.field_f[0].a(var7.field_q * var8 / var7.field_r + 8, -var12 + var8 >> 1, var10, var12);
+          qd.field_f[0].drawScaledAveraged(var7.field_q * var8 / var7.field_r + 8, -var12 + var8 >> 1, var10, var12);
           ah.a(var11, false);
           var13 = BufferedSocket.field_b.field_m;
           pg.field_a = new Sprite(var13, var13);
           pg.field_a.a();
-          u.field_c.a(0, 0, var13, var13);
+          u.field_c.drawScaledAveraged(0, 0, var13, var13);
           u.field_c = null;
           eh.field_b = new Sprite[IterableNodeHashTable.field_g.length];
           for (var14 = 0; IterableNodeHashTable.field_g.length > var14; var14++) {
             var15 = IterableNodeHashTable.field_g[var14];
             eh.field_b[var14] = new Sprite(var15.field_p, var15.field_t);
             eh.field_b[var14].a();
-            var15.d(-var15.field_s, -var15.field_n, 65793);
+            var15.drawSilhouette(-var15.field_s, -var15.field_n, 65793);
             var15.c(-var15.field_s, -var15.field_n, 64);
             SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           }
@@ -958,7 +958,7 @@ public final class SolKnight extends ab {
             if (var7 > 255) {
               var7 = 255;
             }
-            uh.field_l[var3].a(var5, var6, var7);
+            uh.field_l[var3].drawAdditive(var5, var6, var7);
             var4_int += 2;
           }
           if (kd.currentScreenIndex == ri.field_f) {
@@ -1000,7 +1000,7 @@ public final class SolKnight extends ab {
             }
             var7Lifetime1 = SocketConnector.field_g.b(BufferedCacheFile.field_m[var4.field_h]);
             uj.a(60 + var7Lifetime1, 70, -60 - var7Lifetime1 + 640 >> 1, gf.field_fb, var5Lifetime1, 2);
-            IterableNodeHashTable.field_f[var4.field_h].e(304, 10 + SocketConnector.field_g.field_s + (SocketConnector.field_g.field_F + var5Lifetime1));
+            IterableNodeHashTable.field_f[var4.field_h].drawQuarterSize(304, 10 + SocketConnector.field_g.field_s + (SocketConnector.field_g.field_F + var5Lifetime1));
             SocketConnector.field_g.a(BufferedCacheFile.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
           }
           if (RandomAccessCacheFile.b((byte) -115)) {
@@ -1168,8 +1168,8 @@ public final class SolKnight extends ab {
             var15.field_s = 0;
           }
           var12 = new Sprite(29, 29);
-          Sprite.a(var40[0], var12, 4, 0, 0, 0, 29, 29);
-          Sprite.a(var40[0], var12, 0, 4, 0, 0, 10, 29);
+          Sprite.copyRegion(var40[0], var12, 4, 0, 0, 0, 29, 29);
+          Sprite.copyRegion(var40[0], var12, 0, 4, 0, 0, 10, 29);
           var41 = wc.a(var12, 0);
           var42 = wc.a(var41, 0);
           var43 = wc.a(var42, 0);

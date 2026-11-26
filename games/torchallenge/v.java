@@ -107,7 +107,7 @@ abstract class v extends b {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.b(param2 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(param2 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -120,12 +120,12 @@ abstract class v extends b {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          SoftwareRasterizer.b(param2, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.b(this.field_p + param2 - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_p + param2 - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        rj.field_a.g(-90 + (this.field_p + param2), 10 + param1);
+        rj.field_a.drawTransparent(-90 + (this.field_p + param2), 10 + param1);
         SecondaryNodeDeque.a(5 + param2, this.field_p - 10, param1 + 35, param0 ^ -30, fl.field_s);
         SecondaryNodeDeque.a(param2, this.field_p, -22 + param1 + this.field_l, param0 ^ -30, qa.field_e);
         var4Lifetime2 = this.field_l - 79;
@@ -136,8 +136,8 @@ abstract class v extends b {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          SoftwareRasterizer.b(param2, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.b(-6 + (param2 + this.field_p), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param2 + this.field_p), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -203,7 +203,7 @@ abstract class v extends b {
         if (jc.field_c >= 150) {
           hf.field_a.d(var3 + 15, var4 + 10, var5);
         } else {
-          bd.field_t.f(var3, var4);
+          bd.field_t.drawHalfSize(var3, var4);
         }
         var6 = -125 + jc.field_c;
         if (var6 > 0 &&
@@ -391,8 +391,8 @@ abstract class v extends b {
         RuntimeException var5 = null;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
-          SoftwareRasterizer.b(param0, param3, param2 + 1, 10000536);
-          SoftwareRasterizer.b(param0, param4 + param3, param2 + 1, param1);
+          SoftwareRasterizer.drawHorizontalLine(param0, param3, param2 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param4 + param3, param2 + 1, param1);
           var5_int = 1;
           var6 = param4;
           if (SoftwareRasterizer.field_k > param3 + var5_int) {

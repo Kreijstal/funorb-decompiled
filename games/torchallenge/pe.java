@@ -95,7 +95,7 @@ final class pe extends v {
         super.c(param0, param1, param2);
         dl.field_H.a(this.field_fb, (this.field_p >> 1) + param2, 103 + param1, 16777215, -1);
         if (this.field_hb != null) {
-          SoftwareRasterizer.b(20 + param2, 120 + (param1 - 7), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param2, 120 + (param1 - 7), 260, 8421504);
           dl.field_H.a(this.field_hb, 20 + param2, 8 + param1 + 120, 260, 100, 16777215, -1, 1, 0, dl.field_H.field_x);
         }
     }

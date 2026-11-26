@@ -92,7 +92,7 @@ class wa extends DualLinkNode {
                   var15[1 + var13] == 0 ||
                   !(param0.field_t - 1 <= var16) &&
                   0 == var15[var13 + param0.field_r])) {
-                  SoftwareRasterizer.e(var17, var16, param6, param4);
+                  SoftwareRasterizer.fillCircle(var17, var16, param6, param4);
                 }
                 var13++;
               }

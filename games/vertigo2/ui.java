@@ -332,7 +332,7 @@ final class ui {
                 }
               }
             }
-            ir.a(var5, gg.field_n[var6], var4 + BitmapFont.b(SpriteState.field_D.toString()), var7, 0);
+            ir.a(var5, gg.field_n[var6], var4 + BitmapFont.escapeMarkup(SpriteState.field_D.toString()), var7, 0);
             if (!MouseWheelInput.field_a) {
               field_b.field_pb = false;
             }

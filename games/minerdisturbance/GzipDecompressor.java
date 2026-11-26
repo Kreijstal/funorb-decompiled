@@ -41,21 +41,21 @@ final class GzipDecompressor {
         if (mn.field_x >= 150) {
           bl.field_x.f(15 + var3, 10 + var4, var5);
         } else {
-          nn.field_c.d(var3, var4);
+          nn.field_c.drawHalfSize(var3, var4);
         }
         var6 = mn.field_x - 125;
         if (var6 > 0 &&
           var6 < 50) {
           if (var6 >= 20) {
             if (var6 < 30) {
-              lc.field_u.g(var3, var4, 256);
+              lc.field_u.drawAdditive(var3, var4, 256);
             } else {
               var7 = (50 - var6) * 256 / 20;
-              lc.field_u.g(var3, var4, var7);
+              lc.field_u.drawAdditive(var3, var4, var7);
             }
           } else {
             var7 = 256 * var6 / 20;
-            lc.field_u.g(var3, var4, var7);
+            lc.field_u.drawAdditive(var3, var4, var7);
           }
         }
         if (param0 != 10853) {

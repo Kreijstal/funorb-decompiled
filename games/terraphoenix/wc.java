@@ -224,7 +224,7 @@ abstract class wc extends DualLinkNode {
                         if (var9Lifetime1 != 4 &&
                           7 != var9Lifetime1 &&
                           var9Lifetime1 != 8) {
-                          rh.field_b[var9Lifetime1].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
+                          rh.field_b[var9Lifetime1].drawAdditive(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
                           break regionExit2;
                         }
                       }
@@ -260,7 +260,7 @@ abstract class wc extends DualLinkNode {
               if (fd.field_o) {
                 if (var5Lifetime1 != 0 && (param0.field_q == null ||
                   !param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
-                  rh.field_b[p.field_a[var4_intLifetime1].field_b].d(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
+                  rh.field_b[p.field_a[var4_intLifetime1].field_b].drawAdditive(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
                   break regionExit1;
                 }
                 rh.field_b[p.field_a[var4_intLifetime1].field_b].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
@@ -301,23 +301,23 @@ abstract class wc extends DualLinkNode {
                 var17Lifetime1 = (int)(20.0 * Math.cos((double)(-(var14Lifetime1 / 2) + var16Lifetime1) * 0.07));
                 var18 = -(int)(20.0 * Math.sin(0.07 * (double)(-(var14Lifetime1 / 2) + var16Lifetime1)));
                 if (var16Lifetime1 < var11Lifetime1) {
-                  SoftwareRasterizer.e(16 - var17Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e + var18, 1, 16711680);
+                  SoftwareRasterizer.fillCircle(16 - var17Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e + var18, 1, 16711680);
                 } else {
                   if (var14Lifetime1 > var16Lifetime1) {
-                    SoftwareRasterizer.e(p.field_a[var4_intLifetime1].field_f + (-var17Lifetime1 + 16), 16 + var18 + p.field_a[var4_intLifetime1].field_e, 1, 8388608);
+                    SoftwareRasterizer.fillCircle(p.field_a[var4_intLifetime1].field_f + (-var17Lifetime1 + 16), 16 + var18 + p.field_a[var4_intLifetime1].field_e, 1, 8388608);
                   }
                 }
                 var17Lifetime1Lifetime1 = (int)(Math.cos((double)(-(var15Lifetime1 / 2) + var16Lifetime1) * 0.07) * 20.0);
                 var18Lifetime1 = -(int)(Math.sin((double)(-(var15Lifetime1 / 2) + var16Lifetime1) * 0.07) * 20.0);
                 if (var12Lifetime1 > var16Lifetime1) {
-                  SoftwareRasterizer.e(var17Lifetime1Lifetime1 + (p.field_a[var4_intLifetime1].field_f + 16), 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 65280);
+                  SoftwareRasterizer.fillCircle(var17Lifetime1Lifetime1 + (p.field_a[var4_intLifetime1].field_f + 16), 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 65280);
                 } else {
                   if (var13Lifetime1 <= var16Lifetime1) {
                     if (var16Lifetime1 < var15Lifetime1) {
-                      SoftwareRasterizer.e(16 + var17Lifetime1Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 32768);
+                      SoftwareRasterizer.fillCircle(16 + var17Lifetime1Lifetime1 + p.field_a[var4_intLifetime1].field_f, 16 + var18Lifetime1 + p.field_a[var4_intLifetime1].field_e, 1, 32768);
                     }
                   } else {
-                    SoftwareRasterizer.e(16 + (p.field_a[var4_intLifetime1].field_f + var17Lifetime1Lifetime1), var18Lifetime1 + p.field_a[var4_intLifetime1].field_e + 16, 1, 255);
+                    SoftwareRasterizer.fillCircle(16 + (p.field_a[var4_intLifetime1].field_f + var17Lifetime1Lifetime1), var18Lifetime1 + p.field_a[var4_intLifetime1].field_e + 16, 1, 255);
                   }
                 }
               }

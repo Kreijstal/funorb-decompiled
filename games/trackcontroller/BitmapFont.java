@@ -83,9 +83,9 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_t != 256) {
-                                    var11_ref_fd.a(param1, param2 + this.field_q - var12, field_t);
+                                    var11_ref_fd.drawAlpha(param1, param2 + this.field_q - var12, field_t);
                                   } else {
-                                    var11_ref_fd.a(param1, param2 + this.field_q - var12);
+                                    var11_ref_fd.draw(param1, param2 + this.field_q - var12);
                                   }
                                   param1 = param1 + var11_ref_fd.field_g;
                                   var5 = 0;
@@ -152,10 +152,10 @@ abstract class BitmapFont extends DualLinkNode {
               }
               param1 = param1 + this.field_K[var8];
               if (field_w != -1) {
-                SoftwareRasterizer.a(var11, param2 + (int)((double)this.field_q * 0.7), param1 - var11, field_w);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_q * 0.7), param1 - var11, field_w);
               }
               if (field_B != -1) {
-                SoftwareRasterizer.a(var11, param2 + this.field_q + 1, param1 - var11, field_B);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_q + 1, param1 - var11, field_B);
               }
               var5 = var8;
             }
@@ -821,9 +821,9 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                   var17 = stackIn_33_0;
                                   if (field_t != 256) {
-                                    var16_ref_fd.a(param1 + var13, param2 + this.field_q - var17 + var14, field_t);
+                                    var16_ref_fd.drawAlpha(param1 + var13, param2 + this.field_q - var17 + var14, field_t);
                                   } else {
-                                    var16_ref_fd.a(param1 + var13, param2 + this.field_q - var17 + var14);
+                                    var16_ref_fd.draw(param1 + var13, param2 + this.field_q - var17 + var14);
                                   }
                                   param1 = param1 + var16_ref_fd.field_g;
                                   var7 = 0;
@@ -900,10 +900,10 @@ abstract class BitmapFont extends DualLinkNode {
               }
               var16 = this.field_K[var11];
               if (field_w != -1) {
-                SoftwareRasterizer.a(param1, param2 + (int)((double)this.field_q * 0.7), var16, field_w);
+                SoftwareRasterizer.drawHorizontalLine(param1, param2 + (int)((double)this.field_q * 0.7), var16, field_w);
               }
               if (field_B != -1) {
-                SoftwareRasterizer.a(param1, param2 + this.field_q, var16, field_B);
+                SoftwareRasterizer.drawHorizontalLine(param1, param2 + this.field_q, var16, field_B);
               }
               param1 = param1 + var16;
               var7 = var11;

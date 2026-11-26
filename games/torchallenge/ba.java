@@ -78,14 +78,14 @@ final class ba {
             var7Lifetime1 = var10 + param1 * (-var10 + var7Lifetime1) / param4;
           }
         }
-        var12.g(var6Lifetime1, var7Lifetime1);
+        var12.drawTransparent(var6Lifetime1, var7Lifetime1);
         if (0 == param0) {
           var6Lifetime2 = ic.field_B[0][8];
           var7Lifetime2 = ic.field_B[0][9];
-          ri.field_j.g(var6Lifetime2, var7Lifetime2);
+          ri.field_j.drawTransparent(var6Lifetime2, var7Lifetime2);
           var7Lifetime2Lifetime1 = ic.field_B[0][11];
           var6Lifetime2Lifetime1 = ic.field_B[0][10];
-          ri.field_j.g(var6Lifetime2Lifetime1, var7Lifetime2Lifetime1);
+          ri.field_j.drawTransparent(var6Lifetime2Lifetime1, var7Lifetime2Lifetime1);
         }
         return;
     }

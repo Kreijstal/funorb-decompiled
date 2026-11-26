@@ -239,7 +239,7 @@ abstract class MouseWheelInput {
                       var21 > var15 && (var13 < var22 ||
                       var23 <= var14)) {
                       var19 = wc.field_e[var25][var26][2];
-                      ResourceArchive.field_h[var19].g(var13, var15);
+                      ResourceArchive.field_h[var19].drawTransparent(var13, var15);
                     }
                   }
                 }

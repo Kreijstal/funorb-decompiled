@@ -134,8 +134,8 @@ final class mc implements j {
           SoftwareRasterizer.a(var8, var9, this.field_n, this.field_j, 5592405);
           SoftwareRasterizer.f(var8, var9, this.field_n, this.field_j, var7);
           if (var11.field_D) {
-            SoftwareRasterizer.d(var8, var9, this.field_n + var8, var9 + this.field_j, 1);
-            SoftwareRasterizer.d(var8 + this.field_n, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_n + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_n, var9, var8, this.field_j + var9, 1);
           }
           if (this.field_b != null) {
             var10 = this.field_n + this.field_h + this.field_c;

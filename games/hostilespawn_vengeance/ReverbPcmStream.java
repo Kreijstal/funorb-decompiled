@@ -359,7 +359,7 @@ final class ReverbPcmStream extends PcmStream {
         return 8;
     }
 
-    final synchronized void c(float param0) {
+    final synchronized void setWetGain(float param0) {
         this.field_x = param0;
         this.field_q = (float)((double)this.field_x * Math.sqrt((double)(1.0f + this.field_o) * 0.5));
         this.field_r = (float)((double)this.field_x * Math.sqrt((double)(1.0f - this.field_o) * 0.5));
@@ -374,7 +374,7 @@ final class ReverbPcmStream extends PcmStream {
         return this.field_m;
     }
 
-    final synchronized void d(float param0) {
+    final synchronized void setStereoWidth(float param0) {
         this.field_o = param0;
         this.field_q = (float)((double)this.field_x * Math.sqrt((double)(1.0f + this.field_o) * 0.5));
         this.field_r = (float)((double)this.field_x * Math.sqrt((double)(1.0f - this.field_o) * 0.5));
@@ -400,11 +400,11 @@ final class ReverbPcmStream extends PcmStream {
         }
         this.configureReverbChannels();
         this.f(0.04500000178813934f);
-        this.c(1.0f);
+        this.setWetGain(1.0f);
         this.b(0.8399999737739563f);
         this.a(1.0f);
         this.e(7000.0f);
-        this.d(1.0f);
+        this.setStereoWidth(1.0f);
         this.field_s = param0;
     }
 }

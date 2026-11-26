@@ -258,14 +258,14 @@ final class ki extends vj {
             }
             var2Lifetime4 = (stackIn_51_0 * MessageKeys.a(stackIn_51_1, stackIn_51_2 << stackIn_52_3) >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              lm.field_e.d(230, 389, var2Lifetime4);
-              lm.field_e.d(232, 389, var2Lifetime4);
-              lm.field_e.d(232, 391, var2Lifetime4);
-              lm.field_e.d(230, 391, var2Lifetime4);
-              var1.d(1, 1, var2Lifetime4);
-              var1.d(-1, 1, var2Lifetime4);
-              var1.d(1, -1, var2Lifetime4);
-              var1.d(-1, -1, var2Lifetime4);
+              lm.field_e.drawAdditive(230, 389, var2Lifetime4);
+              lm.field_e.drawAdditive(232, 389, var2Lifetime4);
+              lm.field_e.drawAdditive(232, 391, var2Lifetime4);
+              lm.field_e.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_56_0 = sl.field_d;
             stackIn_56_1 = -106;
@@ -294,10 +294,10 @@ final class ki extends vj {
               if (0 < var2Lifetime5) {
                 if (ef.field_j > -ig.field_a.field_r + 269 &&
                   ef.field_j < 269) {
-                  ig.field_a.d(-1 + (-ig.field_a.field_q + 269), var1_int - 1, var2Lifetime5);
-                  ig.field_a.d(269 - ig.field_a.field_q + 1, -1 + var1_int, var2Lifetime5);
-                  ig.field_a.d(268 - ig.field_a.field_q, var1_int + 1, var2Lifetime5);
-                  ig.field_a.d(1 + (269 - ig.field_a.field_q), var1_int + 1, var2Lifetime5);
+                  ig.field_a.drawAdditive(-1 + (-ig.field_a.field_q + 269), var1_int - 1, var2Lifetime5);
+                  ig.field_a.drawAdditive(269 - ig.field_a.field_q + 1, -1 + var1_int, var2Lifetime5);
+                  ig.field_a.drawAdditive(268 - ig.field_a.field_q, var1_int + 1, var2Lifetime5);
+                  ig.field_a.drawAdditive(1 + (269 - ig.field_a.field_q), var1_int + 1, var2Lifetime5);
                 } else {
                   if (ef.field_j > 586) {
                     if (ef.field_j >= ig.field_a.field_r + 586) {
@@ -305,10 +305,10 @@ final class ki extends vj {
                       wg.field_l[vi.field_q].b(269, 340);
                       return;
                     }
-                    ve.field_a.d(585, -1 + var1_int, var2Lifetime5);
-                    ve.field_a.d(587, -1 + var1_int, var2Lifetime5);
-                    ve.field_a.d(585, 1 + var1_int, var2Lifetime5);
-                    ve.field_a.d(587, 1 + var1_int, var2Lifetime5);
+                    ve.field_a.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                    ve.field_a.drawAdditive(587, -1 + var1_int, var2Lifetime5);
+                    ve.field_a.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                    ve.field_a.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }
@@ -421,10 +421,10 @@ final class ki extends vj {
           var6Lifetime1 != oh.field_b) {
           if (qf.field_d == var6Lifetime1) {
             var14 = AccountRequestState.field_c[2];
-            var14.d(var9, -(var14.field_t >> 1) + var10, 256);
+            var14.drawAdditive(var9, -(var14.field_t >> 1) + var10, 256);
           } else if (var6Lifetime1 == dg.field_c) {
             var15 = AccountRequestState.field_c[1];
-            var15.d(var9, -(var15.field_t >> 1) + var10, 256);
+            var15.drawAdditive(var9, -(var15.field_t >> 1) + var10, 256);
           }
         } else {
           var16 = AccountRequestState.field_c[0];
@@ -441,7 +441,7 @@ final class ki extends vj {
           }
           var16.b(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_W << 10, 4096);
           MessageKeys.a(false);
-          this.field_U.d(-(var16.field_q >> 1) + var9, -var16.field_u + var10, 256);
+          this.field_U.drawAdditive(-(var16.field_q >> 1) + var9, -var16.field_u + var10, 256);
         }
     }
 

@@ -51,25 +51,25 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var1Lifetime1;
         int var1Lifetime2;
         int var2Lifetime1;
-        ii.field_h[0].g(var1, var2);
+        ii.field_h[0].drawTransparent(var1, var2);
         var1Lifetime1 = 640 - var3;
-        ii.field_h[2].g(var1Lifetime1, var2);
+        ii.field_h[2].drawTransparent(var1Lifetime1, var2);
         var2Lifetime1 = 480 - var4;
         var1Lifetime2 = 0;
         if (param0 > 40) {
-          ii.field_h[5].g(var1Lifetime2, var2Lifetime1);
+          ii.field_h[5].drawTransparent(var1Lifetime2, var2Lifetime1);
           var1Lifetime2 = 640 - var3;
-          ii.field_h[7].g(var1Lifetime2, var2Lifetime1);
+          ii.field_h[7].drawTransparent(var1Lifetime2, var2Lifetime1);
           var1Lifetime2 = 0;
           var2Lifetime1 = 0;
-          ii.field_h[3].g(var1Lifetime2, var2Lifetime1);
+          ii.field_h[3].drawTransparent(var1Lifetime2, var2Lifetime1);
           var1Lifetime2 = 640 - ii.field_h[4].fullWidth;
-          ii.field_h[4].g(var1Lifetime2, var2Lifetime1);
+          ii.field_h[4].drawTransparent(var1Lifetime2, var2Lifetime1);
           var1Lifetime2 = 0;
           var2Lifetime1 = 0;
-          ii.field_h[1].g(var1Lifetime2, var2Lifetime1);
+          ii.field_h[1].drawTransparent(var1Lifetime2, var2Lifetime1);
           var2Lifetime1 = 480 - ii.field_h[6].fullHeight;
-          ii.field_h[6].g(var1Lifetime2, var2Lifetime1);
+          ii.field_h[6].drawTransparent(var1Lifetime2, var2Lifetime1);
           return;
         }
     }

@@ -277,7 +277,7 @@ final class ClientException extends RuntimeException {
           field_c = (String) null;
         }
         var13 = gj.a(2, 104, var13);
-        mb.field_d[var13].e(-(mb.field_d[var13].field_t / 2) + var8, -(mb.field_d[var13].field_q / 2) + var9);
+        mb.field_d[var13].drawTransparent(-(mb.field_d[var13].field_t / 2) + var8, -(mb.field_d[var13].field_q / 2) + var9);
         return new u(var8, var9);
     }
 

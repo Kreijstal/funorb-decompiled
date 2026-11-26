@@ -223,7 +223,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blitArgbScaled(SoftwareRasterizer.field_b, this.field_C, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final void drawTransparentWithOpacity(int param0, int param1, int param2) {
+    final void drawTransparentWithIntensity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

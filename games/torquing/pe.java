@@ -370,7 +370,7 @@ final class pe extends WidgetContainer implements wm, ng {
           this.field_C = (tk) null;
         }
         if (null != this.field_D) {
-          SoftwareRasterizer.b(param3 + 10, 134 + param2, -20 + this.width, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param2, -20 + this.width, 4210752);
         }
         super.a(param0, (byte) -98, param2, param3);
     }

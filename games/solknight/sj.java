@@ -41,9 +41,9 @@ final class sj implements j {
           }
           var8 = param3 + param4.field_m + var12.field_I;
           var9 = param1 + param4.field_j + var12.field_L;
-          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_g);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_g);
           for (var10 = var12.i(-85) - 1; var10 >= 0; var10--) {
-            SoftwareRasterizer.e(var8 + var12.b(var10, -96) * var7 / var12.a(-3), var9, this.field_b, this.field_f);
+            SoftwareRasterizer.fillCircle(var8 + var12.b(var10, -96) * var7 / var12.a(-3), var9, this.field_b, this.field_f);
           }
           if (this.field_e == null) {
             return;

@@ -52,18 +52,18 @@ final class c extends UiWidget {
             stackIn_7_0 = var8 | var9;
           }
           var12 = stackIn_7_0;
-          SoftwareRasterizer.b(var7, var6, this.field_N, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_N, var12);
           var9Lifetime1 = param2 & 65280;
           var8Lifetime1 = param2 & 16711935;
-          SoftwareRasterizer.b(var7 - 2 * this.field_N, var6, this.field_N, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_N, var6, this.field_N, var12);
           if (var11 >= 256) {
             stackIn_10_0 = var9Lifetime1 | var8Lifetime1;
           } else {
             stackIn_10_0 = (var9Lifetime1 * var11 & 16711680 | var11 * var8Lifetime1 & -16711936) >>> 8;
           }
           var12Lifetime1 = stackIn_10_0;
-          SoftwareRasterizer.b(this.field_N + var7, var6, this.field_N, var12Lifetime1);
-          SoftwareRasterizer.b(var7 - this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_N + var7, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_N, var6, this.field_N, var12Lifetime1);
         }
         if (param1 != 16711935) {
           this.field_O = 56;
@@ -163,7 +163,7 @@ final class c extends UiWidget {
             cl.a(param0 ^ -100, this.field_G);
             param2.d(-this.field_D, 0);
             param2.d(-this.field_D + 2 * this.field_N, 0);
-            this.field_A.g(0, 0);
+            this.field_A.drawMultiply(0, 0);
             MidiPcmStream.e(param0 ^ 4096);
             this.field_G.d(param3, param1);
           }
@@ -173,7 +173,7 @@ final class c extends UiWidget {
             }
             param2.d(-var7, 0);
             param2.d(-var7 + 2 * this.field_N, 0);
-            this.field_P.g(0, 0);
+            this.field_P.drawMultiply(0, 0);
             MidiPcmStream.e(param0 ^ 4096);
             this.field_G.d(-this.field_P.field_p + var5_int, param1);
             return;

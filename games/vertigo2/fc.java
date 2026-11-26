@@ -2047,7 +2047,7 @@ final class fc extends bn {
         this.field_K = false;
         this.field_M = (byte) 0;
         param0.c();
-        param0.d();
+        param0.buildVertexGroups();
         this.field_T = param0.field_G;
         this.field_W = param0.field_O;
         this.field_k = param0.field_p;

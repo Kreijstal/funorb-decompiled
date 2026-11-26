@@ -50,16 +50,16 @@ final class ra {
           SoftwareRasterizer.a(ae.field_y);
           SoftwareRasterizer.a(var9, param1, var10, param4);
           if ((1 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
-            sf.field_d[param6][param2][var11].a(var9, param1);
+            sf.field_d[param6][param2][var11].drawOpaque(var9, param1);
           }
           if ((2 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
-            sf.field_d[param6][param2][var11].a(var9, param1 + 16);
+            sf.field_d[param6][param2][var11].drawOpaque(var9, param1 + 16);
           }
           if ((ic.field_E[vb.field_a[param0][param2]][param5] & 4) > 0) {
-            sf.field_d[param6][param2][var11].a(var9, 32 + param1);
+            sf.field_d[param6][param2][var11].drawOpaque(var9, 32 + param1);
           }
           if ((8 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
-            sf.field_d[param6][param2][var11].a(var9, 48 + param1);
+            sf.field_d[param6][param2][var11].drawOpaque(var9, 48 + param1);
           }
           SoftwareRasterizer.b(ae.field_y);
         }
@@ -767,7 +767,7 @@ final class ra {
             mb.field_c.storedHeight = mb.field_c.fullHeight;
             SoftwareRasterizer.f(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
             for (var20Lifetime1 = 0; var18Lifetime1 > var20Lifetime1; var20Lifetime1++) {
-              Sprite.a(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
+              Sprite.copyRegion(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
               var19Lifetime1 += 16;
             }
             return;

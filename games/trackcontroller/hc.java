@@ -54,8 +54,8 @@ final class hc {
             var5_int = param3[0].field_s;
             var6 = param3[2].field_s;
             var7 = param3[1].field_s;
-            param3[0].e(param0, param1);
-            param3[2].e(-var6 + (param2 + param0), param1);
+            param3[0].drawTransparent(param0, param1);
+            param3[2].drawTransparent(-var6 + (param2 + param0), param1);
             SoftwareRasterizer.a(Archive.field_g);
             SoftwareRasterizer.b(param0 + var5_int, param1, -var6 + (param0 + param2), param1 + param3[1].field_v);
             if (param4 != -22081) {
@@ -64,7 +64,7 @@ final class hc {
             var8 = param0 + var5_int;
             var9 = param0 + param2 - var6;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
-              param3[1].e(param0, param1);
+              param3[1].drawTransparent(param0, param1);
             }
             SoftwareRasterizer.b(Archive.field_g);
             return;

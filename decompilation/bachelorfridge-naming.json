@@ -153,7 +153,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:TriangleRasterizer.a([IIIIII)V#0"
+      "renamedSymbol": "B:TriangleRasterizer.drawFlatSpan([IIIIII)V#0"
     },
     {
       "symbol": "B:jja.a(I)V#0",
@@ -5068,6 +5068,14 @@
       "renamedSymbol": "M:SoftwareRasterizer.clear()V"
     },
     {
+      "symbol": "M:dg.d(IIII)V",
+      "originalName": "d",
+      "to": "addVerticalLine",
+      "evidence": "Source-purpose review: Saturating additive vertical run,clipped x/y,length;preservechannelmask arithmetic. Original identity M:dg.d(IIII)V. Pinned original body SHA256 d44bc30aa76d468c92ca4063179de662fa3e61b6f83ac4774719757df89037dc. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.addVerticalLine(IIII)V"
+    },
+    {
       "symbol": "M:dg.d(IIIII)V",
       "originalName": "d",
       "to": "drawLine",
@@ -5572,12 +5580,52 @@
       "renamedSymbol": "M:IndexedSprite.blendPaletteRowsWithAlpha([I[B[IIIIIIII)V"
     },
     {
+      "symbol": "M:ee.b()Lee;",
+      "originalName": "b",
+      "to": "copyFlippedHorizontal",
+      "evidence": "Source-purpose review: Deep indexed copy with reversed columns and mirrored horizontal trim;palettecopied,pixelsnew. Original identity M:ee.b()Lee;. Pinned original body SHA256 4225f8cdbecf8e3355175672a4aad4e9848ceb79f4133a94777d7fe4aa73b634. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;"
+    },
+    {
       "symbol": "M:ee.b([I[B[IIIIIIII)V",
       "originalName": "b",
       "to": "copyNonzeroPaletteRows",
       "evidence": "Body is token-identical to the reviewed IndexedSprite method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IndexedSprite.copyNonzeroPaletteRows([I[B[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:ee.c()Lee;",
+      "originalName": "c",
+      "to": "copy",
+      "evidence": "Source-purpose review: Deep pixel+palette copy retaining alltrim/full/trimmeddimensions. Original identity M:ee.c()Lee;. Pinned original body SHA256 fdfa191504589003891528a765f519827e8261dc2d18f7950e60d6648369b40a. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.copy()LIndexedSprite;"
+    },
+    {
+      "symbol": "M:ee.c([I[B[IIIIIIII)V",
+      "originalName": "c",
+      "to": "blitTinted",
+      "evidence": "Source-purpose review: Tint applies ONLY when palette RGB channels are equal;non-gray colours pass through unchanged. New evidence must preserve this condition;existing generic blitTinted alias retained. Original identity M:ee.c([I[B[IIIIIIII)V. Pinned original body SHA256 6b9390013d817fd6c6d00be74b953600643461b415b2e71b28f3d2be7439b781. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.blitTinted([I[B[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:ee.d()V",
+      "originalName": "d",
+      "to": "flipVertically",
+      "evidence": "Source-purpose review: Existing flipHorizontally alias is wrong for Zombie DawnMulti row-reversal body and targetBachelorFridge d(). UseflipVertically;allfields/operations unchanged. Do not propagate wrong reference name. Original identity M:ee.d()V. Pinned original body SHA256 fb89fe85bc0076264b407f60ea307966bc9ce9b16c89a6a27e90d2544ef7b359. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.flipVertically()V"
+    },
+    {
+      "symbol": "M:ee.d([I[B[IIIIIIII)V",
+      "originalName": "d",
+      "to": "copyNonzeroPaletteRowsReversed",
+      "evidence": "Source-purpose review: Unrolled source cursor decrements while destination increments;transparency tests palette colour0,not index0. New evidence must describe source reversal rather than claim reverse destination writes. Original identity M:ee.d([I[B[IIIIIIII)V. Pinned original body SHA256 712fe9acabade4e47f75ec0a6f4151f85502830314dbb4e4c1d3d0fab04bf84a. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V"
     },
     {
       "symbol": "M:eea.a(B)V",
@@ -5938,6 +5986,14 @@
       "evidence": "Body is token-identical to the reviewed BinaryBitmapFont method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BinaryBitmapFont.drawGlyphAlpha(IIIIIIIZ)V"
+    },
+    {
+      "symbol": "M:fea.a(IIIIIIZ)V",
+      "originalName": "a",
+      "to": "drawGlyph",
+      "evidence": "Source-purpose review: Binary unmasked solid-colour nonzero-byte kernel and row-masked kernel fully read;masked kernel ignores array parameter and writes global raster. Preserve all masks,clipping,cursors and failures. Original identity M:fea.a(IIIIIIZ)V. Pinned original body SHA256 77135566eef2859f98162c0f46c4ca16d85425068ba69cc7d448a1c848821e58. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BinaryBitmapFont.drawGlyph(IIIIIIZ)V"
     },
     {
       "symbol": "M:fea.a([I[BIIIIIII)V",
@@ -7444,6 +7500,22 @@
       "renamedSymbol": "M:TriangleRasterizer.drawShadedTriangle(IIIIIIIII)V"
     },
     {
+      "symbol": "M:jb.a([IIIIII)V",
+      "originalName": "a",
+      "to": "drawFlatSpan",
+      "evidence": "Source-purpose review: Flat triangle span,optionalxclip,4pixelunroll/tail;alpha0opaque,254copiesNEXTneighbor,otherblend. Preserve that original neighbor/bounds path. Original identity M:jb.a([IIIIII)V. Pinned original body SHA256 e82bbf957c1f6fd300a79b421c3ea4d7bb402fe2a5301012a4b865b337bfef5c. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TriangleRasterizer.drawFlatSpan([IIIIII)V"
+    },
+    {
+      "symbol": "M:jb.a([IIIIIIII)V",
+      "originalName": "a",
+      "to": "drawShadedSpan",
+      "evidence": "Source-purpose review: Palette-shaded span withfixedpointgradient and optionalcoarse4pixelgroups;retainalpha arithmetic,paletteindex failures andpartialwrites. Original identity M:jb.a([IIIIIIII)V. Pinned original body SHA256 0eb8653be33bf803fc011cc7651f2561bcc197a4ee8e74e15845d903ae953022. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TriangleRasterizer.drawShadedSpan([IIIIIIII)V"
+    },
+    {
       "symbol": "M:jb.b()V",
       "originalName": "b",
       "to": "releaseStatics",
@@ -7730,6 +7802,14 @@
       "evidence": "Body is token-identical to the reviewed PcmSampleStream method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.cancelRamp()V"
+    },
+    {
+      "symbol": "M:je.l()Z",
+      "originalName": "l",
+      "to": "finishOrContinueVolumeRamp",
+      "evidence": "Source-purpose review: Finish/restart volume+stereo ramp:MININTfadeouttargetzero,matchinggainsrefreshorunlink,trueonlyfadeoutcompletion;otherwise scheduleunitsteps/minimumdistance. Original identity M:je.l()Z. Pinned original body SHA256 7c94b94739148a83ba6ef8c2962cd229c30e1aae3b0b17c427bdfab341ebe416. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.finishOrContinueVolumeRamp()Z"
     },
     {
       "symbol": "M:jea.a(I)V",
@@ -8428,12 +8508,36 @@
       "renamedSymbol": "M:Sprite.drawMultiply(II)V"
     },
     {
+      "symbol": "M:kv.a(IIII)Z",
+      "originalName": "a",
+      "to": "isOpaqueAt",
+      "evidence": "Source-purpose review: Four args are sprite origin and testpoint;subtracttrim/origin,boundscheck,return sourcepixel!=0. Original identity M:kv.a(IIII)Z. Pinned original body SHA256 1d928421d59e4776d124d0f2fb484846ca215e93e1072ca7d3d20e4ab37e19e4. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.isOpaqueAt(IIII)Z"
+    },
+    {
       "symbol": "M:kv.a(IIIIII)V",
       "originalName": "a",
       "to": "rotateNearest",
       "evidence": "Body is token-identical to the reviewed ArgbSprite method of the same name in other FunOrb games. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.rotateNearest(IIIIII)V"
+    },
+    {
+      "symbol": "M:kv.a(IIII[I[IIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitScaledAdditiveRows",
+      "evidence": "Source-purpose review: Nearest16.16scaledsampling,skipzeros,saturatingaddRGB into destination;retain negated width/height loop domains,strides/overflow. Original identity M:kv.a(IIII[I[IIIIIIIIIII)V. Pinned original body SHA256 c9e35ceee165fb7420d1a0df4bfe6a3f92dddc5f0100bfeb1748146c05100fb1. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:kv.a(IIII[I[IIIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitScaledAdditiveIntensityRows",
+      "evidence": "Source-purpose review: Same additive scaledkernel,RGBintensitymultiply before saturation;retainunsignedshifts/masks. Original identity M:kv.a(IIII[I[IIIIIIIIIIII)V. Pinned original body SHA256 cfad84b83217e5772f152ba82e9f28768a845293624eb841256c60c51802d278. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V"
     },
     {
       "symbol": "M:kv.a(III[I[IIIIIIIII)V",
@@ -8498,6 +8602,14 @@
       "evidence": "Body is token-identical to the reviewed Sprite method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.drawVerticalFlip(II)V"
+    },
+    {
+      "symbol": "M:kv.b(III)V",
+      "originalName": "b",
+      "to": "drawTransparentWithIntensity",
+      "evidence": "Source-purpose review: Wrapper isRGBINTENSITY,notglobalopacity:256normaldraw,other paths multiply nonzero source RGB andreplace destination. Name drawTransparentWithIntensity. Original identity M:kv.b(III)V. Pinned original body SHA256 b60eea10fa1530e3dde3639dc9732c1353f0126f839d41570302c7cafc78b670. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.drawTransparentWithIntensity(III)V"
     },
     {
       "symbol": "M:kv.b(IIIII)V",
@@ -8618,6 +8730,14 @@
       "evidence": "Body is token-identical to the reviewed Sprite method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.draw(II)V"
+    },
+    {
+      "symbol": "M:kv.e(IIII)V",
+      "originalName": "e",
+      "to": "drawScaledAveraged",
+      "evidence": "Source-purpose review: Area-weighted downscale only when requested size<=full dimensions;trim-aware fixedpoint4fractional area,nonzeroRGB weighting,coverage thresholdhalfarea,blackresultforced1. Preserve zeroarea destination cursor quirk and larger-size exception. Original identity M:kv.e(IIII)V. Pinned original body SHA256 e7b78e032e22f228621d4c13eba00188e566d2b82f5b8c7421bd1dc81c4e00ab. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.drawScaledAveraged(IIII)V"
     },
     {
       "symbol": "M:kv.f()V",
@@ -10500,6 +10620,14 @@
       "renamedSymbol": "M:ArgbSprite.drawVerticalFlip(II)V"
     },
     {
+      "symbol": "M:pa.b(III)V",
+      "originalName": "b",
+      "to": "drawTransparentWithIntensity",
+      "evidence": "Source-purpose review: ARGB override dims RGB before blending with ORIGINAL per-pixel alpha;intensity doesnot scale alpha. Match basefamily name drawTransparentWithIntensity. Original identity M:pa.b(III)V. Pinned original body SHA256 532586582312546f2a0517e5f28d45a32812a8b146c2adf8ffb937a66a2158d9. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.drawTransparentWithIntensity(III)V"
+    },
+    {
       "symbol": "M:pa.b(III[I[IIIIIIIIII)V",
       "originalName": "b",
       "to": "addArgbRows",
@@ -10988,6 +11116,14 @@
       "renamedSymbol": "M:PalettedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V"
     },
     {
+      "symbol": "M:pia.a(IIIIIIZ)V",
+      "originalName": "a",
+      "to": "drawGlyph",
+      "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:pia.a(IIIIIIZ)V. Pinned original body SHA256 5f058b39bf53a2e11216f4559821fefe7ef9ea130b1be9af47d5d7011be5e504. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PalettedBitmapFont.drawGlyph(IIIIIIZ)V"
+    },
+    {
       "symbol": "M:pia.a(I[I[B[IIIIIII)V",
       "originalName": "a",
       "to": "blitPalettedGlyph",
@@ -11082,6 +11218,14 @@
       "evidence": "Body is token-identical to the reviewed BinaryBitmapFont method of the same name in other FunOrb games. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BitmapFont.drawGlyphAlpha(IIIIIIIZ)V"
+    },
+    {
+      "symbol": "M:po.a(IIIIIIZ)V",
+      "originalName": "a",
+      "to": "drawGlyph",
+      "evidence": "Source-purpose review: Expanded override-family member reviewed alongside its complete selected family;preserve the inherited API contract and all original dispatch. Original identity M:po.a(IIIIIIZ)V. Original abstract declaration and full override closure retained. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BitmapFont.drawGlyph(IIIIIIZ)V"
     },
     {
       "symbol": "M:po.a(Ljava/lang/String;I)V",
@@ -11964,6 +12108,14 @@
       "renamedSymbol": "M:AntialiasedBitmapFont.drawGlyphAlpha(IIIIIIIZ)V"
     },
     {
+      "symbol": "M:sba.a(IIIIIIZ)V",
+      "originalName": "a",
+      "to": "drawGlyph",
+      "evidence": "Source-purpose review: Coverage glyph clips;shadow selects binary mask,otherwise unsigned byte coverage with 256-complement RGB blend. Both primary helpers fully read. Original identity M:sba.a(IIIIIIZ)V. Pinned original body SHA256 c92476582233d17bfe1970b9e0a9c8b447d64c6cf69ca455203c2833f8dfa500. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V"
+    },
+    {
       "symbol": "M:sba.a([I[BIIIIIII)V",
       "originalName": "a",
       "to": "blitCoverageGlyph",
@@ -12252,12 +12404,28 @@
       "renamedSymbol": "M:ModelMesh.scaleGeometry(III)V"
     },
     {
+      "symbol": "M:ss.a(IIIIIIII)Z",
+      "originalName": "a",
+      "to": "isPointInTriangleBounds",
+      "evidence": "Source-purpose review: Inclusive AABB point-vs3projected-vertex bounds,NOTtrueedgecontainment;preservecomparisonshortcircuits/int extrema. Original identity M:ss.a(IIIIIIII)Z. Pinned original body SHA256 364ad2c350020a77b318a098f33047d47073ed3453a10fd67a4044b94760303f. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z"
+    },
+    {
       "symbol": "M:ss.b()V",
       "originalName": "b",
       "to": "calculateBounds",
       "evidence": "Body is token-identical to the reviewed ModelMesh method of the same name in other FunOrb games.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ModelMesh.calculateBounds()V"
+    },
+    {
+      "symbol": "M:ss.b(I)V",
+      "originalName": "b",
+      "to": "drawFace",
+      "evidence": "Source-purpose review: Face index dispatches nearclip helper or textured/shaded/flat triangle afterclip/alpha state writes;keeptexturevertex overrides/sentinels/unsignedmasks. Original identity M:ss.b(I)V. Pinned original body SHA256 92f4c63833bd02b67c2fcfe26af5ceac1d4b8a08620ac8233ebfaf56408bea4a. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ModelMesh.drawFace(I)V"
     },
     {
       "symbol": "M:ss.c(I)I",
@@ -13957,7 +14125,7 @@
     },
     {
       "symbol": "B:jb.a([IIIIII)V#0",
-      "renamedSymbol": "B:TriangleRasterizer.a([IIIIII)V#0",
+      "renamedSymbol": "B:TriangleRasterizer.drawFlatSpan([IIIIII)V#0",
       "originalName": "L2",
       "renamedName": "regionExit1",
       "declaration": {
@@ -114783,7 +114951,7 @@
     },
     {
       "symbol": "L:dg.d(IIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.addVerticalLine(IIII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -114794,7 +114962,7 @@
     },
     {
       "symbol": "L:dg.d(IIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.addVerticalLine(IIII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -114805,7 +114973,7 @@
     },
     {
       "symbol": "L:dg.d(IIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.addVerticalLine(IIII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -114816,7 +114984,7 @@
     },
     {
       "symbol": "L:dg.d(IIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.addVerticalLine(IIII)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -127708,7 +127876,7 @@
     },
     {
       "symbol": "L:ee.b()Lee;#0",
-      "renamedSymbol": "L:IndexedSprite.b()LIndexedSprite;#0",
+      "renamedSymbol": "L:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -127719,7 +127887,7 @@
     },
     {
       "symbol": "L:ee.b()Lee;#1",
-      "renamedSymbol": "L:IndexedSprite.b()LIndexedSprite;#1",
+      "renamedSymbol": "L:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -127730,7 +127898,7 @@
     },
     {
       "symbol": "L:ee.b()Lee;#2",
-      "renamedSymbol": "L:IndexedSprite.b()LIndexedSprite;#2",
+      "renamedSymbol": "L:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -127741,7 +127909,7 @@
     },
     {
       "symbol": "L:ee.b()Lee;#3",
-      "renamedSymbol": "L:IndexedSprite.b()LIndexedSprite;#3",
+      "renamedSymbol": "L:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;#3",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -127752,7 +127920,7 @@
     },
     {
       "symbol": "L:ee.b()Lee;#4",
-      "renamedSymbol": "L:IndexedSprite.b()LIndexedSprite;#4",
+      "renamedSymbol": "L:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -128192,7 +128360,7 @@
     },
     {
       "symbol": "L:ee.c()Lee;#0",
-      "renamedSymbol": "L:IndexedSprite.c()LIndexedSprite;#0",
+      "renamedSymbol": "L:IndexedSprite.copy()LIndexedSprite;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128203,7 +128371,7 @@
     },
     {
       "symbol": "L:ee.c()Lee;#1",
-      "renamedSymbol": "L:IndexedSprite.c()LIndexedSprite;#1",
+      "renamedSymbol": "L:IndexedSprite.copy()LIndexedSprite;#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -128214,7 +128382,7 @@
     },
     {
       "symbol": "L:ee.c()Lee;#2",
-      "renamedSymbol": "L:IndexedSprite.c()LIndexedSprite;#2",
+      "renamedSymbol": "L:IndexedSprite.copy()LIndexedSprite;#2",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -128225,7 +128393,7 @@
     },
     {
       "symbol": "L:ee.c()Lee;#3",
-      "renamedSymbol": "L:IndexedSprite.c()LIndexedSprite;#3",
+      "renamedSymbol": "L:IndexedSprite.copy()LIndexedSprite;#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -128236,7 +128404,7 @@
     },
     {
       "symbol": "L:ee.c()Lee;#4",
-      "renamedSymbol": "L:IndexedSprite.c()LIndexedSprite;#4",
+      "renamedSymbol": "L:IndexedSprite.copy()LIndexedSprite;#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -128346,7 +128514,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#0",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -128357,7 +128525,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -128368,7 +128536,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -128379,7 +128547,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -128390,7 +128558,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -128401,7 +128569,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -128412,7 +128580,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#6",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -128423,7 +128591,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#7",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -128434,7 +128602,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#8",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -128445,7 +128613,7 @@
     },
     {
       "symbol": "L:ee.c([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "L:IndexedSprite.c([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "L:IndexedSprite.blitTinted([I[B[IIIIIIII)V#9",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -128456,7 +128624,7 @@
     },
     {
       "symbol": "L:ee.d()V#0",
-      "renamedSymbol": "L:IndexedSprite.d()V#0",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128467,7 +128635,7 @@
     },
     {
       "symbol": "L:ee.d()V#1",
-      "renamedSymbol": "L:IndexedSprite.d()V#1",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -128478,7 +128646,7 @@
     },
     {
       "symbol": "L:ee.d()V#2",
-      "renamedSymbol": "L:IndexedSprite.d()V#2",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -128489,7 +128657,7 @@
     },
     {
       "symbol": "L:ee.d()V#3",
-      "renamedSymbol": "L:IndexedSprite.d()V#3",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -128500,7 +128668,7 @@
     },
     {
       "symbol": "L:ee.d()V#4",
-      "renamedSymbol": "L:IndexedSprite.d()V#4",
+      "renamedSymbol": "L:IndexedSprite.flipVertically()V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -128610,7 +128778,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -128621,7 +128789,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#1",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -128632,7 +128800,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -128643,7 +128811,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#3",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -128654,7 +128822,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -128665,7 +128833,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#5",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -128676,7 +128844,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -128687,7 +128855,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -128698,7 +128866,7 @@
     },
     {
       "symbol": "L:ee.d([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#8",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -140435,7 +140603,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#0",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -140446,7 +140614,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#1",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -140457,7 +140625,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#2",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -140468,7 +140636,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#3",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -140479,7 +140647,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#4",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -140490,7 +140658,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#5",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -140501,7 +140669,7 @@
     },
     {
       "symbol": "L:fea.a(IIIIIIZ)V#6",
-      "renamedSymbol": "L:BinaryBitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "L:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -187185,7 +187353,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#0",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#0",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#0",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -187196,7 +187364,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#1",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#1",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#1",
       "originalName": "incrementValue$13",
       "renamedName": "incrementValue$13",
       "declaration": {
@@ -187207,7 +187375,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#10",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#10",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -187218,7 +187386,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#11",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#11",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -187229,7 +187397,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#12",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#12",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -187240,7 +187408,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#13",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#13",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#13",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -187251,7 +187419,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#14",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#14",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#14",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -187262,7 +187430,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#15",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#15",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#15",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -187273,7 +187441,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#16",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#16",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#16",
       "originalName": "var8Lifetime4",
       "renamedName": "var8Lifetime4",
       "declaration": {
@@ -187284,7 +187452,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#2",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#2",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#2",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -187295,7 +187463,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#3",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#3",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#3",
       "originalName": "incrementValue$15",
       "renamedName": "incrementValue$15",
       "declaration": {
@@ -187306,7 +187474,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#4",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#4",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#4",
       "originalName": "incrementValue$16",
       "renamedName": "incrementValue$16",
       "declaration": {
@@ -187317,7 +187485,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#5",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#5",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#5",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -187328,7 +187496,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#6",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#6",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#6",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -187339,7 +187507,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#7",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#7",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#7",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -187350,7 +187518,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#8",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#8",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#8",
       "originalName": "incrementValue$10",
       "renamedName": "incrementValue$10",
       "declaration": {
@@ -187361,7 +187529,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIII)V#9",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIII)V#9",
+      "renamedSymbol": "L:TriangleRasterizer.drawFlatSpan([IIIIII)V#9",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -187372,7 +187540,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#0",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#0",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#0",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -187383,7 +187551,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#1",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#1",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#1",
       "originalName": "incrementValue$13",
       "renamedName": "incrementValue$13",
       "declaration": {
@@ -187394,7 +187562,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#10",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#10",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#10",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -187405,7 +187573,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#2",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#2",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#2",
       "originalName": "incrementValue$15",
       "renamedName": "incrementValue$15",
       "declaration": {
@@ -187416,7 +187584,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#3",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#3",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#3",
       "originalName": "incrementValue$16",
       "renamedName": "incrementValue$16",
       "declaration": {
@@ -187427,7 +187595,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#4",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#4",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#4",
       "originalName": "incrementValue$17",
       "renamedName": "incrementValue$17",
       "declaration": {
@@ -187438,7 +187606,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#5",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#5",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#5",
       "originalName": "incrementValue$18",
       "renamedName": "incrementValue$18",
       "declaration": {
@@ -187449,7 +187617,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#6",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#6",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#6",
       "originalName": "incrementValue$19",
       "renamedName": "incrementValue$19",
       "declaration": {
@@ -187460,7 +187628,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#7",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#7",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -187471,7 +187639,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#8",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#8",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -187482,7 +187650,7 @@
     },
     {
       "symbol": "L:jb.a([IIIIIIII)V#9",
-      "renamedSymbol": "L:TriangleRasterizer.a([IIIIIIII)V#9",
+      "renamedSymbol": "L:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -190540,7 +190708,7 @@
     },
     {
       "symbol": "L:je.l()Z#0",
-      "renamedSymbol": "L:PcmSampleStream.l()Z#0",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -190551,7 +190719,7 @@
     },
     {
       "symbol": "L:je.l()Z#1",
-      "renamedSymbol": "L:PcmSampleStream.l()Z#1",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -190562,7 +190730,7 @@
     },
     {
       "symbol": "L:je.l()Z#2",
-      "renamedSymbol": "L:PcmSampleStream.l()Z#2",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -214003,7 +214171,7 @@
     },
     {
       "symbol": "L:kv.a(IIII)Z#0",
-      "renamedSymbol": "L:Sprite.a(IIII)Z#0",
+      "renamedSymbol": "L:Sprite.isOpaqueAt(IIII)Z#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -215224,7 +215392,7 @@
     },
     {
       "symbol": "L:kv.a(IIII[I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -215235,7 +215403,7 @@
     },
     {
       "symbol": "L:kv.a(IIII[I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -215246,7 +215414,7 @@
     },
     {
       "symbol": "L:kv.a(IIII[I[IIIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -215257,7 +215425,7 @@
     },
     {
       "symbol": "L:kv.a(IIII[I[IIIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(IIII[I[IIIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#1",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -215851,7 +216019,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#0",
-      "renamedSymbol": "L:Sprite.b(III)V#0",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -215862,7 +216030,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#1",
-      "renamedSymbol": "L:Sprite.b(III)V#1",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -215873,7 +216041,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#2",
-      "renamedSymbol": "L:Sprite.b(III)V#2",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -215884,7 +216052,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#3",
-      "renamedSymbol": "L:Sprite.b(III)V#3",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -215895,7 +216063,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#4",
-      "renamedSymbol": "L:Sprite.b(III)V#4",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -215906,7 +216074,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#5",
-      "renamedSymbol": "L:Sprite.b(III)V#5",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -215917,7 +216085,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#6",
-      "renamedSymbol": "L:Sprite.b(III)V#6",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -215928,7 +216096,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#7",
-      "renamedSymbol": "L:Sprite.b(III)V#7",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -215939,7 +216107,7 @@
     },
     {
       "symbol": "L:kv.b(III)V#8",
-      "renamedSymbol": "L:Sprite.b(III)V#8",
+      "renamedSymbol": "L:Sprite.drawTransparentWithIntensity(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -218986,7 +219154,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#0",
-      "renamedSymbol": "L:Sprite.e(IIII)V#0",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -218997,7 +219165,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#1",
-      "renamedSymbol": "L:Sprite.e(IIII)V#1",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -219008,7 +219176,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#10",
-      "renamedSymbol": "L:Sprite.e(IIII)V#10",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -219019,7 +219187,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#11",
-      "renamedSymbol": "L:Sprite.e(IIII)V#11",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -219030,7 +219198,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#12",
-      "renamedSymbol": "L:Sprite.e(IIII)V#12",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -219041,7 +219209,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#13",
-      "renamedSymbol": "L:Sprite.e(IIII)V#13",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -219052,7 +219220,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#14",
-      "renamedSymbol": "L:Sprite.e(IIII)V#14",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -219063,7 +219231,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#15",
-      "renamedSymbol": "L:Sprite.e(IIII)V#15",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -219074,7 +219242,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#16",
-      "renamedSymbol": "L:Sprite.e(IIII)V#16",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -219085,7 +219253,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#17",
-      "renamedSymbol": "L:Sprite.e(IIII)V#17",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#17",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -219096,7 +219264,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#18",
-      "renamedSymbol": "L:Sprite.e(IIII)V#18",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#18",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -219107,7 +219275,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#19",
-      "renamedSymbol": "L:Sprite.e(IIII)V#19",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#19",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -219118,7 +219286,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#2",
-      "renamedSymbol": "L:Sprite.e(IIII)V#2",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#2",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -219129,7 +219297,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#20",
-      "renamedSymbol": "L:Sprite.e(IIII)V#20",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#20",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -219140,7 +219308,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#21",
-      "renamedSymbol": "L:Sprite.e(IIII)V#21",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#21",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -219151,7 +219319,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#22",
-      "renamedSymbol": "L:Sprite.e(IIII)V#22",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#22",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -219162,7 +219330,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#23",
-      "renamedSymbol": "L:Sprite.e(IIII)V#23",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#23",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -219173,7 +219341,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#24",
-      "renamedSymbol": "L:Sprite.e(IIII)V#24",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#24",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -219184,7 +219352,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#25",
-      "renamedSymbol": "L:Sprite.e(IIII)V#25",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#25",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -219195,7 +219363,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#26",
-      "renamedSymbol": "L:Sprite.e(IIII)V#26",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#26",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -219206,7 +219374,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#27",
-      "renamedSymbol": "L:Sprite.e(IIII)V#27",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#27",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -219217,7 +219385,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#28",
-      "renamedSymbol": "L:Sprite.e(IIII)V#28",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#28",
       "originalName": "var28Lifetime1",
       "renamedName": "var28Lifetime1",
       "declaration": {
@@ -219228,7 +219396,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#3",
-      "renamedSymbol": "L:Sprite.e(IIII)V#3",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -219239,7 +219407,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#4",
-      "renamedSymbol": "L:Sprite.e(IIII)V#4",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -219250,7 +219418,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#5",
-      "renamedSymbol": "L:Sprite.e(IIII)V#5",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -219261,7 +219429,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#6",
-      "renamedSymbol": "L:Sprite.e(IIII)V#6",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -219272,7 +219440,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#7",
-      "renamedSymbol": "L:Sprite.e(IIII)V#7",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -219283,7 +219451,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#8",
-      "renamedSymbol": "L:Sprite.e(IIII)V#8",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -219294,7 +219462,7 @@
     },
     {
       "symbol": "L:kv.e(IIII)V#9",
-      "renamedSymbol": "L:Sprite.e(IIII)V#9",
+      "renamedSymbol": "L:Sprite.drawScaledAveraged(IIII)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -275372,7 +275540,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#0",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#0",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -275383,7 +275551,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#1",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#1",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -275394,7 +275562,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#2",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#2",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -275405,7 +275573,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#3",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#3",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -275416,7 +275584,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#4",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#4",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -275427,7 +275595,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#5",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#5",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -275438,7 +275606,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#6",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#6",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -275449,7 +275617,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#7",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#7",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -275460,7 +275628,7 @@
     },
     {
       "symbol": "L:pa.b(III)V#8",
-      "renamedSymbol": "L:ArgbSprite.b(III)V#8",
+      "renamedSymbol": "L:ArgbSprite.drawTransparentWithIntensity(III)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -282346,7 +282514,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#0",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -282357,7 +282525,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#1",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -282368,7 +282536,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#2",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -282379,7 +282547,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#3",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -282390,7 +282558,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#4",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -282401,7 +282569,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#5",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -282412,7 +282580,7 @@
     },
     {
       "symbol": "L:pia.a(IIIIIIZ)V#6",
-      "renamedSymbol": "L:PalettedBitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "L:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -315445,7 +315613,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#0",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -315456,7 +315624,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#1",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -315467,7 +315635,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#2",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -315478,7 +315646,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#3",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -315489,7 +315657,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#4",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -315500,7 +315668,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#5",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -315511,7 +315679,7 @@
     },
     {
       "symbol": "L:sba.a(IIIIIIZ)V#6",
-      "renamedSymbol": "L:AntialiasedBitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "L:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -326555,7 +326723,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#0",
-      "renamedSymbol": "L:ModelMesh.b(I)V#0",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -326566,7 +326734,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#1",
-      "renamedSymbol": "L:ModelMesh.b(I)V#1",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -326577,7 +326745,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#2",
-      "renamedSymbol": "L:ModelMesh.b(I)V#2",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -326588,7 +326756,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#3",
-      "renamedSymbol": "L:ModelMesh.b(I)V#3",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -326599,7 +326767,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#4",
-      "renamedSymbol": "L:ModelMesh.b(I)V#4",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -326610,7 +326778,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#5",
-      "renamedSymbol": "L:ModelMesh.b(I)V#5",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -326621,7 +326789,7 @@
     },
     {
       "symbol": "L:ss.b(I)V#6",
-      "renamedSymbol": "L:ModelMesh.b(I)V#6",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -381159,9 +381327,9 @@
     },
     {
       "symbol": "M:dg.d(IIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.d(IIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.addVerticalLine(IIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "addVerticalLine",
       "declaration": {
         "file": "dg.java",
         "start": 868,
@@ -383326,9 +383494,9 @@
     },
     {
       "symbol": "M:ee.b()Lee;",
-      "renamedSymbol": "M:IndexedSprite.b()LIndexedSprite;",
+      "renamedSymbol": "M:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "copyFlippedHorizontal",
       "declaration": {
         "file": "ee.java",
         "start": 7771,
@@ -383370,9 +383538,9 @@
     },
     {
       "symbol": "M:ee.c()Lee;",
-      "renamedSymbol": "M:IndexedSprite.c()LIndexedSprite;",
+      "renamedSymbol": "M:IndexedSprite.copy()LIndexedSprite;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "copy",
       "declaration": {
         "file": "ee.java",
         "start": 38287,
@@ -383392,9 +383560,9 @@
     },
     {
       "symbol": "M:ee.c([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:IndexedSprite.c([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:IndexedSprite.blitTinted([I[B[IIIIIIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "blitTinted",
       "declaration": {
         "file": "ee.java",
         "start": 43495,
@@ -383403,9 +383571,9 @@
     },
     {
       "symbol": "M:ee.d()V",
-      "renamedSymbol": "M:IndexedSprite.d()V",
+      "renamedSymbol": "M:IndexedSprite.flipVertically()V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "flipVertically",
       "declaration": {
         "file": "ee.java",
         "start": 121,
@@ -383425,9 +383593,9 @@
     },
     {
       "symbol": "M:ee.d([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:IndexedSprite.d([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "copyNonzeroPaletteRowsReversed",
       "declaration": {
         "file": "ee.java",
         "start": 46285,
@@ -385548,9 +385716,9 @@
     },
     {
       "symbol": "M:fea.a(IIIIIIZ)V",
-      "renamedSymbol": "M:BinaryBitmapFont.a(IIIIIIZ)V",
+      "renamedSymbol": "M:BinaryBitmapFont.drawGlyph(IIIIIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawGlyph",
       "declaration": {
         "file": "fea.java",
         "start": 6151,
@@ -395646,9 +395814,9 @@
     },
     {
       "symbol": "M:jb.a([IIIIII)V",
-      "renamedSymbol": "M:TriangleRasterizer.a([IIIIII)V",
+      "renamedSymbol": "M:TriangleRasterizer.drawFlatSpan([IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawFlatSpan",
       "declaration": {
         "file": "jb.java",
         "start": 39836,
@@ -395657,9 +395825,9 @@
     },
     {
       "symbol": "M:jb.a([IIIIIIII)V",
-      "renamedSymbol": "M:TriangleRasterizer.a([IIIIIIII)V",
+      "renamedSymbol": "M:TriangleRasterizer.drawShadedSpan([IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawShadedSpan",
       "declaration": {
         "file": "jb.java",
         "start": 35416,
@@ -396669,9 +396837,9 @@
     },
     {
       "symbol": "M:je.l()Z",
-      "renamedSymbol": "M:PcmSampleStream.l()Z",
+      "renamedSymbol": "M:PcmSampleStream.finishOrContinueVolumeRamp()Z",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "finishOrContinueVolumeRamp",
       "declaration": {
         "file": "je.java",
         "start": 4839,
@@ -401586,9 +401754,9 @@
     },
     {
       "symbol": "M:kv.a(IIII)Z",
-      "renamedSymbol": "M:Sprite.a(IIII)Z",
+      "renamedSymbol": "M:Sprite.isOpaqueAt(IIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isOpaqueAt",
       "declaration": {
         "file": "kv.java",
         "start": 107843,
@@ -401608,9 +401776,9 @@
     },
     {
       "symbol": "M:kv.a(IIII[I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(IIII[I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitScaledAdditiveRows",
       "declaration": {
         "file": "kv.java",
         "start": 87577,
@@ -401619,9 +401787,9 @@
     },
     {
       "symbol": "M:kv.a(IIII[I[IIIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(IIII[I[IIIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitScaledAdditiveIntensityRows",
       "declaration": {
         "file": "kv.java",
         "start": 33994,
@@ -401751,9 +401919,9 @@
     },
     {
       "symbol": "M:kv.b(III)V",
-      "renamedSymbol": "M:Sprite.b(III)V",
+      "renamedSymbol": "M:Sprite.drawTransparentWithIntensity(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawTransparentWithIntensity",
       "declaration": {
         "file": "kv.java",
         "start": 105307,
@@ -401993,9 +402161,9 @@
     },
     {
       "symbol": "M:kv.e(IIII)V",
-      "renamedSymbol": "M:Sprite.e(IIII)V",
+      "renamedSymbol": "M:Sprite.drawScaledAveraged(IIII)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "drawScaledAveraged",
       "declaration": {
         "file": "kv.java",
         "start": 48738,
@@ -412883,9 +413051,9 @@
     },
     {
       "symbol": "M:pa.b(III)V",
-      "renamedSymbol": "M:ArgbSprite.b(III)V",
+      "renamedSymbol": "M:ArgbSprite.drawTransparentWithIntensity(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawTransparentWithIntensity",
       "declaration": {
         "file": "pa.java",
         "start": 57861,
@@ -414324,9 +414492,9 @@
     },
     {
       "symbol": "M:pia.a(IIIIIIZ)V",
-      "renamedSymbol": "M:PalettedBitmapFont.a(IIIIIIZ)V",
+      "renamedSymbol": "M:PalettedBitmapFont.drawGlyph(IIIIIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawGlyph",
       "declaration": {
         "file": "pia.java",
         "start": 134,
@@ -415325,9 +415493,9 @@
     },
     {
       "symbol": "M:po.a(IIIIIIZ)V",
-      "renamedSymbol": "M:BitmapFont.a(IIIIIIZ)V",
+      "renamedSymbol": "M:BitmapFont.drawGlyph(IIIIIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawGlyph",
       "declaration": {
         "file": "po.java",
         "start": 16500,
@@ -420737,9 +420905,9 @@
     },
     {
       "symbol": "M:sba.a(IIIIIIZ)V",
-      "renamedSymbol": "M:AntialiasedBitmapFont.a(IIIIIIZ)V",
+      "renamedSymbol": "M:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawGlyph",
       "declaration": {
         "file": "sba.java",
         "start": 2078,
@@ -422376,9 +422544,9 @@
     },
     {
       "symbol": "M:ss.a(IIIIIIII)Z",
-      "renamedSymbol": "M:ModelMesh.a(IIIIIIII)Z",
+      "renamedSymbol": "M:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isPointInTriangleBounds",
       "declaration": {
         "file": "ss.java",
         "start": 1735,
@@ -422420,9 +422588,9 @@
     },
     {
       "symbol": "M:ss.b(I)V",
-      "renamedSymbol": "M:ModelMesh.b(I)V",
+      "renamedSymbol": "M:ModelMesh.drawFace(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawFace",
       "declaration": {
         "file": "ss.java",
         "start": 38524,
@@ -450327,7 +450495,7 @@
     },
     {
       "symbol": "P:dg.d(IIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.addVerticalLine(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -450338,7 +450506,7 @@
     },
     {
       "symbol": "P:dg.d(IIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.addVerticalLine(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -450349,7 +450517,7 @@
     },
     {
       "symbol": "P:dg.d(IIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.addVerticalLine(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -450360,7 +450528,7 @@
     },
     {
       "symbol": "P:dg.d(IIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.addVerticalLine(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -455904,7 +456072,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455915,7 +456083,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -455926,7 +456094,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -455937,7 +456105,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -455948,7 +456116,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -455959,7 +456127,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -455970,7 +456138,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -455981,7 +456149,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -455992,7 +456160,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -456003,7 +456171,7 @@
     },
     {
       "symbol": "P:ee.c([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:IndexedSprite.c([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:IndexedSprite.blitTinted([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -456036,7 +456204,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456047,7 +456215,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -456058,7 +456226,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -456069,7 +456237,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -456080,7 +456248,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -456091,7 +456259,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -456102,7 +456270,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -456113,7 +456281,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -456124,7 +456292,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -456135,7 +456303,7 @@
     },
     {
       "symbol": "P:ee.d([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:IndexedSprite.copyNonzeroPaletteRowsReversed([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -461096,7 +461264,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#0",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -461107,7 +461275,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#1",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -461118,7 +461286,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#2",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -461129,7 +461297,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#3",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -461140,7 +461308,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#4",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -461151,7 +461319,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#5",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -461162,7 +461330,7 @@
     },
     {
       "symbol": "P:fea.a(IIIIIIZ)V#6",
-      "renamedSymbol": "P:BinaryBitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "P:BinaryBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -484295,7 +484463,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIII)V#0",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIII)V#0",
+      "renamedSymbol": "P:TriangleRasterizer.drawFlatSpan([IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -484306,7 +484474,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIII)V#1",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIII)V#1",
+      "renamedSymbol": "P:TriangleRasterizer.drawFlatSpan([IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -484317,7 +484485,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIII)V#2",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIII)V#2",
+      "renamedSymbol": "P:TriangleRasterizer.drawFlatSpan([IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -484328,7 +484496,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIII)V#3",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIII)V#3",
+      "renamedSymbol": "P:TriangleRasterizer.drawFlatSpan([IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -484339,7 +484507,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIII)V#4",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIII)V#4",
+      "renamedSymbol": "P:TriangleRasterizer.drawFlatSpan([IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -484350,7 +484518,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIII)V#5",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIII)V#5",
+      "renamedSymbol": "P:TriangleRasterizer.drawFlatSpan([IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -484361,7 +484529,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#0",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#0",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -484372,7 +484540,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#1",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#1",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -484383,7 +484551,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#2",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#2",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -484394,7 +484562,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#3",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#3",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -484405,7 +484573,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#4",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#4",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -484416,7 +484584,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#5",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#5",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -484427,7 +484595,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#6",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#6",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -484438,7 +484606,7 @@
     },
     {
       "symbol": "P:jb.a([IIIIIIII)V#7",
-      "renamedSymbol": "P:TriangleRasterizer.a([IIIIIIII)V#7",
+      "renamedSymbol": "P:TriangleRasterizer.drawShadedSpan([IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -497363,7 +497531,7 @@
     },
     {
       "symbol": "P:kv.a(IIII)Z#0",
-      "renamedSymbol": "P:Sprite.a(IIII)Z#0",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -497374,7 +497542,7 @@
     },
     {
       "symbol": "P:kv.a(IIII)Z#1",
-      "renamedSymbol": "P:Sprite.a(IIII)Z#1",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -497385,7 +497553,7 @@
     },
     {
       "symbol": "P:kv.a(IIII)Z#2",
-      "renamedSymbol": "P:Sprite.a(IIII)Z#2",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -497396,7 +497564,7 @@
     },
     {
       "symbol": "P:kv.a(IIII)Z#3",
-      "renamedSymbol": "P:Sprite.a(IIII)Z#3",
+      "renamedSymbol": "P:Sprite.isOpaqueAt(IIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -497473,7 +497641,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -497484,7 +497652,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -497495,7 +497663,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -497506,7 +497674,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -497517,7 +497685,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -497528,7 +497696,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -497539,7 +497707,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#14",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#14",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -497550,7 +497718,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#15",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#15",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -497561,7 +497729,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -497572,7 +497740,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -497583,7 +497751,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -497594,7 +497762,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -497605,7 +497773,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -497616,7 +497784,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -497627,7 +497795,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -497638,7 +497806,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveRows(IIII[I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -497649,7 +497817,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -497660,7 +497828,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -497671,7 +497839,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -497682,7 +497850,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -497693,7 +497861,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -497704,7 +497872,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -497715,7 +497883,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#14",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#14",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -497726,7 +497894,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#15",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#15",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -497737,7 +497905,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#16",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#16",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -497748,7 +497916,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -497759,7 +497927,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -497770,7 +497938,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -497781,7 +497949,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -497792,7 +497960,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -497803,7 +497971,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -497814,7 +497982,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -497825,7 +497993,7 @@
     },
     {
       "symbol": "P:kv.a(IIII[I[IIIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(IIII[I[IIIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -498925,7 +499093,7 @@
     },
     {
       "symbol": "P:kv.b(III)V#0",
-      "renamedSymbol": "P:Sprite.b(III)V#0",
+      "renamedSymbol": "P:Sprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -498936,7 +499104,7 @@
     },
     {
       "symbol": "P:kv.b(III)V#1",
-      "renamedSymbol": "P:Sprite.b(III)V#1",
+      "renamedSymbol": "P:Sprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -498947,7 +499115,7 @@
     },
     {
       "symbol": "P:kv.b(III)V#2",
-      "renamedSymbol": "P:Sprite.b(III)V#2",
+      "renamedSymbol": "P:Sprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -500080,7 +500248,7 @@
     },
     {
       "symbol": "P:kv.e(IIII)V#0",
-      "renamedSymbol": "P:Sprite.e(IIII)V#0",
+      "renamedSymbol": "P:Sprite.drawScaledAveraged(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -500091,7 +500259,7 @@
     },
     {
       "symbol": "P:kv.e(IIII)V#1",
-      "renamedSymbol": "P:Sprite.e(IIII)V#1",
+      "renamedSymbol": "P:Sprite.drawScaledAveraged(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -500102,7 +500270,7 @@
     },
     {
       "symbol": "P:kv.e(IIII)V#2",
-      "renamedSymbol": "P:Sprite.e(IIII)V#2",
+      "renamedSymbol": "P:Sprite.drawScaledAveraged(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -500113,7 +500281,7 @@
     },
     {
       "symbol": "P:kv.e(IIII)V#3",
-      "renamedSymbol": "P:Sprite.e(IIII)V#3",
+      "renamedSymbol": "P:Sprite.drawScaledAveraged(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -524247,7 +524415,7 @@
     },
     {
       "symbol": "P:pa.b(III)V#0",
-      "renamedSymbol": "P:ArgbSprite.b(III)V#0",
+      "renamedSymbol": "P:ArgbSprite.drawTransparentWithIntensity(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -524258,7 +524426,7 @@
     },
     {
       "symbol": "P:pa.b(III)V#1",
-      "renamedSymbol": "P:ArgbSprite.b(III)V#1",
+      "renamedSymbol": "P:ArgbSprite.drawTransparentWithIntensity(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -524269,7 +524437,7 @@
     },
     {
       "symbol": "P:pa.b(III)V#2",
-      "renamedSymbol": "P:ArgbSprite.b(III)V#2",
+      "renamedSymbol": "P:ArgbSprite.drawTransparentWithIntensity(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -527877,7 +528045,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#0",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -527888,7 +528056,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#1",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -527899,7 +528067,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#2",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -527910,7 +528078,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#3",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -527921,7 +528089,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#4",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -527932,7 +528100,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#5",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -527943,7 +528111,7 @@
     },
     {
       "symbol": "P:pia.a(IIIIIIZ)V#6",
-      "renamedSymbol": "P:PalettedBitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "P:PalettedBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -530781,7 +530949,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#0",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -530792,7 +530960,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#1",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -530803,7 +530971,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#2",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -530814,7 +530982,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#3",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -530825,7 +530993,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#4",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -530836,7 +531004,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#5",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -530847,7 +531015,7 @@
     },
     {
       "symbol": "P:po.a(IIIIIIZ)V#6",
-      "renamedSymbol": "P:BitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "P:BitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -543277,7 +543445,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#0",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#0",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -543288,7 +543456,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#1",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#1",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -543299,7 +543467,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#2",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#2",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -543310,7 +543478,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#3",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#3",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -543321,7 +543489,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#4",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#4",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -543332,7 +543500,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#5",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#5",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -543343,7 +543511,7 @@
     },
     {
       "symbol": "P:sba.a(IIIIIIZ)V#6",
-      "renamedSymbol": "P:AntialiasedBitmapFont.a(IIIIIIZ)V#6",
+      "renamedSymbol": "P:AntialiasedBitmapFont.drawGlyph(IIIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -547171,7 +547339,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#0",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#0",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -547182,7 +547350,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#1",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#1",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -547193,7 +547361,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#2",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#2",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -547204,7 +547372,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#3",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#3",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -547215,7 +547383,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#4",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#4",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -547226,7 +547394,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#5",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#5",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -547237,7 +547405,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#6",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#6",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -547248,7 +547416,7 @@
     },
     {
       "symbol": "P:ss.a(IIIIIIII)Z#7",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#7",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -547336,7 +547504,7 @@
     },
     {
       "symbol": "P:ss.b(I)V#0",
-      "renamedSymbol": "P:ModelMesh.b(I)V#0",
+      "renamedSymbol": "P:ModelMesh.drawFace(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -569494,7 +569662,7 @@
       "original": "BachelorFridge.java",
       "renamed": "BachelorFridge.java",
       "inputSha256": "391cd94920e6e97d6195a3bd3359d3980815a7177a0ef225101f995702613a8b",
-      "outputSha256": "dfa4fe4e6c8ac9f0e4747da71410e92496a0567b4f920e221a5c052d37910303",
+      "outputSha256": "858ac383bcde5d2bb99267cf6ca2876ad2bfae30bc68ac9bba9943771ec32eaa",
       "edits": [
         {
           "start": 80,
@@ -576558,6 +576726,13 @@
           "symbol": "C:sw",
           "original": "sw",
           "renamed": "SleepSpecial"
+        },
+        {
+          "start": 52056,
+          "end": 52057,
+          "symbol": "M:kv.e(IIII)V",
+          "original": "e",
+          "renamed": "drawScaledAveraged"
         },
         {
           "start": 52160,
@@ -598869,7 +599044,7 @@
       "original": "baa.java",
       "renamed": "BananarangAnimation.java",
       "inputSha256": "4fbe379613713d0554100f2bbea748b58a5e54df1ab2f0fa1bf2c06860685446",
-      "outputSha256": "37bfd400c75cf91b2c3b39d5b9e9e7bbce48003a73682c83b057d27c7276c8d0",
+      "outputSha256": "a686539dbcc6d43975efa89dee7b34f343abf9530805b9ca2b07de3990b418bd",
       "edits": [
         {
           "start": 71,
@@ -599325,6 +599500,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6944,
+          "end": 6945,
+          "symbol": "M:dg.d(IIII)V",
+          "original": "d",
+          "renamed": "addVerticalLine"
         },
         {
           "start": 7087,
@@ -601229,7 +601411,7 @@
       "original": "bi.java",
       "renamed": "bi.java",
       "inputSha256": "c71b590ee1725b23fe7e77c82b9ff72ebcaf91966a130e4e6d40c4dc3de21200",
-      "outputSha256": "a2ccb54e248715117b6436620812db9ee4b21f160305c2896bf0f31a35f96546",
+      "outputSha256": "2308f23ad0b0be3ce6da1d043bfab0792f3a5ba7d5ec9cbc13b4a6e76fe49dff",
       "edits": [
         {
           "start": 106,
@@ -601608,6 +601790,13 @@
           "symbol": "M:kv.e(II)V",
           "original": "e",
           "renamed": "draw"
+        },
+        {
+          "start": 6624,
+          "end": 6625,
+          "symbol": "M:kv.b(III)V",
+          "original": "b",
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 6699,
@@ -615151,7 +615340,7 @@
       "original": "dg.java",
       "renamed": "SoftwareRasterizer.java",
       "inputSha256": "1df563d48ceaee885c41530cc921a58cbace703365c7152f107fedeb49a1166e",
-      "outputSha256": "443695eb9e1a7b78683ede8e4c139cb5b51ba222d078d6e90bcdb14a200c0fba",
+      "outputSha256": "245fa2ab5c028754e94f6da35d1c9802e7d40e5b903fcb030214865e9713ffa3",
       "edits": [
         {
           "start": 50,
@@ -615229,6 +615418,13 @@
           "symbol": "M:dg.f(IIII)V",
           "original": "f",
           "renamed": "drawVerticalLine"
+        },
+        {
+          "start": 868,
+          "end": 869,
+          "symbol": "M:dg.d(IIII)V",
+          "original": "d",
+          "renamed": "addVerticalLine"
         },
         {
           "start": 1779,
@@ -617365,7 +617561,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "a49772ba3321d5b58987d5f59311ec337248bc53e84df400206961d97d096f02",
-      "outputSha256": "44b2e37d80f7d65e5ee73740431b0adf858290fee2237911867f5eb83d14c993",
+      "outputSha256": "54aa63b63a17b9d15a8819215a9a5da7ef6fe4e056c1d134226bec3218a52ad8",
       "edits": [
         {
           "start": 105,
@@ -617506,6 +617702,13 @@
           "symbol": "C:pia",
           "original": "pia",
           "renamed": "PalettedBitmapFont"
+        },
+        {
+          "start": 5126,
+          "end": 5127,
+          "symbol": "M:kv.b(III)V",
+          "original": "b",
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 5208,
@@ -621962,7 +622165,7 @@
       "original": "eca.java",
       "renamed": "eca.java",
       "inputSha256": "221bef552b3126e3db1a434999f429f050aba2b3830fa7762e4a1c02d9149093",
-      "outputSha256": "334f3309cdba45e259ea54d47b27a8e8b24767c44474b1adf58229ec3745dbff",
+      "outputSha256": "55d322c12b0f9a8823d87775074f0fb08e937d04737a1a999ff0dd9fff68c210",
       "edits": [
         {
           "start": 79,
@@ -622028,6 +622231,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 2080,
+          "end": 2081,
+          "symbol": "M:kv.b(III)V",
+          "original": "b",
+          "renamed": "drawTransparentWithIntensity"
+        },
+        {
           "start": 2143,
           "end": 2145,
           "symbol": "C:po",
@@ -622061,6 +622271,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 2880,
+          "end": 2881,
+          "symbol": "M:kv.b(III)V",
+          "original": "b",
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 2959,
@@ -622406,7 +622623,7 @@
       "original": "ee.java",
       "renamed": "IndexedSprite.java",
       "inputSha256": "1226b3bccb3f0291d1b546a8429c831725df8d6351bedec0afda4b59a6130862",
-      "outputSha256": "f475869257e2743aa19ed02fbfd981eb4b2d1a3912cff248ce4b3bf93b633fe8",
+      "outputSha256": "553302ffe586cf8d3c5e26e6e8077abf99d77aec59e4ff5a43a17266d0a83be3",
       "edits": [
         {
           "start": 50,
@@ -622421,6 +622638,13 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 121,
+          "end": 122,
+          "symbol": "M:ee.d()V",
+          "original": "d",
+          "renamed": "flipVertically"
         },
         {
           "start": 1828,
@@ -622752,6 +622976,13 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 7771,
+          "end": 7772,
+          "symbol": "M:ee.b()Lee;",
+          "original": "b",
+          "renamed": "copyFlippedHorizontal"
+        },
+        {
           "start": 7829,
           "end": 7831,
           "symbol": "C:ee",
@@ -623067,6 +623298,13 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 35297,
+          "end": 35298,
+          "symbol": "M:ee.c([I[B[IIIIIIII)V",
+          "original": "c",
+          "renamed": "blitTinted"
+        },
+        {
           "start": 35299,
           "end": 35301,
           "symbol": "C:dg",
@@ -623177,6 +623415,13 @@
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 38287,
+          "end": 38288,
+          "symbol": "M:ee.c()Lee;",
+          "original": "c",
+          "renamed": "copy"
         },
         {
           "start": 38323,
@@ -623298,11 +623543,25 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 43348,
+          "end": 43349,
+          "symbol": "M:ee.d([I[B[IIIIIIII)V",
+          "original": "d",
+          "renamed": "copyNonzeroPaletteRowsReversed"
+        },
+        {
           "start": 43350,
           "end": 43352,
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 43495,
+          "end": 43496,
+          "symbol": "M:ee.c([I[B[IIIIIIII)V",
+          "original": "c",
+          "renamed": "blitTinted"
         },
         {
           "start": 45014,
@@ -623415,6 +623674,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 46285,
+          "end": 46286,
+          "symbol": "M:ee.d([I[B[IIIIIIII)V",
+          "original": "d",
+          "renamed": "copyNonzeroPaletteRowsReversed"
         },
         {
           "start": 48305,
@@ -631112,7 +631378,7 @@
       "original": "fea.java",
       "renamed": "BinaryBitmapFont.java",
       "inputSha256": "e408307bc0402e489360394c7c917aeba533b2a03f0246c2941c6a389ae3d4ef",
-      "outputSha256": "980e03f7a1a91c1b0950244709a421ac58a756421f371dacfa0ded2e9b06ce28",
+      "outputSha256": "c7d986258c773b3aa5e36976b1bf5a10e168ced84bb6c5522e0f4a2962056e8c",
       "edits": [
         {
           "start": 50,
@@ -631295,6 +631561,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6151,
+          "end": 6152,
+          "symbol": "M:fea.a(IIIIIIZ)V",
+          "original": "a",
+          "renamed": "drawGlyph"
         },
         {
           "start": 6425,
@@ -636090,7 +636363,7 @@
       "original": "fu.java",
       "renamed": "fu.java",
       "inputSha256": "5f90d2ebc6d816a89abb228fed45bad64efa1d969a1d8c6a9d044406bb32c8d4",
-      "outputSha256": "774d44d6e6c04a994998393aa8050f2a02c2ca5d7316928f3add9c4dd87165c8",
+      "outputSha256": "6f6f66d050dfeeeaa680a68f2cb5f8fa8ddecb901adc566dd32cd2826f269845",
       "edits": [
         {
           "start": 82,
@@ -636450,6 +636723,13 @@
           "renamed": "ClamsAnimation"
         },
         {
+          "start": 5084,
+          "end": 5085,
+          "symbol": "M:ee.c()Lee;",
+          "original": "c",
+          "renamed": "copy"
+        },
+        {
           "start": 5099,
           "end": 5102,
           "symbol": "C:gha",
@@ -636457,11 +636737,32 @@
           "renamed": "DefaultWidgetRenderer"
         },
         {
+          "start": 5111,
+          "end": 5112,
+          "symbol": "M:ee.d()V",
+          "original": "d",
+          "renamed": "flipVertically"
+        },
+        {
           "start": 5140,
           "end": 5142,
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "BagpipeSpecial"
+        },
+        {
+          "start": 5224,
+          "end": 5225,
+          "symbol": "M:ee.c()Lee;",
+          "original": "c",
+          "renamed": "copy"
+        },
+        {
+          "start": 5251,
+          "end": 5252,
+          "symbol": "M:ee.d()V",
+          "original": "d",
+          "renamed": "flipVertically"
         },
         {
           "start": 5280,
@@ -641080,7 +641381,7 @@
       "original": "gj.java",
       "renamed": "BattleScreen.java",
       "inputSha256": "caa514085786676d402831154c24cbda3d0d0740162bb548d77ad54852953491",
-      "outputSha256": "898e72c5ee5ec0afb32c3a49289fcb9380c9d170f919fc5f1de2cabb6b2807fe",
+      "outputSha256": "d9be9204c98f6f438e5b92ea3ff8556b398a66ed46cfc77517f9e28cfb56ff9d",
       "edits": [
         {
           "start": 71,
@@ -642278,6 +642579,13 @@
           "symbol": "F:sfa.field_h:Lnq;",
           "original": "field_h",
           "renamed": "creature"
+        },
+        {
+          "start": 20648,
+          "end": 20649,
+          "symbol": "M:kv.a(IIII)Z",
+          "original": "a",
+          "renamed": "isOpaqueAt"
         },
         {
           "start": 20660,
@@ -650910,7 +651218,7 @@
       "original": "hba.java",
       "renamed": "hba.java",
       "inputSha256": "867bad9219941d5e604cfb5ea0bc46da0aafcc832da10025ce59dc12440e6ba2",
-      "outputSha256": "b155e2f85c7c623a55f2e92d3d3990253b7156ee8db56089e81f313253e24464",
+      "outputSha256": "ca9064d1684beddd087feb9588a6ae0fd3918dce729390ec99f10235dd297de6",
       "edits": [
         {
           "start": 62,
@@ -651354,6 +651662,13 @@
           "renamed": "RageSpecial"
         },
         {
+          "start": 5542,
+          "end": 5543,
+          "symbol": "M:ee.d()V",
+          "original": "d",
+          "renamed": "flipVertically"
+        },
+        {
           "start": 5557,
           "end": 5559,
           "symbol": "C:hr",
@@ -651543,6 +651858,13 @@
           "renamed": "IncomingAnimation"
         },
         {
+          "start": 8248,
+          "end": 8249,
+          "symbol": "M:ee.b()Lee;",
+          "original": "b",
+          "renamed": "copyFlippedHorizontal"
+        },
+        {
           "start": 8275,
           "end": 8278,
           "symbol": "C:hha",
@@ -651583,6 +651905,13 @@
           "symbol": "C:hha",
           "original": "hha",
           "renamed": "SleepAnimation"
+        },
+        {
+          "start": 8563,
+          "end": 8564,
+          "symbol": "M:ee.b()Lee;",
+          "original": "b",
+          "renamed": "copyFlippedHorizontal"
         },
         {
           "start": 8590,
@@ -671857,7 +672186,7 @@
       "original": "jb.java",
       "renamed": "TriangleRasterizer.java",
       "inputSha256": "58a8245200c39b54b76d9e5f3cf74f91f01b77664ee90cfdb0a5cecaf0fb2e9e",
-      "outputSha256": "ede519734afad7b484b23105380d6e7fa3d418d9bbc747824f45e0ecaf7bd545",
+      "outputSha256": "432ede584067a7e7ba3a6f0244cbaa28ae11bce74385d19b1481e68b34666345",
       "edits": [
         {
           "start": 50,
@@ -671881,6 +672210,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 6209,
+          "end": 6210,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 6211,
           "end": 6213,
           "symbol": "C:dg",
@@ -671900,6 +672236,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 6567,
+          "end": 6568,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 6569,
@@ -671923,6 +672266,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 7050,
+          "end": 7051,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 7052,
           "end": 7054,
           "symbol": "C:dg",
@@ -671942,6 +672292,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 7388,
+          "end": 7389,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 7390,
@@ -671965,6 +672322,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 8381,
+          "end": 8382,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 8383,
           "end": 8385,
           "symbol": "C:dg",
@@ -671984,6 +672348,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 8719,
+          "end": 8720,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 8721,
@@ -672007,6 +672378,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 9174,
+          "end": 9175,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 9176,
           "end": 9178,
           "symbol": "C:dg",
@@ -672026,6 +672404,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 9492,
+          "end": 9493,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 9494,
@@ -672049,6 +672434,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 10701,
+          "end": 10702,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 10703,
           "end": 10705,
           "symbol": "C:dg",
@@ -672068,6 +672460,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 11059,
+          "end": 11060,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 11061,
@@ -672091,6 +672490,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 11542,
+          "end": 11543,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 11544,
           "end": 11546,
           "symbol": "C:dg",
@@ -672110,6 +672516,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 11880,
+          "end": 11881,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 11882,
@@ -672133,6 +672546,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 12777,
+          "end": 12778,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 12779,
           "end": 12781,
           "symbol": "C:dg",
@@ -672152,6 +672572,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 13115,
+          "end": 13116,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 13117,
@@ -672175,6 +672602,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 13570,
+          "end": 13571,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 13572,
           "end": 13574,
           "symbol": "C:dg",
@@ -672194,6 +672628,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 13888,
+          "end": 13889,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 13890,
@@ -672217,6 +672658,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 15004,
+          "end": 15005,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 15006,
           "end": 15008,
           "symbol": "C:dg",
@@ -672236,6 +672684,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 15342,
+          "end": 15343,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 15344,
@@ -672259,6 +672714,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 15797,
+          "end": 15798,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 15799,
           "end": 15801,
           "symbol": "C:dg",
@@ -672278,6 +672740,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 16115,
+          "end": 16116,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 16117,
@@ -672301,6 +672770,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 17046,
+          "end": 17047,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 17048,
           "end": 17050,
           "symbol": "C:dg",
@@ -672320,6 +672796,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 17364,
+          "end": 17365,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 17366,
@@ -672343,6 +672826,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 17791,
+          "end": 17792,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
+        },
+        {
           "start": 17793,
           "end": 17795,
           "symbol": "C:dg",
@@ -672362,6 +672852,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 18089,
+          "end": 18090,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 18091,
@@ -672455,6 +672952,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 21380,
+          "end": 21381,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 21382,
           "end": 21384,
           "symbol": "C:dg",
@@ -672474,6 +672978,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 21793,
+          "end": 21794,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 21795,
@@ -672497,6 +673008,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 22329,
+          "end": 22330,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 22331,
           "end": 22333,
           "symbol": "C:dg",
@@ -672516,6 +673034,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 22720,
+          "end": 22721,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 22722,
@@ -672539,6 +673064,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 23817,
+          "end": 23818,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 23819,
           "end": 23821,
           "symbol": "C:dg",
@@ -672558,6 +673090,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 24208,
+          "end": 24209,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 24210,
@@ -672581,6 +673120,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 24714,
+          "end": 24715,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 24716,
           "end": 24718,
           "symbol": "C:dg",
@@ -672600,6 +673146,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 25083,
+          "end": 25084,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 25085,
@@ -672623,6 +673176,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 26453,
+          "end": 26454,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 26455,
           "end": 26457,
           "symbol": "C:dg",
@@ -672642,6 +673202,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 26866,
+          "end": 26867,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 26868,
@@ -672665,6 +673232,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 27402,
+          "end": 27403,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 27404,
           "end": 27406,
           "symbol": "C:dg",
@@ -672684,6 +673258,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 27793,
+          "end": 27794,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 27795,
@@ -672707,6 +673288,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 28792,
+          "end": 28793,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 28794,
           "end": 28796,
           "symbol": "C:dg",
@@ -672726,6 +673314,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 29183,
+          "end": 29184,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 29185,
@@ -672749,6 +673344,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 29689,
+          "end": 29690,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 29691,
           "end": 29693,
           "symbol": "C:dg",
@@ -672768,6 +673370,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 30058,
+          "end": 30059,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 30060,
@@ -672791,6 +673400,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 31331,
+          "end": 31332,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 31333,
           "end": 31335,
           "symbol": "C:dg",
@@ -672810,6 +673426,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 31722,
+          "end": 31723,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 31724,
@@ -672833,6 +673456,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 32228,
+          "end": 32229,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 32230,
           "end": 32232,
           "symbol": "C:dg",
@@ -672852,6 +673482,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 32597,
+          "end": 32598,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 32599,
@@ -672875,6 +673512,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 33628,
+          "end": 33629,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 33630,
           "end": 33632,
           "symbol": "C:dg",
@@ -672894,6 +673538,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "TriangleRasterizer"
+        },
+        {
+          "start": 33997,
+          "end": 33998,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
         },
         {
           "start": 33999,
@@ -672917,6 +673568,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 34473,
+          "end": 34474,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 34475,
           "end": 34477,
           "symbol": "C:dg",
@@ -672938,6 +673596,13 @@
           "renamed": "TriangleRasterizer"
         },
         {
+          "start": 34820,
+          "end": 34821,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
           "start": 34822,
           "end": 34824,
           "symbol": "C:dg",
@@ -672957,6 +673622,20 @@
           "symbol": "M:jb.a(II)I",
           "original": "a",
           "renamed": "scaleHslLightness"
+        },
+        {
+          "start": 35416,
+          "end": 35417,
+          "symbol": "M:jb.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawShadedSpan"
+        },
+        {
+          "start": 39836,
+          "end": 39837,
+          "symbol": "M:jb.a([IIIIII)V",
+          "original": "a",
+          "renamed": "drawFlatSpan"
         },
         {
           "start": 41270,
@@ -674519,7 +675198,7 @@
       "original": "je.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "9bb57f498e77a854e9893d2ce64894479ef083381f123c6c834f4afea608d12c",
-      "outputSha256": "65291bffd3b7001a63d1ec86256ed6018ad6ef00ae989cd3ab23615cdb9e660c",
+      "outputSha256": "bbaa0de746a2f1d2b165abf3039431cbacd82f52a36ef2d8bf4042c674dc614f",
       "edits": [
         {
           "start": 50,
@@ -674562,6 +675241,13 @@
           "symbol": "C:je",
           "original": "je",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 4839,
+          "end": 4840,
+          "symbol": "M:je.l()Z",
+          "original": "l",
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 4980,
@@ -674968,6 +675654,13 @@
           "symbol": "C:be",
           "original": "be",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 26802,
+          "end": 26803,
+          "symbol": "M:je.l()Z",
+          "original": "l",
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 26866,
@@ -675542,6 +676235,13 @@
           "symbol": "C:be",
           "original": "be",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 57732,
+          "end": 57733,
+          "symbol": "M:je.l()Z",
+          "original": "l",
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 57785,
@@ -677953,7 +678653,7 @@
       "original": "jla.java",
       "renamed": "jla.java",
       "inputSha256": "edd2120d7208a8a6dfc061b69eff23f8f8fc32e2b4fa83b857c4d94b6f863a27",
-      "outputSha256": "9154be6fab884a3b0895bd4003515b46fea20322a8dc7faf8faa3dbcd0ea9195",
+      "outputSha256": "d87325e33293ac2eea163b568b82dc23813cfd8267add2962b098426342dc4d5",
       "edits": [
         {
           "start": 126,
@@ -678019,6 +678719,13 @@
           "renamed": "SuperSpeedAllAnimation"
         },
         {
+          "start": 937,
+          "end": 938,
+          "symbol": "M:ee.b()Lee;",
+          "original": "b",
+          "renamed": "copyFlippedHorizontal"
+        },
+        {
           "start": 1085,
           "end": 1087,
           "symbol": "C:bp",
@@ -678066,6 +678773,13 @@
           "symbol": "C:bp",
           "original": "bp",
           "renamed": "AttackUpAllAnimation"
+        },
+        {
+          "start": 1376,
+          "end": 1377,
+          "symbol": "M:ee.b()Lee;",
+          "original": "b",
+          "renamed": "copyFlippedHorizontal"
         },
         {
           "start": 1630,
@@ -681917,7 +682631,7 @@
       "original": "jo.java",
       "renamed": "BoardView.java",
       "inputSha256": "c294ba4e85375cb0dca51881ddea06add6a2e97be395a612edeab99e7b795f2f",
-      "outputSha256": "32b6c1fe8ba015a34e60d15504c9f358f844b098d8a0238f8d31e61b1ac7d9d7",
+      "outputSha256": "341a7e21dbc79904a46b9d907bbd98bdc6f77eee647d6a8220bb5747095354fe",
       "edits": [
         {
           "start": 71,
@@ -682205,6 +682919,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10794,
+          "end": 10795,
+          "symbol": "M:dg.d(IIII)V",
+          "original": "d",
+          "renamed": "addVerticalLine"
         },
         {
           "start": 10951,
@@ -684326,6 +685047,27 @@
           "symbol": "C:sfa",
           "original": "sfa",
           "renamed": "CreatureOrder"
+        },
+        {
+          "start": 89944,
+          "end": 89945,
+          "symbol": "M:kv.a(IIII)Z",
+          "original": "a",
+          "renamed": "isOpaqueAt"
+        },
+        {
+          "start": 90783,
+          "end": 90784,
+          "symbol": "M:kv.a(IIII)Z",
+          "original": "a",
+          "renamed": "isOpaqueAt"
+        },
+        {
+          "start": 90954,
+          "end": 90955,
+          "symbol": "M:kv.a(IIII)Z",
+          "original": "a",
+          "renamed": "isOpaqueAt"
         },
         {
           "start": 91224,
@@ -694724,7 +695466,7 @@
       "original": "kv.java",
       "renamed": "Sprite.java",
       "inputSha256": "cb2250c6808cb7dd3310a9541c3e2f50593da846b157b40e9f72f6682434f218",
-      "outputSha256": "9a8dd24d4b7506e9a7aa0ec86412b0ce8068eb76bb603bd64d5abcfa6b1e8765",
+      "outputSha256": "fc4a6d6b2146514bd25ca4a4e0fbf9a11c8f2cb264742cbfb52a2004151acc1f",
       "edits": [
         {
           "start": 44,
@@ -695042,6 +695784,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 33994,
+          "end": 33995,
+          "symbol": "M:kv.a(IIII[I[IIIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveIntensityRows"
+        },
+        {
           "start": 36744,
           "end": 36746,
           "symbol": "C:dg",
@@ -695126,6 +695875,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 37703,
+          "end": 37704,
+          "symbol": "M:kv.a(IIII[I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveRows"
+        },
+        {
           "start": 37734,
           "end": 37736,
           "symbol": "C:dg",
@@ -695138,6 +695894,13 @@
           "symbol": "C:kv",
           "original": "kv",
           "renamed": "Sprite"
+        },
+        {
+          "start": 37853,
+          "end": 37854,
+          "symbol": "M:kv.a(IIII[I[IIIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveIntensityRows"
         },
         {
           "start": 37884,
@@ -695607,6 +696370,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 48738,
+          "end": 48739,
+          "symbol": "M:kv.e(IIII)V",
+          "original": "e",
+          "renamed": "drawScaledAveraged"
         },
         {
           "start": 49784,
@@ -696576,6 +697346,13 @@
           "renamed": "copyOpaqueRows"
         },
         {
+          "start": 87577,
+          "end": 87578,
+          "symbol": "M:kv.a(IIII[I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitScaledAdditiveRows"
+        },
+        {
           "start": 88711,
           "end": 88712,
           "symbol": "M:kv.a([IIIIIIII)V",
@@ -697122,6 +697899,13 @@
           "renamed": "blitBinaryGlyph"
         },
         {
+          "start": 105307,
+          "end": 105308,
+          "symbol": "M:kv.b(III)V",
+          "original": "b",
+          "renamed": "drawTransparentWithIntensity"
+        },
+        {
           "start": 105470,
           "end": 105471,
           "symbol": "M:kv.e(II)V",
@@ -697246,6 +698030,13 @@
           "symbol": "M:kv.f()V",
           "original": "f",
           "renamed": "rotateClockwise"
+        },
+        {
+          "start": 107843,
+          "end": 107844,
+          "symbol": "M:kv.a(IIII)Z",
+          "original": "a",
+          "renamed": "isOpaqueAt"
         },
         {
           "start": 108392,
@@ -733932,7 +734723,7 @@
       "original": "ola.java",
       "renamed": "FridgeScreen.java",
       "inputSha256": "ef295958ffd3a6ff0637ef9aee7e1df72211dd9a0ec69bb57b5f487a85decd20",
-      "outputSha256": "d5b0830c673a45064faf0de126a37588b3f49d45b9a02530bca033ea98a485bc",
+      "outputSha256": "9d38afef076e9c0bae176711ec63cdf518509992ff924b31bec42545e5ab7778",
       "edits": [
         {
           "start": 71,
@@ -734052,6 +734843,13 @@
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 3396,
+          "end": 3397,
+          "symbol": "M:kv.a(IIII)Z",
+          "original": "a",
+          "renamed": "isOpaqueAt"
         },
         {
           "start": 3541,
@@ -743860,7 +744658,7 @@
       "original": "pa.java",
       "renamed": "ArgbSprite.java",
       "inputSha256": "9f08784b2a8ed0023e274b011b3d90304b1caf94691925c872a78e3319fdb661",
-      "outputSha256": "9d4ca83f1c94a162d257c9b13a1679a5b2fba339b984fe9ec3450dd6c3cd8c9d",
+      "outputSha256": "d4f9bb9009aa48b2b71d0b96a1a6bf083abe908e8f4247cbb134ef257e842c55",
       "edits": [
         {
           "start": 50,
@@ -745268,6 +746066,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 57861,
+          "end": 57862,
+          "symbol": "M:pa.b(III)V",
+          "original": "b",
+          "renamed": "drawTransparentWithIntensity"
         },
         {
           "start": 58024,
@@ -750128,7 +750933,7 @@
       "original": "pia.java",
       "renamed": "PalettedBitmapFont.java",
       "inputSha256": "ccfa101f7cc6457629a9123b1a120215a66c4505e25b9a13a75de3a155a9dd4d",
-      "outputSha256": "73ce55cfd0d47764b0623438054846464485a88af4dfa726212dc56ea0cf5b51",
+      "outputSha256": "d60c2725972d650a7af5fbb515ce22801d63f8e24ab0f3b24d5f9fa78035a6c4",
       "edits": [
         {
           "start": 50,
@@ -750143,6 +750948,13 @@
           "symbol": "C:po",
           "original": "po",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 134,
+          "end": 135,
+          "symbol": "M:pia.a(IIIIIIZ)V",
+          "original": "a",
+          "renamed": "drawGlyph"
         },
         {
           "start": 408,
@@ -754507,7 +755319,7 @@
       "original": "po.java",
       "renamed": "BitmapFont.java",
       "inputSha256": "f1b93cfc1c0575457262551cda82f48264fd95cb412a5f99cdee41a862da436c",
-      "outputSha256": "e547056ba104d87b9153db6bb1aa5bc7cbb747d5b2e802c5a9d8c1c4b24e3b02",
+      "outputSha256": "37a8b3925d033294b4a2e839ad7f5bedac9af0ef453c5650f67d42eb80b5e615",
       "edits": [
         {
           "start": 53,
@@ -754594,6 +755406,20 @@
           "renamed": "drawGlyphAlpha"
         },
         {
+          "start": 9861,
+          "end": 9862,
+          "symbol": "M:po.a(IIIIIIZ)V",
+          "original": "a",
+          "renamed": "drawGlyph"
+        },
+        {
+          "start": 10007,
+          "end": 10008,
+          "symbol": "M:po.a(IIIIIIZ)V",
+          "original": "a",
+          "renamed": "drawGlyph"
+        },
+        {
           "start": 10240,
           "end": 10242,
           "symbol": "C:dg",
@@ -754676,6 +755502,13 @@
           "symbol": "M:po.a(III)V",
           "original": "a",
           "renamed": "resetStyle"
+        },
+        {
+          "start": 16500,
+          "end": 16501,
+          "symbol": "M:po.a(IIIIIIZ)V",
+          "original": "a",
+          "renamed": "drawGlyph"
         },
         {
           "start": 17239,
@@ -772724,7 +773557,7 @@
       "original": "sba.java",
       "renamed": "AntialiasedBitmapFont.java",
       "inputSha256": "8225a6c638333b2be38d8b54425b82eca6910fb2c9c1acc5a3c96bafd608c786",
-      "outputSha256": "5b507c979b93b60733721b4e14e01bedb37033a2f1f4c2ee3f9f09d64951faa8",
+      "outputSha256": "94a527b2506aae4f0503b664c393f6b7c09a94423ac3c64e1895b8229a993eac",
       "edits": [
         {
           "start": 50,
@@ -772746,6 +773579,13 @@
           "symbol": "M:sba.a([I[BIIIIIII)V",
           "original": "a",
           "renamed": "blitCoverageGlyph"
+        },
+        {
+          "start": 2078,
+          "end": 2079,
+          "symbol": "M:sba.a(IIIIIIZ)V",
+          "original": "a",
+          "renamed": "drawGlyph"
         },
         {
           "start": 2352,
@@ -779583,7 +780423,7 @@
       "original": "ss.java",
       "renamed": "ModelMesh.java",
       "inputSha256": "33bd5d7040c590a091253473e374c5603f53937e327c43c6aa3199573ed80642",
-      "outputSha256": "b7c0c8148490cf91794a6582747893cdc103c6f4208444eeaecc11f86db4eb3f",
+      "outputSha256": "a37356232d527d938415a7f57acf10ef5216072dca01c39c4a3ff89345710857",
       "edits": [
         {
           "start": 50,
@@ -779605,6 +780445,13 @@
           "symbol": "M:ss.c(I)I",
           "original": "c",
           "renamed": "clampHslLightness"
+        },
+        {
+          "start": 1735,
+          "end": 1736,
+          "symbol": "M:ss.a(IIIIIIII)Z",
+          "original": "a",
+          "renamed": "isPointInTriangleBounds"
         },
         {
           "start": 2384,
@@ -779932,6 +780779,13 @@
           "kind": "label"
         },
         {
+          "start": 21609,
+          "end": 21610,
+          "symbol": "M:ss.a(IIIIIIII)Z",
+          "original": "a",
+          "renamed": "isPointInTriangleBounds"
+        },
+        {
           "start": 21625,
           "end": 21627,
           "symbol": "C:jb",
@@ -779982,6 +780836,62 @@
           "renamed": "MoveOrder"
         },
         {
+          "start": 24246,
+          "end": 24247,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 25818,
+          "end": 25819,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 26159,
+          "end": 26160,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 30218,
+          "end": 30219,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 30957,
+          "end": 30958,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 31697,
+          "end": 31698,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 32456,
+          "end": 32457,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 32646,
+          "end": 32647,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
           "start": 34248,
           "end": 34249,
           "symbol": "M:ss.b()V",
@@ -780008,6 +780918,13 @@
           "symbol": "M:ss.a(III)V",
           "original": "a",
           "renamed": "scaleGeometry"
+        },
+        {
+          "start": 38524,
+          "end": 38525,
+          "symbol": "M:ss.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
         },
         {
           "start": 38870,
@@ -816788,10 +817705,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "6fc5e2579bfd91672ae3a003d102ec444d67e899d5e894d682a0b73a57399ce9",
+    "rulesSha256": "ebe1cacb3098901d7eb96e2d7c6dab388632d80f126fc9a77547ee1570e7a857",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "fd526f0fa0086c49744a815a359094e6ff2080272ec72841470ba274e36d5efc",
+    "outputTreeSha256": "2731623060b8a6c68d08f39b45bb6a6bd6adafc4b3abef423a260e0c9b4e1407",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

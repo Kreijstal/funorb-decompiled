@@ -461,7 +461,7 @@ final class cl extends kn implements wg, sh {
           bn.field_d.a(this.field_R, 20 + param1 + this.field_u, 15 + this.field_t + param2, this.field_v - 40, this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
         }
         if (null != this.field_J) {
-          SoftwareRasterizer.e(10 + param1, 134 + param2, -20 + this.field_v, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param1, 134 + param2, -20 + this.field_v, 4210752);
         }
         if (param0 != 4) {
           String var6 = (String) null;

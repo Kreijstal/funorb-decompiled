@@ -95,13 +95,13 @@ final class hm extends UiWidget {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = 256 <= var11 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var9 * var11) >>> 8;
-          SoftwareRasterizer.d(var7, var6, this.field_K, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_K, var12);
           var8Lifetime1 = 16711935 & param2;
-          SoftwareRasterizer.d(-(2 * this.field_K) + var7, var6, this.field_K, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_K) + var7, var6, this.field_K, var12);
           var9Lifetime1 = param2 & 65280;
           var12Lifetime1 = var11 < 256 ? (var8Lifetime1 * var11 & -16711936 | var9Lifetime1 * var11 & 16711680) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          SoftwareRasterizer.d(this.field_K + var7, var6, this.field_K, var12Lifetime1);
-          SoftwareRasterizer.d(var7 - this.field_K, var6, this.field_K, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_K + var7, var6, this.field_K, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_K, var6, this.field_K, var12Lifetime1);
         }
         MessageKeys.a(false);
         return var14;
@@ -134,7 +134,7 @@ final class hm extends UiWidget {
             il.a(1, this.field_I);
             param0.b(-this.field_A, 0);
             param0.b(2 * this.field_K - this.field_A, 0);
-            this.field_z.e(0, 0);
+            this.field_z.drawMultiply(0, 0);
             MessageKeys.a(false);
             this.field_I.b(param2, param1);
           }
@@ -144,7 +144,7 @@ final class hm extends UiWidget {
             }
             param0.b(-var7, 0);
             param0.b(-var7 + this.field_K * 2, 0);
-            this.field_C.e(0, 0);
+            this.field_C.drawMultiply(0, 0);
             MessageKeys.a(false);
             this.field_I.b(-this.field_C.field_r + var5_int, param1);
             return;

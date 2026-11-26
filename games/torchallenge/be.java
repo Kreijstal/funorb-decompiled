@@ -78,7 +78,7 @@ final class be {
               var17 = var18 / 4;
               var17 = var17 * (25 + ResourceArchive.field_b / 25 * 25 - ResourceArchive.field_b) / 25;
               var18 = (param1 - ResourceArchive.field_b / 25 - 1) * var18 / 4 + var17;
-              SoftwareRasterizer.f(param4, param3, param4 + var18, param3 + var19);
+              SoftwareRasterizer.setClip(param4, param3, param4 + var18, param3 + var19);
               IterableNodeHashTable.field_h.d(param4, param3, var8_int);
               SoftwareRasterizer.b(sh.field_w);
             } else {
@@ -86,12 +86,12 @@ final class be {
                 var17 = var18 / 4;
                 var17 = fh.field_d * var17 / 200;
                 var18 = var17 + param1 * var18 / 4;
-                SoftwareRasterizer.f(param4, param3, var18 + param4, var19 + param3);
+                SoftwareRasterizer.setClip(param4, param3, var18 + param4, var19 + param3);
                 IterableNodeHashTable.field_h.d(param4, param3, var8_int);
                 SoftwareRasterizer.b(sh.field_w);
               } else {
                 var18 = var18 * param1 / 4;
-                SoftwareRasterizer.f(param4, param3, param4 + var18, param3 + var19);
+                SoftwareRasterizer.setClip(param4, param3, param4 + var18, param3 + var19);
                 IterableNodeHashTable.field_h.d(param4, param3, var8_int);
                 SoftwareRasterizer.b(sh.field_w);
               }
@@ -120,8 +120,8 @@ final class be {
               }
             }
             SoftwareRasterizer.b();
-            SoftwareRasterizer.f(0, 0, var18, var19);
-            IterableNodeHashTable.field_h.g(0, 0);
+            SoftwareRasterizer.setClip(0, 0, var18, var19);
+            IterableNodeHashTable.field_h.drawTransparent(0, 0);
             SoftwareRasterizer.d(2, 2, 0, 0, var18, var19);
             SoftwareRasterizer.b(sh.field_w);
             SectorCacheStore.field_f.bindAsTarget(-123);
@@ -135,7 +135,7 @@ final class be {
             if (125 > var20Lifetime1) {
               var18 = 2 * (var18 * var20Lifetime1) / 250;
             }
-            SoftwareRasterizer.f(param4, param3, var18 + param4, var19 + param3);
+            SoftwareRasterizer.setClip(param4, param3, var18 + param4, var19 + param3);
             ac.field_a.d(param4, param3, var8_int);
             SoftwareRasterizer.b(sh.field_w);
           }

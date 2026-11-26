@@ -269,7 +269,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_w != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.updateRamp());
         return param3;
     }
 
@@ -1179,7 +1179,7 @@ final class PcmSampleStream extends PcmStream {
         return null;
     }
 
-    private final boolean g() {
+    private final boolean updateRamp() {
         int var1;
         int var2;
         int var3;
@@ -1362,7 +1362,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_w != 0) {
             return param1;
           }
-        } while (!this.g());
+        } while (!this.updateRamp());
         return param3;
     }
 

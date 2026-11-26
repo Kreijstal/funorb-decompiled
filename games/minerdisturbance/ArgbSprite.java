@@ -57,7 +57,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1);
     }
 
-    final void g(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -103,7 +103,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawTransparentWithIntensity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -267,7 +267,7 @@ final class ArgbSprite extends Sprite {
         int var16Lifetime1;
         int var16Lifetime2;
         if (param4 == 256) {
-          this.c(param0, param1, param2, param3);
+          this.drawScaled(param0, param1, param2, param3);
           return;
         }
         if (param2 > 0) {
@@ -393,7 +393,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void h(int param0, int param1) {
+    final void drawHorizontalFlip(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -474,7 +474,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -1271,7 +1271,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawQuarterSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;
@@ -1367,7 +1367,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1467,7 +1467,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final ArgbSprite h() {
+    final ArgbSprite copyArgb() {
         int var3 = 0;
         ArgbSprite var1 = new ArgbSprite(this.field_y, this.field_C);
         var1.field_x = this.field_x;
@@ -1591,7 +1591,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1690,7 +1690,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawVerticalFlip(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

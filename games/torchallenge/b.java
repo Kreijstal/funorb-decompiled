@@ -82,7 +82,7 @@ abstract class b extends kj {
         int var8 = SocketConnector.field_l[param5][param2][1][1];
         SoftwareRasterizer.a(ae.field_y);
         SoftwareRasterizer.a(var7, param6, var8, param4);
-        we.field_e[param1][param2].a(var7, param6);
+        we.field_e[param1][param2].drawOpaque(var7, param6);
         if (param0 < 105) {
           b.a(-8);
         } else {

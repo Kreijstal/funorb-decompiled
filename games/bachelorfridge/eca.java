@@ -80,7 +80,7 @@ final class eca extends bi {
           var9 = this.a(param1, true) + this.b(param1, 40) >> 1;
           var10 = this.a(param1, (byte) -74) + (this.a(param2 - 119, param1) >> 1);
           if (var5 == 0) {
-            var12.b(var9 - (var12.field_n >> 1), var10 - 22, 128);
+            var12.drawTransparentWithIntensity(var9 - (var12.field_n >> 1), var10 - 22, 128);
             ((BitmapFont) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
             return;
           }
@@ -96,7 +96,7 @@ final class eca extends bi {
         var9Lifetime1 = this.a(param1, true) + this.b(param1, 40) >> 1;
         var10Lifetime1 = this.a(param1, (byte) -74) + (this.a(param2 - 119, param1) >> 1);
         if (var5Lifetime1 == 0) {
-          var14.b(var9Lifetime1 - (var14.field_n >> 1), var10Lifetime1 - 22, 128);
+          var14.drawTransparentWithIntensity(var9Lifetime1 - (var14.field_n >> 1), var10Lifetime1 - 22, 128);
           ((BitmapFont) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
           return;
         }

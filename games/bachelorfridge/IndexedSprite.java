@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteState {
     byte[] field_g;
     int[] field_h;
 
-    final void d() {
+    final void flipVertically() {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;
@@ -222,7 +222,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final IndexedSprite b() {
+    final IndexedSprite copyFlippedHorizontal() {
         int var4 = 0;
         int var3 = 0;
         IndexedSprite var1 = new IndexedSprite(this.field_d, this.field_e, this.field_h.length);
@@ -880,7 +880,7 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var6 <= 0) {
             return;
           }
-          IndexedSprite.c(SoftwareRasterizer.field_e, this.field_g, this.field_h, var5, var4, var7, var6, var8, var9, param2);
+          IndexedSprite.blitTinted(SoftwareRasterizer.field_e, this.field_g, this.field_h, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -972,7 +972,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final IndexedSprite c() {
+    final IndexedSprite copy() {
         int var3 = 0;
         IndexedSprite var1 = new IndexedSprite(this.field_d, this.field_e, this.field_h.length);
         int var3Lifetime1;
@@ -1123,12 +1123,12 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var5 <= 0) {
             return;
           }
-          IndexedSprite.d(SoftwareRasterizer.field_e, this.field_g, this.field_h, 0, var4, var3, var6, var5, var7, var8);
+          IndexedSprite.copyNonzeroPaletteRowsReversed(SoftwareRasterizer.field_e, this.field_g, this.field_h, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitTinted(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var13 = 0;
         int var14 = 0;
         int incrementValue$14 = 0;
@@ -1213,7 +1213,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    private final static void d(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRowsReversed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;

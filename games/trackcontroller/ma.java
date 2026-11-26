@@ -104,7 +104,7 @@ final class ma implements t {
             for (var24 = 0; var24 < var20; var24++) {
               for (var25 = 0; var19 > var25; var25++) {
                 if (var18[var23++] != 0) {
-                  SoftwareRasterizer.f(var25 + param2, var24 + param2, param2, 2);
+                  SoftwareRasterizer.fillCircle(var25 + param2, var24 + param2, param2, 2);
                 }
               }
             }

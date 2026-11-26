@@ -4604,7 +4604,7 @@ final class re {
         an.field_n = 0.20000000298023224f;
         var5 = CrossfadingMidiPcmStream.field_v.j();
         if (GameCanvas.field_a != var5) {
-          CrossfadingMidiPcmStream.field_v.d(ua.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.setStereoWidth(ua.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
         }
         var5Lifetime1 = CrossfadingMidiPcmStream.field_v.h();
         if (var5Lifetime1 != qm.field_O) {
@@ -4623,7 +4623,7 @@ final class re {
         }
         var5Lifetime4 = CrossfadingMidiPcmStream.field_v.k();
         if (an.field_n != var5Lifetime4) {
-          CrossfadingMidiPcmStream.field_v.c(ua.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.setWetGain(ua.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
         }
         var5Lifetime5 = CrossfadingMidiPcmStream.field_v.e();
         if (vb.field_Jb != var5Lifetime5) {

@@ -103,7 +103,7 @@ final class FridgeScreen {
         while (var2Lifetime1 < this.field_i.length) {
           for (var3 = 0; var3 < this.field_i.length; var3++) {
             if (null != this.field_i[var2Lifetime1][var3].field_f &&
-              dc.field_y[this.field_i[var2Lifetime1][var3].field_e].a(this.field_i[var2Lifetime1][var3].field_f.field_p, this.field_i[var2Lifetime1][var3].field_f.field_j, mk.field_p, gd.field_m)) {
+              dc.field_y[this.field_i[var2Lifetime1][var3].field_e].isOpaqueAt(this.field_i[var2Lifetime1][var3].field_f.field_p, this.field_i[var2Lifetime1][var3].field_f.field_j, mk.field_p, gd.field_m)) {
               Crc32Table.a(7, (byte) 119);
             }
           }

@@ -844,7 +844,7 @@ class Sprite extends go {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final static void blitScaledAdditiveIntensityRows(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
@@ -941,9 +941,9 @@ class Sprite extends go {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            Sprite.a(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_e, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.blitScaledAdditiveRows(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_e, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            Sprite.a(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_e, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.blitScaledAdditiveIntensityRows(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_e, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -1265,7 +1265,7 @@ class Sprite extends go {
         }
     }
 
-    final void e(int param0, int param1, int param2, int param3) {
+    final void drawScaledAveraged(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var12 = 0;
         int var30 = 0;
@@ -2398,7 +2398,7 @@ class Sprite extends go {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    private final static void blitScaledAdditiveRows(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
@@ -2930,7 +2930,7 @@ class Sprite extends go {
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void drawTransparentWithIntensity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -3008,7 +3008,7 @@ class Sprite extends go {
         this.field_n = var3Lifetime3;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3) {
+    final boolean isOpaqueAt(int param0, int param1, int param2, int param3) {
         boolean stackIn_11_0 = false;
         param2 = param2 - (param0 + this.field_t);
         if (param2 < 0) {

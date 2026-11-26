@@ -45,18 +45,18 @@ final class f implements WidgetActionListener {
           }
           var7 = var14.field_R + (param2 + param1.x);
           var8 = param0 + param1.y + var14.field_M;
-          SoftwareRasterizer.e(var7, var8, var14.field_Q, this.field_b);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_Q, this.field_b);
           if (var14.field_P != -1) {
             var9 = 3.141592653589793 * (double)var14.field_P * 2.0 / (double)var14.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_Q);
             var12 = (int)(Math.cos(var9) * (double)var14.field_Q);
-            SoftwareRasterizer.e(var7 + var11, var8 + var12, 1, this.field_l);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_l);
           }
-          SoftwareRasterizer.e(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_N) / (double)var14.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_Q);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_Q);
-          SoftwareRasterizer.c(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_k) {
             var13 = var14.field_Q + (var14.field_R + this.field_c);
             this.field_k.a(param1.text, var13 + (param1.x + param2), this.field_j + param0 + param1.y, -this.field_c + (-var13 + param1.width), param1.height - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);

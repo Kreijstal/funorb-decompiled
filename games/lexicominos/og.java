@@ -52,9 +52,9 @@ final class og implements rd {
           if (param4 != -3284) {
             this.field_g = 108;
           }
-          SoftwareRasterizer.b(var8, var9, var7 + var8, var9, this.field_h);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_h);
           for (var10 = -1 + var12.e(false); var10 >= 0; var10--) {
-            SoftwareRasterizer.c(var12.a(var10, (byte) -37) * var7 / var12.i(-1) + var8, var9, this.field_a, this.field_k);
+            SoftwareRasterizer.fillCircle(var12.a(var10, (byte) -37) * var7 / var12.i(-1) + var8, var9, this.field_a, this.field_k);
           }
           if (this.field_i == null) {
             return;

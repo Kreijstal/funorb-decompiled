@@ -110,7 +110,7 @@ final class ll {
             cj.field_c.d();
             je.field_g.e(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
-            var16.g(0, 0);
+            var16.drawTransparent(0, 0);
             SectorCacheStore.field_f.bindAsTarget(119);
             je.field_i = true;
           }
@@ -125,14 +125,14 @@ final class ll {
             param1 == 2) {
             if (1 == var13) {
               if (var14 >= c.field_b.storedWidth >> 1) {
-                c.field_b.g(param11 - (c.field_b.fullWidth >> 1), param7);
+                c.field_b.drawTransparent(param11 - (c.field_b.fullWidth >> 1), param7);
               } else {
                 c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
             if (2 == var13) {
               if (c.field_b.storedWidth >> 1 <= var14) {
-                c.field_b.g(param2 - (c.field_b.fullWidth >> 1), param7);
+                c.field_b.drawTransparent(param2 - (c.field_b.fullWidth >> 1), param7);
               } else {
                 c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
@@ -187,7 +187,7 @@ final class ll {
             cj.field_c.d();
             je.field_g.e(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
-            var16.g(0, 0);
+            var16.drawTransparent(0, 0);
             SectorCacheStore.field_f.bindAsTarget(119);
             je.field_i = true;
           }
@@ -202,14 +202,14 @@ final class ll {
             param1 == 2) {
             if (1 == var13) {
               if (var14 >= c.field_b.storedWidth >> 1) {
-                c.field_b.g(param11 - (c.field_b.fullWidth >> 1), param7);
+                c.field_b.drawTransparent(param11 - (c.field_b.fullWidth >> 1), param7);
               } else {
                 c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
             }
             if (2 == var13) {
               if (c.field_b.storedWidth >> 1 <= var14) {
-                c.field_b.g(param2 - (c.field_b.fullWidth >> 1), param7);
+                c.field_b.drawTransparent(param2 - (c.field_b.fullWidth >> 1), param7);
               } else {
                 c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
               }
@@ -264,7 +264,7 @@ final class ll {
           cj.field_c.d();
           je.field_g.e(0, 0, param8);
           od.a(cj.field_c, 33, 30, 68, 90);
-          var16.g(0, 0);
+          var16.drawTransparent(0, 0);
           SectorCacheStore.field_f.bindAsTarget(119);
           je.field_i = true;
         }
@@ -281,12 +281,12 @@ final class ll {
             if (var14 < c.field_b.storedWidth >> 1) {
               c.field_b.d(-(var14 * (c.field_b.fullWidth >> 1) / (c.field_b.storedWidth >> 1)) + param11, param7, var14 * c.field_b.fullWidth / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
             } else {
-              c.field_b.g(param11 - (c.field_b.fullWidth >> 1), param7);
+              c.field_b.drawTransparent(param11 - (c.field_b.fullWidth >> 1), param7);
             }
           }
           if (2 == var13) {
             if (c.field_b.storedWidth >> 1 <= var14) {
-              c.field_b.g(param2 - (c.field_b.fullWidth >> 1), param7);
+              c.field_b.drawTransparent(param2 - (c.field_b.fullWidth >> 1), param7);
             } else {
               c.field_b.d(-((c.field_b.fullWidth >> 1) * var14 / (c.field_b.storedWidth >> 1)) + param2, param7, c.field_b.fullWidth * var14 / (c.field_b.storedWidth >> 1), c.field_b.fullHeight);
             }

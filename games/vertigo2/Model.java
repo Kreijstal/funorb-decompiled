@@ -357,7 +357,7 @@ final class Model extends sb {
     final void a(ei param0, int param1) {
         int var5 = 0;
         int var6 = 0;
-        this.d();
+        this.buildVertexGroups();
         if (this.field_n == null) {
           return;
         }
@@ -1007,7 +1007,7 @@ final class Model extends sb {
         field_s = null;
     }
 
-    final void d() {
+    final void buildVertexGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;

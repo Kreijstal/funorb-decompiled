@@ -1602,7 +1602,7 @@ public final class BachelorFridge extends NetworkGameClient {
           TriangleRasterizer.a(new wi(WidgetContainer.field_y, fw.field_j, uda.field_U, 32, false));
           SleepSpecial.field_p = new Sprite(32, 32);
           SleepSpecial.field_p.b();
-          rc.field_l.e(0, 0, 32, 32);
+          rc.field_l.drawScaledAveraged(0, 0, 32, 32);
           hga.field_U.a((byte) -97);
           rc.field_l = null;
           var4 = new Sprite[1 + ena.field_o.length][];

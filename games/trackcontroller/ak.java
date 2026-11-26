@@ -90,13 +90,13 @@ final class ak {
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();
-          var17.h(0, 0);
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.a();
-          var17.h(-var17.field_t + var9Lifetime1, 0);
+          var17.drawOpaque(-var17.field_t + var9Lifetime1, 0);
           var12 = new Sprite(var17.field_t - var9Lifetime1 * 2, var9Lifetime1);
           var12.a();
-          var17.h(-var9Lifetime1, 0);
+          var17.drawOpaque(-var9Lifetime1, 0);
           GameShell.m(-108);
           BufferedCacheFile.field_l = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

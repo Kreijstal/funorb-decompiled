@@ -64,7 +64,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (0 > param0.field_x.field_r[param0.field_y]) {
                 param0.field_v.e(-1);
               }
-              var11.f(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.mixInto(param1, param3, -param3 + param2);
               if (!var11.e()) {
                 continue;

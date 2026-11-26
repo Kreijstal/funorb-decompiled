@@ -71,8 +71,8 @@ final class pl {
         int var10 = 0;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
-          SoftwareRasterizer.b(param4, param3, 1 + param2, 10000536);
-          SoftwareRasterizer.b(param4, param1 + param3, 1 + param2, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param4, param3, 1 + param2, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param4, param1 + param3, 1 + param2, 12105912);
           var5_int = 1;
           var6 = param1;
           if (param3 + var5_int < SoftwareRasterizer.field_l) {

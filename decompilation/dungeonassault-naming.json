@@ -1876,6 +1876,14 @@
       "renamedSymbol": "M:ReverbPcmStream.getSchedulingCost()I"
     },
     {
+      "symbol": "M:ge.a(F)V",
+      "originalName": "a",
+      "to": "setWetGain",
+      "evidence": "Source-purpose review: Synchronized retained wet gain setter,recomputes equal-power same/crosschannels via sqrt((1+/-width)*0.5);no rangeclamp orNaNnormalization. Original identity M:ge.a(F)V. Pinned original body SHA256 d502478fdf1a37fe03e66e98439b8ec06fc39857ea51b2e216754b799a71bf3a. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReverbPcmStream.setWetGain(F)V"
+    },
+    {
       "symbol": "M:ge.a(I)V",
       "originalName": "a",
       "to": "skipFrames",
@@ -1906,6 +1914,14 @@
       "evidence": "Continue enumeration of immediate child PCM streams using the original cursor/voice traversal or paired-stream state. Preserve next-link read order,sentinel/null tests,skipped voice states,all global/guard paths and exceptional behavior. Complete original-body SHA256 8e3206f68e80879d581c5df2e63d30570ceaacfa4de14fa89bafaf5b71237483. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ReverbPcmStream.nextChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:ge.c(F)V",
+      "originalName": "c",
+      "to": "setStereoWidth",
+      "evidence": "Source-purpose review: Synchronized retained stereo width setter using same retainedwetgain/equalpower formulas;retainfloatdouble conversions/order. Original identity M:ge.c(F)V. Pinned original body SHA256 4dc042c471a04d35c507df05fda3df19d2127ab3dfe7f8de690dbc159acbef2a. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReverbPcmStream.setStereoWidth(F)V"
     },
     {
       "symbol": "M:ge.d()Lqb;",
@@ -2844,12 +2860,28 @@
       "renamedSymbol": "M:PcmSampleStream.firstChildStream()LPcmStream;"
     },
     {
+      "symbol": "M:ni.f(I)V",
+      "originalName": "f",
+      "to": "fadeOutAndUnlink",
+      "evidence": "Source-purpose review: Synchronized fadeout/unlink immediatefor0;otherwise signedmaxgain clamp,MININTtarget andoriginalinteger slope division;zerochannelsfastunlink. Preserve negative/overflow/division domains. Original identity M:ni.f(I)V. Pinned original body SHA256 b4022b7b68607ec9c3b2248a5424df2c3d2973163f16c97e3c95c60ac781d4a5. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.fadeOutAndUnlink(I)V"
+    },
+    {
       "symbol": "M:ni.g()V",
       "originalName": "g",
       "to": "recomputeGains",
       "evidence": "Copy target volume into current mono gain,then evaluate and store left and right panning gains through the two exact original static helpers in their retained order. Complete original-body SHA256 3916916b03a4380f42e477d33b499f99a199bb53e9d0ec0fba32bdb7a4191287. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.recomputeGains()V"
+    },
+    {
+      "symbol": "M:ni.j()Z",
+      "originalName": "j",
+      "to": "finishOrContinueVolumeRamp",
+      "evidence": "Source-purpose review: Finish/restart volume+stereo ramp:MININTfadeouttargetzero,matchinggainsrefreshorunlink,trueonlyfadeoutcompletion;otherwise scheduleunitsteps/minimumdistance. Original identity M:ni.j()Z. Pinned original body SHA256 1b34dd0994aad617b7a00a71292e950d2f2f7d3da6186a62d35c9e7d47d5373c. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.finishOrContinueVolumeRamp()Z"
     },
     {
       "symbol": "M:ni.k()V",
@@ -163080,7 +163112,7 @@
     },
     {
       "symbol": "L:ni.f(I)V#0",
-      "renamedSymbol": "L:PcmSampleStream.f(I)V#0",
+      "renamedSymbol": "L:PcmSampleStream.fadeOutAndUnlink(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -163091,7 +163123,7 @@
     },
     {
       "symbol": "L:ni.f(I)V#1",
-      "renamedSymbol": "L:PcmSampleStream.f(I)V#1",
+      "renamedSymbol": "L:PcmSampleStream.fadeOutAndUnlink(I)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -163113,7 +163145,7 @@
     },
     {
       "symbol": "L:ni.j()Z#0",
-      "renamedSymbol": "L:PcmSampleStream.j()Z#0",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -163124,7 +163156,7 @@
     },
     {
       "symbol": "L:ni.j()Z#1",
-      "renamedSymbol": "L:PcmSampleStream.j()Z#1",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -163135,7 +163167,7 @@
     },
     {
       "symbol": "L:ni.j()Z#2",
-      "renamedSymbol": "L:PcmSampleStream.j()Z#2",
+      "renamedSymbol": "L:PcmSampleStream.finishOrContinueVolumeRamp()Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -235779,9 +235811,9 @@
     },
     {
       "symbol": "M:ge.a(F)V",
-      "renamedSymbol": "M:ReverbPcmStream.a(F)V",
+      "renamedSymbol": "M:ReverbPcmStream.setWetGain(F)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setWetGain",
       "declaration": {
         "file": "ge.java",
         "start": 1235,
@@ -235845,9 +235877,9 @@
     },
     {
       "symbol": "M:ge.c(F)V",
-      "renamedSymbol": "M:ReverbPcmStream.c(F)V",
+      "renamedSymbol": "M:ReverbPcmStream.setStereoWidth(F)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "setStereoWidth",
       "declaration": {
         "file": "ge.java",
         "start": 814,
@@ -247373,9 +247405,9 @@
     },
     {
       "symbol": "M:ni.f(I)V",
-      "renamedSymbol": "M:PcmSampleStream.f(I)V",
+      "renamedSymbol": "M:PcmSampleStream.fadeOutAndUnlink(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "fadeOutAndUnlink",
       "declaration": {
         "file": "ni.java",
         "start": 42202,
@@ -247450,9 +247482,9 @@
     },
     {
       "symbol": "M:ni.j()Z",
-      "renamedSymbol": "M:PcmSampleStream.j()Z",
+      "renamedSymbol": "M:PcmSampleStream.finishOrContinueVolumeRamp()Z",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "finishOrContinueVolumeRamp",
       "declaration": {
         "file": "ni.java",
         "start": 38054,
@@ -282848,7 +282880,7 @@
     },
     {
       "symbol": "P:ge.a(F)V#0",
-      "renamedSymbol": "P:ReverbPcmStream.a(F)V#0",
+      "renamedSymbol": "P:ReverbPcmStream.setWetGain(F)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282958,7 +282990,7 @@
     },
     {
       "symbol": "P:ge.c(F)V#0",
-      "renamedSymbol": "P:ReverbPcmStream.c(F)V#0",
+      "renamedSymbol": "P:ReverbPcmStream.setStereoWidth(F)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -311129,7 +311161,7 @@
     },
     {
       "symbol": "P:ni.f(I)V#0",
-      "renamedSymbol": "P:PcmSampleStream.f(I)V#0",
+      "renamedSymbol": "P:PcmSampleStream.fadeOutAndUnlink(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -360724,7 +360756,7 @@
       "original": "ge.java",
       "renamed": "ReverbPcmStream.java",
       "inputSha256": "9955b2de7ba54a74b50394e970fbb29888fabe77a256730666b61b94fa67f68e",
-      "outputSha256": "d77323c70000b2edf654d86b8cab93deaa6b045602704b95c50b903a597acec2",
+      "outputSha256": "a90ebae4aaadead627b7a0ccf939067492ce1f9ce71bb07b7f1a9d59d8dd4dda",
       "edits": [
         {
           "start": 50,
@@ -360762,6 +360794,13 @@
           "renamed": "AudioOutput"
         },
         {
+          "start": 814,
+          "end": 815,
+          "symbol": "M:ge.c(F)V",
+          "original": "c",
+          "renamed": "setStereoWidth"
+        },
+        {
           "start": 1104,
           "end": 1105,
           "symbol": "M:ge.a(I)V",
@@ -360774,6 +360813,13 @@
           "symbol": "M:qb.a(I)V",
           "original": "a",
           "renamed": "skipFrames"
+        },
+        {
+          "start": 1235,
+          "end": 1236,
+          "symbol": "M:ge.a(F)V",
+          "original": "a",
+          "renamed": "setWetGain"
         },
         {
           "start": 1525,
@@ -361117,6 +361163,20 @@
           "symbol": "M:ge.e()V",
           "original": "e",
           "renamed": "configureReverbChannels"
+        },
+        {
+          "start": 14357,
+          "end": 14358,
+          "symbol": "M:ge.a(F)V",
+          "original": "a",
+          "renamed": "setWetGain"
+        },
+        {
+          "start": 14463,
+          "end": 14464,
+          "symbol": "M:ge.c(F)V",
+          "original": "c",
+          "renamed": "setStereoWidth"
         }
       ]
     },
@@ -365831,7 +365891,7 @@
       "original": "hg.java",
       "renamed": "MusicPatchPcmStream.java",
       "inputSha256": "e91fe67567d8d42e0a089c74a74a2d351b9f8d16b729ce27638f3705a853ddae",
-      "outputSha256": "182f12c5bba11de48a829a9ee13ef302fe18afd29208903988252e1edf01e996",
+      "outputSha256": "96182ebc098505b5fa353b5120684f7268c1e8936b59e670b3e21cd9f80c79d6",
       "edits": [
         {
           "start": 50,
@@ -365937,6 +365997,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 2550,
+          "end": 2551,
+          "symbol": "M:ni.f(I)V",
+          "original": "f",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 2579,
@@ -379332,7 +379399,7 @@
       "original": "md.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "601bd235e7bb9bf8e2b9969f064f951651ef5eb5a82c0f3057fc6c9c63b7436a",
-      "outputSha256": "aa067b5af6b22a3df6093c9d766f2beff7cc222b75edaf64843f161442191c23",
+      "outputSha256": "ae1ba61841e609f4910811a5f4c7c01921a54be2866bf264038e0e0e6df40031",
       "edits": [
         {
           "start": 71,
@@ -379697,6 +379764,20 @@
           "symbol": "M:vn.a(Lqb;)V",
           "original": "a",
           "renamed": "setRootStream"
+        },
+        {
+          "start": 2679,
+          "end": 2680,
+          "symbol": "M:ge.a(F)V",
+          "original": "a",
+          "renamed": "setWetGain"
+        },
+        {
+          "start": 2739,
+          "end": 2740,
+          "symbol": "M:ge.c(F)V",
+          "original": "c",
+          "renamed": "setStereoWidth"
         },
         {
           "start": 3152,
@@ -382818,7 +382899,7 @@
       "original": "ni.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "3710891145ef7c5bcaf8857462a46f36f5c3af20fd6e646fec10aa69534a53a7",
-      "outputSha256": "086adec085b0afa035bb379aa84f804dcf58de793733953f19f20642b87fa5e7",
+      "outputSha256": "beb6968f8c1d018190f0ab256be7ba7f2cb4bfaa76e3c1fb037e223fa52638c2",
       "edits": [
         {
           "start": 50,
@@ -383199,6 +383280,13 @@
           "renamed": "data"
         },
         {
+          "start": 12932,
+          "end": 12933,
+          "symbol": "M:ni.j()Z",
+          "original": "j",
+          "renamed": "finishOrContinueVolumeRamp"
+        },
+        {
           "start": 13100,
           "end": 13102,
           "symbol": "C:ni",
@@ -383346,6 +383434,13 @@
           "renamed": "PcmSampleStream"
         },
         {
+          "start": 38054,
+          "end": 38055,
+          "symbol": "M:ni.j()Z",
+          "original": "j",
+          "renamed": "finishOrContinueVolumeRamp"
+        },
+        {
           "start": 38195,
           "end": 38197,
           "symbol": "C:ni",
@@ -383379,6 +383474,13 @@
           "symbol": "C:ni",
           "original": "ni",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 42202,
+          "end": 42203,
+          "symbol": "M:ni.f(I)V",
+          "original": "f",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 42330,
@@ -384002,6 +384104,13 @@
           "symbol": "F:va.field_k:[B",
           "original": "field_k",
           "renamed": "data"
+        },
+        {
+          "start": 63191,
+          "end": 63192,
+          "symbol": "M:ni.j()Z",
+          "original": "j",
+          "renamed": "finishOrContinueVolumeRamp"
         },
         {
           "start": 63239,
@@ -400226,7 +400335,7 @@
       "original": "ug.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "5c9e521c8d0d451c0ad9c7f783fb638244e9859f63af1d66a5457ae743dadd2e",
-      "outputSha256": "236bedd89242464032906633e79768c4ad3c0a7412bffe95ce2982f9262e5d2c",
+      "outputSha256": "924a82d97449c9ac25bd5bd8f410c227990814b6d384feee12c9151c358a7391",
       "edits": [
         {
           "start": 50,
@@ -400318,6 +400427,13 @@
           "symbol": "M:md.e(I)Lne;",
           "original": "e",
           "renamed": "beginBackward"
+        },
+        {
+          "start": 4155,
+          "end": 4156,
+          "symbol": "M:ni.f(I)V",
+          "original": "f",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 4157,
@@ -400733,6 +400849,13 @@
           "symbol": "M:ne.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 32542,
+          "end": 32543,
+          "symbol": "M:ni.f(I)V",
+          "original": "f",
+          "renamed": "fadeOutAndUnlink"
         },
         {
           "start": 32620,
@@ -406278,10 +406401,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/dungeonassault"
     },
-    "rulesSha256": "8d30a58c38f1281a11b35acb3a0d145b05ea192090d3b09cf8064f8d99da91ba",
+    "rulesSha256": "834150327884c562527145639b2693876884b5e47802fb0480421b150e6dc93f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
-    "outputTreeSha256": "5fef130f7fc35563228befcfb439c7c5f1f14ca621c969aa1afcf34b89221210",
+    "outputTreeSha256": "339aee7cc95c5c62545c4637ee3fcd4595627ab6215ee71d8008b2ff574ad283",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

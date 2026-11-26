@@ -20,7 +20,7 @@ final class wi extends eb {
           if (param1 != null) {
             param1.a(0, param2 - 32, (byte) 127, 1, param3 - 64, kg.field_r[45]);
           }
-          kg.field_r[76].c(-32 + param2, -64 + param3, 128);
+          kg.field_r[76].drawTransparentWithIntensity(-32 + param2, -64 + param3, 128);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "wi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -862,10 +862,10 @@ final class TutorialController {
           var3 = -lg.field_c + 16 * this.field_C + this.field_r * 16 + 240;
           var4 = 1052688 * this.field_j + 11513775;
           if (-1 != this.field_r) {
-            SoftwareRasterizer.c(var2 - 32, var3, var2, -16 + var3, var4);
-            SoftwareRasterizer.c(var2 - 32, var3, var2, var3 + 16, var4);
-            SoftwareRasterizer.c(32 + var2, var3, var2, var3 - 16, var4);
-            SoftwareRasterizer.c(var2 + 32, var3, var2, 16 + var3, var4);
+            SoftwareRasterizer.drawLine(var2 - 32, var3, var2, -16 + var3, var4);
+            SoftwareRasterizer.drawLine(var2 - 32, var3, var2, var3 + 16, var4);
+            SoftwareRasterizer.drawLine(32 + var2, var3, var2, var3 - 16, var4);
+            SoftwareRasterizer.drawLine(var2 + 32, var3, var2, 16 + var3, var4);
           }
         }
         if (param0 <= 116) {

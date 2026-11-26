@@ -62,7 +62,7 @@ final class e extends IntrusiveNode {
               SoftwareRasterizer.a(ui.field_f);
               SoftwareRasterizer.a(0, 0, -(2 * param1) + SoftwareRasterizer.width, SoftwareRasterizer.height);
             }
-            we.field_m[1 + var4].a(param1, param1, 16777215);
+            we.field_m[1 + var4].drawMask(param1, param1, 16777215);
             if (var4 == 0) {
               SoftwareRasterizer.b(ui.field_f);
             }

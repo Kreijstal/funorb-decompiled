@@ -813,7 +813,7 @@ final class jl {
                                   MouseWheelSource.field_c = 0;
                                   tj.field_G = 0;
                                   if (null != ah.field_a) {
-                                    ah.field_a.h(6000);
+                                    ah.field_a.fadeOutAndUnlink(6000);
                                     ah.field_a = null;
                                   }
                                   if (AccountCreationResultPanel.field_tb != null) {

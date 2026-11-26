@@ -4,7 +4,7 @@
 final class BinaryBitmapFont extends BitmapFont {
     private byte[][] field_N;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -123,7 +123,7 @@ final class BinaryBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.field_f;
         int var10 = SoftwareRasterizer.field_f - param3;

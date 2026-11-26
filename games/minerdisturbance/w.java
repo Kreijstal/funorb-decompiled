@@ -189,14 +189,14 @@ final class w extends tn {
             var6 != bm.field_o) {
             if (fg.field_d == var6) {
               var19 = AccountServiceResult.field_g[2];
-              var19.g(var9, var10 - (var19.field_C >> 1), 256);
+              var19.drawAdditive(var9, var10 - (var19.field_C >> 1), 256);
               return;
             }
             if (sc.field_a != var6) {
               return;
             }
             var20 = AccountServiceResult.field_g[1];
-            var20.g(var9, var10 - (var20.field_C >> 1), 256);
+            var20.drawAdditive(var9, var10 - (var20.field_C >> 1), 256);
             return;
           }
           var21 = AccountServiceResult.field_g[0];
@@ -221,7 +221,7 @@ final class w extends tn {
           }
           var21.b(112, 144, var21.field_x << 4, var21.field_A << 4, -this.field_O << 10, 4096);
           tk.b(true);
-          this.field_Q.g(var9 - (var21.field_x >> 1), var10 - var21.field_A, 256);
+          this.field_Q.drawAdditive(var9 - (var21.field_x >> 1), var10 - var21.field_A, 256);
           return;
         }
         if (var6 == bm.field_o) {
@@ -239,14 +239,14 @@ final class w extends tn {
             var6 != bm.field_o) {
             if (fg.field_d == var6) {
               var24 = AccountServiceResult.field_g[2];
-              var24.g(var9Lifetime1, var10Lifetime1 - (var24.field_C >> 1), 256);
+              var24.drawAdditive(var9Lifetime1, var10Lifetime1 - (var24.field_C >> 1), 256);
               return;
             }
             if (sc.field_a != var6) {
               return;
             }
             var25 = AccountServiceResult.field_g[1];
-            var25.g(var9Lifetime1, var10Lifetime1 - (var25.field_C >> 1), 256);
+            var25.drawAdditive(var9Lifetime1, var10Lifetime1 - (var25.field_C >> 1), 256);
             return;
           }
           var26 = AccountServiceResult.field_g[0];
@@ -271,7 +271,7 @@ final class w extends tn {
           }
           var26.b(112, 144, var26.field_x << 4, var26.field_A << 4, -this.field_O << 10, 4096);
           tk.b(true);
-          this.field_Q.g(var9Lifetime1 - (var26.field_x >> 1), var10Lifetime1 - var26.field_A, 256);
+          this.field_Q.drawAdditive(var9Lifetime1 - (var26.field_x >> 1), var10Lifetime1 - var26.field_A, 256);
           return;
         }
         var27 = this.field_V.a(param0 + 7316);
@@ -289,14 +289,14 @@ final class w extends tn {
             var6Lifetime1 != bm.field_o) {
             if (fg.field_d == var6Lifetime1) {
               var29 = AccountServiceResult.field_g[2];
-              var29.g(var9Lifetime2, var10Lifetime2 - (var29.field_C >> 1), 256);
+              var29.drawAdditive(var9Lifetime2, var10Lifetime2 - (var29.field_C >> 1), 256);
               return;
             }
             if (sc.field_a != var6Lifetime1) {
               return;
             }
             var30 = AccountServiceResult.field_g[1];
-            var30.g(var9Lifetime2, var10Lifetime2 - (var30.field_C >> 1), 256);
+            var30.drawAdditive(var9Lifetime2, var10Lifetime2 - (var30.field_C >> 1), 256);
             return;
           }
           var31 = AccountServiceResult.field_g[0];
@@ -321,7 +321,7 @@ final class w extends tn {
           }
           var31.b(112, 144, var31.field_x << 4, var31.field_A << 4, -this.field_O << 10, 4096);
           tk.b(true);
-          this.field_Q.g(var9Lifetime2 - (var31.field_x >> 1), var10Lifetime2 - var31.field_A, 256);
+          this.field_Q.drawAdditive(var9Lifetime2 - (var31.field_x >> 1), var10Lifetime2 - var31.field_A, 256);
           return;
         }
         var32 = this.field_U;
@@ -338,14 +338,14 @@ final class w extends tn {
           var6Lifetime2 != bm.field_o) {
           if (fg.field_d == var6Lifetime2) {
             var34 = AccountServiceResult.field_g[2];
-            var34.g(var9Lifetime3, var10Lifetime3 - (var34.field_C >> 1), 256);
+            var34.drawAdditive(var9Lifetime3, var10Lifetime3 - (var34.field_C >> 1), 256);
             return;
           }
           if (sc.field_a != var6Lifetime2) {
             return;
           }
           var35 = AccountServiceResult.field_g[1];
-          var35.g(var9Lifetime3, var10Lifetime3 - (var35.field_C >> 1), 256);
+          var35.drawAdditive(var9Lifetime3, var10Lifetime3 - (var35.field_C >> 1), 256);
           return;
         }
         var36 = AccountServiceResult.field_g[0];
@@ -371,7 +371,7 @@ final class w extends tn {
         }
         var36.b(112, 144, var36.field_x << 4, var36.field_A << 4, -this.field_O << 10, 4096);
         tk.b(true);
-        this.field_Q.g(var9Lifetime3 - (var36.field_x >> 1), var10Lifetime3 - var36.field_A, 256);
+        this.field_Q.drawAdditive(var9Lifetime3 - (var36.field_x >> 1), var10Lifetime3 - var36.field_A, 256);
     }
 
     w(jm param0, String param1, int param2, int param3, int param4, int param5) {

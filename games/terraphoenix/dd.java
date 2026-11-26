@@ -195,20 +195,20 @@ final class dd extends eb {
             }
             var16.b(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_P << 10, 4096);
             MessageKeys.a(false);
-            ld.field_c.d(var5 - var16.field_q, -var16.field_u + var6, 256);
+            ld.field_c.drawAdditive(var5 - var16.field_q, -var16.field_u + var6, 256);
             return;
           }
           if (oh.field_b != var8) {
             if (qf.field_d == var8) {
               var17 = AccountRequestState.field_c[2];
-              var17.d(var5 - (var17.field_r >> 1), var6 - (var17.field_t >> 1), 256);
+              var17.drawAdditive(var5 - (var17.field_r >> 1), var6 - (var17.field_t >> 1), 256);
               return;
             }
             if (dg.field_c != var8) {
               return;
             }
             var18 = AccountRequestState.field_c[1];
-            var18.d(-(var18.field_r >> 1) + var5, var6 - (var18.field_t >> 1), 256);
+            var18.drawAdditive(-(var18.field_r >> 1) + var5, var6 - (var18.field_t >> 1), 256);
             return;
           }
           var15 = AccountRequestState.field_c[0];
@@ -225,7 +225,7 @@ final class dd extends eb {
           }
           var15.b(112, 144, var15.field_q << 4, var15.field_u << 4, -this.field_P << 10, 4096);
           MessageKeys.a(false);
-          ld.field_c.d(var5 - var15.field_q, -var15.field_u + var6, 256);
+          ld.field_c.drawAdditive(var5 - var15.field_q, -var15.field_u + var6, 256);
           return;
         }
         field_O = (String[]) null;
@@ -254,20 +254,20 @@ final class dd extends eb {
           }
           var20.b(112, 144, var20.field_q << 4, var20.field_u << 4, -this.field_P << 10, 4096);
           MessageKeys.a(false);
-          ld.field_c.d(var5 - var20.field_q, -var20.field_u + var6Lifetime1, 256);
+          ld.field_c.drawAdditive(var5 - var20.field_q, -var20.field_u + var6Lifetime1, 256);
           return;
         }
         if (oh.field_b != var8Lifetime1) {
           if (qf.field_d == var8Lifetime1) {
             var21 = AccountRequestState.field_c[2];
-            var21.d(var5 - (var21.field_r >> 1), var6Lifetime1 - (var21.field_t >> 1), 256);
+            var21.drawAdditive(var5 - (var21.field_r >> 1), var6Lifetime1 - (var21.field_t >> 1), 256);
             return;
           }
           if (dg.field_c != var8Lifetime1) {
             return;
           }
           var22 = AccountRequestState.field_c[1];
-          var22.d(-(var22.field_r >> 1) + var5, var6Lifetime1 - (var22.field_t >> 1), 256);
+          var22.drawAdditive(-(var22.field_r >> 1) + var5, var6Lifetime1 - (var22.field_t >> 1), 256);
           return;
         }
         var19 = AccountRequestState.field_c[0];
@@ -288,7 +288,7 @@ final class dd extends eb {
         }
         var19.b(112, 144, var19.field_q << 4, var19.field_u << 4, -this.field_P << 10, 4096);
         MessageKeys.a(false);
-        ld.field_c.d(var5 - var19.field_q, -var19.field_u + var6Lifetime1, 256);
+        ld.field_c.drawAdditive(var5 - var19.field_q, -var19.field_u + var6Lifetime1, 256);
     }
 
     static {

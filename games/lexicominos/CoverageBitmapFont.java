@@ -31,7 +31,7 @@ final class CoverageBitmapFont extends BitmapFont {
         return param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -143,7 +143,7 @@ final class CoverageBitmapFont extends BitmapFont {
         this.field_N = CoverageBitmapFont.a(param5, param6);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;

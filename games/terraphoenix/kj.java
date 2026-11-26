@@ -28,7 +28,7 @@ final class kj implements WidgetActionListener {
           var8 = AccountRequestState.field_c[1];
           if (param1 instanceof eb &&
             ((eb) (param1)).field_C) {
-            var8.d((-var8.field_q + param1.width >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.height >> 1), 256);
+            var8.drawAdditive((-var8.field_q + param1.width >> 1) + (var6_int + 1), var7 + 1 + (-var8.field_u + param1.height >> 1), 256);
           }
           if (!param1.d(-118)) {
             return;

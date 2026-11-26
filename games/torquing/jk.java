@@ -36,7 +36,7 @@ final class jk {
               VertexMesh.field_l.d(hb.field_s, ra.field_e);
               var1_int = ResourceArchive.field_j.field_s * MouseWheelInput.field_d / 100;
               var2 = ResourceArchive.field_j.field_t * MouseWheelInput.field_d / 100;
-              ResourceArchive.field_j.b(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
+              ResourceArchive.field_j.drawScaled(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
             }
           } else {
             fq.field_F.a(false, ub.field_E, ra.field_e);

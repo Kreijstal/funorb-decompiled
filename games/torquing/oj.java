@@ -52,8 +52,8 @@ final class oj implements WidgetRenderer {
           }
           SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_A) {
-            SoftwareRasterizer.a(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
-            SoftwareRasterizer.a(this.field_i + var8, var9, var8, this.field_e + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, this.field_e + var9, 1);
           }
           if (null != this.field_c) {
             var10 = this.field_i + this.field_k + this.field_b;

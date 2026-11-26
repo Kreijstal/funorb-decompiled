@@ -583,7 +583,7 @@ final class ih extends IntrusiveNode {
           var4.b(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.a();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_a[var6Lifetime1];
           while (true) {
             if (var4.field_a[var6Lifetime1] != var7) {

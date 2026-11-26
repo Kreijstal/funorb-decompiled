@@ -279,7 +279,7 @@ final class vi {
         if (param3 < 92) {
           return;
         }
-        SoftwareRasterizer.d(param4, param2, param0, param1, param5);
+        SoftwareRasterizer.drawLine(param4, param2, param0, param1, param5);
     }
 
     static {

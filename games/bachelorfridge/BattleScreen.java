@@ -632,7 +632,7 @@ final class BattleScreen extends dfa {
             }
             var4 = al.a(-110, var3.moveId);
             hh.field_b[var4.field_h].draw(var3.creature.field_f * 39 + 16, 28);
-            if (hh.field_b[var4.field_h].a(39 * var3.creature.field_f + 16, 28, mk.field_p, gd.field_m)) {
+            if (hh.field_b[var4.field_h].isOpaqueAt(39 * var3.creature.field_f + 16, 28, mk.field_p, gd.field_m)) {
               var5 = 640;
               var6 = 480;
               var7 = 4 + mk.field_p;

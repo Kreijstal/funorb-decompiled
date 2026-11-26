@@ -649,7 +649,7 @@ final class MenuScreen {
     }
 
     private final void drawTitleBanner(int param0, byte param1) {
-        NanoTickClock.field_k.drawTransparentWithOpacity(110, 0, 192);
+        NanoTickClock.field_k.drawTransparentWithIntensity(110, 0, 192);
         GameApplet.field_c.drawScaled(163, 20, 315, 120);
         int var3 = -94 % ((-17 - param1) / 53);
     }

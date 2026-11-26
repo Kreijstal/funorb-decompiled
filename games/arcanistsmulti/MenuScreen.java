@@ -9851,8 +9851,8 @@ final class MenuScreen {
                   WhirlpoolHasher.field_o[10].drawSilhouette(26 + (ValidatedTextWidget.field_I + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, var12 >> 1 & 8355711 | 8421504);
                   WhirlpoolHasher.field_o[var9].drawSilhouette(ValidatedTextWidget.field_I + (32 - (6 - (-WhirlpoolHasher.field_o[var9].field_n + 245) / 2)), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, 8355711 & var12 >> 1 | 8421504);
                   SoftwareRasterizer.blurRectangle(6, 6, 8 + (32 + ValidatedTextWidget.field_I), 186 + QuickChatHelpers.field_a, 229, 229);
-                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 + ValidatedTextWidget.field_I + 26, (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 64);
-                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (-6 + ValidatedTextWidget.field_I + 32), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 64);
+                  WhirlpoolHasher.field_o[10].drawTransparentWithIntensity((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 + ValidatedTextWidget.field_I + 26, (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 64);
+                  WhirlpoolHasher.field_o[var9].drawTransparentWithIntensity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (-6 + ValidatedTextWidget.field_I + 32), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + QuickChatHelpers.field_a + 178, 64);
                   GameSelectionHelpers.field_m.makeRasterTarget(true);
                   var14 = 416 + (ValidatedTextWidget.field_I << 4) + 1960;
                   var15 = 2848 + ((QuickChatHelpers.field_a << 4) + 1960);
@@ -9889,8 +9889,8 @@ final class MenuScreen {
                   WhirlpoolHasher.field_o[10].drawSilhouette(32 + (ValidatedTextWidget.field_I - 6 + (245 - WhirlpoolHasher.field_o[9].field_n) / 2), 178 + QuickChatHelpers.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2, (16711422 & var12 | 16843009) >> 1);
                   WhirlpoolHasher.field_o[var9].drawSilhouette((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 32 - 6), 178 + (QuickChatHelpers.field_a + (245 - WhirlpoolHasher.field_o[9].field_w) / 2), (var12 & 16711422 | 16843009) >> 1);
                   SoftwareRasterizer.blurRectangle(6, 6, ValidatedTextWidget.field_I + 32 + 8, 8 + (QuickChatHelpers.field_a + 178), 229, 229);
-                  WhirlpoolHasher.field_o[10].drawTransparentWithOpacity(-6 + (ValidatedTextWidget.field_I + 32 + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, 64);
-                  WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 26), QuickChatHelpers.field_a - (-178 - (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), 64);
+                  WhirlpoolHasher.field_o[10].drawTransparentWithIntensity(-6 + (ValidatedTextWidget.field_I + 32 + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + QuickChatHelpers.field_a, 64);
+                  WhirlpoolHasher.field_o[var9].drawTransparentWithIntensity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 26), QuickChatHelpers.field_a - (-178 - (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), 64);
                   GameSelectionHelpers.field_m.makeRasterTarget(true);
                 } else {
                   WhirlpoolHasher.field_o[10].drawSilhouette((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 - 6 + (ValidatedTextWidget.field_I + 32), 178 + (QuickChatHelpers.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), (16843008 | var12 & 16711422) >> 1);
@@ -9959,7 +9959,7 @@ final class MenuScreen {
                   if (var17_int != 0) {
                     LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var16]].drawTransparent(var14 - 1, var15Lifetime1 - 1);
                   } else {
-                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var16]].drawTransparentWithOpacity(var14 - 1, -1 + var15Lifetime1, 64);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var16]].drawTransparentWithIntensity(var14 - 1, -1 + var15Lifetime1, 64);
                     SoftwareRasterizer.drawLine(var14, var15Lifetime1, var14 + 32, 32 + var15Lifetime1, 16711680);
                     SoftwareRasterizer.drawLine(32 + var14, var15Lifetime1, var14, 32 + var15Lifetime1, 16711680);
                     ThrowableFormatHelpers.field_f[var13_intLifetime1 + 2 * var12Lifetime1] = -1;
@@ -10249,7 +10249,7 @@ final class MenuScreen {
             SoftwareRasterizer.drawCircleOutline(var22 + 16, 16 + var23, var18Lifetime2, 0);
             if (9 == this.field_h && (SpellbookCaptionGlobals.field_d == 0 ||
               ArcanistsMulti.isOfflineOrNotLoaded((byte) -74))) {
-              LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
+              LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithIntensity(-4 + var22, -4 + var23, 32);
               decompiledFrameRemainder3 = false;
             }
             else {
@@ -10257,7 +10257,7 @@ final class MenuScreen {
                 this.field_h > 1 &&
                 this.field_h < 9 &&
                 var16Lifetime3 == 0) {
-                LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, var23 - 4, 32);
+                LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithIntensity(-4 + var22, var23 - 4, 32);
               } else {
                 if (var16Lifetime3 != 0) {
                   LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparent(-4 + var22, var23 - 4);
@@ -10280,9 +10280,9 @@ final class MenuScreen {
                 }
                 else {
                   if (var17_intLifetime3 == 0) {
-                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var13_intLifetime4 + var12Lifetime4]].drawTransparentWithIntensity(-4 + var22, -4 + var23, 32);
                   } else {
-                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var12Lifetime4 + var13_intLifetime4]].drawTransparentWithOpacity(-4 + var22, -4 + var23, 32);
+                    LoginLoadingHelpers.field_g[PasswordCheckHelpers.field_f[var12Lifetime4 + var13_intLifetime4]].drawTransparentWithIntensity(-4 + var22, -4 + var23, 32);
                     var24Lifetime1Lifetime1 = var22 + 16 << 4;
                     var25_intLifetime1 = 16 + var23 << 4;
                     if (!ArcanistsMulti.isOfflineOrNotLoaded((byte) -102)) {

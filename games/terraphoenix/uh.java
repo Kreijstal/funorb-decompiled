@@ -353,7 +353,7 @@ final class uh extends WidgetContainer implements pa, n {
           qk.field_e.a(this.field_I, this.x + param0 + 20, this.y + (param3 + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, qk.field_e.field_s);
         }
         if (this.field_K != null) {
-          SoftwareRasterizer.d(param0 + 10, param3 + 134, this.width - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 10, param3 + 134, this.width - 20, 4210752);
         }
         if (param1 > -106) {
           this.field_R = (ej) null;

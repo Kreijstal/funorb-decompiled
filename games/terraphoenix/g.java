@@ -173,7 +173,7 @@ class g extends wa {
         if (this.field_D) {
           gi.field_w = true;
         }
-        SoftwareRasterizer.c(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_N != 0 &&
           this.field_kb) {
           this.field_ib = MouseWheelInput.field_b - (this.field_Y + param0);
@@ -545,7 +545,7 @@ class g extends wa {
             var23_ref = (g) (this.field_L.nextBackward((byte) -119));
           }
         }
-        SoftwareRasterizer.c(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     private g(long param0, g param1, int param2, int param3, int param4, int param5, String param6) {

@@ -82,7 +82,7 @@ final class ha {
             var15++;
           }
         } else {
-          SoftwareRasterizer.g(0, 8, 311, 450);
+          SoftwareRasterizer.setClip(0, 8, 311, 450);
           var3_int = this.field_b.field_a * this.field_b.field_b + this.field_b.a((byte) -123);
           if (var3_int < 0) {
             var3_int += 128;
