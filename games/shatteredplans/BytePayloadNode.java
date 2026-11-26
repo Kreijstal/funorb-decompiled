@@ -8,7 +8,7 @@ final class BytePayloadNode extends IntrusiveNode {
     static String field_i;
     byte[] field_j;
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawAlternatingColourLine(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_22_0;
         int stackIn_22_1;
         int stackIn_22_2;
@@ -108,7 +108,7 @@ final class BytePayloadNode extends IntrusiveNode {
         }
     }
 
-    final static void a(AnimatedPanel param0, int param1, AnimatedPanel param2, int param3, int param4, byte param5, int param6, AnimatedPanel param7, byte[] param8, int param9) {
+    final static void initializeLobbySessionState(AnimatedPanel param0, int param1, AnimatedPanel param2, int param3, int param4, byte param5, int param6, AnimatedPanel param7, byte[] param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -202,7 +202,7 @@ final class BytePayloadNode extends IntrusiveNode {
     public static void clearStatics(byte param0) {
         field_k = null;
         if (param0 < 67) {
-          BytePayloadNode.a((byte) -90, 116, 111, -79, -48, 35, -128, -23, -56);
+          BytePayloadNode.drawAlternatingColourLine((byte) -90, 116, 111, -79, -48, 35, -128, -23, -56);
         }
         field_i = null;
     }

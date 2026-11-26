@@ -76,7 +76,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.getAccountRequestType((byte) -24), DropTargetWidget.getAccountDialogText(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
+            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.getAccountRequestName(-97), this.field_B, (byte) -42, PacketBuffer.getAccountRequestType((byte) -24), DropTargetWidget.getAccountDialogText(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
               GraphicsSettings.showLoginResult(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -92,7 +92,7 @@ abstract class GameClientShell extends GameApplet {
             if (param0) {
               StripedProgressWidget.field_B = false;
             } else {
-              var5_intLifetime2 = SolVictoryChecker.pollLoginHandshake(this.field_B, (byte) -121, false, DropTargetWidget.getAccountDialogText(-116), this.field_C, BoundsRect.d(-121));
+              var5_intLifetime2 = SolVictoryChecker.pollLoginHandshake(this.field_B, (byte) -121, false, DropTargetWidget.getAccountDialogText(-116), this.field_C, BoundsRect.getAccountRequestName(-121));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   AccountStatusSupport.showLoginResult((byte) -127, var5_intLifetime2, DiplomacyRowSupport.field_c);
@@ -148,10 +148,10 @@ abstract class GameClientShell extends GameApplet {
                 var12 = GraphicsSettings.field_g.getResultBuffer(true);
                 if (var12 == null) {
                   var9 = (String) null;
-                  AccountCreationForm.a((String) null, true);
+                  AccountCreationForm.handleCountryListResponse((String) null, true);
                 } else {
                   var7 = StellarBombEvent.decodeCp1252(var12.payload, var12.position, 0, param1 ^ -128);
-                  AccountCreationForm.a(var7, true);
+                  AccountCreationForm.handleCountryListResponse(var7, true);
                 }
                 GraphicsSettings.field_g = null;
               }
@@ -160,7 +160,7 @@ abstract class GameClientShell extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               GameKeyHandler.a(-29901, (Throwable) ((Object) var5), "S1");
               var10 = (String) null;
-              AccountCreationForm.a((String) null, true);
+              AccountCreationForm.handleCountryListResponse((String) null, true);
               GraphicsSettings.field_g = null;
             }
           }
@@ -674,7 +674,7 @@ abstract class GameClientShell extends GameApplet {
         if (StripedProgressWidget.field_B) {
           return -1;
         }
-        int var2 = SolVictoryChecker.pollLoginHandshake(this.field_B, (byte) -94, true, DropTargetWidget.getAccountDialogText(-125), this.field_C, BoundsRect.d(-97));
+        int var2 = SolVictoryChecker.pollLoginHandshake(this.field_B, (byte) -94, true, DropTargetWidget.getAccountDialogText(-125), this.field_C, BoundsRect.getAccountRequestName(-97));
         if (var2 == -1) {
           return -1;
         }

@@ -178,7 +178,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return false;
           }
           if (TertiaryLinkNode.field_r == 2) {
-            if (!ShatteredPlansClient.a(16, DefendTask.field_o, ValidationMessageWidget.field_S)) {
+            if (!ShatteredPlansClient.canMessageRecipient(16, DefendTask.field_o, ValidationMessageWidget.field_S)) {
               return false;
             }
             if (TertiaryLinkNode.field_r == 2) {
@@ -218,7 +218,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               return false;
             }
             if (TertiaryLinkNode.field_r == 2) {
-              if (ShatteredPlansClient.a(16, DefendTask.field_o, ValidationMessageWidget.field_S)) {
+              if (ShatteredPlansClient.canMessageRecipient(16, DefendTask.field_o, ValidationMessageWidget.field_S)) {
                 if (TertiaryLinkNode.field_r != 2 &&
                   var3 != 0) {
                   return false;

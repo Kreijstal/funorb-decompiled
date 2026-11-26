@@ -11,7 +11,7 @@ public final class ShatteredPlansClient extends GameClientShell {
     private int field_I;
     public static boolean field_F;
 
-    final static boolean a(int param0, long param1, String param2) {
+    final static boolean canMessageRecipient(int param0, long param1, String param2) {
         SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_12_0 = false;
@@ -150,7 +150,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           stackIn_7_1 = (null != NameSuggestionsPanel.field_K);
           this.tickClientShell(stackIn_7_1, 77);
           if (PlayerStats.field_n) {
-            this.c(false);
+            this.openGameArchives(false);
             PlayerStats.field_n = false;
           }
           RasterStateFrame.field_n = RasterStateFrame.field_n + 1;
@@ -161,7 +161,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 return;
               }
               if (QuaternaryNodeList.isGameClientReady(91)) {
-                MutableIntPairNode.field_h = this.c(82, false);
+                MutableIntPairNode.field_h = this.pollGameAssetInitialization(82, false);
               }
               return;
             }
@@ -169,7 +169,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           var2 = 0;
           if (!MutableIntPairNode.field_h) {
             ChatAreaLayoutSupport.updateLoginUi(0, BattleExplosionVisual.field_o);
-            if (this.c(82, true)) {
+            if (this.pollGameAssetInitialization(82, true)) {
               MutableIntPairNode.field_h = true;
             }
           } else {
@@ -192,28 +192,28 @@ public final class ShatteredPlansClient extends GameClientShell {
                         DebouncedValidator.openQuitPage(1, (java.applet.Applet) (this));
                       }
                     }
-                    this.b(false, true);
+                    this.tickMenusAndLobby(false, true);
                   } else {
                     if (DialPainter.isAccountChoiceMenuOpen(0)) {
                       var2 = 1;
                       if (~ClientOverlayDrawSupport.field_c != ~ClientOverlayDrawSupport.field_g) {
-                        this.b(false, false);
+                        this.tickMenusAndLobby(false, false);
                       } else {
                         var3 = RoundedFrameSupport.a(106);
                         if (var3 == 1) {
                           AccountStatusDialog.field_ob = true;
                           MenuLabel.requestMenuLogin(AchievementProgress.field_a, 0, (byte) 122);
                         }
-                        this.b(false, true);
+                        this.tickMenusAndLobby(false, true);
                       }
                     } else {
-                      this.b(false, false);
+                      this.tickMenusAndLobby(false, false);
                     }
                   }
                 } else {
                   boolean decompiledFrameRemainder1 = true;
                   if (~ClientOverlayDrawSupport.field_g != ~ClientOverlayDrawSupport.field_c) {
-                    this.b(false, false);
+                    this.tickMenusAndLobby(false, false);
                   } else {
                     var3 = GuestPlayForm.pollFullscreenDialogAction(false);
                     if (var3 == 2) {
@@ -225,7 +225,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                         HuffmanCodec.requestFullscreen(true, -1);
                       } else {
                         if (var3 != 4) {
-                          this.b(false, true);
+                          this.tickMenusAndLobby(false, true);
                           decompiledFrameRemainder1 = false;
                         }
                         else {
@@ -235,7 +235,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      this.b(false, true);
+                      this.tickMenusAndLobby(false, true);
                     }
                   }
                   var2 = 1;
@@ -287,7 +287,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             if (BufferedCacheFile.field_e == 14) {
               DiskCacheWorker.commitMenuTransition(1048576);
-              BytePayloadNode.a(HitRegion.getLobbyRoomListContent(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.getRoomPlayerListContent(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
+              BytePayloadNode.initializeLobbySessionState(HitRegion.getLobbyRoomListContent(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.getRoomPlayerListContent(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
               SocialListSetupSupport.initializeSocialLists((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.a(83));
               EmailValidator.field_p = true;
               StripedProgressWidget.field_Q = false;
@@ -544,7 +544,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
     }
 
-    private final void l(int param0) {
+    private final void initializeGameTextReplacements(int param0) {
         int var2_int = 0;
         int var3 = field_F ? 1 : 0;
         ClientLobbyResources.field_e = new TextReplacementContext();
@@ -579,7 +579,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ClientLobbyResources.field_e.putReplacement(QuickChatPhraseRegistry.replaceNumberedPlaceholders(var2, param0 + 4370, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3].toUpperCase()}), 27275, "PROJECT_EXOTICS");
     }
 
-    private final boolean c(int param0, boolean param1) {
+    private final boolean pollGameAssetInitialization(int param0, boolean param1) {
         int var3 = 0;
         boolean stackIn_77_0 = false;
         int var4;
@@ -624,14 +624,14 @@ public final class ShatteredPlansClient extends GameClientShell {
             ValidationState.resetFrameTiming(126);
             return false;
           }
-          this.l(1);
+          this.initializeGameTextReplacements(1);
           WhirlpoolHasher.a(true);
           SoundEffectDefinition.initializeIntro((byte) -125);
           for (var3 = 0; 14 > var3; var3++) {
             LobbyPlayerEntry.field_Hb[var3] = new GameMenuController(var3);
           }
           if (param0 != 82) {
-            this.l(64);
+            this.initializeGameTextReplacements(64);
           }
           PlayerRankingRequest.field_o = 0;
           stackIn_77_0 = !(RasterTargetSupport.field_b < 2);
@@ -686,40 +686,40 @@ public final class ShatteredPlansClient extends GameClientShell {
                                 ClientDialogSupport.setLoadingProgress(75.0f, 2, CandidateLink.formatArchiveLoadingProgress(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
                                 return false;
                               }
-                              ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", GameSpriteResources.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
+                              ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", GameSpriteResources.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
                               return false;
                             }
-                            ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", LeaderboardSortSupport.field_c, (byte) 39, MouseInputHandler.field_e, ToggleButton.field_v));
+                            ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", LeaderboardSortSupport.field_c, (byte) 39, MouseInputHandler.field_e, ToggleButton.field_v));
                             return false;
                           }
-                          ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", IntrusiveNodeHashTable.field_g, (byte) 12, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+                          ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", IntrusiveNodeHashTable.field_g, (byte) 12, ValidatedTextInputWidget.field_J, SpriteState.field_r));
                           return false;
                         }
-                        ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", PointsVictoryChecker.field_l, (byte) 61, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+                        ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", PointsVictoryChecker.field_l, (byte) 61, ValidatedTextInputWidget.field_J, SpriteState.field_r));
                         return false;
                       }
-                      ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", ChatMessage.field_d, (byte) 11, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+                      ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", ChatMessage.field_d, (byte) 11, ValidatedTextInputWidget.field_J, SpriteState.field_r));
                       return false;
                     }
-                    ClientDialogSupport.setLoadingProgress(60.0f, param0 - 80, BoundsRect.a("", StrongCacheEntry.field_z, (byte) 62, ByteArrayStorage.field_a, MeshMaterial.field_b));
+                    ClientDialogSupport.setLoadingProgress(60.0f, param0 - 80, BoundsRect.formatArchiveGroupLoadingProgress("", StrongCacheEntry.field_z, (byte) 62, ByteArrayStorage.field_a, MeshMaterial.field_b));
                     return false;
                   }
                   ClientDialogSupport.setLoadingProgress(45.0f, 2, SocialListEntry.formatArchiveGroupProgress(DualLinkNode.field_n, 0, ByteArrayStorage.field_a, MeshMaterial.field_b, param0 - 15012));
                   return false;
                 }
-                ClientDialogSupport.setLoadingProgress(40.0f, 2, BoundsRect.a("", ByteArrayReadRequest.field_m, (byte) 47, PlayerReportPanel.field_Db, TurnEventLog.field_e));
+                ClientDialogSupport.setLoadingProgress(40.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", ByteArrayReadRequest.field_m, (byte) 47, PlayerReportPanel.field_Db, TurnEventLog.field_e));
                 return false;
               }
-              ClientDialogSupport.setLoadingProgress(20.0f, 2, BoundsRect.a("", IntHashIndex.field_a, (byte) 117, PlayerReportPanel.field_Db, TurnEventLog.field_e));
+              ClientDialogSupport.setLoadingProgress(20.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("", IntHashIndex.field_a, (byte) 117, PlayerReportPanel.field_Db, TurnEventLog.field_e));
               return false;
             }
-            ClientDialogSupport.setLoadingProgress(17.0f, 2, BoundsRect.a("lobby", TextReplacementContext.field_f, (byte) 94, LinkPainter.field_h, IntrusiveDequeCursor.field_h));
+            ClientDialogSupport.setLoadingProgress(17.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("lobby", TextReplacementContext.field_f, (byte) 94, LinkPainter.field_h, IntrusiveDequeCursor.field_h));
             return false;
           }
-          ClientDialogSupport.setLoadingProgress(13.0f, 2, BoundsRect.a("lobby", AttackTask.field_s, (byte) 19, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+          ClientDialogSupport.setLoadingProgress(13.0f, 2, BoundsRect.formatArchiveGroupLoadingProgress("lobby", AttackTask.field_s, (byte) 19, ValidatedTextInputWidget.field_J, SpriteState.field_r));
           return false;
         }
-        ClientDialogSupport.setLoadingProgress(10.0f, param0 ^ 80, BoundsRect.a("basic", AttackTask.field_s, (byte) 38, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+        ClientDialogSupport.setLoadingProgress(10.0f, param0 ^ 80, BoundsRect.formatArchiveGroupLoadingProgress("basic", AttackTask.field_s, (byte) 38, ValidatedTextInputWidget.field_J, SpriteState.field_r));
         return false;
     }
 
@@ -948,7 +948,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         PlayerOverlaySupport.clearStatics(-27153);
         ClientRuntimeState.clearStatics(param0 ^ -24069);
         MapStateReader.clearStatics((byte) 91);
-        DelegatingCanvas.a(param0 ^ 24068);
+        DelegatingCanvas.clearDelegatingCanvasStatics(param0 ^ 24068);
         LobbyRoomControlsSupport.clearStatics((byte) 26);
         IntHashIndex.clearStatics((byte) -26);
         ByteArrayStorage.clearStatics(124);
@@ -1129,7 +1129,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         this.configureGame("shatteredplans", 15, (byte) 112);
     }
 
-    private final void b(boolean param0, boolean param1) {
+    private final void tickMenusAndLobby(boolean param0, boolean param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_47_0 = false;
         boolean stackIn_82_0 = false;
@@ -1271,7 +1271,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           }
           stackIn_47_0Lifetime1 = EmailValidator.field_p;
           if (!stackIn_47_0Lifetime1) {
-            DelegatingCanvas.b(0);
+            DelegatingCanvas.tickChatAndLobbyTransitions(0);
           }
           if (!ImageProducerRasterBuffer.field_n) {
             if (NodeHashTableIterator.field_h > 0) {
@@ -1300,7 +1300,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
         if (param0) {
           var9 = (String) null;
-          ShatteredPlansClient.a(64, 68L, (String) null);
+          ShatteredPlansClient.canMessageRecipient(64, 68L, (String) null);
         }
         if (PlayerRankingRequest.field_o == -4) {
           StringList.field_b = null;
@@ -1327,7 +1327,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void openGameArchives(boolean param0) {
         if (StandardAi.field_e != null) {
           PrivateChatMessage.loadGameText(-47, StandardAi.field_e);
           StandardAi.field_e = null;
@@ -1399,7 +1399,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           ValidationState.drawCurrentClientScreen(stackIn_28_0, false);
           if (~GameRules.field_c != ~PlayerRankingRequest.field_o ||
             -2 != GameRules.field_c) {
-            ShatteredPlansClient.n((byte) 67);
+            ShatteredPlansClient.drawIdleMenuLogo((byte) 67);
           }
           if (PointsVictoryChecker.isMenuScreen((byte) -105, GameRules.field_c) &&
             !PointsVictoryChecker.isMenuScreen((byte) -123, PlayerRankingRequest.field_o)) {
@@ -1421,7 +1421,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             ValidationState.drawCurrentClientScreen(stackIn_18_0, false);
             if (GameRules.field_c != PlayerRankingRequest.field_o ||
               GameRules.field_c != -2) {
-              ShatteredPlansClient.n((byte) 67);
+              ShatteredPlansClient.drawIdleMenuLogo((byte) 67);
             }
             if (PointsVictoryChecker.isMenuScreen((byte) -99, GameRules.field_c)) {
               LobbyPlayerEntry.field_Hb[GameRules.field_c].drawMenu(-121);
@@ -1513,7 +1513,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         this.field_I = 0;
     }
 
-    private final static void n(byte param0) {
+    private final static void drawIdleMenuLogo(byte param0) {
         int var1 = 0;
         int var2 = 0;
         double var3 = 0.0;

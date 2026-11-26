@@ -169,7 +169,7 @@ final class IntroTextLine extends IntrusiveNode {
         try {
           DirectByteArrayStorage.field_i = new int[var1_int];
           for (var2 = 0; var1_int > var2; var2++) {
-            var3 = AccountCreationForm.a(var2, (byte) -71);
+            var3 = AccountCreationForm.measureInstructionSectionHeight(var2, (byte) -71);
             if (var2 != -1 + var1_int) {
               var3 += 50;
             }

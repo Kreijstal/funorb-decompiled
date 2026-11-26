@@ -3086,7 +3086,7 @@ final class MapView extends MapViewState {
                         KeyboardStateSupport.drawAlternatingDashedLineQ4(9, var27 << 4, var26 << 4, var25 << 4, var24, 0, var28 << 4, var29, 80);
                         break;
                       }
-                      BytePayloadNode.a((byte) 92, 0, var27 << 4, var24, var26 << 4, var29, var25 << 4, var28 << 4, 5);
+                      BytePayloadNode.drawAlternatingColourLine((byte) 92, 0, var27 << 4, var24, var26 << 4, var29, var25 << 4, var28 << 4, 5);
                       break;
                     }
                     if (MatchingTextValidator.field_t.field_f) {

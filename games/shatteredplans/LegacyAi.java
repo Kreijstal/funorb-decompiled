@@ -209,7 +209,7 @@ class LegacyAi extends StandardAi {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||
-            ShatteredPlansClient.a(16, param4, param2))) {
+            ShatteredPlansClient.canMessageRecipient(16, param4, param2))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }

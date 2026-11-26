@@ -151,7 +151,7 @@ final class CanvasResizeController {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.a(16548, param1, param4)) {
+          if (!param3.containsPoint(16548, param1, param4)) {
             return false;
           }
           if (param0 != 0) {

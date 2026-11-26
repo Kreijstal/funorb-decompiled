@@ -14,10 +14,10 @@ final class BoundsRect extends IntrusiveNode {
     static int field_h;
     int field_i;
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         if (param0 != 16548) {
           String var5 = (String) null;
-          BoundsRect.a((String) null, (Archive) null, (byte) 81, (String) null, (String) null);
+          BoundsRect.formatArchiveGroupLoadingProgress((String) null, (Archive) null, (byte) 81, (String) null, (String) null);
           if (param2 < this.field_l) {
             return false;
           }
@@ -61,7 +61,7 @@ final class BoundsRect extends IntrusiveNode {
         field_k = null;
     }
 
-    final static String a(String param0, Archive param1, byte param2, String param3, String param4) {
+    final static String formatArchiveGroupLoadingProgress(String param0, Archive param1, byte param2, String param3, String param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_5_0 = null;
@@ -79,7 +79,7 @@ final class BoundsRect extends IntrusiveNode {
         try {
           if (param2 <= 7) {
             var6 = (String) null;
-            BoundsRect.a((String) null, (Archive) null, (byte) -117, (String) null, (String) null);
+            BoundsRect.formatArchiveGroupLoadingProgress((String) null, (Archive) null, (byte) -117, (String) null, (String) null);
           }
           if (!param1.isIndexLoaded((byte) -109)) {
             stackIn_5_0 = (String) (param3);
@@ -119,7 +119,7 @@ final class BoundsRect extends IntrusiveNode {
         }
     }
 
-    final static String d(int param0) {
+    final static String getAccountRequestName(int param0) {
         if (ExternalLinkSupport.field_a == PrivateChatMessage.field_l) {
           return PlayerStats.field_j;
         }
@@ -133,11 +133,11 @@ final class BoundsRect extends IntrusiveNode {
           return MenuWindow.field_B;
         }
         String var2 = (String) null;
-        BoundsRect.a((String) null, (Archive) null, (byte) 30, (String) null, (String) null);
+        BoundsRect.formatArchiveGroupLoadingProgress((String) null, (Archive) null, (byte) 30, (String) null, (String) null);
         return MenuWindow.field_B;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void finalizeRankingIndices(int param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -147,7 +147,7 @@ final class BoundsRect extends IntrusiveNode {
         try {
           if (param1 >= -36) {
             var4 = (String) null;
-            BoundsRect.a((String) null, (Archive) null, (byte) -45, (String) null, (String) null);
+            BoundsRect.formatArchiveGroupLoadingProgress((String) null, (Archive) null, (byte) -45, (String) null, (String) null);
           }
           LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, true, 0, UiSpriteSupport.field_c, (byte) -60, ReflectionQueueSupport.field_a, ClientRenderSupport.field_b);
           for (var2_int = 0; UiSpriteSupport.field_c > var2_int; var2_int++) {
@@ -166,7 +166,7 @@ final class BoundsRect extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, String param1, String param2) {
+    final static void submitLoginCredentials(byte param0, String param1, String param2) {
         try {
           LeaderboardSortSupport.openAccountStatusDialog(false, -1, param2, param1);
           int var3_int = 19 % ((param0 - 37) / 41);

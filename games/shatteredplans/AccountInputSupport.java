@@ -51,13 +51,13 @@ final class AccountInputSupport {
     }
 
     final static AccountFieldValue createAccountFieldValue(int param0) {
-        String var1 = BoundsRect.d(-77);
+        String var1 = BoundsRect.getAccountRequestName(-77);
         if (param0 == 64) {
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new AccountFieldValue(BoundsRect.d(-98), MenuTransitionSupport.isAccountNameRequestPending(33));
+          return new AccountFieldValue(BoundsRect.getAccountRequestName(-98), MenuTransitionSupport.isAccountNameRequestPending(33));
         }
         return (AccountFieldValue) null;
     }

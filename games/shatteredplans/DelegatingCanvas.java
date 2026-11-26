@@ -9,7 +9,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static String field_d;
     static String field_c;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsLoginPassword(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -39,7 +39,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void b(int param0) {
+    final static void tickChatAndLobbyTransitions(int param0) {
         MenuWindow.tickChatPanelTransition(83);
         if (param0 != 0) {
           field_f = (AnimatedPanel) null;
@@ -49,7 +49,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         DiskArchiveRequest.tickLobbyPanelTransitions(-751);
     }
 
-    public static void a(int param0) {
+    public static void clearDelegatingCanvasStatics(int param0) {
         field_b = null;
         field_f = null;
         field_d = null;
@@ -58,11 +58,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
           field_c = null;
           return;
         }
-        DelegatingCanvas.a(-3);
+        DelegatingCanvas.clearDelegatingCanvasStatics(-3);
         field_c = null;
     }
 
-    final static boolean b(String param0, int param1) {
+    final static boolean openUrlWithWindowsShell(String param0, int param1) {
         int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;

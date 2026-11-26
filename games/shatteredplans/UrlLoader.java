@@ -78,7 +78,7 @@ final class UrlLoader implements Runnable {
                 ContextActionMenu.appendRankingRow(0, Bzip2State.field_L, MenuInputState.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ClientUiLoadingSupport.field_d);
               }
             }
-            BoundsRect.a(var6, (byte) -111);
+            BoundsRect.finalizeRankingIndices(var6, (byte) -111);
             dupTemp$0 = new String[2][var6];
             var3.field_n = dupTemp$0;
             var7 = dupTemp$0;

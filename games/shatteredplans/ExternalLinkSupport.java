@@ -39,7 +39,7 @@ final class ExternalLinkSupport {
               return;
             }
             if (PlatformTaskDispatcher.field_b.startsWith("win") &&
-              DelegatingCanvas.b(param2, -1495)) {
+              DelegatingCanvas.openUrlWithWindowsShell(param2, -1495)) {
               return;
             }
             try {

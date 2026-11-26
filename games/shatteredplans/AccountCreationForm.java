@@ -55,11 +55,11 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void handleCountryListResponse(String param0, boolean param1) {
         try {
           if (!param1) {
             String var3 = (String) null;
-            AccountCreationForm.a((String) null, false);
+            AccountCreationForm.handleCountryListResponse((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aa.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -75,7 +75,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         return "</col></u>";
     }
 
-    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, int param1, int param2, UiWidget param3, String param4, String param5, int param6) {
         int discarded$1 = 0;
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
@@ -93,7 +93,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         try {
           if (param0 < 126) {
             var10 = (String) null;
-            discarded$1 = this.a(-107, 92, -35, (UiWidget) null, (String) null, (String) null, 123);
+            discarded$1 = this.addLabeledFieldWithValidationMessage(-107, 92, -35, (UiWidget) null, (String) null, (String) null, 123);
           }
           var11 = new LabeledChildWidget(20, param2, 120 + param1, 25, param3, false, 120, 3, StatefulWidgetTheme.field_u, 16777215, param5);
           this.addChild((byte) -120, var11);
@@ -169,7 +169,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
     }
 
-    private final int a(String param0, int param1, UiWidget param2, int param3, int param4) {
+    private final int addLabeledField(String param0, int param1, UiWidget param2, int param3, int param4) {
         LabeledChildWidget var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -182,7 +182,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         try {
           var6 = new LabeledChildWidget(20, param3, 120 + param4, 25, param2, false, 120, 3, StatefulWidgetTheme.field_u, 16777215, param0);
           if (param1 != 21760) {
-            AccountCreationForm.a(-24, (byte) 20);
+            AccountCreationForm.measureInstructionSectionHeight(-24, (byte) 20);
           }
           this.addChild((byte) -126, var6);
           stackIn_3_0 = var6.field_n;
@@ -223,7 +223,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           ((TextFieldWidget) ((Object) var3)).setText(57, var4, false);
           if (param0 != 15270) {
             var5 = (String) null;
-            discarded$1 = this.a(-31, (String) null, 115, (byte) 34, (UiWidget) null, (String) null);
+            discarded$1 = this.addValidationMessageFieldRow(-31, (String) null, 115, (byte) 34, (UiWidget) null, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,12 +290,12 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AccountNoticeDialog.field_Y, 4371, new String[]{this.linkStartTag(-63), this.linkEndTag(15)});
         int var3 = 20;
-        var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
-        var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
-        var3 = var3 + this.a(GarrisonTask.field_t, 21760, this.field_J, var3, 170);
-        var3 = var3 + (5 + this.a(170, AccountValidationText.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
-        var3 = var3 + (this.a(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
-        var3 = var3 + this.a(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
+        var3 = var3 + this.addLabeledField(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
+        var3 = var3 + (5 + this.addLabeledFieldWithValidationMessage(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
+        var3 = var3 + this.addLabeledField(GarrisonTask.field_t, 21760, this.field_J, var3, 170);
+        var3 = var3 + (5 + this.addValidationMessageFieldRow(170, AccountValidationText.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
+        var3 = var3 + (this.addValidationMessageFieldRow(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
+        var3 = var3 + this.addLabeledFieldWithValidationIndicator(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
         LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, MenuButton.field_E);
         this.addChild((byte) -71, var4);
         var3 = var3 + var4.field_n;
@@ -322,7 +322,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         this.setBounds(0, var3 + 55 + var6, (byte) 122, 0, 496);
     }
 
-    private final int a(int param0, String param1, int param2, byte param3, UiWidget param4, String param5) {
+    private final int addValidationMessageFieldRow(int param0, String param1, int param2, byte param3, UiWidget param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -336,7 +336,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < -126) {
-            stackIn_4_0 = this.a(127, param0, param2, param4, param1, param5, 35);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(127, param0, param2, param4, param1, param5, 35);
             return stackIn_4_0;
           }
           stackIn_2_0 = -57;
@@ -398,7 +398,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int measureInstructionSectionHeight(int param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_26_0 = 0;
@@ -582,7 +582,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
             return stackIn_6_0;
           }
           if (param2 != 13) {
-            AccountCreationForm.a(104, (byte) -32);
+            AccountCreationForm.measureInstructionSectionHeight(104, (byte) -32);
           }
           if (param0 != 99) {
             return false;
@@ -603,7 +603,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
     }
 
-    private final int a(String param0, UiWidget param1, int param2, byte param3, int param4) {
+    private final int addLabeledFieldWithValidationIndicator(String param0, UiWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         ValidationIndicator var7 = null;
         int var8 = 0;

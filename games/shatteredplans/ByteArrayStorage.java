@@ -73,7 +73,7 @@ abstract class ByteArrayStorage {
             MusicVoice.clearChatInput(param2);
           } else {
             var4_ref_String = OpacityWidget.field_E.toString();
-            if (DelegatingCanvas.a(var4_ref_String, 0)) {
+            if (DelegatingCanvas.containsLoginPassword(var4_ref_String, 0)) {
               var13 = (String) null;
               var12 = (String) null;
               StripedProgressWidget.appendChatHistoryMessage(2, ClientClockSupport.field_e, 0, (String) null, (String) null, -16169);
