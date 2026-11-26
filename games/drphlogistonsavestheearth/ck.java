@@ -28,9 +28,9 @@ final class ck {
         if (param0 <= 71) {
           field_d = (he[]) null;
         }
-        PcmResampler.field_c.a((byte) -112, (vg) (fb.field_e));
-        fb.field_e.a(33, pi.field_O);
-        fb.field_e.g((byte) -125);
+        PcmResampler.field_c.a((byte) -112, (vg) (PcmOutputWorker.field_e));
+        PcmOutputWorker.field_e.a(33, pi.field_O);
+        PcmOutputWorker.field_e.g((byte) -125);
     }
 
     final static boolean b(int param0) {

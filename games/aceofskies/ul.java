@@ -31,7 +31,7 @@ final class ul extends sl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class ul extends sl {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

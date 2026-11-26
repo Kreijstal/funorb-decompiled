@@ -18,7 +18,7 @@ final class mc {
 
     final static void a(byte param0) {
         if (cb.field_j != null) {
-          cb.field_j.a(true);
+          cb.field_j.close(true);
           cb.field_j = null;
         }
         if (param0 > -124) {

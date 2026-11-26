@@ -82,10 +82,10 @@ final class am {
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           var2_int = 6 % ((param1 - 15) / 33);
-          var3 = (ha) (oa.field_d.beginForward((byte) -111));
+          var3 = (ha) (PcmOutputWorker.field_d.beginForward((byte) -111));
           while (var3 != null) {
             tl.a(-128, var3, param0);
-            var3 = (ha) (oa.field_d.nextForward(853));
+            var3 = (ha) (PcmOutputWorker.field_d.nextForward(853));
           }
           var2 = mj.field_m.beginForward((byte) -123);
           while (var2 != null) {

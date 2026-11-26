@@ -61,11 +61,11 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         var3 = field_D ? 1 : 0;
         try {
           we.a(qa.field_O, -106, 82.0f);
-          bd.field_P = qk.a("", kf.field_d, "weapongattlinggun", true);
-          le.field_d = qk.a("", kf.field_d, "weapongattlinggun2", true);
-          qf.field_b = qk.a("", kf.field_d, "weapongattlinggun3", param0);
-          lh.field_p = qk.a("", kf.field_d, "weaponhomingmissile", true);
-          nc.field_K = qk.a("", kf.field_d, "weaponbomb", true);
+          bd.field_P = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun", true);
+          le.field_d = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun2", true);
+          qf.field_b = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun3", param0);
+          lh.field_p = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponhomingmissile", true);
+          nc.field_K = ProxyAuthenticationRequiredException.a("", kf.field_d, "weaponbomb", true);
           f.field_i = cl.a("", kf.field_d, -116, "weaponmegacannonshot");
           oj.field_c = ij.a("bulletspark", (byte) 96, kf.field_d, "");
           hb.field_a = new RgbSprite(15, 15);
@@ -226,7 +226,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           if (df.field_l != null &&
             df.field_l.focusLost) {
-            qk.a(true);
+            ProxyAuthenticationRequiredException.a(true);
             vj.b((byte) 72);
           }
           if (param0 != 35) {
@@ -271,7 +271,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                   var4 = qg.n((byte) 46);
                   switch (var4) {
                     case 2:
-                      qk.a(true);
+                      ProxyAuthenticationRequiredException.a(true);
                     default:
                       break;
                     case 4:
@@ -527,7 +527,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           n.b(-31553);
           df.clearStaticReferences(110);
           ge.clearStaticReferences(false);
-          qe.clearStaticReferences(0);
+          BufferedSocket.clearStaticReferences(0);
           oj.clearStaticReferences(false);
           fj.clearDeclaredStaticReferences(57);
           gf.clearStaticReferences(param0);
@@ -571,7 +571,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           sf.resetStaticState(param0);
           ub.clearStaticReferences((byte) -119);
           s.a(7);
-          fb.clearStaticReferences(256);
+          PcmOutputWorker.clearStaticReferences(256);
           cb.clearStaticReferences((byte) 122);
           SpriteGeometry.g(-62);
           DualLinkNode.d(-24338);
@@ -648,7 +648,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ji.clearStaticReferences(true);
           ph.clearStaticReferences(1);
           hj.clearStaticReferences(-20385);
-          qk.clearStaticReferences(65280);
+          ProxyAuthenticationRequiredException.clearStaticReferences(65280);
           bk.clearStaticReferences(66);
           ImageProducerRasterBuffer.clearStaticReferences(-57);
           ga.clearStaticReferences((byte) -4);
@@ -991,7 +991,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             if ((fl.b(73)) &&
               (!BoundedRandomAccessFile.a((byte) 97))) {
               SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
-              qe.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, (byte) -76);
+              BufferedSocket.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, (byte) -76);
               if (var4 != 0) {
                 stackIn_86_0 = 91;
                 if (df.field_l != null) {
@@ -1333,238 +1333,238 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         try {
           we.a(GameClientShell.field_s, -79, 50.0f);
           this.h(0);
-          nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().resample(qk.field_g);
+          nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().resample(ProxyAuthenticationRequiredException.field_g);
           var2 = kb.a(aa.field_b, "", "DrP_1_gatling_gun_fire");
           if (null != var2) {
-            nl.field_r[1] = var2.a().resample(qk.field_g);
+            nl.field_r[1] = var2.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime1 = kb.a(aa.field_b, "", "DrP_2_drop_bomb");
           if (var2Lifetime1 != null) {
-            nl.field_r[2] = var2Lifetime1.a().resample(qk.field_g);
+            nl.field_r[2] = var2Lifetime1.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime2 = kb.a(aa.field_b, "", "DrP_3_sonic_canon_fire");
           if (null != var2Lifetime2) {
-            nl.field_r[3] = var2Lifetime2.a().resample(qk.field_g);
+            nl.field_r[3] = var2Lifetime2.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime3 = kb.a(aa.field_b, "", "DrP_4_homing_missile_fire");
           if (var2Lifetime3 != null) {
-            nl.field_r[4] = var2Lifetime3.a().resample(qk.field_g);
+            nl.field_r[4] = var2Lifetime3.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           nl.field_r[5] = wi.a(2205, 100, 100);
           var2Lifetime4 = kb.a(aa.field_b, "", "DrP_6_mega_canon_fire");
           if (var2Lifetime4 != null) {
-            nl.field_r[6] = var2Lifetime4.a().resample(qk.field_g);
+            nl.field_r[6] = var2Lifetime4.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime5 = kb.a(aa.field_b, "", "DrP_7_loose_life");
           if (var2Lifetime5 != null) {
-            nl.field_r[7] = var2Lifetime5.a().resample(qk.field_g);
+            nl.field_r[7] = var2Lifetime5.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[8] = tk.a(DelegatingCanvas.field_b, "", "DrP_8_respawn").c().resample(qk.field_g);
+          nl.field_r[8] = tk.a(DelegatingCanvas.field_b, "", "DrP_8_respawn").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime6 = kb.a(aa.field_b, "", "DrP_9_final_death");
           if (null != var2Lifetime6) {
-            nl.field_r[9] = var2Lifetime6.a().resample(qk.field_g);
+            nl.field_r[9] = var2Lifetime6.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime7 = kb.a(aa.field_b, "", "DrP_10_tripod_hit");
           if (null != var2Lifetime7) {
-            nl.field_r[10] = var2Lifetime7.a().resample(qk.field_g);
+            nl.field_r[10] = var2Lifetime7.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime8 = kb.a(aa.field_b, "", "DrP_11_tripod_fire");
           if (var2Lifetime8 != null) {
-            nl.field_r[11] = var2Lifetime8.a().resample(qk.field_g);
+            nl.field_r[11] = var2Lifetime8.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime9 = kb.a(aa.field_b, "", "DrP_12_probes_hit");
           if (var2Lifetime9 != null) {
-            nl.field_r[12] = var2Lifetime9.a().resample(qk.field_g);
+            nl.field_r[12] = var2Lifetime9.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[13] = tk.a(DelegatingCanvas.field_b, "", "DrP_13_probes_die").c().resample(qk.field_g);
+          nl.field_r[13] = tk.a(DelegatingCanvas.field_b, "", "DrP_13_probes_die").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime10 = kb.a(aa.field_b, "", "DrP_14_glider_fire");
           if (null != var2Lifetime10) {
-            nl.field_r[14] = var2Lifetime10.a().resample(qk.field_g);
+            nl.field_r[14] = var2Lifetime10.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime11 = kb.a(aa.field_b, "", "DrP_15_glider_die");
           if (var2Lifetime11 != null) {
-            nl.field_r[15] = var2Lifetime11.a().resample(qk.field_g);
+            nl.field_r[15] = var2Lifetime11.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime12 = kb.a(aa.field_b, "", "DrP_16_shredder_hit");
           if (null != var2Lifetime12) {
-            nl.field_r[16] = var2Lifetime12.a().resample(qk.field_g);
+            nl.field_r[16] = var2Lifetime12.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime13 = kb.a(aa.field_b, "", "DrP_17_shredder_die");
           if (var2Lifetime13 != null) {
-            nl.field_r[17] = var2Lifetime13.a().resample(qk.field_g);
+            nl.field_r[17] = var2Lifetime13.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime14 = kb.a(aa.field_b, "", "DrP_18_as_bot_hit");
           if (var2Lifetime14 != null) {
-            nl.field_r[18] = var2Lifetime14.a().resample(qk.field_g);
+            nl.field_r[18] = var2Lifetime14.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime15 = kb.a(aa.field_b, "", "DrP_19_as_bot_fire");
           if (null != var2Lifetime15) {
-            nl.field_r[19] = var2Lifetime15.a().resample(qk.field_g);
+            nl.field_r[19] = var2Lifetime15.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[20] = tk.a(DelegatingCanvas.field_b, "", "DrP_20_as_bot_die").c().resample(qk.field_g);
-          nl.field_r[21] = tk.a(DelegatingCanvas.field_b, "", "DrP_21_dropship_move").c().resample(qk.field_g);
-          nl.field_r[22] = tk.a(DelegatingCanvas.field_b, "", "DrP_22_dropship_chrg").c().resample(qk.field_g);
+          nl.field_r[20] = tk.a(DelegatingCanvas.field_b, "", "DrP_20_as_bot_die").c().resample(ProxyAuthenticationRequiredException.field_g);
+          nl.field_r[21] = tk.a(DelegatingCanvas.field_b, "", "DrP_21_dropship_move").c().resample(ProxyAuthenticationRequiredException.field_g);
+          nl.field_r[22] = tk.a(DelegatingCanvas.field_b, "", "DrP_22_dropship_chrg").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime16 = kb.a(aa.field_b, "", "DrP_23_dropship_spawn");
           if (var2Lifetime16 != null) {
-            nl.field_r[23] = var2Lifetime16.a().resample(qk.field_g);
+            nl.field_r[23] = var2Lifetime16.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime17 = kb.a(aa.field_b, "", "DrP_24_dropship_fire");
           if (var2Lifetime17 != null) {
-            nl.field_r[24] = var2Lifetime17.a().resample(qk.field_g);
+            nl.field_r[24] = var2Lifetime17.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime18 = kb.a(aa.field_b, "", "DrP_25_dropship_hit");
           if (null != var2Lifetime18) {
-            nl.field_r[25] = var2Lifetime18.a().resample(qk.field_g);
+            nl.field_r[25] = var2Lifetime18.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[26] = tk.a(DelegatingCanvas.field_b, "", "DrP_26_dropship_die").c().resample(qk.field_g);
+          nl.field_r[26] = tk.a(DelegatingCanvas.field_b, "", "DrP_26_dropship_die").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime19 = kb.a(aa.field_b, "", "DrP_27_spacemine_exp");
           if (null != var2Lifetime19) {
-            nl.field_r[27] = var2Lifetime19.a().resample(qk.field_g);
+            nl.field_r[27] = var2Lifetime19.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime20 = kb.a(aa.field_b, "", "DrP_28_miner_hit");
           if (var2Lifetime20 != null) {
-            nl.field_r[28] = var2Lifetime20.a().resample(qk.field_g);
+            nl.field_r[28] = var2Lifetime20.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[29] = tk.a(DelegatingCanvas.field_b, "", "DrP_29_miner_move").c().resample(qk.field_g);
+          nl.field_r[29] = tk.a(DelegatingCanvas.field_b, "", "DrP_29_miner_move").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime21 = kb.a(aa.field_b, "", "DrP_30_miner_die");
           if (null != var2Lifetime21) {
-            nl.field_r[30] = var2Lifetime21.a().resample(qk.field_g);
+            nl.field_r[30] = var2Lifetime21.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime22 = kb.a(aa.field_b, "", "DrP_31_asteroid_hit");
           if (var2Lifetime22 != null) {
-            nl.field_r[31] = var2Lifetime22.a().resample(qk.field_g);
+            nl.field_r[31] = var2Lifetime22.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime23 = kb.a(aa.field_b, "", "DrP_32b_asteroid_dest");
           if (null != var2Lifetime23) {
-            nl.field_r[32] = var2Lifetime23.a().resample(qk.field_g);
+            nl.field_r[32] = var2Lifetime23.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[33] = tk.a(DelegatingCanvas.field_b, "", "DrP_33_battlecarr_move").c().resample(qk.field_g);
-          nl.field_r[34] = tk.a(DelegatingCanvas.field_b, "", "DrP_34_battlecarr_charge").c().resample(qk.field_g);
+          nl.field_r[33] = tk.a(DelegatingCanvas.field_b, "", "DrP_33_battlecarr_move").c().resample(ProxyAuthenticationRequiredException.field_g);
+          nl.field_r[34] = tk.a(DelegatingCanvas.field_b, "", "DrP_34_battlecarr_charge").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime24 = kb.a(aa.field_b, "", "DrP_35_battlecarr_fire");
           if (var2Lifetime24 != null) {
-            nl.field_r[35] = var2Lifetime24.a().resample(qk.field_g);
+            nl.field_r[35] = var2Lifetime24.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime25 = kb.a(aa.field_b, "", "DrP_36_battlecarr_spawn");
           if (null != var2Lifetime25) {
-            nl.field_r[36] = var2Lifetime25.a().resample(qk.field_g);
+            nl.field_r[36] = var2Lifetime25.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime26 = kb.a(aa.field_b, "", "DrP_37_battlecarr_hit");
           if (var2Lifetime26 != null) {
-            nl.field_r[37] = var2Lifetime26.a().resample(qk.field_g);
+            nl.field_r[37] = var2Lifetime26.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[38] = tk.a(DelegatingCanvas.field_b, "", "DrP_38_battlecarr_die").c().resample(qk.field_g);
-          nl.field_r[39] = tk.a(DelegatingCanvas.field_b, "", "DrP_39_bunkers_hit").c().resample(qk.field_g);
+          nl.field_r[38] = tk.a(DelegatingCanvas.field_b, "", "DrP_38_battlecarr_die").c().resample(ProxyAuthenticationRequiredException.field_g);
+          nl.field_r[39] = tk.a(DelegatingCanvas.field_b, "", "DrP_39_bunkers_hit").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime27 = kb.a(aa.field_b, "", "DrP_40_bunkers_die");
           if (null != var2Lifetime27) {
-            nl.field_r[40] = var2Lifetime27.a().resample(qk.field_g);
+            nl.field_r[40] = var2Lifetime27.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime28 = kb.a(aa.field_b, "", "DrP_41_combtank_fire");
           if (var2Lifetime28 != null) {
-            nl.field_r[41] = var2Lifetime28.a().resample(qk.field_g);
+            nl.field_r[41] = var2Lifetime28.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime29 = kb.a(aa.field_b, "", "DrP_42_combtank_hit");
           if (var2Lifetime29 != null) {
-            nl.field_r[42] = var2Lifetime29.a().resample(qk.field_g);
+            nl.field_r[42] = var2Lifetime29.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime30 = kb.a(aa.field_b, "", "DrP_43_combtank_die");
           if (var2Lifetime30 != null) {
-            nl.field_r[43] = var2Lifetime30.a().resample(qk.field_g);
+            nl.field_r[43] = var2Lifetime30.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime31 = kb.a(aa.field_b, "", "DrP_44_battank_fire");
           if (var2Lifetime31 != null) {
-            nl.field_r[44] = var2Lifetime31.a().resample(qk.field_g);
+            nl.field_r[44] = var2Lifetime31.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime32 = kb.a(aa.field_b, "", "DrP_45_battank_hit");
           if (var2Lifetime32 != null) {
-            nl.field_r[45] = var2Lifetime32.a().resample(qk.field_g);
+            nl.field_r[45] = var2Lifetime32.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime33 = kb.a(aa.field_b, "", "DrP_46_battank_die");
           if (var2Lifetime33 != null) {
-            nl.field_r[46] = var2Lifetime33.a().resample(qk.field_g);
+            nl.field_r[46] = var2Lifetime33.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[47] = tk.a(DelegatingCanvas.field_b, "", "DrP_47_attackcop_move").c().resample(qk.field_g);
+          nl.field_r[47] = tk.a(DelegatingCanvas.field_b, "", "DrP_47_attackcop_move").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime34 = kb.a(aa.field_b, "", "DrP_48_attackcop_fire");
           if (null != var2Lifetime34) {
-            nl.field_r[48] = var2Lifetime34.a().resample(qk.field_g);
+            nl.field_r[48] = var2Lifetime34.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime35 = kb.a(aa.field_b, "", "DrP_49_attackcop_hit");
           if (var2Lifetime35 != null) {
-            nl.field_r[49] = var2Lifetime35.a().resample(qk.field_g);
+            nl.field_r[49] = var2Lifetime35.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[50] = tk.a(DelegatingCanvas.field_b, "", "DrP_50_attackcop_die").c().resample(qk.field_g);
-          nl.field_r[51] = tk.a(DelegatingCanvas.field_b, "", "DrP_51_doomcop_move").c().resample(qk.field_g);
+          nl.field_r[50] = tk.a(DelegatingCanvas.field_b, "", "DrP_50_attackcop_die").c().resample(ProxyAuthenticationRequiredException.field_g);
+          nl.field_r[51] = tk.a(DelegatingCanvas.field_b, "", "DrP_51_doomcop_move").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime36 = kb.a(aa.field_b, "", "DrP_52_doomcop_fire");
           if (var2Lifetime36 != null) {
-            nl.field_r[52] = var2Lifetime36.a().resample(qk.field_g);
+            nl.field_r[52] = var2Lifetime36.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime37 = kb.a(aa.field_b, "", "DrP_53_doomcop_hit");
           if (null != var2Lifetime37) {
-            nl.field_r[53] = var2Lifetime37.a().resample(qk.field_g);
+            nl.field_r[53] = var2Lifetime37.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[54] = tk.a(DelegatingCanvas.field_b, "", "DrP_54_doomcop_die").c().resample(qk.field_g);
+          nl.field_r[54] = tk.a(DelegatingCanvas.field_b, "", "DrP_54_doomcop_die").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime38 = kb.a(aa.field_b, "", "DrP_55_floatbat_move");
           if (null != var2Lifetime38) {
-            nl.field_r[55] = var2Lifetime38.a().resample(qk.field_g);
+            nl.field_r[55] = var2Lifetime38.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[56] = tk.a(DelegatingCanvas.field_b, "", "DrP_56_floatbat_chrg").c().resample(qk.field_g);
+          nl.field_r[56] = tk.a(DelegatingCanvas.field_b, "", "DrP_56_floatbat_chrg").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime39 = kb.a(aa.field_b, "", "DrP_57_floatbat_fire");
           if (null != var2Lifetime39) {
-            nl.field_r[57] = var2Lifetime39.a().resample(qk.field_g);
+            nl.field_r[57] = var2Lifetime39.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime40 = kb.a(aa.field_b, "", "DrP_58_floatbat_spawn");
           if (null != var2Lifetime40) {
-            nl.field_r[58] = var2Lifetime40.a().resample(qk.field_g);
+            nl.field_r[58] = var2Lifetime40.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime41 = kb.a(aa.field_b, "", "DrP_59_floatbat_hit");
           if (null != var2Lifetime41) {
-            nl.field_r[59] = var2Lifetime41.a().resample(qk.field_g);
+            nl.field_r[59] = var2Lifetime41.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[60] = tk.a(DelegatingCanvas.field_b, "", "DrP_60_floatbat_die").c().resample(qk.field_g);
+          nl.field_r[60] = tk.a(DelegatingCanvas.field_b, "", "DrP_60_floatbat_die").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime42 = kb.a(aa.field_b, "", "DrP_61_alcomship_move");
           if (var2Lifetime42 != null) {
-            nl.field_r[61] = var2Lifetime42.a().resample(qk.field_g);
+            nl.field_r[61] = var2Lifetime42.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[62] = tk.a(DelegatingCanvas.field_b, "", "DrP_62_alcomship_chrg").c().resample(qk.field_g);
+          nl.field_r[62] = tk.a(DelegatingCanvas.field_b, "", "DrP_62_alcomship_chrg").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime43 = kb.a(aa.field_b, "", "DrP_63_alcomship_fire");
           if (null != var2Lifetime43) {
-            nl.field_r[63] = var2Lifetime43.a().resample(qk.field_g);
+            nl.field_r[63] = var2Lifetime43.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime44 = kb.a(aa.field_b, "", "DrP_64_alcomship_spawn");
           if (null != var2Lifetime44) {
-            nl.field_r[64] = var2Lifetime44.a().resample(qk.field_g);
+            nl.field_r[64] = var2Lifetime44.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime45 = kb.a(aa.field_b, "", "DrP_65_alcomship_fire2");
           if (var2Lifetime45 != null) {
-            nl.field_r[65] = var2Lifetime45.a().resample(qk.field_g);
+            nl.field_r[65] = var2Lifetime45.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime46 = kb.a(aa.field_b, "", "DrP_66_alcomship_hit");
           if (null != var2Lifetime46) {
-            nl.field_r[66] = var2Lifetime46.a().resample(qk.field_g);
+            nl.field_r[66] = var2Lifetime46.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
-          nl.field_r[67] = tk.a(DelegatingCanvas.field_b, "", "DrP_67_alcomship_die").c().resample(qk.field_g);
+          nl.field_r[67] = tk.a(DelegatingCanvas.field_b, "", "DrP_67_alcomship_die").c().resample(ProxyAuthenticationRequiredException.field_g);
           var2Lifetime47 = kb.a(aa.field_b, "", "DrP_68_humbuild_hit");
           if (var2Lifetime47 != null) {
-            nl.field_r[68] = var2Lifetime47.a().resample(qk.field_g);
+            nl.field_r[68] = var2Lifetime47.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           if (var2Lifetime47 != null) {
-            nl.field_r[69] = var2Lifetime47.a().resample(qk.field_g);
+            nl.field_r[69] = var2Lifetime47.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime48 = kb.a(aa.field_b, "", "DrP_70_allpowerups");
           if (var2Lifetime48 != null) {
-            nl.field_r[70] = var2Lifetime48.a().resample(qk.field_g);
+            nl.field_r[70] = var2Lifetime48.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime49 = kb.a(aa.field_b, "", "DrP_32c_asteroid_dest");
           var3 = 47 / ((param0 - 19) / 45);
           if (var2Lifetime49 != null) {
-            nl.field_r[71] = var2Lifetime49.a().resample(qk.field_g);
+            nl.field_r[71] = var2Lifetime49.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime50 = kb.a(aa.field_b, "", "DrP_32a_asteroid_dest");
           if (var2Lifetime50 != null) {
-            nl.field_r[72] = var2Lifetime50.a().resample(qk.field_g);
+            nl.field_r[72] = var2Lifetime50.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           var2Lifetime51 = kb.a(aa.field_b, "", "drp_71_tesla_coil");
           if (var2Lifetime51 != null) {
-            nl.field_r[73] = var2Lifetime51.a().resample(qk.field_g);
+            nl.field_r[73] = var2Lifetime51.a().resample(ProxyAuthenticationRequiredException.field_g);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1635,24 +1635,24 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException var2 = null;
         try {
           we.a(qa.field_O, -111, 95.0f);
-          nc.field_M = qk.a("", kf.field_d, "mb_foreground", true);
-          eb.field_g = qk.a("", kf.field_d, "mb_logo", true);
-          qk.a("", kf.field_d, "mb_transparency_layer", true);
-          qk.a("", kf.field_d, "mb_signup_button_frame", true);
-          v.field_Y = qk.a("", kf.field_d, "mb_price_background", true);
-          qk.a("", kf.field_d, "mb_menu_button_frame", true);
+          nc.field_M = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_foreground", true);
+          eb.field_g = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_logo", true);
+          ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_transparency_layer", true);
+          ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_signup_button_frame", true);
+          v.field_Y = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_price_background", true);
+          ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_menu_button_frame", true);
           cm.field_R = new RgbSprite[8];
-          cm.field_R[0] = qk.a("", kf.field_d, "mb_screenshot_1", true);
-          cm.field_R[1] = qk.a("", kf.field_d, "mb_screenshot_2", true);
-          cm.field_R[2] = qk.a("", kf.field_d, "mb_screenshot_3", true);
-          cm.field_R[3] = qk.a("", kf.field_d, "mb_screenshot_4", true);
-          cm.field_R[4] = qk.a("", kf.field_d, "mb_screenshot_5", true);
+          cm.field_R[0] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_1", true);
+          cm.field_R[1] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_2", true);
+          cm.field_R[2] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_3", true);
+          cm.field_R[3] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_4", true);
+          cm.field_R[4] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_5", true);
           if (param0 != -23796) {
             this.s(-63);
           }
-          cm.field_R[5] = qk.a("", kf.field_d, "mb_screenshot_6", true);
-          cm.field_R[6] = qk.a("", kf.field_d, "mb_screenshot_7", true);
-          cm.field_R[7] = qk.a("", kf.field_d, "mb_screenshot_8", true);
+          cm.field_R[5] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_6", true);
+          cm.field_R[6] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_7", true);
+          cm.field_R[7] = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_screenshot_8", true);
           sg.field_e.h();
           uk.field_h.h();
           MouseWheelInput.field_f.h();
@@ -1785,7 +1785,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           MouseWheelInput.field_h = eh.a("", (byte) -100, kf.field_d, "slider_foreground");
           gg.field_d = eh.a("", (byte) -84, kf.field_d, "title_text_highscore_screen");
           we.field_g = eh.a("", (byte) -61, kf.field_d, "title_text_instructions_screen");
-          qe.field_k = eh.a("", (byte) -87, kf.field_d, "title_text_achievements_screen");
+          BufferedSocket.field_k = eh.a("", (byte) -87, kf.field_d, "title_text_achievements_screen");
           el.field_ub = eh.a("", (byte) -23, kf.field_d, "title_text_achievements_this_game_screen");
           jk.field_L = eh.a("", (byte) -100, kf.field_d, "title_text_level_select_screen");
           cj.field_g = eh.a("", (byte) -24, kf.field_d, "title_text_world_complete");
@@ -2062,7 +2062,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                             }
                             ByteStorage.b(77);
                             cf.field_c = new cf(aa.field_b, DelegatingCanvas.field_b);
-                            qk.field_g = new PcmResampler(22050, AudioOutput.field_d);
+                            ProxyAuthenticationRequiredException.field_g = new PcmResampler(22050, AudioOutput.field_d);
                             this.j((byte) -30);
                             aa.field_b = null;
                             return false;
@@ -2092,7 +2092,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             return false;
           }
           if (null != DelegatingCanvas.field_b) {
-            qk.field_g = null;
+            ProxyAuthenticationRequiredException.field_g = null;
             DelegatingCanvas.field_b = null;
             IterableNodeHashTable.a((byte) 86);
             return false;
@@ -2257,7 +2257,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               var5 = 0;
               break;
             }
-            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, qk.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
+            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, ProxyAuthenticationRequiredException.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
             var5++;
           } while (var6 == 0);
           do {
@@ -2286,17 +2286,17 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (param0 != -11666) {
             return;
           }
-          sh.field_b = qk.a("", kf.field_d, "midground_space", true);
+          sh.field_b = ProxyAuthenticationRequiredException.a("", kf.field_d, "midground_space", true);
           vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
           gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
           ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
-          FullscreenFocusCanvas.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
-          kl.field_R[0] = qk.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
-          kl.field_R[1] = qk.a("", kf.field_d, "scenery_space_background_asteroid_2", true);
-          kl.field_R[2] = qk.a("", kf.field_d, "scenery_space_background_asteroid_3", true);
-          kl.field_R[3] = qk.a("", kf.field_d, "scenery_space_background_asteroid_4", true);
-          kl.field_R[4] = qk.a("", kf.field_d, "scenery_space_background_asteroid_5", true);
-          si.field_F = qk.a("", kf.field_d, "background_space_comet", true);
+          FullscreenFocusCanvas.field_e = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
+          kl.field_R[0] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
+          kl.field_R[1] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_2", true);
+          kl.field_R[2] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_3", true);
+          kl.field_R[3] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_4", true);
+          kl.field_R[4] = ProxyAuthenticationRequiredException.a("", kf.field_d, "scenery_space_background_asteroid_5", true);
+          si.field_F = ProxyAuthenticationRequiredException.a("", kf.field_d, "background_space_comet", true);
           cc.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
           b.field_k = eh.a("", (byte) -45, kf.field_d, "midground_alien_8");
           nf.field_v = eh.a("", (byte) -77, kf.field_d, "midground_alien_9");

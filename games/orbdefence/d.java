@@ -62,18 +62,18 @@ final class d extends IntrusiveNode {
               }
             }
             if (2 == mc.field_j) {
-              dd.field_A = new cb((java.net.Socket) (cf.field_a.result), lh.field_b);
+              dd.field_A = new BufferedSocket((java.net.Socket) (cf.field_a.result), lh.field_b);
               var2 = new PacketBuffer(13);
               nl.a(20994, hc.field_f, SpriteGeometry.field_m, var2, s.field_x);
               var2.writeByte(15, -49);
               var2.writeInt(m.field_b, -1);
-              dd.field_A.a((byte) 30, var2.payload, 0, 13);
+              dd.field_A.queueWrite((byte) 30, var2.payload, 0, 13);
               mc.field_j = mc.field_j + 1;
               n.field_b = 30000L + ji.correctedCurrentTimeMillis(-75);
             }
             if (mc.field_j == 3) {
-              if (dd.field_A.b((byte) 101) > 0) {
-                var1_int = dd.field_A.a(true);
+              if (dd.field_A.availableBytes((byte) 101) > 0) {
+                var1_int = dd.field_A.readSingleByte(true);
                 if (var1_int != 0) {
                   stackIn_30_0 = kk.a(-30179, var1_int);
                   return stackIn_30_0;

@@ -113,7 +113,7 @@ final class AccountCreationResultPanel extends ma implements ke {
             } else {
               if (5 == param1.statusCode) {
                 var5.a(false, jf.field_fb, 11);
-                var5.a(false, qk.field_d, 17);
+                var5.a(false, ProxyAuthenticationRequiredException.field_d, 17);
               } else {
                 var5.a(false, f.field_m, -1);
               }

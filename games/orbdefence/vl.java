@@ -268,7 +268,7 @@ final class vl implements Runnable {
     final static void a(int param0, int param1, vg param2) {
         try {
           kk.field_X.addLast(-123, param2);
-          bk.a(true, param0, param2);
+          ProxyAuthenticationRequiredException.a(true, param0, param2);
           if (param1 != 10) {
             vg var4 = (vg) null;
             vl.a(-76, -35, (vg) null);

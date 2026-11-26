@@ -78,7 +78,7 @@ final class tf extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        int var1 = (-640 + vi.field_d) / 2;
+        int var1 = (-640 + PcmOutputWorker.field_d) / 2;
         int var2 = ug.field_b * ug.field_b;
         int var3 = -(an.field_e * an.field_e) + var2;
         ql.field_d.a(-(var3 * 199 / var2) + var1, 199, -2147483648, -4 + (-120 + (SoftwareRasterizer.field_c - param0)), 90);

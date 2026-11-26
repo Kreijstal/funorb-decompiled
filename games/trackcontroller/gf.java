@@ -262,7 +262,7 @@ final class gf {
         this.field_n = AccountCreationResultPanel.field_pb;
         this.field_b.a(this.field_f, this.field_v, (byte) 4);
         mj.field_c = false;
-        FullscreenFocusCanvas var2 = dj.a(param0, this.field_v, this.field_f, (byte) 28, rg.field_c, 0);
+        FullscreenFocusCanvas var2 = ProxyAuthenticationRequiredException.a(param0, this.field_v, this.field_f, (byte) 28, rg.field_c, 0);
         if (var2 != null) {
           return var2;
         }

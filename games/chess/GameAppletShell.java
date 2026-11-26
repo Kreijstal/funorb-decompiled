@@ -364,7 +364,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var7 != 0) {
             var5 = var2.readUnsignedShort(674914976);
             try {
-              var6 = oa.field_b.a((byte) 79, var5);
+              var6 = ProxyAuthenticationRequiredException.field_b.a((byte) 79, var5);
               sn.field_g = var6.e((byte) -125);
               if (!oh.field_e.equals(ci.field_J)) {
                 stackIn_39_0 = var6.field_u;

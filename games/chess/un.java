@@ -44,11 +44,11 @@ final class un {
         } else {
           if (-1 != this.field_w &&
             -1 != this.field_n) {
-            while (-hn.field_k + this.field_w < -16) {
+            while (-BufferedSocket.field_k + this.field_w < -16) {
               this.field_t.i(40);
               this.field_w = this.field_w + 8;
             }
-            while (-hn.field_k + this.field_w > 16) {
+            while (-BufferedSocket.field_k + this.field_w > 16) {
               this.field_t.l(-28628);
               this.field_w = this.field_w - 8;
             }
@@ -61,7 +61,7 @@ final class un {
               this.field_n = this.field_n - 8;
             }
           } else {
-            this.field_w = hn.field_k;
+            this.field_w = BufferedSocket.field_k;
             this.field_n = rf.field_b;
           }
         }
@@ -654,7 +654,7 @@ final class un {
     }
 
     final void i(int param0) {
-        if (!vi.a(-3)) {
+        if (!PcmOutputWorker.a(-3)) {
           this.d(125);
         }
         int var3 = 16 % ((-38 - param0) / 55);
@@ -694,7 +694,7 @@ final class un {
         if (null == cb.field_e &&
           this.field_f > 0) {
           cb.field_e = new ak(36, 65499, this.field_o, this.field_x, this.field_z, this.field_s, new int[]{this.field_f});
-          if (!vi.a(-3)) {
+          if (!PcmOutputWorker.a(-3)) {
             ba.a(cb.field_e, -124, 3);
           }
         }

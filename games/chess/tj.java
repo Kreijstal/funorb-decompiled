@@ -260,7 +260,7 @@ final class tj extends vm {
           var3_int = stackIn_3_0;
           var4 = 63 / ((param0 + 49) / 62);
           if (var3_int != 0) {
-            return oa.field_a;
+            return ProxyAuthenticationRequiredException.field_a;
           }
           stackIn_6_0 = qk.field_b;
           return stackIn_6_0;

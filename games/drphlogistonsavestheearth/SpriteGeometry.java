@@ -119,7 +119,7 @@ abstract class SpriteGeometry extends DualLinkNode {
               } else {
                 sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               }
-              qe.field_a = -150;
+              BufferedSocket.field_a = -150;
               sd.field_a.field_J = 0;
               sd.field_a.s(86);
               return;
@@ -229,7 +229,7 @@ abstract class SpriteGeometry extends DualLinkNode {
                   } else {
                     sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                   }
-                  qe.field_a = -150;
+                  BufferedSocket.field_a = -150;
                   sd.field_a.field_J = 0;
                   sd.field_a.s(86);
                   return;
@@ -245,7 +245,7 @@ abstract class SpriteGeometry extends DualLinkNode {
                   } else {
                     sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                   }
-                  qe.field_a = -150;
+                  BufferedSocket.field_a = -150;
                   sd.field_a.field_J = 0;
                   sd.field_a.s(86);
                   return;
@@ -259,21 +259,21 @@ abstract class SpriteGeometry extends DualLinkNode {
                 } else {
                   sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
                 }
-                qe.field_a = -150;
+                BufferedSocket.field_a = -150;
                 sd.field_a.field_J = 0;
                 sd.field_a.s(86);
                 return;
               }
               if (bi.field_K.length > sd.field_a.levelNumber) {
                 sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
-                qe.field_a = -150;
+                BufferedSocket.field_a = -150;
                 sd.field_a.field_J = 0;
                 sd.field_a.s(86);
                 return;
               }
               sc.a(param0 ^ 8371, false, ml.field_l);
               sd.field_a.d((byte) 98);
-              qe.field_a = -150;
+              BufferedSocket.field_a = -150;
               sd.field_a.field_J = 0;
               sd.field_a.s(86);
               return;
@@ -304,7 +304,7 @@ abstract class SpriteGeometry extends DualLinkNode {
               } else {
                 sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
               }
-              qe.field_a = -150;
+              BufferedSocket.field_a = -150;
               sd.field_a.field_J = 0;
               sd.field_a.s(86);
               return;
@@ -340,7 +340,7 @@ abstract class SpriteGeometry extends DualLinkNode {
             sd.field_a.d((byte) 98);
           }
         }
-        qe.field_a = -150;
+        BufferedSocket.field_a = -150;
         sd.field_a.field_J = 0;
         sd.field_a.s(86);
     }

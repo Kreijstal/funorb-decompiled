@@ -84,7 +84,7 @@ final class mj {
           }
           if (FullscreenFocusCanvas.field_a != null) {
             if (!FullscreenFocusCanvas.field_a.c(48)) {
-              stackIn_10_0 = pc.field_p;
+              stackIn_10_0 = BufferedSocket.field_p;
               return stackIn_10_0;
             }
             stackIn_12_0 = CipherPacketBuffer.field_l;
@@ -414,7 +414,7 @@ final class mj {
           }
           if (decompiledFrameRemainder0) {
             if (null == pe.field_f) {
-              tk.field_c = 0;
+              ProxyAuthenticationRequiredException.field_c = 0;
               pe.field_f = pe.a(3, 10, 1, -16947, 13);
             }
             if (!pe.field_f.field_i) {
@@ -440,7 +440,7 @@ final class mj {
                         ~var3[var8] == ~var6.field_o &&
                         var4[var8] == ti.field_O) {
                         var5 = 1;
-                        tk.field_c = -(1 + var8);
+                        ProxyAuthenticationRequiredException.field_c = -(1 + var8);
                       }
                       if (var2[var8] != null ||
                         var5 == 0 &&
@@ -462,7 +462,7 @@ final class mj {
                           var9Lifetime2 = ti.field_O;
                           var12 = ja.field_b;
                           var11 = var9Lifetime2;
-                          tk.field_c = -(var8 + 1);
+                          ProxyAuthenticationRequiredException.field_c = -(var8 + 1);
                           if (0 == var10) {
                             var12 = "," + var12 + ",   " + var11;
                           }

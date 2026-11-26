@@ -217,12 +217,12 @@ final class qb {
             return false;
           }
           try {
-            var2_int = NodeHashTableIterator.field_a.d(param1 ^ param1);
+            var2_int = NodeHashTableIterator.field_a.availableBytes(param1 ^ param1);
             if (0 < var2_int) {
               if (-jc.field_g.position + param0 < var2_int) {
                 var2_int = -jc.field_g.position + param0;
               }
-              NodeHashTableIterator.field_a.a(jc.field_g.payload, true, var2_int, jc.field_g.position);
+              NodeHashTableIterator.field_a.readFully(jc.field_g.payload, true, var2_int, jc.field_g.position);
               qe.field_k = fa.correctedCurrentTimeMillis(-96);
               jc.field_g.position = jc.field_g.position + var2_int;
               if (jc.field_g.position < param0) {

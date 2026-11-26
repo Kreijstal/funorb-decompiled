@@ -319,7 +319,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_all_players_have_left", -86);
                 if (var2 != null) {
-                  hn.field_b = ad.a(-29410, var2);
+                  BufferedSocket.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_lobby_name", -122);
                 if (var2 != null) {
@@ -643,7 +643,7 @@ abstract class gm {
                 }
                 var2 = cd.a("quickchat_lobby", -123);
                 if (var2 != null) {
-                  hn.field_n = ad.a(-29410, var2);
+                  BufferedSocket.field_n = ad.a(-29410, var2);
                 }
                 var2 = cd.a("message_game", -118);
                 if (null != var2) {
@@ -1081,7 +1081,7 @@ abstract class gm {
                 }
                 var2 = cd.a("rule_2_0", -85);
                 if (var2 != null) {
-                  oa.field_c = ad.a(-29410, var2);
+                  ProxyAuthenticationRequiredException.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_2_1", -121);
                 if (null != var2) {
@@ -1129,7 +1129,7 @@ abstract class gm {
                 }
                 var2 = cd.a("reloadgame", -102);
                 if (null != var2) {
-                  vi.field_a = ad.a(-29410, var2);
+                  PcmOutputWorker.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("toserverlist", -103);
                 if (null != var2) {

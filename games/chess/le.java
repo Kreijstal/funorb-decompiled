@@ -170,7 +170,7 @@ final class le {
               var9 = sc.field_a.b(var4);
               if (!wk.a((byte) 118)) {
                 if (BoundedRandomAccessFile.field_f.field_F &&
-                  var9 > (-BoundedRandomAccessFile.field_f.field_U + hn.field_k)) {
+                  var9 > (-BoundedRandomAccessFile.field_f.field_U + BufferedSocket.field_k)) {
                   if (qf.field_b) {
                     var1 = "Broken!";
                   } else {

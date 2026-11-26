@@ -362,7 +362,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             for (var14 = 0; param4.field_t.length > var14; var14++) {
               var15 = param4.field_t[var14];
               if (-1 != var15) {
-                var16 = oa.field_b.a((byte) 79, var15);
+                var16 = ProxyAuthenticationRequiredException.field_b.a((byte) 79, var15);
                 var8[var12Lifetime1 + var14] = var16.e((byte) -119);
                 var9[var12Lifetime1 + var14] = param4.field_s[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {

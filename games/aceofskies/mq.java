@@ -45,7 +45,7 @@ final class mq extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class mq extends IntrusiveNode {
           this.field_f = param0;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "mq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

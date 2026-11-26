@@ -114,7 +114,7 @@ abstract class dm {
           param1.field_f = 0;
           param1.field_k = false;
           ak.field_u = new kj(var3_int, param1, param1);
-          oa.field_b = new qc(var3_int, param1, param1, new th());
+          ProxyAuthenticationRequiredException.field_b = new qc(var3_int, param1, param1, new th());
           var4 = PacketBuffer.a(param2 - 1529624);
           if (var4 == null) {
             var11 = (Throwable) null;

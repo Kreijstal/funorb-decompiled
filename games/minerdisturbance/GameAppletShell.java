@@ -72,7 +72,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (j.field_h == this &&
+          if (PcmOutputWorker.field_h == this &&
             !tn.field_J) {
             IsaacRandom.field_k = sf.correctedCurrentTimeMillis((byte) 124);
             gf.sleepMillis(5000L, -10309);
@@ -163,7 +163,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (j.field_h == this &&
+          if (PcmOutputWorker.field_h == this &&
             !tn.field_J) {
             bh.field_cb = true;
             if (dh.field_e &&
@@ -206,7 +206,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void start() {
-        if (j.field_h != this ||
+        if (PcmOutputWorker.field_h != this ||
           tn.field_J) {
           return;
         }
@@ -344,7 +344,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = j.field_h;
+                var1 = PcmOutputWorker.field_h;
                 if (of.field_b != null) {
                   var1 = of.field_b;
                 }
@@ -635,7 +635,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (decompiledFrameRemainder0) {
             if (nd.field_f == null) {
               if (null == of.field_b) {
-                var2 = j.field_h;
+                var2 = PcmOutputWorker.field_h;
                 if (var5 != 0) {
                   var2 = of.field_b;
                   var2 = nd.field_f;
@@ -693,7 +693,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void stop() {
-        if (this != j.field_h ||
+        if (this != PcmOutputWorker.field_h ||
           tn.field_J) {
           return;
         }
@@ -806,7 +806,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var9 = MinerDisturbance.field_ab;
           try {
             try {
-              if (null != j.field_h) {
+              if (null != PcmOutputWorker.field_h) {
                 ij.field_v = ij.field_v + 1;
                 if (ij.field_v < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -825,7 +825,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (param3 != 3) {
                 field_m = (Sprite) null;
               }
-              j.field_h = this;
+              PcmOutputWorker.field_h = this;
               aj.field_d = bm.c(-108);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param4, param1, true);
               qa.field_a = dupTemp$0;

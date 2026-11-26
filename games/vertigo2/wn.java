@@ -433,7 +433,7 @@ final class wn {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (nn.field_w == rg.field_d) {
+          if (nn.field_w == ProxyAuthenticationRequiredException.field_d) {
             mr.field_a = null;
             uh.field_Wb.position = 0;
             if (param4 == null) {
@@ -488,15 +488,15 @@ final class wn {
               uh.field_Wb.patchShortLength((byte) -120, -var10 + uh.field_Wb.position);
             }
             lf.d(106, -1);
-            rg.field_d = SecondaryNodeHashTable.field_b;
+            ProxyAuthenticationRequiredException.field_d = SecondaryNodeHashTable.field_b;
           }
-          if (SecondaryNodeHashTable.field_b == rg.field_d &&
+          if (SecondaryNodeHashTable.field_b == ProxyAuthenticationRequiredException.field_d &&
             c.a(1, (byte) -104)) {
             var9Lifetime1 = id.field_f.readUnsignedByte(-11);
             id.field_f.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              rg.field_d = RandomAccessCacheFile.field_f;
+              ProxyAuthenticationRequiredException.field_d = RandomAccessCacheFile.field_f;
               na.field_m = new String[-100 + var9Lifetime1];
             } else {
               if (248 == var9Lifetime1) {
@@ -509,7 +509,7 @@ final class wn {
               }
               if (99 != var9Lifetime1) {
                 lc.field_f = var9Lifetime1;
-                rg.field_d = ko.field_O;
+                ProxyAuthenticationRequiredException.field_d = ko.field_O;
                 ca.field_b = -1;
               } else {
                 c.a(tk.c(1), (byte) -104);
@@ -518,7 +518,7 @@ final class wn {
               }
             }
           }
-          if (rg.field_d == RandomAccessCacheFile.field_f) {
+          if (ProxyAuthenticationRequiredException.field_d == RandomAccessCacheFile.field_f) {
             var9Lifetime2 = 2;
             if (c.a(var9Lifetime2, (byte) -104)) {
               var10Lifetime1 = id.field_f.readUnsignedShort((byte) -11);
@@ -535,7 +535,7 @@ final class wn {
               }
             }
           }
-          if (rg.field_d == ko.field_O &&
+          if (ProxyAuthenticationRequiredException.field_d == ko.field_O &&
             dl.b((byte) -72)) {
             if (255 != lc.field_f) {
               nk.field_Kb = id.field_f.readString(128);

@@ -108,11 +108,11 @@ final class SystemTaskService implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (ls) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.result = dd.a((String) (var8.objectArgument), var8.intArgument, -105).a((byte) 97);
-                    } catch (ls decompiledCaughtParameter1) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      ls var3_ref = (ls) (Object) decompiledCaughtException;
+                      ProxyAuthenticationRequiredException var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref.getMessage();
                       throw var3_ref;
                     }

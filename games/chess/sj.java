@@ -162,7 +162,7 @@ final class sj implements jm {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = hn.field_k;
+          var2_int = BufferedSocket.field_k;
           var3 = rf.field_b;
           var4 = qn.field_P.field_xb.b(param0, 500);
           var5 = qn.field_P.field_xb.c(param0, 500) + 6;

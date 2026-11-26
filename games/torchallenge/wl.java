@@ -472,7 +472,7 @@ final class wl {
           o.a(5, true);
         }
         if (cj.field_b) {
-          bb.activeScreenId = 13;
+          PcmOutputWorker.activeScreenId = 13;
           bc.field_o = 13;
           cj.field_b = false;
         }
@@ -569,7 +569,7 @@ final class wl {
         cd.field_b = cd.field_b + 1;
         kk.field_d = cd.field_b;
         if (!(cd.field_b <= aa.field_f >> 1)) {
-          bb.activeScreenId = 10;
+          PcmOutputWorker.activeScreenId = 10;
           bc.field_o = 10;
           kk.field_d = kk.field_d - (aa.field_f >> 1);
           fh.field_b = -1;
@@ -702,7 +702,7 @@ final class wl {
             }
           }
         }
-        bj.a((byte) 71);
+        ProxyAuthenticationRequiredException.a((byte) 71);
         while (null != db.field_D.first((byte) -69)) {
           db.field_D.pollFirst((byte) 101);
         }

@@ -13,7 +13,7 @@ abstract class ByteStorage {
           ol.field_a.d(true);
         }
         dd.field_g = new ah();
-        fb.field_e.a(33, dd.field_g);
+        PcmOutputWorker.field_e.a(33, dd.field_g);
         if (param0 < -11) {
           return;
         }

@@ -287,7 +287,7 @@ final class gf {
     }
 
     final static void d(byte param0) {
-        fb.field_e.a(33, new ff());
+        PcmOutputWorker.field_e.a(33, new ff());
         if (param0 <= 78) {
           field_C = -56;
         }

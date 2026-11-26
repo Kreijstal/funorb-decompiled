@@ -1256,7 +1256,7 @@ final class gf {
                 var5Lifetime1 = stackIn_246_0;
                 if (this.field_l > 32) {
                   if (var5Lifetime1 != 0) {
-                    ne.a(ll.a((byte) -73, 4) + 37, -96);
+                    ne.a(BufferedSocket.a((byte) -73, 4) + 37, -96);
                   }
                   this.field_l = -10;
                 }
@@ -1363,7 +1363,7 @@ final class gf {
                         MidiPcmStream.field_X = MidiPcmStream.field_X + var15;
                       }
                     }
-                    ne.a(ll.a((byte) -73, 4) + 37, 122);
+                    ne.a(BufferedSocket.a((byte) -73, 4) + 37, 122);
                     stackIn_320_0 = null;
                     return (gf) (stackIn_320_0);
                   }

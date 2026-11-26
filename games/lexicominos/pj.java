@@ -101,7 +101,7 @@ final class pj extends nb implements ue, jk, ag {
         this.field_K.field_q = mk.field_l;
         this.field_O.field_q = bf.field_f;
         this.field_D.field_q = r.field_C;
-        this.field_M.field_q = ck.field_b;
+        this.field_M.field_q = ProxyAuthenticationRequiredException.field_b;
         this.field_J.field_q = wb.field_c;
         this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
         this.field_G.a(new pc(this.field_G), (byte) 23);
@@ -291,7 +291,7 @@ final class pj extends nb implements ue, jk, ag {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = jd.a(fd.a((byte) -58, param0), 37);
+          var2 = jd.a(PcmOutputWorker.a((byte) -58, param0), 37);
           if (var2 == null) {
             var2 = "";
           }
@@ -615,7 +615,7 @@ final class pj extends nb implements ue, jk, ag {
           var2 = Integer.parseInt(this.field_M.field_u);
         } catch (NumberFormatException numberFormatException) {
         }
-        return fd.a(this.field_E.field_u, 0, var2, this.field_G.field_u, this, this.field_O.field_u, this.field_J.field_C);
+        return PcmOutputWorker.a(this.field_E.field_u, 0, var2, this.field_G.field_u, this, this.field_O.field_u, this.field_J.field_C);
     }
 
     static {

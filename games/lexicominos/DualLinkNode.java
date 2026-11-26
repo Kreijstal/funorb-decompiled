@@ -20,12 +20,12 @@ class DualLinkNode extends IntrusiveNode {
             hc.h(249);
             wa.a(-45);
             if (!el.a(1)) {
-              ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
               return;
             }
             SpriteGeometry.field_q.h(1, 0);
             kc.a(0, -1);
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
           }
           jd.a(ug.field_y, 160);
@@ -35,10 +35,10 @@ class DualLinkNode extends IntrusiveNode {
           if (el.a(1)) {
             SpriteGeometry.field_q.h(1, 0);
             kc.a(0, -1);
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
           }
-          ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
         }
         if (null != ug.field_y) {
@@ -47,24 +47,24 @@ class DualLinkNode extends IntrusiveNode {
           hc.h(249);
           wa.a(-45);
           if (!el.a(1)) {
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
           }
           SpriteGeometry.field_q.h(1, 0);
           kc.a(0, -1);
-          ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
         }
         rg.a(-124);
         hc.h(249);
         wa.a(-45);
         if (!el.a(1)) {
-          ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
         }
         SpriteGeometry.field_q.h(1, 0);
         kc.a(0, -1);
-        ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
+        ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-60);
     }
 
     final static boolean a(byte param0) {
@@ -91,10 +91,10 @@ class DualLinkNode extends IntrusiveNode {
           while (true) {
             var3 = param0.requestFullscreenExit(param1 - 15232, param2);
             while (0 == var3.status) {
-              ge.sleepMillis(0, 10L);
+              BufferedSocket.sleepMillis(0, 10L);
             }
             if (1 != var3.status) {
-              ge.sleepMillis(0, 100L);
+              BufferedSocket.sleepMillis(0, 100L);
               continue;
             }
             break;

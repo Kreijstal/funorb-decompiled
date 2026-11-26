@@ -57,7 +57,7 @@ final class IntKeyLookup {
           }
           var4.close();
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class IntKeyLookup {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

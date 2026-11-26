@@ -55,7 +55,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               return true;
             }
           }
-          var2Lifetime1 = ff.field_e;
+          var2Lifetime1 = PcmOutputWorker.field_e;
           var3Lifetime1 = 0;
           while (true) {
             if (var2Lifetime1.length <= var3Lifetime1) {

@@ -198,7 +198,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_25_0;
           }
           if (param0 == 14) {
-            stackIn_28_0 = oc.a(hn.field_b, new String[]{param1}, (byte) -119);
+            stackIn_28_0 = oc.a(BufferedSocket.field_b, new String[]{param1}, (byte) -119);
             return stackIn_28_0;
           }
           if (param2 == -3) {

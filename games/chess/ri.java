@@ -97,7 +97,7 @@ final class ri extends jb implements ha, we {
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return qk.field_b;
         }
-        return oa.field_a;
+        return ProxyAuthenticationRequiredException.field_a;
     }
 
     public static void h(int param0) {

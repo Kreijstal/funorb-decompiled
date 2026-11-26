@@ -161,38 +161,38 @@ final class AccountNameAvailabilityValidator extends di {
           jl.field_I.h((byte) -28);
           if (vi.field_n == null) {
             if (param0 >= 29) {
-              wb.b(107);
+              ProxyAuthenticationRequiredException.b(107);
               return;
             }
             field_r = (String[]) null;
-            wb.b(107);
+            ProxyAuthenticationRequiredException.b(107);
             return;
           }
           vi.field_n.h((byte) -81);
           if (param0 < 29) {
             field_r = (String[]) null;
-            wb.b(107);
+            ProxyAuthenticationRequiredException.b(107);
             return;
           }
-          wb.b(107);
+          ProxyAuthenticationRequiredException.b(107);
           return;
         }
         if (vi.field_n != null) {
           vi.field_n.h((byte) -81);
           if (param0 >= 29) {
-            wb.b(107);
+            ProxyAuthenticationRequiredException.b(107);
             return;
           }
           field_r = (String[]) null;
-          wb.b(107);
+          ProxyAuthenticationRequiredException.b(107);
           return;
         }
         if (param0 >= 29) {
-          wb.b(107);
+          ProxyAuthenticationRequiredException.b(107);
           return;
         }
         field_r = (String[]) null;
-        wb.b(107);
+        ProxyAuthenticationRequiredException.b(107);
     }
 
     final void g(int param0) {

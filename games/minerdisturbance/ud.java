@@ -20,7 +20,7 @@ final class ud {
           if (param3 < 51) {
             field_e = 50;
           }
-          pm.field_c = param1;
+          ProxyAuthenticationRequiredException.field_c = param1;
           rb.field_e = param0;
           rf.field_b = param2;
         } catch (RuntimeException runtimeException) {

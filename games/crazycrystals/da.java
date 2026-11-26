@@ -225,8 +225,8 @@ final class da extends ue {
             return false;
           }
         }
-        var4 = dk.field_l[param0] + j.field_i[param0] + cd.field_u[param0];
-        var5 = cd.field_u[param3] + j.field_i[param3] + dk.field_l[param3];
+        var4 = dk.field_l[param0] + BufferedSocket.field_i[param0] + cd.field_u[param0];
+        var5 = cd.field_u[param3] + BufferedSocket.field_i[param3] + dk.field_l[param3];
         if (var4 < var5) {
           return true;
         }

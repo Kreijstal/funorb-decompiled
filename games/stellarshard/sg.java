@@ -89,7 +89,7 @@ final class sg {
             ae.field_N = new ha(param9);
             pg.field_fb = new ha(param0);
             il.field_v = param4;
-            tl.field_b = param7;
+            ProxyAuthenticationRequiredException.field_b = param7;
             t.field_f = param12;
             uj.field_f = param13;
             ue.field_d = param10;

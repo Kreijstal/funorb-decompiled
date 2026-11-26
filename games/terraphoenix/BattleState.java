@@ -1509,7 +1509,7 @@ final class BattleState {
             stackIn_33_0 = !(IterableNodeHashTable.field_e);
             IterableNodeHashTable.field_e = stackIn_33_0;
           }
-          if (wb.field_e == param1 &&
+          if (ProxyAuthenticationRequiredException.field_e == param1 &&
             !ha.field_o) {
             stackIn_44_1 = !(this.field_w);
             this.field_w = stackIn_44_1;
@@ -3152,7 +3152,7 @@ final class BattleState {
         try {
           ja.field_i = 7;
           rk.field_c = 32;
-          wb.field_g = 20;
+          ProxyAuthenticationRequiredException.field_g = 20;
           hh.field_m.a();
           SoftwareRasterizer.clearRaster();
           k.field_f.a(0);

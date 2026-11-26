@@ -77,7 +77,7 @@ final class qs {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

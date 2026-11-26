@@ -4,7 +4,7 @@
 final class p {
     static long field_a;
     static long field_c;
-    static cb field_d;
+    static BufferedSocket field_d;
     static String field_e;
     static String field_b;
     static String field_f;

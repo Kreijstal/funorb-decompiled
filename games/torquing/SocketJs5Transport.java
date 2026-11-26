@@ -3000,27 +3000,27 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,0");
                 if (null != var2) {
-                  ko.field_a[0] = SecondaryNodeDeque.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_a[0] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,1");
                 if (null != var2) {
-                  ko.field_a[1] = SecondaryNodeDeque.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_a[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,2");
                 if (null != var2) {
-                  ko.field_a[2] = SecondaryNodeDeque.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_a[2] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,3");
                 if (null != var2) {
-                  ko.field_a[3] = SecondaryNodeDeque.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_a[3] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  ko.field_a[4] = SecondaryNodeDeque.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_a[4] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  ko.field_a[5] = SecondaryNodeDeque.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_a[5] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "keychar_the_character_under_questionmark");
                 if (null != var2) {

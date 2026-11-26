@@ -45,7 +45,7 @@ final class jk extends hm {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        em var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = fleas.field_A ? 1 : 0;
@@ -105,15 +105,15 @@ final class jk extends hm {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (em) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, (byte) -38);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (em decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (em) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -184,11 +184,11 @@ final class jk extends hm {
                   if (var12 != -1) {
                     var9 = var16.substring(0, var12);
                   }
-                  throw new em(var9);
+                  throw new ProxyAuthenticationRequiredException(var9);
                 }
                 break;
               }
-              throw new em("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_10_0 = var14;

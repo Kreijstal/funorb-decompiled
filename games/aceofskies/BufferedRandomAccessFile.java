@@ -192,7 +192,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class BufferedRandomAccessFile {
         try {
           this.a(0, param0.length, param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -346,7 +346,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ final class BufferedRandomAccessFile {
           this.field_g = new byte[param2];
           this.field_k = 0L;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

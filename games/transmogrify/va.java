@@ -71,7 +71,7 @@ final class va extends me {
         try {
           var3_int = 22 / ((8 - param2) / 37);
           var4 = (String) null;
-          stackIn_1_0 = jd.a(0, param1, (byte) -9, (String) null, 0, false, param0);
+          stackIn_1_0 = ProxyAuthenticationRequiredException.a(0, param1, (byte) -9, (String) null, 0, false, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

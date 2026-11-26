@@ -44,7 +44,7 @@ final class ProxySocketFactory extends SocketFactory {
         Object objectLocal26 = null;
         java.net.Proxy proxyLocal27 = null;
         java.net.Socket socketLocal28 = null;
-        DiagnosticSupport001 diagnosticSupport001Local29 = null;
+        ProxyAuthenticationRequiredException diagnosticSupport001Local29 = null;
         IOException iOExceptionLocal30 = null;
         int integerLocal31 = 0;
         integerLocal31 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -98,15 +98,15 @@ final class ProxySocketFactory extends SocketFactory {
           objectLocal26 = objectArrayLocal25[integerLocal1];
           proxyLocal27 = (java.net.Proxy) (objectLocal26);
           try {
-            if (false) throw (DiagnosticSupport001) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             socketLocal28 = this.computeSocket1475((byte) -86, proxyLocal27);
             if (socketLocal28 != null) {
               stackSocketLocal17 = socketLocal28;
               return stackSocketLocal17;
             }
-          } catch (DiagnosticSupport001 caughtParameterLocal33) {
+          } catch (ProxyAuthenticationRequiredException caughtParameterLocal33) {
             caughtExceptionLocal18 = caughtParameterLocal33;
-            diagnosticSupport001Local29 = (DiagnosticSupport001) (Object) caughtExceptionLocal18;
+            diagnosticSupport001Local29 = (ProxyAuthenticationRequiredException) (Object) caughtExceptionLocal18;
             objectLocal24 = diagnosticSupport001Local29;
           } catch (java.io.IOException caughtParameterLocal34) {
             caughtExceptionLocal18 = caughtParameterLocal34;
@@ -262,11 +262,11 @@ final class ProxySocketFactory extends SocketFactory {
                   if (integerLocal15 != -1) {
                     stringLocal12 = stringLocal18.substring(0, integerLocal15);
                   }
-                  throw new DiagnosticSupport001(stringLocal12);
+                  throw new ProxyAuthenticationRequiredException(stringLocal12);
                 }
                 break;
               }
-              throw new DiagnosticSupport001("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (frameRemainderLocal19) {
               stackSocketLocal1 = socketLocal17;

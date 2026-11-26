@@ -89,7 +89,7 @@ final class kk {
         try {
           ob.field_f = cl.a("commonui", param1, -125, "frame_top");
           kc.field_i = cl.a("commonui", param1, -115, "frame_bottom");
-          ck.field_l = qk.a("commonui", param1, "jagex_logo_grey", true);
+          ck.field_l = ProxyAuthenticationRequiredException.a("commonui", param1, "jagex_logo_grey", true);
           rk.field_d = cl.a("commonui", param1, -120, "button");
           ja.field_n = ea.a("validation", "commonui", 0, param1);
           u.field_d = (rf) ((Object) qg.a(param2, "arezzo12", "commonui", param1, 126));

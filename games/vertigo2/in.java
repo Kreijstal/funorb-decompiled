@@ -45,7 +45,7 @@ final class in {
             if (sj.field_d != null) {
               ho.a(0, true);
             } else {
-              jr.a(-127);
+              PcmOutputWorker.a(-127);
             }
           }
         }

@@ -68,12 +68,12 @@ final class ic extends jj implements da {
           return;
         }
         nb.field_a.i(-72);
-        if (em.field_g != null) {
-          nb.field_a.b(em.field_g, (byte) -35);
+        if (ProxyAuthenticationRequiredException.field_g != null) {
+          nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
           return;
         }
-        em.field_g = new nd(nb.field_a, ResourceArchive.field_e);
-        nb.field_a.b(em.field_g, (byte) -35);
+        ProxyAuthenticationRequiredException.field_g = new nd(nb.field_a, ResourceArchive.field_e);
+        nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
     }
 
     public final void a(int param0, int param1, int param2, int param3, bb param4) {
@@ -123,7 +123,7 @@ final class ic extends jj implements da {
               var3 = oc.field_c;
               if (al.a(-83)) {
                 this.field_j = this.field_j + 20;
-                var3 = ec.field_e;
+                var3 = PcmOutputWorker.field_e;
               }
             } else {
               if (param1 == ge.field_c) {

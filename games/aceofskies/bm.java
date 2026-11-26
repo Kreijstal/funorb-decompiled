@@ -136,7 +136,7 @@ class bm extends mi {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ class bm extends mi {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ class bm extends mi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ class bm extends mi {
           this.field_y = true;
           this.field_F = kh.correctedCurrentTimeMillis(-88);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ class bm extends mi {
             this.field_F = kh.correctedCurrentTimeMillis(-60);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "bm.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "bm.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -533,7 +533,7 @@ class bm extends mi {
           this.field_D = this.field_B;
           this.g((byte) -75);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "bm.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "bm.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -586,7 +586,7 @@ class bm extends mi {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
         }
     }
 

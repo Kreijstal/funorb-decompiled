@@ -43,7 +43,7 @@ final class j extends IntrusiveNode {
         int var7 = 0;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (bm.field_I != rg.field_d) {
+          if (bm.field_I != ProxyAuthenticationRequiredException.field_d) {
             return false;
           }
           if (param0 != 0) {

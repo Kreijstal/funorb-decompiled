@@ -200,7 +200,7 @@ final class lk extends UiComponent {
           var3 = 0;
           if (var1_int != 0 &&
             bk.field_a.field_k >= 0) {
-            var3 = em.field_e[bk.field_a.field_k];
+            var3 = ProxyAuthenticationRequiredException.field_e[bk.field_a.field_k];
             if (var3 == 2 ||
               var3 == 5) {
               md.i(124);

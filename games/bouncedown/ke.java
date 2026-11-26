@@ -35,9 +35,9 @@ final class ke extends IntrusiveNode {
             IntrusiveNode.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
             return;
           }
-          if (!tk.c(250)) {
+          if (!ProxyAuthenticationRequiredException.c(250)) {
             SoftwareRasterizer.clearRaster();
-            pc.a(240, (byte) -66, 320);
+            BufferedSocket.a(240, (byte) -66, 320);
             qi.a(param0, 0, 0, -25971);
             return;
           }

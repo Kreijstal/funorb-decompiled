@@ -69,10 +69,10 @@ final class BufferedSocket implements Runnable {
             oa.a(9, true, 37);
           } else {
             bc.field_V = -1;
-            if (em.field_b > 0) {
-              wi.field_p.a(-119, em.field_b);
+            if (ProxyAuthenticationRequiredException.field_b > 0) {
+              wi.field_p.a(-119, ProxyAuthenticationRequiredException.field_b);
               wi.field_p.a(false);
-              em.field_b = 0;
+              ProxyAuthenticationRequiredException.field_b = 0;
             }
             if (tj.field_a == 12 &&
               fleas.field_E == 0 &&

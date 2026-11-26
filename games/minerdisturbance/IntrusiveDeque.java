@@ -20,12 +20,12 @@ final class IntrusiveDeque {
           if (AwtRasterBuffer.field_i == null) {
             return false;
           }
-          int var2_int = AwtRasterBuffer.field_i.c(0);
+          int var2_int = AwtRasterBuffer.field_i.availableBytes(0);
           if (var2_int > 0) {
             if (var2_int > param1 - kj.field_a.position) {
               var2_int = -kj.field_a.position + param1;
             }
-            AwtRasterBuffer.field_i.a(false, kj.field_a.payload, kj.field_a.position, var2_int);
+            AwtRasterBuffer.field_i.readFully(false, kj.field_a.payload, kj.field_a.position, var2_int);
             sk.field_c = sf.correctedCurrentTimeMillis((byte) -15);
             kj.field_a.position = kj.field_a.position + var2_int;
             if (kj.field_a.position < param1) {

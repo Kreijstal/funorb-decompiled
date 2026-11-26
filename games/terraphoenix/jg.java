@@ -29,14 +29,14 @@ final class jg extends al {
               var6 = new ua(255, TutorialController.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
             }
             if (TutorialController.field_x != null) {
-              if (null == wb.field_b) {
-                wb.field_b = new ak[mc.field_b.field_s.length];
+              if (null == ProxyAuthenticationRequiredException.field_b) {
+                ProxyAuthenticationRequiredException.field_b = new ak[mc.field_b.field_s.length];
               }
-              if (null == wb.field_b[param4]) {
-                wb.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
+              if (null == ProxyAuthenticationRequiredException.field_b[param4]) {
+                ProxyAuthenticationRequiredException.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
                 mc.field_b.field_s[param4] = null;
               }
-              var7 = new ua(param4, TutorialController.field_x, wb.field_b[param4], 2097152);
+              var7 = new ua(param4, TutorialController.field_x, ProxyAuthenticationRequiredException.field_b[param4], 2097152);
             }
             var8 = i.field_a.a(param2, param4, (ua) (var6), (ua) (var7), 115);
             if (param3) {

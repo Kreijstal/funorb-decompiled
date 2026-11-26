@@ -9,7 +9,7 @@ final class OpenGlCubeTexture extends OpenGlTexture implements HardwareCubeTextu
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "qp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "qp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class OpenGlCubeTexture extends OpenGlTexture implements HardwareCubeTextu
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

@@ -19,7 +19,7 @@ final class SecondaryNodeDeque {
         try {
           param0.nextSecondaryNode.previousSecondaryNode = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "er.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "er.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class SecondaryNodeDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1), "er.C(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "er.C(" + param0 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class SecondaryNodeDeque {
           }
           param1.nextSecondaryNode.previousSecondaryNode = param1;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "er.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "er.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

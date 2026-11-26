@@ -279,7 +279,7 @@ final class q extends jg {
             dl.field_c[2] = hm.field_mb;
             dl.field_c[5] = "";
             dl.field_c[4] = em.field_c;
-            dl.field_c[3] = sb.field_i;
+            dl.field_c[3] = PcmOutputWorker.field_i;
             uc.field_ab[0] = 5;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_68_0 = dl.field_c;

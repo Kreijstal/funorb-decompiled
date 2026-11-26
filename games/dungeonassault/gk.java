@@ -365,7 +365,7 @@ final class gk extends ii implements mg, vg {
             field_L = (gn) null;
           }
           sd.a(40 + param0, jj.field_b, 66, param3, param1.field_r, param4);
-          sd.a(param0, wl.field_d, 87, param3, param1.field_b, param4 + 18);
+          sd.a(param0, ProxyAuthenticationRequiredException.field_d, 87, param3, param1.field_b, param4 + 18);
           sd.a(param0 + 40, pk.field_o, 89, param3, param1.field_o, param4 + 18);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "gk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

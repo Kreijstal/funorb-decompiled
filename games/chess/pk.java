@@ -43,13 +43,13 @@ abstract class pk {
         if (param0 != -9) {
           return false;
         }
-        if (hn.field_k < this.field_i) {
+        if (BufferedSocket.field_k < this.field_i) {
           return false;
         }
         if (this.field_k > rf.field_b) {
           return false;
         }
-        if (this.field_l + this.field_i < hn.field_k) {
+        if (this.field_l + this.field_i < BufferedSocket.field_k) {
           return false;
         }
         if (this.field_c + this.field_k >= rf.field_b) {

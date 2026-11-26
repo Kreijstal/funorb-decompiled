@@ -308,7 +308,7 @@ final class am {
           } else {
             qr.field_l.a(this.field_s.field_e, 28580);
           }
-          sc.a(true, rg.field_f);
+          sc.a(true, ProxyAuthenticationRequiredException.field_f);
           var6Lifetime1 = this.field_s.field_e[0];
           var7 = this.field_s.field_e[2];
           var8Lifetime1 = this.field_s.field_e[1];
@@ -756,7 +756,7 @@ final class am {
           } else {
             ue.field_N.c(0, 0);
           }
-          sc.a(param3, rg.field_f);
+          sc.a(param3, ProxyAuthenticationRequiredException.field_f);
           var13Lifetime1 = param4.h(9979);
           if (var13Lifetime1 == 4) {
             var14 = 255 * param4.field_n / 200;
@@ -1473,7 +1473,7 @@ final class am {
             } else {
               qr.field_l.a(this.field_s.field_e, 28580);
             }
-            sc.a(true, rg.field_f);
+            sc.a(true, ProxyAuthenticationRequiredException.field_f);
           }
           var7Lifetime1 = this.field_s.field_e[0];
           var8 = this.field_s.field_e[2];

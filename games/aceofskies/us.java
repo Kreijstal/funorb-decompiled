@@ -48,7 +48,7 @@ final class us implements ir {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class us implements ir {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1), "us.A(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "us.A(" + param0 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class us implements ir {
           this.field_e = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "us.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "us.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

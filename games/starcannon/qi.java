@@ -32,8 +32,8 @@ final class qi {
           }
           if (decompiledFrameRemainder0) {
             if (!eg.field_h) {
-              if (di.field_m >= le.field_a) {
-                stackIn_19_0 = (le.field_a + hf.field_l > di.field_m) ? 1 : 0;
+              if (di.field_m >= ProxyAuthenticationRequiredException.field_a) {
+                stackIn_19_0 = (ProxyAuthenticationRequiredException.field_a + hf.field_l > di.field_m) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -44,12 +44,12 @@ final class qi {
             var2_int = stackIn_19_0;
             if (param1 != null) {
               if (eg.field_h) {
-                di.field_m = le.field_a;
+                di.field_m = ProxyAuthenticationRequiredException.field_a;
                 decompiledFrameRemainder1 = false;
               }
               else {
                 if (var2_int != 0) {
-                  di.field_m = le.field_a;
+                  di.field_m = ProxyAuthenticationRequiredException.field_a;
                   decompiledFrameRemainder1 = false;
                 }
               }
@@ -69,7 +69,7 @@ final class qi {
           }
           sc.field_c = param1;
           if (!eg.field_h &&
-            le.field_a > di.field_m &&
+            ProxyAuthenticationRequiredException.field_a > di.field_m &&
             uf.field_d) {
             ua.field_a = dg.field_n;
             ti.field_c = a.field_e;

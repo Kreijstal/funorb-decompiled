@@ -1089,7 +1089,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("pleasewait", param0 - 7);
                 if (var2 != null) {
-                  qk.field_e = mj.a((byte) -17, var2);
+                  ProxyAuthenticationRequiredException.field_e = mj.a((byte) -17, var2);
                 }
                 var2 = wg.a("logging_in", 0);
                 if (var2 != null) {
@@ -1141,7 +1141,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("quittowebsite", 0);
                 if (null != var2) {
-                  qk.field_d = mj.a((byte) -114, var2);
+                  ProxyAuthenticationRequiredException.field_d = mj.a((byte) -114, var2);
                 }
                 var2 = wg.a("connectionrestored", 0);
                 if (var2 != null) {
@@ -1385,7 +1385,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_welcome", 0);
                 if (var2 != null) {
-                  qk.field_a = mj.a((byte) 13, var2);
+                  ProxyAuthenticationRequiredException.field_a = mj.a((byte) 13, var2);
                 }
                 var2 = wg.a("create_u13_welcome", 0);
                 if (var2 != null) {
@@ -1833,7 +1833,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("loading_extradata", param0 - 7);
                 if (null != var2) {
-                  fb.field_a = mj.a((byte) 122, var2);
+                  PcmOutputWorker.field_a = mj.a((byte) 122, var2);
                 }
                 var2 = wg.a("loading_languages", param0 ^ 7);
                 if (null != var2) {
@@ -3223,12 +3223,12 @@ final class LoginMenuScreen extends pj implements ke {
               if (param1 != 5929) {
                 field_Q = (he[]) null;
               }
-              var2_int = uj.field_j.a((byte) -122);
+              var2_int = uj.field_j.availableBytes((byte) -122);
               if (var2_int > 0) {
                 if (var2_int > -dh.field_N.position + param0) {
                   var2_int = -dh.field_N.position + param0;
                 }
-                uj.field_j.a((byte) -14, dh.field_N.payload, dh.field_N.position, var2_int);
+                uj.field_j.readFully((byte) -14, dh.field_N.payload, dh.field_N.position, var2_int);
                 el.field_rb = la.correctedCurrentTimeMillis(false);
                 dh.field_N.position = dh.field_N.position + var2_int;
                 if (param0 > dh.field_N.position) {

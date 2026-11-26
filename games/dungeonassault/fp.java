@@ -26,12 +26,12 @@ final class fp {
           if (Raider.field_a.b((byte) 60)) {
             return 0;
           }
-          return bk.a(0);
+          return PcmOutputWorker.a(0);
         }
         if (Raider.field_a.b((byte) 60)) {
           return 0;
         }
-        return bk.a(0);
+        return PcmOutputWorker.a(0);
     }
 
     static {

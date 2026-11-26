@@ -100,7 +100,7 @@ final class ca extends IntrusiveNode {
         if (param2 >= ae.field_F) {
           if (param2 <= uo.field_m) {
             dk.field_l[SecondaryNodeDeque.field_c] = param0;
-            j.field_i[SecondaryNodeDeque.field_c] = param1;
+            BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
             cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
             if (var6 == 0) {
@@ -125,7 +125,7 @@ final class ca extends IntrusiveNode {
           }
           em.field_i = param2;
           dk.field_l[SecondaryNodeDeque.field_c] = param0;
-          j.field_i[SecondaryNodeDeque.field_c] = param1;
+          BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
           cd.field_u[SecondaryNodeDeque.field_c] = param5;
           var6 = param5 + param1 + param0;
           if (var6 == 0) {
@@ -138,7 +138,7 @@ final class ca extends IntrusiveNode {
           db.field_i = param2;
           if (param2 <= uo.field_m) {
             dk.field_l[SecondaryNodeDeque.field_c] = param0;
-            j.field_i[SecondaryNodeDeque.field_c] = param1;
+            BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
             cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
             if (var6 == 0) {
@@ -150,7 +150,7 @@ final class ca extends IntrusiveNode {
           } else {
             em.field_i = param2;
             dk.field_l[SecondaryNodeDeque.field_c] = param0;
-            j.field_i[SecondaryNodeDeque.field_c] = param1;
+            BufferedSocket.field_i[SecondaryNodeDeque.field_c] = param1;
             cd.field_u[SecondaryNodeDeque.field_c] = param5;
             var6 = param5 + param1 + param0;
             if (var6 == 0) {

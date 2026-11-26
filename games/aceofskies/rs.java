@@ -39,7 +39,7 @@ final class rs extends ab implements ue, dn {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class rs extends ab implements ue, dn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class rs extends ab implements ue, dn {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class rs extends ab implements ue, dn {
           this.a(this.field_z, 1);
           this.a(var3 + (55 + var5), 0, 0, 300, (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

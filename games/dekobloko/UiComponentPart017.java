@@ -64,8 +64,8 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           ProxySocketFactory.integerState0732 = ProxySocketFactory.integerState0732 + 65536;
-          while (MixedSupport132.computeInteger1674(PlatformSupport002.integerState0148, ProxySocketFactory.integerState0732, integerArgument1 + 11469) >= 65536) {
-            ProxySocketFactory.integerState0732 = ProxySocketFactory.integerState0732 - PlatformSupport002.integerState0148;
+          while (MixedSupport132.computeInteger1674(DelegatingCanvas.integerState0148, ProxySocketFactory.integerState0732, integerArgument1 + 11469) >= 65536) {
+            ProxySocketFactory.integerState0732 = ProxySocketFactory.integerState0732 - DelegatingCanvas.integerState0148;
             MixedSupport107.integerState0682 = MixedSupport107.integerState0682 + 1;
           }
           integerLocal10 = -1;
@@ -78,21 +78,21 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
           }
           if (-1 != integerLocal10) {
             boolean frameRemainderLocal15 = true;
-            if (MixedSupport003.integerState0019 < PlatformSupport002.integerState0146) {
+            if (MixedSupport003.integerState0019 < DelegatingCanvas.integerState0146) {
               MixedSupport003.integerState0019 = MixedSupport003.integerState0019 + 1;
-              if (PlatformSupport002.integerState0147 < MixedSupport003.integerState0019 && (null == MixedSupport021.rgbSpriteArrayState0008 ||
+              if (DelegatingCanvas.integerState0147 < MixedSupport003.integerState0019 && (null == MixedSupport021.rgbSpriteArrayState0008 ||
                 MixedSupport021.rgbSpriteArrayState0008[MixedSupport146.integerState0930] == null)) {
                 MixedSupport003.integerState0019 = MixedSupport003.integerState0019 - 1;
                 frameRemainderLocal15 = false;
               }
               else {
-                if (MixedSupport003.integerState0019 >= PlatformSupport002.integerState0146 &&
+                if (MixedSupport003.integerState0019 >= DelegatingCanvas.integerState0146 &&
                   MixedSupport021.rgbSpriteArrayState0008[(1 + MixedSupport146.integerState0930) % integerLocal10] == null) {
                   MixedSupport003.integerState0019 = MixedSupport003.integerState0019 - 1;
                 }
               }
             }
-            if (PlatformSupport002.integerState0146 <= MixedSupport003.integerState0019) {
+            if (DelegatingCanvas.integerState0146 <= MixedSupport003.integerState0019) {
               HashNode.integerState0068 = MixedSupport146.integerState0930;
               if (MixedSupport075.booleanState0098) {
                 MixedSupport146.integerState0930 = MixedSupport146.integerState0930 + 1;
@@ -105,9 +105,9 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
                   MixedSupport146.integerState0930 = MixedSupport146.integerState0930 + integerLocal10;
                 }
               }
-              MixedSupport003.integerState0019 = MixedSupport003.integerState0019 - PlatformSupport002.integerState0146;
+              MixedSupport003.integerState0019 = MixedSupport003.integerState0019 - DelegatingCanvas.integerState0146;
             }
-            if (PlatformSupport002.integerState0147 < MixedSupport003.integerState0019) {
+            if (DelegatingCanvas.integerState0147 < MixedSupport003.integerState0019) {
               MixedSupport075.booleanState0098 = true;
             }
           }
@@ -121,26 +121,26 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
                 UiComponentPart013.integerState0276 < 269) {
                 MixedSupport075.booleanState0098 = false;
                 integerLocal13 = 1;
-                MixedSupport003.integerState0019 = PlatformSupport002.integerState0146;
+                MixedSupport003.integerState0019 = DelegatingCanvas.integerState0146;
               }
               if (UiComponentPart013.integerState0276 > 586 &&
                 UiComponentPart013.integerState0276 < RenderingSupport003.rgbSpriteState0017.integerState0258 + 586) {
                 MixedSupport075.booleanState0098 = true;
                 integerLocal13 = 1;
-                MixedSupport003.integerState0019 = PlatformSupport002.integerState0146;
+                MixedSupport003.integerState0019 = DelegatingCanvas.integerState0146;
               }
             }
             if (integerLocal13 == 0 &&
-              MixedSupport003.integerState0019 > PlatformSupport002.integerState0147 &&
+              MixedSupport003.integerState0019 > DelegatingCanvas.integerState0147 &&
               integerLocal12 < MixedSupport101.integerState0590 &&
               MixedSupport101.integerState0590 < RenderingSupport003.rgbSpriteState0017.integerState0255 + integerLocal12) {
               if (269 - RenderingSupport003.rgbSpriteState0017.integerState0258 < HashNode.integerState0069 &&
                 HashNode.integerState0069 < 269) {
-                MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
+                MixedSupport003.integerState0019 = DelegatingCanvas.integerState0147;
               }
               if (HashNode.integerState0069 > 586 &&
                 HashNode.integerState0069 < 586 + RenderingSupport003.rgbSpriteState0017.integerState0258) {
-                MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
+                MixedSupport003.integerState0019 = DelegatingCanvas.integerState0147;
               }
             }
           }

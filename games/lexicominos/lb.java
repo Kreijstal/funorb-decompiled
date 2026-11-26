@@ -29,7 +29,7 @@ final class lb {
             }
             var2 = 1;
           }
-          bc.field_H.a(rc.a(ef.field_a, param0 + 59719, ck.field_a), rc.a(bk.field_b, 29532, sh.field_e), param0 ^ -30202);
+          bc.field_H.a(rc.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), rc.a(bk.field_b, 29532, sh.field_e), param0 ^ -30202);
           if (bc.field_H.b(true)) {
             var1_int = 1;
           }

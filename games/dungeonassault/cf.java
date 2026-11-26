@@ -42,7 +42,7 @@ final class cf {
         } else {
           var4 = 10;
         }
-        rk.a(30, 80, var4, 0, param3, param1, 0, 116, MouseWheelInput.field_g);
+        BufferedSocket.a(30, 80, var4, 0, param3, param1, 0, 116, MouseWheelInput.field_g);
     }
 
     cf(PcmSample param0, int param1) {

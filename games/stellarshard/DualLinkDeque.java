@@ -54,7 +54,7 @@ final class DualLinkDeque implements Iterable {
             if (param1 > oe.field_c) {
               ce.field_b = param1;
             }
-            qf.field_g[BufferedSocket.field_b] = param4;
+            PcmOutputWorker.field_g[BufferedSocket.field_b] = param4;
             wb.field_e[BufferedSocket.field_b] = param3;
             vc.field_f[BufferedSocket.field_b] = param2;
             var6 = param4 - (-param3 - param2);
@@ -70,7 +70,7 @@ final class DualLinkDeque implements Iterable {
             if (param1 > oe.field_c) {
               ce.field_b = param1;
             }
-            qf.field_g[BufferedSocket.field_b] = param4;
+            PcmOutputWorker.field_g[BufferedSocket.field_b] = param4;
             wb.field_e[BufferedSocket.field_b] = param3;
             vc.field_f[BufferedSocket.field_b] = param2;
             var6 = param4 - (-param3 - param2);
@@ -95,7 +95,7 @@ final class DualLinkDeque implements Iterable {
           if (param1 > oe.field_c) {
             ce.field_b = param1;
           }
-          qf.field_g[BufferedSocket.field_b] = param4;
+          PcmOutputWorker.field_g[BufferedSocket.field_b] = param4;
           wb.field_e[BufferedSocket.field_b] = param3;
           vc.field_f[BufferedSocket.field_b] = param2;
           var6Lifetime1 = param4 - (-param3 - param2);
@@ -120,7 +120,7 @@ final class DualLinkDeque implements Iterable {
         if (param1 > oe.field_c) {
           ce.field_b = param1;
         }
-        qf.field_g[BufferedSocket.field_b] = param4;
+        PcmOutputWorker.field_g[BufferedSocket.field_b] = param4;
         wb.field_e[BufferedSocket.field_b] = param3;
         vc.field_f[BufferedSocket.field_b] = param2;
         var6Lifetime2 = param4 - (-param3 - param2);

@@ -91,11 +91,11 @@ final class jk extends aj implements df {
 
     final static int l(int param0) {
         if (param0 == -889) {
-          return -ic.field_b + jd.field_a;
+          return -ic.field_b + ProxyAuthenticationRequiredException.field_a;
         }
         String var2 = (String) null;
         jk.a(80, 5, -66, 13, 33, false, (String) null, -125, -49, (byte) -7);
-        return -ic.field_b + jd.field_a;
+        return -ic.field_b + ProxyAuthenticationRequiredException.field_a;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {

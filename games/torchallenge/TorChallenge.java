@@ -620,10 +620,10 @@ public final class TorChallenge extends GameClientBase {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (~bc.field_o != ~bb.activeScreenId) {
+          if (~bc.field_o != ~PcmOutputWorker.activeScreenId) {
             if (16 <= hk.field_e) {
-              if (-1 != bb.activeScreenId) {
-                GameApplet.screens[bb.activeScreenId].e(param0 ^ 1014663489);
+              if (-1 != PcmOutputWorker.activeScreenId) {
+                GameApplet.screens[PcmOutputWorker.activeScreenId].e(param0 ^ 1014663489);
                 if (var5 != 0) {
                   ji.field_m.c(param0 ^ 7856);
                 }
@@ -1484,7 +1484,7 @@ public final class TorChallenge extends GameClientBase {
                   continue;
                 }
               } else {
-                bb.activeScreenId = 12;
+                PcmOutputWorker.activeScreenId = 12;
                 bc.field_o = 12;
                 GameApplet.screens[12].a(3, true);
                 al.b(50, true);
@@ -1568,7 +1568,7 @@ public final class TorChallenge extends GameClientBase {
               }
               rb.field_b = 3;
               hk.field_e = 31;
-              bb.activeScreenId = bc.field_o;
+              PcmOutputWorker.activeScreenId = bc.field_o;
               if (var3 == 0) {
                 return;
               }
@@ -1590,11 +1590,11 @@ public final class TorChallenge extends GameClientBase {
               return;
             }
           }
-          if (bc.field_o != bb.activeScreenId) {
+          if (bc.field_o != PcmOutputWorker.activeScreenId) {
             hk.field_e = hk.field_e + 1;
             if (16 <= hk.field_e &&
               bc.field_o == 3 &&
-              bb.activeScreenId == 1 &&
+              PcmOutputWorker.activeScreenId == 1 &&
               DirectByteStorage.field_g) {
               if (dj.field_Q >= 0 &&
                 ~n.field_jb != ~dj.field_Q) {
@@ -1625,7 +1625,7 @@ public final class TorChallenge extends GameClientBase {
             if (bc.field_o == 1) {
               vd.b(0);
             }
-            bc.field_o = bb.activeScreenId;
+            bc.field_o = PcmOutputWorker.activeScreenId;
             cf.field_b = bc.field_o;
             hk.field_e = 0;
             if (bc.field_o != 0) {
@@ -1953,7 +1953,7 @@ public final class TorChallenge extends GameClientBase {
           nl.clearStaticReferences();
           ei.clearStaticReferences(-113);
           ed.resetStaticState(91);
-          bb.b(6);
+          PcmOutputWorker.b(6);
           fl.clearStaticReferences(-25984);
           ii.b(16711680);
           db.clearStaticReferences(117);
@@ -2006,7 +2006,7 @@ public final class TorChallenge extends GameClientBase {
           ba.clearStaticReferences((byte) -5);
           ie.a((byte) 33);
           SocketConnector.clearStaticReferences(-26425);
-          bj.clearStaticReferences(-38);
+          ProxyAuthenticationRequiredException.clearStaticReferences(-38);
           bd.clearStaticReferences((byte) 126);
           ImageProducerRasterBuffer.d(15752);
           ja.clearStaticReferences(75);

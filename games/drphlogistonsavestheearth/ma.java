@@ -114,7 +114,7 @@ class ma extends jf implements ke {
           var4 = var6;
           if (param0 == 5) {
             var6.a(false, jf.field_fb, 11);
-            var6.a(false, qk.field_d, 17);
+            var6.a(false, ProxyAuthenticationRequiredException.field_d, 17);
           } else {
             if (256 != param0) {
               stackIn_12_0 = var6;

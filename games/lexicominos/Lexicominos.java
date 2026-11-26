@@ -960,12 +960,12 @@ public final class Lexicominos extends nk {
           wb.clearStaticReferences(5);
           pg.resetStaticState(-8413);
           be.clearStaticReferences((byte) -116);
-          ge.clearStaticReferences((byte) -59);
+          BufferedSocket.clearStaticReferences((byte) -59);
           SpriteGeometry.resetStaticState(-43);
           DualLinkNode.clearDeclaredStaticReferences(param0 - 163);
           IntrusiveNode.clearDeclaredStaticReferences(true);
           vg.resetStaticState(0);
-          fd.resetStaticState((byte) -61);
+          PcmOutputWorker.resetStaticState((byte) -61);
           MidiPcmStream.c(true);
           na.clearStaticReferences(true);
           cb.clearStaticReferences(param0 + 29073);
@@ -1062,7 +1062,7 @@ public final class Lexicominos extends nk {
           vl.clearStaticReferences(96);
           ni.clearStaticReferences((byte) 65);
           lg.clearStaticReferences(21745);
-          ck.clearStaticReferences((byte) -18);
+          ProxyAuthenticationRequiredException.clearStaticReferences((byte) -18);
           rk.clearStaticReferences(true);
           ImageProducerRasterBuffer.clearStaticReferences((byte) -126);
           jd.resetStaticState((byte) -118);
@@ -1624,7 +1624,7 @@ public final class Lexicominos extends nk {
                       af.a(-108);
                     }
                     if (var3 == 2) {
-                      ge.a(0, kk.c(-14047));
+                      BufferedSocket.a(0, kk.c(-14047));
                     }
                   }
                   if (var4 != 0) {
@@ -1848,7 +1848,7 @@ public final class Lexicominos extends nk {
                   if (SpriteGeometry.field_v != 40) {
                     break regionExit1;
                   }
-                  ge.a(0, kk.c(-14047));
+                  BufferedSocket.a(0, kk.c(-14047));
                   if (var4 == 0) {
                     break regionExit1;
                   }

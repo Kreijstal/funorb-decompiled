@@ -80,11 +80,11 @@ final class lf {
               } catch (IOException iOException) {
               }
             }
-            if (wb.field_b != null) {
-              for (var1_int = 0; var1_int < wb.field_b.length; var1_int++) {
-                if (null != wb.field_b[var1_int]) {
+            if (ProxyAuthenticationRequiredException.field_b != null) {
+              for (var1_int = 0; var1_int < ProxyAuthenticationRequiredException.field_b.length; var1_int++) {
+                if (null != ProxyAuthenticationRequiredException.field_b[var1_int]) {
                   try {
-                    wb.field_b[var1_int].b((byte) -54);
+                    ProxyAuthenticationRequiredException.field_b[var1_int].b((byte) -54);
                   } catch (IOException var2_ref) {
                   }
                 }

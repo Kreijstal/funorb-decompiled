@@ -15,7 +15,7 @@ final class bg extends qn implements ee {
         if (null == this.field_j) {
           return null;
         }
-        sb.d(33, rf.field_b, -this.field_bb + this.field_y + hn.field_k);
+        sb.d(33, rf.field_b, -this.field_bb + this.field_y + BufferedSocket.field_k);
         if (param0 == 0) {
           return this.field_j;
         }
@@ -65,7 +65,7 @@ final class bg extends qn implements ee {
             field_cb = (String[]) null;
           }
           super.a(param0, -30, param2, param3);
-          this.field_bb = -param0 + (-this.field_u + hn.field_k);
+          this.field_bb = -param0 + (-this.field_u + BufferedSocket.field_k);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

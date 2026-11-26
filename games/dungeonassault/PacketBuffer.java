@@ -1427,7 +1427,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_guardian2,1", param1);
                 if (var2 != null) {
-                  bk.field_f[1] = dj.a(var2, param1);
+                  PcmOutputWorker.field_f[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_victory,0", false);
                 if (var2 != null) {
@@ -1455,11 +1455,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_death,0", false);
                 if (null != var2) {
-                  wl.field_c[0] = dj.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_c[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_death,1", param1);
                 if (var2 != null) {
-                  wl.field_c[1] = dj.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_c[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_hoardroom,0", false);
                 if (null != var2) {
@@ -1555,7 +1555,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_dragonsofrenown3,1", false);
                 if (var2 != null) {
-                  rk.field_k[1] = dj.a(var2, false);
+                  BufferedSocket.field_k[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_dragonsofrenown4,1", false);
                 if (null != var2) {
@@ -2433,11 +2433,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_tough_brief,0", false);
                 if (var2 != null) {
-                  rk.field_f[0] = dj.a(var2, param1);
+                  BufferedSocket.field_f[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_tough_brief,1", false);
                 if (null != var2) {
-                  rk.field_f[1] = dj.a(var2, param1);
+                  BufferedSocket.field_f[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_retreat_brief,0", false);
                 if (var2 != null) {
@@ -3621,7 +3621,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_snare", false);
                 if (null != var2) {
-                  rk.field_a = dj.a(var2, false);
+                  BufferedSocket.field_a = dj.a(var2, false);
                 }
                 var2 = gm.a("text_detect", param1);
                 if (null != var2) {
@@ -3921,7 +3921,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_acv_habit", param1);
                 if (var2 != null) {
-                  wl.field_b = dj.a(var2, false);
+                  ProxyAuthenticationRequiredException.field_b = dj.a(var2, false);
                 }
                 var2 = gm.a("title_dtdtdt", param1);
                 if (var2 != null) {

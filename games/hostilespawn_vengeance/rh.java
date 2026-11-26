@@ -147,16 +147,16 @@ final class rh extends ae {
               }
               var10 = stackIn_43_0;
               if (var10 != null) {
-                var10.a((jd.field_l << 1) + var8Lifetime1, var1_int, eh.field_d + (ab.field_b << 1), -jd.field_l + var9Lifetime1, 5);
+                var10.a((jd.field_l << 1) + var8Lifetime1, var1_int, eh.field_d + (ProxyAuthenticationRequiredException.field_b << 1), -jd.field_l + var9Lifetime1, 5);
               }
-              var1_int = var1_int + ab.field_b;
+              var1_int = var1_int + ProxyAuthenticationRequiredException.field_b;
             }
             if (var5 < 0) {
               lj.field_u.c(var7, var9Lifetime1, ka.field_q + var1_int, var6, -1);
               var1_int = var1_int + MouseWheelInput.field_d;
             } else {
               na.field_c.c(var7, var9Lifetime1, sd.field_s + var1_int, var6, -1);
-              var1_int = var1_int + (eh.field_d + ab.field_b + cl.field_l);
+              var1_int = var1_int + (eh.field_d + ProxyAuthenticationRequiredException.field_b + cl.field_l);
             }
           }
           return;

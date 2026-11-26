@@ -92,7 +92,7 @@ public final class stellarshard extends rb implements cf {
         RuntimeException var2 = null;
         try {
           if (0 == te.field_c &&
-            0 == tl.field_a &&
+            0 == ProxyAuthenticationRequiredException.field_a &&
             tf.field_a.isEmpty(0)) {
             oa.field_D = true;
           }
@@ -101,7 +101,7 @@ public final class stellarshard extends rb implements cf {
             this.c(127, te.field_c);
             oc.field_d = false;
             cl.field_a = cl.field_a + te.field_c;
-            if (tl.field_a > 0) {
+            if (ProxyAuthenticationRequiredException.field_a > 0) {
               oc.field_d = true;
             }
             stackIn_20_0 = !(mk.field_k <= 0);
@@ -112,9 +112,9 @@ public final class stellarshard extends rb implements cf {
           if (decompiledSharedTail0) {
             na.field_j = new LevelScreen(this);
             if (!(te.field_c <= 0) ||
-              !(0 >= tl.field_a) ||
+              !(0 >= ProxyAuthenticationRequiredException.field_a) ||
               !tf.field_a.isEmpty(0)) {
-              tl.field_c = 5;
+              ProxyAuthenticationRequiredException.field_c = 5;
             }
           }
           DualLinkDequeIterator.field_i = false;
@@ -357,11 +357,11 @@ public final class stellarshard extends rb implements cf {
           if (hf.field_f) {
             if ((MouseHandler.field_g != null) &&
               (decompiledFrameRemainder0 = !(!MouseHandler.field_g.field_n))) {
-              tl.field_a = tl.field_a & ~MouseHandler.field_g.field_m[0];
+              ProxyAuthenticationRequiredException.field_a = ProxyAuthenticationRequiredException.field_a & ~MouseHandler.field_g.field_m[0];
               ScorePopup.field_d = ScorePopup.field_d | MouseHandler.field_g.field_m[0];
               MouseHandler.field_g = null;
               if (na.field_j != null &&
-                tl.field_a == 0) {
+                ProxyAuthenticationRequiredException.field_a == 0) {
                 oc.field_d = false;
               }
               DelegatingCanvas.b((byte) 109);
@@ -927,23 +927,23 @@ public final class stellarshard extends rb implements cf {
               og.field_a = 25;
               gj.field_r.b(25, 0);
             }
-            if (tl.field_c == 8) {
+            if (ProxyAuthenticationRequiredException.field_c == 8) {
               var2_int = qc.updateMembershipSlides((byte) -115, true);
               if (3 == var2_int) {
                 qd.openSubscriptionPage(hf.a((byte) -68), (byte) -30);
               }
               if (var2_int == 1) {
                 na.field_j.field_l = 0;
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 return;
               }
               if (var2_int == 2) {
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 na.field_j.field_l = -1;
                 return;
               }
             }
-            if (tl.field_c == 3 &&
+            if (ProxyAuthenticationRequiredException.field_c == 3 &&
               gh.field_c == 1 &&
               na.field_j.field_r != -1) {
               if (na.field_j.field_u != na.field_j.field_r) {
@@ -956,7 +956,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if (qi.level <= na.field_j.field_t) {
-              if (4 == tl.field_c) {
+              if (4 == ProxyAuthenticationRequiredException.field_c) {
                 na.field_j.field_p = na.field_j.field_p + 1;
                 if (na.field_j.field_p > 50) {
                   na.field_j.field_p = na.field_j.field_p - 50;
@@ -964,10 +964,10 @@ public final class stellarshard extends rb implements cf {
                 }
                 if (!(na.field_j.field_s > 0)) {
                   gh.field_d = null;
-                  tl.field_c = 2;
+                  ProxyAuthenticationRequiredException.field_c = 2;
                   na.field_j.field_l = 9;
-                  if (tl.field_a > 0) {
-                    tl.field_c = 3;
+                  if (ProxyAuthenticationRequiredException.field_a > 0) {
+                    ProxyAuthenticationRequiredException.field_c = 3;
                   }
                   n.field_L = 256;
                   if (var15 != 0) {
@@ -986,7 +986,7 @@ public final class stellarshard extends rb implements cf {
                 na.field_j.field_p = na.field_j.field_p - 10;
               }
             }
-            if (tl.field_c == 0) {
+            if (ProxyAuthenticationRequiredException.field_c == 0) {
               var2_int = 0;
               while (true) {
                 if (var2_int < 9) {
@@ -1051,7 +1051,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             boolean decompiledFrameCompleted16 = true;
-            if (tl.field_c == 4) {
+            if (ProxyAuthenticationRequiredException.field_c == 4) {
               var2_int = 8;
               while (var2_int < 9) {
                 stackIn_176_0 = var2_int;
@@ -1069,7 +1069,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if (decompiledFrameCompleted16) {
-              stackIn_176_0 = ~tl.field_c;
+              stackIn_176_0 = ~ProxyAuthenticationRequiredException.field_c;
               stackIn_176_1 = -2;
             }
             boolean decompiledFrameCompleted15 = true;
@@ -1092,7 +1092,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (decompiledFrameCompleted15) {
               stackIn_191_0 = 2;
-              stackIn_191_1 = tl.field_c;
+              stackIn_191_1 = ProxyAuthenticationRequiredException.field_c;
             }
             boolean decompiledFrameCompleted14 = true;
             if (stackIn_191_0 == stackIn_191_1) {
@@ -1114,7 +1114,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if (decompiledFrameCompleted14) {
-              stackIn_205_0 = ~tl.field_c;
+              stackIn_205_0 = ~ProxyAuthenticationRequiredException.field_c;
               stackIn_205_1 = -4;
             }
             boolean decompiledFrameCompleted13 = true;
@@ -1159,15 +1159,15 @@ public final class stellarshard extends rb implements cf {
               stackIn_270_1 = 13;
               if (var15 == 0) {
                 if (stackIn_270_0 == stackIn_270_1 &&
-                  tl.field_c == 0) {
+                  ProxyAuthenticationRequiredException.field_c == 0) {
                   na.field_j = null;
                 }
                 if (na.field_j != null &&
-                  gi.field_f == 13 && (tl.field_c == 2 ||
-                  tl.field_c == 1 ||
-                  tl.field_c == 3)) {
+                  gi.field_f == 13 && (ProxyAuthenticationRequiredException.field_c == 2 ||
+                  ProxyAuthenticationRequiredException.field_c == 1 ||
+                  ProxyAuthenticationRequiredException.field_c == 3)) {
                   n.field_L = 256;
-                  tl.field_c = 0;
+                  ProxyAuthenticationRequiredException.field_c = 0;
                   gh.field_d = null;
                   continue;
                 }
@@ -1184,13 +1184,13 @@ public final class stellarshard extends rb implements cf {
                 return;
               }
               stackIn_270_0 = -4;
-              stackIn_270_1 = ~tl.field_c;
+              stackIn_270_1 = ~ProxyAuthenticationRequiredException.field_c;
             }
             if (stackIn_270_0 == stackIn_270_1) {
             }
-            if (tl.field_c == 2) {
+            if (ProxyAuthenticationRequiredException.field_c == 2) {
             }
-            if (tl.field_c == 1) {
+            if (ProxyAuthenticationRequiredException.field_c == 1) {
             }
             na.field_j.a(true);
             return;
@@ -2363,7 +2363,7 @@ public final class stellarshard extends rb implements cf {
             (decompiledFrameCompleted3) &&
             (decompiledFrameCompleted2)) {
             na.field_j = new LevelScreen(this);
-            tl.field_c = 0;
+            ProxyAuthenticationRequiredException.field_c = 0;
             return;
           }
           if ((decompiledFrameCompleted3) &&
@@ -2681,7 +2681,7 @@ public final class stellarshard extends rb implements cf {
               }
               na.field_j = new LevelScreen(this);
               if (!ni.field_a) {
-                tl.field_c = 4;
+                ProxyAuthenticationRequiredException.field_c = 4;
                 na.field_j.field_l = 8;
               }
               ni.field_a = false;
@@ -2697,11 +2697,11 @@ public final class stellarshard extends rb implements cf {
             stackIn_1305_1 = na.field_j;
             if (var15 == 0) {
               if (stackIn_1305_0 != stackIn_1305_1 &&
-                gi.field_f == 13 && (tl.field_c == 2 ||
-                tl.field_c == 1 ||
-                tl.field_c == 3)) {
+                gi.field_f == 13 && (ProxyAuthenticationRequiredException.field_c == 2 ||
+                ProxyAuthenticationRequiredException.field_c == 1 ||
+                ProxyAuthenticationRequiredException.field_c == 3)) {
                 n.field_L = 256;
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 continue;
               }
               if (na.field_j == null) {
@@ -2717,22 +2717,22 @@ public final class stellarshard extends rb implements cf {
             stackIn_1305_1 = na.field_j;
           }
           if (stackIn_1305_0 != stackIn_1305_1) {
-            if (tl.field_c == 1 &&
+            if (ProxyAuthenticationRequiredException.field_c == 1 &&
               this.field_Q >= 612 &&
               628 > this.field_Q &&
               this.field_O >= 176 &&
               this.field_O < 192 &&
               gh.field_c == 1) {
               n.field_L = 256;
-              tl.field_c = 0;
+              ProxyAuthenticationRequiredException.field_c = 0;
             }
-            if (tl.field_c == 2) {
+            if (ProxyAuthenticationRequiredException.field_c == 2) {
               if (this.field_Q >= 496 &&
                 512 > this.field_Q &&
                 208 <= this.field_O &&
                 this.field_O < 224 &&
                 gh.field_c == 1) {
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 gh.field_d = null;
                 n.field_L = 256;
               }
@@ -2759,16 +2759,16 @@ public final class stellarshard extends rb implements cf {
                 }
               }
             }
-            if (3 == tl.field_c &&
+            if (3 == ProxyAuthenticationRequiredException.field_c &&
               this.field_Q >= 496 &&
               this.field_Q < 512 &&
               208 <= this.field_O &&
               this.field_O < 224 &&
               gh.field_c == 1) {
-              tl.field_c = 0;
+              ProxyAuthenticationRequiredException.field_c = 0;
               n.field_L = 256;
               if (oc.field_d) {
-                tl.field_c = 2;
+                ProxyAuthenticationRequiredException.field_c = 2;
                 oc.field_d = false;
               }
             }
@@ -2897,7 +2897,7 @@ public final class stellarshard extends rb implements cf {
           SpriteState.resetStaticState(-28692);
           DualLinkNode.clearStaticReferences((byte) -31);
           ra.clearStaticReferences(-14755);
-          qf.clearStaticReferences(-15967);
+          PcmOutputWorker.clearStaticReferences(-15967);
           gf.clearStaticReferences(-118);
           BitmapFont.clearStaticReferences();
           de.clearStaticReferences(4);
@@ -4098,7 +4098,7 @@ public final class stellarshard extends rb implements cf {
             !ni.field_a))) {
             na.field_j = new LevelScreen(this);
             if (!ni.field_a) {
-              tl.field_c = 4;
+              ProxyAuthenticationRequiredException.field_c = 4;
               na.field_j.field_l = 8;
             }
             ni.field_a = false;
@@ -4405,10 +4405,10 @@ public final class stellarshard extends rb implements cf {
               qj.field_a.c(var6, 1 + (var5_int / 2 - 1), 356, 16777215, -1);
             }
             if (!DualLinkDequeIterator.field_i && (na.field_j == null ||
-              tl.field_c != 8 &&
-              tl.field_c != 1 &&
-              tl.field_c != 3 &&
-              tl.field_c != 2)) {
+              ProxyAuthenticationRequiredException.field_c != 8 &&
+              ProxyAuthenticationRequiredException.field_c != 1 &&
+              ProxyAuthenticationRequiredException.field_c != 3 &&
+              ProxyAuthenticationRequiredException.field_c != 2)) {
               if (wh.field_c == 0 &&
                 rh.field_a == null) {
                 pl.field_R = null;

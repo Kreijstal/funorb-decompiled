@@ -15,15 +15,15 @@ final class nb extends ig {
 
     final static void a(boolean param0, float param1, String param2, byte param3) {
         try {
-          if (qf.field_d == null) {
-            qf.field_d = new ql(na.field_d, ii.field_F);
-            na.field_d.a((byte) -104, (UiWidget) (qf.field_d));
+          if (PcmOutputWorker.field_d == null) {
+            PcmOutputWorker.field_d = new ql(na.field_d, ii.field_F);
+            na.field_d.a((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
           }
           if (param3 > -117) {
             String var5 = (String) null;
             nb.a(true, 0.3101823627948761f, (String) null, (byte) 81);
           }
-          qf.field_d.a(param0, param1, true, param2);
+          PcmOutputWorker.field_d.a(param0, param1, true, param2);
           SoftwareRasterizer.clearRaster();
           af.a(true, (byte) -79);
         } catch (RuntimeException runtimeException) {

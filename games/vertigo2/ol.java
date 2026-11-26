@@ -68,7 +68,7 @@ final class ol extends TextureOperator {
             stackIn_14_0 = var5;
             return stackIn_14_0;
           }
-          stackIn_4_0 = jr.field_e;
+          stackIn_4_0 = PcmOutputWorker.field_e;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

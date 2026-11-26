@@ -394,7 +394,7 @@ final class pa extends ql {
           var4 = ja.field_e[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = bf.field_d[ua.a((int) var4[var6], 255)];
+            var5[var6] = bf.field_d[PcmOutputWorker.a((int) var4[var6], 255)];
           }
           var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var5);
         }
@@ -467,7 +467,7 @@ final class pa extends ql {
         this.field_f = new v(ta.field_lb, 0, 0, 200, false);
         this.field_f.field_l = ih.field_y[0].field_e * 24 - 100;
         this.field_f.field_d = ih.field_y[0].field_g * 24 + 60;
-        this.field_e = new v(ab.field_d, 0, 0, 200, false);
+        this.field_e = new v(ProxyAuthenticationRequiredException.field_d, 0, 0, 200, false);
         this.field_e.field_l = 0;
     }
 

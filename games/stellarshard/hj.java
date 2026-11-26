@@ -67,7 +67,7 @@ final class hj {
           return;
         }
         ScorePopup.field_d = ScorePopup.field_d | var3;
-        tl.field_a = tl.field_a | var3;
+        ProxyAuthenticationRequiredException.field_a = ProxyAuthenticationRequiredException.field_a | var3;
         hf.field_i.addLast(-46, new jf(param1));
         if (e.field_c) {
           return;

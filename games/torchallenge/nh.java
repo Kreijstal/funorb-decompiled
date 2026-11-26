@@ -90,10 +90,10 @@ final class nh extends v implements sg {
           if (bg.field_Q[param2] > bg.field_Q[param3]) {
             return false;
           }
-          if (bj.field_b[param2] < bj.field_b[param3]) {
+          if (ProxyAuthenticationRequiredException.field_b[param2] < ProxyAuthenticationRequiredException.field_b[param3]) {
             return true;
           }
-          if (bj.field_b[param3] < bj.field_b[param2]) {
+          if (ProxyAuthenticationRequiredException.field_b[param3] < ProxyAuthenticationRequiredException.field_b[param2]) {
             return false;
           }
           if (param1 != 0) {
@@ -109,10 +109,10 @@ final class nh extends v implements sg {
           }
           return !(param2 >= param3);
         }
-        if (bj.field_b[param2] < bj.field_b[param3]) {
+        if (ProxyAuthenticationRequiredException.field_b[param2] < ProxyAuthenticationRequiredException.field_b[param3]) {
           return true;
         }
-        if (bj.field_b[param2] > bj.field_b[param3]) {
+        if (ProxyAuthenticationRequiredException.field_b[param2] > ProxyAuthenticationRequiredException.field_b[param3]) {
           return false;
         }
         if (bg.field_Q[param2] < bg.field_Q[param3]) {

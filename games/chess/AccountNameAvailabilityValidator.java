@@ -164,7 +164,7 @@ final class AccountNameAvailabilityValidator extends vm {
             }
           }
           if (this.nameAvailable) {
-            stackIn_15_0 = oa.field_a;
+            stackIn_15_0 = ProxyAuthenticationRequiredException.field_a;
           } else {
             stackIn_15_0 = qk.field_b;
           }

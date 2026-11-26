@@ -59,7 +59,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rb.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rb.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ class PacketBuffer extends IntrusiveNode {
           this.writeShort(var8.length, 23385);
           this.writeBytes(true, var8.length, 0, var8);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rb.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rb.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -280,7 +280,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -463,7 +463,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -490,7 +490,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -590,7 +590,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -700,7 +700,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rb.<init>(" + (payload != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rb.<init>(" + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -223,7 +223,7 @@ final class th {
 
     final static void a(int param0) {
         if (p.field_d != null) {
-          p.field_d.a(1);
+          p.field_d.close(1);
           p.field_d = null;
         }
         if (param0 <= 101) {

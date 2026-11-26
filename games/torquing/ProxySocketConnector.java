@@ -78,11 +78,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8Lifetime2Lifetime2 = var15.substring(0, var11);
                   }
-                  throw new ko(var8Lifetime2Lifetime2);
+                  throw new ProxyAuthenticationRequiredException(var8Lifetime2Lifetime2);
                 }
                 break;
               }
-              throw new ko("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var13;
@@ -272,7 +272,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        ko var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Torquing.field_u;
@@ -326,15 +326,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (ko) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, param0 + 33118);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
             }
-          } catch (ko decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (ko) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

@@ -317,7 +317,7 @@ final class qh {
           if (gm.field_f == 2) {
             ol.field_R.a(-1, -1, param1, 0);
           } else {
-            ol.field_R.a(0, fe.a(hn.field_k, 1, rf.field_b), param1, 0);
+            ol.field_R.a(0, fe.a(BufferedSocket.field_k, 1, rf.field_b), param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

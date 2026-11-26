@@ -1194,13 +1194,13 @@ final class t {
           fl.field_f = gj.field_A.field_t;
         }
         if (this.field_i == 10) {
-          if (em.field_b <= 30) {
-            if (0 < em.field_b) {
-              wi.field_p.a(param0 - 150, em.field_b);
-              em.field_b = 0;
+          if (ProxyAuthenticationRequiredException.field_b <= 30) {
+            if (0 < ProxyAuthenticationRequiredException.field_b) {
+              wi.field_p.a(param0 - 150, ProxyAuthenticationRequiredException.field_b);
+              ProxyAuthenticationRequiredException.field_b = 0;
             }
           } else {
-            em.field_b = em.field_b - 30;
+            ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b - 30;
             wi.field_p.a(-116, 30);
           }
           wi.field_p.a(false);

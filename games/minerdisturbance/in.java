@@ -80,7 +80,7 @@ final class in {
         bg[] var5;
         int var3Lifetime1;
         var4 = MinerDisturbance.field_ab;
-        var5 = pm.b(-5596);
+        var5 = ProxyAuthenticationRequiredException.b(-5596);
         var2 = var5;
         if (param1 == 77) {
           for (var3 = 0; var5.length > var3; var3++) {

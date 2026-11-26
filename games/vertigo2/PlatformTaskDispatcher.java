@@ -6,7 +6,7 @@ import java.io.*;
 final class PlatformTaskDispatcher implements Runnable {
     java.awt.EventQueue field_j;
     private static int field_f;
-    private fl field_w;
+    private Win32CursorManager field_w;
     boolean privilegedTasksEnabled;
     static String field_m;
     private AsyncRequest queueTail;
@@ -187,7 +187,7 @@ final class PlatformTaskDispatcher implements Runnable {
           int var3_int = 0;
           Exception var3_ref = null;
           RandomAccessCacheFile var3_ref2 = null;
-          rg var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -302,7 +302,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.microsoftJvm) {
                             Class.forName("pj").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_g, new Object[]{new Integer(var3_int), new Integer(var4_int)});
                           } else {
-                            this.field_w.a(var3_int, (byte) 76, var4_int);
+                            this.field_w.setCursorPosition(var3_int, (byte) 76, var4_int);
                           }
                           break;
                         }
@@ -312,7 +312,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = stackIn_57_0;
                           var11 = (java.awt.Component) (var8.objectArgument);
                           if (this.microsoftJvm) {
-                            this.field_w.a(11333, var11, var3_int != 0);
+                            this.field_w.setCursorVisible(11333, var11, var3_int != 0);
                           } else {
                             Class.forName("pj").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_g, new Object[]{var11, new Boolean(var3_int != 0)});
                           }
@@ -391,11 +391,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (rg) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.result = wp.a((String) (var8.objectArgument), (byte) -109, var8.intArgument).b(640);
-                    } catch (rg decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (rg) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
@@ -602,7 +602,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              this.field_w = new fl();
+              this.field_w = new Win32CursorManager();
             } else {
               this.field_g = Class.forName("pj").newInstance();
             }

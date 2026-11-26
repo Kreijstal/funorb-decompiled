@@ -233,7 +233,7 @@ final class di extends ci {
               }
               var8 = (String) null;
               IsaacCipher.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
-              hn.a(ij.field_c, vk.field_g, (byte) -54, var5, re.field_p);
+              BufferedSocket.a(ij.field_c, vk.field_g, (byte) -54, var5, re.field_p);
               rc.b(param0 ^ 24);
               e.h((byte) -120);
             }
@@ -566,11 +566,11 @@ final class di extends ci {
           var7Lifetime1 = 0;
           var8Lifetime1 = GzipInflater.a(106, var6Lifetime1) >> 8;
           var9Lifetime1 = rf.a(var6Lifetime1, 255) >> 8;
-          if (hn.field_k != -1 &&
+          if (BufferedSocket.field_k != -1 &&
             rf.field_b != -1) {
             var8Lifetime1 = -rf.field_b + 240;
             var9Lifetime1 = -128;
-            var7Lifetime1 = -320 + hn.field_k;
+            var7Lifetime1 = -320 + BufferedSocket.field_k;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1));
           var8Lifetime1 = (int)((double)var8Lifetime1 * var10);

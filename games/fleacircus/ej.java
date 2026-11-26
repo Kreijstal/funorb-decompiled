@@ -81,7 +81,7 @@ final class ej {
           c.field_U = false;
           AwtRasterBuffer.b((byte) 84);
           rg.b(4);
-          em.field_b = 6000;
+          ProxyAuthenticationRequiredException.field_b = 6000;
           fb.field_e = new int[100];
           oa.field_n = true;
           pg.field_f = -60;

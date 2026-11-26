@@ -170,7 +170,7 @@ final class cg {
             bd.field_d = stackIn_38_0 + stackIn_39_1;
           }
           id.field_c = pd.field_Fb - (bd.field_d >> 1);
-          nj.field_u.a(0, qn.a((byte) 107, hn.field_k, rf.field_b), param4, 0);
+          nj.field_u.a(0, qn.a((byte) 107, BufferedSocket.field_k, rf.field_b), param4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

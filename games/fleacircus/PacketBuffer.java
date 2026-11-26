@@ -170,7 +170,7 @@ class PacketBuffer extends IntrusiveNode {
           field_j = -77;
         }
         if (var1.length() == 0) {
-          var1 = em.c(10158);
+          var1 = ProxyAuthenticationRequiredException.c(10158);
         }
         if (var1.length() == 0) {
           var1 = gg.field_a;

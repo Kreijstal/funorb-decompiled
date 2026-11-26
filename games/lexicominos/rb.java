@@ -161,7 +161,7 @@ final class rb {
     final static void a(boolean param0) {
         cg var1 = (cg) (DualLinkNode.field_n.beginForward(true));
         if (var1 == null) {
-          ck.$cfr$intArgs$b$e683eeaaf5b5(-120);
+          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-120);
           return;
         }
         th var2 = ig.field_a;

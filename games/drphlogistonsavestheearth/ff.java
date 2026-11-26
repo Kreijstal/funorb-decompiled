@@ -44,7 +44,7 @@ final class ff extends pj implements ke {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = param0 + this.field_o;
         int var6 = this.field_m + param3;
-        DualLinkNode.field_i.a(qk.field_a, var5 + 20, 20 + var6, -40 + this.field_w, this.field_k - 50, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
+        DualLinkNode.field_i.a(ProxyAuthenticationRequiredException.field_a, var5 + 20, 20 + var6, -40 + this.field_w, this.field_k - 50, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
         super.a(param0, param1, param2, param3);
     }
 

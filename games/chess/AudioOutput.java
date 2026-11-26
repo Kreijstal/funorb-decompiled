@@ -6,7 +6,7 @@ class AudioOutput {
     private boolean field_a;
     static boolean field_q;
     private long field_t;
-    private static vi field_e;
+    private static PcmOutputWorker field_e;
     private int field_i;
     int[] field_j;
     private PcmStream field_c;
@@ -72,7 +72,7 @@ class AudioOutput {
               ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_g);
               if (field_s > 0 &&
                 field_e == null) {
-                field_e = new vi();
+                field_e = new PcmOutputWorker();
                 field_e.field_b = param0;
                 param0.requestThreadStart(field_s, true, (Runnable) ((Object) field_e));
               }

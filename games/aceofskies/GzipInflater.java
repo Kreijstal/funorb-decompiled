@@ -26,7 +26,7 @@ final class GzipInflater {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1), "ei.C(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "ei.C(" + param0 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class GzipInflater {
           param1.addKeyListener(OpenGlBuffer.field_d);
           param1.addFocusListener(OpenGlBuffer.field_d);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ei.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ei.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class GzipInflater {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class GzipInflater {
             }
             this.field_b.reset();
           } catch (RuntimeException runtimeException) {
-            throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ei.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ei.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

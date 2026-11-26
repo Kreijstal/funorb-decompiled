@@ -377,7 +377,7 @@ abstract class bh extends mf implements ra {
           var2 = (dc) null;
           bh.a((dc) null, (byte) 43, 62);
         }
-        stackIn_7_0 = (hm.field_g) || (vi.a(param0 - 58));
+        stackIn_7_0 = (hm.field_g) || (PcmOutputWorker.a(param0 - 58));
         return stackIn_7_0;
     }
 

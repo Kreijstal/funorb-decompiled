@@ -65,7 +65,7 @@ final class n {
         try {
           pi.field_c = la.a(true, "");
           pi.field_c.a(false, -1730123902);
-          hn.a(param3 ^ 86, param4, param1, param0);
+          BufferedSocket.a(param3 ^ 86, param4, param1, param0);
           ak.c((byte) -128);
           MidiPcmStream.field_A = ji.field_T;
           if (param3 != 0) {

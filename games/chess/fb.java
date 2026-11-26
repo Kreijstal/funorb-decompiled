@@ -36,11 +36,11 @@ class fb extends mf {
           super.a(param0, -91, param2, param3);
           if (this.field_q != 0 &&
             wh.field_f != this.field_q) {
-            if (this.a(rf.field_b, param3, param0, (byte) -117, hn.field_k) &&
+            if (this.a(rf.field_b, param3, param0, (byte) -117, BufferedSocket.field_k) &&
               wh.field_f == 0) {
-              this.a(-param3 + rf.field_b, false, this.field_q, -param0 + hn.field_k);
+              this.a(-param3 + rf.field_b, false, this.field_q, -param0 + BufferedSocket.field_k);
             }
-            this.a(rf.field_b, param2, param0, hn.field_k, 0, param3);
+            this.a(rf.field_b, param2, param0, BufferedSocket.field_k, 0, param3);
           }
           if (param1 < -6) {
             return;

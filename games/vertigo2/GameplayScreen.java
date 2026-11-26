@@ -1899,7 +1899,7 @@ final class GameplayScreen {
                 (decompiledFrameRemainder0 = (!(hj.field_g) ||
                 !(param0))) &&
                 (decompiledFrameRemainder1 = !(wg.field_g <= 0))) {
-                stackIn_163_0 = ~(rg.field_f % 40);
+                stackIn_163_0 = ~(ProxyAuthenticationRequiredException.field_f % 40);
                 stackIn_163_1 = -21;
               }
             }
@@ -2076,7 +2076,7 @@ final class GameplayScreen {
           var9_int = t.field_l;
           t.field_l = 0;
           var10 = var9_int;
-          var11 = rg.field_f % 4;
+          var11 = ProxyAuthenticationRequiredException.field_f % 4;
           var12 = (-t.field_l + var10) * 4;
           t.field_l = var10;
           switch (var11) {

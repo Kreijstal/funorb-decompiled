@@ -209,7 +209,7 @@ final class hn {
         var15 = var16;
         var2 = var15;
         this.field_m.field_X.a((byte) 52, var17);
-        sb.field_g = -4.0 * var17[11];
+        PcmOutputWorker.field_g = -4.0 * var17[11];
         IntrusiveDeque.field_a = -4.0 * var17[9];
         ke.field_Z = var17[10] * -4.0;
         var3 = -91 / ((param0 - 45) / 32);

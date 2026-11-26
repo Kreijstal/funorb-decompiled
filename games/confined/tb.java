@@ -94,7 +94,7 @@ final class tb {
             if (decompiledFrameRemainder0) {
               if (vh.field_a.position > 0) {
                 try {
-                  kl.field_G.a(vh.field_a.position, false, vh.field_a.payload, 0);
+                  kl.field_G.queueWrite(vh.field_a.position, false, vh.field_a.payload, 0);
                   pc.field_a = ri.correctedCurrentTimeMillis(-3);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

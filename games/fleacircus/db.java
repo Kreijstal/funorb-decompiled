@@ -128,7 +128,7 @@ abstract class db extends gj {
             if (var6_int >= 0) {
               stackIn_6_0 = 2 + var6_int;
               for (var5 = stackIn_6_0; var3_int > var5; var5++) {
-                if (em.a((byte) -108, param0.charAt(var5))) {
+                if (ProxyAuthenticationRequiredException.a((byte) -108, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -164,7 +164,7 @@ abstract class db extends gj {
               return stackIn_29_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (em.a((byte) -71, param0.charAt(var5Lifetime1))) {
+              if (ProxyAuthenticationRequiredException.a((byte) -71, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

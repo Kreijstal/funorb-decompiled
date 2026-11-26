@@ -36,7 +36,7 @@ final class ArchiveIndex {
         if (param0 < 111) {
           ArchiveIndex.resetStaticState((byte) 11);
         }
-        IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], wb.field_a);
+        IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], ProxyAuthenticationRequiredException.field_a);
         SocketConnector.a((byte) 79);
         return var1;
     }

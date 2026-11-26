@@ -28,7 +28,7 @@ final class ui {
         String var1Lifetime3;
         var5 = Confined.field_J ? 1 : 0;
         if (param0 == 10) {
-          var15 = "(" + kk.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
+          var15 = "(" + ProxyAuthenticationRequiredException.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
           var1 = var15;
           if (0 >= ai.field_i) {
             return var1;
@@ -55,7 +55,7 @@ final class ui {
           return var1Lifetime3;
         }
         field_b = (String) null;
-        var9 = "(" + kk.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
+        var9 = "(" + ProxyAuthenticationRequiredException.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
         var1Lifetime1 = var9;
         if (0 >= ai.field_i) {
           return var1Lifetime1;

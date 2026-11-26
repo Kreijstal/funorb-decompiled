@@ -279,7 +279,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             if (var1 != 1) {
               sd.field_T = ci.a(new String[]{Integer.toString(var1)}, gh.field_t, 3);
             } else {
-              sd.field_T = va.field_a;
+              sd.field_T = ProxyAuthenticationRequiredException.field_a;
             }
             sd.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) sd.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
           }

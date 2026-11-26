@@ -14,7 +14,7 @@ final class aa {
 
     private final int d(int param0, int param1) {
         if (this.field_c == 4 &&
-          !vi.a(-3)) {
+          !PcmOutputWorker.a(-3)) {
           return param1 >= 2 ? 380 : 300 + 240 * param1;
         }
         if (this.field_c != 5) {
@@ -391,7 +391,7 @@ final class aa {
           this.a(124, false, -22);
         }
         if (this.field_c == 4 &&
-          !vi.a(-3)) {
+          !PcmOutputWorker.a(-3)) {
           if (param0 < 2) {
             return ak.field_m[this.field_c];
           }
@@ -1058,7 +1058,7 @@ final class aa {
                           if (!this.field_e.d((byte) 34)) {
                             break regionExit2;
                           }
-                          if (!vi.a(-3)) {
+                          if (!PcmOutputWorker.a(-3)) {
                             var9 = param0 ? 1 : 0;
                             uk.a(qk.field_h, var9 != 0, 28333, -4);
                             if (var11 == 0) {
@@ -1292,7 +1292,7 @@ final class aa {
                   if (this.field_e.b(false)) {
                     MusicPatchPcmStream.field_q.c((byte) 57);
                     if (!MusicPatchPcmStream.field_q.field_d) {
-                      if (MusicPatchPcmStream.field_q.field_i > hn.field_k) {
+                      if (MusicPatchPcmStream.field_q.field_i > BufferedSocket.field_k) {
                         an.a(0, (byte) 87);
                         if (var11 != 0) {
                           an.a(80, (byte) 99);
@@ -1349,7 +1349,7 @@ final class aa {
                     if (hg.field_b.field_d) {
                       rf.b(80, hg.field_b.field_x);
                       if (var11 != 0) {
-                        if (hg.field_b.field_i > hn.field_k) {
+                        if (hg.field_b.field_i > BufferedSocket.field_k) {
                           rf.b(param1 ^ 82, 0);
                           rf.b(param1 + 78, 80);
                         } else {
@@ -1357,7 +1357,7 @@ final class aa {
                         }
                       }
                     } else {
-                      if (hg.field_b.field_i > hn.field_k) {
+                      if (hg.field_b.field_i > BufferedSocket.field_k) {
                         rf.b(param1 ^ 82, 0);
                         if (var11 != 0) {
                           rf.b(param1 + 78, 80);
@@ -1765,7 +1765,7 @@ final class aa {
         if (this.field_e.field_h != -1) {
           param2 = this.field_e.field_h;
         }
-        this.field_e.a(param2, this.a(hn.field_k, (byte) -89, rf.field_b), param1, 0);
+        this.field_e.a(param2, this.a(BufferedSocket.field_k, (byte) -89, rf.field_b), param1, 0);
         if (param0 >= 92) {
           ad.field_a = -1;
           qf.field_e = -1;
@@ -1893,8 +1893,8 @@ final class aa {
               if (stackIn_28_0 ||
                 0 != (var9 & 1 << var13)) {
                 if (-1 == ad.field_a &&
-                  hn.field_k >= var10Lifetime1 &&
-                  var10Lifetime1 + var12 >= hn.field_k &&
+                  BufferedSocket.field_k >= var10Lifetime1 &&
+                  var10Lifetime1 + var12 >= BufferedSocket.field_k &&
                   rf.field_b >= var11 &&
                   rf.field_b <= var11 + 32) {
                   ad.field_a = var13;
@@ -1946,7 +1946,7 @@ final class aa {
           var13Lifetime1 = stackIn_66_0;
           if (-1 != var13Lifetime1) {
             var21.b("<u=000001>" + da.field_m[var13Lifetime1] + "</u>", param2 + 320, 210, 1, -1);
-            if (vi.a(param0 + 18207)) {
+            if (PcmOutputWorker.a(param0 + 18207)) {
               jj.field_b.b(bf.field_N, 320 + param2, var11, 1, -1);
             }
             stackIn_72_0 = ((1 << var13Lifetime1 & var9) == 0) ? 0 : 1;
@@ -2119,7 +2119,7 @@ final class aa {
             stackIn_17_0 = 550 + param1;
           }
           var9Lifetime1 = stackIn_17_0;
-          if (!vi.a(-3)) {
+          if (!PcmOutputWorker.a(-3)) {
             if (ce.field_b == null) {
               ce.field_b = ge.a(true, 7, 0, 10);
             }
@@ -2266,7 +2266,7 @@ final class aa {
           this.field_h = -33;
         }
         if (4 == this.field_c &&
-          !vi.a(-3)) {
+          !PcmOutputWorker.a(-3)) {
           return 2 > param1 ? 100 + 240 * param1 : 260;
         }
         if (this.field_c == 5) {

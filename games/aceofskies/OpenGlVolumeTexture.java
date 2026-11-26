@@ -25,7 +25,7 @@ final class OpenGlVolumeTexture extends OpenGlTexture implements HardwareVolumeT
           jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.a(false), this.field_k, this.field_i, this.field_m, 0, WeightedObjectCache.a(this.field_h, -29824), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class OpenGlVolumeTexture extends OpenGlTexture implements HardwareVolumeT
           }
           super.a(param0, param1 ^ 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

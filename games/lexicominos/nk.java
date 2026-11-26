@@ -166,7 +166,7 @@ abstract class nk extends GameAppletShell {
             !(SecondaryNodeDequeIterator.a(-28617) <= var3) &&
             !(var3 >= rf.a(30448))) {
             this.field_w = false;
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-125);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-125);
             ia.a((byte) 93);
             sc.a(2, (byte) -128, kk.field_i);
             l.i(57);
@@ -595,7 +595,7 @@ abstract class nk extends GameAppletShell {
             }
           }
           if (var4 == 5) {
-            ge.a(0, kk.c(param1 ^ -14047));
+            BufferedSocket.a(0, kk.c(param1 ^ -14047));
           }
           if (var4 == 6 &&
             AccountCreationResultPanel.field_tb) {
@@ -699,7 +699,7 @@ abstract class nk extends GameAppletShell {
                     pg.a(1);
                   } else {
                     if (var2 == 6) {
-                      ge.c(param0 ^ -6708);
+                      BufferedSocket.c(param0 ^ -6708);
                     } else {
                       if (var2 != 7) {
                         if (8 != var2) {
@@ -721,7 +721,7 @@ abstract class nk extends GameAppletShell {
                                 return;
                               }
                               uj.a("MGS1: " + qj.h(param0 ^ 6689), (Throwable) null, 1);
-                              ck.$cfr$intArgs$b$e683eeaaf5b5(-118);
+                              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-118);
                               return;
                             }
                             stackIn_30_0 = 0;
@@ -730,7 +730,7 @@ abstract class nk extends GameAppletShell {
                             ij.a(var3, param0 + 6833);
                           }
                         } else {
-                          ge.a((byte) -127, a.field_c, ig.field_a, jh.field_a);
+                          BufferedSocket.a((byte) -127, a.field_c, ig.field_a, jh.field_a);
                         }
                       } else {
                         this.h(16);
@@ -746,7 +746,7 @@ abstract class nk extends GameAppletShell {
           return;
         }
         uj.a("MGS2: " + qj.h(param0 + 6632), (Throwable) null, param0 + 6722);
-        ck.$cfr$intArgs$b$e683eeaaf5b5(-79);
+        ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-79);
         return;
     }
 

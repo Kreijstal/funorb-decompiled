@@ -7,7 +7,7 @@ final class tf extends pd {
     static IntrusiveDeque field_q;
     static String field_m;
     static String[] field_p;
-    static jd field_r;
+    static BufferedSocket field_r;
     static AccountServiceResult field_s;
 
     final boolean f(int param0) {

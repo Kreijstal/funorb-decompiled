@@ -94,7 +94,7 @@ final class vh extends ButtonWidget {
             return false;
           }
           var2_long = pf.correctedCurrentTimeMillis(0);
-          if (ff.field_g != 0 &&
+          if (PcmOutputWorker.field_g != 0 &&
             sb.field_f < 0) {
             var4_ref_nh = (nh) (cb.field_a.beginBackward((byte) -117));
             if (var4_ref_nh != null &&
@@ -128,7 +128,7 @@ final class vh extends ButtonWidget {
             if (!gb.a(true)) {
               return false;
             }
-            if (ff.field_g == 0) {
+            if (PcmOutputWorker.field_g == 0) {
               bk.field_f = il.field_e;
               il.field_e = hk.field_l;
               hk.field_l = wk.field_a;
@@ -136,7 +136,7 @@ final class vh extends ButtonWidget {
               sb.field_f = -1;
               return true;
             }
-            var4 = ff.field_g;
+            var4 = PcmOutputWorker.field_g;
             if (rc.field_l != 0.0) {
               var4 = (int)((double)var4 + pi.field_l.nextGaussian() * rc.field_l);
               if (var4 < 0) {

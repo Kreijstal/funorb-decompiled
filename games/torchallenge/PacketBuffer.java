@@ -224,7 +224,7 @@ class PacketBuffer extends IntrusiveNode {
               var6_int = id.field_b.readUnsignedByte(-115);
               if (var6_int != 0) {
                 cb.field_g = var6_int;
-                bb.field_i = -1;
+                PcmOutputWorker.field_i = -1;
                 aj.field_c = qc.field_f;
               } else {
                 aj.field_c = BufferedCacheFile.field_n;
@@ -252,7 +252,7 @@ class PacketBuffer extends IntrusiveNode {
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (8 != var6_intLifetime1) {
-                  bb.field_i = -1;
+                  PcmOutputWorker.field_i = -1;
                   aj.field_c = qc.field_f;
                   decompiledFrameRemainder0 = false;
                 }
@@ -265,7 +265,7 @@ class PacketBuffer extends IntrusiveNode {
               }
               if (decompiledFrameRemainder0) {
                 aj.field_c = le.field_a;
-                bb.field_i = -1;
+                PcmOutputWorker.field_i = -1;
               }
             }
             if (le.field_a == aj.field_c &&

@@ -330,7 +330,7 @@ final class ta {
 
     final static void b(boolean param0) {
         MidiPcmStream.field_I = new v();
-        fb.field_e.a(33, MidiPcmStream.field_I);
+        PcmOutputWorker.field_e.a(33, MidiPcmStream.field_I);
         if (param0) {
           field_d = (he[]) null;
         }

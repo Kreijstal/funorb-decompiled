@@ -18,7 +18,7 @@ final class AccountCreationResultPanel extends wa implements sg {
           if (param4) {
             this.field_Bb = (dg) null;
           }
-          bj.a(30);
+          ProxyAuthenticationRequiredException.a(30);
           this.o(77);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

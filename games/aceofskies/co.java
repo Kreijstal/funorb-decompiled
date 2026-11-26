@@ -152,7 +152,7 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var5), "co.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var5), "co.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

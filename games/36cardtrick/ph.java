@@ -59,7 +59,7 @@ final class ph {
     }
 
     final static void c(int param0) {
-        ga.a(true);
+        PcmOutputWorker.a(true);
         if (tb.field_c != null) {
           AccountCreationResultPanel.a(tb.field_c, (byte) -76);
           r.b((byte) 123);

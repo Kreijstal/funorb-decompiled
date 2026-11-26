@@ -27,7 +27,7 @@ final class a extends kb {
           if (null == DelegatingCanvas.field_b) {
             return false;
           }
-          int var2_int = DelegatingCanvas.field_b.d(param1 - 16791);
+          int var2_int = DelegatingCanvas.field_b.availableBytes(param1 - 16791);
           if (param1 != 10343) {
             return false;
           }
@@ -35,7 +35,7 @@ final class a extends kb {
             if (param0 - ig.field_a.position < var2_int) {
               var2_int = param0 - ig.field_a.position;
             }
-            DelegatingCanvas.field_b.a(ig.field_a.payload, (byte) -109, var2_int, ig.field_a.position);
+            DelegatingCanvas.field_b.readFully(ig.field_a.payload, (byte) -109, var2_int, ig.field_a.position);
             ta.field_e = rf.correctedCurrentTimeMillis(0);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (param0 > ig.field_a.position) {
@@ -50,9 +50,9 @@ final class a extends kb {
               vl.b(-91) <= 30000L) {
               return false;
             }
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-120);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-120);
           } catch (IOException iOException) {
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-86);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-86);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -206,7 +206,7 @@ class kf extends w {
         }
         og.field_c = ig.field_a.readString(false);
         CharSequence var2 = (CharSequence) ((Object) og.field_c);
-        cb.field_t = ck.a(var2, (byte) -48);
+        cb.field_t = ProxyAuthenticationRequiredException.a(var2, (byte) -48);
     }
 
     kf(String param0, rd param1, vd param2) {

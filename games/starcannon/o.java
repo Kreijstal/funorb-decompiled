@@ -99,7 +99,7 @@ final class o {
           mj.field_c[17] = vb.field_j;
           mj.field_c[8] = hj.field_b[0];
           mj.field_c[10] = hj.field_b[2];
-          mj.field_c[18] = ck.field_b;
+          mj.field_c[18] = PcmOutputWorker.field_b;
           mj.field_c[9] = hj.field_b[1];
           return;
         }
@@ -108,7 +108,7 @@ final class o {
         mj.field_c[17] = vb.field_j;
         mj.field_c[8] = hj.field_b[0];
         mj.field_c[10] = hj.field_b[2];
-        mj.field_c[18] = ck.field_b;
+        mj.field_c[18] = PcmOutputWorker.field_b;
         mj.field_c[9] = hj.field_b[1];
     }
 

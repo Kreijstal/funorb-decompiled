@@ -46,7 +46,7 @@ final class qh extends dl {
         bf.field_b = 0;
         BufferedSocket.field_i = ByteStorage.field_c;
         ul.field_G = new pl(2);
-        ul.field_G.a(em.a(kc.field_b, param1, ag.field_f), -1, param0, -81);
+        ul.field_G.a(ProxyAuthenticationRequiredException.a(kc.field_b, param1, ag.field_f), -1, param0, -81);
     }
 
     final static int a(int param0, int param1) {

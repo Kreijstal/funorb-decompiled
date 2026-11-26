@@ -42,9 +42,9 @@ final class ei extends om {
             !(param0 <= dk.field_l.length)) {
             dk.field_l = new int[2 * param0];
           }
-          if (null == j.field_i ||
-            !(j.field_i.length >= param0)) {
-            j.field_i = new int[param0 * 2];
+          if (null == BufferedSocket.field_i ||
+            !(BufferedSocket.field_i.length >= param0)) {
+            BufferedSocket.field_i = new int[param0 * 2];
           }
           if (null == cd.field_u) {
             cd.field_u = new int[2 * param0];
@@ -103,9 +103,9 @@ final class ei extends om {
               !(param0 <= dk.field_l.length)) {
               dk.field_l = new int[2 * param0];
             }
-            if (null == j.field_i ||
-              !(j.field_i.length >= param0)) {
-              j.field_i = new int[param0 * 2];
+            if (null == BufferedSocket.field_i ||
+              !(BufferedSocket.field_i.length >= param0)) {
+              BufferedSocket.field_i = new int[param0 * 2];
             }
             if (null == cd.field_u) {
               cd.field_u = new int[2 * param0];
@@ -164,9 +164,9 @@ final class ei extends om {
               !(param0 <= dk.field_l.length)) {
               dk.field_l = new int[2 * param0];
             }
-            if (null == j.field_i ||
-              !(j.field_i.length >= param0)) {
-              j.field_i = new int[param0 * 2];
+            if (null == BufferedSocket.field_i ||
+              !(BufferedSocket.field_i.length >= param0)) {
+              BufferedSocket.field_i = new int[param0 * 2];
             }
             if (null == cd.field_u) {
               cd.field_u = new int[2 * param0];

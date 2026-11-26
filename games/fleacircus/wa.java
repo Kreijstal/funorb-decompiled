@@ -41,7 +41,7 @@ final class wa {
     }
 
     final static String a(boolean param0) {
-        int var1 = em.field_b;
+        int var1 = ProxyAuthenticationRequiredException.field_b;
         if (var1 < 0) {
           var1 = 0;
         }

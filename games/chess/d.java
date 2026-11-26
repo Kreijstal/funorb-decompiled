@@ -219,7 +219,7 @@ final class d extends ci {
             ca.field_i = param1.field_l;
             FullscreenFocusCanvas.field_f = param1.field_m;
             v.field_b = param1.field_i;
-            hn.field_s = param1.field_k;
+            BufferedSocket.field_s = param1.field_k;
           }
           var2_intLifetime1 = 79 / ((92 - param0) / 33);
           ml.a((byte) 90, param1);

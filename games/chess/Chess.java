@@ -339,7 +339,7 @@ public final class Chess extends gb {
             qi.field_l = true;
           }
         }
-        if (!vi.a(-3)) {
+        if (!PcmOutputWorker.a(-3)) {
           while (true) {
             var12 = (ac) (tg.field_e.removeLast(1184188328));
             if (var12 == null) {
@@ -1325,7 +1325,7 @@ public final class Chess extends gb {
         if (n.field_e != n.field_f) {
           if (n.field_e != ka.field_h) {
             if (n.field_e == on.field_d) {
-              if (vi.a(-3)) {
+              if (PcmOutputWorker.a(-3)) {
                 IntrusiveDeque.field_f = cc.field_z;
               } else {
                 gf.field_d = vc.a(-127, 4);
@@ -1593,7 +1593,7 @@ public final class Chess extends gb {
         wm.clearStaticReferences((byte) -108);
         hj.clearStaticReferences(64655);
         lc.resetStaticState((byte) -9);
-        hn.clearStaticReferences(false);
+        BufferedSocket.clearStaticReferences(false);
         IntrusiveNode.a((byte) -91);
         tn.a(-2);
         AudioOutput.clearStaticReferences();
@@ -1737,7 +1737,7 @@ public final class Chess extends gb {
         dj.d((byte) -114);
         v.clearStaticReferences((byte) -117);
         wn.clearStaticReferences(false);
-        oa.a(17);
+        ProxyAuthenticationRequiredException.a(17);
         kh.clearStaticReferences(64);
         ImageProducerRasterBuffer.clearDeclaredStaticReferences(23);
         de.clearStaticReferences((byte) -120);
@@ -1746,7 +1746,7 @@ public final class Chess extends gb {
         td.resetStaticState(5239);
         cl.clearStaticReferences(12);
         df.clearStaticReferences(-6);
-        vi.clearStaticReferences((byte) 116);
+        PcmOutputWorker.clearStaticReferences((byte) 116);
         kf.c((byte) -101);
         dl.clearStaticReferences(7);
         d.clearDeclaredStaticReferences(-110);
@@ -1901,7 +1901,7 @@ public final class Chess extends gb {
             qk.field_h = 0;
             IntrusiveDeque.field_f = 0;
             bf.a(true, 50);
-            if (vi.a(-3)) {
+            if (PcmOutputWorker.a(-3)) {
               return true;
             }
             gf.field_d = vc.a(param0 - 19841, 4);

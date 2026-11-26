@@ -547,7 +547,7 @@ final class o extends IntrusiveNode {
         rf.field_ib = 0;
         RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];
         bc.field_o = 13;
-        bb.activeScreenId = 13;
+        PcmOutputWorker.activeScreenId = 13;
         ch.b(!param1);
     }
 

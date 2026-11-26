@@ -222,8 +222,8 @@ final class d extends wd {
           var1 = jc.field_g;
           var2 = var1.readUnsignedByte((byte) -113);
           if (var2 == 0) {
-            if (null == tk.field_b) {
-              tk.field_b = new hc(128);
+            if (null == ProxyAuthenticationRequiredException.field_b) {
+              ProxyAuthenticationRequiredException.field_b = new hc(128);
               bi.field_g = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte((byte) -128) != 1) ? 0 : 1;
@@ -241,12 +241,12 @@ final class d extends wd {
             if (var5 == null) {
               var5 = fl.a((byte) -128, var6);
               if (var5 != null) {
-                tk.field_b.a((long)var7.hashCode(), var5, -121);
+                ProxyAuthenticationRequiredException.field_b.a((long)var7.hashCode(), var5, -121);
               }
             }
             if (null == var5) {
               var5 = new fb();
-              tk.field_b.a((long)var7.hashCode(), var5, -24);
+              ProxyAuthenticationRequiredException.field_b.a((long)var7.hashCode(), var5, -24);
               fieldTemp$0 = bi.field_g;
               bi.field_g = bi.field_g + 1;
               var5.field_mb = fieldTemp$0;

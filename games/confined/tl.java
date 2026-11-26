@@ -32,7 +32,7 @@ final class tl {
             }
             e.field_c = new CipherPacketBuffer(param2);
             vh.field_a = new CipherPacketBuffer(param13);
-            kk.field_b = param7;
+            ProxyAuthenticationRequiredException.field_b = param7;
             na.field_W = param8;
             d.field_d = param5;
             ld.field_k = param6;

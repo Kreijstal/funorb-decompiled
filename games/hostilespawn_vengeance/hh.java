@@ -266,7 +266,7 @@ final class hh {
           }
           pc.field_d = -(var3_intLifetime1 >> 1) + (wk.field_c + var3_intLifetime1);
           hg.field_f = -(var3_intLifetime1 >> 1) + wk.field_c;
-          ArchiveIndex.field_m = (ab.field_b + cl.field_l << 1) * mc.field_F.field_b;
+          ArchiveIndex.field_m = (ProxyAuthenticationRequiredException.field_b + cl.field_l << 1) * mc.field_F.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < hf.field_d.length; var4Lifetime2++) {
             stackIn_112_0 = ArchiveIndex.field_m;
             if (jf.field_b[var4Lifetime2] < 0) {
@@ -295,8 +295,8 @@ final class hh {
               q.field_e[var4Lifetime3][0] = -jd.field_l + var8Lifetime1;
               q.field_e[var4Lifetime3][1] = var5Lifetime3;
               q.field_e[var4Lifetime3][2] = (jd.field_l << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (eh.field_d + (cl.field_l + (ab.field_b << 1)));
-              q.field_e[var4Lifetime3][3] = (ab.field_b << 1) + eh.field_d;
+              var5Lifetime3 = var5Lifetime3 + (eh.field_d + (cl.field_l + (ProxyAuthenticationRequiredException.field_b << 1)));
+              q.field_e[var4Lifetime3][3] = (ProxyAuthenticationRequiredException.field_b << 1) + eh.field_d;
             }
             var4Lifetime3++;
           }
@@ -322,7 +322,7 @@ final class hh {
             hh.clearStaticReferences(114);
           }
           mb.field_p = param1;
-          ab.field_c = param7;
+          ProxyAuthenticationRequiredException.field_c = param7;
           ByteStorage.field_a = param0;
           ik.field_a = param3;
           mm.field_s = param5;

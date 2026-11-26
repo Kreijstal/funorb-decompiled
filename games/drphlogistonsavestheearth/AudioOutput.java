@@ -7,7 +7,7 @@ class AudioOutput {
     private boolean field_e;
     static int field_d;
     int[] field_a;
-    private static fb field_g;
+    private static PcmOutputWorker field_g;
     private static int field_o;
     private long field_p;
     static boolean field_f;
@@ -391,7 +391,7 @@ class AudioOutput {
               ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_h);
               if (field_o > 0 &&
                 field_g == null) {
-                field_g = new fb();
+                field_g = new PcmOutputWorker();
                 field_g.field_d = param0;
                 param0.requestThreadStart((Runnable) ((Object) field_g), field_o, (byte) -8);
               }

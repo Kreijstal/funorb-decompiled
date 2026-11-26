@@ -46,11 +46,11 @@ final class se {
           return;
         }
         try {
-          if (em.field_g == null) {
-            em.field_g = new nd(nb.field_a, ResourceArchive.field_e);
-            nb.field_a.b(em.field_g, (byte) -35);
+          if (ProxyAuthenticationRequiredException.field_g == null) {
+            ProxyAuthenticationRequiredException.field_g = new nd(nb.field_a, ResourceArchive.field_e);
+            nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
           }
-          em.field_g.a(param0, param3, param2, -122);
+          ProxyAuthenticationRequiredException.field_g.a(param0, param3, param2, -122);
           SoftwareRasterizer.clearRaster();
           kb.a(0, true);
         } catch (RuntimeException runtimeException) {

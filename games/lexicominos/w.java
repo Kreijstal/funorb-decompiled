@@ -532,7 +532,7 @@ class w extends IntrusiveNode {
               sj.a(0, this.b(param3 - 2));
               return param1;
             }
-            if (this.a(-4808, nk.field_z, this, ck.field_a, param2, param0, ef.field_a)) {
+            if (this.a(-4808, nk.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
               param1 = false;
             } else {
             }
@@ -585,7 +585,7 @@ class w extends IntrusiveNode {
           sj.a(0, this.b(param3 - 2));
           return param1;
         }
-        if (this.a(-4808, nk.field_z, this, ck.field_a, param2, param0, ef.field_a)) {
+        if (this.a(-4808, nk.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
           param1 = false;
         } else {
           if (var5 != 0) {

@@ -297,7 +297,7 @@ abstract class ag extends GameApplet {
         }
         bi.a(119);
         gf.a(true);
-        if (!le.c(param1 + 5) &&
+        if (!ProxyAuthenticationRequiredException.c(param1 + 5) &&
           bl.field_a != 11) {
           ce.a((byte) -100);
         }
@@ -307,7 +307,7 @@ abstract class ag extends GameApplet {
         if (fc.a((byte) 57)) {
           var3 = 1200 * wc.a(-75);
           if (this.field_t ||
-            !(var3 >= ck.b((byte) -33)) &&
+            !(var3 >= PcmOutputWorker.b((byte) -33)) &&
             !(var3 >= oj.a(-79))) {
             this.field_t = false;
             ec.a((byte) 27);
@@ -521,7 +521,7 @@ abstract class ag extends GameApplet {
         this.setBackground(java.awt.Color.black);
         vg.field_b = this.field_n;
         jh.a(vg.field_b, param4);
-        le.a(this.field_u, vg.field_b, 5000, nb.field_e, param6, 22692, this.field_l, this.field_s, this.field_w, this.field_v, this.field_p, 5000, param0, this.field_q);
+        ProxyAuthenticationRequiredException.a(this.field_u, vg.field_b, 5000, nb.field_e, param6, 22692, this.field_l, this.field_s, this.field_w, this.field_v, this.field_p, 5000, param0, this.field_q);
         hj.a(vg.field_b, this.field_p, nb.field_e, this.field_q, 78, this.field_w, param0, this.field_u, this.field_v);
         ge.b(4039);
         qj.field_eb = wc.createMouseWheelInput(5220);

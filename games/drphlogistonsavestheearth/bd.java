@@ -23,7 +23,7 @@ abstract class bd extends pj {
     }
 
     bd(k param0, int param1, int param2) {
-        super(-param1 + di.field_a >> 1, qe.field_l - param2 >> 1, param1, param2, (cg) null);
+        super(-param1 + di.field_a >> 1, BufferedSocket.field_l - param2 >> 1, param1, param2, (cg) null);
         try {
           this.field_Q = false;
           this.field_R = param0;
@@ -123,11 +123,11 @@ abstract class bd extends pj {
 
     final void b(int param0, int param1, int param2) {
         if (param1 == 1688990433) {
-          this.a(qe.field_l - param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
+          this.a(BufferedSocket.field_l - param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
           return;
         }
         field_K = (char[]) null;
-        this.a(qe.field_l - param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
+        this.a(BufferedSocket.field_l - param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
     }
 
     boolean k(int param0) {

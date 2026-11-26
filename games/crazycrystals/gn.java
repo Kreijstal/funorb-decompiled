@@ -155,9 +155,9 @@ final class gn extends en implements vd {
     final static boolean d(boolean param0) {
         if (param0) {
           field_S = (java.math.BigInteger) null;
-          return j.c((byte) -23);
+          return BufferedSocket.c((byte) -23);
         }
-        return j.c((byte) -23);
+        return BufferedSocket.c((byte) -23);
     }
 
     static {

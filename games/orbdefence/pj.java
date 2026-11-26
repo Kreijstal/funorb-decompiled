@@ -413,7 +413,7 @@ class pj extends IntrusiveNode {
           var3 = param1.getParameter("username");
           if (var3 != null) {
             var4 = (CharSequence) ((Object) var3);
-            if (bk.a(127, var4) != 0L) {
+            if (ProxyAuthenticationRequiredException.a(127, var4) != 0L) {
               return;
             }
           }

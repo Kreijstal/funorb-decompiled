@@ -10,7 +10,7 @@ final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode nextNode;
     private IntrusiveNode lastReturned;
     static String field_d;
-    static pc field_a;
+    static BufferedSocket field_a;
     static String field_e;
 
     public final void remove() {
@@ -118,7 +118,7 @@ final class NodeHashTableIterator implements Iterator {
     final static void a(boolean param0, String param1, float param2, int param3) {
         try {
           if (param3 != -608757616) {
-            field_a = (pc) null;
+            field_a = (BufferedSocket) null;
           }
           if (q.field_A == null) {
             q.field_A = new db(q.field_N, ej.field_c);

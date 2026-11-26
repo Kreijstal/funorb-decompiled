@@ -1246,7 +1246,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           if (MixedSupport128.rgbSpriteState0060 == GameDomainSupport003.rgbSpriteState0020 &&
             DualNodeDeque.computeInteger0037(integerArgument1 - 58860) == 0) {
             if (MixedSupport007.booleanState0005) {
-              DiagnosticSupport001.booleanState0024 = false;
+              ProxyAuthenticationRequiredException.booleanState0024 = false;
               if (ComponentContainer.gameSessionState0002 != null &&
                 ComponentContainer.gameSessionState0002.integerState0623 < 38) {
                 MixedSupport128.rgbSpriteState0060 = MixedSupport026.rgbSpriteArrayState0009[ComponentContainer.gameSessionState0002.mixedSupport028State0001.integerState0166];
@@ -1260,16 +1260,16 @@ public final class DekoBlokoClient extends FunOrbClient {
             }
             if (frameRemainderLocal27) {
               if (IterableNodeCollection.booleanState0193) {
-                DiagnosticSupport001.booleanState0024 = false;
+                ProxyAuthenticationRequiredException.booleanState0024 = false;
                 MouseInput.booleanState0223 = false;
                 MixedSupport128.rgbSpriteState0060 = null;
                 if (integerLocal17 != 0) {
-                  DiagnosticSupport001.booleanState0024 = true;
+                  ProxyAuthenticationRequiredException.booleanState0024 = true;
                   MixedSupport128.rgbSpriteState0060 = SceneWidgetPart011.rgbSpriteState0058;
                   MouseInput.booleanState0223 = true;
                 }
               } else {
-                DiagnosticSupport001.booleanState0024 = true;
+                ProxyAuthenticationRequiredException.booleanState0024 = true;
                 MixedSupport128.rgbSpriteState0060 = SceneWidgetPart011.rgbSpriteState0058;
                 MouseInput.booleanState0223 = true;
               }
@@ -1455,7 +1455,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         MixedSupport036.clearStaticReferences(38);
         MixedSupport002.performAction0026(true);
         MixedSupport077.clearStaticReferences(101);
-        PlatformSupport002.clearStaticReferences(16057);
+        DelegatingCanvas.clearStaticReferences(16057);
         MixedSupport133.clearStaticReferences((byte) 86);
         MixedSupport091.clearStaticReferences(true);
         ByteStorage.clearStaticReferences(false);
@@ -1494,7 +1494,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           MixedSupport035.performAction0501((byte) 117);
           ThemeTips.clearStaticReferences(false);
           SocketFactory.clearStaticReferences((byte) -37);
-          DiagnosticSupport001.performAction0330((byte) 91);
+          ProxyAuthenticationRequiredException.performAction0330((byte) 91);
           MixedSupport026.performAction0386(72);
           SoftwareFramebuffer.clearDeclaredStaticReferences(-119);
           MixedSupport049.clearStaticReferences(79);
@@ -2823,15 +2823,15 @@ public final class DekoBlokoClient extends FunOrbClient {
               do {
                 if (byteArrayLocal28.length <= integerLocal29) {
                   GameApplet.renderingSupport009State0002 = RenderingSupport004.computeRenderingSupport0090580(indexedSpriteArrayLocal27, 121, byteArrayLocal28);
-                  MixedSupport001.rgbSpriteArrayState0001 = DiagnosticSupport001.computeRgbSpriteArray0334("ui_frame_vbrick", "ui_frame_hbrick", EmailFormatValidator.resourceArchiveState0008, true, "ui_frame_corner");
+                  MixedSupport001.rgbSpriteArrayState0001 = ProxyAuthenticationRequiredException.computeRgbSpriteArray0334("ui_frame_vbrick", "ui_frame_hbrick", EmailFormatValidator.resourceArchiveState0008, true, "ui_frame_corner");
                   MixedSupport094.rgbSpriteArrayState0020 = InteractiveComponent.computeRgbSpriteArray0463("ui_button_up", "", integerArgument1 ^ -95, EmailFormatValidator.resourceArchiveState0008);
                   CacheWorkQueue.rgbSpriteArrayState0016 = InteractiveComponent.computeRgbSpriteArray0463("ui_button_highlight", "", -114, EmailFormatValidator.resourceArchiveState0008);
                   UiComponent.rgbSpriteArrayState0005 = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "chat_toggle_button");
                   MixedSupport046.rgbSpriteArrayState0015 = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "chat_toggle_button_highlight");
                   MixedSupport138.rgbSpriteState0063 = UiComponentPart015.computeRgbSprite0704(MixedSupport005.resourceArchiveState0002, "unachieved", "basic", 8192);
                   MouseInput.rgbSpriteState0072 = UiComponentPart015.computeRgbSprite0704(MixedSupport005.resourceArchiveState0002, "locked", "basic", integerArgument1 + 8192);
-                  DiagnosticSupport001.rgbSpriteState0011 = new RgbSprite(32, 32);
-                  DiagnosticSupport001.rgbSpriteState0011.performAction0256();
+                  ProxyAuthenticationRequiredException.rgbSpriteState0011 = new RgbSprite(32, 32);
+                  ProxyAuthenticationRequiredException.rgbSpriteState0011.performAction0256();
                   MixedSupport138.rgbSpriteState0063.performAction0258(0, 0, 32, 32);
                   MixedSupport047.rgbSpriteState0018 = new RgbSprite(32, 32);
                   MixedSupport047.rgbSpriteState0018.performAction0256();
@@ -2985,7 +2985,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                   if (integerLocal41 >= 31) {
                     MixedSupport076.framebufferState0001.performAction0420((byte) -108);
                     MixedSupport100.rgbSpriteState0042 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "ui_clouds", "", 8192);
-                    PlatformSupport002.rgbSpriteState0013 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "ui_border_tl", "", 8192);
+                    DelegatingCanvas.rgbSpriteState0013 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "ui_border_tl", "", 8192);
                     GameDomainSupport004.rgbSpriteState0024 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "ui_border_t", "", 8192);
                     MixedSupport116.rgbSpriteState0056 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "ui_border_tr", "", 8192);
                     MixedSupport042.rgbSpriteState0016 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "ui_border_l", "", integerArgument1 ^ 8192);

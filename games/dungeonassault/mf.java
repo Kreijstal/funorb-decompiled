@@ -34,10 +34,10 @@ final class mf {
             var10 = var6;
             var8 = var10;
             var2 = var8;
-            if (bk.field_b != null) {
+            if (PcmOutputWorker.field_b != null) {
               try {
-                bk.field_b.a(0L, -26296);
-                bk.field_b.a(param0 ^ -30463, var9);
+                PcmOutputWorker.field_b.a(0L, -26296);
+                PcmOutputWorker.field_b.a(param0 ^ -30463, var9);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

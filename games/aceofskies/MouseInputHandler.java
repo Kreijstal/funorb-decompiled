@@ -56,7 +56,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1), "rq.A(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "rq.A(" + param0 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             si.field_b = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rq.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rq.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             si.field_b = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rq.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rq.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             si.field_b = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rq.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rq.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -342,7 +342,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

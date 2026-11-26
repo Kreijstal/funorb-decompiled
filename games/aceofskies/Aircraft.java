@@ -324,7 +324,7 @@ final class Aircraft extends FlightBody {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ final class Aircraft extends FlightBody {
           this.bankOffset = 0;
           this.targetAircraft = null;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "md.I(" + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ',' + (definition != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "md.I(" + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ',' + (definition != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -363,7 +363,7 @@ final class Aircraft extends FlightBody {
         try {
           this.initializeAircraft((byte) 86, position, definition);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "md.<init>(" + (position != null ? "{...}" : "null") + ',' + (definition != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "md.<init>(" + (position != null ? "{...}" : "null") + ',' + (definition != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -416,7 +416,7 @@ final class Aircraft extends FlightBody {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -545,7 +545,7 @@ final class Aircraft extends FlightBody {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
         }
     }
 

@@ -17,7 +17,7 @@ final class cf {
         int var4;
         sj[] var5;
         var4 = CrazyCrystals.field_B;
-        var5 = rp.a(58);
+        var5 = PcmOutputWorker.a(58);
         var2 = var5;
         if (param1 <= 117) {
           return (sj) null;

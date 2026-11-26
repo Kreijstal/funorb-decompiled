@@ -1184,7 +1184,7 @@ final class GameAssets {
           }
           byteArrayLocal191 = MixedSupport067.computeByteArray0840(-33, "instructions_activatingspecials");
           if (byteArrayLocal191 != null) {
-            PlatformSupport002.stringState0123 = MixedSupport105.computeString1370(byteArrayLocal191, 2);
+            DelegatingCanvas.stringState0123 = MixedSupport105.computeString1370(byteArrayLocal191, 2);
           }
           byteArrayLocal192 = MixedSupport067.computeByteArray0840(-65, "instructions_multiplayer_specials");
           if (null != byteArrayLocal192) {

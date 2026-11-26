@@ -281,27 +281,27 @@ final class wj extends ph {
           }
           var1_float = CrossfadingMidiPcmStream.field_v.j();
           if (var1_float != GameCanvas.field_a) {
-            CrossfadingMidiPcmStream.field_v.setStereoWidth(ua.a((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
+            CrossfadingMidiPcmStream.field_v.setStereoWidth(PcmOutputWorker.a((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
           }
           var1_floatLifetime1 = CrossfadingMidiPcmStream.field_v.h();
           if (var1_floatLifetime1 != qm.field_O) {
-            CrossfadingMidiPcmStream.field_v.f(ua.a((byte) -96, qm.field_O, var1_floatLifetime1, 0.07000000029802322f));
+            CrossfadingMidiPcmStream.field_v.f(PcmOutputWorker.a((byte) -96, qm.field_O, var1_floatLifetime1, 0.07000000029802322f));
           }
           var1_floatLifetime2 = CrossfadingMidiPcmStream.field_v.f();
           if (var1_floatLifetime2 != ea.field_d) {
-            CrossfadingMidiPcmStream.field_v.b(ua.a((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.a((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
           }
           var1_floatLifetime3 = CrossfadingMidiPcmStream.field_v.g();
           if (var1_floatLifetime3 != ag.field_w) {
-            CrossfadingMidiPcmStream.field_v.e(ua.a((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
+            CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.a((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
           }
           var1_floatLifetime4 = CrossfadingMidiPcmStream.field_v.k();
           if (an.field_n != var1_floatLifetime4) {
-            CrossfadingMidiPcmStream.field_v.setWetGain(ua.a((byte) -112, an.field_n, var1_floatLifetime4, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.setWetGain(PcmOutputWorker.a((byte) -112, an.field_n, var1_floatLifetime4, 0.009999999776482582f));
           }
           var1_floatLifetime5 = CrossfadingMidiPcmStream.field_v.e();
           if (var1_floatLifetime5 != vb.field_Jb) {
-            CrossfadingMidiPcmStream.field_v.a(ua.a((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.a(PcmOutputWorker.a((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
           }
           eb.field_e.setRootStream(CrossfadingMidiPcmStream.field_v);
           ik.field_b = false;

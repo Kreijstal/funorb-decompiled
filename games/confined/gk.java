@@ -11,7 +11,7 @@ class gk extends IntrusiveNode {
     private boolean field_p;
     double field_w;
     static String field_v;
-    static vd field_u;
+    static BufferedSocket field_u;
     static char[] field_y;
     RawPcmStream field_n;
     static int field_r;

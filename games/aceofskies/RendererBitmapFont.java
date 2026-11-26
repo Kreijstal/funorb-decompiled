@@ -46,7 +46,7 @@ abstract class RendererBitmapFont {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ abstract class RendererBitmapFont {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ abstract class RendererBitmapFont {
           this.resetTextStyle(shadowColor, -1, textColor);
           this.drawStyledText(0, inlineImages, leftX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (GlyphMask) null, maskY);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.O(" + textColor + ',' + shadowColor + ',' + (inlineImages != null ? "{...}" : "null") + ',' + leftX + ',' + maskY + ',' + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "da.O(" + textColor + ',' + shadowColor + ',' + (inlineImages != null ? "{...}" : "null") + ',' + leftX + ',' + maskY + ',' + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -260,7 +260,7 @@ abstract class RendererBitmapFont {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(left).append(',').append(maskX).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(left).append(',').append(maskX).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ abstract class RendererBitmapFont {
           this.metrics = metrics;
           this.renderer = renderer;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.<init>(" + (renderer != null ? "{...}" : "null") + ',' + (metrics != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "da.<init>(" + (renderer != null ? "{...}" : "null") + ',' + (metrics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -293,7 +293,7 @@ abstract class RendererBitmapFont {
           this.resetTextStyle(shadowColor, obfuscationGuard - 18732, textColor);
           this.drawStyledText(0, (RenderSprite[]) null, leftX, text, (byte) 5, (int[]) null, baselineY, (GlyphMask) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.F(" + textColor + ',' + shadowColor + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "da.F(" + textColor + ',' + shadowColor + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ')');
         }
     }
 
@@ -432,7 +432,7 @@ abstract class RendererBitmapFont {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(maskY).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(maskY).append(')').toString());
         }
     }
 
@@ -470,7 +470,7 @@ abstract class RendererBitmapFont {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ abstract class RendererBitmapFont {
           }
           this.drawStyledText(0, (RenderSprite[]) null, rightX - this.metrics.measureTextWidth((byte) 94, text), text, (byte) 5, (int[]) null, baselineY, (GlyphMask) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.J(" + (text != null ? "{...}" : "null") + ',' + textColor + ',' + shadowColor + ',' + rightX + ',' + baselineY + ',' + obfuscationGuard + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "da.J(" + (text != null ? "{...}" : "null") + ',' + textColor + ',' + shadowColor + ',' + rightX + ',' + baselineY + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -517,7 +517,7 @@ abstract class RendererBitmapFont {
             this.drawRightAlignedText((String) null, 1, -72, -15, 80, (byte) -125);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.Q(" + obfuscationGuard + ',' + textColor + ',' + shadowColor + ',' + baselineY + ',' + centerX + ',' + (text != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "da.Q(" + obfuscationGuard + ',' + textColor + ',' + shadowColor + ',' + baselineY + ',' + centerX + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -532,7 +532,7 @@ abstract class RendererBitmapFont {
           }
           this.drawStyledText(0, inlineImages, -this.metrics.measureTextWidth((byte) 94, text) + rightX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (GlyphMask) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.M(" + shadowColor + ',' + textColor + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ',' + (text != null ? "{...}" : "null") + ',' + rightX + ',' + (inlineImages != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "da.M(" + shadowColor + ',' + textColor + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ',' + (text != null ? "{...}" : "null") + ',' + rightX + ',' + (inlineImages != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -35,7 +35,7 @@ final class vc {
           if (param3 != -2) {
             field_a = 32L;
           }
-          if (tl.a(param0, (byte) -5, param2, param1)) {
+          if (ProxyAuthenticationRequiredException.a(param0, (byte) -5, param2, param1)) {
             return vg.c((byte) -118);
           }
           return null;

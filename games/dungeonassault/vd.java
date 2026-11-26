@@ -39,8 +39,8 @@ final class vd {
             vd.a(-78, 112, -21, -44, 75, -60);
           }
           while (param0 > var7) {
-            bk.field_e.b(var7 + param4, param5);
-            var7 = var7 + bk.field_e.field_d;
+            PcmOutputWorker.field_e.b(var7 + param4, param5);
+            var7 = var7 + PcmOutputWorker.field_e.field_d;
           }
           jh.b();
           if (param3 == 2) {

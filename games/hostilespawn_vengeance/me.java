@@ -101,7 +101,7 @@ abstract class me extends wb {
             rc.field_a = sg.field_c;
           } else {
             try {
-              ag.field_t = new td((java.net.Socket) (oa.field_l.result), uj.field_k);
+              ag.field_t = new BufferedSocket((java.net.Socket) (oa.field_l.result), uj.field_k);
               s.field_b.field_i = 0;
               var2 = sc.field_g;
               stackIn_11_0 = (param0) ? -2 : -1;

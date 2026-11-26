@@ -79,13 +79,13 @@ final class bg extends IntrusiveNode {
             null != sb.field_g &&
             sb.field_g.a(0) &&
             sb.field_g.a(param0 ^ -11140, "benefits")) {
-            DelegatingCanvas.field_c = qk.a("benefits", ce.field_a, "headline", true);
-            t.field_d = qk.a("benefits", ce.field_a, "blurbpane", true);
-            r.field_b = qk.a("benefits", ce.field_a, "button", true);
-            eg.field_d = qk.a("benefits", ce.field_a, "signup_text", true);
-            nj.field_f = qk.a("benefits", ce.field_a, "menu_text", true);
-            DualLinkNode.field_r = qk.a("benefits", ce.field_a, "button_frame", true);
-            sc.field_c = qk.a("benefits", ce.field_a, "arrow", true);
+            DelegatingCanvas.field_c = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "headline", true);
+            t.field_d = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "blurbpane", true);
+            r.field_b = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "button", true);
+            eg.field_d = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "signup_text", true);
+            nj.field_f = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "menu_text", true);
+            DualLinkNode.field_r = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "button_frame", true);
+            sc.field_c = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "arrow", true);
             md.field_a = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font"));
             sc.field_f = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
             var28 = SoftwareRasterizer.field_l;

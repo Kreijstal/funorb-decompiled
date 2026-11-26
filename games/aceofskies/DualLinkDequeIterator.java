@@ -45,7 +45,7 @@ final class DualLinkDequeIterator implements Iterator {
           this.field_a = null;
           this.field_d = this.field_b.field_c.nextSecondaryNode;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "js.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "js.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

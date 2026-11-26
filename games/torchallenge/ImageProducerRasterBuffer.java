@@ -94,21 +94,21 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException var6 = null;
         int var7 = 0;
         try {
-          LocalizedStrings.field_s[bb.field_c] = param1;
-          hi.field_G[bb.field_c] = bb.field_c;
-          bg.field_Q[bb.field_c] = param3;
+          LocalizedStrings.field_s[PcmOutputWorker.field_c] = param1;
+          hi.field_G[PcmOutputWorker.field_c] = PcmOutputWorker.field_c;
+          bg.field_Q[PcmOutputWorker.field_c] = param3;
           if (param3 > ia.field_q) {
             v.field_Z = param3;
           }
           if (param3 < ol.field_d) {
             pi.field_e = param3;
           }
-          BufferedCacheFile.field_p[bb.field_c] = param0;
+          BufferedCacheFile.field_p[PcmOutputWorker.field_c] = param0;
           if (param2 != 27715) {
             return;
           }
-          ea.field_a[bb.field_c] = param5;
-          cb.field_e[bb.field_c] = param4;
+          ea.field_a[PcmOutputWorker.field_c] = param5;
+          cb.field_e[PcmOutputWorker.field_c] = param4;
           var6_int = param4 + (param0 + param5);
           if (var6_int == 0) {
             stackIn_13_0 = 0;
@@ -116,11 +116,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             stackIn_13_0 = param0 * 1000 / var6_int;
           }
           var7 = stackIn_13_0;
-          bj.field_b[bb.field_c] = var7;
+          ProxyAuthenticationRequiredException.field_b[PcmOutputWorker.field_c] = var7;
           if (var7 < pi.field_e) {
             pi.field_e = var7;
           }
-          bb.field_c = bb.field_c + 1;
+          PcmOutputWorker.field_c = PcmOutputWorker.field_c + 1;
           if (v.field_Z < var7) {
             v.field_Z = var7;
           }
@@ -252,7 +252,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             vk.field_i = null;
             hk.field_b = false;
             var3 = 124 % ((param0 - 72) / 47);
-            bj.a((byte) 71);
+            ProxyAuthenticationRequiredException.a((byte) 71);
             if (!gh.field_x) {
               if ((!gh.field_x) &&
                 ((1 + ea.field_e) % 2 == 0)) {
@@ -262,7 +262,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                   ea.field_e = (-6 + ea.field_e + 1 << 1) - 1;
                   if (var1_int != 0 &&
                     ea.field_e >= 1) {
-                    bb.a(var1_int != 0, (byte) -17);
+                    PcmOutputWorker.a(var1_int != 0, (byte) -17);
                   }
                 }
               }
@@ -271,7 +271,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               ea.field_e = (-6 + ea.field_e + 1 << 1) - 1;
               if (var1_int != 0 &&
                 ea.field_e >= 1) {
-                bb.a(var1_int != 0, (byte) -17);
+                PcmOutputWorker.a(var1_int != 0, (byte) -17);
               }
             }
             boolean decompiledSharedTail0 = !(!gh.field_x);

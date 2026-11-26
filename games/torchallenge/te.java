@@ -104,7 +104,7 @@ final class te {
               df.field_Q = qa.field_a;
             } else {
               while (qa.field_a != df.field_Q) {
-                var2 = bb.field_g[qa.field_a];
+                var2 = PcmOutputWorker.field_g[qa.field_a];
                 qa.field_a = qa.field_a + 1 & 127;
                 if (0 <= var2) {
                   nj.field_c[var2] = true;

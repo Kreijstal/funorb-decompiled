@@ -460,7 +460,7 @@ public final class Main extends c {
         try {
           jl.b((byte) 22);
           if (null != gj.field_a) {
-            ga.a(true);
+            PcmOutputWorker.a(true);
           }
           ph.c(1);
           if (param0 >= -36) {
@@ -590,7 +590,7 @@ public final class Main extends c {
           h.e((byte) -84);
           if (null != gj.field_a &&
             gj.field_a.focusLost) {
-            ga.a(!param0);
+            PcmOutputWorker.a(!param0);
             g.k(4);
           }
           stackIn_15_1 = -71;
@@ -683,7 +683,7 @@ public final class Main extends c {
                     if (var2_int == 1 ||
                       var2_int == 2) {
                       if (null != gj.field_a) {
-                        ga.a(true);
+                        PcmOutputWorker.a(true);
                       }
                       if (2 == var2_int) {
                         PacketBuffer.a((byte) -124, mk.g(-124));
@@ -706,7 +706,7 @@ public final class Main extends c {
                           break;
                         }
                       case 2:
-                        ga.a(true);
+                        PcmOutputWorker.a(true);
                         break;
                     }
                     if (!eh.d(19314)) {
@@ -905,7 +905,7 @@ public final class Main extends c {
               stackIn_49_0 = 118;
               break;
             }
-            mi.a(stackIn_49_0, jd.field_c[9], 100 * lg.field_I[9] / this.field_ab, ca.field_c[9]);
+            mi.a(stackIn_49_0, BufferedSocket.field_c[9], 100 * lg.field_I[9] / this.field_ab, ca.field_c[9]);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1566,7 +1566,7 @@ public final class Main extends c {
         var46 = field_T;
         try {
           hc.a(true);
-          if (null == jd.field_c[0]) {
+          if (null == BufferedSocket.field_c[0]) {
             if (hf.field_H.b(4) &&
               hf.field_H.b(4, "basic")) {
               if (sh.field_g.b(4) &&
@@ -1586,36 +1586,36 @@ public final class Main extends c {
                         ok.b(69);
                         ug.a(80.0f, 122, AccountRequestState.field_c);
                         this.b((byte) 59);
-                        jd.field_c[0] = uj.a(sh.field_g, "", "turnover_card").a();
-                        jd.field_c[1] = uj.a(sh.field_g, "", "revolver_cocking").a();
-                        jd.field_c[2] = uj.a(sh.field_g, "", "revolver_decocking").a();
-                        jd.field_c[3] = ig.a(fb.field_a, "", "gunshot").c();
-                        jd.field_c[4] = ig.a(fb.field_a, "", "crow").c();
-                        jd.field_c[5] = ig.a(fb.field_a, "", "pesky varment").c();
-                        jd.field_c[6] = ig.a(fb.field_a, "", "feelin lucky").c();
+                        BufferedSocket.field_c[0] = uj.a(sh.field_g, "", "turnover_card").a();
+                        BufferedSocket.field_c[1] = uj.a(sh.field_g, "", "revolver_cocking").a();
+                        BufferedSocket.field_c[2] = uj.a(sh.field_g, "", "revolver_decocking").a();
+                        BufferedSocket.field_c[3] = ig.a(fb.field_a, "", "gunshot").c();
+                        BufferedSocket.field_c[4] = ig.a(fb.field_a, "", "crow").c();
+                        BufferedSocket.field_c[5] = ig.a(fb.field_a, "", "pesky varment").c();
+                        BufferedSocket.field_c[6] = ig.a(fb.field_a, "", "feelin lucky").c();
                         ca.field_c[6] = 112;
-                        jd.field_c[7] = ig.a(fb.field_a, "", "dont try that again").c();
-                        jd.field_c[8] = ig.a(fb.field_a, "", "didnt see that one comin").c();
-                        jd.field_c[9] = uj.a(sh.field_g, "", "swap_cards").a();
-                        jd.field_c[10] = ig.a(fb.field_a, "", "yeeehaaa").c();
-                        jd.field_c[11] = ig.a(fb.field_a, "", "yeeehaaa2").c();
-                        jd.field_c[12] = ig.a(fb.field_a, "", "yeeehaaa3").c();
-                        jd.field_c[13] = ig.a(fb.field_a, "", "are you a mexican").c();
+                        BufferedSocket.field_c[7] = ig.a(fb.field_a, "", "dont try that again").c();
+                        BufferedSocket.field_c[8] = ig.a(fb.field_a, "", "didnt see that one comin").c();
+                        BufferedSocket.field_c[9] = uj.a(sh.field_g, "", "swap_cards").a();
+                        BufferedSocket.field_c[10] = ig.a(fb.field_a, "", "yeeehaaa").c();
+                        BufferedSocket.field_c[11] = ig.a(fb.field_a, "", "yeeehaaa2").c();
+                        BufferedSocket.field_c[12] = ig.a(fb.field_a, "", "yeeehaaa3").c();
+                        BufferedSocket.field_c[13] = ig.a(fb.field_a, "", "are you a mexican").c();
                         ca.field_c[13] = 120;
-                        jd.field_c[14] = ig.a(fb.field_a, "", "chicken").c();
-                        jd.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
+                        BufferedSocket.field_c[14] = ig.a(fb.field_a, "", "chicken").c();
+                        BufferedSocket.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
                         var3 = uj.a(sh.field_g, "", "score-count").a();
                         var3.field_k = var3.field_h.length;
                         ve.field_c = RawPcmStream.a(var3, 100, 30);
                         ve.field_c.e(-1);
-                        var4_ref_ib = new PcmSample(jd.field_c[15].field_l, jd.field_c[15].field_h.length + 1000);
-                        og.a(jd.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, jd.field_c[15].field_h.length);
+                        var4_ref_ib = new PcmSample(BufferedSocket.field_c[15].field_l, BufferedSocket.field_c[15].field_h.length + 1000);
+                        og.a(BufferedSocket.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, BufferedSocket.field_c[15].field_h.length);
                         lh.field_d = RawPcmStream.a(var4_ref_ib, 100, 96);
                         lh.field_d.c(0, var4_ref_ib.field_h.length);
                         lh.field_d.e(0);
                         var5 = 0;
                         while (var5 < 16) {
-                          var6 = jd.field_c[var5];
+                          var6 = BufferedSocket.field_c[var5];
                           stackIn_56_0 = lg.field_I;
                           stackIn_56_1 = var5;
                           if (var6 != null) {
@@ -1716,7 +1716,7 @@ public final class Main extends c {
           this.b((byte) 59);
           var3_array = id.field_a.a((byte) 7, "font", "");
           var4_ref_wb__ = lk.a("font", "", (byte) 49, mh.field_c);
-          qa.field_b = ga.a(121, var4_ref_wb__, var3_array);
+          qa.field_b = PcmOutputWorker.a(121, var4_ref_wb__, var3_array);
           eb.field_c = kk.a(var4_ref_wb__, var3_array, 1, 256, 16777215);
           var5Lifetime1 = qa.field_b.field_s + qa.field_b.field_x;
           sk.field_c = new RgbSprite(var5Lifetime1, var5Lifetime1);
@@ -2106,7 +2106,7 @@ public final class Main extends c {
           gj.clearStaticReferences((byte) 14);
           eb.clearStaticReferences(true);
           tk.resetStaticState(~param0);
-          jd.resetStaticState((byte) 23);
+          BufferedSocket.resetStaticState((byte) 23);
           gi.clearStaticReferences(1159353185);
           AudioOutput.clearStaticReferences();
           oj.resetStaticState((byte) -105);
@@ -2206,7 +2206,7 @@ public final class Main extends c {
           ec.resetDeclaredStaticState(param0 ^ 10);
           ImageProducerRasterBuffer.resetStaticState(param0 ^ -14143);
           hi.clearStaticReferences(0);
-          ga.b(true);
+          PcmOutputWorker.b(true);
           dd.clearStaticReferences(false);
           ck.clearStaticReferences((byte) 41);
           hf.o(-31141);

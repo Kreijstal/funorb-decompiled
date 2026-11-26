@@ -208,7 +208,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.f(118);
                 lb.field_C = al.a((byte) -73, fg.field_h, (java.awt.Component) ((Object) n.field_g), ByteStorage.field_a);
                 this.a(32);
-                qe.field_e = qk.a(65280);
+                BufferedSocket.field_e = ProxyAuthenticationRequiredException.a(65280);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (sf.field_j != 0L) {
@@ -220,7 +220,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    jj.field_b = qe.field_e.b(ma.field_vb, 1);
+                    jj.field_b = BufferedSocket.field_e.b(ma.field_vb, 1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -541,7 +541,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (~gm.field_O == ~b.field_l) {
                   break;
                 }
-                var2Lifetime1 = qk.field_f[b.field_l];
+                var2Lifetime1 = ProxyAuthenticationRequiredException.field_f[b.field_l];
                 b.field_l = 127 & b.field_l + 1;
                 stackIn_28_0 = -1;
                 if (var4 != 0) {

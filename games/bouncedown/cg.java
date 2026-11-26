@@ -1550,7 +1550,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 105, "create_email_confirm_tooltip");
                 if (null != var2) {
-                  pc.field_c = c.a(0, var2);
+                  BufferedSocket.field_c = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 115, "create_age_tooltip");
                 if (null != var2) {
@@ -2100,7 +2100,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 98, "cont");
                 if (null != var2) {
-                  pc.field_i = c.a(0, var2);
+                  BufferedSocket.field_i = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 111, "continue_spectating");
                 if (null != var2) {

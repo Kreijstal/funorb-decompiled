@@ -1218,7 +1218,7 @@ final class dj extends ee {
                         !mc.field_e[vf.field_l]) &&
                         (decompiledFrameRemainder0 = !(this.field_ab <= 0)) &&
                         (decompiledFrameRemainder0 = !(this.field_A.field_M)) &&
-                        (decompiledFrameRemainder0 = !(!mc.field_e[sb.field_f])) &&
+                        (decompiledFrameRemainder0 = !(!mc.field_e[PcmOutputWorker.field_f])) &&
                         (decompiledFrameRemainder0 = !(this.field_A.field_P)) &&
                         (decompiledFrameRemainder0 = (0 == this.field_A.field_L))) {
                         this.field_Lb.b(118);

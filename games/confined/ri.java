@@ -48,7 +48,7 @@ final class ri {
           fa.a(fb.field_b, -122);
         }
         hl.b((byte) -58);
-        vd.b((byte) 18);
+        BufferedSocket.b((byte) 18);
         vm.h((byte) 37);
         if (param0 <= 101) {
           return;

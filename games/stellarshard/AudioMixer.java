@@ -7,7 +7,7 @@ class AudioMixer {
     int[] field_f;
     static int field_m;
     private long field_n;
-    private static qf field_p;
+    private static PcmOutputWorker field_p;
     private static int field_l;
     private int field_c;
     private PcmStream field_r;
@@ -205,7 +205,7 @@ class AudioMixer {
               ((AudioMixer) ((Object) var4)).openDevice(((AudioMixer) ((Object) var4)).field_a);
               if (field_l > 0 &&
                 field_p == null) {
-                field_p = new qf();
+                field_p = new PcmOutputWorker();
                 field_p.field_h = param0;
                 param0.requestThreadStart((Runnable) ((Object) field_p), field_l, 0);
               }

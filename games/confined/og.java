@@ -114,11 +114,11 @@ final class og extends n {
                   if (var11 != -1) {
                     var8 = var16.substring(0, var11);
                   }
-                  throw new kk(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new kk("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_11_0 = var14;
@@ -179,7 +179,7 @@ final class og extends n {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        kk var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Confined.field_J ? 1 : 0;
@@ -233,15 +233,15 @@ final class og extends n {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (kk) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(param0 ^ 22172, var11);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
             }
-          } catch (kk decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (kk) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

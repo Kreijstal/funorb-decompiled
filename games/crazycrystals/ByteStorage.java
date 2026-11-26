@@ -587,7 +587,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("ticketing_oneunread", 5236);
                 if (var2 != null) {
-                  va.field_a = fa.a((byte) -121, var2);
+                  ProxyAuthenticationRequiredException.field_a = fa.a((byte) -121, var2);
                 }
                 var2 = ah.a("ticketing_xunread", 5236);
                 if (null != var2) {
@@ -1865,7 +1865,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_welcome", 5236);
                 if (var2 != null) {
-                  j.field_h = fa.a((byte) -104, var2);
+                  BufferedSocket.field_h = fa.a((byte) -104, var2);
                 }
                 var2 = ah.a("create_u13_welcome", 5236);
                 if (var2 != null) {
@@ -2401,7 +2401,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("achievementsthisgame", 5236);
                 if (null != var2) {
-                  rp.field_a = fa.a((byte) -121, var2);
+                  PcmOutputWorker.field_a = fa.a((byte) -121, var2);
                 }
                 var2 = ah.a("achievementsthissession", 5236);
                 if (null != var2) {

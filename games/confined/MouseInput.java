@@ -205,7 +205,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
         if (ki.field_c != null) {
           ki.field_c.n(10);
-          var1 = vd.d(85);
+          var1 = BufferedSocket.d(85);
           om.field_p = new w(var1, (String) null, true, false, false);
           if (param0 == 2) {
             vg.field_Z.c(dn.field_b, 0);
@@ -215,7 +215,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           }
           return;
         }
-        var1Lifetime1 = vd.d(85);
+        var1Lifetime1 = BufferedSocket.d(85);
         om.field_p = new w(var1Lifetime1, (String) null, true, false, false);
         if (param0 == 2) {
           vg.field_Z.c(dn.field_b, 0);

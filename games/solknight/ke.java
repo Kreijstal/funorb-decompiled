@@ -111,7 +111,7 @@ final class ke extends si {
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           ua.field_L = ua.field_L + 65536;
-          while (sb.a(ua.field_L, uc.field_b, 1513551664) >= 65536) {
+          while (PcmOutputWorker.a(ua.field_L, uc.field_b, 1513551664) >= 65536) {
             ArchiveSource.field_a = ArchiveSource.field_a + 1;
             ua.field_L = ua.field_L - uc.field_b;
           }

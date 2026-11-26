@@ -73,7 +73,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           }
           if (gm.field_O >= 0 &&
             var2_int >= 0) {
-            qk.field_f[gm.field_O] = var2_int;
+            ProxyAuthenticationRequiredException.field_f[gm.field_O] = var2_int;
             gm.field_O = 127 & gm.field_O + 1;
             if (b.field_l == gm.field_O) {
               gm.field_O = -1;
@@ -137,7 +137,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (gm.field_O >= 0 &&
               var2_int >= 0) {
-              qk.field_f[gm.field_O] = ~var2_int;
+              ProxyAuthenticationRequiredException.field_f[gm.field_O] = ~var2_int;
               gm.field_O = gm.field_O + 1 & 127;
               if (b.field_l == gm.field_O) {
                 gm.field_O = -1;

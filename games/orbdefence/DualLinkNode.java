@@ -43,7 +43,7 @@ class DualLinkNode extends IntrusiveNode {
     final static void a(int param0, int param1, boolean param2, int param3) {
         te.field_O = 0;
         kk.field_S = param3;
-        bk.field_e = param0;
+        ProxyAuthenticationRequiredException.field_e = param0;
         if (!b.a((byte) 112, kk.field_S)) {
           if (param1 != 2) {
             field_j = -61;

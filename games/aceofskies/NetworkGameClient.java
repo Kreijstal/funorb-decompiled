@@ -153,7 +153,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_z = -63L;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ct.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ct.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -235,7 +235,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

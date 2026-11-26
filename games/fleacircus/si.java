@@ -247,7 +247,7 @@ final class si {
             return stackIn_59_0;
           }
           if (param1) {
-            ul.field_G.b(109, em.a(ob.field_e, false, pb.field_d), em.a(kc.field_b, false, ag.field_f));
+            ul.field_G.b(109, ProxyAuthenticationRequiredException.a(ob.field_e, false, pb.field_d), ProxyAuthenticationRequiredException.a(kc.field_b, false, ag.field_f));
             if (ul.field_G.b(-78)) {
               if (ul.field_G.field_k == 0) {
                 stackIn_64_0 = 3;

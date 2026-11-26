@@ -311,7 +311,7 @@ final class uh extends IntrusiveNode {
         byte[] var2Lifetime217;
         var4 = fleas.field_A ? 1 : 0;
         try {
-          em.field_c = param1;
+          ProxyAuthenticationRequiredException.field_c = param1;
           var2 = tf.a(0, "waitingfor_patches");
           if (var2 != null) {
             cf.field_b = ab.a(0, var2);
@@ -902,7 +902,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime147 = tf.a(0, "NEW_GAME");
           if (null != var2Lifetime147) {
-            ec.field_a = ab.a(0, var2Lifetime147);
+            PcmOutputWorker.field_a = ab.a(0, var2Lifetime147);
           }
           var2Lifetime148 = tf.a(0, "CLASSIC_GAME");
           if (null != var2Lifetime148) {
@@ -938,7 +938,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime156 = tf.a(0, "INSTRUCTIONS_TITLES_6");
           if (null != var2Lifetime156) {
-            ec.field_d = ab.a(0, var2Lifetime156);
+            PcmOutputWorker.field_d = ab.a(0, var2Lifetime156);
           }
           var2Lifetime157 = tf.a(0, "INSTRUCTIONS_TITLES_7");
           if (var2Lifetime157 != null) {
@@ -946,7 +946,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime158 = tf.a(0, "INSTRUCTIONS_BODIES_1_1");
           if (null != var2Lifetime158) {
-            em.field_a = ab.a(0, var2Lifetime158);
+            ProxyAuthenticationRequiredException.field_a = ab.a(0, var2Lifetime158);
           }
           var2Lifetime159 = tf.a(0, "INSTRUCTIONS_BODIES_1_2");
           if (null != var2Lifetime159) {
@@ -1026,7 +1026,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime178 = tf.a(0, "INSTRUCTIONS_BODIES_4_4");
           if (null != var2Lifetime178) {
-            em.field_h = ab.a(0, var2Lifetime178);
+            ProxyAuthenticationRequiredException.field_h = ab.a(0, var2Lifetime178);
           }
           var2Lifetime179 = tf.a(0, "INSTRUCTIONS_BODIES_4_5");
           if (null != var2Lifetime179) {
@@ -1185,7 +1185,7 @@ final class uh extends IntrusiveNode {
           if (var2Lifetime217 != null) {
             jd.field_g[3] = ab.a(0, var2Lifetime217);
           }
-          em.field_c = null;
+          ProxyAuthenticationRequiredException.field_c = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

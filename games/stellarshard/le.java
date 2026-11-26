@@ -295,7 +295,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime39 = ImageProducerRasterBuffer.a(false, "levelspaces");
           if (null != var2Lifetime39) {
-            qf.field_f = se.a(0, var2Lifetime39);
+            PcmOutputWorker.field_f = se.a(0, var2Lifetime39);
           }
           var2Lifetime40 = ImageProducerRasterBuffer.a(false, "startlevel");
           if (var2Lifetime40 != null) {

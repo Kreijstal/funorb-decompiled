@@ -272,7 +272,7 @@ public final class Torquing extends tg {
           ef.clearStaticReferences(param0 - 1);
           ob.clearStaticReferences((byte) -12);
           SocketConnector.clearStaticReferences(23116);
-          ko.clearStaticReferences((byte) -102);
+          ProxyAuthenticationRequiredException.clearStaticReferences((byte) -102);
           np.clearDeclaredStaticReferences(0);
           mk.a(115);
           qm.clearStaticReferences(param0 ^ 35);

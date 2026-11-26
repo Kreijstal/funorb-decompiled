@@ -112,7 +112,7 @@ final class cd extends rg {
           if (uj.field_f) {
             var7 = var7 | 1;
           }
-          if (tl.field_b) {
+          if (ProxyAuthenticationRequiredException.field_b) {
             var7 = var7 | 4;
           }
           if (param1) {

@@ -48,7 +48,7 @@ final class wc {
               if (param0) {
                 stackIn_24_0 = bg.field_Q[var12];
               } else {
-                stackIn_24_0 = bj.field_b[var12];
+                stackIn_24_0 = ProxyAuthenticationRequiredException.field_b[var12];
               }
               var13 = stackIn_24_0;
               if (var7_int < var13) {

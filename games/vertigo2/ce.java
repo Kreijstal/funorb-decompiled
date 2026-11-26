@@ -64,7 +64,7 @@ final class ce {
         var2 = 67 % ((param0 - 60) / 39);
         if (1 != hb.field_q.status) {
         }
-        rg.field_d = NodeHashTableIterator.field_h;
+        ProxyAuthenticationRequiredException.field_d = NodeHashTableIterator.field_h;
         hb.field_q = null;
         return true;
     }

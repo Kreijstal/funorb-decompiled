@@ -11,16 +11,16 @@ final class hn {
     final synchronized static long correctedCurrentTimeMillis(byte param0) {
         long var1 = System.currentTimeMillis();
         if (ResourceArchive.field_e > var1) {
-          td.field_c = td.field_c + (-var1 + ResourceArchive.field_e);
+          BufferedSocket.field_c = BufferedSocket.field_c + (-var1 + ResourceArchive.field_e);
           ResourceArchive.field_e = var1;
           if (param0 == 80) {
-            return var1 + td.field_c;
+            return var1 + BufferedSocket.field_c;
           }
           return 95L;
         }
         ResourceArchive.field_e = var1;
         if (param0 == 80) {
-          return var1 + td.field_c;
+          return var1 + BufferedSocket.field_c;
         }
         return 95L;
     }

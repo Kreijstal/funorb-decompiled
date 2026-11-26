@@ -8,7 +8,7 @@ final class DirectByteStorage extends ByteStorage {
     final static void a(int param0, boolean param1) {
         IntrusiveDeque.field_a = ByteStorage.field_a;
         ag.field_o = 0;
-        ck.field_f = 0;
+        PcmOutputWorker.field_f = 0;
         fk.field_a = param0;
         ea.field_a = new n(2);
         ea.field_a.a(false, param1, -1, td.a(pe.field_d, la.field_c, true));

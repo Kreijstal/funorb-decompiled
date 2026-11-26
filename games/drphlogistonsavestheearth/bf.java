@@ -424,29 +424,29 @@ final class bf {
             if (null != this.field_r) {
               this.field_r[this.field_R].a((int)this.field_o, (int)this.field_N);
               if (DrPhlogistonSavesTheEarth.field_D) {
-                param1.c((int)this.field_o, (int)this.field_N, 128, qk.field_b[this.field_Q]);
+                param1.c((int)this.field_o, (int)this.field_N, 128, ProxyAuthenticationRequiredException.field_b[this.field_Q]);
                 if (this.field_y != null) {
-                  this.field_y[this.field_K].c((int)this.field_o, (int)this.field_N, 128, qk.field_b[this.field_Q]);
+                  this.field_y[this.field_K].c((int)this.field_o, (int)this.field_N, 128, ProxyAuthenticationRequiredException.field_b[this.field_Q]);
                 }
                 if (null != this.field_r) {
-                  this.field_r[this.field_R].c((int)this.field_o, (int)this.field_N, 128, qk.field_b[this.field_Q]);
+                  this.field_r[this.field_R].c((int)this.field_o, (int)this.field_N, 128, ProxyAuthenticationRequiredException.field_b[this.field_Q]);
                 }
               }
             }
           } else {
-            param1.c((int)this.field_o, (int)this.field_N, 128, qk.field_b[this.field_Q]);
+            param1.c((int)this.field_o, (int)this.field_N, 128, ProxyAuthenticationRequiredException.field_b[this.field_Q]);
             if (this.field_y != null) {
-              this.field_y[this.field_K].c((int)this.field_o, (int)this.field_N, 128, qk.field_b[this.field_Q]);
+              this.field_y[this.field_K].c((int)this.field_o, (int)this.field_N, 128, ProxyAuthenticationRequiredException.field_b[this.field_Q]);
             }
             if (null != this.field_r) {
-              this.field_r[this.field_R].c((int)this.field_o, (int)this.field_N, 128, qk.field_b[this.field_Q]);
+              this.field_r[this.field_R].c((int)this.field_o, (int)this.field_N, 128, ProxyAuthenticationRequiredException.field_b[this.field_Q]);
             }
           }
           if (this.field_f != null &&
             2 == sd.field_e &&
             0 < g.field_s[this.field_Q]) {
             if (0 == (1 & this.field_e)) {
-              this.field_f = gm.a(this.field_f, fb.field_c[this.field_Q], g.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
+              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], g.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
             }
             if (this.field_f != null) {
               this.field_f.a((int)this.field_o, (int)this.field_N, 382);

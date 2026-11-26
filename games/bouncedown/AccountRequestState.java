@@ -4,7 +4,7 @@
 final class AccountRequestState {
     static int field_e;
     static IntrusiveDeque field_d;
-    static pc field_a;
+    static BufferedSocket field_a;
     static RgbSprite field_b;
     static String field_c;
 

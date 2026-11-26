@@ -39,7 +39,7 @@ final class la {
           0 < this.field_h) {
           return 2;
         }
-        if (~this.field_a == ~rk.field_l) {
+        if (~this.field_a == ~BufferedSocket.field_l) {
           return 1;
         }
         if (ke.field_d == 2 &&

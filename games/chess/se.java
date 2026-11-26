@@ -27,7 +27,7 @@ class se extends fb {
           super.a(param0, -8, param2, param3);
           this.field_R = null;
           if (this.field_w) {
-            var5_int = hn.field_k - param0 - this.field_u;
+            var5_int = BufferedSocket.field_k - param0 - this.field_u;
             var6 = -this.field_r + (rf.field_b - param3);
             this.field_R = this.a((byte) 126, var6, var5_int);
           }

@@ -33,7 +33,7 @@ final class nb {
           var10.c(true);
           uc.field_d = BufferedSocket.a(var10, (byte) 107);
           ci.field_g = new lb[var3];
-          ck.field_h = new int[var3][];
+          PcmOutputWorker.field_h = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             ci.field_g[var4] = vh.a(var8, 102);
           }
@@ -48,7 +48,7 @@ final class nb {
             var5.a(1, 6, 6, 6, (byte) -72);
             var5.c((byte) -3);
             var6 = new int[]{var5.field_p + var5.field_M >> 1, var5.field_w + var5.field_F >> 1, var5.field_k + var5.field_v >> 1};
-            ck.field_h[var9] = var6;
+            PcmOutputWorker.field_h[var9] = var6;
             var5.a(-var6[0], -var6[2], (byte) -30, -var6[1]);
             var9++;
           }

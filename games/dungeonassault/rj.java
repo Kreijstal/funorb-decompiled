@@ -277,13 +277,13 @@ abstract class rj extends IntrusiveNode {
             pd.field_A = tp.field_B;
           } else {
             try {
-              sp.field_c = new rk((java.net.Socket) (ImageProducerRasterBuffer.field_m.result), sc.field_q);
+              sp.field_c = new BufferedSocket((java.net.Socket) (ImageProducerRasterBuffer.field_m.result), sc.field_q);
               ac.field_B.position = 0;
               var5 = ra.field_c;
               var6 = var5;
               var6.position = 0;
               pd.field_A = no.field_c;
-              wl.field_f = !param1 ? -1 : -2;
+              ProxyAuthenticationRequiredException.field_f = !param1 ? -1 : -2;
               oc.field_E = !param1 ? -1 : -2;
               SpriteGeometry.field_C = !param1 ? -1 : -2;
               rg.a(MouseInput.field_g, ac.field_B, kn.field_b, 119, SpriteGeometry.field_D);

@@ -32,7 +32,7 @@ final class Pickup extends FlightBody {
           }
           this.pickupCode = pickupCode;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wm.I(" + pickupCode + ',' + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wm.I(" + pickupCode + ',' + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ')');
         }
     }
 

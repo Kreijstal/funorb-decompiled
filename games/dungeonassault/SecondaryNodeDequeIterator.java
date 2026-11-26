@@ -89,7 +89,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_qh = ih.field_w[var3];
             var4_ref_qh.a((byte) -123);
-            bk.a(7, var3);
+            PcmOutputWorker.a(7, var3);
             var5 = var4_ref_qh.field_i + var4_ref_qh.field_H >> 1;
             var6 = var4_ref_qh.field_p + var4_ref_qh.field_M >> 1;
             var7 = var4_ref_qh.field_a + var4_ref_qh.field_b >> 1;
@@ -138,7 +138,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             }
             var22[var16] = -2147483648;
             var17 = ih.field_w[var16];
-            bk.a(7, var16);
+            PcmOutputWorker.a(7, var16);
             for (var18 = 0; var18 < 3; var18++) {
               CombatState.field_e[var18] = CombatState.field_e[var18] + lk.field_R[var15][var18];
             }

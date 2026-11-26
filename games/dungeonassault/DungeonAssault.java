@@ -70,11 +70,11 @@ public final class DungeonAssault extends NetworkGameClient {
                 }
               }
             }
-            if (null != wl.field_a.beginBackward(-24172)) {
+            if (null != ProxyAuthenticationRequiredException.field_a.beginBackward(-24172)) {
               fieldTemp$0 = ke.field_e + 1;
               ke.field_e = ke.field_e + 1;
               if (fieldTemp$0 == 335) {
-                wl.field_a.removeLast((byte) -124);
+                ProxyAuthenticationRequiredException.field_a.removeLast((byte) -124);
                 sl.field_b = null;
                 pa.field_a = null;
                 ri.field_g = null;
@@ -403,7 +403,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   for (var3 = 0; var3 < ce.field_o.length; var3++) {
                     stackIn_139_0 = vl.a(var3, -67, var22);
                     if (stackIn_139_0) {
-                      wl.field_a.addFirst(new a(var3), false);
+                      ProxyAuthenticationRequiredException.field_a.addFirst(new a(var3), false);
                     }
                   }
                 }
@@ -714,7 +714,7 @@ public final class DungeonAssault extends NetworkGameClient {
           mi.clearStaticReferences(-128);
           fd.a((byte) 65);
           hl.a(50);
-          rk.clearStaticReferences(true);
+          BufferedSocket.clearStaticReferences(true);
           CipherPacketBuffer.resetStaticState(7);
           qc.resetStaticState(0);
           dd.clearStaticReferences((byte) -40);
@@ -757,7 +757,7 @@ public final class DungeonAssault extends NetworkGameClient {
           s.clearStaticReferences(-55);
           pa.clearStaticReferences(2601);
           ka.resetStaticState((byte) -67);
-          bk.a(param0);
+          PcmOutputWorker.a(param0);
           il.clearStaticReferences((byte) 111);
           bb.clearStaticReferences((byte) 127);
           cc.clearStaticReferences(-86);
@@ -813,7 +813,7 @@ public final class DungeonAssault extends NetworkGameClient {
           hp.clearStaticReferences(35);
           no.resetStaticState((byte) -126);
           um.a(false);
-          wl.clearStaticReferences(98);
+          ProxyAuthenticationRequiredException.clearStaticReferences(98);
           fg.clearStaticReferences(-102);
           ImageProducerRasterBuffer.clearStaticReferences(false);
           ag.clearStaticReferences(16760896);
@@ -1129,7 +1129,7 @@ public final class DungeonAssault extends NetworkGameClient {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, var3_intLifetime1);
             }
           }
-          var3_ref = (a) (wl.field_a.beginBackward(-24172));
+          var3_ref = (a) (ProxyAuthenticationRequiredException.field_a.beginBackward(-24172));
           if (var3_ref != null) {
             if (null == sl.field_b) {
               ah.a(true, var3_ref.field_j);

@@ -122,7 +122,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (df.field_Q >= 0 &&
               var2_int >= 0) {
-              bb.field_g[df.field_Q] = var2_int;
+              PcmOutputWorker.field_g[df.field_Q] = var2_int;
               df.field_Q = 127 & df.field_Q + 1;
               if (df.field_Q == qa.field_a) {
                 df.field_Q = -1;
@@ -184,7 +184,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (df.field_Q >= 0 &&
               var2_int >= 0) {
-              bb.field_g[df.field_Q] = ~var2_int;
+              PcmOutputWorker.field_g[df.field_Q] = ~var2_int;
               df.field_Q = 1 + df.field_Q & 127;
               if (qa.field_a == df.field_Q) {
                 df.field_Q = -1;

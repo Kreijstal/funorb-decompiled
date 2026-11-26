@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class dd extends kj {
-    static cb field_A;
+    static BufferedSocket field_A;
     private int field_C;
     private boolean field_H;
     private int field_G;

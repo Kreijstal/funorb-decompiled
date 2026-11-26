@@ -129,7 +129,7 @@ final class hc extends ui {
               if (var9Lifetime1 == 248) {
                 sa.a((byte) 108, kk.c(-14047));
                 wj.field_p = el.field_d;
-                ck.$cfr$intArgs$b$e683eeaaf5b5(-88);
+                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-88);
                 fb.field_p = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -155,7 +155,7 @@ final class hc extends ui {
                 for (var12 = 0; var12 < var11; var12++) {
                   fc.field_S[var12] = ig.field_a.readPrefixedString(0);
                 }
-                ck.$cfr$intArgs$b$e683eeaaf5b5(-36);
+                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-36);
                 fb.field_p = false;
                 stackIn_47_0 = 100 + var11;
                 return stackIn_47_0;
@@ -172,7 +172,7 @@ final class hc extends ui {
             } else {
               wj.field_p = ig.field_a.readString(false);
             }
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-85);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-85);
             fb.field_p = false;
             stackIn_57_0 = pg.field_d;
             return stackIn_57_0;

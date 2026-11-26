@@ -224,7 +224,7 @@ final class nq extends rk {
           if (null != param9 && (null == vf.field_y ||
             !(param0 <= vf.field_y.length))) {
             vf.field_y = new int[100 + param0];
-            jr.field_f = new int[param0 + 100];
+            PcmOutputWorker.field_f = new int[param0 + 100];
             hn.field_s = new int[100 + param0];
           }
           var30 = 0;
@@ -616,8 +616,8 @@ final class nq extends rk {
                     qq.a(hn.field_s, 0, var55Lifetime3Lifetime3, 0, var34);
                     hn.field_s = var55Lifetime3Lifetime3;
                     var55Lifetime3Lifetime3 = new int[98 + (param0 + var33) + var59];
-                    qq.a(jr.field_f, 0, var55Lifetime3Lifetime3, 0, var34);
-                    jr.field_f = var55Lifetime3Lifetime3;
+                    qq.a(PcmOutputWorker.field_f, 0, var55Lifetime3Lifetime3, 0, var34);
+                    PcmOutputWorker.field_f = var55Lifetime3Lifetime3;
                   }
                 }
                 b.field_m[var34] = var26[4];
@@ -627,10 +627,10 @@ final class nq extends rk {
                   if (var65 != 0) {
                     vf.field_y[var34] = var26[12];
                     hn.field_s[var34] = var26[13];
-                    jr.field_f[var34] = var26[14];
+                    PcmOutputWorker.field_f[var34] = var26[14];
                   } else {
                     vf.field_y[var34] = var36;
-                    jr.field_f[var34] = var38;
+                    PcmOutputWorker.field_f[var34] = var38;
                   }
                 }
                 var28[var34++] = var39;
@@ -641,11 +641,11 @@ final class nq extends rk {
                   if (param9 != null) {
                     if (var65 == 0) {
                       vf.field_y[var34] = var36;
-                      jr.field_f[var34] = var38;
+                      PcmOutputWorker.field_f[var34] = var38;
                     } else {
                       vf.field_y[var34] = var26[14];
                       hn.field_s[var34] = var26[15];
-                      jr.field_f[var34] = var26[12];
+                      PcmOutputWorker.field_f[var34] = var26[12];
                     }
                   }
                   var28[var34++] = var39;
@@ -692,7 +692,7 @@ final class nq extends rk {
                 if (null != param9) {
                   vf.field_y[var34] = param9[var39];
                   hn.field_s[var34] = param10[var39];
-                  jr.field_f[var34] = param7[var39];
+                  PcmOutputWorker.field_f[var34] = param7[var39];
                 }
                 var28[var34] = var39;
               }

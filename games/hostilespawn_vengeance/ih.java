@@ -9,7 +9,7 @@ final class ih extends ej {
     static String field_u;
     static RgbSprite field_v;
     static volatile boolean field_s;
-    private td field_t;
+    private BufferedSocket field_t;
     static int field_w;
     static oc[] field_y;
 
@@ -51,7 +51,7 @@ final class ih extends ej {
             this.field_f = this.field_f + var4;
             if (this.field_f > 30000) {
               try {
-                this.field_t.a(37);
+                this.field_t.close(37);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -70,13 +70,13 @@ final class ih extends ej {
             return false;
           }
           try {
-            this.field_t.a((byte) -55);
+            this.field_t.checkWriteError((byte) -55);
             var2 = (lm) (this.field_b.d((byte) -35));
             while (var2 != null) {
               this.field_m.field_i = 0;
               this.field_m.d(124, 1);
               this.field_m.a(-113, var2.field_h);
-              this.field_t.a(this.field_m.field_n.length, this.field_m.field_n, (byte) -63, 0);
+              this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) -63, 0);
               this.field_j.a(var2, -126);
               var2 = (lm) (this.field_b.b((byte) -59));
             }
@@ -85,12 +85,12 @@ final class ih extends ej {
               this.field_m.field_i = 0;
               this.field_m.d(100, 0);
               this.field_m.a(-127, var2Lifetime1.field_h);
-              this.field_t.a(this.field_m.field_n.length, this.field_m.field_n, (byte) -127, 0);
+              this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) -127, 0);
               this.field_a.a(var2Lifetime1, 56);
               var2Lifetime1 = (lm) (this.field_l.b((byte) -114));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
-              var3_int = this.field_t.b((byte) 59);
+              var3_int = this.field_t.availableBytes((byte) 59);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -113,7 +113,7 @@ final class ih extends ej {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_t.a(-1, this.field_p.field_C.field_n, this.field_p.field_C.field_i, var6);
+                  this.field_t.readFully(-1, this.field_p.field_C.field_n, this.field_p.field_C.field_i, var6);
                   if (this.field_r != 0) {
                     var17 = 0;
                     var7 = var17;
@@ -138,7 +138,7 @@ final class ih extends ej {
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_t.a(-1, this.field_i.field_n, this.field_i.field_i, var5);
+                  this.field_t.readFully(-1, this.field_i.field_n, this.field_i.field_i, var5);
                   if (this.field_r != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_i.field_n[var6 + this.field_i.field_i] = (byte)bm.a((int) this.field_i.field_n[var6 + this.field_i.field_i], (int) this.field_r);
@@ -213,7 +213,7 @@ final class ih extends ej {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_t.a(-98);
+              this.field_t.close(-98);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -236,7 +236,7 @@ final class ih extends ej {
 
     final void a(byte param0) {
         if (null != this.field_t) {
-          this.field_t.a(-105);
+          this.field_t.close(-105);
         }
         int var2 = -92 % ((param0 + 63) / 63);
     }
@@ -246,7 +246,7 @@ final class ih extends ej {
           if (param0 != 194) {
             this.e(57);
           }
-          this.field_t.a(-114);
+          this.field_t.close(-114);
         } catch (Exception exception) {
         }
         this.field_e = -1;
@@ -268,12 +268,12 @@ final class ih extends ej {
             this.field_m.d(param0 + 74, 6);
             this.field_m.e(3, -91);
             this.field_m.a((byte) -119, 0);
-            this.field_t.a(this.field_m.field_n.length, this.field_m.field_n, (byte) 32, 0);
+            this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) 32, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_t.a(-54);
+              this.field_t.close(-54);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -283,7 +283,7 @@ final class ih extends ej {
             this.field_e = -2;
           }
           if (param0 != 24) {
-            this.field_t = (td) null;
+            this.field_t = (BufferedSocket) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -309,14 +309,14 @@ final class ih extends ej {
           try {
             if (null != this.field_t) {
               try {
-                this.field_t.a(-98);
+                this.field_t.close(-98);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
               }
               this.field_t = null;
             }
-            this.field_t = (td) (param2);
+            this.field_t = (BufferedSocket) (param2);
             this.g(24);
             this.a((byte) 47, param0);
             this.field_p = null;
@@ -346,12 +346,12 @@ final class ih extends ej {
                 this.field_m.d(106, 4);
                 this.field_m.d(param1 ^ 52, (int) this.field_r);
                 this.field_m.b(0, 25251);
-                this.field_t.a(this.field_m.field_n.length, this.field_m.field_n, (byte) 87, 0);
+                this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) 87, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_t.a(-95);
+                  this.field_t.close(-95);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -476,12 +476,12 @@ final class ih extends ej {
             }
             ((PacketBuffer) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_5_2);
             this.field_m.a(-121, 0L);
-            this.field_t.a(this.field_m.field_n.length, this.field_m.field_n, (byte) -105, 0);
+            this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) -105, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_t.a(param0 ^ 127);
+              this.field_t.close(param0 ^ 127);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;

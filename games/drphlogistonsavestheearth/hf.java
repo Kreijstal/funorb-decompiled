@@ -20,10 +20,10 @@ class hf extends vg {
           if (em.field_c) {
             return null;
           }
-          if (dd.field_l < qe.field_c) {
+          if (dd.field_l < BufferedSocket.field_c) {
             return null;
           }
-          if (!(dd.field_l >= je.field_j + qe.field_c)) {
+          if (!(dd.field_l >= je.field_j + BufferedSocket.field_c)) {
             return ie.field_C;
           }
           return null;
@@ -31,10 +31,10 @@ class hf extends vg {
         if (em.field_c) {
           return null;
         }
-        if (dd.field_l < qe.field_c) {
+        if (dd.field_l < BufferedSocket.field_c) {
           return null;
         }
-        if (!(dd.field_l >= je.field_j + qe.field_c)) {
+        if (!(dd.field_l >= je.field_j + BufferedSocket.field_c)) {
           return ie.field_C;
         }
         return null;

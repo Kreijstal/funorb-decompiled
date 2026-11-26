@@ -132,7 +132,7 @@ public final class Bounce extends GameClient {
           v.clearStaticReferences(-8217);
           vi.clearStaticReferences((byte) 74);
           jf.e(-18695);
-          pc.clearStaticReferences(-14582);
+          BufferedSocket.clearStaticReferences(-14582);
           Platform.clearStaticReferences((byte) 64);
           Slime.clearStaticReferences(100);
           qf.clearStaticReferences(-107);
@@ -239,7 +239,7 @@ public final class Bounce extends GameClient {
           fl.clearStaticReferences(8192);
           ta.resetStaticState(0);
           oa.clearStaticReferences(22085);
-          tk.resetStaticState(8191);
+          ProxyAuthenticationRequiredException.resetStaticState(8191);
           ImageProducerRasterBuffer.resetStaticState(true);
           lb.resetStaticState((byte) -83);
           kj.clearStaticReferences(false);
@@ -563,7 +563,7 @@ public final class Bounce extends GameClient {
               ll.field_y <= 16 + var7 &&
               this.field_L &&
               1 == vh.field_e) {
-              tk.d(-6144);
+              ProxyAuthenticationRequiredException.d(-6144);
               rj.field_j = 2;
             }
             var5Lifetime1 = gk.field_e.b(db.field_T);
@@ -653,7 +653,7 @@ public final class Bounce extends GameClient {
             stackIn_307_1 = qf.field_b;
             if (var10 == 0) {
               if (stackIn_307_0 == stackIn_307_1) {
-                tk.d(-6144);
+                ProxyAuthenticationRequiredException.d(-6144);
                 rj.field_j = 2;
               }
               if (qf.field_b != 1) {
@@ -1347,7 +1347,7 @@ public final class Bounce extends GameClient {
           } else {
             mb.field_q = nc.a("background", ub.field_a, "", 0);
           }
-          pc.field_o = nc.a("wall", ub.field_a, "", param1 - 3134);
+          BufferedSocket.field_o = nc.a("wall", ub.field_a, "", param1 - 3134);
           PacketBuffer.field_j = nc.a("topspikes", ub.field_a, "", param1 ^ 3134);
           vb.field_m = vh.a(ub.field_a, "", (byte) -68, "squish");
           se.field_A = nc.a("spikes", ub.field_a, "", param1 ^ 3134);
@@ -1540,8 +1540,8 @@ public final class Bounce extends GameClient {
           do {
             if (640 <= var5_int) {
               SoftwareRasterizer.resetClip();
-              pc.field_o.a(-pc.field_o.field_s + 640, 0);
-              pc.field_o.d(0, 0);
+              BufferedSocket.field_o.a(-BufferedSocket.field_o.field_s + 640, 0);
+              BufferedSocket.field_o.d(0, 0);
               SoftwareRasterizer.setClip(var3, 0, var3 + 512, 446);
               break;
             }

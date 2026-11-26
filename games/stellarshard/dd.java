@@ -85,7 +85,7 @@ final class dd {
           if (param1 < 108) {
             dd.b(-57);
           }
-          if (!tl.a(param2, (byte) -5, param0, param4)) {
+          if (!ProxyAuthenticationRequiredException.a(param2, (byte) -5, param0, param4)) {
             return null;
           }
           stackIn_6_0 = DirectByteStorage.a(2376, param3.a(param4, 16, param0));

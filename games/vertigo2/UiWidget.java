@@ -163,7 +163,7 @@ class UiWidget extends IntrusiveNode {
               }
             }
             if (q.field_v == 0 &&
-              rg.field_c != 0) {
+              ProxyAuthenticationRequiredException.field_c != 0) {
               this.a(this, (byte) 46, param3, param0, PacketBuffer.field_n, gb.field_d);
               var6_ref_qg = um.field_E;
               if (var6_ref_qg != null) {
@@ -175,7 +175,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
         }
-        rg.field_c = q.field_v;
+        ProxyAuthenticationRequiredException.field_c = q.field_v;
         qc.a(this.a(false), 74);
         var6 = 96 % ((4 - param2) / 50);
         return param1;

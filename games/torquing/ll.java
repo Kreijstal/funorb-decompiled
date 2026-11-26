@@ -25,7 +25,7 @@ final class ll extends kj {
         int var5 = this.field_l * param1 >> 12;
         int var6 = param0 * this.field_j >> 12;
         int var7 = param0 * this.field_h >> 12;
-        ko.a(this.field_c, var7, this.field_e, var5, var6, -2910, var4);
+        ProxyAuthenticationRequiredException.a(this.field_c, var7, this.field_e, var5, var6, -2910, var4);
     }
 
     ll(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

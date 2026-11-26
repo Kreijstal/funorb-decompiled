@@ -8,7 +8,7 @@ final class sp {
     static int field_h;
     static AccountRequestState field_e;
     static String field_f;
-    static rk field_c;
+    static BufferedSocket field_c;
     static String field_b;
     private static String field_z;
 

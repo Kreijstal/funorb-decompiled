@@ -78,7 +78,7 @@ final class fo {
         String var5;
         int var2Lifetime1;
         var4 = Vertigo2.field_L ? 1 : 0;
-        if (!rg.field_b &&
+        if (!ProxyAuthenticationRequiredException.field_b &&
           !kj.field_C) {
           while (NodeHashTableIterator.a(false)) {
             if (de.field_f != 13) {
@@ -1457,11 +1457,11 @@ final class fo {
                         }
                         if ((var7 != 0)) {
                           if (this.field_a.b((byte) 85) &&
-                            rg.field_f <= dc.field_O) {
+                            ProxyAuthenticationRequiredException.field_f <= dc.field_O) {
                             break regionExit2;
                           }
                           e.a(on.field_b[0][0], false);
-                          dc.field_O = rg.field_f + 20;
+                          dc.field_O = ProxyAuthenticationRequiredException.field_f + 20;
                         }
                         break regionExit1;
                       }
@@ -1726,7 +1726,7 @@ final class fo {
         }
         this.field_a.a(param1, this.a(110, PacketBuffer.field_n, gb.field_d), param2, (byte) 80);
         qc.field_t = -1;
-        dc.field_O = rg.field_f;
+        dc.field_O = ProxyAuthenticationRequiredException.field_f;
         oa.field_q = -1;
     }
 

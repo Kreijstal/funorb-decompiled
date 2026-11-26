@@ -256,7 +256,7 @@ abstract class GameClient extends AppletShell {
         }
         if (cf.field_e == 0 &&
           !tb.e(-11)) {
-          tk.field_a = false;
+          ProxyAuthenticationRequiredException.field_a = false;
         }
         if (sa.field_k == 0 &&
           gk.b(116)) {
@@ -330,7 +330,7 @@ abstract class GameClient extends AppletShell {
         if (sa.field_k == 11) {
           if (null != AccountCreationResultPanel.field_pb && (!AccountCreationResultPanel.field_pb.c(-121) ||
             !AccountCreationResultPanel.field_pb.a((byte) -62))) {
-            hg.a(hg.a(pc.field_p, AccountCreationResultPanel.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
+            hg.a(hg.a(BufferedSocket.field_p, AccountCreationResultPanel.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -731,7 +731,7 @@ abstract class GameClient extends AppletShell {
         } else {
           if (sa.field_k < 10) {
           } else {
-            if (!tk.c(param0 ^ 250)) {
+            if (!ProxyAuthenticationRequiredException.c(param0 ^ 250)) {
               ij.a((byte) -105);
             } else {
               if (0 != mh.field_U) {

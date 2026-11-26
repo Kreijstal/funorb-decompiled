@@ -213,7 +213,7 @@ final class wa extends pj implements kd, ke {
             }
           } else {
             this.field_S = new hf(DrPhlogistonSavesTheEarth.field_E, (fd) null);
-            this.field_P = new hf(qk.field_d, (fd) null);
+            this.field_P = new hf(ProxyAuthenticationRequiredException.field_d, (fd) null);
             this.field_L.field_E = false;
           }
           this.field_L.field_l = (cg) ((Object) new mj(10000536));

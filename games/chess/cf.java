@@ -72,7 +72,7 @@ final class cf extends ci {
         int var15 = 0;
         var13 = Chess.field_G;
         try {
-          vi.field_d = SoftwareRasterizer.field_h;
+          PcmOutputWorker.field_d = SoftwareRasterizer.field_h;
           fn.field_c = SoftwareRasterizer.field_c;
           if (param1) {
             stackIn_4_0 = AccountServiceResult.field_c;
@@ -204,7 +204,7 @@ final class cf extends ci {
           dn.field_c.a(0, ah.field_i.field_M, -2147483648, -24 + ah.field_i.field_pb, 24);
           dn.field_c.field_Ab = wh.a(67, dn.field_c.field_pb, 3, 11579568, 8421504, 1);
           bh.field_G.a(5, -10 + dn.field_c.field_M, -2147483648, -2 + (-24 + (-10 + dn.field_c.field_pb)), 5);
-          hn.field_d.a((-80 + dn.field_c.field_M) / 2, 80, -2147483648, 24, -24 + dn.field_c.field_pb - 5);
+          BufferedSocket.field_d.a((-80 + dn.field_c.field_M) / 2, 80, -2147483648, 24, -24 + dn.field_c.field_pb - 5);
           dj.g(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

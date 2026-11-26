@@ -41,7 +41,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ck.field_d != null) {
+          if (ProxyAuthenticationRequiredException.field_d != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -99,7 +99,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var8 = jh.field_a.requestThreadStart((Runnable) (this), false, 1);
               while (true) {
                 if (var8.status == 0) {
-                  ge.sleepMillis(0, 10L);
+                  BufferedSocket.sleepMillis(0, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -279,7 +279,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           this.b((byte) 79);
-          if (ck.field_d != null) {
+          if (ProxyAuthenticationRequiredException.field_d != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -386,8 +386,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (null != ck.field_d) {
-              var2 = ck.field_d;
+            if (null != ProxyAuthenticationRequiredException.field_d) {
+              var2 = ProxyAuthenticationRequiredException.field_d;
               if (var4 != 0) {
                 if (pg.field_b == null) {
                   var2 = c.field_j;
@@ -412,13 +412,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ug.field_y));
           ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
           ug.field_y.setVisible(true);
-          boolean decompiledSharedTail0 = (var2 == ck.field_d);
+          boolean decompiledSharedTail0 = (var2 == ProxyAuthenticationRequiredException.field_d);
           if (!decompiledSharedTail0) {
             ug.field_y.setLocation(ef.field_e, ga.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = ck.field_d.getInsets();
+            var3 = ProxyAuthenticationRequiredException.field_d.getInsets();
             ug.field_y.setLocation(ef.field_e + var3.left, var3.top + ga.field_c);
           }
           ug.field_y.addFocusListener((java.awt.event.FocusListener) (this));
@@ -446,7 +446,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (this == c.field_j &&
             !MouseWheelInput.field_d) {
             rf.field_a = rf.correctedCurrentTimeMillis(0);
-            ge.sleepMillis(0, 5000L);
+            BufferedSocket.sleepMillis(0, 5000L);
             TriangleMesh.field_n = null;
             this.a(false, -23646);
             return;
@@ -461,7 +461,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (ck.field_d != null) {
+        if (ProxyAuthenticationRequiredException.field_d != null) {
           return null;
         }
         if (pg.field_b != null &&
@@ -485,7 +485,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ck.field_d) {
+          if (null != ProxyAuthenticationRequiredException.field_d) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -517,7 +517,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ck.field_d != null) {
+          if (ProxyAuthenticationRequiredException.field_d != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -786,14 +786,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             wj.field_o = wj.field_o - 50;
             ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
             ug.field_y.setVisible(true);
-            boolean decompiledSharedTail0 = (null != ck.field_d &&
+            boolean decompiledSharedTail0 = (null != ProxyAuthenticationRequiredException.field_d &&
               hh.field_G == null);
             if (!decompiledSharedTail0) {
               ug.field_y.setLocation(ef.field_e, ga.field_c);
               decompiledSharedTail0 = (Lexicominos.field_L);
             }
             if (decompiledSharedTail0) {
-              var6 = ck.field_d.getInsets();
+              var6 = ProxyAuthenticationRequiredException.field_d.getInsets();
               ug.field_y.setLocation(var6.left + ef.field_e, var6.top + ga.field_c);
             }
           }

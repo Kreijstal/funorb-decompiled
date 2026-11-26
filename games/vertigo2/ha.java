@@ -187,7 +187,7 @@ final class ha {
             }
           }
           IterableNodeHashTable.field_h[2] = new UiPanel(0L, fm.field_e, in.field_f);
-          mg.field_S[2] = new nk[]{new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[1], rg.field_h)};
+          mg.field_S[2] = new nk[]{new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, (Sprite) null, pp.field_r), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, sf.field_a[1], ProxyAuthenticationRequiredException.field_h)};
           if (sp.field_O > 1) {
             IterableNodeHashTable.field_h[3] = new UiPanel(0L, fm.field_e, um.field_H);
             array$1 = new nk[1 + sp.field_O];

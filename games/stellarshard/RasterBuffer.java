@@ -269,8 +269,8 @@ abstract class RasterBuffer {
           if (null != na.field_d) {
             na.field_d.i(-21535);
           }
-          if (null != qf.field_d) {
-            qf.field_d.k(29960);
+          if (null != PcmOutputWorker.field_d) {
+            PcmOutputWorker.field_d.k(29960);
           }
           ld.e((byte) -111);
           return;

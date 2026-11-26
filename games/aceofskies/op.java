@@ -39,7 +39,7 @@ final class op {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class op {
           VorbisSample var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

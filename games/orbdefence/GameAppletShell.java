@@ -222,7 +222,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 ml.a(117);
                 this.e(53);
-                cb.field_a = bk.a(bd.field_k, (java.awt.Component) ((Object) field_f), th.field_e, false);
+                BufferedSocket.field_a = ProxyAuthenticationRequiredException.a(bd.field_k, (java.awt.Component) ((Object) field_f), th.field_e, false);
                 this.c((byte) -69);
                 ge.field_g = ql.a(65280);
                 do {

@@ -75,8 +75,8 @@ final class g extends ei {
           }
           if (decompiledFrameRemainder0) {
             if (!em.field_c) {
-              if (dd.field_l >= qe.field_c) {
-                stackIn_18_0 = (je.field_j + qe.field_c > dd.field_l) ? 1 : 0;
+              if (dd.field_l >= BufferedSocket.field_c) {
+                stackIn_18_0 = (je.field_j + BufferedSocket.field_c > dd.field_l) ? 1 : 0;
               } else {
                 stackIn_18_0 = 0;
               }
@@ -87,12 +87,12 @@ final class g extends ei {
             var2_int = stackIn_18_0;
             if (param0 != null) {
               if (em.field_c) {
-                dd.field_l = qe.field_c;
+                dd.field_l = BufferedSocket.field_c;
                 decompiledFrameRemainder1 = false;
               }
               else {
                 if (var2_int != 0) {
-                  dd.field_l = qe.field_c;
+                  dd.field_l = BufferedSocket.field_c;
                   decompiledFrameRemainder1 = false;
                 }
               }
@@ -115,7 +115,7 @@ final class g extends ei {
             return;
           }
           if (!em.field_c &&
-            dd.field_l < qe.field_c &&
+            dd.field_l < BufferedSocket.field_c &&
             df.field_o) {
             oh.field_e = ClientException.field_c;
             pi.field_Q = oc.field_B;

@@ -175,7 +175,7 @@ final class sj extends jc {
           var6 = null;
           if (param1.indexOf('@') == -1) {
             var8 = (CharSequence) ((Object) param1);
-            var4_long = bk.a(125, var8);
+            var4_long = ProxyAuthenticationRequiredException.a(125, var8);
           } else {
             var6 = param1;
           }

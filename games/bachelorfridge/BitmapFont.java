@@ -73,7 +73,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_D = en.a(16, var7, -63);
+                                field_D = ProxyAuthenticationRequiredException.a(16, var7, -63);
                               }
                             } else {
                               field_H = -1;
@@ -83,7 +83,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_H = en.a(16, var6, 98);
+                          field_H = ProxyAuthenticationRequiredException.a(16, var6, 98);
                         }
                       } else {
                         field_J = -1;
@@ -93,7 +93,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_J = en.a(16, var5, 121);
+                    field_J = ProxyAuthenticationRequiredException.a(16, var5, 121);
                   }
                 } else {
                   field_G = field_w;
@@ -107,7 +107,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_I = en.a(16, var3, -8);
+            field_I = ProxyAuthenticationRequiredException.a(16, var3, -8);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

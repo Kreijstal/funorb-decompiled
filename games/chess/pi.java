@@ -85,11 +85,11 @@ final class pi {
               var11 = vn.field_Ab[var9];
               var6[0][var10] = ag.field_d[var11];
               var7[0][var10 * 4] = hg.field_d[var11];
-              var7[0][1 + 4 * var10] = hn.field_e[var11];
+              var7[0][1 + 4 * var10] = BufferedSocket.field_e[var11];
               var7[0][2 + 4 * var10] = in.field_j[var11];
               var7[0][3 + 4 * var10] = oc.field_n[var11];
               if (qd.a((byte) 13, ag.field_d[var11]) &&
-                in.field_j[var11] + (hn.field_e[var11] + oc.field_n[var11]) == 0) {
+                in.field_j[var11] + (BufferedSocket.field_e[var11] + oc.field_n[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -103,11 +103,11 @@ final class pi {
               var11Lifetime1 = vn.field_Ab[var9Lifetime1 + var5];
               var6[1][var14] = ag.field_d[var11Lifetime1];
               var7[1][4 * var14] = hg.field_d[var11Lifetime1];
-              var7[1][1 + 4 * var14] = hn.field_e[var11Lifetime1];
+              var7[1][1 + 4 * var14] = BufferedSocket.field_e[var11Lifetime1];
               var7[1][2 + var14 * 4] = in.field_j[var11Lifetime1];
               var7[1][3 + var14 * 4] = oc.field_n[var11Lifetime1];
               if (qd.a((byte) 13, ag.field_d[var11Lifetime1]) &&
-                0 == hn.field_e[var11Lifetime1] - (-in.field_j[var11Lifetime1] - oc.field_n[var11Lifetime1])) {
+                0 == BufferedSocket.field_e[var11Lifetime1] - (-in.field_j[var11Lifetime1] - oc.field_n[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;
               }

@@ -23,7 +23,7 @@ final class cd {
         if (null == lo.field_k) {
           return false;
         }
-        if (!rg.field_d.a((byte) 125)) {
+        if (!ProxyAuthenticationRequiredException.field_d.a((byte) 125)) {
           return false;
         }
         return true;

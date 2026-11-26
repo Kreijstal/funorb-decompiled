@@ -47,7 +47,7 @@ final class BufferElementType {
           }
           jn.a((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "la.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "la.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

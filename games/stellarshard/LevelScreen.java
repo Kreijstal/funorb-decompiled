@@ -37,41 +37,41 @@ final class LevelScreen extends ib {
               var2_int = 1;
             }
           }
-          if (tl.field_c == 4) {
+          if (ProxyAuthenticationRequiredException.field_c == 4) {
             var2_int = 8;
             var3 = 9;
           }
-          if (tl.field_c == 1) {
+          if (ProxyAuthenticationRequiredException.field_c == 1) {
             var3 = 10;
             var2_int = 9;
           }
-          if (tl.field_c == 2) {
+          if (ProxyAuthenticationRequiredException.field_c == 2) {
             var2_int = 8;
             var3 = 10;
           }
-          if (tl.field_c == 3) {
+          if (ProxyAuthenticationRequiredException.field_c == 3) {
             var2_int = 8;
             var3 = 10;
           }
-          if (param0 == tl.field_c &&
+          if (param0 == ProxyAuthenticationRequiredException.field_c &&
             gi.field_f == 96) {
             this.field_l = 1;
-            if ((var4 != 0) && (tl.field_c == 8 &&
+            if ((var4 != 0) && (ProxyAuthenticationRequiredException.field_c == 8 &&
               gi.field_f == 97)) {
               this.field_l = 0;
             }
           } else {
-            if (tl.field_c == 8 &&
+            if (ProxyAuthenticationRequiredException.field_c == 8 &&
               gi.field_f == 97) {
               this.field_l = 0;
             }
           }
           if (gi.field_f == 98) {
-            if (tl.field_c != 0 &&
-              tl.field_c != 4 &&
-              tl.field_c != 1 &&
-              tl.field_c != 2 &&
-              3 != tl.field_c) {
+            if (ProxyAuthenticationRequiredException.field_c != 0 &&
+              ProxyAuthenticationRequiredException.field_c != 4 &&
+              ProxyAuthenticationRequiredException.field_c != 1 &&
+              ProxyAuthenticationRequiredException.field_c != 2 &&
+              3 != ProxyAuthenticationRequiredException.field_c) {
               return;
             }
             this.field_l = this.field_l - 1;
@@ -96,11 +96,11 @@ final class LevelScreen extends ib {
             }
           }
           if (gi.field_f == 99) {
-            if (tl.field_c != 0 &&
-              tl.field_c != 4 &&
-              tl.field_c != 1 &&
-              2 != tl.field_c &&
-              tl.field_c != 3) {
+            if (ProxyAuthenticationRequiredException.field_c != 0 &&
+              ProxyAuthenticationRequiredException.field_c != 4 &&
+              ProxyAuthenticationRequiredException.field_c != 1 &&
+              2 != ProxyAuthenticationRequiredException.field_c &&
+              ProxyAuthenticationRequiredException.field_c != 3) {
               return;
             }
             this.field_l = this.field_l + 1;
@@ -157,7 +157,7 @@ final class LevelScreen extends ib {
               return stackIn_14_0;
             }
             if (DualLinkDequeIterator.field_i &&
-              tl.field_c == 0) {
+              ProxyAuthenticationRequiredException.field_c == 0) {
               if (var4_int >= 1) {
                 var4_int++;
               }
@@ -196,10 +196,10 @@ final class LevelScreen extends ib {
           if (param2 != 8) {
             this.field_o = true;
           }
-          if (tl.field_c != 2 ||
+          if (ProxyAuthenticationRequiredException.field_c != 2 ||
             param3 != 8 ||
             DualLinkNode.a(-1)) {
-            if (0 == tl.field_c) {
+            if (0 == ProxyAuthenticationRequiredException.field_c) {
               if (1 != param3 ||
                 DualLinkDequeIterator.field_i ||
                 !(of.field_A > 1)) {
@@ -354,7 +354,7 @@ final class LevelScreen extends ib {
           if (1 == param0 &&
             !DualLinkDequeIterator.field_i &&
             of.field_A > 1 &&
-            tl.field_c == 0) {
+            ProxyAuthenticationRequiredException.field_c == 0) {
             qi.level = qi.level - 1;
             decompiledFrameRemainder0 = !(1 <= qi.level);
             if (decompiledFrameRemainder0) {
@@ -418,8 +418,8 @@ final class LevelScreen extends ib {
           if (param0 != 424) {
             this.a(true, 82);
           }
-          if (tl.field_c != 8) {
-            if (tl.field_c == 3 && (fb.field_n == 0 ||
+          if (ProxyAuthenticationRequiredException.field_c != 8) {
+            if (ProxyAuthenticationRequiredException.field_c == 3 && (fb.field_n == 0 ||
               1 == gh.field_c)) {
               if (param1 == 8 &&
                 DualLinkNode.a(param0 ^ -425)) {
@@ -442,18 +442,18 @@ final class LevelScreen extends ib {
                 } else {
                   this.field_l = 7;
                 }
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 if (oa.field_D) {
                   return;
                 }
-                tl.field_c = 8;
+                ProxyAuthenticationRequiredException.field_c = 8;
                 oa.field_D = true;
                 ta.a(v.field_e, 713);
                 if (var4 == 0) {
                   return;
                 }
               }
-              tl.field_c = 2;
+              ProxyAuthenticationRequiredException.field_c = 2;
               oc.field_d = false;
               n.field_L = 255;
               if (!v.field_e) {
@@ -467,7 +467,7 @@ final class LevelScreen extends ib {
                 return;
               }
             }
-            if (2 == tl.field_c) {
+            if (2 == ProxyAuthenticationRequiredException.field_c) {
               if (param1 == 8 &&
                 DualLinkNode.a(-1)) {
                 am.a(2, 2, param0 - 544);
@@ -488,12 +488,12 @@ final class LevelScreen extends ib {
                 } else {
                   this.field_l = -1;
                 }
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 if (oa.field_D) {
                   return;
                 }
                 oa.field_D = true;
-                tl.field_c = 8;
+                ProxyAuthenticationRequiredException.field_c = 8;
                 ta.a(v.field_e, 713);
                 if (var4 == 0) {
                   return;
@@ -508,8 +508,8 @@ final class LevelScreen extends ib {
                 return;
               }
             }
-            if (tl.field_c != 1) {
-              if (4 == tl.field_c) {
+            if (ProxyAuthenticationRequiredException.field_c != 1) {
+              if (4 == ProxyAuthenticationRequiredException.field_c) {
                 if (param1 != 8) {
                   return;
                 }
@@ -521,17 +521,17 @@ final class LevelScreen extends ib {
                 } else {
                   this.field_l = -1;
                 }
-                tl.field_c = 0;
+                ProxyAuthenticationRequiredException.field_c = 0;
                 n.field_L = 255;
                 gh.field_d = null;
                 if (!DualLinkNode.a(-1)) {
                   if (0 < ue.field_a) {
-                    tl.field_c = 2;
+                    ProxyAuthenticationRequiredException.field_c = 2;
                   }
                   if (oc.field_d) {
-                    tl.field_c = 3;
+                    ProxyAuthenticationRequiredException.field_c = 3;
                   }
-                  if (tl.field_c == 0) {
+                  if (ProxyAuthenticationRequiredException.field_c == 0) {
                     return;
                   }
                   stackIn_150_0 = !(mk.field_k <= 0);
@@ -545,7 +545,7 @@ final class LevelScreen extends ib {
                   return;
                 }
               }
-              if (tl.field_c != 0) {
+              if (ProxyAuthenticationRequiredException.field_c != 0) {
                 return;
               }
               var3_int = this.field_j;
@@ -582,7 +582,7 @@ final class LevelScreen extends ib {
                     }
                     nf.field_r = false;
                     DualLinkDequeIterator.field_i = true;
-                    tl.field_a = 0;
+                    ProxyAuthenticationRequiredException.field_a = 0;
                     decompiledFrameRemainder0 = (qi.level == 0);
                     if (decompiledFrameRemainder0) {
                       nf.field_r = true;
@@ -614,10 +614,10 @@ final class LevelScreen extends ib {
                         }
                         if (decompiledFrameRemainder0) {
                           if (param1 == 2) {
-                            if (1 != tl.field_c) {
+                            if (1 != ProxyAuthenticationRequiredException.field_c) {
                               n.field_L = 255;
                             }
-                            tl.field_c = 1;
+                            ProxyAuthenticationRequiredException.field_c = 1;
                             if (!v.field_e) {
                               this.field_l = 9;
                               decompiledFrameRemainder0 = (var4 != 0);
@@ -630,7 +630,7 @@ final class LevelScreen extends ib {
                           if (decompiledFrameRemainder0) {
                             if (param1 == 7) {
                               if (!DualLinkDequeIterator.field_i) {
-                                if (tl.field_c != 3) {
+                                if (ProxyAuthenticationRequiredException.field_c != 3) {
                                   n.field_L = 255;
                                 }
                                 if (v.field_e) {
@@ -641,7 +641,7 @@ final class LevelScreen extends ib {
                                 } else {
                                   this.field_l = 9;
                                 }
-                                tl.field_c = 3;
+                                ProxyAuthenticationRequiredException.field_c = 3;
                               }
                               oc.field_d = false;
                               decompiledFrameRemainder0 = (var4 != 0);
@@ -666,10 +666,10 @@ final class LevelScreen extends ib {
                                 if (!DualLinkNode.a(-1)) {
                                   gh.field_d = bk.a(3, 10, 1, param0 ^ 441, 5);
                                 }
-                                if (2 != tl.field_c) {
+                                if (2 != ProxyAuthenticationRequiredException.field_c) {
                                   n.field_L = 255;
                                 }
-                                tl.field_c = 2;
+                                ProxyAuthenticationRequiredException.field_c = 2;
                                 if (v.field_e) {
                                   this.field_l = -1;
                                   decompiledFrameRemainder0 = (var4 != 0);
@@ -695,7 +695,7 @@ final class LevelScreen extends ib {
                           GameEntity.field_e = 0;
                           nf.field_r = true;
                           stellarshard.field_K = true;
-                          tl.field_a = 0;
+                          ProxyAuthenticationRequiredException.field_a = 0;
                           bi.field_u = null;
                           if (qi.level > 0) {
                             qi.level = qi.level - 1;
@@ -747,7 +747,7 @@ final class LevelScreen extends ib {
             }
             if (param1 == 9) {
               n.field_L = 255;
-              tl.field_c = 0;
+              ProxyAuthenticationRequiredException.field_c = 0;
               if (v.field_e) {
                 this.field_l = -1;
                 if (var4 == 0) {
@@ -778,7 +778,7 @@ final class LevelScreen extends ib {
                 this.field_l = stackIn_27_1;
               }
               n.field_L = 255;
-              tl.field_c = 0;
+              ProxyAuthenticationRequiredException.field_c = 0;
               if (var4 == 0) {
                 return;
               }
@@ -809,7 +809,7 @@ final class LevelScreen extends ib {
         try {
           nj.field_f = new int[10];
           n.field_L = 255;
-          tl.field_c = 0;
+          ProxyAuthenticationRequiredException.field_c = 0;
           this.field_l = 0;
           if (!DualLinkDequeIterator.field_i &&
             of.field_A <= 1) {
@@ -818,7 +818,7 @@ final class LevelScreen extends ib {
           vc.field_h = param0;
           if (oc.field_d) {
             this.field_l = 9;
-            tl.field_c = 3;
+            ProxyAuthenticationRequiredException.field_c = 3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -860,7 +860,7 @@ final class LevelScreen extends ib {
               }
             }
           }
-          if (tl.field_c == 0) {
+          if (ProxyAuthenticationRequiredException.field_c == 0) {
             var5_int = 5883647;
             if (param2 == 0) {
               if (a.entities[0] != null &&
@@ -887,7 +887,7 @@ final class LevelScreen extends ib {
                 }
               }
               if (of.field_A > 1) {
-                ic.a(qf.field_f, param2, -1, false, 320, var5_int, param3);
+                ic.a(PcmOutputWorker.field_f, param2, -1, false, 320, var5_int, param3);
                 BufferedSocket.field_k[0].e(316, param3 + 3);
                 BufferedSocket.field_k[2].e(418, 3 + param3);
                 BufferedSocket.field_k[1].e(-3 + ((100 * qi.level - 100) / (-1 + of.field_A) + 320), 3 + param3);
@@ -1002,7 +1002,7 @@ final class LevelScreen extends ib {
           if (param1 == 1 &&
             !DualLinkDequeIterator.field_i &&
             of.field_A > 1 &&
-            tl.field_c == 0) {
+            ProxyAuthenticationRequiredException.field_c == 0) {
             qi.level = qi.level + 1;
             if (qi.level <= of.field_A) {
               return;
@@ -1056,9 +1056,9 @@ final class LevelScreen extends ib {
           }
           if (gi.field_f != 96 ||
             param0 != 8 &&
-            tl.field_c == 2) {
+            ProxyAuthenticationRequiredException.field_c == 2) {
             if (97 == gi.field_f && (param0 == 8 ||
-              tl.field_c != 2)) {
+              ProxyAuthenticationRequiredException.field_c != 2)) {
               si.field_X = si.field_X + 1;
               if (si.field_X >= 3) {
                 si.field_X = si.field_X - 3;
@@ -1284,31 +1284,31 @@ final class LevelScreen extends ib {
         int var3Lifetime1Lifetime4;
         var14 = stellarshard.field_B;
         try {
-          if (tl.field_c == 8) {
+          if (ProxyAuthenticationRequiredException.field_c == 8) {
             wj.c((byte) 57);
           }
           boolean decompiledFrameRemainder3 = true;
-          if (tl.field_c == 6) {
+          if (ProxyAuthenticationRequiredException.field_c == 6) {
             UiWidget.c((byte) -94);
-            tl.field_c = 7;
+            ProxyAuthenticationRequiredException.field_c = 7;
             decompiledFrameRemainder3 = (var14 != 0);
           }
           if ((decompiledFrameRemainder3) &&
-            (tl.field_c == 7)) {
+            (ProxyAuthenticationRequiredException.field_c == 7)) {
             if (DualLinkNode.a(-1)) {
               n.field_L = 255;
-              tl.field_c = fg.field_O;
+              ProxyAuthenticationRequiredException.field_c = fg.field_O;
               decompiledFrameRemainder3 = (var14 != 0);
             }
             if (decompiledFrameRemainder3) {
               MouseHandler.field_g = ab.a(-5094, 4);
-              tl.field_c = ea.field_p;
-              if (tl.field_c == 4) {
-                qf.a((byte) -125);
+              ProxyAuthenticationRequiredException.field_c = ea.field_p;
+              if (ProxyAuthenticationRequiredException.field_c == 4) {
+                PcmOutputWorker.a((byte) -125);
                 wh.a(-94);
                 vc.field_h.c(param0 + 42, te.field_c);
                 oc.field_d = false;
-                if (tl.field_a > 0) {
+                if (ProxyAuthenticationRequiredException.field_a > 0) {
                   oc.field_d = true;
                 }
                 cl.field_a = cl.field_a + te.field_c;
@@ -1318,8 +1318,8 @@ final class LevelScreen extends ib {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameRemainder2 = true;
-          if ((tl.field_c != 5) &&
-            (decompiledFrameRemainder2 = (tl.field_c == 4))) {
+          if ((ProxyAuthenticationRequiredException.field_c != 5) &&
+            (decompiledFrameRemainder2 = (ProxyAuthenticationRequiredException.field_c == 4))) {
             if (this.field_t < 0) {
               return;
             }
@@ -1396,7 +1396,7 @@ final class LevelScreen extends ib {
             }
             if (decompiledFrameCompleted1) {
               var2_int = 5883647;
-              if (0 >= tl.field_a) {
+              if (0 >= ProxyAuthenticationRequiredException.field_a) {
                 ic.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
                 if (var14 != 0) {
                   ic.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
@@ -1423,7 +1423,7 @@ final class LevelScreen extends ib {
             var2.c(qj.field_b, 320, var3, 10742263, -1);
             stackIn_104_0 = var2;
             stackIn_105_1 = !(tf.field_a.isEmpty(0));
-            stackIn_109_2 = (tl.field_a != 0);
+            stackIn_109_2 = (ProxyAuthenticationRequiredException.field_a != 0);
             stackIn_113_3 = (0 != te.field_c);
             ((ub) (Object) stackIn_104_0).c(ch.a(stackIn_105_1, stackIn_109_2, stackIn_113_3, 0), 320, var4 + var3, 10742263, -1);
             stackIn_116_1 = 320;
@@ -1437,32 +1437,32 @@ final class LevelScreen extends ib {
             stackIn_127_1 = (te.field_c != 0);
             stackIn_131_2 = !(tf.field_a.isEmpty(0));
             stackIn_134_3 = -72;
-            stackIn_135_4 = (tl.field_a != 0);
+            stackIn_135_4 = (ProxyAuthenticationRequiredException.field_a != 0);
             ((ub) (Object) stackIn_126_0).c(pe.$cfr$intArgs$a$3214d41809e1(stackIn_127_1, stackIn_131_2, stackIn_134_3, stackIn_135_4), 320, 30 + (3 * var4 + var3), 10742263, -1);
             stackIn_138_1 = 320;
             stackIn_138_2 = param0 ^ -87;
             stackIn_139_3 = (ld.field_F == 1);
             if (this.a(stackIn_138_1, stackIn_138_2, stackIn_139_3, 30 + var4 / 2 + (var3 + 4 * var4), v.field_e, sg.field_b, 5883647)) {
               oc.field_d = false;
-              tl.field_a = 0;
+              ProxyAuthenticationRequiredException.field_a = 0;
               ue.field_a = 0;
               ta.a(true, 713);
               ue.field_c.clear((byte) -8);
               tf.field_a.clear((byte) -8);
               qi.level = 0;
               n.field_L = 255;
-              tl.field_c = 8;
+              ProxyAuthenticationRequiredException.field_c = 8;
             }
             stackIn_145_0 = var2;
             stackIn_146_1 = (0 != te.field_c);
-            stackIn_150_2 = (tl.field_a != 0);
+            stackIn_150_2 = (ProxyAuthenticationRequiredException.field_a != 0);
             stackIn_153_3 = 6;
             stackIn_154_4 = !(tf.field_a.isEmpty(param0 - 85));
             ((ub) (Object) stackIn_145_0).c(stellarshard.a(stackIn_146_1, stackIn_150_2, stackIn_153_3, stackIn_154_4), 320, 4 * var4 + var3 + 60, 10742263, -1);
             SoftwareRasterizer.fillRectangleAlpha(112, 190, 416, 80 + var4 * 5, 16777215, n.field_L);
           }
           if (decompiledFrameCompleted1) {
-            stackIn_156_0 = ~tl.field_c;
+            stackIn_156_0 = ~ProxyAuthenticationRequiredException.field_c;
             stackIn_156_1 = -1;
           }
           if (stackIn_156_0 == stackIn_156_1) {
@@ -1470,7 +1470,7 @@ final class LevelScreen extends ib {
             if (!DualLinkDequeIterator.field_i) {
             }
           }
-          if (tl.field_c == 1) {
+          if (ProxyAuthenticationRequiredException.field_c == 1) {
             hk.field_l[1].e(0, 0);
             SoftwareRasterizer.fillRectangleAlpha(12, 96, 616, 336, 0, 192);
             ed.a(-6313, 3, 89, fg.field_P, 634, 343);
@@ -1555,7 +1555,7 @@ final class LevelScreen extends ib {
             SoftwareRasterizer.fillRectangleAlpha(12, 96, 616, 336, 16777215, n.field_L);
           }
           boolean decompiledFrameCompleted0 = true;
-          if (tl.field_c == 2) {
+          if (ProxyAuthenticationRequiredException.field_c == 2) {
             boolean decompiledFrameRemainder1 = true;
             hk.field_l[0].e(0, 0);
             SoftwareRasterizer.fillRectangleAlpha(128, 105, 384, 295, 0, 192);
@@ -1716,7 +1716,7 @@ final class LevelScreen extends ib {
               SoftwareRasterizer.fillRectangleAlpha(128, 105, 384, 295, 16777215, n.field_L);
             }
           }
-          if (tl.field_c == 3) {
+          if (ProxyAuthenticationRequiredException.field_c == 3) {
             this.field_r = -1;
             SoftwareRasterizer.fillRectangleAlpha(108, 112, 424, 296, 0, 192);
             ed.a(-6313, 99, 105, fg.field_P, 442, 303);
@@ -1747,7 +1747,7 @@ final class LevelScreen extends ib {
             var2_intLifetime3 = 180;
             var3Lifetime3 = 134;
             if (oc.field_d) {
-              stackIn_289_0 = tl.field_a;
+              stackIn_289_0 = ProxyAuthenticationRequiredException.field_a;
             } else {
               if (!DualLinkNode.a(-1)) {
                 stackIn_289_0 = ScorePopup.field_d;

@@ -15,7 +15,7 @@ abstract class td {
           pb.field_k = kg.a(2, "");
           pb.field_k.a(false, (byte) -48);
           uc.a(param2, 118, param3, param1);
-          tk.a(param0 ^ 127);
+          ProxyAuthenticationRequiredException.a(param0 ^ 127);
           vc.field_F = wj.field_a;
           fh.field_B = wj.field_a;
         } catch (RuntimeException runtimeException) {

@@ -26,7 +26,7 @@ final class tj {
           return kj.field_z + " - " + og.field_g.a((byte) -41, "commonui") + "%";
         }
         if (!am.field_b.b(-1)) {
-          return bk.field_a;
+          return ProxyAuthenticationRequiredException.field_a;
         }
         if (!am.field_b.b((byte) -103, "commonui")) {
           return hi.field_e + " - " + am.field_b.a((byte) -97, "commonui") + "%";

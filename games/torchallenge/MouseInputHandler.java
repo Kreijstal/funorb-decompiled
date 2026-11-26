@@ -11,7 +11,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (te.field_b != null) {
             sj.field_L = 0;
-            bj.mouseX = -1;
+            ProxyAuthenticationRequiredException.mouseX = -1;
             qb.mouseY = -1;
             ua.field_c = true;
           }
@@ -52,7 +52,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (te.field_b != null) {
             sj.field_L = 0;
-            bj.mouseX = param0.getX();
+            ProxyAuthenticationRequiredException.mouseX = param0.getX();
             qb.mouseY = param0.getY();
             ua.field_c = true;
           }
@@ -80,7 +80,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (te.field_b != null) {
             sj.field_L = 0;
-            bj.mouseX = param0.getX();
+            ProxyAuthenticationRequiredException.mouseX = param0.getX();
             qb.mouseY = param0.getY();
             ua.field_c = true;
           }
@@ -216,7 +216,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != te.field_b) {
             sj.field_L = 0;
-            bj.mouseX = param0.getX();
+            ProxyAuthenticationRequiredException.mouseX = param0.getX();
             qb.mouseY = param0.getY();
             ua.field_c = true;
           }

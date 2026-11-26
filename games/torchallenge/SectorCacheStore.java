@@ -533,7 +533,7 @@ final class SectorCacheStore {
               var16_ref.unlink(true);
             }
           } else {
-            var12 = (rd) (bb.field_d.first((byte) 113));
+            var12 = (rd) (PcmOutputWorker.field_d.first((byte) 113));
             if (var12 == null) {
               ob.b(-93);
               return;

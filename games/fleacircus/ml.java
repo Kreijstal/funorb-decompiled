@@ -110,7 +110,7 @@ final class ml extends dk {
         try {
           var4 = (hg) (ak.field_d.beginForward((byte) 47));
           while (var4 != null) {
-            ec.a(var4, (byte) 30, param0);
+            PcmOutputWorker.a(var4, (byte) 30, param0);
             var4 = (hg) (ak.field_d.nextForward((byte) -105));
           }
           if (param1 == 960240129) {

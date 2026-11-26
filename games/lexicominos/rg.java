@@ -15,7 +15,7 @@ final class rg {
         }
         try {
           id.field_v = param1;
-          ge.f(72);
+          BufferedSocket.f(72);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "rg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

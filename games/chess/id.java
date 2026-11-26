@@ -9,11 +9,11 @@ final class id {
     final static void a(byte param0) {
         if (param0 < 21) {
           id.a((byte) -89);
-          hn.b(68);
+          BufferedSocket.b(68);
           ArchiveIndex.a((byte) 19);
           return;
         }
-        hn.b(68);
+        BufferedSocket.b(68);
         ArchiveIndex.a((byte) 19);
     }
 

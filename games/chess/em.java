@@ -113,7 +113,7 @@ final class em {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, boolean param9) {
         int var11;
         var11 = Chess.field_G;
-        if (!param2 && (SoftwareRasterizer.field_h != vi.field_d ||
+        if (!param2 && (SoftwareRasterizer.field_h != PcmOutputWorker.field_d ||
           fn.field_c != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == ph.field_j.field_i &&
           SoftwareRasterizer.field_h == ph.field_j.field_e)) {
           if (pd.field_Rb != null) {
@@ -129,7 +129,7 @@ final class em {
         if (param2) {
           fl.field_x = ln.field_rc;
         } else {
-          fl.field_x = (vi.field_d - 640) / 2;
+          fl.field_x = (PcmOutputWorker.field_d - 640) / 2;
         }
         ge.a(false, param2);
         if (param1 != 2) {

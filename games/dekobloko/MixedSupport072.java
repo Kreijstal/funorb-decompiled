@@ -63,8 +63,8 @@ final class MixedSupport072 extends HashNode {
     MixedSupport072(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int[] integerArrayArgument7) {
         int integerLocal1 = 0;
         try {
-          integerLocal1 = PlatformSupport002.integerState0145;
-          PlatformSupport002.integerState0145 = PlatformSupport002.integerState0145 + 1;
+          integerLocal1 = DelegatingCanvas.integerState0145;
+          DelegatingCanvas.integerState0145 = DelegatingCanvas.integerState0145 + 1;
           this.integerState0411 = 65535 & integerLocal1;
           this.integerArrayState0139 = integerArrayArgument7;
           this.integerState0412 = integerArgument4;

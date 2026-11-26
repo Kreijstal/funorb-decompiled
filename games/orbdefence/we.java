@@ -125,7 +125,7 @@ final class we extends ta implements ai {
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_C[var5] = new s(this.field_D[var5], (ag) (this));
               this.field_C[var5].field_j = (td) ((Object) var4);
-              this.field_C[var5].field_i = oa.field_f;
+              this.field_C[var5].field_i = PcmOutputWorker.field_f;
               this.field_C[var5].a(0, var5 * 16 + 20, 15, (byte) -90, 80);
               this.a(this.field_C[var5], (byte) 74);
             }

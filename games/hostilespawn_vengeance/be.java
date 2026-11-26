@@ -10,7 +10,7 @@ final class be {
     static int field_i;
     static int field_e;
     int field_b;
-    static td field_g;
+    static BufferedSocket field_g;
     private boolean field_c;
 
     final void a(byte param0, int param1, int param2) {

@@ -75,7 +75,7 @@ final class pa {
             }
             var5_ref = cj.a((byte) 114, var4_ref_String);
             var6_ref = var1.readString(false);
-            var7_ref = ck.a((CharSequence) ((Object) var4_ref_String), (byte) -48);
+            var7_ref = ProxyAuthenticationRequiredException.a((CharSequence) ((Object) var4_ref_String), (byte) -48);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
@@ -118,7 +118,7 @@ final class pa {
               return;
             }
             uj.a("F1: " + qj.h(-124), (Throwable) null, param0 ^ 14);
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-45);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-45);
             if (param0 != 15) {
               pa.b(35);
             }
@@ -138,12 +138,12 @@ final class pa {
           if (null == var6) {
             var6 = sg.a((byte) 126, var5);
             if (var6 != null) {
-              pf.field_n.a(var6, (long)ck.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) -48).hashCode(), (byte) 64);
+              pf.field_n.a(var6, (long)ProxyAuthenticationRequiredException.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) -48).hashCode(), (byte) 64);
             }
           }
           if (var6 == null) {
             var6 = new hc();
-            pf.field_n.a(var6, (long)ck.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) -48).hashCode(), (byte) 64);
+            pf.field_n.a(var6, (long)ProxyAuthenticationRequiredException.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) -48).hashCode(), (byte) 64);
             fieldTemp$0 = ad.field_c;
             ad.field_c = ad.field_c + 1;
             var6.field_hb = fieldTemp$0;

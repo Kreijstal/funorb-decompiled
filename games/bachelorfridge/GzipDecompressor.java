@@ -424,7 +424,7 @@ final class GzipDecompressor {
           if (13 != param1) {
             return null;
           }
-          stackIn_38_0 = lga.a(true, new String[]{param0}, kc.field_a);
+          stackIn_38_0 = lga.a(true, new String[]{param0}, PcmOutputWorker.field_a);
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

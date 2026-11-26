@@ -2737,7 +2737,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("fs_focus_or_resolution", 0);
                 if (null != var2) {
-                  ec.field_e = ab.a(0, var2);
+                  PcmOutputWorker.field_e = ab.a(0, var2);
                 }
                 var2 = ad.a("fs_timeout", 0);
                 if (var2 != null) {

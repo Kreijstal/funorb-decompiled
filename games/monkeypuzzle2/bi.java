@@ -457,7 +457,7 @@ abstract class bi extends GameApplet {
           if (-1 != bl.field_m &&
             bl.field_m != 0) {
             bl.field_m = -1;
-            ff.a(64);
+            PcmOutputWorker.a(64);
           }
         }
         if (bl.field_m == 0 &&
@@ -817,7 +817,7 @@ abstract class bi extends GameApplet {
             if (bl.field_m != -1 &&
               bl.field_m != 0) {
               bl.field_m = -1;
-              ff.a(95);
+              PcmOutputWorker.a(95);
             }
             if (!param0) {
               var5_intLifetime2 = ad.a(this.field_n, 650, this.field_y, false, mk.e(0), lb.d((byte) -56));

@@ -53,7 +53,7 @@ class ik implements rd, ub {
           return ef.field_c;
         }
         if (!ej.field_d.a((byte) -114)) {
-          return ck.field_c + " - " + ej.field_d.a(false) + "%";
+          return ProxyAuthenticationRequiredException.field_c + " - " + ej.field_d.a(false) + "%";
         }
         return ta.field_b;
     }

@@ -53,16 +53,16 @@ final class sc {
           synchronized (var1) {
             tl.field_o = tc.field_h;
             lg.field_d = lg.field_d + 1;
-            if (~em.field_f > param0) {
+            if (~ProxyAuthenticationRequiredException.field_f > param0) {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
                 MidiPcmStream.field_H[var5] = false;
                 var5++;
               }
-              em.field_f = sd.field_a;
+              ProxyAuthenticationRequiredException.field_f = sd.field_a;
             } else {
-              while (em.field_f != sd.field_a) {
+              while (ProxyAuthenticationRequiredException.field_f != sd.field_a) {
                 var2 = qk.field_b[sd.field_a];
                 sd.field_a = 127 & 1 + sd.field_a;
                 if (0 <= var2) {

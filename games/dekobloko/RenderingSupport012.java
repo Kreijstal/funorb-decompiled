@@ -301,7 +301,7 @@ final class RenderingSupport012 {
           stringLocal1 = MixedSupport025.uiComponentPart013State0001.computeString0633(80);
         }
         if (stringLocal1.length() == 0) {
-          stringLocal1 = DiagnosticSupport001.computeString0337((byte) 122);
+          stringLocal1 = ProxyAuthenticationRequiredException.computeString0337((byte) 122);
         }
         if (stringLocal1.length() == 0) {
           stringLocal1 = MixedSupport146.stringState0620;

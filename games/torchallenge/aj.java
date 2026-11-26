@@ -170,7 +170,7 @@ final class aj {
             hl.a((byte) -44, var5);
             var6 = new String[2][var5];
             var19 = new int[2][4 * var5];
-            var8 = bb.field_c;
+            var8 = PcmOutputWorker.field_c;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {

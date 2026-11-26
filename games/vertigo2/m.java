@@ -145,7 +145,7 @@ final class m extends TextureOperator {
         if (!sl.b(-24)) {
           return false;
         }
-        if ((8 & rg.field_f) == 0) {
+        if ((8 & ProxyAuthenticationRequiredException.field_f) == 0) {
           return true;
         }
         return false;

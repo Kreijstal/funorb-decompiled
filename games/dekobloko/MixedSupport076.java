@@ -373,9 +373,9 @@ final class MixedSupport076 extends ResourceSupport003 {
     }
 
     final static void performAction0945(byte byteArgument1, int integerArgument2) {
-        PlatformSupport002.integerState0147 = integerArgument2 * 100 / 150;
-        PlatformSupport002.integerState0148 = (integerArgument2 << 16) / 150;
-        PlatformSupport002.integerState0146 = integerArgument2 * 400 / 150;
+        DelegatingCanvas.integerState0147 = integerArgument2 * 100 / 150;
+        DelegatingCanvas.integerState0148 = (integerArgument2 << 16) / 150;
+        DelegatingCanvas.integerState0146 = integerArgument2 * 400 / 150;
         int integerLocal1 = 101 % ((8 - byteArgument1) / 52);
     }
 

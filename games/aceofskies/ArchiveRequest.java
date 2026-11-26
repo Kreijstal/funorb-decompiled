@@ -22,7 +22,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           packet.writeByte(-1336879960, query.entryLimit);
           packet.writeByte(-1336879960, query.valuesPerEntry);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ag.E(" + opcode + ',' + payloadLength + ',' + (query != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ag.E(" + opcode + ',' + payloadLength + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 

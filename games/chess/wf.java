@@ -273,7 +273,7 @@ final class wf extends ma implements ha, mj {
             if (this.field_L != param0) {
               if (this.field_O == param0) {
                 if (this.field_T) {
-                  oa.b(-16586);
+                  ProxyAuthenticationRequiredException.b(-16586);
                 } else {
                   if (!this.field_K) {
                     el.h(-117);
@@ -424,7 +424,7 @@ final class wf extends ma implements ha, mj {
             }
             var2 = 1;
           }
-          ol.field_R.a(fe.a(re.field_m, 1, ag.field_f), 99, fe.a(hn.field_k, 1, rf.field_b));
+          ol.field_R.a(fe.a(re.field_m, 1, ag.field_f), 99, fe.a(BufferedSocket.field_k, 1, rf.field_b));
           if (ol.field_R.d((byte) 124)) {
             var1_int = 1;
           }

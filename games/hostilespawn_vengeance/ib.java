@@ -1136,7 +1136,7 @@ final class ib {
                 }
                 var2 = mk.b("V2_found_grenade_launcher", (byte) -120);
                 if (var2 != null) {
-                  ab.field_d = PcmResampler.a(125, var2);
+                  ProxyAuthenticationRequiredException.field_d = PcmResampler.a(125, var2);
                 }
                 var2 = mk.b("V2_lift_bust", (byte) -119);
                 if (var2 != null) {
@@ -1224,7 +1224,7 @@ final class ib {
                 }
                 var2 = mk.b("V6_blastdoor", (byte) -123);
                 if (var2 != null) {
-                  td.field_p = PcmResampler.a(127, var2);
+                  BufferedSocket.field_p = PcmResampler.a(127, var2);
                 }
                 var2 = mk.b("V6_launcher", (byte) -121);
                 if (null != var2) {

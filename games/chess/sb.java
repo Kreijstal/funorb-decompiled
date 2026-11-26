@@ -77,7 +77,7 @@ final class sb extends bj {
         try {
           if (-1 == ac.field_k &&
             kj.field_c == -1) {
-            ac.field_k = hn.field_k;
+            ac.field_k = BufferedSocket.field_k;
             kj.field_c = rf.field_b;
           }
           ei.field_u = ei.field_u + 1;

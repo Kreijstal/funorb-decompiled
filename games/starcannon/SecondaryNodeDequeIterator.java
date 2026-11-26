@@ -52,7 +52,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var6 = -25 % ((27 - param1) / 58);
           var4_int = param3.a(param2, false);
           var5 = param3.a(param0, true, var4_int);
-          stackIn_1_0 = le.a(var5, var4_int, (byte) -77, param3);
+          stackIn_1_0 = ProxyAuthenticationRequiredException.a(var5, var4_int, (byte) -77, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

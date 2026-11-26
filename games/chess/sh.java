@@ -148,18 +148,18 @@ final class sh {
               }
             }
             if (vm.field_k == 2) {
-              jj.field_a = new hn((java.net.Socket) (dm.field_b.result), ol.field_N);
+              jj.field_a = new BufferedSocket((java.net.Socket) (dm.field_b.result), ol.field_N);
               var2 = new PacketBuffer(13);
               dh.a(ue.field_e, 11, uj.field_n, tg.field_t, var2);
               var2.writeByte(15, (byte) 95);
               var2.writeInt(ln.field_oc, (byte) -81);
-              jj.field_a.a(0, 13, (byte) -92, var2.data);
+              jj.field_a.queueWrite(0, 13, (byte) -92, var2.data);
               vm.field_k = vm.field_k + 1;
               ve.field_Pb = 30000L + ud.correctedCurrentTimeMillis(2);
             }
             if (vm.field_k == 3) {
-              if (jj.field_a.c(0) > 0) {
-                var1_int = jj.field_a.b((byte) -103);
+              if (jj.field_a.availableBytes(0) > 0) {
+                var1_int = jj.field_a.readSingleByte((byte) -103);
                 if (0 != var1_int) {
                   stackIn_26_0 = ic.a(118, var1_int);
                   return stackIn_26_0;

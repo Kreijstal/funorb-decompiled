@@ -57,7 +57,7 @@ class qn extends fb {
           if (!(this.field_n instanceof mg)) {
             return false;
           }
-          var8_int = ((mg) ((Object) this.field_n)).a(rf.field_b, param5, -4, param6, (mf) (this), hn.field_k);
+          var8_int = ((mg) ((Object) this.field_n)).a(rf.field_b, param5, -4, param6, (mf) (this), BufferedSocket.field_k);
           if (-1 != var8_int) {
             stackIn_7_1 = var8_int;
           } else {
@@ -604,7 +604,7 @@ class qn extends fb {
           if (1 == this.field_q) {
             if (this.field_n instanceof mg) {
               var5 = (mg) ((Object) this.field_n);
-              var6 = var5.a(rf.field_b, param3, -4, param0, (mf) (this), hn.field_k);
+              var6 = var5.a(rf.field_b, param3, -4, param0, (mf) (this), BufferedSocket.field_k);
               if (var6 != -1) {
                 if (this.field_S &&
                   this.field_N > var6 &&

@@ -68,7 +68,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ProxySocketConnector extends SocketConnector {
         try {
           SoftwareRasterizer.setRasterTarget(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "cm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "cm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -135,15 +135,15 @@ final class ProxySocketConnector extends SocketConnector {
           Object var11 = var8[var10];
           java.net.Proxy var12 = (java.net.Proxy) (var11);
           try {
-            if (false) throw (ls) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             java.net.Socket var13 = this.a(-109, var12);
             if (var13 != null) {
               java.net.Socket stackIn_22_0 = var13;
               return stackIn_22_0;
             }
-          } catch (ls decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            ls var13_ref = (ls) (Object) decompiledCaughtException;
+            ProxyAuthenticationRequiredException var13_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var13_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -201,11 +201,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new ls(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new ls("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               java.net.Socket stackIn_11_0 = var13;
@@ -233,7 +233,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

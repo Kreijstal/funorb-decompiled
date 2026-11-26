@@ -1129,7 +1129,7 @@ final class bi {
           this.field_s = this.field_U;
           if (ri.field_E >= 2 &&
             ce.field_b) {
-            ko.field_b = false;
+            ProxyAuthenticationRequiredException.field_b = false;
           }
           var2_int = 0;
           var3 = 0;
@@ -1243,7 +1243,7 @@ final class bi {
               if (!ce.field_b) {
                 continue;
               }
-              ko.field_b = true;
+              ProxyAuthenticationRequiredException.field_b = true;
               continue;
             }
             if (var7_int == 101) {
@@ -1315,7 +1315,7 @@ final class bi {
           }
           if (ri.field_E >= 2 &&
             ce.field_b &&
-            !ko.field_b) {
+            !ProxyAuthenticationRequiredException.field_b) {
             return;
           }
           if (this.field_r > 0) {

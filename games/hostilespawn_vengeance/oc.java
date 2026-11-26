@@ -196,7 +196,7 @@ final class oc {
               stackIn_65_0 = var7_ref;
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
-                (td.a(stackIn_65_0, true, var6_ref))) {
+                (BufferedSocket.a(stackIn_65_0, true, var6_ref))) {
                 var7_ref = (vb) (gm.field_d.nextForward(12684));
                 continue;
               }

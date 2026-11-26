@@ -38,7 +38,7 @@ abstract class TextLayout {
         while (longArgument2 != 0L) {
           longLocal1 = longArgument2;
           longArgument2 = longArgument2 / 37L;
-          integerLocal2 = DiagnosticSupport001.characterArrayState0004[(int)(longLocal1 - 37L * longArgument2)];
+          integerLocal2 = ProxyAuthenticationRequiredException.characterArrayState0004[(int)(longLocal1 - 37L * longArgument2)];
           if (integerLocal2 == 95) {
             integerLocal3 = -1 + stringBuilderLocal8.length();
             stringBuilderLocal8.setCharAt(integerLocal3, Character.toUpperCase(stringBuilderLocal8.charAt(integerLocal3)));

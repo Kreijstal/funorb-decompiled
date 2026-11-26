@@ -176,7 +176,7 @@ final class wj extends fb {
                 if (wd.field_c) {
                 }
               }
-              if (tl.field_b) {
+              if (ProxyAuthenticationRequiredException.field_b) {
                 ae.field_N.readUnsignedByte(4);
                 ae.field_N.readUnsignedByte(4);
                 ae.field_N.readInt(false);

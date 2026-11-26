@@ -38,7 +38,7 @@ class fg extends jc {
             dh.field_bb = ug.field_p;
           } else {
             try {
-              p.field_d = new cb((java.net.Socket) (ia.field_f.result), ef.field_i);
+              p.field_d = new BufferedSocket((java.net.Socket) (ia.field_f.result), ef.field_i);
               var4 = cd.field_t;
               var5 = var4;
               uk.field_b.position = 0;

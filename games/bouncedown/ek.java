@@ -139,7 +139,7 @@ final class ek extends ji {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         qk.field_a > var37) {
-                        tk.a(var38, var36Lifetime2 + var37, var21, (byte) -72, 0, param1, 0, var29, var25, 0);
+                        ProxyAuthenticationRequiredException.a(var38, var36Lifetime2 + var37, var21, (byte) -72, 0, param1, 0, var29, var25, 0);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -149,9 +149,9 @@ final class ek extends ji {
                         var38 = -var37 + (qk.field_a - 1);
                       }
                       if (var37 < 0) {
-                        tk.a(var38 + var37, var36Lifetime2, -(var37 * var39) + var21, (byte) -72, var39, param1, var41, -(var41 * var37) + var29, var25 - var37 * var40, var40);
+                        ProxyAuthenticationRequiredException.a(var38 + var37, var36Lifetime2, -(var37 * var39) + var21, (byte) -72, var39, param1, var41, -(var41 * var37) + var29, var25 - var37 * var40, var40);
                       } else {
-                        tk.a(var38, var36Lifetime2 + var37, var21, (byte) -72, var39, param1, var41, var29, var25, var40);
+                        ProxyAuthenticationRequiredException.a(var38, var36Lifetime2 + var37, var21, (byte) -72, var39, param1, var41, var29, var25, var40);
                       }
                     }
                   }
@@ -295,7 +295,7 @@ final class ek extends ji {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < qk.field_a) {
-                    tk.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, var21, (byte) -72, 0, param1, 0, var29, var25, 0);
+                    ProxyAuthenticationRequiredException.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, var21, (byte) -72, 0, param1, 0, var29, var25, 0);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
@@ -305,9 +305,9 @@ final class ek extends ji {
                     var37Lifetime1 = -var36Lifetime1 + qk.field_a - 1;
                   }
                   if (var36Lifetime1 < 0) {
-                    tk.a(var37Lifetime1 + var36Lifetime1, var35Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, (byte) -72, var38Lifetime1, param1, var40Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var39Lifetime1);
+                    ProxyAuthenticationRequiredException.a(var37Lifetime1 + var36Lifetime1, var35Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, (byte) -72, var38Lifetime1, param1, var40Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var39Lifetime1);
                   } else {
-                    tk.a(var37Lifetime1, var35Lifetime1 + var36Lifetime1, var21, (byte) -72, var38Lifetime1, param1, var40Lifetime1, var29, var25, var39Lifetime1);
+                    ProxyAuthenticationRequiredException.a(var37Lifetime1, var35Lifetime1 + var36Lifetime1, var21, (byte) -72, var38Lifetime1, param1, var40Lifetime1, var29, var25, var39Lifetime1);
                   }
                 }
               }

@@ -135,7 +135,7 @@ public final class Transmogrify extends SessionGameApplet {
                       vl.a((byte) 120, ha.b(85));
                       break;
                     case 2364824:
-                      jd.a((byte) -77);
+                      ProxyAuthenticationRequiredException.a((byte) -77);
                       break;
                     default:
                       break;
@@ -182,7 +182,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (var2_int != 0) {
             var3 = this.f((byte) 102);
             if (var3 == 2) {
-              jd.a(240, 10, eh.field_c, 3, IntrusiveNode.field_d.field_y, 320, IntrusiveNode.field_d, IntrusiveNode.field_d.field_y * 3 / 2, 3, SecondaryNodeDeque.field_h, false);
+              ProxyAuthenticationRequiredException.a(240, 10, eh.field_c, 3, IntrusiveNode.field_d.field_y, 320, IntrusiveNode.field_d, IntrusiveNode.field_d.field_y * 3 / 2, 3, SecondaryNodeDeque.field_h, false);
             }
           }
           return;
@@ -815,7 +815,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (le.field_A == null) {
             var21 = SessionGameApplet.field_y.a("", (byte) 92, "arialish20");
-            IntrusiveNode.field_d = jd.a(var21, 98, gb.field_a);
+            IntrusiveNode.field_d = ProxyAuthenticationRequiredException.a(var21, 98, gb.field_a);
             og.field_a = ua.a(oi.field_g, "", 32, kk.field_a, "arialish20narrow");
             le.field_A = eh.a(gb.field_a, param0 ^ -96, var21, 255, 119);
             le.field_A.field_K[1] = new int[]{0, 16777215, 7829367};
@@ -1232,7 +1232,7 @@ public final class Transmogrify extends SessionGameApplet {
           kk.clearStaticReferences(false);
           ug.clearStaticReferences((byte) 118);
           mc.clearStaticReferences(true);
-          ef.clearStaticReferences(-106);
+          PcmOutputWorker.clearStaticReferences(-106);
           DelayedPcmStream.clearStaticReferences(0);
           tj.clearStaticReferences((byte) 107);
           bk.clearStaticReferences(-123);

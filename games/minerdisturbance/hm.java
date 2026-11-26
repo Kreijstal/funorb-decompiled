@@ -18,17 +18,17 @@ final class hm extends jc {
             field_J = (String[]) null;
           }
           if (tk.b(127)) {
-            ll.field_a.a(true, ql.field_c, cl.field_T, 0);
-            ll.field_a.o(-256);
+            BufferedSocket.field_a.a(true, ql.field_c, cl.field_T, 0);
+            BufferedSocket.field_a.o(-256);
             while (mm.b((byte) 118)) {
-              ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
+              BufferedSocket.field_a.a((byte) -65, lj.field_t, ud.field_c);
             }
             return;
           }
           if (null != kf.field_d &&
             kf.field_d.field_b) {
             ng.a((byte) 81);
-            ll.field_a.b(param0 ^ 23, new bh(ll.field_a, od.field_k));
+            BufferedSocket.field_a.b(param0 ^ 23, new bh(BufferedSocket.field_a, od.field_k));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1004,7 +1004,7 @@ final class re {
           var40 = e.field_y;
           var34 = var40;
           var15_ref_int__ = var34;
-          var15_ref_int__[0] = ua.a(var40[0], -1073741825);
+          var15_ref_int__[0] = PcmOutputWorker.a(var40[0], -1073741825);
         }
         boolean decompiledFrameCompleted1 = true;
         var15 = 48;
@@ -1035,7 +1035,7 @@ final class re {
         }
         var18Lifetime1 = 0;
         while (8 > var18Lifetime1) {
-          var16_ref_int__[var18Lifetime1] = ua.a(var16_ref_int__[var18Lifetime1], ~var17_ref_int__[var18Lifetime1]);
+          var16_ref_int__[var18Lifetime1] = PcmOutputWorker.a(var16_ref_int__[var18Lifetime1], ~var17_ref_int__[var18Lifetime1]);
           var18Lifetime1++;
           if (var30 == 0) {
             continue;
@@ -2236,12 +2236,12 @@ final class re {
             return false;
           }
           try {
-            var2_int = ag.field_t.b((byte) 120);
+            var2_int = ag.field_t.availableBytes((byte) 120);
             if (var2_int > 0) {
               if (var2_int > (param1 - sc.field_g.field_i)) {
                 var2_int = -sc.field_g.field_i + param1;
               }
-              ag.field_t.a(-1, sc.field_g.field_n, sc.field_g.field_i, var2_int);
+              ag.field_t.readFully(-1, sc.field_g.field_n, sc.field_g.field_i, var2_int);
               bb.field_c = hn.correctedCurrentTimeMillis((byte) 80);
               sc.field_g.field_i = sc.field_g.field_i + var2_int;
               if (sc.field_g.field_i < param1) {
@@ -4604,30 +4604,30 @@ final class re {
         an.field_n = 0.20000000298023224f;
         var5 = CrossfadingMidiPcmStream.field_v.j();
         if (GameCanvas.field_a != var5) {
-          CrossfadingMidiPcmStream.field_v.setStereoWidth(ua.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.setStereoWidth(PcmOutputWorker.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
         }
         var5Lifetime1 = CrossfadingMidiPcmStream.field_v.h();
         if (var5Lifetime1 != qm.field_O) {
-          CrossfadingMidiPcmStream.field_v.f(ua.a((byte) -68, qm.field_O, var5Lifetime1, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.f(PcmOutputWorker.a((byte) -68, qm.field_O, var5Lifetime1, 0.07000000029802322f));
         }
         var5Lifetime2 = CrossfadingMidiPcmStream.field_v.f();
         if (param3 != -99) {
           return;
         }
         if (var5Lifetime2 != ea.field_d) {
-          CrossfadingMidiPcmStream.field_v.b(ua.a((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.a((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
         }
         var5Lifetime3 = CrossfadingMidiPcmStream.field_v.g();
         if (var5Lifetime3 != ag.field_w) {
-          CrossfadingMidiPcmStream.field_v.e(ua.a((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
+          CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.a((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
         }
         var5Lifetime4 = CrossfadingMidiPcmStream.field_v.k();
         if (an.field_n != var5Lifetime4) {
-          CrossfadingMidiPcmStream.field_v.setWetGain(ua.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.setWetGain(PcmOutputWorker.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
         }
         var5Lifetime5 = CrossfadingMidiPcmStream.field_v.e();
         if (vb.field_Jb != var5Lifetime5) {
-          CrossfadingMidiPcmStream.field_v.a(ua.a((byte) -114, vb.field_Jb, var5Lifetime5, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.a(PcmOutputWorker.a((byte) -114, vb.field_Jb, var5Lifetime5, 0.009999999776482582f));
         }
         fieldTemp$0 = ch.field_q + 1;
         ch.field_q = ch.field_q + 1;
@@ -4781,7 +4781,7 @@ final class re {
     final static void a(int param0, vh param1, int param2, int param3, int param4, vh param5) {
         try {
           al.field_N = param1;
-          ab.field_b = param2;
+          ProxyAuthenticationRequiredException.field_b = param2;
           jd.field_l = param4;
           if (param0 != 4) {
             field_D = (RgbSprite[][]) null;
@@ -4942,7 +4942,7 @@ final class re {
           }
           stackIn_18_0[stackIn_18_1] = stackIn_19_2;
         }
-        dd.field_o[6] = td.field_d;
+        dd.field_o[6] = BufferedSocket.field_d;
         if (ib.a((byte) -72)) {
           dd.field_o[6] = ak.field_c;
           dd.field_o[4] = oj.field_y;

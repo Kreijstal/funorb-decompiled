@@ -227,7 +227,7 @@ public final class MonkeyPuzzle2 extends bi {
           ok.clearStaticReferences((byte) 123);
           uc.clearStaticReferences(-2355);
           gi.b(8);
-          ff.clearStaticReferences((byte) -7);
+          PcmOutputWorker.clearStaticReferences((byte) -7);
           il.clearStaticReferences(false);
           ci.clearStaticReferences((byte) -128);
           mh.clearDeclaredStaticReferences((byte) 99);
@@ -457,7 +457,7 @@ public final class MonkeyPuzzle2 extends bi {
               if (ek.a((byte) 25) &&
                 !ad.a(false)) {
                 stackIn_33_0 = (null != AwtRasterBuffer.field_f);
-                var2_int = ff.a(stackIn_33_0, -32323, (bi) (this));
+                var2_int = PcmOutputWorker.a(stackIn_33_0, -32323, (bi) (this));
                 if (var2_int == 2364824) {
                   DirectByteStorage.e(-18753);
                 } else {

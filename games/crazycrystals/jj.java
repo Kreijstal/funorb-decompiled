@@ -8,7 +8,7 @@ final class jj {
 
     final static void a(int param0) {
         if (oi.field_c != null) {
-          oi.field_c.b((byte) -118);
+          oi.field_c.close((byte) -118);
           oi.field_c = null;
         }
         if (param0 != 4) {

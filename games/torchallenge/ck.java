@@ -29,14 +29,14 @@ final class ck {
         var5 = TorChallenge.field_F ? 1 : 0;
         var6 = "(" + ul.field_j + " " + uc.field_X + " " + NodeHashTableIterator.field_i + ") " + cb.field_g;
         var1 = var6;
-        if (bb.field_i <= 0) {
+        if (PcmOutputWorker.field_i <= 0) {
           if (param0 != -13299) {
             ck.a(-82);
           }
           return var1;
         }
         var1Lifetime1 = var6 + ":";
-        for (var2 = 0; bb.field_i > var2; var2++) {
+        for (var2 = 0; PcmOutputWorker.field_i > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
           var3 = 255 & id.field_b.payload[var2];

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ap extends ob {
     static int field_r;
-    private j field_q;
+    private BufferedSocket field_q;
 
     final void e(int param0) {
         Throwable decompiledCaughtException = null;
@@ -13,7 +13,7 @@ final class ap extends ob {
         RuntimeException var2_ref = null;
         try {
           try {
-            this.field_q.b((byte) -118);
+            this.field_q.close((byte) -118);
             if (param0 != 20406) {
               this.a(true, 38);
             }
@@ -52,14 +52,14 @@ final class ap extends ob {
           try {
             if (null != this.field_q) {
               try {
-                this.field_q.b((byte) -118);
+                this.field_q.close((byte) -118);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
               }
               this.field_q = null;
             }
-            this.field_q = (j) (param1);
+            this.field_q = (BufferedSocket) (param1);
             this.d((byte) -121);
             this.a(param0, 25);
             this.field_h = null;
@@ -103,12 +103,12 @@ final class ap extends ob {
                 stackIn_31_1 = !(param2);
                 ((PacketBuffer) (Object) stackIn_30_0).writeByte(stackIn_31_1, (int) this.field_d);
                 this.field_n.writeInt(0, -16384);
-                this.field_q.a(0, 90, this.field_n.payload, this.field_n.payload.length);
+                this.field_q.queueWrite(0, 90, this.field_n.payload, this.field_n.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_q.b((byte) -118);
+                  this.field_q.close((byte) -118);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -166,12 +166,12 @@ final class ap extends ob {
               }
               ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
               this.field_n.writeLong40(0L, false);
-              this.field_q.a(0, 108, this.field_n.payload, this.field_n.payload.length);
+              this.field_q.queueWrite(0, 108, this.field_n.payload, this.field_n.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_q.b((byte) -118);
+                this.field_q.close((byte) -118);
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var5 = (Exception) (Object) decompiledCaughtException;
@@ -210,12 +210,12 @@ final class ap extends ob {
               this.field_n.writeByte(true, 6);
               this.field_n.writeMedium((byte) 104, 3);
               this.field_n.writeShort(-161478600, 0);
-              this.field_q.a(0, 124, this.field_n.payload, this.field_n.payload.length);
+              this.field_q.queueWrite(0, 124, this.field_n.payload, this.field_n.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_q.b((byte) -118);
+                this.field_q.close((byte) -118);
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -435,7 +435,7 @@ final class ap extends ob {
               this.field_c = this.field_c + var4;
               if (this.field_c > 30000) {
                 try {
-                  this.field_q.b((byte) -118);
+                  this.field_q.close((byte) -118);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -451,14 +451,14 @@ final class ap extends ob {
               return false;
             }
             try {
-              this.field_q.a(-128);
+              this.field_q.checkWriteError(-128);
               var2 = (ld) (this.field_m.b(120));
               scanLoop1: while (true) {
                 if (null != var2) {
                   this.field_n.position = 0;
                   this.field_n.writeByte(true, 1);
                   this.field_n.writeLong40(var2.field_k, false);
-                  this.field_q.a(0, 106, this.field_n.payload, this.field_n.payload.length);
+                  this.field_q.queueWrite(0, 106, this.field_n.payload, this.field_n.payload.length);
                   this.field_f.a((byte) 113, var2);
                   var2 = (ld) (this.field_m.a(127));
                   if (var16 != 0) {
@@ -475,7 +475,7 @@ final class ap extends ob {
                 this.field_n.position = 0;
                 this.field_n.writeByte(true, 0);
                 this.field_n.writeLong40(var2.field_k, false);
-                this.field_q.a(0, 116, this.field_n.payload, this.field_n.payload.length);
+                this.field_q.queueWrite(0, 116, this.field_n.payload, this.field_n.payload.length);
                 this.field_a.a((byte) 111, var2);
                 var2 = (ld) (this.field_k.a(104));
                 if (var16 == 0) {
@@ -489,7 +489,7 @@ final class ap extends ob {
               }
               scanLoop2: while (true) {
                 if (var2_int < 100) {
-                  var3_int = this.field_q.c(0);
+                  var3_int = this.field_q.availableBytes(0);
                   stackIn_137_0 = ~var3_int;
                   if (var16 != 0) {
                     break scanLoop2;
@@ -521,7 +521,7 @@ final class ap extends ob {
                         var6 = var3_int;
                       }
                       boolean decompiledFrameCompleted4 = true;
-                      this.field_q.a(this.field_h.field_s.payload, var6, 2034, this.field_h.field_s.position);
+                      this.field_q.readFully(this.field_h.field_s.payload, var6, 2034, this.field_h.field_s.position);
                       if (this.field_d != 0) {
                         var7 = 0;
                         while (var6 > var7) {
@@ -560,7 +560,7 @@ final class ap extends ob {
                         var5Lifetime1 = var3_int;
                       }
                       boolean decompiledFrameCompleted3 = true;
-                      this.field_q.a(this.field_i.payload, var5Lifetime1, 2034, this.field_i.position);
+                      this.field_q.readFully(this.field_i.payload, var5Lifetime1, 2034, this.field_i.position);
                       if (this.field_d != 0) {
                         var6Lifetime1 = 0;
                         while (var5Lifetime1 > var6Lifetime1) {
@@ -682,7 +682,7 @@ final class ap extends ob {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_q.b((byte) -118);
+                this.field_q.close((byte) -118);
               } catch (java.lang.Exception decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var3 = (Exception) (Object) decompiledCaughtException;
@@ -714,7 +714,7 @@ final class ap extends ob {
         RuntimeException var2 = null;
         try {
           if (this.field_q != null) {
-            this.field_q.b((byte) -118);
+            this.field_q.close((byte) -118);
           }
           var2_int = -61 / ((-61 - param0) / 62);
           return;

@@ -24,7 +24,7 @@ final class pi extends mi {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class pi extends mi {
             pi.clearStaticReferences(-28);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pi.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pi.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class pi extends mi {
             } else {
               stackIn_102_2 = "{...}";
             }
-            throw pn.wrapClientException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param5).append(')').toString());
+            throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -311,7 +311,7 @@ final class pi extends mi {
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

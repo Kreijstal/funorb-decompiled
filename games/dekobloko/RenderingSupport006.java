@@ -492,7 +492,7 @@ final class RenderingSupport006 extends HashNode {
     }
 
     final static void performAction0749(byte byteArgument1) {
-        DiagnosticSupport001.performAction0332(byteArgument1 - 76, PasswordValidator.stringState0527, SceneWidgetPart013.stringState0586, true);
+        ProxyAuthenticationRequiredException.performAction0332(byteArgument1 - 76, PasswordValidator.stringState0527, SceneWidgetPart013.stringState0586, true);
         MixedSupport023.booleanState0025 = true;
         if (byteArgument1 != -51) {
           MixedSupport129 mixedSupport129Local1 = (MixedSupport129) null;

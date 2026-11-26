@@ -156,7 +156,7 @@ final class jn extends fb {
               var18.d(var5 - (var18.field_w >> 1), -(var18.field_t >> 1) + var6, 256);
               return;
             }
-            if (oa.field_a != var8) {
+            if (ProxyAuthenticationRequiredException.field_a != var8) {
               return;
             }
             var17 = AccountNameAvailabilityValidator.field_p[1];
@@ -220,7 +220,7 @@ final class jn extends fb {
             var22.d(var5Lifetime1 - (var22.field_w >> 1), -(var22.field_t >> 1) + var6Lifetime1, 256);
             return;
           }
-          if (oa.field_a != var8Lifetime1) {
+          if (ProxyAuthenticationRequiredException.field_a != var8Lifetime1) {
             return;
           }
           var21 = AccountNameAvailabilityValidator.field_p[1];

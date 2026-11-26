@@ -75,7 +75,7 @@ final class lj {
           var3 >= t.field_l) {
           var4Lifetime1 = df.field_k;
           var8 = var3;
-          var9 = rg.field_f % 4;
+          var9 = ProxyAuthenticationRequiredException.field_f % 4;
           var10 = 4 * (var8 - t.field_l);
           if (var9 == 0) {
             var11 = var10 / 2;

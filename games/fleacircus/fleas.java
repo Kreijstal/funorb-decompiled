@@ -1046,7 +1046,7 @@ public final class fleas extends NetworkGameClient {
           wi.clearStaticReferences(false);
           PcmResampler.clearStaticReferences((byte) 127);
           gd.clearStaticReferences(-1);
-          ec.clearStaticReferences(124);
+          PcmOutputWorker.clearStaticReferences(124);
           hk.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           ub.clearStaticReferences(17077);
@@ -1114,7 +1114,7 @@ public final class fleas extends NetworkGameClient {
           oc.clearStaticReferences((byte) -40);
           lg.clearStaticReferences(-106);
           hm.clearStaticReferences(2067);
-          em.clearStaticReferences(3505);
+          ProxyAuthenticationRequiredException.clearStaticReferences(3505);
           o.clearStaticReferences((byte) 82);
           ImageProducerRasterBuffer.clearStaticReferences(0);
           hf.clearStaticReferences(-124);
@@ -1363,7 +1363,7 @@ public final class fleas extends NetworkGameClient {
             this.d(true);
             cb.field_u = kl.a(252, a.field_a, "basic", "unachieved");
             BufferedSocket.field_m = kl.a(252, a.field_a, "basic", "orbcoin");
-            em.a(BufferedSocket.field_m, (byte) -85);
+            ProxyAuthenticationRequiredException.a(BufferedSocket.field_m, (byte) -85);
             mf.field_g = kl.a(252, a.field_a, "basic", "locked");
             ve.field_d = (fa) ((Object) ub.a("roman12", a.field_a, "", pf.field_b, 32));
             lk.field_Q = (fa) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
@@ -1604,7 +1604,7 @@ public final class fleas extends NetworkGameClient {
               decompiledFrameRemainder0 = !(!BufferedSocket.d(-104));
               if (decompiledFrameRemainder0) {
                 wh.a(-98);
-                em.a(param0 - 21512);
+                ProxyAuthenticationRequiredException.a(param0 - 21512);
                 if (8 == ab.field_b) {
                   AccountNameAvailabilityValidator.e(-6359);
                 }
@@ -2309,7 +2309,7 @@ public final class fleas extends NetworkGameClient {
             stackIn_61_0 = ~qh.field_z;
           }
           if (stackIn_61_0 != -1) {
-            em.field_b = em.field_b - 1;
+            ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b - 1;
           }
           dk.field_C.b(true);
           wd.field_a.b(true);
@@ -2477,7 +2477,7 @@ public final class fleas extends NetworkGameClient {
             }
             if (jk.field_l == 10 &&
               pg.field_f < 360 &&
-              em.field_b == 0 &&
+              ProxyAuthenticationRequiredException.field_b == 0 &&
               qh.field_y == 0) {
               pg.field_f = pg.field_f + 1;
             }

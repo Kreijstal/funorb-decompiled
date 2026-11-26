@@ -129,10 +129,10 @@ class lf {
     final void b(int param0) {
         if (this.field_d > 0) {
           if (null == this.field_e &&
-            null != ua.field_c &&
-            -1 + ua.field_c.length > this.field_c &&
-            null != ua.field_c[-1 + this.field_c]) {
-            this.field_e = RawPcmStream.a(ua.field_c[-1 + this.field_c], 100, this.field_d);
+            null != PcmOutputWorker.field_c &&
+            -1 + PcmOutputWorker.field_c.length > this.field_c &&
+            null != PcmOutputWorker.field_c[-1 + this.field_c]) {
+            this.field_e = RawPcmStream.a(PcmOutputWorker.field_c[-1 + this.field_c], 100, this.field_d);
             this.field_e.d(-1);
             eh.field_c.b(this.field_e);
           }

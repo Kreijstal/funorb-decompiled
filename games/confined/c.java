@@ -650,7 +650,7 @@ final class c extends sc {
           }
           var2Lifetime7 = wm.a("keycode_missile4", (byte) 103);
           if (null != var2Lifetime7) {
-            sb.field_f = var2Lifetime7[0] & 255;
+            PcmOutputWorker.field_f = var2Lifetime7[0] & 255;
           }
           var2Lifetime8 = wm.a("keyname_energyweapon1", (byte) 52);
           if (var2Lifetime8 != null) {
@@ -901,7 +901,7 @@ final class c extends sc {
           }
           var2Lifetime69 = wm.a("intro1_GoodMorning", (byte) 52);
           if (null != var2Lifetime69) {
-            sb.field_e = va.a(0, var2Lifetime69);
+            PcmOutputWorker.field_e = va.a(0, var2Lifetime69);
           }
           var2Lifetime70 = wm.a("intro2_TheJourneyWentSmoothly", (byte) 114);
           if (null != var2Lifetime70) {
@@ -989,7 +989,7 @@ final class c extends sc {
           }
           var2Lifetime91 = wm.a("tryTheArrowKeys", (byte) 107);
           if (var2Lifetime91 != null) {
-            vd.field_l = va.a(0, var2Lifetime91);
+            BufferedSocket.field_l = va.a(0, var2Lifetime91);
           }
           var2Lifetime92 = wm.a("ctrl", (byte) 63);
           if (var2Lifetime92 != null) {
@@ -1233,7 +1233,7 @@ final class c extends sc {
           }
           var2Lifetime152 = wm.a("hardDifficulty", (byte) 124);
           if (var2Lifetime152 != null) {
-            kk.field_a = va.a(0, var2Lifetime152);
+            ProxyAuthenticationRequiredException.field_a = va.a(0, var2Lifetime152);
           }
           var2Lifetime153 = wm.a("rapidFire", (byte) 29);
           if (null != var2Lifetime153) {

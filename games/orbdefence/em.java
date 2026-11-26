@@ -36,7 +36,7 @@ final class em extends hi {
         }
         try {
           hm.a(cg.field_d.field_v, 3, param0 - 67, 3);
-          cb.field_a.a(param0 ^ -101);
+          BufferedSocket.field_a.a(param0 ^ -101);
           li.field_a.e(0, 0, 640, 480, ef.field_k);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');

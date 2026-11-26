@@ -31,14 +31,14 @@ final class vo extends va {
               var6 = new qh(255, ad.field_g, new im(or.field_f.field_r, 12000, 0), 2097152);
             }
             if (ad.field_g != null) {
-              if (null == rg.field_g) {
-                rg.field_g = new im[or.field_f.field_n.length];
+              if (null == ProxyAuthenticationRequiredException.field_g) {
+                ProxyAuthenticationRequiredException.field_g = new im[or.field_f.field_n.length];
               }
-              if (null == rg.field_g[param3]) {
-                rg.field_g[param3] = new im(or.field_f.field_n[param3], 12000, 0);
+              if (null == ProxyAuthenticationRequiredException.field_g[param3]) {
+                ProxyAuthenticationRequiredException.field_g[param3] = new im(or.field_f.field_n[param3], 12000, 0);
                 or.field_f.field_n[param3] = null;
               }
-              var7 = new qh(param3, ad.field_g, rg.field_g[param3], 2097152);
+              var7 = new qh(param3, ad.field_g, ProxyAuthenticationRequiredException.field_g[param3], 2097152);
             }
             var8 = pd.field_c.a(18162, (qh) (var6), param0, param3, (qh) (var7));
             if (param4) {

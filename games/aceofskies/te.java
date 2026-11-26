@@ -37,7 +37,7 @@ final class te extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class te extends IntrusiveNode {
         try {
           OpenGlShaderProgram.field_c.a(0);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
-            pn.field_b[var1_int] = 0L;
+            PcmOutputWorker.field_b[var1_int] = 0L;
           }
           if (obfuscationGuard < 31) {
             field_e = (char[]) null;
@@ -56,7 +56,7 @@ final class te extends IntrusiveNode {
           }
           Bullet.field_g = 0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "te.D(" + obfuscationGuard + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "te.D(" + obfuscationGuard + ')');
         }
     }
 

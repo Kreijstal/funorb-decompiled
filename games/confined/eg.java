@@ -217,7 +217,7 @@ final class eg {
                 this.a(var23[0].length() * 3 / 2, var23[1], 8 + vg.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
                 this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
                 this.a(376, 400, new RgbSprite(220, 104), 0, 420);
-                var24 = ij.a(0, '#', sb.field_e);
+                var24 = ij.a(0, '#', PcmOutputWorker.field_e);
                 this.a(180, (String) null, 632, var24[0], (String) null, 0, -116);
                 this.a(0, var24[1], 8, (String) null, (String) null, 1, -79);
                 this.a(0, 400, (RgbSprite) null, 0, 0);
@@ -229,14 +229,14 @@ final class eg {
             this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
             this.a(376, 400, new RgbSprite(220, 104), 0, 420);
             if (var5 != 0) {
-              var24 = ij.a(0, '#', sb.field_e);
+              var24 = ij.a(0, '#', PcmOutputWorker.field_e);
               this.a(180, (String) null, 632, var24[0], (String) null, 0, -116);
               this.a(0, var24[1], 8, (String) null, (String) null, 1, -79);
               this.a(0, 400, (RgbSprite) null, 0, 0);
             }
           }
         } else {
-          var24 = ij.a(0, '#', sb.field_e);
+          var24 = ij.a(0, '#', PcmOutputWorker.field_e);
           this.a(180, (String) null, 632, var24[0], (String) null, 0, -116);
           this.a(0, var24[1], 8, (String) null, (String) null, 1, -79);
           this.a(0, 400, (RgbSprite) null, 0, 0);
@@ -716,7 +716,7 @@ final class eg {
                     !this.field_c)) {
                     this.field_c = true;
                     KeyboardInput.field_f = 0;
-                    hc.field_u = vd.field_l;
+                    hc.field_u = BufferedSocket.field_l;
                   }
                 }
               } else {
@@ -725,7 +725,7 @@ final class eg {
                   !this.field_c) {
                   this.field_c = true;
                   KeyboardInput.field_f = 0;
-                  hc.field_u = vd.field_l;
+                  hc.field_u = BufferedSocket.field_l;
                 }
               }
             }

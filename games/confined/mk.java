@@ -43,7 +43,7 @@ final class mk extends ai {
 
     final si b(byte param0) {
         int var2 = 114 % ((param0 - 51) / 57);
-        return vd.field_c;
+        return BufferedSocket.field_c;
     }
 
     final static void b(int param0) {

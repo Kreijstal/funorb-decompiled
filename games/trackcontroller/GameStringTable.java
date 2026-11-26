@@ -380,7 +380,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime69 = DualLinkNode.a("okay", -523);
           if (var2Lifetime69 != null) {
-            dj.field_a = ta.a(32200, var2Lifetime69);
+            ProxyAuthenticationRequiredException.field_a = ta.a(32200, var2Lifetime69);
           }
           var2Lifetime70 = DualLinkNode.a("all", -523);
           if (null != var2Lifetime70) {

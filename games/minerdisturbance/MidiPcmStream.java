@@ -665,7 +665,7 @@ final class MidiPcmStream extends PcmStream {
         if (!param0) {
           field_Z = -105;
         }
-        return ll.field_h ^ 38054639;
+        return BufferedSocket.field_h ^ 38054639;
     }
 
     private final void b(int param0, int param1, int param2) {

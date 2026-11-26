@@ -104,15 +104,15 @@ final class ee {
           ImageProducerRasterBuffer.field_j[u.field_p] = null;
           return var2_ref_byte__Lifetime2;
         }
-        if (qf.field_i != null) {
+        if (PcmOutputWorker.field_i != null) {
           for (var2 = 0; var2 < ol.field_a.length; var2++) {
             if (ol.field_a[var2] == param0 &&
               tc.field_s[var2] > 0) {
               dupTemp$3 = tc.field_s[var2] - 1;
-              arrayValue$4 = qf.field_i[var2];
+              arrayValue$4 = PcmOutputWorker.field_i[var2];
               tc.field_s[var2] = dupTemp$3;
               var3 = arrayValue$4[dupTemp$3];
-              qf.field_i[var2][tc.field_s[var2]] = null;
+              PcmOutputWorker.field_i[var2][tc.field_s[var2]] = null;
               return var3;
             }
           }

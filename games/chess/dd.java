@@ -336,7 +336,7 @@ final class dd extends kk {
           }
         }
         if (field_r) {
-          hn.a(field_l, 0, 0, field_L, var7 - 1);
+          BufferedSocket.a(field_l, 0, 0, field_L, var7 - 1);
           if (this.field_u == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.e(field_L[var8Lifetime2]);

@@ -24,7 +24,7 @@ abstract class sk extends DualLinkNode {
             return null;
           }
           var5_int = 50 / ((param0 - 21) / 49);
-          stackIn_4_0 = sb.a(param4.b(param3, 12257, param2), 32223);
+          stackIn_4_0 = PcmOutputWorker.a(param4.b(param3, 12257, param2), 32223);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

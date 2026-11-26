@@ -393,8 +393,8 @@ final class IntrusiveDeque {
           if (param0 < 88) {
             field_b = (String) null;
           }
-          if (hn.field_u != null) {
-            hn.field_u.field_Q.a(param1, -1);
+          if (BufferedSocket.field_u != null) {
+            BufferedSocket.field_u.field_Q.a(param1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

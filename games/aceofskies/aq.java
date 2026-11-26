@@ -27,7 +27,7 @@ final class aq {
           var1.d(0, 0);
           sl.c(2765);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class aq {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class aq {
           this.field_a = param1;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

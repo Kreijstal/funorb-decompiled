@@ -6,7 +6,7 @@ final class pe extends IntrusiveNode {
     static String field_k;
     static String field_n;
     static String field_i;
-    static rk field_l;
+    static BufferedSocket field_l;
     static String field_o;
     static String[] field_m;
 
@@ -42,7 +42,7 @@ final class pe extends IntrusiveNode {
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
         if (param2 <= 3) {
-          field_l = (rk) null;
+          field_l = (BufferedSocket) null;
           dupTemp$1 = bl.a(false, param3, param4);
           var6[8] = dupTemp$1;
           var5[7] = dupTemp$1;

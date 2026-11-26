@@ -178,7 +178,7 @@ final class PlatformTaskDispatcher implements Runnable {
           BoundedRandomAccessFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          en var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -376,11 +376,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (en) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.result = lda.a((String) (var8.objectArgument), var8.intArgument, (byte) -113).a((byte) -70);
-                    } catch (en decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (en) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }

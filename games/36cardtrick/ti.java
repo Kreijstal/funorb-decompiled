@@ -113,7 +113,7 @@ final class ti {
           }
           ji.field_a.a(param2, param3, param0, (byte) -63);
           SoftwareRasterizer.clearRaster();
-          ga.a(true, 40);
+          PcmOutputWorker.a(true, 40);
           if (param1 == 54) {
             return;
           }

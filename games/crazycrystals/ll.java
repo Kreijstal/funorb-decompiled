@@ -90,7 +90,7 @@ final class ll {
             }
             var10 = (kb) (rc.field_a.elementAt(uo.field_o));
             qg.field_q = 0;
-            va.field_d = 0;
+            ProxyAuthenticationRequiredException.field_d = 0;
             MouseWheelInput.field_b = 0;
             var4 = var10.field_b;
             oe.field_a = new fq[3];
@@ -144,7 +144,7 @@ final class ll {
             CipherPacketBuffer.field_k[1] = 0;
             qp.field_f = false;
             mo.field_f = 0;
-            va.field_c = 0;
+            ProxyAuthenticationRequiredException.field_c = 0;
             CipherPacketBuffer.field_k[0] = 32;
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -111,7 +111,7 @@ final class ui extends di {
               return true;
             }
           }
-          var2Lifetime1 = hj.field_f;
+          var2Lifetime1 = PcmOutputWorker.field_f;
           var3Lifetime1 = 0;
           while (true) {
             if (var3Lifetime1 >= var2Lifetime1.length) {

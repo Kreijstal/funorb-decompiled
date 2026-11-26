@@ -154,10 +154,10 @@ final class PcmResampler {
         if (param0 != -21923) {
           return;
         }
-        if (qf.field_d == null) {
-          qf.field_d = new ql(na.field_d, ii.field_F);
+        if (PcmOutputWorker.field_d == null) {
+          PcmOutputWorker.field_d = new ql(na.field_d, ii.field_F);
         }
-        na.field_d.a((byte) 72, (UiWidget) (qf.field_d));
+        na.field_d.a((byte) 72, (UiWidget) (PcmOutputWorker.field_d));
     }
 
     final static void a(int param0, ha param1) {

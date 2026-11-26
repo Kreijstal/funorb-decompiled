@@ -66,7 +66,7 @@ final class dj {
               return;
             }
             try {
-              bk.field_b = new hd(sc.field_q.field_h, 64, 0);
+              PcmOutputWorker.field_b = new hd(sc.field_q.field_h, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

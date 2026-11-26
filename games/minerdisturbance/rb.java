@@ -1568,14 +1568,14 @@ final class rb {
                     if (this.field_d[var14Lifetime2] &&
                       !this.field_g[var14Lifetime2 - this.field_k]) {
                       var16Lifetime2 = 8;
-                      SoftwareRasterizer.fillCircleAlpha(ll.a((byte) -73, 8) + var7_intLifetime2, -var15Lifetime2 + (var8Lifetime2 - ll.a((byte) -73, 4)), 4, 16711680, 110);
+                      SoftwareRasterizer.fillCircleAlpha(BufferedSocket.a((byte) -73, 8) + var7_intLifetime2, -var15Lifetime2 + (var8Lifetime2 - BufferedSocket.a((byte) -73, 4)), 4, 16711680, 110);
                       if (8 < var16Lifetime2 + (8 - var15Lifetime2)) {
                         var16Lifetime2 = -var15Lifetime2 + 8;
                       }
-                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -ll.a((byte) -73, 4) + var8Lifetime2 - (var15Lifetime2 - 1) << 4, 64, 4, re.field_c);
-                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -var15Lifetime2 + var8Lifetime2 + (-ll.a((byte) -73, 4) + 1) << 4, 64, 4, re.field_c);
-                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + (-ll.a((byte) -73, 6) + (var8Lifetime2 - var15Lifetime2)) << 4, 80, 5, re.field_c);
-                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + var8Lifetime2 - var15Lifetime2 - ll.a((byte) -73, 6) << 4, 80, 5, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + BufferedSocket.a((byte) -73, 8) << 4, -BufferedSocket.a((byte) -73, 4) + var8Lifetime2 - (var15Lifetime2 - 1) << 4, 64, 4, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + BufferedSocket.a((byte) -73, 8) << 4, -var15Lifetime2 + var8Lifetime2 + (-BufferedSocket.a((byte) -73, 4) + 1) << 4, 64, 4, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + BufferedSocket.a((byte) -73, 8) << 4, 1 + (-BufferedSocket.a((byte) -73, 6) + (var8Lifetime2 - var15Lifetime2)) << 4, 80, 5, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + BufferedSocket.a((byte) -73, 8) << 4, 1 + var8Lifetime2 - var15Lifetime2 - BufferedSocket.a((byte) -73, 6) << 4, 80, 5, re.field_c);
                     }
                   }
                 }
@@ -1611,7 +1611,7 @@ final class rb {
         this.field_c = new int[this.field_j * this.field_k];
         this.field_d = new boolean[this.field_j * this.field_k];
         for (var3 = 0; var3 < this.field_j * this.field_k; var3++) {
-          this.field_h[var3] = ll.a((byte) -73, 15);
+          this.field_h[var3] = BufferedSocket.a((byte) -73, 15);
         }
         this.field_n = 0;
     }

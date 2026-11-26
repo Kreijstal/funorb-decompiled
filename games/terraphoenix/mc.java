@@ -29,7 +29,7 @@ final class mc {
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = wb.field_a[dg.a(255, (int) var2[var4_int])];
+          var3[var4_int] = ProxyAuthenticationRequiredException.field_a[dg.a(255, (int) var2[var4_int])];
         }
         if (param0 > 92) {
           var4 = new Sprite(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], var3);

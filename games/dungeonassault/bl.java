@@ -161,7 +161,7 @@ final class bl {
           SoftwareRasterizer.fillRectangle(0, 0, var5, 2, 16416);
           SoftwareRasterizer.fillRectangle(0, 2, var5, var6 - 4, 96);
           SoftwareRasterizer.fillRectangle(0, var6 - 2, var5, 2, 49184);
-          bk.field_e = new ph(var19, var7);
+          PcmOutputWorker.field_e = new ph(var19, var7);
           var5Lifetime1 = var2.field_y;
           var6Lifetime1 = var2.field_v;
           for (var8_int = 0; var8_int < var5Lifetime1 * var6Lifetime1; var8_int++) {
@@ -314,7 +314,7 @@ final class bl {
           up.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_zealot");
           gd.field_E = oh.a(hj.field_Z, "", 11091, "stat_attack");
           jj.field_b = oh.a(hj.field_Z, "", 11091, "stat_defence");
-          wl.field_d = oh.a(hj.field_Z, "", 11091, "stat_dodge");
+          ProxyAuthenticationRequiredException.field_d = oh.a(hj.field_Z, "", 11091, "stat_dodge");
           pk.field_o = oh.a(hj.field_Z, "", 11091, "stat_sneak");
           tb.field_c = oh.a(hj.field_Z, "", 11091, "stat_snare");
           kd.field_f = oh.a(hj.field_Z, "", 11091, "stat_detect");
@@ -365,7 +365,7 @@ final class bl {
           i.field_v.g();
           IterableNodeHashTable.field_i = i.field_v.d();
           IterableNodeHashTable.field_i.g();
-          qe.a(gd.field_E, jj.field_b, wl.field_d, pk.field_o, tb.field_c, kd.field_f);
+          qe.a(gd.field_E, jj.field_b, ProxyAuthenticationRequiredException.field_d, pk.field_o, tb.field_c, kd.field_f);
           ao.field_n = oh.a(hj.field_Z, "", 11091, "scroll_top");
           rn.field_c = oh.a(hj.field_Z, "", 11091, "scroll_bottom");
           field_s = oh.a(hj.field_Z, "", 11091, "scroll_tile");

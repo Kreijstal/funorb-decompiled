@@ -136,7 +136,7 @@ final class ma extends jc {
             return stackIn_6_0 != 0;
           }
           if (param4 == 1) {
-            j.field_d = this;
+            PcmOutputWorker.field_d = this;
             this.field_N = -param6 + (-this.field_u + param0);
             this.field_K = -param1 + (param3 - this.field_t);
           }

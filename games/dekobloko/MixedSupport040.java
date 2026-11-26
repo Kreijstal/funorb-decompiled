@@ -49,7 +49,7 @@ final class MixedSupport040 {
     }
 
     final static void performAction0531(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        PlatformSupport002.rgbSpriteState0013.performAction0291(integerArgument1, integerArgument4, integerArgument2);
+        DelegatingCanvas.rgbSpriteState0013.performAction0291(integerArgument1, integerArgument4, integerArgument2);
         GameDomainSupport004.rgbSpriteState0024.performAction0291(integerArgument1 + 35, integerArgument4, integerArgument2);
         MixedSupport116.rgbSpriteState0056.performAction0291(integerArgument1 + 605, integerArgument4, integerArgument2);
         MixedSupport042.rgbSpriteState0016.performAction0291(integerArgument1, integerArgument4 + 35, integerArgument2);

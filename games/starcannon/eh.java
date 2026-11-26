@@ -2150,7 +2150,7 @@ abstract class eh {
                 }
                 var2 = rd.a("next", 107);
                 if (null != var2) {
-                  ck.field_b = DualLinkNode.a(118, var2);
+                  PcmOutputWorker.field_b = DualLinkNode.a(118, var2);
                 }
                 var2 = rd.a("graphics_colon", -76);
                 if (var2 != null) {

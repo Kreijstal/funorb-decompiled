@@ -84,16 +84,16 @@ final class se extends bd {
         try {
           jl.field_b[param2] = di.field_l.nextInt();
           jl.field_b[1] = di.field_l.nextInt();
-          ck.field_g.position = 0;
+          PcmOutputWorker.field_g.position = 0;
           jl.field_b[3] = (int)mi.field_o;
           jl.field_b[2] = (int)(mi.field_o >> 32);
-          ck.field_g.writeInt((byte) -113, jl.field_b[0]);
-          ck.field_g.writeInt((byte) -71, jl.field_b[1]);
-          ck.field_g.writeInt((byte) -109, jl.field_b[2]);
-          ck.field_g.writeInt((byte) -107, jl.field_b[3]);
-          fd.a(ck.field_g, (byte) -111);
-          ck.field_g.writeShort(param3, param2 - 306);
-          param1.a((byte) 69, ck.field_g);
+          PcmOutputWorker.field_g.writeInt((byte) -113, jl.field_b[0]);
+          PcmOutputWorker.field_g.writeInt((byte) -71, jl.field_b[1]);
+          PcmOutputWorker.field_g.writeInt((byte) -109, jl.field_b[2]);
+          PcmOutputWorker.field_g.writeInt((byte) -107, jl.field_b[3]);
+          fd.a(PcmOutputWorker.field_g, (byte) -111);
+          PcmOutputWorker.field_g.writeShort(param3, param2 - 306);
+          param1.a((byte) 69, PcmOutputWorker.field_g);
           d.field_b.position = 0;
           if (!param0) {
             d.field_b.writeByte(16, -110);
@@ -126,7 +126,7 @@ final class se extends bd {
           if (null != lj.field_c) {
             d.field_b.writePrefixedString(false, lj.field_c);
           }
-          fc.a(ck.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
+          fc.a(PcmOutputWorker.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
           d.field_b.backpatchShortLength((byte) 88, -var5_int + d.field_b.position);
           nf.a(-1, (byte) 95);
           return;

@@ -222,7 +222,7 @@ final class GameDomainSupport005 {
             rgbSpriteLocal21.performAction0278(0, 0);
             SceneWidget.rgbSpriteState0068 = new RgbSprite(640, 480);
             SceneWidget.rgbSpriteState0068.performAction0256();
-            MouseInput.rgbSpriteState0073.performAction0287((MouseInput.rgbSpriteState0073.integerState0254 >> 1) + MixedSupport076.integerState0429, (MouseInput.rgbSpriteState0073.integerState0260 >> 1) + UiComponentPart011.integerState0240, DiagnosticSupport001.integerState0125, 4096);
+            MouseInput.rgbSpriteState0073.performAction0287((MouseInput.rgbSpriteState0073.integerState0254 >> 1) + MixedSupport076.integerState0429, (MouseInput.rgbSpriteState0073.integerState0260 >> 1) + UiComponentPart011.integerState0240, ProxyAuthenticationRequiredException.integerState0125, 4096);
             MouseInput.rgbSpriteState0073 = null;
             SceneWidget.rgbSpriteState0068.performAction0293();
             SoftwareRaster.setRasterBuffer(integerArrayLocal29, integerLocal32, integerLocal37);

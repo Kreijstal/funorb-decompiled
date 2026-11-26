@@ -26,7 +26,7 @@ final class sia extends TileEffect {
         try {
           this.field_k = param3;
           this.field_f = 100;
-          this.field_l = en.field_a.toRgbSprite();
+          this.field_l = ProxyAuthenticationRequiredException.field_a.toRgbSprite();
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "sia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

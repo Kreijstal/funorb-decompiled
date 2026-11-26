@@ -14,7 +14,7 @@ final class jg extends bh implements mj {
         if (param4 != -24221) {
           field_O = (byte[]) null;
         }
-        if (this.field_J.a(param4 ^ 24305).a(param4 + 45535) != oa.field_a) {
+        if (this.field_J.a(param4 ^ 24305).a(param4 + 45535) != ProxyAuthenticationRequiredException.field_a) {
           return;
         }
         try {
@@ -104,7 +104,7 @@ final class jg extends bh implements mj {
         try {
           super.a(param0, -103, param2, param3);
           stackIn_2_0 = this.field_N;
-          stackIn_3_1 = (this.field_J.a(-112).a(21314) == oa.field_a);
+          stackIn_3_1 = (this.field_J.a(-112).a(21314) == ProxyAuthenticationRequiredException.field_a);
           stackIn_2_0.field_H = stackIn_3_1;
           if (param1 <= -6) {
             return;

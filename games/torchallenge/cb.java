@@ -17,7 +17,7 @@ final class cb {
         synchronized (var1) {
           sj.field_L = sj.field_L + 1;
           wh.field_e = jc.field_h;
-          LocalizedStrings.field_u = bj.mouseX;
+          LocalizedStrings.field_u = ProxyAuthenticationRequiredException.mouseX;
           ph.field_d = qb.mouseY;
           ek.field_P = ua.field_c;
           ua.field_c = false;

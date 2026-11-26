@@ -1538,7 +1538,7 @@ public final class StarCannon extends ag {
         if (null != n.field_a &&
           n.field_a.focusLost) {
           re.a(0);
-          le.b(-36);
+          ProxyAuthenticationRequiredException.b(-36);
         }
         stackIn_6_1 = (n.field_a != null);
         this.b(stackIn_6_1, -1);
@@ -1549,9 +1549,9 @@ public final class StarCannon extends ag {
           this.t(-23523);
           fa.field_E = false;
         }
-        if (le.c(4)) {
+        if (ProxyAuthenticationRequiredException.c(4)) {
           this.f((byte) -90);
-          if (le.c(4)) {
+          if (ProxyAuthenticationRequiredException.c(4)) {
             if (!ai.a((byte) -78)) {
               return;
             }
@@ -3242,7 +3242,7 @@ public final class StarCannon extends ag {
         gi.b(640);
         wc.clearStaticReferences(-1);
         bi.b(0);
-        ck.a(false);
+        PcmOutputWorker.a(false);
         gf.clearStaticReferences((byte) -126);
         sd.resetStaticState(false);
         sc.clearStaticReferences(0);
@@ -3337,7 +3337,7 @@ public final class StarCannon extends ag {
         ic.clearStaticReferences((byte) -120);
         wj.a(false);
         oe.b(12);
-        le.clearStaticReferences(-11434);
+        ProxyAuthenticationRequiredException.clearStaticReferences(-11434);
         hf.b(-22720);
         ImageProducerRasterBuffer.clearStaticReferences(0);
         jk.clearStaticReferences(-124);
@@ -3438,7 +3438,7 @@ public final class StarCannon extends ag {
           stackIn_3_0 = kj.field_E;
         }
         var2 = stackIn_3_0;
-        if (le.c(4)) {
+        if (ProxyAuthenticationRequiredException.c(4)) {
           stackIn_7_0 = 320;
           stackIn_7_1 = var2;
           if (n.field_a != null) {

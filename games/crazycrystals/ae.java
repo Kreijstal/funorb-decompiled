@@ -125,7 +125,7 @@ final class ae extends og implements vd {
         if (param1 < -12) {
           var5 = this.field_r + param2;
           var6 = this.field_j + param0;
-          ai.field_h.a(j.field_h, 20 + var5, 20 + var6, -40 + this.field_g, this.field_f - 50, 16777215, -1, 1, 0, ai.field_h.field_o);
+          ai.field_h.a(BufferedSocket.field_h, 20 + var5, 20 + var6, -40 + this.field_g, this.field_f - 50, 16777215, -1, 1, 0, ai.field_h.field_o);
           super.a(param0, (byte) -20, param2, param3);
           return;
         }

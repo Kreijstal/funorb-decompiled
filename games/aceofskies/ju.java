@@ -53,7 +53,7 @@ final class ju extends rt {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class ju extends rt {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           this.a(true, -128);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ju.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class ju extends rt {
           tj.field_o = tj.field_o + (var2_intLifetime2 >> 1);
           HighscoreNameEntry.field_b = HighscoreNameEntry.field_b + param1.readUnsignedShort((byte) 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ju.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ju.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

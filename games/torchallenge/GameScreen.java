@@ -169,7 +169,7 @@ final class GameScreen {
                 if (var9 != 99) {
                   aj.field_c = ProxySocketConnector.field_q;
                   cb.field_g = var9;
-                  bb.field_i = -1;
+                  PcmOutputWorker.field_i = -1;
                   decompiledFrameRemainder0 = (var13 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -553,7 +553,7 @@ final class GameScreen {
             this.screenId == 10) {
             AccountServiceResult.field_k = AccountServiceResult.field_k + 1;
           }
-          stackIn_230_0 = (bc.field_o == bb.activeScreenId) ? 0 : 1;
+          stackIn_230_0 = (bc.field_o == PcmOutputWorker.activeScreenId) ? 0 : 1;
           var3 = stackIn_230_0;
           if (this.screenId == 10) {
             if (0 <= this.field_k.field_j &&
@@ -884,7 +884,7 @@ final class GameScreen {
                 NodeHashTableIterator.field_a = false;
                 o.a(4, true);
                 bc.field_o = -1;
-                bb.activeScreenId = -1;
+                PcmOutputWorker.activeScreenId = -1;
                 cj.field_b = true;
                 this.h(30122);
                 return;
@@ -904,7 +904,7 @@ final class GameScreen {
                   NodeHashTableIterator.field_a = false;
                   o.a(-1, true);
                   df.field_O = true;
-                  bb.activeScreenId = -1;
+                  PcmOutputWorker.activeScreenId = -1;
                   bc.field_o = -1;
                   if (gh.field_x) {
                     GameApplet.field_o = 1;
@@ -968,7 +968,7 @@ final class GameScreen {
                     o.a(4, true);
                     bc.field_o = -1;
                     cj.field_b = true;
-                    bb.activeScreenId = -1;
+                    PcmOutputWorker.activeScreenId = -1;
                     ImageProducerRasterBuffer.c(127);
                     return;
                   }
@@ -979,7 +979,7 @@ final class GameScreen {
                     NodeHashTableIterator.field_a))) {
                     NodeHashTableIterator.field_a = false;
                     o.a(4, true);
-                    bb.activeScreenId = -1;
+                    PcmOutputWorker.activeScreenId = -1;
                     bc.field_o = -1;
                     cj.field_b = true;
                     ImageProducerRasterBuffer.c(123);
@@ -1067,8 +1067,8 @@ final class GameScreen {
                         (decompiledFrameRemainder2 = (rj.field_g == 7))) {
                         if (RandomAccessCacheFile.field_e == 750) {
                           bc.field_o = 15;
-                          bb.activeScreenId = 15;
-                          GameApplet.screens[bb.activeScreenId].a(param0 + 22313, true);
+                          PcmOutputWorker.activeScreenId = 15;
+                          GameApplet.screens[PcmOutputWorker.activeScreenId].a(param0 + 22313, true);
                           return;
                         }
                         decompiledFrameRemainder2 = (!(RandomAccessCacheFile.field_e <= 800) ||
@@ -3076,7 +3076,7 @@ final class GameScreen {
           bc.field_o = -1;
           stackIn_7_0 = (0 < UiComponent.field_o) ? 0 : 7;
           LocalizedStrings.field_v = stackIn_7_0;
-          bb.activeScreenId = -1;
+          PcmOutputWorker.activeScreenId = -1;
           ch.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3321,12 +3321,12 @@ final class GameScreen {
             var9 = 0;
           }
           GzipDecoder.drawNineSlice(ui.field_i, var11, var10, (byte) -74, var9, var8);
-          var8 = bb.field_j[param3] + var8;
+          var8 = PcmOutputWorker.field_j[param3] + var8;
           var9 = var9 + 20;
           var5.drawTransparent(var8, var9);
           if (param3 == 1) {
             var5Lifetime1 = pe.field_eb[param0 + 2];
-            var8 = 269 + (-bb.field_j[param3] + var8);
+            var8 = 269 + (-PcmOutputWorker.field_j[param3] + var8);
             var5Lifetime1.drawTransparent(var8, var9);
           }
           if (var16Lifetime1 >= 0) {
@@ -4391,7 +4391,7 @@ final class GameScreen {
             }
             if (this.field_k.c((byte) 48)) {
               bc.field_o = 13;
-              bb.activeScreenId = 13;
+              PcmOutputWorker.activeScreenId = 13;
             }
           }
           return;
@@ -6893,7 +6893,7 @@ final class GameScreen {
               var2_intLifetime1++;
               continue scanLoop1;
             }
-            bj.a((byte) 71);
+            ProxyAuthenticationRequiredException.a((byte) 71);
             ab.field_d = 1;
             tf.field_o = 0;
             stackIn_21_0 = param0;

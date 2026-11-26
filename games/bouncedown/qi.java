@@ -340,7 +340,7 @@ final class qi extends jd {
             var3 = (java.awt.Canvas) null;
             qi.a((java.awt.Canvas) null, -82, -45, 126);
           }
-          stackIn_3_0 = pc.a(8272, true, param0, 10);
+          stackIn_3_0 = BufferedSocket.a(8272, true, param0, 10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

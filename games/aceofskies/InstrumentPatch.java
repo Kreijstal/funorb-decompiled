@@ -76,7 +76,7 @@ final class InstrumentPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class InstrumentPatch extends IntrusiveNode {
           }
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -518,7 +518,7 @@ final class InstrumentPatch extends IntrusiveNode {
           } else {
             stackIn_209_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
         }
     }
 
@@ -542,7 +542,7 @@ final class InstrumentPatch extends IntrusiveNode {
           }
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 }

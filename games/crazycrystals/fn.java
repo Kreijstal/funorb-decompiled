@@ -52,7 +52,7 @@ final class fn extends ln {
 
     final int a(int param0, byte param1) {
         int var3 = -121 % ((param1 - 55) / 50);
-        return (va.field_d & 1 << param0) != 0 ? 1 : 0;
+        return (ProxyAuthenticationRequiredException.field_d & 1 << param0) != 0 ? 1 : 0;
     }
 
     static {

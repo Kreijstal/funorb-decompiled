@@ -761,7 +761,7 @@ public final class BachelorFridge extends NetworkGameClient {
         MidiNote.resetStaticState((byte) 73);
         MidiFileReader.releaseStatics();
         MusicPatchPcmStream.releaseStatics((byte) -90);
-        kc.releaseStatics((byte) 94);
+        PcmOutputWorker.releaseStatics((byte) 94);
         rm.releaseStatics(-101);
         ti.releaseStatics(3);
         BoardChangeBatch.releaseStatics(false);
@@ -790,7 +790,7 @@ public final class BachelorFridge extends NetworkGameClient {
         lha.releaseStatics(1);
         mq.releaseStatics(213);
         SocketConnector.releaseStatics(1);
-        en.releaseStatics(-10132);
+        ProxyAuthenticationRequiredException.releaseStatics(-10132);
         WhirlpoolDigest.releaseStatics(107);
         cr.resetStaticState(21592);
         ByteStorage.releaseStatics(76);

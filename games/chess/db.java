@@ -163,7 +163,7 @@ final class db extends vm {
           if (!this.field_o) {
             stackIn_13_0 = qk.field_b;
           } else {
-            stackIn_13_0 = oa.field_a;
+            stackIn_13_0 = ProxyAuthenticationRequiredException.field_a;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

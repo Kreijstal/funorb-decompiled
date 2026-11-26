@@ -162,17 +162,17 @@ final class pf {
             for (var5 = 0; var5 < var4; var5++) {
               m.field_c[var5] = -1;
             }
-            em.field_e = new int[2];
+            ProxyAuthenticationRequiredException.field_e = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               fb.field_d[var5] = sc.field_d[var5];
             }
             fb.field_d[var4 - 3] = "";
             fb.field_d[-2 + var4] = md.field_M;
             m.field_c[var4 - 2] = 0;
-            em.field_e[0] = 4;
+            ProxyAuthenticationRequiredException.field_e[0] = 4;
             fb.field_d[-1 + var4] = ja.field_O;
             m.field_c[-1 + var4] = 1;
-            em.field_e[1] = 5;
+            ProxyAuthenticationRequiredException.field_e[1] = 5;
           } else if (IntrusiveDeque.field_a == 1) {
             var3_int = nb.a(ResourceArchive.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
             var4 = 2 + var3_int;
@@ -181,14 +181,14 @@ final class pf {
             for (var5 = 0; var5 < var4; var5++) {
               m.field_c[var5] = -1;
             }
-            em.field_e = new int[1];
+            ProxyAuthenticationRequiredException.field_e = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
               fb.field_d[var5] = sc.field_d[var5];
             }
             fb.field_d[-2 + var4] = "";
             fb.field_d[-1 + var4] = ja.field_O;
             m.field_c[var4 - 1] = 0;
-            em.field_e[0] = 5;
+            ProxyAuthenticationRequiredException.field_e[0] = 5;
           } else if (IntrusiveDeque.field_a != 2) {
             if (IntrusiveDeque.field_a == 3) {
               if (!fg.field_q.privilegedTasksEnabled) {
@@ -202,14 +202,14 @@ final class pf {
               for (var5 = 0; var4 > var5; var5++) {
                 m.field_c[var5] = -1;
               }
-              em.field_e = new int[1];
+              ProxyAuthenticationRequiredException.field_e = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 fb.field_d[var5] = sc.field_d[var5];
               }
               fb.field_d[-2 + var4] = "";
               fb.field_d[var4 - 1] = ja.field_O;
               m.field_c[-1 + var4] = 0;
-              em.field_e[0] = 5;
+              ProxyAuthenticationRequiredException.field_e[0] = 5;
             } else if (IntrusiveDeque.field_a == 4) {
               var3_int = nb.a(oc.field_c, vh.field_l, pb.field_e, sc.field_d, 1);
               var4 = var3_int + 2;
@@ -218,14 +218,14 @@ final class pf {
               for (var5 = 0; var5 < var4; var5++) {
                 m.field_c[var5] = -1;
               }
-              em.field_e = new int[1];
+              ProxyAuthenticationRequiredException.field_e = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 fb.field_d[var5] = sc.field_d[var5];
               }
               fb.field_d[-2 + var4] = "";
               fb.field_d[-1 + var4] = ja.field_O;
               m.field_c[-1 + var4] = 0;
-              em.field_e[0] = 5;
+              ProxyAuthenticationRequiredException.field_e[0] = 5;
             } else {
               if (IntrusiveDeque.field_a != 5) {
                 throw new IllegalArgumentException();
@@ -237,17 +237,17 @@ final class pf {
               for (var5 = 0; var4 > var5; var5++) {
                 m.field_c[var5] = -1;
               }
-              em.field_e = new int[2];
+              ProxyAuthenticationRequiredException.field_e = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 fb.field_d[var5] = sc.field_d[var5];
               }
               fb.field_d[var4 - 3] = "";
               fb.field_d[var4 - 2] = s.field_a;
               m.field_c[var4 - 2] = 0;
-              em.field_e[0] = 3;
+              ProxyAuthenticationRequiredException.field_e[0] = 3;
               fb.field_d[-1 + var4] = ja.field_O;
               m.field_c[-1 + var4] = 1;
-              em.field_e[1] = 5;
+              ProxyAuthenticationRequiredException.field_e[1] = 5;
             }
           } else {
             var3_int = nb.a(db.a(wa.field_q, new String[]{"<br><%0><br>"}, true), vh.field_l, pb.field_e, sc.field_d, 1);
@@ -300,7 +300,7 @@ final class pf {
             for (var8 = 0; var7 > var8; var8++) {
               m.field_c[var8] = -1;
             }
-            em.field_e = new int[2];
+            ProxyAuthenticationRequiredException.field_e = new int[2];
             m.field_c[1] = 0;
             fb.field_d[1] = ck.field_p;
             fb.field_d[0] = ki.field_e;
@@ -308,8 +308,8 @@ final class pf {
             m.field_c[3] = 1;
             fb.field_d[2] = cf.field_a;
             fb.field_d[3] = SecondaryNodeDequeIterator.field_h;
-            em.field_e[0] = 5;
-            em.field_e[1] = 2;
+            ProxyAuthenticationRequiredException.field_e[0] = 5;
+            ProxyAuthenticationRequiredException.field_e[1] = 2;
             fb.field_d[4] = ib.field_d;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_39_0 = fb.field_d;
@@ -340,7 +340,7 @@ final class pf {
           if (param1 != 1) {
             field_a = (RgbSprite) null;
           }
-          bk.field_a.field_m = em.field_e.length;
+          bk.field_a.field_m = ProxyAuthenticationRequiredException.field_e.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < fb.field_d.length; var4Lifetime1++) {
             stackIn_90_0 = 3;
@@ -370,19 +370,19 @@ final class pf {
               }
             }
           }
-          em.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
+          ProxyAuthenticationRequiredException.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
           bm.field_K = af.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
           MidiPcmStream.field_M = -(var3_intLifetime1 >> 1) + af.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < fb.field_d.length; var4Lifetime2++) {
-            stackIn_115_0 = em.field_d;
+            stackIn_115_0 = ProxyAuthenticationRequiredException.field_d;
             if (0 > m.field_c[var4Lifetime2]) {
               stackIn_116_1 = cm.field_f;
             } else {
               stackIn_116_1 = hb.field_t;
             }
-            em.field_d = stackIn_115_0 + stackIn_116_1;
+            ProxyAuthenticationRequiredException.field_d = stackIn_115_0 + stackIn_116_1;
           }
-          rb.field_H = IntrusiveDeque.field_f - (em.field_d >> 1);
+          rb.field_H = IntrusiveDeque.field_f - (ProxyAuthenticationRequiredException.field_d >> 1);
           vh.field_j = new int[fb.field_d.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = rb.field_H;

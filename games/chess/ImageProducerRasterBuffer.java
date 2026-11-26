@@ -66,7 +66,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           return;
         }
         if (ArchiveIndex.field_a != null) {
-          ArchiveIndex.field_a.a(-1);
+          ArchiveIndex.field_a.close(-1);
           ArchiveIndex.field_a = null;
         }
     }

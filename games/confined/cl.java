@@ -99,23 +99,23 @@ final class cl extends ee {
               }
             }
             if (2 == we.field_k) {
-              gk.field_u = new vd((java.net.Socket) (ol.field_a.result), ek.field_p);
+              gk.field_u = new BufferedSocket((java.net.Socket) (ol.field_a.result), ek.field_p);
               var2 = new PacketBuffer(13);
               ql.a(hj.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
               var2.writeByte(93, 15);
               var2.writeInt(-103, pi.field_L);
-              gk.field_u.a(13, false, var2.payload, 0);
+              gk.field_u.queueWrite(13, false, var2.payload, 0);
               we.field_k = we.field_k + 1;
               fl.field_a = ri.correctedCurrentTimeMillis(-3) + 30000L;
             }
             if (we.field_k == 3) {
-              if (gk.field_u.c((byte) -109) <= 0) {
+              if (gk.field_u.availableBytes((byte) -109) <= 0) {
                 if (fl.field_a < ri.correctedCurrentTimeMillis(-3)) {
                   stackIn_31_0 = sf.a(-2, (byte) -80);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = gk.field_u.a((byte) -5);
+                var1_int = gk.field_u.readSingleByte((byte) -5);
                 if (0 != var1_int) {
                   stackIn_27_0 = sf.a(var1_int, (byte) -67);
                   return stackIn_27_0;

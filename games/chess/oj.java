@@ -114,8 +114,8 @@ final class oj {
         if (ArchiveProvider.field_d != null) {
           ArchiveProvider.field_d.k((byte) -112);
         }
-        hn.field_u = new s();
-        nj.field_w.c(hn.field_u, 78);
+        BufferedSocket.field_u = new s();
+        nj.field_w.c(BufferedSocket.field_u, 78);
         if (param0 <= 120) {
           field_a = (String) null;
         }

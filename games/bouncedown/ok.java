@@ -188,7 +188,7 @@ final class ok {
           qe.field_k = dupTemp$1;
           if (ec.field_P.status == 1) {
             try {
-              NodeHashTableIterator.field_a = new pc((java.net.Socket) (ec.field_P.result), pj.field_c);
+              NodeHashTableIterator.field_a = new BufferedSocket((java.net.Socket) (ec.field_P.result), pj.field_c);
               var4 = jc.field_g;
               var5 = var4;
               hh.field_p.position = 0;

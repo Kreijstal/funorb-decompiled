@@ -210,7 +210,7 @@ final class pa {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_f[var2] = hf.a(tk.a((long)this.field_l[7 + var3], 255L), hf.a(hf.a(tk.a(255L, (long)this.field_l[var3 + 5]) << 16, hf.a(hf.a(tk.a(1095216660480L, (long)this.field_l[var3 + 3] << 32), hf.a(hf.a((long)this.field_l[var3] << 56, tk.a((long)this.field_l[1 + var3], 255L) << 48), tk.a(255L, (long)this.field_l[var3 + 2]) << 40)), tk.a(4278190080L, (long)this.field_l[4 + var3] << 24))), tk.a((long)this.field_l[6 + var3], 255L) << 8));
+          this.field_f[var2] = hf.a(ProxyAuthenticationRequiredException.a((long)this.field_l[7 + var3], 255L), hf.a(hf.a(ProxyAuthenticationRequiredException.a(255L, (long)this.field_l[var3 + 5]) << 16, hf.a(hf.a(ProxyAuthenticationRequiredException.a(1095216660480L, (long)this.field_l[var3 + 3] << 32), hf.a(hf.a((long)this.field_l[var3] << 56, ProxyAuthenticationRequiredException.a((long)this.field_l[1 + var3], 255L) << 48), ProxyAuthenticationRequiredException.a(255L, (long)this.field_l[var3 + 2]) << 40)), ProxyAuthenticationRequiredException.a(4278190080L, (long)this.field_l[4 + var3] << 24))), ProxyAuthenticationRequiredException.a((long)this.field_l[6 + var3], 255L) << 8));
           var2++;
           var3 += 8;
         }

@@ -149,7 +149,7 @@ final class oc extends vm {
           if (this.field_q instanceof ee) {
             var3 = ((ee) ((Object) this.field_q)).a(param1 + 9210);
             if (var3 != null) {
-              if (var3.a(21314) == oa.field_a &&
+              if (var3.a(21314) == ProxyAuthenticationRequiredException.field_a &&
                 !param0.equals(this.field_q.field_v)) {
                 stackIn_6_0 = gg.field_z;
                 return stackIn_6_0;
@@ -234,7 +234,7 @@ final class oc extends vm {
           if (this.field_q instanceof ee) {
             var3 = ((ee) ((Object) this.field_q)).a(-89);
             if (var3 != null &&
-              var3.a(21314) != oa.field_a) {
+              var3.a(21314) != ProxyAuthenticationRequiredException.field_a) {
               stackIn_5_0 = qk.field_b;
               return stackIn_5_0;
             }
@@ -243,7 +243,7 @@ final class oc extends vm {
           if (!param1.equals(this.field_q.field_v)) {
             stackIn_9_0 = qk.field_b;
           } else {
-            stackIn_9_0 = oa.field_a;
+            stackIn_9_0 = ProxyAuthenticationRequiredException.field_a;
           }
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

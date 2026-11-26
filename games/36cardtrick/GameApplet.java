@@ -938,12 +938,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               stackIn_48_0 = -1;
             }
             var20 = stackIn_48_0;
-            if (ga.field_b != null &&
+            if (PcmOutputWorker.field_b != null &&
               param6.field_N != null &&
               var14Lifetime1 < param6.field_N.length &&
               param6.field_N[var14Lifetime1] != -1 &&
-              param6.field_N[var14Lifetime1] < ga.field_b.length) {
-              stackIn_64_0 = ga.field_b[param6.field_N[var14Lifetime1]];
+              param6.field_N[var14Lifetime1] < PcmOutputWorker.field_b.length) {
+              stackIn_64_0 = PcmOutputWorker.field_b[param6.field_N[var14Lifetime1]];
             } else {
               stackIn_64_0 = null;
             }

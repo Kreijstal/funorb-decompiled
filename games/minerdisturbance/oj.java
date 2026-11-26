@@ -71,7 +71,7 @@ final class oj extends jc {
           var6Lifetime1 = mn.field_x << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = nm.a(var6Lifetime1, (byte) -128) >> 8;
-          var9Lifetime1 = j.a(var6Lifetime1, -50) >> 8;
+          var9Lifetime1 = PcmOutputWorker.a(var6Lifetime1, -50) >> 8;
           if (nk.field_w != -1 &&
             -1 != NodeHashTableIterator.field_e) {
             var9Lifetime1 = -128;

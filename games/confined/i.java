@@ -146,7 +146,7 @@ abstract class i extends GameAppletShell {
         if (null != jc.field_c) {
           il.field_cb = jc.field_c.pollRotation(8);
         }
-        if (kk.a(117)) {
+        if (ProxyAuthenticationRequiredException.a(117)) {
           var3 = 1200 * KeyboardInput.a(12398);
           if (this.field_m ||
             !(var3 >= eh.e(0)) &&

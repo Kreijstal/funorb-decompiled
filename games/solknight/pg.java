@@ -158,10 +158,10 @@ final class pg {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(-4);
             var4 = var27.readLong(10526);
-            var6 = (qc) (sb.field_c.beginBackward((byte) 51));
+            var6 = (qc) (PcmOutputWorker.field_c.beginBackward((byte) 51));
             while (var6 != null) {
               if (var6.field_u != var3Lifetime1) {
-                var6 = (qc) (sb.field_c.nextBackward(-111));
+                var6 = (qc) (PcmOutputWorker.field_c.nextBackward(-111));
                 continue;
               }
               break;

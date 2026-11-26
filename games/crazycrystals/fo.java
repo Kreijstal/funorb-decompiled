@@ -30,7 +30,7 @@ final class fo extends IntrusiveNode {
             field_m = (int[]) null;
           }
           while (var5 != null) {
-            j.a(var5, param0, false);
+            BufferedSocket.a(var5, param0, false);
             var5 = (ak) (hd.field_d.nextForward(false));
           }
           return;

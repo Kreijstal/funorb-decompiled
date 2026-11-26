@@ -144,7 +144,7 @@ final class el extends fe {
                     if (var11 != -1) {
                       var8 = var8.substring(0, var11);
                     }
-                    throw new ab(var8);
+                    throw new ProxyAuthenticationRequiredException(var8);
                   }
                   var9++;
                   var8 = var7.readLine();
@@ -154,7 +154,7 @@ final class el extends fe {
                 }
                 break;
               }
-              throw new ab("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_18_0 = var5;
@@ -564,7 +564,7 @@ final class el extends fe {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        ab var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = HostileSpawn.field_I ? 1 : 0;
@@ -631,9 +631,9 @@ final class el extends fe {
                   }
                   decompiledRegionSelector0 = 1;
                 }
-              } catch (ab decompiledCaughtParameter1) {
+              } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var12_ref = (ab) (Object) decompiledCaughtException;
+                var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                 var7 = var12_ref;
                 decompiledRegionSelector0 = 1;
               } catch (java.io.IOException decompiledCaughtParameter2) {

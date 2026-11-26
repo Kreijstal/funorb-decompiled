@@ -41,7 +41,7 @@ final class da {
               if (MusicPatchPcmStream.field_B) {
                 param1 = pj.field_d;
               } else {
-                param1 = j.field_a;
+                param1 = PcmOutputWorker.field_a;
               }
               param2 = 2;
               MidiPcmStream.field_D.a(pl.field_a, 69);

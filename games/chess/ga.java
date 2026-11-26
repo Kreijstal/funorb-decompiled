@@ -51,7 +51,7 @@ final class ga {
             var2 = 3;
           }
         } else {
-          var2 = (vi.a(-3)) ? 0 : 1;
+          var2 = (PcmOutputWorker.a(-3)) ? 0 : 1;
         }
         if (null == ch.field_gb &&
           re.field_r) {

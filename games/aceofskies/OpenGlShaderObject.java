@@ -117,7 +117,7 @@ final class OpenGlShaderObject {
             } else {
               stackIn_47_2 = "{...}";
             }
-            throw pn.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -146,7 +146,7 @@ final class OpenGlShaderObject {
           this.field_c = param1;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

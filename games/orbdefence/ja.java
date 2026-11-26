@@ -21,7 +21,7 @@ final class ja {
             return false;
           }
           if (param0 == 2) {
-            if (oa.field_i.length - 1 != na.field_a) {
+            if (PcmOutputWorker.field_i.length - 1 != na.field_a) {
               return true;
             }
             return false;
@@ -367,13 +367,13 @@ final class ja {
                 if (this.field_a == 6) {
                   continue;
                 }
-                rh.a((byte) 111, bk.field_e, false);
+                rh.a((byte) 111, ProxyAuthenticationRequiredException.field_e, false);
                 continue;
               }
               rh.a((byte) -74, -1, false);
               MouseInputListener.a(mh.field_a[44], (byte) -11);
               stackIn_32_0 = (tc.field_b > 0) ? 0 : 7;
-              bk.field_e = stackIn_32_0;
+              ProxyAuthenticationRequiredException.field_e = stackIn_32_0;
               continue;
             }
             this.c((byte) 126);
@@ -625,7 +625,7 @@ final class ja {
               break regionExit1;
             }
             rh.a((byte) -115, 8, param2);
-            bk.field_e = this.field_a;
+            ProxyAuthenticationRequiredException.field_e = this.field_a;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -676,7 +676,7 @@ final class ja {
             il.field_f = new nk(-19 + var4);
             rh.a((byte) -79, -1, param2);
             stackIn_76_0 = (0 < tc.field_b) ? 0 : 7;
-            bk.field_e = stackIn_76_0;
+            ProxyAuthenticationRequiredException.field_e = stackIn_76_0;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -709,7 +709,7 @@ final class ja {
             il.field_f = new nk(0);
             rh.a((byte) 117, -1, param2);
             stackIn_81_0 = (tc.field_b > 0) ? 0 : 7;
-            bk.field_e = stackIn_81_0;
+            ProxyAuthenticationRequiredException.field_e = stackIn_81_0;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -764,7 +764,7 @@ final class ja {
             MouseInputListener.a(mh.field_a[44], (byte) -11);
             rh.a((byte) -24, -1, param2);
             stackIn_91_0 = (tc.field_b <= 0) ? 7 : 0;
-            bk.field_e = stackIn_91_0;
+            ProxyAuthenticationRequiredException.field_e = stackIn_91_0;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -793,7 +793,7 @@ final class ja {
             if (!this.field_f.a((byte) -1)) {
               break regionExit1;
             }
-            if (bk.field_e != 7) {
+            if (ProxyAuthenticationRequiredException.field_e != 7) {
               rh.a((byte) -128, 0, param2);
               if (var9 == 0) {
                 break regionExit1;
@@ -848,7 +848,7 @@ final class ja {
               break regionExit1;
             }
             rh.a((byte) 110, 4, param2);
-            bk.field_e = this.field_a;
+            ProxyAuthenticationRequiredException.field_e = this.field_a;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -871,7 +871,7 @@ final class ja {
             }
             na.field_a = 0;
             rh.a((byte) 127, 3, param2);
-            bk.field_e = this.field_a;
+            ProxyAuthenticationRequiredException.field_e = this.field_a;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -891,7 +891,7 @@ final class ja {
             if (!this.field_f.a((byte) -1)) {
               break regionExit1;
             }
-            rh.a((byte) -80, bk.field_e, param2);
+            rh.a((byte) -80, ProxyAuthenticationRequiredException.field_e, param2);
             if (var9 == 0) {
               break regionExit1;
             }
@@ -1035,7 +1035,7 @@ final class ja {
             }
             if (null == PacketBuffer.field_k) {
               var6Lifetime1 = param2 ? 1 : 0;
-              ud.a(8, bk.field_d, var6Lifetime1 != 0, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+              ud.a(8, ProxyAuthenticationRequiredException.field_d, var6Lifetime1 != 0, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
               if (var9 == 0) {
                 break regionExit1;
               }
@@ -1090,7 +1090,7 @@ final class ja {
               }
             }
             stackIn_182_0 = (tc.field_b > 0) ? 0 : 7;
-            bk.field_e = stackIn_182_0;
+            ProxyAuthenticationRequiredException.field_e = stackIn_182_0;
             if (var9 == 0) {
               break regionExit1;
             }
@@ -1316,7 +1316,7 @@ final class ja {
           var8 = hh.field_e;
         }
         if (2 == dm.field_e) {
-          var8 = bk.field_c;
+          var8 = ProxyAuthenticationRequiredException.field_c;
         }
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder3 = true;
@@ -1407,7 +1407,7 @@ final class ja {
               decompiledFrameRemainder0 = (var28 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var9 = oa.field_a;
+              var9 = PcmOutputWorker.field_a;
               var12 = var11.field_i[dm.field_e];
               var32 = var11.field_l[dm.field_e];
               var14 = oc.a(dm.field_e, -1, mm.field_A, var11);
@@ -1517,7 +1517,7 @@ final class ja {
         }
         if ((decompiledFrameRemainder3) &&
           (decompiledFrameCompleted0)) {
-          var9 = oa.field_a;
+          var9 = PcmOutputWorker.field_a;
         }
         if (decompiledFrameCompleted0) {
           stackIn_93_0 = ob.field_I.field_H;
@@ -1582,7 +1582,7 @@ final class ja {
         stackIn_13_0 = (param1) ? 16759807 : 16777215;
         var11 = stackIn_13_0;
         var12 = ob.field_I;
-        var13 = -var12.field_B + (-bk.field_d[0].field_t + (var10 - bk.field_d[6].field_t)) - var12.field_H;
+        var13 = -var12.field_B + (-ProxyAuthenticationRequiredException.field_d[0].field_t + (var10 - ProxyAuthenticationRequiredException.field_d[6].field_t)) - var12.field_H;
         var13Lifetime1 = -16;
         if (var7 != 12 &&
           var7 != 13) {
@@ -1615,13 +1615,13 @@ final class ja {
           if (var7 < 19 ||
             var7 > 24) {
             if (16777215 == var11) {
-              cb.field_a.a(param0 - 56);
-              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, bk.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
+              BufferedSocket.field_a.a(param0 - 56);
+              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
               vj.field_b.d();
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, (var13Lifetime1 >> 1) + (bk.field_d[0].field_t + (cc.field_t.field_H + var4)), 1, -1);
+              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, (var13Lifetime1 >> 1) + (ProxyAuthenticationRequiredException.field_d[0].field_t + (cc.field_t.field_H + var4)), 1, -1);
               if (var11 == 16777215) {
                 SoftwareRasterizer.blurRectangle(2, 2, 10 + var5, var4 - 1, var6 + (-var5 - 20), var15);
               }
@@ -1629,8 +1629,8 @@ final class ja {
                 var19 != 0) {
                 SoftwareRasterizer.blurRectangle(10, 2, var5 + 10, var4 - 1, -20 - var5 + var6, var15);
               }
-              cb.field_a.a(param0 - 56);
-              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, bk.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
+              BufferedSocket.field_a.a(param0 - 56);
+              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
               vj.field_b.d();
             }
           }
@@ -1638,28 +1638,28 @@ final class ja {
             !(var7 > 24) || var19 != 0)) {
             var5 = 150;
             if (var11 == 16777215) {
-              cb.field_a.a(param0 ^ -56);
-              cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + bk.field_d[0].field_t + (var4 + cc.field_t.field_H), 0, -1);
+              BufferedSocket.field_a.a(param0 ^ -56);
+              cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + cc.field_t.field_H), 0, -1);
               vj.field_b.d();
               if (var19 != 0) {
-                cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + bk.field_d[0].field_t)), 1, -1);
+                cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + ProxyAuthenticationRequiredException.field_d[0].field_t)), 1, -1);
                 if (16777215 != var11) {
                   SoftwareRasterizer.blurRectangle(10, 2, -10 + var5, -1 + var4, -20 + (var6 - var5), var15);
                 }
                 SoftwareRasterizer.blurRectangle(2, 2, -10 + var5, var4 - 1, -20 + (-var5 + var6), var15);
-                cb.field_a.a(-40);
-                cc.field_t.b(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-bk.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
+                BufferedSocket.field_a.a(-40);
+                cc.field_t.b(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
                 vj.field_b.d();
               }
             } else {
-              cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + bk.field_d[0].field_t)), 1, -1);
+              cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + ProxyAuthenticationRequiredException.field_d[0].field_t)), 1, -1);
               SoftwareRasterizer.blurRectangle(10, 2, -10 + var5, -1 + var4, -20 + (var6 - var5), var15);
               if (16777215 == var11 ||
                 var19 != 0) {
                 SoftwareRasterizer.blurRectangle(2, 2, -10 + var5, var4 - 1, -20 + (-var5 + var6), var15);
               }
-              cb.field_a.a(-40);
-              cc.field_t.b(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-bk.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
+              BufferedSocket.field_a.a(-40);
+              cc.field_t.b(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
               vj.field_b.d();
             }
           }
@@ -1702,16 +1702,16 @@ final class ja {
           var15Lifetime1 = var5 + (-var14Lifetime1 + var9 >> 1);
           var16 = 32;
           if (var11 != 16777215) {
-            cc.field_t.a(var8.toLowerCase(), var5 + (var9 >> 1), (var13Lifetime1 >> 1) + (var4 + cc.field_t.field_H + bk.field_d[0].field_t), 1, -1);
+            cc.field_t.a(var8.toLowerCase(), var5 + (var9 >> 1), (var13Lifetime1 >> 1) + (var4 + cc.field_t.field_H + ProxyAuthenticationRequiredException.field_d[0].field_t), 1, -1);
             SoftwareRasterizer.blurRectangle(10, 2, 10 + var5, -1 + var4, -20 + var6 - var5, var16);
-            cb.field_a.a(-40);
-            cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, bk.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
+            BufferedSocket.field_a.a(-40);
+            cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.d();
           }
           if (var11 == 16777215 ||
             var19 != 0) {
-            cb.field_a.a(param0 ^ -56);
-            cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, bk.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
+            BufferedSocket.field_a.a(param0 ^ -56);
+            cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.d();
           }
           var15Lifetime1 = var15Lifetime1 + (aa.field_c + 16);
@@ -2086,7 +2086,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit1) {
-          var11 = jd.field_c.a(CrossfadingMidiPcmStream.a(-415993727, new String[]{"          "}, oa.field_i[na.field_a]), var22, var9);
+          var11 = jd.field_c.a(CrossfadingMidiPcmStream.a(-415993727, new String[]{"          "}, PcmOutputWorker.field_i[na.field_a]), var22, var9);
           stackIn_15_0 = 0;
         }
         var12 = stackIn_15_0;
@@ -2120,7 +2120,7 @@ final class ja {
         if (stackIn_26_0 > -74) {
           field_d = (String) null;
         }
-        ob.field_I.c(oa.a(oa.field_i.length, (byte) -2, na.field_a + 1), 555, 380, 16777215, -1);
+        ob.field_I.c(PcmOutputWorker.a(PcmOutputWorker.field_i.length, (byte) -2, na.field_a + 1), 555, 380, 16777215, -1);
         if (na.field_a != 0) {
           if (na.field_a != 1) {
             boolean decompiledFrameRemainder1 = true;
@@ -2416,7 +2416,7 @@ final class ja {
             fk.field_b.b(0, 0, 16711935);
             SoftwareRasterizer.blurRectangle(5, 5, 0, 0, 640, 128);
             fk.field_b.c(0, 0);
-            cb.field_a.a(-40);
+            BufferedSocket.field_a.a(-40);
             fk.field_b = var3_ref_hj;
           }
           var3 = this.a((byte) -12);
@@ -2483,7 +2483,7 @@ final class ja {
         boolean decompiledFrameRemainder0 = true;
         vj.field_b.d();
         SoftwareRasterizer.clearRaster();
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         if (this.field_a == 8) {
           this.a(false);
           decompiledFrameRemainder0 = (var10 != 0);
@@ -2563,7 +2563,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          cb.field_a.a(-40);
+          BufferedSocket.field_a.a(-40);
           stackIn_64_0 = -91 % ((-83 - param0) / 34);
         }
         var2Lifetime3 = stackIn_64_0;
@@ -2810,9 +2810,9 @@ final class ja {
         var14Lifetime2 = 220;
         var5Lifetime3 = 170;
         if (var21 != 0) {
-          ob.field_I.c(cb.field_g, -1 + var5Lifetime3, var14Lifetime2, 0, 0);
-          ob.field_I.c(cb.field_g, var5Lifetime3, var14Lifetime2 - 1, 0, 0);
-          ob.field_I.c(cb.field_g, var5Lifetime3, var14Lifetime2, 2293572, -1);
+          ob.field_I.c(BufferedSocket.field_g, -1 + var5Lifetime3, var14Lifetime2, 0, 0);
+          ob.field_I.c(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2 - 1, 0, 0);
+          ob.field_I.c(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2, 2293572, -1);
         }
         if (var21 == 0 ||
           var24 != 0) {
@@ -2874,7 +2874,7 @@ final class ja {
           cc.field_t.c(param1, 320, 96, 1, -1);
           SoftwareRasterizer.blurRectangle(5, 5, -(var3_int / 2) + 315, 59, 10 + var3_int, 42);
           cc.field_t.c(param1, 320, 96, 0, -1);
-          cb.field_a.a(-40);
+          BufferedSocket.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -237,7 +237,7 @@ final class mj {
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_13_0 = rg.a(57, var4, param2);
+          stackIn_13_0 = ProxyAuthenticationRequiredException.a(57, var4, param2);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

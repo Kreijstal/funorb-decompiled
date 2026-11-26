@@ -156,7 +156,7 @@ abstract class ve {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ck.$cfr$intArgs$b$e683eeaaf5b5(-30);
+                  ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-30);
                   fb.field_p = false;
                   stackIn_30_0 = var6_intLifetime1;
                   return stackIn_30_0;
@@ -198,7 +198,7 @@ abstract class ve {
               }
               og.field_c = ig.field_a.readString(false);
               var11 = (CharSequence) ((Object) og.field_c);
-              cb.field_t = ck.a(var11, (byte) -48);
+              cb.field_t = ProxyAuthenticationRequiredException.a(var11, (byte) -48);
               be.field_l = ig.field_a.readUnsignedByte(true);
               uf.field_m = gg.field_b;
               if (fa.field_b.a((byte) 45) == jf.field_M) {
@@ -241,7 +241,7 @@ abstract class ve {
             }
             if (uf.field_m == CrossfadingMidiPcmStream.field_l &&
               dc.d(param1 + 27)) {
-              ck.$cfr$intArgs$b$e683eeaaf5b5(-96);
+              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-96);
               if (7 == pg.field_d &&
                 !fb.field_p) {
                 fb.field_p = true;

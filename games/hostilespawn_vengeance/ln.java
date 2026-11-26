@@ -165,7 +165,7 @@ final class ln {
           var23 = null;
           var12 = HostileSpawn.field_I ? 1 : 0;
           try {
-            var13 = (ng) (td.field_o.beginForward(-97));
+            var13 = (ng) (BufferedSocket.field_o.beginForward(-97));
             var17 = var13;
             if (var17 == null) {
               return;

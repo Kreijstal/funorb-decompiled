@@ -29,7 +29,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
           var5.appendCrc32(var4, 45);
           var5.patchByteLength(-var4 + var5.position, (byte) 76);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ac.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ac.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
           packetAlias.appendCrc32(payloadStartPosition, firstScoreIndex + 108);
           packetAlias.patchByteLength(packetAlias.position - payloadStartPosition, (byte) 93);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ac.C(" + firstScoreIndex + ',' + opcode + ',' + (submission != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ac.C(" + firstScoreIndex + ',' + opcode + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 

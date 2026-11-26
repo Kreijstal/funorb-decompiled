@@ -173,7 +173,7 @@ final class fe extends l {
           MouseInputHandler.field_d = new am(RawPcmStream.a(ab.field_z, 100, 0));
           rb.field_g = new am(RawPcmStream.a(AccountCreationResultPanel.field_nb, 100, 0));
           ln.field_f = new am(RawPcmStream.a(tg.field_c, 100, 0));
-          oj.field_E = new am(RawPcmStream.a(va.field_b, 100, 0));
+          oj.field_E = new am(RawPcmStream.a(ProxyAuthenticationRequiredException.field_b, 100, 0));
           c.field_q = new am(RawPcmStream.a(ga.field_H, 100, 0));
           e.b((byte) -122);
         } catch (RuntimeException runtimeException) {

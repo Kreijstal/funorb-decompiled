@@ -237,12 +237,12 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             } else {
               var2_int = -1;
             }
-            if (0 <= em.field_f &&
+            if (0 <= ProxyAuthenticationRequiredException.field_f &&
               var2_int >= 0) {
-              qk.field_b[em.field_f] = ~var2_int;
-              em.field_f = 127 & em.field_f + 1;
-              if (em.field_f == sd.field_a) {
-                em.field_f = -1;
+              qk.field_b[ProxyAuthenticationRequiredException.field_f] = ~var2_int;
+              ProxyAuthenticationRequiredException.field_f = 127 & ProxyAuthenticationRequiredException.field_f + 1;
+              if (ProxyAuthenticationRequiredException.field_f == sd.field_a) {
+                ProxyAuthenticationRequiredException.field_f = -1;
               }
             }
           }
@@ -429,7 +429,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException var2 = null;
         try {
           if (ResourceArchive.field_f != null) {
-            em.field_f = -1;
+            ProxyAuthenticationRequiredException.field_f = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -471,12 +471,12 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             } else {
               var2_int = -1;
             }
-            if (em.field_f >= 0 &&
+            if (ProxyAuthenticationRequiredException.field_f >= 0 &&
               0 <= var2_int) {
-              qk.field_b[em.field_f] = var2_int;
-              em.field_f = 127 & em.field_f + 1;
-              if (em.field_f == sd.field_a) {
-                em.field_f = -1;
+              qk.field_b[ProxyAuthenticationRequiredException.field_f] = var2_int;
+              ProxyAuthenticationRequiredException.field_f = 127 & ProxyAuthenticationRequiredException.field_f + 1;
+              if (ProxyAuthenticationRequiredException.field_f == sd.field_a) {
+                ProxyAuthenticationRequiredException.field_f = -1;
               }
             }
             if (var2_int >= 0) {

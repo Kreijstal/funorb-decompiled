@@ -50,7 +50,7 @@ final class di {
               for (var5_int = 0; var5_int < nj.field_b; var5_int++) {
                 ra.field_c.payload[var5_int] = var4_ref_ao.field_m[var5_int];
               }
-              wl.field_f = oc.field_E;
+              ProxyAuthenticationRequiredException.field_f = oc.field_E;
               oc.field_E = SpriteGeometry.field_C;
               SpriteGeometry.field_C = hc.field_c;
               hc.field_c = var4_ref_ao.field_j;
@@ -71,7 +71,7 @@ final class di {
               return false;
             }
             if (pm.field_p == 0) {
-              wl.field_f = oc.field_E;
+              ProxyAuthenticationRequiredException.field_f = oc.field_E;
               oc.field_E = SpriteGeometry.field_C;
               SpriteGeometry.field_C = hc.field_c;
               hc.field_c = pp.field_J;

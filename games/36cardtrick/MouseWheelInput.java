@@ -42,7 +42,7 @@ abstract class MouseWheelInput {
           }
           if (param1 != null &&
             param1.length() >= lg.field_k &&
-            param1.length() <= jd.field_g) {
+            param1.length() <= BufferedSocket.field_g) {
             return false;
           }
           return true;

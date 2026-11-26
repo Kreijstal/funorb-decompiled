@@ -106,7 +106,7 @@ final class hba extends AttackEvent {
           ge.field_K = dupTemp$0;
           nha.field_a = var10[4];
           il.field_a = var10[15];
-          en.field_a = var10[3];
+          ProxyAuthenticationRequiredException.field_a = var10[3];
           ho.field_j = new IndexedSprite[]{var10[13], var10[14]};
           fw.field_f = var10[5];
           ff.field_u = var10[0];

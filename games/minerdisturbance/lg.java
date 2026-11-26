@@ -1661,7 +1661,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltipMap");
                 if (var2 != null) {
-                  j.field_e = bh.a(var2, -124);
+                  PcmOutputWorker.field_e = bh.a(var2, -124);
                 }
                 var2 = lh.b(-1, "tooltip2X");
                 if (null != var2) {
@@ -1877,7 +1877,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "optionsMembersExpansion");
                 if (null != var2) {
-                  pm.field_d = bh.a(var2, -119);
+                  ProxyAuthenticationRequiredException.field_d = bh.a(var2, -119);
                 }
                 var2 = lh.b(-1, "highscoreVolcano");
                 if (var2 != null) {
@@ -1935,7 +1935,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "keycode_cheat_up");
                 if (var2 != null) {
-                  pm.field_a = var2[0] & 255;
+                  ProxyAuthenticationRequiredException.field_a = var2[0] & 255;
                 }
                 var2 = lh.b(-1, "keycode_cheat_down");
                 if (null != var2) {

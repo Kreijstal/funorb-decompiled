@@ -23,7 +23,7 @@ final class BitmapFontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var3), "vs.H(" + obfuscationGuard + ',' + glyphIndex + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var3), "vs.H(" + obfuscationGuard + ',' + glyphIndex + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class BitmapFontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1), "vs.B(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "vs.B(" + param0 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class BitmapFontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1), "vs.E(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "vs.E(" + param0 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class BitmapFontMetrics {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class BitmapFontMetrics {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ final class BitmapFontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var4 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var4), "vs.G(" + obfuscationGuard + ',' + secondGlyph + ',' + firstGlyph + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var4), "vs.G(" + obfuscationGuard + ',' + secondGlyph + ',' + firstGlyph + ')');
         }
     }
 
@@ -594,7 +594,7 @@ final class BitmapFontMetrics {
           } else {
             stackIn_174_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_161_0), ((StringBuilder) (Object) stackIn_173_1).append(stackIn_174_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_161_0), ((StringBuilder) (Object) stackIn_173_1).append(stackIn_174_2).append(')').toString());
         }
     }
 
@@ -617,7 +617,7 @@ final class BitmapFontMetrics {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -757,7 +757,7 @@ final class BitmapFontMetrics {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 

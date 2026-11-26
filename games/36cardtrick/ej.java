@@ -178,7 +178,7 @@ final class ej extends ta {
         } else {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 0, 192);
         }
-        ga.a(param0, param1 + 62);
+        PcmOutputWorker.a(param0, param1 + 62);
     }
 
     static {

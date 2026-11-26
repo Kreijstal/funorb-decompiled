@@ -152,7 +152,7 @@ final class md extends w {
             md.e(-86);
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = cb.field_t.equals(ck.a(var3, (byte) -48));
+          stackIn_3_0 = cb.field_t.equals(ProxyAuthenticationRequiredException.a(var3, (byte) -48));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

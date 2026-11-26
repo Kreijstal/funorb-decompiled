@@ -2858,7 +2858,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 96, "keycode_M");
                 if (null != var2) {
-                  wb.field_e = var2[0] & 255;
+                  ProxyAuthenticationRequiredException.field_e = var2[0] & 255;
                 }
                 var2 = il.a((byte) 82, "keycode_W");
                 if (var2 != null) {

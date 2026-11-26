@@ -82,7 +82,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_s, this.field_u, this.field_v);
           this.field_o = this.field_v * this.field_u * this.field_t.e(-32334, this.field_s);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

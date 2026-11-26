@@ -223,7 +223,7 @@ final class ob extends ql {
         this.field_u = new oc(var8[24], var8[25]);
         this.field_r[0] = new oc(var8[28], var8[29]);
         this.field_r[1] = new oc(var8[30], var8[31]);
-        this.field_D = new v(td.field_p, 48 + 24 * this.field_l.field_e, -20 + 24 * (this.field_l.field_g - 3));
+        this.field_D = new v(BufferedSocket.field_p, 48 + 24 * this.field_l.field_e, -20 + 24 * (this.field_l.field_g - 3));
         this.field_H = new v(sa.field_e, 24 * var8[6], -30 + (-96 + var8[7] * 24), 150);
         this.field_q = new v(sa.field_b, 0, 48 + 24 * this.field_F.field_g);
         this.field_q.field_l = -this.field_q.field_m + (this.field_F.field_e - 3) * 24;

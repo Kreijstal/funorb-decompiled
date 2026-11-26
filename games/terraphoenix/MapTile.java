@@ -1426,7 +1426,7 @@ final class MapTile {
               var11Lifetime1 = lf.field_e[15];
             }
             if (11 == this.field_m) {
-              var11Lifetime1 = wb.field_h[3];
+              var11Lifetime1 = ProxyAuthenticationRequiredException.field_h[3];
             }
             if (var11Lifetime1 != null) {
               if (!this.field_z &&

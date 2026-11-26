@@ -35,19 +35,19 @@ final class se extends jc {
         ma var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5 + param5);
-          var7 = j.field_d;
+          var7 = PcmOutputWorker.field_d;
           if (var7 != null) {
             if (!this.b(param1, param0, param3, param2, -88)) {
               return;
             }
             if (this.field_y instanceof cd) {
               ((cd) (this.field_y)).a(27055, this, var7);
-              j.field_d = null;
+              PcmOutputWorker.field_d = null;
               return;
             }
             if (var7.field_y instanceof cd) {
               ((cd) (var7.field_y)).a(param5 + 27055, this, var7);
-              j.field_d = null;
+              PcmOutputWorker.field_d = null;
               return;
             }
           }

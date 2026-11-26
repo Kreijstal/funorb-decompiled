@@ -125,7 +125,7 @@ final class kd {
           if (null == ql.field_m) {
             return;
           }
-          ql.field_m.a(ll.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          ql.field_m.a(BufferedSocket.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           return;
         }
         var6 = this.field_l[this.field_s];
@@ -137,7 +137,7 @@ final class kd {
           var6.a(9, 58);
         } else {
           if (null != ql.field_m) {
-            ql.field_m.a(ll.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            ql.field_m.a(BufferedSocket.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (tg.field_g > this.field_n) {

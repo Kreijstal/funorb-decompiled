@@ -144,8 +144,8 @@ abstract class wf extends cc {
           return;
         }
         fh.field_a.f(-90 + param2 + this.field_v, param1 + 10);
-        pm.a(param1 + 35, param0 - 21532, 5 + param2, -10 + this.field_v, vk.field_e);
-        pm.a(-22 + this.field_q + param1, param0 - 21532, param2, this.field_v, v.field_d);
+        ProxyAuthenticationRequiredException.a(param1 + 35, param0 - 21532, 5 + param2, -10 + this.field_v, vk.field_e);
+        ProxyAuthenticationRequiredException.a(-22 + this.field_q + param1, param0 - 21532, param2, this.field_v, v.field_d);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.field_q;

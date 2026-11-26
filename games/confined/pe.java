@@ -174,7 +174,7 @@ final class pe extends IntrusiveNode {
               for (var5_int = 0; var5_int < ai.field_i; var5_int++) {
                 e.field_c.payload[var5_int] = var4_ref_hc.field_q[var5_int];
               }
-              kk.field_c = pk.field_c;
+              ProxyAuthenticationRequiredException.field_c = pk.field_c;
               pk.field_c = qm.field_y;
               qm.field_y = Confined.field_F;
               Confined.field_F = var4_ref_hc.field_o;
@@ -209,7 +209,7 @@ final class pe extends IntrusiveNode {
               return false;
             }
             if (tk.field_b == 0) {
-              kk.field_c = pk.field_c;
+              ProxyAuthenticationRequiredException.field_c = pk.field_c;
               pk.field_c = qm.field_y;
               qm.field_y = Confined.field_F;
               Confined.field_F = tg.field_S;

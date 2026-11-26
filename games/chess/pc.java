@@ -978,7 +978,7 @@ final class pc extends ci {
             if (uj.field_j.field_L != 0) {
               jh.field_a = true;
             }
-            if (hn.field_d.field_L != 0) {
+            if (BufferedSocket.field_d.field_L != 0) {
               jh.field_a = false;
             }
             t.a(pd.field_Rb, false, param4, true);

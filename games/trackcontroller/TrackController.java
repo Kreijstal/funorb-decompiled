@@ -382,7 +382,7 @@ public final class TrackController extends GameShell {
         u.clearStaticReferences((byte) 105);
         pg.clearStaticReferences();
         c.a((byte) 107);
-        hj.a(param0 ^ -3863);
+        PcmOutputWorker.a(param0 ^ -3863);
         la.clearStaticReferences(false);
         jk.clearStaticReferences(-99);
         wf.resetStaticState((byte) -123);
@@ -447,7 +447,7 @@ public final class TrackController extends GameShell {
         ff.clearStaticReferences(-1);
         rf.a(0);
         SocketConnector.a(-88);
-        dj.clearStaticReferences(-60);
+        ProxyAuthenticationRequiredException.clearStaticReferences(-60);
         ImageProducerRasterBuffer.clearStaticReferences((byte) 12);
         ca.clearStaticReferences(118);
         ji.clearStaticReferences((byte) -64);

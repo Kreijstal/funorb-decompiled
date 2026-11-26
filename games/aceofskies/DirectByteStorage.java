@@ -31,7 +31,7 @@ final class DirectByteStorage extends ByteStorage {
           }
           this.field_d.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ku.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ku.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

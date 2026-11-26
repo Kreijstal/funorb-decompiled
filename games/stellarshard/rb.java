@@ -531,7 +531,7 @@ abstract class rb extends GameApplet {
           }
         }
         if (!param1 &&
-          tl.field_d) {
+          ProxyAuthenticationRequiredException.field_d) {
           nd.a(-26621, qd.field_j);
           this.c(31178);
           nc.a(qd.field_j, (byte) 118);

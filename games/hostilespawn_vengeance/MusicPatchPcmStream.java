@@ -1594,7 +1594,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_displayname", 24);
                 if (null != var2) {
-                  ua.field_a = PcmResampler.a(123, var2);
+                  PcmOutputWorker.field_a = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("create_password", 24);
                 if (var2 != null) {

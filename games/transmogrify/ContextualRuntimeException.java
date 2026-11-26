@@ -2712,7 +2712,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("fs_accept_countdown_sing", (byte) 122);
                 if (var2 != null) {
-                  ef.field_c = eg.a(100, var2);
+                  PcmOutputWorker.field_c = eg.a(100, var2);
                 }
                 var2 = kb.a("fs_accept_countdown_pl", (byte) 108);
                 if (var2 != null) {

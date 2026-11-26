@@ -394,7 +394,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
         MixedSupport042.performAction0537(130, integerArgument2 ^ 12362, 16694016, MixedSupport054.stringState0233, 320 + integerArgument1, SceneWidget.renderingSupport009State0007);
         integerLocal1 = 145;
         MixedSupport121.computeRgbSprite1601(true, 0).performAction0280(320 + integerArgument1, integerLocal1, 18, 18);
-        integerLocal1 = integerLocal1 + (16 * MixedSupport045.computeInteger0552(212, 0, integerLocal1, PlatformSupport002.stringState0123, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -128, 0, 348 + integerArgument1) + 16);
+        integerLocal1 = integerLocal1 + (16 * MixedSupport045.computeInteger0552(212, 0, integerLocal1, DelegatingCanvas.stringState0123, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -128, 0, 348 + integerArgument1) + 16);
         if (integerArgument2 != 12618) {
           UiComponentPart003.performAction0163(105, 85, false);
         }

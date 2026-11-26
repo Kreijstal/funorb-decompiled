@@ -257,7 +257,7 @@ final class la {
             } else {
               stackIn_52_4 = 4;
             }
-            var2Lifetime4 = stackIn_51_0 + (stackIn_51_1 * va.a(stackIn_51_2, stackIn_51_3 << stackIn_52_4) >> 16);
+            var2Lifetime4 = stackIn_51_0 + (stackIn_51_1 * ProxyAuthenticationRequiredException.a(stackIn_51_2, stackIn_51_3 << stackIn_52_4) >> 16);
             if (var2Lifetime4 > 0) {
               ad.field_h.d(230, 389, var2Lifetime4);
               ad.field_h.d(232, 389, var2Lifetime4);
@@ -291,7 +291,7 @@ final class la {
             bf.field_a.a(586, var1_int);
             if (var1_int < IsaacRandom.field_h &&
               qk.field_H.field_u + var1_int > IsaacRandom.field_h) {
-              var2Lifetime5 = 40 + (40 * va.a(2047, hl.field_g << 4) >> 16);
+              var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, hl.field_g << 4) >> 16);
               if (var2Lifetime5 <= 0) {
                 rh.a(false);
                 ld.field_v[ue.field_a].a(269, 340);

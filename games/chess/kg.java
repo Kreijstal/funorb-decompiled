@@ -43,7 +43,7 @@ final class kg extends kn {
             }
             var1_int = 1;
           }
-          nj.field_u.a(qn.a((byte) 107, re.field_m, ag.field_f), 99, qn.a((byte) 107, hn.field_k, rf.field_b));
+          nj.field_u.a(qn.a((byte) 107, re.field_m, ag.field_f), 99, qn.a((byte) 107, BufferedSocket.field_k, rf.field_b));
           if (nj.field_u.d((byte) 55)) {
             var1_int = 1;
           }

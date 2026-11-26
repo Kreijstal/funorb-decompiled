@@ -114,7 +114,7 @@ final class jj extends ug {
           }
           var2 = -103 % ((param1 + 39) / 37);
           try {
-            var3_int = kl.field_G.c((byte) -79);
+            var3_int = kl.field_G.availableBytes((byte) -79);
             if (0 >= var3_int) {
               if (0 > var3_int) {
                 dc.d(125);
@@ -129,7 +129,7 @@ final class jj extends ug {
             if (-e.field_c.position + param0 < var3_int) {
               var3_int = param0 - e.field_c.position;
             }
-            kl.field_G.a(e.field_c.payload, -77, var3_int, e.field_c.position);
+            kl.field_G.readFully(e.field_c.payload, -77, var3_int, e.field_c.position);
             m.field_b = ri.correctedCurrentTimeMillis(-3);
             e.field_c.position = e.field_c.position + var3_int;
             if (param0 > e.field_c.position) {

@@ -195,7 +195,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(preferIndexed).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(preferIndexed).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -495,7 +495,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -532,7 +532,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           bounds[2] = this.field_d;
           bounds[1] = this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wl.K(" + (bounds != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wl.K(" + (bounds != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -746,7 +746,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1060,7 +1060,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -1078,7 +1078,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           this.field_qb = param1;
           this.field_qb.c(-1122);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wl.KC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wl.KC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1134,7 +1134,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1190,7 +1190,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1380,7 +1380,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1492,7 +1492,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1637,7 +1637,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1656,7 +1656,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(offset).append(',').append(stride).append(',').append(width).append(',').append(height).append(',').append(param5).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(offset).append(',').append(stride).append(',').append(width).append(',').append(height).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1758,7 +1758,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -1897,7 +1897,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           param0.removeFocusListener(OpenGlBuffer.field_d);
           fb.field_a = -1;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wl.UB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wl.UB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -2027,7 +2027,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2133,7 +2133,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2228,7 +2228,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wl.SA(" + x + ',' + y + ',' + width + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + offset + ',' + stride + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wl.SA(" + x + ',' + y + ',' + width + ',' + height + ',' + (pixels != null ? "{...}" : "null") + ',' + offset + ',' + stride + ')');
         }
     }
 
@@ -2249,7 +2249,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           this.field_Rb = param0;
           this.field_Rb.c((byte) 82);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wl.QB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wl.QB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

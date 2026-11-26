@@ -201,10 +201,10 @@ abstract class l {
 
     final static void b(boolean param0) {
         try {
-          if (bk.field_b != null) {
+          if (PcmOutputWorker.field_b != null) {
             try {
-              bk.field_b.a(0L, -26296);
-              bk.field_b.a(ra.field_c.position, -79, 24, ra.field_c.payload);
+              PcmOutputWorker.field_b.a(0L, -26296);
+              PcmOutputWorker.field_b.a(ra.field_c.position, -79, 24, ra.field_c.payload);
             } catch (Exception exception) {
             }
           }

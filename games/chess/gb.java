@@ -543,7 +543,7 @@ abstract class gb extends GameAppletShell {
           }
         }
         if (il.field_a == 3 &&
-          vi.a(fl.field_m, 99, Chess.field_B, bi.field_a) &&
+          PcmOutputWorker.a(fl.field_m, 99, Chess.field_B, bi.field_a) &&
           ml.a(0, bi.field_a)) {
           gb.e(-5);
           ag.a((byte) -119);

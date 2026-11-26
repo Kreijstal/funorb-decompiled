@@ -299,7 +299,7 @@ final class tl implements Runnable {
 
     final static void a(int param0) {
         if (sp.field_c != null) {
-          sp.field_c.c(-6624);
+          sp.field_c.close(-6624);
           sp.field_c = null;
         }
         int var1 = 17 / ((param0 - 42) / 58);

@@ -54,11 +54,11 @@ final class ql {
             return var2;
           }
           if (param1 == 30000 &&
-            hn.field_t > 0) {
-            fieldTemp$3 = hn.field_t - 1;
-            hn.field_t = hn.field_t - 1;
+            BufferedSocket.field_t > 0) {
+            fieldTemp$3 = BufferedSocket.field_t - 1;
+            BufferedSocket.field_t = BufferedSocket.field_t - 1;
             var2 = cg.field_b[fieldTemp$3];
-            cg.field_b[hn.field_t] = null;
+            cg.field_b[BufferedSocket.field_t] = null;
             return var2;
           }
           if (null != se.field_Y) {
@@ -77,11 +77,11 @@ final class ql {
         } else {
           if (5000 != param1) {
             if (param1 == 30000 &&
-              hn.field_t > 0) {
-              fieldTemp$12 = hn.field_t - 1;
-              hn.field_t = hn.field_t - 1;
+              BufferedSocket.field_t > 0) {
+              fieldTemp$12 = BufferedSocket.field_t - 1;
+              BufferedSocket.field_t = BufferedSocket.field_t - 1;
               var2 = cg.field_b[fieldTemp$12];
-              cg.field_b[hn.field_t] = null;
+              cg.field_b[BufferedSocket.field_t] = null;
               return var2;
             }
             if (null != se.field_Y) {
@@ -120,11 +120,11 @@ final class ql {
                 }
               }
             } else {
-              if (hn.field_t > 0) {
-                fieldTemp$6 = hn.field_t - 1;
-                hn.field_t = hn.field_t - 1;
+              if (BufferedSocket.field_t > 0) {
+                fieldTemp$6 = BufferedSocket.field_t - 1;
+                BufferedSocket.field_t = BufferedSocket.field_t - 1;
                 var2 = cg.field_b[fieldTemp$6];
-                cg.field_b[hn.field_t] = null;
+                cg.field_b[BufferedSocket.field_t] = null;
                 return var2;
               }
               if (null != se.field_Y) {

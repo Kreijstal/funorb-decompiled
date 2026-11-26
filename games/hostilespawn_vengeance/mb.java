@@ -226,7 +226,7 @@ final class mb extends ce {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32270) << (ua.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32270) << (PcmOutputWorker.a(var7, 3) << 8));
             }
             var4.field_j = true;
             var4.unlink(param0 - 170);
@@ -340,7 +340,7 @@ final class mb extends ce {
             }
             if (s.field_b.field_i > 0) {
               try {
-                ag.field_t.a(s.field_b.field_i, s.field_b.field_n, (byte) 112, 0);
+                ag.field_t.queueWrite(s.field_b.field_i, s.field_b.field_n, (byte) 112, 0);
                 gf.field_h = hn.correctedCurrentTimeMillis((byte) 80);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

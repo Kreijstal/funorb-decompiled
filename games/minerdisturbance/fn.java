@@ -48,18 +48,18 @@ final class fn extends IntrusiveNode {
               }
             }
             if (tl.field_m == 2) {
-              mb.field_c = new ll((java.net.Socket) (em.field_B.result), jl.field_fb);
+              mb.field_c = new BufferedSocket((java.net.Socket) (em.field_B.result), jl.field_fb);
               var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
               var2.writeByte(15, 25564);
               var2.writeInt((byte) 120, MusicPatchPcmStream.field_y);
-              mb.field_c.a((byte) 104, var2.payload, 13, 0);
+              mb.field_c.queueWrite((byte) 104, var2.payload, 13, 0);
               tl.field_m = tl.field_m + 1;
               sk.field_a = 30000L + sf.correctedCurrentTimeMillis((byte) -54);
             }
             if (tl.field_m == 3) {
-              if (mb.field_c.c(0) > 0) {
-                var1_int = mb.field_c.a(false);
+              if (mb.field_c.availableBytes(0) > 0) {
+                var1_int = mb.field_c.readSingleByte(false);
                 if (var1_int != 0) {
                   stackIn_29_0 = tg.a(var1_int, -118);
                   return stackIn_29_0;

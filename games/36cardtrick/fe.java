@@ -99,7 +99,7 @@ final class fe {
             if (decompiledFrameRemainder0) {
               if (na.field_r.position > 0) {
                 try {
-                  cb.field_j.a(0, (byte) -89, na.field_r.position, na.field_r.payload);
+                  cb.field_j.queueWrite(0, (byte) -89, na.field_r.position, na.field_r.payload);
                   ua.field_E = id.correctedCurrentTimeMillis(125);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

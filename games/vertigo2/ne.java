@@ -48,7 +48,7 @@ final class ne extends WidgetContainer implements nc, ij {
           ca.field_h = new UiPanel(0L, (UiPanel) null);
           ca.field_h.b(qo.field_D.field_b, 123);
           ca.field_h.b(DirectByteStorage.field_j, 123);
-          jr.a(98);
+          PcmOutputWorker.a(98);
           return;
         }
     }

@@ -87,11 +87,11 @@ final class wg extends pk {
           var4 = var4 + this.field_m.field_j;
         }
         if (null != this.field_n) {
-          var2 = var2 != 0 | this.field_n.b(var3, this.field_k, hn.field_k, rf.field_b) ? 1 : 0;
+          var2 = var2 != 0 | this.field_n.b(var3, this.field_k, BufferedSocket.field_k, rf.field_b) ? 1 : 0;
           var3 = var3 + this.field_n.field_k;
         }
         stackIn_16_0 = var2;
-        if (hn.field_k >= var3) {
+        if (BufferedSocket.field_k >= var3) {
           var2Lifetime1 = stackIn_16_0 | 1;
         } else {
           stackIn_24_0 = stackIn_16_0;
@@ -100,7 +100,7 @@ final class wg extends pk {
           } else {
             stackIn_33_0 = stackIn_24_0;
             regionExit1: {
-              if (hn.field_k <= this.field_u - var4) {
+              if (BufferedSocket.field_k <= this.field_u - var4) {
                 stackIn_35_0 = stackIn_33_0;
                 stackIn_35_1 = 1;
               } else {
@@ -117,7 +117,7 @@ final class wg extends pk {
         }
         var3 = var3 + (this.field_u - var4);
         if (this.field_m != null) {
-          var2Lifetime1 = var2Lifetime1 != 0 | this.field_m.b(var3, this.field_k, hn.field_k, rf.field_b) ? 1 : 0;
+          var2Lifetime1 = var2Lifetime1 != 0 | this.field_m.b(var3, this.field_k, BufferedSocket.field_k, rf.field_b) ? 1 : 0;
         }
         if (param0 != -9) {
           return true;
@@ -180,7 +180,7 @@ final class wg extends pk {
             var3Lifetime6 = 77 / ((-32 - param0) / 63);
             return;
           }
-          var3Lifetime7 = -this.field_i + hn.field_k;
+          var3Lifetime7 = -this.field_i + BufferedSocket.field_k;
           if (this.field_z) {
             var3Lifetime7 = var3Lifetime7 + (this.field_u / (-this.field_s + this.field_y) >> 1);
             this.field_x = this.field_s + (this.field_y - this.field_s) * var3Lifetime7 / this.field_u;
@@ -246,7 +246,7 @@ final class wg extends pk {
             var3Lifetime1Lifetime1 = 77 / ((-32 - param0) / 63);
             return;
           }
-          var3Lifetime1Lifetime2 = -this.field_i + hn.field_k;
+          var3Lifetime1Lifetime2 = -this.field_i + BufferedSocket.field_k;
           if (this.field_z) {
             var3Lifetime1Lifetime2 = var3Lifetime1Lifetime2 + (this.field_u / (-this.field_s + this.field_y) >> 1);
             this.field_x = this.field_s + (this.field_y - this.field_s) * var3Lifetime1Lifetime2 / this.field_u;
@@ -309,7 +309,7 @@ final class wg extends pk {
           return;
         }
         if (this.field_z) {
-          var3Lifetime4 = -this.field_i + hn.field_k;
+          var3Lifetime4 = -this.field_i + BufferedSocket.field_k;
           if (this.field_z) {
             var3Lifetime4 = var3Lifetime4 + (this.field_u / (-this.field_s + this.field_y) >> 1);
             this.field_x = this.field_s + (this.field_y - this.field_s) * var3Lifetime4 / this.field_u;
@@ -354,7 +354,7 @@ final class wg extends pk {
             }
             var3Lifetime4 = 77 / ((-32 - param0) / 63);
           } else {
-            var3Lifetime4 = -this.field_i + hn.field_k;
+            var3Lifetime4 = -this.field_i + BufferedSocket.field_k;
             if (this.field_z) {
               var3Lifetime4 = var3Lifetime4 + (this.field_u / (-this.field_s + this.field_y) >> 1);
               this.field_x = this.field_s + (this.field_y - this.field_s) * var3Lifetime4 / this.field_u;

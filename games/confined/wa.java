@@ -23,14 +23,14 @@ final class wa {
         RuntimeException decompiledCaughtException = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
+          PcmOutputWorker.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
           if (param1 != 117) {
             wa.a(-119);
           }
           for (var2_int = 0; mc.field_c > var2_int; var2_int++) {
             sj.field_rb[param0 + var2_int] = var2_int;
           }
-          sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
+          PcmOutputWorker.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
           if (mc.field_c <= param0) {
             return;
           }

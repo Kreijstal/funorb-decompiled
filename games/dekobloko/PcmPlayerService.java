@@ -91,7 +91,7 @@ final class PcmPlayerService implements Runnable {
               }
             }
             MixedSupport125.sleepMillis(10L, -128);
-            DiagnosticSupport001.performAction0331(-68, (Object) null, this.platformServiceState0007);
+            ProxyAuthenticationRequiredException.performAction0331(-68, (Object) null, this.platformServiceState0007);
           }
         } catch (Exception exception) {
           String stringLocal5 = (String) null;

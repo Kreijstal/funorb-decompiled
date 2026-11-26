@@ -64,7 +64,7 @@ final class fj extends si {
           }
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = ck.a(param0, (byte) -48);
+            var4 = ProxyAuthenticationRequiredException.a(param0, (byte) -48);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!cf.a(var4.charAt(0), (byte) 78) &&
@@ -152,7 +152,7 @@ final class fj extends si {
           var6 = null;
           if (param1.indexOf('@') == -1) {
             var8 = (CharSequence) ((Object) param1);
-            var4_long = fd.a((byte) -58, var8);
+            var4_long = PcmOutputWorker.a((byte) -58, var8);
           } else {
             var6 = param1;
           }

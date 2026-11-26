@@ -109,7 +109,7 @@ final class tf extends dk {
           if (param0 != 0) {
             field_G = (ob) null;
           }
-          stackIn_3_0 = em.field_c.a(0, param1, "");
+          stackIn_3_0 = ProxyAuthenticationRequiredException.field_c.a(0, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,8 +129,8 @@ final class tf extends dk {
         if (nb.field_a != null) {
           nb.field_a.k(-110);
         }
-        if (em.field_g != null) {
-          em.field_g.n(100);
+        if (ProxyAuthenticationRequiredException.field_g != null) {
+          ProxyAuthenticationRequiredException.field_g.n(100);
           if (!param0) {
             field_H = (ob) null;
             bc.s(-33);

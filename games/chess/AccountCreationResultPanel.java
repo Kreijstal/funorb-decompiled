@@ -76,7 +76,7 @@ final class AccountCreationResultPanel extends vn implements mj {
               if (5 != param1.statusCode) {
                 var5.a(-1, 114, GameAppletShell.field_k);
               } else {
-                var5.a(11, 67, vi.field_a);
+                var5.a(11, 67, PcmOutputWorker.field_a);
                 var5.a(17, 39, sn.field_b);
               }
             } else {

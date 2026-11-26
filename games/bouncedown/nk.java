@@ -240,7 +240,7 @@ final class nk {
                           if (param0 != 0) {
                             return;
                           }
-                          tk.d(-6144);
+                          ProxyAuthenticationRequiredException.d(-6144);
                           rj.field_j = 3;
                         }
                       } else {
@@ -632,7 +632,7 @@ final class nk {
           mi.field_k.a(-(mi.field_k.field_t / 2) + 320, this.field_g - 470);
         }
         if (this.field_i < 0 &&
-          tk.field_c == this.field_i) {
+          ProxyAuthenticationRequiredException.field_c == this.field_i) {
           var6Lifetime1 = Bounce.field_A[18] + var18;
           var19 = var6Lifetime1;
           var6Lifetime1 = var19;

@@ -304,10 +304,10 @@ class gd extends rj {
             field_G = (qk) null;
           }
           var2_int = uj.a(param0, 37, h.field_j);
-          var3 = wl.field_e[var2_int];
+          var3 = ProxyAuthenticationRequiredException.field_e[var2_int];
           fieldTemp$1 = h.field_j - 1;
           h.field_j = h.field_j - 1;
-          wl.field_e[var2_int] = wl.field_e[fieldTemp$1];
+          ProxyAuthenticationRequiredException.field_e[var2_int] = ProxyAuthenticationRequiredException.field_e[fieldTemp$1];
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

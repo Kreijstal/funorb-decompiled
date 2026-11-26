@@ -118,7 +118,7 @@ abstract class sj extends rf {
           var6 = (RgbSprite) null;
           sj.a((RgbSprite) null, -120);
         }
-        var7 = "(" + wl.field_f + " " + oc.field_E + " " + SpriteGeometry.field_C + ") " + hc.field_c;
+        var7 = "(" + ProxyAuthenticationRequiredException.field_f + " " + oc.field_E + " " + SpriteGeometry.field_C + ") " + hc.field_c;
         var1 = var7;
         if (0 < nj.field_b) {
           var1 = var7 + ":";

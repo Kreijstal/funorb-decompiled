@@ -347,14 +347,14 @@ class lm extends IntrusiveNode {
         while (true) {
           if (var4 < var5_int) {
             if (param2 == 452) {
-              var5 = bk.b(param2 ^ 453);
+              var5 = PcmOutputWorker.b(param2 ^ 453);
               if (var5 != null) {
                 hl.field_a.a(var5, 6710886, fl.field_l, wa.field_c);
               }
               return;
             }
             this.a((lm) null, -108, -48, 123, 4, (byte) -62, -69);
-            var5Lifetime2 = bk.b(param2 ^ 453);
+            var5Lifetime2 = PcmOutputWorker.b(param2 ^ 453);
             if (var5Lifetime2 != null) {
               hl.field_a.a(var5Lifetime2, 6710886, fl.field_l, wa.field_c);
             }
@@ -363,7 +363,7 @@ class lm extends IntrusiveNode {
           this.a(var5_int, param1, 0, param0);
           var5_int++;
           if (var6 != 0) {
-            var5Lifetime1 = bk.b(param2 ^ 453);
+            var5Lifetime1 = PcmOutputWorker.b(param2 ^ 453);
             if (var5Lifetime1 != null) {
               hl.field_a.a(var5Lifetime1, 6710886, fl.field_l, wa.field_c);
             }

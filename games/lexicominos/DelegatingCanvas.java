@@ -3,7 +3,7 @@
  */
 final class DelegatingCanvas extends java.awt.Canvas {
     static int field_c;
-    static ge field_b;
+    static BufferedSocket field_b;
     private java.awt.Component delegateComponent;
 
     public final void paint(java.awt.Graphics param0) {
@@ -22,7 +22,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     public static void clearStaticReferences(int param0) {
         if (param0 >= -14) {
-          field_b = (ge) null;
+          field_b = (BufferedSocket) null;
           field_b = null;
           return;
         }

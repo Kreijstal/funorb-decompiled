@@ -284,7 +284,7 @@ final class OpenGlRenderSprite extends RenderSprite {
             this.a(-1.3366332054138184f, -0.0905967578291893f, 1.239539384841919f, -0.2479313760995865f, 0.13926813006401062f, -0.1986529529094696f, -78, 35, 110, -22);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "tm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "tm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class OpenGlRenderSprite extends RenderSprite {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class OpenGlRenderSprite extends RenderSprite {
           this.field_g = param0;
           this.field_j = ab.a(param0, -126, false, param3, param4, param5, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

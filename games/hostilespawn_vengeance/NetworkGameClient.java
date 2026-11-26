@@ -351,7 +351,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             aa.a(bn.c(-1), 2429);
           }
           if (9 == var4) {
-            td.a(bn.c(-1), 200);
+            BufferedSocket.a(bn.c(-1), 200);
           }
           if (var4 == 10) {
             s.field_b.i(19319, 17);

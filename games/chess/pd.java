@@ -153,12 +153,12 @@ final class pd extends ci {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = ib.field_d != null ? 1 : 0;
         if (9 == vg.field_a &&
-          ph.a(hn.field_s, (byte) -43, v.field_b, FullscreenFocusCanvas.field_f, ca.field_i)) {
-          if (hn.field_s != 2 &&
+          ph.a(BufferedSocket.field_s, (byte) -43, v.field_b, FullscreenFocusCanvas.field_f, ca.field_i)) {
+          if (BufferedSocket.field_s != 2 &&
             var3 != 0) {
             return false;
           }
-          return fl.a(ca.field_i, FullscreenFocusCanvas.field_f, hn.field_s, v.field_b, (byte) 105);
+          return fl.a(ca.field_i, FullscreenFocusCanvas.field_f, BufferedSocket.field_s, v.field_b, (byte) 105);
         }
         if (vg.field_a == 10) {
           if (var3 != 0) {

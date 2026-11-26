@@ -129,7 +129,7 @@ abstract class ByteStorage {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (nn.field_w == rg.field_d) {
+            if (nn.field_w == ProxyAuthenticationRequiredException.field_d) {
               if (param5) {
                 var11 = (String) null;
                 qn.field_y = dp.a(param2, (String) null, (byte) -7, false, tn.field_p);
@@ -140,29 +140,29 @@ abstract class ByteStorage {
               uh.field_Wb.writeByte(14, -47);
               uh.field_Wb.writeByte(qn.field_y.a((byte) -83).field_b, param0 ^ 24323);
               lf.d(72, -1);
-              rg.field_d = vi.field_D;
+              ProxyAuthenticationRequiredException.field_d = vi.field_D;
             }
-            if (rg.field_d == vi.field_D &&
+            if (ProxyAuthenticationRequiredException.field_d == vi.field_D &&
               c.a(1, (byte) -104)) {
               var6_int = id.field_f.readUnsignedByte(-11);
               id.field_f.position = 0;
               if (var6_int != 0) {
                 lc.field_f = var6_int;
                 ca.field_b = -1;
-                rg.field_d = hj.field_f;
+                ProxyAuthenticationRequiredException.field_d = hj.field_f;
               } else {
-                rg.field_d = gd.field_l;
+                ProxyAuthenticationRequiredException.field_d = gd.field_l;
               }
             }
-            if (gd.field_l == rg.field_d &&
+            if (gd.field_l == ProxyAuthenticationRequiredException.field_d &&
               c.a(8, (byte) -104)) {
               dc.field_F = id.field_f.readLong(-31016);
               id.field_f.position = 0;
               wl.a(param5, param1, (byte) 101, param4, qn.field_y);
-              rg.field_d = ir.field_c;
+              ProxyAuthenticationRequiredException.field_d = ir.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ir.field_c == rg.field_d &&
+            if (ir.field_c == ProxyAuthenticationRequiredException.field_d &&
               c.a(1, (byte) -104)) {
               var6_intLifetime1 = id.field_f.readUnsignedByte(-11);
               lc.field_f = var6_intLifetime1;
@@ -172,7 +172,7 @@ abstract class ByteStorage {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   ca.field_b = -1;
-                  rg.field_d = hj.field_f;
+                  ProxyAuthenticationRequiredException.field_d = hj.field_f;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -183,11 +183,11 @@ abstract class ByteStorage {
                 }
               }
               if (decompiledFrameRemainder0) {
-                rg.field_d = Vertigo2.field_E;
+                ProxyAuthenticationRequiredException.field_d = Vertigo2.field_E;
                 ca.field_b = -1;
               }
             }
-            if (rg.field_d == Vertigo2.field_E &&
+            if (ProxyAuthenticationRequiredException.field_d == Vertigo2.field_E &&
               dl.b((byte) -126)) {
               tn.field_p = id.field_f.readLong(-31016);
               nb.field_A = param2;
@@ -226,7 +226,7 @@ abstract class ByteStorage {
               var12 = (CharSequence) ((Object) qe.field_V);
               Vertigo2.field_F = rc.a(var12, 320);
               rc.field_b = id.field_f.readUnsignedByte(-11);
-              rg.field_d = bm.field_I;
+              ProxyAuthenticationRequiredException.field_d = bm.field_I;
               if (qn.field_y.a((byte) -83) == lb.field_e) {
                 IntrusiveNode.field_j.a(ob.e((byte) -93), (byte) -121);
               } else {
@@ -269,7 +269,7 @@ abstract class ByteStorage {
               var10 = (java.awt.Canvas) null;
               ByteStorage.a(-113, (byte) 112, (java.awt.Canvas) null, 37);
             }
-            if (rg.field_d == hj.field_f &&
+            if (ProxyAuthenticationRequiredException.field_d == hj.field_f &&
               dl.b((byte) 103)) {
               rm.b((byte) 119);
               if (7 == lc.field_f &&

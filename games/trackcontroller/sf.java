@@ -1489,51 +1489,51 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "monthnames,0");
                 if (var2 != null) {
-                  hj.field_c[0] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[0] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,1");
                 if (var2 != null) {
-                  hj.field_c[1] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[1] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,2");
                 if (var2 != null) {
-                  hj.field_c[2] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,3");
                 if (var2 != null) {
-                  hj.field_c[3] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,4");
                 if (null != var2) {
-                  hj.field_c[4] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[4] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,5");
                 if (null != var2) {
-                  hj.field_c[5] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[5] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,6");
                 if (var2 != null) {
-                  hj.field_c[6] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[6] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,7");
                 if (null != var2) {
-                  hj.field_c[7] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[7] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,8");
                 if (var2 != null) {
-                  hj.field_c[8] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[8] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,9");
                 if (null != var2) {
-                  hj.field_c[9] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[9] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,10");
                 if (null != var2) {
-                  hj.field_c[10] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[10] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "monthnames,11");
                 if (null != var2) {
-                  hj.field_c[11] = ta.a(32200, var2);
+                  PcmOutputWorker.field_c[11] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_welcome");
                 if (var2 != null) {

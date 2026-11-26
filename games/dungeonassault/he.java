@@ -282,7 +282,7 @@ final class he extends ip {
           var2[ob.field_Vb] = jf.field_e;
           var2[ob.field_Zb] = bh.field_N;
           var2[ob.field_Jb] = rp.field_b;
-          var2[ob.field_Sb] = rk.field_f;
+          var2[ob.field_Sb] = BufferedSocket.field_f;
           var2[ob.field_Ib] = bb.field_l;
           var2[ob.field_Gb] = um.field_b;
           var2[ob.field_pc] = gl.field_Kb;
@@ -852,7 +852,7 @@ final class he extends ip {
           ck.field_H.a("<col=0A7500>" + dj.field_c + "</col>", param0 + 23590, "defence");
           ck.field_H.a("<col=21634A>" + pm.field_n + "</col>", -114, "dodge");
           ck.field_H.a("<col=00A7D2>" + nf.field_x + "</col>", 59, "sneak");
-          ck.field_H.a("<col=9F70CF>" + rk.field_a + "</col>", 93, "snare");
+          ck.field_H.a("<col=9F70CF>" + BufferedSocket.field_a + "</col>", 93, "snare");
           ck.field_H.a("<col=7B633A>" + eg.field_f + "</col>", 116, "detect");
           ck.field_H.a(lh.field_b, -114, "charge");
           ck.field_H.a(dn.field_L, param0 + 23391, "advance");

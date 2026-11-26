@@ -49,15 +49,15 @@ final class le {
         int var6 = 0;
         String var7 = null;
         try {
-          fb.field_b[0] = cm.field_M.nextInt();
-          fb.field_b[1] = cm.field_M.nextInt();
+          PcmOutputWorker.field_b[0] = cm.field_M.nextInt();
+          PcmOutputWorker.field_b[1] = cm.field_M.nextInt();
           MusicPatchPcmStream.field_n.position = 0;
-          fb.field_b[2] = (int)(s.field_c >> 32);
-          fb.field_b[3] = (int)s.field_c;
-          MusicPatchPcmStream.field_n.writeInt(fb.field_b[0], (byte) -49);
-          MusicPatchPcmStream.field_n.writeInt(fb.field_b[1], (byte) 119);
-          MusicPatchPcmStream.field_n.writeInt(fb.field_b[2], (byte) -50);
-          MusicPatchPcmStream.field_n.writeInt(fb.field_b[3], (byte) -44);
+          PcmOutputWorker.field_b[2] = (int)(s.field_c >> 32);
+          PcmOutputWorker.field_b[3] = (int)s.field_c;
+          MusicPatchPcmStream.field_n.writeInt(PcmOutputWorker.field_b[0], (byte) -49);
+          MusicPatchPcmStream.field_n.writeInt(PcmOutputWorker.field_b[1], (byte) 119);
+          MusicPatchPcmStream.field_n.writeInt(PcmOutputWorker.field_b[2], (byte) -50);
+          MusicPatchPcmStream.field_n.writeInt(PcmOutputWorker.field_b[3], (byte) -44);
           u.a(MusicPatchPcmStream.field_n, (byte) -102);
           MusicPatchPcmStream.field_n.writeShort(param2, -17402);
           param0.a(MusicPatchPcmStream.field_n, param4 ^ 103);

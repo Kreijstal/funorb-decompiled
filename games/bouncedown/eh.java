@@ -305,7 +305,7 @@ final class eh {
         field_d[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = var0 * 8 - 8;
-            field_d[var0] = hf.a(tk.a(255L, field_a[7][7 + var1]), hf.a(tk.a(field_a[6][6 + var1], 65280L), hf.a(tk.a(field_a[5][5 + var1], 16711680L), hf.a(hf.a(hf.a(hf.a(tk.a(field_a[1][var1 + 1], 71776119061217280L), tk.a(-72057594037927936L, field_a[0][var1])), tk.a(280375465082880L, field_a[2][var1 + 2])), tk.a(1095216660480L, field_a[3][3 + var1])), tk.a(field_a[4][var1 + 4], 4278190080L)))));
+            field_d[var0] = hf.a(ProxyAuthenticationRequiredException.a(255L, field_a[7][7 + var1]), hf.a(ProxyAuthenticationRequiredException.a(field_a[6][6 + var1], 65280L), hf.a(ProxyAuthenticationRequiredException.a(field_a[5][5 + var1], 16711680L), hf.a(hf.a(hf.a(hf.a(ProxyAuthenticationRequiredException.a(field_a[1][var1 + 1], 71776119061217280L), ProxyAuthenticationRequiredException.a(-72057594037927936L, field_a[0][var1])), ProxyAuthenticationRequiredException.a(280375465082880L, field_a[2][var1 + 2])), ProxyAuthenticationRequiredException.a(1095216660480L, field_a[3][3 + var1])), ProxyAuthenticationRequiredException.a(field_a[4][var1 + 4], 4278190080L)))));
         }
     }
 }

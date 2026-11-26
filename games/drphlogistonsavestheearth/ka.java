@@ -44,7 +44,7 @@ final class ka extends hj {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        qk var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -98,15 +98,15 @@ final class ka extends hj {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (qk) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(-39, var11);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
             }
-          } catch (qk decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (qk) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -339,11 +339,11 @@ final class ka extends hj {
                   if (var11 != -1) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new qk(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new qk("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_9_0 = var13;

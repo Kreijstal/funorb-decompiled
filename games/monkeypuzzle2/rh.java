@@ -275,7 +275,7 @@ abstract class rh extends WidgetContainer {
           }
           var2Lifetime14 = PcmResampler.a((byte) 76, "speedBonus");
           if (var2Lifetime14 != null) {
-            ff.field_a = be.a(var2Lifetime14, (byte) 122);
+            PcmOutputWorker.field_a = be.a(var2Lifetime14, (byte) 122);
           }
           var2Lifetime15 = PcmResampler.a((byte) 76, "cancel");
           if (null != var2Lifetime15) {

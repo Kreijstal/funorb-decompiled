@@ -59,7 +59,7 @@ final class qe extends uk {
         int var11Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var5 = hn.field_k;
+        var5 = BufferedSocket.field_k;
         var6 = rf.field_b;
         this.field_j = -1;
         if (qk.field_k == null) {
@@ -517,7 +517,7 @@ final class qe extends uk {
             var13.a(param0, var12);
             if (IntrusiveDeque.field_f == -1 &&
               this.field_j == -1 &&
-              this.field_S.c(0, 0, hn.field_k, rf.field_b)) {
+              this.field_S.c(0, 0, BufferedSocket.field_k, rf.field_b)) {
               this.field_j = var11;
             }
           }
@@ -883,8 +883,8 @@ final class qe extends uk {
               }
             }
             if (param1 &&
-              hn.field_k >= var11Lifetime1 &&
-              hn.field_k < 45 + var11Lifetime1 &&
+              BufferedSocket.field_k >= var11Lifetime1 &&
+              BufferedSocket.field_k < 45 + var11Lifetime1 &&
               rf.field_b >= var12Lifetime1 &&
               45 + var12Lifetime1 > rf.field_b) {
               this.field_j = var15;

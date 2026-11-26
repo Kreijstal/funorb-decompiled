@@ -8,7 +8,7 @@ final class so {
     static am field_g;
     static IntrusiveDeque field_h;
     static int[] field_f;
-    static j field_c;
+    static BufferedSocket field_c;
     static int field_e;
 
     public static void a(int param0) {

@@ -112,7 +112,7 @@ final class e extends ma implements mj {
         int var1Lifetime1;
         int var2Lifetime1;
         int var3Lifetime1;
-        vi.field_d = SoftwareRasterizer.field_h;
+        PcmOutputWorker.field_d = SoftwareRasterizer.field_h;
         fn.field_c = SoftwareRasterizer.field_c;
         tf.a(90);
         wf.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb - 40), true);
@@ -207,7 +207,7 @@ final class e extends ma implements mj {
             }
             return;
           }
-          ji.field_V.a(-126, hn.field_m, tj.field_o, true);
+          ji.field_V.a(-126, BufferedSocket.field_m, tj.field_o, true);
           if (param0 < 109) {
             return;
           }

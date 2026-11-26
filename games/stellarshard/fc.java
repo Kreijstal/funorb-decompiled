@@ -17,7 +17,7 @@ final class fc {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!tl.a(param1, (byte) -5, param0, param2)) {
+          if (!ProxyAuthenticationRequiredException.a(param1, (byte) -5, param0, param2)) {
             stackIn_2_0 = null;
             return (ek) (stackIn_2_0);
           }

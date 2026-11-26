@@ -224,7 +224,7 @@ final class bf extends IntrusiveNode {
     final static int e(int param0) {
         bl.field_b.a((byte) -71);
         if (!jh.field_b.d((byte) -62)) {
-          return ck.a((byte) 125);
+          return PcmOutputWorker.a((byte) 125);
         }
         if (param0 != 0) {
           return -127;
@@ -1428,16 +1428,16 @@ final class bf extends IntrusiveNode {
               if (param1) {
                 var9 = var9 | 1;
               }
-              ck.field_g.position = 0;
-              ck.field_g.writeInt((byte) -113, di.field_l.nextInt());
-              ck.field_g.writeInt((byte) -125, di.field_l.nextInt());
-              ck.field_g.writePrefixedString(false, var13);
-              ck.field_g.writePrefixedString(false, var8);
+              PcmOutputWorker.field_g.position = 0;
+              PcmOutputWorker.field_g.writeInt((byte) -113, di.field_l.nextInt());
+              PcmOutputWorker.field_g.writeInt((byte) -125, di.field_l.nextInt());
+              PcmOutputWorker.field_g.writePrefixedString(false, var13);
+              PcmOutputWorker.field_g.writePrefixedString(false, var8);
               var14 = (CharSequence) ((Object) param2);
-              ck.field_g.writePrefixedString(false, cc.a(20755, var14));
-              ck.field_g.writeShort(param6, -306);
-              ck.field_g.writeByte(param0, param3 - 133);
-              ck.field_g.writeByte(var9, -107);
+              PcmOutputWorker.field_g.writePrefixedString(false, cc.a(20755, var14));
+              PcmOutputWorker.field_g.writeShort(param6, -306);
+              PcmOutputWorker.field_g.writeByte(param0, param3 - 133);
+              PcmOutputWorker.field_g.writeByte(var9, -107);
               d.field_b.writeByte(18, -116);
               d.field_b.position = d.field_b.position + 2;
               var10 = d.field_b.position;
@@ -1446,13 +1446,13 @@ final class bf extends IntrusiveNode {
                 var11_ref_String = "";
               }
               d.field_b.writeString(false, var11_ref_String);
-              fc.a(ck.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
+              fc.a(PcmOutputWorker.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
               d.field_b.backpatchShortLength((byte) 88, -var10 + d.field_b.position);
             } else {
-              ck.field_g.position = 0;
-              ck.field_g.writeInt((byte) -86, di.field_l.nextInt());
-              ck.field_g.writeInt((byte) -95, di.field_l.nextInt());
-              stackIn_9_0 = ck.field_g;
+              PcmOutputWorker.field_g.position = 0;
+              PcmOutputWorker.field_g.writeInt((byte) -86, di.field_l.nextInt());
+              PcmOutputWorker.field_g.writeInt((byte) -95, di.field_l.nextInt());
+              stackIn_9_0 = PcmOutputWorker.field_g;
               stackIn_9_1 = false;
               if (param5.c(param3 ^ 6)) {
                 stackIn_10_2 = var13;
@@ -1460,7 +1460,7 @@ final class bf extends IntrusiveNode {
                 stackIn_10_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_9_0).writePrefixedString(stackIn_9_1, stackIn_10_2);
-              stackIn_12_0 = ck.field_g;
+              stackIn_12_0 = PcmOutputWorker.field_g;
               stackIn_12_1 = false;
               if (param4.c(0)) {
                 stackIn_13_2 = var8;
@@ -1471,7 +1471,7 @@ final class bf extends IntrusiveNode {
               d.field_b.writeByte(16, param3 ^ -64);
               d.field_b.position = d.field_b.position + 1;
               var9 = d.field_b.position;
-              fc.a(ck.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
+              fc.a(PcmOutputWorker.field_g, d.field_b, DelayedPcmStream.field_j, gg.field_e, 0);
               d.field_b.backpatchByteLength(d.field_b.position - var9, 31700);
             }
             nf.a(-1, (byte) 95);

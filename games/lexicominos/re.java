@@ -12,7 +12,7 @@ abstract class re extends ql {
     static String field_cb;
     private int field_V;
     private int field_ab;
-    static ge field_X;
+    static BufferedSocket field_X;
     static int field_Z;
 
     boolean f(byte param0) {

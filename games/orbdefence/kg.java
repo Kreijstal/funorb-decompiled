@@ -51,7 +51,7 @@ final class kg extends IntrusiveNode {
             if (param1 != -83) {
               return;
             }
-            cb.field_a.a(param2, param0, var4, true);
+            BufferedSocket.field_a.a(param2, param0, var4, true);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

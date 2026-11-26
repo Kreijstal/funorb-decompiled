@@ -16,7 +16,7 @@ final class jp {
           }
           ud.a(param1, -98);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "jp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "jp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

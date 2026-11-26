@@ -11,7 +11,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gj.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gj.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class GameCanvas extends java.awt.Canvas {
           }
           OpenGlBuffer.a(ec.field_o, false, (byte) 82);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gj.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gj.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class GameCanvas extends java.awt.Canvas {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

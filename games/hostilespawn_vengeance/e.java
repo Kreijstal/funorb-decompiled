@@ -621,7 +621,7 @@ final class e {
         for (var0_int = 18; var0_int < 42; var0_int++) {
           var1 = field_w;
           var2 = var0_int;
-          var1[var2 >> 5] = ll.a(var1[var2 >> 5], 1 << ua.a(var2, 31));
+          var1[var2 >> 5] = ll.a(var1[var2 >> 5], 1 << PcmOutputWorker.a(var2, 31));
         }
         int[] var17 = field_y;
         int[] var3 = var17;

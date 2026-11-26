@@ -30,7 +30,7 @@ final class jj {
             }
             if (0 < hh.field_p.position) {
               try {
-                NodeHashTableIterator.field_a.a(hh.field_p.position, hh.field_p.payload, 0, 0);
+                NodeHashTableIterator.field_a.queueWrite(hh.field_p.position, hh.field_p.payload, 0, 0);
                 wa.field_e = fa.correctedCurrentTimeMillis(-76);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

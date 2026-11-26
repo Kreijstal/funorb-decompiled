@@ -605,7 +605,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_68_0 = em.a((byte) -99, var2.charAt(var3));
+                      stackIn_68_0 = ProxyAuthenticationRequiredException.a((byte) -99, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

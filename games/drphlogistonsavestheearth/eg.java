@@ -77,7 +77,7 @@ final class eg {
 
     final static void a(byte param0) {
         if (uj.field_j != null) {
-          uj.field_j.b(50);
+          uj.field_j.close(50);
           uj.field_j = null;
         }
         if (param0 != 126) {

@@ -12,7 +12,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private static String field_u;
     java.awt.EventQueue field_m;
     private PlatformTask queueHead;
-    private t field_o;
+    private Win32CursorManager field_o;
     private Object field_t;
     private static int field_g;
     private static String field_n;
@@ -125,7 +125,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          jd var3_ref = null;
+          ProxyAuthenticationRequiredException var3_ref = null;
           di var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
@@ -177,11 +177,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (jd) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.result = AccountNameAvailabilityValidator.a(false, (String) (var8.objectArgument), var8.intArgument).a(-70);
-                    } catch (jd decompiledCaughtParameter1) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var3_ref = (jd) (Object) decompiledCaughtException;
+                      var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref.getMessage();
                       throw var3_ref;
                     }
@@ -239,7 +239,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.microsoftJvm) {
                             Class.forName("na").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{new Integer(var3_int), new Integer(var4)});
                           } else {
-                            this.field_o.a(var3_int, 101024, var4);
+                            this.field_o.setCursorPosition(var3_int, 101024, var4);
                           }
                           break;
                         }
@@ -251,7 +251,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.microsoftJvm) {
                             Class.forName("na").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_t, new Object[]{var14, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_o.a(var3_int != 0, 0, var14);
+                            this.field_o.setCursorVisible(var3_int != 0, 0, var14);
                           }
                           break;
                         }
@@ -609,7 +609,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              this.field_o = new t();
+              this.field_o = new Win32CursorManager();
             } else {
               this.field_t = Class.forName("na").newInstance();
             }

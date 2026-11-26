@@ -31,7 +31,7 @@ final class AccountServiceResult {
           ah.field_i.a((byte) 123, qf.field_f);
           ah.field_i.a((byte) 126, dn.field_c);
           dn.field_c.a((byte) 126, bh.field_G);
-          dn.field_c.a((byte) 123, hn.field_d);
+          dn.field_c.a((byte) 123, BufferedSocket.field_d);
           cf.a(122, param0);
           return;
         }
@@ -40,7 +40,7 @@ final class AccountServiceResult {
         ah.field_i.a((byte) 123, qf.field_f);
         ah.field_i.a((byte) 126, dn.field_c);
         dn.field_c.a((byte) 126, bh.field_G);
-        dn.field_c.a((byte) 123, hn.field_d);
+        dn.field_c.a((byte) 123, BufferedSocket.field_d);
         cf.a(122, param0);
     }
 

@@ -167,7 +167,7 @@ final class eb extends lc implements ki, rc {
         int var6 = 0;
         try {
           this.field_A = param0;
-          this.field_H = new wd(pc.field_i, (sk) null);
+          this.field_H = new wd(BufferedSocket.field_i, (sk) null);
           this.field_H.field_j = (fc) ((Object) new jh());
           var7 = jf.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
           var3 = 20;

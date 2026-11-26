@@ -301,7 +301,7 @@ final class fc extends en {
           lb.a(param16, param19, param20, 2);
           mi.a(param12, 25570, param9, param5, param15);
           wm.a((byte) -66, param3, param13);
-          bk.a(param11, (byte) -40, param18, param1, param6, param0);
+          PcmOutputWorker.a(param11, (byte) -40, param18, param1, param6, param0);
           if (param14 <= 108) {
             field_l = (String) null;
           }

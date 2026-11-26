@@ -6,7 +6,7 @@ final class ArchiveIndex {
     int field_g;
     int[] field_q;
     int[] field_l;
-    static hn field_a;
+    static BufferedSocket field_a;
     private int field_k;
     private byte[] field_r;
     int[] field_o;

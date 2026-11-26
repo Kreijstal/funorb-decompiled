@@ -55,7 +55,7 @@ final class MixedSupport056 {
         RuntimeException caughtExceptionLocal5 = null;
         RuntimeException runtimeExceptionLocal6 = null;
         try {
-          DiagnosticSupport001.performAction0333((java.awt.Component) ((Object) canvasArgument1), false);
+          ProxyAuthenticationRequiredException.performAction0333((java.awt.Component) ((Object) canvasArgument1), false);
           if (byteArgument2 >= -29) {
             canvasLocal1 = (java.awt.Canvas) null;
             MixedSupport056.performAction0668((java.awt.Canvas) null, (byte) -79);

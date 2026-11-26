@@ -74,11 +74,11 @@ final class wf extends tl {
                   if (-1 != var11) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new va(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new va("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var13;
@@ -139,7 +139,7 @@ final class wf extends tl {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        va var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = CrazyCrystals.field_B;
@@ -190,15 +190,15 @@ final class wf extends tl {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (va) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, (byte) -123);
             if (var12 != null) {
               stackIn_23_0 = var12;
               return stackIn_23_0;
             }
-          } catch (va decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (va) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

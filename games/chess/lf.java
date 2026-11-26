@@ -30,7 +30,7 @@ final class lf extends kn {
         if (param5 > bj.field_gb) {
           eb.field_y = param5;
         }
-        hn.field_e[AccountRequestState.field_b] = param0;
+        BufferedSocket.field_e[AccountRequestState.field_b] = param0;
         in.field_j[AccountRequestState.field_b] = param2;
         oc.field_n[AccountRequestState.field_b] = param4;
         int var6 = param4 + param2 + param0;

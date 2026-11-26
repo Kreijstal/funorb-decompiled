@@ -688,7 +688,7 @@ final class LevelSession {
         this.field_fb = 225;
         scanLoop1: while (true) {
           if (this.field_L > 1) {
-            this.field_d[this.f(qk.a(param0, -6111))] = new ib(this.field_N, this.field_D, 7, true, false);
+            this.field_d[this.f(ProxyAuthenticationRequiredException.a(param0, -6111))] = new ib(this.field_N, this.field_D, 7, true, false);
             this.field_L = this.field_L - 1;
             if (var5 != 0) {
               break scanLoop1;
@@ -1168,7 +1168,7 @@ final class LevelSession {
         if (param0 > -67) {
           this.a((byte) 58);
         }
-        if (qe.field_a == -150) {
+        if (BufferedSocket.field_a == -150) {
           System.gc();
         }
         if (~ab.field_b != ~this.levelNumber) {
@@ -1211,7 +1211,7 @@ final class LevelSession {
           this.i((byte) -1);
           this.A(1052688);
           this.I(0);
-          if (qe.field_a > 0) {
+          if (BufferedSocket.field_a > 0) {
             this.z(215);
             this.b(114);
             this.a(true);
@@ -1315,18 +1315,18 @@ final class LevelSession {
               return;
             }
           }
-          stackIn_66_0 = ~qe.field_a;
+          stackIn_66_0 = ~BufferedSocket.field_a;
           stackIn_66_1 = 149;
           break;
         }
         if (stackIn_66_0 == stackIn_66_1) {
           this.b(116);
         }
-        var2 = -((double)qe.field_a / -150.0) + 1.0;
-        qe.field_a = qe.field_a + 1;
+        var2 = -((double)BufferedSocket.field_a / -150.0) + 1.0;
+        BufferedSocket.field_a = BufferedSocket.field_a + 1;
         this.field_N = (double)(-MusicPatchPcmStream.field_l) + (double)(275 + MusicPatchPcmStream.field_l) * var2;
         if (ck.field_f[83]) {
-          qe.field_a = qe.field_a + 10;
+          BufferedSocket.field_a = BufferedSocket.field_a + 10;
           return;
         }
         return;
@@ -1565,16 +1565,16 @@ final class LevelSession {
         String var5 = null;
         int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var2 = qe.field_a * 3 * pi.field_S[0].field_c / -150;
+        var2 = BufferedSocket.field_a * 3 * pi.field_S[0].field_c / -150;
         var3 = (-fk.field_m.field_h + 640) / 2;
         var4 = -(fk.field_m.field_h / 2) + 120;
-        boolean decompiledSharedTail0 = !(qe.field_a <= -25);
+        boolean decompiledSharedTail0 = !(BufferedSocket.field_a <= -25);
         if (!decompiledSharedTail0) {
           fk.field_m.a(var3, var4);
           decompiledSharedTail0 = (var6 != 0);
         }
         if (decompiledSharedTail0) {
-          var5_int = -(qe.field_a * 10);
+          var5_int = -(BufferedSocket.field_a * 10);
           var4 = var4 - (255 - var5_int) / 2;
           fk.field_m.a(var3, var4, var5_int);
         }
@@ -1904,7 +1904,7 @@ final class LevelSession {
                     this.field_d[this.f(0)] = new ib(640.0, 215.0, 2, false, false);
                   }
                   if (ck.field_f[18]) {
-                    this.field_d[this.f(qk.a(param0, 215))] = new ib(640.0, 215.0, 3, false, false);
+                    this.field_d[this.f(ProxyAuthenticationRequiredException.a(param0, 215))] = new ib(640.0, 215.0, 3, false, false);
                   }
                   if (ck.field_f[19]) {
                     this.field_d[this.f(0)] = new ib(640.0, 215.0, 4, false, false);
@@ -1913,7 +1913,7 @@ final class LevelSession {
                     this.field_d[this.f(0)] = new ib(640.0, 215.0, 5, false, false);
                   }
                   if (ck.field_f[21]) {
-                    this.field_d[this.f(qk.a(param0, 215))] = new ib(640.0, 215.0, 6, false, false);
+                    this.field_d[this.f(ProxyAuthenticationRequiredException.a(param0, 215))] = new ib(640.0, 215.0, 6, false, false);
                   }
                   decompiledFrameRemainder0 = !(!ck.field_f[22]);
                   if (decompiledFrameRemainder0) {
@@ -3458,7 +3458,7 @@ final class LevelSession {
         this.B(-5651);
         this.x(-64);
         this.v(-122);
-        if (qe.field_a <= 0) {
+        if (BufferedSocket.field_a <= 0) {
           this.c(true);
         }
         this.u(7);
@@ -3846,7 +3846,7 @@ final class LevelSession {
                 if (pe.field_e.field_j) {
                   ck.field_j[var2] = null;
                 }
-                ck.field_j[var2] = new td(hi.a(6, qk.a(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, qk.a(param0, 4), this.field_l), -1);
+                ck.field_j[var2] = new td(hi.a(6, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), -1);
               }
               var2++;
               return;
@@ -3880,7 +3880,7 @@ final class LevelSession {
             if (pe.field_e.field_j) {
               ck.field_j[var2Lifetime1] = null;
             } else {
-              ck.field_j[var2Lifetime1] = new td(hi.a(6, qk.a(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, qk.a(param0, 4), this.field_l), -1);
+              ck.field_j[var2Lifetime1] = new td(hi.a(6, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), lc.field_m + hi.a(cj.field_e.field_h, 4, this.field_l), ti.field_a + hi.a(cj.field_e.field_c, ProxyAuthenticationRequiredException.a(param0, 4), this.field_l), -1);
             }
           }
           var2Lifetime1++;
@@ -4246,7 +4246,7 @@ final class LevelSession {
         this.field_fb = -1;
         this.field_J = 0;
         ib.field_t = 0;
-        qk.field_c = true;
+        ProxyAuthenticationRequiredException.field_c = true;
         ej.field_h = 0;
         this.field_l = new Random(9416L);
         var2 = 0;
@@ -4292,7 +4292,7 @@ final class LevelSession {
             this.field_x = -1901789184;
             gm.field_J = 0;
             this.field_g = 15132;
-            qe.field_a = -150;
+            BufferedSocket.field_a = -150;
             this.field_f = 0;
             this.levelNumber = -1 + param0;
             this.field_M = PcmSampleStream.a(nl.field_r[5], 256, SecondaryNodeDeque.field_e * 24 / 80);

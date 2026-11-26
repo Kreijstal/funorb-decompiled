@@ -698,7 +698,7 @@ final class li implements uj {
                 }
                 var2 = e.a(17, "loading");
                 if (var2 != null) {
-                  ll.field_e = bh.a(var2, 33);
+                  BufferedSocket.field_e = bh.a(var2, 33);
                 }
                 var2 = e.a(-127, "offline");
                 if (var2 != null) {
@@ -1050,7 +1050,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-114, "invaliduserorpass");
                 if (var2 != null) {
-                  j.field_a = bh.a(var2, -118);
+                  PcmOutputWorker.field_a = bh.a(var2, -118);
                 }
                 var2 = e.a(98, "pleasetryagain");
                 if (null != var2) {

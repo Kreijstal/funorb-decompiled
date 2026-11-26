@@ -98,7 +98,7 @@ public final class Confined extends i {
           ok.clearStaticReferences();
           ld.clearStaticReferences(0);
           nl.a(false);
-          sb.clearStaticReferences(param0 - 135);
+          PcmOutputWorker.clearStaticReferences(param0 - 135);
           t.clearStaticReferences();
           uh.clearStaticReferences((byte) -56);
           p.clearStaticReferences(101);
@@ -106,7 +106,7 @@ public final class Confined extends i {
           pc.clearStaticReferences((byte) -119);
           ja.clearStaticReferences((byte) -35);
           pf.clearStaticReferences(param0 ^ -172);
-          vd.clearStaticReferences(116);
+          BufferedSocket.clearStaticReferences(116);
           tb.clearStaticReferences((byte) 116);
           di.a(0);
           ui.a((byte) 110);
@@ -218,7 +218,7 @@ public final class Confined extends i {
           mc.resetStaticState((byte) 58);
           qa.clearStaticReferences(param0 ^ -234);
           n.clearStaticReferences((byte) 122);
-          kk.resetStaticState((byte) -95);
+          ProxyAuthenticationRequiredException.resetStaticState((byte) -95);
           q.clearStaticReferences(-93);
           ImageProducerRasterBuffer.clearStaticReferences(-45);
           vl.clearStaticReferences(-14578);
@@ -1017,8 +1017,8 @@ public final class Confined extends i {
             db.field_w = nm.a(ih.field_d, "achievements", param0 + 96, "");
             kn.field_g = dh.a(false, "unachieved", "basic", pb.field_e);
             var2_ref = dh.a(false, "orbcoin", "basic", pb.field_e);
-            sb.field_h = new RgbSprite(20, 20);
-            sb.field_h.d();
+            PcmOutputWorker.field_h = new RgbSprite(20, 20);
+            PcmOutputWorker.field_h.d();
             var2_ref.a(0, 0, 20, 20);
             pi.field_S.setAsRasterTarget((byte) 111);
             var2_ref2 = null;

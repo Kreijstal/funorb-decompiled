@@ -87,12 +87,12 @@ final class tk {
             return false;
           }
           int var3 = 64 / ((param0 + 77) / 42);
-          int var2_int = ArchiveIndex.field_a.c(0);
+          int var2_int = ArchiveIndex.field_a.availableBytes(0);
           if (0 < var2_int) {
             if (!(param1 - field_h.position >= var2_int)) {
               var2_int = param1 - field_h.position;
             }
-            ArchiveIndex.field_a.a(field_h.data, var2_int, (byte) -87, field_h.position);
+            ArchiveIndex.field_a.readFully(field_h.data, var2_int, (byte) -87, field_h.position);
             ml.field_d = ud.correctedCurrentTimeMillis(2);
             field_h.position = field_h.position + var2_int;
             if (param1 > field_h.position) {

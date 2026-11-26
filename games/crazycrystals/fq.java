@@ -767,12 +767,12 @@ final class fq extends ea implements Cloneable {
           }
           var2 = 43 / ((-3 - param1) / 34);
           try {
-            var3_int = oi.field_c.c(0);
+            var3_int = oi.field_c.availableBytes(0);
             if (var3_int > 0) {
               if (param0 - kd.field_n.position < var3_int) {
                 var3_int = -kd.field_n.position + param0;
               }
-              oi.field_c.a(kd.field_n.payload, var3_int, 2034, kd.field_n.position);
+              oi.field_c.readFully(kd.field_n.payload, var3_int, 2034, kd.field_n.position);
               MidiPcmStream.field_y = lo.correctedCurrentTimeMillis((byte) -60);
               kd.field_n.position = kd.field_n.position + var3_int;
               if (param0 > kd.field_n.position) {

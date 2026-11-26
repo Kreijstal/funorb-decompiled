@@ -218,7 +218,7 @@ final class MenuInputState {
         this.pressedButton = 0;
         this.keyCode = 0;
         if (0 != OpenGlShaderObject.pressedMouseButton) {
-          this.repeatCountdown = pn.menuInitialRepeatDelay;
+          this.repeatCountdown = PcmOutputWorker.menuInitialRepeatDelay;
           this.pressedButton = OpenGlShaderObject.pressedMouseButton;
           this.pointerSelection = true;
           this.heldButton = OpenGlShaderObject.pressedMouseButton;

@@ -91,7 +91,7 @@ final class SecondaryKeyHashTable {
           node.secondaryKey = key;
           node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "es.C(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "es.C(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class SecondaryKeyHashTable {
             } else {
               stackIn_26_2 = "{...}";
             }
-            throw pn.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+            throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

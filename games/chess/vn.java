@@ -34,7 +34,7 @@ class vn extends bj implements mj {
           MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
           MusicPatchPcmStream.field_t[18] = kn.field_J;
           MusicPatchPcmStream.field_t[16] = fb.field_G;
-          MusicPatchPcmStream.field_t[13] = oa.field_c;
+          MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
           return;
         }
         field_Eb = (String) null;
@@ -42,7 +42,7 @@ class vn extends bj implements mj {
         MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
         MusicPatchPcmStream.field_t[18] = kn.field_J;
         MusicPatchPcmStream.field_t[16] = fb.field_G;
-        MusicPatchPcmStream.field_t[13] = oa.field_c;
+        MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
     }
 
     vn(fm param0, lh param1, String param2, boolean param3, boolean param4) {
@@ -166,7 +166,7 @@ class vn extends bj implements mj {
               var6.a((byte) -114, (rg) (this), hl.field_f);
             }
           } else {
-            var6.a(11, 29, vi.field_a);
+            var6.a(11, 29, PcmOutputWorker.field_a);
             var6.a(17, 62, sn.field_b);
           }
           if (param0 != 3) {

@@ -100,7 +100,7 @@ public final class Vertigo2 extends GameShell {
             this.l((byte) 123);
             hh.field_c = false;
           }
-          rg.field_f = rg.field_f + 1;
+          ProxyAuthenticationRequiredException.field_f = ProxyAuthenticationRequiredException.field_f + 1;
           if (cp.a(-109)) {
             this.m(-105);
             if (cp.a(-1)) {
@@ -110,10 +110,10 @@ public final class Vertigo2 extends GameShell {
               return;
             }
           }
-          if (!rg.field_a) {
+          if (!ProxyAuthenticationRequiredException.field_a) {
             UiWidget.a((byte) -107, uo.field_h);
             if (this.a(16777215, true)) {
-              rg.field_a = true;
+              ProxyAuthenticationRequiredException.field_a = true;
             }
           } else {
             if (!SpriteState.i(11)) {
@@ -201,7 +201,7 @@ public final class Vertigo2 extends GameShell {
                   en.a(true);
                   if (1 == var3Lifetime1) {
                     kj.field_C = true;
-                    rg.field_b = true;
+                    ProxyAuthenticationRequiredException.field_b = true;
                   } else {
                     if (oj.field_P) {
                       an.field_c = true;
@@ -223,7 +223,7 @@ public final class Vertigo2 extends GameShell {
                       ua.a(-5141);
                     }
                     kj.field_C = false;
-                    rg.field_b = false;
+                    ProxyAuthenticationRequiredException.field_b = false;
                   }
                 }
                 var4 = 0;
@@ -231,7 +231,7 @@ public final class Vertigo2 extends GameShell {
                   var4 = 1;
                 }
                 if (oj.field_P ||
-                  rg.field_b ||
+                  ProxyAuthenticationRequiredException.field_b ||
                   kj.field_C) {
                   var4 = 1;
                 }
@@ -258,10 +258,10 @@ public final class Vertigo2 extends GameShell {
             }
             if (9 == lc.field_f) {
               g.b(7);
-              rg.field_b = false;
+              ProxyAuthenticationRequiredException.field_b = false;
               am.field_n = 11;
               kj.field_C = false;
-              rg.field_b = false;
+              ProxyAuthenticationRequiredException.field_b = false;
               ke.field_i = id.field_f.readString(128);
               continue;
             }
@@ -269,7 +269,7 @@ public final class Vertigo2 extends GameShell {
               g.b(7);
               so.a(un.b((byte) 114), 3, 150, 1024, re.c(-1087), rm.field_A, th.a(true), qp.roundUpPowerOfTwo(2000, 70), 113, qp.roundUpPowerOfTwo(8, 72));
               wn.a(-122, SecondaryNodeDequeIterator.a(true), pp.a(12));
-              rg.field_b = false;
+              ProxyAuthenticationRequiredException.field_b = false;
               oj.field_P = true;
               am.field_n = -2;
               continue;
@@ -289,7 +289,7 @@ public final class Vertigo2 extends GameShell {
                 vl.a(-127);
               }
               kj.field_C = false;
-              rg.field_b = false;
+              ProxyAuthenticationRequiredException.field_b = false;
               continue;
             }
             if (lc.field_f == 10 &&
@@ -973,7 +973,7 @@ public final class Vertigo2 extends GameShell {
           vq.clearStaticReferences((byte) 111);
           al.a(-1216);
           gl.clearStaticReferences(true);
-          jr.clearStaticReferences((byte) -100);
+          PcmOutputWorker.clearStaticReferences((byte) -100);
           oc.clearStaticReferences(-27171);
           SoundFilter.clearStaticReferences();
           va.clearStaticReferences(60);
@@ -1026,7 +1026,7 @@ public final class Vertigo2 extends GameShell {
           q.clearStaticReferences(0);
           lo.clearStaticReferences((byte) -102);
           SocketConnector.a(-1);
-          rg.clearStaticReferences((byte) 127);
+          ProxyAuthenticationRequiredException.clearStaticReferences((byte) 127);
           nl.clearDeclaredStaticReferences(116);
           ImageProducerRasterBuffer.clearDeclaredStaticReferences(-48);
           gb.a(19199);
@@ -1200,7 +1200,7 @@ public final class Vertigo2 extends GameShell {
           if (param0 != -17) {
             this.loadBackgroundImages((byte) 108);
           }
-          if (!rg.field_a) {
+          if (!ProxyAuthenticationRequiredException.field_a) {
             an.a(-1243, var8);
             return;
           }
@@ -1511,7 +1511,7 @@ public final class Vertigo2 extends GameShell {
             lc.field_b = 0;
             vc.a(0);
             va.a(50, (byte) 119);
-            rg.field_a = true;
+            ProxyAuthenticationRequiredException.field_a = true;
             this.o((byte) 117);
             this.p(50);
             di.b((byte) 91);
@@ -1763,7 +1763,7 @@ public final class Vertigo2 extends GameShell {
               }
             }
             if (oj.field_P &&
-              !rg.field_b &&
+              !ProxyAuthenticationRequiredException.field_b &&
               !kj.field_C) {
               if (am.field_b &&
                 MouseWheelInput.field_a) {
@@ -1909,7 +1909,7 @@ public final class Vertigo2 extends GameShell {
           if (am.field_n == -4) {
             uh.field_Wb.writeCipheredByte(9, 127);
             sg.field_e = ld.field_b;
-            rg.field_b = true;
+            ProxyAuthenticationRequiredException.field_b = true;
             am.field_n = lc.field_b;
           }
           if (am.field_n == -5) {

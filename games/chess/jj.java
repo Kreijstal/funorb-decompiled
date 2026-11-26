@@ -7,7 +7,7 @@ final class jj {
     static c field_d;
     static c field_b;
     static ResourceArchive field_e;
-    static hn field_a;
+    static BufferedSocket field_a;
 
     final static void c(int param0) {
         int fieldTemp$0 = 0;

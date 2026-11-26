@@ -171,7 +171,7 @@ final class bk {
             }
             if (sn.field_c.position > 0) {
               try {
-                AwtRasterBuffer.field_i.a((byte) 124, sn.field_c.payload, sn.field_c.position, 0);
+                AwtRasterBuffer.field_i.queueWrite((byte) 124, sn.field_c.payload, sn.field_c.position, 0);
                 ck.field_d = sf.correctedCurrentTimeMillis((byte) 115);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

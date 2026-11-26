@@ -106,7 +106,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         int integerLocal8;
         int integerLocal9;
         int integerLocal10;
-        if (!DiagnosticSupport001.booleanState0024) {
+        if (!ProxyAuthenticationRequiredException.booleanState0024) {
           rgbSpriteLocal5 = MixedSupport128.rgbSpriteState0060;
           integerLocal9 = 320 * (MixedSupport137.integerState0848 * MixedSupport137.integerState0848) / 900;
           stackIntegerLocal3 = (!SceneWidgetPart009.booleanState0151) ? 0 : 1;

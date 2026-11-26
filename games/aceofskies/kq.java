@@ -173,7 +173,7 @@ final class kq {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 

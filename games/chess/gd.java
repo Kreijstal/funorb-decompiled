@@ -204,7 +204,7 @@ final class gd {
             tb.field_f = gh.field_c;
           } else {
             try {
-              ArchiveIndex.field_a = new hn((java.net.Socket) (tl.field_Gb.result), re.field_n);
+              ArchiveIndex.field_a = new BufferedSocket((java.net.Socket) (tl.field_Gb.result), re.field_n);
               qn.field_U.position = 0;
               var4 = tk.field_h;
               var5 = var4;

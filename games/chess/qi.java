@@ -36,7 +36,7 @@ final class qi extends vm {
           var4 = fn.a(var6, 0);
           if (var4 > 0 &&
             var4 <= 130) {
-            stackIn_10_0 = oa.field_a;
+            stackIn_10_0 = ProxyAuthenticationRequiredException.field_a;
             return stackIn_10_0;
           }
           stackIn_8_0 = qk.field_b;

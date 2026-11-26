@@ -124,7 +124,7 @@ final class sg {
         } else {
           this.field_j = null;
         }
-        this.field_f = jd.field_b;
+        this.field_f = ProxyAuthenticationRequiredException.field_b;
         this.field_h = l.field_c;
         this.field_c = LetterTile.field_m;
         this.field_b = sh.field_b;

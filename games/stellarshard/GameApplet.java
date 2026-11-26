@@ -615,7 +615,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 31178) {
             return;
           }
-          tl.field_d = false;
+          ProxyAuthenticationRequiredException.field_d = false;
           kk.field_m = ih.correctedCurrentTimeMillis((byte) -98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -744,7 +744,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              tl.field_d = true;
+              ProxyAuthenticationRequiredException.field_d = true;
             }
             return;
           }

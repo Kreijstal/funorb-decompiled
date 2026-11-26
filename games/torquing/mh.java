@@ -1639,7 +1639,7 @@ final class mh {
             boolean decompiledFrameCompleted0 = true;
             var11 = Torquing.field_u;
             var5 = -86 % ((12 - param2) / 41);
-            if (ko.field_c[param0] == -1) {
+            if (ProxyAuthenticationRequiredException.field_c[param0] == -1) {
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameRemainder12 = true;
               boolean decompiledFrameRemainder11 = true;
@@ -2385,7 +2385,7 @@ final class mh {
             }
             if ((decompiledFrameCompleted0) && (this.field_a.c(-97) ||
               param3)) {
-              this.field_c.a(true, ko.field_c[param0], 1, param1);
+              this.field_c.a(true, ProxyAuthenticationRequiredException.field_c[param0], 1, param1);
               th.a(100, th.field_F[23]);
               if (0 == this.field_h) {
                 if (GzipDecompressor.field_c != 6 &&
@@ -2543,7 +2543,7 @@ final class mh {
                 stackIn_38_2 = 100;
                 stackIn_39_3 = (ie.field_b.field_L != 0);
                 stackIn_42_4 = (fa.field_b != 0);
-                stackIn_43_0 = ((pk) (Object) stackIn_35_0).a(ko.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
+                stackIn_43_0 = ((pk) (Object) stackIn_35_0).a(ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
                 break;
               }
               stackIn_43_0Lifetime1 = -1;

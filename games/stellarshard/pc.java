@@ -284,7 +284,7 @@ final class pc {
             stackIn_2_0 = (ub) null;
             return stackIn_2_0;
           }
-          if (tl.a(param2, (byte) -5, param0, param4)) {
+          if (ProxyAuthenticationRequiredException.a(param2, (byte) -5, param0, param4)) {
             stackIn_7_0 = we.a(param1.a(param4, 16, param0), 1);
             return stackIn_7_0;
           }

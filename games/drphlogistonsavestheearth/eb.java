@@ -28,12 +28,12 @@ final class eb {
         cf.a((byte) -107);
         PcmResampler.field_c.j(300);
         pi.field_O = new wa(qf.field_c, (String) null, sg.field_a, param1, param2);
-        fb.field_e = new el(PcmResampler.field_c, pi.field_O);
+        PcmOutputWorker.field_e = new el(PcmResampler.field_c, pi.field_O);
         if (param3 != 10) {
           return;
         }
         try {
-          PcmResampler.field_c.a((byte) -125, (vg) (fb.field_e));
+          PcmResampler.field_c.a((byte) -125, (vg) (PcmOutputWorker.field_e));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "eb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

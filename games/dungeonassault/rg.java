@@ -444,7 +444,7 @@ final class rg extends ii implements pf, vg, mg {
         this.field_V = new ck(pp.field_I, (pg) null);
         this.field_R.field_i = ByteStorage.field_d;
         this.field_O.field_i = lk.field_Q;
-        this.field_U.field_i = bk.field_c;
+        this.field_U.field_i = PcmOutputWorker.field_c;
         this.field_K.field_i = ce.field_t;
         this.field_L.field_i = lm.field_p;
         this.field_S.field_i = AccountServiceResult.field_h;

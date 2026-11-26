@@ -3121,7 +3121,7 @@ final class LevelEntity {
                 this.field_v = false;
                 this.field_p = AccountServiceResult.field_k;
               }
-              if ((AccountServiceResult.field_k - this.field_p) > bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) {
+              if ((AccountServiceResult.field_k - this.field_p) > PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) {
                 this.field_eb = false;
               }
               n.field_jb = 1;
@@ -3137,7 +3137,7 @@ final class LevelEntity {
             if (AccountNameAvailabilityValidator.field_r != 2) {
               if (!ja.a((byte) 104, this.field_L) && (this.field_L != 0 ||
                 AccountNameAvailabilityValidator.field_r != 17)) {
-                n.field_jb = (-this.field_p + AccountServiceResult.field_k) / bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int];
+                n.field_jb = (-this.field_p + AccountServiceResult.field_k) / PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int];
                 if (n.field_jb >= -1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int] &&
                   !ue.field_i[AccountNameAvailabilityValidator.field_r][var3_int]) {
                   n.field_jb = db.field_x[AccountNameAvailabilityValidator.field_r][var3_int] - 1;
@@ -3149,7 +3149,7 @@ final class LevelEntity {
                 }
                 decompiledFrameRemainder1 = (AccountNameAvailabilityValidator.field_r == 1);
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder1 = ((AccountServiceResult.field_k - this.field_p) % bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int] == 0)) &&
+                  (decompiledFrameRemainder1 = ((AccountServiceResult.field_k - this.field_p) % PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int] == 0)) &&
                   (decompiledFrameRemainder1 = !(!ja.field_e[var3_int][n.field_jb]))) {
                   wh.a(vj.field_c, 3, -103);
                   decompiledFrameRemainder1 = (var7 != 0);
@@ -3165,7 +3165,7 @@ final class LevelEntity {
                   (cg.field_h[var3_int][n.field_jb])) {
                   wh.a(vj.field_c, 4, -114);
                   if (var7 != 0) {
-                    if (AccountServiceResult.field_k + (-this.field_p - bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
+                    if (AccountServiceResult.field_k + (-this.field_p - PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
                       n.field_jb = 0;
                       n.field_jb = 1;
                     } else {
@@ -3175,7 +3175,7 @@ final class LevelEntity {
                 }
               }
             } else {
-              if (AccountServiceResult.field_k + (-this.field_p - bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
+              if (AccountServiceResult.field_k + (-this.field_p - PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
                 n.field_jb = 0;
                 if (var7 != 0) {
                   n.field_jb = 1;
@@ -4030,7 +4030,7 @@ final class LevelEntity {
         int var12Lifetime1;
         var18 = TorChallenge.field_F ? 1 : 0;
         try {
-          var2 = bj.field_d;
+          var2 = ProxyAuthenticationRequiredException.field_d;
           var3 = ImageProducerRasterBuffer.field_q;
           var8 = v.field_S[fh.field_e];
           var9 = r.field_a[fh.field_e];

@@ -337,7 +337,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                     rc.a(1, we.field_h, b.field_a, 243, je.field_j, 12, fp.field_a);
                   }
                   if (uo.field_o == 11 &&
-                    va.field_d != 0) {
+                    ProxyAuthenticationRequiredException.field_d != 0) {
                     rc.a(1, we.field_h, b.field_a, 242, je.field_j, 13, fp.field_a);
                   }
                   if (uo.field_o == 15 &&
@@ -345,7 +345,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                     rc.a(1, we.field_h, b.field_a, 241, je.field_j, 14, fp.field_a);
                   }
                   if (uo.field_o == 9 &&
-                    va.field_d != 0 &&
+                    ProxyAuthenticationRequiredException.field_d != 0 &&
                     ol.field_B != 0) {
                     rc.a(1, we.field_h, b.field_a, 240, je.field_j, 15, fp.field_a);
                   }
@@ -370,7 +370,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             null == cn.field_d &&
             !(ab.field_D instanceof ja) &&
             !go.field_i)) {
-            va.a(127);
+            ProxyAuthenticationRequiredException.a(127);
           }
           if (!uh.field_n &&
             pj.field_v != 0) {
@@ -590,7 +590,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ob.resetStaticState(12554);
           pk.clearStaticReferences(120);
           qa.a(param0 - 6231);
-          j.clearStaticReferences((byte) 45);
+          BufferedSocket.clearStaticReferences((byte) 45);
           bn.clearStaticReferences((byte) -3);
           kp.resetStaticState(false);
           mj.a((byte) -64);
@@ -600,7 +600,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ic.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 120);
           to.clearStaticReferences((byte) -109);
-          rp.clearStaticReferences(2);
+          PcmOutputWorker.clearStaticReferences(2);
           dn.clearStaticReferences(param0 - 210);
           kb.clearStaticReferences(-96);
           vc.clearStaticReferences();
@@ -735,7 +735,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           jj.clearStaticReferences((byte) 65);
           wp.clearStaticReferences((byte) -98);
           tl.b(2);
-          va.clearStaticReferences(true);
+          ProxyAuthenticationRequiredException.clearStaticReferences(true);
           s.b((byte) 118);
           ImageProducerRasterBuffer.clearStaticReferences((byte) -125);
           df.clearStaticReferences(-20012);
@@ -994,7 +994,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             MouseInputHandler.field_b.b(8);
             if ((!fj.a(136) &&
               cb.field_w <= 0) &&
-              (decompiledFrameRemainder0 = !(!j.c((byte) -23)))) {
+              (decompiledFrameRemainder0 = !(!BufferedSocket.c((byte) -23)))) {
               if (ph.field_E == null) {
                 stackIn_60_0 = mb.field_d;
               } else {
@@ -1601,7 +1601,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ab.field_z = ha.a(vm.field_k, "initialset", "teleport").b();
             AccountCreationResultPanel.field_nb = bl.a(ma.field_p, "initialset", "player-push-upwards").a();
             tg.field_c = bl.a(ma.field_p, "initialset", "player-sticky-feet").a();
-            va.field_b = bl.a(ma.field_p, "initialset", "player-prod-spider").a();
+            ProxyAuthenticationRequiredException.field_b = bl.a(ma.field_p, "initialset", "player-prod-spider").a();
             ga.field_H = bl.a(ma.field_p, "initialset", "player-taunt-spider").a();
             e.a(0, vm.field_k, ma.field_p);
             sb.a(ma.field_p, 18180);

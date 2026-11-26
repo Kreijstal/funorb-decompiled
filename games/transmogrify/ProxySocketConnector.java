@@ -28,7 +28,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
           var7 = new hg(param6);
           var8 = new hg(param1);
-          stackIn_4_0 = jd.a(param4, var8, (byte) -9, param2, param0, param5, var7);
+          stackIn_4_0 = ProxyAuthenticationRequiredException.a(param4, var8, (byte) -9, param2, param0, param5, var7);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,7 +203,7 @@ final class ProxySocketConnector extends SocketConnector {
                     if (var11 != -1) {
                       var8 = var8.substring(0, var11);
                     }
-                    throw new jd(var8);
+                    throw new ProxyAuthenticationRequiredException(var8);
                   }
                   var8 = var7.readLine();
                   var9++;
@@ -213,7 +213,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 break;
               }
-              throw new jd("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_18_0 = var5;
@@ -422,7 +422,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        jd var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Transmogrify.field_A ? 1 : 0;
@@ -492,9 +492,9 @@ final class ProxySocketConnector extends SocketConnector {
                   }
                   decompiledRegionSelector0 = 1;
                 }
-              } catch (jd decompiledCaughtParameter1) {
+              } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var12_ref = (jd) (Object) decompiledCaughtException;
+                var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                 var7 = var12_ref;
                 decompiledRegionSelector0 = 1;
               } catch (java.io.IOException decompiledCaughtParameter2) {

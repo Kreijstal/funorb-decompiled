@@ -86,10 +86,10 @@ final class cd extends pk {
 
     final boolean a(byte param0) {
         if (param0 == -9) {
-          return this.field_q.b(this.field_i, this.field_k, hn.field_k, rf.field_b);
+          return this.field_q.b(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
         }
         this.field_t = (lh) null;
-        return this.field_q.b(this.field_i, this.field_k, hn.field_k, rf.field_b);
+        return this.field_q.b(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
     }
 
     static long a(long param0, long param1) {

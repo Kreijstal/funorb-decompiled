@@ -143,7 +143,7 @@ final class rf implements nn {
         int var4_intLifetime1;
         if (param0 <= -43) {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
-            var3[var4_int] = bf.field_d[ua.a((int) var7[var4_int], 255)];
+            var3[var4_int] = bf.field_d[PcmOutputWorker.a((int) var7[var4_int], 255)];
           }
           var4 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var3);
           uj.d(92);
@@ -151,7 +151,7 @@ final class rf implements nn {
         }
         rf.clearStaticReferences(-63);
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
-          var3[var4_intLifetime1] = bf.field_d[ua.a((int) var7[var4_intLifetime1], 255)];
+          var3[var4_intLifetime1] = bf.field_d[PcmOutputWorker.a((int) var7[var4_intLifetime1], 255)];
         }
         var4Lifetime1 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var3);
         uj.d(92);

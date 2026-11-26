@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class AudioOutput {
-    private static ck field_q;
+    private static PcmOutputWorker field_q;
     private int field_b;
     static int field_n;
     private PcmStream field_i;
@@ -360,7 +360,7 @@ class AudioOutput {
               ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_m);
               if (field_d > 0 &&
                 field_q == null) {
-                field_q = new ck();
+                field_q = new PcmOutputWorker();
                 field_q.field_d = param0;
                 param0.requestThreadStart(field_d, 39, (Runnable) ((Object) field_q));
               }

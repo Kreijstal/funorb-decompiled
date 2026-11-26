@@ -69,7 +69,7 @@ final class mh implements uj {
         try {
           var1 = MidiPcmStream.field_O;
           synchronized (var1) {
-            dn.field_w = ll.field_d;
+            dn.field_w = BufferedSocket.field_d;
             hb.field_b = hb.field_b + 1;
             if (cg.field_H < 0) {
               for (var2 = 0; var2 < 112; var2++) {
@@ -88,7 +88,7 @@ final class mh implements uj {
               }
             }
             var2Lifetime1 = -126 % ((param0 + 3) / 32);
-            ll.field_d = qf.field_n;
+            BufferedSocket.field_d = qf.field_n;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

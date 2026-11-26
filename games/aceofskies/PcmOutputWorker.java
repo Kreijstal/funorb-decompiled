@@ -1,0 +1,148 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PcmOutputWorker implements Runnable {
+    SystemTaskService field_f;
+    static int menuInitialRepeatDelay;
+    volatile boolean field_e;
+    volatile boolean field_a;
+    static long[] field_b;
+    volatile AudioOutput[] field_c;
+
+    final static byte[] a(byte[] param0, int param1) {
+        String stackIn_28_2 = null;
+        try {
+          if (param1 != 0) {
+            byte[] stackIn_2_0 = (byte[]) null;
+            return stackIn_2_0;
+          }
+          PacketBuffer var9 = new PacketBuffer(param0);
+          int var3 = var9.readUnsignedByte(-123);
+          int var4 = var9.readInt((byte) 113);
+          if (var4 >= 0 && (0 == kk.field_K ||
+            !(var4 > kk.field_K))) {
+            if (var3 == 0) {
+              byte[] var13 = new byte[var4];
+              byte[] var11 = var13;
+              byte[] var5 = var11;
+              var9.readBytes(0, param1 + 7186, var4, var13);
+              byte[] stackIn_24_0 = var5;
+              return stackIn_24_0;
+            }
+            int var5_int = var9.readInt((byte) 110);
+            if (var5_int >= 0 && (kk.field_K == 0 ||
+              !(var5_int > kk.field_K))) {
+              byte[] var12 = new byte[var5_int];
+              byte[] var10 = var12;
+              byte[] var6 = var10;
+              if (var3 == 1) {
+                on.a(var12, var5_int, param0, var4, 9);
+              } else {
+                Object var7 = vg.field_h;
+                synchronized (var7) {
+                  vg.field_h.decompress(var12, 10, var9);
+                }
+              }
+              byte[] stackIn_22_0 = var6;
+              return stackIn_22_0;
+            }
+            throw new RuntimeException();
+          }
+          throw new RuntimeException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var2;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("pn.D(");
+          if (param0 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
+          }
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void resetStaticState(int param0) {
+        if (param0 != 9) {
+          menuInitialRepeatDelay = 33;
+        }
+        field_b = null;
+    }
+
+    public final void run() {
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        this.field_e = true;
+        try {
+          while (!this.field_a) {
+            for (int var1_int = 0; var1_int < 2; var1_int++) {
+              AudioOutput var2 = this.field_c[var1_int];
+              if (var2 != null) {
+                var2.serviceOutput();
+              }
+            }
+            IntrusiveNode.sleepMillis(10L, false);
+            PacketBuffer.postDummyActionEvent(5, (Object) null, this.field_f);
+          }
+        } catch (Exception exception) {
+          String var5 = (String) null;
+          v.a((String) null, (byte) -52, (Throwable) ((Object) exception));
+        } finally {
+          this.field_e = false;
+        }
+    }
+
+    final static ClientException wrapClientException(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
+        } else {
+          var2 = (ClientException) ((Object) param0);
+          var2.field_a = var2.field_a + ' ' + param1;
+        }
+        return var2;
+    }
+
+    final static void a(AchievementSubmission param0, byte param1, int param2) {
+        try {
+          ci.field_j.addLast(77, param0);
+          if (param1 > -70) {
+            field_b = (long[]) null;
+          }
+          SoftwareDepthBuffer.writeAchievementSubmission(param2, 0, param0);
+        } catch (RuntimeException runtimeException) {
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final static void a(boolean param0) {
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        try {
+          int var1_int = gi.field_i[0];
+          if (!param0) {
+            return;
+          }
+          for (int var2 = 1; var2 < gi.field_i.length; var2++) {
+            int var3 = gi.field_i[var2];
+            au.a(jr.field_n, var2 << 4, jr.field_n, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1), "pn.C(" + param0 + ')');
+        }
+    }
+
+    PcmOutputWorker() {
+        this.field_c = new AudioOutput[2];
+        this.field_a = false;
+        this.field_e = false;
+    }
+
+    static {
+        menuInitialRepeatDelay = 20;
+        field_b = new long[32];
+    }
+}

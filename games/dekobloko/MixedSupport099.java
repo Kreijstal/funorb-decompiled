@@ -438,7 +438,7 @@ final class MixedSupport099 {
             if (MixedSupport146.integerState0932 == 0) {
               this.sceneWidgetPart002State0002.performAction0560(UiComponentPart001.stringState0023, 12, byteArgument1 + 126);
             }
-            this.sceneWidgetPart002State0002.performAction0560(PlatformSupport002.stringState0125, 13, byteArgument1 + 153);
+            this.sceneWidgetPart002State0002.performAction0560(DelegatingCanvas.stringState0125, 13, byteArgument1 + 153);
           }
           if (2 == mixedSupport056Argument2.integerState0290) {
             if (PacketBuffer.integerState0936 == 0) {

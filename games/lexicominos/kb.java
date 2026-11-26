@@ -1559,7 +1559,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_age_tooltip");
                 if (null != var2) {
-                  ck.field_b = ni.a((byte) -55, var2);
+                  ProxyAuthenticationRequiredException.field_b = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_optin_news_tooltip");
                 if (null != var2) {
@@ -1843,7 +1843,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "loading_extradata");
                 if (var2 != null) {
-                  ck.field_c = ni.a((byte) -55, var2);
+                  ProxyAuthenticationRequiredException.field_c = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "loading_languages");
                 if (null != var2) {
@@ -2305,7 +2305,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "no_highscores");
                 if (null != var2) {
-                  fd.field_a = ni.a((byte) -55, var2);
+                  PcmOutputWorker.field_a = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "hs_name");
                 if (null != var2) {
@@ -2709,7 +2709,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  ge.field_e = ni.a((byte) -55, var2);
+                  BufferedSocket.field_e = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_timeout");
                 if (var2 != null) {

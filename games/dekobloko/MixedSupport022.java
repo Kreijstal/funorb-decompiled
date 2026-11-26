@@ -126,7 +126,7 @@ final class MixedSupport022 {
           if (byteArgument1 != -109) {
             MixedSupport022.clearStaticReferences((byte) -7);
           }
-          DiagnosticSupport001.performAction0332(-127, stringArgument2, stringArgument3, false);
+          ProxyAuthenticationRequiredException.performAction0332(-127, stringArgument2, stringArgument3, false);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "da.A(" + byteArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
         }

@@ -74,7 +74,7 @@ final class ba {
           ob.field_I.a(nh.field_a, 339, 30, 16777215, -1);
           SoftwareRasterizer.setClip(0, 0, 640, 2);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
-          cb.field_a.a(-40);
+          BufferedSocket.field_a.a(-40);
           hc.field_i.d();
           SoftwareRasterizer.fillRectangleVerticalGradient(3, 2, 634, 117, 0, 10359);
           SoftwareRasterizer.setClip(0, 120, 640, 480);
@@ -85,7 +85,7 @@ final class ba {
           ug.a(42, 0, 462, 120, 176);
           SoftwareRasterizer.fillRectangleVerticalGradient(468, 6, 164, 24, 5132630, 1644825);
           SoftwareRasterizer.drawRectangleOutline(468, 6, 164, 24, 8947848);
-          cb.field_a.a(-40);
+          BufferedSocket.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ba.A(" + param0 + ')');
         }

@@ -125,7 +125,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             var3 = var1.readString(param0 ^ 128);
             la.field_q = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(16383);
-            hj.a((byte) 100, var4);
+            PcmOutputWorker.a((byte) 100, var4);
             return;
           }
           if (ag.field_d == null) {

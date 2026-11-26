@@ -30,12 +30,12 @@ final class kc {
             }
             if (~SpriteGeometry.field_q.position < param1) {
               try {
-                DelegatingCanvas.field_b.a(SpriteGeometry.field_q.payload, SpriteGeometry.field_q.position, 120, 0);
+                DelegatingCanvas.field_b.queueWrite(SpriteGeometry.field_q.payload, SpriteGeometry.field_q.position, 120, 0);
                 p.field_c = rf.correctedCurrentTimeMillis(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                ck.$cfr$intArgs$b$e683eeaaf5b5(-37);
+                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-37);
               }
               SpriteGeometry.field_q.position = 0;
             }

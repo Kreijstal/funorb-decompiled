@@ -71,7 +71,7 @@ final class ce {
               var5.field_b.a((byte) -12, var6, 14);
             }
             var7 = pi.field_d;
-            var8 = hn.field_n;
+            var8 = BufferedSocket.field_n;
             var7.field_b.a((byte) -12, var8, 20);
           }
           if (param0.field_k == 1 &&

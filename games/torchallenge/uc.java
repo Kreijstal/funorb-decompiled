@@ -185,7 +185,7 @@ final class uc extends ng {
         if (!param8) {
           field_T = (String) null;
         }
-        int var11 = bj.a(param6, !param8 ? true : false, param3, param2, param1);
+        int var11 = ProxyAuthenticationRequiredException.a(param6, !param8 ? true : false, param3, param2, param1);
         if (0 == var10 ||
           var11 < 0) {
           sd.a(127);

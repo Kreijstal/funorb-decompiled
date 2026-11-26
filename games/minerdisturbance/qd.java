@@ -86,7 +86,7 @@ final class qd extends kn implements sh {
 
     final static void a(int param0, String param1) {
         try {
-          pm.field_b = param1;
+          ProxyAuthenticationRequiredException.field_b = param1;
           if (param0 != 5) {
             field_J = -98;
           }
@@ -507,7 +507,7 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[17] = de.field_c;
         GameAppletShell.field_g[10] = jh.field_b;
         GameAppletShell.field_g[8] = ck.field_c[1];
-        GameAppletShell.field_g[23] = pm.field_d;
+        GameAppletShell.field_g[23] = ProxyAuthenticationRequiredException.field_d;
         GameAppletShell.field_g[14] = IterableNodeHashTable.field_e;
         GameAppletShell.field_g[15] = ee.field_E;
         GameAppletShell.field_g[22] = jc.field_D;

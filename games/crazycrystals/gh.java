@@ -142,7 +142,7 @@ final class gh extends ea implements Cloneable {
                   mb.field_g = mb.field_g + wd.field_j;
                   ob.field_l = ob.field_l + 1;
                   if (BoundedRandomAccessFile.field_e == 0) {
-                    va.field_d = va.field_d | 1 << var7;
+                    ProxyAuthenticationRequiredException.field_d = ProxyAuthenticationRequiredException.field_d | 1 << var7;
                   }
                   mb.field_g = mb.field_g + 50;
                   fn.field_j = fn.field_j + 75;

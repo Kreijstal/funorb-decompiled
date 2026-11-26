@@ -39,9 +39,9 @@ final class hh {
             ea.field_a.length >= param2) {
             if (cb.field_e == null) {
               cb.field_e = new int[param2 * 2];
-              if (bj.field_b == null ||
-                !(param2 <= bj.field_b.length)) {
-                bj.field_b = new int[param2 * 2];
+              if (ProxyAuthenticationRequiredException.field_b == null ||
+                !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
               }
               if (null == hi.field_G ||
                 !(param1 + param2 <= hi.field_G.length)) {
@@ -54,9 +54,9 @@ final class hh {
             } else {
               if (param2 > cb.field_e.length) {
                 cb.field_e = new int[param2 * 2];
-                if (bj.field_b == null ||
-                  !(param2 <= bj.field_b.length)) {
-                  bj.field_b = new int[param2 * 2];
+                if (ProxyAuthenticationRequiredException.field_b == null ||
+                  !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                  ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
                 if (null == hi.field_G ||
                   !(param1 + param2 <= hi.field_G.length)) {
@@ -67,9 +67,9 @@ final class hh {
                   qa.field_i = new boolean[param2 * 2];
                 }
               } else {
-                if (bj.field_b == null ||
-                  !(param2 <= bj.field_b.length)) {
-                  bj.field_b = new int[param2 * 2];
+                if (ProxyAuthenticationRequiredException.field_b == null ||
+                  !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                  ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
                 if (null == hi.field_G) {
                   hi.field_G = new int[(param1 + param2) * 2];
@@ -96,7 +96,7 @@ final class hh {
                 }
               }
             }
-            bb.field_c = 0;
+            PcmOutputWorker.field_c = 0;
             ia.field_q = -2147483648;
             v.field_Z = -2147483648;
             ol.field_d = 2147483647;
@@ -108,9 +108,9 @@ final class hh {
             !(param2 <= cb.field_e.length)) {
             cb.field_e = new int[param2 * 2];
           }
-          if (bj.field_b == null ||
-            !(param2 <= bj.field_b.length)) {
-            bj.field_b = new int[param2 * 2];
+          if (ProxyAuthenticationRequiredException.field_b == null ||
+            !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+            ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
           }
           if (null == hi.field_G ||
             !(param1 + param2 <= hi.field_G.length)) {
@@ -136,9 +136,9 @@ final class hh {
               ea.field_a.length >= param2) {
               if (cb.field_e == null) {
                 cb.field_e = new int[param2 * 2];
-                if (bj.field_b == null ||
-                  !(param2 <= bj.field_b.length)) {
-                  bj.field_b = new int[param2 * 2];
+                if (ProxyAuthenticationRequiredException.field_b == null ||
+                  !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                  ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
                 if (null == hi.field_G ||
                   !(param1 + param2 <= hi.field_G.length)) {
@@ -151,9 +151,9 @@ final class hh {
               } else {
                 if (param2 > cb.field_e.length) {
                   cb.field_e = new int[param2 * 2];
-                  if (bj.field_b == null ||
-                    !(param2 <= bj.field_b.length)) {
-                    bj.field_b = new int[param2 * 2];
+                  if (ProxyAuthenticationRequiredException.field_b == null ||
+                    !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                    ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
                   if (null == hi.field_G ||
                     !(param1 + param2 <= hi.field_G.length)) {
@@ -164,9 +164,9 @@ final class hh {
                     qa.field_i = new boolean[param2 * 2];
                   }
                 } else {
-                  if (bj.field_b == null ||
-                    !(param2 <= bj.field_b.length)) {
-                    bj.field_b = new int[param2 * 2];
+                  if (ProxyAuthenticationRequiredException.field_b == null ||
+                    !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                    ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
                   if (null == hi.field_G) {
                     hi.field_G = new int[(param1 + param2) * 2];
@@ -193,7 +193,7 @@ final class hh {
                   }
                 }
               }
-              bb.field_c = 0;
+              PcmOutputWorker.field_c = 0;
               ia.field_q = -2147483648;
               v.field_Z = -2147483648;
               ol.field_d = 2147483647;
@@ -205,9 +205,9 @@ final class hh {
               !(param2 <= cb.field_e.length)) {
               cb.field_e = new int[param2 * 2];
             }
-            if (bj.field_b == null ||
-              !(param2 <= bj.field_b.length)) {
-              bj.field_b = new int[param2 * 2];
+            if (ProxyAuthenticationRequiredException.field_b == null ||
+              !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+              ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
             }
             if (null == hi.field_G ||
               !(param1 + param2 <= hi.field_G.length)) {
@@ -229,9 +229,9 @@ final class hh {
               ea.field_a.length >= param2) {
               if (cb.field_e == null) {
                 cb.field_e = new int[param2 * 2];
-                if (bj.field_b == null ||
-                  !(param2 <= bj.field_b.length)) {
-                  bj.field_b = new int[param2 * 2];
+                if (ProxyAuthenticationRequiredException.field_b == null ||
+                  !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                  ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                 }
                 if (null == hi.field_G) {
                   hi.field_G = new int[(param1 + param2) * 2];
@@ -259,18 +259,18 @@ final class hh {
               } else {
                 if (param2 > cb.field_e.length) {
                   cb.field_e = new int[param2 * 2];
-                  if (bj.field_b == null ||
-                    !(param2 <= bj.field_b.length)) {
-                    bj.field_b = new int[param2 * 2];
+                  if (ProxyAuthenticationRequiredException.field_b == null ||
+                    !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                    ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
                   if (null == hi.field_G ||
                     !(param1 + param2 <= hi.field_G.length)) {
                     hi.field_G = new int[(param1 + param2) * 2];
                   }
                 } else {
-                  if (bj.field_b == null ||
-                    !(param2 <= bj.field_b.length)) {
-                    bj.field_b = new int[param2 * 2];
+                  if (ProxyAuthenticationRequiredException.field_b == null ||
+                    !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+                    ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
                   }
                   if (null == hi.field_G) {
                     hi.field_G = new int[(param1 + param2) * 2];
@@ -288,7 +288,7 @@ final class hh {
                   }
                 }
               }
-              bb.field_c = 0;
+              PcmOutputWorker.field_c = 0;
               ia.field_q = -2147483648;
               v.field_Z = -2147483648;
               ol.field_d = 2147483647;
@@ -300,9 +300,9 @@ final class hh {
               !(param2 <= cb.field_e.length)) {
               cb.field_e = new int[param2 * 2];
             }
-            if (bj.field_b == null ||
-              !(param2 <= bj.field_b.length)) {
-              bj.field_b = new int[param2 * 2];
+            if (ProxyAuthenticationRequiredException.field_b == null ||
+              !(param2 <= ProxyAuthenticationRequiredException.field_b.length)) {
+              ProxyAuthenticationRequiredException.field_b = new int[param2 * 2];
             }
             if (null == hi.field_G ||
               !(param1 + param2 <= hi.field_G.length)) {
@@ -310,7 +310,7 @@ final class hh {
             }
             if (null != qa.field_i &&
               qa.field_i.length >= param2) {
-              bb.field_c = 0;
+              PcmOutputWorker.field_c = 0;
               ia.field_q = -2147483648;
               v.field_Z = -2147483648;
               ol.field_d = 2147483647;
@@ -320,7 +320,7 @@ final class hh {
             qa.field_i = new boolean[param2 * 2];
           }
         }
-        bb.field_c = 0;
+        PcmOutputWorker.field_c = 0;
         ia.field_q = -2147483648;
         v.field_Z = -2147483648;
         ol.field_d = 2147483647;

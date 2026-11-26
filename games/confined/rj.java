@@ -24,7 +24,7 @@ final class rj {
             return false;
           }
           if (!fd.field_j) {
-            return !kk.a(param0 ^ -28329) ? true : false;
+            return !ProxyAuthenticationRequiredException.a(param0 ^ -28329) ? true : false;
           }
           return false;
         }
@@ -32,7 +32,7 @@ final class rj {
           return false;
         }
         if (!fd.field_j) {
-          return !kk.a(param0 ^ -28329) ? true : false;
+          return !ProxyAuthenticationRequiredException.a(param0 ^ -28329) ? true : false;
         }
         return false;
     }

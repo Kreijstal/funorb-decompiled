@@ -171,7 +171,7 @@ class fe extends IntrusiveNode {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new pf(fc.b((byte) 126), j.a((byte) -110));
+          return new pf(fc.b((byte) 126), PcmOutputWorker.a((byte) -110));
         }
         return (pf) null;
     }
@@ -326,12 +326,12 @@ class fe extends IntrusiveNode {
               if (CipherPacketBuffer.field_B == 0 &&
                 nb.field_f != 0) {
                 this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
-                var8 = j.field_d;
+                var8 = PcmOutputWorker.field_d;
                 if (var8 != null) {
                   if (var8.field_y instanceof cd) {
                     ((cd) (var8.field_y)).a(27055, (se) null, var8);
                   }
-                  j.field_d = null;
+                  PcmOutputWorker.field_d = null;
                 }
               }
             }
@@ -362,12 +362,12 @@ class fe extends IntrusiveNode {
                 return param0;
               }
               this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
-              var9 = j.field_d;
+              var9 = PcmOutputWorker.field_d;
               if (var9 != null) {
                 if (var9.field_y instanceof cd) {
                   ((cd) (var9.field_y)).a(27055, (se) null, var9);
                 }
-                j.field_d = null;
+                PcmOutputWorker.field_d = null;
               }
               nb.field_f = CipherPacketBuffer.field_B;
               if (param3 != 0) {
@@ -391,7 +391,7 @@ class fe extends IntrusiveNode {
                 if (CipherPacketBuffer.field_B == 0 &&
                   nb.field_f != 0) {
                   this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
-                  var10 = j.field_d;
+                  var10 = PcmOutputWorker.field_d;
                   if (var10 == null) {
                     nb.field_f = CipherPacketBuffer.field_B;
                     if (param3 != 0) {
@@ -401,7 +401,7 @@ class fe extends IntrusiveNode {
                     return param0;
                   }
                   if (!(var10.field_y instanceof cd)) {
-                    j.field_d = null;
+                    PcmOutputWorker.field_d = null;
                     nb.field_f = CipherPacketBuffer.field_B;
                     if (param3 != 0) {
                       return true;
@@ -410,7 +410,7 @@ class fe extends IntrusiveNode {
                     return param0;
                   }
                   ((cd) (var10.field_y)).a(27055, (se) null, var10);
-                  j.field_d = null;
+                  PcmOutputWorker.field_d = null;
                   nb.field_f = CipherPacketBuffer.field_B;
                   if (param3 != 0) {
                     return true;
@@ -430,12 +430,12 @@ class fe extends IntrusiveNode {
           if (CipherPacketBuffer.field_B == 0 &&
             nb.field_f != 0) {
             this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
-            var11 = j.field_d;
+            var11 = PcmOutputWorker.field_d;
             if (var11 != null) {
               if (var11.field_y instanceof cd) {
                 ((cd) (var11.field_y)).a(27055, (se) null, var11);
               }
-              j.field_d = null;
+              PcmOutputWorker.field_d = null;
             }
             nb.field_f = CipherPacketBuffer.field_B;
             if (param3 != 0) {

@@ -253,7 +253,7 @@ class FlightBody {
         try {
           this.position = new Vector2(position);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "o.<init>(" + (position != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "o.<init>(" + (position != null ? "{...}" : "null") + ')');
         }
     }
 

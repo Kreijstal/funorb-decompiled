@@ -38,7 +38,7 @@ abstract class SocketConnector {
 
     final static void a(byte param0) {
         hj.field_K = null;
-        wb.field_a = null;
+        ProxyAuthenticationRequiredException.field_a = null;
         sb.field_m = null;
         ha.field_s = null;
         qc.field_b = (byte[][]) null;

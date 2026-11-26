@@ -32,7 +32,7 @@ final class fl extends IntrusiveNode {
         synchronized (var1) {
           wh.field_f = nd.field_l;
           qf.field_a = qf.field_a + 1;
-          hn.field_k = IntrusiveNode.field_b;
+          BufferedSocket.field_k = IntrusiveNode.field_b;
           if (!param0) {
             fl.clearStaticReferences(true);
           }

@@ -57,9 +57,9 @@ final class qd {
         jf.field_P = var8.readLong((byte) 8);
         if (2 != kb.field_a) {
           kc.field_c = 0;
-          fd.field_g = 0;
+          PcmOutputWorker.field_g = 0;
         } else {
-          fd.field_g = var8.readUnsignedShort(-1698573656);
+          PcmOutputWorker.field_g = var8.readUnsignedShort(-1698573656);
           kc.field_c = var8.readUnsignedMedium(86);
         }
         stackIn_9_0 = (1 != var8.readUnsignedByte(true)) ? 0 : 1;

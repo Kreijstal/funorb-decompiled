@@ -584,7 +584,7 @@ final class vc {
               if (decompiledFrameCompleted0) {
                 gb.field_h = cd.field_t.readString(2);
                 sg.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
-                cb.field_j = cd.field_t.readUnsignedByte((byte) 90);
+                BufferedSocket.field_j = cd.field_t.readUnsignedByte((byte) 90);
                 dh.field_bb = da.field_r;
               }
               if (s.field_A.a(10277) != ci.field_b) {

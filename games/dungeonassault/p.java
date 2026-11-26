@@ -1316,7 +1316,7 @@ final class p extends qe {
         this.field_A.field_n = (en) ((Object) new e(jk.a(new String[]{tn.field_U}, tp.field_w, 30496)));
         this.field_L.field_n = (en) ((Object) new e(jk.a(new String[]{qk.field_d}, tp.field_w, param0 + 12257)));
         this.field_C.field_n = (en) ((Object) new e(jk.a(new String[]{dj.field_c}, tp.field_w, param0 + 12257)));
-        this.field_P.field_n = (en) ((Object) new e(jk.a(new String[]{rk.field_a}, tp.field_w, 30496)));
+        this.field_P.field_n = (en) ((Object) new e(jk.a(new String[]{BufferedSocket.field_a}, tp.field_w, 30496)));
         this.field_y.field_n = (en) ((Object) new e(jk.a(new String[]{eg.field_f}, tp.field_w, 30496)));
         this.field_O.field_n = (en) ((Object) new e((String) null, pm.field_o, nk.field_Lb));
         this.field_Q.field_n = (en) ((Object) new e((String) null, ud.field_u, oi.field_M));
@@ -1730,7 +1730,7 @@ final class p extends qe {
         ke.a(-112, -be.field_o.field_d + 640, 480, 0);
         AwtRasterBuffer.a(0, 640, 0, (byte) 53);
         AwtRasterBuffer.a(0, 640, 40, (byte) 91);
-        AwtRasterBuffer.a(0, 640, -bk.field_e.field_b + 480, (byte) 102);
+        AwtRasterBuffer.a(0, 640, -PcmOutputWorker.field_e.field_b + 480, (byte) 102);
         p.a(14, 55, 161, 36);
         p.b(188, 55, 418, 83, 8421504, 128, 128);
         p.a(188, 55, 418, 83, 256, 64, 4, 32);

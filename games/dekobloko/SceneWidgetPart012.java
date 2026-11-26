@@ -106,7 +106,7 @@ final class SceneWidgetPart012 extends SceneWidget {
         ProxySocketFactory.integerState0732 = 0;
         if (integerArgument2 >= 97) {
           MixedSupport107.integerState0682 = 0;
-          MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
+          MixedSupport003.integerState0019 = DelegatingCanvas.integerState0147;
           MixedSupport146.integerState0930 = 0;
           MixedSupport109.mixedSupport116State0003 = new MixedSupport116(2);
           MixedSupport109.mixedSupport116State0003.performAction1516(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport101.integerState0590, (byte) 7), booleanArgument1);
@@ -114,7 +114,7 @@ final class SceneWidgetPart012 extends SceneWidget {
         }
         SceneWidgetPart012.discardDeclaredStaticReferences(-61);
         MixedSupport107.integerState0682 = 0;
-        MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
+        MixedSupport003.integerState0019 = DelegatingCanvas.integerState0147;
         MixedSupport146.integerState0930 = 0;
         MixedSupport109.mixedSupport116State0003 = new MixedSupport116(2);
         MixedSupport109.mixedSupport116State0003.performAction1516(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport101.integerState0590, (byte) 7), booleanArgument1);

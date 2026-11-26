@@ -23,7 +23,7 @@ final class ii extends ql implements jk {
               this.field_v = this.field_v + 10;
               var3 = pj.field_B;
               if (n.c(-2147483648)) {
-                var3 = ge.field_e;
+                var3 = BufferedSocket.field_e;
                 this.field_v = this.field_v + 20;
               }
             } else {

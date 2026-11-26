@@ -44,7 +44,7 @@ final class rc extends hh {
           this.field_a.a(false, 0);
           this.field_f.b(false);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class rc extends hh {
           this.field_a.a(param2, 1);
           this.field_a.a(param0, (byte) -39);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rc.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rc.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class rc extends hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var3), "rc.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var3), "rc.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

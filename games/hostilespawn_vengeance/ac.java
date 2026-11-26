@@ -265,7 +265,7 @@ final class ac {
         RuntimeException decompiledCaughtException = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (ng) (td.field_o.beginForward(-92));
+          var4 = (ng) (BufferedSocket.field_o.beginForward(-92));
           var1 = var4;
           if (var1 == null) {
             return false;

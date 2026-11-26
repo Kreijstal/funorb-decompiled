@@ -41,7 +41,7 @@ final class md {
             ra.field_b = rk.field_fb;
           } else {
             try {
-              cb.field_j = new jd((java.net.Socket) (fe.field_c.result), td.field_b);
+              cb.field_j = new BufferedSocket((java.net.Socket) (fe.field_c.result), td.field_b);
               var4 = rd.field_j;
               var5 = var4;
               na.field_r.position = 0;

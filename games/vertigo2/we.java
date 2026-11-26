@@ -338,10 +338,10 @@ final class we extends UiWidget {
           var17 = new Sprite(param2.a("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
           vl.a(0, "commonui", param1, "dropdown");
           var5 = WidgetWrapper.a((byte) -39, "screen_options", "commonui", param1);
-          rg.field_e = new u[4];
+          ProxyAuthenticationRequiredException.field_e = new u[4];
           wh.field_F = new u[4];
           Archive.field_k = new u[4];
-          var6 = new u[][]{wh.field_F, Archive.field_k, rg.field_e};
+          var6 = new u[][]{wh.field_F, Archive.field_k, ProxyAuthenticationRequiredException.field_e};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

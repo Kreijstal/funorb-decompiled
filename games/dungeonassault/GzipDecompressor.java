@@ -39,7 +39,7 @@ final class GzipDecompressor {
         var12 = DungeonAssault.field_K;
         try {
           bo.field_Jb = new wm(ib.field_l);
-          wl.field_e = new int[ib.field_l];
+          ProxyAuthenticationRequiredException.field_e = new int[ib.field_l];
           h.field_j = 0;
           for (var2_int = 0; var2_int < ib.field_l; var2_int++) {
             if (var2_int != 14 &&
@@ -56,7 +56,7 @@ final class GzipDecompressor {
               var2_int != 66) {
               fieldTemp$0 = h.field_j;
               h.field_j = h.field_j + 1;
-              wl.field_e[fieldTemp$0] = var2_int;
+              ProxyAuthenticationRequiredException.field_e[fieldTemp$0] = var2_int;
             }
           }
           ue.field_j = new int[ib.field_k];

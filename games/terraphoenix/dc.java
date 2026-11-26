@@ -115,7 +115,7 @@ final class dc {
     }
 
     dc(boolean param0) {
-        this.field_f = wb.field_c;
+        this.field_f = ProxyAuthenticationRequiredException.field_c;
         this.field_h = ea.field_n;
         this.field_k = pl.field_Q;
         this.field_d = wh.field_a;

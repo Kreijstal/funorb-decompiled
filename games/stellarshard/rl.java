@@ -114,7 +114,7 @@ final class rl {
               of.field_F = false;
               var3_int = 1;
             }
-            ph.a(cd.h(-1064120735), 2, qf.field_a, ia.l(50), var3_int != 0);
+            ph.a(cd.h(-1064120735), 2, PcmOutputWorker.field_a, ia.l(50), var3_int != 0);
           } else {
             if (gh.b((byte) 105)) {
               if (eg.field_d == 0) {

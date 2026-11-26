@@ -368,7 +368,7 @@ final class qh extends kj implements tl, sg {
         RuntimeException var6 = null;
         try {
           if (this.field_K == param0) {
-            bj.a(120);
+            ProxyAuthenticationRequiredException.a(120);
             this.field_Q.o(77);
           }
           if (param4) {

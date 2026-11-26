@@ -177,7 +177,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           MixedSupport029.stringArrayState0011[3] = MixedSupport053.stringState0223;
           MixedSupport029.stringArrayState0011[4] = MixedSupport062.stringState0262;
           MixedSupport029.stringArrayState0011[1] = MixedSupport131.stringState0569;
-          MixedSupport029.stringArrayState0011[0] = PlatformSupport002.stringState0124;
+          MixedSupport029.stringArrayState0011[0] = DelegatingCanvas.stringState0124;
           RenderingSupport004.sceneWidgetState0039 = new SceneWidget(0L, (SceneWidget) null);
           MixedSupport048.sceneWidgetState0041 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
           MixedSupport072.sceneWidgetState0071 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport006.stringState0031);

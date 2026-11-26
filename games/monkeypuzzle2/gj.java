@@ -46,7 +46,7 @@ final class gj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ff.a(false, param9, param12, param3);
+          PcmOutputWorker.a(false, param9, param12, param3);
           wf.a(param10, param17, param0, 8192, param16);
           if (param15 >= -88) {
             field_c = (int[]) null;

@@ -184,11 +184,11 @@ final class df implements uk {
               var11 = fj.field_b[var9];
               var6[0][var10] = wj.field_t[var11];
               var20[0][var10 * 4] = se.field_B[var11];
-              var20[0][4 * var10 + 1] = qf.field_g[var11];
+              var20[0][4 * var10 + 1] = PcmOutputWorker.field_g[var11];
               var20[0][2 + var10 * 4] = wb.field_e[var11];
               var20[0][4 * var10 + 3] = vc.field_f[var11];
               if (hk.a(120, wj.field_t[var11]) &&
-                vc.field_f[var11] + qf.field_g[var11] + wb.field_e[var11] == 0) {
+                vc.field_f[var11] + PcmOutputWorker.field_g[var11] + wb.field_e[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -202,11 +202,11 @@ final class df implements uk {
               var11Lifetime1 = fj.field_b[var9Lifetime1 + var5];
               var6[1][var15] = wj.field_t[var11Lifetime1];
               var20[1][4 * var15] = se.field_B[var11Lifetime1];
-              var20[1][4 * var15 + 1] = qf.field_g[var11Lifetime1];
+              var20[1][4 * var15 + 1] = PcmOutputWorker.field_g[var11Lifetime1];
               var20[1][4 * var15 + 2] = wb.field_e[var11Lifetime1];
               var20[1][3 + var15 * 4] = vc.field_f[var11Lifetime1];
               if (hk.a(112, wj.field_t[var11Lifetime1]) &&
-                0 == qf.field_g[var11Lifetime1] - (-wb.field_e[var11Lifetime1] - vc.field_f[var11Lifetime1])) {
+                0 == PcmOutputWorker.field_g[var11Lifetime1] - (-wb.field_e[var11Lifetime1] - vc.field_f[var11Lifetime1])) {
                 var6[1][var15] = null;
                 var15--;
               }

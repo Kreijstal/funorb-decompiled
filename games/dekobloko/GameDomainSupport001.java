@@ -39,7 +39,7 @@ final class GameDomainSupport001 {
           GameDomainSupport001.performAction0092((byte) -17);
         }
         UiComponentPart031.performAction1598((byte) -121);
-        DiagnosticSupport001.performAction0335(booleanArgument1);
+        ProxyAuthenticationRequiredException.performAction0335(booleanArgument1);
         MixedSupport097.sceneWidgetPart007State0001 = null;
         MixedSupport099.performAction1230(false);
     }
@@ -156,8 +156,8 @@ final class GameDomainSupport001 {
           TranslatedUiText.sceneWidgetState0086.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 116, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "heading"));
           MixedSupport143.sceneWidgetState0146 = new SceneWidget(0L, (SceneWidget) null);
           MixedSupport143.sceneWidgetState0146.rgbSpriteArrayState0033 = RenderingSupport012.computeRgbSpriteArray1346(false, 120, false, 8421504, 4210752, -26198);
-          DiagnosticSupport001.sceneWidgetState0017 = new SceneWidget(0L, (SceneWidget) null);
-          DiagnosticSupport001.sceneWidgetState0017.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0390(1, -20982, 3, 114, 6316128, 6316128);
+          ProxyAuthenticationRequiredException.sceneWidgetState0017 = new SceneWidget(0L, (SceneWidget) null);
+          ProxyAuthenticationRequiredException.sceneWidgetState0017.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0390(1, -20982, 3, 114, 6316128, 6316128);
           MixedSupport005.sceneWidgetState0002 = new SceneWidget(0L, (SceneWidget) null);
           MixedSupport005.sceneWidgetState0002.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 126, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "popup"));
           rgbSpriteArrayLocal32 = RenderingSupport002.computeRgbSpriteArray0239((byte) 118, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "popup_mouseover"));

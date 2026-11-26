@@ -29,7 +29,7 @@ final class o {
           IntrusiveDeque.field_c[4] = fj.field_R;
           IntrusiveDeque.field_c[19] = IntrusiveNode.field_a;
           IntrusiveDeque.field_c[3] = c.field_b;
-          IntrusiveDeque.field_c[27] = dj.field_a;
+          IntrusiveDeque.field_c[27] = ProxyAuthenticationRequiredException.field_a;
           IntrusiveDeque.field_c[10] = nh.field_d;
           IntrusiveDeque.field_c[0] = jd.field_h;
           IntrusiveDeque.field_c[24] = AccountCreationResultPanel.field_qb;
@@ -48,7 +48,7 @@ final class o {
         IntrusiveDeque.field_c[4] = fj.field_R;
         IntrusiveDeque.field_c[19] = IntrusiveNode.field_a;
         IntrusiveDeque.field_c[3] = c.field_b;
-        IntrusiveDeque.field_c[27] = dj.field_a;
+        IntrusiveDeque.field_c[27] = ProxyAuthenticationRequiredException.field_a;
         IntrusiveDeque.field_c[10] = nh.field_d;
         IntrusiveDeque.field_c[0] = jd.field_h;
         IntrusiveDeque.field_c[24] = AccountCreationResultPanel.field_qb;

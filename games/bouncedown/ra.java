@@ -64,11 +64,11 @@ final class ra extends oa {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new tk(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new tk("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_10_0 = var13;
@@ -133,7 +133,7 @@ final class ra extends oa {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        tk var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Bounce.field_N;
@@ -187,15 +187,15 @@ final class ra extends oa {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (tk) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, (byte) -37);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (tk decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (tk) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

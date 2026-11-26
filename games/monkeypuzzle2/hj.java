@@ -820,7 +820,7 @@ final class hj {
             this.i(0);
             AccountNameAvailabilityValidator.f(8500);
             eb.d((byte) -93);
-            ff.a(this.field_O, -6961);
+            PcmOutputWorker.a(this.field_O, -6961);
             if (ub.field_a) {
               this.field_J = jf.a(-2147483648);
             }
@@ -1123,7 +1123,7 @@ final class hj {
                       sb.field_r.a(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, sb.field_r.field_C, 1, -1);
                       this.field_f.e();
                       lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
-                      sb.field_r.a(gg.a(new String[]{Integer.toString(this.field_I)}, ff.field_a, true), 170, sb.field_r.field_C, 1, -1);
+                      sb.field_r.a(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, sb.field_r.field_C, 1, -1);
                       ac.field_a.setAsRasterTarget((byte) 119);
                       if (IterableNodeHashTable.field_c == 19) {
                         e.a(254, (byte) 40, 1);
@@ -1146,7 +1146,7 @@ final class hj {
                       }
                     }
                     nh.b((byte) 107);
-                    ff.a(this.field_O, -6961);
+                    PcmOutputWorker.a(this.field_O, -6961);
                     AccountNameAvailabilityValidator.f(8500);
                     this.d((byte) 56);
                     if (this.field_u != 2 &&

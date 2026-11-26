@@ -36,42 +36,42 @@ abstract class qd extends vk {
           }
           return;
         }
-        if (le.field_c == null) {
-          le.field_c = new Sprite(this.field_i, this.field_f);
-          bc.a(le.field_c, 26095);
+        if (ProxyAuthenticationRequiredException.field_c == null) {
+          ProxyAuthenticationRequiredException.field_c = new Sprite(this.field_i, this.field_f);
+          bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
           SoftwareRasterizer.clearRaster();
           this.c(0, (byte) 73, 0);
           super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
-          le.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
+          ProxyAuthenticationRequiredException.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
           return;
         }
-        if (le.field_c.field_u < this.field_i) {
-          le.field_c = new Sprite(this.field_i, this.field_f);
-          bc.a(le.field_c, 26095);
+        if (ProxyAuthenticationRequiredException.field_c.field_u < this.field_i) {
+          ProxyAuthenticationRequiredException.field_c = new Sprite(this.field_i, this.field_f);
+          bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
           SoftwareRasterizer.clearRaster();
           this.c(0, (byte) 73, 0);
           super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
-          le.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
+          ProxyAuthenticationRequiredException.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
           return;
         }
-        if (le.field_c.field_v >= this.field_f) {
-          bc.a(le.field_c, 26095);
+        if (ProxyAuthenticationRequiredException.field_c.field_v >= this.field_f) {
+          bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
           SoftwareRasterizer.clearRaster();
           this.c(0, (byte) 73, 0);
           super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
-          le.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
+          ProxyAuthenticationRequiredException.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
           return;
         }
-        le.field_c = new Sprite(this.field_i, this.field_f);
-        bc.a(le.field_c, 26095);
+        ProxyAuthenticationRequiredException.field_c = new Sprite(this.field_i, this.field_f);
+        bc.a(ProxyAuthenticationRequiredException.field_c, 26095);
         SoftwareRasterizer.clearRaster();
         this.c(0, (byte) 73, 0);
         super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
         wf.a(param2 ^ -15);
-        le.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
+        ProxyAuthenticationRequiredException.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
     }
 
     final static void a(int param0, int param1) {

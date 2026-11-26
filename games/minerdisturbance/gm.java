@@ -34,7 +34,7 @@ final class gm {
             }
             break;
           }
-          pa.field_a[var1_int] = RawPcmStream.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
+          pa.field_a[var1_int] = RawPcmStream.a(re.field_a[BufferedSocket.a((byte) -73, 5) + 25], 100, oc.field_f);
           mg.a(1963987425, pa.field_a[var1_int]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

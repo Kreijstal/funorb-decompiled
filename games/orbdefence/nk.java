@@ -212,7 +212,7 @@ final class nk {
         var10 = 0;
         do {
           if (!(var10 < var26.field_v.length)) {
-            cb.field_a.a(-40);
+            BufferedSocket.field_a.a(-40);
             break;
           }
           var11 = var26.field_v[var10];
@@ -432,7 +432,7 @@ final class nk {
           stackIn_141_3 = jl.field_f;
         }
         stackIn_140_1[stackIn_140_2] = stackIn_141_3;
-        stackIn_140_0[8] = bk.field_b;
+        stackIn_140_0[8] = ProxyAuthenticationRequiredException.field_b;
         stackIn_140_0[9] = k.field_a;
         stackIn_140_0[10] = bi.field_a;
         stackIn_140_0[11] = bi.field_a;
@@ -2043,7 +2043,7 @@ final class nk {
             }
           }
           stackIn_110_0 = (tc.field_b > 0) ? 0 : 7;
-          bk.field_e = stackIn_110_0;
+          ProxyAuthenticationRequiredException.field_e = stackIn_110_0;
           return;
         }
         da.field_b = da.field_b + 1;
@@ -2442,7 +2442,7 @@ final class nk {
               this.field_p = vl.field_d;
               this.field_e = ua.field_a;
             }
-            cb.field_a.a(param0 - 28843);
+            BufferedSocket.field_a.a(param0 - 28843);
             if (this.field_h < 192) {
               this.field_h = 192;
             }

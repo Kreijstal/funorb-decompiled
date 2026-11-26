@@ -26,7 +26,7 @@ final class wb {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (tl.a(param2, (byte) -5, param1, param0)) {
+          if (ProxyAuthenticationRequiredException.a(param2, (byte) -5, param1, param0)) {
             stackIn_7_0 = ma.a(false);
             return stackIn_7_0;
           }

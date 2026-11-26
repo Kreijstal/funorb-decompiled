@@ -57,7 +57,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         mj.field_i = de.createMouseWheelInput((byte) -112);
         l.a(GameAppletShell.field_f, 59);
         pj.field_p = param3;
-        cb.field_e = param5;
+        BufferedSocket.field_e = param5;
         ve.field_Q = param6;
         oc.field_V = param4;
         nl.field_b = param2;
@@ -74,7 +74,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = GameAppletShell.field_c - 1;
         byte[] var5 = new byte[var4];
         cd.field_t.a(-29, 0, var5, var4);
-        ke.a(bk.a(var5, -12465), var3 != 0, (byte) -94, uj.b((byte) -120));
+        ke.a(ProxyAuthenticationRequiredException.a(var5, -12465), var3 != 0, (byte) -94, uj.b((byte) -120));
     }
 
     final void a(int param0, String param1, byte param2) {
@@ -558,7 +558,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (vh.field_n == 1) {
           if (wj.field_m != 0) {
-            lf.field_a = qk.a(cb.field_e, -32585);
+            lf.field_a = qk.a(BufferedSocket.field_e, -32585);
           }
           og.field_g = hm.a(48, true, false, oc.field_V, 1);
           am.field_b = hm.a(48, true, false, ve.field_Q, 1);

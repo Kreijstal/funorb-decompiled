@@ -8,7 +8,7 @@ class AudioOutput {
     private static int field_l;
     private long field_i;
     private boolean field_c;
-    private static fd field_t;
+    private static PcmOutputWorker field_t;
     static int field_r;
     private PcmStream field_q;
     private int field_m;
@@ -184,7 +184,7 @@ class AudioOutput {
               ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_f);
               if (field_l > 0 &&
                 field_t == null) {
-                field_t = new fd();
+                field_t = new PcmOutputWorker();
                 field_t.field_b = param0;
                 param0.requestThreadStart((Runnable) ((Object) field_t), false, field_l);
               }
@@ -391,7 +391,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_t.field_d = true;
             while (field_t.field_c) {
-              ge.sleepMillis(0, 50L);
+              BufferedSocket.sleepMillis(0, 50L);
             }
             field_t = null;
           }

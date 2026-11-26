@@ -115,7 +115,7 @@ final class jn extends fc {
             var5 = var9;
             var6 = param4;
             var7 = param3;
-            var9[var6] = var7 + ua.a(8355711, var9[var6] >> 1);
+            var9[var6] = var7 + PcmOutputWorker.a(8355711, var9[var6] >> 1);
             param4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

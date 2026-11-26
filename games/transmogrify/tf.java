@@ -184,7 +184,7 @@ final class tf {
               AccountServiceResult.field_d[1] = 5;
             }
           } else {
-            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(ef.field_c, new String[]{"<br><%0><br>"}, (byte) -53), GameKeyHandler.field_b, (byte) -80);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(PcmOutputWorker.field_c, new String[]{"<br><%0><br>"}, (byte) -53), GameKeyHandler.field_b, (byte) -80);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(nc.field_r[var5])) {
@@ -302,7 +302,7 @@ final class tf {
             }
           }
           ic.field_b = wd.field_j - (var3_intLifetime1 >> 1);
-          jd.field_a = wd.field_j - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
+          ProxyAuthenticationRequiredException.field_a = wd.field_j - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
           mf.field_d = (ee.field_D + jl.field_o << 1) * bk.field_c.field_a;
           for (var4Lifetime2 = 0; var4Lifetime2 < qb.field_f.length; var4Lifetime2++) {
             stackIn_113_0 = mf.field_d;

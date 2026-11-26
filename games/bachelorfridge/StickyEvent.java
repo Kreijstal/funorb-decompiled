@@ -307,7 +307,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_x_dropped_out");
                 if (null != var2) {
-                  kc.field_a = qq.a(var2, false);
+                  PcmOutputWorker.field_a = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_entered_other_game");
                 if (null != var2) {

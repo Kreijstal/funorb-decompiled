@@ -26,14 +26,14 @@ final class cj extends IntrusiveNode {
             return null;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = ck.a(var6, (byte) -48);
+          var2 = ProxyAuthenticationRequiredException.a(var6, (byte) -48);
           if (var2 == null) {
             var2 = param1;
           }
           var3 = (hc) (cl.field_P.a((long)var2.hashCode(), true));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_R);
-            var4_ref_String = ck.a(var7, (byte) -48);
+            var4_ref_String = ProxyAuthenticationRequiredException.a(var7, (byte) -48);
             if (var4_ref_String == null) {
               var4_ref_String = var3.field_R;
             }

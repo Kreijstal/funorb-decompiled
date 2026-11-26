@@ -293,9 +293,9 @@ abstract class ResourceSupport002 implements CallbackContract011 {
     }
 
     final static void performAction0085(int integerArgument1, int integerArgument2, int integerArgument3) {
-        if (null == DiagnosticSupport001.integerArrayState0030 ||
-          !(DiagnosticSupport001.integerArrayState0030.length >= integerArgument2)) {
-          DiagnosticSupport001.integerArrayState0030 = new int[2 * integerArgument2];
+        if (null == ProxyAuthenticationRequiredException.integerArrayState0030 ||
+          !(ProxyAuthenticationRequiredException.integerArrayState0030.length >= integerArgument2)) {
+          ProxyAuthenticationRequiredException.integerArrayState0030 = new int[2 * integerArgument2];
         }
         if (ResourceSupport001.integerArrayState0012 == null ||
           !(ResourceSupport001.integerArrayState0012.length >= integerArgument2)) {

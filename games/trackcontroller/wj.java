@@ -68,7 +68,7 @@ abstract class wj {
           return;
         }
         if (null == AsyncRequest.field_u) {
-          AccountCreationResultPanel.field_rb = dj.a(0, 480, 640, (byte) 96, rg.field_c, 0);
+          AccountCreationResultPanel.field_rb = ProxyAuthenticationRequiredException.a(0, 480, 640, (byte) 96, rg.field_c, 0);
           if (AccountCreationResultPanel.field_rb == null) {
             var3Lifetime1 = 3;
           } else {

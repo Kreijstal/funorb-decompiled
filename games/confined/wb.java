@@ -2769,7 +2769,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_button_cancel", (byte) 76);
                 if (var2 != null) {
-                  sb.field_i = va.a(0, var2);
+                  PcmOutputWorker.field_i = va.a(0, var2);
                 }
                 var2 = ha.a("fs_accept_aftercancel", (byte) 27);
                 if (var2 != null) {

@@ -9,7 +9,7 @@ final class kl extends pm {
     static String field_H;
     double[] field_I;
     static oc[] field_R;
-    static vd field_G;
+    static BufferedSocket field_G;
     double[] field_T;
     private int[] field_L;
     double[] field_S;
@@ -32,7 +32,7 @@ final class kl extends pm {
     final void a(kh param0, int param1) {
         try {
           if (param1 <= 122) {
-            field_G = (vd) null;
+            field_G = (BufferedSocket) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "kl.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

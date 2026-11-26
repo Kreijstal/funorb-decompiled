@@ -366,7 +366,7 @@ final class DisplayModeController {
         int integerLocal4;
         int integerLocal5;
         int integerLocal6;
-        DiagnosticSupport001.integerArrayState0030[UiComponentPart021.integerState0556] = integerArgument1;
+        ProxyAuthenticationRequiredException.integerArrayState0030[UiComponentPart021.integerState0556] = integerArgument1;
         MixedSupport017.integerArrayState0022[UiComponentPart021.integerState0556] = UiComponentPart021.integerState0556;
         ResourceSupport001.integerArrayState0012[UiComponentPart021.integerState0556] = integerArgument4;
         if (RenderingSupport003.integerState0252 > integerArgument4) {

@@ -28,7 +28,7 @@ final class rc extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1) {
-        fd.a(ca.field_c[param1], jd.field_c[param1], false);
+        fd.a(ca.field_c[param1], BufferedSocket.field_c[param1], false);
         if (param0 != 111) {
           field_k = (RgbSprite[]) null;
         }

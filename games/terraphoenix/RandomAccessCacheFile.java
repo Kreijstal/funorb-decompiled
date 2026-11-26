@@ -324,11 +324,11 @@ final class RandomAccessCacheFile {
             rf.field_p[var4Lifetime3] = var18.readUnsignedShort(-25578);
           }
           var18.position = -((-1 + var3) * 3) + (-7 + param0.length) - kf.field_b * 8;
-          wb.field_a = new int[var3];
+          ProxyAuthenticationRequiredException.field_a = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            wb.field_a[var4Lifetime4] = var18.readUnsignedMedium((byte) -113);
-            if (wb.field_a[var4Lifetime4] == 0) {
-              wb.field_a[var4Lifetime4] = 1;
+            ProxyAuthenticationRequiredException.field_a[var4Lifetime4] = var18.readUnsignedMedium((byte) -113);
+            if (ProxyAuthenticationRequiredException.field_a[var4Lifetime4] == 0) {
+              ProxyAuthenticationRequiredException.field_a[var4Lifetime4] = 1;
             }
           }
           var18.position = 0;

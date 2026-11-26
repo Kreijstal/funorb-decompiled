@@ -28,12 +28,12 @@ final class jf {
 
     final static int[] a(int param0, boolean param1, int param2) {
         int var3 = jg.a(param0, true);
-        int var4 = tk.a(-822, param0);
+        int var4 = ProxyAuthenticationRequiredException.a(-822, param0);
         if (param1) {
           field_g = (String) null;
         }
         int var5 = jg.a(param2, true);
-        int var6 = tk.a(-822, param2);
+        int var6 = ProxyAuthenticationRequiredException.a(-822, param2);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -665,7 +665,7 @@ final class jf {
           var6Lifetime1 = oa.field_a << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = jg.a(var6Lifetime1, true) >> 8;
-          var9Lifetime1 = tk.a(-822, var6Lifetime1) >> 8;
+          var9Lifetime1 = ProxyAuthenticationRequiredException.a(-822, var6Lifetime1) >> 8;
           if (uc.field_C != -1 &&
             ll.field_y != -1) {
             var7Lifetime1 = -320 + uc.field_C;

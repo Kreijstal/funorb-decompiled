@@ -77,11 +77,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (-1 != var11) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new dj(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new dj("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_13_0 = var13;
@@ -205,7 +205,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var11 = null;
         java.net.Proxy var12 = null;
         java.net.Socket var13 = null;
-        dj var13_ref = null;
+        ProxyAuthenticationRequiredException var13_ref = null;
         IOException var13_ref2 = null;
         int var14 = 0;
         var14 = TrackController.field_F ? 1 : 0;
@@ -257,15 +257,15 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = var9[var10];
           var12 = (java.net.Proxy) (var11);
           try {
-            if (false) throw (dj) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var13 = this.a(var12, (byte) 66);
             if (var13 != null) {
               stackIn_23_0 = var13;
               return stackIn_23_0;
             }
-          } catch (dj decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var13_ref = (dj) (Object) decompiledCaughtException;
+            var13_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var8 = var13_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

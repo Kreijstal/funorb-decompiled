@@ -266,7 +266,7 @@ abstract class hl extends ej {
           if (param1 < 104) {
             field_N = (ki) null;
           }
-          cb.a(5000, (java.awt.Component) ((Object) param0));
+          BufferedSocket.a(5000, (java.awt.Component) ((Object) param0));
           if (mj.field_i == null) {
             return;
           }

@@ -40,7 +40,7 @@ final class fl {
         RuntimeException var2_ref = null;
         var5 = Bounce.field_N;
         try {
-          if (tk.field_b == null) {
+          if (ProxyAuthenticationRequiredException.field_b == null) {
             stackIn_3_0 = null;
             return (fb) (stackIn_3_0);
           }
@@ -52,7 +52,7 @@ final class fl {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (fb) (tk.field_b.a((long)var2.hashCode(), 0));
+          var3 = (fb) (ProxyAuthenticationRequiredException.field_b.a((long)var2.hashCode(), 0));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_ob);
             var4 = ce.a(var7, 0);
@@ -63,7 +63,7 @@ final class fl {
               stackIn_16_0 = var3;
               return stackIn_16_0;
             }
-            var3 = (fb) (tk.field_b.b(0));
+            var3 = (fb) (ProxyAuthenticationRequiredException.field_b.b(0));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

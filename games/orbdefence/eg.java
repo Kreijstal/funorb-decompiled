@@ -42,7 +42,7 @@ final class eg extends fg {
           if (!fe.c((byte) -121)) {
             return true;
           }
-          if (0 >= cb.field_j) {
+          if (0 >= BufferedSocket.field_j) {
             return false;
           }
           if (!ld.a((byte) 85)) {
@@ -56,7 +56,7 @@ final class eg extends fg {
         if (!fe.c((byte) -121)) {
           return true;
         }
-        if (0 >= cb.field_j) {
+        if (0 >= BufferedSocket.field_j) {
           return false;
         }
         if (!ld.a((byte) 85)) {

@@ -236,7 +236,7 @@ final class gh extends lc implements ki, rc, rf {
         this.field_K = new wd(AccountServiceResult.field_e, (sk) null);
         this.field_F.field_q = ej.field_e;
         this.field_B.field_q = ta.field_d;
-        this.field_C.field_q = pc.field_c;
+        this.field_C.field_q = BufferedSocket.field_c;
         this.field_A.field_q = AccountServiceResult.field_b;
         this.field_E.field_q = fd.field_o;
         this.field_J.field_q = FullscreenFocusCanvas.field_b;

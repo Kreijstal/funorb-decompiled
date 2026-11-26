@@ -161,7 +161,7 @@ final class ud {
     }
 
     final static void a(int param0) {
-        ff.a(true, -125, ac.field_c, v.field_b);
+        PcmOutputWorker.a(true, -125, ac.field_c, v.field_b);
         ja.field_F = true;
         if (param0 < 42) {
           field_a = 104;

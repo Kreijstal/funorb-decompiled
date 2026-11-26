@@ -1,0 +1,39 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class ProxyAuthenticationRequiredException extends IOException {
+    static String field_a;
+    static int field_c;
+    static int field_b;
+
+    final static boolean a(int param0) {
+        int var1 = 64 % ((param0 + 52) / 39);
+        if (null == kl.field_G) {
+          return false;
+        }
+        if (wd.field_f == lk.field_d) {
+          return true;
+        }
+        return false;
+    }
+
+    public static void resetStaticState(byte param0) {
+        if (param0 >= -86) {
+          field_c = -28;
+          field_a = null;
+          return;
+        }
+        field_a = null;
+    }
+
+    ProxyAuthenticationRequiredException(String param0) {
+        super(param0);
+    }
+
+    static {
+        field_a = "Hard Difficulty";
+        field_c = -1;
+    }
+}

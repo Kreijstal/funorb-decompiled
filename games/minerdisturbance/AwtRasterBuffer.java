@@ -4,7 +4,7 @@
 abstract class AwtRasterBuffer {
     static double field_k;
     java.awt.Image field_g;
-    static ll field_i;
+    static BufferedSocket field_i;
     int field_c;
     int[] field_f;
     static byte[][] field_a;
@@ -47,7 +47,7 @@ abstract class AwtRasterBuffer {
 
     final static boolean a(int param0) {
         if (param0 <= 36) {
-          field_i = (ll) null;
+          field_i = (BufferedSocket) null;
           if (fh.field_b < 10) {
             return false;
           }

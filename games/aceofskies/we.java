@@ -44,7 +44,7 @@ final class we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1_ref), "we.C(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1_ref), "we.C(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class we {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class we {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 

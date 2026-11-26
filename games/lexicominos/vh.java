@@ -27,7 +27,7 @@ final class vh {
           }
           var2 = ci.field_f.beginForward(true);
           while (var2 != null) {
-            ck.a(param1, 2);
+            ProxyAuthenticationRequiredException.a(param1, 2);
             var2 = ci.field_f.nextForward(2);
           }
           return;

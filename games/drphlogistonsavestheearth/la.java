@@ -234,7 +234,7 @@ final class la {
               fieldTemp$0 = fg.field_j;
               fg.field_j = fg.field_j + 1;
               var5.field_tb = fieldTemp$0;
-              fb.field_g.addLast(var5, 255);
+              PcmOutputWorker.field_g.addLast(var5, 255);
             }
             var5.field_V = var4_ref_String;
             return;

@@ -6,7 +6,7 @@ import java.io.*;
 final class PlatformTaskDispatcher implements Runnable {
     private boolean shutdownRequested;
     ee field_q;
-    private sl field_r;
+    private DirectDrawFullscreenManager field_r;
     ee field_l;
     static String field_c;
     ee[] field_v;
@@ -19,7 +19,7 @@ final class PlatformTaskDispatcher implements Runnable {
     boolean privilegedTasksEnabled;
     private static String field_e;
     private PlatformTask queueTail;
-    private tl field_a;
+    private Win32CursorManager field_a;
     static String field_h;
     private static int field_t;
     private static String field_g;
@@ -197,7 +197,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          ab var3_ref = null;
+          ProxyAuthenticationRequiredException var3_ref = null;
           ee var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
@@ -255,11 +255,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (ab) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.result = qj.a(27, (String) (var8.objectArgument), var8.intArgument).a(31067);
-                    } catch (ab decompiledCaughtParameter1) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var3_ref = (ab) (Object) decompiledCaughtException;
+                      var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref.getMessage();
                       throw var3_ref;
                     }
@@ -317,7 +317,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.microsoftJvm) {
                           var8.result = Class.forName("hc").getMethod("listmodes", new Class[]{}).invoke(this.field_p, new Object[]{});
                         } else {
-                          var8.result = this.field_r.a((byte) 113);
+                          var8.result = this.field_r.listDisplayModes((byte) 113);
                         }
                         break;
                       case 6:
@@ -325,14 +325,14 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.result = var13;
                         var13.setResizable(false);
                         if (this.microsoftJvm) {
-                          this.field_r.a(65535 & var8.intArgument, var8.intArgument >>> 16, -7018, 65535 & var8.secondaryIntArgument, var13, var8.secondaryIntArgument >> 16);
+                          this.field_r.enterFullscreen(65535 & var8.intArgument, var8.intArgument >>> 16, -7018, 65535 & var8.secondaryIntArgument, var13, var8.secondaryIntArgument >> 16);
                         } else {
                           Class.forName("hc").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_p, new Object[]{var13, new Integer(var8.intArgument >>> 16), new Integer(var8.intArgument & 65535), new Integer(var8.secondaryIntArgument >> 16), new Integer(65535 & var8.secondaryIntArgument)});
                         }
                         break;
                       case 7:
                         if (this.microsoftJvm) {
-                          this.field_r.a((java.awt.Frame) (var8.objectArgument), -7738);
+                          this.field_r.restoreDisplayMode((java.awt.Frame) (var8.objectArgument), -7738);
                         } else {
                           Class.forName("hc").getMethod("exit", new Class[]{}).invoke(this.field_p, new Object[]{});
                         }
@@ -350,7 +350,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.microsoftJvm) {
                             Class.forName("dm").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_j, new Object[]{new Integer(var3_int), new Integer(var4_int)});
                           } else {
-                            this.field_a.a(var4_int, -93, var3_int);
+                            this.field_a.setCursorPosition(var4_int, -93, var3_int);
                           }
                           break;
                         }
@@ -360,7 +360,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = stackIn_50_0;
                           var10 = (java.awt.Component) (var8.objectArgument);
                           if (this.microsoftJvm) {
-                            this.field_a.a(0, var3_int != 0, var10);
+                            this.field_a.setCursorVisible(0, var3_int != 0, var10);
                           } else {
                             Class.forName("dm").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_j, new Object[]{var10, new Boolean(var3_int != 0)});
                           }
@@ -493,7 +493,7 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        sl var6 = null;
+        DirectDrawFullscreenManager var6 = null;
         this.shutdownRequested = false;
         this.field_q = null;
         this.queueTail = null;
@@ -589,7 +589,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              var6 = new sl();
+              var6 = new DirectDrawFullscreenManager();
               this.field_r = var6;
             } else {
               this.field_p = Class.forName("hc").newInstance();
@@ -602,7 +602,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!this.microsoftJvm) {
               this.field_j = Class.forName("dm").newInstance();
             } else {
-              this.field_a = new tl();
+              this.field_a = new Win32CursorManager();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

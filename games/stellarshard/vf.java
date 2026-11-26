@@ -46,7 +46,7 @@ final class vf extends WidgetContainer implements oi {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (tl.a(param0, (byte) -5, param3, param2)) {
+          if (ProxyAuthenticationRequiredException.a(param0, (byte) -5, param3, param2)) {
             return dl.d((byte) 116);
           }
           return null;

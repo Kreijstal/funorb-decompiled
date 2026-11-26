@@ -89,7 +89,7 @@ final class lb {
             var14.unlink(57);
           } else {
             if (var2 == 1) {
-              var11 = (ha) (oa.field_d.beginForward((byte) 122));
+              var11 = (ha) (PcmOutputWorker.field_d.beginForward((byte) 122));
               if (var11 == null) {
                 th.a(103);
                 return;

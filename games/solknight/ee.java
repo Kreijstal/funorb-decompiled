@@ -129,7 +129,7 @@ final class ee extends IntrusiveNode {
             stackIn_42_0 = var6;
             stackIn_43_1 = !(var4 < 0);
             var7Lifetime1 = fa.a(stackIn_42_0, stackIn_43_1, (byte) 99);
-            var8Lifetime1 = sb.field_d - (var7Lifetime1 >> 1);
+            var8Lifetime1 = PcmOutputWorker.field_d - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + vg.field_N;
               if (bc.field_K.field_f != var4) {

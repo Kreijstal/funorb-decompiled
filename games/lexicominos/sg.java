@@ -498,7 +498,7 @@ final class sg {
                                                   }
                                                   if (this.field_c.d(0) &&
                                                     param1) {
-                                                    var4_int = this.a(false, ck.field_a, ef.field_a, -89);
+                                                    var4_int = this.a(false, ProxyAuthenticationRequiredException.field_a, ef.field_a, -89);
                                                     if (var4_int != -1) {
                                                       jf.field_I = var4_int;
                                                     }
@@ -993,7 +993,7 @@ final class sg {
             return null;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = ck.a(var6, (byte) -48);
+          var2 = ProxyAuthenticationRequiredException.a(var6, (byte) -48);
           if (var2 == null) {
             stackIn_14_0 = null;
             return (hc) (stackIn_14_0);
@@ -1004,7 +1004,7 @@ final class sg {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_R);
-            var4 = ck.a(var7, (byte) -48);
+            var4 = ProxyAuthenticationRequiredException.a(var7, (byte) -48);
             if (!var4.equals(var2)) {
               var3 = (hc) (pf.field_n.b(-109));
               continue;
@@ -1421,7 +1421,7 @@ final class sg {
               }
               if (hh.field_N.field_k) {
                 if (hh.field_N.field_j != null) {
-                  var2 = fd.field_a;
+                  var2 = PcmOutputWorker.field_a;
                   var14 = hh.field_N.field_j[jf.field_I];
                   var19 = hh.field_N.field_n[jf.field_I];
                   var6 = ul.a(AccountRequestState.field_d, hh.field_N, param0 ^ 52, jf.field_I);
@@ -1457,7 +1457,7 @@ final class sg {
                 var2 = ta.field_b;
               }
             } else {
-              var2 = fd.field_a;
+              var2 = PcmOutputWorker.field_a;
               jh.field_d.a(al.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
             }
             bi.field_a.a(var2, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
@@ -2007,7 +2007,7 @@ final class sg {
             }
             vg.field_d[14].field_g = this.field_d;
           }
-          this.field_c.a(this.a(ef.field_a, ck.field_a, 640), this.a(bk.field_b, sh.field_e, 640), param0 ^ 49);
+          this.field_c.a(this.a(ef.field_a, ProxyAuthenticationRequiredException.field_a, 640), this.a(bk.field_b, sh.field_e, 640), param0 ^ 49);
           if (param0 != -88) {
             var4 = (java.awt.Component) null;
             sg.a((java.awt.Component) null, -97);
@@ -2016,7 +2016,7 @@ final class sg {
             this.a(95, true, this.field_c.field_d);
           }
           if (nk.field_z != 0) {
-            this.field_j = ck.field_a;
+            this.field_j = ProxyAuthenticationRequiredException.field_a;
             this.field_o = ef.field_a;
           }
           if (null != this.field_m) {

@@ -373,7 +373,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wb.field_d = false;
+          ProxyAuthenticationRequiredException.field_d = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -564,7 +564,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           o.field_b = 1 + o.field_b & 31;
           var6 = this;
           synchronized (var6) {
-            uk.field_c = wb.field_d;
+            uk.field_c = ProxyAuthenticationRequiredException.field_d;
           }
           this.a(true);
           return;
@@ -672,7 +672,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ae.field_G.addFocusListener((java.awt.event.FocusListener) (this));
           ae.field_G.requestFocus();
           uk.field_c = true;
-          wb.field_d = true;
+          ProxyAuthenticationRequiredException.field_d = true;
           il.field_e = true;
           ai.field_h = false;
           SpriteState.field_x = ll.correctedCurrentTimeMillis(1000);
@@ -831,7 +831,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wb.field_d = true;
+          ProxyAuthenticationRequiredException.field_d = true;
           il.field_e = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -64,9 +64,9 @@ final class bm {
         pl.field_Q = var8.readLong((byte) 78);
         if (im.field_c != 2) {
           ji.field_k = 0;
-          wb.field_c = 0;
+          ProxyAuthenticationRequiredException.field_c = 0;
         } else {
-          wb.field_c = var8.readUnsignedShort(-25578);
+          ProxyAuthenticationRequiredException.field_c = var8.readUnsignedShort(-25578);
           ji.field_k = var8.readUnsignedMedium((byte) -114);
         }
         stackIn_11_0 = (var8.readUnsignedByte(-16384) != 1) ? 0 : 1;

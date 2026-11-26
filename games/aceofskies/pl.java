@@ -26,7 +26,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var1_ref = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var1_ref), "pl.C(" + param0 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var1_ref), "pl.C(" + param0 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class pl {
             int discarded$1 = this.a(45, 78);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var2), "pl.F(" + opcode + ',' + obfuscationGuard + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var2), "pl.F(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class pl {
           this.field_b = 1;
           this.field_a = (long)param0.field_f;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class pl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

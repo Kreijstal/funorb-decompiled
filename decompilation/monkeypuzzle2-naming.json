@@ -292,12 +292,28 @@
       "renamedSymbol": "C:ClientException"
     },
     {
+      "symbol": "C:eh",
+      "originalName": "eh",
+      "to": "Win32CursorManager",
+      "evidence": "Source-purpose review: final Win32 cursor manager extends com.ms.dll.Callback;owns five private fields,including two volatile window/procedure ints and one volatile visibility boolean. Package-visible no-argument constructor starts visibility true;synchronized final callback routes existing window messages through bound User32 cursor/window-procedure operations. Complete class and all helper/callback/constructor bodies reviewed across23games,plus all53incoming helper contexts and50class reference contexts. Preserve native-facing callback name/signature,volatile fields,Root.alloc lifetime,monitor regions,window procedure chain,full primitive domains,guards/recursion/partial writes and call/exception order. No native implementation repairs or callback leaf renames.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Win32CursorManager"
+    },
+    {
       "symbol": "C:fc",
       "originalName": "fc",
       "to": "GameApplet",
       "evidence": "Abstract Applet implementing Runnable and focus listener; owns the canvas and main loop.",
       "confidence": "reviewed",
       "renamedSymbol": "C:GameApplet"
+    },
+    {
+      "symbol": "C:ff",
+      "originalName": "ff",
+      "to": "PcmOutputWorker",
+      "evidence": "Source-purpose review: Runnable output worker with volatile two-slot PCM output array (existing AudioOutput/PcmPlayerService/AudioMixer names retained),two volatile running/stop flags,and retained system-task service. Package-visible constructor allocates two player slots and initializes both flags false;public final run services nonnull players through the already reviewed bound output serviceOutput method,sleeps via sleepMillis(10),and performs its original post-service helper call. All22run bodies,22constructors and22creation/task-registration contexts human read. Preserve run callback name,all field/method leaves,volatile declarations,flag placement,Exception/Throwable/finally routing,diagnostic wrappers,partial writes and call/allocation/exception order. Unrelated static helper bodies preserved without claiming their semantic review.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmOutputWorker"
     },
     {
       "symbol": "C:fh",
@@ -530,6 +546,14 @@
       "evidence": "Sentinel-based deque of IntrusiveNode with directional traversal, insertion and removal.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IntrusiveDeque"
+    },
+    {
+      "symbol": "C:pk",
+      "originalName": "pk",
+      "to": "DirectDrawFullscreenManager",
+      "evidence": "Source-purpose review: final DirectDraw-backed fullscreen manager implements IEnumModesCallback,owns one DirectDraw and shared static int count/int[] mode accumulator;public constructor initializes DirectDraw. Complete class and all73incoming method/65class use contexts across21games reviewed. Enumerates flat width,height,rgbBitCount,refreshRate records;switches a Frame into fullscreen and restores display mode/cooperative level. Preserve callback name/signature,public constructor,all fields/modifiers/guard paths,shared state,primitive domains,allocation/call/exception order. No native callback or implementation fixes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectDrawFullscreenManager"
     },
     {
       "symbol": "C:r",
@@ -1460,6 +1484,22 @@
       "renamedSymbol": "M:eg.clearStaticReferences(II)V"
     },
     {
+      "symbol": "M:eh.a(BII)V",
+      "originalName": "a",
+      "to": "setCursorPosition",
+      "evidence": "Source-purpose review: Calls bound Win32 User32.SetCursorPos with original per-game coordinate order. All incoming task dispatch/self-call contexts reviewed;preserve original guard values,conditional field writes,arithmetic exceptions,callback/self recursion and before/after native-call order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Win32CursorManager.setCursorPosition(BII)V"
+    },
+    {
+      "symbol": "M:eh.a(ZBLjava/awt/Component;)V",
+      "originalName": "a",
+      "to": "setCursorVisible",
+      "evidence": "Source-purpose review: Registers/root-retains a Win32 callback,loads the cursor,updates the retained window-procedure/visibility state under original monitors,and sends cursor-update messages for a Component. All incoming task dispatch/guard-call contexts reviewed;preserve boolean meaning,supplied SendMessage arguments,all early returns/field writes/guards/nulls/recursion and native-call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V"
+    },
+    {
       "symbol": "M:ej.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1537,7 +1577,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 7a9f1a92b756d80acb8c31e15054a562addc15d17662e958ee8731bf7f6f4140.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ff.clearStaticReferences(B)V"
+      "renamedSymbol": "M:PcmOutputWorker.clearStaticReferences(B)V"
     },
     {
       "symbol": "M:fh.a()Lfh;",
@@ -3636,6 +3676,30 @@
       "renamedSymbol": "M:IntrusiveDeque.isEmpty(I)Z"
     },
     {
+      "symbol": "M:pk.a(B)[I",
+      "originalName": "a",
+      "to": "listDisplayModes",
+      "evidence": "Source-purpose review: Calls bound DirectDraw.enumDisplayModes twice around shared flat-int mode array allocation,using callbackEnumModes to count/fill width,height,rgbBitCount,refreshRate records. Preserve each supplied enum flag,counter-reset argument,null/early-return/recursive guard path and partial writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.listDisplayModes(B)[I"
+    },
+    {
+      "symbol": "M:pk.a(IIIIILjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "enterFullscreen",
+      "evidence": "Source-purpose review: Makes a Frame visible,adjusts window styles through bound Win32.SetWindowLong,sets DirectDraw cooperative level/display mode and updates frame bounds/focus. Preserve per-game parameter order and semantics,including supplied visibility,window style/index and display-mode flags;retain all guard returns/nulls/recursion/exception and operation order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V"
+    },
+    {
+      "symbol": "M:pk.a(ILjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "restoreDisplayMode",
+      "evidence": "Source-purpose review: Calls bound DirectDraw.restoreDisplayMode followed by guarded/cooperative-level restoration on a Frame. Preserve caller-supplied cooperative flags,guard branches,arithmetic exceptions,static resets and recursive sibling calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.restoreDisplayMode(ILjava/awt/Frame;)V"
+    },
+    {
       "symbol": "M:q.a(B)V",
       "originalName": "a",
       "to": "resetStaticState",
@@ -5472,9 +5536,9 @@
     },
     {
       "symbol": "C:eh",
-      "renamedSymbol": "C:eh",
+      "renamedSymbol": "C:Win32CursorManager",
       "originalName": "eh",
-      "renamedName": "eh",
+      "renamedName": "Win32CursorManager",
       "declaration": {
         "file": "eh.java",
         "start": 50,
@@ -5604,9 +5668,9 @@
     },
     {
       "symbol": "C:ff",
-      "renamedSymbol": "C:ff",
+      "renamedSymbol": "C:PcmOutputWorker",
       "originalName": "ff",
-      "renamedName": "ff",
+      "renamedName": "PcmOutputWorker",
       "declaration": {
         "file": "ff.java",
         "start": 50,
@@ -7078,9 +7142,9 @@
     },
     {
       "symbol": "C:pk",
-      "renamedSymbol": "C:pk",
+      "renamedSymbol": "C:DirectDrawFullscreenManager",
       "originalName": "pk",
-      "renamedName": "pk",
+      "renamedName": "DirectDrawFullscreenManager",
       "declaration": {
         "file": "pk.java",
         "start": 50,
@@ -12908,7 +12972,7 @@
     },
     {
       "symbol": "F:eh.field_a:I",
-      "renamedSymbol": "F:eh.field_a:I",
+      "renamedSymbol": "F:Win32CursorManager.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -12919,7 +12983,7 @@
     },
     {
       "symbol": "F:eh.field_b:I",
-      "renamedSymbol": "F:eh.field_b:I",
+      "renamedSymbol": "F:Win32CursorManager.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -12930,7 +12994,7 @@
     },
     {
       "symbol": "F:eh.field_c:Z",
-      "renamedSymbol": "F:eh.field_c:Z",
+      "renamedSymbol": "F:Win32CursorManager.field_c:Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -12941,7 +13005,7 @@
     },
     {
       "symbol": "F:eh.field_d:Z",
-      "renamedSymbol": "F:eh.field_d:Z",
+      "renamedSymbol": "F:Win32CursorManager.field_d:Z",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -12952,7 +13016,7 @@
     },
     {
       "symbol": "F:eh.field_e:I",
-      "renamedSymbol": "F:eh.field_e:I",
+      "renamedSymbol": "F:Win32CursorManager.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -13634,7 +13698,7 @@
     },
     {
       "symbol": "F:ff.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ff.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmOutputWorker.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -13645,7 +13709,7 @@
     },
     {
       "symbol": "F:ff.field_b:Lmd;",
-      "renamedSymbol": "F:ff.field_b:LPlatformTaskDispatcher;",
+      "renamedSymbol": "F:PcmOutputWorker.field_b:LPlatformTaskDispatcher;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -13656,7 +13720,7 @@
     },
     {
       "symbol": "F:ff.field_c:[Lva;",
-      "renamedSymbol": "F:ff.field_c:[LAudioOutput;",
+      "renamedSymbol": "F:PcmOutputWorker.field_c:[LAudioOutput;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -13667,7 +13731,7 @@
     },
     {
       "symbol": "F:ff.field_d:Z",
-      "renamedSymbol": "F:ff.field_d:Z",
+      "renamedSymbol": "F:PcmOutputWorker.field_d:Z",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -13678,7 +13742,7 @@
     },
     {
       "symbol": "F:ff.field_e:[C",
-      "renamedSymbol": "F:ff.field_e:[C",
+      "renamedSymbol": "F:PcmOutputWorker.field_e:[C",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -13689,7 +13753,7 @@
     },
     {
       "symbol": "F:ff.field_f:Z",
-      "renamedSymbol": "F:ff.field_f:Z",
+      "renamedSymbol": "F:PcmOutputWorker.field_f:Z",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -13700,7 +13764,7 @@
     },
     {
       "symbol": "F:ff.field_g:I",
-      "renamedSymbol": "F:ff.field_g:I",
+      "renamedSymbol": "F:PcmOutputWorker.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -21367,7 +21431,7 @@
     },
     {
       "symbol": "F:md.field_g:Leh;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_g:Leh;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_g:LWin32CursorManager;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -21411,7 +21475,7 @@
     },
     {
       "symbol": "F:md.field_k:Lpk;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_k:Lpk;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_k:LDirectDrawFullscreenManager;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -24348,7 +24412,7 @@
     },
     {
       "symbol": "F:pk.field_a:I",
-      "renamedSymbol": "F:pk.field_a:I",
+      "renamedSymbol": "F:DirectDrawFullscreenManager.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -24359,7 +24423,7 @@
     },
     {
       "symbol": "F:pk.field_b:Lcom/ms/directX/DirectDraw;",
-      "renamedSymbol": "F:pk.field_b:Lcom/ms/directX/DirectDraw;",
+      "renamedSymbol": "F:DirectDrawFullscreenManager.field_b:Lcom/ms/directX/DirectDraw;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -24370,7 +24434,7 @@
     },
     {
       "symbol": "F:pk.field_c:[I",
-      "renamedSymbol": "F:pk.field_c:[I",
+      "renamedSymbol": "F:DirectDrawFullscreenManager.field_c:[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -29595,7 +29659,7 @@
     },
     {
       "symbol": "F:va.field_g:Lff;",
-      "renamedSymbol": "F:AudioOutput.field_g:Lff;",
+      "renamedSymbol": "F:AudioOutput.field_g:LPcmOutputWorker;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -59647,7 +59711,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#0",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#0",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#0",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -59658,7 +59722,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#1",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#1",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#1",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -59669,7 +59733,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#2",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#2",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#2",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -59680,7 +59744,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#3",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#3",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#3",
       "originalName": "stackIn_32_1",
       "renamedName": "stackIn_32_1",
       "declaration": {
@@ -59691,7 +59755,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#4",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#4",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -59702,7 +59766,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#5",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#5",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -59713,7 +59777,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#6",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#6",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -59724,7 +59788,7 @@
     },
     {
       "symbol": "L:eh.a(ZBLjava/awt/Component;)V#7",
-      "renamedSymbol": "L:eh.a(ZBLjava/awt/Component;)V#7",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -59735,7 +59799,7 @@
     },
     {
       "symbol": "L:eh.callback(IIII)I#0",
-      "renamedSymbol": "L:eh.callback(IIII)I#0",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -59746,7 +59810,7 @@
     },
     {
       "symbol": "L:eh.callback(IIII)I#1",
-      "renamedSymbol": "L:eh.callback(IIII)I#1",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#1",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -59757,7 +59821,7 @@
     },
     {
       "symbol": "L:eh.callback(IIII)I#2",
-      "renamedSymbol": "L:eh.callback(IIII)I#2",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#2",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -59768,7 +59832,7 @@
     },
     {
       "symbol": "L:eh.callback(IIII)I#3",
-      "renamedSymbol": "L:eh.callback(IIII)I#3",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -59779,7 +59843,7 @@
     },
     {
       "symbol": "L:eh.callback(IIII)I#4",
-      "renamedSymbol": "L:eh.callback(IIII)I#4",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#4",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -64014,7 +64078,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#0",
-      "renamedSymbol": "L:ff.a(II)V#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -64025,7 +64089,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#1",
-      "renamedSymbol": "L:ff.a(II)V#1",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -64036,7 +64100,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#10",
-      "renamedSymbol": "L:ff.a(II)V#10",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#10",
       "originalName": "dupTemp$9",
       "renamedName": "dupTemp$9",
       "declaration": {
@@ -64047,7 +64111,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#11",
-      "renamedSymbol": "L:ff.a(II)V#11",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#11",
       "originalName": "dupTemp$10",
       "renamedName": "dupTemp$10",
       "declaration": {
@@ -64058,7 +64122,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#12",
-      "renamedSymbol": "L:ff.a(II)V#12",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#12",
       "originalName": "dupTemp$11",
       "renamedName": "dupTemp$11",
       "declaration": {
@@ -64069,7 +64133,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#13",
-      "renamedSymbol": "L:ff.a(II)V#13",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#13",
       "originalName": "dupTemp$12",
       "renamedName": "dupTemp$12",
       "declaration": {
@@ -64080,7 +64144,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#14",
-      "renamedSymbol": "L:ff.a(II)V#14",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#14",
       "originalName": "dupTemp$13",
       "renamedName": "dupTemp$13",
       "declaration": {
@@ -64091,7 +64155,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#15",
-      "renamedSymbol": "L:ff.a(II)V#15",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#15",
       "originalName": "dupTemp$14",
       "renamedName": "dupTemp$14",
       "declaration": {
@@ -64102,7 +64166,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#16",
-      "renamedSymbol": "L:ff.a(II)V#16",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#16",
       "originalName": "dupTemp$15",
       "renamedName": "dupTemp$15",
       "declaration": {
@@ -64113,7 +64177,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#17",
-      "renamedSymbol": "L:ff.a(II)V#17",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#17",
       "originalName": "dupTemp$16",
       "renamedName": "dupTemp$16",
       "declaration": {
@@ -64124,7 +64188,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#18",
-      "renamedSymbol": "L:ff.a(II)V#18",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#18",
       "originalName": "dupTemp$17",
       "renamedName": "dupTemp$17",
       "declaration": {
@@ -64135,7 +64199,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#19",
-      "renamedSymbol": "L:ff.a(II)V#19",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#19",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -64146,7 +64210,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#2",
-      "renamedSymbol": "L:ff.a(II)V#2",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#2",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -64157,7 +64221,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#20",
-      "renamedSymbol": "L:ff.a(II)V#20",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#20",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -64168,7 +64232,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#21",
-      "renamedSymbol": "L:ff.a(II)V#21",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#21",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -64179,7 +64243,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#22",
-      "renamedSymbol": "L:ff.a(II)V#22",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#22",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -64190,7 +64254,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#23",
-      "renamedSymbol": "L:ff.a(II)V#23",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#23",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -64201,7 +64265,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#24",
-      "renamedSymbol": "L:ff.a(II)V#24",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#24",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -64212,7 +64276,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#25",
-      "renamedSymbol": "L:ff.a(II)V#25",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#25",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -64223,7 +64287,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#26",
-      "renamedSymbol": "L:ff.a(II)V#26",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#26",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -64234,7 +64298,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#27",
-      "renamedSymbol": "L:ff.a(II)V#27",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#27",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -64245,7 +64309,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#28",
-      "renamedSymbol": "L:ff.a(II)V#28",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#28",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -64256,7 +64320,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#29",
-      "renamedSymbol": "L:ff.a(II)V#29",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#29",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -64267,7 +64331,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#3",
-      "renamedSymbol": "L:ff.a(II)V#3",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#3",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -64278,7 +64342,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#30",
-      "renamedSymbol": "L:ff.a(II)V#30",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#30",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -64289,7 +64353,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#4",
-      "renamedSymbol": "L:ff.a(II)V#4",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#4",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -64300,7 +64364,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#5",
-      "renamedSymbol": "L:ff.a(II)V#5",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#5",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -64311,7 +64375,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#6",
-      "renamedSymbol": "L:ff.a(II)V#6",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#6",
       "originalName": "dupTemp$5",
       "renamedName": "dupTemp$5",
       "declaration": {
@@ -64322,7 +64386,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#7",
-      "renamedSymbol": "L:ff.a(II)V#7",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#7",
       "originalName": "dupTemp$6",
       "renamedName": "dupTemp$6",
       "declaration": {
@@ -64333,7 +64397,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#8",
-      "renamedSymbol": "L:ff.a(II)V#8",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#8",
       "originalName": "dupTemp$7",
       "renamedName": "dupTemp$7",
       "declaration": {
@@ -64344,7 +64408,7 @@
     },
     {
       "symbol": "L:ff.a(II)V#9",
-      "renamedSymbol": "L:ff.a(II)V#9",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)V#9",
       "originalName": "dupTemp$8",
       "renamedName": "dupTemp$8",
       "declaration": {
@@ -64355,7 +64419,7 @@
     },
     {
       "symbol": "L:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#0",
-      "renamedSymbol": "L:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -64366,7 +64430,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#0",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -64377,7 +64441,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#1",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#1",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -64388,7 +64452,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#2",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#2",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -64399,7 +64463,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#3",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#3",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -64410,7 +64474,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#4",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#4",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -64421,7 +64485,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#5",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#5",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -64432,7 +64496,7 @@
     },
     {
       "symbol": "L:ff.a(ZILbi;)I#6",
-      "renamedSymbol": "L:ff.a(ZILbi;)I#6",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILbi;)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -64443,7 +64507,7 @@
     },
     {
       "symbol": "L:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#0",
-      "renamedSymbol": "L:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZILjava/lang/String;Ljava/lang/String;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -64454,7 +64518,7 @@
     },
     {
       "symbol": "L:ff.a(ZLta;Lta;I)V#0",
-      "renamedSymbol": "L:ff.a(ZLta;Lta;I)V#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(ZLta;Lta;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -64465,7 +64529,7 @@
     },
     {
       "symbol": "L:ff.run()V#0",
-      "renamedSymbol": "L:ff.run()V#0",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -64476,7 +64540,7 @@
     },
     {
       "symbol": "L:ff.run()V#1",
-      "renamedSymbol": "L:ff.run()V#1",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -64487,7 +64551,7 @@
     },
     {
       "symbol": "L:ff.run()V#2",
-      "renamedSymbol": "L:ff.run()V#2",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -64498,7 +64562,7 @@
     },
     {
       "symbol": "L:ff.run()V#3",
-      "renamedSymbol": "L:ff.run()V#3",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#3",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -64509,7 +64573,7 @@
     },
     {
       "symbol": "L:ff.run()V#4",
-      "renamedSymbol": "L:ff.run()V#4",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -117573,7 +117637,7 @@
     },
     {
       "symbol": "L:pk.a(B)[I#0",
-      "renamedSymbol": "L:pk.a(B)[I#0",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(B)[I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -117584,7 +117648,7 @@
     },
     {
       "symbol": "L:pk.a(B)[I#1",
-      "renamedSymbol": "L:pk.a(B)[I#1",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(B)[I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -117595,7 +117659,7 @@
     },
     {
       "symbol": "L:pk.a(B)[I#2",
-      "renamedSymbol": "L:pk.a(B)[I#2",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(B)[I#2",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -117606,7 +117670,7 @@
     },
     {
       "symbol": "L:pk.a(B)[I#3",
-      "renamedSymbol": "L:pk.a(B)[I#3",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(B)[I#3",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -117617,7 +117681,7 @@
     },
     {
       "symbol": "L:pk.a(B)[I#4",
-      "renamedSymbol": "L:pk.a(B)[I#4",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(B)[I#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -117628,7 +117692,7 @@
     },
     {
       "symbol": "L:pk.a(IIIIILjava/awt/Frame;)V#0",
-      "renamedSymbol": "L:pk.a(IIIIILjava/awt/Frame;)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -117639,7 +117703,7 @@
     },
     {
       "symbol": "L:pk.a(IIIIILjava/awt/Frame;)V#1",
-      "renamedSymbol": "L:pk.a(IIIIILjava/awt/Frame;)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -117650,7 +117714,7 @@
     },
     {
       "symbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -117661,7 +117725,7 @@
     },
     {
       "symbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -117672,7 +117736,7 @@
     },
     {
       "symbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
-      "renamedSymbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -117683,7 +117747,7 @@
     },
     {
       "symbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
-      "renamedSymbol": "L:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -154709,9 +154773,9 @@
     },
     {
       "symbol": "M:eh.<init>()V",
-      "renamedSymbol": "M:eh.<init>()V",
+      "renamedSymbol": "M:Win32CursorManager.<init>()V",
       "originalName": "eh",
-      "renamedName": "eh",
+      "renamedName": "Win32CursorManager",
       "declaration": {
         "file": "eh.java",
         "start": 4036,
@@ -154720,9 +154784,9 @@
     },
     {
       "symbol": "M:eh.a(BII)V",
-      "renamedSymbol": "M:eh.a(BII)V",
+      "renamedSymbol": "M:Win32CursorManager.setCursorPosition(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCursorPosition",
       "declaration": {
         "file": "eh.java",
         "start": 2117,
@@ -154731,9 +154795,9 @@
     },
     {
       "symbol": "M:eh.a(ZBLjava/awt/Component;)V",
-      "renamedSymbol": "M:eh.a(ZBLjava/awt/Component;)V",
+      "renamedSymbol": "M:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCursorVisible",
       "declaration": {
         "file": "eh.java",
         "start": 2387,
@@ -154742,7 +154806,7 @@
     },
     {
       "symbol": "M:eh.callback(IIII)I",
-      "renamedSymbol": "M:eh.callback(IIII)I",
+      "renamedSymbol": "M:Win32CursorManager.callback(IIII)I",
       "originalName": "callback",
       "renamedName": "callback",
       "declaration": {
@@ -155655,9 +155719,9 @@
     },
     {
       "symbol": "M:ff.<init>()V",
-      "renamedSymbol": "M:ff.<init>()V",
+      "renamedSymbol": "M:PcmOutputWorker.<init>()V",
       "originalName": "ff",
-      "renamedName": "ff",
+      "renamedName": "PcmOutputWorker",
       "declaration": {
         "file": "ff.java",
         "start": 11174,
@@ -155666,7 +155730,7 @@
     },
     {
       "symbol": "M:ff.a(B)V",
-      "renamedSymbol": "M:ff.clearStaticReferences(B)V",
+      "renamedSymbol": "M:PcmOutputWorker.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -155677,7 +155741,7 @@
     },
     {
       "symbol": "M:ff.a(I)V",
-      "renamedSymbol": "M:ff.a(I)V",
+      "renamedSymbol": "M:PcmOutputWorker.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155688,7 +155752,7 @@
     },
     {
       "symbol": "M:ff.a(II)V",
-      "renamedSymbol": "M:ff.a(II)V",
+      "renamedSymbol": "M:PcmOutputWorker.a(II)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155699,7 +155763,7 @@
     },
     {
       "symbol": "M:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V",
-      "renamedSymbol": "M:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V",
+      "renamedSymbol": "M:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155710,7 +155774,7 @@
     },
     {
       "symbol": "M:ff.a(ZILbi;)I",
-      "renamedSymbol": "M:ff.a(ZILbi;)I",
+      "renamedSymbol": "M:PcmOutputWorker.a(ZILbi;)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155721,7 +155785,7 @@
     },
     {
       "symbol": "M:ff.a(ZILjava/lang/String;Ljava/lang/String;)V",
-      "renamedSymbol": "M:ff.a(ZILjava/lang/String;Ljava/lang/String;)V",
+      "renamedSymbol": "M:PcmOutputWorker.a(ZILjava/lang/String;Ljava/lang/String;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155732,7 +155796,7 @@
     },
     {
       "symbol": "M:ff.a(ZLta;Lta;I)V",
-      "renamedSymbol": "M:ff.a(ZLta;Lta;I)V",
+      "renamedSymbol": "M:PcmOutputWorker.a(ZLta;Lta;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155743,7 +155807,7 @@
     },
     {
       "symbol": "M:ff.run()V",
-      "renamedSymbol": "M:ff.run()V",
+      "renamedSymbol": "M:PcmOutputWorker.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -166006,9 +166070,9 @@
     },
     {
       "symbol": "M:pk.<init>()V",
-      "renamedSymbol": "M:pk.<init>()V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.<init>()V",
       "originalName": "pk",
-      "renamedName": "pk",
+      "renamedName": "DirectDrawFullscreenManager",
       "declaration": {
         "file": "pk.java",
         "start": 2531,
@@ -166017,9 +166081,9 @@
     },
     {
       "symbol": "M:pk.a(B)[I",
-      "renamedSymbol": "M:pk.a(B)[I",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.listDisplayModes(B)[I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "listDisplayModes",
       "declaration": {
         "file": "pk.java",
         "start": 230,
@@ -166028,9 +166092,9 @@
     },
     {
       "symbol": "M:pk.a(IIIIILjava/awt/Frame;)V",
-      "renamedSymbol": "M:pk.a(IIIIILjava/awt/Frame;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enterFullscreen",
       "declaration": {
         "file": "pk.java",
         "start": 2674,
@@ -166039,9 +166103,9 @@
     },
     {
       "symbol": "M:pk.a(ILjava/awt/Frame;)V",
-      "renamedSymbol": "M:pk.a(ILjava/awt/Frame;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.restoreDisplayMode(ILjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "restoreDisplayMode",
       "declaration": {
         "file": "pk.java",
         "start": 2145,
@@ -166050,7 +166114,7 @@
     },
     {
       "symbol": "M:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
-      "renamedSymbol": "M:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
       "originalName": "callbackEnumModes",
       "renamedName": "callbackEnumModes",
       "declaration": {
@@ -185421,7 +185485,7 @@
     },
     {
       "symbol": "P:eh.a(BII)V#0",
-      "renamedSymbol": "P:eh.a(BII)V#0",
+      "renamedSymbol": "P:Win32CursorManager.setCursorPosition(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185432,7 +185496,7 @@
     },
     {
       "symbol": "P:eh.a(BII)V#1",
-      "renamedSymbol": "P:eh.a(BII)V#1",
+      "renamedSymbol": "P:Win32CursorManager.setCursorPosition(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -185443,7 +185507,7 @@
     },
     {
       "symbol": "P:eh.a(BII)V#2",
-      "renamedSymbol": "P:eh.a(BII)V#2",
+      "renamedSymbol": "P:Win32CursorManager.setCursorPosition(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -185454,7 +185518,7 @@
     },
     {
       "symbol": "P:eh.a(ZBLjava/awt/Component;)V#0",
-      "renamedSymbol": "P:eh.a(ZBLjava/awt/Component;)V#0",
+      "renamedSymbol": "P:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185465,7 +185529,7 @@
     },
     {
       "symbol": "P:eh.a(ZBLjava/awt/Component;)V#1",
-      "renamedSymbol": "P:eh.a(ZBLjava/awt/Component;)V#1",
+      "renamedSymbol": "P:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -185476,7 +185540,7 @@
     },
     {
       "symbol": "P:eh.a(ZBLjava/awt/Component;)V#2",
-      "renamedSymbol": "P:eh.a(ZBLjava/awt/Component;)V#2",
+      "renamedSymbol": "P:Win32CursorManager.setCursorVisible(ZBLjava/awt/Component;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -185487,7 +185551,7 @@
     },
     {
       "symbol": "P:eh.callback(IIII)I#0",
-      "renamedSymbol": "P:eh.callback(IIII)I#0",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185498,7 +185562,7 @@
     },
     {
       "symbol": "P:eh.callback(IIII)I#1",
-      "renamedSymbol": "P:eh.callback(IIII)I#1",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -185509,7 +185573,7 @@
     },
     {
       "symbol": "P:eh.callback(IIII)I#2",
-      "renamedSymbol": "P:eh.callback(IIII)I#2",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -185520,7 +185584,7 @@
     },
     {
       "symbol": "P:eh.callback(IIII)I#3",
-      "renamedSymbol": "P:eh.callback(IIII)I#3",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -186884,7 +186948,7 @@
     },
     {
       "symbol": "P:ff.a(B)V#0",
-      "renamedSymbol": "P:ff.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -186895,7 +186959,7 @@
     },
     {
       "symbol": "P:ff.a(I)V#0",
-      "renamedSymbol": "P:ff.a(I)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -186906,7 +186970,7 @@
     },
     {
       "symbol": "P:ff.a(II)V#0",
-      "renamedSymbol": "P:ff.a(II)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -186917,7 +186981,7 @@
     },
     {
       "symbol": "P:ff.a(II)V#1",
-      "renamedSymbol": "P:ff.a(II)V#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -186928,7 +186992,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#0",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -186939,7 +187003,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#1",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -186950,7 +187014,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#10",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#10",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -186961,7 +187025,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#11",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#11",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -186972,7 +187036,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#12",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#12",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -186983,7 +187047,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#13",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#13",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -186994,7 +187058,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#14",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#14",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -187005,7 +187069,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#15",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#15",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -187016,7 +187080,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#2",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#2",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187027,7 +187091,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#3",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#3",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187038,7 +187102,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#4",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#4",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187049,7 +187113,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#5",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#5",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -187060,7 +187124,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#6",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#6",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -187071,7 +187135,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#7",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#7",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -187082,7 +187146,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#8",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#8",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -187093,7 +187157,7 @@
     },
     {
       "symbol": "P:ff.a(Lta;[Lle;III[Lle;IIIZIIIIILta;)V#9",
-      "renamedSymbol": "P:ff.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#9",
+      "renamedSymbol": "P:PcmOutputWorker.a(Lta;[LSprite;III[LSprite;IIIZIIIIILta;)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -187104,7 +187168,7 @@
     },
     {
       "symbol": "P:ff.a(ZILbi;)I#0",
-      "renamedSymbol": "P:ff.a(ZILbi;)I#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILbi;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187115,7 +187179,7 @@
     },
     {
       "symbol": "P:ff.a(ZILbi;)I#1",
-      "renamedSymbol": "P:ff.a(ZILbi;)I#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILbi;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187126,7 +187190,7 @@
     },
     {
       "symbol": "P:ff.a(ZILbi;)I#2",
-      "renamedSymbol": "P:ff.a(ZILbi;)I#2",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILbi;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187137,7 +187201,7 @@
     },
     {
       "symbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#0",
-      "renamedSymbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILjava/lang/String;Ljava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187148,7 +187212,7 @@
     },
     {
       "symbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#1",
-      "renamedSymbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILjava/lang/String;Ljava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187159,7 +187223,7 @@
     },
     {
       "symbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#2",
-      "renamedSymbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#2",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILjava/lang/String;Ljava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187170,7 +187234,7 @@
     },
     {
       "symbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#3",
-      "renamedSymbol": "P:ff.a(ZILjava/lang/String;Ljava/lang/String;)V#3",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZILjava/lang/String;Ljava/lang/String;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187181,7 +187245,7 @@
     },
     {
       "symbol": "P:ff.a(ZLta;Lta;I)V#0",
-      "renamedSymbol": "P:ff.a(ZLta;Lta;I)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZLta;Lta;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187192,7 +187256,7 @@
     },
     {
       "symbol": "P:ff.a(ZLta;Lta;I)V#1",
-      "renamedSymbol": "P:ff.a(ZLta;Lta;I)V#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZLta;Lta;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187203,7 +187267,7 @@
     },
     {
       "symbol": "P:ff.a(ZLta;Lta;I)V#2",
-      "renamedSymbol": "P:ff.a(ZLta;Lta;I)V#2",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZLta;Lta;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187214,7 +187278,7 @@
     },
     {
       "symbol": "P:ff.a(ZLta;Lta;I)V#3",
-      "renamedSymbol": "P:ff.a(ZLta;Lta;I)V#3",
+      "renamedSymbol": "P:PcmOutputWorker.a(ZLta;Lta;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213119,7 +213183,7 @@
     },
     {
       "symbol": "P:pk.a(B)[I#0",
-      "renamedSymbol": "P:pk.a(B)[I#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.listDisplayModes(B)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213130,7 +213194,7 @@
     },
     {
       "symbol": "P:pk.a(IIIIILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:pk.a(IIIIILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213141,7 +213205,7 @@
     },
     {
       "symbol": "P:pk.a(IIIIILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:pk.a(IIIIILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213152,7 +213216,7 @@
     },
     {
       "symbol": "P:pk.a(IIIIILjava/awt/Frame;)V#2",
-      "renamedSymbol": "P:pk.a(IIIIILjava/awt/Frame;)V#2",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213163,7 +213227,7 @@
     },
     {
       "symbol": "P:pk.a(IIIIILjava/awt/Frame;)V#3",
-      "renamedSymbol": "P:pk.a(IIIIILjava/awt/Frame;)V#3",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213174,7 +213238,7 @@
     },
     {
       "symbol": "P:pk.a(IIIIILjava/awt/Frame;)V#4",
-      "renamedSymbol": "P:pk.a(IIIIILjava/awt/Frame;)V#4",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -213185,7 +213249,7 @@
     },
     {
       "symbol": "P:pk.a(IIIIILjava/awt/Frame;)V#5",
-      "renamedSymbol": "P:pk.a(IIIIILjava/awt/Frame;)V#5",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIIIILjava/awt/Frame;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -213196,7 +213260,7 @@
     },
     {
       "symbol": "P:pk.a(ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:pk.a(ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.restoreDisplayMode(ILjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213207,7 +213271,7 @@
     },
     {
       "symbol": "P:pk.a(ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:pk.a(ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.restoreDisplayMode(ILjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213218,7 +213282,7 @@
     },
     {
       "symbol": "P:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "P:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213229,7 +213293,7 @@
     },
     {
       "symbol": "P:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "P:pk.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -229447,7 +229511,7 @@
       "original": "MonkeyPuzzle2.java",
       "renamed": "MonkeyPuzzle2.java",
       "inputSha256": "305709b718cd67b5c463c11029c13ce2793c4f288f94d74f0d4a9a23b54aed15",
-      "outputSha256": "ba986d4a58dc13995f76f038a0f701e261725c5417ab4d5e88e5a4d37b5ba8fa",
+      "outputSha256": "112ad2f8be9179c7a4053819b17e9f1c74b01c4b99c8d9dd40183bf9c31d4779",
       "edits": [
         {
           "start": 141,
@@ -230598,6 +230662,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 5854,
+          "end": 5856,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 5857,
           "end": 5858,
           "symbol": "M:ff.a(B)V",
@@ -231247,6 +231318,13 @@
           "symbol": "C:ba",
           "original": "ba",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 12699,
+          "end": 12701,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 12801,
@@ -235582,7 +235660,7 @@
       "original": "bi.java",
       "renamed": "bi.java",
       "inputSha256": "d1e9cbd36378836d2e90d1582b5a20a899395725376d9b1e03420b564c8147fc",
-      "outputSha256": "a5df92dbac277f30b45ffa6608a39c82e69a1e471f3b718c3646fb750cdcb3af",
+      "outputSha256": "da460e4c0c5dd4d8f3fd62bb93f8aa3d2f7742586c3d8e49d0b9931d230cb862",
       "edits": [
         {
           "start": 64,
@@ -235688,6 +235766,13 @@
           "symbol": "M:pf.a(I)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 14457,
+          "end": 14459,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 14913,
@@ -235877,6 +235962,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 26274,
+          "end": 26276,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 26577,
@@ -241485,10 +241577,39 @@
     },
     {
       "original": "eh.java",
-      "renamed": "eh.java",
+      "renamed": "Win32CursorManager.java",
       "inputSha256": "9d468add6fee35b2e13c56ed5ef5f2db833833be49dbd82fcaa254097e460967",
-      "outputSha256": "9d468add6fee35b2e13c56ed5ef5f2db833833be49dbd82fcaa254097e460967",
-      "edits": []
+      "outputSha256": "60f31e15c870dab4e9ded741db8eb58e11704e2faff7172c206b67f355c4a85d",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:eh",
+          "original": "eh",
+          "renamed": "Win32CursorManager"
+        },
+        {
+          "start": 2117,
+          "end": 2118,
+          "symbol": "M:eh.a(BII)V",
+          "original": "a",
+          "renamed": "setCursorPosition"
+        },
+        {
+          "start": 2387,
+          "end": 2388,
+          "symbol": "M:eh.a(ZBLjava/awt/Component;)V",
+          "original": "a",
+          "renamed": "setCursorVisible"
+        },
+        {
+          "start": 4036,
+          "end": 4038,
+          "symbol": "M:eh.<init>()V",
+          "original": "eh",
+          "renamed": "Win32CursorManager"
+        }
+      ]
     },
     {
       "original": "ei.java",
@@ -242763,10 +242884,17 @@
     },
     {
       "original": "ff.java",
-      "renamed": "ff.java",
+      "renamed": "PcmOutputWorker.java",
       "inputSha256": "66544510acf0d2300a15f14c7f43a86ade8d875cf78073bd481b67e0e0926a15",
-      "outputSha256": "3494fe6dc62bfdb283e8c475074ea78b149ff914b1e5e99b68759764c87103b8",
+      "outputSha256": "e4939a528e2bdbde6d13639f91a5dc87c8a85a611e7adeb35106a3e2f3e86ba8",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
         {
           "start": 157,
           "end": 159,
@@ -242815,6 +242943,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 3186,
+          "end": 3188,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 3203,
@@ -242899,6 +243034,20 @@
           "symbol": "M:em.a(JZ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 11104,
+          "end": 11106,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 11174,
+          "end": 11176,
+          "symbol": "M:ff.<init>()V",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 11208,
@@ -244126,7 +244275,7 @@
       "original": "gi.java",
       "renamed": "gi.java",
       "inputSha256": "27e5eac81b4ead18cb2aa50b027557e5b5864a2c9a96b2b269dc41ca0572a173",
-      "outputSha256": "a2b8e931d1f775b944108d6f25b478bcc6f42cc5142bd6ac0f60caa9dfdd0a7d",
+      "outputSha256": "810af7f8cfb4a1287279cf98342dc221344ba770f0bf5eb9c0aa683ac3b09b16",
       "edits": [
         {
           "start": 412,
@@ -244143,6 +244292,13 @@
           "renamed": "copyByteRange"
         },
         {
+          "start": 7347,
+          "end": 7349,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 14831,
           "end": 14833,
           "symbol": "C:pj",
@@ -244155,7 +244311,7 @@
       "original": "gj.java",
       "renamed": "gj.java",
       "inputSha256": "7c879d5f391b7876f997b4b55693064a9be15211f4b000e213b6e2bfe6fdb48b",
-      "outputSha256": "2acc61b13487732e37a4ae6a004bd51b952b39955a77f0db9a90e851a4fa8711",
+      "outputSha256": "592ab58134fbcbaa0fc3ddbb28ac91a94464aeff66e3790bc394397e6deb346b",
       "edits": [
         {
           "start": 95,
@@ -244205,6 +244361,13 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1728,
+          "end": 1730,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         }
       ]
     },
@@ -248144,7 +248307,7 @@
       "original": "hj.java",
       "renamed": "hj.java",
       "inputSha256": "83ec5a209604788688a843253144d633bf9a8fff3bb1979cef5dc1fc9c130af7",
-      "outputSha256": "19fb980ad7309f2e62b283b99958aa03333d4d2bbbc0226b517ae3663d720903",
+      "outputSha256": "b913894f4df91e1493a3a07547ea03efba876775de2582a110eb6acf1babc944",
       "edits": [
         {
           "start": 354,
@@ -248483,6 +248646,13 @@
           "renamed": "AccountNameAvailabilityValidator"
         },
         {
+          "start": 28315,
+          "end": 28317,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 28570,
           "end": 28571,
           "symbol": "M:pj.e(I)Z",
@@ -248632,6 +248802,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 40738,
+          "end": 40740,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 40823,
           "end": 40824,
           "symbol": "M:ba.a(B)V",
@@ -248665,6 +248842,13 @@
           "symbol": "C:ba",
           "original": "ba",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 41786,
+          "end": 41788,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 41833,
@@ -259965,7 +260149,7 @@
       "original": "md.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "7f5e8e06517281b7f936a0441717662ad6cac15d351dd8b2830810c8add49684",
-      "outputSha256": "ec887dcbcb5ed8560a788e1d49eebf37e61a013ba8f3e39f9a82d9b81bf05931",
+      "outputSha256": "989a747ac4aaf9f2f8cb7fef421a1e1af5cd74e1cdac0e377eff8ac133a26d20",
       "edits": [
         {
           "start": 69,
@@ -259973,6 +260157,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 212,
+          "end": 214,
+          "symbol": "C:eh",
+          "original": "eh",
+          "renamed": "Win32CursorManager"
         },
         {
           "start": 236,
@@ -260008,6 +260199,13 @@
           "symbol": "F:md.field_p:Ljava/lang/Thread;",
           "original": "field_p",
           "renamed": "workerThread"
+        },
+        {
+          "start": 542,
+          "end": 544,
+          "symbol": "C:pk",
+          "original": "pk",
+          "renamed": "DirectDrawFullscreenManager"
         },
         {
           "start": 611,
@@ -260528,6 +260726,13 @@
           "renamed": "result"
         },
         {
+          "start": 11388,
+          "end": 11389,
+          "symbol": "M:pk.a(B)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
           "start": 11466,
           "end": 11473,
           "symbol": "F:ic.field_b:Ljava/lang/Object;",
@@ -260563,6 +260768,13 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 11964,
+          "end": 11965,
+          "symbol": "M:eh.a(BII)V",
+          "original": "a",
+          "renamed": "setCursorPosition"
+        },
+        {
           "start": 12348,
           "end": 12355,
           "symbol": "F:md.field_q:Z",
@@ -260589,6 +260801,13 @@
           "symbol": "F:md.field_o:Z",
           "original": "field_o",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 12914,
+          "end": 12915,
+          "symbol": "M:eh.a(ZBLjava/awt/Component;)V",
+          "original": "a",
+          "renamed": "setCursorVisible"
         },
         {
           "start": 13067,
@@ -260759,6 +260978,13 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 15977,
+          "end": 15978,
+          "symbol": "M:pk.a(ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "restoreDisplayMode"
+        },
+        {
           "start": 16007,
           "end": 16014,
           "symbol": "F:ic.field_e:Ljava/lang/Object;",
@@ -260806,6 +261032,13 @@
           "symbol": "F:ic.field_d:I",
           "original": "field_d",
           "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 16728,
+          "end": 16729,
+          "symbol": "M:pk.a(IIIIILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
         },
         {
           "start": 16735,
@@ -261102,6 +261335,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 21011,
+          "end": 21013,
+          "symbol": "C:pk",
+          "original": "pk",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
           "start": 21069,
           "end": 21076,
           "symbol": "F:md.field_u:Lic;",
@@ -261179,11 +261419,25 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 25215,
+          "end": 25217,
+          "symbol": "C:pk",
+          "original": "pk",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
           "start": 25592,
           "end": 25599,
           "symbol": "F:md.field_o:Z",
           "original": "field_o",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 25636,
+          "end": 25638,
+          "symbol": "C:eh",
+          "original": "eh",
+          "renamed": "Win32CursorManager"
         },
         {
           "start": 25966,
@@ -266900,10 +267154,46 @@
     },
     {
       "original": "pk.java",
-      "renamed": "pk.java",
+      "renamed": "DirectDrawFullscreenManager.java",
       "inputSha256": "a3e460077648d93675f87b3836b03ffa5bf870eedbe7d318195aacf2037897c9",
-      "outputSha256": "a3e460077648d93675f87b3836b03ffa5bf870eedbe7d318195aacf2037897c9",
-      "edits": []
+      "outputSha256": "427c3ba37258e1340893d1fbdbddb6e6541ff864e392897a79ecc18800742c5c",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:pk",
+          "original": "pk",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
+          "start": 230,
+          "end": 231,
+          "symbol": "M:pk.a(B)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
+          "start": 2145,
+          "end": 2146,
+          "symbol": "M:pk.a(ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "restoreDisplayMode"
+        },
+        {
+          "start": 2531,
+          "end": 2533,
+          "symbol": "M:pk.<init>()V",
+          "original": "pk",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
+          "start": 2674,
+          "end": 2675,
+          "symbol": "M:pk.a(IIIIILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
+        }
+      ]
     },
     {
       "original": "pl.java",
@@ -269173,7 +269463,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "b2b05edc4792cc4916a708788d21f6b2e585bc3a2b140331a0c9db98833aaa4b",
-      "outputSha256": "df3d7fb1b07ad15f301f2e9ebedf73dca47f226eb3e3b7737b1e736cf556e531",
+      "outputSha256": "e9428d72d1db3d69051af260da4653538f64987fde6db79c2065e5474145d63f",
       "edits": [
         {
           "start": 64,
@@ -269349,6 +269639,13 @@
           "symbol": "C:o",
           "original": "o",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 10073,
+          "end": 10075,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 10159,
@@ -271739,7 +272036,7 @@
       "original": "sl.java",
       "renamed": "ImageProducerRasterBuffer.java",
       "inputSha256": "907019afda13bd36b08c9f5540d4aa4ffffe1dcc5f2a76ea758e86d3162ba045",
-      "outputSha256": "6bfb11cb8bf819205596dfbfa4746c2c276d49465a4322e15526bb8a113585cf",
+      "outputSha256": "ebba29988595e7f6400401fde130b29d773cf573c6aa2b05bc06232be89a0077",
       "edits": [
         {
           "start": 71,
@@ -271768,6 +272065,13 @@
           "symbol": "M:sl.b(I)V",
           "original": "b",
           "renamed": "publishPixelsToConsumer"
+        },
+        {
+          "start": 1985,
+          "end": 1987,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 2823,
@@ -274061,7 +274365,7 @@
       "original": "ud.java",
       "renamed": "ud.java",
       "inputSha256": "1dbc4d852886a0e0984d5cee454f99c161323567dffbeb56f6182b405aa007fa",
-      "outputSha256": "479d3bad6056981aef95b0ce6f545a7256153d655c810462e0349ae172a919c3",
+      "outputSha256": "9f4eb29a207d341625db9c9e5cf9cc4b715d1b9c9f7a9b88a84072895f9b103a",
       "edits": [
         {
           "start": 263,
@@ -274183,6 +274487,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 5891,
+          "end": 5893,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 6046,
           "end": 6048,
           "symbol": "C:td",
@@ -274265,7 +274576,7 @@
       "original": "ue.java",
       "renamed": "ue.java",
       "inputSha256": "592f55120656a83b80353920348034400edb6bf3a5c0442b1e6745a9fbd19829",
-      "outputSha256": "a988543bd8d89d53bddfa8ef0e15fd723ec82969885899126bcc1ca9b34a2c9b",
+      "outputSha256": "af3ae495e017748c322a31b86763cf550adf328179c61f9b7649db0e1f8988cb",
       "edits": [
         {
           "start": 2122,
@@ -274289,6 +274600,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 3597,
+          "end": 3599,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 3614,
           "end": 3616,
           "symbol": "C:ji",
@@ -274301,6 +274619,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 3948,
+          "end": 3950,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 3965,
@@ -274338,6 +274663,13 @@
           "renamed": "AwtRasterBuffer"
         },
         {
+          "start": 4418,
+          "end": 4420,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 4435,
           "end": 4437,
           "symbol": "C:ji",
@@ -274359,6 +274691,13 @@
           "renamed": "AwtRasterBuffer"
         },
         {
+          "start": 4854,
+          "end": 4856,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 4871,
           "end": 4873,
           "symbol": "C:ji",
@@ -274373,6 +274712,13 @@
           "renamed": "SpriteState"
         },
         {
+          "start": 5321,
+          "end": 5323,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 5338,
           "end": 5340,
           "symbol": "C:ji",
@@ -274385,6 +274731,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 5743,
+          "end": 5745,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 5760,
@@ -274422,6 +274775,13 @@
           "renamed": "AwtRasterBuffer"
         },
         {
+          "start": 6289,
+          "end": 6291,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 6306,
           "end": 6308,
           "symbol": "C:ji",
@@ -274441,6 +274801,13 @@
           "symbol": "C:ba",
           "original": "ba",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 6713,
+          "end": 6715,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 6730,
@@ -275240,7 +275607,7 @@
       "original": "va.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "cfb207bfee0605db4cbdde2cbc79ed91ec83890f30b6568340cb4eb2caf95b42",
-      "outputSha256": "ef49e1138ce9dbf64bc56b3866658984674537a86bec279fd844df5b515af423",
+      "outputSha256": "4c3974691db3c3ad7aa8dfdd7eb9a8a9666f06f86f564f3456d3ab204ca8f341",
       "edits": [
         {
           "start": 44,
@@ -275248,6 +275615,13 @@
           "symbol": "C:va",
           "original": "va",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 144,
+          "end": 146,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 275,
@@ -275486,6 +275860,13 @@
           "symbol": "C:va",
           "original": "va",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 3560,
+          "end": 3562,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 3631,
@@ -276585,7 +276966,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "9b2c7b59dc3953c0a1847fe0b812bad611aabe006d6e55e7179e86ba585a89e7",
-      "outputSha256": "ee855ce6a072add88cb7f4a9122e6fc45028d7a55118d3ec099f660d12237ce2",
+      "outputSha256": "5b8f4ddcaab39e52710908924adf45d3789b1fcfe2d13e89d51be4e9b8685b2a",
       "edits": [
         {
           "start": 61,
@@ -276689,6 +277070,13 @@
           "renamed": "correctedCurrentTimeMillis"
         },
         {
+          "start": 2874,
+          "end": 2876,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 2966,
           "end": 2967,
           "symbol": "M:pj.a(B)Lug;",
@@ -276729,6 +277117,20 @@
           "symbol": "F:gk.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 4120,
+          "end": 4122,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 4386,
+          "end": 4388,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 4802,
@@ -278982,10 +279384,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/monkeypuzzle2"
     },
-    "rulesSha256": "c61e6ba35df784110c03870b86f415aec004677f797302e9af7428c4ef382a3f",
+    "rulesSha256": "6756d4fe5eef26ab375e6ae1eeae00facbea233d141e3cf0f2f1afb2ebe23f86",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
-    "outputTreeSha256": "385dd64bb6ec2ee18650f26efb4c7561af666905defa02e2331d4ecca69fe4bf",
+    "outputTreeSha256": "fe59e573b4c7c2cc7c8b057851e496d361600c217aee2b71c1161ba948646b6c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

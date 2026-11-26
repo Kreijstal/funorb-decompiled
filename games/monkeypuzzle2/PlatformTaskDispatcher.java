@@ -8,7 +8,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private static int field_a;
     pl field_t;
     pl field_x;
-    private eh field_g;
+    private Win32CursorManager field_g;
     boolean privilegedTasksEnabled;
     private static String field_w;
     private boolean microsoftJvm;
@@ -20,7 +20,7 @@ final class PlatformTaskDispatcher implements Runnable {
     static String field_l;
     static String field_m;
     private Thread workerThread;
-    private pk field_k;
+    private DirectDrawFullscreenManager field_k;
     static java.lang.reflect.Method field_h;
     private PlatformTask queueHead;
     private boolean shutdownRequested;
@@ -304,7 +304,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 5:
                         if (this.microsoftJvm) {
-                          var8.result = this.field_k.a((byte) 88);
+                          var8.result = this.field_k.listDisplayModes((byte) 88);
                         } else {
                           var8.result = Class.forName("se").getMethod("listmodes", new Class[]{}).invoke(this.field_v, new Object[]{});
                         }
@@ -316,7 +316,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = var8.intArgument;
                           var4_int = var8.secondaryIntArgument;
                           if (this.microsoftJvm) {
-                            this.field_g.a((byte) 121, var3, var4_int);
+                            this.field_g.setCursorPosition((byte) 121, var3, var4_int);
                           } else {
                             Class.forName("bm").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_n, new Object[]{new Integer(var3), new Integer(var4_int)});
                           }
@@ -330,7 +330,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.microsoftJvm) {
                             Class.forName("bm").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_n, new Object[]{var15, new Boolean(var3 != 0)});
                           } else {
-                            this.field_g.a(var3 != 0, (byte) 90, var15);
+                            this.field_g.setCursorVisible(var3 != 0, (byte) 90, var15);
                           }
                           break;
                         }
@@ -379,7 +379,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.microsoftJvm) {
                           Class.forName("se").getMethod("exit", new Class[]{}).invoke(this.field_v, new Object[]{});
                         } else {
-                          this.field_k.a(106, (java.awt.Frame) (var8.objectArgument));
+                          this.field_k.restoreDisplayMode(106, (java.awt.Frame) (var8.objectArgument));
                         }
                         break;
                       case 6:
@@ -389,7 +389,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.microsoftJvm) {
                           Class.forName("se").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_v, new Object[]{var12, new Integer(var8.intArgument >>> 16), new Integer(var8.intArgument & 65535), new Integer(var8.secondaryIntArgument >> 16), new Integer(var8.secondaryIntArgument & 65535)});
                         } else {
-                          this.field_k.a(var8.secondaryIntArgument & 65535, 65535 & var8.intArgument, var8.secondaryIntArgument >> 16, var8.intArgument >>> 16, -16, var12);
+                          this.field_k.enterFullscreen(var8.secondaryIntArgument & 65535, 65535 & var8.intArgument, var8.secondaryIntArgument >> 16, var8.intArgument >>> 16, -16, var12);
                         }
                         break;
                     }
@@ -496,7 +496,7 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        pk var7 = null;
+        DirectDrawFullscreenManager var7 = null;
         this.field_x = null;
         this.queueTail = null;
         this.privilegedTasksEnabled = false;
@@ -592,7 +592,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              var7 = new pk();
+              var7 = new DirectDrawFullscreenManager();
               this.field_k = var7;
             } else {
               this.field_v = Class.forName("se").newInstance();
@@ -603,7 +603,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              this.field_g = new eh();
+              this.field_g = new Win32CursorManager();
             } else {
               this.field_n = Class.forName("bm").newInstance();
             }

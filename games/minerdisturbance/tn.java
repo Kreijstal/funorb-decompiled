@@ -276,7 +276,7 @@ class tn extends hc {
           AwtRasterBuffer.a(ef.field_c, 0);
         }
         bf.c(109);
-        ll.a(-118);
+        BufferedSocket.a(-118);
         bl.a(true);
         if (ob.l(-1)) {
           sn.field_c.d((byte) -75, 1);

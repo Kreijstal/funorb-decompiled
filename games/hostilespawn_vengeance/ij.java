@@ -322,7 +322,7 @@ final class ij extends vd implements kn, qk {
         var2.a(270, var3, 0, 20, 50);
         this.a(51448, var2);
         var3 += 50;
-        var3 = var3 + (this.a(170, this.field_G, vg.field_f, (byte) 31, var3, ua.field_a) + 5);
+        var3 = var3 + (this.a(170, this.field_G, vg.field_f, (byte) 31, var3, PcmOutputWorker.field_a) + 5);
         this.field_E.a(var5, var3, 0, -var5 + 496 >> 1, 40);
         this.field_H.a(60, var3 + 15, 0, var4 + 3, 40);
         this.field_H.field_p = (mh) (this);

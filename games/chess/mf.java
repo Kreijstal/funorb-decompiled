@@ -272,7 +272,7 @@ class mf extends IntrusiveNode {
                 if (0 == th.field_d) {
                   if (((wh.field_f == 0)) &&
                     ((on.field_h != 0))) {
-                    this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
+                    this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                     var8 = AwtRasterBuffer.field_a;
                     if (var8 != null) {
                       if (!(var8.field_p instanceof cj)) {
@@ -294,7 +294,7 @@ class mf extends IntrusiveNode {
                   }
                   if (((wh.field_f == 0)) &&
                     ((on.field_h != 0))) {
-                    this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
+                    this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                     var9 = AwtRasterBuffer.field_a;
                     if (var9 != null) {
                       if (!(var9.field_p instanceof cj)) {
@@ -308,12 +308,12 @@ class mf extends IntrusiveNode {
                 }
                 break regionExit1;
               }
-              this.a(78, fl.field_p, param1, this, param2, rf.field_b, hn.field_k);
+              this.a(78, fl.field_p, param1, this, param2, rf.field_b, BufferedSocket.field_k);
             }
             if (0 == th.field_d) {
               if (((wh.field_f == 0)) &&
                 ((on.field_h != 0))) {
-                this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
+                this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                 var11 = AwtRasterBuffer.field_a;
                 if (var11 == null) {
                   if (((var7 != 0)) &&
@@ -346,7 +346,7 @@ class mf extends IntrusiveNode {
               if (var5 == 0) {
                 if (((wh.field_f == 0)) &&
                   ((on.field_h != 0))) {
-                  this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
+                  this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                   var12 = AwtRasterBuffer.field_a;
                   if (var12 == null) {
                     if (var7 != 0 &&
@@ -380,7 +380,7 @@ class mf extends IntrusiveNode {
             }
             if ((wh.field_f == 0) &&
               (on.field_h != 0)) {
-              this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
+              this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
               var19 = AwtRasterBuffer.field_a;
               if (var19 != null) {
                 if (!(var19.field_p instanceof cj)) {
@@ -439,7 +439,7 @@ class mf extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(rf.field_b, param3, param0, (byte) -117, hn.field_k) ? 1 : 0;
+          var5_int = this.a(rf.field_b, param3, param0, (byte) -117, BufferedSocket.field_k) ? 1 : 0;
           stackIn_2_0 = this.field_w;
           if (var5_int != 0) {
             stackIn_3_1 = 0;

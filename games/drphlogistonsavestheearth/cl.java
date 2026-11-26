@@ -8,7 +8,7 @@ final class cl extends gb {
     static RgbSprite field_p;
     static String field_q;
     static RgbSprite field_s;
-    private qe field_r;
+    private BufferedSocket field_r;
     static he[] field_n;
     static he field_t;
 
@@ -78,14 +78,14 @@ final class cl extends gb {
             var4_int = 2 % ((param2 + 59) / 40);
             if (this.field_r != null) {
               try {
-                this.field_r.b(50);
+                this.field_r.close(50);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5 = (Exception) (Object) decompiledCaughtException;
               }
               this.field_r = null;
             }
-            this.field_r = (qe) (param0);
+            this.field_r = (BufferedSocket) (param0);
             this.e(6);
             this.a(param1, 0);
             this.field_g.position = 0;
@@ -112,12 +112,12 @@ final class cl extends gb {
                 this.field_l.writeByte(4, (byte) -96);
                 this.field_l.writeByte((int) this.field_a, (byte) -126);
                 this.field_l.writeInt(0, (byte) 120);
-                this.field_r.a(this.field_l.payload.length, -30537, this.field_l.payload, 0);
+                this.field_r.queueWrite(this.field_l.payload.length, -30537, this.field_l.payload, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var5_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_r.b(50);
+                  this.field_r.close(50);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6 = (Exception) (Object) decompiledCaughtException;
@@ -206,7 +206,7 @@ final class cl extends gb {
             this.field_j = this.field_j + var4;
             if (30000 < this.field_j) {
               try {
-                this.field_r.b(50);
+                this.field_r.close(50);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -224,13 +224,13 @@ final class cl extends gb {
             return false;
           }
           try {
-            this.field_r.b((byte) -13);
+            this.field_r.checkWriteError((byte) -13);
             var2 = (cm) (this.field_i.a(true));
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(1, (byte) -117);
               this.field_l.writeLong40(1992910808, var2.secondaryKey);
-              this.field_r.a(this.field_l.payload.length, -30537, this.field_l.payload, 0);
+              this.field_r.queueWrite(this.field_l.payload.length, -30537, this.field_l.payload, 0);
               this.field_m.a(var2, 0);
               var2 = (cm) (this.field_i.c(91));
             }
@@ -239,7 +239,7 @@ final class cl extends gb {
               this.field_l.position = 0;
               this.field_l.writeByte(0, (byte) -90);
               this.field_l.writeLong40(1992910808, var2Lifetime1.secondaryKey);
-              this.field_r.a(this.field_l.payload.length, -30537, this.field_l.payload, 0);
+              this.field_r.queueWrite(this.field_l.payload.length, -30537, this.field_l.payload, 0);
               this.field_b.a(var2Lifetime1, 0);
               var2Lifetime1 = (cm) (this.field_f.c(-124));
             }
@@ -248,7 +248,7 @@ final class cl extends gb {
               cl.a((String) null, (vj) null, 114, (String) null);
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_r.a((byte) -122);
+              var3_int = this.field_r.availableBytes((byte) -122);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -267,10 +267,10 @@ final class cl extends gb {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_r.a((byte) -14, this.field_g.payload, this.field_g.position, var5);
+                  this.field_r.readFully((byte) -14, this.field_g.payload, this.field_g.position, var5);
                   if (this.field_a != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_g.payload[this.field_g.position + var6] = (byte)qk.a((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_a);
+                      this.field_g.payload[this.field_g.position + var6] = (byte)ProxyAuthenticationRequiredException.a((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_a);
                     }
                   }
                   this.field_g.position = this.field_g.position + var5;
@@ -343,10 +343,10 @@ final class cl extends gb {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_r.a((byte) -14, this.field_d.field_K.payload, this.field_d.field_K.position, var6);
+                  this.field_r.readFully((byte) -14, this.field_d.field_K.payload, this.field_d.field_K.position, var6);
                   if (this.field_a != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_d.field_K.payload[this.field_d.field_K.position + var7] = (byte)qk.a((int) this.field_d.field_K.payload[this.field_d.field_K.position + var7], (int) this.field_a);
+                      this.field_d.field_K.payload[this.field_d.field_K.position + var7] = (byte)ProxyAuthenticationRequiredException.a((int) this.field_d.field_K.payload[this.field_d.field_K.position + var7], (int) this.field_a);
                     }
                   }
                   this.field_d.field_K.position = this.field_d.field_K.position + var6;
@@ -370,7 +370,7 @@ final class cl extends gb {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_r.b(50);
+              this.field_r.close(50);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -422,12 +422,12 @@ final class cl extends gb {
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, (byte) -96);
             this.field_l.writeLong40(1992910808, 0L);
-            this.field_r.a(this.field_l.payload.length, -30537, this.field_l.payload, 0);
+            this.field_r.queueWrite(this.field_l.payload.length, -30537, this.field_l.payload, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_r.b(50);
+              this.field_r.close(50);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -445,7 +445,7 @@ final class cl extends gb {
 
     final void b(byte param0) {
         try {
-          this.field_r.b(50);
+          this.field_r.close(50);
         } catch (Exception exception) {
         }
         if (param0 != 122) {
@@ -460,7 +460,7 @@ final class cl extends gb {
     final void a(byte param0) {
         int var2 = -8 / ((65 - param0) / 58);
         if (null != this.field_r) {
-          this.field_r.b(50);
+          this.field_r.close(50);
         }
     }
 
@@ -477,12 +477,12 @@ final class cl extends gb {
             this.field_l.writeByte(param0, (byte) -92);
             this.field_l.writeMedium(3, false);
             this.field_l.writeShort(0, -17402);
-            this.field_r.a(this.field_l.payload.length, param0 - 30543, this.field_l.payload, 0);
+            this.field_r.queueWrite(this.field_l.payload.length, param0 - 30543, this.field_l.payload, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_r.b(50);
+              this.field_r.close(50);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;

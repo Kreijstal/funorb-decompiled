@@ -290,8 +290,8 @@ final class hc {
               }
             }
           }
-          pk.field_ab = sb.field_d - (var3_intLifetime1 >> 1);
-          GameApplet.field_h = sb.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
+          pk.field_ab = PcmOutputWorker.field_d - (var3_intLifetime1 >> 1);
+          GameApplet.field_h = PcmOutputWorker.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           v.field_d = (g.field_l + vg.field_N << 1) * bc.field_K.field_g;
           for (var4Lifetime2 = 0; vc.field_d.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_110_0 = v.field_d;
@@ -316,7 +316,7 @@ final class hc {
             } else {
               var7Lifetime2 = fa.a(vc.field_d[var4Lifetime3], true, (byte) 99);
               var5Lifetime3 = var5Lifetime3 + vg.field_N;
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + sb.field_d;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + PcmOutputWorker.field_d;
               og.field_j[var4Lifetime3] = new int[4];
               og.field_j[var4Lifetime3][0] = var8Lifetime1 - bl.field_i;
               og.field_j[var4Lifetime3][1] = var5Lifetime3;

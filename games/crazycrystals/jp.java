@@ -28,7 +28,7 @@ final class jp {
           var7.field_h = param3;
           var7.field_g = param0;
           hd.field_d.addLast(0, var7);
-          j.a(var7, param2, false);
+          BufferedSocket.a(var7, param2, false);
           return var7;
         }
         field_b = (String) null;
@@ -45,7 +45,7 @@ final class jp {
         var8.field_h = param3;
         var8.field_g = param0;
         hd.field_d.addLast(0, var8);
-        j.a(var8, param2, false);
+        BufferedSocket.a(var8, param2, false);
         return var8;
     }
 

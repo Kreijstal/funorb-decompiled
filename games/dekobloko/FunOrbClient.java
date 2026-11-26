@@ -540,7 +540,7 @@ abstract class FunOrbClient extends GameApplet {
             if (integerLocal4 != 1) {
               if (2 != integerLocal4) {
                 if (integerLocal4 == 3) {
-                  PlatformSupport002.performAction0374(69);
+                  DelegatingCanvas.performAction0374(69);
                 } else {
                   if (integerLocal4 != 4) {
                     if (5 == integerLocal4) {

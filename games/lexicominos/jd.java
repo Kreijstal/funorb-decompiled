@@ -61,8 +61,8 @@ final class jd {
 
     final static java.awt.Container a(int param0) {
         int var1 = 68 / ((-25 - param0) / 41);
-        if (ck.field_d != null) {
-          return (java.awt.Container) ((Object) ck.field_d);
+        if (ProxyAuthenticationRequiredException.field_d != null) {
+          return (java.awt.Container) ((Object) ProxyAuthenticationRequiredException.field_d);
         }
         return (java.awt.Container) ((Object) kk.c(-14047));
     }

@@ -113,7 +113,7 @@ final class k extends si {
     }
 
     public k() {
-        super(0, 0, di.field_a, qe.field_l, (cg) null, (fd) null);
+        super(0, 0, di.field_a, BufferedSocket.field_l, (cg) null, (fd) null);
         this.field_K = new IntrusiveDeque();
     }
 

@@ -260,12 +260,12 @@ final class oi extends da {
           if (null == sp.field_c) {
             return false;
           }
-          int var2_int = sp.field_c.a(0);
+          int var2_int = sp.field_c.availableBytes(0);
           if (0 < var2_int) {
             if (-ra.field_c.position + param1 < var2_int) {
               var2_int = -ra.field_c.position + param1;
             }
-            sp.field_c.a(ra.field_c.payload, false, var2_int, ra.field_c.position);
+            sp.field_c.readFully(ra.field_c.payload, false, var2_int, ra.field_c.position);
             qm.field_o = kd.correctedCurrentTimeMillis(param0 ^ 15127);
             ra.field_c.position = ra.field_c.position + var2_int;
             if (!(param1 <= ra.field_c.position)) {

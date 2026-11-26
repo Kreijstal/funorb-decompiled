@@ -168,7 +168,7 @@ final class jo extends pn implements Cloneable {
             1 == uo.field_o &&
             param5 + param2 == 6 + w.field_f &&
             9 + ia.field_i == param3 + param0) {
-            va.field_c = 1;
+            ProxyAuthenticationRequiredException.field_c = 1;
           }
           we.field_h = we.field_h - 16;
           b.field_a = b.field_a - 8;

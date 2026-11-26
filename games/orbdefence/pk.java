@@ -317,7 +317,7 @@ final class pk extends ta implements jb, ai {
             this.field_n = this.field_n + (var7.a(this.field_L, -40 + this.field_m, var7.field_H) + 5);
           }
           var8 = GzipDecompressor.field_d;
-          var9 = oa.a(true, uj.b((byte) -120));
+          var9 = PcmOutputWorker.a(true, uj.b((byte) -120));
           if (mj.field_l == var9) {
             var8 = gl.field_h;
           } else {

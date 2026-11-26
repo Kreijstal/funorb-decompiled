@@ -28,16 +28,16 @@ final class mb extends ka {
             lk.field_d = i.field_q;
           } else {
             try {
-              kl.field_G = new vd((java.net.Socket) (mg.field_a.result), ld.field_k);
+              kl.field_G = new BufferedSocket((java.net.Socket) (mg.field_a.result), ld.field_k);
               var4 = e.field_c;
               var5 = var4;
               vh.field_a.position = 0;
-              kk.field_c = !param0 ? -1 : -2;
+              ProxyAuthenticationRequiredException.field_c = !param0 ? -1 : -2;
               pk.field_c = !param0 ? -1 : -2;
               qm.field_y = !param0 ? -1 : -2;
               lk.field_d = si.field_g;
               var5.position = 0;
-              ql.a(kk.field_b, vh.field_a, rg.field_M, (byte) 40, qa.field_c);
+              ql.a(ProxyAuthenticationRequiredException.field_b, vh.field_a, rg.field_M, (byte) 40, qa.field_c);
               tb.a(-1, 116);
             } catch (IOException iOException) {
               lk.field_d = i.field_q;

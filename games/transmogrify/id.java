@@ -32,11 +32,11 @@ final class id {
         sh.field_b = var8.readUnsignedByte((byte) 106);
         LetterTile.field_m = var8.readLong((byte) -51);
         if (kd.field_a != 2) {
-          jd.field_b = 0;
+          ProxyAuthenticationRequiredException.field_b = 0;
           u.field_d = 0;
         } else {
           u.field_d = var8.readUnsignedShort((byte) -108);
-          jd.field_b = var8.readUnsignedMedium((byte) 124);
+          ProxyAuthenticationRequiredException.field_b = var8.readUnsignedMedium((byte) 124);
         }
         if (param1 != 9) {
           id.a(true, (byte) -86);

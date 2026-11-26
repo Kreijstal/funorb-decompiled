@@ -85,7 +85,7 @@ final class of {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.a(-1, param4, param2, param1, rf.field_b, hn.field_k, param3);
+        int var6 = this.a(-1, param4, param2, param1, rf.field_b, BufferedSocket.field_k, param3);
         int var7 = this.a(param0 - 62, param4, param2, param1, ag.field_f, re.field_m, param3);
         if (param0 != 61) {
           this.a(-57, 37, false, 100);

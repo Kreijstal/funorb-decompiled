@@ -25,12 +25,12 @@ abstract class RasterBuffer {
         gj var8;
         gj var5Lifetime1;
         var7 = OrbDefence.field_D ? 1 : 0;
-        var5 = (gj) (cb.field_b.beginForward((byte) -106));
+        var5 = (gj) (BufferedSocket.field_b.beginForward((byte) -106));
         while (var5 != null) {
           if (var5.field_o == param2) {
             return var5;
           }
-          var5 = (gj) (cb.field_b.nextForward(853));
+          var5 = (gj) (BufferedSocket.field_b.nextForward(853));
         }
         var8 = new gj();
         var5Lifetime1 = var8;
@@ -38,7 +38,7 @@ abstract class RasterBuffer {
         var6 = 102 / ((41 - param4) / 45);
         var5Lifetime1.field_m = param3;
         var5Lifetime1.field_n = param0;
-        cb.field_b.addLast(-92, var5Lifetime1);
+        BufferedSocket.field_b.addLast(-92, var5Lifetime1);
         se.a(var5Lifetime1, param1, -38);
         return var5Lifetime1;
     }

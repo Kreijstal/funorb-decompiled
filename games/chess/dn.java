@@ -59,7 +59,7 @@ final class dn {
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = oa.field_b.a((byte) 79, param1[var10_int]);
+              var11 = ProxyAuthenticationRequiredException.field_b.a((byte) 79, param1[var10_int]);
               var6[var10_int] = var11.e((byte) -107);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

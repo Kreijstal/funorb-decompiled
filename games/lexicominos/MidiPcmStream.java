@@ -778,7 +778,7 @@ final class MidiPcmStream extends PcmStream {
           if (var2 != 0) {
             if (var2 != 1) {
               uj.a("HS1: " + qj.h(param0 - 117), (Throwable) null, 1);
-              ck.$cfr$intArgs$b$e683eeaaf5b5(-70);
+              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-70);
               if (var26 == 0) {
                 return;
               }
@@ -808,7 +808,7 @@ final class MidiPcmStream extends PcmStream {
                 }
                 stackIn_14_0 = -95;
               }
-              ck.$cfr$intArgs$b$e683eeaaf5b5(stackIn_14_0);
+              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(stackIn_14_0);
               return;
             }
           }
@@ -939,7 +939,7 @@ final class MidiPcmStream extends PcmStream {
             stackIn_27_0 = -32;
             break;
           }
-          ck.$cfr$intArgs$b$e683eeaaf5b5(stackIn_27_0);
+          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(stackIn_27_0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

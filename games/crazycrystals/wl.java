@@ -282,12 +282,12 @@ abstract class wl extends DualLinkNode {
         RuntimeException var2 = null;
         try {
           sm.field_j = (63 & param1) >> 4;
-          j.field_j = (param1 & 13) >> 2;
+          BufferedSocket.field_j = (param1 & 13) >> 2;
           if (sm.field_j > 2) {
             sm.field_j = 2;
           }
-          if (j.field_j > 2) {
-            j.field_j = 2;
+          if (BufferedSocket.field_j > 2) {
+            BufferedSocket.field_j = 2;
           }
           AccountNameAvailabilityValidator.field_m = 3 & param1;
           if (AccountNameAvailabilityValidator.field_m > 2) {

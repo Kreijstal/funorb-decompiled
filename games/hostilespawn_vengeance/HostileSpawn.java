@@ -292,7 +292,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[164] = pi.field_c;
           ia.field_l[108] = cn.field_h;
           ia.field_l[162] = ga.field_a;
-          ia.field_l[115] = td.field_f;
+          ia.field_l[115] = BufferedSocket.field_f;
           ia.field_l[212] = SpriteGeometry.field_q;
           ia.field_l[140] = IsaacGenerator.field_j;
           ia.field_l[207] = ArchiveIndex.field_e;
@@ -348,7 +348,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[203] = qh.field_g;
           ia.field_l[102] = lh.field_e;
           ia.field_l[111] = qg.field_m;
-          ia.field_l[92] = ab.field_a;
+          ia.field_l[92] = ProxyAuthenticationRequiredException.field_a;
           ia.field_l[184] = ra.field_b;
           ia.field_l[104] = DualLinkDeque.field_b;
           ia.field_l[180] = nb.field_E;
@@ -802,7 +802,7 @@ public final class HostileSpawn extends NetworkGameClient {
           lm.field_A[21] = va.a(ul.field_P, "", "lift_up").a().resample(var2);
           lm.field_A[22] = va.a(ul.field_P, "", "lift_down").a().resample(var2);
           lm.field_A[23] = va.a(ul.field_P, "", "trigger_reactor").a().resample(var2);
-          ua.field_c = new PcmSample[]{lm.field_A[24], lm.field_A[5]};
+          PcmOutputWorker.field_c = new PcmSample[]{lm.field_A[24], lm.field_A[5]};
           var3 = 0;
           do {
             if (5 <= var3) {
@@ -1051,7 +1051,7 @@ public final class HostileSpawn extends NetworkGameClient {
           bb.field_e = ji.a(tk.field_a, "", "Hostilespawnthreat");
           int var2_int = -11 % ((57 - param0) / 52);
           CipherPacketBuffer.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
-          ua.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
+          PcmOutputWorker.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
           ph.field_F = null;
           ul.field_P = null;
           tk.field_a = null;
@@ -1064,7 +1064,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ha.field_w.field_F.a(0, ArchiveProvider.field_d, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, bb.field_e, ej.field_h, nd.field_e, false);
           ha.field_w.field_F.a(0, CipherPacketBuffer.field_u, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, ua.field_f, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, PcmOutputWorker.field_f, ej.field_h, nd.field_e, false);
           nd.field_e = null;
           ej.field_h = null;
         } catch (RuntimeException runtimeException) {
@@ -1138,7 +1138,7 @@ public final class HostileSpawn extends NetworkGameClient {
           dh.clearStaticReferences(-3);
           sg.b(-106);
           bn.clearStaticReferences(false);
-          td.clearStaticReferences(200);
+          BufferedSocket.clearStaticReferences(200);
           im.clearStaticReferences(-14986);
           lh.clearStaticReferences(-95);
           oj.clearStaticReferences((byte) 118);
@@ -1159,7 +1159,7 @@ public final class HostileSpawn extends NetworkGameClient {
           AudioOutput.clearStaticReferences();
           ch.clearStaticReferences(false);
           sa.clearStaticReferences((byte) -121);
-          ua.clearStaticReferences((byte) 60);
+          PcmOutputWorker.clearStaticReferences((byte) 60);
           l.clearStaticReferences((byte) -7);
           i.clearStaticReferences(true);
           ml.clearStaticReferences((byte) -67);
@@ -1274,7 +1274,7 @@ public final class HostileSpawn extends NetworkGameClient {
           q.a(50);
           mj.clearStaticReferences((byte) 122);
           fe.clearStaticReferences((byte) -112);
-          ab.clearStaticReferences(-128);
+          ProxyAuthenticationRequiredException.clearStaticReferences(-128);
           lg.resetStaticState((byte) -121);
           ImageProducerRasterBuffer.resetStaticState((byte) 107);
           hg.clearStaticReferences(0);
@@ -1568,7 +1568,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (null != ImageProducerRasterBuffer.field_q &&
             ImageProducerRasterBuffer.field_q.focusLost) {
-            td.c((byte) 113);
+            BufferedSocket.c((byte) 113);
             v.a(-112, ImageProducerRasterBuffer.field_q);
             ImageProducerRasterBuffer.field_q.exitFullscreen(true, gf.field_b);
             ImageProducerRasterBuffer.field_q = null;
@@ -2261,7 +2261,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (ImageProducerRasterBuffer.field_q != null &&
             ImageProducerRasterBuffer.field_q.focusLost) {
-            td.c((byte) 110);
+            BufferedSocket.c((byte) 110);
             v.a(29, ImageProducerRasterBuffer.field_q);
             ImageProducerRasterBuffer.field_q.exitFullscreen(true, gf.field_b);
             ImageProducerRasterBuffer.field_q = null;
@@ -2466,7 +2466,7 @@ public final class HostileSpawn extends NetworkGameClient {
           tc.field_b = fg.a("", "Scenery_43", vd.field_C, false);
           NodeHashTableIterator.field_d = fg.a("", "Scenery_44", vd.field_C, false);
           km.field_z = fg.a("", "Scenery_45", vd.field_C, false);
-          ab.field_a = fg.a("", "Scenery_46", vd.field_C, false);
+          ProxyAuthenticationRequiredException.field_a = fg.a("", "Scenery_46", vd.field_C, false);
           GameCanvas.field_k = fg.a("", "Scenery_47", vd.field_C, false);
           jc.field_a = fg.a("", "Scenery_48", vd.field_C, false);
           hm.field_l = fg.a("", "Scenery_49", vd.field_C, false);
@@ -2489,7 +2489,7 @@ public final class HostileSpawn extends NetworkGameClient {
           SpriteGeometry.field_B = fg.a("", "Scenery_66", vd.field_C, false);
           ld.field_p = fg.a("", "Scenery_67", vd.field_C, false);
           rj.field_N = fg.a("", "Scenery_68", vd.field_C, false);
-          td.field_f = fg.a("", "Scenery_69", vd.field_C, false);
+          BufferedSocket.field_f = fg.a("", "Scenery_69", vd.field_C, false);
           dd.field_j = fg.a("", "Scenery_70", vd.field_C, false);
           ck.field_C = fg.a("", "Scenery_71", vd.field_C, false);
           tb.field_L = fg.a("", "Scenery_72", vd.field_C, false);

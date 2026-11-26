@@ -105,7 +105,7 @@ final class UiComponentPart015 extends ComponentDecorator {
           BufferedSocket.integerState0668 = integerArgument9;
           MixedSupport101.integerState0591 = integerArgument6;
           UiComponentPart011.integerState0240 = integerArgument3;
-          DiagnosticSupport001.integerState0125 = integerArgument4;
+          ProxyAuthenticationRequiredException.integerState0125 = integerArgument4;
           MixedSupport076.integerState0429 = integerArgument5;
           UiComponent.integerState0106 = integerArgument2;
           MouseInput.rgbSpriteState0073 = rgbSpriteArgument8;

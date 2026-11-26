@@ -278,11 +278,11 @@ final class ld {
         boolean decompiledFrameRemainder0 = true;
         IterableNodeHashTable.field_d = 0;
         var3 = -111 % ((18 - param0) / 61);
-        if (qk.field_c &&
+        if (ProxyAuthenticationRequiredException.field_c &&
           hb.field_g <= 0 && (this.field_c == 2 ||
           this.field_c == 4 ||
           9 == this.field_c)) {
-          qk.field_c = false;
+          ProxyAuthenticationRequiredException.field_c = false;
           ek.a(-95, param1, 11);
           decompiledFrameRemainder0 = false;
         }
@@ -1225,7 +1225,7 @@ final class ld {
           var2 = wa.updateMembershipSlidesWithIntGuard(stackIn_6_0, stackIn_7_1);
           if (var2 == 3) {
             if (null != df.field_l) {
-              qk.a(true);
+              ProxyAuthenticationRequiredException.a(true);
             }
             p.openSubscriptionPage(-161, nb.a(97));
           }
@@ -1240,7 +1240,7 @@ final class ld {
         if (this.field_c == 0 ||
           -2 == this.field_c) {
           IterableNodeHashTable.field_d = this.field_c;
-          qk.field_c = false;
+          ProxyAuthenticationRequiredException.field_c = false;
         }
         if (this.field_a == 0) {
           this.field_a = mh.field_f;
@@ -1772,7 +1772,7 @@ final class ld {
                   } else {
                     if (this.field_e.e(-748)) {
                       if (null != df.field_l) {
-                        qk.a(true);
+                        ProxyAuthenticationRequiredException.a(true);
                       } else {
                         s.a(param2, (byte) -121);
                       }
@@ -1876,7 +1876,7 @@ final class ld {
         var5 = stackIn_5_0;
         var6 = var5 + 220;
         if (!param0) {
-          stackIn_8_0 = qe.field_k;
+          stackIn_8_0 = BufferedSocket.field_k;
         } else {
           stackIn_8_0 = el.field_ub;
         }
@@ -2075,7 +2075,7 @@ final class ld {
           var11_ref_vb = ob.field_b;
           var12 = pa.field_d;
           if (!var11_ref_vb.field_r) {
-            var3 = qk.field_e;
+            var3 = ProxyAuthenticationRequiredException.field_e;
             for (var13 = 0; var13 < lf.field_b / 25 % 4; var13++) {
               var3 = var3 + ".";
             }

@@ -88,7 +88,7 @@ final class gb {
           }
           var9 = param1.requestDisplayModes((byte) 127);
           while (var9.status == 0) {
-            ge.sleepMillis(0, 10L);
+            BufferedSocket.sleepMillis(0, 10L);
           }
           if (2 == var9.status) {
             stackIn_13_0 = new we[]{};

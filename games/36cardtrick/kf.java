@@ -46,23 +46,23 @@ final class kf extends IntrusiveNode {
               }
             }
             if (2 == IterableNodeHashTable.field_c) {
-              tf.field_r = new jd((java.net.Socket) (d.field_a.result), bi.field_b);
+              tf.field_r = new BufferedSocket((java.net.Socket) (d.field_a.result), bi.field_b);
               var2 = new PacketBuffer(13);
               nf.a(var2, false, cc.field_c, eh.field_l, pf.field_h);
               var2.writeByte(-9469, 15);
               var2.writeInt(-246, oj.field_d);
-              tf.field_r.a(0, (byte) -89, 13, var2.payload);
+              tf.field_r.queueWrite(0, (byte) -89, 13, var2.payload);
               IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
               lc.field_b = id.correctedCurrentTimeMillis(70) + 30000L;
             }
             if (IterableNodeHashTable.field_c == 3) {
-              if (tf.field_r.b(-108) <= 0) {
+              if (tf.field_r.availableBytes(-108) <= 0) {
                 if (id.correctedCurrentTimeMillis(120) > lc.field_b) {
                   stackIn_29_0 = ma.a(2, -2);
                   return stackIn_29_0;
                 }
               } else {
-                var1_int = tf.field_r.a(0);
+                var1_int = tf.field_r.readSingleByte(0);
                 if (var1_int != 0) {
                   stackIn_24_0 = ma.a(2, var1_int);
                   return stackIn_24_0;

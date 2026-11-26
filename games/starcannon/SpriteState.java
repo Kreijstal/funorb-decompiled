@@ -82,7 +82,7 @@ abstract class SpriteState extends DualLinkNode {
             field_o = -116;
           }
           fc.a(SoftwareRasterizer.field_j / 2, (byte) 102, SoftwareRasterizer.field_f / 2);
-          le.a(param0 - 5437, param2.field_r + param2.field_q, param2.field_r, param3.field_r, param3.field_r + param3.field_q);
+          ProxyAuthenticationRequiredException.a(param0 - 5437, param2.field_r + param2.field_q, param2.field_r, param3.field_r, param3.field_r + param3.field_q);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ui.MB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

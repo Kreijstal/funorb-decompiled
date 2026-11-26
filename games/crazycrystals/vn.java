@@ -85,7 +85,7 @@ final class vn extends ue {
           return;
         }
         if (this.field_n) {
-          go.field_l.c(rp.field_a, 320, this.field_v - 5, 16777215, -1);
+          go.field_l.c(PcmOutputWorker.field_a, 320, this.field_v - 5, 16777215, -1);
         }
         var5 = this.field_o;
         var6 = fk.field_s;

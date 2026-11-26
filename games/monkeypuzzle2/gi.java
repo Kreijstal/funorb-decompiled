@@ -199,7 +199,7 @@ final class gi {
 
     final static void a(byte param0, String param1, String param2) {
         try {
-          ff.a(false, -109, param2, param1);
+          PcmOutputWorker.a(false, -109, param2, param1);
           if (param0 < 35) {
             hb var4 = (hb) null;
             gi.a(-117, (hb) null);

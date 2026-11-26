@@ -154,7 +154,7 @@ final class ui extends IntrusiveNode {
                   var26Lifetime1 = param6.field_A[var23Lifetime2];
                   il.field_d[var23Lifetime2] = var9 + (var12 * var24Lifetime1 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> 16);
                   nd.field_F[var23Lifetime2] = (var19 * var26Lifetime1 + var16 * var25Lifetime1 + var24Lifetime1 * var13 >> 16) + var10;
-                  pc.field_j[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var24Lifetime1 * var14 >> 16) + var11;
+                  BufferedSocket.field_j[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var24Lifetime1 * var14 >> 16) + var11;
                   var24Lifetime1 = param6.field_c[var23Lifetime2];
                   var25Lifetime1 = param6.field_o[var23Lifetime2];
                   var26Lifetime1 = param6.field_r[var23Lifetime2];

@@ -319,7 +319,7 @@ final class mk extends vd implements nk, qk, kn {
         var3 = var3 + (5 + this.a(170, var3, 3, "", wj.field_K, 20, this.field_N));
         var3 = var3 + this.a(qh.field_x, this.field_E, -124, var3, 170);
         var3 = var3 + (5 + this.a(he.field_w, 170, var3, this.field_U, 20, um.field_h));
-        var3 = var3 + (this.a(vg.field_f, 170, var3, this.field_P, 20, ua.field_a) + 5);
+        var3 = var3 + (this.a(vg.field_f, 170, var3, this.field_P, 20, PcmOutputWorker.field_a) + 5);
         var3 = var3 + this.a(this.field_F, 120, gg.field_E, var3, 170);
         nh var4 = new nh(46, var3, this.field_s - 90, 25, this.field_G, true, this.field_s - 120, 5, jn.field_G, 11579568, hm.field_o);
         this.a(51448, var4);

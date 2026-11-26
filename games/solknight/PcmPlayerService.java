@@ -5,7 +5,7 @@ class PcmPlayerService {
     private boolean field_j;
     private static int field_d;
     private int field_q;
-    private static sb field_p;
+    private static PcmOutputWorker field_p;
     private long field_e;
     static boolean field_u;
     private PcmStream field_f;
@@ -66,7 +66,7 @@ class PcmPlayerService {
               ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_t);
               if (field_d > 0 &&
                 field_p == null) {
-                field_p = new sb();
+                field_p = new PcmOutputWorker();
                 field_p.field_b = param0;
                 param0.requestThreadStart(field_d, -30, (Runnable) ((Object) field_p));
               }

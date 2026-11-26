@@ -35,7 +35,7 @@ final class lf extends TextureOperator {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (lo.field_k != null && (0 > param1 ||
-            bm.field_I == rg.field_d)) {
+            bm.field_I == ProxyAuthenticationRequiredException.field_d)) {
             if (0 == uh.field_Wb.position &&
               (10000L + bm.field_H) < gk.correctedCurrentTimeMillis(55)) {
               uh.field_Wb.writeCipheredByte(param1, 121);

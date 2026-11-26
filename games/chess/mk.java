@@ -176,7 +176,7 @@ final class mk {
               var12.a((byte) 123, var12.field_fc);
               var12.field_Ob = new ci[qa.field_e];
               var12.field_kc = new ci(0L, (ci) null);
-              if (0 != (var14 & 1 << hn.field_p)) {
+              if (0 != (var14 & 1 << BufferedSocket.field_p)) {
                 var12.field_fc.a((byte) 125, var12.field_kc);
               }
               var12.field_Eb = new ci(0L, (ci) null);
@@ -370,7 +370,7 @@ final class mk {
               var33_intLifetime1 = stackIn_72_0;
               var12.field_fc.a(var33_intLifetime1, -var33_intLifetime1 + 365 - 2, -2147483648, fe.field_g, var31);
               var34_int = qc.field_e;
-              if ((var14Lifetime1 & 1 << hn.field_p) != 0) {
+              if ((var14Lifetime1 & 1 << BufferedSocket.field_p) != 0) {
                 var50_ref = sh.field_b[var12.field_ic];
                 var12.field_kc.field_jb = var50_ref;
                 var12.field_kc.a(var34_int, var50_ref.field_v, -2147483648, var12.field_fc.field_pb, 0);

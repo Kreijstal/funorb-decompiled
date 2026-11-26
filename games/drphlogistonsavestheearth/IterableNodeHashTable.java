@@ -114,7 +114,7 @@ final class IterableNodeHashTable implements Iterable {
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var1_intLifetime1;
         try {
-          qe.field_e.b(false);
+          BufferedSocket.field_e.b(false);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             ph.field_g[var1_int] = 0L;
           }

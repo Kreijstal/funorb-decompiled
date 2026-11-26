@@ -16,7 +16,7 @@ final class mm implements uj {
         }
         var1_ref = MidiPcmStream.field_O;
         synchronized (var1_ref) {
-          if (dn.field_w == ll.field_d) {
+          if (dn.field_w == BufferedSocket.field_d) {
             return false;
           }
           lj.field_t = jk.field_ib[dn.field_w];

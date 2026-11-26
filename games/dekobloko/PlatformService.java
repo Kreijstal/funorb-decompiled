@@ -6,7 +6,7 @@ import java.io.*;
 final class PlatformService implements Runnable {
     static String stringState0168;
     java.awt.EventQueue eventQueueState0001;
-    private PlatformSupport001 platformSupport001State0001;
+    private Win32CursorManager platformSupport001State0001;
     private static int integerState0223;
     private AsyncTask asyncTaskState0002;
     private Object objectState0001;
@@ -26,12 +26,12 @@ final class PlatformService implements Runnable {
     private static String stringState0172;
     BoundedRandomAccessFile boundedRandomAccessFileState0002;
     private static String stringState0173;
-    private PlatformSupport003 platformSupport003State0001;
+    private DirectDrawFullscreenManager platformSupport003State0001;
     BoundedRandomAccessFile boundedRandomAccessFileState0003;
 
     final AsyncTask requestEnterFullscreen(byte byteArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         if (byteArgument1 <= 39) {
-          this.platformSupport001State0001 = (PlatformSupport001) null;
+          this.platformSupport001State0001 = (Win32CursorManager) null;
         }
         return this.enqueueTask(integerArgument5 + (integerArgument3 << 16), 1, (Object) null, 6, (integerArgument4 << 16) + integerArgument2);
     }
@@ -209,7 +209,7 @@ final class PlatformService implements Runnable {
           BoundedRandomAccessFile boundedRandomAccessFileLocal9 = null;
           int integerLocal10 = 0;
           Exception exceptionLocal11 = null;
-          DiagnosticSupport001 diagnosticSupport001Local12 = null;
+          ProxyAuthenticationRequiredException diagnosticSupport001Local12 = null;
           int integerLocal13 = 0;
           String stringLocal14 = null;
           java.awt.datatransfer.Transferable transferableLocal15 = null;
@@ -299,7 +299,7 @@ final class PlatformService implements Runnable {
                           integerLocal10 = asyncTaskLocal16.integerState0509;
                           integerLocal13 = asyncTaskLocal16.integerState0508;
                           if (this.booleanState0044) {
-                            this.platformSupport001State0001.performAction0048(integerLocal10, integerLocal13, (byte) -98);
+                            this.platformSupport001State0001.setCursorPosition(integerLocal10, integerLocal13, (byte) -98);
                           } else {
                             Class.forName("RenderingSupport005").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.objectState0002, new Object[]{new Integer(integerLocal10), new Integer(integerLocal13)});
                           }
@@ -311,7 +311,7 @@ final class PlatformService implements Runnable {
                           integerLocal10 = stackIntegerLocal2;
                           componentLocal27 = (java.awt.Component) (asyncTaskLocal16.objectState0003);
                           if (this.booleanState0044) {
-                            this.platformSupport001State0001.performAction0049(integerLocal10 != 0, componentLocal27, (byte) 111);
+                            this.platformSupport001State0001.setCursorVisible(integerLocal10 != 0, componentLocal27, (byte) 111);
                           } else {
                             Class.forName("RenderingSupport005").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.objectState0002, new Object[]{componentLocal27, new Boolean(integerLocal10 != 0)});
                           }
@@ -356,7 +356,7 @@ final class PlatformService implements Runnable {
                         break;
                       case 7:
                         if (this.booleanState0044) {
-                          this.platformSupport003State0001.performAction0523((java.awt.Frame) (asyncTaskLocal16.objectState0003), (byte) 122);
+                          this.platformSupport003State0001.restoreDisplayMode((java.awt.Frame) (asyncTaskLocal16.objectState0003), (byte) 122);
                         } else {
                           Class.forName("MixedSupport135").getMethod("exit", new Class[]{}).invoke(this.objectState0001, new Object[]{});
                         }
@@ -368,14 +368,14 @@ final class PlatformService implements Runnable {
                         if (!this.booleanState0044) {
                           Class.forName("MixedSupport135").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.objectState0001, new Object[]{frameLocal22, new Integer(asyncTaskLocal16.integerState0509 >>> 16), new Integer(asyncTaskLocal16.integerState0509 & 65535), new Integer(asyncTaskLocal16.integerState0508 >> 16), new Integer(asyncTaskLocal16.integerState0508 & 65535)});
                         } else {
-                          this.platformSupport003State0001.performAction0522(asyncTaskLocal16.integerState0508 >> 16, false, asyncTaskLocal16.integerState0509 >>> 16, asyncTaskLocal16.integerState0509 & 65535, asyncTaskLocal16.integerState0508 & 65535, frameLocal22);
+                          this.platformSupport003State0001.enterFullscreen(asyncTaskLocal16.integerState0508 >> 16, false, asyncTaskLocal16.integerState0509 >>> 16, asyncTaskLocal16.integerState0509 & 65535, asyncTaskLocal16.integerState0508 & 65535, frameLocal22);
                         }
                         break;
                       case 5:
                         if (!this.booleanState0044) {
                           asyncTaskLocal16.objectState0004 = Class.forName("MixedSupport135").getMethod("listmodes", new Class[]{}).invoke(this.objectState0001, new Object[]{});
                         } else {
-                          asyncTaskLocal16.objectState0004 = this.platformSupport003State0001.computeIntegerArray0521(0);
+                          asyncTaskLocal16.objectState0004 = this.platformSupport003State0001.listDisplayModes(0);
                         }
                         break;
                       case 3:
@@ -417,11 +417,11 @@ final class PlatformService implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (DiagnosticSupport001) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       asyncTaskLocal16.objectState0004 = UiComponentPart024.computeSocketFactory1275((String) (asyncTaskLocal16.objectState0003), asyncTaskLocal16.integerState0509, 23155).computeSocket1476(-7);
-                    } catch (DiagnosticSupport001 caughtParameterLocal32) {
+                    } catch (ProxyAuthenticationRequiredException caughtParameterLocal32) {
                       caughtExceptionLocal3 = caughtParameterLocal32;
-                      diagnosticSupport001Local12 = (DiagnosticSupport001) (Object) caughtExceptionLocal3;
+                      diagnosticSupport001Local12 = (ProxyAuthenticationRequiredException) (Object) caughtExceptionLocal3;
                       asyncTaskLocal16.objectState0004 = diagnosticSupport001Local12.getMessage();
                       throw diagnosticSupport001Local12;
                     }
@@ -499,7 +499,7 @@ final class PlatformService implements Runnable {
         Throwable throwable = null;
         boolean stackBooleanLocal4 = false;
         Throwable caughtExceptionLocal5 = null;
-        PlatformSupport003 platformSupport003Local6 = null;
+        DirectDrawFullscreenManager platformSupport003Local6 = null;
         this.asyncTaskState0002 = null;
         this.boundedRandomAccessFileState0001 = null;
         this.asyncTaskState0003 = null;
@@ -597,7 +597,7 @@ final class PlatformService implements Runnable {
             if (!this.booleanState0044) {
               this.objectState0001 = Class.forName("MixedSupport135").newInstance();
             } else {
-              platformSupport003Local6 = new PlatformSupport003();
+              platformSupport003Local6 = new DirectDrawFullscreenManager();
               this.platformSupport003State0001 = platformSupport003Local6;
             }
           } catch (java.lang.Throwable caughtParameterLocal16) {
@@ -608,7 +608,7 @@ final class PlatformService implements Runnable {
             if (!this.booleanState0044) {
               this.objectState0002 = Class.forName("RenderingSupport005").newInstance();
             } else {
-              this.platformSupport001State0001 = new PlatformSupport001();
+              this.platformSupport001State0001 = new Win32CursorManager();
             }
           } catch (java.lang.Throwable caughtParameterLocal17) {
             caughtExceptionLocal5 = caughtParameterLocal17;

@@ -100,7 +100,7 @@ final class pg {
           if (0 == var2) {
             var3_ref_pb = (pb) (tl.field_h.beginForward(true));
             if (var3_ref_pb == null) {
-              ck.$cfr$intArgs$b$e683eeaaf5b5(-116);
+              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-116);
               return;
             }
             var4_int = var9.readUnsignedByte(true);
@@ -112,7 +112,7 @@ final class pg {
             }
             var9.position = var9.position + 4;
             if (!var9.verifyCrc32(4)) {
-              ck.$cfr$intArgs$b$e683eeaaf5b5(-112);
+              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-112);
               return;
             }
             var3_ref_pb.unlink((byte) -127);
@@ -120,7 +120,7 @@ final class pg {
           }
           if (1 != var2) {
             uj.a("A1: " + qj.h(-100), (Throwable) null, 1);
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-46);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-46);
             return;
           }
           var3 = var9.readInt((byte) 19);
@@ -133,7 +133,7 @@ final class pg {
             break;
           }
           if (var4 == null) {
-            ck.$cfr$intArgs$b$e683eeaaf5b5(-73);
+            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-73);
             return;
           }
           var4.unlink((byte) -128);

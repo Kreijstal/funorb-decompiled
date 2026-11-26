@@ -56,7 +56,7 @@ abstract class fu {
           jaggl.OpenGL.glBufferDataARBub(param1, this.field_e, param2, 0, !this.field_a ? 35044 : 35040);
           this.field_b.field_ib = this.field_b.field_ib + this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "fu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "fu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

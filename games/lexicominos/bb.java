@@ -186,7 +186,7 @@ final class bb extends nb implements jk {
           var3_int = param0.length();
           if (1 <= var3_int &&
             var3_int <= 12) {
-            var4 = ck.a(param0, (byte) -48);
+            var4 = ProxyAuthenticationRequiredException.a(param0, (byte) -48);
             if (var4 == null) {
               return false;
             }

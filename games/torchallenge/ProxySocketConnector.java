@@ -106,7 +106,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
         int var5 = 118 % ((-62 - param2) / 37);
-        return bb.a(param3, param4, param1, (byte) 92, false, param0);
+        return PcmOutputWorker.a(param3, param4, param1, (byte) 92, false, param0);
     }
 
     final static boolean d(int param0) {
@@ -172,11 +172,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var12 != -1) {
                     var9 = var15.substring(0, var12);
                   }
-                  throw new bj(var9);
+                  throw new ProxyAuthenticationRequiredException(var9);
                 }
                 break;
               }
-              throw new bj("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_10_0 = var14;
@@ -285,7 +285,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        bj var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         rd var14 = null;
@@ -347,15 +347,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (bj) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, (byte) -115);
             if (var12 != null) {
               stackIn_26_0 = var12;
               return stackIn_26_0;
             }
-          } catch (bj decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (bj) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -375,7 +375,7 @@ final class ProxySocketConnector extends SocketConnector {
             rd var4 = (rd) null;
             ProxySocketConnector.a((rd) null, 123, false);
           }
-          bb.field_d.addLast(param0, -70);
+          PcmOutputWorker.field_d.addLast(param0, -70);
           mg.a(-127, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

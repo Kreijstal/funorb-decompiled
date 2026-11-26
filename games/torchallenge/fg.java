@@ -44,10 +44,10 @@ final class fg extends kj implements cc, sg {
           if (param1) {
             field_M = (int[]) null;
           }
-          var4 = (rd) (bb.field_d.first((byte) 118));
+          var4 = (rd) (PcmOutputWorker.field_d.first((byte) 118));
           while (var4 != null) {
             mg.a(-127, var4, param0);
-            var4 = (rd) (bb.field_d.next(-270));
+            var4 = (rd) (PcmOutputWorker.field_d.next(-270));
           }
           var2 = ji.field_q.first((byte) -49);
           while (var2 != null) {
@@ -374,7 +374,7 @@ final class fg extends kj implements cc, sg {
             } else {
               if (this.field_R == param0) {
                 if (this.field_P) {
-                  bj.a(!param4);
+                  ProxyAuthenticationRequiredException.a(!param4);
                 } else {
                   if (this.field_K) {
                     IterableNodeHashTable.a(-2068);

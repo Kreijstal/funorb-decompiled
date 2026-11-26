@@ -44,7 +44,7 @@ final class ArchiveIndex {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class ArchiveIndex {
         int var14Lifetime1;
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          PacketBuffer var17 = new PacketBuffer(pn.a(param0, 0));
+          PacketBuffer var17 = new PacketBuffer(PcmOutputWorker.a(param0, 0));
           int var4 = var17.readUnsignedByte(-112);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -234,7 +234,7 @@ final class ArchiveIndex {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class ArchiveIndex {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class ArchiveIndex {
           }
           this.a(param0, 100);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ps.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ps.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

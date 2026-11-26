@@ -288,7 +288,7 @@ public final class SolKnight extends ab {
           la.resetStaticState((byte) 74);
           IsaacRandom.clearStaticReferences(-122);
           ti.clearStaticReferences(103);
-          sb.clearStaticReferences((byte) -90);
+          PcmOutputWorker.clearStaticReferences((byte) -90);
           ea.d(false);
           hl.a((byte) -113);
           ic.resetStaticState(-74);

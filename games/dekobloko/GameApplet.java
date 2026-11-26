@@ -362,7 +362,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           ((java.awt.Container) (objectLocal2)).setLayout((java.awt.LayoutManager) null);
-          GameDomainSupport004.canvasState0001 = (java.awt.Canvas) ((Object) new PlatformSupport002((java.awt.Component) (this)));
+          GameDomainSupport004.canvasState0001 = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (objectLocal2)).add((java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
           GameDomainSupport004.canvasState0001.setSize(UiComponentPart006.integerState0133, MixedSupport090.integerState0548);
           GameDomainSupport004.canvasState0001.setVisible(true);
@@ -707,7 +707,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(integerLocal11 < MixedSupport142.integerState0883)) {
                       this.performAction0677(false);
-                      DiagnosticSupport001.performAction0331(-61, GameDomainSupport004.canvasState0001, GzipDecompressor.platformServiceState0003);
+                      ProxyAuthenticationRequiredException.performAction0331(-61, GameDomainSupport004.canvasState0001, GzipDecompressor.platformServiceState0003);
                       break;
                     }
                     this.performAction0682(121);

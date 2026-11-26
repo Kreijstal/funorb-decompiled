@@ -65,11 +65,11 @@ final class cd extends ea implements Cloneable {
                 uo.field_o == 4) {
                 if (w.field_f + 2 == param1 &&
                   12 + ia.field_i == param0) {
-                  va.field_c = 1;
+                  ProxyAuthenticationRequiredException.field_c = 1;
                 }
                 if (w.field_f + 2 == param1 &&
                   ia.field_i + 27 == param0) {
-                  va.field_c = 2;
+                  ProxyAuthenticationRequiredException.field_c = 2;
                 }
               }
               wd.field_j = wd.field_j + 1;
@@ -579,7 +579,7 @@ final class cd extends ea implements Cloneable {
                   fp.field_a = fp.field_a + 40;
                   b.field_a = b.field_a + 20;
                   if (BoundedRandomAccessFile.field_e == 0) {
-                    va.field_d = va.field_d | 1 << var7;
+                    ProxyAuthenticationRequiredException.field_d = ProxyAuthenticationRequiredException.field_d | 1 << var7;
                   }
                 }
               }

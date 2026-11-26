@@ -148,10 +148,10 @@ final class ta extends pk {
 
     final boolean a(byte param0) {
         if (param0 == -9) {
-          return this.field_m.c(this.field_i, this.field_k, hn.field_k, rf.field_b);
+          return this.field_m.c(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
         }
         this.field_v = (RgbSprite) null;
-        return this.field_m.c(this.field_i, this.field_k, hn.field_k, rf.field_b);
+        return this.field_m.c(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
     }
 
     final static void a(r param0, int param1) {

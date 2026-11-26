@@ -124,7 +124,7 @@ public final class MinerDisturbance extends ob {
 
     private final void a(int param0, byte param1) {
         try {
-          ll.field_h = 38054639 ^ param0;
+          BufferedSocket.field_h = 38054639 ^ param0;
           if (param1 <= 114) {
             this.w(-76);
           }
@@ -565,7 +565,7 @@ public final class MinerDisturbance extends ob {
             if (var4 > 50) {
               var4 = 50;
             }
-            this.field_D[this.field_I] = (24 * (ll.a((byte) -73, 1 + var4) * (ll.a((byte) -73, 3) - 1) + var4) / 100 + ll.a((byte) -73, 2)) * this.field_M;
+            this.field_D[this.field_I] = (24 * (BufferedSocket.a((byte) -73, 1 + var4) * (BufferedSocket.a((byte) -73, 3) - 1) + var4) / 100 + BufferedSocket.a((byte) -73, 2)) * this.field_M;
             if (Math.abs(this.field_D[this.field_I]) > 25) {
               this.field_D[this.field_I] = 25 * this.field_M;
             }
@@ -1161,7 +1161,7 @@ public final class MinerDisturbance extends ob {
           this.field_K = false;
           vk.field_a = cm.field_o;
           this.a(3, a.field_c);
-          this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
+          this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
           pl.field_h = 15;
           var2_int = 0;
           do {
@@ -1489,7 +1489,7 @@ public final class MinerDisturbance extends ob {
               fn.a(12, 243, param0 + 16509);
             }
             ke.field_V = false;
-            this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
+            this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
             cm.field_r = 0;
             if (wf.q(88)) {
               a.field_c = a.field_c * 2;
@@ -2893,7 +2893,7 @@ public final class MinerDisturbance extends ob {
               if (var9Lifetime1 != 0 &&
                 var4Lifetime3 == 0 &&
                 je.field_O.f(hf.field_t, 2, ca.field_k)) {
-                ne.a(ll.a((byte) -73, 4) + 57, 85);
+                ne.a(BufferedSocket.a((byte) -73, 4) + 57, 85);
               }
               boolean decompiledFrameRemainder2 = true;
               if (0 < AccountRequestState.field_k) {
@@ -2981,21 +2981,21 @@ public final class MinerDisturbance extends ob {
                   if (cm.field_o == 1) {
                     if (!mh.field_e[this.field_db][this.field_N].field_E) {
                       if (!mh.field_e[this.field_db][this.field_N].field_v) {
-                        ne.a(ll.a((byte) -73, 3) + 54, param0 + 16598);
+                        ne.a(BufferedSocket.a((byte) -73, 3) + 54, param0 + 16598);
                         if (var21 != 0) {
-                          ne.a(51 + ll.a((byte) -73, 3), -125);
-                          ne.a(ll.a((byte) -73, 3) + 48, 71);
+                          ne.a(51 + BufferedSocket.a((byte) -73, 3), -125);
+                          ne.a(BufferedSocket.a((byte) -73, 3) + 48, 71);
                           ne.a(24, -105);
                         }
                       } else {
-                        ne.a(51 + ll.a((byte) -73, 3), -125);
+                        ne.a(51 + BufferedSocket.a((byte) -73, 3), -125);
                         if (var21 != 0) {
-                          ne.a(ll.a((byte) -73, 3) + 48, 71);
+                          ne.a(BufferedSocket.a((byte) -73, 3) + 48, 71);
                           ne.a(24, -105);
                         }
                       }
                     } else {
-                      ne.a(ll.a((byte) -73, 3) + 48, 71);
+                      ne.a(BufferedSocket.a((byte) -73, 3) + 48, 71);
                       if (var21 != 0) {
                         ne.a(24, -105);
                       }
@@ -4762,7 +4762,7 @@ public final class MinerDisturbance extends ob {
           nm.a(false);
           bk.clearStaticReferences((byte) -113);
           me.clearStaticReferences((byte) -83);
-          ll.b((byte) -121);
+          BufferedSocket.b((byte) -121);
           ha.a((byte) 28);
           d.a((byte) 109);
           h.b(true);
@@ -4822,7 +4822,7 @@ public final class MinerDisturbance extends ob {
           qf.clearDeclaredStaticReferences(param0 - 28582);
           vc.clearDeclaredStaticReferences(param0 + 105);
           ng.a(-1);
-          j.clearStaticReferences(90);
+          PcmOutputWorker.clearStaticReferences(90);
           rf.clearStaticReferences((byte) -56);
           eg.clearStaticReferences(-7709);
           ck.a((byte) -100);
@@ -4876,7 +4876,7 @@ public final class MinerDisturbance extends ob {
           sn.clearStaticReferences((byte) -18);
           a.clearStaticReferences(0);
           jh.clearStaticReferences((byte) 39);
-          pm.clearStaticReferences(92);
+          ProxyAuthenticationRequiredException.clearStaticReferences(92);
           ca.b(param0 ^ 11);
           ImageProducerRasterBuffer.d(16711680);
           o.clearStaticReferences(param0 - 23642);
@@ -5170,7 +5170,7 @@ public final class MinerDisturbance extends ob {
             nn.field_h[cm.field_o].f(0, 0);
             if (this.field_T < 0 ||
               !(this.field_T <= (-1 + sl.field_u[pl.field_h].length))) {
-              this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
+              this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
             }
             boolean decompiledFrameRemainder11 = true;
             regionExit1: {
@@ -5437,7 +5437,7 @@ public final class MinerDisturbance extends ob {
             dl.field_d[cm.field_o].d();
             if (0 > this.field_T ||
               !(this.field_T <= sl.field_u[pl.field_h].length - 1)) {
-              this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
+              this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
             }
             var9_ref_String = sl.field_u[pl.field_h][this.field_T];
             PacketBuffer.field_n.field_T[0][wd.field_e] = 9737364;
@@ -7032,7 +7032,7 @@ public final class MinerDisturbance extends ob {
                 hf.field_t = hf.field_t + 4;
                 mh.field_e[ca.field_k][hf.field_t].field_a = false;
               }
-              if (~lj.field_t == ~pm.field_a) {
+              if (~lj.field_t == ~ProxyAuthenticationRequiredException.field_a) {
                 qm.field_f = true;
                 hf.field_t = hf.field_t - 4;
                 mh.field_e[ca.field_k][hf.field_t].field_a = false;
@@ -7404,7 +7404,7 @@ public final class MinerDisturbance extends ob {
                 }
               }
               if (14 == var8Lifetime1) {
-                bb.a(j.field_e, 0, ce.field_d, 16513123, -6);
+                bb.a(PcmOutputWorker.field_e, 0, ce.field_d, 16513123, -6);
                 if (var10 == 0) {
                   return;
                 }
@@ -7492,7 +7492,7 @@ public final class MinerDisturbance extends ob {
         try {
           ke.field_V = false;
           mg.a((byte) -113);
-          this.field_T = ll.a((byte) -73, sl.field_u[pl.field_h].length);
+          this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "MinerDisturbance.CA(" + param0 + ')');
         }

@@ -191,7 +191,7 @@ final class ia extends rk {
           MouseInputHandler.field_c = param0.field_A;
           hn.field_s = param9.field_X;
           vf.field_y = param9.field_i;
-          jr.field_f = param9.field_bb;
+          PcmOutputWorker.field_f = param9.field_bb;
           rn.field_z = param9.field_A;
           ln.field_g = param9.field_D;
           al.field_s = param0.field_a;
@@ -226,7 +226,7 @@ final class ia extends rk {
           }
           param9.field_X = hn.field_s;
           param9.field_C = ga.field_hb;
-          param9.field_bb = jr.field_f;
+          param9.field_bb = PcmOutputWorker.field_f;
           param9.field_A = rn.field_z;
           param9.field_o = b.field_m;
           param9.field_u = vj.field_f;

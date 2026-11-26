@@ -119,7 +119,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static void a(int param0, int param1, int param2) {
-        sb.field_d = param0;
+        PcmOutputWorker.field_d = param0;
         int var3 = 89 / ((-62 - param2) / 40);
         vk.field_m = param1;
     }

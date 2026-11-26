@@ -171,7 +171,7 @@ final class je extends vm {
             return stackIn_7_0;
           }
           if (!this.b((byte) -94, param1)) {
-            stackIn_12_0 = oa.field_a;
+            stackIn_12_0 = ProxyAuthenticationRequiredException.field_a;
             return stackIn_12_0;
           }
           stackIn_10_0 = qk.field_b;

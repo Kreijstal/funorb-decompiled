@@ -223,12 +223,12 @@ class r extends ek {
           if (param1 < 118) {
             field_s = 4;
           }
-          int var2_int = cb.field_j.b(126);
+          int var2_int = cb.field_j.availableBytes(126);
           if (var2_int > 0) {
             if (!(param0 - rd.field_j.position >= var2_int)) {
               var2_int = param0 - rd.field_j.position;
             }
-            cb.field_j.a((byte) 66, rd.field_j.payload, var2_int, rd.field_j.position);
+            cb.field_j.readFully((byte) 66, rd.field_j.payload, var2_int, rd.field_j.position);
             uk.field_a = id.correctedCurrentTimeMillis(71);
             rd.field_j.position = rd.field_j.position + var2_int;
             if (param0 > rd.field_j.position) {

@@ -116,9 +116,9 @@ final class p {
             if (var4_ref_lc != null &&
               var2_long > var4_ref_lc.field_l) {
               var4_ref_lc.unlink(true);
-              bb.field_i = var4_ref_lc.field_q.length;
+              PcmOutputWorker.field_i = var4_ref_lc.field_q.length;
               id.field_b.position = 0;
-              for (var5_int = 0; var5_int < bb.field_i; var5_int++) {
+              for (var5_int = 0; var5_int < PcmOutputWorker.field_i; var5_int++) {
                 id.field_b.payload[var5_int] = var4_ref_lc.field_q[var5_int];
               }
               ul.field_j = uc.field_X;
@@ -136,7 +136,7 @@ final class p {
               }
               jf.field_tb = id.field_b.o(11650);
               id.field_b.position = 0;
-              bb.field_i = param1[jf.field_tb];
+              PcmOutputWorker.field_i = param1[jf.field_tb];
             }
             if (!NodeHashTableIterator.a((byte) 124)) {
               return false;
@@ -156,8 +156,8 @@ final class p {
                 var4 = 0;
               }
             }
-            var5 = new lc((long)var4 + var2_long, jf.field_tb, new byte[bb.field_i]);
-            for (var6 = 0; var6 < bb.field_i; var6++) {
+            var5 = new lc((long)var4 + var2_long, jf.field_tb, new byte[PcmOutputWorker.field_i]);
+            for (var6 = 0; var6 < PcmOutputWorker.field_i; var6++) {
               var5.field_q[var6] = id.field_b.payload[var6];
             }
             ba.field_a.addLast(var5, -111);

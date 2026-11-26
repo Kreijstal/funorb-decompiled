@@ -21,9 +21,9 @@ abstract class MouseWheelInput {
           if (param2 < 52) {
             return;
           }
-          if (hn.field_e == null ||
-            !(hn.field_e.length >= param1)) {
-            hn.field_e = new int[param1 * 2];
+          if (BufferedSocket.field_e == null ||
+            !(BufferedSocket.field_e.length >= param1)) {
+            BufferedSocket.field_e = new int[param1 * 2];
           }
           if (null == in.field_j ||
             !(in.field_j.length >= param1)) {
@@ -71,9 +71,9 @@ abstract class MouseWheelInput {
             if (param2 < 52) {
               return;
             }
-            if (hn.field_e == null ||
-              !(hn.field_e.length >= param1)) {
-              hn.field_e = new int[param1 * 2];
+            if (BufferedSocket.field_e == null ||
+              !(BufferedSocket.field_e.length >= param1)) {
+              BufferedSocket.field_e = new int[param1 * 2];
             }
             if (null == in.field_j ||
               !(in.field_j.length >= param1)) {
@@ -102,8 +102,8 @@ abstract class MouseWheelInput {
             if (param2 < 52) {
               return;
             }
-            if (hn.field_e == null) {
-              hn.field_e = new int[param1 * 2];
+            if (BufferedSocket.field_e == null) {
+              BufferedSocket.field_e = new int[param1 * 2];
               if (null == in.field_j ||
                 !(in.field_j.length >= param1)) {
                 in.field_j = new int[param1 * 2];
@@ -145,7 +145,7 @@ abstract class MouseWheelInput {
                 }
               }
             } else {
-              if (hn.field_e.length >= param1) {
+              if (BufferedSocket.field_e.length >= param1) {
                 if (null == in.field_j ||
                   !(in.field_j.length >= param1)) {
                   in.field_j = new int[param1 * 2];
@@ -187,7 +187,7 @@ abstract class MouseWheelInput {
                   }
                 }
               } else {
-                hn.field_e = new int[param1 * 2];
+                BufferedSocket.field_e = new int[param1 * 2];
                 if (null == in.field_j ||
                   !(in.field_j.length >= param1)) {
                   in.field_j = new int[param1 * 2];

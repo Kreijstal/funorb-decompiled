@@ -724,7 +724,7 @@ abstract class pm extends DualLinkNode {
           var13 = 4.0;
           var15 = IntrusiveDeque.field_a;
           var17 = ke.field_Z;
-          var19 = sb.field_g;
+          var19 = PcmOutputWorker.field_g;
           var21 = new vb(param7);
           var22_ref_oi = (oi) (var21.b(param6, 6));
           while (var22_ref_oi != null) {

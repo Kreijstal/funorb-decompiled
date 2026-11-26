@@ -21,7 +21,7 @@ final class op {
             }
             if (0 < ac.field_B.position) {
               try {
-                sp.field_c.b(ac.field_B.payload, false, 0, ac.field_B.position);
+                sp.field_c.queueWrite(ac.field_B.payload, false, 0, ac.field_B.position);
                 wh.field_e = kd.correctedCurrentTimeMillis(-2456);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

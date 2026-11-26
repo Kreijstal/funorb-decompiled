@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea {
-    static qe field_a;
+    static BufferedSocket field_a;
     static String field_b;
     static he field_c;
 

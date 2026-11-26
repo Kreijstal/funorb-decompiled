@@ -70,7 +70,7 @@ final class g extends aa {
           if (param1 != -119) {
             g.clearDeclaredStaticReferences((byte) 111);
           }
-          var2 = jj.a(param1 + 14580, bk.a(124, param0));
+          var2 = jj.a(param1 + 14580, ProxyAuthenticationRequiredException.a(124, param0));
           if (var2 == null) {
             var2 = "";
           }

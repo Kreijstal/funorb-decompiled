@@ -50,7 +50,7 @@ final class wj {
               ob.b(-100);
               return;
             }
-            var5_int = bb.field_i - var10.position;
+            var5_int = PcmOutputWorker.field_i - var10.position;
             var12 = var4_ref_tc.field_n;
             var11 = var12;
             var6 = var11;

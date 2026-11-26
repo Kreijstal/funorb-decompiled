@@ -1297,7 +1297,7 @@ final class BattleUnit {
                 if (30 < this.field_A) {
                   var4 = 2;
                 }
-                wb.field_h[var4].b(13, -6, var3);
+                ProxyAuthenticationRequiredException.field_h[var4].b(13, -6, var3);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
             }

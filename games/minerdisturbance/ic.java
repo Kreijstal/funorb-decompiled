@@ -45,7 +45,7 @@ final class ic extends jh {
         String stackIn_13_4;
         java.net.Socket stackIn_23_0 = null;
         Throwable decompiledCaughtException = null;
-        pm var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         var13 = MinerDisturbance.field_ab;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
@@ -95,15 +95,15 @@ final class ic extends jh {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (pm) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, 8217);
             if (var12 != null) {
               stackIn_23_0 = var12;
               return stackIn_23_0;
             }
-          } catch (pm decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (pm) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -282,11 +282,11 @@ final class ic extends jh {
                   if (-1 != var11) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new pm(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new pm("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_9_0 = var13;

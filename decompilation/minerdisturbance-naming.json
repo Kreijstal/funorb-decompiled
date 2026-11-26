@@ -508,6 +508,14 @@
       "renamedSymbol": "C:ArchiveIndex"
     },
     {
+      "symbol": "C:ga",
+      "originalName": "ga",
+      "to": "DirectDrawFullscreenManager",
+      "evidence": "Source-purpose review: final DirectDraw-backed fullscreen manager implements IEnumModesCallback,owns one DirectDraw and shared static int count/int[] mode accumulator;public constructor initializes DirectDraw. Complete class and all73incoming method/65class use contexts across21games reviewed. Enumerates flat width,height,rgbBitCount,refreshRate records;switches a Frame into fullscreen and restores display mode/cooperative level. Preserve callback name/signature,public constructor,all fields/modifiers/guard paths,shared state,primitive domains,allocation/call/exception order. No native callback or implementation fixes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectDrawFullscreenManager"
+    },
+    {
       "symbol": "C:gb",
       "originalName": "gb",
       "to": "NodeHashTableIterator",
@@ -556,6 +564,14 @@
       "renamedSymbol": "C:PlatformTask"
     },
     {
+      "symbol": "C:j",
+      "originalName": "j",
+      "to": "PcmOutputWorker",
+      "evidence": "Source-purpose review: Runnable output worker with volatile two-slot PCM output array (existing AudioOutput/PcmPlayerService/AudioMixer names retained),two volatile running/stop flags,and retained system-task service. Package-visible constructor allocates two player slots and initializes both flags false;public final run services nonnull players through the already reviewed bound output serviceOutput method,sleeps via sleepMillis(10),and performs its original post-service helper call. All22run bodies,22constructors and22creation/task-registration contexts human read. Preserve run callback name,all field/method leaves,volatile declarations,flag placement,Exception/Throwable/finally routing,diagnostic wrappers,partial writes and call/allocation/exception order. Unrelated static helper bodies preserved without claiming their semantic review.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PcmOutputWorker"
+    },
+    {
       "symbol": "C:ji",
       "originalName": "ji",
       "to": "PcmSample",
@@ -586,6 +602,14 @@
       "evidence": "PacketBuffer subclass with an IsaacRandom opcode cipher and bit cursor.",
       "confidence": "reviewed",
       "renamedSymbol": "C:CipherPacketBuffer"
+    },
+    {
+      "symbol": "C:ll",
+      "originalName": "ll",
+      "to": "BufferedSocket",
+      "evidence": "Source-purpose review: final Runnable Socket wrapper retains InputStream/OutputStream,private5000-default circular output storage and asynchronous writer-task state;performs direct input reads with queued output writes,error-latch handling and close/join/finalizer lifecycle. All110instance bodies across11games human read,including22constructors and11writer loops/finalizers;all278incoming method references compiler-bound,66representative method callers and21construction contexts human read. Preserve callbacks run/finalize,constructor visibility and defaults,full primitive/byte-array domains,IO/EOF behavior,monitor and task/join semantics,guard/sentinel/partial-write/diagnostic/exception order. Unrelated static bodies preserved without claiming semantic review.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BufferedSocket"
     },
     {
       "symbol": "C:m",
@@ -668,6 +692,14 @@
       "renamedSymbol": "C:IntrusiveNode"
     },
     {
+      "symbol": "C:pm",
+      "originalName": "pm",
+      "to": "ProxyAuthenticationRequiredException",
+      "evidence": "Source-purpose review: final IOException subtype with one String constructor forwarding unchanged to super,and no own instance fields or other instance methods. Both bound throw sites in each game are within HTTP/1.0 or HTTP/1.1 407 proxy-authentication handling:carry parsed proxy-authenticate scheme or empty fallback. Two typed catch paths retain/rethrow and expose getMessage through platform-task result. All22constructors,44throw sites and44catch contexts human read;all class references mechanically bound,unrelated static helpers/fields preserved. Preserve visibility,message payloads,inheritance,exception/guard order and every unselected member name;no implementation repairs.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ProxyAuthenticationRequiredException"
+    },
+    {
       "symbol": "C:qc",
       "originalName": "qc",
       "to": "SecondaryNodeDeque",
@@ -730,6 +762,14 @@
       "evidence": "Holds a sentinel pi and a traversal cursor; same shared role as Ace IntrusiveDeque.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IntrusiveDeque"
+    },
+    {
+      "symbol": "C:ue",
+      "originalName": "ue",
+      "to": "Win32CursorManager",
+      "evidence": "Source-purpose review: final Win32 cursor manager extends com.ms.dll.Callback;owns five private fields,including two volatile window/procedure ints and one volatile visibility boolean. Package-visible no-argument constructor starts visibility true;synchronized final callback routes existing window messages through bound User32 cursor/window-procedure operations. Complete class and all helper/callback/constructor bodies reviewed across23games,plus all53incoming helper contexts and50class reference contexts. Preserve native-facing callback name/signature,volatile fields,Root.alloc lifetime,monitor regions,window procedure chain,full primitive domains,guards/recursion/partial writes and call/exception order. No native implementation repairs or callback leaf renames.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Win32CursorManager"
     },
     {
       "symbol": "C:uk",
@@ -2420,6 +2460,30 @@
       "renamedSymbol": "M:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V"
     },
     {
+      "symbol": "M:ga.a(BLjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "restoreDisplayMode",
+      "evidence": "Source-purpose review: Calls bound DirectDraw.restoreDisplayMode followed by guarded/cooperative-level restoration on a Frame. Preserve caller-supplied cooperative flags,guard branches,arithmetic exceptions,static resets and recursive sibling calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.restoreDisplayMode(BLjava/awt/Frame;)V"
+    },
+    {
+      "symbol": "M:ga.a(I)[I",
+      "originalName": "a",
+      "to": "listDisplayModes",
+      "evidence": "Source-purpose review: Calls bound DirectDraw.enumDisplayModes twice around shared flat-int mode array allocation,using callbackEnumModes to count/fill width,height,rgbBitCount,refreshRate records. Preserve each supplied enum flag,counter-reset argument,null/early-return/recursive guard path and partial writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.listDisplayModes(I)[I"
+    },
+    {
+      "symbol": "M:ga.a(IIBLjava/awt/Frame;II)V",
+      "originalName": "a",
+      "to": "enterFullscreen",
+      "evidence": "Source-purpose review: Makes a Frame visible,adjusts window styles through bound Win32.SetWindowLong,sets DirectDraw cooperative level/display mode and updates frame bounds/focus. Preserve per-game parameter order and semantics,including supplied visibility,window style/index and display-mode flags;retain all guard returns/nulls/recursion/exception and operation order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V"
+    },
+    {
       "symbol": "M:gb.c(I)V",
       "originalName": "c",
       "to": "reset",
@@ -2825,7 +2889,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 500e6b630b22a5144172e7a325d2bd70ccfb3e933b98cf1555f21923a2504bca.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:j.clearStaticReferences(I)V"
+      "renamedSymbol": "M:PcmOutputWorker.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:ja.f(I)V",
@@ -3098,6 +3162,54 @@
       "evidence": "Reuse the existing client exception and append space plus diagnostic context,or allocate the original wrapper for another Throwable,preserving null/identity/string concatenation and allocation/exception order. Complete original-body SHA256 ba7b6f89055d79270fa49d77e8e15cae2e7544be7eeb3841d17b72a13cc8323e. Naming only. Entire original selected bodies and compiler-bound calls/fields were source-reviewed;support/owning PCM contracts and exact game-specific exceptional branches retained. Preserve all JVM widths/domains,original literals/operators,overflow,FP/casts,shared aliases,partial writes,allocation/call/exception order,visibility/modifiers,native and override bindings. No bodies,fields,parameters,locals or intentional native/class-name literals change. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:lj.wrapClientException(Ljava/lang/Throwable;Ljava/lang/String;)LClientException;"
+    },
+    {
+      "symbol": "M:ll.a(B)V",
+      "originalName": "a",
+      "to": "checkWriteError",
+      "evidence": "Source-purpose review: Checks and consumes the owned deferred write-error latch,throwing IOException on the original branches. Latch identity verified against queueWrite and both writer IOException handlers;preserve closed/guard paths,parameter domains,field mutations and exception order. Complete owning body and representative bound caller reviewed;all declarations/signatures/modifiers and unselected leaves retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.checkWriteError(B)V"
+    },
+    {
+      "symbol": "M:ll.a(B[BII)V",
+      "originalName": "a",
+      "to": "queueWrite",
+      "evidence": "Source-purpose review: Copies caller bytes into the owned circular output buffer under the original monitor,lazily starts the writer task,and notifies it on the original branches. Preserve consumed error latch,capacity/modulo/overflow/fullness effects,partial writes,all argument roles and guard paths;BounceDown fourth int is the starting copy-counter value,Confined boolean can skip notifyAll after task creation. Complete owning body and representative bound caller reviewed;all declarations/signatures/modifiers and unselected leaves retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.queueWrite(B[BII)V"
+    },
+    {
+      "symbol": "M:ll.a(Z)I",
+      "originalName": "a",
+      "to": "readSingleByte",
+      "evidence": "Source-purpose review: Returns a single bound InputStream.read() result on the primary open-socket path. Preserve EOF -1,closed return0,all parameter-dependent sentinel returns,guard mutations/finalizer or close calls and exceptions;no unsigned-byte normalization. Complete owning body and representative bound caller reviewed;all declarations/signatures/modifiers and unselected leaves retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.readSingleByte(Z)I"
+    },
+    {
+      "symbol": "M:ll.a(Z[BII)V",
+      "originalName": "a",
+      "to": "readFully",
+      "evidence": "Source-purpose review: Fills the requested input range by repeated bound InputStream.read(byte[],offset,count) calls,advancing offset/reducing remaining count and throwing EOFException for nonpositive progress. Preserve original argument order,closed/guard returns,partial writes,EOF routing,debug mutations and diagnostic wrapping. Complete owning body and representative bound caller reviewed;all declarations/signatures/modifiers and unselected leaves retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.readFully(Z[BII)V"
+    },
+    {
+      "symbol": "M:ll.b(I)V",
+      "originalName": "b",
+      "to": "close",
+      "evidence": "Source-purpose review: Marks the socket closed/notifies under the original monitor,waits for writer-task completion and joins its Thread using the original status/InterruptedException paths. Preserve36CardTrick supplied closed-flag boolean,all guard returns/mutations,join order and exception wrapping. Complete owning body and representative bound caller reviewed;all declarations/signatures/modifiers and unselected leaves retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.close(I)V"
+    },
+    {
+      "symbol": "M:ll.c(I)I",
+      "originalName": "c",
+      "to": "availableBytes",
+      "evidence": "Source-purpose review: Returns bound InputStream.available() on the primary open-socket path. Preserve closed/sentinel returns,arithmetic guards,static helper calls,field writes and exception order. Complete owning body and representative bound caller reviewed;all declarations/signatures/modifiers and unselected leaves retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.availableBytes(I)I"
     },
     {
       "symbol": "M:lm.f(B)V",
@@ -3849,7 +3961,7 @@
       "to": "clearStaticReferences",
       "evidence": "Source-purpose review: Clears 2 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:pm.clearStaticReferences(I)V"
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:qc.a(BLal;)V",
@@ -4818,6 +4930,22 @@
       "evidence": "Source-purpose review: Clears 2 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ud.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ue.a(ILjava/awt/Component;Z)V",
+      "originalName": "a",
+      "to": "setCursorVisible",
+      "evidence": "Source-purpose review: Registers/root-retains a Win32 callback,loads the cursor,updates the retained window-procedure/visibility state under original monitors,and sends cursor-update messages for a Component. All incoming task dispatch/guard-call contexts reviewed;preserve boolean meaning,supplied SendMessage arguments,all early returns/field writes/guards/nulls/recursion and native-call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V"
+    },
+    {
+      "symbol": "M:ue.a(ZII)V",
+      "originalName": "a",
+      "to": "setCursorPosition",
+      "evidence": "Source-purpose review: Calls bound Win32 User32.SetCursorPos with original per-game coordinate order. All incoming task dispatch/self-call contexts reviewed;preserve original guard values,conditional field writes,arithmetic exceptions,callback/self recursion and before/after native-call order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Win32CursorManager.setCursorPosition(ZII)V"
     },
     {
       "symbol": "M:uf.f(I)V",
@@ -6846,9 +6974,9 @@
     },
     {
       "symbol": "C:ga",
-      "renamedSymbol": "C:ga",
+      "renamedSymbol": "C:DirectDrawFullscreenManager",
       "originalName": "ga",
-      "renamedName": "ga",
+      "renamedName": "DirectDrawFullscreenManager",
       "declaration": {
         "file": "ga.java",
         "start": 50,
@@ -7308,9 +7436,9 @@
     },
     {
       "symbol": "C:j",
-      "renamedSymbol": "C:j",
+      "renamedSymbol": "C:PcmOutputWorker",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "PcmOutputWorker",
       "declaration": {
         "file": "j.java",
         "start": 50,
@@ -7792,9 +7920,9 @@
     },
     {
       "symbol": "C:ll",
-      "renamedSymbol": "C:ll",
+      "renamedSymbol": "C:BufferedSocket",
       "originalName": "ll",
-      "renamedName": "ll",
+      "renamedName": "BufferedSocket",
       "declaration": {
         "file": "ll.java",
         "start": 89,
@@ -8463,9 +8591,9 @@
     },
     {
       "symbol": "C:pm",
-      "renamedSymbol": "C:pm",
+      "renamedSymbol": "C:ProxyAuthenticationRequiredException",
       "originalName": "pm",
-      "renamedName": "pm",
+      "renamedName": "ProxyAuthenticationRequiredException",
       "declaration": {
         "file": "pm.java",
         "start": 69,
@@ -9200,9 +9328,9 @@
     },
     {
       "symbol": "C:ue",
-      "renamedSymbol": "C:ue",
+      "renamedSymbol": "C:Win32CursorManager",
       "originalName": "ue",
-      "renamedName": "ue",
+      "renamedName": "Win32CursorManager",
       "declaration": {
         "file": "ue.java",
         "start": 50,
@@ -12863,7 +12991,7 @@
     },
     {
       "symbol": "F:ci.field_i:Lll;",
-      "renamedSymbol": "F:AwtRasterBuffer.field_i:Lll;",
+      "renamedSymbol": "F:AwtRasterBuffer.field_i:LBufferedSocket;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -17109,7 +17237,7 @@
     },
     {
       "symbol": "F:fj.field_b:Lj;",
-      "renamedSymbol": "F:AudioOutput.field_b:Lj;",
+      "renamedSymbol": "F:AudioOutput.field_b:LPcmOutputWorker;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -17923,7 +18051,7 @@
     },
     {
       "symbol": "F:ga.field_a:Lcom/ms/directX/DirectDraw;",
-      "renamedSymbol": "F:ga.field_a:Lcom/ms/directX/DirectDraw;",
+      "renamedSymbol": "F:DirectDrawFullscreenManager.field_a:Lcom/ms/directX/DirectDraw;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -17934,7 +18062,7 @@
     },
     {
       "symbol": "F:ga.field_b:[I",
-      "renamedSymbol": "F:ga.field_b:[I",
+      "renamedSymbol": "F:DirectDrawFullscreenManager.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -17945,7 +18073,7 @@
     },
     {
       "symbol": "F:ga.field_c:I",
-      "renamedSymbol": "F:ga.field_c:I",
+      "renamedSymbol": "F:DirectDrawFullscreenManager.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -20970,7 +21098,7 @@
     },
     {
       "symbol": "F:j.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:j.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmOutputWorker.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -20981,7 +21109,7 @@
     },
     {
       "symbol": "F:j.field_b:Z",
-      "renamedSymbol": "F:j.field_b:Z",
+      "renamedSymbol": "F:PcmOutputWorker.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -20992,7 +21120,7 @@
     },
     {
       "symbol": "F:j.field_c:Lvf;",
-      "renamedSymbol": "F:j.field_c:LPlatformTaskDispatcher;",
+      "renamedSymbol": "F:PcmOutputWorker.field_c:LPlatformTaskDispatcher;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -21003,7 +21131,7 @@
     },
     {
       "symbol": "F:j.field_d:Lma;",
-      "renamedSymbol": "F:j.field_d:Lma;",
+      "renamedSymbol": "F:PcmOutputWorker.field_d:Lma;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -21014,7 +21142,7 @@
     },
     {
       "symbol": "F:j.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:j.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:PcmOutputWorker.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -21025,7 +21153,7 @@
     },
     {
       "symbol": "F:j.field_f:J",
-      "renamedSymbol": "F:j.field_f:J",
+      "renamedSymbol": "F:PcmOutputWorker.field_f:J",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -21036,7 +21164,7 @@
     },
     {
       "symbol": "F:j.field_g:[Lfj;",
-      "renamedSymbol": "F:j.field_g:[LAudioOutput;",
+      "renamedSymbol": "F:PcmOutputWorker.field_g:[LAudioOutput;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -21047,7 +21175,7 @@
     },
     {
       "symbol": "F:j.field_h:Lm;",
-      "renamedSymbol": "F:j.field_h:LGameAppletShell;",
+      "renamedSymbol": "F:PcmOutputWorker.field_h:LGameAppletShell;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -21058,7 +21186,7 @@
     },
     {
       "symbol": "F:j.field_i:Z",
-      "renamedSymbol": "F:j.field_i:Z",
+      "renamedSymbol": "F:PcmOutputWorker.field_i:Z",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -24127,7 +24255,7 @@
     },
     {
       "symbol": "F:ll.field_a:Lhm;",
-      "renamedSymbol": "F:ll.field_a:Lhm;",
+      "renamedSymbol": "F:BufferedSocket.field_a:Lhm;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -24138,7 +24266,7 @@
     },
     {
       "symbol": "F:ll.field_b:Lia;",
-      "renamedSymbol": "F:ll.field_b:LPlatformTask;",
+      "renamedSymbol": "F:BufferedSocket.field_b:LPlatformTask;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -24149,7 +24277,7 @@
     },
     {
       "symbol": "F:ll.field_c:[B",
-      "renamedSymbol": "F:ll.field_c:[B",
+      "renamedSymbol": "F:BufferedSocket.field_c:[B",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -24160,7 +24288,7 @@
     },
     {
       "symbol": "F:ll.field_d:I",
-      "renamedSymbol": "F:ll.field_d:I",
+      "renamedSymbol": "F:BufferedSocket.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -24171,7 +24299,7 @@
     },
     {
       "symbol": "F:ll.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:ll.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:BufferedSocket.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -24182,7 +24310,7 @@
     },
     {
       "symbol": "F:ll.field_f:Z",
-      "renamedSymbol": "F:ll.field_f:Z",
+      "renamedSymbol": "F:BufferedSocket.field_f:Z",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -24193,7 +24321,7 @@
     },
     {
       "symbol": "F:ll.field_g:I",
-      "renamedSymbol": "F:ll.field_g:I",
+      "renamedSymbol": "F:BufferedSocket.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -24204,7 +24332,7 @@
     },
     {
       "symbol": "F:ll.field_h:I",
-      "renamedSymbol": "F:ll.field_h:I",
+      "renamedSymbol": "F:BufferedSocket.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -24215,7 +24343,7 @@
     },
     {
       "symbol": "F:ll.field_i:Ljava/io/InputStream;",
-      "renamedSymbol": "F:ll.field_i:Ljava/io/InputStream;",
+      "renamedSymbol": "F:BufferedSocket.field_i:Ljava/io/InputStream;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -24226,7 +24354,7 @@
     },
     {
       "symbol": "F:ll.field_j:Ljava/net/Socket;",
-      "renamedSymbol": "F:ll.field_j:Ljava/net/Socket;",
+      "renamedSymbol": "F:BufferedSocket.field_j:Ljava/net/Socket;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -24237,7 +24365,7 @@
     },
     {
       "symbol": "F:ll.field_k:I",
-      "renamedSymbol": "F:ll.field_k:I",
+      "renamedSymbol": "F:BufferedSocket.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -24248,7 +24376,7 @@
     },
     {
       "symbol": "F:ll.field_l:Z",
-      "renamedSymbol": "F:ll.field_l:Z",
+      "renamedSymbol": "F:BufferedSocket.field_l:Z",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -24259,7 +24387,7 @@
     },
     {
       "symbol": "F:ll.field_m:I",
-      "renamedSymbol": "F:ll.field_m:I",
+      "renamedSymbol": "F:BufferedSocket.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -24270,7 +24398,7 @@
     },
     {
       "symbol": "F:ll.field_n:Lvf;",
-      "renamedSymbol": "F:ll.field_n:LPlatformTaskDispatcher;",
+      "renamedSymbol": "F:BufferedSocket.field_n:LPlatformTaskDispatcher;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -24281,7 +24409,7 @@
     },
     {
       "symbol": "F:ll.field_o:Ljava/io/OutputStream;",
-      "renamedSymbol": "F:ll.field_o:Ljava/io/OutputStream;",
+      "renamedSymbol": "F:BufferedSocket.field_o:Ljava/io/OutputStream;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -24644,7 +24772,7 @@
     },
     {
       "symbol": "F:mb.field_c:Lll;",
-      "renamedSymbol": "F:mb.field_c:Lll;",
+      "renamedSymbol": "F:mb.field_c:LBufferedSocket;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -29759,7 +29887,7 @@
     },
     {
       "symbol": "F:pm.field_a:I",
-      "renamedSymbol": "F:pm.field_a:I",
+      "renamedSymbol": "F:ProxyAuthenticationRequiredException.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -29770,7 +29898,7 @@
     },
     {
       "symbol": "F:pm.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:pm.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:ProxyAuthenticationRequiredException.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -29781,7 +29909,7 @@
     },
     {
       "symbol": "F:pm.field_c:I",
-      "renamedSymbol": "F:pm.field_c:I",
+      "renamedSymbol": "F:ProxyAuthenticationRequiredException.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -29792,7 +29920,7 @@
     },
     {
       "symbol": "F:pm.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:pm.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:ProxyAuthenticationRequiredException.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -34115,7 +34243,7 @@
     },
     {
       "symbol": "F:ue.field_a:Z",
-      "renamedSymbol": "F:ue.field_a:Z",
+      "renamedSymbol": "F:Win32CursorManager.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -34126,7 +34254,7 @@
     },
     {
       "symbol": "F:ue.field_b:I",
-      "renamedSymbol": "F:ue.field_b:I",
+      "renamedSymbol": "F:Win32CursorManager.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -34137,7 +34265,7 @@
     },
     {
       "symbol": "F:ue.field_c:Z",
-      "renamedSymbol": "F:ue.field_c:Z",
+      "renamedSymbol": "F:Win32CursorManager.field_c:Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -34148,7 +34276,7 @@
     },
     {
       "symbol": "F:ue.field_d:I",
-      "renamedSymbol": "F:ue.field_d:I",
+      "renamedSymbol": "F:Win32CursorManager.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -34159,7 +34287,7 @@
     },
     {
       "symbol": "F:ue.field_e:I",
-      "renamedSymbol": "F:ue.field_e:I",
+      "renamedSymbol": "F:Win32CursorManager.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -34203,7 +34331,7 @@
     },
     {
       "symbol": "F:uf.field_s:Lll;",
-      "renamedSymbol": "F:uf.field_s:Lll;",
+      "renamedSymbol": "F:uf.field_s:LBufferedSocket;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -35534,7 +35662,7 @@
     },
     {
       "symbol": "F:vf.field_t:Lue;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_t:Lue;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_t:LWin32CursorManager;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -35567,7 +35695,7 @@
     },
     {
       "symbol": "F:vf.field_w:Lga;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_w:Lga;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_w:LDirectDrawFullscreenManager;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -79567,7 +79695,7 @@
     },
     {
       "symbol": "L:ga.a(I)[I#0",
-      "renamedSymbol": "L:ga.a(I)[I#0",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(I)[I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -79578,7 +79706,7 @@
     },
     {
       "symbol": "L:ga.a(I)[I#1",
-      "renamedSymbol": "L:ga.a(I)[I#1",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.listDisplayModes(I)[I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -79589,7 +79717,7 @@
     },
     {
       "symbol": "L:ga.a(IIBLjava/awt/Frame;II)V#0",
-      "renamedSymbol": "L:ga.a(IIBLjava/awt/Frame;II)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -79600,7 +79728,7 @@
     },
     {
       "symbol": "L:ga.a(IIBLjava/awt/Frame;II)V#1",
-      "renamedSymbol": "L:ga.a(IIBLjava/awt/Frame;II)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -79611,7 +79739,7 @@
     },
     {
       "symbol": "L:ga.a(IIBLjava/awt/Frame;II)V#2",
-      "renamedSymbol": "L:ga.a(IIBLjava/awt/Frame;II)V#2",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#2",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -79622,7 +79750,7 @@
     },
     {
       "symbol": "L:ga.a(IIBLjava/awt/Frame;II)V#3",
-      "renamedSymbol": "L:ga.a(IIBLjava/awt/Frame;II)V#3",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#3",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -79633,7 +79761,7 @@
     },
     {
       "symbol": "L:ga.a(IIBLjava/awt/Frame;II)V#4",
-      "renamedSymbol": "L:ga.a(IIBLjava/awt/Frame;II)V#4",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -79644,7 +79772,7 @@
     },
     {
       "symbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -79655,7 +79783,7 @@
     },
     {
       "symbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -79666,7 +79794,7 @@
     },
     {
       "symbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
-      "renamedSymbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -79677,7 +79805,7 @@
     },
     {
       "symbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
-      "renamedSymbol": "L:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+      "renamedSymbol": "L:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -92690,7 +92818,7 @@
     },
     {
       "symbol": "L:j.a(II)I#0",
-      "renamedSymbol": "L:j.a(II)I#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -92701,7 +92829,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#0",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#0",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -92712,7 +92840,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#1",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#1",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -92723,7 +92851,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#10",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#10",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#10",
       "originalName": "stackIn_53_0",
       "renamedName": "stackIn_53_0",
       "declaration": {
@@ -92734,7 +92862,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#11",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#11",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#11",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -92745,7 +92873,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#12",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#12",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#12",
       "originalName": "stackIn_64_0",
       "renamedName": "stackIn_64_0",
       "declaration": {
@@ -92756,7 +92884,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#13",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#13",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#13",
       "originalName": "stackIn_67_0",
       "renamedName": "stackIn_67_0",
       "declaration": {
@@ -92767,7 +92895,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#14",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#14",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#14",
       "originalName": "stackIn_67_1",
       "renamedName": "stackIn_67_1",
       "declaration": {
@@ -92778,7 +92906,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#15",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#15",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#15",
       "originalName": "stackIn_68_2",
       "renamedName": "stackIn_68_2",
       "declaration": {
@@ -92789,7 +92917,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#16",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#16",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#16",
       "originalName": "stackIn_70_1",
       "renamedName": "stackIn_70_1",
       "declaration": {
@@ -92800,7 +92928,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#17",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#17",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#17",
       "originalName": "stackIn_71_2",
       "renamedName": "stackIn_71_2",
       "declaration": {
@@ -92811,7 +92939,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#18",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#18",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#18",
       "originalName": "stackIn_73_1",
       "renamedName": "stackIn_73_1",
       "declaration": {
@@ -92822,7 +92950,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#19",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#19",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#19",
       "originalName": "stackIn_74_2",
       "renamedName": "stackIn_74_2",
       "declaration": {
@@ -92833,7 +92961,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#2",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#2",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -92844,7 +92972,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#20",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#20",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#20",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -92855,7 +92983,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#21",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#21",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#21",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -92866,7 +92994,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#22",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#22",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#22",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -92877,7 +93005,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#23",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#23",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#23",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -92888,7 +93016,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#24",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#24",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#24",
       "originalName": "var9_ref_String",
       "renamedName": "var9_ref_String",
       "declaration": {
@@ -92899,7 +93027,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#25",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#25",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#25",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -92910,7 +93038,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#26",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#26",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#26",
       "originalName": "var11_ref_String",
       "renamedName": "var11_ref_String",
       "declaration": {
@@ -92921,7 +93049,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#27",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#27",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#27",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -92932,7 +93060,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#28",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#28",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#28",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -92943,7 +93071,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#29",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#29",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#29",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -92954,7 +93082,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#3",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#3",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -92965,7 +93093,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#30",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#30",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#30",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -92976,7 +93104,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#31",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#31",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#31",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -92987,7 +93115,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#32",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#32",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#32",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -92998,7 +93126,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#33",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#33",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#33",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -93009,7 +93137,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#34",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#34",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#34",
       "originalName": "var9Lifetime3",
       "renamedName": "var9Lifetime3",
       "declaration": {
@@ -93020,7 +93148,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#35",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#35",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#35",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -93031,7 +93159,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#4",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#4",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#4",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -93042,7 +93170,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#5",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#5",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#5",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -93053,7 +93181,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#6",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#6",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#6",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -93064,7 +93192,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#7",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#7",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#7",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -93075,7 +93203,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#8",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#8",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#8",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -93086,7 +93214,7 @@
     },
     {
       "symbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#9",
-      "renamedSymbol": "L:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#9",
+      "renamedSymbol": "L:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#9",
       "originalName": "stackIn_44_0",
       "renamedName": "stackIn_44_0",
       "declaration": {
@@ -93097,7 +93225,7 @@
     },
     {
       "symbol": "L:j.run()V#0",
-      "renamedSymbol": "L:j.run()V#0",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -93108,7 +93236,7 @@
     },
     {
       "symbol": "L:j.run()V#1",
-      "renamedSymbol": "L:j.run()V#1",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -93119,7 +93247,7 @@
     },
     {
       "symbol": "L:j.run()V#2",
-      "renamedSymbol": "L:j.run()V#2",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -93130,7 +93258,7 @@
     },
     {
       "symbol": "L:j.run()V#3",
-      "renamedSymbol": "L:j.run()V#3",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -93141,7 +93269,7 @@
     },
     {
       "symbol": "L:j.run()V#4",
-      "renamedSymbol": "L:j.run()V#4",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#4",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -93152,7 +93280,7 @@
     },
     {
       "symbol": "L:j.run()V#5",
-      "renamedSymbol": "L:j.run()V#5",
+      "renamedSymbol": "L:PcmOutputWorker.run()V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -109443,7 +109571,7 @@
     },
     {
       "symbol": "L:ll.<init>(Ljava/net/Socket;Lvf;I)V#0",
-      "renamedSymbol": "L:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#0",
+      "renamedSymbol": "L:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -109454,7 +109582,7 @@
     },
     {
       "symbol": "L:ll.a(B)V#0",
-      "renamedSymbol": "L:ll.a(B)V#0",
+      "renamedSymbol": "L:BufferedSocket.checkWriteError(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109465,7 +109593,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#0",
-      "renamedSymbol": "L:ll.a(B[BII)V#0",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -109476,7 +109604,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#1",
-      "renamedSymbol": "L:ll.a(B[BII)V#1",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#1",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -109487,7 +109615,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#2",
-      "renamedSymbol": "L:ll.a(B[BII)V#2",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#2",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -109498,7 +109626,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#3",
-      "renamedSymbol": "L:ll.a(B[BII)V#3",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#3",
       "originalName": "stackIn_26_2",
       "renamedName": "stackIn_26_2",
       "declaration": {
@@ -109509,7 +109637,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#4",
-      "renamedSymbol": "L:ll.a(B[BII)V#4",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109520,7 +109648,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#5",
-      "renamedSymbol": "L:ll.a(B[BII)V#5",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -109531,7 +109659,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#6",
-      "renamedSymbol": "L:ll.a(B[BII)V#6",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#6",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -109542,7 +109670,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#7",
-      "renamedSymbol": "L:ll.a(B[BII)V#7",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -109553,7 +109681,7 @@
     },
     {
       "symbol": "L:ll.a(B[BII)V#8",
-      "renamedSymbol": "L:ll.a(B[BII)V#8",
+      "renamedSymbol": "L:BufferedSocket.queueWrite(B[BII)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109564,7 +109692,7 @@
     },
     {
       "symbol": "L:ll.a(I)V#0",
-      "renamedSymbol": "L:ll.a(I)V#0",
+      "renamedSymbol": "L:BufferedSocket.a(I)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109575,7 +109703,7 @@
     },
     {
       "symbol": "L:ll.a(I)V#1",
-      "renamedSymbol": "L:ll.a(I)V#1",
+      "renamedSymbol": "L:BufferedSocket.a(I)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -109586,7 +109714,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#0",
-      "renamedSymbol": "L:ll.a(Z[BII)V#0",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -109597,7 +109725,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#1",
-      "renamedSymbol": "L:ll.a(Z[BII)V#1",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -109608,7 +109736,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#2",
-      "renamedSymbol": "L:ll.a(Z[BII)V#2",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -109619,7 +109747,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#3",
-      "renamedSymbol": "L:ll.a(Z[BII)V#3",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#3",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -109630,7 +109758,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#4",
-      "renamedSymbol": "L:ll.a(Z[BII)V#4",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -109641,7 +109769,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#5",
-      "renamedSymbol": "L:ll.a(Z[BII)V#5",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#5",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -109652,7 +109780,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#6",
-      "renamedSymbol": "L:ll.a(Z[BII)V#6",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109663,7 +109791,7 @@
     },
     {
       "symbol": "L:ll.a(Z[BII)V#7",
-      "renamedSymbol": "L:ll.a(Z[BII)V#7",
+      "renamedSymbol": "L:BufferedSocket.readFully(Z[BII)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109674,7 +109802,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#0",
-      "renamedSymbol": "L:ll.b(I)V#0",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109685,7 +109813,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#1",
-      "renamedSymbol": "L:ll.b(I)V#1",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -109696,7 +109824,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#2",
-      "renamedSymbol": "L:ll.b(I)V#2",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109707,7 +109835,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#3",
-      "renamedSymbol": "L:ll.b(I)V#3",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#3",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -109718,7 +109846,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#4",
-      "renamedSymbol": "L:ll.b(I)V#4",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109729,7 +109857,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#5",
-      "renamedSymbol": "L:ll.b(I)V#5",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#5",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -109740,7 +109868,7 @@
     },
     {
       "symbol": "L:ll.b(I)V#6",
-      "renamedSymbol": "L:ll.b(I)V#6",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#6",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -109751,7 +109879,7 @@
     },
     {
       "symbol": "L:ll.run()V#0",
-      "renamedSymbol": "L:ll.run()V#0",
+      "renamedSymbol": "L:BufferedSocket.run()V#0",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -109762,7 +109890,7 @@
     },
     {
       "symbol": "L:ll.run()V#1",
-      "renamedSymbol": "L:ll.run()V#1",
+      "renamedSymbol": "L:BufferedSocket.run()V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109773,7 +109901,7 @@
     },
     {
       "symbol": "L:ll.run()V#10",
-      "renamedSymbol": "L:ll.run()V#10",
+      "renamedSymbol": "L:BufferedSocket.run()V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -109784,7 +109912,7 @@
     },
     {
       "symbol": "L:ll.run()V#11",
-      "renamedSymbol": "L:ll.run()V#11",
+      "renamedSymbol": "L:BufferedSocket.run()V#11",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -109795,7 +109923,7 @@
     },
     {
       "symbol": "L:ll.run()V#12",
-      "renamedSymbol": "L:ll.run()V#12",
+      "renamedSymbol": "L:BufferedSocket.run()V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109806,7 +109934,7 @@
     },
     {
       "symbol": "L:ll.run()V#13",
-      "renamedSymbol": "L:ll.run()V#13",
+      "renamedSymbol": "L:BufferedSocket.run()V#13",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -109817,7 +109945,7 @@
     },
     {
       "symbol": "L:ll.run()V#14",
-      "renamedSymbol": "L:ll.run()V#14",
+      "renamedSymbol": "L:BufferedSocket.run()V#14",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -109828,7 +109956,7 @@
     },
     {
       "symbol": "L:ll.run()V#15",
-      "renamedSymbol": "L:ll.run()V#15",
+      "renamedSymbol": "L:BufferedSocket.run()V#15",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -109839,7 +109967,7 @@
     },
     {
       "symbol": "L:ll.run()V#16",
-      "renamedSymbol": "L:ll.run()V#16",
+      "renamedSymbol": "L:BufferedSocket.run()V#16",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -109850,7 +109978,7 @@
     },
     {
       "symbol": "L:ll.run()V#17",
-      "renamedSymbol": "L:ll.run()V#17",
+      "renamedSymbol": "L:BufferedSocket.run()V#17",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -109861,7 +109989,7 @@
     },
     {
       "symbol": "L:ll.run()V#18",
-      "renamedSymbol": "L:ll.run()V#18",
+      "renamedSymbol": "L:BufferedSocket.run()V#18",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -109872,7 +110000,7 @@
     },
     {
       "symbol": "L:ll.run()V#2",
-      "renamedSymbol": "L:ll.run()V#2",
+      "renamedSymbol": "L:BufferedSocket.run()V#2",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -109883,7 +110011,7 @@
     },
     {
       "symbol": "L:ll.run()V#3",
-      "renamedSymbol": "L:ll.run()V#3",
+      "renamedSymbol": "L:BufferedSocket.run()V#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -109894,7 +110022,7 @@
     },
     {
       "symbol": "L:ll.run()V#4",
-      "renamedSymbol": "L:ll.run()V#4",
+      "renamedSymbol": "L:BufferedSocket.run()V#4",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -109905,7 +110033,7 @@
     },
     {
       "symbol": "L:ll.run()V#5",
-      "renamedSymbol": "L:ll.run()V#5",
+      "renamedSymbol": "L:BufferedSocket.run()V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109916,7 +110044,7 @@
     },
     {
       "symbol": "L:ll.run()V#6",
-      "renamedSymbol": "L:ll.run()V#6",
+      "renamedSymbol": "L:BufferedSocket.run()V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109927,7 +110055,7 @@
     },
     {
       "symbol": "L:ll.run()V#7",
-      "renamedSymbol": "L:ll.run()V#7",
+      "renamedSymbol": "L:BufferedSocket.run()V#7",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -109938,7 +110066,7 @@
     },
     {
       "symbol": "L:ll.run()V#8",
-      "renamedSymbol": "L:ll.run()V#8",
+      "renamedSymbol": "L:BufferedSocket.run()V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -109949,7 +110077,7 @@
     },
     {
       "symbol": "L:ll.run()V#9",
-      "renamedSymbol": "L:ll.run()V#9",
+      "renamedSymbol": "L:BufferedSocket.run()V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -138560,7 +138688,7 @@
     },
     {
       "symbol": "L:pm.a(I)V#0",
-      "renamedSymbol": "L:pm.clearStaticReferences(I)V#0",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.clearStaticReferences(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -138571,7 +138699,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#0",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#0",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -138582,7 +138710,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#1",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#1",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -138593,7 +138721,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#2",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#2",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -138604,7 +138732,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#3",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#3",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -138615,7 +138743,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#4",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#4",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -138626,7 +138754,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#5",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#5",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -138637,7 +138765,7 @@
     },
     {
       "symbol": "L:pm.a(IIII[Lea;)V#6",
-      "renamedSymbol": "L:pm.a(IIII[LSprite;)V#6",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#6",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -160505,7 +160633,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#0",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#0",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -160516,7 +160644,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#1",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#1",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -160527,7 +160655,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#2",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#2",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -160538,7 +160666,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#3",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#3",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -160549,7 +160677,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#4",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#4",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#4",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -160560,7 +160688,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#5",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#5",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#5",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -160571,7 +160699,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#6",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#6",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#6",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -160582,7 +160710,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#7",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#7",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#7",
       "originalName": "stackIn_29_1",
       "renamedName": "stackIn_29_1",
       "declaration": {
@@ -160593,7 +160721,7 @@
     },
     {
       "symbol": "L:ue.a(ILjava/awt/Component;Z)V#8",
-      "renamedSymbol": "L:ue.a(ILjava/awt/Component;Z)V#8",
+      "renamedSymbol": "L:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -160604,7 +160732,7 @@
     },
     {
       "symbol": "L:ue.callback(IIII)I#0",
-      "renamedSymbol": "L:ue.callback(IIII)I#0",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -160615,7 +160743,7 @@
     },
     {
       "symbol": "L:ue.callback(IIII)I#1",
-      "renamedSymbol": "L:ue.callback(IIII)I#1",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#1",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -160626,7 +160754,7 @@
     },
     {
       "symbol": "L:ue.callback(IIII)I#2",
-      "renamedSymbol": "L:ue.callback(IIII)I#2",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#2",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -160637,7 +160765,7 @@
     },
     {
       "symbol": "L:ue.callback(IIII)I#3",
-      "renamedSymbol": "L:ue.callback(IIII)I#3",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -160648,7 +160776,7 @@
     },
     {
       "symbol": "L:ue.callback(IIII)I#4",
-      "renamedSymbol": "L:ue.callback(IIII)I#4",
+      "renamedSymbol": "L:Win32CursorManager.callback(IIII)I#4",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -184100,9 +184228,9 @@
     },
     {
       "symbol": "M:ga.<init>()V",
-      "renamedSymbol": "M:ga.<init>()V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.<init>()V",
       "originalName": "ga",
-      "renamedName": "ga",
+      "renamedName": "DirectDrawFullscreenManager",
       "declaration": {
         "file": "ga.java",
         "start": 3361,
@@ -184111,9 +184239,9 @@
     },
     {
       "symbol": "M:ga.a(BLjava/awt/Frame;)V",
-      "renamedSymbol": "M:ga.a(BLjava/awt/Frame;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.restoreDisplayMode(BLjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "restoreDisplayMode",
       "declaration": {
         "file": "ga.java",
         "start": 1541,
@@ -184122,9 +184250,9 @@
     },
     {
       "symbol": "M:ga.a(I)[I",
-      "renamedSymbol": "M:ga.a(I)[I",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.listDisplayModes(I)[I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "listDisplayModes",
       "declaration": {
         "file": "ga.java",
         "start": 230,
@@ -184133,9 +184261,9 @@
     },
     {
       "symbol": "M:ga.a(IIBLjava/awt/Frame;II)V",
-      "renamedSymbol": "M:ga.a(IIBLjava/awt/Frame;II)V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enterFullscreen",
       "declaration": {
         "file": "ga.java",
         "start": 1829,
@@ -184144,7 +184272,7 @@
     },
     {
       "symbol": "M:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
-      "renamedSymbol": "M:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
       "originalName": "callbackEnumModes",
       "renamedName": "callbackEnumModes",
       "declaration": {
@@ -186938,9 +187066,9 @@
     },
     {
       "symbol": "M:j.<init>()V",
-      "renamedSymbol": "M:j.<init>()V",
+      "renamedSymbol": "M:PcmOutputWorker.<init>()V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "PcmOutputWorker",
       "declaration": {
         "file": "j.java",
         "start": 9602,
@@ -186949,7 +187077,7 @@
     },
     {
       "symbol": "M:j.a(B)Z",
-      "renamedSymbol": "M:j.a(B)Z",
+      "renamedSymbol": "M:PcmOutputWorker.a(B)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -186960,7 +187088,7 @@
     },
     {
       "symbol": "M:j.a(I)V",
-      "renamedSymbol": "M:j.clearStaticReferences(I)V",
+      "renamedSymbol": "M:PcmOutputWorker.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -186971,7 +187099,7 @@
     },
     {
       "symbol": "M:j.a(II)I",
-      "renamedSymbol": "M:j.a(II)I",
+      "renamedSymbol": "M:PcmOutputWorker.a(II)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -186982,7 +187110,7 @@
     },
     {
       "symbol": "M:j.a(IIZILpf;Ljava/lang/String;Lpf;)I",
-      "renamedSymbol": "M:j.a(IIZILpf;Ljava/lang/String;Lpf;)I",
+      "renamedSymbol": "M:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -186993,7 +187121,7 @@
     },
     {
       "symbol": "M:j.run()V",
-      "renamedSymbol": "M:j.run()V",
+      "renamedSymbol": "M:PcmOutputWorker.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -190293,9 +190421,9 @@
     },
     {
       "symbol": "M:ll.<init>(Ljava/net/Socket;Lvf;)V",
-      "renamedSymbol": "M:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;)V",
+      "renamedSymbol": "M:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;)V",
       "originalName": "ll",
-      "renamedName": "ll",
+      "renamedName": "BufferedSocket",
       "declaration": {
         "file": "ll.java",
         "start": 596,
@@ -190304,9 +190432,9 @@
     },
     {
       "symbol": "M:ll.<init>(Ljava/net/Socket;Lvf;I)V",
-      "renamedSymbol": "M:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V",
+      "renamedSymbol": "M:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V",
       "originalName": "ll",
-      "renamedName": "ll",
+      "renamedName": "BufferedSocket",
       "declaration": {
         "file": "ll.java",
         "start": 11172,
@@ -190315,9 +190443,9 @@
     },
     {
       "symbol": "M:ll.a(B)V",
-      "renamedSymbol": "M:ll.a(B)V",
+      "renamedSymbol": "M:BufferedSocket.checkWriteError(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "checkWriteError",
       "declaration": {
         "file": "ll.java",
         "start": 10894,
@@ -190326,7 +190454,7 @@
     },
     {
       "symbol": "M:ll.a(BI)I",
-      "renamedSymbol": "M:ll.a(BI)I",
+      "renamedSymbol": "M:BufferedSocket.a(BI)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -190337,9 +190465,9 @@
     },
     {
       "symbol": "M:ll.a(B[BII)V",
-      "renamedSymbol": "M:ll.a(B[BII)V",
+      "renamedSymbol": "M:BufferedSocket.queueWrite(B[BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueWrite",
       "declaration": {
         "file": "ll.java",
         "start": 713,
@@ -190348,7 +190476,7 @@
     },
     {
       "symbol": "M:ll.a(I)V",
-      "renamedSymbol": "M:ll.a(I)V",
+      "renamedSymbol": "M:BufferedSocket.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -190359,9 +190487,9 @@
     },
     {
       "symbol": "M:ll.a(Z)I",
-      "renamedSymbol": "M:ll.a(Z)I",
+      "renamedSymbol": "M:BufferedSocket.readSingleByte(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readSingleByte",
       "declaration": {
         "file": "ll.java",
         "start": 10573,
@@ -190370,9 +190498,9 @@
     },
     {
       "symbol": "M:ll.a(Z[BII)V",
-      "renamedSymbol": "M:ll.a(Z[BII)V",
+      "renamedSymbol": "M:BufferedSocket.readFully(Z[BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readFully",
       "declaration": {
         "file": "ll.java",
         "start": 9058,
@@ -190381,7 +190509,7 @@
     },
     {
       "symbol": "M:ll.b(B)V",
-      "renamedSymbol": "M:ll.b(B)V",
+      "renamedSymbol": "M:BufferedSocket.b(B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -190392,9 +190520,9 @@
     },
     {
       "symbol": "M:ll.b(I)V",
-      "renamedSymbol": "M:ll.b(I)V",
+      "renamedSymbol": "M:BufferedSocket.close(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "close",
       "declaration": {
         "file": "ll.java",
         "start": 2764,
@@ -190403,9 +190531,9 @@
     },
     {
       "symbol": "M:ll.c(I)I",
-      "renamedSymbol": "M:ll.c(I)I",
+      "renamedSymbol": "M:BufferedSocket.availableBytes(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "availableBytes",
       "declaration": {
         "file": "ll.java",
         "start": 8671,
@@ -190414,7 +190542,7 @@
     },
     {
       "symbol": "M:ll.finalize()V",
-      "renamedSymbol": "M:ll.finalize()V",
+      "renamedSymbol": "M:BufferedSocket.finalize()V",
       "originalName": "finalize",
       "renamedName": "finalize",
       "declaration": {
@@ -190425,7 +190553,7 @@
     },
     {
       "symbol": "M:ll.run()V",
-      "renamedSymbol": "M:ll.run()V",
+      "renamedSymbol": "M:BufferedSocket.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -195826,9 +195954,9 @@
     },
     {
       "symbol": "M:pm.<init>(Ljava/lang/String;)V",
-      "renamedSymbol": "M:pm.<init>(Ljava/lang/String;)V",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.<init>(Ljava/lang/String;)V",
       "originalName": "pm",
-      "renamedName": "pm",
+      "renamedName": "ProxyAuthenticationRequiredException",
       "declaration": {
         "file": "pm.java",
         "start": 838,
@@ -195837,7 +195965,7 @@
     },
     {
       "symbol": "M:pm.a(I)V",
-      "renamedSymbol": "M:pm.clearStaticReferences(I)V",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -195848,7 +195976,7 @@
     },
     {
       "symbol": "M:pm.a(IIII[Lea;)V",
-      "renamedSymbol": "M:pm.a(IIII[LSprite;)V",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -195859,7 +195987,7 @@
     },
     {
       "symbol": "M:pm.b(I)[Lbg;",
-      "renamedSymbol": "M:pm.b(I)[Lbg;",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.b(I)[Lbg;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -200490,9 +200618,9 @@
     },
     {
       "symbol": "M:ue.<init>()V",
-      "renamedSymbol": "M:ue.<init>()V",
+      "renamedSymbol": "M:Win32CursorManager.<init>()V",
       "originalName": "ue",
-      "renamedName": "ue",
+      "renamedName": "Win32CursorManager",
       "declaration": {
         "file": "ue.java",
         "start": 3930,
@@ -200501,9 +200629,9 @@
     },
     {
       "symbol": "M:ue.a(ILjava/awt/Component;Z)V",
-      "renamedSymbol": "M:ue.a(ILjava/awt/Component;Z)V",
+      "renamedSymbol": "M:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCursorVisible",
       "declaration": {
         "file": "ue.java",
         "start": 259,
@@ -200512,9 +200640,9 @@
     },
     {
       "symbol": "M:ue.a(ZII)V",
-      "renamedSymbol": "M:ue.a(ZII)V",
+      "renamedSymbol": "M:Win32CursorManager.setCursorPosition(ZII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCursorPosition",
       "declaration": {
         "file": "ue.java",
         "start": 3751,
@@ -200523,7 +200651,7 @@
     },
     {
       "symbol": "M:ue.callback(IIII)I",
-      "renamedSymbol": "M:ue.callback(IIII)I",
+      "renamedSymbol": "M:Win32CursorManager.callback(IIII)I",
       "originalName": "callback",
       "renamedName": "callback",
       "declaration": {
@@ -221995,7 +222123,7 @@
     },
     {
       "symbol": "P:ga.a(BLjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:ga.a(BLjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.restoreDisplayMode(BLjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222006,7 +222134,7 @@
     },
     {
       "symbol": "P:ga.a(BLjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:ga.a(BLjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.restoreDisplayMode(BLjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222017,7 +222145,7 @@
     },
     {
       "symbol": "P:ga.a(I)[I#0",
-      "renamedSymbol": "P:ga.a(I)[I#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.listDisplayModes(I)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222028,7 +222156,7 @@
     },
     {
       "symbol": "P:ga.a(IIBLjava/awt/Frame;II)V#0",
-      "renamedSymbol": "P:ga.a(IIBLjava/awt/Frame;II)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222039,7 +222167,7 @@
     },
     {
       "symbol": "P:ga.a(IIBLjava/awt/Frame;II)V#1",
-      "renamedSymbol": "P:ga.a(IIBLjava/awt/Frame;II)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222050,7 +222178,7 @@
     },
     {
       "symbol": "P:ga.a(IIBLjava/awt/Frame;II)V#2",
-      "renamedSymbol": "P:ga.a(IIBLjava/awt/Frame;II)V#2",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -222061,7 +222189,7 @@
     },
     {
       "symbol": "P:ga.a(IIBLjava/awt/Frame;II)V#3",
-      "renamedSymbol": "P:ga.a(IIBLjava/awt/Frame;II)V#3",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -222072,7 +222200,7 @@
     },
     {
       "symbol": "P:ga.a(IIBLjava/awt/Frame;II)V#4",
-      "renamedSymbol": "P:ga.a(IIBLjava/awt/Frame;II)V#4",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -222083,7 +222211,7 @@
     },
     {
       "symbol": "P:ga.a(IIBLjava/awt/Frame;II)V#5",
-      "renamedSymbol": "P:ga.a(IIBLjava/awt/Frame;II)V#5",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.enterFullscreen(IIBLjava/awt/Frame;II)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -222094,7 +222222,7 @@
     },
     {
       "symbol": "P:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "P:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222105,7 +222233,7 @@
     },
     {
       "symbol": "P:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "P:ga.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenManager.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227451,7 +227579,7 @@
     },
     {
       "symbol": "P:j.a(B)Z#0",
-      "renamedSymbol": "P:j.a(B)Z#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227462,7 +227590,7 @@
     },
     {
       "symbol": "P:j.a(I)V#0",
-      "renamedSymbol": "P:j.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:PcmOutputWorker.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227473,7 +227601,7 @@
     },
     {
       "symbol": "P:j.a(II)I#0",
-      "renamedSymbol": "P:j.a(II)I#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227484,7 +227612,7 @@
     },
     {
       "symbol": "P:j.a(II)I#1",
-      "renamedSymbol": "P:j.a(II)I#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227495,7 +227623,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#0",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#0",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227506,7 +227634,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#1",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#1",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227517,7 +227645,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#2",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#2",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -227528,7 +227656,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#3",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#3",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -227539,7 +227667,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#4",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#4",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -227550,7 +227678,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#5",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#5",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -227561,7 +227689,7 @@
     },
     {
       "symbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#6",
-      "renamedSymbol": "P:j.a(IIZILpf;Ljava/lang/String;Lpf;)I#6",
+      "renamedSymbol": "P:PcmOutputWorker.a(IIZILpf;Ljava/lang/String;Lpf;)I#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -234249,7 +234377,7 @@
     },
     {
       "symbol": "P:ll.<init>(Ljava/net/Socket;Lvf;)V#0",
-      "renamedSymbol": "P:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;)V#0",
+      "renamedSymbol": "P:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234260,7 +234388,7 @@
     },
     {
       "symbol": "P:ll.<init>(Ljava/net/Socket;Lvf;)V#1",
-      "renamedSymbol": "P:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;)V#1",
+      "renamedSymbol": "P:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234271,7 +234399,7 @@
     },
     {
       "symbol": "P:ll.<init>(Ljava/net/Socket;Lvf;I)V#0",
-      "renamedSymbol": "P:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#0",
+      "renamedSymbol": "P:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234282,7 +234410,7 @@
     },
     {
       "symbol": "P:ll.<init>(Ljava/net/Socket;Lvf;I)V#1",
-      "renamedSymbol": "P:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#1",
+      "renamedSymbol": "P:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234293,7 +234421,7 @@
     },
     {
       "symbol": "P:ll.<init>(Ljava/net/Socket;Lvf;I)V#2",
-      "renamedSymbol": "P:ll.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#2",
+      "renamedSymbol": "P:BufferedSocket.<init>(Ljava/net/Socket;LPlatformTaskDispatcher;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -234304,7 +234432,7 @@
     },
     {
       "symbol": "P:ll.a(B)V#0",
-      "renamedSymbol": "P:ll.a(B)V#0",
+      "renamedSymbol": "P:BufferedSocket.checkWriteError(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234315,7 +234443,7 @@
     },
     {
       "symbol": "P:ll.a(BI)I#0",
-      "renamedSymbol": "P:ll.a(BI)I#0",
+      "renamedSymbol": "P:BufferedSocket.a(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234326,7 +234454,7 @@
     },
     {
       "symbol": "P:ll.a(BI)I#1",
-      "renamedSymbol": "P:ll.a(BI)I#1",
+      "renamedSymbol": "P:BufferedSocket.a(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234337,7 +234465,7 @@
     },
     {
       "symbol": "P:ll.a(B[BII)V#0",
-      "renamedSymbol": "P:ll.a(B[BII)V#0",
+      "renamedSymbol": "P:BufferedSocket.queueWrite(B[BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234348,7 +234476,7 @@
     },
     {
       "symbol": "P:ll.a(B[BII)V#1",
-      "renamedSymbol": "P:ll.a(B[BII)V#1",
+      "renamedSymbol": "P:BufferedSocket.queueWrite(B[BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234359,7 +234487,7 @@
     },
     {
       "symbol": "P:ll.a(B[BII)V#2",
-      "renamedSymbol": "P:ll.a(B[BII)V#2",
+      "renamedSymbol": "P:BufferedSocket.queueWrite(B[BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -234370,7 +234498,7 @@
     },
     {
       "symbol": "P:ll.a(B[BII)V#3",
-      "renamedSymbol": "P:ll.a(B[BII)V#3",
+      "renamedSymbol": "P:BufferedSocket.queueWrite(B[BII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -234381,7 +234509,7 @@
     },
     {
       "symbol": "P:ll.a(I)V#0",
-      "renamedSymbol": "P:ll.a(I)V#0",
+      "renamedSymbol": "P:BufferedSocket.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234392,7 +234520,7 @@
     },
     {
       "symbol": "P:ll.a(Z)I#0",
-      "renamedSymbol": "P:ll.a(Z)I#0",
+      "renamedSymbol": "P:BufferedSocket.readSingleByte(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234403,7 +234531,7 @@
     },
     {
       "symbol": "P:ll.a(Z[BII)V#0",
-      "renamedSymbol": "P:ll.a(Z[BII)V#0",
+      "renamedSymbol": "P:BufferedSocket.readFully(Z[BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234414,7 +234542,7 @@
     },
     {
       "symbol": "P:ll.a(Z[BII)V#1",
-      "renamedSymbol": "P:ll.a(Z[BII)V#1",
+      "renamedSymbol": "P:BufferedSocket.readFully(Z[BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234425,7 +234553,7 @@
     },
     {
       "symbol": "P:ll.a(Z[BII)V#2",
-      "renamedSymbol": "P:ll.a(Z[BII)V#2",
+      "renamedSymbol": "P:BufferedSocket.readFully(Z[BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -234436,7 +234564,7 @@
     },
     {
       "symbol": "P:ll.a(Z[BII)V#3",
-      "renamedSymbol": "P:ll.a(Z[BII)V#3",
+      "renamedSymbol": "P:BufferedSocket.readFully(Z[BII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -234447,7 +234575,7 @@
     },
     {
       "symbol": "P:ll.b(B)V#0",
-      "renamedSymbol": "P:ll.b(B)V#0",
+      "renamedSymbol": "P:BufferedSocket.b(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234458,7 +234586,7 @@
     },
     {
       "symbol": "P:ll.b(I)V#0",
-      "renamedSymbol": "P:ll.b(I)V#0",
+      "renamedSymbol": "P:BufferedSocket.close(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234469,7 +234597,7 @@
     },
     {
       "symbol": "P:ll.c(I)I#0",
-      "renamedSymbol": "P:ll.c(I)I#0",
+      "renamedSymbol": "P:BufferedSocket.availableBytes(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247724,7 +247852,7 @@
     },
     {
       "symbol": "P:pm.<init>(Ljava/lang/String;)V#0",
-      "renamedSymbol": "P:pm.<init>(Ljava/lang/String;)V#0",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.<init>(Ljava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247735,7 +247863,7 @@
     },
     {
       "symbol": "P:pm.a(I)V#0",
-      "renamedSymbol": "P:pm.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247746,7 +247874,7 @@
     },
     {
       "symbol": "P:pm.a(IIII[Lea;)V#0",
-      "renamedSymbol": "P:pm.a(IIII[LSprite;)V#0",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -247757,7 +247885,7 @@
     },
     {
       "symbol": "P:pm.a(IIII[Lea;)V#1",
-      "renamedSymbol": "P:pm.a(IIII[LSprite;)V#1",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -247768,7 +247896,7 @@
     },
     {
       "symbol": "P:pm.a(IIII[Lea;)V#2",
-      "renamedSymbol": "P:pm.a(IIII[LSprite;)V#2",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -247779,7 +247907,7 @@
     },
     {
       "symbol": "P:pm.a(IIII[Lea;)V#3",
-      "renamedSymbol": "P:pm.a(IIII[LSprite;)V#3",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -247790,7 +247918,7 @@
     },
     {
       "symbol": "P:pm.a(IIII[Lea;)V#4",
-      "renamedSymbol": "P:pm.a(IIII[LSprite;)V#4",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(IIII[LSprite;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -247801,7 +247929,7 @@
     },
     {
       "symbol": "P:pm.b(I)[Lbg;#0",
-      "renamedSymbol": "P:pm.b(I)[Lbg;#0",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.b(I)[Lbg;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259615,7 +259743,7 @@
     },
     {
       "symbol": "P:ue.a(ILjava/awt/Component;Z)V#0",
-      "renamedSymbol": "P:ue.a(ILjava/awt/Component;Z)V#0",
+      "renamedSymbol": "P:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259626,7 +259754,7 @@
     },
     {
       "symbol": "P:ue.a(ILjava/awt/Component;Z)V#1",
-      "renamedSymbol": "P:ue.a(ILjava/awt/Component;Z)V#1",
+      "renamedSymbol": "P:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259637,7 +259765,7 @@
     },
     {
       "symbol": "P:ue.a(ILjava/awt/Component;Z)V#2",
-      "renamedSymbol": "P:ue.a(ILjava/awt/Component;Z)V#2",
+      "renamedSymbol": "P:Win32CursorManager.setCursorVisible(ILjava/awt/Component;Z)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -259648,7 +259776,7 @@
     },
     {
       "symbol": "P:ue.a(ZII)V#0",
-      "renamedSymbol": "P:ue.a(ZII)V#0",
+      "renamedSymbol": "P:Win32CursorManager.setCursorPosition(ZII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259659,7 +259787,7 @@
     },
     {
       "symbol": "P:ue.a(ZII)V#1",
-      "renamedSymbol": "P:ue.a(ZII)V#1",
+      "renamedSymbol": "P:Win32CursorManager.setCursorPosition(ZII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259670,7 +259798,7 @@
     },
     {
       "symbol": "P:ue.a(ZII)V#2",
-      "renamedSymbol": "P:ue.a(ZII)V#2",
+      "renamedSymbol": "P:Win32CursorManager.setCursorPosition(ZII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -259681,7 +259809,7 @@
     },
     {
       "symbol": "P:ue.callback(IIII)I#0",
-      "renamedSymbol": "P:ue.callback(IIII)I#0",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259692,7 +259820,7 @@
     },
     {
       "symbol": "P:ue.callback(IIII)I#1",
-      "renamedSymbol": "P:ue.callback(IIII)I#1",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -259703,7 +259831,7 @@
     },
     {
       "symbol": "P:ue.callback(IIII)I#2",
-      "renamedSymbol": "P:ue.callback(IIII)I#2",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -259714,7 +259842,7 @@
     },
     {
       "symbol": "P:ue.callback(IIII)I#3",
-      "renamedSymbol": "P:ue.callback(IIII)I#3",
+      "renamedSymbol": "P:Win32CursorManager.callback(IIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -265856,7 +265984,7 @@
       "original": "MinerDisturbance.java",
       "renamed": "MinerDisturbance.java",
       "inputSha256": "4658ac9113fe2f4fb9901c9545f1c453e90e3e918a8266a9803dfa7b5853d04f",
-      "outputSha256": "1b4be8b866e38e7029c13c296cdee547a95b3e576e6d3b549341e064bd1fb959",
+      "outputSha256": "081a883d5144ad228492a234234cdcca04d48a98238a5925c1f563efafee6069",
       "edits": [
         {
           "start": 4839,
@@ -265864,6 +265992,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 5111,
+          "end": 5113,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 5284,
@@ -266025,6 +266160,27 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 23320,
+          "end": 23322,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 23350,
+          "end": 23352,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 23391,
+          "end": 23393,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 23655,
@@ -266431,6 +266587,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 43920,
+          "end": 43922,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 44223,
           "end": 44225,
           "symbol": "C:an",
@@ -266623,6 +266786,13 @@
           "symbol": "C:di",
           "original": "di",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 54447,
+          "end": 54449,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 54784,
@@ -268202,6 +268372,13 @@
           "renamed": "IsaacRandom"
         },
         {
+          "start": 108573,
+          "end": 108575,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 108698,
           "end": 108700,
           "symbol": "C:bd",
@@ -268251,6 +268428,48 @@
           "original": "L110",
           "renamed": "regionExit2",
           "kind": "label"
+        },
+        {
+          "start": 111775,
+          "end": 111777,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 111896,
+          "end": 111898,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 111955,
+          "end": 111957,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 112119,
+          "end": 112121,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 112220,
+          "end": 112222,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 112399,
+          "end": 112401,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 114576,
@@ -269942,6 +270161,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 185743,
+          "end": 185745,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 185893,
           "end": 185894,
           "symbol": "M:hm.c(B)V",
@@ -270355,6 +270581,13 @@
           "renamed": "clearDeclaredStaticReferences"
         },
         {
+          "start": 187259,
+          "end": 187260,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 187261,
           "end": 187262,
           "symbol": "M:j.a(I)V",
@@ -270689,6 +270922,13 @@
           "symbol": "M:jh.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 188537,
+          "end": 188539,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 188540,
@@ -271545,6 +271785,13 @@
           "renamed": "setClip"
         },
         {
+          "start": 199003,
+          "end": 199005,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 199133,
           "end": 199135,
           "symbol": "B:MinerDisturbance.d(Z)V#0",
@@ -271691,6 +271938,13 @@
           "symbol": "M:ea.h(II)V",
           "original": "h",
           "renamed": "drawHorizontalFlip"
+        },
+        {
+          "start": 212068,
+          "end": 212070,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 212211,
@@ -272638,6 +272892,13 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 273896,
+          "end": 273898,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
           "start": 275015,
           "end": 275017,
           "symbol": "C:bj",
@@ -272984,6 +273245,13 @@
           "renamed": "AccountRequestState"
         },
         {
+          "start": 286778,
+          "end": 286779,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 287020,
           "end": 287022,
           "symbol": "C:gd",
@@ -273003,6 +273271,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 289794,
+          "end": 289796,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 289916,
@@ -276600,7 +276875,7 @@
       "original": "bk.java",
       "renamed": "bk.java",
       "inputSha256": "39750656c5f6ba88a0d3dbab3fb241ad5919e8ee4c8b958653ac350aba9cc1cf",
-      "outputSha256": "e85b14192b4ffdcef62642e8ba5ac2c18a7a51a7eb3fa356a2b91a303fdbe6d0",
+      "outputSha256": "bbb9e4248d69983451dd66eb94359e15cb13580db53ac4ad2d156bc533c36aa3",
       "edits": [
         {
           "start": 163,
@@ -276762,6 +277037,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 5898,
+          "end": 5899,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
         },
         {
           "start": 5923,
@@ -277008,8 +277290,15 @@
       "original": "bm.java",
       "renamed": "bm.java",
       "inputSha256": "09d317094ba2c470c5a3f18a00d8b34892128b731ce65d6cba9dc87117ef97f7",
-      "outputSha256": "f55b555fd8c530685d4d8d9cb0a1b17d63ddd949dc4a531465d776869fc7679e",
+      "outputSha256": "1d5195f33c2b0acbdc6dcd258db81562799667276b365dc608aa93b3750ce9ae",
       "edits": [
+        {
+          "start": 631,
+          "end": 632,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
         {
           "start": 5482,
           "end": 5483,
@@ -277951,7 +278240,7 @@
       "original": "ci.java",
       "renamed": "AwtRasterBuffer.java",
       "inputSha256": "f41dcc01d3c3443915fcf6d5ae832c9d66e090a06f825fd161c9cb03494a7569",
-      "outputSha256": "0ac8c9ec98cb13fdeefd628cf6ec721bd26ed03dba1f23f13547471e582ffe93",
+      "outputSha256": "26095b7cb5f07fc9e5b5f2d46df60190efa67589ef27dd27ee405d1c5bdb2bb0",
       "edits": [
         {
           "start": 53,
@@ -277959,6 +278248,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 124,
+          "end": 126,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 260,
@@ -277987,6 +278283,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1683,
+          "end": 1685,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 1779,
@@ -278777,7 +279080,7 @@
       "original": "da.java",
       "renamed": "da.java",
       "inputSha256": "582c0a7db052c7ffd9137871eec902d34321d2407c0bf1b4eaa2e2207dd26a68",
-      "outputSha256": "ab2033afda60edd8465e481340abe13a1c6f4fa2a89dc72ef40eb0d9a0c2a74d",
+      "outputSha256": "50b5540436c1c0e33e83267f1cac0b2baaf4efc6f61052bb64713443f658fbe7",
       "edits": [
         {
           "start": 461,
@@ -278792,6 +279095,13 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "MusicPatchPcmStream"
+        },
+        {
+          "start": 1215,
+          "end": 1216,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 1282,
@@ -279064,7 +279374,7 @@
       "original": "di.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "1d25fb0ff6bed4a507667ef62c24bb6a23c5591b8c31743da4fa6993dd73111d",
-      "outputSha256": "d1d856c84a7510055067d444418c3cbf5eb62a4b180728cccde8b4db99dbc9df",
+      "outputSha256": "beb044df5e516e3f3181bfd1d60c872d2c2a66675b27b20cad12c63722f1d92f",
       "edits": [
         {
           "start": 69,
@@ -279345,6 +279655,13 @@
           "symbol": "M:di.d()I",
           "original": "d",
           "renamed": "getSchedulingCost"
+        },
+        {
+          "start": 23055,
+          "end": 23057,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 23351,
@@ -280147,7 +280464,7 @@
       "original": "dn.java",
       "renamed": "dn.java",
       "inputSha256": "148477a6e0627eb95f441fcc714bf2f20bcca08588c56467488737c4157762cd",
-      "outputSha256": "1a43f498bb21ce272048371a4fb1047ca86ac41c68fd71c1be5a811596ca80d4",
+      "outputSha256": "81d24cea1101245bcec4d3743eeb5a05323761c6964c36fa878bafc6931a2f09",
       "edits": [
         {
           "start": 61,
@@ -280246,6 +280563,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "ClientException"
+        },
+        {
+          "start": 6118,
+          "end": 6119,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 7163,
@@ -283058,7 +283382,7 @@
       "original": "ed.java",
       "renamed": "AccountServiceResult.java",
       "inputSha256": "00c05e14209c7b340225006d5e1f5b3bc936fd2410a052943a92e2259448d985",
-      "outputSha256": "6e7984a75ed9e4bd22570a50c05669947b17322fad752aa30066057636781458",
+      "outputSha256": "31489b5b0e765ec18a315886645d543df1d1ef82d16a136e9bfa21ab598527e9",
       "edits": [
         {
           "start": 69,
@@ -283222,6 +283546,13 @@
           "renamed": "AwtRasterBuffer"
         },
         {
+          "start": 4442,
+          "end": 4444,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 4475,
           "end": 4482,
           "symbol": "F:ia.field_a:Ljava/lang/Object;",
@@ -283276,7 +283607,7 @@
       "original": "ee.java",
       "renamed": "ee.java",
       "inputSha256": "74ce0d180bcac21689a002b69394951a2a7e78e5a190928862ecbf79d3e502c5",
-      "outputSha256": "b23b25c7b83e95b7e8e324db9254565d141c3ebbec032af33041edc0998f0035",
+      "outputSha256": "e5e7527cb09103ce9b2cbecc24c18771523d455ea34f5d90e9b1abd2373b3c0b",
       "edits": [
         {
           "start": 97,
@@ -283347,6 +283678,20 @@
           "symbol": "M:ee.h(I)V",
           "original": "h",
           "renamed": "releaseDeclaredStaticReferences"
+        },
+        {
+          "start": 1630,
+          "end": 1632,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 1668,
+          "end": 1670,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 2428,
@@ -285257,7 +285602,7 @@
       "original": "fe.java",
       "renamed": "fe.java",
       "inputSha256": "445c3a7727ff30ab27c7e28a461f6018fd7f542eb1deaacfb9423bcee3a9a9a8",
-      "outputSha256": "6a553a5edcf98a3ce195c00027efe56ced7ba9bf9ed87515e5db070206164a1c",
+      "outputSha256": "133ed829c4d3ece79819c983011b5c27ab5ffa5efad4626f1b6d6667250413f3",
       "edits": [
         {
           "start": 76,
@@ -285302,6 +285647,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 5800,
+          "end": 5801,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 8609,
           "end": 8610,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -285344,6 +285696,20 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 10887,
+          "end": 10888,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 11093,
+          "end": 11094,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 11343,
           "end": 11344,
           "symbol": "C:m",
@@ -285377,6 +285743,20 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 12079,
+          "end": 12080,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 12275,
+          "end": 12276,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 12336,
@@ -285430,6 +285810,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 13128,
+          "end": 13129,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 13211,
           "end": 13213,
           "symbol": "C:ld",
@@ -285437,11 +285824,25 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 13497,
+          "end": 13498,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 13548,
           "end": 13550,
           "symbol": "C:ld",
           "original": "ld",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 13845,
+          "end": 13846,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 13894,
@@ -285470,6 +285871,20 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 14486,
+          "end": 14487,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 14676,
+          "end": 14677,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 14733,
@@ -286174,7 +286589,7 @@
       "original": "fj.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "bed52763dcb9170dcd29693047ff9540e25d92f082dafe9e7b8d05cda3655d56",
-      "outputSha256": "ea4f843b1ae26ac737d20a2611ee9c893f99c13aabb3ffd24ee28939646fc333",
+      "outputSha256": "734fd5965091e5cf6f8825d44b62abb9e82dbb54af39f42a53e2dd38f26ac382",
       "edits": [
         {
           "start": 44,
@@ -286189,6 +286604,13 @@
           "symbol": "C:um",
           "original": "um",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 92,
+          "end": 93,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 323,
@@ -286539,6 +286961,13 @@
           "symbol": "C:fj",
           "original": "fj",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 6951,
+          "end": 6952,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 7021,
@@ -287019,7 +287448,7 @@
       "original": "fn.java",
       "renamed": "fn.java",
       "inputSha256": "ed1774dffc290700e6d66b61a8d8f1421895d0e13da8bac19213730fcc1f2675",
-      "outputSha256": "2d4579ede9834c82c7e24e4d43c202ddba4509c827877d5a9c20275b133d908f",
+      "outputSha256": "816ecedee6d3b11b1231162df7528fb4f767ade96efd94b3c47fd646b5d9d966",
       "edits": [
         {
           "start": 80,
@@ -287057,6 +287486,13 @@
           "renamed": "status"
         },
         {
+          "start": 1427,
+          "end": 1429,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 1460,
           "end": 1467,
           "symbol": "F:ia.field_a:Ljava/lang/Object;",
@@ -287092,6 +287528,13 @@
           "renamed": "MusicPatchPcmStream"
         },
         {
+          "start": 1687,
+          "end": 1688,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 1706,
           "end": 1713,
           "symbol": "F:sb.field_u:[B",
@@ -287104,6 +287547,20 @@
           "symbol": "M:sf.a(B)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 1898,
+          "end": 1899,
+          "symbol": "M:ll.c(I)I",
+          "original": "c",
+          "renamed": "availableBytes"
+        },
+        {
+          "start": 1948,
+          "end": 1949,
+          "symbol": "M:ll.a(Z)I",
+          "original": "a",
+          "renamed": "readSingleByte"
         },
         {
           "start": 2198,
@@ -287412,7 +287869,7 @@
       "original": "g.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "e6db1ca78d87be66e0452e2b4cbe0985ee9be41c1de87905c89774045ac7d035",
-      "outputSha256": "3674ec006ea1e4dc99bc25093b10eb3dc6ad329194ae2bf775954d5d7d93c625",
+      "outputSha256": "eb8db5e3b92c9595fa8eb12c1d549e84111948a09e32f300d70cb56141caf574",
       "edits": [
         {
           "start": 50,
@@ -288003,6 +288460,13 @@
           "renamed": "openSubscriptionPage"
         },
         {
+          "start": 20431,
+          "end": 20432,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 20455,
           "end": 20456,
           "symbol": "M:sf.a(B)J",
@@ -288027,10 +288491,46 @@
     },
     {
       "original": "ga.java",
-      "renamed": "ga.java",
+      "renamed": "DirectDrawFullscreenManager.java",
       "inputSha256": "58ac74ed8ac4686e2c233ce22027cf7c43eba40d3a89c9f0c63034e84729c1c2",
-      "outputSha256": "58ac74ed8ac4686e2c233ce22027cf7c43eba40d3a89c9f0c63034e84729c1c2",
-      "edits": []
+      "outputSha256": "df37da072d3957dda8b786481309508c646d595e0ff3c50b22fda5748f6a172b",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ga",
+          "original": "ga",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
+          "start": 230,
+          "end": 231,
+          "symbol": "M:ga.a(I)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
+          "start": 1541,
+          "end": 1542,
+          "symbol": "M:ga.a(BLjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "restoreDisplayMode"
+        },
+        {
+          "start": 1829,
+          "end": 1830,
+          "symbol": "M:ga.a(IIBLjava/awt/Frame;II)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
+        },
+        {
+          "start": 3361,
+          "end": 3363,
+          "symbol": "M:ga.<init>()V",
+          "original": "ga",
+          "renamed": "DirectDrawFullscreenManager"
+        }
+      ]
     },
     {
       "original": "gb.java",
@@ -289215,7 +289715,7 @@
       "original": "gf.java",
       "renamed": "gf.java",
       "inputSha256": "ef92f46cda557a434aef87fd9df25ef5e2cb2cf1e8a1c219d148b3ad7753ce78",
-      "outputSha256": "b68564f65844fc8e31f5ad7555073bf818ea218c373a9243e550d6019c5cbced",
+      "outputSha256": "b16e4d3b355089fce3736e382ac2950ac5879ca1583ca14107878d29cc5f8647",
       "edits": [
         {
           "start": 996,
@@ -289544,6 +290044,13 @@
           "renamed": "MidiPcmStream"
         },
         {
+          "start": 46735,
+          "end": 46737,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 50870,
           "end": 50872,
           "symbol": "C:di",
@@ -289570,6 +290077,13 @@
           "symbol": "C:di",
           "original": "di",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 51298,
+          "end": 51300,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 53696,
@@ -290010,7 +290524,7 @@
       "original": "gm.java",
       "renamed": "gm.java",
       "inputSha256": "418eeb08e8b848d2a03cbac34f115250475def6a3a0429a17f4b763d1702e90c",
-      "outputSha256": "cefb964f8c270b3f92c740333d233917e13a9131e574713b5498ee3f31b505e7",
+      "outputSha256": "28137757b147109b42164acb69bf5db015db315abfba2c5d00eddb8867ed36c2",
       "edits": [
         {
           "start": 161,
@@ -290025,6 +290539,13 @@
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "RawPcmStream"
+        },
+        {
+          "start": 935,
+          "end": 937,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 1251,
@@ -291936,7 +292457,7 @@
       "original": "hm.java",
       "renamed": "hm.java",
       "inputSha256": "ce36b2558eec92e4a79c89ca2b94c4a63a58cebaee22f6407ebff8c4c42b9b76",
-      "outputSha256": "0e4d1295a5ede7cf0d5d4b42662b5031a5eb88628e1df7646bd2df722b78f3c5",
+      "outputSha256": "9a63d100372a51d10c176922b902d941cb2b18fb494d3ef837fcad953835fd72",
       "edits": [
         {
           "start": 188,
@@ -291944,6 +292465,41 @@
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 535,
+          "end": 537,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 594,
+          "end": 596,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 667,
+          "end": 669,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 874,
+          "end": 876,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 907,
+          "end": 909,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 1166,
@@ -292284,7 +292840,7 @@
       "original": "ic.java",
       "renamed": "ic.java",
       "inputSha256": "78b4e354a64d100a5e8c0234904e40cee3c198880a377077308b51d519ce3d1e",
-      "outputSha256": "993b63fd6070fc993bf44226268eeaadbe85ec4f10bd0893ac10afbef5cb716e",
+      "outputSha256": "fad7bb698a9200837e44709db583b1d2e30237813278d76013eaeabb94880e45",
       "edits": [
         {
           "start": 289,
@@ -292292,6 +292848,34 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 1456,
+          "end": 1458,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 3613,
+          "end": 3615,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 3801,
+          "end": 3803,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 3927,
+          "end": 3929,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 4296,
@@ -292306,6 +292890,20 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 11677,
+          "end": 11679,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 11768,
+          "end": 11770,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 12844,
@@ -294065,7 +294663,7 @@
       "original": "in.java",
       "renamed": "in.java",
       "inputSha256": "6bf751f113dac4aa078743ccb6f58f5fd1187ddab7d18e7f4c7842ecddfa4b51",
-      "outputSha256": "0739884b21fdd2eee74e57b5f9af0963b33cb9c150c7235ede08abb29ec4b5a8",
+      "outputSha256": "c6b57dcdc88d5ad202531024744c9e6009b7dadfb9fda2554408d9604cea3e05",
       "edits": [
         {
           "start": 364,
@@ -294138,6 +294736,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 2758,
+          "end": 2760,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
           "start": 3296,
           "end": 3297,
           "symbol": "M:in.a(I)V",
@@ -294155,10 +294760,17 @@
     },
     {
       "original": "j.java",
-      "renamed": "j.java",
+      "renamed": "PcmOutputWorker.java",
       "inputSha256": "7ba5e909591a049d2382375aed5bbd2d187764932ad33c1954e2a99f919fea30",
-      "outputSha256": "f6702eb8a64498960c5a0902ad42b7679a71e319e6f1e14370ebe51d004ac907",
+      "outputSha256": "d5d91bb6c93e9d7fd82ad723d5a2688a8b524d1b3cf63a94d3aee3987b763f58",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
         {
           "start": 87,
           "end": 89,
@@ -294613,6 +295225,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 9602,
+          "end": 9603,
+          "symbol": "M:j.<init>()V",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 9635,
@@ -295226,7 +295845,7 @@
       "original": "je.java",
       "renamed": "je.java",
       "inputSha256": "73d917dbe9fdea92ae8c931dc0b37e87022e39e09b411b24c550d804a06fb6cb",
-      "outputSha256": "6ca718d7bbbf0cadb43e34482d127a1cb82a0e7f8518b0dc03a654f79115a39a",
+      "outputSha256": "6c6f884eb770a1ea100156cd1cb7488402821c309f379e6d7d3d748bb90670d4",
       "edits": [
         {
           "start": 150,
@@ -295530,6 +296149,20 @@
           "renamed": "setClip"
         },
         {
+          "start": 31519,
+          "end": 31521,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 31607,
+          "end": 31609,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 31707,
           "end": 31709,
           "symbol": "C:eh",
@@ -295775,6 +296408,27 @@
           "renamed": "fillCircleAlpha"
         },
         {
+          "start": 45838,
+          "end": 45840,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 45867,
+          "end": 45869,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 45890,
+          "end": 45892,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 45942,
           "end": 45944,
           "symbol": "C:eh",
@@ -295787,6 +296441,27 @@
           "symbol": "M:eh.a(IIII[I)V",
           "original": "a",
           "renamed": "addRadialGlow"
+        },
+        {
+          "start": 45954,
+          "end": 45956,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 45988,
+          "end": 45990,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46011,
+          "end": 46013,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 46069,
@@ -295803,6 +296478,27 @@
           "renamed": "addRadialGlow"
         },
         {
+          "start": 46081,
+          "end": 46083,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46115,
+          "end": 46117,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46138,
+          "end": 46140,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 46196,
           "end": 46198,
           "symbol": "C:eh",
@@ -295817,6 +296513,27 @@
           "renamed": "addRadialGlow"
         },
         {
+          "start": 46208,
+          "end": 46210,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46242,
+          "end": 46244,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46265,
+          "end": 46267,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 46323,
           "end": 46325,
           "symbol": "C:eh",
@@ -295829,6 +296546,27 @@
           "symbol": "M:eh.a(IIII[I)V",
           "original": "a",
           "renamed": "addRadialGlow"
+        },
+        {
+          "start": 46335,
+          "end": 46337,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46369,
+          "end": 46371,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 46392,
+          "end": 46394,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 46476,
@@ -296923,6 +297661,27 @@
           "renamed": "Sprite"
         },
         {
+          "start": 77181,
+          "end": 77183,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 77234,
+          "end": 77236,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 77297,
+          "end": 77299,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 92905,
           "end": 92908,
           "symbol": "B:je.b(I)V#0",
@@ -297003,12 +297762,26 @@
           "kind": "label"
         },
         {
+          "start": 99919,
+          "end": 99921,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 100145,
           "end": 100147,
           "symbol": "B:je.b(I)V#2",
           "original": "L3",
           "renamed": "scanLoop3",
           "kind": "label"
+        },
+        {
+          "start": 100199,
+          "end": 100201,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 101611,
@@ -298199,7 +298972,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "a669ea547d662632669a1e19b9e018028e8ea3c14c7da4b0c5fd3ab57814bb07",
-      "outputSha256": "1363074944978b8244f49c97306baf2a75d91b2229c24d686196ab1a95971075",
+      "outputSha256": "23098d262bbdfdf03bcf6244a15b520ab811bacc2c90d72f433458e50d1f1db3",
       "edits": [
         {
           "start": 116,
@@ -298410,6 +299183,20 @@
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "ArchiveProvider"
+        },
+        {
+          "start": 4120,
+          "end": 4122,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 4473,
+          "end": 4475,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 5332,
@@ -299678,7 +300465,7 @@
       "original": "kn.java",
       "renamed": "kn.java",
       "inputSha256": "d778151185b39315cd7f9044a64bd0b73fff3d94f9b013e94213c21323995eb0",
-      "outputSha256": "df4beb007327788b41e244f1b26a502cdf061c1801fcaf19c8240191336576cb",
+      "outputSha256": "f4c4a586376469095e8fe4dbaedacd864ab7a2ca5fb9ea8b003502ed106dd75e",
       "edits": [
         {
           "start": 206,
@@ -299707,6 +300494,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2257,
+          "end": 2259,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 3990,
@@ -301380,7 +302174,7 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "f6c2b85cd71e26795560cd1769b4a4da8418b589b3c1fb4e82399cfa2ca8f52a",
-      "outputSha256": "f7ef17759ac10ba5ddc733808ebaf50a1d611b7d91898c25f9600928f410c98b",
+      "outputSha256": "e70eaac3192687ac68650e35d59c13bf98438d15b4c38ee5260aa3f1630fe912",
       "edits": [
         {
           "start": 343,
@@ -301726,6 +302520,13 @@
           "renamed": "AccountRequestState"
         },
         {
+          "start": 66633,
+          "end": 66634,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 66930,
           "end": 66932,
           "symbol": "C:gd",
@@ -301754,6 +302555,13 @@
           "renamed": "MusicPatchPcmStream"
         },
         {
+          "start": 74842,
+          "end": 74844,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
           "start": 75395,
           "end": 75397,
           "symbol": "C:dc",
@@ -301773,6 +302581,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 77122,
+          "end": 77124,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 77277,
@@ -301851,7 +302666,7 @@
       "original": "li.java",
       "renamed": "li.java",
       "inputSha256": "d08489e3dcbfdeb1e4b87e70dfd127449fc2c709d676abd4af7c02dfbeec1db5",
-      "outputSha256": "76cbf96905e42c8e471922112651f4f47cc0d845e8973afd219de01d9eb63a9b",
+      "outputSha256": "5494c31d565ce0c707e6b2578239df0b0631f441df2dddcbd6a72481a50c6633",
       "edits": [
         {
           "start": 728,
@@ -301894,6 +302709,20 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 26220,
+          "end": 26222,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 39467,
+          "end": 39468,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 42857,
@@ -302327,10 +303156,17 @@
     },
     {
       "original": "ll.java",
-      "renamed": "ll.java",
+      "renamed": "BufferedSocket.java",
       "inputSha256": "016e8110e39c4112d2feed095a64f8fabd7928807d13ee6d327a64f022905807",
-      "outputSha256": "5b43f64eed0a164556b1c264ae30cceb1b5de7f21c04b5cca3964317a59eede8",
+      "outputSha256": "6c91b695524e3e676e27c9273a8ee13f9ee9c32782bafc04c5a7410d6acbd0f1",
       "edits": [
+        {
+          "start": 89,
+          "end": 91,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
         {
           "start": 267,
           "end": 269,
@@ -302346,11 +303182,32 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 577,
+          "end": 578,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 596,
+          "end": 598,
+          "symbol": "M:ll.<init>(Ljava/net/Socket;Lvf;)V",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 623,
           "end": 625,
           "symbol": "C:vf",
           "original": "vf",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 713,
+          "end": 714,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
         },
         {
           "start": 1950,
@@ -302365,6 +303222,20 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2764,
+          "end": 2765,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 3197,
+          "end": 3199,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 3346,
@@ -302402,6 +303273,13 @@
           "renamed": "MidiPcmStream"
         },
         {
+          "start": 8149,
+          "end": 8151,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 8210,
           "end": 8212,
           "symbol": "C:sb",
@@ -302416,11 +303294,53 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 8671,
+          "end": 8672,
+          "symbol": "M:ll.c(I)I",
+          "original": "c",
+          "renamed": "availableBytes"
+        },
+        {
+          "start": 9025,
+          "end": 9027,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 9058,
+          "end": 9059,
+          "symbol": "M:ll.a(Z[BII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
           "start": 10363,
           "end": 10364,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 10573,
+          "end": 10574,
+          "symbol": "M:ll.a(Z)I",
+          "original": "a",
+          "renamed": "readSingleByte"
+        },
+        {
+          "start": 10894,
+          "end": 10895,
+          "symbol": "M:ll.a(B)V",
+          "original": "a",
+          "renamed": "checkWriteError"
+        },
+        {
+          "start": 11172,
+          "end": 11174,
+          "symbol": "M:ll.<init>(Ljava/net/Socket;Lvf;I)V",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 11199,
@@ -303284,7 +304204,7 @@
       "original": "m.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "7f185ae59da80ce194601c58e2b3f895d8bf1bdb84133eddcec39a68daa19a26",
-      "outputSha256": "2ee6cc28a2c12b69e29cb3c78b9589746c06751418cb9db58b846de57201812c",
+      "outputSha256": "bc45463eec841ab0530f6c7bf2bee2612dd13d11f8f2cd22020ce9f33d6e7f76",
       "edits": [
         {
           "start": 60,
@@ -303313,6 +304233,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2995,
+          "end": 2996,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 3055,
@@ -303371,6 +304298,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 6064,
+          "end": 6065,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 6205,
           "end": 6206,
           "symbol": "M:sf.a(B)J",
@@ -303390,6 +304324,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 7409,
+          "end": 7410,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 7506,
@@ -303467,6 +304408,13 @@
           "symbol": "C:vf",
           "original": "vf",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 12885,
+          "end": 12886,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 13020,
@@ -303595,6 +304543,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 24660,
+          "end": 24661,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 25175,
           "end": 25177,
           "symbol": "C:dc",
@@ -303635,6 +304590,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 26709,
+          "end": 26710,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 26798,
@@ -303700,6 +304662,13 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 30937,
+          "end": 30938,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 31343,
           "end": 31345,
           "symbol": "C:an",
@@ -303719,6 +304688,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "Sprite"
+        },
+        {
+          "start": 31594,
+          "end": 31595,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 31681,
@@ -303775,7 +304751,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "9b4b8f7ef7599ce2e370e2ce9125ac72d6062fdfde6e44a651ee12c09c2a175a",
-      "outputSha256": "35ce717209880a289b11247f2786a8fc3dda6808aa57a0c3f0e8e0e6d41ba63b",
+      "outputSha256": "5b4f5fa1c5c31d2ec690ad04f36ec158441a6c90deea2afe477b85ce9fb604d4",
       "edits": [
         {
           "start": 123,
@@ -303883,6 +304859,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 5173,
+          "end": 5174,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 5950,
           "end": 5951,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
@@ -303923,8 +304906,15 @@
       "original": "mb.java",
       "renamed": "mb.java",
       "inputSha256": "88ea4534c6c092aa60d168b94aa4bbd18a364a6a1bdaaeba8210d673c51a350e",
-      "outputSha256": "7f10b71a33bef0aed89a92cf777d49de4807d8f84aaca948e695be880afb3aba",
+      "outputSha256": "5cac34609e030790635c7b05d19318f17dd9e19b9091d081dbb898e666176122",
       "edits": [
+        {
+          "start": 66,
+          "end": 68,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
         {
           "start": 89,
           "end": 91,
@@ -304822,7 +305812,7 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "99f8c171ed9b01add00feaf5cfc554fcf93d7e317f0fa361e4601b947a457973",
-      "outputSha256": "5349c340ab04f9c59ed8d2c21f2fd19263bdc1170a21f66a4d3053b4caeddbf9",
+      "outputSha256": "e73898c41830e603e02278e17f0243558f3a0957509d2fbf19cd519c1fc2f288",
       "edits": [
         {
           "start": 107,
@@ -304858,6 +305848,20 @@
           "symbol": "C:di",
           "original": "di",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 2153,
+          "end": 2155,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 2818,
+          "end": 2820,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 3108,
@@ -305938,7 +306942,7 @@
       "original": "mm.java",
       "renamed": "mm.java",
       "inputSha256": "8501410f1d3dccd5fb80dc9464f0b804d1b33cfb1488e1d62956c183d85e3bf8",
-      "outputSha256": "9241c301f04b3306b1994d73948cb734ce9b442cc30aa3feaff92928ade55166",
+      "outputSha256": "f31d776a6ac77d57507210296b1bb7c6c5d8dc3282aa18bea3ec7acdd4c13dc9",
       "edits": [
         {
           "start": 103,
@@ -305960,6 +306964,13 @@
           "symbol": "C:di",
           "original": "di",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 499,
+          "end": 501,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 789,
@@ -307724,7 +308735,7 @@
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "566b695c9f332eb03ffc659f0633ac9fea2452115d0d70359625c0bf23f04015",
-      "outputSha256": "8ab7983b0885779115e51db2cade488c664c10cc718286718aad011e18a05f8a",
+      "outputSha256": "47ea89dbe7d3bd2ef49cb6db58a872e9a07176a5df72a086d58beb5a7d0241a1",
       "edits": [
         {
           "start": 64,
@@ -307790,6 +308801,13 @@
           "renamed": "getTickRate"
         },
         {
+          "start": 3910,
+          "end": 3911,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
           "start": 3934,
           "end": 3935,
           "symbol": "M:sf.a(B)J",
@@ -307802,6 +308820,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 4462,
+          "end": 4463,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 4477,
@@ -307823,6 +308848,13 @@
           "symbol": "M:sf.a(B)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 6043,
+          "end": 6044,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 6267,
@@ -307902,6 +308934,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 7529,
+          "end": 7531,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 7967,
           "end": 7969,
           "symbol": "C:bd",
@@ -307935,6 +308974,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 10564,
+          "end": 10565,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 10588,
@@ -308089,6 +309135,13 @@
           "symbol": "C:di",
           "original": "di",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 25272,
+          "end": 25273,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 26039,
@@ -310631,8 +311684,15 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "ed53b2704ae1b2ece22150a87cf0a588863907e417dbb8c65789c8ec713fe0de",
-      "outputSha256": "8aafb12550908581141d25035326b3bf60ffd7d58ac64309136f65f5d5837828",
+      "outputSha256": "2f6e9d09c877f0f729a9c8608661d77e82dc44c81eda45e55178e764e1609a1a",
       "edits": [
+        {
+          "start": 2576,
+          "end": 2577,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
         {
           "start": 2658,
           "end": 2660,
@@ -313160,10 +314220,17 @@
     },
     {
       "original": "pm.java",
-      "renamed": "pm.java",
+      "renamed": "ProxyAuthenticationRequiredException.java",
       "inputSha256": "5f9d7dc003754f764587e4b1debe4cdc78cef364377679bf4ff57883a66ff60f",
-      "outputSha256": "4928d857613fe8704b243f4b5481a15576897fd305f782253a03488ba20b6fbd",
+      "outputSha256": "52f2279be0859cf652ae9061b33ad2b38638d016573fe1dc2392809d50ff18e8",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
         {
           "start": 220,
           "end": 221,
@@ -313184,6 +314251,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 838,
+          "end": 840,
+          "symbol": "M:pm.<init>(Ljava/lang/String;)V",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 960,
@@ -313986,7 +315060,7 @@
       "original": "qd.java",
       "renamed": "qd.java",
       "inputSha256": "162e0f8d061b73c248896943b88d9bf32addae2c2f092944c91c51d8613f73db",
-      "outputSha256": "f29f5a846e54d8f6d4da6248396c63d40fb7484777ccfcb99f98e428b55b4bd5",
+      "outputSha256": "e6c94db2708d3f9acce2eee42fe4eda216d4184cba7ff3dfefd74b2d0baf16fa",
       "edits": [
         {
           "start": 1641,
@@ -313994,6 +315068,13 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3380,
+          "end": 3382,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 3565,
@@ -314568,6 +315649,13 @@
           "symbol": "C:m",
           "original": "m",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 20209,
+          "end": 20211,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 20229,
@@ -315386,7 +316474,7 @@
       "original": "ql.java",
       "renamed": "ql.java",
       "inputSha256": "345d65468f0268f2c8364b3730c2d1ed3ae1e16da1e8c530f758e3ebed241689",
-      "outputSha256": "5aa0eab98e85b39165894196345c81920ddc8d5c14ca649db61c6a1b7600adde",
+      "outputSha256": "4908b300e071cfe8c712c909ec321a8343096171bbe66630fedf1e47c322d9a9",
       "edits": [
         {
           "start": 381,
@@ -315443,6 +316531,20 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3702,
+          "end": 3703,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 3784,
+          "end": 3785,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 4167,
@@ -315986,7 +317088,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "f259e7d3686b1868c5a88ffffe2476f2fe521aa9288b1e626ec6489f0e1a4ee4",
-      "outputSha256": "536ba636a875b3337f97a64fbd3f344244f738332afd8a1c68a8eec1305ba1ac",
+      "outputSha256": "a4ba521f2d4a8e4511937f996a29b1c414524ba5f75f4878b18fa522359dd4a5",
       "edits": [
         {
           "start": 5339,
@@ -316339,6 +317441,20 @@
           "renamed": "fillCircleAlpha"
         },
         {
+          "start": 60217,
+          "end": 60219,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 60293,
+          "end": 60295,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 60513,
           "end": 60515,
           "symbol": "C:eh",
@@ -316351,6 +317467,20 @@
           "symbol": "M:eh.a(IIII[I)V",
           "original": "a",
           "renamed": "addRadialGlow"
+        },
+        {
+          "start": 60538,
+          "end": 60540,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 60565,
+          "end": 60567,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 60672,
@@ -316367,6 +317497,20 @@
           "renamed": "addRadialGlow"
         },
         {
+          "start": 60697,
+          "end": 60699,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 60759,
+          "end": 60761,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 60832,
           "end": 60834,
           "symbol": "C:eh",
@@ -316379,6 +317523,20 @@
           "symbol": "M:eh.a(IIII[I)V",
           "original": "a",
           "renamed": "addRadialGlow"
+        },
+        {
+          "start": 60857,
+          "end": 60859,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 60889,
+          "end": 60891,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 60993,
@@ -316395,11 +317553,32 @@
           "renamed": "addRadialGlow"
         },
         {
+          "start": 61018,
+          "end": 61020,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 61081,
+          "end": 61083,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 61836,
           "end": 61837,
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 62710,
+          "end": 62712,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         }
       ]
     },
@@ -321749,7 +322928,7 @@
       "original": "se.java",
       "renamed": "se.java",
       "inputSha256": "31a804e7bd0ed836e501cc93aa9d634dfe19baadbf564ecf0f9c2c84cb8c3ccc",
-      "outputSha256": "86351a332f6925b9e4bf29fbb36e269c9fb7be31f0ea017beab0183a888885be",
+      "outputSha256": "b09ae6c38a414e3443f39e794ccfd36040a4e1c7e05eb8205dbd192c8fe65390",
       "edits": [
         {
           "start": 500,
@@ -321771,6 +322950,27 @@
           "symbol": "M:se.n(I)V",
           "original": "n",
           "renamed": "clearDeclaredStaticReferences"
+        },
+        {
+          "start": 1262,
+          "end": 1263,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 1521,
+          "end": 1522,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 1702,
+          "end": 1703,
+          "symbol": "C:j",
+          "original": "j",
+          "renamed": "PcmOutputWorker"
         },
         {
           "start": 1841,
@@ -322010,7 +323210,7 @@
       "original": "si.java",
       "renamed": "si.java",
       "inputSha256": "27437bcd10403d007f2f647d7aaa88c3dbb395342ae32842672983961ed98b43",
-      "outputSha256": "d80d3f619f1e543f0cebd123efd8b0f57f9431fed098445d7e2acb4ab3f8a48b",
+      "outputSha256": "eb82955b45fe12210886103c9f5e79554f9685785156be3e37f13f2e815ac3d7",
       "edits": [
         {
           "start": 120,
@@ -322032,6 +323232,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 307,
+          "end": 308,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
         },
         {
           "start": 325,
@@ -322584,7 +323791,7 @@
       "original": "ta.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "29c592f70b7a7e398c2bc55fb67b7341fd3ca38eb8cb9d2fdedfc91447f40da0",
-      "outputSha256": "28ebdc1ef5c56b643d1c00215975852a8fecbb63bb23213e3270aa4b1f99d161",
+      "outputSha256": "1fff9ed180d32bb14c892428c2f55e30007757791910c877bbb50e4d0d5ca028",
       "edits": [
         {
           "start": 69,
@@ -322643,6 +323850,13 @@
           "renamed": "AwtRasterBuffer"
         },
         {
+          "start": 504,
+          "end": 505,
+          "symbol": "M:ll.c(I)I",
+          "original": "c",
+          "renamed": "availableBytes"
+        },
+        {
           "start": 587,
           "end": 594,
           "symbol": "F:sb.field_o:I",
@@ -322662,6 +323876,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 690,
+          "end": 691,
+          "symbol": "M:ll.a(Z[BII)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 710,
@@ -324470,7 +325691,7 @@
       "original": "tk.java",
       "renamed": "tk.java",
       "inputSha256": "fc051b4a2a6aa930192fb4af0e01d5d3b1de6e0db07b6946a822eea45f98025d",
-      "outputSha256": "31131cf3ac5d4f31b0ab5252d960bedc9adabd262375cdee65f92e796e610cf2",
+      "outputSha256": "c73871a0625a1de2c4e16e0ff6a2ed0ec207ab50cfd63fa79324a1cbbfe4588f",
       "edits": [
         {
           "start": 357,
@@ -324548,6 +325769,20 @@
           "symbol": "M:lj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ldb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3092,
+          "end": 3094,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 3108,
+          "end": 3110,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 3200,
@@ -324980,7 +326215,7 @@
       "original": "tn.java",
       "renamed": "tn.java",
       "inputSha256": "d20e184f5892c5d5f9990e38dfb1733a520420bcf7778119d79911f2dbe650a0",
-      "outputSha256": "9ade9d305ae47dcfdeb05f230765489dad40bbea1bb951e011ee163d06123149",
+      "outputSha256": "11533c405a541bbe76f0e13a8927d60ec99b1d0553fc02722dac68dbd183843d",
       "edits": [
         {
           "start": 123,
@@ -325079,6 +326314,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 9059,
+          "end": 9061,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 10049,
@@ -325285,7 +326527,7 @@
       "original": "ud.java",
       "renamed": "ud.java",
       "inputSha256": "40b245b424d67597153d9a5887f55e58ce410adc28bd458eb746cebef456545e",
-      "outputSha256": "3f41cf751361bbe594f907444be3334ed726954f9eaba015c4bee7f262037862",
+      "outputSha256": "f04901a3ffbcb3cb71ce9e1a5b7a065d5dafaa113fc153765c6083bfa134adf6",
       "edits": [
         {
           "start": 223,
@@ -325293,6 +326535,13 @@
           "symbol": "M:ud.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 504,
+          "end": 506,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 660,
@@ -325305,17 +326554,67 @@
     },
     {
       "original": "ue.java",
-      "renamed": "ue.java",
+      "renamed": "Win32CursorManager.java",
       "inputSha256": "a70a63b20c7c3021543ca06f51a9f66af3e7442abab0a11ed7b87615d55298ce",
-      "outputSha256": "a70a63b20c7c3021543ca06f51a9f66af3e7442abab0a11ed7b87615d55298ce",
-      "edits": []
+      "outputSha256": "e3ef8c38427b7993a03a9b8d8a6fc97f6b9052a70a48fdef08d93b7581f5aaf3",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "Win32CursorManager"
+        },
+        {
+          "start": 259,
+          "end": 260,
+          "symbol": "M:ue.a(ILjava/awt/Component;Z)V",
+          "original": "a",
+          "renamed": "setCursorVisible"
+        },
+        {
+          "start": 3751,
+          "end": 3752,
+          "symbol": "M:ue.a(ZII)V",
+          "original": "a",
+          "renamed": "setCursorPosition"
+        },
+        {
+          "start": 3890,
+          "end": 3891,
+          "symbol": "M:ue.a(ZII)V",
+          "original": "a",
+          "renamed": "setCursorPosition"
+        },
+        {
+          "start": 3930,
+          "end": 3932,
+          "symbol": "M:ue.<init>()V",
+          "original": "ue",
+          "renamed": "Win32CursorManager"
+        }
+      ]
     },
     {
       "original": "uf.java",
       "renamed": "uf.java",
       "inputSha256": "d0922b61c5c2861f27594296d59c8cce928c99e8415f0968b5743d5fbeadde20",
-      "outputSha256": "2d3f7ee8ab9334331c8a37f20cad30a9c67acf32c3cd2e7ec14d1f21591ae1a5",
+      "outputSha256": "6849289bd9e058a220598cf0a66c2aa80364add08c75c33013013e87256bd1a8",
       "edits": [
+        {
+          "start": 255,
+          "end": 257,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
+          "start": 386,
+          "end": 387,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
         {
           "start": 1923,
           "end": 1924,
@@ -325329,6 +326628,20 @@
           "symbol": "M:sf.a(B)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 3557,
+          "end": 3558,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 4109,
+          "end": 4110,
+          "symbol": "M:ll.a(B)V",
+          "original": "a",
+          "renamed": "checkWriteError"
         },
         {
           "start": 4232,
@@ -325350,6 +326663,13 @@
           "symbol": "M:sb.a(IJ)V",
           "original": "a",
           "renamed": "writeLong40"
+        },
+        {
+          "start": 4362,
+          "end": 4363,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
         },
         {
           "start": 4389,
@@ -325387,6 +326707,13 @@
           "renamed": "writeLong40"
         },
         {
+          "start": 4802,
+          "end": 4803,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 4828,
           "end": 4835,
           "symbol": "F:sb.field_u:[B",
@@ -325399,6 +326726,13 @@
           "symbol": "F:sb.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 5152,
+          "end": 5153,
+          "symbol": "M:ll.c(I)I",
+          "original": "c",
+          "renamed": "availableBytes"
         },
         {
           "start": 5658,
@@ -325420,6 +326754,13 @@
           "symbol": "F:sb.field_o:I",
           "original": "field_o",
           "renamed": "position"
+        },
+        {
+          "start": 6049,
+          "end": 6050,
+          "symbol": "M:ll.a(Z[BII)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 6079,
@@ -325497,6 +326838,13 @@
           "symbol": "F:sb.field_o:I",
           "original": "field_o",
           "renamed": "position"
+        },
+        {
+          "start": 7302,
+          "end": 7303,
+          "symbol": "M:ll.a(Z[BII)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 7324,
@@ -325639,6 +326987,27 @@
           "renamed": "position"
         },
         {
+          "start": 10916,
+          "end": 10917,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 11788,
+          "end": 11789,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 12062,
+          "end": 12064,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
+        },
+        {
           "start": 12112,
           "end": 12113,
           "symbol": "M:uf.f(I)V",
@@ -325688,6 +327057,13 @@
           "renamed": "writeLong40"
         },
         {
+          "start": 13038,
+          "end": 13039,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 13065,
           "end": 13072,
           "symbol": "F:sb.field_u:[B",
@@ -325700,6 +327076,13 @@
           "symbol": "F:sb.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 13365,
+          "end": 13366,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
         },
         {
           "start": 14355,
@@ -325730,6 +327113,13 @@
           "renamed": "writeShort"
         },
         {
+          "start": 14518,
+          "end": 14519,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 14545,
           "end": 14552,
           "symbol": "F:sb.field_u:[B",
@@ -325742,6 +327132,27 @@
           "symbol": "F:sb.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 14845,
+          "end": 14846,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 16172,
+          "end": 16173,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
+        },
+        {
+          "start": 16500,
+          "end": 16502,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "BufferedSocket"
         },
         {
           "start": 16705,
@@ -325779,6 +327190,13 @@
           "renamed": "writeInt"
         },
         {
+          "start": 17520,
+          "end": 17521,
+          "symbol": "M:ll.a(B[BII)V",
+          "original": "a",
+          "renamed": "queueWrite"
+        },
+        {
           "start": 17547,
           "end": 17554,
           "symbol": "F:sb.field_u:[B",
@@ -325791,6 +327209,13 @@
           "symbol": "F:sb.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 17865,
+          "end": 17866,
+          "symbol": "M:ll.b(I)V",
+          "original": "b",
+          "renamed": "close"
         },
         {
           "start": 18323,
@@ -327854,7 +329279,7 @@
       "original": "vf.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "ceb6f8aea06b04f566bb5226bcc8ab6a3a25458cf74ad1fbb4628375b443ff62",
-      "outputSha256": "c11163c9c92cdcc45a2f8e276c6f8bf58a3205762aeaa1934cbcc8ca8fbb4b02",
+      "outputSha256": "776cbdd4daf9584c71b81cffcbb67a1fff005a1399c8f2ae61c0feae8745db1d",
       "edits": [
         {
           "start": 69,
@@ -327876,6 +329301,13 @@
           "symbol": "F:vf.field_u:Z",
           "original": "field_u",
           "renamed": "shutdownRequested"
+        },
+        {
+          "start": 283,
+          "end": 285,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "Win32CursorManager"
         },
         {
           "start": 358,
@@ -327948,6 +329380,13 @@
           "renamed": "queueTail"
         },
         {
+          "start": 745,
+          "end": 747,
+          "symbol": "C:ga",
+          "original": "ga",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
           "start": 776,
           "end": 777,
           "symbol": "M:vf.b(B)Z",
@@ -328016,6 +329455,13 @@
           "symbol": "M:an.b(I)V",
           "original": "b",
           "renamed": "close"
+        },
+        {
+          "start": 3970,
+          "end": 3972,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 4066,
@@ -328130,6 +329576,13 @@
           "renamed": "correctedCurrentTimeMillis"
         },
         {
+          "start": 6201,
+          "end": 6203,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
           "start": 6238,
           "end": 6245,
           "symbol": "F:ia.field_a:Ljava/lang/Object;",
@@ -328149,6 +329602,20 @@
           "symbol": "F:ia.field_f:I",
           "original": "field_f",
           "renamed": "intArgument"
+        },
+        {
+          "start": 6339,
+          "end": 6341,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 6484,
+          "end": 6486,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 6551,
@@ -328284,6 +329751,13 @@
           "renamed": "result"
         },
         {
+          "start": 8613,
+          "end": 8614,
+          "symbol": "M:ga.a(I)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
           "start": 8808,
           "end": 8815,
           "symbol": "F:ia.field_a:Ljava/lang/Object;",
@@ -328296,6 +329770,13 @@
           "symbol": "F:vf.field_q:Z",
           "original": "field_q",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 8959,
+          "end": 8960,
+          "symbol": "M:ga.a(IIBLjava/awt/Frame;II)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
         },
         {
           "start": 8974,
@@ -328361,6 +329842,13 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 9756,
+          "end": 9757,
+          "symbol": "M:ga.a(BLjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "restoreDisplayMode"
+        },
+        {
           "start": 9794,
           "end": 9801,
           "symbol": "F:ia.field_d:Ljava/lang/Object;",
@@ -328396,6 +329884,13 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 10197,
+          "end": 10198,
+          "symbol": "M:ue.a(ZII)V",
+          "original": "a",
+          "renamed": "setCursorPosition"
+        },
+        {
           "start": 10576,
           "end": 10583,
           "symbol": "F:vf.field_a:Z",
@@ -328422,6 +329917,13 @@
           "symbol": "F:vf.field_q:Z",
           "original": "field_q",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 10910,
+          "end": 10911,
+          "symbol": "M:ue.a(ILjava/awt/Component;Z)V",
+          "original": "a",
+          "renamed": "setCursorVisible"
         },
         {
           "start": 11298,
@@ -329075,6 +330577,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 20973,
+          "end": 20975,
+          "symbol": "C:ga",
+          "original": "ga",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
           "start": 21031,
           "end": 21038,
           "symbol": "F:vf.field_u:Z",
@@ -329187,11 +330696,25 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 25180,
+          "end": 25182,
+          "symbol": "C:ga",
+          "original": "ga",
+          "renamed": "DirectDrawFullscreenManager"
+        },
+        {
           "start": 25558,
           "end": 25565,
           "symbol": "F:vf.field_q:Z",
           "original": "field_q",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 25687,
+          "end": 25689,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "Win32CursorManager"
         },
         {
           "start": 25932,
@@ -331340,7 +332863,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "0da9701370d6f81239faa589481c6c17f3c4e18deec03f0895c7d63c9efe4b3b",
-      "outputSha256": "89fbb65ddb5b8c7fc8269c85aef5f31bee330399d4de430df450781a474801cc",
+      "outputSha256": "d5770a51965d2340d6cfe384774a9582f142a53dff67a05d2adc050790c2437a",
       "edits": [
         {
           "start": 1166,
@@ -331446,6 +332969,20 @@
           "symbol": "M:eh.e(IIII)V",
           "original": "e",
           "renamed": "drawHorizontalLine"
+        },
+        {
+          "start": 4615,
+          "end": 4617,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 4702,
+          "end": 4704,
+          "symbol": "C:pm",
+          "original": "pm",
+          "renamed": "ProxyAuthenticationRequiredException"
         },
         {
           "start": 5204,
@@ -332821,10 +334358,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/minerdisturbance"
     },
-    "rulesSha256": "62f77360626f1eb8106da6860927e65322a18d1fb3259dfc54ba99433102c0e7",
+    "rulesSha256": "6c52cfc93cbbeb3a592df2e3ab142deb73d6298dfd7004129185b06a81d8fb30",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
-    "outputTreeSha256": "6e38e983d3878bc435d56c9dc45423d03248f7d7a3ddc31466a74171b1cf3b81",
+    "outputTreeSha256": "42cc21f6b93e3d8907cd5dddabfff0697dd2c3cefb84de4abadbd2818a84ffc3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

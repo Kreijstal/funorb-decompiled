@@ -42,7 +42,7 @@ final class id {
         if (vh.field_j) {
           oj.field_q.d((byte) -62);
         } else {
-          var1 = cb.field_j;
+          var1 = BufferedSocket.field_j;
           if (var1 > 0) {
             if (1 == var1) {
               bm.field_a = gi.field_d;

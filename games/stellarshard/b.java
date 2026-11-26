@@ -21,7 +21,7 @@ final class b extends id {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -9 / ((param0 + 59) / 44);
-          if (tl.a(param3, (byte) -5, param2, param1)) {
+          if (ProxyAuthenticationRequiredException.a(param3, (byte) -5, param2, param1)) {
             stackIn_4_0 = rb.g(1851);
             return stackIn_4_0;
           }

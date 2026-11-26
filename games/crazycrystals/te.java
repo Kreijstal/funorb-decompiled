@@ -25,7 +25,7 @@ abstract class te {
             MidiPcmStream.field_y = dupTemp$1;
             if (vj.field_b.status == 1) {
               try {
-                oi.field_c = new j((java.net.Socket) (vj.field_b.result), gf.field_b);
+                oi.field_c = new BufferedSocket((java.net.Socket) (vj.field_b.result), gf.field_b);
                 tp.field_f.position = 0;
                 CipherPacketBuffer var2 = kd.field_n;
                 var2.position = 0;

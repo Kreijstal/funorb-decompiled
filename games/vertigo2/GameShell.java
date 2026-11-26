@@ -683,7 +683,7 @@ abstract class GameShell extends GameApplet {
             hr.a(3, true);
           }
           if (wi.field_h[3]) {
-            jr.a(4, 2);
+            PcmOutputWorker.a(4, 2);
           }
           if (wi.field_h[4]) {
             in.a((byte) -102, 5);

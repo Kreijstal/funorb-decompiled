@@ -408,7 +408,7 @@ final class ca extends gj implements dc, da, pe {
             ca.j(-73);
           }
           param0.removeFocusListener(ResourceArchive.field_f);
-          em.field_f = -1;
+          ProxyAuthenticationRequiredException.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

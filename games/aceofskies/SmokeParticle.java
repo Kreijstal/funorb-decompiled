@@ -27,7 +27,7 @@ final class SmokeParticle extends FlightBody {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -43,7 +43,7 @@ final class SmokeParticle extends FlightBody {
           this.spriteIndex = qq.a(20, SecondaryKeyHashTable.smokeSprites.length);
           this.depthPhase = depthPhase;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "qf.O(" + lifetimeTicks + ',' + obfuscationGuard + ',' + colourOrBlastRadius + ',' + depthPhase + ',' + (position != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "qf.O(" + lifetimeTicks + ',' + obfuscationGuard + ',' + colourOrBlastRadius + ',' + depthPhase + ',' + (position != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class SmokeParticle extends FlightBody {
           this.spriteIndex = qq.a(20, SecondaryKeyHashTable.smokeSprites.length);
           this.depthPhase = 92;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "qf.L(" + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ',' + colourOrBlastRadius + ',' + lifetimeTicks + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "qf.L(" + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ',' + colourOrBlastRadius + ',' + lifetimeTicks + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class SmokeParticle extends FlightBody {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class SmokeParticle extends FlightBody {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
         }
     }
 

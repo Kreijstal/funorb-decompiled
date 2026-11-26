@@ -13,7 +13,7 @@ class ag extends IntrusiveNode {
     static String field_j;
     String field_n;
     mh field_p;
-    static td field_t;
+    static BufferedSocket field_t;
     int field_s;
     int field_m;
     ce field_l;
@@ -52,7 +52,7 @@ class ag extends IntrusiveNode {
               var5_ref_int__ = new int[var1];
               var6 = 0;
               while (var6 < var1) {
-                var5_ref_int__[var6] = ll.a(ua.a(255, (int) var16[var6]) << 24, bf.field_d[ua.a((int) var17[var6], 255)]);
+                var5_ref_int__[var6] = ll.a(PcmOutputWorker.a(255, (int) var16[var6]) << 24, bf.field_d[PcmOutputWorker.a((int) var17[var6], 255)]);
                 var6++;
                 if (var7 == 0) {
                   continue;
@@ -67,7 +67,7 @@ class ag extends IntrusiveNode {
             var9 = new int[var1];
             var5 = 0;
             while (var1 > var5) {
-              var9[var5] = bf.field_d[ua.a((int) var17[var5], 255)];
+              var9[var5] = bf.field_d[PcmOutputWorker.a((int) var17[var5], 255)];
               var5++;
               if (var7 == 0) {
                 continue;
@@ -85,7 +85,7 @@ class ag extends IntrusiveNode {
               var5_ref_int__ = new int[var1];
               var6 = 0;
               while (var6 < var1) {
-                var5_ref_int__[var6] = ll.a(ua.a(255, (int) var14[var6]) << 24, bf.field_d[ua.a((int) var15[var6], 255)]);
+                var5_ref_int__[var6] = ll.a(PcmOutputWorker.a(255, (int) var14[var6]) << 24, bf.field_d[PcmOutputWorker.a((int) var15[var6], 255)]);
                 var6++;
                 if (var7 == 0) {
                   continue;
@@ -100,7 +100,7 @@ class ag extends IntrusiveNode {
             var9 = new int[var1];
             var5 = 0;
             while (var1 > var5) {
-              var9[var5] = bf.field_d[ua.a((int) var15[var5], 255)];
+              var9[var5] = bf.field_d[PcmOutputWorker.a((int) var15[var5], 255)];
               var5++;
               if (var7 == 0) {
                 continue;
@@ -803,7 +803,7 @@ class ag extends IntrusiveNode {
         int var4Lifetime3;
         if (!this.g(-9015)) {
           if (param2 != 80) {
-            field_t = (td) null;
+            field_t = (BufferedSocket) null;
             var4 = param0;
             if (var4 == 80) {
               return this.a((byte) -93, this);
@@ -820,7 +820,7 @@ class ag extends IntrusiveNode {
           return true;
         }
         if (param2 != 80) {
-          field_t = (td) null;
+          field_t = (BufferedSocket) null;
           var4Lifetime1 = param0;
           if (var4Lifetime1 == 80) {
             return this.a((byte) -93, this);

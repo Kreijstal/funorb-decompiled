@@ -458,7 +458,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_chat_game_hide", -15192);
                 if (byteArrayState0015 != null) {
-                  PlatformSupport002.stringState0125 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringState0125 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_chat_pm_show_all", -15192);
                 if (byteArrayState0015 != null) {
@@ -690,7 +690,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("multiconst_invite_only", -15192);
                 if (null != byteArrayState0015) {
-                  PlatformSupport002.stringState0124 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringState0124 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("multiconst_clan", -15192);
                 if (byteArrayState0015 != null) {
@@ -2489,27 +2489,27 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_help,0", -15192);
                 if (null != byteArrayState0015) {
-                  PlatformSupport002.stringArrayState0007[0] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringArrayState0007[0] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_help,1", -15192);
                 if (null != byteArrayState0015) {
-                  PlatformSupport002.stringArrayState0007[1] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringArrayState0007[1] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_help,2", -15192);
                 if (byteArrayState0015 != null) {
-                  PlatformSupport002.stringArrayState0007[2] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringArrayState0007[2] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_help,3", -15192);
                 if (null != byteArrayState0015) {
-                  PlatformSupport002.stringArrayState0007[3] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringArrayState0007[3] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_help,4", -15192);
                 if (byteArrayState0015 != null) {
-                  PlatformSupport002.stringArrayState0007[4] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringArrayState0007[4] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_help,5", -15192);
                 if (null != byteArrayState0015) {
-                  PlatformSupport002.stringArrayState0007[5] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DelegatingCanvas.stringArrayState0007[5] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("quickchat_shortcut_keys,0", -15192);
                 if (byteArrayState0015 != null) {

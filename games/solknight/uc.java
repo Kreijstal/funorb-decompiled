@@ -48,7 +48,7 @@ final class uc {
             if (var5 >= 0) {
               var6 = fa.a(vc.field_d[var3_int], true, (byte) 99);
               var4 = var4 + vg.field_N;
-              var7 = sb.field_d - (var6 >> 1);
+              var7 = PcmOutputWorker.field_d - (var6 >> 1);
               if (gh.a(var4, we.field_c + (g.field_l << 1), param0, var6 + (bl.field_i << 1), 16777215, param2, -bl.field_i + var7)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;

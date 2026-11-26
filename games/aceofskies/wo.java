@@ -84,7 +84,7 @@ final class wo extends IntrusiveNode {
           this.field_k = param3;
           this.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

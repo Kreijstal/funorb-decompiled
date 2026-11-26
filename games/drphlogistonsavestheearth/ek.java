@@ -38,7 +38,7 @@ final class ek extends IntrusiveNode {
         if (r.field_d != 11) {
           return;
         }
-        qk.field_c = false;
+        ProxyAuthenticationRequiredException.field_c = false;
     }
 
     final static boolean a(boolean param0, boolean param1) {
@@ -62,7 +62,7 @@ final class ek extends IntrusiveNode {
             tl.field_O = sg.field_b;
           } else {
             try {
-              uj.field_j = new qe((java.net.Socket) (de.field_q.result), pi.field_I);
+              uj.field_j = new BufferedSocket((java.net.Socket) (de.field_q.result), pi.field_I);
               var4 = dh.field_N;
               var5 = var4;
               nj.field_p.position = 0;

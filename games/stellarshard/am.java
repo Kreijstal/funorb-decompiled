@@ -26,7 +26,7 @@ final class am {
         fg.field_O = param0;
         int var3 = 21 % ((-58 - param2) / 59);
         n.field_L = 255;
-        tl.field_c = 6;
+        ProxyAuthenticationRequiredException.field_c = 6;
     }
 
     public static void clearStaticReferences(int param0) {

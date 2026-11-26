@@ -87,9 +87,9 @@ final class tf {
             pn.field_a.c("???", 500, param2 + 123, 16777215, -1);
             return;
           }
-          pn.field_a.c(Integer.toString(sb.field_b[param1]), 500, param2 + 103, 16777215, -1);
+          pn.field_a.c(Integer.toString(PcmOutputWorker.field_b[param1]), 500, param2 + 103, 16777215, -1);
           for (var6 = 0; eg.field_j[param1] > var6; var6++) {
-            sb.field_h.d(var6 * 5 + 500, param2 + 108);
+            PcmOutputWorker.field_h.d(var6 * 5 + 500, param2 + 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

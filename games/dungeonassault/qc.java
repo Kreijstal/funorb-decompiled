@@ -51,7 +51,7 @@ final class qc extends qe {
             stackIn_10_0 = oo.field_d * 120 / 256;
           }
           var10 = stackIn_10_0;
-          var11 = (var7 - bk.field_e.field_b) / 2;
+          var11 = (var7 - PcmOutputWorker.field_e.field_b) / 2;
           vd.a(120, 2, -14561, 2, var9, var11 + var6);
           jc.a(var7 - 6, var10 + var9 - 1, var6 + 3, 2, 2, 2);
         }
@@ -647,7 +647,7 @@ final class qc extends qe {
                 if (var3Lifetime1 == 42 &&
                   df.a((byte) -38) < gm.field_d.field_p &&
                   gm.field_d.field_p >= gm.field_d.field_i) {
-                  var10Lifetime2 = jk.a(new String[]{np.b(3, gm.field_d.field_p), np.b(3, gm.field_d.field_i)}, wl.field_b, 30496);
+                  var10Lifetime2 = jk.a(new String[]{np.b(3, gm.field_d.field_p), np.b(3, gm.field_d.field_i)}, ProxyAuthenticationRequiredException.field_b, 30496);
                 }
               } else {
                 var10Lifetime2 = jk.a(new String[]{ve.a(1, (long)gm.field_d.field_g, -17311, hc.field_d, true)}, fn.field_q, 30496);

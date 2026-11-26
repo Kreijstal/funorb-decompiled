@@ -89,7 +89,7 @@ final class AccountCreationResultPanel extends fj implements ij {
         if (param0 <= 59) {
           field_rb = (String) null;
         }
-        stackIn_6_0 = (null != lo.field_k) && (bm.field_I == rg.field_d);
+        stackIn_6_0 = (null != lo.field_k) && (bm.field_I == ProxyAuthenticationRequiredException.field_d);
         return stackIn_6_0;
     }
 

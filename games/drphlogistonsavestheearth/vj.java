@@ -965,18 +965,18 @@ final class vj {
               }
             }
             if (hf.field_C == 2) {
-              ea.field_a = new qe((java.net.Socket) (IterableNodeHashTable.field_e.result), MouseWheelInput.field_e);
+              ea.field_a = new BufferedSocket((java.net.Socket) (IterableNodeHashTable.field_e.result), MouseWheelInput.field_e);
               var3 = new PacketBuffer(13);
               FullscreenFocusCanvas.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
               var3.writeByte(15, (byte) -92);
               var3.writeInt(mi.field_j, (byte) 107);
-              ea.field_a.a(13, -30537, var3.payload, 0);
+              ea.field_a.queueWrite(13, -30537, var3.payload, 0);
               hf.field_C = hf.field_C + 1;
               BoundedRandomAccessFile.field_a = la.correctedCurrentTimeMillis(false) + 30000L;
             }
             if (3 == hf.field_C) {
-              if (0 < ea.field_a.a((byte) 41)) {
-                var1_int = ea.field_a.a(-125);
+              if (0 < ea.field_a.availableBytes((byte) 41)) {
+                var1_int = ea.field_a.readSingleByte(-125);
                 if (var1_int != 0) {
                   stackIn_27_0 = uj.a((byte) 85, var1_int);
                   return stackIn_27_0;

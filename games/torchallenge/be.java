@@ -26,13 +26,13 @@ final class be {
     }
 
     final static void a(int param0, byte param1, boolean param2) {
-        bb.activeScreenId = param0;
+        PcmOutputWorker.activeScreenId = param0;
         if (param1 >= -101) {
           be.a(19, (byte) -122, true);
         }
         hk.field_e = 0;
-        if (!(bb.activeScreenId < 0)) {
-          GameApplet.screens[bb.activeScreenId].a(3, param2);
+        if (!(PcmOutputWorker.activeScreenId < 0)) {
+          GameApplet.screens[PcmOutputWorker.activeScreenId].a(3, param2);
         }
     }
 

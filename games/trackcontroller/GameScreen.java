@@ -320,7 +320,7 @@ final class GameScreen {
           bk.font.b(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
         } else {
           if (null == SpriteState.field_w) {
-            SpriteState.field_w = hj.a(3, 10, 1, 10, (byte) -102);
+            SpriteState.field_w = PcmOutputWorker.a(3, 10, 1, 10, (byte) -102);
           }
           if (SpriteState.field_w.field_o) {
             if (SpriteState.field_w.field_m != null) {

@@ -862,8 +862,8 @@ final class je {
                   var34Lifetime1 = var34Lifetime1 * 8;
                   SoftwareRasterizer.setClip(var8Lifetime1 + param0, var9Lifetime1 + param1 + 32 - var34Lifetime1, var8Lifetime1 + param0 + 32, var9Lifetime1 + param1 + 32);
                   for (var35Lifetime1Lifetime1 = 0; var35Lifetime1Lifetime1 < 3; var35Lifetime1Lifetime1++) {
-                    var36Lifetime1 = var8Lifetime1 + param0 + 1 + ll.a((byte) -73, 30);
-                    var37Lifetime1 = var9Lifetime1 + param1 + 1 + ll.a((byte) -73, 30);
+                    var36Lifetime1 = var8Lifetime1 + param0 + 1 + BufferedSocket.a((byte) -73, 30);
+                    var37Lifetime1 = var9Lifetime1 + param1 + 1 + BufferedSocket.a((byte) -73, 30);
                     if (var35Lifetime1Lifetime1 == 0) {
                       SoftwareRasterizer.drawHorizontalLine(var36Lifetime1 - 1, var37Lifetime1, 3, 16777215);
                       SoftwareRasterizer.drawVerticalLine(var36Lifetime1, var37Lifetime1 - 1, 3, 16777215);
@@ -1252,11 +1252,11 @@ final class je {
           }
           if (var5 == 0 &&
             var10 != 0) {
-            SoftwareRasterizer.fillCircleAlpha(var3 + ll.a((byte) -73, 32), var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4), 8, 16711680, 110);
-            SoftwareRasterizer.addRadialGlow(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 64, 6, re.field_c);
-            SoftwareRasterizer.addRadialGlow(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 64, 6, re.field_c);
-            SoftwareRasterizer.addRadialGlow(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 80, 4, re.field_c);
-            SoftwareRasterizer.addRadialGlow(var3 + ll.a((byte) -73, 32) << 4, var4 + ll.a((byte) -73, 32) - ll.a((byte) -73, 4) << 4, 80, 4, re.field_c);
+            SoftwareRasterizer.fillCircleAlpha(var3 + BufferedSocket.a((byte) -73, 32), var4 + BufferedSocket.a((byte) -73, 32) - BufferedSocket.a((byte) -73, 4), 8, 16711680, 110);
+            SoftwareRasterizer.addRadialGlow(var3 + BufferedSocket.a((byte) -73, 32) << 4, var4 + BufferedSocket.a((byte) -73, 32) - BufferedSocket.a((byte) -73, 4) << 4, 64, 6, re.field_c);
+            SoftwareRasterizer.addRadialGlow(var3 + BufferedSocket.a((byte) -73, 32) << 4, var4 + BufferedSocket.a((byte) -73, 32) - BufferedSocket.a((byte) -73, 4) << 4, 64, 6, re.field_c);
+            SoftwareRasterizer.addRadialGlow(var3 + BufferedSocket.a((byte) -73, 32) << 4, var4 + BufferedSocket.a((byte) -73, 32) - BufferedSocket.a((byte) -73, 4) << 4, 80, 4, re.field_c);
+            SoftwareRasterizer.addRadialGlow(var3 + BufferedSocket.a((byte) -73, 32) << 4, var4 + BufferedSocket.a((byte) -73, 32) - BufferedSocket.a((byte) -73, 4) << 4, 80, 4, re.field_c);
           }
         }
         return (Sprite) (var7);
@@ -2046,9 +2046,9 @@ final class je {
               if (cm.field_o == 1 &&
                 field_T < 0 &&
                 field_u >= field_N[cm.field_o] - 3) {
-                field_T = ll.a((byte) -73, 5);
-                field_o = 16 - (ll.a((byte) -73, 16) - 8);
-                field_f = field_t + ll.a((byte) -73, 24);
+                field_T = BufferedSocket.a((byte) -73, 5);
+                field_o = 16 - (BufferedSocket.a((byte) -73, 16) - 8);
+                field_f = field_t + BufferedSocket.a((byte) -73, 24);
                 var0 = 1;
               }
             } else {
@@ -2631,7 +2631,7 @@ final class je {
                 if (field_I[var6][var8].field_U >= 0 &&
                   field_I[var6][var8].field_U < 3 &&
                   Math.random() < 0.4) {
-                  var9 = ll.a((byte) -73, 7) + 5;
+                  var9 = BufferedSocket.a((byte) -73, 7) + 5;
                   var10 = 0;
                   do {
                     incrementValue$0 = var9;
@@ -2639,7 +2639,7 @@ final class je {
                     if (incrementValue$0 < 0) {
                       break scanLoop3;
                     }
-                    var11 = ll.a((byte) -73, 3) - 1;
+                    var11 = BufferedSocket.a((byte) -73, 3) - 1;
                     if (var10 != 0 &&
                       var11 == 0) {
                       if (var6 > 1 &&

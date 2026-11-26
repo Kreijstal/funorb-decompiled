@@ -1084,7 +1084,7 @@ abstract class dc extends DualLinkNode {
           dc.f(-117);
         }
         if (null != kl.field_G) {
-          kl.field_G.a(1);
+          kl.field_G.close(1);
           kl.field_G = null;
         }
     }

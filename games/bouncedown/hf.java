@@ -105,23 +105,23 @@ final class hf {
               hf.a(true);
             }
             if (ih.field_X == 2) {
-              AccountRequestState.field_a = new pc((java.net.Socket) (md.field_q.result), vc.field_G);
+              AccountRequestState.field_a = new BufferedSocket((java.net.Socket) (md.field_q.result), vc.field_G);
               var2 = new PacketBuffer(13);
               AppletShell.a(pe.field_c, 6, AccountRequestState.field_e, var2, fi.field_c);
               var2.writeByte(15, (byte) 98);
               var2.writeInt(uj.field_s, (byte) 40);
-              AccountRequestState.field_a.a(13, var2.payload, 0, 0);
+              AccountRequestState.field_a.queueWrite(13, var2.payload, 0, 0);
               ih.field_X = ih.field_X + 1;
               GameClient.field_B = 30000L + fa.correctedCurrentTimeMillis(76);
             }
             if (ih.field_X == 3) {
-              if (AccountRequestState.field_a.d(0) <= 0) {
+              if (AccountRequestState.field_a.availableBytes(0) <= 0) {
                 if (GameClient.field_B < fa.correctedCurrentTimeMillis(125)) {
                   stackIn_31_0 = qg.a(-23888, -2);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = AccountRequestState.field_a.b(0);
+                var1_int = AccountRequestState.field_a.readSingleByte(0);
                 if (var1_int != 0) {
                   stackIn_27_0 = qg.a(-23888, var1_int);
                   return stackIn_27_0;

@@ -69,7 +69,7 @@ abstract class ug {
             stackIn_7_0 = GameKeyHandler.field_a;
             return stackIn_7_0;
           }
-          var3 = jr.a((byte) -9, '.', param0);
+          var3 = PcmOutputWorker.a((byte) -9, '.', param0);
           if (var3.length < 2) {
             stackIn_10_0 = ab.field_a;
             return stackIn_10_0;

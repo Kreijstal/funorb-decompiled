@@ -71,7 +71,7 @@ class dh extends hl implements ai {
     final void d(byte param0) {
         this.field_ab.a(16711422, 2121792, 4210752);
         int var2 = 96 % ((param0 - 8) / 44);
-        ec var3 = new ec(this, this.field_db, oa.field_e);
+        ec var3 = new ec(this, this.field_db, PcmOutputWorker.field_e);
         var3.a(il.field_d, 15, -15858);
         this.a(false, var3);
     }

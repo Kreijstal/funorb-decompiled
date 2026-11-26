@@ -115,10 +115,10 @@ final class uk {
           var2 = var27.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(98203176);
-            var4 = (gj) (cb.field_b.beginForward((byte) -126));
+            var4 = (gj) (BufferedSocket.field_b.beginForward((byte) -126));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (gj) (cb.field_b.nextForward(param0 + 785));
+                var4 = (gj) (BufferedSocket.field_b.nextForward(param0 + 785));
                 continue;
               }
               break;

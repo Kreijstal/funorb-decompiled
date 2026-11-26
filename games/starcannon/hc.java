@@ -219,7 +219,7 @@ final class hc {
         RuntimeException var21 = null;
         try {
           SpriteState.a(640, param17, param1, param3);
-          le.a(-4797, param16, param19, param8, param15);
+          ProxyAuthenticationRequiredException.a(-4797, param16, param19, param8, param15);
           if (param13 != -11) {
             field_e = (String) null;
           }

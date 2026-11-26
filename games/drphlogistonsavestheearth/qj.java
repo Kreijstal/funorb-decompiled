@@ -71,7 +71,7 @@ final class qj {
             }
             if (nj.field_p.position > 0) {
               try {
-                uj.field_j.a(nj.field_p.position, -30537, nj.field_p.payload, 0);
+                uj.field_j.queueWrite(nj.field_p.position, -30537, nj.field_p.payload, 0);
                 ck.field_e = la.correctedCurrentTimeMillis(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

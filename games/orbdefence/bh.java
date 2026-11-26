@@ -23,7 +23,7 @@ final class bh {
             }
             if (param1 > ~uk.field_b.position) {
               try {
-                p.field_d.a((byte) 30, uk.field_b.payload, 0, uk.field_b.position);
+                p.field_d.queueWrite((byte) 30, uk.field_b.payload, 0, uk.field_b.position);
                 p.field_a = ji.correctedCurrentTimeMillis(-61);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

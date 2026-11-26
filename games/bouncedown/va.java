@@ -52,7 +52,7 @@ final class va {
             mh.field_U = 11;
           }
         }
-        tk.field_a = true;
+        ProxyAuthenticationRequiredException.field_a = true;
         if (param0 == 2) {
           return;
         }

@@ -69,7 +69,7 @@ final class OhNoEvent extends SpecialEvent {
         de.field_F = null;
         sia.field_g = null;
         nv.field_wb = null;
-        en.field_a = null;
+        ProxyAuthenticationRequiredException.field_a = null;
         pk.field_b = null;
         qna.field_l = null;
         pfa.field_g = null;

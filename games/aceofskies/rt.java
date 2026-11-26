@@ -123,7 +123,7 @@ abstract class rt implements FramebufferAttachment {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2_ref = decompiledCaughtException;
-          throw pn.wrapClientException((Throwable) ((Object) var2_ref), "rt.N(" + param0 + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) var2_ref), "rt.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ abstract class rt implements FramebufferAttachment {
           this.field_d = hd.field_c[0];
           this.a(0, (byte) 1);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

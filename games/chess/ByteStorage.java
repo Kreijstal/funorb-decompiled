@@ -22,7 +22,7 @@ abstract class ByteStorage {
         int var3 = 0;
         int var4 = 0;
         if (param1) {
-          var2 = (vi.field_d - 640) / 2;
+          var2 = (PcmOutputWorker.field_d - 640) / 2;
           var3 = ug.field_b * ug.field_b;
           var4 = -(param0 * param0) + var3;
           fm.field_T.a(var2 - 199 * var4 / var3, 199, -2147483648, -4 + SoftwareRasterizer.field_c - 210, 90);

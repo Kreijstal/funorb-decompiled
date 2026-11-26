@@ -150,21 +150,21 @@ public final class Terraphoenix extends GameShell {
           if (ld.field_b) {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (!fd.d(1)))) {
-              stackIn_70_0 = ~wb.field_g;
+              stackIn_70_0 = ~ProxyAuthenticationRequiredException.field_g;
               if (var8 == 0) {
                 if (stackIn_70_0 <= -10) {
                   continue;
                 }
                 if (lf.field_c == 84 ||
                   lf.field_c == 13) {
-                  wb.field_g = 20;
+                  ProxyAuthenticationRequiredException.field_g = 20;
                   ld.field_b = false;
                   qd.$cfr$intArgs$a$e9dea5688aa5(79, 34);
                 }
                 if (lf.field_c == 97 ||
                   lf.field_c == 99) {
                   qd.$cfr$intArgs$a$e9dea5688aa5(53, 24);
-                  wb.field_g = 20;
+                  ProxyAuthenticationRequiredException.field_g = 20;
                   ea.field_o = ea.field_o + 1;
                   if (ea.field_o >= gh.g(-118)) {
                     ea.field_o = ea.field_o - gh.g(-125);
@@ -175,7 +175,7 @@ public final class Terraphoenix extends GameShell {
                   continue;
                 }
                 qd.$cfr$intArgs$a$e9dea5688aa5(68, 25);
-                wb.field_g = 20;
+                ProxyAuthenticationRequiredException.field_g = 20;
                 ea.field_o = ea.field_o - 1;
                 if (0 <= ea.field_o) {
                   continue;
@@ -197,9 +197,9 @@ public final class Terraphoenix extends GameShell {
               (var3 + var5_int) >= ef.field_j &&
               MouseWheelInput.field_b <= var4 + var6_int &&
               1 == ma.field_I &&
-              wb.field_g < 10) {
+              ProxyAuthenticationRequiredException.field_g < 10) {
               qd.$cfr$intArgs$a$e9dea5688aa5(48, 24);
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               ea.field_o = ea.field_o + 1;
               if (ea.field_o >= gh.g(-123)) {
                 ea.field_o = ea.field_o - gh.g(-125);
@@ -215,9 +215,9 @@ public final class Terraphoenix extends GameShell {
                 ef.field_j <= (var5_intLifetime1 + var3Lifetime4) &&
                 (var6_intLifetime1 + var4Lifetime3) >= MouseWheelInput.field_b &&
                 1 == ma.field_I &&
-                wb.field_g < 10) {
+                ProxyAuthenticationRequiredException.field_g < 10) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(94, 25);
-                wb.field_g = 20;
+                ProxyAuthenticationRequiredException.field_g = 20;
                 ea.field_o = ea.field_o - 1;
                 if (ea.field_o < 0) {
                   ea.field_o = ea.field_o + gh.g(-124);
@@ -233,13 +233,13 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b <= var6_intLifetime1Lifetime1 + var4Lifetime3 &&
                 ma.field_I == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(26, 34);
-                wb.field_g = 20;
+                ProxyAuthenticationRequiredException.field_g = 20;
                 ld.field_b = false;
               }
             }
             if (oh.field_f == 2) {
               ld.field_b = false;
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               qd.$cfr$intArgs$a$e9dea5688aa5(53, 34);
             }
             return;
@@ -302,7 +302,7 @@ public final class Terraphoenix extends GameShell {
               ja.field_i = wj.field_a;
               if (ja.field_i == 16) {
                 ja.field_i = 10;
-                wb.field_g = 20;
+                ProxyAuthenticationRequiredException.field_g = 20;
                 if (0 == ge.field_e) {
                   ja.field_i = 0;
                 }
@@ -353,7 +353,7 @@ public final class Terraphoenix extends GameShell {
                     if (bh.field_e[13]) {
                       qd.$cfr$intArgs$a$e9dea5688aa5(25, 34);
                       ja.field_i = 0;
-                      wb.field_g = 20;
+                      ProxyAuthenticationRequiredException.field_g = 20;
                       if (!se.field_h) {
                         this.n(16777215);
                       }
@@ -378,17 +378,17 @@ public final class Terraphoenix extends GameShell {
                         MouseWheelInput.field_b <= 476 &&
                         1 == oh.field_f) {
                         qd.$cfr$intArgs$a$e9dea5688aa5(102, 34);
-                        wb.field_g = 20;
+                        ProxyAuthenticationRequiredException.field_g = 20;
                         ja.field_i = 0;
                         GameShell.field_y = null;
                       }
                     }
-                    if (wb.field_g != 0) {
+                    if (ProxyAuthenticationRequiredException.field_g != 0) {
                       return;
                     }
                     if (bh.field_e[84]) {
                       qd.$cfr$intArgs$a$e9dea5688aa5(87, 34);
-                      wb.field_g = 20;
+                      ProxyAuthenticationRequiredException.field_g = 20;
                       ja.field_i = 0;
                       if (!se.field_h) {
                         this.n(16777215);
@@ -399,7 +399,7 @@ public final class Terraphoenix extends GameShell {
                       ma.field_J > 0) {
                       qd.$cfr$intArgs$a$e9dea5688aa5(22, 33);
                       ma.field_J = ma.field_J - 1;
-                      wb.field_g = 10;
+                      ProxyAuthenticationRequiredException.field_g = 10;
                     }
                     if (!bh.field_e[97]) {
                       return;
@@ -408,7 +408,7 @@ public final class Terraphoenix extends GameShell {
                       return;
                     }
                     qd.$cfr$intArgs$a$e9dea5688aa5(114, 33);
-                    wb.field_g = 10;
+                    ProxyAuthenticationRequiredException.field_g = 10;
                     ma.field_J = ma.field_J + 1;
                     return;
                   } else {
@@ -443,7 +443,7 @@ public final class Terraphoenix extends GameShell {
                         MouseWheelInput.field_b >= (-qh.field_b.field_t + 476) &&
                         MouseWheelInput.field_b <= 476) {
                         qd.$cfr$intArgs$a$e9dea5688aa5(87, 34);
-                        wb.field_g = 20;
+                        ProxyAuthenticationRequiredException.field_g = 20;
                         ja.field_i = 0;
                         GameShell.field_y = null;
                         if (!se.field_h) {
@@ -459,13 +459,13 @@ public final class Terraphoenix extends GameShell {
                       if (!bh.field_e[84]) {
                         return;
                       }
-                      if (wb.field_g != 0) {
+                      if (ProxyAuthenticationRequiredException.field_g != 0) {
                         return;
                       }
                     }
                     qd.$cfr$intArgs$a$e9dea5688aa5(54, 34);
                     ja.field_i = 0;
-                    wb.field_g = 20;
+                    ProxyAuthenticationRequiredException.field_g = 20;
                     if (!se.field_h) {
                       this.n(16777215);
                     }
@@ -606,7 +606,7 @@ public final class Terraphoenix extends GameShell {
                 }
                 if (this.field_Bb != 0 &&
                   this.field_Bb != 13) {
-                  wb.field_g = 20;
+                  ProxyAuthenticationRequiredException.field_g = 20;
                   if (null != this.field_X) {
                     this.field_X = null;
                     this.field_pb = this.field_pb - 1;
@@ -618,7 +618,7 @@ public final class Terraphoenix extends GameShell {
                 }
                 ja.field_i = 0;
                 this.field_Gb = false;
-                wb.field_g = 20;
+                ProxyAuthenticationRequiredException.field_g = 20;
                 se.field_h = true;
                 if (var8 == 0) {
                   continue;
@@ -676,7 +676,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Eb[0] = g.field_qb;
                 }
                 if (ma.field_I == 1) {
-                  wb.field_g = 20;
+                  ProxyAuthenticationRequiredException.field_g = 20;
                   ja.field_i = 1;
                   if (this.field_X != null) {
                     this.field_pb = this.field_pb - 1;
@@ -706,7 +706,7 @@ public final class Terraphoenix extends GameShell {
                 return;
               }
               qd.$cfr$intArgs$a$e9dea5688aa5(92, 33);
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 5;
               cb.a(false, this.field_X.field_i);
               var3Lifetime1Lifetime2 = 0;
@@ -759,7 +759,7 @@ public final class Terraphoenix extends GameShell {
             }
             qd.$cfr$intArgs$a$e9dea5688aa5(63, 33);
             ja.field_i = 5;
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             cb.a(false, this.field_X.field_i);
             if (var8 == 0) {
               return;
@@ -902,15 +902,15 @@ public final class Terraphoenix extends GameShell {
             this.field_bb = jh.field_l[19];
           }
           PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 484);
-          if (wb.field_f < PcmPlayerPump.field_h) {
+          if (ProxyAuthenticationRequiredException.field_f < PcmPlayerPump.field_h) {
             PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 475);
           }
           if (this.field_S != null &&
-            wb.field_f >= PcmPlayerPump.field_h) {
+            ProxyAuthenticationRequiredException.field_f >= PcmPlayerPump.field_h) {
             this.field_S = null;
           }
           if (null == this.field_S &&
-            wb.field_f < PcmPlayerPump.field_h) {
+            ProxyAuthenticationRequiredException.field_f < PcmPlayerPump.field_h) {
             qg.field_a = 0;
             var3_ref_g = new g(0L, (g) null);
             var3_ref_g.field_X = jc.field_G;
@@ -923,7 +923,7 @@ public final class Terraphoenix extends GameShell {
             var6 = sl.field_b[4];
             var7 = sj.field_e[4];
             this.field_S = new ol(0L, var3_ref_g, var6, var7, var4_ref_g, var5);
-            this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, wb.field_f, wb.field_f);
+            this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, ProxyAuthenticationRequiredException.field_f, ProxyAuthenticationRequiredException.field_f);
           }
           if (this.field_S != null) {
             PcmPlayerPump.field_h = 16 * AccountRequestState.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
@@ -951,16 +951,16 @@ public final class Terraphoenix extends GameShell {
               bh.field_e[105]) {
               qg.field_a = qg.field_a + var4Lifetime2;
             }
-            if (qg.field_a > -wb.field_f + PcmPlayerPump.field_h) {
-              qg.field_a = PcmPlayerPump.field_h - wb.field_f;
+            if (qg.field_a > -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h) {
+              qg.field_a = PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f;
             }
             if (qg.field_a < 0) {
               qg.field_a = 0;
             }
             if (this.field_S.f(-1)) {
-              qg.field_a = this.field_S.a(74, PcmPlayerPump.field_h, wb.field_f);
+              qg.field_a = this.field_S.a(74, PcmPlayerPump.field_h, ProxyAuthenticationRequiredException.field_f);
             }
-            this.field_S.a((byte) 79, wb.field_f, qg.field_a, PcmPlayerPump.field_h);
+            this.field_S.a((byte) 79, ProxyAuthenticationRequiredException.field_f, qg.field_a, PcmPlayerPump.field_h);
           }
           if (this.field_ib < 256) {
             this.field_ib = this.field_ib + 1;
@@ -990,9 +990,9 @@ public final class Terraphoenix extends GameShell {
             if (var3Lifetime3 < this.field_mb) {
               this.field_cb = this.field_cb + 1;
               this.field_mb = 0;
-              if (PcmPlayerPump.field_h - wb.field_f <= qg.field_a) {
+              if (PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f <= qg.field_a) {
                 PcmPlayerPump.field_h = AccountRequestState.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
-                qg.field_a = -wb.field_f + PcmPlayerPump.field_h;
+                qg.field_a = -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h;
                 if (0 > qg.field_a) {
                   qg.field_a = 0;
                 }
@@ -1071,7 +1071,7 @@ public final class Terraphoenix extends GameShell {
                   if (ge.field_e == 0) {
                     ja.field_i = 0;
                   }
-                  wb.field_g = 20;
+                  ProxyAuthenticationRequiredException.field_g = 20;
                   if (TutorialText.field_a > 0) {
                     ja.field_i = 11;
                   }
@@ -1114,7 +1114,7 @@ public final class Terraphoenix extends GameShell {
             if (ha.field_q == 4 &&
               gd.field_c >= 4) {
               ja.field_i = 10;
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               if (ge.field_e == 0) {
                 ja.field_i = 0;
               }
@@ -1129,7 +1129,7 @@ public final class Terraphoenix extends GameShell {
               if (ge.field_e == 0) {
                 ja.field_i = 0;
               }
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               if (0 < TutorialText.field_a) {
                 ja.field_i = 11;
               }
@@ -1356,7 +1356,7 @@ public final class Terraphoenix extends GameShell {
               if (this.field_Bb >= 8) {
                 ha.field_q = 2;
               }
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               if (this.field_Bb >= 11) {
                 ha.field_q = 3;
               }
@@ -1482,7 +1482,7 @@ public final class Terraphoenix extends GameShell {
           var5++;
           if (~var2_int == ~var5 &&
             var3 == 0) {
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             wf.field_h = false;
             ld.field_b = true;
             ea.field_o = 0;
@@ -1491,13 +1491,13 @@ public final class Terraphoenix extends GameShell {
           if (!this.field_Gb) {
             if (~var5 == ~var2_int &&
               0 == var3) {
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 10;
             }
             var5++;
             if (var2_int == var5 &&
               var3 == 0) {
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               wf.field_t = -1;
               ja.field_i = 11;
             }
@@ -2224,7 +2224,7 @@ public final class Terraphoenix extends GameShell {
           this.f(true);
           var2_int = 400;
           this.a(true, var2_int);
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
@@ -2564,7 +2564,7 @@ public final class Terraphoenix extends GameShell {
           var2_int = 611;
           this.a(true, var2_int);
           this.f(true);
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
@@ -2857,7 +2857,7 @@ public final class Terraphoenix extends GameShell {
         try {
           boolean decompiledFrameCompleted0 = true;
           ng.field_x = ng.field_x + 1;
-          if (Math.random() * 10.0 < (double)(10 - Math.abs(-10 + wb.field_g))) {
+          if (Math.random() * 10.0 < (double)(10 - Math.abs(-10 + ProxyAuthenticationRequiredException.field_g))) {
             var2_int = 0;
             while (var2_int < 480) {
               SoftwareRasterizer.setClip(-(rk.field_c >> 1) + 320, var2_int, (rk.field_c >> 1) + 320, 1 + var2_int);
@@ -3754,7 +3754,7 @@ public final class Terraphoenix extends GameShell {
           var2_int = 280;
           this.a(true, var2_int);
           ab.field_i = -1;
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
@@ -4045,7 +4045,7 @@ public final class Terraphoenix extends GameShell {
           this.a(true, var2_int);
           this.f(true);
           ab.field_i = -1;
-          if (10 > wb.field_g) {
+          if (10 > ProxyAuthenticationRequiredException.field_g) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
@@ -4382,7 +4382,7 @@ public final class Terraphoenix extends GameShell {
           rf.a(true);
           IsaacCipher.a(true);
           SocketConnector.clearStaticReferences(11147);
-          wb.clearStaticReferences(-122);
+          ProxyAuthenticationRequiredException.clearStaticReferences(-122);
           tg.clearStaticReferences(23);
           bc.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(false);
@@ -4645,7 +4645,7 @@ public final class Terraphoenix extends GameShell {
             }
           }
           if (var3 != 0) {
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             qd.$cfr$intArgs$a$e9dea5688aa5(89, 33);
             ge.field_e = ge.field_e + this.field_X.field_H;
             if (0 != (1 & ef.field_j)) {
@@ -5252,7 +5252,7 @@ public final class Terraphoenix extends GameShell {
             }
             if (ma.field_I == 1 &&
               this.field_Db) {
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 2;
             }
           }
@@ -5260,11 +5260,11 @@ public final class Terraphoenix extends GameShell {
             if (lf.field_c != 13) {
               continue;
             }
-            if (wb.field_g >= 10) {
+            if (ProxyAuthenticationRequiredException.field_g >= 10) {
               continue;
             }
             TutorialText.field_c = ja.field_i;
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             di.field_k = null;
             ja.field_i = 12;
             qd.$cfr$intArgs$a$e9dea5688aa5(59, 33);
@@ -5323,7 +5323,7 @@ public final class Terraphoenix extends GameShell {
           this.a(true, var2_int);
           this.f(true);
           ab.field_i = -1;
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             boolean decompiledFrameRemainder0 = true;
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
@@ -5460,7 +5460,7 @@ public final class Terraphoenix extends GameShell {
                       if (oh.field_f == 1 &&
                         ~var8_intLifetime1 != ~ma.field_J) {
                         ma.field_J = var8_intLifetime1;
-                        wb.field_g = 10;
+                        ProxyAuthenticationRequiredException.field_g = 10;
                       }
                     }
                     vc.field_f.c(var9_ref_String, var10Lifetime1, var11Lifetime1, var12, 0);
@@ -5717,7 +5717,7 @@ public final class Terraphoenix extends GameShell {
           gd.field_c = 0;
           ja.field_i = 8;
           if (ha.field_q == 0) {
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             ja.field_i = 2;
             this.field_Db = true;
           }
@@ -5896,7 +5896,7 @@ public final class Terraphoenix extends GameShell {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = ee.field_z;
                 if (ma.field_I == 1) {
-                  wb.field_g = 20;
+                  ProxyAuthenticationRequiredException.field_g = 20;
                   ld.field_b = true;
                   hh.field_m.a();
                   SoftwareRasterizer.clearRaster();
@@ -6069,7 +6069,7 @@ public final class Terraphoenix extends GameShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (0 < wb.field_g) {
+          if (0 < ProxyAuthenticationRequiredException.field_g) {
             param1 -= 20;
           }
           if (~rk.field_c != ~param1) {
@@ -6084,8 +6084,8 @@ public final class Terraphoenix extends GameShell {
           if (hh.field_m == null) {
             hh.field_m = new Sprite(640, 480);
           }
-          if (wb.field_g > 0) {
-            wb.field_g = wb.field_g - 1;
+          if (ProxyAuthenticationRequiredException.field_g > 0) {
+            ProxyAuthenticationRequiredException.field_g = ProxyAuthenticationRequiredException.field_g - 1;
           }
           if (!param0) {
             this.field_Y = true;
@@ -6151,7 +6151,7 @@ public final class Terraphoenix extends GameShell {
           }
           ab.field_i = -1;
           var3 = ic.field_x[0];
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var4 = 320;
@@ -6989,7 +6989,7 @@ public final class Terraphoenix extends GameShell {
           this.f(true);
           ab.field_i = -1;
           var3 = ic.field_x[0];
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var4 = 320;
@@ -7712,10 +7712,10 @@ public final class Terraphoenix extends GameShell {
               }
               stackIn_31_0 = 10;
               if (var8 == 0) {
-                if (stackIn_31_0 <= wb.field_g) {
+                if (stackIn_31_0 <= ProxyAuthenticationRequiredException.field_g) {
                   continue;
                 }
-                wb.field_g = 20;
+                ProxyAuthenticationRequiredException.field_g = 20;
                 ja.field_i = TutorialText.field_c;
                 return;
               }
@@ -7728,7 +7728,7 @@ public final class Terraphoenix extends GameShell {
           var6 = -10 % ((74 - param0) / 43);
           if (~var2_int == ~var5) {
             ja.field_i = TutorialText.field_c;
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             return;
           }
           var5++;
@@ -7804,7 +7804,7 @@ public final class Terraphoenix extends GameShell {
             wf.field_h = false;
             ld.field_b = true;
             ea.field_o = 0;
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
           }
           boolean decompiledFrameRemainder0 = true;
           var5++;
@@ -7817,7 +7817,7 @@ public final class Terraphoenix extends GameShell {
                 oh.field_e = oh.field_e + this.field_X.field_H;
                 ge.field_e = ge.field_e + this.field_X.field_H;
               }
-              wb.field_g = 20;
+              ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 10;
               if (ge.field_e == 0) {
                 ja.field_i = 0;
@@ -8002,7 +8002,7 @@ public final class Terraphoenix extends GameShell {
               }
               bj.field_e.d(0, 439);
               ab.field_i = -1;
-              if (10 > wb.field_g) {
+              if (10 > ProxyAuthenticationRequiredException.field_g) {
                 hh.field_m.a();
                 SoftwareRasterizer.clearRaster();
                 var4 = 320;
@@ -8118,7 +8118,7 @@ public final class Terraphoenix extends GameShell {
             var3_intLifetime1 = 320;
             this.a(true, var3_intLifetime1);
             ab.field_i = -1;
-            if (wb.field_g < 10) {
+            if (ProxyAuthenticationRequiredException.field_g < 10) {
               hh.field_m.a();
               SoftwareRasterizer.clearRaster();
               var5Lifetime1 = 320;
@@ -8372,7 +8372,7 @@ public final class Terraphoenix extends GameShell {
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 470, 512, 0, 64);
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 471, 512, 0, 128);
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 472, 512, 0, 192);
-                this.field_S.a((byte) 74, wb.field_f, qg.field_a, PcmPlayerPump.field_h);
+                this.field_S.a((byte) 74, ProxyAuthenticationRequiredException.field_f, qg.field_a, PcmPlayerPump.field_h);
                 this.field_S.a((byte) -36, false);
               }
             }
@@ -8783,7 +8783,7 @@ public final class Terraphoenix extends GameShell {
           nb.field_f = lf.a(true, "", "menwalk", ab.field_a);
           if (mb.b(0, 108)) {
             rk.field_e = lf.a(true, "", "zombiewalk", ab.field_a);
-            wb.field_h = lf.a(true, "", "zombie_deaths", ab.field_a);
+            ProxyAuthenticationRequiredException.field_h = lf.a(true, "", "zombie_deaths", ab.field_a);
           }
           AdminCheatOverlay.field_a = lf.a(true, "", "aliens_deaths", ab.field_a);
           lf.field_e = lf.a(true, "", "men_deaths", ab.field_a);
@@ -9050,7 +9050,7 @@ public final class Terraphoenix extends GameShell {
           this.f(true);
           ab.field_i = -1;
           var3 = ic.field_x[0];
-          if (wb.field_g < 10) {
+          if (ProxyAuthenticationRequiredException.field_g < 10) {
             hh.field_m.a();
             SoftwareRasterizer.clearRaster();
             var4 = 320;
@@ -9644,7 +9644,7 @@ public final class Terraphoenix extends GameShell {
             boolean decompiledFrameCompleted0 = true;
             TutorialText.field_c = ja.field_i;
             ja.field_i = 12;
-            wb.field_g = 20;
+            ProxyAuthenticationRequiredException.field_g = 20;
             if (TutorialText.field_c != 1) {
               di.field_k = new Sprite(640, 480);
               var2_int = 0;

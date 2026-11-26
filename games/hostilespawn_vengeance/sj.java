@@ -73,23 +73,23 @@ final class sj {
               }
             }
             if (ce.field_e == 2) {
-              be.field_g = new td((java.net.Socket) (db.field_o.result), AccountServiceResult.field_k);
+              be.field_g = new BufferedSocket((java.net.Socket) (db.field_o.result), AccountServiceResult.field_k);
               var2 = new PacketBuffer(13);
-              hm.a(ab.field_c, mm.field_s, var2, ByteStorage.field_a, 4122);
+              hm.a(ProxyAuthenticationRequiredException.field_c, mm.field_s, var2, ByteStorage.field_a, 4122);
               var2.d(87, 15);
               var2.b(ik.field_a, 25251);
-              be.field_g.a(13, var2.field_n, (byte) -70, 0);
+              be.field_g.queueWrite(13, var2.field_n, (byte) -70, 0);
               ce.field_e = ce.field_e + 1;
               cb.field_e = hn.correctedCurrentTimeMillis((byte) 80) + 30000L;
             }
             if (3 == ce.field_e) {
-              if (be.field_g.b((byte) 53) <= 0) {
+              if (be.field_g.availableBytes((byte) 53) <= 0) {
                 if (hn.correctedCurrentTimeMillis((byte) 80) > cb.field_e) {
                   stackIn_32_0 = th.a((byte) 127, -2);
                   return stackIn_32_0;
                 }
               } else {
-                var1_int = be.field_g.d((byte) 97);
+                var1_int = be.field_g.readSingleByte((byte) 97);
                 if (var1_int != 0) {
                   stackIn_27_0 = th.a((byte) 122, var1_int);
                   return stackIn_27_0;
@@ -133,7 +133,7 @@ final class sj {
           var1 = cl.field_o;
           var2 = bb.field_e;
           if (bm.field_c == 1) {
-            var2 = ua.field_f;
+            var2 = PcmOutputWorker.field_f;
             var1 = CipherPacketBuffer.field_u;
           }
           if (ii.b((byte) 30)) {

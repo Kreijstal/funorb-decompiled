@@ -625,7 +625,7 @@ final class re {
                             if (var8 == 12) {
                               if ((param2)) {
                                 if (null != gj.field_a) {
-                                  ga.a(true);
+                                  PcmOutputWorker.a(true);
                                 }
                                 PacketBuffer.a((byte) -124, mk.g(-119));
                               }
@@ -826,7 +826,7 @@ final class re {
                       } else {
                         if (param2) {
                           if (gj.field_a != null) {
-                            ga.a(true);
+                            PcmOutputWorker.a(true);
                           } else {
                             var8 = param0 ? 1 : 0;
                             mb.a(qa.field_b.field_s * 3 >> 1, 18, g.field_C, var8 != 0, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);

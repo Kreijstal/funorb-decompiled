@@ -60,7 +60,7 @@ final class s extends ma implements wl, mj {
             field_O = 81;
           }
           var4 = var3.a(21314);
-          stackIn_8_0 = (oa.field_a == var4);
+          stackIn_8_0 = (ProxyAuthenticationRequiredException.field_a == var4);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

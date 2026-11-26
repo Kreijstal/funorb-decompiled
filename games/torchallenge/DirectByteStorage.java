@@ -191,10 +191,10 @@ final class DirectByteStorage extends ByteStorage {
           var6 = hf.field_d[var5] + ((hf.field_d[var5 + 1] << 8) + ((hf.field_d[var5 + 2] << 16) + (hf.field_d[3 + var5] << 24)));
           if (!gh.field_x) {
             var12 = GzipDecoder.field_c[var4];
-            if (bj.field_a[var4] < 0) {
-              var12 = var12 >> -bj.field_a[var4];
+            if (ProxyAuthenticationRequiredException.field_a[var4] < 0) {
+              var12 = var12 >> -ProxyAuthenticationRequiredException.field_a[var4];
             } else {
-              var12 = var12 << bj.field_a[var4];
+              var12 = var12 << ProxyAuthenticationRequiredException.field_a[var4];
             }
             var10 = var6;
             var12 = RasterBuffer.field_b[var4] & var12;

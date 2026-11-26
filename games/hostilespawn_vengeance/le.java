@@ -72,7 +72,7 @@ class le extends cf {
 
     final static void c(byte param0) {
         if (null != ag.field_t) {
-          ag.field_t.a(-98);
+          ag.field_t.close(-98);
           ag.field_t = null;
         }
         if (param0 < 38) {

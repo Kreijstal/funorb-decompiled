@@ -57,7 +57,7 @@ public final class OrbDefence extends NetworkGameClient {
                 rh.a((byte) -96, 2, false);
               }
               if (rl.a((byte) 125)) {
-                ud.a(8, bk.field_d, true, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+                ud.a(8, ProxyAuthenticationRequiredException.field_d, true, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
               }
             }
           } else {
@@ -90,7 +90,7 @@ public final class OrbDefence extends NetworkGameClient {
                       n.a((byte) -110);
                     }
                   } else {
-                    ud.a(8, bk.field_d, true, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+                    ud.a(8, ProxyAuthenticationRequiredException.field_d, true, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
                   }
                 }
                 if (!rl.a((byte) 114)) {
@@ -414,7 +414,7 @@ public final class OrbDefence extends NetworkGameClient {
         vl.b(-122);
         pi.clearStaticReferences(param0);
         dj.c((byte) 78);
-        cb.clearStaticReferences((byte) -95);
+        BufferedSocket.clearStaticReferences((byte) -95);
         IntrusiveNode.clearStaticReferences(40);
         MidiPcmStream.resetStaticState(116);
         mh.clearStaticReferences(1);
@@ -472,7 +472,7 @@ public final class OrbDefence extends NetworkGameClient {
         ub.clearStaticReferences();
         re.clearStaticReferences((byte) -77);
         nd.clearStaticReferences(-16996);
-        oa.clearStaticReferences((byte) 90);
+        PcmOutputWorker.clearStaticReferences((byte) 90);
         a.clearStaticReferences((byte) 29);
         il.resetStaticState(0);
         cd.clearStaticReferences((byte) 61);
@@ -526,7 +526,7 @@ public final class OrbDefence extends NetworkGameClient {
         cf.clearStaticReferences(0);
         mb.clearStaticReferences(114);
         pg.clearStaticReferences(-12150);
-        bk.clearStaticReferences(48);
+        ProxyAuthenticationRequiredException.clearStaticReferences(48);
         g.clearDeclaredStaticReferences((byte) -22);
         ImageProducerRasterBuffer.b((byte) 68);
         db.clearStaticReferences(-101);
@@ -767,13 +767,13 @@ public final class OrbDefence extends NetworkGameClient {
           if (j.field_b.b(-1) &&
             j.field_b.b((byte) 102, "basic")) {
             if (!j.field_b.b((byte) 99, "arialbold14")) {
-              j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, bk.field_a, "arialbold14"), (byte) 118);
+              j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
               return false;
             }
             if (GameAppletShell.field_d.b(-1) &&
               GameAppletShell.field_d.b((byte) 121, "arialbold14")) {
               if (!j.field_b.b((byte) 81, "arial13")) {
-                j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 - 14513, bk.field_a, "arial13"), (byte) 112);
+                j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
                 return false;
               }
               if (GameAppletShell.field_d.b(param1 - 98) &&
@@ -845,7 +845,7 @@ public final class OrbDefence extends NetworkGameClient {
                             vd.a(39);
                             return false;
                           }
-                          j.a(55.0f, ed.a(hi.field_e, pd.field_r, param1 ^ -14383, bk.field_a, ""), (byte) 105);
+                          j.a(55.0f, ed.a(hi.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
                           return false;
                         }
                         j.a(45.0f, ed.a(kj.field_z, bh.field_d, param1 - 14513, jj.field_B, ""), (byte) 120);
@@ -863,10 +863,10 @@ public final class OrbDefence extends NetworkGameClient {
                 j.a(10.0f, ed.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
                 return false;
               }
-              j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, bk.field_a, "arial13"), (byte) 122);
+              j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 122);
               return false;
             }
-            j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, bk.field_a, "arialbold14"), (byte) 113);
+            j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 113);
             return false;
           }
           j.a(3.0f, ed.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
@@ -1017,7 +1017,7 @@ public final class OrbDefence extends NetworkGameClient {
         KeyboardListener.field_d[1] = fk.a(bh.field_d, "in_game_topbutton_green", -60, "");
         KeyboardListener.field_d[2] = fk.a(bh.field_d, "in_game_topbutton_grey", 71, "");
         f.field_w = p.a(13863, "", bh.field_d, "frame");
-        bk.field_d = p.a(13863, "", bh.field_d, "button_frame");
+        ProxyAuthenticationRequiredException.field_d = p.a(13863, "", bh.field_d, "button_frame");
         qc.field_f = p.a(13863, "", bh.field_d, "button_raised");
         p.a(param1 ^ 13894, "", bh.field_d, "button_depressed");
         bd.field_o = new RgbSprite[24];
@@ -1056,12 +1056,12 @@ public final class OrbDefence extends NetworkGameClient {
         ba.field_e.d();
         jm.field_b.d(0, 0, var6Lifetime2, var6Lifetime2);
         jm.field_b = null;
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         DualLinkNode.a(80, (byte) -38, (java.applet.Applet) (this), SpriteGeometry.field_r, 0, 255);
         var7 = fk.a(bh.field_d, "mb_frames", param1 ^ 38, "");
         ImageProducerRasterBuffer.a(-63, ui.field_e, var7);
         pj.a(param1 - 97, fk.a(bh.field_d, "mb_logo", 40, ""));
-        bk.a(90, p.a(13863, "", bh.field_d, "mb_sshots"));
+        ProxyAuthenticationRequiredException.a(90, p.a(13863, "", bh.field_d, "mb_sshots"));
         var13 = fk.a(bh.field_d, "mb_pricing_bg", 60, "");
         kj.a(var13, 80, (byte) 45, 10, 10, 10, 140, 1500, 10);
         bh.field_d = null;
@@ -1115,7 +1115,7 @@ public final class OrbDefence extends NetworkGameClient {
                 kf.field_c = da.field_B;
                 if (kf.field_c == -2) {
                   kf.field_c = 0;
-                  ud.a(8, bk.field_d, false, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+                  ud.a(8, ProxyAuthenticationRequiredException.field_d, false, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
                 }
               } else {
                 kf.field_c = dm.field_a;

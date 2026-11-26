@@ -151,7 +151,7 @@ abstract class ob extends GameAppletShell {
             da.a(true, le.field_a, 2);
             oj.c((byte) -62);
             nd.field_e = true;
-            j.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -58);
+            PcmOutputWorker.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -58);
           }
         }
         if (param1 != 18808) {
@@ -170,7 +170,7 @@ abstract class ob extends GameAppletShell {
           }
           if (tb.field_f != -1 &&
             0 != tb.field_f) {
-            j.field_f = sf.correctedCurrentTimeMillis((byte) -52) + 15000L;
+            PcmOutputWorker.field_f = sf.correctedCurrentTimeMillis((byte) -52) + 15000L;
           }
         }
         if (tb.field_f != -1 &&
@@ -220,7 +220,7 @@ abstract class ob extends GameAppletShell {
         if ((-1 != tb.field_f &&
           tb.field_f != 0 ||
           AwtRasterBuffer.a(106)) &&
-          sf.correctedCurrentTimeMillis((byte) -15) >= j.field_f) {
+          sf.correctedCurrentTimeMillis((byte) -15) >= PcmOutputWorker.field_f) {
           nd.field_e = false;
           if (tb.field_f != -1 &&
             tb.field_f != 0) {
@@ -269,7 +269,7 @@ abstract class ob extends GameAppletShell {
           eb.a(oh.field_C, (byte) 124)) {
           bh.h((byte) 123);
           em.g(-1719110238);
-          ResourceArchive.field_c = ll.field_e;
+          ResourceArchive.field_c = BufferedSocket.field_e;
           jb.field_q = false;
           mj.a(v.field_e, hj.field_i, 43, oh.field_C, pb.field_r);
           if (nc.field_e ||
@@ -372,7 +372,7 @@ abstract class ob extends GameAppletShell {
           eb.a((byte) -33);
           da.a(true, nf.field_g, var2);
           nd.field_e = true;
-          j.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -89);
+          PcmOutputWorker.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -89);
           return var2;
         }
         if (11 == fh.field_b &&
@@ -798,7 +798,7 @@ abstract class ob extends GameAppletShell {
             field_v = (String) null;
           }
           var4 = (String) null;
-          stackIn_3_0 = j.a(0, -45, false, 0, param1, (String) null, param2);
+          stackIn_3_0 = PcmOutputWorker.a(0, -45, false, 0, param1, (String) null, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

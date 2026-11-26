@@ -44,7 +44,7 @@ final class mg {
           param0.copyPixels(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, SoftwareRasterizer.stride * var6, SoftwareRasterizer.stride);
           var2.popRenderState(true);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class mg {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

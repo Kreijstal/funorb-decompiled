@@ -98,10 +98,10 @@ final class pe extends IntrusiveNode {
               var6[0][var10] = th.field_A[var11];
               var18[0][var10 * 4] = mh.field_l[var11];
               var18[0][1 + var10 * 4] = dk.field_l[var11];
-              var18[0][2 + var10 * 4] = j.field_i[var11];
+              var18[0][2 + var10 * 4] = BufferedSocket.field_i[var11];
               var18[0][3 + var10 * 4] = cd.field_u[var11];
               if (ai.a((byte) 82, th.field_A[var11]) &&
-                0 == j.field_i[var11] + dk.field_l[var11] + cd.field_u[var11]) {
+                0 == BufferedSocket.field_i[var11] + dk.field_l[var11] + cd.field_u[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -116,10 +116,10 @@ final class pe extends IntrusiveNode {
               var6[1][var13] = th.field_A[var11Lifetime1];
               var18[1][4 * var13] = mh.field_l[var11Lifetime1];
               var18[1][var13 * 4 + 1] = dk.field_l[var11Lifetime1];
-              var18[1][var13 * 4 + 2] = j.field_i[var11Lifetime1];
+              var18[1][var13 * 4 + 2] = BufferedSocket.field_i[var11Lifetime1];
               var18[1][4 * var13 + 3] = cd.field_u[var11Lifetime1];
               if (ai.a((byte) 82, th.field_A[var11Lifetime1]) &&
-                j.field_i[var11Lifetime1] + (dk.field_l[var11Lifetime1] + cd.field_u[var11Lifetime1]) == 0) {
+                BufferedSocket.field_i[var11Lifetime1] + (dk.field_l[var11Lifetime1] + cd.field_u[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

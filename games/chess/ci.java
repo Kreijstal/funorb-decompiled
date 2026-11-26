@@ -708,7 +708,7 @@ class ci extends ei {
           }
           this.field_L = 0;
         }
-        stackIn_32_1 = (!gd.field_e) && (SoftwareRasterizer.field_i <= hn.field_k) && (SoftwareRasterizer.field_j > hn.field_k) && (rf.field_b >= SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_b > rf.field_b);
+        stackIn_32_1 = (!gd.field_e) && (SoftwareRasterizer.field_i <= BufferedSocket.field_k) && (SoftwareRasterizer.field_j > BufferedSocket.field_k) && (rf.field_b >= SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_b > rf.field_b);
         this.field_Db = stackIn_32_1;
         if (wh.field_f == 0) {
           this.field_kb = 0;
@@ -731,7 +731,7 @@ class ci extends ei {
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_kb != 0 &&
           this.field_rb) {
-          this.field_mb = -this.field_qb + hn.field_k - param0;
+          this.field_mb = -this.field_qb + BufferedSocket.field_k - param0;
           this.field_V = rf.field_b + (-this.field_lb - param3);
           if (this.field_mb < 0) {
             this.field_mb = 0;

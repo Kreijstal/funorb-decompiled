@@ -475,7 +475,7 @@ final class hd extends hi {
                                             }
                                           }
                                         } else {
-                                          ab.a(var4, false, var6, var15_ref_oc, var16, var23, var40, var39Lifetime2, var21, var11, var10);
+                                          ProxyAuthenticationRequiredException.a(var4, false, var6, var15_ref_oc, var16, var23, var40, var39Lifetime2, var21, var11, var10);
                                         }
                                       }
                                     } else {

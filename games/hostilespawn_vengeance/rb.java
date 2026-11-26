@@ -109,9 +109,9 @@ final class rb extends ArchiveProvider {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              td.field_a.reset();
-              td.field_a.update(var5, 0, var18.length - 2);
-              var6_int = (int)td.field_a.getValue();
+              BufferedSocket.field_a.reset();
+              BufferedSocket.field_a.update(var5, 0, var18.length - 2);
+              var6_int = (int)BufferedSocket.field_a.getValue();
               if (var6_int != this.field_x.field_v[param0]) {
                 throw new RuntimeException();
               }
@@ -160,9 +160,9 @@ final class rb extends ArchiveProvider {
         try {
           if (var5 != null &&
             2 < var18.length) {
-            td.field_a.reset();
-            td.field_a.update(var5, 0, var18.length - 2);
-            var6_int = (int)td.field_a.getValue();
+            BufferedSocket.field_a.reset();
+            BufferedSocket.field_a.update(var5, 0, var18.length - 2);
+            var6_int = (int)BufferedSocket.field_a.getValue();
             if (this.field_x.field_v[param0] != var6_int) {
               throw new RuntimeException();
             }

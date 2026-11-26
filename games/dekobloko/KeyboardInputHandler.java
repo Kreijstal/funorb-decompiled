@@ -254,7 +254,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               MixedSupport029.stringState0148 = NodeHashTableIterator.substituteIndexedPlaceholders(87, EmailValidationError.stringState0274, new String[]{Integer.toString(integerLocal1)});
             }
-            MixedSupport029.stringState0148 = DiagnosticSupport001.computeString0336(new CharSequence[]{(CharSequence) ((Object) MixedSupport029.stringState0148), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BoundedRandomAccessFile.stringState0228)}, -62);
+            MixedSupport029.stringState0148 = ProxyAuthenticationRequiredException.computeString0336(new CharSequence[]{(CharSequence) ((Object) MixedSupport029.stringState0148), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BoundedRandomAccessFile.stringState0228)}, -62);
           }
           MixedSupport020.uiComponentPart012State0001.performAction0593(-127);
           MixedSupport032.performAction0472(-1199770620);

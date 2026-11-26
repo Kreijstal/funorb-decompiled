@@ -106,7 +106,7 @@ final class GzipDecompressor {
             var17 = ci.field_g[var16];
             lj.a(var16, 8710);
             for (var18 = 0; var18 < 3; var18++) {
-              la.field_d[var18] = la.field_d[var18] + ck.field_h[var15][var18];
+              la.field_d[var18] = la.field_d[var18] + PcmOutputWorker.field_h[var15][var18];
             }
             sh.a(false, false, 88, la.field_d, var17, fb.field_l, true);
             kb.a(var9Lifetime1, param0 ^ -1196711933, var12Lifetime1, var17, var14, var8Lifetime1, var7Lifetime1, var13Lifetime1);
@@ -240,10 +240,10 @@ final class GzipDecompressor {
         int var5 = 0;
         var5 = StarCannon.field_A;
         try {
-          ck.field_f = ck.field_f + 65536;
-          while (fk.a(ck.field_f, ByteStorage.field_e, (byte) -117) >= 65536) {
+          PcmOutputWorker.field_f = PcmOutputWorker.field_f + 65536;
+          while (fk.a(PcmOutputWorker.field_f, ByteStorage.field_e, (byte) -117) >= 65536) {
             fk.field_a = fk.field_a + 1;
-            ck.field_f = ck.field_f - ByteStorage.field_e;
+            PcmOutputWorker.field_f = PcmOutputWorker.field_f - ByteStorage.field_e;
           }
           var2_int = -1;
           if (og.field_d == null) {

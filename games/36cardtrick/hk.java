@@ -73,7 +73,7 @@ final class hk {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        gl.a(param2, jd.field_c[param1], ca.field_c[param1], 804);
+        gl.a(param2, BufferedSocket.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
           w var4 = (w) null;
           hk.a(-7, (w) null);
@@ -86,7 +86,7 @@ final class hk {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$7ad285df57e9(int param0, int param1, int param2) {
-        gl.a(param2, jd.field_c[param1], ca.field_c[param1], 804);
+        gl.a(param2, BufferedSocket.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
           w var4 = (w) null;
           hk.a(-7, (w) null);

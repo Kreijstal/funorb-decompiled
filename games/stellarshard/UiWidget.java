@@ -902,9 +902,9 @@ class UiWidget extends IntrusiveNode {
           AccountNameAvailabilityValidator.field_n.length >= param1) {
           if (null == se.field_B) {
             se.field_B = new int[2 * param1];
-            if (null == qf.field_g ||
-              !(qf.field_g.length >= param1)) {
-              qf.field_g = new int[2 * param1];
+            if (null == PcmOutputWorker.field_g ||
+              !(PcmOutputWorker.field_g.length >= param1)) {
+              PcmOutputWorker.field_g = new int[2 * param1];
             }
             if (null == wb.field_e) {
               wb.field_e = new int[param1 * 2];
@@ -964,9 +964,9 @@ class UiWidget extends IntrusiveNode {
             }
           } else {
             if (param1 <= se.field_B.length) {
-              if (null == qf.field_g ||
-                !(qf.field_g.length >= param1)) {
-                qf.field_g = new int[2 * param1];
+              if (null == PcmOutputWorker.field_g ||
+                !(PcmOutputWorker.field_g.length >= param1)) {
+                PcmOutputWorker.field_g = new int[2 * param1];
               }
               if (null == wb.field_e ||
                 !(param1 <= wb.field_e.length)) {
@@ -990,9 +990,9 @@ class UiWidget extends IntrusiveNode {
               }
             } else {
               se.field_B = new int[2 * param1];
-              if (null == qf.field_g ||
-                !(qf.field_g.length >= param1)) {
-                qf.field_g = new int[2 * param1];
+              if (null == PcmOutputWorker.field_g ||
+                !(PcmOutputWorker.field_g.length >= param1)) {
+                PcmOutputWorker.field_g = new int[2 * param1];
               }
               if (null == wb.field_e) {
                 wb.field_e = new int[param1 * 2];
@@ -1067,9 +1067,9 @@ class UiWidget extends IntrusiveNode {
           !(param1 <= se.field_B.length)) {
           se.field_B = new int[2 * param1];
         }
-        if (null == qf.field_g ||
-          !(qf.field_g.length >= param1)) {
-          qf.field_g = new int[2 * param1];
+        if (null == PcmOutputWorker.field_g ||
+          !(PcmOutputWorker.field_g.length >= param1)) {
+          PcmOutputWorker.field_g = new int[2 * param1];
         }
         if (null == wb.field_e ||
           !(param1 <= wb.field_e.length)) {

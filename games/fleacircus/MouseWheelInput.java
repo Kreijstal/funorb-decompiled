@@ -14,9 +14,9 @@ abstract class MouseWheelInput {
     final static int c(int param0) {
         if (param0 != 24178) {
           MouseWheelInput.c(61);
-          return em.field_d;
+          return ProxyAuthenticationRequiredException.field_d;
         }
-        return em.field_d;
+        return ProxyAuthenticationRequiredException.field_d;
     }
 
     abstract void detach(byte param0, java.awt.Component param1);

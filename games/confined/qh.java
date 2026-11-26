@@ -109,7 +109,7 @@ final class qh extends vf {
         int var3 = 20 + var10.field_c + var10.field_b;
         if (!tj.a(true)) {
           var10.a((byte) -83, new bd(18, ca.field_s, pn.field_a));
-          var10.a((byte) -84, new bd(18, kk.field_a, pn.field_a));
+          var10.a((byte) -84, new bd(18, ProxyAuthenticationRequiredException.field_a, pn.field_a));
           var8.a((byte) -103, new bd(19, dn.field_e[0], pn.field_a));
           var8.a((byte) -90, new bd(19, dn.field_e[1], pn.field_a));
           var8.a((byte) -123, new bd(19, dn.field_e[2], pn.field_a));

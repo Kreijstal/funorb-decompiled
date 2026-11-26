@@ -249,7 +249,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         int integerLocal6 = MixedSupport029.calendarState0001.get(12);
         int integerLocal7 = MixedSupport029.calendarState0001.get(13);
-        return MixedSupport123.stringArrayState0048[-1 + integerLocal1] + ", " + integerLocal2 / 10 + integerLocal2 % 10 + "-" + DiagnosticSupport001.stringArrayState0004[integerLocal3] + "-" + integerLocal4 + " " + integerLocal5 / 10 + integerLocal5 % 10 + ":" + integerLocal6 / 10 + integerLocal6 % 10 + ":" + integerLocal7 / 10 + integerLocal7 % 10 + " GMT";
+        return MixedSupport123.stringArrayState0048[-1 + integerLocal1] + ", " + integerLocal2 / 10 + integerLocal2 % 10 + "-" + ProxyAuthenticationRequiredException.stringArrayState0004[integerLocal3] + "-" + integerLocal4 + " " + integerLocal5 / 10 + integerLocal5 % 10 + ":" + integerLocal6 / 10 + integerLocal6 % 10 + ":" + integerLocal7 / 10 + integerLocal7 % 10 + " GMT";
     }
 
     final void performAction1640(int[] integerArrayArgument1, byte byteArgument2) {

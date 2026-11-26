@@ -58,7 +58,7 @@ final class i {
           if (mh.field_U == 11) {
             lj.clearStaticReferences((byte) -50);
           }
-          NodeHashTableIterator.a(tk.field_a, ea.field_c, q.field_I, -608757616);
+          NodeHashTableIterator.a(ProxyAuthenticationRequiredException.field_a, ea.field_c, q.field_I, -608757616);
           qi.a(param0, 0, param1, param1 - 25971);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "i.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

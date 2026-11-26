@@ -183,7 +183,7 @@ final class dn extends IntrusiveNode {
           }
           var7 = new pf(param3);
           var8 = new pf(param0);
-          stackIn_3_0 = j.a(param2, param6 ^ 14565, param1, param5, var8, param4, var7);
+          stackIn_3_0 = PcmOutputWorker.a(param2, param6 ^ 14565, param1, param5, var8, param4, var7);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -141,7 +141,7 @@ final class df {
         } else {
           this.field_b = null;
         }
-        this.field_i = fd.field_g;
+        this.field_i = PcmOutputWorker.field_g;
         this.field_f = jf.field_P;
         this.field_j = GzipDecompressor.field_c;
         this.field_h = oe.field_b;

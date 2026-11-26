@@ -97,7 +97,7 @@ final class RenderingSupport002 {
             rgbSpriteLocal16 = UiComponentPart010.rgbSpriteArrayState0010[2];
             rgbSpriteLocal46 = rgbSpriteLocal16;
             rgbSpriteLocal47 = rgbSpriteLocal16;
-            stringLocal17 = PlatformSupport002.stringState0125;
+            stringLocal17 = DelegatingCanvas.stringState0125;
             mixedSupport099Local15.sceneWidgetPart002State0002.performAction0556(4193, 13, rgbSpriteLocal16, stringLocal17);
           }
           if (integerArgument3 == 2) {

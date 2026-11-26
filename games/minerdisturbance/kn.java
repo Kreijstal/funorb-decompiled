@@ -67,7 +67,7 @@ class kn extends fe implements rk {
         if (param0 != 0) {
           field_F = (ln[]) null;
         }
-        return pm.field_b;
+        return ProxyAuthenticationRequiredException.field_b;
     }
 
     void a(byte param0, int param1, int param2, int param3) {

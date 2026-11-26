@@ -371,7 +371,7 @@ abstract class GameClientBase extends GameApplet {
                             pi.a((byte) 7);
                           }
                         } else {
-                          bg.a(bb.field_i, (byte) 121, sh.field_u, id.field_b);
+                          bg.a(PcmOutputWorker.field_i, (byte) 121, sh.field_u, id.field_b);
                         }
                       }
                     } else {
@@ -485,7 +485,7 @@ abstract class GameClientBase extends GameApplet {
           field_y = (int[]) null;
         }
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = -1 + bb.field_i;
+        int var4 = -1 + PcmOutputWorker.field_i;
         byte[] var5 = new byte[var4];
         id.field_b.a(-25038, var4, 0, var5);
         u.a(gi.b(12476), var3 != 0, -127, re.a(18990, var5));
@@ -747,7 +747,7 @@ abstract class GameClientBase extends GameApplet {
         if (param0 != 17) {
           return;
         }
-        String var2 = bb.a(6);
+        String var2 = PcmOutputWorker.a(6);
         pa.a(var2, 8, gi.b(param0 ^ 12461));
     }
 

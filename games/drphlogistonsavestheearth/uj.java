@@ -4,11 +4,11 @@
 final class uj extends IntrusiveNode {
     static rf field_i;
     static ge field_h;
-    static qe field_j;
+    static BufferedSocket field_j;
 
     public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 1) {
-          field_j = (qe) null;
+          field_j = (BufferedSocket) null;
         }
         field_h = null;
         field_j = null;

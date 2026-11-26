@@ -203,7 +203,7 @@ final class df {
         ae.field_e[6] = new aa(6);
         sa.a(new int[]{12, 6}, 440, 27, 410, 4, 200, 27690);
         ae.field_e[4] = new aa(4);
-        if (!vi.a(-3)) {
+        if (!PcmOutputWorker.a(-3)) {
           sa.a(new int[]{2, 14, 15, 5, 26, 4, 8}, 455, 27, 190, 1, 185, 27690);
           ae.field_e[1] = new aa(1);
           sa.a(new int[]{2, 14, 15, 5, 26, 4, 9, 10, 11}, 455, 27, 190, 2, 185, 27690);

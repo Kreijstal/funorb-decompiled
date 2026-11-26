@@ -145,7 +145,7 @@ final class dg extends kj implements tl, sg, tb {
           dg.a(-29, 81, -13, -54, 74, -112, 103, -2, (byte) -114, 60);
         }
         int var10 = qk.a(param3, param0, param6, param2, -65, param7, param1, param9);
-        int var11 = bj.a(param9, false, param7, param6, param0);
+        int var11 = ProxyAuthenticationRequiredException.a(param9, false, param7, param6, param0);
         if (var11 < 0) {
           var11 = 128;
         }

@@ -1309,7 +1309,7 @@ final class f {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oa.field_d.addLast(-114, param1);
+          PcmOutputWorker.field_d.addLast(-114, param1);
           tl.a(-127, param1, param0);
           var3_int = 75 / ((param2 - 30) / 33);
           return;

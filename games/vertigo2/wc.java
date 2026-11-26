@@ -527,7 +527,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("yes", false);
                 if (null != var2) {
-                  rg.field_h = in.a(0, var2);
+                  ProxyAuthenticationRequiredException.field_h = in.a(0, var2);
                 }
                 var2 = tk.a("no", false);
                 if (null != var2) {

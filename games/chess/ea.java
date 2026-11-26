@@ -108,7 +108,7 @@ final class ea extends se {
               var19.d(var9, -(var19.field_t >> 1) + var10, 256);
               return;
             }
-            if (oa.field_a != var6) {
+            if (ProxyAuthenticationRequiredException.field_a != var6) {
               return;
             }
             var20 = AccountNameAvailabilityValidator.field_p[1];
@@ -158,7 +158,7 @@ final class ea extends se {
               var24.d(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
-            if (oa.field_a != var6) {
+            if (ProxyAuthenticationRequiredException.field_a != var6) {
               return;
             }
             var25 = AccountNameAvailabilityValidator.field_p[1];
@@ -208,7 +208,7 @@ final class ea extends se {
               var40.d(var9Lifetime2, -(var40.field_t >> 1) + var10Lifetime2, 256);
               return;
             }
-            if (oa.field_a != var6Lifetime1) {
+            if (ProxyAuthenticationRequiredException.field_a != var6Lifetime1) {
               return;
             }
             var41 = AccountNameAvailabilityValidator.field_p[1];
@@ -280,7 +280,7 @@ final class ea extends se {
             var37.d(var9Lifetime3, -(var37.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
-          if (oa.field_a != var6Lifetime2) {
+          if (ProxyAuthenticationRequiredException.field_a != var6Lifetime2) {
             return;
           }
           var38 = AccountNameAvailabilityValidator.field_p[1];

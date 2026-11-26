@@ -62,7 +62,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pn.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class NodeHashTableIterator implements Iterator {
           SecondaryKeyHashTable.lockedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "locked");
           HighscoreQuery.unachievedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "unachieved");
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pe.D(" + (fontMetricsArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (sharedSpriteArchive != null ? "{...}" : "null") + ',' + (gameSpriteArchive != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pe.D(" + (fontMetricsArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (sharedSpriteArchive != null ? "{...}" : "null") + ',' + (gameSpriteArchive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class NodeHashTableIterator implements Iterator {
           this.table = param0;
           this.reset(true);
         } catch (RuntimeException runtimeException) {
-          throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

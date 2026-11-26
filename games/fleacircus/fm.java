@@ -30,7 +30,7 @@ final class fm {
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!ak.a((char) var3, (byte) 67) &&
-              !em.a((byte) -65, (char) var3)) {
+              !ProxyAuthenticationRequiredException.a((byte) -65, (char) var3)) {
               return true;
             }
           }

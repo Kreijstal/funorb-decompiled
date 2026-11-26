@@ -101,8 +101,8 @@ final class ec extends dm {
             return false;
           }
           var5 = 28 / ((param0 - 59) / 61);
-          var4 = in.field_j[param1] + (hn.field_e[param1] + oc.field_n[param1]);
-          var6 = in.field_j[param2] + hn.field_e[param2] + oc.field_n[param2];
+          var4 = in.field_j[param1] + (BufferedSocket.field_e[param1] + oc.field_n[param1]);
+          var6 = in.field_j[param2] + BufferedSocket.field_e[param2] + oc.field_n[param2];
           if (var6 > var4) {
             return true;
           }
@@ -124,8 +124,8 @@ final class ec extends dm {
           return false;
         }
         var5Lifetime1 = 28 / ((param0 - 59) / 61);
-        var4Lifetime1 = in.field_j[param1] + (hn.field_e[param1] + oc.field_n[param1]);
-        var6Lifetime1 = in.field_j[param2] + hn.field_e[param2] + oc.field_n[param2];
+        var4Lifetime1 = in.field_j[param1] + (BufferedSocket.field_e[param1] + oc.field_n[param1]);
+        var6Lifetime1 = in.field_j[param2] + BufferedSocket.field_e[param2] + oc.field_n[param2];
         if (var6Lifetime1 > var4Lifetime1) {
           return true;
         }

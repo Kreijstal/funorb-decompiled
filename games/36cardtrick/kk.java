@@ -209,7 +209,7 @@ final class kk {
           var10 = var8;
           var3 = var10.readUnsignedByte(param0 ^ -16903);
           var10.f(true);
-          ga.field_b = hk.a(param0 + 17076, var10);
+          PcmOutputWorker.field_b = hk.a(param0 + 17076, var10);
           NodeHashTableIterator.field_a = new mg[var3];
           sk.field_b = new int[var3][];
           var4 = 0;

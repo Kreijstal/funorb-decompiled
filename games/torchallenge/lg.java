@@ -66,7 +66,7 @@ abstract class lg {
         if (param0 != 84) {
           return -106;
         }
-        var3 = bj.field_d;
+        var3 = ProxyAuthenticationRequiredException.field_d;
         var2 = var3;
         if (var3[4] != param1 &&
           var3[3] != param1) {

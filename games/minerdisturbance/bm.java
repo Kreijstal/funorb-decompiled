@@ -22,7 +22,7 @@ final class bm extends nf {
         if (of.field_b != null) {
           return of.field_b;
         }
-        return (java.applet.Applet) ((Object) j.field_h);
+        return (java.applet.Applet) ((Object) PcmOutputWorker.field_h);
     }
 
     final void a(int param0, int param1, we param2, String param3, int param4, byte param5, int param6, int param7) {

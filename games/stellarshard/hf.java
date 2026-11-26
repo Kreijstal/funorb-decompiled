@@ -121,9 +121,9 @@ final class hf extends sk {
           if (vh.field_h[param2] > vh.field_h[param0]) {
             return false;
           }
-          var4 = qf.field_g[param2] + wb.field_e[param2] + vc.field_f[param2];
+          var4 = PcmOutputWorker.field_g[param2] + wb.field_e[param2] + vc.field_f[param2];
           if (param3 == 41) {
-            var5 = vc.field_f[param0] + qf.field_g[param0] + wb.field_e[param0];
+            var5 = vc.field_f[param0] + PcmOutputWorker.field_g[param0] + wb.field_e[param0];
             if (var5 > var4) {
               return true;
             }
@@ -133,7 +133,7 @@ final class hf extends sk {
             return !(param0 <= param2);
           }
           hf.b(-31);
-          var5Lifetime3 = vc.field_f[param0] + qf.field_g[param0] + wb.field_e[param0];
+          var5Lifetime3 = vc.field_f[param0] + PcmOutputWorker.field_g[param0] + wb.field_e[param0];
           if (var5Lifetime3 > var4) {
             return true;
           }
@@ -154,9 +154,9 @@ final class hf extends sk {
         if (se.field_B[param2] > se.field_B[param0]) {
           return false;
         }
-        var4Lifetime1 = qf.field_g[param2] + wb.field_e[param2] + vc.field_f[param2];
+        var4Lifetime1 = PcmOutputWorker.field_g[param2] + wb.field_e[param2] + vc.field_f[param2];
         if (param3 == 41) {
-          var5Lifetime1 = vc.field_f[param0] + qf.field_g[param0] + wb.field_e[param0];
+          var5Lifetime1 = vc.field_f[param0] + PcmOutputWorker.field_g[param0] + wb.field_e[param0];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -166,7 +166,7 @@ final class hf extends sk {
           return !(param0 <= param2);
         }
         hf.b(-31);
-        var5Lifetime2 = vc.field_f[param0] + qf.field_g[param0] + wb.field_e[param0];
+        var5Lifetime2 = vc.field_f[param0] + PcmOutputWorker.field_g[param0] + wb.field_e[param0];
         if (var5Lifetime2 > var4Lifetime1) {
           return true;
         }

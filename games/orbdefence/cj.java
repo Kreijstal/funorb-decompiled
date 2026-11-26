@@ -47,7 +47,7 @@ final class cj {
         ab.field_g[0].d(10, 50);
         ab.field_g[1].d(100, 50);
         ab.field_g[2].d(55, 70);
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         hi.field_g[1].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[24].d(80, 0);
@@ -59,7 +59,7 @@ final class cj {
         ab.field_g[12].d(10, 50);
         ab.field_g[12].d(40, 60);
         ab.field_g[12].d(20, 70);
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         hi.field_g[2].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[60].c(30, 10);
@@ -67,7 +67,7 @@ final class cj {
         hg.field_ab.d(10, 45);
         SoftwareRasterizer.addRadialGlow(2080, 1040, 480, 255, ki.field_f);
         hg.field_ab.d(110, 45);
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         hi.field_g[3].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[86].c(30, 0);
@@ -81,7 +81,7 @@ final class cj {
         hg.field_ab.a(95, 75);
         SoftwareRasterizer.addRadialGlow(1280, 1440, 240, 255, ki.field_f);
         hg.field_ab.a(70, 80);
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         hi.field_g[4].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(640, 1520, 240, 255, ki.field_f);
@@ -94,7 +94,7 @@ final class cj {
         hf.field_g[0].d(75, 55);
         hf.field_g[2].b(2093920872, 3000, 50, 85, 62);
         hf.field_g[1].d(75, 55);
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         hi.field_g[5].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(640, 640, 640, 255, ki.field_f);
@@ -103,7 +103,7 @@ final class cj {
         hg.field_ab.c(40, 20);
         SoftwareRasterizer.addRadialGlow(1920, 1280, 640, 255, ki.field_f);
         hg.field_ab.d(100, 60);
-        cb.field_a.a(-40);
+        BufferedSocket.field_a.a(-40);
         if (param0 <= 51) {
           field_b = (vd) null;
         }

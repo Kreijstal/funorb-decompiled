@@ -141,7 +141,7 @@ final class ch extends lg {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        ck var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Lexicominos.field_L ? 1 : 0;
@@ -195,15 +195,15 @@ final class ch extends lg {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (ck) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(false, var11);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (ck decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (ck) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -275,11 +275,11 @@ final class ch extends lg {
                   if (var11 != -1) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new ck(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new ck("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_10_0 = var13;

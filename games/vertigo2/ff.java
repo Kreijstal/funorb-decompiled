@@ -253,7 +253,7 @@ final class ff {
 
     final static void a(boolean param0, int param1) {
         kq.b(-69, param0);
-        rg.a((byte) 53, param0);
+        ProxyAuthenticationRequiredException.a((byte) 53, param0);
         if (param1 != 11182) {
           ff.b((byte) 54);
         }

@@ -75,8 +75,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (tc.field_b <= 0) {
             return;
           }
-          if (bk.field_e == 7) {
-            bk.field_e = 0;
+          if (ProxyAuthenticationRequiredException.field_e == 7) {
+            ProxyAuthenticationRequiredException.field_e = 0;
             return;
           }
           return;
@@ -87,8 +87,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (tc.field_b <= 0) {
             return;
           }
-          if (bk.field_e == 7) {
-            bk.field_e = 0;
+          if (ProxyAuthenticationRequiredException.field_e == 7) {
+            ProxyAuthenticationRequiredException.field_e = 0;
             return;
           }
           return;
@@ -100,8 +100,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (tc.field_b <= 0) {
           return;
         }
-        if (bk.field_e == 7) {
-          bk.field_e = 0;
+        if (ProxyAuthenticationRequiredException.field_e == 7) {
+          ProxyAuthenticationRequiredException.field_e = 0;
           return;
         }
     }

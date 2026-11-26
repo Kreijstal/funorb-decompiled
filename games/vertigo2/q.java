@@ -134,7 +134,7 @@ final class q extends DualLinkNode {
               }
             }
           } else {
-            this.field_t = jr.a((byte) -9, '<', param0.readString(128));
+            this.field_t = PcmOutputWorker.a((byte) -9, '<', param0.readString(128));
           }
           if (param1 != 19291) {
             this.a((byte) 72);
