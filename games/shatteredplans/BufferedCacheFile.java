@@ -461,7 +461,7 @@ final class BufferedCacheFile {
           NameSuggestionsPanel.field_K.disposeFullscreenFrame(ValidatedTextInputWidget.field_W, -17115);
           NameSuggestionsPanel.field_K = null;
           if (null != BoundsRect.field_p) {
-            BoundsRect.field_p.c(-119);
+            BoundsRect.field_p.restoreWindowedSize(-119);
           }
           if (param0 != 0) {
             field_j = (String) null;

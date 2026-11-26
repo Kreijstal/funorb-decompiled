@@ -943,7 +943,7 @@ final class Archive {
           }
           DialWidget.field_I.pollPointerInput(BattleEvent.field_o, true, QuickChatPhraseRegistry.field_b, (byte) 0);
           DialWidget.field_I.updateDialogs(125);
-          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.pollKeyEventFullInts(55)) {
             DialWidget.field_I.dispatchKeyInput(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
           }
           return;

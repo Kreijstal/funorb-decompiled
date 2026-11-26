@@ -33,7 +33,7 @@ final class LobbyRoomInteractionSupport {
             return stackIn_3_0;
           }
           stackIn_6_0 = 55;
-          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(stackIn_6_0)) {
+          while (PasswordValidator.pollKeyEventFullInts(stackIn_6_0)) {
             ByteArrayStorage.field_e.dispatchKeyInput(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
             stackIn_6_0 = 55;
           }

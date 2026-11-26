@@ -141,7 +141,7 @@ final class TextReplacementContext {
         if (param0 != -1) {
           return (Archive) null;
         }
-        return PasswordValidator.a(param2, false, param3, param0 + 12001, param1, param4);
+        return PasswordValidator.createArchive(param2, false, param3, param0 + 12001, param1, param4);
     }
 
     private final String lookupReplacement(int param0, String param1) {

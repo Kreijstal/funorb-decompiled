@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
             }
           }
           if (MeshData.field_h) {
-            PlayerEliminatedEvent.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
+            PlayerEliminatedEvent.layoutChatInputDialog(param3, param0, param0, param2, param7, param1, -10, 20, param6);
             ValidatedTextInputWidget.field_X.updatePointerState(param5, -20429);
             if (param5) {
               if (IntroTextLine.field_m.field_rb != 0) {

@@ -446,7 +446,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
           return this.field_Ab;
         }
         while (true) {
-          if (!PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+          if (!PasswordValidator.pollKeyEventFullInts(55)) {
             if (param0 < -42) {
               this.field_zb.field_z = this.field_Db.toString();
               if (!param1) {

@@ -300,10 +300,10 @@ final class SoundCache {
 
     final static Archive createArchive(int param0, int param1) {
         if (param1 >= 27) {
-          return PasswordValidator.a(1, false, param0, 12000, true, false);
+          return PasswordValidator.createArchive(1, false, param0, 12000, true, false);
         }
         field_c = (AnimatedPanel) null;
-        return PasswordValidator.a(1, false, param0, 12000, true, false);
+        return PasswordValidator.createArchive(1, false, param0, 12000, true, false);
     }
 
     private final PcmSample getVorbisSampleByName(String param0, boolean param1, int[] param2, String param3) {

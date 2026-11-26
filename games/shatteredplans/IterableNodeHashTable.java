@@ -152,9 +152,9 @@ final class IterableNodeHashTable implements Iterable {
     final static Archive createArchive(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         if (!param3) {
           field_c = (String) null;
-          return PasswordValidator.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+          return PasswordValidator.createArchive(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
         }
-        return PasswordValidator.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+        return PasswordValidator.createArchive(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
     }
 
     static {

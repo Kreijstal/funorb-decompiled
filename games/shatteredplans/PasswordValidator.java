@@ -19,7 +19,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(boolean param0, String param1) {
+    private final boolean containsEmailComponent(boolean param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -33,7 +33,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           var3 = this.field_o.field_s.toLowerCase();
           if (!param0) {
-            PasswordValidator.a(80, -33, 98, true);
+            PasswordValidator.tickChatPanel(80, -33, 98, true);
           }
           var4 = param1.toLowerCase();
           if (var3.length() > 0 &&
@@ -67,7 +67,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void tickChatPanel(int param0, int param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -131,7 +131,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static Archive a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static Archive createArchive(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -204,7 +204,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_10_0 = ArchiveSourceManager.field_b;
             return stackIn_10_0;
           }
-          if (!this.b(true, param1)) {
+          if (!this.containsEmailComponent(true, param1)) {
             return CachedArchiveSource.field_g;
           }
           stackIn_14_0 = ArchiveSourceManager.field_b;
@@ -230,7 +230,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean pollKeyEvent(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         boolean stackIn_9_0 = false;
@@ -251,7 +251,7 @@ final class PasswordValidator extends TextFieldValidator {
         return stackIn_9_0;
     }
 
-    final static void f(byte param0) {
+    final static void increaseSoundEffectVolume(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (224 <= CheckboxPainter.field_p) {
@@ -304,7 +304,7 @@ final class PasswordValidator extends TextFieldValidator {
             this.field_q = (TextFieldWidget) null;
           }
           stackIn_19_1 = !(param0);
-          if (this.b(stackIn_19_1, param1)) {
+          if (this.containsEmailComponent(stackIn_19_1, param1)) {
             stackIn_22_0 = AccountHandshakeSupport.field_d;
             return stackIn_22_0;
           }
@@ -345,7 +345,7 @@ final class PasswordValidator extends TextFieldValidator {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$e$296a4c2b494e(int param0) {
+    final static boolean pollKeyEventFullInts(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         boolean stackIn_9_0 = false;

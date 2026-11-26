@@ -30,7 +30,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
         try {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
-          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.pollKeyEventFullInts(55)) {
             GameState.field_l.updateVerticalKeys(0);
             if (GameState.field_l.isInitiallyActivated((byte) -46)) {
               var1_int = 1;

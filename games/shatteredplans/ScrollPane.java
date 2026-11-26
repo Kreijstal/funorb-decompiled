@@ -245,7 +245,7 @@ final class ScrollPane extends AnimatedPanel {
           if (param0 != 93) {
             ScrollPane.tickIntroSequence((byte) -67);
           }
-          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.pollKeyEventFullInts(55)) {
             if (TextReplacementEntry.field_j == 13) {
               ArchiveRequest.requestIntroScene(-1, (byte) 125);
               continue;

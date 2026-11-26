@@ -235,7 +235,7 @@ final class TextReplacementEntry {
             field_i = (String[]) null;
           }
           while (var2 != null) {
-            CanvasResizeController.a(param0, 1);
+            CanvasResizeController.writeByteArrayReadRequest(param0, 1);
             var2 = SectorCacheStore.field_d.nextForward((byte) -71);
           }
           return;

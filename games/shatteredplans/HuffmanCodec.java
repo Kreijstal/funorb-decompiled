@@ -19,7 +19,7 @@ final class HuffmanCodec {
           if (null == BoundsRect.field_p) {
             NameSuggestionsPanel.field_K = QuickChatCategoryDefinition.createFullscreenCanvas(640, ValidatedTextInputWidget.field_W, 0, (byte) 98, 0, 480);
           } else {
-            NameSuggestionsPanel.field_K = BoundsRect.field_p.a(0);
+            NameSuggestionsPanel.field_K = BoundsRect.field_p.createFullscreenCanvas(0);
             GameRules.notifyBrowserResize(param1 - 15468, 2);
           }
           if (null == NameSuggestionsPanel.field_K) {

@@ -158,11 +158,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         if (param5 < -125) {
-          RoundedFrameSupport.a(20, param1, param0, param2, param4, param3, 0, param6);
+          RoundedFrameSupport.drawRoundedGradientFrame(20, param1, param0, param2, param4, param3, 0, param6);
           return;
         }
         GameKeyHandler.a(-32, 98, 121, 31, -39, (byte) -98, 83);
-        RoundedFrameSupport.a(20, param1, param0, param2, param4, param3, 0, param6);
+        RoundedFrameSupport.drawRoundedGradientFrame(20, param1, param0, param2, param4, param3, 0, param6);
     }
 
     final static void a(int param0, Throwable param1, String param2) {

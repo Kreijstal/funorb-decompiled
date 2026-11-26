@@ -34,7 +34,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         if (BoundsRect.field_p == null) {
           return false;
         }
-        if (BoundsRect.field_p.b(-1)) {
+        if (BoundsRect.field_p.isResizeAllowed(-1)) {
           return true;
         }
         return false;

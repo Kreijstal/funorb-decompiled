@@ -381,9 +381,9 @@ abstract class GameClientShell extends GameApplet {
           if (null == NameSuggestionsPanel.field_K) {
             var6 = StarAbandonedEvent.getAppletContainer(76);
             var4 = var6.getSize();
-            BoundsRect.field_p.a(var4.width, var4.height, -28);
+            BoundsRect.field_p.setContainerSize(var4.width, var4.height, -28);
           }
-          BoundsRect.field_p.a(true);
+          BoundsRect.field_p.tickCanvasSize(true);
         }
         KeyboardStateSupport.snapshotKeyboardInput((byte) -59);
         HighscoreResponseSupport.snapshotMouseInput((byte) 62);

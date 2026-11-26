@@ -25,9 +25,9 @@ final class CanvasResizeController {
     private float field_v;
     private boolean field_b;
 
-    final boolean b(int param0) {
+    final boolean isResizeAllowed(int param0) {
         if (param0 != -1) {
-          this.a(-62);
+          this.createFullscreenCanvas(-62);
           if (QuickChatPhraseRegistry.field_a < this.field_p) {
             return false;
           }
@@ -45,14 +45,14 @@ final class CanvasResizeController {
         return false;
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeByteArrayReadRequest(int param0, int param1) {
         CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.writeOpcode(param0, 255);
         var2.writeByte(param1, (byte) -69);
         var2.writeByte(0, (byte) -119);
     }
 
-    private final void a(byte param0) {
+    private final void applyConstrainedCanvasSize(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -60,7 +60,7 @@ final class CanvasResizeController {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = this.field_c;
         var3 = this.field_l;
-        if (!this.b(-1)) {
+        if (!this.isResizeAllowed(-1)) {
           this.field_b = false;
           return;
         }
@@ -140,7 +140,7 @@ final class CanvasResizeController {
         }
     }
 
-    final static boolean a(int param0, int param1, int[] param2, BoundsRect param3, int param4) {
+    final static boolean containsPointInBoundedPolygon(int param0, int param1, int[] param2, BoundsRect param3, int param4) {
         RuntimeException var5 = null;
         BoundsRect var6 = null;
         boolean stackIn_7_0 = false;
@@ -156,7 +156,7 @@ final class CanvasResizeController {
           }
           if (param0 != 0) {
             var6 = (BoundsRect) null;
-            CanvasResizeController.a(-93, -33, (int[]) null, (BoundsRect) null, 124);
+            CanvasResizeController.containsPointInBoundedPolygon(-93, -33, (int[]) null, (BoundsRect) null, 124);
           }
           stackIn_7_0 = ClientContextMenuSupport.containsPointInPolygon(1, param4, param1, param2);
           return stackIn_7_0;
@@ -191,7 +191,7 @@ final class CanvasResizeController {
         field_a = null;
     }
 
-    final void a(boolean param0) {
+    final void tickCanvasSize(boolean param0) {
         int fieldTemp$0 = 0;
         if (NameSuggestionsPanel.field_K != null) {
           return;
@@ -209,7 +209,7 @@ final class CanvasResizeController {
           if (this.field_p > QuickChatPhraseRegistry.field_a) {
             this.field_b = false;
           } else {
-            this.a((byte) 45);
+            this.applyConstrainedCanvasSize((byte) 45);
             if (!param0) {
               this.field_j = 87;
             }
@@ -230,24 +230,24 @@ final class CanvasResizeController {
         this.field_s.onCanvasResize(this.field_h, this.field_e, -12725);
     }
 
-    final FullscreenFocusCanvas a(int param0) {
+    final FullscreenFocusCanvas createFullscreenCanvas(int param0) {
         this.field_o = AccountNameValidationSupport.field_b;
         this.field_n = VictoryChecker.field_e;
         this.field_s.onCanvasResize(this.field_g, this.field_k, param0 ^ -12725);
         IntrusiveDeque.field_c = false;
         FullscreenFocusCanvas var2 = QuickChatCategoryDefinition.createFullscreenCanvas(this.field_k, ValidatedTextInputWidget.field_W, 0, (byte) 125, param0, this.field_g);
         if (var2 == null) {
-          this.c(param0 ^ -115);
+          this.restoreWindowedSize(param0 ^ -115);
         }
         return var2;
     }
 
-    final void c(int param0) {
+    final void restoreWindowedSize(int param0) {
         this.field_s.onCanvasResize(this.field_o, this.field_n, -12725);
         int var2 = -2 % ((param0 + 68) / 46);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setContainerSize(int param0, int param1, int param2) {
         this.field_l = param1;
         int var4 = -89 / ((param2 - 64) / 62);
         this.field_c = param0;

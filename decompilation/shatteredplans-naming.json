@@ -7228,6 +7228,22 @@
       "renamedSymbol": "M:PlayerEliminatedEvent.clearStatics(I)V"
     },
     {
+      "symbol": "M:ca.a(IIILjava/lang/String;IIIII)V",
+      "originalName": "a",
+      "to": "layoutChatInputDialog",
+      "evidence": "Lay out retained chat input dialog/message,channel-specific clear label,buttons and gradient background around original center. Complete interaction wrapper and layout/gradient helpers read. Preserve unused int argument,caption alias,measure/layout order,all signed dimensions/centering and raster replacement allocation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V"
+    },
+    {
+      "symbol": "M:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V",
+      "originalName": "a",
+      "to": "initializeLobbyResources",
+      "evidence": "Load retained optional lobby sprite sets,initialize lobby UI/fonts/options,load lobbyicon,reset flags,initialize200message chat history and promotion resources. Incoming asset setup window and complete initializer wrapper/guard read. Preserve sparse rows,repeated sprite-array aliases,archive argument roles,unused row alias,guard calls and partial publication order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V"
+    },
+    {
       "symbol": "M:cb.a(B)V",
       "originalName": "a",
       "to": "clearDirectByteArrayStorageStatics",
@@ -7268,6 +7284,30 @@
       "renamedSymbol": "M:DirectByteArrayStorage.isCanvasResizeAvailable(B)Z"
     },
     {
+      "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+      "originalName": "$cfr$intArgs$e$296a4c2b494e",
+      "to": "pollKeyEventFullInts",
+      "evidence": "Full signed32bit-int companion of byte pollKeyEvent with identical original body. Under retained monitor,publish next keycode/character from128slot ring and advance read index;return false when empty,true otherwise. All incoming windows read.Preserve full argument domain,guard55,monitor identity/exit,field/index evaluation and return ordering;no narrowing cast or delegation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordValidator.pollKeyEventFullInts(I)Z"
+    },
+    {
+      "symbol": "M:cc.a(IIIZ)V",
+      "originalName": "a",
+      "to": "tickChatPanel",
+      "evidence": "Advance and lay out animated chat panel,update pointer/menu/filter/report interactions and chat history/composition. Complete outer interaction caller and all incoming windows read. Preserve shared animation counters,scroll delta,flag gating,context-menu/widget allocation,late invalid-int cleanup and partial update/call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordValidator.tickChatPanel(IIIZ)V"
+    },
+    {
+      "symbol": "M:cc.a(IZIIZZ)Lbc;",
+      "originalName": "a",
+      "to": "createArchive",
+      "evidence": "Open/reuse original shared data/index cache files and per-archive sector stores,obtain retained source,optionally prefetch and allocate Archive. Complete three wrapper factories/source-manager/prefetch helpers read. Preserve one-time file-handle transfer to null,5200/12000buffer sizes,2097152store limit,index ordering,flags,guard caption clear and IOException conversion. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordValidator.createArchive(IZIIZZ)LArchive;"
+    },
+    {
       "symbol": "M:cc.a(ZLjava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
       "to": "computeMessageFor",
@@ -7284,12 +7324,36 @@
       "renamedSymbol": "M:PasswordValidator.computeStateFor(ILjava/lang/String;)LValidationState;"
     },
     {
+      "symbol": "M:cc.b(ZLjava/lang/String;)Z",
+      "originalName": "b",
+      "to": "containsEmailComponent",
+      "evidence": "Test proposed password for lowercase local/domain component of retained email field. Complete validation-state/message callers and constructor/form email role read. Preserve default-locale lowercase order,last-at split,nonempty checks,leading/trailing-at edge behavior,boolean-triggered chat tick and short circuit. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z"
+    },
+    {
       "symbol": "M:cc.d(I)V",
       "originalName": "d",
       "to": "clearStatics",
       "evidence": "Assigns null to 2 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PasswordValidator.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:cc.e(B)Z",
+      "originalName": "e",
+      "to": "pollKeyEvent",
+      "evidence": "Poll original retained key-event ring under shared monitor,publish keycode/character and wrap read cursor with127mask. Identical full-int companion and all incoming windows read. Preserve byte descriptor,guard55return branch,empty false,lock identity,queue array reads/publication ordering and exact same body. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordValidator.pollKeyEvent(B)Z"
+    },
+    {
+      "symbol": "M:cc.f(B)V",
+      "originalName": "f",
+      "to": "increaseSoundEffectVolume",
+      "evidence": "Advance retained sound-effect volume to next original32unit step or256at volume>=224. Complete setter and menu caller window read. Preserve signed remainder/overflow,all active playback updates and byte-derived division after volume mutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordValidator.increaseSoundEffectVolume(B)V"
     },
     {
       "symbol": "M:cd.a(BILfr;I)V",
@@ -7474,6 +7538,54 @@
       "evidence": "Releases the retained static frame, UI, text and temporary builder state.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpacityWidget.releaseOpacityWidgetStatics(I)V"
+    },
+    {
+      "symbol": "M:ch.a(B)Lqh;",
+      "originalName": "a",
+      "to": "createProductionWindow",
+      "evidence": "Create retained Production menu window with close button,vertical slider,list and ProductionContent wiring. Actual Production title literal and game-screen constructor window read. Preserve initial window publication before child allocation,byte division timing,child order/aliases and listener linkage. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;"
+    },
+    {
+      "symbol": "M:ch.a(I)I",
+      "originalName": "a",
+      "to": "pollAccountChoiceAction",
+      "evidence": "Drain key events through retained account-choice MenuInputState,update pointer selection and return selected original action code. All callers and complete input-state helpers read. Preserve int<=86return86,key-drain/activation accumulation,original click/hover coordinates and action2flag clear. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoundedFrameSupport.pollAccountChoiceAction(I)I"
+    },
+    {
+      "symbol": "M:ch.a(IBLbc;I)[Lbi;",
+      "originalName": "a",
+      "to": "loadSprites",
+      "evidence": "Decode original archive sprite sheet and materialize palette sprites through retained shared factory. Complete sprite factory and named-wrapper caller read. Preserve byte87guard null-archive call,group/file order,null on missing data and shared decode-buffer cleanup. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;"
+    },
+    {
+      "symbol": "M:ch.a(III)I",
+      "originalName": "a",
+      "to": "findAccountChoiceButtonAt",
+      "evidence": "Walk retained account-choice labels,measure eligible buttons and return original mapped index for point inside padded rectangle. Selection/layout callers read. Preserve negative-index spacer rows,global vertical accumulation,guard caption clear,first-hit order and original rectangle bounds helper. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoundedFrameSupport.findAccountChoiceButtonAt(III)I"
+    },
+    {
+      "symbol": "M:ch.a(IIIIIIII)V",
+      "originalName": "a",
+      "to": "drawRoundedGradientFrame",
+      "evidence": "Draw original rounded top/bottom frame edges/corners and gradient side pixels using saved raster clip. Complete nine-slice caller windows read. Preserve initial clip snapshot allocation,early width reject,intersect/restore sequence without finally,corner offsets,guard clear,height20loop formula and overflow/division. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V"
+    },
+    {
+      "symbol": "M:ch.a(Lbc;III)Lbi;",
+      "originalName": "a",
+      "to": "loadSprite",
+      "evidence": "Decode original archive sprite sheet then materialize first Sprite/ArgbSprite through retained factory only when int<-104. Complete sprite factory and named-wrapper caller read. Preserve null after decode for other ints,archive roles,alpha-buffer semantics and cleanup order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;"
     },
     {
       "symbol": "M:ch.b(B)V",
@@ -7692,12 +7804,76 @@
       "renamedSymbol": "M:GarrisonTask.clearStatics(B)V"
     },
     {
+      "symbol": "M:cp.a(B)V",
+      "originalName": "a",
+      "to": "applyConstrainedCanvasSize",
+      "evidence": "Clamp retained container size to original min/max and optional aspect ratio,notify resize listener on change and update horizontal centering. Complete controller class and tick caller read. Preserve eligibility early exit,byte-dependent max-height write,float rounding/casts,branch-specific clamping and callback-before-centering order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.applyConstrainedCanvasSize(B)V"
+    },
+    {
+      "symbol": "M:cp.a(I)Leb;",
+      "originalName": "a",
+      "to": "createFullscreenCanvas",
+      "evidence": "Save windowed canvas dimensions,notify original fullscreen size,clear resize flag and create retained focus canvas;restore saved size if creation fails. Complete controller class/fullscreen callers/helper read. Preserve callback argument order,int-derived guards,unrestricted ints,null result and partial publication on failure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.createFullscreenCanvas(I)LFullscreenFocusCanvas;"
+    },
+    {
+      "symbol": "M:cp.a(II)V",
+      "originalName": "a",
+      "to": "writeByteArrayReadRequest",
+      "evidence": "Write original opcode followed by supplied read-kind byte and zero byte into retained outbound buffer. Complete pending read-request creator and resend caller read. Preserve dynamic opcode/kind,integer-to-byte writer behavior,buffer alias and partial cursor/write order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.writeByteArrayReadRequest(II)V"
+    },
+    {
+      "symbol": "M:cp.a(III)V",
+      "originalName": "a",
+      "to": "setContainerSize",
+      "evidence": "Retain available container height then width from applet-container size snapshot. Full controller class and actual measured Dimension caller read. Preserve division using third int between two assignments and unrestricted signed sizes/partial write. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.setContainerSize(III)V"
+    },
+    {
+      "symbol": "M:cp.a(II[ILbh;I)Z",
+      "originalName": "a",
+      "to": "containsPointInBoundedPolygon",
+      "evidence": "Reject points outside retained rectangle then run original polygon point test. Complete rectangle/polygon caller window read. Preserve half-open bounds,coordinate order,int-dependent recursive null-bounds path only after passed rectangle test and short circuit. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z"
+    },
+    {
+      "symbol": "M:cp.a(Z)V",
+      "originalName": "a",
+      "to": "tickCanvasSize",
+      "evidence": "Poll original resize cadence/eligibility,apply constrained live container dimensions or fixed windowed dimensions,and update horizontal centering unless fullscreen active. Full controller and applet tick caller read. Preserve countdown predecrement,boolean-dependent max-height write,membership/threshold gating,early exits and original callback/dimension order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.tickCanvasSize(Z)V"
+    },
+    {
+      "symbol": "M:cp.b(I)Z",
+      "originalName": "b",
+      "to": "isResizeAllowed",
+      "evidence": "Return original capability-threshold and positive account-status eligibility for resizing. Full controller class and availability consumer read. Preserve int -1normal path,other-int fullscreen allocation side effect before eligibility check and exact dereference/order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.isResizeAllowed(I)Z"
+    },
+    {
       "symbol": "M:cp.b(Z)V",
       "originalName": "b",
       "to": "clearStatics",
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CanvasResizeController.clearStatics(Z)V"
+    },
+    {
+      "symbol": "M:cp.c(I)V",
+      "originalName": "c",
+      "to": "restoreWindowedSize",
+      "evidence": "Notify retained listener with previously saved windowed dimensions when fullscreen exits or creation fails. Full controller and both consumers read. Preserve callback before guard-derived remainder,original height/width argument order and all signed int guard behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasResizeController.restoreWindowedSize(I)V"
     },
     {
       "symbol": "M:cq.a(B)V",
@@ -99411,7 +99587,7 @@
     },
     {
       "symbol": "L:ca.a(IIILjava/lang/String;IIIII)V#0",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#0",
+      "renamedSymbol": "L:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#0",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -99422,7 +99598,7 @@
     },
     {
       "symbol": "L:ca.a(IIILjava/lang/String;IIIII)V#1",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#1",
+      "renamedSymbol": "L:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -99433,7 +99609,7 @@
     },
     {
       "symbol": "L:ca.a(IIILjava/lang/String;IIIII)V#2",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#2",
+      "renamedSymbol": "L:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -99444,7 +99620,7 @@
     },
     {
       "symbol": "L:ca.a(IIILjava/lang/String;IIIII)V#3",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#3",
+      "renamedSymbol": "L:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -99455,7 +99631,7 @@
     },
     {
       "symbol": "L:ca.a(IIILjava/lang/String;IIIII)V#4",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#4",
+      "renamedSymbol": "L:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -99466,7 +99642,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#0",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#0",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -99477,7 +99653,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#1",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#1",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -99488,7 +99664,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#10",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#10",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#10",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -99499,7 +99675,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#11",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#11",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#11",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -99510,7 +99686,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#12",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#12",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -99521,7 +99697,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#13",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#13",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -99532,7 +99708,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#14",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#14",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -99543,7 +99719,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#15",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#15",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -99554,7 +99730,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#16",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#16",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#16",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -99565,7 +99741,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#17",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#17",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -99576,7 +99752,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#2",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#2",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#2",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -99587,7 +99763,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#3",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#3",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#3",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -99598,7 +99774,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#4",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#4",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -99609,7 +99785,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#5",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#5",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#5",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -99620,7 +99796,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#6",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#6",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#6",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -99631,7 +99807,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#7",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#7",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#7",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -99642,7 +99818,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#8",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#8",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#8",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -99653,7 +99829,7 @@
     },
     {
       "symbol": "L:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#9",
-      "renamedSymbol": "L:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#9",
+      "renamedSymbol": "L:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#9",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -99708,7 +99884,7 @@
     },
     {
       "symbol": "L:cc.$cfr$intArgs$e$296a4c2b494e(I)Z#0",
-      "renamedSymbol": "L:PasswordValidator.$cfr$intArgs$e$296a4c2b494e(I)Z#0",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEventFullInts(I)Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -99719,7 +99895,7 @@
     },
     {
       "symbol": "L:cc.$cfr$intArgs$e$296a4c2b494e(I)Z#1",
-      "renamedSymbol": "L:PasswordValidator.$cfr$intArgs$e$296a4c2b494e(I)Z#1",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEventFullInts(I)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -99730,7 +99906,7 @@
     },
     {
       "symbol": "L:cc.$cfr$intArgs$e$296a4c2b494e(I)Z#2",
-      "renamedSymbol": "L:PasswordValidator.$cfr$intArgs$e$296a4c2b494e(I)Z#2",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEventFullInts(I)Z#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -99741,7 +99917,7 @@
     },
     {
       "symbol": "L:cc.$cfr$intArgs$e$296a4c2b494e(I)Z#3",
-      "renamedSymbol": "L:PasswordValidator.$cfr$intArgs$e$296a4c2b494e(I)Z#3",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEventFullInts(I)Z#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -99763,7 +99939,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#0",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#0",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -99774,7 +99950,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#1",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#1",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -99785,7 +99961,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#2",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#2",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -99796,7 +99972,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#3",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#3",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -99807,7 +99983,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#4",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#4",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -99818,7 +99994,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#5",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#5",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -99829,7 +100005,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#6",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#6",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -99840,7 +100016,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#7",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#7",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -99851,7 +100027,7 @@
     },
     {
       "symbol": "L:cc.a(IIIZ)V#8",
-      "renamedSymbol": "L:PasswordValidator.a(IIIZ)V#8",
+      "renamedSymbol": "L:PasswordValidator.tickChatPanel(IIIZ)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -99862,7 +100038,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#0",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#0",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -99873,7 +100049,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#1",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#1",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -99884,7 +100060,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#2",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#2",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -99895,7 +100071,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#3",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#3",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -99906,7 +100082,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#4",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#4",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -99917,7 +100093,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#5",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#5",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -99928,7 +100104,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#6",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#6",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#6",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -99939,7 +100115,7 @@
     },
     {
       "symbol": "L:cc.a(IZIIZZ)Lbc;#7",
-      "renamedSymbol": "L:PasswordValidator.a(IZIIZZ)LArchive;#7",
+      "renamedSymbol": "L:PasswordValidator.createArchive(IZIIZZ)LArchive;#7",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -100280,7 +100456,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -100291,7 +100467,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -100302,7 +100478,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#10",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#10",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -100313,7 +100489,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -100324,7 +100500,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -100335,7 +100511,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -100346,7 +100522,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -100357,7 +100533,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#6",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -100368,7 +100544,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#7",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -100379,7 +100555,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#8",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -100390,7 +100566,7 @@
     },
     {
       "symbol": "L:cc.b(ZLjava/lang/String;)Z#9",
-      "renamedSymbol": "L:PasswordValidator.b(ZLjava/lang/String;)Z#9",
+      "renamedSymbol": "L:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100401,7 +100577,7 @@
     },
     {
       "symbol": "L:cc.e(B)Z#0",
-      "renamedSymbol": "L:PasswordValidator.e(B)Z#0",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEvent(B)Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -100412,7 +100588,7 @@
     },
     {
       "symbol": "L:cc.e(B)Z#1",
-      "renamedSymbol": "L:PasswordValidator.e(B)Z#1",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEvent(B)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100423,7 +100599,7 @@
     },
     {
       "symbol": "L:cc.e(B)Z#2",
-      "renamedSymbol": "L:PasswordValidator.e(B)Z#2",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEvent(B)Z#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -100434,7 +100610,7 @@
     },
     {
       "symbol": "L:cc.e(B)Z#3",
-      "renamedSymbol": "L:PasswordValidator.e(B)Z#3",
+      "renamedSymbol": "L:PasswordValidator.pollKeyEvent(B)Z#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100445,7 +100621,7 @@
     },
     {
       "symbol": "L:cc.f(B)V#0",
-      "renamedSymbol": "L:PasswordValidator.f(B)V#0",
+      "renamedSymbol": "L:PasswordValidator.increaseSoundEffectVolume(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -100456,7 +100632,7 @@
     },
     {
       "symbol": "L:cc.f(B)V#1",
-      "renamedSymbol": "L:PasswordValidator.f(B)V#1",
+      "renamedSymbol": "L:PasswordValidator.increaseSoundEffectVolume(B)V#1",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -101743,7 +101919,7 @@
     },
     {
       "symbol": "L:ch.a(B)Lqh;#0",
-      "renamedSymbol": "L:RoundedFrameSupport.a(B)LMenuWindow;#0",
+      "renamedSymbol": "L:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -101754,7 +101930,7 @@
     },
     {
       "symbol": "L:ch.a(B)Lqh;#1",
-      "renamedSymbol": "L:RoundedFrameSupport.a(B)LMenuWindow;#1",
+      "renamedSymbol": "L:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -101765,7 +101941,7 @@
     },
     {
       "symbol": "L:ch.a(B)Lqh;#2",
-      "renamedSymbol": "L:RoundedFrameSupport.a(B)LMenuWindow;#2",
+      "renamedSymbol": "L:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -101776,7 +101952,7 @@
     },
     {
       "symbol": "L:ch.a(B)Lqh;#3",
-      "renamedSymbol": "L:RoundedFrameSupport.a(B)LMenuWindow;#3",
+      "renamedSymbol": "L:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -101787,7 +101963,7 @@
     },
     {
       "symbol": "L:ch.a(B)Lqh;#4",
-      "renamedSymbol": "L:RoundedFrameSupport.a(B)LMenuWindow;#4",
+      "renamedSymbol": "L:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -101798,7 +101974,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#0",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#0",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -101809,7 +101985,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#1",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#1",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -101820,7 +101996,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#2",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#2",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -101831,7 +102007,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#3",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#3",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -101842,7 +102018,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#4",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#4",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#4",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -101853,7 +102029,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#5",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#5",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#5",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -101864,7 +102040,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#6",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#6",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -101875,7 +102051,7 @@
     },
     {
       "symbol": "L:ch.a(I)I#7",
-      "renamedSymbol": "L:RoundedFrameSupport.a(I)I#7",
+      "renamedSymbol": "L:RoundedFrameSupport.pollAccountChoiceAction(I)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -101886,7 +102062,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#0",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#0",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -101897,7 +102073,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#1",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#1",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -101908,7 +102084,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#2",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#2",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -101919,7 +102095,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#3",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#3",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -101930,7 +102106,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#4",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#4",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -101941,7 +102117,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#5",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#5",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -101952,7 +102128,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#6",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#6",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -101963,7 +102139,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#7",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#7",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -101974,7 +102150,7 @@
     },
     {
       "symbol": "L:ch.a(IBLbc;I)[Lbi;#8",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#8",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -101985,7 +102161,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#0",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#0",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -101996,7 +102172,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#1",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#1",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102007,7 +102183,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#10",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#10",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -102018,7 +102194,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#2",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#2",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102029,7 +102205,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#3",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#3",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -102040,7 +102216,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#4",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#4",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -102051,7 +102227,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#5",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#5",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -102062,7 +102238,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#6",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#6",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -102073,7 +102249,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#7",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#7",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#7",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -102084,7 +102260,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#8",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#8",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -102095,7 +102271,7 @@
     },
     {
       "symbol": "L:ch.a(III)I#9",
-      "renamedSymbol": "L:RoundedFrameSupport.a(III)I#9",
+      "renamedSymbol": "L:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102106,7 +102282,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#0",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#0",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -102117,7 +102293,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#1",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#1",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -102128,7 +102304,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#2",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#2",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -102139,7 +102315,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#3",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#3",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#3",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -102150,7 +102326,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#4",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#4",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -102161,7 +102337,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#5",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#5",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -102172,7 +102348,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#6",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#6",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -102183,7 +102359,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#7",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#7",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -102194,7 +102370,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#8",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#8",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#8",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -102205,7 +102381,7 @@
     },
     {
       "symbol": "L:ch.a(IIIIIIII)V#9",
-      "renamedSymbol": "L:RoundedFrameSupport.a(IIIIIIII)V#9",
+      "renamedSymbol": "L:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -102216,7 +102392,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#0",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#0",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102227,7 +102403,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#1",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#1",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -102238,7 +102414,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#2",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#2",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -102249,7 +102425,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#3",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#3",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -102260,7 +102436,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#4",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#4",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -102271,7 +102447,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#5",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#5",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -102282,7 +102458,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#6",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#6",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -102293,7 +102469,7 @@
     },
     {
       "symbol": "L:ch.a(Lbc;III)Lbi;#7",
-      "renamedSymbol": "L:RoundedFrameSupport.a(LArchive;III)LSprite;#7",
+      "renamedSymbol": "L:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -105439,7 +105615,7 @@
     },
     {
       "symbol": "L:cp.a(B)V#0",
-      "renamedSymbol": "L:CanvasResizeController.a(B)V#0",
+      "renamedSymbol": "L:CanvasResizeController.applyConstrainedCanvasSize(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105450,7 +105626,7 @@
     },
     {
       "symbol": "L:cp.a(B)V#1",
-      "renamedSymbol": "L:CanvasResizeController.a(B)V#1",
+      "renamedSymbol": "L:CanvasResizeController.applyConstrainedCanvasSize(B)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -105461,7 +105637,7 @@
     },
     {
       "symbol": "L:cp.a(B)V#2",
-      "renamedSymbol": "L:CanvasResizeController.a(B)V#2",
+      "renamedSymbol": "L:CanvasResizeController.applyConstrainedCanvasSize(B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -105472,7 +105648,7 @@
     },
     {
       "symbol": "L:cp.a(B)V#3",
-      "renamedSymbol": "L:CanvasResizeController.a(B)V#3",
+      "renamedSymbol": "L:CanvasResizeController.applyConstrainedCanvasSize(B)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -105483,7 +105659,7 @@
     },
     {
       "symbol": "L:cp.a(B)V#4",
-      "renamedSymbol": "L:CanvasResizeController.a(B)V#4",
+      "renamedSymbol": "L:CanvasResizeController.applyConstrainedCanvasSize(B)V#4",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -105494,7 +105670,7 @@
     },
     {
       "symbol": "L:cp.a(I)Leb;#0",
-      "renamedSymbol": "L:CanvasResizeController.a(I)LFullscreenFocusCanvas;#0",
+      "renamedSymbol": "L:CanvasResizeController.createFullscreenCanvas(I)LFullscreenFocusCanvas;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105505,7 +105681,7 @@
     },
     {
       "symbol": "L:cp.a(II)V#0",
-      "renamedSymbol": "L:CanvasResizeController.a(II)V#0",
+      "renamedSymbol": "L:CanvasResizeController.writeByteArrayReadRequest(II)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105516,7 +105692,7 @@
     },
     {
       "symbol": "L:cp.a(III)V#0",
-      "renamedSymbol": "L:CanvasResizeController.a(III)V#0",
+      "renamedSymbol": "L:CanvasResizeController.setContainerSize(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -105527,7 +105703,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#0",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#0",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -105538,7 +105714,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#1",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#1",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -105549,7 +105725,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#2",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#2",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -105560,7 +105736,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#3",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#3",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -105571,7 +105747,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#4",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#4",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -105582,7 +105758,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#5",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#5",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -105593,7 +105769,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#6",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#6",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#6",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -105604,7 +105780,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#7",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#7",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#7",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -105615,7 +105791,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#8",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#8",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -105626,7 +105802,7 @@
     },
     {
       "symbol": "L:cp.a(II[ILbh;I)Z#9",
-      "renamedSymbol": "L:CanvasResizeController.a(II[ILBoundsRect;I)Z#9",
+      "renamedSymbol": "L:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -105637,7 +105813,7 @@
     },
     {
       "symbol": "L:cp.a(Z)V#0",
-      "renamedSymbol": "L:CanvasResizeController.a(Z)V#0",
+      "renamedSymbol": "L:CanvasResizeController.tickCanvasSize(Z)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -105648,7 +105824,7 @@
     },
     {
       "symbol": "L:cp.c(I)V#0",
-      "renamedSymbol": "L:CanvasResizeController.c(I)V#0",
+      "renamedSymbol": "L:CanvasResizeController.restoreWindowedSize(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -328497,9 +328673,9 @@
     },
     {
       "symbol": "M:ca.a(IIILjava/lang/String;IIIII)V",
-      "renamedSymbol": "M:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V",
+      "renamedSymbol": "M:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutChatInputDialog",
       "declaration": {
         "file": "ca.java",
         "start": 407,
@@ -328508,9 +328684,9 @@
     },
     {
       "symbol": "M:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V",
-      "renamedSymbol": "M:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V",
+      "renamedSymbol": "M:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeLobbyResources",
       "declaration": {
         "file": "ca.java",
         "start": 2111,
@@ -328585,9 +328761,9 @@
     },
     {
       "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
-      "renamedSymbol": "M:PasswordValidator.$cfr$intArgs$e$296a4c2b494e(I)Z",
+      "renamedSymbol": "M:PasswordValidator.pollKeyEventFullInts(I)Z",
       "originalName": "$cfr$intArgs$e$296a4c2b494e",
-      "renamedName": "$cfr$intArgs$e$296a4c2b494e",
+      "renamedName": "pollKeyEventFullInts",
       "declaration": {
         "file": "cc.java",
         "start": 12197,
@@ -328607,9 +328783,9 @@
     },
     {
       "symbol": "M:cc.a(IIIZ)V",
-      "renamedSymbol": "M:PasswordValidator.a(IIIZ)V",
+      "renamedSymbol": "M:PasswordValidator.tickChatPanel(IIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "tickChatPanel",
       "declaration": {
         "file": "cc.java",
         "start": 2369,
@@ -328618,9 +328794,9 @@
     },
     {
       "symbol": "M:cc.a(IZIIZZ)Lbc;",
-      "renamedSymbol": "M:PasswordValidator.a(IZIIZZ)LArchive;",
+      "renamedSymbol": "M:PasswordValidator.createArchive(IZIIZZ)LArchive;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createArchive",
       "declaration": {
         "file": "cc.java",
         "start": 4734,
@@ -328651,9 +328827,9 @@
     },
     {
       "symbol": "M:cc.b(ZLjava/lang/String;)Z",
-      "renamedSymbol": "M:PasswordValidator.b(ZLjava/lang/String;)Z",
+      "renamedSymbol": "M:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "containsEmailComponent",
       "declaration": {
         "file": "cc.java",
         "start": 635,
@@ -328673,9 +328849,9 @@
     },
     {
       "symbol": "M:cc.e(B)Z",
-      "renamedSymbol": "M:PasswordValidator.e(B)Z",
+      "renamedSymbol": "M:PasswordValidator.pollKeyEvent(B)Z",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "pollKeyEvent",
       "declaration": {
         "file": "cc.java",
         "start": 8502,
@@ -328684,9 +328860,9 @@
     },
     {
       "symbol": "M:cc.f(B)V",
-      "renamedSymbol": "M:PasswordValidator.f(B)V",
+      "renamedSymbol": "M:PasswordValidator.increaseSoundEffectVolume(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "increaseSoundEffectVolume",
       "declaration": {
         "file": "cc.java",
         "start": 9108,
@@ -329003,9 +329179,9 @@
     },
     {
       "symbol": "M:ch.a(B)Lqh;",
-      "renamedSymbol": "M:RoundedFrameSupport.a(B)LMenuWindow;",
+      "renamedSymbol": "M:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createProductionWindow",
       "declaration": {
         "file": "ch.java",
         "start": 5410,
@@ -329014,9 +329190,9 @@
     },
     {
       "symbol": "M:ch.a(I)I",
-      "renamedSymbol": "M:RoundedFrameSupport.a(I)I",
+      "renamedSymbol": "M:RoundedFrameSupport.pollAccountChoiceAction(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountChoiceAction",
       "declaration": {
         "file": "ch.java",
         "start": 7647,
@@ -329025,9 +329201,9 @@
     },
     {
       "symbol": "M:ch.a(IBLbc;I)[Lbi;",
-      "renamedSymbol": "M:RoundedFrameSupport.a(IBLArchive;I)[LSprite;",
+      "renamedSymbol": "M:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSprites",
       "declaration": {
         "file": "ch.java",
         "start": 6288,
@@ -329036,9 +329212,9 @@
     },
     {
       "symbol": "M:ch.a(III)I",
-      "renamedSymbol": "M:RoundedFrameSupport.a(III)I",
+      "renamedSymbol": "M:RoundedFrameSupport.findAccountChoiceButtonAt(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findAccountChoiceButtonAt",
       "declaration": {
         "file": "ch.java",
         "start": 2521,
@@ -329047,9 +329223,9 @@
     },
     {
       "symbol": "M:ch.a(IIIIIIII)V",
-      "renamedSymbol": "M:RoundedFrameSupport.a(IIIIIIII)V",
+      "renamedSymbol": "M:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawRoundedGradientFrame",
       "declaration": {
         "file": "ch.java",
         "start": 169,
@@ -329058,9 +329234,9 @@
     },
     {
       "symbol": "M:ch.a(Lbc;III)Lbi;",
-      "renamedSymbol": "M:RoundedFrameSupport.a(LArchive;III)LSprite;",
+      "renamedSymbol": "M:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSprite",
       "declaration": {
         "file": "ch.java",
         "start": 4124,
@@ -329443,9 +329619,9 @@
     },
     {
       "symbol": "M:cp.a(B)V",
-      "renamedSymbol": "M:CanvasResizeController.a(B)V",
+      "renamedSymbol": "M:CanvasResizeController.applyConstrainedCanvasSize(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyConstrainedCanvasSize",
       "declaration": {
         "file": "cp.java",
         "start": 1252,
@@ -329454,9 +329630,9 @@
     },
     {
       "symbol": "M:cp.a(I)Leb;",
-      "renamedSymbol": "M:CanvasResizeController.a(I)LFullscreenFocusCanvas;",
+      "renamedSymbol": "M:CanvasResizeController.createFullscreenCanvas(I)LFullscreenFocusCanvas;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createFullscreenCanvas",
       "declaration": {
         "file": "cp.java",
         "start": 6715,
@@ -329465,9 +329641,9 @@
     },
     {
       "symbol": "M:cp.a(II)V",
-      "renamedSymbol": "M:CanvasResizeController.a(II)V",
+      "renamedSymbol": "M:CanvasResizeController.writeByteArrayReadRequest(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeByteArrayReadRequest",
       "declaration": {
         "file": "cp.java",
         "start": 1067,
@@ -329476,9 +329652,9 @@
     },
     {
       "symbol": "M:cp.a(III)V",
-      "renamedSymbol": "M:CanvasResizeController.a(III)V",
+      "renamedSymbol": "M:CanvasResizeController.setContainerSize(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setContainerSize",
       "declaration": {
         "file": "cp.java",
         "start": 7243,
@@ -329487,9 +329663,9 @@
     },
     {
       "symbol": "M:cp.a(II[ILbh;I)Z",
-      "renamedSymbol": "M:CanvasResizeController.a(II[ILBoundsRect;I)Z",
+      "renamedSymbol": "M:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "containsPointInBoundedPolygon",
       "declaration": {
         "file": "cp.java",
         "start": 3809,
@@ -329498,9 +329674,9 @@
     },
     {
       "symbol": "M:cp.a(Z)V",
-      "renamedSymbol": "M:CanvasResizeController.a(Z)V",
+      "renamedSymbol": "M:CanvasResizeController.tickCanvasSize(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "tickCanvasSize",
       "declaration": {
         "file": "cp.java",
         "start": 5685,
@@ -329509,9 +329685,9 @@
     },
     {
       "symbol": "M:cp.b(I)Z",
-      "renamedSymbol": "M:CanvasResizeController.b(I)Z",
+      "renamedSymbol": "M:CanvasResizeController.isResizeAllowed(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "isResizeAllowed",
       "declaration": {
         "file": "cp.java",
         "start": 627,
@@ -329531,9 +329707,9 @@
     },
     {
       "symbol": "M:cp.c(I)V",
-      "renamedSymbol": "M:CanvasResizeController.c(I)V",
+      "renamedSymbol": "M:CanvasResizeController.restoreWindowedSize(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "restoreWindowedSize",
       "declaration": {
         "file": "cp.java",
         "start": 7099,
@@ -376061,7 +376237,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#0",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#0",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376072,7 +376248,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#1",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#1",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376083,7 +376259,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#2",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#2",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376094,7 +376270,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#3",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#3",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -376105,7 +376281,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#4",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#4",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -376116,7 +376292,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#5",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#5",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -376127,7 +376303,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#6",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#6",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -376138,7 +376314,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#7",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#7",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -376149,7 +376325,7 @@
     },
     {
       "symbol": "P:ca.a(IIILjava/lang/String;IIIII)V#8",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(IIILjava/lang/String;IIIII)V#8",
+      "renamedSymbol": "P:PlayerEliminatedEvent.layoutChatInputDialog(IIILjava/lang/String;IIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -376160,7 +376336,7 @@
     },
     {
       "symbol": "P:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#0",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#0",
+      "renamedSymbol": "P:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376171,7 +376347,7 @@
     },
     {
       "symbol": "P:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#1",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#1",
+      "renamedSymbol": "P:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376182,7 +376358,7 @@
     },
     {
       "symbol": "P:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#2",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#2",
+      "renamedSymbol": "P:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376193,7 +376369,7 @@
     },
     {
       "symbol": "P:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#3",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#3",
+      "renamedSymbol": "P:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -376204,7 +376380,7 @@
     },
     {
       "symbol": "P:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#4",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#4",
+      "renamedSymbol": "P:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -376215,7 +376391,7 @@
     },
     {
       "symbol": "P:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V#5",
-      "renamedSymbol": "P:PlayerEliminatedEvent.a(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#5",
+      "renamedSymbol": "P:PlayerEliminatedEvent.initializeLobbyResources(Ljava/applet/Applet;LArchive;LArchive;LArchive;ZLArchive;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -376292,7 +376468,7 @@
     },
     {
       "symbol": "P:cc.$cfr$intArgs$e$296a4c2b494e(I)Z#0",
-      "renamedSymbol": "P:PasswordValidator.$cfr$intArgs$e$296a4c2b494e(I)Z#0",
+      "renamedSymbol": "P:PasswordValidator.pollKeyEventFullInts(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376336,7 +376512,7 @@
     },
     {
       "symbol": "P:cc.a(IIIZ)V#0",
-      "renamedSymbol": "P:PasswordValidator.a(IIIZ)V#0",
+      "renamedSymbol": "P:PasswordValidator.tickChatPanel(IIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376347,7 +376523,7 @@
     },
     {
       "symbol": "P:cc.a(IIIZ)V#1",
-      "renamedSymbol": "P:PasswordValidator.a(IIIZ)V#1",
+      "renamedSymbol": "P:PasswordValidator.tickChatPanel(IIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376358,7 +376534,7 @@
     },
     {
       "symbol": "P:cc.a(IIIZ)V#2",
-      "renamedSymbol": "P:PasswordValidator.a(IIIZ)V#2",
+      "renamedSymbol": "P:PasswordValidator.tickChatPanel(IIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376369,7 +376545,7 @@
     },
     {
       "symbol": "P:cc.a(IIIZ)V#3",
-      "renamedSymbol": "P:PasswordValidator.a(IIIZ)V#3",
+      "renamedSymbol": "P:PasswordValidator.tickChatPanel(IIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -376380,7 +376556,7 @@
     },
     {
       "symbol": "P:cc.a(IZIIZZ)Lbc;#0",
-      "renamedSymbol": "P:PasswordValidator.a(IZIIZZ)LArchive;#0",
+      "renamedSymbol": "P:PasswordValidator.createArchive(IZIIZZ)LArchive;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376391,7 +376567,7 @@
     },
     {
       "symbol": "P:cc.a(IZIIZZ)Lbc;#1",
-      "renamedSymbol": "P:PasswordValidator.a(IZIIZZ)LArchive;#1",
+      "renamedSymbol": "P:PasswordValidator.createArchive(IZIIZZ)LArchive;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376402,7 +376578,7 @@
     },
     {
       "symbol": "P:cc.a(IZIIZZ)Lbc;#2",
-      "renamedSymbol": "P:PasswordValidator.a(IZIIZZ)LArchive;#2",
+      "renamedSymbol": "P:PasswordValidator.createArchive(IZIIZZ)LArchive;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376413,7 +376589,7 @@
     },
     {
       "symbol": "P:cc.a(IZIIZZ)Lbc;#3",
-      "renamedSymbol": "P:PasswordValidator.a(IZIIZZ)LArchive;#3",
+      "renamedSymbol": "P:PasswordValidator.createArchive(IZIIZZ)LArchive;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -376424,7 +376600,7 @@
     },
     {
       "symbol": "P:cc.a(IZIIZZ)Lbc;#4",
-      "renamedSymbol": "P:PasswordValidator.a(IZIIZZ)LArchive;#4",
+      "renamedSymbol": "P:PasswordValidator.createArchive(IZIIZZ)LArchive;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -376435,7 +376611,7 @@
     },
     {
       "symbol": "P:cc.a(IZIIZZ)Lbc;#5",
-      "renamedSymbol": "P:PasswordValidator.a(IZIIZZ)LArchive;#5",
+      "renamedSymbol": "P:PasswordValidator.createArchive(IZIIZZ)LArchive;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -376490,7 +376666,7 @@
     },
     {
       "symbol": "P:cc.b(ZLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:PasswordValidator.b(ZLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376501,7 +376677,7 @@
     },
     {
       "symbol": "P:cc.b(ZLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:PasswordValidator.b(ZLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:PasswordValidator.containsEmailComponent(ZLjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376523,7 +376699,7 @@
     },
     {
       "symbol": "P:cc.e(B)Z#0",
-      "renamedSymbol": "P:PasswordValidator.e(B)Z#0",
+      "renamedSymbol": "P:PasswordValidator.pollKeyEvent(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376534,7 +376710,7 @@
     },
     {
       "symbol": "P:cc.f(B)V#0",
-      "renamedSymbol": "P:PasswordValidator.f(B)V#0",
+      "renamedSymbol": "P:PasswordValidator.increaseSoundEffectVolume(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377315,7 +377491,7 @@
     },
     {
       "symbol": "P:ch.a(B)Lqh;#0",
-      "renamedSymbol": "P:RoundedFrameSupport.a(B)LMenuWindow;#0",
+      "renamedSymbol": "P:RoundedFrameSupport.createProductionWindow(B)LMenuWindow;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377326,7 +377502,7 @@
     },
     {
       "symbol": "P:ch.a(I)I#0",
-      "renamedSymbol": "P:RoundedFrameSupport.a(I)I#0",
+      "renamedSymbol": "P:RoundedFrameSupport.pollAccountChoiceAction(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377337,7 +377513,7 @@
     },
     {
       "symbol": "P:ch.a(IBLbc;I)[Lbi;#0",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#0",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377348,7 +377524,7 @@
     },
     {
       "symbol": "P:ch.a(IBLbc;I)[Lbi;#1",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#1",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377359,7 +377535,7 @@
     },
     {
       "symbol": "P:ch.a(IBLbc;I)[Lbi;#2",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#2",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -377370,7 +377546,7 @@
     },
     {
       "symbol": "P:ch.a(IBLbc;I)[Lbi;#3",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IBLArchive;I)[LSprite;#3",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprites(IBLArchive;I)[LSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -377381,7 +377557,7 @@
     },
     {
       "symbol": "P:ch.a(III)I#0",
-      "renamedSymbol": "P:RoundedFrameSupport.a(III)I#0",
+      "renamedSymbol": "P:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377392,7 +377568,7 @@
     },
     {
       "symbol": "P:ch.a(III)I#1",
-      "renamedSymbol": "P:RoundedFrameSupport.a(III)I#1",
+      "renamedSymbol": "P:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377403,7 +377579,7 @@
     },
     {
       "symbol": "P:ch.a(III)I#2",
-      "renamedSymbol": "P:RoundedFrameSupport.a(III)I#2",
+      "renamedSymbol": "P:RoundedFrameSupport.findAccountChoiceButtonAt(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -377414,7 +377590,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#0",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#0",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377425,7 +377601,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#1",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#1",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377436,7 +377612,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#2",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#2",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -377447,7 +377623,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#3",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#3",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -377458,7 +377634,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#4",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#4",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -377469,7 +377645,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#5",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#5",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -377480,7 +377656,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#6",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#6",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -377491,7 +377667,7 @@
     },
     {
       "symbol": "P:ch.a(IIIIIIII)V#7",
-      "renamedSymbol": "P:RoundedFrameSupport.a(IIIIIIII)V#7",
+      "renamedSymbol": "P:RoundedFrameSupport.drawRoundedGradientFrame(IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -377502,7 +377678,7 @@
     },
     {
       "symbol": "P:ch.a(Lbc;III)Lbi;#0",
-      "renamedSymbol": "P:RoundedFrameSupport.a(LArchive;III)LSprite;#0",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377513,7 +377689,7 @@
     },
     {
       "symbol": "P:ch.a(Lbc;III)Lbi;#1",
-      "renamedSymbol": "P:RoundedFrameSupport.a(LArchive;III)LSprite;#1",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377524,7 +377700,7 @@
     },
     {
       "symbol": "P:ch.a(Lbc;III)Lbi;#2",
-      "renamedSymbol": "P:RoundedFrameSupport.a(LArchive;III)LSprite;#2",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -377535,7 +377711,7 @@
     },
     {
       "symbol": "P:ch.a(Lbc;III)Lbi;#3",
-      "renamedSymbol": "P:RoundedFrameSupport.a(LArchive;III)LSprite;#3",
+      "renamedSymbol": "P:RoundedFrameSupport.loadSprite(LArchive;III)LSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -378404,7 +378580,7 @@
     },
     {
       "symbol": "P:cp.a(B)V#0",
-      "renamedSymbol": "P:CanvasResizeController.a(B)V#0",
+      "renamedSymbol": "P:CanvasResizeController.applyConstrainedCanvasSize(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378415,7 +378591,7 @@
     },
     {
       "symbol": "P:cp.a(I)Leb;#0",
-      "renamedSymbol": "P:CanvasResizeController.a(I)LFullscreenFocusCanvas;#0",
+      "renamedSymbol": "P:CanvasResizeController.createFullscreenCanvas(I)LFullscreenFocusCanvas;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378426,7 +378602,7 @@
     },
     {
       "symbol": "P:cp.a(II)V#0",
-      "renamedSymbol": "P:CanvasResizeController.a(II)V#0",
+      "renamedSymbol": "P:CanvasResizeController.writeByteArrayReadRequest(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378437,7 +378613,7 @@
     },
     {
       "symbol": "P:cp.a(II)V#1",
-      "renamedSymbol": "P:CanvasResizeController.a(II)V#1",
+      "renamedSymbol": "P:CanvasResizeController.writeByteArrayReadRequest(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378448,7 +378624,7 @@
     },
     {
       "symbol": "P:cp.a(III)V#0",
-      "renamedSymbol": "P:CanvasResizeController.a(III)V#0",
+      "renamedSymbol": "P:CanvasResizeController.setContainerSize(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378459,7 +378635,7 @@
     },
     {
       "symbol": "P:cp.a(III)V#1",
-      "renamedSymbol": "P:CanvasResizeController.a(III)V#1",
+      "renamedSymbol": "P:CanvasResizeController.setContainerSize(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378470,7 +378646,7 @@
     },
     {
       "symbol": "P:cp.a(III)V#2",
-      "renamedSymbol": "P:CanvasResizeController.a(III)V#2",
+      "renamedSymbol": "P:CanvasResizeController.setContainerSize(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -378481,7 +378657,7 @@
     },
     {
       "symbol": "P:cp.a(II[ILbh;I)Z#0",
-      "renamedSymbol": "P:CanvasResizeController.a(II[ILBoundsRect;I)Z#0",
+      "renamedSymbol": "P:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378492,7 +378668,7 @@
     },
     {
       "symbol": "P:cp.a(II[ILbh;I)Z#1",
-      "renamedSymbol": "P:CanvasResizeController.a(II[ILBoundsRect;I)Z#1",
+      "renamedSymbol": "P:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378503,7 +378679,7 @@
     },
     {
       "symbol": "P:cp.a(II[ILbh;I)Z#2",
-      "renamedSymbol": "P:CanvasResizeController.a(II[ILBoundsRect;I)Z#2",
+      "renamedSymbol": "P:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -378514,7 +378690,7 @@
     },
     {
       "symbol": "P:cp.a(II[ILbh;I)Z#3",
-      "renamedSymbol": "P:CanvasResizeController.a(II[ILBoundsRect;I)Z#3",
+      "renamedSymbol": "P:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -378525,7 +378701,7 @@
     },
     {
       "symbol": "P:cp.a(II[ILbh;I)Z#4",
-      "renamedSymbol": "P:CanvasResizeController.a(II[ILBoundsRect;I)Z#4",
+      "renamedSymbol": "P:CanvasResizeController.containsPointInBoundedPolygon(II[ILBoundsRect;I)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -378536,7 +378712,7 @@
     },
     {
       "symbol": "P:cp.a(Z)V#0",
-      "renamedSymbol": "P:CanvasResizeController.a(Z)V#0",
+      "renamedSymbol": "P:CanvasResizeController.tickCanvasSize(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378547,7 +378723,7 @@
     },
     {
       "symbol": "P:cp.b(I)Z#0",
-      "renamedSymbol": "P:CanvasResizeController.b(I)Z#0",
+      "renamedSymbol": "P:CanvasResizeController.isResizeAllowed(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378569,7 +378745,7 @@
     },
     {
       "symbol": "P:cp.c(I)V#0",
-      "renamedSymbol": "P:CanvasResizeController.c(I)V#0",
+      "renamedSymbol": "P:CanvasResizeController.restoreWindowedSize(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -462184,7 +462360,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "8c9860cbdb3e1fcbef11bfb3c3395e3d942b6f307cdd4aa33613ca694c459f4f",
+      "outputSha256": "822cd8eebc0dac79e65952d1d7bf01286d3f5609b6e06454ac3f3d25a4fd9a52",
       "edits": [
         {
           "start": 86,
@@ -463102,6 +463278,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 6504,
+          "end": 6505,
+          "symbol": "M:ch.a(I)I",
+          "original": "a",
+          "renamed": "pollAccountChoiceAction"
         },
         {
           "start": 6579,
@@ -473592,6 +473775,13 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 40099,
+          "end": 40126,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
+        },
+        {
           "start": 40154,
           "end": 40156,
           "symbol": "C:ce",
@@ -473800,6 +473990,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 41095,
+          "end": 41122,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 41148,
@@ -478992,7 +479189,7 @@
       "original": "ae.java",
       "renamed": "HighscoreResponseSupport.java",
       "inputSha256": "812a16cad84cfd07bde31d9e75c3532cf32f33417be5fbc6eafba8d9dc2fba08",
-      "outputSha256": "8673b08e158653f44acefe19b5ae9e7e83f886284e370297f908247c23281423",
+      "outputSha256": "48db7fc89cdfb44179f088507d4d0fc3b753767005737c89ca82ad7ad9d49a71",
       "edits": [
         {
           "start": 50,
@@ -479728,6 +479925,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 8396,
+          "end": 8397,
+          "symbol": "M:ch.a(IBLbc;I)[Lbi;",
+          "original": "a",
+          "renamed": "loadSprites"
         },
         {
           "start": 9373,
@@ -489757,7 +489961,7 @@
       "original": "bc.java",
       "renamed": "Archive.java",
       "inputSha256": "0251dde79a293019ee424a736ad340cd2fc69eff2c0fcd6b301f6a7cd2cc9dde",
-      "outputSha256": "92a30d377bde24aae7077603b9b3474b5bbf77694e2443b5c6c2f33c793e5a99",
+      "outputSha256": "dd5d8df1bea595e57ccbd5170616368a92ed7cdda6774b1e0b0b7344e5457d8c",
       "edits": [
         {
           "start": 50,
@@ -491186,6 +491390,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 33596,
+          "end": 33623,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 33643,
@@ -500387,7 +500598,7 @@
       "original": "ca.java",
       "renamed": "PlayerEliminatedEvent.java",
       "inputSha256": "2d0ae02ed950114b7d76c95fb47a288bca207a3f2fd8cf8d6bf7e19c83f525bf",
-      "outputSha256": "3d339a6637be674c0f277d3d84ca737f07b684920bbb4b703b34464056a4502a",
+      "outputSha256": "4e821c3845fcaf53e31c34347d6a6d6be78c144095aee6d13515c4e522b8ac37",
       "edits": [
         {
           "start": 50,
@@ -500423,6 +500634,20 @@
           "symbol": "C:ca",
           "original": "ca",
           "renamed": "PlayerEliminatedEvent"
+        },
+        {
+          "start": 288,
+          "end": 289,
+          "symbol": "M:ca.a(IIILjava/lang/String;IIIII)V",
+          "original": "a",
+          "renamed": "layoutChatInputDialog"
+        },
+        {
+          "start": 407,
+          "end": 408,
+          "symbol": "M:ca.a(IIILjava/lang/String;IIIII)V",
+          "original": "a",
+          "renamed": "layoutChatInputDialog"
         },
         {
           "start": 641,
@@ -500689,6 +500914,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 2111,
+          "end": 2112,
+          "symbol": "M:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V",
+          "original": "a",
+          "renamed": "initializeLobbyResources"
         },
         {
           "start": 2140,
@@ -500962,7 +501194,7 @@
       "original": "cb.java",
       "renamed": "DirectByteArrayStorage.java",
       "inputSha256": "3016dbb1dae980117cdd7442d1d82fa22184e656bc52fab849ff0e958e1b5666",
-      "outputSha256": "b510135d2dbef773a8b7c0afcf15ba57efa037a716b0e99142aa58efb091837b",
+      "outputSha256": "ee29c7812aeb377c241dc7b644ae3ce86f68b6c3cb2c1eda7faa73f8de3a286c",
       "edits": [
         {
           "start": 50,
@@ -501056,6 +501288,13 @@
           "renamed": "BoundsRect"
         },
         {
+          "start": 1012,
+          "end": 1013,
+          "symbol": "M:cp.b(I)Z",
+          "original": "b",
+          "renamed": "isResizeAllowed"
+        },
+        {
           "start": 1108,
           "end": 1109,
           "symbol": "M:cb.b(B)Z",
@@ -501117,7 +501356,7 @@
       "original": "cc.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "fe203fb395d05186f908d9b8e344c102f70d7f7955191c1ac2e43b62816b0bf3",
-      "outputSha256": "3626bb8bfecba68c7a101a21e010550bdde990cd3e1fa6da2b6da403821703bc",
+      "outputSha256": "763ddc016c2bf812b78c972e285d1e32367b394fa4b741295136a7dbf9fe425d",
       "edits": [
         {
           "start": 69,
@@ -501190,11 +501429,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 635,
+          "end": 636,
+          "symbol": "M:cc.b(ZLjava/lang/String;)Z",
+          "original": "b",
+          "renamed": "containsEmailComponent"
+        },
+        {
           "start": 1134,
           "end": 1136,
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 1137,
+          "end": 1138,
+          "symbol": "M:cc.a(IIIZ)V",
+          "original": "a",
+          "renamed": "tickChatPanel"
         },
         {
           "start": 2203,
@@ -501209,6 +501462,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2369,
+          "end": 2370,
+          "symbol": "M:cc.a(IIIZ)V",
+          "original": "a",
+          "renamed": "tickChatPanel"
         },
         {
           "start": 2556,
@@ -501645,6 +501905,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 4734,
+          "end": 4735,
+          "symbol": "M:cc.a(IZIIZZ)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 4906,
           "end": 4907,
           "symbol": "C:p",
@@ -501932,6 +502199,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 7598,
+          "end": 7599,
+          "symbol": "M:cc.b(ZLjava/lang/String;)Z",
+          "original": "b",
+          "renamed": "containsEmailComponent"
+        },
+        {
           "start": 7636,
           "end": 7637,
           "symbol": "C:p",
@@ -501965,6 +502239,13 @@
           "symbol": "M:cc.d(I)V",
           "original": "d",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 8502,
+          "end": 8503,
+          "symbol": "M:cc.e(B)Z",
+          "original": "e",
+          "renamed": "pollKeyEvent"
         },
         {
           "start": 8682,
@@ -502042,6 +502323,13 @@
           "symbol": "C:tc",
           "original": "tc",
           "renamed": "DialogRoot"
+        },
+        {
+          "start": 9108,
+          "end": 9109,
+          "symbol": "M:cc.f(B)V",
+          "original": "f",
+          "renamed": "increaseSoundEffectVolume"
         },
         {
           "start": 9193,
@@ -502170,6 +502458,13 @@
           "renamed": "TextFieldWidget"
         },
         {
+          "start": 10783,
+          "end": 10784,
+          "symbol": "M:cc.b(ZLjava/lang/String;)Z",
+          "original": "b",
+          "renamed": "containsEmailComponent"
+        },
+        {
           "start": 10837,
           "end": 10839,
           "symbol": "C:hq",
@@ -502266,6 +502561,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 12197,
+          "end": 12224,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 12402,
@@ -504721,7 +505023,7 @@
       "original": "ch.java",
       "renamed": "RoundedFrameSupport.java",
       "inputSha256": "f736055e37199533433f3956683f507ffa2477bf2feed11fd567645c21359f72",
-      "outputSha256": "0adb005b269856620753dc6f51a800d81ff8e274c5dc3172a848e247c85f5349",
+      "outputSha256": "d50918b0836501c7fdb797cbfc8fd9672b02d06be9ffe26fa9c8385c44e08433",
       "edits": [
         {
           "start": 50,
@@ -504743,6 +505045,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 169,
+          "end": 170,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
         },
         {
           "start": 731,
@@ -505011,6 +505320,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 2521,
+          "end": 2522,
+          "symbol": "M:ch.a(III)I",
+          "original": "a",
+          "renamed": "findAccountChoiceButtonAt"
+        },
+        {
           "start": 3045,
           "end": 3047,
           "symbol": "C:vo",
@@ -505158,6 +505474,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 4124,
+          "end": 4125,
+          "symbol": "M:ch.a(Lbc;III)Lbi;",
+          "original": "a",
+          "renamed": "loadSprite"
+        },
+        {
           "start": 4126,
           "end": 4128,
           "symbol": "C:bc",
@@ -505233,6 +505556,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 5410,
+          "end": 5411,
+          "symbol": "M:ch.a(B)Lqh;",
+          "original": "a",
+          "renamed": "createProductionWindow"
         },
         {
           "start": 5435,
@@ -505466,6 +505796,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 6288,
+          "end": 6289,
+          "symbol": "M:ch.a(IBLbc;I)[Lbi;",
+          "original": "a",
+          "renamed": "loadSprites"
+        },
+        {
           "start": 6315,
           "end": 6317,
           "symbol": "C:bc",
@@ -505499,6 +505836,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 6741,
+          "end": 6742,
+          "symbol": "M:ch.a(Lbc;III)Lbi;",
+          "original": "a",
+          "renamed": "loadSprite"
         },
         {
           "start": 6744,
@@ -505557,11 +505901,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 7647,
+          "end": 7648,
+          "symbol": "M:ch.a(I)I",
+          "original": "a",
+          "renamed": "pollAccountChoiceAction"
+        },
+        {
           "start": 8101,
           "end": 8103,
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 8104,
+          "end": 8131,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 8151,
@@ -505613,6 +505971,13 @@
           "renamed": "RoundedFrameSupport"
         },
         {
+          "start": 8322,
+          "end": 8323,
+          "symbol": "M:ch.a(III)I",
+          "original": "a",
+          "renamed": "findAccountChoiceButtonAt"
+        },
+        {
           "start": 8332,
           "end": 8334,
           "symbol": "C:td",
@@ -505632,6 +505997,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 8360,
+          "end": 8361,
+          "symbol": "M:ch.a(III)I",
+          "original": "a",
+          "renamed": "findAccountChoiceButtonAt"
         },
         {
           "start": 8370,
@@ -506929,7 +507301,7 @@
       "original": "ck.java",
       "renamed": "GameAssetSetupSupport.java",
       "inputSha256": "59719f0315e8d99b2db60702fc77f74ed0b563d31dd2ef793727c26cf2316a34",
-      "outputSha256": "4ae334c19e6d9dca77903a4e08a7dfd56052d7f3f1ced86ec8dded1c539e268c",
+      "outputSha256": "b2a332ce84751065f2cd8fc47c25b5f9f79175c846a1cd38e861fdd14b3a5e3f",
       "edits": [
         {
           "start": 50,
@@ -509788,6 +510160,13 @@
           "renamed": "PlayerEliminatedEvent"
         },
         {
+          "start": 12986,
+          "end": 12987,
+          "symbol": "M:ca.a(Ljava/applet/Applet;Lbc;Lbc;Lbc;ZLbc;)V",
+          "original": "a",
+          "renamed": "initializeLobbyResources"
+        },
+        {
           "start": 13045,
           "end": 13047,
           "symbol": "C:kq",
@@ -510987,7 +511366,7 @@
       "original": "cp.java",
       "renamed": "CanvasResizeController.java",
       "inputSha256": "805c71dace3027164d7d0abbc99687fdf8d9622553ac02b2137e4e568f167f46",
-      "outputSha256": "87aa0471e565326bbfd0da7a6964be21e9532a3a6abc555ed8917e3dbac08770",
+      "outputSha256": "ef74faddd68793f47cb7bc2ad97b7e9e16d99f4a4692b4f8d3c207353f0179cd",
       "edits": [
         {
           "start": 50,
@@ -511018,6 +511397,20 @@
           "renamed": "AnimatedPanel"
         },
         {
+          "start": 627,
+          "end": 628,
+          "symbol": "M:cp.b(I)Z",
+          "original": "b",
+          "renamed": "isResizeAllowed"
+        },
+        {
+          "start": 686,
+          "end": 687,
+          "symbol": "M:cp.a(I)Leb;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
+        },
+        {
           "start": 708,
           "end": 710,
           "symbol": "C:re",
@@ -511044,6 +511437,13 @@
           "symbol": "C:es",
           "original": "es",
           "renamed": "StarAnnotation"
+        },
+        {
+          "start": 1067,
+          "end": 1068,
+          "symbol": "M:cp.a(II)V",
+          "original": "a",
+          "renamed": "writeByteArrayReadRequest"
         },
         {
           "start": 1103,
@@ -511079,6 +511479,20 @@
           "symbol": "M:ob.c(IB)V",
           "original": "c",
           "renamed": "writeByte"
+        },
+        {
+          "start": 1252,
+          "end": 1253,
+          "symbol": "M:cp.a(B)V",
+          "original": "a",
+          "renamed": "applyConstrainedCanvasSize"
+        },
+        {
+          "start": 1470,
+          "end": 1471,
+          "symbol": "M:cp.b(I)Z",
+          "original": "b",
+          "renamed": "isResizeAllowed"
         },
         {
           "start": 3487,
@@ -511123,6 +511537,13 @@
           "renamed": "VictoryChecker"
         },
         {
+          "start": 3809,
+          "end": 3810,
+          "symbol": "M:cp.a(II[ILbh;I)Z",
+          "original": "a",
+          "renamed": "containsPointInBoundedPolygon"
+        },
+        {
           "start": 3849,
           "end": 3851,
           "symbol": "C:bh",
@@ -511156,6 +511577,13 @@
           "symbol": "C:cp",
           "original": "cp",
           "renamed": "CanvasResizeController"
+        },
+        {
+          "start": 4412,
+          "end": 4413,
+          "symbol": "M:cp.a(II[ILbh;I)Z",
+          "original": "a",
+          "renamed": "containsPointInBoundedPolygon"
         },
         {
           "start": 4439,
@@ -511207,6 +511635,13 @@
           "renamed": "AnimatedPanel"
         },
         {
+          "start": 5685,
+          "end": 5686,
+          "symbol": "M:cp.a(Z)V",
+          "original": "a",
+          "renamed": "tickCanvasSize"
+        },
+        {
           "start": 5746,
           "end": 5748,
           "symbol": "C:bj",
@@ -511226,6 +511661,13 @@
           "symbol": "C:re",
           "original": "re",
           "renamed": "QuickChatPhraseRegistry"
+        },
+        {
+          "start": 6199,
+          "end": 6200,
+          "symbol": "M:cp.a(B)V",
+          "original": "a",
+          "renamed": "applyConstrainedCanvasSize"
         },
         {
           "start": 6354,
@@ -511284,6 +511726,13 @@
           "renamed": "FullscreenFocusCanvas"
         },
         {
+          "start": 6715,
+          "end": 6716,
+          "symbol": "M:cp.a(I)Leb;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
+        },
+        {
           "start": 6754,
           "end": 6756,
           "symbol": "C:nn",
@@ -511340,11 +511789,32 @@
           "renamed": "ValidatedTextInputWidget"
         },
         {
+          "start": 7028,
+          "end": 7029,
+          "symbol": "M:cp.c(I)V",
+          "original": "c",
+          "renamed": "restoreWindowedSize"
+        },
+        {
+          "start": 7099,
+          "end": 7100,
+          "symbol": "M:cp.c(I)V",
+          "original": "c",
+          "renamed": "restoreWindowedSize"
+        },
+        {
           "start": 7136,
           "end": 7137,
           "symbol": "M:bn.a(III)V",
           "original": "a",
           "renamed": "onCanvasResize"
+        },
+        {
+          "start": 7243,
+          "end": 7244,
+          "symbol": "M:cp.a(III)V",
+          "original": "a",
+          "renamed": "setContainerSize"
         },
         {
           "start": 7411,
@@ -511359,7 +511829,7 @@
       "original": "cq.java",
       "renamed": "GuestPlayForm.java",
       "inputSha256": "a375b0d4035b7a5f722858d5d8cca089dbb7135b0d7a29792bf15e8d531b9792",
-      "outputSha256": "3c375e9f41b5121f2d92204bf60726db6a609d76853ec1ae0c559be3450d910f",
+      "outputSha256": "ee7d4e06e49f76f2bb57bbf756a7bfb1cf5d5f1f7e90d9777e166d10bb2eac29",
       "edits": [
         {
           "start": 50,
@@ -511458,6 +511928,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 1022,
+          "end": 1049,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 1069,
@@ -526736,7 +527213,7 @@
       "original": "ds.java",
       "renamed": "MessageKind.java",
       "inputSha256": "51b09303427f9f4c19e4717a80d1d68c2d148eccdaca30e7b5da4966065bee68",
-      "outputSha256": "93fb2ac009cfeef561ca359f2f275c5a8483d6d87a3ba12410a7c4621afa61d7",
+      "outputSha256": "e4b283d423d5fa2ae87ecc47ea4fae00eecee31f407d8d1c0882f4107b280fb2",
       "edits": [
         {
           "start": 50,
@@ -526828,6 +527305,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 1108,
+          "end": 1109,
+          "symbol": "M:ch.a(Lbc;III)Lbi;",
+          "original": "a",
+          "renamed": "loadSprite"
         },
         {
           "start": 2083,
@@ -527410,7 +527894,7 @@
       "original": "ea.java",
       "renamed": "IsaacBackedRandom.java",
       "inputSha256": "04b3e6ab78693db69b5a0be0ba257e9a0bab0957af0610b85410d4b66773c7b6",
-      "outputSha256": "d9c61ef9d1674d12df6f81942060a82843ee888fedf5bfc416ccb425c3738023",
+      "outputSha256": "e51b19b3e1522d55a29423ac77ad1ea15304051720e795028b3a5415aac46945",
       "edits": [
         {
           "start": 71,
@@ -527602,6 +528086,13 @@
           "renamed": "RoundedFrameSupport"
         },
         {
+          "start": 1002,
+          "end": 1003,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
+        },
+        {
           "start": 1089,
           "end": 1090,
           "symbol": "M:bi.e()V",
@@ -527614,6 +528105,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 1105,
+          "end": 1106,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
         },
         {
           "start": 1198,
@@ -527630,6 +528128,13 @@
           "renamed": "RoundedFrameSupport"
         },
         {
+          "start": 1214,
+          "end": 1215,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
+        },
+        {
           "start": 1312,
           "end": 1313,
           "symbol": "M:bi.e()V",
@@ -527642,6 +528147,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 1328,
+          "end": 1329,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
         },
         {
           "start": 1421,
@@ -527658,6 +528170,13 @@
           "renamed": "RoundedFrameSupport"
         },
         {
+          "start": 1437,
+          "end": 1438,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
+        },
+        {
           "start": 1590,
           "end": 1591,
           "symbol": "M:bi.e()V",
@@ -527670,6 +528189,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 1606,
+          "end": 1607,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
         },
         {
           "start": 1708,
@@ -527686,6 +528212,13 @@
           "renamed": "RoundedFrameSupport"
         },
         {
+          "start": 1724,
+          "end": 1725,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
+        },
+        {
           "start": 1832,
           "end": 1833,
           "symbol": "M:bi.e()V",
@@ -527698,6 +528231,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 1848,
+          "end": 1849,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
         },
         {
           "start": 1949,
@@ -550589,7 +551129,7 @@
       "original": "ej.java",
       "renamed": "BufferedCacheFile.java",
       "inputSha256": "20584980b792da4e864cb06e35db22126633b9468307e79f17848c947cf9d551",
-      "outputSha256": "209ca102518af3d7968f3fd642fd9fe5ee36e8ff46cf3aa3e30243b50353933f",
+      "outputSha256": "fe48ac95417e560c67e117f50142d94cc68498faf27d7ed9267bae9be1faf2ca",
       "edits": [
         {
           "start": 69,
@@ -551080,6 +551620,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "BoundsRect"
+        },
+        {
+          "start": 18269,
+          "end": 18270,
+          "symbol": "M:cp.c(I)V",
+          "original": "c",
+          "renamed": "restoreWindowedSize"
         },
         {
           "start": 18378,
@@ -555476,7 +556023,7 @@
       "original": "er.java",
       "renamed": "WhirlpoolHasher.java",
       "inputSha256": "6c024acd825e819ff6d265c3779246c9bb2de06c9792dad4650e2f28358ed47a",
-      "outputSha256": "47e1a7d69d3ecace1853ffd33d4b53cf2e6548b514ecaf7f5d7a0ac20b8f81a4",
+      "outputSha256": "cdbd3a934191667e7a2db9a20d9592f6ca725f6363403889e8a7a3ceb94331d9",
       "edits": [
         {
           "start": 50,
@@ -555645,6 +556192,13 @@
           "symbol": "C:ca",
           "original": "ca",
           "renamed": "PlayerEliminatedEvent"
+        },
+        {
+          "start": 4598,
+          "end": 4599,
+          "symbol": "M:ca.a(IIILjava/lang/String;IIIII)V",
+          "original": "a",
+          "renamed": "layoutChatInputDialog"
         },
         {
           "start": 4678,
@@ -565865,7 +566419,7 @@
       "original": "fm.java",
       "renamed": "HuffmanCodec.java",
       "inputSha256": "8389597dddd3d57da9eae058e78f0b2929ddda7d83d6c8851250bd65392a2a14",
-      "outputSha256": "a4371b59ab9a24181d3cbc1b569c946f527b0f355a6c498abb14843b7d64370a",
+      "outputSha256": "8b93dca08f97601f5216a71d747338da27798c11e8d61f529e354b9f69d54223",
       "edits": [
         {
           "start": 50,
@@ -565957,6 +566511,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "BoundsRect"
+        },
+        {
+          "start": 599,
+          "end": 600,
+          "symbol": "M:cp.a(I)Leb;",
+          "original": "a",
+          "renamed": "createFullscreenCanvas"
         },
         {
           "start": 617,
@@ -584341,7 +584902,7 @@
       "original": "hd.java",
       "renamed": "IntroTextLine.java",
       "inputSha256": "98b5c39df933650b6a4d1f0278f70ca75a567b3fb1b8329f003fc1df3e00d1f5",
-      "outputSha256": "2f0517a91e1197e2b84ed8c45e2d7ff3360c8a74f8e0c54bfc9adb26e5075052",
+      "outputSha256": "42f41f0954484fb140324e3ca95dccadd6aac60c27d4340382dcf58b3149df50",
       "edits": [
         {
           "start": 50,
@@ -584846,6 +585407,13 @@
           "symbol": "C:cp",
           "original": "cp",
           "renamed": "CanvasResizeController"
+        },
+        {
+          "start": 5256,
+          "end": 5257,
+          "symbol": "M:cp.a(II)V",
+          "original": "a",
+          "renamed": "writeByteArrayReadRequest"
         },
         {
           "start": 5320,
@@ -596704,7 +597272,7 @@
       "original": "ia.java",
       "renamed": "MapViewState.java",
       "inputSha256": "3c8ecb141a6cb969686e369882208e461c1491aac124d573669379b149af81d1",
-      "outputSha256": "1505efbc7254457ddc02c68943768c7303deaccde43e34c2a82b410a173a9dbd",
+      "outputSha256": "9b39668f56815b2c7ad06de30ca88a69a59fd7206ddfe1c84739f966f1b551c7",
       "edits": [
         {
           "start": 74,
@@ -597692,6 +598260,13 @@
           "symbol": "C:cp",
           "original": "cp",
           "renamed": "CanvasResizeController"
+        },
+        {
+          "start": 18883,
+          "end": 18884,
+          "symbol": "M:cp.a(II[ILbh;I)Z",
+          "original": "a",
+          "renamed": "containsPointInBoundedPolygon"
         },
         {
           "start": 19074,
@@ -603004,7 +603579,7 @@
       "original": "io.java",
       "renamed": "SoundCache.java",
       "inputSha256": "4ad7292d266e9962b7e5c8443775c53c50cdb0109a3efff3683f6d339f3ab272",
-      "outputSha256": "7fd35495dbb6e4b55d7f1fe1911f972efba47495224a837e5eb684d0ff45a0da",
+      "outputSha256": "7112591500e08ed6c72580fde4f09b6d68b6a8021dc3fe797fde1c471e4f3449",
       "edits": [
         {
           "start": 50,
@@ -603630,6 +604205,13 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 11318,
+          "end": 11319,
+          "symbol": "M:cc.a(IZIIZZ)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 11388,
           "end": 11390,
           "symbol": "C:qr",
@@ -603642,6 +604224,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 11416,
+          "end": 11417,
+          "symbol": "M:cc.a(IZIIZZ)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         },
         {
           "start": 11482,
@@ -611539,7 +612128,7 @@
       "original": "jp.java",
       "renamed": "SocialNameInputPanel.java",
       "inputSha256": "6dbdbeab855f3249f85c111125312aff1c460a4e1c483432034585cea19cfb1a",
-      "outputSha256": "4f2621585687ccdd7e3854d54e0cc33708b76a291198f0c42ce108f0a91bd22a",
+      "outputSha256": "13c251d7ba2d1d44839ba61b3d423456309275c110840053a8071baedb76f4ee",
       "edits": [
         {
           "start": 50,
@@ -612249,6 +612838,13 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 15094,
+          "end": 15121,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
+        },
+        {
           "start": 15326,
           "end": 15328,
           "symbol": "C:je",
@@ -612716,7 +613312,7 @@
       "original": "jq.java",
       "renamed": "GameKeyHandler.java",
       "inputSha256": "93a15e5bc4a7a0dc7eb400aeb709c7fe7f3147d5d2f838bfbf306a11e2251798",
-      "outputSha256": "e53dd668a097564bb4b9fa5f9a3f3b1119d74e15685395ceff0090df17042ab6",
+      "outputSha256": "a66a79551a21ff27f6c799d66471c044d354480833ad3731271da8a365357e69",
       "edits": [
         {
           "start": 69,
@@ -613097,6 +613693,13 @@
           "renamed": "RoundedFrameSupport"
         },
         {
+          "start": 5493,
+          "end": 5494,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
+        },
+        {
           "start": 5587,
           "end": 5589,
           "symbol": "C:jq",
@@ -613109,6 +613712,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 5643,
+          "end": 5644,
+          "symbol": "M:ch.a(IIIIIIII)V",
+          "original": "a",
+          "renamed": "drawRoundedGradientFrame"
         },
         {
           "start": 5803,
@@ -620007,7 +620617,7 @@
       "original": "kb.java",
       "renamed": "GradientMenuLabel.java",
       "inputSha256": "58cc5c04d0e33888b77d6a325b2ed8a646d3deef9bbb068a05fe480648bb96bb",
-      "outputSha256": "3515d992e0e310ea03d5757b777fdefed088947e268a2abbfa16ff2189177589",
+      "outputSha256": "e247fd0817325046d0f9f06772749554b991274617d60f585dc23e0e68639f78",
       "edits": [
         {
           "start": 50,
@@ -621079,6 +621689,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 7338,
+          "end": 7339,
+          "symbol": "M:ch.a(III)I",
+          "original": "a",
+          "renamed": "findAccountChoiceButtonAt"
         },
         {
           "start": 7348,
@@ -637598,7 +638215,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "60a5346aea6f2ad1807f0c63dc98a63fd2941dae039c7592f1b1737bac0aed0c",
+      "outputSha256": "44c8f75e69974ecd49efa75844df87e675db1f72529e5e0b20e6302e85188bba",
       "edits": [
         {
           "start": 50,
@@ -650098,6 +650715,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "RoundedFrameSupport"
+        },
+        {
+          "start": 195702,
+          "end": 195703,
+          "symbol": "M:ch.a(B)Lqh;",
+          "original": "a",
+          "renamed": "createProductionWindow"
         },
         {
           "start": 195740,
@@ -696744,7 +697368,7 @@
       "original": "oq.java",
       "renamed": "TextReplacementEntry.java",
       "inputSha256": "0a11a42fde7ae8da09287fc1d2a2441f449f84ed7ce0cde38b8bcef65f4bd29f",
-      "outputSha256": "85c45f29d33dd43a378b743120eaeb1097f5b6f8ee91d39b50237f68834da84a",
+      "outputSha256": "89f83898bf3ceef17e902be5268c30f6fb95bffbda36b2c5909152be722ea8d4",
       "edits": [
         {
           "start": 50,
@@ -697193,6 +697817,13 @@
           "symbol": "C:cp",
           "original": "cp",
           "renamed": "CanvasResizeController"
+        },
+        {
+          "start": 7778,
+          "end": 7779,
+          "symbol": "M:cp.a(II)V",
+          "original": "a",
+          "renamed": "writeByteArrayReadRequest"
         },
         {
           "start": 7811,
@@ -725869,7 +726500,7 @@
       "original": "rl.java",
       "renamed": "TextReplacementContext.java",
       "inputSha256": "af85cf4c39c47cee18c187ae3d6b5ac7e8d5e00616bbda5315843155e9730cc8",
-      "outputSha256": "bbb44a224f36774b2e6a72aac24bed4895c860f46d0414f0b2a1ad25cc02909d",
+      "outputSha256": "d95cb1a9dfa61b6e3237f01e27aca695ee41b0c33b388fa8d15d2d5277df7adb",
       "edits": [
         {
           "start": 50,
@@ -726019,6 +726650,13 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 4916,
+          "end": 4917,
+          "symbol": "M:cc.a(IZIIZZ)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 5006,
           "end": 5007,
           "symbol": "M:rl.b(ILjava/lang/String;)Ljava/lang/String;",
@@ -726094,7 +726732,7 @@
       "original": "rm.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "e666e9868101b8c9bc6e222f5411925aba7604256cbcfd4fa6f35983982fc69c",
-      "outputSha256": "c5e2ee81ecbbf062f079437f1a873b1f3aeb212282c74f698160724bb07c0f6b",
+      "outputSha256": "75480d1f2112772bfa57ec921fa0e3bfb8ba1c070ceb0d12df8556aceeb56c17",
       "edits": [
         {
           "start": 71,
@@ -726538,11 +727176,25 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 4768,
+          "end": 4769,
+          "symbol": "M:cc.a(IZIIZZ)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 4851,
           "end": 4853,
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 4854,
+          "end": 4855,
+          "symbol": "M:cc.a(IZIIZZ)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         }
       ]
     },
@@ -741937,7 +742589,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "81f3d9be7216ba84f972f8ab4d0d911962cae4b24f1fd62a65b4e1ce6d758170",
+      "outputSha256": "7c5a0402e150fb679e119caa54fa5dd4f15e730a2b8ae4659e838d951f34f6c1",
       "edits": [
         {
           "start": 50,
@@ -748914,6 +749566,13 @@
           "renamed": "PasswordValidator"
         },
         {
+          "start": 62009,
+          "end": 62036,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
+        },
+        {
           "start": 62060,
           "end": 62062,
           "symbol": "C:oq",
@@ -749850,6 +750509,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 68753,
+          "end": 68754,
+          "symbol": "M:cc.f(B)V",
+          "original": "f",
+          "renamed": "increaseSoundEffectVolume"
         },
         {
           "start": 68832,
@@ -754655,7 +755321,7 @@
       "original": "so.java",
       "renamed": "BattleExplosionVisual.java",
       "inputSha256": "08bb2afb87f3b83b5655cddbe46333b393e92286064676bf7ea034e75547a620",
-      "outputSha256": "67e10b5ca5b29e1abd81446dcfc8fdc37406feaefd3d3465b871e6efbdebe0ce",
+      "outputSha256": "9cdd0a5033d65c264832941431cf13d422b48e2d4fc93c6dc575f7ef8eaf81c9",
       "edits": [
         {
           "start": 50,
@@ -754901,6 +755567,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 3331,
+          "end": 3332,
+          "symbol": "M:cc.a(IIIZ)V",
+          "original": "a",
+          "renamed": "tickChatPanel"
         },
         {
           "start": 3396,
@@ -767918,7 +768591,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "01ff7f21f8abff97292d1458c560a950c55d9a54c737362c76b76eae3139caa0",
+      "outputSha256": "febf794ca765fe03b4b0ae6ea4275c57613568ae25639d7c641e200b8fa841a9",
       "edits": [
         {
           "start": 53,
@@ -769713,11 +770386,25 @@
           "renamed": "BoundsRect"
         },
         {
+          "start": 11893,
+          "end": 11894,
+          "symbol": "M:cp.a(III)V",
+          "original": "a",
+          "renamed": "setContainerSize"
+        },
+        {
           "start": 11948,
           "end": 11950,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "BoundsRect"
+        },
+        {
+          "start": 11959,
+          "end": 11960,
+          "symbol": "M:cp.a(Z)V",
+          "original": "a",
+          "renamed": "tickCanvasSize"
         },
         {
           "start": 11986,
@@ -784149,7 +784836,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "13e711dec62f86ada3dba3c801b59329f460b32e07047024e86cdebc473a5e3d",
+      "outputSha256": "31d60d8905bef26fc447f43a4786706023c5f313d8526b87fd2b9a2f81e3ea66",
       "edits": [
         {
           "start": 50,
@@ -784689,6 +785376,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 9692,
+          "end": 9719,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 9743,
@@ -791141,7 +791835,7 @@
       "original": "uo.java",
       "renamed": "LobbyRoomInteractionSupport.java",
       "inputSha256": "9825ac590ae6649c8a9888f95ec2e1ce832521557782b5ed80c016c82c2799b0",
-      "outputSha256": "1f2e03d75c3d6b4802e5a0cb9f26da35f26ae723541efddde10dffd9b1ea122d",
+      "outputSha256": "5d325e0057c9be01f4ce53d73eb0e1f8b6af3ecd2d0499b625bb4c0be8c2ecd8",
       "edits": [
         {
           "start": 50,
@@ -791212,6 +791906,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PasswordValidator"
+        },
+        {
+          "start": 1000,
+          "end": 1027,
+          "symbol": "M:cc.$cfr$intArgs$e$296a4c2b494e(I)Z",
+          "original": "$cfr$intArgs$e$296a4c2b494e",
+          "renamed": "pollKeyEventFullInts"
         },
         {
           "start": 1056,
@@ -833082,10 +833783,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "e9f090349df524bf544e5241f06bf509a3163ef50e1f4808f7adf70eba7d6972",
+    "rulesSha256": "667d8b0bf8031c3b1255ab59009f56b1406b5427b5a12a7676e36a2e82f1ff97",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "27e8af63a8cd6d37539521d9920ee18c56885216f70d259985b4d2b2013648a6",
+    "outputTreeSha256": "bccd121bba861cb5be58e52879601dcbea02098507f2bd77dbcf583814692607",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

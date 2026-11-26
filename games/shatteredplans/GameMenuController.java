@@ -1597,7 +1597,7 @@ final class GameMenuController {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!StripedProgressWidget.field_Q &&
           !ArchiveConnectionRetrySupport.field_a) {
-          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.pollKeyEventFullInts(55)) {
             if (TextReplacementEntry.field_j != 13) {
               this.handleMenuKey(23);
               if (this.field_d.field_c == -1) {
@@ -1810,7 +1810,7 @@ final class GameMenuController {
             if (this.field_d.isRightPressed(-97) &&
               CheckboxPainter.field_p < 256) {
               var5 = 1;
-              PasswordValidator.f((byte) 124);
+              PasswordValidator.increaseSoundEffectVolume((byte) 124);
             }
             if (((var5 != 0)) && ((!(this.field_d.isPointerHeld((byte) -114)) ||
               !(RasterStateFrame.field_n <= TutorialVictoryChecker.field_q)))) {

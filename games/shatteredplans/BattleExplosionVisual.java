@@ -86,7 +86,7 @@ final class BattleExplosionVisual extends StarSoundState {
         param13 = DiskArchiveRequest.pollLobbyOverlays(true, param7, param5, param13, param8, param10, param9);
         LobbyRoomEntry.updateLobbyInterface(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
         IntrusiveDeque.updateSocialListMenus(param12, param11, -1043);
-        PasswordValidator.a(-115, param7, param12, param13);
+        PasswordValidator.tickChatPanel(-115, param7, param12, param13);
     }
 
     public static void clearStatics(int param0) {

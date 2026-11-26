@@ -6,7 +6,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
     static String field_a;
     static String field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawRoundedGradientFrame(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         int[] var8 = null;
         int var10 = 0;
@@ -56,7 +56,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int findAccountChoiceButtonAt(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -99,7 +99,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         }
     }
 
-    final static Sprite a(Archive param0, int param1, int param2, int param3) {
+    final static Sprite loadSprite(Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -131,7 +131,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         }
     }
 
-    final static MenuWindow a(byte param0) {
+    final static MenuWindow createProductionWindow(byte param0) {
         BattleContribution.field_l = new MenuWindow(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
         MenuButton var1 = new MenuButton(-16 + BattleContribution.field_l.field_k + BattleContribution.field_l.field_m, 2 + BattleContribution.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var1.field_h = BattleContribution.field_l;
@@ -149,7 +149,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         return BattleContribution.field_l;
     }
 
-    final static Sprite[] a(int param0, byte param1, Archive param2, int param3) {
+    final static Sprite[] loadSprites(int param0, byte param1, Archive param2, int param3) {
         RuntimeException var4 = null;
         Archive var5 = null;
         Object stackIn_4_0 = null;
@@ -161,7 +161,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         try {
           if (param1 != 87) {
             var5 = (Archive) null;
-            RoundedFrameSupport.a((Archive) null, 22, -122, 78);
+            RoundedFrameSupport.loadSprite((Archive) null, 22, -122, 78);
           }
           if (MenuComponent.decodeSpriteSheetFromArchive(param3, param2, param0, 2)) {
             stackIn_6_0 = LinkPainter.createDecodedSprites(0);
@@ -183,7 +183,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         }
     }
 
-    final static int a(int param0) {
+    final static int pollAccountChoiceAction(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -198,14 +198,14 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             stackIn_3_0 = 86;
             return stackIn_3_0;
           }
-          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.pollKeyEventFullInts(55)) {
             AccountStatusDialog.field_nb.updateVerticalKeys(0);
             if (!AccountStatusDialog.field_nb.isInitiallyActivated((byte) -82)) {
               continue;
             }
             var1_int = 1;
           }
-          AccountStatusDialog.field_nb.updatePointerSelection(-1, RoundedFrameSupport.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k));
+          AccountStatusDialog.field_nb.updatePointerSelection(-1, RoundedFrameSupport.findAccountChoiceButtonAt(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), RoundedFrameSupport.findAccountChoiceButtonAt(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k));
           if (AccountStatusDialog.field_nb.isInitiallyActivated((byte) 36)) {
             var1_int = 1;
           }

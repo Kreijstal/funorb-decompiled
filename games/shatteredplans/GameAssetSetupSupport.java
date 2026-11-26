@@ -288,7 +288,7 @@ final class GameAssetSetupSupport {
           ClientUiResourceState.field_a = new Sprite[var14];
           AlignedMenuLabel.field_C = new Sprite[var14];
           GarrisonTask.field_p = GraphicsSettings.loadSpriteSetByName("system_icons", 0, "", param0);
-          PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
+          PlayerEliminatedEvent.initializeLobbyResources(param1, param2, param3, param5, true, param0);
           GameScreen.field_R = new Sprite(15, 15);
           RasterTargetSupport.pushSpriteRenderTarget(GameScreen.field_R, 78);
           SoftwareRasterizer.fillCircle(15, 15, 15, 65793);

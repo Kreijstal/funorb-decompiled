@@ -199,7 +199,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                       if (~ClientOverlayDrawSupport.field_c != ~ClientOverlayDrawSupport.field_g) {
                         this.tickMenusAndLobby(false, false);
                       } else {
-                        var3 = RoundedFrameSupport.a(106);
+                        var3 = RoundedFrameSupport.pollAccountChoiceAction(106);
                         if (var3 == 1) {
                           AccountStatusDialog.field_ob = true;
                           MenuLabel.requestMenuLogin(AchievementProgress.field_a, 0, (byte) 122);
@@ -1217,7 +1217,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               } else {
                 if (!EmailValidator.field_p) {
                   PasswordInputPainter.field_x.tick(true, true);
-                  while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+                  while (PasswordValidator.pollKeyEventFullInts(55)) {
                     PasswordInputPainter.field_x.handleKeyInput(-86);
                   }
                 } else {
@@ -1251,7 +1251,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               StatusMessagePanel.updateChatInputOverlay(320, 8, 180, var4 != 0);
               PasswordInputPainter.field_x.tick(var4 != 0, true);
             }
-            while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
+            while (PasswordValidator.pollKeyEventFullInts(55)) {
               if (TiledNineSlicePainter.field_b) {
                 if (StatefulWidgetTheme.handleChatKeyInput(13, -9861, 12, 15)) {
                   continue;

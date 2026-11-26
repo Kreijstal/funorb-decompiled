@@ -518,7 +518,7 @@ abstract class MapViewState {
         Star[] var4 = var9;
         for (var5 = 0; var9.length > var5; var5++) {
           var6 = var9[var5];
-          if (CanvasResizeController.a(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
+          if (CanvasResizeController.containsPointInBoundedPolygon(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
             return var6;
           }
         }

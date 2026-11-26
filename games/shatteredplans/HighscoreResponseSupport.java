@@ -252,7 +252,7 @@ final class HighscoreResponseSupport {
           var4_int = param2.getGroupIdByName(122, param1);
           var5 = param2.getFileIdByName(var4_int, (byte) 106, param3);
           var6 = -106 / ((-22 - param0) / 53);
-          stackIn_1_0 = RoundedFrameSupport.a(var5, (byte) 87, param2, var4_int);
+          stackIn_1_0 = RoundedFrameSupport.loadSprites(var5, (byte) 87, param2, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

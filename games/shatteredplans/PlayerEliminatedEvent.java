@@ -10,12 +10,12 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
         field_i = null;
         if (param0 != 2105376) {
           String var2 = (String) null;
-          PlayerEliminatedEvent.a(72, -63, 69, (String) null, -119, 55, -75, -55, 113);
+          PlayerEliminatedEvent.layoutChatInputDialog(72, -63, 69, (String) null, -119, 55, -75, -55, 113);
         }
         field_h = null;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void layoutChatInputDialog(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -50,7 +50,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
     PlayerEliminatedEvent(Player param0) {
     }
 
-    final static void a(java.applet.Applet param0, Archive param1, Archive param2, Archive param3, boolean param4, Archive param5) {
+    final static void initializeLobbyResources(java.applet.Applet param0, Archive param1, Archive param2, Archive param3, boolean param4, Archive param5) {
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

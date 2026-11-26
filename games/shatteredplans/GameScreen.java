@@ -5068,7 +5068,7 @@ final class GameScreen {
           this.field_I = true;
           this.field_s = param0;
           this.field_y = new IntrusiveDeque();
-          this.field_e = RoundedFrameSupport.a((byte) 112);
+          this.field_e = RoundedFrameSupport.createProductionWindow((byte) 112);
           this.field_y.addLast((byte) -113, this.field_e);
           if (this.field_s.field_n != null) {
             this.field_j = ProjectsWindowSupport.createProjectsWindow((byte) 127);

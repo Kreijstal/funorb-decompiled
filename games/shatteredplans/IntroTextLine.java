@@ -153,7 +153,7 @@ final class IntroTextLine extends IntrusiveNode {
         }
         ByteArrayReadRequest var2 = new ByteArrayReadRequest();
         SectorCacheStore.field_d.addLast((byte) -113, var2);
-        CanvasResizeController.a(param0, 1);
+        CanvasResizeController.writeByteArrayReadRequest(param0, 1);
         return var2;
     }
 
