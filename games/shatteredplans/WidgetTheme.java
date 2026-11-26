@@ -103,7 +103,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             param0.field_j = (TextLayout) ((Object) new RichTextLayout());
           }
           if (this.field_d) {
-            ((RichTextLayout) (param0.field_j)).a(this.getDisplayText(true, param0), 0, this.field_r, this.field_l, this.getInnerWidth(124, param0), this.getInnerHeight(param0, 0), this.field_c, this.field_j);
+            ((RichTextLayout) (param0.field_j)).setWrappedText(this.getDisplayText(true, param0), 0, this.field_r, this.field_l, this.getInnerWidth(124, param0), this.getInnerHeight(param0, 0), this.field_c, this.field_j);
           } else {
             this.layoutSingleLineText((byte) 104, param0);
           }
@@ -540,11 +540,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             if (!(param1.field_j instanceof RichTextLayout)) {
               return;
             }
-            ((RichTextLayout) (param1.field_j)).a(108, var5, this.field_c, this.getDisplayText(true, param1), var3_int);
+            ((RichTextLayout) (param1.field_j)).setRightAlignedText(108, var5, this.field_c, this.getDisplayText(true, param1), var3_int);
             return;
           }
           if (param1.field_j instanceof RichTextLayout) {
-            ((RichTextLayout) (param1.field_j)).a(this.field_c, var5, -4, this.getDisplayText(true, param1), 0);
+            ((RichTextLayout) (param1.field_j)).setLeftAlignedText(this.field_c, var5, -4, this.getDisplayText(true, param1), 0);
             return;
           }
           return;

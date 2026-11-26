@@ -20,7 +20,7 @@ final class LoginMethodPreference {
 
     final void saveBrowserPreference(java.applet.Applet param0, boolean param1) {
         try {
-          ProxyAuthenticationRequiredException.a(31536000L, param0, 52, "jagex-last-login-method", this.value);
+          ProxyAuthenticationRequiredException.setBrowserCookie(31536000L, param0, 52, "jagex-last-login-method", this.value);
           if (!param1) {
             this.value = (String) null;
           }

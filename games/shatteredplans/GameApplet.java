@@ -718,7 +718,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var5 = -40 / ((-13 - param1) / 47);
           var4_int = param2.getGroupIdByName(127, param0);
           var6 = param2.getFileIdByName(var4_int, (byte) 106, param3);
-          stackIn_1_0 = ProxyAuthenticationRequiredException.a(-78, var6, var4_int, param2);
+          stackIn_1_0 = ProxyAuthenticationRequiredException.loadIndexedSprite(-78, var6, var4_int, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

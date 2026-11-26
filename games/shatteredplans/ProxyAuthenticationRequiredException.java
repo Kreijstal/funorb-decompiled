@@ -11,7 +11,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int[] field_d;
     static int[] field_a;
 
-    final static IndexedSprite[] a(int param0, Archive param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSprites(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_5_0 = null;
@@ -45,7 +45,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    final static IndexedSprite a(int param0, int param1, int param2, Archive param3) {
+    final static IndexedSprite loadIndexedSprite(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         IndexedSprite stackIn_5_0 = null;
         IndexedSprite stackIn_7_0 = null;
@@ -77,7 +77,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    final static void a(int param0) {
+    final static void clearScratchArray(int param0) {
         if (param0 != 0) {
           field_a = (int[]) null;
         }
@@ -96,7 +96,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         super(param0);
     }
 
-    final static void a(long param0, java.applet.Applet param1, int param2, String param3, String param4) {
+    final static void setBrowserCookie(long param0, java.applet.Applet param1, int param2, String param3, String param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -117,7 +117,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           String var7Lifetime4;
           try {
             if (param2 <= 1) {
-              ProxyAuthenticationRequiredException.a(63);
+              ProxyAuthenticationRequiredException.clearScratchArray(63);
             }
             try {
               var8 = param1.getParameter("cookiehost");
@@ -169,7 +169,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         }
     }
 
-    final static Sprite a(int param0, String param1) {
+    final static Sprite createTextSprite(int param0, String param1) {
         CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

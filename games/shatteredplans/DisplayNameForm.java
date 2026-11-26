@@ -143,7 +143,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
               this.submitDisplayName((byte) -1);
             }
           } else {
-            RichTextLayout.a(false);
+            RichTextLayout.showLoginForm(false);
           }
           if (param1 == 6) {
             return;

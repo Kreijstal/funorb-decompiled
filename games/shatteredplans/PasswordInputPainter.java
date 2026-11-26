@@ -46,7 +46,7 @@ final class PasswordInputPainter extends TextInputPainter {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          ProxyAuthenticationRequiredException.a(var4, param0, 60, var2, var3);
+          ProxyAuthenticationRequiredException.setBrowserCookie(var4, param0, 60, var2, var3);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ce.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

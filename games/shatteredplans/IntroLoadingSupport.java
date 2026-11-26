@@ -16,7 +16,7 @@ final class IntroLoadingSupport {
     final static void drawIntroLoadingScreen(int param0) {
         int var2 = 0;
         if (null == GraphicsSettings.field_d) {
-          GraphicsSettings.field_d = new Sprite[]{ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[0]), ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[1])};
+          GraphicsSettings.field_d = new Sprite[]{ProxyAuthenticationRequiredException.createTextSprite(0, MusicVoice.field_w[0]), ProxyAuthenticationRequiredException.createTextSprite(0, MusicVoice.field_w[1])};
         }
         SoftwareRasterizer.clear();
         int var1 = 240;

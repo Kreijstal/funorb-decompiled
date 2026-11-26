@@ -41,7 +41,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7) {
+    final void setWrappedText(String param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7) {
         TextLayoutLine stackIn_33_0;
         TextLayoutLine stackIn_33_1;
         int stackIn_33_2;
@@ -229,7 +229,7 @@ final class RichTextLayout extends TextLayout {
         field_o = null;
     }
 
-    final void a(BitmapFont param0, int param1, int param2, String param3, int param4) {
+    final void setLeftAlignedText(BitmapFont param0, int param1, int param2, String param3, int param4) {
         TextLayoutLine var7 = null;
         TextLayoutLine var8 = null;
         if (param3 == null) {
@@ -258,7 +258,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
+    final void setRightAlignedText(int param0, int param1, BitmapFont param2, String param3, int param4) {
         TextLayoutLine var9 = null;
         TextLayoutLine var10 = null;
         if (param3 == null) {
@@ -291,7 +291,7 @@ final class RichTextLayout extends TextLayout {
     public RichTextLayout() {
     }
 
-    final static void a(boolean param0) {
+    final static void showLoginForm(boolean param0) {
         String var2 = (String) null;
         PasswordInputPainter.showLoginForm("", (String) null, (byte) 3);
         if (param0) {

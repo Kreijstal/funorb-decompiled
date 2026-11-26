@@ -178,7 +178,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static void drawAccountLoadingScreen(int param0, java.awt.Canvas param1) {
         if (SoundPlayback.field_i == 11) {
-          ProxyAuthenticationRequiredException.a(param0 - 9242);
+          ProxyAuthenticationRequiredException.clearScratchArray(param0 - 9242);
         }
         if (param0 != 9242) {
           return;

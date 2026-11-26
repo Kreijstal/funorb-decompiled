@@ -137,7 +137,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             return;
           }
           if (this.field_J == param0) {
-            RichTextLayout.a(false);
+            RichTextLayout.showLoginForm(false);
             return;
           }
           if (this.field_H == param0) {

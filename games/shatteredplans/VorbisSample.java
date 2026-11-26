@@ -256,7 +256,7 @@ final class VorbisSample extends IntrusiveNode {
         var14 = field_O[field_J[var2]];
         var16 = var14.field_d;
         var17_int = var14.field_b[var16];
-        stackIn_22_0 = (field_h[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_h[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_c; var17_intLifetime1++) {
@@ -267,7 +267,7 @@ final class VorbisSample extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_d;
           var18_int = var14.field_b[var17_intLifetime2];
-          field_h[var18_int].a(field_k, var4 >> 1);
+          field_h[var18_int].applyFloor(field_k, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {

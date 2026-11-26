@@ -79,7 +79,7 @@ final class Bzip2Decoder {
           field_a.field_h = 0;
           field_a.field_j = 0;
           field_a.field_p = 0;
-          Bzip2Decoder.a(field_a);
+          Bzip2Decoder.decodeBlocks(field_a);
           param1 = param1 - field_a.field_B;
           field_a.field_n = null;
           field_a.field_E = null;
@@ -88,7 +88,7 @@ final class Bzip2Decoder {
         return stackIn_2_0;
     }
 
-    private final static void a(Bzip2State param0) {
+    private final static void decodeBlocks(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -336,7 +336,7 @@ final class Bzip2Decoder {
               param0.field_w = param0.field_w >> 8;
               param0.field_G = param0.field_G + 1;
               param0.field_f = var14;
-              Bzip2Decoder.b(param0);
+              Bzip2Decoder.writeDecodedBlock(param0);
               if (param0.field_G == param0.field_f + 1 &&
                 param0.field_k == 0) {
                 var26 = 1;
@@ -460,7 +460,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void b(Bzip2State param0) {
+    private final static void writeDecodedBlock(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
