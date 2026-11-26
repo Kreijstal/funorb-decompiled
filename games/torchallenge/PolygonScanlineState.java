@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi {
+final class PolygonScanlineState {
     private static int field_d;
     private static int field_g;
     private static int field_f;
@@ -11,7 +11,7 @@ final class fi {
     static int field_c;
     private static int field_a;
 
-    private final static void b(int param0, int param1) {
+    private final static void sortEdgesByStartY(int param0, int param1) {
         int var7 = 0;
         int var2;
         int var3;
@@ -45,11 +45,11 @@ final class fi {
         field_b[var2 + 1] = var4;
         field_b[var2 + 2] = var5;
         field_b[var2 + 3] = var6;
-        fi.b(param0, var2);
-        fi.b(var2 + 4, param1);
+        PolygonScanlineState.sortEdgesByStartY(param0, var2);
+        PolygonScanlineState.sortEdgesByStartY(var2 + 4, param1);
     }
 
-    final static void c() {
+    final static void resetEdges() {
         field_d = 0;
     }
 
@@ -57,7 +57,7 @@ final class fi {
         field_b = null;
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void addPolygonEdges(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -140,7 +140,7 @@ final class fi {
           field_h = 2147483646;
           return;
         }
-        fi.b(0, field_d);
+        PolygonScanlineState.sortEdgesByStartY(0, field_d);
         int var0 = field_b[1];
         if (var0 < SoftwareRasterizer.field_k) {
           var0 = SoftwareRasterizer.field_k;
@@ -230,14 +230,14 @@ final class fi {
             field_d = 0;
             return false;
           }
-          fi.a(var3, var0);
+          PolygonScanlineState.sortActiveEdgesByX(var3, var0);
           field_f = var3;
           field_g = var0;
           var1 = var3;
         }
     }
 
-    private final static void a(int param0, int param1) {
+    private final static void sortActiveEdgesByX(int param0, int param1) {
         int var3 = 0;
         int var2;
         int var4;

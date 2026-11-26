@@ -1519,12 +1519,12 @@ final class ArgbSprite extends Sprite {
         if (var6 > param0 + this.offsetX + this.storedWidth) {
           var6 = param0 + this.offsetX + this.storedWidth;
         }
-        fi.initializeScanlineSpans();
+        PolygonScanlineState.initializeScanlineSpans();
         var7 = -(param0 + this.offsetX + (param1 + this.offsetY) * this.storedWidth);
-        while (fi.nextScanlineSpan()) {
-          var8 = fi.field_c;
-          var9 = fi.field_e;
-          var10 = fi.field_h;
+        while (PolygonScanlineState.nextScanlineSpan()) {
+          var8 = PolygonScanlineState.field_c;
+          var9 = PolygonScanlineState.field_e;
+          var10 = PolygonScanlineState.field_h;
           if (var8 < var5) {
             var8 = var5;
           }

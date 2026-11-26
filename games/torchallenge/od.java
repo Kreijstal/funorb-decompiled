@@ -539,7 +539,7 @@ final class od {
           }
         }
         for (var24 = 0; var24 < 4; var24++) {
-          fi.c();
+          PolygonScanlineState.resetEdges();
           var13Lifetime1 = 0;
           var14Lifetime1 = 1;
           var17 = 0;
@@ -566,7 +566,7 @@ final class od {
             var13Lifetime1 += 2;
             var14Lifetime1 += 2;
           }
-          fi.a(param8, 0, 8);
+          PolygonScanlineState.addPolygonEdges(param8, 0, 8);
           var15Lifetime1 = 65793;
           var16Lifetime1 = var9;
           var19 = param2;

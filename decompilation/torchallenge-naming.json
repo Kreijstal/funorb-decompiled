@@ -548,6 +548,14 @@
       "renamedSymbol": "C:JavaScriptBridge"
     },
     {
+      "symbol": "C:fi",
+      "originalName": "fi",
+      "to": "PolygonScanlineState",
+      "evidence": "Complete 269-line class and all seven owned method bodies reviewed. Owns packed four-int polygon edges and active scanline state; adds non-horizontal closed-polygon edges, sorts and initializes edges, and yields paired left/right/y spans to sprite masking. Preserve static shared state, sorting details, full index domains, fixed-point arithmetic, clip-dependent divisions, sentinels, allocation and partial-write order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PolygonScanlineState"
+    },
+    {
       "symbol": "C:fj",
       "originalName": "fj",
       "to": "CrossfadingMidiPcmStream",
@@ -2073,7 +2081,23 @@
       "to": "initializeScanlineSpans",
       "evidence": "Source-purpose review: Sort/init mutable four-int scanline edge records, clip the starting row and establish active-edge indices; preserve divisions, empty-edge sentinel2147483646 and partial writes. Preserve every original guard, allocation, literal, descriptor, modifier, exception boundary and full primitive domain. Original body SHA256 c886fc3c1eae963f9aedd504072e39b6ec005e679035f57fbdf09860c3c364ae.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fi.initializeScanlineSpans()V"
+      "renamedSymbol": "M:PolygonScanlineState.initializeScanlineSpans()V"
+    },
+    {
+      "symbol": "M:fi.a(II)V",
+      "originalName": "a",
+      "to": "sortActiveEdgesByX",
+      "evidence": "Source-purpose review: Order active fixed-point intersections by X using adjacent swaps of X,deltaX,endY while intentionally retaining slot1;preserve early exit and shrinking range.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineState.sortActiveEdgesByX(II)V"
+    },
+    {
+      "symbol": "M:fi.a([III)V",
+      "originalName": "a",
+      "to": "addPolygonEdges",
+      "evidence": "Source-purpose review: Append the non-horizontal edges of a closed polygon from a flat coordinate slice,orienting endpoints by Y;preservecapacity calculation/copy/replacement,all increments,zero-length/negative/full-int behavior and partial writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineState.addPolygonEdges([III)V"
     },
     {
       "symbol": "M:fi.b()Z",
@@ -2081,7 +2105,23 @@
       "to": "nextScanlineSpan",
       "evidence": "Source-purpose review: Advance paired active edges and yield left/right/y span coordinates, updating fixed-point intersections and active-record ordering; preserve clipping, divisions, mutation and termination order. Preserve every original guard, allocation, literal, descriptor, modifier, exception boundary and full primitive domain. Original body SHA256 e40f25a57ef868061a19f8268daabc20c8dcc1aa3d66e6baa5f1b5d0fb7a71f5.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fi.nextScanlineSpan()Z"
+      "renamedSymbol": "M:PolygonScanlineState.nextScanlineSpan()Z"
+    },
+    {
+      "symbol": "M:fi.b(II)V",
+      "originalName": "b",
+      "to": "sortEdgesByStartY",
+      "evidence": "Source-purpose review: Recursively partition four-int edge records by starting Y, preserving the exact pivot/record move sequence, recursion boundaries and all index-domain failures.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineState.sortEdgesByStartY(II)V"
+    },
+    {
+      "symbol": "M:fi.c()V",
+      "originalName": "c",
+      "to": "resetEdges",
+      "evidence": "Source-purpose review: Reset only the packed edge-count cursor to zero without clearing other state or allocating.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineState.resetEdges()V"
     },
     {
       "symbol": "M:fi.d()V",
@@ -2089,7 +2129,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 27801428b238b865fc69632d276ab5f34422987deffa9bb5fa7179eae660238e.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fi.clearStaticReferences()V"
+      "renamedSymbol": "M:PolygonScanlineState.clearStaticReferences()V"
     },
     {
       "symbol": "M:fj.a()I",
@@ -5957,9 +5997,9 @@
     },
     {
       "symbol": "C:fi",
-      "renamedSymbol": "C:fi",
+      "renamedSymbol": "C:PolygonScanlineState",
       "originalName": "fi",
-      "renamedName": "fi",
+      "renamedName": "PolygonScanlineState",
       "declaration": {
         "file": "fi.java",
         "start": 50,
@@ -17111,7 +17151,7 @@
     },
     {
       "symbol": "F:fi.field_a:I",
-      "renamedSymbol": "F:fi.field_a:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -17122,7 +17162,7 @@
     },
     {
       "symbol": "F:fi.field_b:[I",
-      "renamedSymbol": "F:fi.field_b:[I",
+      "renamedSymbol": "F:PolygonScanlineState.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -17133,7 +17173,7 @@
     },
     {
       "symbol": "F:fi.field_c:I",
-      "renamedSymbol": "F:fi.field_c:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -17144,7 +17184,7 @@
     },
     {
       "symbol": "F:fi.field_d:I",
-      "renamedSymbol": "F:fi.field_d:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -17155,7 +17195,7 @@
     },
     {
       "symbol": "F:fi.field_e:I",
-      "renamedSymbol": "F:fi.field_e:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -17166,7 +17206,7 @@
     },
     {
       "symbol": "F:fi.field_f:I",
-      "renamedSymbol": "F:fi.field_f:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -17177,7 +17217,7 @@
     },
     {
       "symbol": "F:fi.field_g:I",
-      "renamedSymbol": "F:fi.field_g:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -17188,7 +17228,7 @@
     },
     {
       "symbol": "F:fi.field_h:I",
-      "renamedSymbol": "F:fi.field_h:I",
+      "renamedSymbol": "F:PolygonScanlineState.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -75235,7 +75275,7 @@
     },
     {
       "symbol": "L:fi.a()V#0",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#0",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75246,7 +75286,7 @@
     },
     {
       "symbol": "L:fi.a()V#1",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#1",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75257,7 +75297,7 @@
     },
     {
       "symbol": "L:fi.a()V#2",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#2",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -75268,7 +75308,7 @@
     },
     {
       "symbol": "L:fi.a()V#3",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#3",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -75279,7 +75319,7 @@
     },
     {
       "symbol": "L:fi.a()V#4",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#4",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -75290,7 +75330,7 @@
     },
     {
       "symbol": "L:fi.a()V#5",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#5",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -75301,7 +75341,7 @@
     },
     {
       "symbol": "L:fi.a()V#6",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#6",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -75312,7 +75352,7 @@
     },
     {
       "symbol": "L:fi.a()V#7",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#7",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#7",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -75323,7 +75363,7 @@
     },
     {
       "symbol": "L:fi.a()V#8",
-      "renamedSymbol": "L:fi.initializeScanlineSpans()V#8",
+      "renamedSymbol": "L:PolygonScanlineState.initializeScanlineSpans()V#8",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -75334,7 +75374,7 @@
     },
     {
       "symbol": "L:fi.a(II)V#0",
-      "renamedSymbol": "L:fi.a(II)V#0",
+      "renamedSymbol": "L:PolygonScanlineState.sortActiveEdgesByX(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75345,7 +75385,7 @@
     },
     {
       "symbol": "L:fi.a(II)V#1",
-      "renamedSymbol": "L:fi.a(II)V#1",
+      "renamedSymbol": "L:PolygonScanlineState.sortActiveEdgesByX(II)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -75356,7 +75396,7 @@
     },
     {
       "symbol": "L:fi.a(II)V#2",
-      "renamedSymbol": "L:fi.a(II)V#2",
+      "renamedSymbol": "L:PolygonScanlineState.sortActiveEdgesByX(II)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75367,7 +75407,7 @@
     },
     {
       "symbol": "L:fi.a(II)V#3",
-      "renamedSymbol": "L:fi.a(II)V#3",
+      "renamedSymbol": "L:PolygonScanlineState.sortActiveEdgesByX(II)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -75378,7 +75418,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#0",
-      "renamedSymbol": "L:fi.a([III)V#0",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -75389,7 +75429,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#1",
-      "renamedSymbol": "L:fi.a([III)V#1",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -75400,7 +75440,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#10",
-      "renamedSymbol": "L:fi.a([III)V#10",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75411,7 +75451,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#11",
-      "renamedSymbol": "L:fi.a([III)V#11",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -75422,7 +75462,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#12",
-      "renamedSymbol": "L:fi.a([III)V#12",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -75433,7 +75473,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#13",
-      "renamedSymbol": "L:fi.a([III)V#13",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -75444,7 +75484,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#14",
-      "renamedSymbol": "L:fi.a([III)V#14",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -75455,7 +75495,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#15",
-      "renamedSymbol": "L:fi.a([III)V#15",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#15",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -75466,7 +75506,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#2",
-      "renamedSymbol": "L:fi.a([III)V#2",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -75477,7 +75517,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#3",
-      "renamedSymbol": "L:fi.a([III)V#3",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -75488,7 +75528,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#4",
-      "renamedSymbol": "L:fi.a([III)V#4",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#4",
       "originalName": "fieldTemp$4",
       "renamedName": "fieldTemp$4",
       "declaration": {
@@ -75499,7 +75539,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#5",
-      "renamedSymbol": "L:fi.a([III)V#5",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#5",
       "originalName": "fieldTemp$5",
       "renamedName": "fieldTemp$5",
       "declaration": {
@@ -75510,7 +75550,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#6",
-      "renamedSymbol": "L:fi.a([III)V#6",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#6",
       "originalName": "fieldTemp$6",
       "renamedName": "fieldTemp$6",
       "declaration": {
@@ -75521,7 +75561,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#7",
-      "renamedSymbol": "L:fi.a([III)V#7",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#7",
       "originalName": "fieldTemp$7",
       "renamedName": "fieldTemp$7",
       "declaration": {
@@ -75532,7 +75572,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#8",
-      "renamedSymbol": "L:fi.a([III)V#8",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75543,7 +75583,7 @@
     },
     {
       "symbol": "L:fi.a([III)V#9",
-      "renamedSymbol": "L:fi.a([III)V#9",
+      "renamedSymbol": "L:PolygonScanlineState.addPolygonEdges([III)V#9",
       "originalName": "var4_ref_int__",
       "renamedName": "var4_ref_int__",
       "declaration": {
@@ -75554,7 +75594,7 @@
     },
     {
       "symbol": "L:fi.b()Z#0",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#0",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#0",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -75565,7 +75605,7 @@
     },
     {
       "symbol": "L:fi.b()Z#1",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#1",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -75576,7 +75616,7 @@
     },
     {
       "symbol": "L:fi.b()Z#10",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#10",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -75587,7 +75627,7 @@
     },
     {
       "symbol": "L:fi.b()Z#11",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#11",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#11",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -75598,7 +75638,7 @@
     },
     {
       "symbol": "L:fi.b()Z#12",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#12",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#12",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -75609,7 +75649,7 @@
     },
     {
       "symbol": "L:fi.b()Z#2",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#2",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -75620,7 +75660,7 @@
     },
     {
       "symbol": "L:fi.b()Z#3",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#3",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75631,7 +75671,7 @@
     },
     {
       "symbol": "L:fi.b()Z#4",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#4",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75642,7 +75682,7 @@
     },
     {
       "symbol": "L:fi.b()Z#5",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#5",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -75653,7 +75693,7 @@
     },
     {
       "symbol": "L:fi.b()Z#6",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#6",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -75664,7 +75704,7 @@
     },
     {
       "symbol": "L:fi.b()Z#7",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#7",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -75675,7 +75715,7 @@
     },
     {
       "symbol": "L:fi.b()Z#8",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#8",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -75686,7 +75726,7 @@
     },
     {
       "symbol": "L:fi.b()Z#9",
-      "renamedSymbol": "L:fi.nextScanlineSpan()Z#9",
+      "renamedSymbol": "L:PolygonScanlineState.nextScanlineSpan()Z#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -75697,7 +75737,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#0",
-      "renamedSymbol": "L:fi.b(II)V#0",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -75708,7 +75748,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#1",
-      "renamedSymbol": "L:fi.b(II)V#1",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -75719,7 +75759,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#2",
-      "renamedSymbol": "L:fi.b(II)V#2",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75730,7 +75770,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#3",
-      "renamedSymbol": "L:fi.b(II)V#3",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -75741,7 +75781,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#4",
-      "renamedSymbol": "L:fi.b(II)V#4",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -75752,7 +75792,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#5",
-      "renamedSymbol": "L:fi.b(II)V#5",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -75763,7 +75803,7 @@
     },
     {
       "symbol": "L:fi.b(II)V#6",
-      "renamedSymbol": "L:fi.b(II)V#6",
+      "renamedSymbol": "L:PolygonScanlineState.sortEdgesByStartY(II)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -206553,7 +206593,7 @@
     },
     {
       "symbol": "M:fi.a()V",
-      "renamedSymbol": "M:fi.initializeScanlineSpans()V",
+      "renamedSymbol": "M:PolygonScanlineState.initializeScanlineSpans()V",
       "originalName": "a",
       "renamedName": "initializeScanlineSpans",
       "declaration": {
@@ -206564,9 +206604,9 @@
     },
     {
       "symbol": "M:fi.a(II)V",
-      "renamedSymbol": "M:fi.a(II)V",
+      "renamedSymbol": "M:PolygonScanlineState.sortActiveEdgesByX(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sortActiveEdgesByX",
       "declaration": {
         "file": "fi.java",
         "start": 6793,
@@ -206575,9 +206615,9 @@
     },
     {
       "symbol": "M:fi.a([III)V",
-      "renamedSymbol": "M:fi.a([III)V",
+      "renamedSymbol": "M:PolygonScanlineState.addPolygonEdges([III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addPolygonEdges",
       "declaration": {
         "file": "fi.java",
         "start": 1583,
@@ -206586,7 +206626,7 @@
     },
     {
       "symbol": "M:fi.b()Z",
-      "renamedSymbol": "M:fi.nextScanlineSpan()Z",
+      "renamedSymbol": "M:PolygonScanlineState.nextScanlineSpan()Z",
       "originalName": "b",
       "renamedName": "nextScanlineSpan",
       "declaration": {
@@ -206597,9 +206637,9 @@
     },
     {
       "symbol": "M:fi.b(II)V",
-      "renamedSymbol": "M:fi.b(II)V",
+      "renamedSymbol": "M:PolygonScanlineState.sortEdgesByStartY(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "sortEdgesByStartY",
       "declaration": {
         "file": "fi.java",
         "start": 320,
@@ -206608,9 +206648,9 @@
     },
     {
       "symbol": "M:fi.c()V",
-      "renamedSymbol": "M:fi.c()V",
+      "renamedSymbol": "M:PolygonScanlineState.resetEdges()V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetEdges",
       "declaration": {
         "file": "fi.java",
         "start": 1467,
@@ -206619,7 +206659,7 @@
     },
     {
       "symbol": "M:fi.d()V",
-      "renamedSymbol": "M:fi.clearStaticReferences()V",
+      "renamedSymbol": "M:PolygonScanlineState.clearStaticReferences()V",
       "originalName": "d",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -243931,7 +243971,7 @@
     },
     {
       "symbol": "P:fi.a(II)V#0",
-      "renamedSymbol": "P:fi.a(II)V#0",
+      "renamedSymbol": "P:PolygonScanlineState.sortActiveEdgesByX(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -243942,7 +243982,7 @@
     },
     {
       "symbol": "P:fi.a(II)V#1",
-      "renamedSymbol": "P:fi.a(II)V#1",
+      "renamedSymbol": "P:PolygonScanlineState.sortActiveEdgesByX(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -243953,7 +243993,7 @@
     },
     {
       "symbol": "P:fi.a([III)V#0",
-      "renamedSymbol": "P:fi.a([III)V#0",
+      "renamedSymbol": "P:PolygonScanlineState.addPolygonEdges([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -243964,7 +244004,7 @@
     },
     {
       "symbol": "P:fi.a([III)V#1",
-      "renamedSymbol": "P:fi.a([III)V#1",
+      "renamedSymbol": "P:PolygonScanlineState.addPolygonEdges([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -243975,7 +244015,7 @@
     },
     {
       "symbol": "P:fi.a([III)V#2",
-      "renamedSymbol": "P:fi.a([III)V#2",
+      "renamedSymbol": "P:PolygonScanlineState.addPolygonEdges([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -243986,7 +244026,7 @@
     },
     {
       "symbol": "P:fi.b(II)V#0",
-      "renamedSymbol": "P:fi.b(II)V#0",
+      "renamedSymbol": "P:PolygonScanlineState.sortEdgesByStartY(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -243997,7 +244037,7 @@
     },
     {
       "symbol": "P:fi.b(II)V#1",
-      "renamedSymbol": "P:fi.b(II)V#1",
+      "renamedSymbol": "P:PolygonScanlineState.sortEdgesByStartY(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294359,7 +294399,7 @@
       "original": "TorChallenge.java",
       "renamed": "TorChallenge.java",
       "inputSha256": "75ee103948c5b44b7d6c6b36d6bd8d90cc0cbf95e347b07e992ad199fc73c86c",
-      "outputSha256": "ae639dd324dc693583f39e11870ccbd081733832bba63e79521fdde61ec0a890",
+      "outputSha256": "2b09d1773b68829dd6f217c5e89bae8bcb74655c71c4910efa4822e7a96a27cc",
       "edits": [
         {
           "start": 78,
@@ -298815,6 +298855,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 81482,
+          "end": 81484,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
         },
         {
           "start": 81485,
@@ -313911,7 +313958,7 @@
       "original": "el.java",
       "renamed": "ArgbSprite.java",
       "inputSha256": "bcef84f37d0bd51bf8400b26df0e4f7d2994d749601d003ae76d03171297bc6f",
-      "outputSha256": "b6bdd5de8f31696906b239c5ad06ba7fdd32702b15f4ba181dbcb82929714f67",
+      "outputSha256": "87fa99ffe58a547afda1414f0c61c92947cc819c41eae8e8f737eb01205acfe3",
       "edits": [
         {
           "start": 50,
@@ -317092,6 +317139,13 @@
           "renamed": "storedWidth"
         },
         {
+          "start": 59664,
+          "end": 59666,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
           "start": 59667,
           "end": 59668,
           "symbol": "M:fi.a()V",
@@ -317120,11 +317174,39 @@
           "renamed": "storedWidth"
         },
         {
+          "start": 59769,
+          "end": 59771,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
           "start": 59772,
           "end": 59773,
           "symbol": "M:fi.b()Z",
           "original": "b",
           "renamed": "nextScanlineSpan"
+        },
+        {
+          "start": 59796,
+          "end": 59798,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 59825,
+          "end": 59827,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 59855,
+          "end": 59857,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
         },
         {
           "start": 60032,
@@ -319476,10 +319558,59 @@
     },
     {
       "original": "fi.java",
-      "renamed": "fi.java",
+      "renamed": "PolygonScanlineState.java",
       "inputSha256": "f664ad79b7897129570edeb50b00b8ba6af02d34067a0680ba92d39fad9ba705",
-      "outputSha256": "d60280bb4d0c61f426b26223fdd35bb75e77ed907fb17d68562147ca31cc7575",
+      "outputSha256": "4b33b487c69aff96f7bbba67c99a7ab310f9e57144bebc632a28fbb4a3542bc3",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 320,
+          "end": 321,
+          "symbol": "M:fi.b(II)V",
+          "original": "b",
+          "renamed": "sortEdgesByStartY"
+        },
+        {
+          "start": 1386,
+          "end": 1388,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 1389,
+          "end": 1390,
+          "symbol": "M:fi.b(II)V",
+          "original": "b",
+          "renamed": "sortEdgesByStartY"
+        },
+        {
+          "start": 1414,
+          "end": 1416,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 1417,
+          "end": 1418,
+          "symbol": "M:fi.b(II)V",
+          "original": "b",
+          "renamed": "sortEdgesByStartY"
+        },
+        {
+          "start": 1467,
+          "end": 1468,
+          "symbol": "M:fi.c()V",
+          "original": "c",
+          "renamed": "resetEdges"
+        },
         {
           "start": 1524,
           "end": 1525,
@@ -319488,11 +319619,32 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 1583,
+          "end": 1584,
+          "symbol": "M:fi.a([III)V",
+          "original": "a",
+          "renamed": "addPolygonEdges"
+        },
+        {
           "start": 3709,
           "end": 3710,
           "symbol": "M:fi.a()V",
           "original": "a",
           "renamed": "initializeScanlineSpans"
+        },
+        {
+          "start": 4033,
+          "end": 4035,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 4036,
+          "end": 4037,
+          "symbol": "M:fi.b(II)V",
+          "original": "b",
+          "renamed": "sortEdgesByStartY"
         },
         {
           "start": 4101,
@@ -319521,6 +319673,27 @@
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6653,
+          "end": 6655,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 6656,
+          "end": 6657,
+          "symbol": "M:fi.a(II)V",
+          "original": "a",
+          "renamed": "sortActiveEdgesByX"
+        },
+        {
+          "start": 6793,
+          "end": 6794,
+          "symbol": "M:fi.a(II)V",
+          "original": "a",
+          "renamed": "sortActiveEdgesByX"
         }
       ]
     },
@@ -329429,7 +329602,7 @@
       "original": "ka.java",
       "renamed": "Sprite.java",
       "inputSha256": "5260cdbcbda2f703d3ad6ff5ee595b6e78caf84d932d9b3b38810b1dd4e0b111",
-      "outputSha256": "40837e6e6b096b6371fcf2871ee7144a40151d5cf25ab578ba748ddb0b7ea119",
+      "outputSha256": "e703e3bb86b9673ccde02f8c91cf8db050677e1c54f2b7b7aa4f708e30881708",
       "edits": [
         {
           "start": 44,
@@ -334732,6 +334905,13 @@
           "renamed": "storedWidth"
         },
         {
+          "start": 82688,
+          "end": 82690,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
           "start": 82691,
           "end": 82692,
           "symbol": "M:fi.a()V",
@@ -334760,11 +334940,39 @@
           "renamed": "storedWidth"
         },
         {
+          "start": 82793,
+          "end": 82795,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
           "start": 82796,
           "end": 82797,
           "symbol": "M:fi.b()Z",
           "original": "b",
           "renamed": "nextScanlineSpan"
+        },
+        {
+          "start": 82820,
+          "end": 82822,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 82849,
+          "end": 82851,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 82879,
+          "end": 82881,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
         },
         {
           "start": 83056,
@@ -349483,7 +349691,7 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "c75b47a0dc11cde5ad9ffdf725d7a5150aaf17396b679f5fb01ea2ba12b539a1",
-      "outputSha256": "4f2c2f561b2c0c3094931a4e6581d7764e4e96b7c67afc90ecb15914129e50fd",
+      "outputSha256": "401aad8ebe128aeb579b4c5d82a0d254c0fe7b050a95b0cbe46a06ef1de37a4e",
       "edits": [
         {
           "start": 79,
@@ -350604,6 +350812,34 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "Sprite"
+        },
+        {
+          "start": 18513,
+          "end": 18515,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 18516,
+          "end": 18517,
+          "symbol": "M:fi.c()V",
+          "original": "c",
+          "renamed": "resetEdges"
+        },
+        {
+          "start": 19287,
+          "end": 19289,
+          "symbol": "C:fi",
+          "original": "fi",
+          "renamed": "PolygonScanlineState"
+        },
+        {
+          "start": 19290,
+          "end": 19291,
+          "symbol": "M:fi.a([III)V",
+          "original": "a",
+          "renamed": "addPolygonEdges"
         },
         {
           "start": 19977,
@@ -397191,10 +397427,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "1650cb5847724dd2ccf8d7fe266c130add1294b51b9df10b19b0bcb5fedbab7a",
+    "rulesSha256": "4b1690786aa627fba830e8ab7edf0da745183fd58170be77a4ceba0c1a10179f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "2ac16864fcf3af37ee48f1c8b04b95a0815eef9665b4ba298708dfba10f08dde",
+    "outputTreeSha256": "4044d1f53e061d014b3521587838f556412c4473729a88b47ab4429903ead7c4",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

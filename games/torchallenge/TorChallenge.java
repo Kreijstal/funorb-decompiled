@@ -1938,7 +1938,7 @@ public final class TorChallenge extends GameClientBase {
           jc.clearStaticReferences(-108);
           SpriteState.b(false);
           DualLinkNode.b((byte) 68);
-          fi.clearStaticReferences();
+          PolygonScanlineState.clearStaticReferences();
           vl.clearStaticReferences(0);
           jh.a(-14282);
           ah.clearStaticReferences(44);
