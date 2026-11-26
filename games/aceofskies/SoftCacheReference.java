@@ -51,7 +51,7 @@ final class SoftCacheReference extends CacheReference {
     final static void c(byte param0) {
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (!bo.a((byte) 102)) {
+          if (!RenderStateStack.hasActiveWindow((byte) 102)) {
             if (null != jf.field_a &&
               jf.field_a.field_b) {
               tt.b(-32546);

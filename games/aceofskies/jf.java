@@ -19,7 +19,7 @@ final class jf implements ir {
     }
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
-        lj.aircraftEngineSamples = nc.a(param1, param0 ^ 102, param2, jb.field_a, (boolean[]) null);
+        lj.aircraftEngineSamples = nc.a(param1, param0 ^ 102, param2, TextureCombineSource.field_a, (boolean[]) null);
         boolean[] var5 = (boolean[]) null;
         kn.field_c = nc.a(param1, -107, param2, s.field_d, (boolean[]) null);
         if (param0 != -4) {
@@ -81,9 +81,9 @@ final class jf implements ir {
           int var4 = -106 % ((param2 - 0) / 46);
           var3 = null;
           Object var5 = null;
-          if (gt.field_r != null &&
-            !gt.field_r.equals(param0.getParameter("settings"))) {
-            var3 = gt.field_r;
+          if (OpenGlPbuffer.field_r != null &&
+            !OpenGlPbuffer.field_r.equals(param0.getParameter("settings"))) {
+            var3 = OpenGlPbuffer.field_r;
             var5 = var3;
             var5 = var3;
           }

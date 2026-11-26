@@ -23,7 +23,7 @@ class sl extends qm {
         if (param0 != 2765) {
           return;
         }
-        wo var1 = (wo) (bo.field_i.removeLast(4095));
+        wo var1 = (wo) (RenderStateStack.field_i.removeLast(4095));
         if (var1 == null) {
           throw new IllegalStateException();
         }

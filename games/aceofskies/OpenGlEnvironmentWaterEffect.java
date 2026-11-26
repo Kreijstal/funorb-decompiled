@@ -3,7 +3,7 @@
  */
 final class OpenGlEnvironmentWaterEffect extends RenderEffect {
     static as field_j;
-    private io field_h;
+    private OpenGlShaderProgram field_h;
     private boolean field_i;
     private em field_f;
     private boolean field_g;
@@ -116,7 +116,7 @@ final class OpenGlEnvironmentWaterEffect extends RenderEffect {
           }
           return;
         }
-        this.field_h = (io) null;
+        this.field_h = (OpenGlShaderProgram) null;
         if (this.field_i) {
           int var4Lifetime1 = 1 << (param1 & 3);
           float var5Lifetime1 = (float)(1 << ((param1 & 58) >> 3)) / 32.0f;
@@ -132,7 +132,7 @@ final class OpenGlEnvironmentWaterEffect extends RenderEffect {
 
     final boolean e(int param0) {
         if (param0 != 3) {
-          this.field_h = (io) null;
+          this.field_h = (OpenGlShaderProgram) null;
           return this.field_g;
         }
         return this.field_g;

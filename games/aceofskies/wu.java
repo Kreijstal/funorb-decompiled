@@ -488,19 +488,19 @@ final class wu {
           }
           byte[] var2Lifetime68 = im.a(79, "instructions_pages,0");
           if (var2Lifetime68 != null) {
-            io.field_a[0] = ea.a(0, var2Lifetime68);
+            OpenGlShaderProgram.field_a[0] = ea.a(0, var2Lifetime68);
           }
           byte[] var2Lifetime69 = im.a(102, "instructions_pages,1");
           if (var2Lifetime69 != null) {
-            io.field_a[1] = ea.a(0, var2Lifetime69);
+            OpenGlShaderProgram.field_a[1] = ea.a(0, var2Lifetime69);
           }
           byte[] var2Lifetime70 = im.a(54, "instructions_pages,2");
           if (null != var2Lifetime70) {
-            io.field_a[2] = ea.a(0, var2Lifetime70);
+            OpenGlShaderProgram.field_a[2] = ea.a(0, var2Lifetime70);
           }
           byte[] var2Lifetime71 = im.a(105, "instructions_pages,3");
           if (null != var2Lifetime71) {
-            io.field_a[3] = ea.a(0, var2Lifetime71);
+            OpenGlShaderProgram.field_a[3] = ea.a(0, var2Lifetime71);
           }
           byte[] var2Lifetime72 = im.a(95, "purchasables,0");
           if (var2Lifetime72 != null) {

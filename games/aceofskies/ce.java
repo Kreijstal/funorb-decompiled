@@ -397,7 +397,7 @@ final class ce extends ab implements dr, dn {
           if (ef.field_k == var9) {
             var8 = hu.field_b;
           } else if (lp.field_f == var9) {
-            var8 = io.field_e;
+            var8 = OpenGlShaderProgram.field_e;
           }
           bc dupTemp$0 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
           bc var12 = dupTemp$0;

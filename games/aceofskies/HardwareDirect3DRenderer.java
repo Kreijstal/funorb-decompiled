@@ -330,7 +330,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         }
     }
 
-    final void a(boolean param0, int param1, boolean param2, jb param3, boolean param4) {
+    final void a(boolean param0, int param1, boolean param2, TextureCombineSource param3, boolean param4) {
         int var6;
         int var7 = 0;
         int var8 = param1;
@@ -348,7 +348,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         if (param4) {
           var7 = var7 | 16;
         }
-        this.field_Rc.SetTextureStageState(this.field_F, var6, var7 | HardwareDirect3DRenderer.a(param3, (byte) -68));
+        this.field_Rc.SetTextureStageState(this.field_F, var6, var7 | HardwareDirect3DRenderer.getDirect3DTextureCombineSource(param3, (byte) -68));
     }
 
     final void bindSpriteTarget(RenderSprite param0, boolean param1) {
@@ -719,7 +719,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         return (fa) ((Object) new dxVertexLayout(this, param0));
     }
 
-    private final static int a(jb param0, byte param1) {
+    private final static int getDirect3DTextureCombineSource(TextureCombineSource param0, byte param1) {
         if (param0 == CipherPacketBuffer.field_p) {
           return 2;
         }
@@ -1048,7 +1048,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.s((byte) -94);
     }
 
-    final void a(jb param0, int param1, boolean param2, byte param3) {
+    final void a(TextureCombineSource param0, int param1, boolean param2, byte param3) {
         int var5;
         if (param3 < 90) {
           this.w((byte) -7);
@@ -1063,7 +1063,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         if (param2) {
           var6 = var6 | 16;
         }
-        this.field_Rc.SetTextureStageState(this.field_F, var5, var6 | HardwareDirect3DRenderer.a(param0, (byte) -68));
+        this.field_Rc.SetTextureStageState(this.field_F, var5, var6 | HardwareDirect3DRenderer.getDirect3DTextureCombineSource(param0, (byte) -68));
     }
 
     final HardwareCubeTexture a(int param0, int param1, boolean param2, int[][] param3) {
@@ -1073,8 +1073,8 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
 
     final void s(byte param0) {
         if (param0 != -94) {
-          jb var3 = (jb) null;
-          this.a(true, 113, false, (jb) null, false);
+          TextureCombineSource var3 = (TextureCombineSource) null;
+          this.a(true, 113, false, (TextureCombineSource) null, false);
         }
         if (!this.field_Mc) {
           this.field_Rc.LightEnable(0, false);

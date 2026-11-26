@@ -6,12 +6,12 @@ abstract class fa {
     static PacketBuffer field_c;
     static AchievementStateRequest field_b;
 
-    final static bo a(GraphicsRenderer param0, boolean param1) {
-        bo var3 = null;
+    final static RenderStateStack a(GraphicsRenderer param0, boolean param1) {
+        RenderStateStack var3 = null;
         String stackIn_17_2 = null;
         try {
           if (ns.field_a == param0) {
-            bo stackIn_2_0 = ArchiveNetworkClient.field_f;
+            RenderStateStack stackIn_2_0 = ArchiveNetworkClient.field_f;
             return stackIn_2_0;
           }
           if (!param1) {
@@ -25,12 +25,12 @@ abstract class fa {
             if (var2 != null) {
               var2.unlink(-124);
             }
-            var3 = new bo(param0);
+            var3 = new RenderStateStack(param0);
             ca.field_i.put(123, (long)param0.field_c, new mq(param0, var3));
           }
           ArchiveNetworkClient.field_f = var3;
           ns.field_a = param0;
-          bo stackIn_13_0 = var3;
+          RenderStateStack stackIn_13_0 = var3;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -84,7 +84,7 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
         r.field_n = r.field_n | var3;
         MenuScreen.field_g.addLast(92, new iq(param2));
         if (!tt.field_a) {
-          sb.field_c.addLast(param1 + 6, new AchievementSubmission(param2, param0, NetworkGameClient.field_x, bo.field_h, se.field_b, GzipInflater.field_a - or.score));
+          sb.field_c.addLast(param1 + 6, new AchievementSubmission(param2, param0, NetworkGameClient.field_x, RenderStateStack.field_h, se.field_b, GzipInflater.field_a - or.score));
           if (param2 == 6) {
             MenuScreen.field_g.addLast(116, new iq(-1));
             si.c(true);

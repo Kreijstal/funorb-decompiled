@@ -126,7 +126,7 @@ public final class AceOfSkies extends NetworkGameClient {
               iq.gameFontMetricsArchive = null;
               hg.sharedSpriteArchive = null;
               wi.gameSpriteArchive = null;
-              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.menuBitmapFont, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, NetworkArchiveRequest.field_w >> 1, 92, SpriteState.field_t, 10, 20);
+              ec.a(10, 10, ka.field_a, 40, hn.field_a, RenderStateStack.menuBitmapFont, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, NetworkArchiveRequest.field_w >> 1, 92, SpriteState.field_t, 10, 20);
               te.resetFrameTiming(62);
               return false;
             }
@@ -403,7 +403,7 @@ public final class AceOfSkies extends NetworkGameClient {
           iq.clearStaticReferences((byte) -126);
           IntrusiveDeque.f(obfuscationGuard - 39323);
           lp.a((byte) -70);
-          bo.clearStaticReferences(18598);
+          RenderStateStack.clearStaticReferences(18598);
           GraphicsRenderer.a(true);
           pd.a(62);
           RendererManager.a(true);
@@ -611,7 +611,7 @@ public final class AceOfSkies extends NetworkGameClient {
           fa.clearStaticReferences(false);
           po.c(-30534);
           hd.a(30714);
-          jb.a(obfuscationGuard - 46603);
+          TextureCombineSource.clearTextureCombineSourceStatics(obfuscationGuard - 46603);
           ia.a(-6411);
           HardwareOpenGlRenderer.W(obfuscationGuard ^ 19581);
           OpenGlVertexBuffer.clearStaticReferences(-33);
@@ -639,7 +639,7 @@ public final class AceOfSkies extends NetworkGameClient {
           hh.clearStaticReferences(30);
           qe.clearStaticReferences(5575);
           nb.clearStaticReferences(126);
-          gt.e(obfuscationGuard ^ -19569);
+          OpenGlPbuffer.clearPbufferStatics(obfuscationGuard ^ -19569);
           si.a(true);
           or.a((byte) 63);
           lk.clearStaticReferences(34962);
@@ -679,7 +679,7 @@ public final class AceOfSkies extends NetworkGameClient {
           OpenGlUnderwaterEffect.g(obfuscationGuard + 5851);
           OpenGlAssemblyProgram.clearAssemblyProgramStatics(39);
           OpenGlEnvironmentWaterEffect.c((byte) 125);
-          io.clearStaticReferences(obfuscationGuard - 52006);
+          OpenGlShaderProgram.clearStaticReferences(obfuscationGuard - 52006);
           OpenGlBuffer.d(107);
           OpenGlIndexBuffer.d((byte) 80);
           tq.clearStaticReferences(400);
@@ -690,7 +690,7 @@ public final class AceOfSkies extends NetworkGameClient {
           qk.clearStaticReferences(0);
           OpenGlShaderObject.clearStaticReferences(1);
           mq.clearStaticReferences(20370);
-          fo.a(25613);
+          RenderStateSnapshot.clearRenderStateStatics(25613);
           HighscoreQuery.clearStaticReferences((byte) 35);
           HighscoreNameEntry.b(-11760);
           SoundPlayback.clearStaticReferences(32081);

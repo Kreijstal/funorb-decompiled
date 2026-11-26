@@ -1506,7 +1506,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "login_username");
                 if (var2 != null) {
-                  io.field_e = ea.a(0, var2);
+                  OpenGlShaderProgram.field_e = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "login_email");
                 if (var2 != null) {
@@ -1862,7 +1862,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "loading_extradata");
                 if (null != var2) {
-                  bo.field_g = ea.a(0, var2);
+                  RenderStateStack.field_g = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "loading_languages");
                 if (null != var2) {

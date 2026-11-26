@@ -29,9 +29,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            int var5_int = bb.a(gt.a((byte) -46), (byte) 127, ju.e(123));
+            int var5_int = bb.a(OpenGlPbuffer.snapshotLoginIdentifier((byte) -46), (byte) 127, ju.e(123));
             if (-1 != var5_int) {
-              gt.a(param0 + 115, HardwareRenderSprite.field_m, var5_int, sd.field_j);
+              OpenGlPbuffer.completeAccountCreation(param0 + 115, HardwareRenderSprite.field_m, var5_int, sd.field_j);
               HardwareRenderSprite.field_m = null;
               sd.field_j = null;
             }
@@ -273,7 +273,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (var2 == 0 ||
           1 == var2) {
           if (fh.field_e[1]) {
-            io.a((byte) -117, 2);
+            OpenGlShaderProgram.resendQueuedRequests((byte) -117, 2);
           }
           if (fh.field_e[2]) {
             pl.resendPendingHighscores(3, 0);
@@ -492,7 +492,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (0 == RenderEffect.field_a &&
           !dg.j(27711)) {
-          w.field_a = false;
+          EmailValidationError.field_a = false;
         }
         if (param1 < 76) {
           return;

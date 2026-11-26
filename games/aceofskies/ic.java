@@ -15,7 +15,7 @@ final class ic {
     public static void a(byte param0) {
         if (param0 >= -43) {
           String var2 = (String) null;
-          ic.a((String) null, true);
+          ic.validateEmailDomainLabel((String) null, true);
         }
         field_a = null;
     }
@@ -33,17 +33,17 @@ final class ic {
         }
     }
 
-    final static w a(String param0, boolean param1) {
+    final static EmailValidationError validateEmailDomainLabel(String param0, boolean param1) {
         String stackIn_27_2 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var2_int = param0.length();
           if (var2_int == 0) {
-            w stackIn_4_0 = nh.field_f;
+            EmailValidationError stackIn_4_0 = nh.field_f;
             return stackIn_4_0;
           }
           if (63 < var2_int) {
-            w stackIn_7_0 = GzipInflater.field_d;
+            EmailValidationError stackIn_7_0 = GzipInflater.field_d;
             return stackIn_7_0;
           }
           for (int var3 = 0; var3 < var2_int; var3++) {
@@ -51,11 +51,11 @@ final class ic {
             if (var4 == 45) {
               if (0 == var3 ||
                 var3 == -1 + var2_int) {
-                w stackIn_15_0 = td.field_d;
+                EmailValidationError stackIn_15_0 = td.field_d;
                 return stackIn_15_0;
               }
             } else if (InstrumentPatch.field_l.indexOf(var4) == -1) {
-              w stackIn_18_0 = td.field_d;
+              EmailValidationError stackIn_18_0 = td.field_d;
               return stackIn_18_0;
             }
           }
@@ -64,7 +64,7 @@ final class ic {
           }
           field_a = (String) null;
           Object stackIn_23_0 = null;
-          return (w) (stackIn_23_0);
+          return (EmailValidationError) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;

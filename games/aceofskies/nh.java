@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh {
-    static w field_f;
+    static EmailValidationError field_f;
     static IntrusiveDeque pendingHighscoreQueries;
     static BitmapFont field_c;
     static int field_e;
@@ -24,7 +24,7 @@ final class nh {
 
     static {
         field_z = "nh.A(";
-        field_f = new w();
+        field_f = new EmailValidationError();
         pendingHighscoreQueries = new IntrusiveDeque();
     }
 }

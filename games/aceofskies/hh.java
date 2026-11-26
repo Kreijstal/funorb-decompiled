@@ -34,7 +34,7 @@ abstract class hh {
 
     final static void a(int param0, GraphicsRenderer param1) {
         try {
-          bo var2 = fa.a(param1, true);
+          RenderStateStack var2 = fa.a(param1, true);
           if (param0 != 255) {
             field_b = (qk) null;
           }
@@ -43,9 +43,9 @@ abstract class hh {
           int var5 = 0;
           int var6 = 0;
           param1.fillRectAlpha(var4, var3, var6, -5782, -65281, var5);
-          var2.a(var3 + var5, var5, var4 + var6, var6, 70);
+          var2.pushClip(var3 + var5, var5, var4 + var6, var6, 70);
           param1.copyPixels(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, var6 * SoftwareRasterizer.stride, SoftwareRasterizer.stride);
-          var2.a(true);
+          var2.popRenderState(true);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "hh.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

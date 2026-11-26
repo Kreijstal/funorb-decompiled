@@ -5,9 +5,9 @@ final class OpenGlAssemblyProgram {
     private HardwareOpenGlRenderer field_b;
     int field_d;
     static int[] field_c;
-    static w field_a;
+    static EmailValidationError field_a;
 
-    final static io linkShaderProgram(int param0, HardwareOpenGlRenderer param1, OpenGlShaderObject[] param2) {
+    final static OpenGlShaderProgram linkShaderProgram(int param0, HardwareOpenGlRenderer param1, OpenGlShaderObject[] param2) {
         String stackIn_30_2 = null;
         String stackIn_33_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -45,10 +45,10 @@ final class OpenGlAssemblyProgram {
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
               Object stackIn_24_0 = null;
-              return (io) (stackIn_24_0);
+              return (OpenGlShaderProgram) (stackIn_24_0);
             }
           }
-          io stackIn_26_0 = new io(param1, var3_long, param2);
+          OpenGlShaderProgram stackIn_26_0 = new OpenGlShaderProgram(param1, var3_long, param2);
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,6 +100,6 @@ final class OpenGlAssemblyProgram {
     }
 
     static {
-        field_a = new w();
+        field_a = new EmailValidationError();
     }
 }

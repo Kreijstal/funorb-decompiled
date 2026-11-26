@@ -11,7 +11,7 @@ final class am {
           if (param1) {
             nextScoreSubmissionId = -84;
           }
-          SoundPlayback stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, 96));
+          SoundPlayback stackIn_3_0 = EmailValidationError.startPcmPlayback(-23159, PcmSampleStream.a(param0, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

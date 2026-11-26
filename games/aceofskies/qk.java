@@ -200,7 +200,7 @@ final class qk {
           var1 = new wo();
         }
         var1.a(SoftwareRasterizer.stride, 251, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.framebuffer, SoftwareRasterizer.clipRight);
-        bo.field_i.addLast(104, var1);
+        RenderStateStack.field_i.addLast(104, var1);
         if (param0 != -92) {
           field_e = (wd) null;
         }

@@ -44,7 +44,7 @@ final class te extends IntrusiveNode {
     final static void resetFrameTiming(int obfuscationGuard) {
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          io.field_c.a(0);
+          OpenGlShaderProgram.field_c.a(0);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
             pn.field_b[var1_int] = 0L;
           }

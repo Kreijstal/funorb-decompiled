@@ -63,7 +63,7 @@ final class as {
         if (null != fu.field_d) {
           fu.field_d.k(-116);
         }
-        fo.b(0);
+        RenderStateSnapshot.resetTooltip(0);
     }
 
     public static void b(int param0) {

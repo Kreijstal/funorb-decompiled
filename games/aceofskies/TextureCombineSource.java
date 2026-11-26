@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb {
+final class TextureCombineSource {
     static String[] field_a;
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    final static void a(String param0, int param1) {
+    final static void printClientError(String param0, int param1) {
         System.out.println("Error: " + AchievementStateRequest.replaceSubstring("%0a", -104, "\n", param0));
         if (param1 != 20164) {
           field_a = (String[]) null;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearTextureCombineSourceStatics(int param0) {
         if (param0 != -27134) {
-          jb.a(-25);
+          TextureCombineSource.clearTextureCombineSourceStatics(-25);
           field_a = null;
           return;
         }

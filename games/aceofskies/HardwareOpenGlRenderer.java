@@ -308,11 +308,11 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         }
     }
 
-    final void a(jb param0, int param1, boolean param2, byte param3) {
+    final void a(TextureCombineSource param0, int param1, boolean param2, byte param3) {
         int stackIn_3_2 = 0;
         String stackIn_9_2 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34184 + param1, ii.a((byte) 79, param0));
+          jaggl.OpenGL.glTexEnvi(8960, 34184 + param1, ii.getOpenGlTextureCombineSource((byte) 79, param0));
           int stackIn_2_0 = 8960;
           int stackIn_2_1 = param1 + 34200;
           stackIn_3_2 = (!param2) ? (770) : (771);
@@ -1332,12 +1332,12 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         int var1 = 10 / ((50 - param0) / 52);
     }
 
-    final void a(boolean param0, int param1, boolean param2, jb param3, boolean param4) {
+    final void a(boolean param0, int param1, boolean param2, TextureCombineSource param3, boolean param4) {
         int stackIn_4_2 = 0;
         int stackIn_8_2 = 0;
         String stackIn_15_2 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, ii.a((byte) 73, param3));
+          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, ii.getOpenGlTextureCombineSource((byte) 73, param3));
           if (param0) {
             int stackIn_7_0 = 8960;
             int stackIn_7_1 = 34192 + param1;

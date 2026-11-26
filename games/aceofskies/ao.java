@@ -94,10 +94,10 @@ abstract class ao {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var2 = decompiledCaughtException;
             }
-            if (gt.field_r == null) {
+            if (OpenGlPbuffer.field_r == null) {
               return param0.getParameter("settings");
             }
-            String stackIn_16_0 = gt.field_r;
+            String stackIn_16_0 = OpenGlPbuffer.field_r;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

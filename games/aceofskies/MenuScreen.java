@@ -53,11 +53,11 @@ final class MenuScreen {
           param4 = param4 + (var7_int << 1);
           CipherPacketBuffer.brassSliderSprites[0].draw(param0, param2);
           CipherPacketBuffer.brassSliderSprites[2].draw(-CipherPacketBuffer.brassSliderSprites[2].getFullWidth() + (param0 + param4), param2);
-          bo var8 = fa.a(param3, true);
+          RenderStateStack var8 = fa.a(param3, true);
           param4 = param4 + param0 - CipherPacketBuffer.brassSliderSprites[2].getFullWidth();
           int var9 = param0;
           param0 = param0 + CipherPacketBuffer.brassSliderSprites[0].getFullWidth();
-          var8.a(param4, param0, CipherPacketBuffer.brassSliderSprites[2].getFullHeight() + param2, param2, 126);
+          var8.pushClip(param4, param0, CipherPacketBuffer.brassSliderSprites[2].getFullHeight() + param2, param2, 126);
           while (param4 > param0) {
             CipherPacketBuffer.brassSliderSprites[1].draw(param0, param2);
             param0 = param0 + CipherPacketBuffer.brassSliderSprites[1].getFullWidth();
@@ -65,7 +65,7 @@ final class MenuScreen {
           if (param5 >= -11) {
             this.handleNavigationKey(-86);
           }
-          var8.a(true);
+          var8.popRenderState(true);
           CipherPacketBuffer.brassSliderSprites[3].draw(var9 + param1, param2);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -334,7 +334,7 @@ final class MenuScreen {
             return false;
           }
           if (itemIndex == 2 &&
-            vq.instructionPage == -1 + io.field_a.length) {
+            vq.instructionPage == -1 + OpenGlShaderProgram.field_a.length) {
             return false;
           }
         }
@@ -388,12 +388,12 @@ final class MenuScreen {
     private final void a(int param0, byte param1, int param2, int param3, GraphicsRenderer param4, int param5) {
         int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          bo var16 = fa.a(param4, true);
-          var16.a(param3 + (param2 - 5), 5 + param2, -5 + (param5 + param0), param5 + 5, -71);
+          RenderStateStack var16 = fa.a(param4, true);
+          var16.pushClip(param3 + (param2 - 5), 5 + param2, -5 + (param5 + param0), param5 + 5, -71);
           for (int var8 = 0; var8 < param0 - 10; var8 = var8 + qk.woodenTileSprite.getFullHeight()) {
             qk.woodenTileSprite.drawScaledPlain(param2 + 5, var8 + (param5 + 5), -10 + param3, qk.woodenTileSprite.getFullHeight());
           }
-          var16.a(true);
+          var16.popRenderState(true);
           GraphicsRenderer var9 = param4;
           int var10 = param2;
           int var11 = param5;
@@ -681,16 +681,16 @@ final class MenuScreen {
           }
           SoftCacheReference.brassButtonSprites[0].draw(param1, param4);
           SoftCacheReference.brassButtonSprites[2].draw(-SoftCacheReference.brassButtonSprites[2].getFullWidth() + (param0 + param1), param4);
-          bo var11 = fa.a(param2, true);
-          bo var12 = var11;
+          RenderStateStack var11 = fa.a(param2, true);
+          RenderStateStack var12 = var11;
           int var8 = param0 + param1 - SoftCacheReference.brassButtonSprites[2].getFullWidth();
           param1 = param1 + SoftCacheReference.brassButtonSprites[0].getFullWidth();
-          var12.a(var8, param1, param4 + SoftCacheReference.brassButtonSprites[2].getFullHeight(), param4, 102);
+          var12.pushClip(var8, param1, param4 + SoftCacheReference.brassButtonSprites[2].getFullHeight(), param4, 102);
           while (var8 > param1) {
             SoftCacheReference.brassButtonSprites[1].draw(param1, param4);
             param1 = param1 + SoftCacheReference.brassButtonSprites[1].getFullWidth();
           }
-          var12.a(true);
+          var12.popRenderState(true);
           SocketConnector.levelRingSprites[21].drawScaledPlain(param1 + 3, 9 + param4, 16, 16);
           SocketConnector.levelRingSprites[21].drawScaledPlain(-param0 + (20 + param1), 9 + param4, 16, 16);
           HighscoreQuery.powerBulbSprites[0].drawScaledPlain(param1 + 3, 9 + param4, 16, 16);
@@ -811,7 +811,7 @@ final class MenuScreen {
           ka.field_a = MouseWheelInput.a((byte) 3, spriteArchive, "", "frame");
           rg.field_F = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_raised");
           DualLinkNode.field_h = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_frame");
-          bo.menuBitmapFont = (BitmapFont) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
+          RenderStateStack.menuBitmapFont = (BitmapFont) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
           if (obfuscationGuard != -56) {
             field_g = (IntrusiveDeque) null;
           }
@@ -823,12 +823,12 @@ final class MenuScreen {
     private final void a(int param0, GraphicsRenderer param1, int param2, int param3, int param4, int param5, int param6) {
         int var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          bo var18 = fa.a(param1, true);
-          var18.a(-5 + (param3 + param2), 5 + param2, param5 + param4 - 5, param4 + 5, -21);
+          RenderStateStack var18 = fa.a(param1, true);
+          var18.pushClip(-5 + (param3 + param2), 5 + param2, param5 + param4 - 5, param4 + 5, -21);
           for (int var9 = 0; param5 - 10 > var9; var9 = var9 + qk.woodenTileSprite.getFullHeight()) {
             qk.woodenTileSprite.drawScaled(5 + param2, param4 + var9 + 5, -10 + param3, qk.woodenTileSprite.getFullHeight(), 2, param6, 0);
           }
-          var18.a(true);
+          var18.popRenderState(true);
           GraphicsRenderer var10 = param1;
           int var11 = param2;
           int var12 = param4;
@@ -1195,7 +1195,7 @@ final class MenuScreen {
             var12[var13] = var12[var13] - 64;
           }
         }
-        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
+        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(OpenGlShaderProgram.field_a[vq.instructionPage], 120, new String[]{"          "}));
         for (int var14 = 0; var14 < var13Lifetime1; var14++) {
           if (!var10[var14].startsWith("<b>")) {
             RendererBitmapFont stackIn_19_0 = PacketBuffer.gameFont;
@@ -1208,7 +1208,7 @@ final class MenuScreen {
             se.bigGameFont.drawTextWithImages(var4, 0, SoftwareDepthBuffer.keySprites, var5 + 12, 0, var10[var14], var9 * (var14 - var13Lifetime1 / 2) + (10 - (-var6 - var8 / 2)), var18);
           }
         }
-        se.bigGameFont.drawRightAlignedTextWithImages(0, var4, var11, (byte) -110, -10 + (var8 + var6), om.a(io.field_a.length, 1 + vq.instructionPage, (byte) 66), var7 + var5 - 10, SoftwareDepthBuffer.keySprites);
+        se.bigGameFont.drawRightAlignedTextWithImages(0, var4, var11, (byte) -110, -10 + (var8 + var6), om.a(OpenGlShaderProgram.field_a.length, 1 + vq.instructionPage, (byte) 66), var7 + var5 - 10, SoftwareDepthBuffer.keySprites);
     }
 
     final static void a(byte param0, int param1, boolean param2) {
@@ -1502,16 +1502,16 @@ final class MenuScreen {
         try {
           SoftCacheReference.brassButtonSprites[0].draw(param4, param0);
           SoftCacheReference.brassButtonSprites[2].draw(-SoftCacheReference.brassButtonSprites[2].getFullWidth() + (param4 + param3), param0);
-          bo var10 = fa.a(param1, true);
-          bo var11 = var10;
+          RenderStateStack var10 = fa.a(param1, true);
+          RenderStateStack var11 = var10;
           param3 = param4 + param3 - SoftCacheReference.brassButtonSprites[2].getFullWidth();
           param4 = param4 + SoftCacheReference.brassButtonSprites[0].getFullWidth();
-          var11.a(param3, param4, param0 + SoftCacheReference.brassButtonSprites[2].getFullHeight(), param0, 120);
+          var11.pushClip(param3, param4, param0 + SoftCacheReference.brassButtonSprites[2].getFullHeight(), param0, 120);
           while (param4 < param3) {
             SoftCacheReference.brassButtonSprites[1].draw(param4, param0);
             param4 = param4 + SoftCacheReference.brassButtonSprites[1].getFullWidth();
           }
-          var11.a(true);
+          var11.popRenderState(true);
           int var7 = -128 % ((param2 + 32) / 50);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "nk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

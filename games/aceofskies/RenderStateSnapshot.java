@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo {
+final class RenderStateSnapshot {
     int field_e;
     RenderSprite field_b;
     int field_g;
-    fo field_c;
+    RenderStateSnapshot field_c;
     int field_a;
     int field_d;
     static int[] field_f;
 
-    public static void a(int param0) {
+    public static void clearRenderStateStatics(int param0) {
         field_f = null;
         if (param0 != 25613) {
-          fo.a(-119);
+          RenderStateSnapshot.clearRenderStateStatics(-119);
         }
     }
 
-    final static void b(int param0) {
+    final static void resetTooltip(int param0) {
         SpriteState.field_o = -1;
         ht.field_g = false;
         ScreenParticle.field_o = param0;
@@ -25,7 +25,7 @@ final class fo {
         StrongCacheReference.field_s = null;
     }
 
-    final void a(byte param0, int param1, int param2, fo param3, int param4, RenderSprite param5, int param6) {
+    final void setRenderState(byte param0, int param1, int param2, RenderStateSnapshot param3, int param4, RenderSprite param5, int param6) {
         this.field_b = param5;
         this.field_d = param6;
         this.field_g = param4;

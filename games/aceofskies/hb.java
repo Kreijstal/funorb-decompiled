@@ -237,7 +237,7 @@ final class hb {
         String stackIn_126_2 = null;
         boolean var28 = (AceOfSkies.obfuscationControl);
         try {
-          bo var10 = fa.a(param7, true);
+          RenderStateStack var10 = fa.a(param7, true);
           if (param9 == null) {
             return;
           }
@@ -287,29 +287,29 @@ final class hb {
               var24 = var13 * param6 / (var14 + var13) + param0;
             }
             if (null != param9[0]) {
-              var10.a(var22, param2, var24, param0, 77);
+              var10.pushClip(var22, param2, var24, param0, 77);
               param9[0].drawBlended(param2, param0, param3, param1, param4);
-              var10.a(true);
+              var10.popRenderState(true);
             }
             if (null != param9[2]) {
-              var10.a(var15, var23, var24, param0, 84);
+              var10.pushClip(var15, var23, var24, param0, 84);
               param9[2].drawBlended(var18, param0, param3, param1, param4);
-              var10.a(true);
+              var10.popRenderState(true);
             }
             if (param9[6] != null) {
-              var10.a(var22, param2, var16, var25, -99);
+              var10.pushClip(var22, param2, var16, var25, -99);
               param9[6].drawBlended(param2, var20, param3, param1, param4);
-              var10.a(true);
+              var10.popRenderState(true);
             }
             if (null != param9[8]) {
-              var10.a(var15, var23, var16, var25, 118);
+              var10.pushClip(var15, var23, var16, var25, 118);
               param9[8].drawBlended(var18, var20, param3, param1, param4);
-              var10.a(true);
+              var10.popRenderState(true);
             }
             boolean decompiledFrameCompleted3 = true;
             if (null != param9[1] &&
               param9[1].getFullWidth() != 0) {
-              var10.a(var23, var22, var24, param0, 76);
+              var10.pushClip(var23, var22, var24, param0, 76);
               int var26 = var17;
               while (var18 > var26) {
                 param9[1].drawBlended(var26, param0, param3, param1, param4);
@@ -320,13 +320,13 @@ final class hb {
                 }
               }
               if (decompiledFrameCompleted3) {
-                var10.a(true);
+                var10.popRenderState(true);
               }
             }
             boolean decompiledFrameCompleted2 = true;
             if (null != param9[7] &&
               param9[7].getFullWidth() != 0) {
-              var10.a(var23, var22, var16, var25, 121);
+              var10.pushClip(var23, var22, var16, var25, 121);
               int var26Lifetime1 = var17;
               while (var18 > var26Lifetime1) {
                 param9[7].drawBlended(var26Lifetime1, var20, param3, param1, param4);
@@ -337,13 +337,13 @@ final class hb {
                 }
               }
               if (decompiledFrameCompleted2) {
-                var10.a(true);
+                var10.popRenderState(true);
               }
             }
             boolean decompiledFrameCompleted1 = true;
             if (param9[3] != null &&
               0 != param9[3].getFullHeight()) {
-              var10.a(var22, param2, var25, var24, -112);
+              var10.pushClip(var22, param2, var25, var24, -112);
               int var26Lifetime2 = var19;
               while (var26Lifetime2 < var20) {
                 param9[3].drawBlended(param2, var26Lifetime2, param3, param1, param4);
@@ -354,13 +354,13 @@ final class hb {
                 }
               }
               if (decompiledFrameCompleted1) {
-                var10.a(true);
+                var10.popRenderState(true);
               }
             }
             boolean decompiledFrameCompleted0 = true;
             if (null != param9[5] &&
               param9[5].getFullHeight() != 0) {
-              var10.a(var15, var23, var25, var24, 100);
+              var10.pushClip(var15, var23, var25, var24, 100);
               int var26Lifetime3 = var19;
               while (var20 > var26Lifetime3) {
                 param9[5].drawBlended(var18, var26Lifetime3, param3, param1, param4);
@@ -371,13 +371,13 @@ final class hb {
                 }
               }
               if (decompiledFrameCompleted0) {
-                var10.a(true);
+                var10.popRenderState(true);
               }
             }
             if (param9[4] != null &&
               0 != param9[4].getFullWidth() &&
               param9[4].getFullHeight() != 0) {
-              var10.a(var23, var22, var25, var24, 93);
+              var10.pushClip(var23, var22, var25, var24, 93);
               int var26Lifetime4 = var19;
               while (var26Lifetime4 < var20) {
                 if (var28) {
@@ -390,7 +390,7 @@ final class hb {
                 }
                 var26Lifetime4 = var26Lifetime4 + param9[4].getFullHeight();
               }
-              var10.a(true);
+              var10.popRenderState(true);
               return;
             }
             return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gt extends DualLinkNode {
+final class OpenGlPbuffer extends DualLinkNode {
     static Sprite field_o;
     private long field_p;
     int field_n;
@@ -9,29 +9,29 @@ final class gt extends DualLinkNode {
     private OpenGlRenderer field_q;
 
     protected final void finalize() throws Throwable {
-        this.c((byte) -95);
+        this.releasePbuffer((byte) -95);
         super.finalize();
     }
 
-    public static void e(int param0) {
+    public static void clearPbufferStatics(int param0) {
         field_o = null;
         if (param0 <= -120) {
           field_r = null;
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        gt.a(110, (d) null, (java.awt.Canvas) null, (ResourceArchive) null, 56);
+        OpenGlPbuffer.createHardwareOpenGlRenderer(110, (d) null, (java.awt.Canvas) null, (ResourceArchive) null, 56);
         field_r = null;
     }
 
-    final static cd a(byte param0) {
+    final static cd snapshotLoginIdentifier(byte param0) {
         if (param0 != -46) {
           return (cd) null;
         }
         return new cd(ve.a(true), oh.a((byte) 114));
     }
 
-    final static GraphicsRenderer a(int param0, d param1, java.awt.Canvas param2, ResourceArchive param3, int param4) {
+    final static GraphicsRenderer createHardwareOpenGlRenderer(int param0, d param1, java.awt.Canvas param2, ResourceArchive param3, int param4) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
@@ -43,7 +43,7 @@ final class gt extends DualLinkNode {
             throw new RuntimeException("");
           }
           if (param0 > -25) {
-            gt.e(19);
+            OpenGlPbuffer.clearPbufferStatics(19);
           }
           jaggl.OpenGL var9 = new jaggl.OpenGL();
           long var6 = var9.init(param2, 8, 8, 8, 24, 0, param4);
@@ -80,7 +80,7 @@ final class gt extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, String param1, int param2, String[] param3) {
+    final static void completeAccountCreation(int param0, String param1, int param2, String[] param3) {
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -129,7 +129,7 @@ final class gt extends DualLinkNode {
         }
     }
 
-    private final void c(byte param0) {
+    private final void releasePbuffer(byte param0) {
         if (param0 <= -64) {
           if (this.field_p > 0L) {
             this.field_q.field_kc.releasePbuffer(this.field_p);
@@ -144,7 +144,7 @@ final class gt extends DualLinkNode {
         }
     }
 
-    gt(OpenGlRenderer param0, int param1, int param2) {
+    OpenGlPbuffer(OpenGlRenderer param0, int param1, int param2) {
         try {
           this.field_n = param2 * param1;
           this.field_q = param0;
@@ -154,7 +154,7 @@ final class gt extends DualLinkNode {
         }
     }
 
-    final long f(int param0) {
+    final long getPbufferHandle(int param0) {
         if (param0 != 25766) {
           return -63L;
         }

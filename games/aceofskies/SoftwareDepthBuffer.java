@@ -7,7 +7,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
     static int[] field_e;
     static String field_d;
     int field_g;
-    static jb field_b;
+    static TextureCombineSource field_b;
     static RenderSprite[] keySprites;
 
     final static void writeAchievementSubmission(int param0, int param1, AchievementSubmission param2) {
@@ -62,7 +62,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
           }
           jaggl.OpenGL.glBindProgramARB(param1, 0);
           if (!param0) {
-            field_b = (jb) null;
+            field_b = (TextureCombineSource) null;
           }
           OpenGlAssemblyProgram stackIn_9_0 = new OpenGlAssemblyProgram(param3, param1, var4_int);
           return stackIn_9_0;
@@ -120,6 +120,6 @@ final class SoftwareDepthBuffer implements DepthBuffer {
 
     static {
         field_e = new int[1000];
-        field_b = new jb();
+        field_b = new TextureCombineSource();
     }
 }

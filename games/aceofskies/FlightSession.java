@@ -207,7 +207,7 @@ final class FlightSession {
               }
             }
             if (decompiledFrameCompleted0) {
-              bo var5_ref_bo = fa.a(renderer, true);
+              RenderStateStack var5_ref_bo = fa.a(renderer, true);
               var6 = 0;
               if (this.multiplierPanelHidePhase > 0) {
                 var6 = 40 * (int)(-Math.cos((double)this.multiplierPanelHidePhase * 3.141592653589793 / 200.0) * 128.0) + 5120 >> 8;
@@ -237,16 +237,16 @@ final class FlightSession {
                   var8 = NetworkArchiveRequest.field_w - 150;
                   var7 = -25 + (sh.field_u + var4_int);
                   ii.gaugeSprites[1][2].draw(var7, var8);
-                  var5_ref_bo.a(var7 + 20, var7, 124 + var8, -this.displayedWeaponHeat + var8 + 104, 82);
+                  var5_ref_bo.pushClip(var7 + 20, var7, 124 + var8, -this.displayedWeaponHeat + var8 + 104, 82);
                   ii.gaugeSprites[1][1].draw(var7, var8);
-                  var5_ref_bo.a(true);
+                  var5_ref_bo.popRenderState(true);
                   ii.gaugeSprites[1][0].draw(var7, var8);
                   var7 = var4_int + (sh.field_u - 50);
                   var8 = -150 + NetworkArchiveRequest.field_w;
                   ii.gaugeSprites[0][2].draw(var7, var8);
-                  var5_ref_bo.a(var7 + 20, var7, var8 + 124, -this.displayedHealthPercent + var8 + 101, -92);
+                  var5_ref_bo.pushClip(var7 + 20, var7, var8 + 124, -this.displayedHealthPercent + var8 + 101, -92);
                   ii.gaugeSprites[0][1].draw(var7, var8);
-                  var5_ref_bo.a(true);
+                  var5_ref_bo.popRenderState(true);
                   ii.gaugeSprites[0][0].draw(var7, var8);
                   break;
                 }
@@ -260,9 +260,9 @@ final class FlightSession {
                   var7 = var4_int + (-80 + sh.field_u);
                   var8 = -151 + NetworkArchiveRequest.field_w;
                   ii.gaugeSprites[2][3].drawBlended(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
-                  var5_ref_bo.a(30 + var7, var7, 135 + var8, -this.displayedTemporaryWeaponTicks + (103 + var8), obfuscationGuard + 20115);
+                  var5_ref_bo.pushClip(30 + var7, var7, 135 + var8, -this.displayedTemporaryWeaponTicks + (103 + var8), obfuscationGuard + 20115);
                   ii.gaugeSprites[2][2].drawBlended(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
-                  var5_ref_bo.a(true);
+                  var5_ref_bo.popRenderState(true);
                   ii.gaugeSprites[2][1].drawBlended(var7, var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
                   var9 = (int)((1.0 + Math.sin((double)this.simulationTick * 3.141592653589793 / 20.0)) * (double)this.temporaryWeaponOpacity / 2.0);
                   break;
@@ -272,15 +272,15 @@ final class FlightSession {
                 renderer.b(var10 + 1, var7 + 5, var7 + 10, 1073741824, var10 + 1, 1);
                 var9++;
               } while (!var13);
-              bo stackIn_135_0 = var5_ref_bo;
+              RenderStateStack stackIn_135_0 = var5_ref_bo;
               int stackIn_135_1 = 30 + var7;
               int stackIn_135_2 = var7;
               int stackIn_135_3 = var8 + 135;
               int stackIn_135_4 = 103 + var8 - this.displayedTemporaryWeaponTicks;
               int stackIn_136_5 = (this.displayedTemporaryWeaponTicks >= 99) ? 50 : 0;
-              ((bo) (Object) stackIn_135_0).a(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_135_4 - stackIn_136_5, 100);
+              ((RenderStateStack) (Object) stackIn_135_0).pushClip(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_135_4 - stackIn_136_5, 100);
               ii.gaugeSprites[2][0].drawBlended(var7, var8, 0, 16843009 * var9, 2);
-              var5_ref_bo.a(true);
+              var5_ref_bo.popRenderState(true);
               if (this.displayedTemporaryWeaponType > 0) {
                 po.powerIconSprites[-1 + this.displayedTemporaryWeaponType].drawBlended(var7 + 7, 104 + var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
               }
@@ -820,7 +820,7 @@ final class FlightSession {
           if (obfuscationGuard <= 59) {
             return;
           }
-          bo.field_h = 0;
+          RenderStateStack.field_h = 0;
           BufferedRandomAccessFile.playerDefinition.maximumSpeed = ub.basePlayerDefinition.maximumSpeed;
           this.fireRateUpgradeLevel = 0;
           this.targetUpgradeCredits = 0;
@@ -1067,7 +1067,7 @@ final class FlightSession {
               if (var6 < 1) {
                 return;
               }
-              bo.a(lp.field_g, var6, 23187);
+              RenderStateStack.playRandomSample(lp.field_g, var6, 23187);
               this.removeBullet(42, var3_int);
               var3_int--;
             }
@@ -1176,29 +1176,29 @@ final class FlightSession {
           }
           if (OpenGlIndexBuffer.field_u != aircraft.definition) {
             if (aircraft.temporaryWeapon == 3) {
-              bo.a(fd.field_b[3], var8, 23187);
+              RenderStateStack.playRandomSample(fd.field_b[3], var8, 23187);
               if (!var9) {
                 return;
               }
             }
             if (var3_int == 2) {
-              bo.a(fd.field_b[2], var8, 23187);
+              RenderStateStack.playRandomSample(fd.field_b[2], var8, 23187);
               if (!var9) {
                 return;
               }
             }
             if (1 != var3_int) {
-              bo.a(fd.field_b[0], var8, 23187);
+              RenderStateStack.playRandomSample(fd.field_b[0], var8, 23187);
               if (!var9) {
                 return;
               }
             }
-            bo.a(fd.field_b[1], var8, 23187);
+            RenderStateStack.playRandomSample(fd.field_b[1], var8, 23187);
             if (!var9) {
               return;
             }
           }
-          bo.a(fd.field_b[4], var8, 23187);
+          RenderStateStack.playRandomSample(fd.field_b[4], var8, 23187);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var3 = decompiledCaughtParameter0;
@@ -1363,7 +1363,7 @@ final class FlightSession {
             int stackIn_13_2 = (this.arcadeMode) ? 1 : 0;
             int stackIn_15_3 = 65535;
             int stackIn_16_4 = (!this.arcadeMode) ? 0 : 1;
-            to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, GzipInflater.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
+            to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, RenderStateStack.field_h, se.field_b, GzipInflater.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
             if (!cn.b(true)) {
               ClientException.queueScoreSubmission(to.lastScoreSubmission, true, 3);
             }
@@ -1383,7 +1383,7 @@ final class FlightSession {
         try {
           se.field_b = se.field_b + 8;
           GzipInflater.field_a = GzipInflater.field_a - 3;
-          bo.field_h = bo.field_h - 5;
+          RenderStateStack.field_h = RenderStateStack.field_h - 5;
           NetworkGameClient.field_x = NetworkGameClient.field_x + 10;
           if (!this.attractMode) {
             if (!this.arcadeMode &&
@@ -1757,19 +1757,19 @@ final class FlightSession {
               if (var5) {
                 if (qq.a(20, 10) >= 5) {
                   NetworkGameClient.field_x = NetworkGameClient.field_x - points;
-                  bo.field_h = bo.field_h - points;
+                  RenderStateStack.field_h = RenderStateStack.field_h - points;
                 } else {
-                  bo.field_h = bo.field_h - points;
+                  RenderStateStack.field_h = RenderStateStack.field_h - points;
                 }
               }
             }
           } else if (qq.a(20, 10) >= 5) {
             NetworkGameClient.field_x = NetworkGameClient.field_x - points;
             if (var5) {
-              bo.field_h = bo.field_h - points;
+              RenderStateStack.field_h = RenderStateStack.field_h - points;
             }
           } else {
-            bo.field_h = bo.field_h - points;
+            RenderStateStack.field_h = RenderStateStack.field_h - points;
           }
           if (!this.attractMode &&
             !this.arcadeMode) {

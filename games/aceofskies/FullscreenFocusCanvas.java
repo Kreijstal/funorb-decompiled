@@ -10,7 +10,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param1 == ~SoundCache.field_d) {
             st.a((byte) 87);
           }
-          hr.a(NetworkGameClient.loadingPercent, 0, w.field_a, AccountRequestState.loadingMessage);
+          hr.a(NetworkGameClient.loadingPercent, 0, EmailValidationError.field_a, AccountRequestState.loadingMessage);
           ArchiveIndex.a(0, false, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

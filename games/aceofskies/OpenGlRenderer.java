@@ -1989,18 +1989,18 @@ final class OpenGlRenderer extends GraphicsRenderer {
             if (!this.field_Mb) {
               throw new RuntimeException("");
             }
-            gt var3_ref = (gt) (this.field_s.findByKey((byte) 106, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight())));
+            OpenGlPbuffer var3_ref = (OpenGlPbuffer) (this.field_s.findByKey((byte) 106, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight())));
             if (var3_ref == null) {
-              gt var7 = new gt(this, this.field_j.getWidth(), this.field_j.getHeight());
+              OpenGlPbuffer var7 = new OpenGlPbuffer(this, this.field_j.getWidth(), this.field_j.getHeight());
               var3_ref = var7;
               this.field_rb = this.field_rb + var7.field_n * 4;
               while (this.field_rb > 2097152) {
                 var4 = this.field_Ec.removeLast(3);
                 if (var4 != null) {
-                  gt var8 = (gt) (var4);
+                  OpenGlPbuffer var8 = (OpenGlPbuffer) (var4);
                   var8.unlinkSecondaryNode(-127);
                   var8.unlink(-126);
-                  this.field_kc.releasePbuffer(var8.f(25766));
+                  this.field_kc.releasePbuffer(var8.getPbufferHandle(25766));
                   this.field_rb = this.field_rb - var8.field_n;
                   continue;
                 }
@@ -2009,7 +2009,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
               this.field_s.put(115, (long)(this.field_j.getWidth() << 16 | this.field_j.getHeight()), var7);
             }
             this.field_Ec.addFirst(var3_ref, (byte) 125);
-            this.field_kc.setPbuffer(var3_ref.f(25766));
+            this.field_kc.setPbuffer(var3_ref.getPbufferHandle(25766));
           }
           this.field_ec = param0.getWidth();
           this.field_bb = param0.getHeight();

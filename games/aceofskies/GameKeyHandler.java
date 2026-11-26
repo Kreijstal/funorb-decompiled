@@ -6,7 +6,7 @@ import java.util.*;
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_c;
     static RenderSprite[] upgradeSprites;
-    static jb field_a;
+    static TextureCombineSource field_a;
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         String stackIn_24_2 = null;
@@ -114,7 +114,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         upgradeSprites = null;
         field_a = null;
         if (param0 != 127) {
-          field_a = (jb) null;
+          field_a = (TextureCombineSource) null;
         }
     }
 
@@ -184,6 +184,6 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     }
 
     static {
-        field_a = new jb();
+        field_a = new TextureCombineSource();
     }
 }

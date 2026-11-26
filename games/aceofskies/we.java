@@ -56,7 +56,7 @@ final class we {
         field_a = null;
     }
 
-    final static w a(String param0, int param1) {
+    final static EmailValidationError validateEmailTopLevelDomain(String param0, int param1) {
         String stackIn_17_2 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -65,10 +65,10 @@ final class we {
           while (true) {
             if (var3 >= var2_int) {
               if (param1 < -108) {
-                w stackIn_13_0 = td.field_d;
+                EmailValidationError stackIn_13_0 = td.field_d;
                 return stackIn_13_0;
               }
-              w stackIn_11_0 = (w) null;
+              EmailValidationError stackIn_11_0 = (EmailValidationError) null;
               return stackIn_11_0;
             }
             int var4 = param0.charAt(var3);
@@ -82,7 +82,7 @@ final class we {
             break;
           }
           Object stackIn_7_0 = null;
-          return (w) (stackIn_7_0);
+          return (EmailValidationError) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;

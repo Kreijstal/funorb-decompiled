@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w {
+final class EmailValidationError {
     static boolean field_a;
 
-    final static SoundPlayback a(int param0, PcmSampleStream param1) {
+    final static SoundPlayback startPcmPlayback(int param0, PcmSampleStream param1) {
         String stackIn_7_2 = null;
         try {
           SoundPlayback var2 = new SoundPlayback(param1, param1);
           di.activeSoundPlaybacks.addLast(param0 ^ -23077, var2);
           if (param0 != -23159) {
             PcmSampleStream var3 = (PcmSampleStream) null;
-            w.a(117, (PcmSampleStream) null);
+            EmailValidationError.startPcmPlayback(117, (PcmSampleStream) null);
           }
           qn.pcmMixer.addSubstream(param1);
           SoundPlayback stackIn_3_0 = var2;

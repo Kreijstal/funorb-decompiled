@@ -67,7 +67,7 @@ abstract class sf extends IntrusiveNode {
     final static void a(byte param0, java.applet.Applet param1, String param2) {
         try {
           String var5Lifetime6;
-          gt.field_r = param2;
+          OpenGlPbuffer.field_r = param2;
           try {
             String var6 = param1.getParameter("cookieprefix");
             String var5 = var6;

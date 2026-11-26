@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bo {
+final class RenderStateStack {
     static int field_h;
     static String field_g;
-    private fo field_b;
+    private RenderStateSnapshot field_b;
     private RenderSprite field_d;
     static IntrusiveDeque field_i;
     static BitmapFont menuBitmapFont;
     private int[] field_e;
     private GraphicsRenderer field_c;
-    private fo field_f;
+    private RenderStateSnapshot field_f;
 
-    final static boolean a(byte param0) {
+    final static boolean hasActiveWindow(byte param0) {
         if (param0 != 102) {
-          bo.a((byte) -128);
+          RenderStateStack.hasActiveWindow((byte) -128);
           if (hr.field_e == null) {
             return false;
           }
@@ -32,7 +32,7 @@ final class bo {
         return false;
     }
 
-    final static SoundPlayback a(PcmSample[] param0, int param1, int param2) {
+    final static SoundPlayback playRandomSample(PcmSample[] param0, int param1, int param2) {
         String stackIn_7_2 = null;
         try {
           if (param2 != 23187) {
@@ -54,9 +54,9 @@ final class bo {
         }
     }
 
-    final void a(boolean param0) {
-        fo var3 = null;
-        fo var2 = null;
+    final void popRenderState(boolean param0) {
+        RenderStateSnapshot var3 = null;
+        RenderStateSnapshot var2 = null;
         if (this.field_b.field_b != this.field_d) {
           this.field_c.restoreDefaultFramebuffer();
           if (null != this.field_b.field_b) {
@@ -64,7 +64,7 @@ final class bo {
           } else {
             this.field_d = this.field_b.field_b;
             if (!param0) {
-              bo.clearStaticReferences(65);
+              RenderStateStack.clearStaticReferences(65);
               this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
               var3 = this.field_b;
               var2 = var3;
@@ -85,10 +85,10 @@ final class bo {
           }
           this.field_d = this.field_b.field_b;
           if (!param0) {
-            bo.clearStaticReferences(65);
+            RenderStateStack.clearStaticReferences(65);
             this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-            fo var3Lifetime3 = this.field_b;
-            fo var2Lifetime3 = var3Lifetime3;
+            RenderStateSnapshot var3Lifetime3 = this.field_b;
+            RenderStateSnapshot var2Lifetime3 = var3Lifetime3;
             this.field_b = this.field_b.field_c;
             var3Lifetime3.field_c = this.field_f;
             var3Lifetime3.field_b = null;
@@ -96,8 +96,8 @@ final class bo {
             return;
           }
           this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-          fo var3Lifetime4 = this.field_b;
-          fo var2Lifetime4 = var3Lifetime4;
+          RenderStateSnapshot var3Lifetime4 = this.field_b;
+          RenderStateSnapshot var2Lifetime4 = var3Lifetime4;
           this.field_b = this.field_b.field_c;
           var3Lifetime4.field_c = this.field_f;
           var3Lifetime4.field_b = null;
@@ -106,34 +106,34 @@ final class bo {
         }
         if (param0) {
           this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-          fo var3Lifetime1 = this.field_b;
-          fo var2Lifetime1 = var3Lifetime1;
+          RenderStateSnapshot var3Lifetime1 = this.field_b;
+          RenderStateSnapshot var2Lifetime1 = var3Lifetime1;
           this.field_b = this.field_b.field_c;
           var3Lifetime1.field_c = this.field_f;
           var3Lifetime1.field_b = null;
           this.field_f = var3Lifetime1;
           return;
         }
-        bo.clearStaticReferences(65);
+        RenderStateStack.clearStaticReferences(65);
         this.field_c.setClip(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-        fo var3Lifetime2 = this.field_b;
-        fo var2Lifetime2 = var3Lifetime2;
+        RenderStateSnapshot var3Lifetime2 = this.field_b;
+        RenderStateSnapshot var2Lifetime2 = var3Lifetime2;
         this.field_b = this.field_b.field_c;
         var3Lifetime2.field_c = this.field_f;
         var3Lifetime2.field_b = null;
         this.field_f = var3Lifetime2;
     }
 
-    private final void b(int param0) {
-        fo var2 = null;
+    private final void pushRenderState(int param0) {
+        RenderStateSnapshot var2 = null;
         this.field_c.getClip(this.field_e);
         if (null != this.field_f) {
           var2 = this.field_f;
           this.field_f = this.field_f.field_c;
         } else {
-          var2 = new fo();
+          var2 = new RenderStateSnapshot();
         }
-        var2.a((byte) 46, this.field_e[3], this.field_e[2], this.field_b, this.field_e[1], this.field_d, this.field_e[0]);
+        var2.setRenderState((byte) 46, this.field_e[3], this.field_e[2], this.field_b, this.field_e[1], this.field_d, this.field_e[0]);
         this.field_b = var2;
         if (param0 == 884) {
           return;
@@ -153,13 +153,13 @@ final class bo {
         menuBitmapFont = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void pushClip(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 120 % ((param4 - 25) / 44);
-        this.b(884);
+        this.pushRenderState(884);
         this.field_c.intersectClip(param1, param3, param0, param2);
     }
 
-    bo(GraphicsRenderer param0) {
+    RenderStateStack(GraphicsRenderer param0) {
         this.field_d = null;
         this.field_e = new int[4];
         try {

@@ -72,10 +72,10 @@ final class tr {
         HighscoreNameEntry.field_d = new Sprite(var3, 3 * var4 / 4);
         HighscoreNameEntry.field_d.makeRasterTarget();
         var2.c(0, 0);
-        gt.field_o = new Sprite(var3, var4 - HighscoreNameEntry.field_d.height);
-        gt.field_o.makeRasterTarget();
+        OpenGlPbuffer.field_o = new Sprite(var3, var4 - HighscoreNameEntry.field_d.height);
+        OpenGlPbuffer.field_o.makeRasterTarget();
         var2.c(0, -HighscoreNameEntry.field_d.height);
-        gt.field_o.trimY = HighscoreNameEntry.field_d.height;
+        OpenGlPbuffer.field_o.trimY = HighscoreNameEntry.field_d.height;
         if (param1 > -64) {
           return;
         }

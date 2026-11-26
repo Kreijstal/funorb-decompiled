@@ -602,7 +602,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.b(-14829);
                 cl.field_fb = qd.a((java.awt.Component) ((Object) ci.field_f), true, ArchiveIndex.field_h, td.field_b);
                 this.initializeClient(28060);
-                io.field_c = ij.c(8194);
+                OpenGlShaderProgram.field_c = ij.c(8194);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (SoftwareFramebuffer.field_g != 0L) {
@@ -614,7 +614,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Bullet.field_g = io.field_c.a(ld.field_b, (byte) -18);
+                    Bullet.field_g = OpenGlShaderProgram.field_c.a(ld.field_b, (byte) -18);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;

@@ -44,7 +44,7 @@ final class qn {
           qn.a(82);
         }
         if (!cf.field_f.b(0)) {
-          return bo.field_g + " - " + cf.field_f.a(-82) + "%";
+          return RenderStateStack.field_g + " - " + cf.field_f.a(-82) + "%";
         }
         return jr.field_r;
     }

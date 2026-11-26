@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CipherPacketBuffer extends PacketBuffer {
-    static jb field_p;
+    static TextureCombineSource field_p;
     private int field_q;
     private fc field_l;
     static RenderSprite[] brassSliderSprites;
@@ -130,7 +130,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           this.position = this.position + 1;
           return 255 & this.payload[fieldTemp$0] - this.field_l.b(256);
         }
-        field_p = (jb) null;
+        field_p = (TextureCombineSource) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
         return 255 & this.payload[fieldTemp$1] - this.field_l.b(256);
@@ -159,6 +159,6 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     static {
-        field_p = new jb();
+        field_p = new TextureCombineSource();
     }
 }

@@ -933,7 +933,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         return this.field_bc;
     }
 
-    abstract void a(jb param0, int param1, boolean param2, byte param3);
+    abstract void a(TextureCombineSource param0, int param1, boolean param2, byte param3);
 
     final za c(int param0) {
         gi var2 = new gi(param0);
@@ -1096,11 +1096,11 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final void a(jb param0, int param1, int param2) {
+    final void a(TextureCombineSource param0, int param1, int param2) {
         try {
           if (param2 != 0) {
-            jb var5 = (jb) null;
-            this.a((jb) null, 23, true, (byte) 38);
+            TextureCombineSource var5 = (TextureCombineSource) null;
+            this.a((TextureCombineSource) null, 23, true, (byte) 38);
           }
           this.a(param0, param1, false, (byte) 111);
         } catch (RuntimeException runtimeException) {
@@ -1677,7 +1677,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
     }
 
-    final void a(byte param0, int param1, jb param2) {
+    final void a(byte param0, int param1, TextureCombineSource param2) {
         try {
           this.a(false, param1, true, param2, false);
           if (param0 <= 117) {
@@ -1972,7 +1972,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
     }
 
-    abstract void a(boolean param0, int param1, boolean param2, jb param3, boolean param4);
+    abstract void a(boolean param0, int param1, boolean param2, TextureCombineSource param3, boolean param4);
 
     abstract void t(byte param0);
 

@@ -73,7 +73,7 @@ abstract class GraphicsRenderer {
             return stackIn_9_0;
           }
           if (param2 == param5) {
-            GraphicsRenderer stackIn_12_0 = gt.a(-70, param7, param3, param1, param4);
+            GraphicsRenderer stackIn_12_0 = OpenGlPbuffer.createHardwareOpenGlRenderer(-70, param7, param3, param1, param4);
             return stackIn_12_0;
           }
           if (param2 != 3) {

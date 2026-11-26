@@ -38,22 +38,22 @@ final class in {
         }
     }
 
-    final static w a(int param0, String param1) {
+    final static EmailValidationError validateEmailDomain(int param0, String param1) {
         String stackIn_27_2 = null;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var2_int = param1.length();
           if (var2_int == 0) {
-            w stackIn_4_0 = nh.field_f;
+            EmailValidationError stackIn_4_0 = nh.field_f;
             return stackIn_4_0;
           }
           if (255 < var2_int) {
-            w stackIn_8_0 = GzipInflater.field_d;
+            EmailValidationError stackIn_8_0 = GzipInflater.field_d;
             return stackIn_8_0;
           }
           String[] var3 = ee.a((byte) 10, '.', param1);
           if (var3.length < 2) {
-            w stackIn_12_0 = nh.field_f;
+            EmailValidationError stackIn_12_0 = nh.field_f;
             return stackIn_12_0;
           }
           if (param0 < 124) {
@@ -62,13 +62,13 @@ final class in {
           String[] var4 = var3;
           for (int var5 = 0; var5 < var4.length; var5++) {
             String var6 = var4[var5];
-            w var7 = ic.a(var6, false);
+            EmailValidationError var7 = ic.validateEmailDomainLabel(var6, false);
             if (var7 != null) {
-              w stackIn_20_0 = var7;
+              EmailValidationError stackIn_20_0 = var7;
               return stackIn_20_0;
             }
           }
-          w stackIn_23_0 = we.a(var3[-1 + var3.length], -120);
+          EmailValidationError stackIn_23_0 = we.validateEmailTopLevelDomain(var3[-1 + var3.length], -120);
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

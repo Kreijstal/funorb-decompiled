@@ -17,22 +17,22 @@ final class ds extends IntrusiveNode {
         throw new Error();
     }
 
-    final static w a(boolean param0, String param1) {
+    final static EmailValidationError validateEmailLocalPart(boolean param0, String param1) {
         String stackIn_50_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var2_int = param1.length();
           if (var2_int == 0) {
-            w stackIn_4_0 = nh.field_f;
+            EmailValidationError stackIn_4_0 = nh.field_f;
             return stackIn_4_0;
           }
           if (64 < var2_int) {
-            w stackIn_8_0 = GzipInflater.field_d;
+            EmailValidationError stackIn_8_0 = GzipInflater.field_d;
             return stackIn_8_0;
           }
           if (param1.charAt(0) == 34) {
             if (34 != param1.charAt(var2_int - 1)) {
-              w stackIn_12_0 = td.field_d;
+              EmailValidationError stackIn_12_0 = td.field_d;
               return stackIn_12_0;
             }
             boolean var3 = false;
@@ -44,7 +44,7 @@ final class ds extends IntrusiveNode {
               } else {
                 if (var5 == 34 &&
                   !var3) {
-                  w stackIn_25_0 = td.field_d;
+                  EmailValidationError stackIn_25_0 = td.field_d;
                   return stackIn_25_0;
                 }
                 var3 = false;
@@ -64,13 +64,13 @@ final class ds extends IntrusiveNode {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                w stackIn_38_0 = td.field_d;
+                EmailValidationError stackIn_38_0 = td.field_d;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (-1 == IntrusiveNodeHashTable.field_f.indexOf(var5Lifetime1)) {
-                w stackIn_43_0 = td.field_d;
+                EmailValidationError stackIn_43_0 = td.field_d;
                 return stackIn_43_0;
               }
               var3Lifetime1 = false;

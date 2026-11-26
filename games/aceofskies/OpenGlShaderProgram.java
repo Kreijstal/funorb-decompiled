@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class io {
+final class OpenGlShaderProgram {
     private HardwareOpenGlRenderer field_b;
     static String field_e;
     long field_d;
@@ -22,7 +22,7 @@ final class io {
         super.finalize();
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendQueuedRequests(byte param0, int param1) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           fp var5 = (fp) (ks.field_d.first(268435455));
@@ -36,7 +36,7 @@ final class io {
         }
     }
 
-    io(HardwareOpenGlRenderer param0, long param1, OpenGlShaderObject[] param2) {
+    OpenGlShaderProgram(HardwareOpenGlRenderer param0, long param1, OpenGlShaderObject[] param2) {
         try {
           this.field_b = param0;
           this.field_d = param1;

@@ -3,7 +3,7 @@
  */
 final class mq extends IntrusiveNode {
     static eg field_h;
-    bo field_j;
+    RenderStateStack field_j;
     GraphicsRenderer field_f;
     static Object field_e;
     static st field_g;
@@ -102,7 +102,7 @@ final class mq extends IntrusiveNode {
         return stackIn_27_0 + stackIn_30_1;
     }
 
-    mq(GraphicsRenderer param0, bo param1) {
+    mq(GraphicsRenderer param0, RenderStateStack param1) {
         try {
           this.field_f = param0;
           this.field_j = param1;

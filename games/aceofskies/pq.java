@@ -9,7 +9,7 @@ final class pq extends vo {
     final pt a(String param0, int param1) {
         String stackIn_13_2 = null;
         try {
-          boolean stackIn_3_0 = !(null != ai.a(param0, (byte) 12));
+          boolean stackIn_3_0 = !(null != ai.validateEmailAddress(param0, (byte) 12));
           boolean var3_int = stackIn_3_0;
           if (!var3_int) {
             pt stackIn_5_0 = bt.field_a;

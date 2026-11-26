@@ -6,7 +6,7 @@ abstract class ArchiveNetworkClient {
     SecondaryNodeDeque field_b;
     static int field_c;
     SecondaryNodeDeque field_g;
-    static jb field_i;
+    static TextureCombineSource field_i;
     SecondaryNodeDeque field_d;
     SecondaryNodeDeque field_n;
     static lh field_o;
@@ -15,7 +15,7 @@ abstract class ArchiveNetworkClient {
     PacketBuffer field_l;
     byte field_k;
     volatile int field_j;
-    static bo field_f;
+    static RenderStateStack field_f;
     PacketBuffer field_h;
     volatile int field_e;
     NetworkArchiveRequest field_a;
@@ -97,7 +97,7 @@ abstract class ArchiveNetworkClient {
           InstrumentPatch.field_m.h((byte) 9);
           String var2 = ka.a(param0 ^ 118);
           if (param0 != -21) {
-            field_i = (jb) null;
+            field_i = (TextureCombineSource) null;
             vr.field_b = new ce(var2, (String) null, true, false, false);
             vn.field_f.a(ClientException.field_d, 0);
             ClientException.field_d.d(vr.field_b, -30244);
@@ -118,7 +118,7 @@ abstract class ArchiveNetworkClient {
           ClientException.field_d.e((byte) 85);
           return;
         }
-        field_i = (jb) null;
+        field_i = (TextureCombineSource) null;
         vr.field_b = new ce(var3, (String) null, true, false, false);
         vn.field_f.a(ClientException.field_d, 0);
         ClientException.field_d.d(vr.field_b, -30244);
@@ -156,7 +156,7 @@ abstract class ArchiveNetworkClient {
 
     static {
         field_q = "radar_sweep_oneshot";
-        field_i = new jb();
+        field_i = new TextureCombineSource();
         field_o = new lh();
         field_f = null;
     }

@@ -4,7 +4,7 @@
 final class td {
     static st field_a;
     static int field_b;
-    static w field_d;
+    static EmailValidationError field_d;
     static String field_c;
 
     public static void clearStaticReferences(int param0) {
@@ -20,7 +20,7 @@ final class td {
         String stackIn_7_2 = null;
         try {
           if (param1 != 38) {
-            field_d = (w) null;
+            field_d = (EmailValidationError) null;
           }
           int stackIn_3_0 = OpenGlIndexBuffer.a(10, true, -98, param0);
           return stackIn_3_0;
@@ -40,7 +40,7 @@ final class td {
 
     static {
         field_a = new st();
-        field_d = new w();
+        field_d = new EmailValidationError();
         field_c = "Play the game without logging in just yet";
     }
 }

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GzipInflater {
-    static w field_d;
+    static EmailValidationError field_d;
     static int field_a;
     private java.util.zip.Inflater field_b;
     static String field_c;
@@ -110,6 +110,6 @@ final class GzipInflater {
 
     static {
         field_c = "Loading music";
-        field_d = new w();
+        field_d = new EmailValidationError();
     }
 }

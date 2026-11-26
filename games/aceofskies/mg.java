@@ -30,7 +30,7 @@ final class mg {
     }
 
     final static void a(GraphicsRenderer param0, int param1) {
-        bo var2 = fa.a(param0, true);
+        RenderStateStack var2 = fa.a(param0, true);
         int var3 = 40 + (BitmapFontMetrics.b(-112) + 40);
         if (param1 != 1150039905) {
           return;
@@ -40,9 +40,9 @@ final class mg {
           int var5 = sh.field_u - var3 >> 1;
           int var6 = NetworkArchiveRequest.field_w - var4 >> 1;
           param0.fillRectAlpha(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
-          var2.a(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
+          var2.pushClip(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
           param0.copyPixels(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, SoftwareRasterizer.stride * var6, SoftwareRasterizer.stride);
-          var2.a(true);
+          var2.popRenderState(true);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -38,7 +38,7 @@ final class ii extends vo {
         field_g = null;
     }
 
-    final static int a(byte param0, jb param1) {
+    final static int getOpenGlTextureCombineSource(byte param0, TextureCombineSource param1) {
         String stackIn_19_2 = null;
         try {
           if (param1 == CipherPacketBuffer.field_p) {
