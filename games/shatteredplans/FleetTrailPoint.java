@@ -13,7 +13,7 @@ final class FleetTrailPoint extends IntrusiveNode {
     static boolean[] field_p;
     static int field_m;
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean pollInboundPacket(int[] param0, int param1) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_40_0 = null;
@@ -102,7 +102,7 @@ final class FleetTrailPoint extends IntrusiveNode {
         }
     }
 
-    final static SocialListEntry a(String param0, int param1) {
+    final static SocialListEntry findIgnoreByName(String param0, int param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         String var4 = null;
@@ -209,7 +209,7 @@ final class FleetTrailPoint extends IntrusiveNode {
         field_p = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawLobbySidePanels(boolean param0, boolean param1) {
         AnimatedPanel stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         AnimatedPanel stackIn_11_0 = null;
@@ -251,7 +251,7 @@ final class FleetTrailPoint extends IntrusiveNode {
     FleetTrailPoint() {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void updateIgnoreListPanel(int param0, boolean param1, int param2) {
         ScrollPane stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;

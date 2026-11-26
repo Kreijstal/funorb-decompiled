@@ -933,7 +933,7 @@ final class Archive {
           if (!StarSoundState.hasActiveModalDialog(116)) {
             if (null != NameSuggestionsPanel.field_K &&
               NameSuggestionsPanel.field_K.field_c) {
-              BufferedCacheFile.c(0);
+              BufferedCacheFile.exitFullscreen(0);
               DialWidget.field_I.addDialog(true, new AccountNoticeDialog(DialWidget.field_I, LoginMethodPreference.field_f));
             }
             return;

@@ -62,14 +62,14 @@ final class GzipInflater {
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = FleetTrailPoint.a(var4_ref_String, 124);
+            var6 = FleetTrailPoint.findIgnoreByName(var4_ref_String, 124);
             var7 = var1.readString(-1);
             var8 = DateInputWidget.normalizeAccountName((CharSequence) ((Object) var4_ref_String), true);
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = FleetTrailPoint.a(var7, 124);
+              var6 = FleetTrailPoint.findIgnoreByName(var7, 124);
               if (null != var6) {
                 CipherPacketBuffer.field_m.put((long)var8.hashCode(), var6, true);
               }
@@ -183,17 +183,17 @@ final class GzipInflater {
     }
 
     final static void initializeClientMenus(int param0) {
-        UsernameAvailabilityValidator.a(-1, FullscreenFocusCanvas.field_a, 5);
+        UsernameAvailabilityValidator.configureMenuItems(-1, FullscreenFocusCanvas.field_a, 5);
         if (param0 != 1) {
           return;
         }
         try {
-          UsernameAvailabilityValidator.a(param0 ^ -2, LoginMethodPreference.field_c, 8);
+          UsernameAvailabilityValidator.configureMenuItems(param0 ^ -2, LoginMethodPreference.field_c, 8);
           if (!AttackTask.isGuestOrNonMember((byte) 104)) {
-            UsernameAvailabilityValidator.a(-1, IterableNodeHashTable.field_h, 1);
-            UsernameAvailabilityValidator.a(-1, SecondaryNodeDeque.field_b, 2);
-            UsernameAvailabilityValidator.a(param0 ^ -2, ChatPanelLayoutSupport.field_e, 3);
-            UsernameAvailabilityValidator.a(param0 ^ -2, TutorialConditionalText.field_e, 4);
+            UsernameAvailabilityValidator.configureMenuItems(-1, IterableNodeHashTable.field_h, 1);
+            UsernameAvailabilityValidator.configureMenuItems(-1, SecondaryNodeDeque.field_b, 2);
+            UsernameAvailabilityValidator.configureMenuItems(param0 ^ -2, ChatPanelLayoutSupport.field_e, 3);
+            UsernameAvailabilityValidator.configureMenuItems(param0 ^ -2, TutorialConditionalText.field_e, 4);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "s.C(" + param0 + ')');

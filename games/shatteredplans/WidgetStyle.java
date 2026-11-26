@@ -236,7 +236,7 @@ final class WidgetStyle {
               return false;
             }
             if (QuickChatHelpSupport.field_d != var3_ref.field_G) {
-              var3_ref = (FleetMove) (TextReplacementEntry.field_a.field_P.field_p.a((byte) -68));
+              var3_ref = (FleetMove) (TextReplacementEntry.field_a.field_P.field_p.next((byte) -68));
               continue;
             }
             break;

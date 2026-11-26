@@ -310,7 +310,7 @@ final class DiskCacheWorker implements Runnable {
         }
         if (DiskArchiveRequest.field_A) {
           ProjectsContent.closeClientOverlays((byte) -120);
-          UsernameAvailabilityValidator.e((byte) -66);
+          UsernameAvailabilityValidator.clearLobbySessionState((byte) -66);
           TerritoryResourcePanelSupport.clearSocialLists(true);
           DiskArchiveRequest.field_A = false;
         }

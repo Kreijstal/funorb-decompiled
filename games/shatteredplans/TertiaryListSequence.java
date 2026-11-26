@@ -80,9 +80,9 @@ final class TertiaryListSequence extends NodeSequence {
     final IntrusiveNode next(boolean param0) {
         if (param0) {
           field_l = -98L;
-          return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
+          return (IntrusiveNode) ((Object) this.field_i.next((byte) -68));
         }
-        return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
+        return (IntrusiveNode) ((Object) this.field_i.next((byte) -68));
     }
 
     final static void clearDecodedSpriteData(int param0) {

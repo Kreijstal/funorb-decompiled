@@ -74,7 +74,7 @@ final class NodeHashTableIterator implements Iterator {
                 var6 = (FleetMove) (var11.nextForward(32));
                 continue;
               }
-              TertiaryNodeList.a(var3, 0, var6);
+              TertiaryNodeList.insertSecondaryBefore(var3, 0, var6);
               break;
             }
             if (var6 == null) {

@@ -446,7 +446,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    final static void attachInputListeners(java.awt.Canvas param0, byte param1) {
+    final static void detachInputListeners(java.awt.Canvas param0, byte param1) {
         try {
           HighscoreResponseSupport.detachKeyboardInput((java.awt.Component) ((Object) param0), 18014);
           Particle.detachMouseInput((byte) 89, (java.awt.Component) ((Object) param0));
@@ -656,7 +656,7 @@ class StandardMapGenerator implements MapGenerator {
           var4_intLifetime1 = 0;
           if (param1 < 66) {
             var6 = (java.awt.Canvas) null;
-            StandardMapGenerator.attachInputListeners((java.awt.Canvas) null, (byte) 94);
+            StandardMapGenerator.detachInputListeners((java.awt.Canvas) null, (byte) 94);
           }
           while (var4_intLifetime1 < 2) {
             dupTemp$2 = SoundEffectDefinition.randomBelow((byte) 44, 4, param2);

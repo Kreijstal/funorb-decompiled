@@ -233,7 +233,7 @@ abstract class GameClientShell extends GameApplet {
                 ClientDrawingSupport.readArrayAndSubmissionResponse(105);
               } else {
                 if (4 == var2) {
-                  BufferedCacheFile.d(-523);
+                  BufferedCacheFile.readIntegerRequestResponse(-523);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
@@ -584,7 +584,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (!param0 &&
           IntrusiveDeque.field_c) {
-          StandardMapGenerator.attachInputListeners(NotificationEntry.field_i, (byte) 125);
+          StandardMapGenerator.detachInputListeners(NotificationEntry.field_i, (byte) 125);
           this.createCanvas(0);
           QuickChatPhraseRegistry.attachCanvasInput(NotificationEntry.field_i, false);
         }

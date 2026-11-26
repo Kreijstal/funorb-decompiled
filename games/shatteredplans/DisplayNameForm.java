@@ -70,12 +70,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
 
     public final void onMoreSuggestionsRequested(int param0) {
         if (param0 == 2147483647) {
-          ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
+          ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).invalidateAvailabilityCache(0);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.addValidatedFieldRow(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
-        ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).invalidateAvailabilityCache(0);
     }
 
     public final void onNameSuggested(int param0, String param1) {

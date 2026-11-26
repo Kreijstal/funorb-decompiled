@@ -41,7 +41,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
             return;
           }
           for (var4 = 0; var3 > var4; var4++) {
-            ClientRandomSupport.field_d[var4] = UsernameAvailabilityValidator.a(var8, (byte) 6);
+            ClientRandomSupport.field_d[var4] = UsernameAvailabilityValidator.readMeshData(var8, (byte) 6);
           }
           var10.finishBitAccess((byte) -47);
           var9 = 0;

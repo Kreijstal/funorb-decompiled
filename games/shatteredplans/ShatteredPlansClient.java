@@ -50,7 +50,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
         GameApplet.closeAudioPlayers(120);
         if (null != NameSuggestionsPanel.field_K) {
-          BufferedCacheFile.c(0);
+          BufferedCacheFile.exitFullscreen(0);
         }
         Dialog.f((byte) 89);
     }
@@ -144,7 +144,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           TextHotspotRegion.updateAudio(-26848);
           if (null != NameSuggestionsPanel.field_K &&
             NameSuggestionsPanel.field_K.field_c) {
-            BufferedCacheFile.c(0);
+            BufferedCacheFile.exitFullscreen(0);
             GameScreen.setFullscreenDialogModeIfOpen(4);
           }
           stackIn_7_1 = (null != NameSuggestionsPanel.field_K);
@@ -186,7 +186,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     if (var3 == 1 ||
                       var3 == 2) {
                       if (NameSuggestionsPanel.field_K != null) {
-                        BufferedCacheFile.c(0);
+                        BufferedCacheFile.exitFullscreen(0);
                       }
                       if (2 == var3) {
                         DebouncedValidator.openQuitPage(1, (java.applet.Applet) (this));
@@ -217,7 +217,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   } else {
                     var3 = GuestPlayForm.pollFullscreenDialogAction(false);
                     if (var3 == 2) {
-                      BufferedCacheFile.c(0);
+                      BufferedCacheFile.exitFullscreen(0);
                     } else {
                       if (3 == var3) {
                         BattleContribution.field_s = false;
@@ -275,7 +275,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
           }
           var3Lifetime1 = -87 % ((15 - param0) / 35);
-          scanLoop1: while (FleetTrailPoint.a(HighscoreResponseSupport.field_a, 1)) {
+          scanLoop1: while (FleetTrailPoint.pollInboundPacket(HighscoreResponseSupport.field_a, 1)) {
             stackIn_150_0 = -10;
             stackIn_150_1 = ~BufferedCacheFile.field_e;
             if (stackIn_150_0 == stackIn_150_1) {
@@ -625,7 +625,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             return false;
           }
           this.initializeGameTextReplacements(1);
-          WhirlpoolHasher.a(true);
+          WhirlpoolHasher.measureAudioSettingLabels(true);
           SoundEffectDefinition.initializeIntro((byte) -125);
           for (var3 = 0; 14 > var3; var3++) {
             LobbyPlayerEntry.field_Hb[var3] = new GameMenuController(var3);
@@ -640,7 +640,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           GameRules.field_c = 0;
           StringNode.field_j = -1;
           PaddedContentDialog.setTargetFrameRate(50, (byte) 52);
-          UsernameAvailabilityValidator.b(param0 ^ -86, 50);
+          UsernameAvailabilityValidator.requireSupportedFrameRate(param0 ^ -86, 50);
           ValidationState.resetFrameTiming(122);
           QuickChatCategoryRegistry.transitionMusicTrack(32767, PaddedContentDialog.field_nb, true, 1048576);
           return true;
@@ -905,7 +905,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         StandardMapGenerator.clearStatics(0);
         SolMapGenerator.clearStatics((byte) -80);
         TutorialMapGenerator.d(-10);
-        TertiaryNodeList.a(-5731);
+        TertiaryNodeList.clearTertiaryListStatics(-5731);
         AchievementProgress.clearStatics((byte) -37);
         GameAssetSetupSupport.clearStatics(100);
         BirthDateConfirmationForm.clearStatics(-105);

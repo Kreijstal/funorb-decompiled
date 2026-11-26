@@ -186,7 +186,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void b(int param0) {
+    final static void tickIntroTextLines(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_20_0 = 0;
@@ -450,14 +450,14 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void c(int param0) {
+    final static void exitFullscreen(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (NameSuggestionsPanel.field_K == null) {
             return;
           }
-          StandardMapGenerator.attachInputListeners(NameSuggestionsPanel.field_K, (byte) 9);
+          StandardMapGenerator.detachInputListeners(NameSuggestionsPanel.field_K, (byte) 9);
           NameSuggestionsPanel.field_K.disposeFullscreenFrame(ValidatedTextInputWidget.field_W, -17115);
           NameSuggestionsPanel.field_K = null;
           if (null != BoundsRect.field_p) {
@@ -520,7 +520,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void d(int param0) {
+    final static void readIntegerRequestResponse(int param0) {
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -702,7 +702,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void a(byte param0, boolean param1, MeshData param2, int param3, int param4) {
+    final static void bucketProjectedMeshFaces(byte param0, boolean param1, MeshData param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_21_0 = 0;
@@ -854,7 +854,7 @@ final class BufferedCacheFile {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c7cf2d00b385(int param0, boolean param1, MeshData param2, int param3, int param4) {
+    final static void bucketProjectedMeshFacesFullInts(int param0, boolean param1, MeshData param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_21_0 = 0;

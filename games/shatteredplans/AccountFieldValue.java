@@ -37,7 +37,7 @@ final class AccountFieldValue {
           var12.addChild(var5, 8);
           var6 = new FilledMenuPanel(ClientPacketFlushSupport.field_b[param2].field_z / 2, IconTextPanel.field_Cb.field_J + 2, 132 - ClientPacketFlushSupport.field_b[param2].field_z / 2, ClientPacketFlushSupport.field_b[param2].field_w, 2, 2105376);
           var12.addChild(var6, 8);
-          var7 = new SpriteButton(3 * ClientPacketFlushSupport.field_b[param2].field_z / 4, IconTextPanel.field_Cb.field_J + 5, UsernameAvailabilityValidator.a(param2, param0, true));
+          var7 = new SpriteButton(3 * ClientPacketFlushSupport.field_b[param2].field_z / 4, IconTextPanel.field_Cb.field_J + 5, UsernameAvailabilityValidator.createProjectProgressSprite(param2, param0, true));
           var12.addChild(var7, 8);
           var8 = new SpriteButton(0, 2 + IconTextPanel.field_Cb.field_J, ClientPacketFlushSupport.field_b[param2]);
           var12.addChild(var8, 8);

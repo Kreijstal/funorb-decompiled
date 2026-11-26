@@ -502,7 +502,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             }
             break;
           }
-          BufferedCacheFile.$cfr$intArgs$a$c7cf2d00b385(stackIn_65_0, stackIn_65_1 != 0, param6, var7_int, var8);
+          BufferedCacheFile.bucketProjectedMeshFacesFullInts(stackIn_65_0, stackIn_65_1 != 0, param6, var7_int, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

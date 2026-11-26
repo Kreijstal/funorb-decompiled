@@ -194,7 +194,7 @@ final class QuickChatParameterType {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_sr = ClientRandomSupport.field_d[var3];
             var4_ref_sr.updateBounds(true);
-            UsernameAvailabilityValidator.a(-1, var3);
+            UsernameAvailabilityValidator.setIntroLogoMeshRotation(-1, var3);
             var5 = var4_ref_sr.field_O + var4_ref_sr.field_k >> 1;
             var6 = var4_ref_sr.field_j + var4_ref_sr.field_t >> 1;
             var7 = var4_ref_sr.field_r + var4_ref_sr.field_E >> 1;
@@ -239,12 +239,12 @@ final class QuickChatParameterType {
             }
             var21[var16] = -2147483648;
             var17 = ClientRandomSupport.field_d[var16];
-            UsernameAvailabilityValidator.a(-1, var16);
+            UsernameAvailabilityValidator.setIntroLogoMeshRotation(-1, var16);
             for (var18 = 0; var18 < 3; var18++) {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + ValidatedTextInputWidget.field_Z[var15][var18];
             }
             UnderageAccountInfoPanel.projectMeshAndBucketFaces(true, CandidateLink.field_p, false, 80, MouseWheelInput.field_a, false, var17);
-            WhirlpoolHasher.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
+            WhirlpoolHasher.drawLitMeshFaces(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);
         } catch (RuntimeException runtimeException) {

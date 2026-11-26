@@ -604,7 +604,7 @@ final class GameSession implements AiHost {
             var5.field_y.field_J = var5.field_y.field_J - var5.field_z;
             stackIn_19_0 = this.field_P;
             if (var10 == 0) {
-              var5 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_19_0.field_p).a((byte) -68));
+              var5 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_19_0.field_p).next((byte) -68));
               continue;
             }
             break;
@@ -2091,7 +2091,7 @@ final class GameSession implements AiHost {
             stackIn_18_0 = var2_int + ((1 + var6.field_y.field_p) * (1 + (var6.field_B.field_p + 65536)) + var6.field_z * ((1 + var6.field_B.field_p) * (1 + var6.field_y.field_p)));
             if (var7 == 0) {
               var2_int = stackIn_18_0;
-              var6 = (FleetMove) (this.field_P.field_p.a((byte) -68));
+              var6 = (FleetMove) (this.field_P.field_p.next((byte) -68));
               continue;
             }
             break;
@@ -2748,7 +2748,7 @@ final class GameSession implements AiHost {
             var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
             while (null != var2_ref) {
               this.changeMoveSize(var2_ref, -var2_ref.field_z, 10755);
-              var2_ref = (FleetMove) (this.field_P.field_p.a((byte) -68));
+              var2_ref = (FleetMove) (this.field_P.field_p.next((byte) -68));
               if (var8 != 0) {
                 return;
               }
@@ -2797,7 +2797,7 @@ final class GameSession implements AiHost {
                 break;
               }
               this.field_v.addLast((byte) 9, var2_ref);
-              var2_ref = (FleetMove) (this.field_P.field_p.a((byte) -68));
+              var2_ref = (FleetMove) (this.field_P.field_p.next((byte) -68));
             } while (var8 == 0);
             do {
               if (var3 == null) {
@@ -3626,7 +3626,7 @@ final class GameSession implements AiHost {
               var2_ref2 = (FleetMove) (this.field_P.field_p.startForward(true));
               while (var2_ref2 != null) {
                 this.field_v.addLast((byte) 9, var2_ref2);
-                var2_ref2 = (FleetMove) (this.field_P.field_p.a((byte) -68));
+                var2_ref2 = (FleetMove) (this.field_P.field_p.next((byte) -68));
                 if (var6 != 0) {
                   break scanLoop1;
                 }

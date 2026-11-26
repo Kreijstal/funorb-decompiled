@@ -168,7 +168,7 @@ final class RoundedMenuPanel extends MenuComponent {
             stackIn_7_0 = MenuWindow.field_C;
             return stackIn_7_0;
           }
-          var7 = FleetTrailPoint.a(param2, param0 ^ 12);
+          var7 = FleetTrailPoint.findIgnoreByName(param2, param0 ^ 12);
           if (var7 == null) {
             stackIn_10_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
             return stackIn_10_0;
@@ -239,7 +239,7 @@ final class RoundedMenuPanel extends MenuComponent {
         int[] var2 = var7;
         SoftwareRasterizer.saveClip(var10);
         SoftwareRasterizer.fillRoundedRectAlpha(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
-        WhirlpoolHasher.a(-119, this.field_k, this.field_i, -10 + this.field_m, this.field_t);
+        WhirlpoolHasher.drawMenuHexagonPattern(-119, this.field_k, this.field_i, -10 + this.field_m, this.field_t);
         SoftwareRasterizer.drawHorizontalLine(10 + this.field_k, this.field_t, -20 + this.field_m, 2052949);
         SoftwareRasterizer.drawHorizontalLine(this.field_k + 10, this.field_t + this.field_i, -20 + this.field_m, 0);
         SoftwareRasterizer.intersectClip(this.field_k, this.field_t, this.field_k + 10, this.field_t + 10);

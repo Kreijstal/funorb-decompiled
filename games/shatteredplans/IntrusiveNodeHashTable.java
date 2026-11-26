@@ -271,7 +271,7 @@ final class IntrusiveNodeHashTable {
           if (!param1) {
             field_k = (java.util.zip.CRC32) null;
           }
-          stackIn_5_0 = (null != FleetTrailPoint.a(param0, 119));
+          stackIn_5_0 = (null != FleetTrailPoint.findIgnoreByName(param0, 119));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

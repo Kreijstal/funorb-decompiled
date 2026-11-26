@@ -78,7 +78,7 @@ final class MenuTransitionSupport {
         if (WeightedLruCache.hasBlockingOverlay(-104)) {
           param0 = false;
         }
-        FleetTrailPoint.a(false, param0);
+        FleetTrailPoint.drawLobbySidePanels(false, param0);
         if (WidgetContainer.field_C) {
           SoftwareRasterizer.clearRect(DiplomacyNotice.field_h.field_d.field_hb, DiplomacyNotice.field_h.field_d.field_db, DiplomacyNotice.field_h.field_d.field_K, DiplomacyNotice.field_h.field_d.field_mb);
           DiplomacyNotice.field_h.field_d.drawFullRaster(param0, -68);

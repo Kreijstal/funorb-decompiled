@@ -383,7 +383,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((UsernameAvailabilityValidator) (this.field_Q.getValidationSource((byte) 117))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_Q.getValidationSource((byte) 117))).invalidateAvailabilityCache(0);
         if (param0 != 2147483647) {
           field_P = (String) null;
         }

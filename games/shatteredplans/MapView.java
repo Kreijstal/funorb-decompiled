@@ -1786,44 +1786,44 @@ final class MapView extends MapViewState {
                 if (param0.field_G[0] != 0) {
                   var14 = new MutableIntPairNode[2 + 2 * param0.field_G[0]];
                   var5 = var14;
-                  var5[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
-                  var5[1] = TertiaryNodeList.a(0, this.field_J[var3_int] + var4 / 2 << 4, -(int)((double)var4 * ProjectsContent.field_e) + this.field_i[var3_int] << 4);
+                  var5[0] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
+                  var5[1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + var4 / 2 << 4, -(int)((double)var4 * ProjectsContent.field_e) + this.field_i[var3_int] << 4);
                   for (var6 = 0; param0.field_G[0] > var6; var6++) {
-                    var5[2 + 2 * var6] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin((double)(24 - 12 * var6) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos((double)(24 - var6 * 12) * 3.141592653589793 / 180.0)) << 4);
-                    var5[var6 * 2 + 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(var6 * 12) + 18) / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos(3.141592653589793 * (double)(-(12 * var6) + 18) / 180.0)) << 4);
+                    var5[2 + 2 * var6] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin((double)(24 - 12 * var6) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos((double)(24 - var6 * 12) * 3.141592653589793 / 180.0)) << 4);
+                    var5[var6 * 2 + 2 + 1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(var6 * 12) + 18) / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos(3.141592653589793 * (double)(-(12 * var6) + 18) / 180.0)) << 4);
                   }
                   IntroRenderSupport.fillPolygon(var14, SoundPlayback.field_k[0], param1);
                 }
                 if (param0.field_G[1] != 0) {
                   var15 = new MutableIntPairNode[2 + 2 * param0.field_G[1]];
                   var5Lifetime1 = var15;
-                  var5Lifetime1[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
-                  var5Lifetime1[1] = TertiaryNodeList.a(0, var4 + this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
+                  var5Lifetime1[0] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
+                  var5Lifetime1[1] = TertiaryNodeList.acquireIntPair(0, var4 + this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
                   for (var6Lifetime1 = 0; var6Lifetime1 < param0.field_G[1]; var6Lifetime1++) {
-                    var5Lifetime1[2 + 2 * var6Lifetime1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime1) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.sin((double)(6 + var6Lifetime1 * 12) * 3.141592653589793 / 180.0)) << 4);
-                    var5Lifetime1[2 + 2 * var6Lifetime1 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(var6Lifetime1 * 12 + 12) / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)(Math.sin(3.141592653589793 * (double)(12 + 12 * var6Lifetime1) / 180.0) * (double)var4) << 4);
+                    var5Lifetime1[2 + 2 * var6Lifetime1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime1) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.sin((double)(6 + var6Lifetime1 * 12) * 3.141592653589793 / 180.0)) << 4);
+                    var5Lifetime1[2 + 2 * var6Lifetime1 + 1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(var6Lifetime1 * 12 + 12) / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)(Math.sin(3.141592653589793 * (double)(12 + 12 * var6Lifetime1) / 180.0) * (double)var4) << 4);
                   }
                   IntroRenderSupport.fillPolygon(var15, SoundPlayback.field_k[1], true);
                 }
                 if (param0.field_G[2] != 0) {
                   var16 = new MutableIntPairNode[2 + param0.field_G[2] * 2];
                   var5Lifetime2 = var16;
-                  var5Lifetime2[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
-                  var5Lifetime2[1] = TertiaryNodeList.a(0, this.field_J[var3_int] + var4 << 4, this.field_i[var3_int] << 4);
+                  var5Lifetime2[0] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
+                  var5Lifetime2[1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + var4 << 4, this.field_i[var3_int] << 4);
                   for (var6Lifetime2 = 0; var6Lifetime2 < param0.field_G[2]; var6Lifetime2++) {
-                    var5Lifetime2[var6Lifetime2 * 2 + 2] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)(Math.sin(3.141592653589793 * (double)(6 + var6Lifetime2 * 12) / 180.0) * (double)var4) << 4);
-                    var5Lifetime2[2 + var6Lifetime2 * 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.cos((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.sin((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4);
+                    var5Lifetime2[var6Lifetime2 * 2 + 2] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)(Math.sin(3.141592653589793 * (double)(6 + var6Lifetime2 * 12) / 180.0) * (double)var4) << 4);
+                    var5Lifetime2[2 + var6Lifetime2 * 2 + 1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)((double)var4 * Math.cos((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.sin((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4);
                   }
                   IntroRenderSupport.fillPolygon(var16, SoundPlayback.field_k[2], param1);
                 }
                 if (param0.field_G[3] != 0) {
                   var17 = new MutableIntPairNode[2 * param0.field_G[3] + 2];
                   var5Lifetime3 = var17;
-                  var5Lifetime3[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
-                  var5Lifetime3[1] = TertiaryNodeList.a(0, var4 / 2 + this.field_J[var3_int] << 4, (int)(ProjectsContent.field_e * (double)var4) + this.field_i[var3_int] << 4);
+                  var5Lifetime3[0] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
+                  var5Lifetime3[1] = TertiaryNodeList.acquireIntPair(0, var4 / 2 + this.field_J[var3_int] << 4, (int)(ProjectsContent.field_e * (double)var4) + this.field_i[var3_int] << 4);
                   for (var6Lifetime3 = 0; param0.field_G[3] > var6Lifetime3; var6Lifetime3++) {
-                    var5Lifetime3[2 + 2 * var6Lifetime3] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(12 * var6Lifetime3) + 24) / 180.0)) << 4, this.field_i[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(24 - 12 * var6Lifetime3) / 180.0) * (double)var4) << 4);
-                    var5Lifetime3[2 + var6Lifetime3 * 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.sin((double)(18 - 12 * var6Lifetime3) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.cos(3.141592653589793 * (double)(18 - var6Lifetime3 * 12) / 180.0)) << 4);
+                    var5Lifetime3[2 + 2 * var6Lifetime3] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(12 * var6Lifetime3) + 24) / 180.0)) << 4, this.field_i[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(24 - 12 * var6Lifetime3) / 180.0) * (double)var4) << 4);
+                    var5Lifetime3[2 + var6Lifetime3 * 2 + 1] = TertiaryNodeList.acquireIntPair(0, this.field_J[var3_int] + (int)(Math.sin((double)(18 - 12 * var6Lifetime3) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.cos(3.141592653589793 * (double)(18 - var6Lifetime3 * 12) / 180.0)) << 4);
                   }
                   IntroRenderSupport.fillPolygon(var17, SoundPlayback.field_k[3], param1);
                 }

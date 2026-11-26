@@ -10,7 +10,7 @@ final class TertiaryNodeList {
     static int field_f;
     private TertiaryLinkNode field_a;
 
-    final static MutableIntPairNode a(int param0, int param1, int param2) {
+    final static MutableIntPairNode acquireIntPair(int param0, int param1, int param2) {
         MutableIntPairNode var3 = InvalidMapConnectionException.acquireIntPairNode((byte) -103);
         var3.setPair(param2, (byte) 38, param1);
         if (param0 != 0) {
@@ -49,7 +49,7 @@ final class TertiaryNodeList {
         return null;
     }
 
-    final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
+    final static void insertSecondaryBefore(DualLinkNode param0, int param1, DualLinkNode param2) {
         try {
           if (param0.field_j != null) {
             param0.unlinkSecondary(16);
@@ -58,7 +58,7 @@ final class TertiaryNodeList {
           param0.field_h = param2;
           if (param1 != 0) {
             DualLinkNode var4 = (DualLinkNode) null;
-            TertiaryNodeList.a((DualLinkNode) null, 13, (DualLinkNode) null);
+            TertiaryNodeList.insertSecondaryBefore((DualLinkNode) null, 13, (DualLinkNode) null);
           }
           param0.field_j.field_h = param0;
           param0.field_h.field_j = param0;
@@ -67,7 +67,7 @@ final class TertiaryNodeList {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearTertiaryListStatics(int param0) {
         field_d = null;
         if (param0 != -5731) {
           field_b = false;
@@ -85,7 +85,7 @@ final class TertiaryNodeList {
         return var2;
     }
 
-    final TertiaryLinkNode a(byte param0) {
+    final TertiaryLinkNode next(byte param0) {
         TertiaryLinkNode var2 = null;
         TertiaryLinkNode var2Lifetime1;
         if (param0 != -68) {

@@ -12,7 +12,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     static String field_t;
     static String field_u;
 
-    final static void a(int param0, int[] param1, int param2) {
+    final static void configureMenuItems(int param0, int[] param1, int param2) {
         try {
           TutorialVictoryChecker.field_p[param2] = param1;
           if (param0 != -1) {
@@ -55,7 +55,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           if (param0 != -11196) {
             var4 = (int[]) null;
-            UsernameAvailabilityValidator.a(30, (int[]) null, 29);
+            UsernameAvailabilityValidator.configureMenuItems(30, (int[]) null, 29);
           }
           if (!this.field_o) {
             stackIn_16_0 = ArchiveSourceManager.field_b;
@@ -77,7 +77,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void e(byte param0) {
+    final static void clearLobbySessionState(byte param0) {
         LobbyPlayerEntry var3 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -119,14 +119,14 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         field_u = null;
         field_s = null;
         if (!param0) {
-          UsernameAvailabilityValidator.a(-25, -13, false);
+          UsernameAvailabilityValidator.createProjectProgressSprite(-25, -13, false);
         }
         field_t = null;
         field_v = null;
         field_r = null;
     }
 
-    final static Sprite a(int param0, int param1, boolean param2) {
+    final static Sprite createProjectProgressSprite(int param0, int param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = (-(3 * ClientPacketFlushSupport.field_b[param0].field_z / 4) + 130) * param1 / 5;
@@ -156,7 +156,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         return var4;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setIntroLogoMeshRotation(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -232,15 +232,15 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         this.field_o = false;
     }
 
-    final void d(int param0) {
+    final void invalidateAvailabilityCache(int param0) {
         this.field_n = null;
         if (param0 != 0) {
           int[] var3 = (int[]) null;
-          UsernameAvailabilityValidator.a(-117, (int[]) null, 13);
+          UsernameAvailabilityValidator.configureMenuItems(-117, (int[]) null, 13);
         }
     }
 
-    final static MeshData a(CipherPacketBuffer param0, byte param1) {
+    final static MeshData readMeshData(CipherPacketBuffer param0, byte param1) {
         int var8 = 0;
         MeshData stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -323,9 +323,9 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void requireSupportedFrameRate(int param0, int param1) {
         if (param0 != -8) {
-          UsernameAvailabilityValidator.e((byte) 84);
+          UsernameAvailabilityValidator.clearLobbySessionState((byte) 84);
         }
         if (param1 != 50) {
           throw new IllegalArgumentException();

@@ -158,12 +158,12 @@ final class NanoFrameTimer extends FrameTimer {
           var7 = MenuLabel.field_z;
         }
         if (param3 <= -56) {
-          WhirlpoolHasher.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
+          WhirlpoolHasher.updateChatInputDialog(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
           return;
         }
         NotificationEntry var8 = (NotificationEntry) null;
         NanoFrameTimer.a((NotificationEntry) null, false);
-        WhirlpoolHasher.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
+        WhirlpoolHasher.updateChatInputDialog(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
     }
 
     final static void a(NotificationEntry param0, boolean param1) {

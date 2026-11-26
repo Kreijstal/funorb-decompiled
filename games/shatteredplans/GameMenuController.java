@@ -2315,7 +2315,7 @@ final class GameMenuController {
                                     var5 != 22) {
                                     if (var5 == 7) {
                                       if (null != NameSuggestionsPanel.field_K) {
-                                        BufferedCacheFile.c(param3 ^ -32580);
+                                        BufferedCacheFile.exitFullscreen(param3 ^ -32580);
                                       } else {
                                         var5 = param1 ? 1 : 0;
                                         BattleContribution.field_s = false;

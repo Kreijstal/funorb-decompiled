@@ -108,7 +108,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1, String param2, int param3, byte param4, boolean param5, int param6, int param7) {
+    final static void updateChatInputDialog(int param0, int param1, String param2, int param3, byte param4, boolean param5, int param6, int param7) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -116,7 +116,7 @@ final class WhirlpoolHasher {
         RuntimeException var8 = null;
         try {
           if (param4 < 97) {
-            WhirlpoolHasher.a(-92, 119, -115, 97, 9);
+            WhirlpoolHasher.drawMenuHexagonPattern(-92, 119, -115, 97, 9);
           }
           if (TaskAi.field_o.field_rb != 0 &&
             !LoginMethodPreference.field_g) {
@@ -155,7 +155,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, MeshData param5, int param6, int param7) {
+    final static void drawLitMeshFaces(int param0, int param1, boolean param2, int param3, int param4, MeshData param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -368,14 +368,14 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawMenuHexagonPattern(int param0, int param1, int param2, int param3, int param4) {
         if (param0 > -95) {
           return;
         }
         SocialListPanel.drawStackedHexagonPattern(param3, 3974311, -58, param2, param1, param4);
     }
 
-    final static void a(boolean param0) {
+    final static void measureAudioSettingLabels(boolean param0) {
         if (!param0) {
           return;
         }
@@ -450,7 +450,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static Sprite a(int param0, byte param1, int param2, Player param3, int param4) {
+    final static Sprite createPlayerScoreBar(int param0, byte param1, int param2, Player param3, int param4) {
         Sprite stackIn_3_0 = null;
         Sprite stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;

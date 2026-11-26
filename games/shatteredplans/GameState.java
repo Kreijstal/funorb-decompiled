@@ -1001,7 +1001,7 @@ final class GameState {
             var4.field_B = this.field_g.field_e[var4.field_B.field_p];
             var4.field_B.field_s.addLast(var4, 32);
             var4.field_y.field_T.addLast((byte) -113, var4);
-            var4 = (FleetMove) (this.field_p.a((byte) -68));
+            var4 = (FleetMove) (this.field_p.next((byte) -68));
           }
           var5 = (ProjectUse) (this.field_i.startForward(0));
           while (var5 != null) {
