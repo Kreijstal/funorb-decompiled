@@ -30,12 +30,12 @@ final class sf extends ig implements sk {
     final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (param4) {
           pf.b(511);
-          si.f(param3, param1, param0, param2);
+          SoftwareRasterizer.intersectClip(param3, param1, param0, param2);
           return;
         }
         field_V = (PcmSample[]) null;
         pf.b(511);
-        si.f(param3, param1, param0, param2);
+        SoftwareRasterizer.intersectClip(param3, param1, param0, param2);
     }
 
     final void a(ag param0, int param1, int param2, int param3) {

@@ -105,13 +105,13 @@ final class fa extends UiWidget {
           var10 = var6 - var5;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 >= 256 ? var9 | var8 : (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> 8;
-          ki.b(var7, var6, this.field_C, var12);
-          ki.b(var7 - 2 * this.field_C, var6, this.field_C, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_C, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_C, var6, this.field_C, var12);
           var8Lifetime1 = 16711935 & param1;
           var9Lifetime1 = 65280 & param1;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (var8Lifetime1 * var11 & -16711936 | 16711680 & var11 * var9Lifetime1) >>> 8;
-          ki.b(var7 + this.field_C, var6, this.field_C, var12Lifetime1);
-          ki.b(-this.field_C + var7, var6, this.field_C, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_C, var6, this.field_C, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_C + var7, var6, this.field_C, var12Lifetime1);
         }
         wf.a(-68);
         return var13;
@@ -150,7 +150,7 @@ final class fa extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
             }
-            ki.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         wf.a(-117);
@@ -226,7 +226,7 @@ final class fa extends UiWidget {
             this.field_x = 78;
           }
           wf.a(param3 + 22830);
-          if (param1 + this.field_v.field_u >= ki.field_l) {
+          if (param1 + this.field_v.field_u >= SoftwareRasterizer.field_l) {
             bc.a(this.field_H, 26095);
             param0.e(-this.field_I, 0);
             param0.e(-this.field_I + this.field_C * 2, 0);
@@ -234,7 +234,7 @@ final class fa extends UiWidget {
             wf.a(-103);
             this.field_H.e(param1, param2);
           }
-          if (var5_int - this.field_v.field_u <= ki.field_g) {
+          if (var5_int - this.field_v.field_u <= SoftwareRasterizer.field_g) {
             bc.a(this.field_H, 26095);
             for (var7 = this.field_i + (-this.field_v.field_u + this.field_I); 2 * this.field_C < var7; var7 = var7 - 2 * this.field_C) {
             }

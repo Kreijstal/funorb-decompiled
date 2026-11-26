@@ -305,10 +305,10 @@ abstract class BitmapFont extends DualLinkNode {
               }
               param1 = param1 + this.field_B[var8];
               if (field_G != -1) {
-                bi.b(var11, param2 + (int)((double)this.field_D * 0.7), param1 - var11, field_G);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_D * 0.7), param1 - var11, field_G);
               }
               if (field_J != -1) {
-                bi.b(var11, param2 + this.field_D + 1, param1 - var11, field_J);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_D + 1, param1 - var11, field_J);
               }
               var5 = var8;
             }

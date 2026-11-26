@@ -101,7 +101,7 @@ final class ve extends lj {
             return;
           }
           CrossfadingMidiPcmStream.a(vh.field_l, 256);
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
           vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
@@ -136,7 +136,7 @@ final class ve extends lj {
             return;
           }
           CrossfadingMidiPcmStream.a(vh.field_l, 256);
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
           vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);

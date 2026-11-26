@@ -66,12 +66,12 @@ abstract class SocketConnector {
         int var3 = 0;
         int var3Lifetime1;
         if (!param0) {
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           kh.a(-75, param0);
           var3 = 119 % ((-73 - param2) / 42);
           return;
         }
-        sb.c(0, 0, sb.field_c, sb.field_g, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 192);
         kh.a(-75, param0);
         var3Lifetime1 = 119 % ((-73 - param2) / 42);
     }

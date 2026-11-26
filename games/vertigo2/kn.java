@@ -42,17 +42,17 @@ final class kn implements WidgetListener {
             param0 = param0 & var11.field_F;
           }
           var7 = 5592405;
-          bi.b(param1 + param3.x, param3.y + param4, param3.width, param3.height, this.field_k);
+          SoftwareRasterizer.fillRectangle(param1 + param3.x, param3.y + param4, param3.width, param3.height, this.field_k);
           if (param0) {
             var7 = 16777215;
           }
           var8 = this.field_i + (param1 + param3.x);
           var9 = this.field_c + (param3.y + param4);
-          bi.f(var8, var9, this.field_d, this.field_f, 5592405);
-          bi.b(var8, var9, this.field_d, this.field_f, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_d, this.field_f, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_d, this.field_f, var7);
           if (var11.field_G) {
-            bi.a(var8, var9, var8 + this.field_d, this.field_f + var9, 1);
-            bi.a(this.field_d + var8, var9, var8, var9 + this.field_f, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_d, this.field_f + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_d + var8, var9, var8, var9 + this.field_f, 1);
           }
           if (!param2) {
             kn.clearStaticReferences(true);

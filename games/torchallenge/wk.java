@@ -182,7 +182,7 @@ final class wk extends ic {
           var1_int = dg.field_M[var3Lifetime1][0][0];
           if (var5 < 0) {
             cg.field_g.d();
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             var13.drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(117);
             var7Lifetime2 = cg.field_g;
@@ -203,7 +203,7 @@ final class wk extends ic {
           var5Lifetime1 = dg.field_M[var4Lifetime1][1][2];
           if (var5Lifetime1 < 0) {
             cg.field_g.d();
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             var15Lifetime2.drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(126);
             var7Lifetime4 = cg.field_g;

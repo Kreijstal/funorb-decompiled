@@ -616,23 +616,23 @@ public final class fleas extends NetworkGameClient {
               do {
                 if (var5 < 0) {
                   gi.field_b.a((byte) 125);
-                  var5 = gb.field_d;
+                  var5 = SoftwareRasterizer.field_d;
                   break;
                 }
                 ji.field_f[var5] = ai.field_n[var5].c();
                 ji.field_f[var5].a();
                 ji.field_f[var5].f();
-                gb.h(5, 1, 0, 0, gb.field_d, gb.field_k);
+                SoftwareRasterizer.blurRectangle(5, 1, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 var5--;
               } while (var17 == 0);
-              var6Lifetime1 = gb.field_k;
-              var7 = gb.field_a;
+              var6Lifetime1 = SoftwareRasterizer.field_k;
+              var7 = SoftwareRasterizer.field_a;
               var8 = new dd(640, 480);
               var8.f();
-              qi.field_c.d(0, 0, gb.field_d, gb.field_k);
-              gb.h(5, 5, 0, 0, gb.field_d, gb.field_k);
+              qi.field_c.d(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+              SoftwareRasterizer.blurRectangle(5, 5, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
               qi.field_c = var8;
-              gb.a(var7, var5, var6Lifetime1);
+              SoftwareRasterizer.setRasterBuffer(var7, var5, var6Lifetime1);
               ca.field_P = kl.a(252, hm.field_g, "", "explosion");
               il.field_d = of.a("achievementicons", "", hm.field_g, 103);
               var9 = new dd[3];
@@ -653,9 +653,9 @@ public final class fleas extends NetworkGameClient {
                 }
                 var10[var11] = new dd(640, 350);
                 var10[var11].f();
-                var9[var11].d(0, 0, gb.field_d, gb.field_k);
-                gb.h(2, 2, 0, 0, gb.field_d, gb.field_k);
-                gb.d(0, 0, gb.field_d, gb.field_k);
+                var9[var11].d(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+                SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+                SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 var11++;
               } while (var17 == 0);
               var11 = 0;
@@ -874,7 +874,7 @@ public final class fleas extends NetworkGameClient {
               if (var3 > 255) {
                 var3 = 255;
               }
-              gb.g(0, 0, 640, 480, 1, var3);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 1, var3);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -891,7 +891,7 @@ public final class fleas extends NetworkGameClient {
               if (var3Lifetime2 > 255) {
                 var3Lifetime2 = 255;
               }
-              gb.g(0, 0, 640, 480, 1, var3Lifetime2);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 1, var3Lifetime2);
               if (var4 != 0) {
                 if (-1 == ab.field_b) {
                   fc.c(126);
@@ -920,18 +920,18 @@ public final class fleas extends NetworkGameClient {
               }
               dh.a(stackIn_77_0, (byte) 121);
               if (var4 != 0) {
-                gb.d(0, 0, gb.field_d, gb.field_k);
+                SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 lf.a(pd.field_k, pd.field_k[0].field_w, pd.field_k[0].field_t, (byte) 100);
               }
             }
           } else {
-            gb.d(0, 0, gb.field_d, gb.field_k);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
             lf.a(pd.field_k, pd.field_k[0].field_w, pd.field_k[0].field_t, (byte) 100);
           }
           if (vk.field_L != 0) {
             var3Lifetime1 = af.field_g * 256 / 32;
             if (var3Lifetime1 > 0) {
-              gb.g(0, 0, gb.field_d, gb.field_k, 0, var3Lifetime1);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, var3Lifetime1);
             }
           }
           if (DirectByteStorage.field_k >= 2) {
@@ -964,7 +964,7 @@ public final class fleas extends NetworkGameClient {
           GameAppletShell.c(true);
           rd.a((byte) -19);
           MouseWheelInput.a(param0 ^ 107);
-          gb.a();
+          SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences((byte) -110);
           fa.clearStaticReferences();
           qg.clearStaticReferences(false);

@@ -42,7 +42,7 @@ final class ce extends kl {
         int var4 = this.field_k + (this.field_a - 200 >> 1);
         int var5 = 60 + var3;
         int var6 = -121 / ((41 - param0) / 63);
-        gf.b(-4 + var4, -4 + var5, 208, 28, 0);
+        SoftwareRasterizer.fillRectangle(-4 + var4, -4 + var5, 208, 28, 0);
         rp.a(4, 200, (byte) 108, var4, 20, kc.field_S, var5);
         if (this.field_u != null) {
           var9 = this.field_u.toString();

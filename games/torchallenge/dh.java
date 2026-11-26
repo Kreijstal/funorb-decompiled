@@ -173,7 +173,7 @@ final class dh extends df {
             this.field_Z.storedWidth >= var11 &&
             this.field_Z.storedHeight >= var12) {
             FullscreenFocusCanvas.a(122, this.field_Z);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_Z = new Sprite(var11, var12);
             FullscreenFocusCanvas.a(-114, this.field_Z);
@@ -224,7 +224,7 @@ final class dh extends df {
             } else {
               if (this.field_Z.storedHeight >= var12Lifetime1) {
                 FullscreenFocusCanvas.a(122, this.field_Z);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
                 FullscreenFocusCanvas.a(-114, this.field_Z);
@@ -255,7 +255,7 @@ final class dh extends df {
             this.field_Z.storedWidth >= var11Lifetime2 &&
             this.field_Z.storedHeight >= var12Lifetime2) {
             FullscreenFocusCanvas.a(122, this.field_Z);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_Z = new Sprite(var11Lifetime2, var12Lifetime2);
             FullscreenFocusCanvas.a(-114, this.field_Z);
@@ -292,7 +292,7 @@ final class dh extends df {
           } else {
             if (this.field_Z.storedHeight >= var12Lifetime3) {
               FullscreenFocusCanvas.a(122, this.field_Z);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
               FullscreenFocusCanvas.a(-114, this.field_Z);

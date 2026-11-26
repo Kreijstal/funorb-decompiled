@@ -62,7 +62,7 @@ final class mi {
           var13.h();
           var14 = var13.d();
           var14.e();
-          gf.b(0, 0, param4.field_y, param4.field_v, 0, 160);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, param4.field_y, param4.field_v, 0, 160);
           var15 = param4.d();
           var15.e();
           rb.a(8, var7, 12690143, (byte) -34).b(var10, var11, 32);

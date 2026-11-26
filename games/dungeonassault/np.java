@@ -27,11 +27,11 @@ class np extends rj {
           return;
         }
         if (null != this.field_L) {
-          gf.a(this.field_L);
-          gf.a(param0 + this.field_t, param1 + this.field_i, this.field_q + this.field_t + param0, param1 + this.field_x + this.field_i);
+          SoftwareRasterizer.saveClip(this.field_L);
+          SoftwareRasterizer.intersectClip(param0 + this.field_t, param1 + this.field_i, this.field_q + this.field_t + param0, param1 + this.field_x + this.field_i);
           var4 = 56 % ((41 - param2) / 61);
           if (null == this.field_J) {
-            gf.b(this.field_L);
+            SoftwareRasterizer.restoreClip(this.field_L);
             return;
           }
           var5 = (rj) (this.field_J.beginBackward(-24172));
@@ -39,12 +39,12 @@ class np extends rj {
             var5.a(param0, param1, (byte) 122);
             var5 = (rj) (this.field_J.nextBackward(4));
           }
-          gf.b(this.field_L);
+          SoftwareRasterizer.restoreClip(this.field_L);
           return;
         }
         this.field_L = new int[4];
-        gf.a(this.field_L);
-        gf.a(param0 + this.field_t, param1 + this.field_i, this.field_q + this.field_t + param0, param1 + this.field_x + this.field_i);
+        SoftwareRasterizer.saveClip(this.field_L);
+        SoftwareRasterizer.intersectClip(param0 + this.field_t, param1 + this.field_i, this.field_q + this.field_t + param0, param1 + this.field_x + this.field_i);
         var4Lifetime1 = 56 % ((41 - param2) / 61);
         if (null != this.field_J) {
           var5Lifetime1 = (rj) (this.field_J.beginBackward(-24172));
@@ -53,7 +53,7 @@ class np extends rj {
             var5Lifetime1 = (rj) (this.field_J.nextBackward(4));
           }
         }
-        gf.b(this.field_L);
+        SoftwareRasterizer.restoreClip(this.field_L);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -301,8 +301,8 @@ class np extends rj {
           return;
         }
         if (this.field_L != null) {
-          gf.a(this.field_L);
-          gf.a(this.field_t + param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
+          SoftwareRasterizer.saveClip(this.field_L);
+          SoftwareRasterizer.intersectClip(this.field_t + param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
           if (param1 == 8187) {
             if (null != this.field_J) {
               var6 = (rj) (this.field_J.beginBackward(-24172));
@@ -310,7 +310,7 @@ class np extends rj {
                 var6.b(param0, 8187, param2);
                 var6 = (rj) (this.field_J.nextBackward(4));
               }
-              gf.b(this.field_L);
+              SoftwareRasterizer.restoreClip(this.field_L);
               return;
             }
           } else {
@@ -325,8 +325,8 @@ class np extends rj {
           }
         } else {
           this.field_L = new int[4];
-          gf.a(this.field_L);
-          gf.a(this.field_t + param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
+          SoftwareRasterizer.saveClip(this.field_L);
+          SoftwareRasterizer.intersectClip(this.field_t + param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
           if (param1 == 8187) {
             if (null != this.field_J) {
               var6 = (rj) (this.field_J.beginBackward(-24172));
@@ -346,7 +346,7 @@ class np extends rj {
             }
           }
         }
-        gf.b(this.field_L);
+        SoftwareRasterizer.restoreClip(this.field_L);
     }
 
     rj a(int param0, int param1, int param2) {

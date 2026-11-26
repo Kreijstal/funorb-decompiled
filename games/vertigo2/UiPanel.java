@@ -308,11 +308,11 @@ class UiPanel extends fh {
         var26 = Vertigo2.field_L ? 1 : 0;
         this.field_ob = this.field_wb + param4;
         this.field_C = this.field_N + param3;
-        var12 = bi.field_d;
-        var13 = bi.field_f;
-        var14 = bi.field_i;
-        var15 = bi.field_c;
-        bi.c(this.field_ob, this.field_C, this.field_Fb + this.field_ob, this.field_C + this.field_db);
+        var12 = SoftwareRasterizer.field_d;
+        var13 = SoftwareRasterizer.field_f;
+        var14 = SoftwareRasterizer.field_i;
+        var15 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.intersectClip(this.field_ob, this.field_C, this.field_Fb + this.field_ob, this.field_C + this.field_db);
         param2 = param2 & this.field_lb;
         if (!this.field_ib) {
           param0 = this.field_pb;
@@ -462,7 +462,7 @@ class UiPanel extends fh {
             var24_ref = (UiPanel) (this.field_M.nextBackward(83));
           }
         }
-        bi.g(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     UiPanel(long param0, UiPanel param1) {
@@ -470,7 +470,7 @@ class UiPanel extends fh {
     }
 
     final void b(boolean param0, int param1) {
-        this.a(false, bi.field_e, true, param1, 0, param0, 41, false, false, bi.field_j, false);
+        this.a(false, SoftwareRasterizer.field_e, true, param1, 0, param0, 41, false, false, SoftwareRasterizer.field_j, false);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -517,7 +517,7 @@ class UiPanel extends fh {
     final void a(int param0, boolean param1) {
         gi.field_o = !param1 ? true : false;
         sj.field_e = !param1 ? true : false;
-        this.a(param0 ^ 1074455266, param0, 0, bi.field_j, true, bi.field_e);
+        this.a(param0 ^ 1074455266, param0, 0, SoftwareRasterizer.field_j, true, SoftwareRasterizer.field_e);
     }
 
     final int b(int param0, int param1) {
@@ -675,19 +675,19 @@ class UiPanel extends fh {
         this.field_db = this.field_db + var7Lifetime3;
         this.field_C = this.field_N + param1;
         param4 = param4 & this.field_lb;
-        var8 = bi.field_d;
-        var9 = bi.field_f;
-        var10 = bi.field_i;
-        var11 = bi.field_c;
-        bi.c(this.field_ob, this.field_C, this.field_Fb + this.field_ob, this.field_C + this.field_db);
+        var8 = SoftwareRasterizer.field_d;
+        var9 = SoftwareRasterizer.field_f;
+        var10 = SoftwareRasterizer.field_i;
+        var11 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.intersectClip(this.field_ob, this.field_C, this.field_Fb + this.field_ob, this.field_C + this.field_db);
         var12 = 0;
         if (!sj.field_e &&
           param4 &&
           kf.field_c != 0 &&
-          sd.field_N >= bi.field_d &&
-          sd.field_N < bi.field_i &&
-          no.field_e >= bi.field_f &&
-          no.field_e < bi.field_c) {
+          sd.field_N >= SoftwareRasterizer.field_d &&
+          sd.field_N < SoftwareRasterizer.field_i &&
+          no.field_e >= SoftwareRasterizer.field_f &&
+          no.field_e < SoftwareRasterizer.field_c) {
           this.field_tb = kf.field_c;
           this.field_ub = -this.field_ob + sd.field_N;
           var12 = 1;
@@ -702,7 +702,7 @@ class UiPanel extends fh {
         if (q.field_v == 0) {
           this.field_xb = 0;
         }
-        stackIn_35_1 = (!gi.field_o) && (bi.field_d <= PacketBuffer.field_n) && (PacketBuffer.field_n < bi.field_i) && (gb.field_d >= bi.field_f) && (bi.field_c > gb.field_d);
+        stackIn_35_1 = (!gi.field_o) && (SoftwareRasterizer.field_d <= PacketBuffer.field_n) && (PacketBuffer.field_n < SoftwareRasterizer.field_i) && (gb.field_d >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_c > gb.field_d);
         this.field_G = stackIn_35_1;
         stackIn_40_1 = (this.field_G) && (q.field_v == this.field_xb) && (param4);
         this.field_pb = stackIn_40_1;
@@ -719,7 +719,7 @@ class UiPanel extends fh {
         if (this.field_G) {
           gi.field_o = true;
         }
-        bi.g(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_xb != 0 &&
           this.field_X) {
           this.field_N = gb.field_d - this.field_fb - param1;

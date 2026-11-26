@@ -24,7 +24,7 @@ final class dl {
         java.awt.Component var4 = null;
         java.awt.Component var4Lifetime1;
         if (!param2) {
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           if (!param1) {
             var4 = (java.awt.Component) null;
             dl.a((java.awt.Component) null, (byte) 72);
@@ -34,7 +34,7 @@ final class dl {
           kh.a((byte) 35, param2);
           return;
         }
-        fn.b(0, 0, fn.field_g, fn.field_l, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, 192);
         if (!param1) {
           var4Lifetime1 = (java.awt.Component) null;
           dl.a((java.awt.Component) null, (byte) 72);

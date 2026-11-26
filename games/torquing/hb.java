@@ -66,12 +66,12 @@ final class hb extends am {
             var10 = SoftwareRasterizer.field_j;
             var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
-            SoftwareRasterizer.b(var29);
+            SoftwareRasterizer.saveClip(var29);
             param2.e();
             if (param1) {
               hb.clearStaticReferences(-75);
             }
-            SoftwareRasterizer.f(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param2.field_s * param6 + param0;
             var14 = param2.field_s - param4;
             var25 = var21.field_y;
@@ -95,8 +95,8 @@ final class hb extends am {
               var13 = var13 + var14;
             }
             var21.d(-param2.field_v, -param2.field_r);
-            SoftwareRasterizer.a(var30, var10, var11);
-            SoftwareRasterizer.a(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

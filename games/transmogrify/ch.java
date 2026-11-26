@@ -40,7 +40,7 @@ final class ch {
             ci.field_f.b((UiWidget) (gh.field_m), (byte) -71);
           }
           gh.field_m.a(param2, param1, (byte) -27, param3);
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           kh.a(-111, true);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ch.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

@@ -66,7 +66,7 @@ abstract class db extends gj {
           ok.field_y = new dd(this.field_u, this.field_j);
         }
         r.a(ok.field_y, 45);
-        gb.c();
+        SoftwareRasterizer.clearRaster();
         this.b(0, 0, 17344);
         super.b(-param0 - this.field_z, -param1 - this.field_y, param2, param3);
         ia.a(-62);

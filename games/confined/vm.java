@@ -28,7 +28,7 @@ final class vm extends hf {
           if (param1 != -8409) {
             vm.a(72, false);
           }
-          fn.a(param0.field_z, param0.field_t, param0.field_x);
+          SoftwareRasterizer.setRasterBuffer(param0.field_z, param0.field_t, param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "vm.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

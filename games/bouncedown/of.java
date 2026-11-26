@@ -11,12 +11,12 @@ final class of {
         int var3 = 0;
         int var3Lifetime1;
         if (!param0) {
-          na.a();
+          SoftwareRasterizer.clearRaster();
           pj.a(param0, 1);
           var3 = -128 / ((param2 - 41) / 34);
           return;
         }
-        na.a(0, 0, na.field_e, na.field_k, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, 192);
         pj.a(param0, 1);
         var3Lifetime1 = -128 / ((param2 - 41) / 34);
     }

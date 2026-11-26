@@ -174,9 +174,9 @@ final class ej extends ta {
           return;
         }
         if (!param0) {
-          vj.d();
+          SoftwareRasterizer.clearRaster();
         } else {
-          vj.a(0, 0, vj.field_l, vj.field_g, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 0, 192);
         }
         ga.a(param0, param1 + 62);
     }

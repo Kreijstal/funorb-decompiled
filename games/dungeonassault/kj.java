@@ -89,7 +89,7 @@ final class kj extends IntrusiveNode {
           if (param2 != -2958) {
             kj.a(93);
           }
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           ByteStorage.a(true, (byte) -106);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

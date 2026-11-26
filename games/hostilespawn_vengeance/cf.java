@@ -10,7 +10,7 @@ class cf extends DualLinkNode {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param0) {
-          si.a(0, 0, si.field_e, si.field_k, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, 192);
           if (param2 <= 5) {
             field_u = (bd[]) null;
             lf.a((byte) 84, param0);
@@ -19,7 +19,7 @@ class cf extends DualLinkNode {
           lf.a((byte) 84, param0);
           return;
         }
-        si.d();
+        SoftwareRasterizer.clearRaster();
         if (param2 <= 5) {
           field_u = (bd[]) null;
           lf.a((byte) 84, param0);

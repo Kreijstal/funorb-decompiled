@@ -126,7 +126,7 @@ final class kl extends pm {
                   var35 = 16;
                   var36 = (int)(var33 * var31 * var31) >> 8;
                 }
-                fn.a(var29, var30, var35, var36, this.field_U);
+                SoftwareRasterizer.addRadialGlow(var29, var30, var35, var36, this.field_U);
                 var28++;
               }
             }

@@ -82,7 +82,7 @@ final class me {
         if (param0 == 32) {
           var6 = new cn(var5, var5);
           jh.a(var6);
-          gf.b(param3, param2, -param3 - (param1 - var5), -param2 + (-param4 + var5), 16777215);
+          SoftwareRasterizer.fillRectangle(param3, param2, -param3 - (param1 - var5), -param2 + (-param4 + var5), 16777215);
           jh.b();
           return var6;
         }

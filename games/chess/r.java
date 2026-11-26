@@ -98,7 +98,7 @@ final class r extends ci {
           if (var1 == null) {
             var1 = new h();
           }
-          var1.a(wb.field_h, wb.field_c, 0, wb.field_d, wb.field_j, wb.field_i, wb.field_b, wb.field_a);
+          var1.a(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a);
           tm.field_a.addFirst((IntrusiveNode) (var1), (byte) -39);
           return;
         }

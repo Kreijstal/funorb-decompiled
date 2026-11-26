@@ -46,14 +46,14 @@ final class hb implements cg {
           if (param0) {
             var7 = 16777215;
           }
-          wj.f(param2.field_o + param4, param3 + param2.field_m, param2.field_w, param2.field_k, this.field_p);
+          SoftwareRasterizer.fillRectangle(param2.field_o + param4, param3 + param2.field_m, param2.field_w, param2.field_k, this.field_p);
           var8 = this.field_h + (param4 + param2.field_o);
           var9 = this.field_o + (param2.field_m + param3);
-          wj.b(var8, var9, this.field_e, this.field_k, 5592405);
-          wj.f(var8, var9, this.field_e, this.field_k, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_e, this.field_k, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_e, this.field_k, var7);
           if (var11.field_A) {
-            wj.g(var8, var9, var8 + this.field_e, var9 + this.field_k, 1);
-            wj.g(var8 + this.field_e, var9, var8, var9 + this.field_k, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_e, var9 + this.field_k, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_e, var9, var8, var9 + this.field_k, 1);
           }
           if (null != this.field_f) {
             var10 = this.field_l + (this.field_e + this.field_h);

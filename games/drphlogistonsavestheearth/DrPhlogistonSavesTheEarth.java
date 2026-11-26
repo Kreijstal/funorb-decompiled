@@ -70,24 +70,24 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           oj.field_c = ij.a("bulletspark", (byte) 96, kf.field_d, "");
           hb.field_a = new nh(15, 15);
           hb.field_a.c();
-          wj.b(7, 7, 7, 8388608);
+          SoftwareRasterizer.fillCircle(7, 7, 7, 8388608);
           lb.field_C.a(123);
           MouseWheelInput.field_d = new nh(20, 20);
           MouseWheelInput.field_d.c();
-          wj.b(9, 9, 6, 61568);
+          SoftwareRasterizer.fillCircle(9, 9, 6, 61568);
           lb.field_C.a(119);
           GameAppletShell.field_i = new nh(10, 10);
           GameAppletShell.field_i.c();
-          wj.b(5, 5, 5, 8421504);
+          SoftwareRasterizer.fillCircle(5, 5, 5, 8421504);
           lb.field_C.a(122);
           al.field_b = new nh(800, 32);
           al.field_b.c();
-          wj.g(0, 7, 800, 16711680);
-          wj.g(0, 8, 800, 16776960);
-          wj.g(0, 9, 800, 16777215);
-          wj.g(0, 10, 800, 16777215);
-          wj.g(0, 11, 800, 16776960);
-          wj.g(0, 12, 800, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(0, 7, 800, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(0, 8, 800, 16776960);
+          SoftwareRasterizer.drawHorizontalLine(0, 9, 800, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(0, 10, 800, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(0, 11, 800, 16776960);
+          SoftwareRasterizer.drawHorizontalLine(0, 12, 800, 16711680);
           lb.field_C.a(101);
           kc.field_p = new nh(32, 430);
           kc.field_p.c();
@@ -97,26 +97,26 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               lb.field_C.a(98);
               kc.field_q = new nh(800, 20);
               kc.field_q.c();
-              wj.g(0, 6, 800, 65280);
-              wj.g(0, 7, 800, 65280);
-              wj.g(0, 8, 800, 65535);
-              wj.g(0, 9, 800, 16777215);
-              wj.g(0, 10, 800, 16777215);
-              wj.g(0, 11, 800, 65535);
-              wj.g(0, 12, 800, 65280);
-              wj.g(0, 13, 800, 65280);
+              SoftwareRasterizer.drawHorizontalLine(0, 6, 800, 65280);
+              SoftwareRasterizer.drawHorizontalLine(0, 7, 800, 65280);
+              SoftwareRasterizer.drawHorizontalLine(0, 8, 800, 65535);
+              SoftwareRasterizer.drawHorizontalLine(0, 9, 800, 16777215);
+              SoftwareRasterizer.drawHorizontalLine(0, 10, 800, 16777215);
+              SoftwareRasterizer.drawHorizontalLine(0, 11, 800, 65535);
+              SoftwareRasterizer.drawHorizontalLine(0, 12, 800, 65280);
+              SoftwareRasterizer.drawHorizontalLine(0, 13, 800, 65280);
               lb.field_C.a(127);
               qa.field_M = new nh(20, 20);
               qa.field_M.c();
-              wj.b(9, 9, 6, 8421376);
+              SoftwareRasterizer.fillCircle(9, 9, 6, 8421376);
               lb.field_C.a(104);
               nd.field_L = new nh(20, 20);
               nd.field_L.c();
-              wj.b(9, 9, 6, 8421376);
+              SoftwareRasterizer.fillCircle(9, 9, 6, 8421376);
               lb.field_C.a(97);
               sa.field_c = new nh(20, 20);
               sa.field_c.c();
-              wj.b(9, 9, 6, 8388736);
+              SoftwareRasterizer.fillCircle(9, 9, 6, 8388736);
               lb.field_C.a(110);
               field_J = sa.field_c;
               mh.field_c = nd.field_L;
@@ -124,28 +124,28 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               jj.field_c.c();
               break;
             }
-            wj.c(var2_int, 430 * (-var2_int + 16) / 16, 430, 16711680 + var2_int * 4096);
-            wj.c(-var2_int + 31, (6880 - 430 * var2_int) / 16, 430, 16711680 + 4096 * var2_int);
+            SoftwareRasterizer.drawVerticalLine(var2_int, 430 * (-var2_int + 16) / 16, 430, 16711680 + var2_int * 4096);
+            SoftwareRasterizer.drawVerticalLine(-var2_int + 31, (6880 - 430 * var2_int) / 16, 430, 16711680 + 4096 * var2_int);
             var2_int++;
           } while (var3 == 0);
           var2_int = 0;
           while (var2_int < 16) {
-            wj.g(0, var2_int, 800, 4096 * var2_int + 16711680);
-            wj.g(0, 32 - var2_int, 800, 16711680 + 4096 * var2_int);
+            SoftwareRasterizer.drawHorizontalLine(0, var2_int, 800, 4096 * var2_int + 16711680);
+            SoftwareRasterizer.drawHorizontalLine(0, 32 - var2_int, 800, 16711680 + 4096 * var2_int);
             var2_int++;
             if (var3 != 0) {
               return;
             }
           }
-          wj.g(0, 16, 800, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(0, 16, 800, 16777215);
           lb.field_C.a(117);
           MusicPatchPcmStream.field_o = new nh(8, 8);
           MusicPatchPcmStream.field_o.c();
-          wj.b(4, 4, 4, 65535);
+          SoftwareRasterizer.fillCircle(4, 4, 4, 65535);
           lb.field_C.a(111);
           ik.field_b = new nh(3, 3);
           ik.field_b.c();
-          wj.b(1, 1, 1, 65408);
+          SoftwareRasterizer.fillCircle(1, 1, 1, 65408);
           lb.field_C.a(105);
           cj.field_d = new nh(256, 256);
           lb.field_C.a(111);
@@ -429,13 +429,13 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           eb.field_e[0].c();
-          wj.f(0, 0, 64, 64, 10836, 21672);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 10836, 21672);
           MouseWheelInput.field_f.a(0, 0, 256, 64);
           eb.field_e[1].c();
-          wj.f(0, 0, 64, 64, 262656, 11754240);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 262656, 11754240);
           sg.field_e.a(0, 0, 256, 64);
           eb.field_e[2].c();
-          wj.f(0, 0, 64, 64, 258, 13932);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 258, 13932);
           uk.field_h.a(0, 0, 256, 64);
           eb.field_e[3].c();
           nb.field_b.a(0, 0);
@@ -448,22 +448,22 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           nb.field_b.a(0, 0);
           be.a(sh.field_b, -715, -75);
           eb.field_e[6].c();
-          wj.f(0, 0, 64, 64, 7091712, 131328);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 7091712, 131328);
           vi.field_g.a(0, 0, 256, 64);
           var2_int = -13 % ((param0 - 56) / 56);
           eb.field_e[7].c();
-          wj.f(0, 0, 64, 64, 27648, 512);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 27648, 512);
           vi.field_g.a(0, 0, 256, 64);
           eb.field_e[8].c();
-          wj.f(0, 0, 64, 64, 27648, 512);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 27648, 512);
           vi.field_g.a(-30, 0, 256, 64);
           md.field_f = new nh(64, 64);
           md.field_f.c();
-          wj.f(0, 0, 64, 64, 2897296, 0);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 2897296, 0);
           cb.field_b.b("?", 32, 32, 16777215, 1);
           wi.field_a = new nh(64, 64);
           wi.field_a.c();
-          wj.f(0, 0, 64, 64, 2897296, 0);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 2897296, 0);
           cb.field_b.b("?", 32, 32, 16777215, 1);
           ge.field_d.b(32, 32);
           lb.field_C.a(103);
@@ -495,7 +495,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           KeyboardInput.a((byte) 119);
           MouseInput.a(45);
           MouseWheelInput.clearStaticReferences((byte) 86);
-          wj.d();
+          SoftwareRasterizer.clearStaticReferences();
           vj.clearStaticReferences(0);
           pc.a(13302);
           bc.clearStaticReferences(66);
@@ -977,20 +977,20 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           if (BoundedRandomAccessFile.a((byte) 97)) {
-            wj.a(0, 0, wj.field_k, wj.field_c);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
             MidiPcmStream.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, 37);
           }
           if (0 != ul.field_a) {
             var3 = 256 * ue.field_b / 32;
             if (var3 > 0) {
-              wj.d(0, 0, wj.field_k, wj.field_c, 0, var3);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, 0, var3);
             }
           }
           if (!bb.a((byte) -103) ||
             BoundedRandomAccessFile.a((byte) 97)) {
             if ((fl.b(73)) &&
               (!BoundedRandomAccessFile.a((byte) 97))) {
-              wj.a(0, 0, wj.field_k, wj.field_c);
+              SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
               qe.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, (byte) -76);
               if (var4 != 0) {
                 stackIn_86_0 = 91;
@@ -2226,7 +2226,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             if (var3 < var4) {
               v.field_O = new nh(640, 430);
               v.field_O.c();
-              var4 = 336 * wj.field_k;
+              var4 = 336 * SoftwareRasterizer.field_k;
               break;
             }
             FullscreenFocusCanvas.field_f.field_m[var4] = (byte) 1;
@@ -2238,7 +2238,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               var5 = 0;
               break;
             }
-            wj.field_l[hi.a(var4, param0 + 11670, pd.field_c)] = 65793 * (hi.a(254, 4, pd.field_c) + 1);
+            SoftwareRasterizer.field_l[hi.a(var4, param0 + 11670, pd.field_c)] = 65793 * (hi.a(254, 4, pd.field_c) + 1);
             var5++;
           } while (var6 == 0);
           do {
@@ -2248,7 +2248,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               nb.field_b.c();
               break;
             }
-            wj.e(0, var5, 640, 258 * ((9 + var5) / 7), (var5 + 435) / 3);
+            SoftwareRasterizer.drawHorizontalLineAlpha(0, var5, 640, 258 * ((9 + var5) / 7), (var5 + 435) / 3);
             var5++;
           } while (var6 == 0);
           var5 = 0;
@@ -2257,7 +2257,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               var5 = 0;
               break;
             }
-            wj.field_l[hi.a(wj.field_l.length, qk.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
+            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, qk.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
             var5++;
           } while (var6 == 0);
           do {
@@ -2265,7 +2265,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               var5 = 0;
               break;
             }
-            wj.field_l[hi.a(wj.field_l.length, 4, pd.field_c)] = 131329 * hi.a(128, 4, pd.field_c);
+            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, 4, pd.field_c)] = 131329 * hi.a(128, 4, pd.field_c);
             var5++;
           } while (var6 == 0);
           do {
@@ -2280,7 +2280,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               dupTemp$1.field_D = dupTemp$1.field_D + 800;
               break;
             }
-            wj.field_l[hi.a(wj.field_l.length, 4, pd.field_c)] = hi.a(128, 4, pd.field_c) * 65794;
+            SoftwareRasterizer.field_l[hi.a(SoftwareRasterizer.field_l.length, 4, pd.field_c)] = hi.a(128, 4, pd.field_c) * 65794;
             var5++;
           } while (var6 == 0);
           if (param0 != -11666) {

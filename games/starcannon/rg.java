@@ -58,7 +58,7 @@ final class rg extends vk implements si, ga {
           nb.field_c.a(this.field_J, 20 + param1 + this.field_s, 15 + (param3 + this.field_j), this.field_i - 40, this.field_f, 16777215, -1, 1, 0, nb.field_c.field_p);
         }
         if (this.field_y != null) {
-          ki.b(10 + param1, param3 + 134, -20 + this.field_i, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param1, param3 + 134, -20 + this.field_i, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

@@ -62,11 +62,11 @@ final class DirectByteStorage extends ByteStorage {
     final static void a(int param0, int param1, byte param2, int param3) {
         int var5 = 125 % ((param2 - 2) / 37);
         int var4 = 88 * param3 >> 16;
-        int var6 = fn.field_b;
+        int var6 = SoftwareRasterizer.field_b;
         int var7 = 472 - var4;
-        fn.field_b = var7;
+        SoftwareRasterizer.field_b = var7;
         dn.field_c[param0].c(param1, 384);
-        fn.field_b = var6;
+        SoftwareRasterizer.field_b = var6;
     }
 
     public static void c(int param0) {

@@ -72,10 +72,10 @@ final class n {
           }
           hj.a(u.field_m, 1);
           cc.a();
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           ja.a(param1 + 45);
           if (var5 < 256) {
-            ti.b(0, 0, ti.field_i, ti.field_b, 0, -var5 + 256);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, 0, -var5 + 256);
           }
           if (param1 != -41) {
             return;

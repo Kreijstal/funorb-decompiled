@@ -207,13 +207,13 @@ final class cm extends WidgetContainer implements ql {
           var1 = new Sprite(540, 140);
           mc.a(param0 - 8512, var1);
           ig.b();
-          ge.d();
+          SoftwareRasterizer.clearRaster();
           uj.field_i = 0;
           ec.b(-128);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
-            ge.b(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ca.field_f.e();
           var1.e(0, 0);

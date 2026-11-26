@@ -129,22 +129,22 @@ final class gi {
         var8 = 115 % ((param0 + 65) / 38);
         if (param2 > param1) {
           if (param4 > param2) {
-            kg.a(param7, param2, param1, param4, param3, na.field_d, param5, 92, param6);
+            kg.a(param7, param2, param1, param4, param3, SoftwareRasterizer.field_d, param5, 92, param6);
           } else {
             if (param4 <= param1) {
-              kg.a(param6, param1, param4, param2, param7, na.field_d, param5, 118, param3);
+              kg.a(param6, param1, param4, param2, param7, SoftwareRasterizer.field_d, param5, 118, param3);
             } else {
-              kg.a(param3, param4, param1, param2, param7, na.field_d, param5, 111, param6);
+              kg.a(param3, param4, param1, param2, param7, SoftwareRasterizer.field_d, param5, 111, param6);
             }
           }
         } else {
           if (param4 > param1) {
-            kg.a(param6, param1, param2, param4, param3, na.field_d, param5, 97, param7);
+            kg.a(param6, param1, param2, param4, param3, SoftwareRasterizer.field_d, param5, 97, param7);
           } else {
             if (param4 <= param2) {
-              kg.a(param7, param2, param4, param1, param6, na.field_d, param5, 126, param3);
+              kg.a(param7, param2, param4, param1, param6, SoftwareRasterizer.field_d, param5, 126, param3);
             } else {
-              kg.a(param3, param4, param2, param1, param6, na.field_d, param5, 105, param7);
+              kg.a(param3, param4, param2, param1, param6, SoftwareRasterizer.field_d, param5, 105, param7);
             }
           }
         }

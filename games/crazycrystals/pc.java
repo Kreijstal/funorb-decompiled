@@ -164,7 +164,7 @@ class pc extends qm {
           param5 = param5 + param3.field_v;
           param0 = param0 + param3.field_t;
           var7 = (param4 << 8) + var6_int * param3.field_v;
-          var8 = kh.field_l * param0 + param5;
+          var8 = SoftwareRasterizer.field_l * param0 + param5;
           var9 = 0;
           if (param1 != 617553576) {
             var21 = (dl) null;
@@ -172,18 +172,18 @@ class pc extends qm {
           }
           var10 = param3.field_u;
           var11 = param3.field_l;
-          var12 = kh.field_l - var11;
-          if (kh.field_b > param0) {
-            var14 = -param0 + kh.field_b;
+          var12 = SoftwareRasterizer.field_l - var11;
+          if (SoftwareRasterizer.field_b > param0) {
+            var14 = -param0 + SoftwareRasterizer.field_b;
             var9 = var9 + var11 * var14;
-            param0 = kh.field_b;
-            var8 = var8 + kh.field_l * var14;
+            param0 = SoftwareRasterizer.field_b;
+            var8 = var8 + SoftwareRasterizer.field_l * var14;
             var10 = var10 - var14;
           }
           var13 = 0;
-          if (param5 < kh.field_c) {
-            var14Lifetime1 = kh.field_c - param5;
-            param5 = kh.field_c;
+          if (param5 < SoftwareRasterizer.field_c) {
+            var14Lifetime1 = SoftwareRasterizer.field_c - param5;
+            param5 = SoftwareRasterizer.field_c;
             var8 = var8 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var13 = var13 + var14Lifetime1;
@@ -191,11 +191,11 @@ class pc extends qm {
             var7 = var7 + var14Lifetime1 * var6_int;
             var12 = var12 + var14Lifetime1;
           }
-          if (kh.field_j < var10 + param0) {
-            var10 = var10 - (var10 + param0 - kh.field_j);
+          if (SoftwareRasterizer.field_j < var10 + param0) {
+            var10 = var10 - (var10 + param0 - SoftwareRasterizer.field_j);
           }
-          if (kh.field_g < param5 + var11) {
-            var14Lifetime2 = -kh.field_g + var11 + param5;
+          if (SoftwareRasterizer.field_g < param5 + var11) {
+            var14Lifetime2 = -SoftwareRasterizer.field_g + var11 + param5;
             var11 = var11 - var14Lifetime2;
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
@@ -217,11 +217,11 @@ class pc extends qm {
                   var17 = param3.field_w[incrementValue$0];
                   if (var17 != 0) {
                     if (255 >= var15) {
-                      var18 = kh.field_i[var8];
+                      var18 = SoftwareRasterizer.field_i[var8];
                       var19 = var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8 & 16711935;
-                      kh.field_i[var8] = var19 + (pf.b(var15 * pf.b(65280, var17) + var16 * pf.b(65280, var18), 16711789) >> 8);
+                      SoftwareRasterizer.field_i[var8] = var19 + (pf.b(var15 * pf.b(65280, var17) + var16 * pf.b(65280, var18), 16711789) >> 8);
                     } else {
-                      kh.field_i[var8] = var17;
+                      SoftwareRasterizer.field_i[var8] = var17;
                     }
                     var8++;
                   } else {

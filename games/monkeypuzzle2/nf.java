@@ -395,7 +395,7 @@ abstract class nf extends rh {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ge.a(6 + param1, param2 + 35, this.field_l - 12, -40 + this.field_p, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param1, param2 + 35, this.field_l - 12, -40 + this.field_p, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -405,8 +405,8 @@ abstract class nf extends rh {
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (var8 >= ge.field_f &&
-            ge.field_k > var8) {
+          if (var8 >= SoftwareRasterizer.field_f &&
+            SoftwareRasterizer.field_k > var8) {
             var9 = var5 + var7 * (-var5 + var6) / var4;
             var10 = 0;
             var11 = this.field_l;
@@ -419,7 +419,7 @@ abstract class nf extends rh {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  ge.field_i[var10 + var8 * ge.field_h + param1] = var13;
+                  SoftwareRasterizer.field_i[var10 + var8 * SoftwareRasterizer.field_h + param1] = var13;
                 }
                 var10++;
               }
@@ -433,7 +433,7 @@ abstract class nf extends rh {
                   if (420 <= var14) {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    ge.field_i[var11 + ge.field_h * var8 + param1] = var15;
+                    SoftwareRasterizer.field_i[var11 + SoftwareRasterizer.field_h * var8 + param1] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -445,7 +445,7 @@ abstract class nf extends rh {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            ge.a(param1 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(param1 + var10, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -458,8 +458,8 @@ abstract class nf extends rh {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          ge.a(param1, var8Lifetime1, 6, var9Lifetime1);
-          ge.a(param1 + this.field_l - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1 + this.field_l - 6, var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -474,8 +474,8 @@ abstract class nf extends rh {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          ge.a(param1, var8Lifetime2, 6, var9Lifetime2);
-          ge.a(-6 + (this.field_l + param1), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.field_l + param1), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

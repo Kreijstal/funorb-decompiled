@@ -72,7 +72,7 @@ final class DirectByteStorage extends ByteStorage {
           integerLocal17 = rgbSpriteLocal1.integerState0255;
           IterableNodeCollection.performAction1656(-9074);
           rgbSpriteLocal1.performAction0256();
-          SoftwareRaster.performAction0654(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284);
+          SoftwareRaster.grayscaleRectangle(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284);
           rgbSpriteLocal9 = new RgbSprite(integerLocal17, integerLocal17);
           rgbSpriteLocal10 = rgbSpriteLocal9;
           rgbSpriteLocal10.performAction0256();

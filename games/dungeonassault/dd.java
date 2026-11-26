@@ -160,10 +160,10 @@ final class dd extends rj {
         try {
           var6 = new cn(param1 * 2 + param2.field_y, 2 * param1 + param2.field_v);
           jh.a(var6);
-          gf.b(0, 0, var6.field_y, var6.field_v, 16777215);
+          SoftwareRasterizer.fillRectangle(0, 0, var6.field_y, var6.field_v, 16777215);
           for (var4 = 0; param1 > var4; var4++) {
             param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
-            gf.d(1, 1, 0, 0, var6.field_y, var6.field_v);
+            SoftwareRasterizer.blurRectangle(1, 1, 0, 0, var6.field_y, var6.field_v);
           }
           var6.h();
           param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);

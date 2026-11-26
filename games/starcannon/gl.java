@@ -26,7 +26,7 @@ final class gl {
     }
 
     final static void b() {
-        gl.a(ki.field_l, ki.field_e, ki.field_g, ki.field_i);
+        gl.a(SoftwareRasterizer.field_l, SoftwareRasterizer.field_e, SoftwareRasterizer.field_g, SoftwareRasterizer.field_i);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -37,10 +37,10 @@ final class gl {
         if (field_c.length < field_a) {
           field_c = new int[gb.roundUpPowerOfTwo(field_a, (byte) -84)];
         }
-        int var4 = param1 * ki.field_j + param0;
+        int var4 = param1 * SoftwareRasterizer.field_j + param0;
         for (var5 = 0; var5 < field_a; var5++) {
           field_c[var5] = var4;
-          var4 = var4 + ki.field_j;
+          var4 = var4 + SoftwareRasterizer.field_j;
         }
     }
 

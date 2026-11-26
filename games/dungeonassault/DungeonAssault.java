@@ -640,7 +640,7 @@ public final class DungeonAssault extends NetworkGameClient {
           tl.clearStaticReferences((byte) 50);
           MouseInput.clearStaticReferences(16);
           MouseWheelInput.a((byte) -109);
-          gf.c();
+          SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences(param0);
           se.clearStaticReferences();
           ig.a(-2898);
@@ -1103,7 +1103,7 @@ public final class DungeonAssault extends NetworkGameClient {
             }
           }
           if (ib.a((byte) 35)) {
-            gf.g(0, 0, gf.field_i, gf.field_c);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
             var3_int = 15 + la.a((byte) -105);
             var4_int = 30 + KeyboardInput.b(4);
             fm.a(ea.a((byte) 13), var3_int, var4_int, (byte) -127);
@@ -1112,7 +1112,7 @@ public final class DungeonAssault extends NetworkGameClient {
           if (!sl.b(15000)) {
             if (ue.b((byte) -112) &&
               !ib.a((byte) 109)) {
-              gf.g(0, 0, gf.field_i, gf.field_c);
+              SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
               rc.a(-126);
             }
           } else {
@@ -1126,7 +1126,7 @@ public final class DungeonAssault extends NetworkGameClient {
           if (~fm.field_a != ~fm.field_e) {
             var3_intLifetime1 = pk.field_t * 256 / 16;
             if (var3_intLifetime1 > 0) {
-              gf.b(0, 0, gf.field_i, gf.field_c, 0, var3_intLifetime1);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, var3_intLifetime1);
             }
           }
           var3_ref = (a) (wl.field_a.beginBackward(-24172));

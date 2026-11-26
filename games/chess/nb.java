@@ -121,7 +121,7 @@ final class nb extends ci {
         var6 = var5;
         if (var6 == 0) {
           var8 = kl.field_l;
-          wb.a(21, param1 - 3, 198, 96, 6, 1, 170);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
           v.field_j.b(var8, 120, var6, 16777215, -1);
           if (var3 != null) {
@@ -134,7 +134,7 @@ final class nb extends ci {
         }
         if (var6 == 1) {
           var9 = he.field_Eb;
-          wb.a(21, param1 - 3, 198, 96, 6, 1, 170);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
           v.field_j.b(var9, 120, var6, 16777215, -1);
           if (var3 != null) {
@@ -148,7 +148,7 @@ final class nb extends ci {
         }
         if (var6 == -1) {
           var10 = pe.field_d;
-          wb.a(21, param1 - 3, 198, 96, 6, 1, 170);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
           v.field_j.b(var10, 120, var6, 16777215, -1);
           if (var3 != null) {
@@ -162,7 +162,7 @@ final class nb extends ci {
         }
         if (var6 != -3) {
           var12 = pe.field_d;
-          wb.a(21, param1 - 3, 198, 96, 6, 1, 170);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
           v.field_j.b(var12, 120, var6, 16777215, -1);
           if (var3 != null) {
@@ -175,7 +175,7 @@ final class nb extends ci {
           return;
         }
         var11 = ok.field_Nb;
-        wb.a(21, param1 - 3, 198, 96, 6, 1, 170);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
         var6Lifetime1 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
         v.field_j.b(var11, 120, var6Lifetime1, 16777215, -1);
         if (var3 != null) {

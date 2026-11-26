@@ -651,7 +651,7 @@ class lm extends IntrusiveNode {
     final static void a(cn param0, byte param1) {
         try {
           ie.a(116);
-          gf.a(param0.field_B, param0.field_E, param0.field_G);
+          SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_E, param0.field_G);
           int var2_int = -127 / ((param1 + 38) / 37);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lm.BC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

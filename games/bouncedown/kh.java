@@ -72,7 +72,7 @@ final class kh {
         RuntimeException decompiledCaughtException = null;
         try {
           wa.a(true);
-          na.a(param0.field_v, param0.field_t, param0.field_o);
+          SoftwareRasterizer.setRasterBuffer(param0.field_v, param0.field_t, param0.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

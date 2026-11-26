@@ -278,7 +278,7 @@ final class da extends ue {
         if (var2 < 0) {
           var2 = 0;
         }
-        kh.d(31, 130, 31 + var2, 450);
+        SoftwareRasterizer.setClip(31, 130, 31 + var2, 450);
         if (param0 != 8) {
           return;
         }
@@ -294,23 +294,23 @@ final class da extends ue {
             var7 = cj.field_E;
             var8 = 20 * go.field_l.a(var6, 304);
             var9 = go.field_l.a(var7, 304) * 20;
-            kh.d(31, 130, 320, var8, 0, 192);
-            kh.a(31, var8 + 130, 320, 0, 160);
-            kh.a(31, 130 + (var8 + 1), 320, 0, 128);
-            kh.a(31, 130 + var8 + 2, 320, 0, 96);
-            kh.a(31, 3 + var8 + 130, 320, 0, 64);
-            kh.a(31, var8 + 134, 320, 0, 32);
-            kh.a(31, -5 - var9 + 450, 320, 0, 32);
-            kh.a(31, -var9 + 446, 320, 0, 64);
-            kh.a(31, 450 + (-var9 - 3), 320, 0, 96);
-            kh.a(31, 448 - var9, 320, 0, 128);
-            kh.a(31, -1 + (450 - var9), 320, 0, 160);
-            kh.d(31, -var9 + 450, 320, var9, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(31, 130, 320, var8, 0, 192);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, var8 + 130, 320, 0, 160);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, 130 + (var8 + 1), 320, 0, 128);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, 130 + var8 + 2, 320, 0, 96);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, 3 + var8 + 130, 320, 0, 64);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, var8 + 134, 320, 0, 32);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, -5 - var9 + 450, 320, 0, 32);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, -var9 + 446, 320, 0, 64);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, 450 + (-var9 - 3), 320, 0, 96);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, 448 - var9, 320, 0, 128);
+            SoftwareRasterizer.drawHorizontalLineAlpha(31, -1 + (450 - var9), 320, 0, 160);
+            SoftwareRasterizer.fillRectangleAlpha(31, -var9 + 450, 320, var9, 0, 192);
             go.field_l.a(var6, 39, 132, 304, 316, 16777215, -1, 1, 0, 20);
             go.field_l.a(var7, 39, 132, 304, 316, 16777215, -1, 1, 2, 20);
           }
         } else {
-          kh.d(31, 130, 320, 320, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(31, 130, 320, 320, 0, 192);
           if (this.field_e >= 0) {
             if (this.field_e >= this.field_g) {
               if (this.e(param0 + 112, this.field_e) == this.field_e) {
@@ -337,10 +337,10 @@ final class da extends ue {
             go.field_l.a(var3_ref, 39, 130, 304, 320, var5, -1, 1, 1, 20);
           }
         }
-        kh.c();
+        SoftwareRasterizer.resetClip();
         if (co.field_x == 20) {
           go.field_l.b(b.field_b, 611, 54, 16777215, -1);
-          kh.f(383, 60, 228, 2, 12640511);
+          SoftwareRasterizer.fillRectangle(383, 60, 228, 2, 12640511);
           this.b(this.field_m, 22370, this.field_d.length);
         }
     }
@@ -406,7 +406,7 @@ final class da extends ue {
             if (var5 > 256) {
               var5 = 256;
             }
-            kh.a(371, var2, 260, 0, var5 * co.field_x / 40);
+            SoftwareRasterizer.drawHorizontalLineAlpha(371, var2, 260, 0, var5 * co.field_x / 40);
           }
         }
         if (co.field_x == 20) {

@@ -31,11 +31,11 @@ final class jh {
 
     final static void b() {
         field_b = field_b - 1;
-        gf.a(field_e[field_b], field_g[field_b], field_k[field_b]);
-        gf.field_j = field_j[field_b];
-        gf.field_h = field_i[field_b];
-        gf.field_f = field_c[field_b];
-        gf.field_e = field_a[field_b];
+        SoftwareRasterizer.setRasterBuffer(field_e[field_b], field_g[field_b], field_k[field_b]);
+        SoftwareRasterizer.field_j = field_j[field_b];
+        SoftwareRasterizer.field_h = field_i[field_b];
+        SoftwareRasterizer.field_f = field_c[field_b];
+        SoftwareRasterizer.field_e = field_a[field_b];
         field_f = field_h[field_b];
         field_l.field_B = field_h[field_b];
         field_l.field_y = field_g[field_b];
@@ -52,14 +52,14 @@ final class jh {
     }
 
     final static void c() {
-        field_e[field_b] = gf.field_b;
+        field_e[field_b] = SoftwareRasterizer.field_b;
         field_h[field_b] = field_f;
-        field_j[field_b] = gf.field_j;
-        field_i[field_b] = gf.field_h;
-        field_c[field_b] = gf.field_f;
-        field_a[field_b] = gf.field_e;
-        field_g[field_b] = gf.field_i;
-        field_k[field_b] = gf.field_c;
+        field_j[field_b] = SoftwareRasterizer.field_j;
+        field_i[field_b] = SoftwareRasterizer.field_h;
+        field_c[field_b] = SoftwareRasterizer.field_f;
+        field_a[field_b] = SoftwareRasterizer.field_e;
+        field_g[field_b] = SoftwareRasterizer.field_i;
+        field_k[field_b] = SoftwareRasterizer.field_c;
         field_b = field_b + 1;
     }
 

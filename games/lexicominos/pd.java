@@ -105,7 +105,7 @@ final class pd extends IntrusiveNode {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_h, var1.field_j, var1.field_n);
+        SoftwareRasterizer.setRasterBuffer(var1.field_h, var1.field_j, var1.field_n);
         SoftwareRasterizer.setClip(var1.field_l, var1.field_i, var1.field_p, var1.field_m);
         var1.field_h = null;
         pb.field_k.addLast(125, var1);

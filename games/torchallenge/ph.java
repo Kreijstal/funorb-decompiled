@@ -51,7 +51,7 @@ final class ph implements j {
             stackIn_6_0 = null;
           }
           var13 = (bl) (stackIn_6_0);
-          SoftwareRasterizer.f(param2 + param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
+          SoftwareRasterizer.fillRectangle(param2 + param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
           if (var13 == null) {
           }
           var7 = param0.field_p - 2 * var13.field_W;

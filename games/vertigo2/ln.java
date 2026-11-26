@@ -67,8 +67,8 @@ final class ln {
           if (var1 == null) {
             throw new IllegalStateException();
           }
-          bi.a(var1.field_n, var1.field_r, var1.field_o);
-          bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
+          SoftwareRasterizer.setRasterBuffer(var1.field_n, var1.field_r, var1.field_o);
+          SoftwareRasterizer.setClip(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
           var1.field_n = null;
           ag.field_b.addFirst(var1, false);
           return;
@@ -76,8 +76,8 @@ final class ln {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        bi.a(var1.field_n, var1.field_r, var1.field_o);
-        bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
+        SoftwareRasterizer.setRasterBuffer(var1.field_n, var1.field_r, var1.field_o);
+        SoftwareRasterizer.setClip(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
         var1.field_n = null;
         ag.field_b.addFirst(var1, false);
     }

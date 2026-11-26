@@ -117,7 +117,7 @@ abstract class di extends af implements pa {
         if (param2 != 16105) {
           field_k = (Sprite) null;
         }
-        SoftwareRasterizer.i(param4, param1, param0, param3);
+        SoftwareRasterizer.intersectClip(param4, param1, param0, param3);
     }
 
     public final void a(ej param0, boolean param1) {

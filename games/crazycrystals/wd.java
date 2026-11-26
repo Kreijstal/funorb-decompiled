@@ -60,13 +60,13 @@ final class wd extends ik {
         }
         if (!this.field_i) {
           for (var5 = 0; var5 < 7; var5++) {
-            kh.f(-var5 + (-1 + (14 + param3)), -8 + (15 + param1 + var5), 2 + var5 * 2, param0);
+            SoftwareRasterizer.drawHorizontalLine(-var5 + (-1 + (14 + param3)), -8 + (15 + param1 + var5), 2 + var5 * 2, param0);
           }
-          kh.f(-3 + (14 + param3), param1 + 15 - 1, 6, 7, param0);
+          SoftwareRasterizer.fillRectangle(-3 + (14 + param3), param1 + 15 - 1, 6, 7, param0);
         } else {
-          kh.f(param3 + 15 - 4, -7 + (-1 + param1) + 15, 6, 7, param0);
+          SoftwareRasterizer.fillRectangle(param3 + 15 - 4, -7 + (-1 + param1) + 15, 6, 7, param0);
           for (var5 = 0; var5 < 7; var5++) {
-            kh.f(-8 + (15 + param3) + var5, -1 + (15 + param1) + var5, 14 - var5 * 2, param0);
+            SoftwareRasterizer.drawHorizontalLine(-8 + (15 + param3) + var5, -1 + (15 + param1) + var5, 14 - var5 * 2, param0);
           }
         }
     }

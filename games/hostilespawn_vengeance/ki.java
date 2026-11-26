@@ -315,19 +315,19 @@ final class ki {
           var28 = var28 + 15 >> 4;
           var29 = var29 >> 4;
           var30 = var30 + param2;
-          if (var28 > si.field_l) {
-            var28 = si.field_l;
+          if (var28 > SoftwareRasterizer.field_l) {
+            var28 = SoftwareRasterizer.field_l;
           }
-          if (var27 < si.field_b) {
-            var27 = si.field_b;
+          if (var27 < SoftwareRasterizer.field_b) {
+            var27 = SoftwareRasterizer.field_b;
           }
-          if (var29 < si.field_j) {
-            var29 = si.field_j;
+          if (var29 < SoftwareRasterizer.field_j) {
+            var29 = SoftwareRasterizer.field_j;
           }
           var30 = 15 + var30 >> 4;
           var28 = -var28 + var27;
-          if (var30 > si.field_a) {
-            var30 = si.field_a;
+          if (var30 > SoftwareRasterizer.field_a) {
+            var30 = SoftwareRasterizer.field_a;
           }
           if (var28 >= 0) {
             return;
@@ -336,7 +336,7 @@ final class ki {
           if (var30 >= 0) {
             return;
           }
-          var31 = var27 + var29 * si.field_e;
+          var31 = var27 + var29 * SoftwareRasterizer.field_e;
           var32 = 16777216.0 / (double)param5;
           var34 = (int)Math.floor(var32 * Math.sin(var15) + 0.5);
           var35 = (int)Math.floor(0.5 + Math.cos(var15) * var32);
@@ -361,19 +361,19 @@ final class ki {
                     if (var46 == 0) {
                       var42++;
                     } else {
-                      var14 = si.field_i[var42];
+                      var14 = SoftwareRasterizer.field_i[var42];
                       var13 = var46 + var14;
                       var46 = (16711935 & var46) + (16711935 & var14);
                       var14 = (var46 & 16777472) + (-var46 + var13 & 65536);
                       incrementValue$6 = var42;
                       var42++;
-                      si.field_i[incrementValue$6] = ll.a(var13 - var14, -(var14 >>> 8) + var14);
+                      SoftwareRasterizer.field_i[incrementValue$6] = ll.a(var13 - var14, -(var14 >>> 8) + var14);
                     }
                     var45++;
                   }
                 }
                 var41++;
-                var31 = var31 + si.field_e;
+                var31 = var31 + SoftwareRasterizer.field_e;
               }
               return;
             }
@@ -399,13 +399,13 @@ final class ki {
                   while (var45Lifetime5 < 0) {
                     var46Lifetime5 = var12[(var43Lifetime5 >> 12) + var10 * (var44Lifetime5 >> 12)];
                     if (var46Lifetime5 != 0) {
-                      var14Lifetime5 = si.field_i[var42Lifetime5];
+                      var14Lifetime5 = SoftwareRasterizer.field_i[var42Lifetime5];
                       var13Lifetime5 = var46Lifetime5 + var14Lifetime5;
                       var46Lifetime5 = (16711935 & var14Lifetime5) + (var46Lifetime5 & 16711935);
                       var14Lifetime5 = (var46Lifetime5 & 16777472) + (var13Lifetime5 - var46Lifetime5 & 65536);
                       incrementValue$7 = var42Lifetime5;
                       var42Lifetime5++;
-                      si.field_i[incrementValue$7] = ll.a(-(var14Lifetime5 >>> 8) + var14Lifetime5, -var14Lifetime5 + var13Lifetime5);
+                      SoftwareRasterizer.field_i[incrementValue$7] = ll.a(-(var14Lifetime5 >>> 8) + var14Lifetime5, -var14Lifetime5 + var13Lifetime5);
                     } else {
                       var42Lifetime5++;
                     }
@@ -414,7 +414,7 @@ final class ki {
                   }
                 }
                 var41Lifetime5++;
-                var31 = var31 + si.field_e;
+                var31 = var31 + SoftwareRasterizer.field_e;
                 var38 = var38 - var34;
               }
               return;
@@ -442,13 +442,13 @@ final class ki {
                   var46Lifetime6 = var12[(var43Lifetime6 >> 12) + var10 * (var44Lifetime6 >> 12)];
                   var44Lifetime6 = var44Lifetime6 + var34;
                   if (0 != var46Lifetime6) {
-                    var14Lifetime6 = si.field_i[var42Lifetime6];
+                    var14Lifetime6 = SoftwareRasterizer.field_i[var42Lifetime6];
                     var13Lifetime6 = var14Lifetime6 + var46Lifetime6;
                     var46Lifetime6 = (16711935 & var14Lifetime6) + (16711935 & var46Lifetime6);
                     var14Lifetime6 = (var13Lifetime6 - var46Lifetime6 & 65536) + (var46Lifetime6 & 16777472);
                     incrementValue$8 = var42Lifetime6;
                     var42Lifetime6++;
-                    si.field_i[incrementValue$8] = ll.a(-var14Lifetime6 + var13Lifetime6, var14Lifetime6 - (var14Lifetime6 >>> 8));
+                    SoftwareRasterizer.field_i[incrementValue$8] = ll.a(-var14Lifetime6 + var13Lifetime6, var14Lifetime6 - (var14Lifetime6 >>> 8));
                   } else {
                     var42Lifetime6++;
                   }
@@ -456,7 +456,7 @@ final class ki {
                 }
               }
               var41Lifetime6++;
-              var31 = var31 + si.field_e;
+              var31 = var31 + SoftwareRasterizer.field_e;
               var38 = var38 - var34;
             }
             return;
@@ -487,20 +487,20 @@ final class ki {
                     if (var46Lifetime1 == 0) {
                       var42Lifetime1++;
                     } else {
-                      var14Lifetime1 = si.field_i[var42Lifetime1];
+                      var14Lifetime1 = SoftwareRasterizer.field_i[var42Lifetime1];
                       var13Lifetime1 = var14Lifetime1 + var46Lifetime1;
                       var46Lifetime1 = (16711935 & var14Lifetime1) + (var46Lifetime1 & 16711935);
                       var14Lifetime1 = (var13Lifetime1 - var46Lifetime1 & 65536) + (var46Lifetime1 & 16777472);
                       incrementValue$0 = var42Lifetime1;
                       var42Lifetime1++;
-                      si.field_i[incrementValue$0] = ll.a(-(var14Lifetime1 >>> 8) + var14Lifetime1, -var14Lifetime1 + var13Lifetime1);
+                      SoftwareRasterizer.field_i[incrementValue$0] = ll.a(-(var14Lifetime1 >>> 8) + var14Lifetime1, -var14Lifetime1 + var13Lifetime1);
                     }
                     var45Lifetime1++;
                   }
                 }
                 var41Lifetime1++;
                 var39 = var39 + var35;
-                var31 = var31 + si.field_e;
+                var31 = var31 + SoftwareRasterizer.field_e;
               }
               return;
             }
@@ -538,19 +538,19 @@ final class ki {
                   var43Lifetime1Lifetime1 = var43Lifetime1Lifetime1 + var35;
                   var44Lifetime1Lifetime1 = var44Lifetime1Lifetime1 + var34;
                   if (var46Lifetime1Lifetime1 != 0) {
-                    var14Lifetime1Lifetime1 = si.field_i[var42Lifetime1Lifetime1];
+                    var14Lifetime1Lifetime1 = SoftwareRasterizer.field_i[var42Lifetime1Lifetime1];
                     var13Lifetime1Lifetime1 = var14Lifetime1Lifetime1 + var46Lifetime1Lifetime1;
                     var46Lifetime1Lifetime1 = (16711935 & var46Lifetime1Lifetime1) + (var14Lifetime1Lifetime1 & 16711935);
                     var14Lifetime1Lifetime1 = (65536 & -var46Lifetime1Lifetime1 + var13Lifetime1Lifetime1) + (var46Lifetime1Lifetime1 & 16777472);
                     incrementValue$2 = var42Lifetime1Lifetime1;
                     var42Lifetime1Lifetime1++;
-                    si.field_i[incrementValue$2] = ll.a(var13Lifetime1Lifetime1 - var14Lifetime1Lifetime1, var14Lifetime1Lifetime1 - (var14Lifetime1Lifetime1 >>> 8));
+                    SoftwareRasterizer.field_i[incrementValue$2] = ll.a(var13Lifetime1Lifetime1 - var14Lifetime1Lifetime1, var14Lifetime1Lifetime1 - (var14Lifetime1Lifetime1 >>> 8));
                   } else {
                     var42Lifetime1Lifetime1++;
                   }
                   var45Lifetime1Lifetime1++;
                 }
-                var31 = var31 + si.field_e;
+                var31 = var31 + SoftwareRasterizer.field_e;
                 var41Lifetime1Lifetime1++;
                 var38 = var38 - var34;
                 var39 = var39 + var35;
@@ -591,20 +591,20 @@ final class ki {
                 var44Lifetime1Lifetime2 = var44Lifetime1Lifetime2 + var34;
                 var43Lifetime1Lifetime2 = var43Lifetime1Lifetime2 + var35;
                 if (var46Lifetime1Lifetime2 != 0) {
-                  var14Lifetime1Lifetime2 = si.field_i[var42Lifetime1Lifetime2];
+                  var14Lifetime1Lifetime2 = SoftwareRasterizer.field_i[var42Lifetime1Lifetime2];
                   var13Lifetime1Lifetime2 = var46Lifetime1Lifetime2 + var14Lifetime1Lifetime2;
                   var46Lifetime1Lifetime2 = (var46Lifetime1Lifetime2 & 16711935) + (16711935 & var14Lifetime1Lifetime2);
                   var14Lifetime1Lifetime2 = (16777472 & var46Lifetime1Lifetime2) + (65536 & -var46Lifetime1Lifetime2 + var13Lifetime1Lifetime2);
                   incrementValue$1 = var42Lifetime1Lifetime2;
                   var42Lifetime1Lifetime2++;
-                  si.field_i[incrementValue$1] = ll.a(var14Lifetime1Lifetime2 - (var14Lifetime1Lifetime2 >>> 8), -var14Lifetime1Lifetime2 + var13Lifetime1Lifetime2);
+                  SoftwareRasterizer.field_i[incrementValue$1] = ll.a(var14Lifetime1Lifetime2 - (var14Lifetime1Lifetime2 >>> 8), -var14Lifetime1Lifetime2 + var13Lifetime1Lifetime2);
                 } else {
                   var42Lifetime1Lifetime2++;
                 }
                 var45Lifetime1Lifetime2++;
               }
               var38 = var38 - var34;
-              var31 = var31 + si.field_e;
+              var31 = var31 + SoftwareRasterizer.field_e;
               var41Lifetime1Lifetime2++;
               var39 = var39 + var35;
             }
@@ -633,13 +633,13 @@ final class ki {
                 while (var45Lifetime2 < 0) {
                   var46Lifetime2 = var12[(var43Lifetime2 >> 12) + var10 * (var44Lifetime2 >> 12)];
                   if (var46Lifetime2 != 0) {
-                    var14Lifetime2 = si.field_i[var42Lifetime2];
+                    var14Lifetime2 = SoftwareRasterizer.field_i[var42Lifetime2];
                     var13Lifetime2 = var14Lifetime2 + var46Lifetime2;
                     var46Lifetime2 = (16711935 & var14Lifetime2) + (16711935 & var46Lifetime2);
                     var14Lifetime2Lifetime1 = (16777472 & var46Lifetime2) + (65536 & var13Lifetime2 - var46Lifetime2);
                     incrementValue$3 = var42Lifetime2;
                     var42Lifetime2++;
-                    si.field_i[incrementValue$3] = ll.a(-var14Lifetime2Lifetime1 + var13Lifetime2, -(var14Lifetime2Lifetime1 >>> 8) + var14Lifetime2Lifetime1);
+                    SoftwareRasterizer.field_i[incrementValue$3] = ll.a(-var14Lifetime2Lifetime1 + var13Lifetime2, -(var14Lifetime2Lifetime1 >>> 8) + var14Lifetime2Lifetime1);
                   } else {
                     var42Lifetime2++;
                   }
@@ -649,7 +649,7 @@ final class ki {
               }
               var39 = var39 + var35;
               var41Lifetime2++;
-              var31 = var31 + si.field_e;
+              var31 = var31 + SoftwareRasterizer.field_e;
             }
             return;
           }
@@ -687,13 +687,13 @@ final class ki {
                 var43Lifetime3 = var43Lifetime3 + var35;
                 var44Lifetime3 = var44Lifetime3 + var34;
                 if (var46Lifetime3 != 0) {
-                  var14Lifetime3 = si.field_i[var42Lifetime3];
+                  var14Lifetime3 = SoftwareRasterizer.field_i[var42Lifetime3];
                   var13Lifetime3 = var46Lifetime3 + var14Lifetime3;
                   var46Lifetime3 = (16711935 & var14Lifetime3) + (16711935 & var46Lifetime3);
                   var14Lifetime3Lifetime1 = (var13Lifetime3 - var46Lifetime3 & 65536) + (var46Lifetime3 & 16777472);
                   incrementValue$5 = var42Lifetime3;
                   var42Lifetime3++;
-                  si.field_i[incrementValue$5] = ll.a(var14Lifetime3Lifetime1 - (var14Lifetime3Lifetime1 >>> 8), var13Lifetime3 - var14Lifetime3Lifetime1);
+                  SoftwareRasterizer.field_i[incrementValue$5] = ll.a(var14Lifetime3Lifetime1 - (var14Lifetime3Lifetime1 >>> 8), var13Lifetime3 - var14Lifetime3Lifetime1);
                 } else {
                   var42Lifetime3++;
                 }
@@ -701,7 +701,7 @@ final class ki {
               }
               var39 = var39 + var35;
               var38 = var38 - var34;
-              var31 = var31 + si.field_e;
+              var31 = var31 + SoftwareRasterizer.field_e;
             }
             return;
           }
@@ -740,13 +740,13 @@ final class ki {
               var44Lifetime4 = var44Lifetime4 + var34;
               var43Lifetime4 = var43Lifetime4 + var35;
               if (0 != var46Lifetime4) {
-                var14Lifetime4 = si.field_i[var42Lifetime4];
+                var14Lifetime4 = SoftwareRasterizer.field_i[var42Lifetime4];
                 var13Lifetime4 = var14Lifetime4 + var46Lifetime4;
                 var46Lifetime4 = (16711935 & var46Lifetime4) + (16711935 & var14Lifetime4);
                 var14Lifetime4Lifetime1 = (16777472 & var46Lifetime4) + (var13Lifetime4 - var46Lifetime4 & 65536);
                 incrementValue$4 = var42Lifetime4;
                 var42Lifetime4++;
-                si.field_i[incrementValue$4] = ll.a(var14Lifetime4Lifetime1 - (var14Lifetime4Lifetime1 >>> 8), var13Lifetime4 - var14Lifetime4Lifetime1);
+                SoftwareRasterizer.field_i[incrementValue$4] = ll.a(var14Lifetime4Lifetime1 - (var14Lifetime4Lifetime1 >>> 8), var13Lifetime4 - var14Lifetime4Lifetime1);
               } else {
                 var42Lifetime4++;
               }
@@ -755,7 +755,7 @@ final class ki {
             var39 = var39 + var35;
             var38 = var38 - var34;
             var41Lifetime4++;
-            var31 = var31 + si.field_e;
+            var31 = var31 + SoftwareRasterizer.field_e;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

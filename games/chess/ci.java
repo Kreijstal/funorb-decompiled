@@ -277,14 +277,14 @@ class ci extends ei {
         var25 = Chess.field_G;
         this.field_U = this.field_mb + param10;
         this.field_wb = param1 + this.field_V;
-        var12 = wb.field_i;
-        var13 = wb.field_a;
-        var14 = wb.field_j;
+        var12 = SoftwareRasterizer.field_i;
+        var13 = SoftwareRasterizer.field_a;
+        var14 = SoftwareRasterizer.field_j;
         if (param6 < 49) {
           this.field_Ab = (km[]) null;
         }
-        var15 = wb.field_b;
-        wb.e(this.field_U, this.field_wb, this.field_M + this.field_U, this.field_pb + this.field_wb);
+        var15 = SoftwareRasterizer.field_b;
+        SoftwareRasterizer.intersectClip(this.field_U, this.field_wb, this.field_M + this.field_U, this.field_pb + this.field_wb);
         param9 = param9 & this.field_tb;
         if (!this.field_W) {
           param5 = this.field_gb;
@@ -433,7 +433,7 @@ class ci extends ei {
             var23_ref = (ci) (this.field_I.nextBackward((byte) -110));
           }
         }
-        wb.b(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     final int a(int param0, int param1) {
@@ -632,7 +632,7 @@ class ci extends ei {
     }
 
     final void a(boolean param0, boolean param1) {
-        this.a(param1, 0, false, false, wb.field_h, false, (byte) 125, param0, wb.field_c, true, 0);
+        this.a(param1, 0, false, false, SoftwareRasterizer.field_h, false, (byte) 125, param0, SoftwareRasterizer.field_c, true, 0);
     }
 
     private final void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -684,19 +684,19 @@ class ci extends ei {
         this.field_U = param0 + this.field_mb;
         this.field_wb = this.field_V + param3;
         this.field_N = this.field_N - var7Lifetime3;
-        var8 = wb.field_i;
-        var9 = wb.field_a;
-        var10 = wb.field_j;
-        var11 = wb.field_b;
-        wb.e(this.field_U, this.field_wb, this.field_U + this.field_M, this.field_pb + this.field_wb);
+        var8 = SoftwareRasterizer.field_i;
+        var9 = SoftwareRasterizer.field_a;
+        var10 = SoftwareRasterizer.field_j;
+        var11 = SoftwareRasterizer.field_b;
+        SoftwareRasterizer.intersectClip(this.field_U, this.field_wb, this.field_U + this.field_M, this.field_pb + this.field_wb);
         var12 = 0;
         if (!fg.field_b &&
           param1 &&
           th.field_d != 0 &&
-          wb.field_i <= re.field_m &&
-          re.field_m < wb.field_j &&
-          ag.field_f >= wb.field_a &&
-          wb.field_b > ag.field_f) {
+          SoftwareRasterizer.field_i <= re.field_m &&
+          re.field_m < SoftwareRasterizer.field_j &&
+          ag.field_f >= SoftwareRasterizer.field_a &&
+          SoftwareRasterizer.field_b > ag.field_f) {
           this.field_L = th.field_d;
           this.field_kb = th.field_d;
           this.field_qb = -this.field_U + re.field_m;
@@ -708,7 +708,7 @@ class ci extends ei {
           }
           this.field_L = 0;
         }
-        stackIn_32_1 = (!gd.field_e) && (wb.field_i <= hn.field_k) && (wb.field_j > hn.field_k) && (rf.field_b >= wb.field_a) && (wb.field_b > rf.field_b);
+        stackIn_32_1 = (!gd.field_e) && (SoftwareRasterizer.field_i <= hn.field_k) && (SoftwareRasterizer.field_j > hn.field_k) && (rf.field_b >= SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_b > rf.field_b);
         this.field_Db = stackIn_32_1;
         if (wh.field_f == 0) {
           this.field_kb = 0;
@@ -728,7 +728,7 @@ class ci extends ei {
         if (this.field_Db) {
           gd.field_e = true;
         }
-        wb.b(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_kb != 0 &&
           this.field_rb) {
           this.field_mb = -this.field_qb + hn.field_k - param0;
@@ -809,7 +809,7 @@ class ci extends ei {
           this.field_I = (IntrusiveDeque) null;
         }
         fg.field_b = !param0 ? true : false;
-        this.a(0, true, wb.field_h, 0, wb.field_c, 122);
+        this.a(0, true, SoftwareRasterizer.field_h, 0, SoftwareRasterizer.field_c, 122);
     }
 
     protected ci() {

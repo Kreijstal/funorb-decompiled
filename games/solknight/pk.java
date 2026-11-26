@@ -162,7 +162,7 @@ final class pk extends kj {
             } else {
               if (var12 <= this.field_W.field_t) {
                 cl.a(-125, this.field_W);
-                SoftwareRasterizer.a();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_W = new Sprite(var11, var12);
                 cl.a(-94, this.field_W);
@@ -215,7 +215,7 @@ final class pk extends kj {
                 cl.a(-94, this.field_W);
               } else {
                 cl.a(-125, this.field_W);
-                SoftwareRasterizer.a();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -263,7 +263,7 @@ final class pk extends kj {
             } else {
               if (var12Lifetime2 <= this.field_W.field_t) {
                 cl.a(-125, this.field_W);
-                SoftwareRasterizer.a();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
                 cl.a(-94, this.field_W);
@@ -312,7 +312,7 @@ final class pk extends kj {
           } else {
             if (var12Lifetime3 <= this.field_W.field_t) {
               cl.a(-125, this.field_W);
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
               cl.a(-94, this.field_W);

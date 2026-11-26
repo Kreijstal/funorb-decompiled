@@ -462,14 +462,14 @@ final class uk extends ic {
             var8 = param5[param1].fullWidth;
             param5[0].drawColorRamp(param2, param3, param0);
             param5[2].drawColorRamp(param2 + (param4 - var7), param3, param0);
-            SoftwareRasterizer.a(bk.field_s);
-            SoftwareRasterizer.a(var6_int + param2, param3, param4 + param2 - var7, param3 + param5[1].fullHeight);
+            SoftwareRasterizer.saveClip(bk.field_s);
+            SoftwareRasterizer.intersectClip(var6_int + param2, param3, param4 + param2 - var7, param3 + param5[1].fullHeight);
             var9 = var6_int + param2;
             var10 = -var7 + param2 + param4;
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param5[1].drawColorRamp(param2, param3, param0);
             }
-            SoftwareRasterizer.b(bk.field_s);
+            SoftwareRasterizer.restoreClip(bk.field_s);
             return;
           }
           return;

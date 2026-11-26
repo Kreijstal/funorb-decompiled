@@ -65,23 +65,23 @@ final class qe extends uk {
         if (qk.field_k == null) {
           qk.field_k = new km(0, 0);
         }
-        qk.field_k.field_x = wb.field_d;
-        qk.field_k.field_w = wb.field_h;
-        qk.field_k.field_t = wb.field_c;
+        qk.field_k.field_x = SoftwareRasterizer.field_d;
+        qk.field_k.field_w = SoftwareRasterizer.field_h;
+        qk.field_k.field_t = SoftwareRasterizer.field_c;
         if (hd.field_f != null) {
           hd.field_f.e();
-          wb.b();
+          SoftwareRasterizer.clearRaster();
         } else {
-          hd.field_f = new km(wb.field_h, wb.field_c);
+          hd.field_f = new km(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           hd.field_f.e();
         }
         this.a(param3, param1, 64, -13147);
         if (rn.field_b != 0 &&
           t.field_Q) {
           this.field_A.e();
-          wb.b();
+          SoftwareRasterizer.clearRaster();
         }
-        wb.a(qk.field_k.field_x, qk.field_k.field_w, qk.field_k.field_t);
+        SoftwareRasterizer.setRasterBuffer(qk.field_k.field_x, qk.field_k.field_w, qk.field_k.field_t);
         if (t.field_Q) {
           for (var7 = 0; var7 < this.field_z.length; var7++) {
             var8_ref_km__ = this.field_z;
@@ -149,8 +149,8 @@ final class qe extends uk {
               this.field_N[var7Lifetime1].field_r = var13;
               this.field_N[var7Lifetime1].a(64, 64, 64);
               this.field_M.e();
-              wb.b(var11, var13, var10, var12);
-              wb.f(0, 0, 640, 480, 0);
+              SoftwareRasterizer.setClip(var11, var13, var10, var12);
+              SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
             }
             if (t.field_Q) {
               this.field_M.e();
@@ -166,8 +166,8 @@ final class qe extends uk {
               this.field_z[var7Lifetime1].field_s = var11Lifetime1;
               this.field_z[var7Lifetime1].field_r = var13Lifetime1;
               this.field_M.e();
-              wb.b(var11Lifetime1, var13Lifetime1, var10Lifetime1, var12Lifetime1);
-              wb.f(0, 0, 640, 480, 0);
+              SoftwareRasterizer.setClip(var11Lifetime1, var13Lifetime1, var10Lifetime1, var12Lifetime1);
+              SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
               decompiledFrameRemainder0 = (IntrusiveDeque.field_f == -1);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (this.field_z[var7Lifetime1] != null))) {
@@ -186,8 +186,8 @@ final class qe extends uk {
           }
           var7Lifetime1++;
         }
-        wb.a(qk.field_k.field_x, qk.field_k.field_w, qk.field_k.field_t);
-        wb.a();
+        SoftwareRasterizer.setRasterBuffer(qk.field_k.field_x, qk.field_k.field_w, qk.field_k.field_t);
+        SoftwareRasterizer.resetClip();
         this.g(-1, var8);
         t.field_Q = false;
     }
@@ -270,18 +270,18 @@ final class qe extends uk {
     }
 
     private final void e(int param0) {
-        int[] var5 = wb.field_d;
+        int[] var5 = SoftwareRasterizer.field_d;
         int[] var2 = var5;
         if (param0 >= -36) {
           return;
         }
-        int var3 = wb.field_h;
-        int var4 = wb.field_c;
+        int var3 = SoftwareRasterizer.field_h;
+        int var4 = SoftwareRasterizer.field_c;
         this.field_S.e();
-        wb.b(this.field_x);
+        SoftwareRasterizer.saveClip(this.field_x);
         this.field_p.e(0, 0);
-        wb.a(this.field_x);
-        wb.a(var5, var3, var4);
+        SoftwareRasterizer.restoreClip(this.field_x);
+        SoftwareRasterizer.setRasterBuffer(var5, var3, var4);
     }
 
     private final int d(int param0) {
@@ -479,11 +479,11 @@ final class qe extends uk {
           if (param3 != -13147) {
             this.field_G = (int[]) null;
           }
-          var19 = wb.field_d;
-          var8 = wb.field_h;
-          var9 = wb.field_c;
+          var19 = SoftwareRasterizer.field_d;
+          var8 = SoftwareRasterizer.field_h;
+          var9 = SoftwareRasterizer.field_c;
           this.field_S.e();
-          wb.b();
+          SoftwareRasterizer.clearRaster();
           var10 = -1;
           if (oc.field_p != null) {
             if (oc.field_p.field_b) {
@@ -522,7 +522,7 @@ final class qe extends uk {
             }
           }
           this.c(param0, -119, param1, param2);
-          wb.a(var19, var8, var9);
+          SoftwareRasterizer.setRasterBuffer(var19, var8, var9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -609,13 +609,13 @@ final class qe extends uk {
         dd var14Lifetime2;
         var12 = Chess.field_G;
         try {
-          qk.field_k.field_t = wb.field_c;
-          qk.field_k.field_w = wb.field_h;
+          qk.field_k.field_t = SoftwareRasterizer.field_c;
+          qk.field_k.field_w = SoftwareRasterizer.field_h;
           vk.field_e = false;
-          qk.field_k.field_x = wb.field_d;
+          qk.field_k.field_x = SoftwareRasterizer.field_d;
           this.field_F.e();
           var5_int = 170 + ((int)(500.0 * this.field_t) + ec.c((byte) -63) / 2);
-          wb.b();
+          SoftwareRasterizer.clearRaster();
           if (ph.field_f != null) {
             var6_int = -(int)((double)ph.field_f.field_w * this.field_T / 6.283185307179586);
             var7 = var5_int - 120;
@@ -631,7 +631,7 @@ final class qe extends uk {
           } else {
             stackIn_6_3 = 480 - var5_int;
           }
-          wb.f(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_6_3, rh.field_a[qm.field_g]);
+          SoftwareRasterizer.fillRectangle(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_6_3, rh.field_a[qm.field_g]);
           if (0 != rn.field_b) {
             for (var6_int = -16; var6_int <= 16; var6_int += 4) {
               for (var7 = -16; var7 <= 16; var7 += 4) {
@@ -804,12 +804,12 @@ final class qe extends uk {
         int var11Lifetime2Lifetime1;
         int var12Lifetime2Lifetime1;
         var24 = Chess.field_G;
-        qk.field_k.field_w = wb.field_h;
-        qk.field_k.field_x = wb.field_d;
-        qk.field_k.field_t = wb.field_c;
+        qk.field_k.field_w = SoftwareRasterizer.field_h;
+        qk.field_k.field_x = SoftwareRasterizer.field_d;
+        qk.field_k.field_t = SoftwareRasterizer.field_c;
         hd.field_f.e();
         if (!param5) {
-          wb.b();
+          SoftwareRasterizer.clearRaster();
         } else {
           ob.field_B.b(0, param3);
         }
@@ -833,13 +833,13 @@ final class qe extends uk {
         var11 = 140;
         var12 = var10 - 315;
         for (var13_int = 0; var13_int < 4; var13_int++) {
-          wb.d(var11 - var13_int, var12 - var13_int, 360 + 2 * var13_int, 2 * var13_int + 360, 10983537);
+          SoftwareRasterizer.drawRectangleOutline(var11 - var13_int, var12 - var13_int, 360 + 2 * var13_int, 2 * var13_int + 360, 10983537);
         }
         for (var13_intLifetime1 = 4; var13_intLifetime1 < 9; var13_intLifetime1++) {
-          wb.d(var11 - var13_intLifetime1, -var13_intLifetime1 + var12, 360 + var13_intLifetime1 * 2, 360 + 2 * var13_intLifetime1, 3288622);
+          SoftwareRasterizer.drawRectangleOutline(var11 - var13_intLifetime1, -var13_intLifetime1 + var12, 360 + var13_intLifetime1 * 2, 360 + 2 * var13_intLifetime1, 3288622);
         }
         for (var13_intLifetime2 = 9; 15 > var13_intLifetime2; var13_intLifetime2++) {
-          wb.d(-var13_intLifetime2 + var11, -var13_intLifetime2 + var12, 360 + 2 * var13_intLifetime2, var13_intLifetime2 * 2 + 360, 4998726);
+          SoftwareRasterizer.drawRectangleOutline(-var13_intLifetime2 + var11, -var13_intLifetime2 + var12, 360 + 2 * var13_intLifetime2, var13_intLifetime2 * 2 + 360, 4998726);
         }
         this.field_j = -1;
         for (var13_intLifetime3 = 7; var13_intLifetime3 >= 0; var13_intLifetime3--) {
@@ -862,7 +862,7 @@ final class qe extends uk {
               stackIn_38_0 = (GzipInflater.field_b[var15] == 0) ? 14101529 : 4525064;
               var20 = stackIn_38_0;
             }
-            wb.f(var11Lifetime1, var12Lifetime1, 45, 45, var20);
+            SoftwareRasterizer.fillRectangle(var11Lifetime1, var12Lifetime1, 45, 45, var20);
             if (var15 != this.field_m) {
               stackIn_49_0 = (!this.a(var7, var15, -80)) ? 0 : 1;
               var22 = stackIn_49_0;
@@ -889,7 +889,7 @@ final class qe extends uk {
               45 + var12Lifetime1 > rf.field_b) {
               this.field_j = var15;
               var21 = 128 + (int)(63.0 * Math.sin((double)qb.field_a / 10.0));
-              wb.b(var11Lifetime1, var12Lifetime1, 45, 45, var20, var21);
+              SoftwareRasterizer.fillRectangleAlpha(var11Lifetime1, var12Lifetime1, 45, 45, var20, var21);
             }
           }
         }
@@ -1105,16 +1105,16 @@ final class qe extends uk {
           this.field_H = (int[]) null;
         }
         this.f(param2, -1);
-        int[] var8 = wb.field_d;
+        int[] var8 = SoftwareRasterizer.field_d;
         int[] var4 = var8;
-        int var5 = wb.field_h;
-        int var6 = wb.field_c;
+        int var5 = SoftwareRasterizer.field_h;
+        int var6 = SoftwareRasterizer.field_c;
         this.field_q.e();
         int var7 = 0;
         if (this.field_K != null) {
           var7 = this.field_K.a(false, false, param1, 0, (byte) -100, false);
         }
-        wb.a(var8, var5, var6);
+        SoftwareRasterizer.setRasterBuffer(var8, var5, var6);
         this.field_q.b(120, ec.c((byte) -63) / 2 - 21, 196);
         return var7;
     }
@@ -1128,12 +1128,12 @@ final class qe extends uk {
         int var8;
         int[] var9;
         var8 = Chess.field_G;
-        var9 = wb.field_d;
+        var9 = SoftwareRasterizer.field_d;
         var3 = var9;
-        var4 = wb.field_h;
-        var5 = wb.field_c;
+        var4 = SoftwareRasterizer.field_h;
+        var5 = SoftwareRasterizer.field_c;
         this.field_p.e();
-        wb.b();
+        SoftwareRasterizer.clearRaster();
         if (param0 != -1) {
           return;
         }
@@ -1145,7 +1145,7 @@ final class qe extends uk {
             this.field_N[var6].b(0, 0);
           }
         }
-        wb.a(var9, var4, var5);
+        SoftwareRasterizer.setRasterBuffer(var9, var4, var5);
     }
 
     private final int[] a(double[] param0, double[] param1, double[] param2, byte param3) {

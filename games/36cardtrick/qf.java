@@ -152,7 +152,7 @@ abstract class qf extends g {
         if (null == ad.field_j) {
           ad.field_j = new kc(this.field_h, this.field_q);
           dl.a(param2 ^ -128, ad.field_j);
-          vj.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -77, 0);
           super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
           gg.a(14756);
@@ -162,7 +162,7 @@ abstract class qf extends g {
         if (this.field_h > ad.field_j.field_p) {
           ad.field_j = new kc(this.field_h, this.field_q);
           dl.a(param2 ^ -128, ad.field_j);
-          vj.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -77, 0);
           super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
           gg.a(14756);
@@ -172,7 +172,7 @@ abstract class qf extends g {
         if (ad.field_j.field_o < this.field_q) {
           ad.field_j = new kc(this.field_h, this.field_q);
           dl.a(param2 ^ -128, ad.field_j);
-          vj.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -77, 0);
           super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
           gg.a(14756);
@@ -180,7 +180,7 @@ abstract class qf extends g {
           return;
         }
         dl.a(param2 ^ -128, ad.field_j);
-        vj.d();
+        SoftwareRasterizer.clearRaster();
         this.b(0, (byte) -77, 0);
         super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
         gg.a(14756);

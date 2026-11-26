@@ -36,7 +36,7 @@ final class ke extends IntrusiveNode {
             return;
           }
           if (!tk.c(250)) {
-            na.a();
+            SoftwareRasterizer.clearRaster();
             pc.a(240, (byte) -66, 320);
             qi.a(param0, 0, 0, -25971);
             return;

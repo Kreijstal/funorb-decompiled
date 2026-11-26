@@ -45,7 +45,7 @@ final class dg extends pj {
             var6 = var6 + param3.field_o;
           }
           oc.g((byte) -105);
-          if (this.field_L.field_o + param2 >= ul.field_i) {
+          if (this.field_L.field_o + param2 >= SoftwareRasterizer.field_i) {
             de.a(-128, this.field_G);
             param3.c(-this.field_A, 0);
             param3.c(-this.field_A + 2 * this.field_D, 0);
@@ -53,7 +53,7 @@ final class dg extends pj {
             oc.g((byte) -105);
             this.field_G.c(param2, param1);
           }
-          if (ul.field_e >= -this.field_L.field_o + var5_int) {
+          if (SoftwareRasterizer.field_e >= -this.field_L.field_o + var5_int) {
             de.a(-127, this.field_G);
             for (var7 = this.field_A + this.field_m - this.field_L.field_o; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
             }
@@ -107,7 +107,7 @@ final class dg extends pj {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
             }
-            ul.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         oc.g((byte) -105);
@@ -139,13 +139,13 @@ final class dg extends pj {
           var10 = var6 - var5;
           var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
           var12 = var11 >= 256 ? var9 | var8 : (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
-          ul.d(var7, var6, this.field_D, var12);
-          ul.d(-(this.field_D * 2) + var7, var6, this.field_D, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_D, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_D * 2) + var7, var6, this.field_D, var12);
           var8Lifetime1 = 16711935 & param2;
           var9Lifetime1 = 65280 & param2;
           var12Lifetime1 = 256 > var11 ? (16711680 & var9Lifetime1 * var11 | -16711936 & var11 * var8Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          ul.d(this.field_D + var7, var6, this.field_D, var12Lifetime1);
-          ul.d(var7 - this.field_D, var6, this.field_D, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_D + var7, var6, this.field_D, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_D, var6, this.field_D, var12Lifetime1);
         }
         oc.g((byte) -105);
         return var14;

@@ -76,14 +76,14 @@ final class fk extends kl {
           for (var3 = 0; var3 < 4; var3++) {
             var4 = 199 + 83 * var3;
             var5 = 57 + var2 * 86;
-            gf.b(var4, var5, 72, 72, 65793);
+            SoftwareRasterizer.fillRectangle(var4, var5, 72, 72, 65793);
             rp.a(4, 64, (byte) 108, 4 + var4, 64, kc.field_V, var5 + 4);
           }
         }
         for (var2Lifetime1 = 0; 4 > var2Lifetime1; var2Lifetime1++) {
           var3Lifetime1 = var2Lifetime1 * 130 + 37;
           var4Lifetime1 = 227;
-          gf.b(var3Lifetime1, var4Lifetime1, 96, 96, 65793);
+          SoftwareRasterizer.fillRectangle(var3Lifetime1, var4Lifetime1, 96, 96, 65793);
           rp.a(4, 88, (byte) 108, 4 + var3Lifetime1, 88, kc.field_S, var4Lifetime1 + 4);
         }
     }
@@ -138,13 +138,13 @@ final class fk extends kl {
           stackIn_8_0 = (var3 != 0) ? 0 : 1;
           var3 = stackIn_8_0;
         }
-        gf.e(0, 0, 640, am.field_a.field_G + var2 - 12);
+        SoftwareRasterizer.setClip(0, 0, 640, am.field_a.field_G + var2 - 12);
         am.field_a.h(-(am.field_a.field_E / 2) + 320, var2);
-        gf.b();
+        SoftwareRasterizer.resetClip();
         lf.field_n.c(321 - lf.field_n.field_E / 2, 60 + var2);
         lf.field_x.h(320 - lf.field_x.field_E / 2, am.field_a.field_G + (var2 - 28));
         var4Lifetime1 = -51 / ((41 - param0) / 63);
-        gf.b(37 + this.field_k, 57 + this.field_j, 155, 158, 65793, 64);
+        SoftwareRasterizer.fillRectangleAlpha(37 + this.field_k, 57 + this.field_j, 155, 158, 65793, 64);
         super.b(-64);
         this.e(-64);
         var5 = null;
@@ -443,7 +443,7 @@ final class fk extends kl {
         }
         da.a(pi.field_i, cm.field_M, this.field_a >> 1, 1917623617, (IntrusiveNode.field_c.field_H + 36 >> 1) + 7, IntrusiveNode.field_c);
         this.d((byte) -123);
-        gf.b(44, 64, 141, 53, 65793);
+        SoftwareRasterizer.fillRectangle(44, 64, 141, 53, 65793);
         rp.a(4, 133, (byte) 108, 48, 45, kc.field_S, 68);
         jh.b();
     }

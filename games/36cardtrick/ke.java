@@ -37,7 +37,7 @@ final class ke {
             if (incrementValue$0 == param10) {
               param9 = 0;
               var15 = var15 + param12;
-              param6 = param6 + param12 * vj.field_l;
+              param6 = param6 + param12 * SoftwareRasterizer.field_l;
               continue;
             }
             param2 = var13_int;

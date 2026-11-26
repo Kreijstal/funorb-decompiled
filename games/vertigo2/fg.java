@@ -35,7 +35,7 @@ final class fg extends sp {
           super.a((byte) -108, param1, param2);
           sg.field_a.c(this.field_bb, (this.width >> 1) + param1, 103 + param2, 16777215, -1);
           if (null != this.field_fb) {
-            bi.b(param1 + 20, param2 + 120 - 7, 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(param1 + 20, param2 + 120 - 7, 260, 8421504);
             sg.field_a.a(this.field_fb, 20 + param1, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, sg.field_a.field_z);
           }
           return;

@@ -50,7 +50,7 @@ final class ro extends pn implements Cloneable {
     }
 
     private final void a(int param0, byte param1, int param2, int param3, boolean param4, int param5) {
-        wm var10 = jf.a(kh.field_j, param2, 0, param0 * 2 + param2, kh.field_b);
+        wm var10 = jf.a(SoftwareRasterizer.field_j, param2, 0, param0 * 2 + param2, SoftwareRasterizer.field_b);
         if (var10 == null) {
           return;
         }
@@ -594,7 +594,7 @@ final class ro extends pn implements Cloneable {
     private final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int var9 = 0;
-        wm var10 = jf.a(kh.field_j, param5, param2 - 2, param5 + param1 * 2, kh.field_b);
+        wm var10 = jf.a(SoftwareRasterizer.field_j, param5, param2 - 2, param5 + param1 * 2, SoftwareRasterizer.field_b);
         if (var10 != null) {
           var8 = param2 * ((-this.field_p.field_p + this.field_p.field_m) * param1) / this.field_p.field_p;
           var9 = param4 * ((-this.field_p.field_p + this.field_p.field_m) * 2) / this.field_p.field_p;

@@ -126,7 +126,7 @@ final class dl extends jla {
           SoftwareRasterizer.setClip(var4, var5Lifetime1, var8 + var4, var7 + var5Lifetime1);
           this.field_g.drawParagraph(var15, var4 + 5, var5Lifetime1, -10 + var8, var7, var12, -1, 1, 0, var6);
           var4 = var4 + var8;
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
         }
     }
 
@@ -211,8 +211,8 @@ final class dl extends jla {
         if (param0 != 9) {
           discarded$0 = this.b(23, (byte) -91);
         }
-        SoftwareRasterizer.a(40, 60, 560, 215, 20, 0, 80);
-        SoftwareRasterizer.a(40, 295, 560, 95, 20, 0, 80);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(40, 60, 560, 215, 20, 0, 80);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(40, 295, 560, 95, 20, 0, 80);
         if (li.field_m) {
           var2 = BasicMoveDefinition.field_m;
         } else {

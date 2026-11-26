@@ -32,10 +32,10 @@ final class GzipDecompressor {
         }
         ArchiveProvider.a(nn.field_c, 127);
         dj.a();
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearRaster();
         oj.o(-1236579128);
         if (var5 < 256) {
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c, 0, 256 - var5);
         }
         tk.b(true);
         if (mn.field_x >= 150) {

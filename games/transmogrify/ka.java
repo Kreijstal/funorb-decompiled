@@ -28,10 +28,10 @@ final class ka {
         if (field_d.length < field_a) {
           field_d = new int[u.roundUpPowerOfTwo(-816856703, field_a)];
         }
-        int var4 = param1 * sb.field_c + param0;
+        int var4 = param1 * SoftwareRasterizer.field_c + param0;
         for (var5 = 0; var5 < field_a; var5++) {
           field_d[var5] = var4;
-          var4 = var4 + sb.field_c;
+          var4 = var4 + SoftwareRasterizer.field_c;
         }
     }
 
@@ -41,7 +41,7 @@ final class ka {
     }
 
     final static void c() {
-        ka.a(sb.field_d, sb.field_e, sb.field_b, sb.field_f);
+        ka.a(SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, SoftwareRasterizer.field_b, SoftwareRasterizer.field_f);
     }
 
     static {

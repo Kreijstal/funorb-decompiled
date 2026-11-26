@@ -33,10 +33,10 @@ final class gi {
         int var4 = 0;
         int var5 = 0;
         int var6 = StarCannon.field_A;
-        int var1_int = ki.field_j;
-        int var2 = ki.field_f;
+        int var1_int = SoftwareRasterizer.field_j;
+        int var2 = SoftwareRasterizer.field_f;
         for (var3 = -1 + var2 * var1_int; var3 >= 0; var3--) {
-          var4 = ki.field_a[var3];
+          var4 = SoftwareRasterizer.field_a[var3];
           var5 = 0;
           if ((var4 & 8388608) == 8388608) {
             var5 = var5 | var4 & 8323072;

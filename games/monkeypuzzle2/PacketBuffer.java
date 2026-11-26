@@ -414,7 +414,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           if (mc.field_a >= 10) {
             if (!ub.b(true)) {
-              ge.d();
+              SoftwareRasterizer.clearRaster();
               nj.a(-21639, 320, 240);
               oh.a(0, (byte) 76, 0, param0);
             } else {

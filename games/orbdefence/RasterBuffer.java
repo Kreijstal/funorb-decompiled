@@ -11,11 +11,11 @@ abstract class RasterBuffer {
 
     final void a(int param0) {
         if (param0 == -40) {
-          ul.a(this.field_d, this.field_e, this.field_f);
+          SoftwareRasterizer.setRasterBuffer(this.field_d, this.field_e, this.field_f);
           return;
         }
         this.field_e = -67;
-        ul.a(this.field_d, this.field_e, this.field_f);
+        SoftwareRasterizer.setRasterBuffer(this.field_d, this.field_e, this.field_f);
     }
 
     final static gj a(int param0, int param1, int param2, int param3, byte param4) {

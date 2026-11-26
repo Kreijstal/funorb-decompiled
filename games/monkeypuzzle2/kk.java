@@ -157,7 +157,7 @@ final class kk {
             }
             var3 = stackIn_23_0;
             while (var3 < 5) {
-              ge.g(pf.a((byte) 25, 640), pf.a((byte) -100, 100), pf.a((byte) 19, 500), 9283525, 60);
+              SoftwareRasterizer.drawVerticalLineAlpha(pf.a((byte) 25, 640), pf.a((byte) -100, 100), pf.a((byte) 19, 500), 9283525, 60);
               var3++;
             }
             ma.a(ve.field_x[var2_int][0] << 4, ve.field_x[var2_int][1] << 4, 128, 40000);
@@ -329,7 +329,7 @@ final class kk {
         this.field_a.e();
         var3 = 380;
         var4 = 263;
-        ge.d(3, 3, var3 - 6, -6 + var4, 16249775);
+        SoftwareRasterizer.fillRectangle(3, 3, var3 - 6, -6 + var4, 16249775);
         lb.a(0, var3, (byte) -124, NodeHashTableIterator.field_e, 0, var4);
         var5 = pl.field_e;
         var6 = 0;
@@ -445,7 +445,7 @@ final class kk {
           this.field_a.e();
           var2 = 380;
           var3 = 275;
-          ge.d(3, 3, var2 - 6, var3 - 6, 16249775);
+          SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
           lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
           sb.field_r.a(bg.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
           var4 = pl.field_e;
@@ -469,9 +469,9 @@ final class kk {
                 stackIn_23_1 = -1;
                 if (var14 == 0) {
                   if (stackIn_23_0 == stackIn_23_1) {
-                    ge.c(13, -2 - var4.field_C + var10, 354, 18, 12303291, 80);
+                    SoftwareRasterizer.fillRectangleAlpha(13, -2 - var4.field_C + var10, 354, 18, 12303291, 80);
                   } else {
-                    ge.c(13, -2 + (-var4.field_C + var10), 354, 18, 14540253, 40);
+                    SoftwareRasterizer.fillRectangleAlpha(13, -2 + (-var4.field_C + var10), 354, 18, 14540253, 40);
                   }
                   if (null != var7_ref_String__[var11]) {
                     var12 = 1;
@@ -848,7 +848,7 @@ final class kk {
         this.field_a.e();
         int var2 = 380;
         int var3 = 275;
-        ge.d(3, 3, -6 + var2, -6 + var3, 16249775);
+        SoftwareRasterizer.fillRectangle(3, 3, -6 + var2, -6 + var3, 16249775);
         lb.a(0, var2, (byte) 64, NodeHashTableIterator.field_e, 0, var3);
         int var5 = 86 % ((53 - param0) / 61);
         int var4 = 90;
@@ -1496,9 +1496,9 @@ final class kk {
         int var10;
         var10 = MonkeyPuzzle2.field_F ? 1 : 0;
         var9 = 101 / ((58 - param1) / 33);
-        param4 = ge.field_i.length - 1;
+        param4 = SoftwareRasterizer.field_i.length - 1;
         while (param4 >= 0) {
-          param5 = ge.field_i[param4];
+          param5 = SoftwareRasterizer.field_i[param4];
           param7 = 255 & param5;
           param2 = 255 & param5 >> 16;
           param6 = param5 >> 8 & 255;
@@ -1521,7 +1521,7 @@ final class kk {
             if (param6 < 0) {
               param6 = 0;
             }
-            ge.field_i[param4] = bd.a(param7, bd.a(param2 << 16, param6 << 8));
+            SoftwareRasterizer.field_i[param4] = bd.a(param7, bd.a(param2 << 16, param6 << 8));
             param4--;
             continue;
           }

@@ -17,7 +17,7 @@ abstract class sm {
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
 
     final void b(byte param0) {
-        si.a(this.field_f, this.field_b, this.field_e);
+        SoftwareRasterizer.setRasterBuffer(this.field_f, this.field_b, this.field_e);
         int var2 = -15 % ((param0 - 49) / 57);
     }
 
@@ -53,7 +53,7 @@ abstract class sm {
           }
           var3_int = 366;
           var4 = 614;
-          si.c(var4 + 4, 70 + var3_int, 12, 12, 0);
+          SoftwareRasterizer.fillRectangle(var4 + 4, 70 + var3_int, 12, 12, 0);
           if (param1 > 0) {
             if (param1 * 4 >= param2) {
               stackIn_13_0 = (param2 <= param1 * 2) ? 128 : 64;
@@ -65,7 +65,7 @@ abstract class sm {
             if (var5 / 2 <= var6) {
               var6 = var5 - var6;
             }
-            si.a(var4 + 4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
+            SoftwareRasterizer.fillRectangleAlpha(var4 + 4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
           }
           HostileSpawn.field_J[0].e(var4, var3_int);
           var5Lifetime1 = var3_int + 64;
@@ -80,7 +80,7 @@ abstract class sm {
             param1 = param2;
           }
           HostileSpawn.field_J[2].e(var4, var7);
-          si.a(7 + var4, 1 + var5Lifetime1 - param1, 6, param1, 16776960, 128);
+          SoftwareRasterizer.fillRectangleAlpha(7 + var4, 1 + var5Lifetime1 - param1, 6, param1, 16776960, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

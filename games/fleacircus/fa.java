@@ -189,10 +189,10 @@ abstract class fa extends DualLinkNode {
               }
               var16 = this.field_z[var11];
               if (field_u != -1) {
-                gb.b(param1, param2 + (int)((double)this.field_N * 0.7), var16, field_u);
+                SoftwareRasterizer.drawHorizontalLine(param1, param2 + (int)((double)this.field_N * 0.7), var16, field_u);
               }
               if (field_J != -1) {
-                gb.b(param1, param2 + this.field_N, var16, field_J);
+                SoftwareRasterizer.drawHorizontalLine(param1, param2 + this.field_N, var16, field_J);
               }
               param1 = param1 + var16;
               var7 = var11;
@@ -512,10 +512,10 @@ abstract class fa extends DualLinkNode {
               }
               param1 = param1 + this.field_z[var8];
               if (field_u != -1) {
-                gb.b(var11, param2 + (int)((double)this.field_N * 0.7), param1 - var11, field_u);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_N * 0.7), param1 - var11, field_u);
               }
               if (field_J != -1) {
-                gb.b(var11, param2 + this.field_N + 1, param1 - var11, field_J);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_N + 1, param1 - var11, field_J);
               }
               var5 = var8;
             }

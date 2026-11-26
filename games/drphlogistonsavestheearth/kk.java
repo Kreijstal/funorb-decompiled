@@ -124,7 +124,7 @@ final class kk {
           MouseInput.a(true);
           var18.c();
           var11Lifetime1 = 101 % ((22 - param0) / 61);
-          wj.e(0, 0, wj.field_k, wj.field_c);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
           var16 = new nh(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.c();

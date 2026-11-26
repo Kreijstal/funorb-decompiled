@@ -1305,7 +1305,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         NetworkSupport008.clearStaticReferences(false);
         MouseInput.clearStaticReferences(true);
         MouseWheelInput.clearStaticReferences(64);
-        SoftwareRaster.performAction0637();
+        SoftwareRaster.clearStaticReferences();
         ResourceArchive.clearStaticReferences(127);
         MixedSupport122.clearStaticReferences(122);
         GameDomainSupport001.performAction0093(-117);
@@ -1739,14 +1739,14 @@ public final class DekoBlokoClient extends FunOrbClient {
           if ((MixedSupport007.booleanState0005 ||
             IterableNodeCollection.booleanState0193) &&
             ComponentContainer.renderingSupport007State0006 != null) {
-            SoftwareRaster.performAction0658(0, 0, 640, 480);
+            SoftwareRaster.darkenRectangleHalf(0, 0, 640, 480);
             ComponentContainer.renderingSupport007State0006.performAction0874(-26325);
             if (MixedSupport033.renderingSupport007State0004 != null) {
               MixedSupport033.renderingSupport007State0004.performAction0864(2);
             }
           }
           if (UiComponentPart005.computeBoolean0321((byte) 99)) {
-            SoftwareRaster.performAction0641(320 - GameDomainSupport006.computeInteger1825(3) / 2 - 34, -(ResourceSupport004.computeInteger1250(20) / 2) + 240 - 24, GameDomainSupport006.computeInteger1825(3) + 68, ResourceSupport004.computeInteger1250(126) + 48, 0, 200);
+            SoftwareRaster.fillRectangleAlpha(320 - GameDomainSupport006.computeInteger1825(3) / 2 - 34, -(ResourceSupport004.computeInteger1250(20) / 2) + 240 - 24, GameDomainSupport006.computeInteger1825(3) + 68, ResourceSupport004.computeInteger1250(126) + 48, 0, 200);
             GameplayControls.performAction1749(ResourceSupport004.computeInteger1250(integerArgument1 - 356) + 60, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, GameDomainSupport006.computeInteger1825(3) + 80, 240 - ResourceSupport004.computeInteger1250(-5) / 2 - 30, 320 - GameDomainSupport006.computeInteger1825(3) / 2 - 40);
             IterableNodeCollection.performAction1660(32659);
           }
@@ -1760,20 +1760,20 @@ public final class DekoBlokoClient extends FunOrbClient {
               }
               UiComponentPart030.performAction1553(stackIntegerLocal5, stackBooleanLocal6);
               if (integerLocal16 != 0) {
-                SoftwareRaster.performAction0641(-34 - MixedSupport136.computeInteger1705(480) / 2 + 320, -24 + (-(UiComponentPart008.computeInteger0369(110) / 2) + 240), 68 + MixedSupport136.computeInteger1705(480), 48 + UiComponentPart008.computeInteger0369(110), 0, 200);
+                SoftwareRaster.fillRectangleAlpha(-34 - MixedSupport136.computeInteger1705(480) / 2 + 320, -24 + (-(UiComponentPart008.computeInteger0369(110) / 2) + 240), 68 + MixedSupport136.computeInteger1705(480), 48 + UiComponentPart008.computeInteger0369(110), 0, 200);
                 GameplayControls.performAction1749(UiComponentPart008.computeInteger0369(113) + 60, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 80 + MixedSupport136.computeInteger1705(480), 210 - UiComponentPart008.computeInteger0369(108) / 2, 320 - (MixedSupport136.computeInteger1705(integerArgument1 ^ 160) / 2 + 40));
                 MixedSupport020.performAction0299(true);
               }
             }
           } else {
-            SoftwareRaster.performAction0641(-34 - MixedSupport136.computeInteger1705(480) / 2 + 320, -24 + (-(UiComponentPart008.computeInteger0369(110) / 2) + 240), 68 + MixedSupport136.computeInteger1705(480), 48 + UiComponentPart008.computeInteger0369(110), 0, 200);
+            SoftwareRaster.fillRectangleAlpha(-34 - MixedSupport136.computeInteger1705(480) / 2 + 320, -24 + (-(UiComponentPart008.computeInteger0369(110) / 2) + 240), 68 + MixedSupport136.computeInteger1705(480), 48 + UiComponentPart008.computeInteger0369(110), 0, 200);
             GameplayControls.performAction1749(UiComponentPart008.computeInteger0369(113) + 60, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 80 + MixedSupport136.computeInteger1705(480), 210 - UiComponentPart008.computeInteger0369(108) / 2, 320 - (MixedSupport136.computeInteger1705(integerArgument1 ^ 160) / 2 + 40));
             MixedSupport020.performAction0299(true);
           }
           if (SceneWidgetPart002.integerState0249 != SceneWidgetPart002.integerState0241) {
             integerLocal13 = 256 * ReturnedShape.integerState0694 / 16;
             if (integerLocal13 > 0) {
-              SoftwareRaster.performAction0641(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, integerLocal13);
+              SoftwareRaster.fillRectangleAlpha(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, integerLocal13);
             }
           }
           if (2 <= PasswordValidator.integerState0776) {

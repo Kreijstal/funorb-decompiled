@@ -14,16 +14,16 @@ final class tj {
           throw new IllegalStateException();
         }
         if (param0 == 653) {
-          ge.a(var1.field_l, var1.field_h, var1.field_m);
-          ge.h(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
+          SoftwareRasterizer.setRasterBuffer(var1.field_l, var1.field_h, var1.field_m);
+          SoftwareRasterizer.setClip(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
           var1.field_l = null;
           de.field_n.addFirst(-8212, var1);
           return;
         }
         ad var2 = (ad) null;
         tj.a(-96, (ad) null, 126, (byte) 79);
-        ge.a(var1.field_l, var1.field_h, var1.field_m);
-        ge.h(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
+        SoftwareRasterizer.setRasterBuffer(var1.field_l, var1.field_h, var1.field_m);
+        SoftwareRasterizer.setClip(var1.field_j, var1.field_n, var1.field_e, var1.field_o);
         var1.field_l = null;
         de.field_n.addFirst(-8212, var1);
     }

@@ -169,7 +169,7 @@ final class hk extends IntrusiveNode {
                   var25 = var25 + var27;
                   var22 = var22 + var24;
                   var18 = var18 + var20;
-                  var36Lifetime2 = var36Lifetime2 + ge.field_h;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_h;
                   var29 = var29 + var31;
                 }
               }
@@ -319,7 +319,7 @@ final class hk extends IntrusiveNode {
                 return;
               }
               var29 = var29 + var31;
-              var35Lifetime1 = var35Lifetime1 + ge.field_h;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_h;
               var26 = var26 + var28;
               var25 = var25 + var27;
               var21 = var21 + var23;
@@ -371,82 +371,82 @@ final class hk extends IntrusiveNode {
         try {
           var5_int = param3 + param0;
           var6 = param1 + param4;
-          if (ge.field_a < param0) {
+          if (SoftwareRasterizer.field_a < param0) {
             stackIn_4_0 = param0;
           } else {
-            stackIn_4_0 = ge.field_a;
+            stackIn_4_0 = SoftwareRasterizer.field_a;
           }
           var7 = stackIn_4_0;
-          if (ge.field_f >= param1) {
-            stackIn_7_0 = ge.field_f;
+          if (SoftwareRasterizer.field_f >= param1) {
+            stackIn_7_0 = SoftwareRasterizer.field_f;
           } else {
             stackIn_7_0 = param1;
           }
           var8 = stackIn_7_0;
-          if (ge.field_j > var5_int) {
+          if (SoftwareRasterizer.field_j > var5_int) {
             stackIn_10_0 = var5_int;
           } else {
-            stackIn_10_0 = ge.field_j;
+            stackIn_10_0 = SoftwareRasterizer.field_j;
           }
           var9 = stackIn_10_0;
-          if (var6 >= ge.field_k) {
-            stackIn_13_0 = ge.field_k;
+          if (var6 >= SoftwareRasterizer.field_k) {
+            stackIn_13_0 = SoftwareRasterizer.field_k;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (ge.field_a <= param0 &&
-            param0 < ge.field_j) {
-            var11 = ge.field_h * var8 + param0;
+          if (SoftwareRasterizer.field_a <= param0 &&
+            param0 < SoftwareRasterizer.field_j) {
+            var11 = SoftwareRasterizer.field_h * var8 + param0;
             var12 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              ge.field_i[var11] = 16777215;
-              var11 = var11 + ge.field_h * 2;
+              SoftwareRasterizer.field_i[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_h * 2;
             }
           }
           if (param2 < 1) {
             return;
           }
-          if (ge.field_f <= param1 &&
-            ge.field_k > var6) {
-            var11Lifetime1 = ge.field_h * param1 + var7;
+          if (SoftwareRasterizer.field_f <= param1 &&
+            SoftwareRasterizer.field_k > var6) {
+            var11Lifetime1 = SoftwareRasterizer.field_h * param1 + var7;
             var12Lifetime1 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              ge.field_i[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_i[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= ge.field_a &&
-            var5_int < ge.field_j) {
-            var11Lifetime2 = ((1 & var5_int - param0) + var8) * ge.field_h + var5_int;
+          if (var5_int >= SoftwareRasterizer.field_a &&
+            var5_int < SoftwareRasterizer.field_j) {
+            var11Lifetime2 = ((1 & var5_int - param0) + var8) * SoftwareRasterizer.field_h + var5_int;
             var12Lifetime2 = -var8 + (1 + var10) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              ge.field_i[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + ge.field_h * 2;
+              SoftwareRasterizer.field_i[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_h * 2;
             }
           }
-          if (param1 >= ge.field_f &&
-            ge.field_k > var6) {
-            var11Lifetime3 = var7 + (var6 * ge.field_h + (1 & -param1 + var6));
+          if (param1 >= SoftwareRasterizer.field_f &&
+            SoftwareRasterizer.field_k > var6) {
+            var11Lifetime3 = var7 + (var6 * SoftwareRasterizer.field_h + (1 & -param1 + var6));
             var12Lifetime3 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              ge.field_i[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_i[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }

@@ -65,21 +65,21 @@ final class InputAdapter001 implements CallbackContract004 {
           uiComponentPart001Local8 = (UiComponentPart001) (stackUiComponentLocal9);
           if (uiComponentPart001Local8 == null) {
           }
-          SoftwareRaster.performAction0640(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0042);
+          SoftwareRaster.fillRectangle(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0042);
           integerLocal2 = integerArgument2 - (-uiComponentArgument5.integerState0110 - uiComponentPart001Local8.integerState0032);
           integerLocal3 = integerArgument3 + uiComponentArgument5.integerState0104 + uiComponentPart001Local8.integerState0037;
-          SoftwareRaster.performAction0661(integerLocal2, integerLocal3, uiComponentPart001Local8.integerState0035, this.integerState0041);
+          SoftwareRaster.fillCircle(integerLocal2, integerLocal3, uiComponentPart001Local8.integerState0035, this.integerState0041);
           if (uiComponentPart001Local8.integerState0036 != -1) {
             doubleLocal4 = 3.141592653589793 * (double)uiComponentPart001Local8.integerState0036 * 2.0 / (double)uiComponentPart001Local8.integerState0038;
             integerLocal5 = (int)(-Math.sin(doubleLocal4) * (double)uiComponentPart001Local8.integerState0035);
             integerLocal6 = (int)(Math.cos(doubleLocal4) * (double)uiComponentPart001Local8.integerState0035);
-            SoftwareRaster.performAction0661(integerLocal5 + integerLocal2, integerLocal3 + integerLocal6, 1, this.integerState0045);
+            SoftwareRaster.fillCircle(integerLocal5 + integerLocal2, integerLocal3 + integerLocal6, 1, this.integerState0045);
           }
-          SoftwareRaster.performAction0661(integerLocal2, integerLocal3, 2, 1);
+          SoftwareRaster.fillCircle(integerLocal2, integerLocal3, 2, 1);
           doubleLocal14 = 3.141592653589793 * (double)uiComponentPart001Local8.integerState0033 * 2.0 / (double)uiComponentPart001Local8.integerState0038;
           integerLocal15 = (int)(-Math.sin(doubleLocal14) * (double)uiComponentPart001Local8.integerState0035);
           integerLocal16 = (int)(Math.cos(doubleLocal14) * (double)uiComponentPart001Local8.integerState0035);
-          SoftwareRaster.performAction0650(integerLocal2, integerLocal3, integerLocal15 + integerLocal2, integerLocal3 + integerLocal16, 1);
+          SoftwareRaster.drawLine(integerLocal2, integerLocal3, integerLocal15 + integerLocal2, integerLocal3 + integerLocal16, 1);
           if (this.bitmapFontState0004 != null) {
             integerLocal7 = this.integerState0046 + (uiComponentPart001Local8.integerState0035 + uiComponentPart001Local8.integerState0032);
             this.bitmapFontState0004.computeInteger1071(uiComponentArgument5.stringState0078, integerArgument2 - (-uiComponentArgument5.integerState0110 - integerLocal7), uiComponentArgument5.integerState0104 + (integerArgument3 + this.integerState0044), -this.integerState0046 - (integerLocal7 - uiComponentArgument5.integerState0107), uiComponentArgument5.integerState0108 - (this.integerState0046 << 1), this.integerState0043, this.integerState0040, 1, 1, 0);

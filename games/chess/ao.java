@@ -63,7 +63,7 @@ final class ao {
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {
-        if (param2 + param0 <= wb.field_h) {
+        if (param2 + param0 <= SoftwareRasterizer.field_h) {
           return param2;
         }
         if (!param1) {
@@ -71,12 +71,12 @@ final class ao {
           if (param2 - (-param3 + param0) >= 0) {
             return param2 - (-param3 + param0);
           }
-          return wb.field_h - param0;
+          return SoftwareRasterizer.field_h - param0;
         }
         if (param2 - (-param3 + param0) >= 0) {
           return param2 - (-param3 + param0);
         }
-        return wb.field_h - param0;
+        return SoftwareRasterizer.field_h - param0;
     }
 
     final static void b(int param0) {

@@ -2067,8 +2067,8 @@ final class go extends qe {
           }
         }
         if (this.field_b != null) {
-          for (var6Lifetime1 = 0; var6Lifetime1 < gf.field_b.length; var6Lifetime1++) {
-            gf.field_b[var6Lifetime1] = nb.a(gf.field_b[var6Lifetime1] >>> 2, 1061109567);
+          for (var6Lifetime1 = 0; var6Lifetime1 < SoftwareRasterizer.field_b.length; var6Lifetime1++) {
+            SoftwareRasterizer.field_b[var6Lifetime1] = nb.a(SoftwareRasterizer.field_b[var6Lifetime1] >>> 2, 1061109567);
           }
           this.field_b.b(-61);
         }

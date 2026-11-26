@@ -43,18 +43,18 @@ final class df implements uk {
             stackIn_4_0 = null;
           }
           var12 = (nb) (stackIn_4_0);
-          ti.f(param1 + param3.field_w, param2 + param3.field_k, param3.field_p, param3.field_t, this.field_e);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_w, param2 + param3.field_k, param3.field_p, param3.field_t, this.field_e);
           if (var12 != null) {
           }
           var7 = param3.field_p - 2 * var12.field_G;
           var8 = var12.field_G + param3.field_w + param1;
           var9 = param3.field_k + param2 + var12.field_I;
-          ti.a(var8, var9, var8 + var7, var9, this.field_a);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_a);
           if (param4 != 4549) {
             df.a(-24);
           }
           for (var10 = -1 + var12.d(true); 0 <= var10; var10--) {
-            ti.e(var7 * var12.b((byte) 95, var10) / var12.g(92) + var8, var9, this.field_h, this.field_g);
+            SoftwareRasterizer.fillCircle(var7 * var12.b((byte) 95, var10) / var12.g(92) + var8, var9, this.field_h, this.field_g);
           }
           if (null != this.field_f) {
             this.field_f.c(var12.field_m, var7 / 2 + var8, var9 + this.field_f.field_v + var12.field_I, this.field_i, this.field_b);

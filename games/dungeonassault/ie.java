@@ -25,7 +25,7 @@ final class ie extends IntrusiveNode {
           if (var1 == null) {
             var1 = new i();
           }
-          var1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
+          var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_i, false, SoftwareRasterizer.field_b);
           SecondaryNodeDequeIterator.field_e.addFirst(var1, false);
           return;
         }
@@ -34,7 +34,7 @@ final class ie extends IntrusiveNode {
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new i();
         }
-        var1Lifetime1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
+        var1Lifetime1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_i, false, SoftwareRasterizer.field_b);
         SecondaryNodeDequeIterator.field_e.addFirst(var1Lifetime1, false);
     }
 

@@ -103,8 +103,8 @@ final class we {
         var14 = this.field_a - (int)(10.0 * Math.sin(3.141592653589793 * (-96.0 + var8) / 128.0));
         var15 = this.field_f - (int)(Math.cos((-96.0 + var8) * 3.141592653589793 / 128.0) * 10.0);
         li.a(var13, -1, var11, var15, var10, var14, 13684736, var12);
-        si.e(this.field_a, this.field_f, 1, 0);
-        si.b(this.field_a, this.field_f, 2, 7368704);
+        SoftwareRasterizer.fillCircle(this.field_a, this.field_f, 1, 0);
+        SoftwareRasterizer.drawCircleOutline(this.field_a, this.field_f, 2, 7368704);
         var16 = Math.max(this.field_f - 10, 1);
         var17 = Math.min(10 + this.field_f, 478);
         var18 = Math.max(this.field_a - 10, 1);
@@ -113,22 +113,22 @@ final class we {
         for (var21 = var16; var21 < var17; var21++) {
           for (var22 = var18; var22 < var19; var22++) {
             var23 = var22 + var20;
-            if ((255 & si.field_i[var23] >> 16) < 100) {
+            if ((255 & SoftwareRasterizer.field_i[var23] >> 16) < 100) {
               var24 = 0;
-              if (13684736 == si.field_i[var23 - 1]) {
+              if (13684736 == SoftwareRasterizer.field_i[var23 - 1]) {
                 var24++;
               }
-              if (si.field_i[1 + var23] == 13684736) {
+              if (SoftwareRasterizer.field_i[1 + var23] == 13684736) {
                 var24++;
               }
-              if (si.field_i[-640 + var23] == 13684736) {
+              if (SoftwareRasterizer.field_i[-640 + var23] == 13684736) {
                 var24++;
               }
-              if (si.field_i[var23 + 640] == 13684736) {
+              if (SoftwareRasterizer.field_i[var23 + 640] == 13684736) {
                 var24++;
               }
               if (var24 >= 2) {
-                si.field_i[var23] = 7368704;
+                SoftwareRasterizer.field_i[var23] = 7368704;
               }
             }
           }

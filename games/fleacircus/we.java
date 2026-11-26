@@ -82,7 +82,7 @@ final class we {
         if (var1 == null) {
           var1 = new uh();
         }
-        var1.a(3, gb.field_a, gb.field_l, gb.field_k, gb.field_h, gb.field_i, gb.field_b, gb.field_d);
+        var1.a(3, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, SoftwareRasterizer.field_d);
         fg.field_t.addLast(false, var1);
         if (param0 < -56) {
           return;

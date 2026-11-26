@@ -182,12 +182,12 @@ final class dc extends og implements im, vd, fd {
         int var3 = 0;
         int var3Lifetime1;
         if (!param2) {
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           var3 = -33 % ((param1 - 49) / 52);
           d.a((byte) 90, param2);
           return;
         }
-        kh.d(0, 0, kh.field_l, kh.field_d, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, 0, 192);
         var3Lifetime1 = -33 % ((param1 - 49) / 52);
         d.a((byte) 90, param2);
     }

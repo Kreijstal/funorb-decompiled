@@ -250,7 +250,7 @@ abstract class rj extends IntrusiveNode {
           return (cn) null;
         }
         for (var2 = 0; var2 < 5; var2++) {
-          gf.b(var2, 3 + var2, 11 - 2 * var2, 65793);
+          SoftwareRasterizer.drawHorizontalLine(var2, 3 + var2, 11 - 2 * var2, 65793);
         }
         jh.b();
         return var1;

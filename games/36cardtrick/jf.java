@@ -48,7 +48,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
             return;
           }
           if (!lc.a((byte) -82)) {
-            vj.d();
+            SoftwareRasterizer.clearRaster();
             mg.a(320, 207, 240);
             ll.a(0, (byte) 115, param0, 0);
             return;

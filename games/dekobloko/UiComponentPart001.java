@@ -128,25 +128,25 @@ final class UiComponentPart001 extends InteractiveComponent {
           integerLocal8 = 0;
           integerLocal7 = 0;
         }
-        SoftwareRaster.performAction0649(0, 0, 640, 160 - integerLocal9);
+        SoftwareRaster.setClip(0, 0, 640, 160 - integerLocal9);
         integerLocal10 = 128 * integerLocal9 / 320 + 128;
         UiComponentPart009.performAction0375((byte) 93, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0649(0, 160 - integerLocal9, 213, 320 - integerLocal9);
+        SoftwareRaster.setClip(0, 160 - integerLocal9, 213, 320 - integerLocal9);
         UiComponentPart009.performAction0375((byte) 123, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0649(427, 160 - integerLocal9, 640, 320 - integerLocal9);
+        SoftwareRaster.setClip(427, 160 - integerLocal9, 640, 320 - integerLocal9);
         UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, -integerLocal9, 256);
-        SoftwareRaster.performAction0649(0, -integerLocal9 + 320, 213, 320 + integerLocal9);
+        SoftwareRaster.setClip(0, -integerLocal9 + 320, 213, 320 + integerLocal9);
         UiComponentPart009.performAction0375((byte) 92, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
-        SoftwareRaster.performAction0649(213, 160 - integerLocal9, 427, integerLocal9 + 160);
+        SoftwareRaster.setClip(213, 160 - integerLocal9, 427, integerLocal9 + 160);
         UiComponentPart009.performAction0375((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
-        SoftwareRaster.performAction0649(427, 320 - integerLocal9, 640, 320 + integerLocal9);
+        SoftwareRaster.setClip(427, 320 - integerLocal9, 640, 320 + integerLocal9);
         UiComponentPart009.performAction0375((byte) 91, integerLocal7 != 0, rgbSpriteLocal5, 0, integerLocal10);
         if (byteArgument1 == 84) {
-          SoftwareRaster.performAction0649(213, 160 + integerLocal9, 427, 320 + integerLocal9);
+          SoftwareRaster.setClip(213, 160 + integerLocal9, 427, 320 + integerLocal9);
           UiComponentPart009.performAction0375((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-          SoftwareRaster.performAction0649(0, integerLocal9 + 320, 640, 480);
+          SoftwareRaster.setClip(0, integerLocal9 + 320, 640, 480);
           UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-          SoftwareRaster.performAction0657();
+          SoftwareRaster.resetClip();
           if (!SceneWidgetPart009.booleanState0151) {
             return;
           }
@@ -160,11 +160,11 @@ final class UiComponentPart001 extends InteractiveComponent {
           return;
         }
         stringState0025 = (String) null;
-        SoftwareRaster.performAction0649(213, 160 + integerLocal9, 427, 320 + integerLocal9);
+        SoftwareRaster.setClip(213, 160 + integerLocal9, 427, 320 + integerLocal9);
         UiComponentPart009.performAction0375((byte) 43, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-        SoftwareRaster.performAction0649(0, integerLocal9 + 320, 640, 480);
+        SoftwareRaster.setClip(0, integerLocal9 + 320, 640, 480);
         UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
-        SoftwareRaster.performAction0657();
+        SoftwareRaster.resetClip();
         if (!SceneWidgetPart009.booleanState0151) {
           return;
         }

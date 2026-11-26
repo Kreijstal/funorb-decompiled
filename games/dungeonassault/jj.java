@@ -35,30 +35,30 @@ final class jj {
         int var12 = 0;
         var12 = DungeonAssault.field_K;
         try {
-          if (gf.field_j > param2) {
-            param5 = param5 - (gf.field_j - param2);
-            param2 = gf.field_j;
+          if (SoftwareRasterizer.field_j > param2) {
+            param5 = param5 - (SoftwareRasterizer.field_j - param2);
+            param2 = SoftwareRasterizer.field_j;
           }
-          if (gf.field_f > param3) {
-            param4 = param4 - (gf.field_f - param3);
-            param3 = gf.field_f;
+          if (SoftwareRasterizer.field_f > param3) {
+            param4 = param4 - (SoftwareRasterizer.field_f - param3);
+            param3 = SoftwareRasterizer.field_f;
           }
-          if (gf.field_h < param2 + param5) {
-            param5 = -param2 + gf.field_h;
+          if (SoftwareRasterizer.field_h < param2 + param5) {
+            param5 = -param2 + SoftwareRasterizer.field_h;
           }
           if (param1 != -971598481) {
             field_a = (String) null;
           }
-          if (param4 + param3 > gf.field_e) {
-            param4 = gf.field_e - param3;
+          if (param4 + param3 > SoftwareRasterizer.field_e) {
+            param4 = SoftwareRasterizer.field_e - param3;
           }
           if (param5 > 0 &&
             0 < param4) {
-            var6_int = param2 + param3 * gf.field_i;
-            var7 = -param5 + gf.field_i;
+            var6_int = param2 + param3 * SoftwareRasterizer.field_i;
+            var7 = -param5 + SoftwareRasterizer.field_i;
             for (param3 = -param4; param3 < 0; param3++) {
               for (param2 = -param5; 0 > param2; param2++) {
-                var8 = gf.field_b[var6_int];
+                var8 = SoftwareRasterizer.field_b[var6_int];
                 if ((65280 & var8) >> 8 > param0 &&
                   (255 & var8 >> 16) <= (255 & var8 >> 8)) {
                   var9 = ((var8 & 16711680) >> 15) - 60;
@@ -68,7 +68,7 @@ final class jj {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = 31 & var8 >> 3;
-                  gf.field_b[var6_int] = mp.a(var11, mp.a(var9 << 16, var10));
+                  SoftwareRasterizer.field_b[var6_int] = mp.a(var11, mp.a(var9 << 16, var10));
                 }
                 var6_int++;
               }

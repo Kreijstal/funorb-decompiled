@@ -236,7 +236,7 @@ final class c {
             t.field_b.a((byte) 86, (UiComponent) (oa.field_k));
           }
           oa.field_k.a(param2, param0, param3, false);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           int var4_int = -58 / ((-64 - param1) / 51);
           c.a(true, false);
         } catch (RuntimeException runtimeException) {

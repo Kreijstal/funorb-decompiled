@@ -445,10 +445,10 @@ abstract class ee extends DualLinkNode {
               }
               param1 = param1 + this.field_p[var8];
               if (field_v != -1) {
-                vj.d(var11, param2 + (int)((double)this.field_E * 0.7), param1 - var11, field_v);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_E * 0.7), param1 - var11, field_v);
               }
               if (field_G != -1) {
-                vj.d(var11, param2 + this.field_E + 1, param1 - var11, field_G);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_E + 1, param1 - var11, field_G);
               }
               var5 = var8;
             }

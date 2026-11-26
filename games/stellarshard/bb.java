@@ -60,17 +60,17 @@ final class bb implements uk {
           if (param0) {
             var7 = 16777215;
           }
-          ti.f(param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, this.field_i);
+          SoftwareRasterizer.fillRectangle(param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, this.field_i);
           var8 = param1 + (param3.field_w + this.field_e);
           if (param4 != 4549) {
             field_h = (String) null;
           }
           var9 = param2 + (param3.field_k + this.field_j);
-          ti.e(var8, var9, this.field_b, this.field_r, 5592405);
-          ti.f(var8, var9, this.field_b, this.field_r, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_b, this.field_r, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_b, this.field_r, var7);
           if (var11.field_z) {
-            ti.a(var8, var9, var8 + this.field_b, var9 + this.field_r, 1);
-            ti.a(var8 + this.field_b, var9, var8, this.field_r + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_b, var9 + this.field_r, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_b, var9, var8, this.field_r + var9, 1);
           }
           if (this.field_g != null) {
             var10 = this.field_q + (this.field_e + this.field_b);

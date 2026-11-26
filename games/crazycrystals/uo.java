@@ -54,12 +54,12 @@ final class uo extends el {
         int var13Lifetime2Lifetime2;
         int var14Lifetime2Lifetime2;
         var17 = CrazyCrystals.field_B;
-        var8 = kh.field_c;
-        var9 = kh.field_b;
-        var10 = kh.field_g;
-        var11 = kh.field_j;
+        var8 = SoftwareRasterizer.field_c;
+        var9 = SoftwareRasterizer.field_b;
+        var10 = SoftwareRasterizer.field_g;
+        var11 = SoftwareRasterizer.field_j;
         if (!param4) {
-          kh.d(0, 0, 480, 480);
+          SoftwareRasterizer.setClip(0, 0, 480, 480);
           this.field_p = true;
           if (param3 > -59) {
             this.a(true, -118, 73, (byte) -80, true, 50, -86);
@@ -89,7 +89,7 @@ final class uo extends el {
             }
             this.field_a.h(-30).b(var13Lifetime5, var14Lifetime5, var12Lifetime5 * 2, var12Lifetime5 * 3, ek.field_f[this.field_a.field_u]);
           }
-          kh.d(var8, var9, var10, var11);
+          SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
         }
         if (!param4) {
@@ -122,7 +122,7 @@ final class uo extends el {
             }
             this.field_a.h(-30).b(var13Lifetime1Lifetime1, var14Lifetime1Lifetime1, var12Lifetime1Lifetime1 * 2, var12Lifetime1Lifetime1 * 3, ek.field_f[this.field_a.field_u]);
           }
-          kh.d(var8, var9, var10, var11);
+          SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
         }
         if (param3 <= -59) {
@@ -133,17 +133,17 @@ final class uo extends el {
               var13Lifetime2 = -var12Lifetime2 + (param1 + param5);
               var14Lifetime2 = param2 + param6 - (var12Lifetime2 * (this.field_j + 16) >> 3);
               if (0 >= 3 * var12Lifetime2 + var14Lifetime2) {
-                kh.d(var8, var9, var10, var11);
+                SoftwareRasterizer.setClip(var8, var9, var10, var11);
                 return;
               }
               if (param4) {
                 this.field_a.h(-30).b(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, ek.field_f[this.field_a.field_u]);
-                kh.d(var8, var9, var10, var11);
+                SoftwareRasterizer.setClip(var8, var9, var10, var11);
                 return;
               }
               this.field_p = false;
               this.field_a.h(-30).b(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, ek.field_f[this.field_a.field_u]);
-              kh.d(var8, var9, var10, var11);
+              SoftwareRasterizer.setClip(var8, var9, var10, var11);
               return;
             }
             var13Lifetime2Lifetime2 = -var12Lifetime2 + (-1 + (this.field_j >> 1)) << 1;
@@ -173,7 +173,7 @@ final class uo extends el {
               this.field_a.h(-30).b(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, ek.field_f[this.field_a.field_u]);
             }
           }
-          kh.d(var8, var9, var10, var11);
+          SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
         }
         this.a(true, -118, 73, (byte) -80, true, 50, -86);
@@ -191,7 +191,7 @@ final class uo extends el {
                 this.field_a.h(-30).b(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, ek.field_f[this.field_a.field_u]);
               }
             }
-            kh.d(var8, var9, var10, var11);
+            SoftwareRasterizer.setClip(var8, var9, var10, var11);
             return;
           }
           var13Lifetime3Lifetime1 = -var12Lifetime3 + (-1 + (this.field_j >> 1)) << 1;
@@ -214,17 +214,17 @@ final class uo extends el {
         var13Lifetime4 = -var12Lifetime4 + (param1 + param5);
         var14Lifetime4 = param2 + param6 - (var12Lifetime4 * (this.field_j + 16) >> 3);
         if (0 >= 3 * var12Lifetime4 + var14Lifetime4) {
-          kh.d(var8, var9, var10, var11);
+          SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
         }
         if (param4) {
           this.field_a.h(-30).b(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, ek.field_f[this.field_a.field_u]);
-          kh.d(var8, var9, var10, var11);
+          SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
         }
         this.field_p = false;
         this.field_a.h(-30).b(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, ek.field_f[this.field_a.field_u]);
-        kh.d(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         return;
     }
 

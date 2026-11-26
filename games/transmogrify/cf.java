@@ -28,14 +28,14 @@ final class cf extends IntrusiveNode {
             }
             incrementValue$0 = var3;
             var3++;
-            sb.field_h[incrementValue$0] = var10[var8];
+            SoftwareRasterizer.field_h[incrementValue$0] = var10[var8];
             var6 = 1 + var6 - (-(var7 * 8) + 2556);
           }
           var4 = -1915 + 8 * var5 + var4;
         }
         var6Lifetime1 = 90 / ((param0 + 67) / 50);
-        sb.d(0, 0, 640, 480, 65793);
-        sb.d(1, 1, 638, 478, 16711422);
+        SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 65793);
+        SoftwareRasterizer.drawRectangleOutline(1, 1, 638, 478, 16711422);
         return var2;
     }
 

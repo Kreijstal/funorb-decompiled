@@ -105,7 +105,7 @@ final class mg extends WidgetWrapper {
           return;
         }
         try {
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           mh.a(true, false);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

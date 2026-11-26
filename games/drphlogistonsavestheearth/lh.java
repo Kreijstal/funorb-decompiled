@@ -83,14 +83,14 @@ final class lh extends PacketBuffer {
             var8 = param0[1].field_z;
             param0[0].b(param4, param5, param3);
             param0[2].b(param4 + param2 - var7, param5, param3);
-            wj.b(rb.field_e);
-            wj.d(param4 + var6_int, param5, param4 + (param2 - var7), param0[1].field_C + param5);
+            SoftwareRasterizer.saveClip(rb.field_e);
+            SoftwareRasterizer.intersectClip(param4 + var6_int, param5, param4 + (param2 - var7), param0[1].field_C + param5);
             var9 = param4 + var6_int;
             var10 = -var7 + (param4 + param2);
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].b(param4, param5, param3);
             }
-            wj.a(rb.field_e);
+            SoftwareRasterizer.restoreClip(rb.field_e);
             return;
           }
           return;

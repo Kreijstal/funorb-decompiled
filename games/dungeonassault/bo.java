@@ -33,7 +33,7 @@ final class bo extends ok {
             IntrusiveNode.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, IntrusiveNode.field_c.field_H);
             var4_int = var4_int + param1.field_g;
             var4_int += 7;
-            gf.b(param3, var4_int, 200, 0);
+            SoftwareRasterizer.drawHorizontalLine(param3, var4_int, 200, 0);
             var4_int += 5;
           }
           var5 = jn.a(param1.field_f, new int[]{194}, -65, la.field_b);

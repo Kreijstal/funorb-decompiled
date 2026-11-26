@@ -165,10 +165,10 @@ final class pd extends rj {
             stackIn_19_0 = this.field_z * (-23 + this.field_F) / this.field_C;
           }
           var6Lifetime3 = stackIn_19_0;
-          gf.e(var4 + 4, var6Lifetime3 + var5 + 5, qh.field_q.field_y + (4 + var4), qh.field_q.field_v / 2 + (var6Lifetime3 + 10) + (var5 + 5));
+          SoftwareRasterizer.setClip(var4 + 4, var6Lifetime3 + var5 + 5, qh.field_q.field_y + (4 + var4), qh.field_q.field_v / 2 + (var6Lifetime3 + 10) + (var5 + 5));
           bp.a(10 + var5 + var6Lifetime3, ji.field_G, var4 + 4, (byte) 99);
           bp.a(var5 - (-10 - var6Lifetime3) - 23, ji.field_G, 4 + var4, (byte) 99);
-          gf.b();
+          SoftwareRasterizer.resetClip();
           qh.field_q.c(var4 + 4, var6Lifetime3 + var5 + 10, qh.field_q.field_y, qh.field_q.field_v / 2);
         } else {
           if (this.field_C == 0) {

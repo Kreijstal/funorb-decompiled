@@ -160,14 +160,14 @@ final class qi extends WidgetContainer implements vc, ql {
           ButtonWidget.field_z.a(this.field_B, 20 + (this.field_r + param3), 15 + this.field_e + param2, this.field_l - 40, this.field_p, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
         }
         if (this.field_D != null) {
-          ge.a(10 + param3, param2 + 134, this.field_l - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param3, param2 + 134, this.field_l - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         vf.a((byte) 66);
-        ge.c(param3, param4, param0, param2);
+        SoftwareRasterizer.intersectClip(param3, param4, param0, param2);
         if (!param1) {
           field_A = (String) null;
         }

@@ -31,7 +31,7 @@ final class fj extends IntrusiveNode {
           if (param2 <= 104) {
             field_i = (String[]) null;
           }
-          a.a(wj.field_c / 2, wj.field_k / 2, (byte) 101);
+          a.a(SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_k / 2, (byte) 101);
           fa.a(false, param3.field_L + param3.field_S, param1.field_L, param1.field_S + param1.field_L, param3.field_L);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

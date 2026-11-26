@@ -55,14 +55,14 @@ final class kl extends en {
         mo.field_m.c(this.field_Y, (this.field_g >> 1) + param1, param2 + 103, 16777215, -1);
         if (param0 == 30) {
           if (null != this.field_Q) {
-            kh.f(param1 + 20, -7 + (120 + param2), 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param2), 260, 8421504);
             mo.field_m.a(this.field_Q, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, mo.field_m.field_o);
           }
           return;
         }
         this.field_Y = (String) null;
         if (null != this.field_Q) {
-          kh.f(param1 + 20, -7 + (120 + param2), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param2), 260, 8421504);
           mo.field_m.a(this.field_Q, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, mo.field_m.field_o);
         }
     }

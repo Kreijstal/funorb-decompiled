@@ -58,17 +58,17 @@ final class lj implements ir {
             param0 = param0 & var11.field_u;
           }
           int var7 = 5592405;
-          SoftwareRasterizer.b(param2 + param3.field_p, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_o);
+          SoftwareRasterizer.fillRectangle(param2 + param3.field_p, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_o);
           if (param0) {
             var7 = 16777215;
           }
           int var8 = param2 + param3.field_p + this.field_n;
           int var9 = this.field_h + param4 + param3.field_h;
-          SoftwareRasterizer.d(var8, var9, this.field_m, this.field_j, 5592405);
-          SoftwareRasterizer.b(var8, var9, this.field_m, this.field_j, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_m, this.field_j, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_m, this.field_j, var7);
           if (var11.field_s) {
-            SoftwareRasterizer.f(var8, var9, var8 + this.field_m, var9 + this.field_j, 1);
-            SoftwareRasterizer.f(var8 + this.field_m, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_m, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_m, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_l) {
             int var10 = this.field_m + (this.field_n + this.field_f);

@@ -147,7 +147,7 @@ class SceneWidget extends SceneWidgetNode {
         integerLocal3 = SoftwareRaster.integerState0280;
         integerLocal4 = SoftwareRaster.integerState0281;
         integerLocal5 = SoftwareRaster.integerState0283;
-        SoftwareRaster.performAction0663(this.integerState0892, this.integerState0886, this.integerState0892 + this.integerState0896, this.integerState0915 + this.integerState0886);
+        SoftwareRaster.intersectClip(this.integerState0892, this.integerState0886, this.integerState0892 + this.integerState0896, this.integerState0915 + this.integerState0886);
         booleanArgument4 = booleanArgument4 & this.booleanState0212;
         if (!this.booleanState0215) {
           booleanArgument3 = this.booleanState0218;
@@ -299,7 +299,7 @@ class SceneWidget extends SceneWidgetNode {
             sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.nextBackward(true));
           }
         }
-        SoftwareRaster.performAction0649(integerLocal2, integerLocal3, integerLocal4, integerLocal5);
+        SoftwareRaster.setClip(integerLocal2, integerLocal3, integerLocal4, integerLocal5);
         return;
     }
 
@@ -476,7 +476,7 @@ class SceneWidget extends SceneWidgetNode {
         integerLocal5 = SoftwareRaster.integerState0280;
         integerLocal6 = SoftwareRaster.integerState0281;
         integerLocal7 = SoftwareRaster.integerState0283;
-        SoftwareRaster.performAction0663(this.integerState0892, this.integerState0886, this.integerState0896 + this.integerState0892, this.integerState0915 + this.integerState0886);
+        SoftwareRaster.intersectClip(this.integerState0892, this.integerState0886, this.integerState0896 + this.integerState0892, this.integerState0915 + this.integerState0886);
         integerLocal8 = 0;
         if (!SceneWidgetPart002.booleanState0051 &&
           booleanArgument3 &&
@@ -516,7 +516,7 @@ class SceneWidget extends SceneWidgetNode {
         if (integerLocal8 != 0) {
           SceneWidgetPart002.booleanState0051 = true;
         }
-        SoftwareRaster.performAction0649(integerLocal4, integerLocal5, integerLocal6, integerLocal7);
+        SoftwareRaster.setClip(integerLocal4, integerLocal5, integerLocal6, integerLocal7);
         if (this.integerState0888 != 0 &&
           this.booleanState0219) {
           this.integerState0890 = -integerArgument1 + HashNode.integerState0069 - this.integerState0897;

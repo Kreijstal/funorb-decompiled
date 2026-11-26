@@ -58,14 +58,14 @@ final class mk implements ad {
             param4 = param4 & var11.field_E;
           }
           var7 = 5592405;
-          SoftwareRasterizer.e(param2.field_u + param1, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_d);
+          SoftwareRasterizer.fillRectangle(param2.field_u + param1, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_d);
           if (param4) {
             var7 = 16777215;
           }
           var8 = this.field_c + (param1 + param2.field_u);
           var9 = param2.field_t + param3 + this.field_f;
-          SoftwareRasterizer.b(var8, var9, this.field_i, this.field_j, 5592405);
-          SoftwareRasterizer.e(var8, var9, this.field_i, this.field_j, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_i, this.field_j, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_i, this.field_j, var7);
           if (var11.field_H) {
             SoftwareRasterizer.drawLine(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
             SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, var9 + this.field_j, 1);

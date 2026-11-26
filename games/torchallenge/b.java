@@ -28,7 +28,7 @@ abstract class b extends kj {
         if (null == nb.field_a) {
           nb.field_a = new Sprite(this.field_p, this.field_l);
           FullscreenFocusCanvas.a(-15, nb.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
@@ -38,7 +38,7 @@ abstract class b extends kj {
         if (this.field_p > nb.field_a.storedWidth) {
           nb.field_a = new Sprite(this.field_p, this.field_l);
           FullscreenFocusCanvas.a(-15, nb.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
@@ -47,7 +47,7 @@ abstract class b extends kj {
         }
         if (nb.field_a.storedHeight >= this.field_l) {
           FullscreenFocusCanvas.a(-15, nb.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.c(103, 0, 0);
           super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
           ie.b((byte) -9);
@@ -56,7 +56,7 @@ abstract class b extends kj {
         }
         nb.field_a = new Sprite(this.field_p, this.field_l);
         FullscreenFocusCanvas.a(-15, nb.field_a);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearRaster();
         this.c(103, 0, 0);
         super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
         ie.b((byte) -9);
@@ -80,16 +80,16 @@ abstract class b extends kj {
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = SocketConnector.field_l[param5][param2][1][0];
         int var8 = SocketConnector.field_l[param5][param2][1][1];
-        SoftwareRasterizer.a(ae.field_y);
-        SoftwareRasterizer.a(var7, param6, var8, param4);
+        SoftwareRasterizer.saveClip(ae.field_y);
+        SoftwareRasterizer.intersectClip(var7, param6, var8, param4);
         we.field_e[param1][param2].drawOpaque(var7, param6);
         if (param0 < 105) {
           b.a(-8);
         } else {
-          SoftwareRasterizer.b(ae.field_y);
+          SoftwareRasterizer.restoreClip(ae.field_y);
           return;
         }
-        SoftwareRasterizer.b(ae.field_y);
+        SoftwareRasterizer.restoreClip(ae.field_y);
     }
 
     abstract void c(int param0, int param1, int param2);

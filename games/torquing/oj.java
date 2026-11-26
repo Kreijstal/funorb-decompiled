@@ -40,17 +40,17 @@ final class oj implements WidgetRenderer {
             param3 = param3 & var11.field_x;
           }
           var7 = 5592405;
-          SoftwareRasterizer.d(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_d);
+          SoftwareRasterizer.fillRectangle(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
           var8 = param4.x + param2 + this.field_k;
           var9 = this.field_j + param4.y + param1;
-          SoftwareRasterizer.e(var8, var9, this.field_i, this.field_e, 5592405);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_i, this.field_e, 5592405);
           if (param0 <= 89) {
             return;
           }
-          SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, var7);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_A) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
             SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, this.field_e + var9, 1);

@@ -42,7 +42,7 @@ final class PolygonScanlineRasterizer {
               integerLocal2 = integerArrayArgument3[integerLocal4] + integerArrayArgument4[integerLocal4] + SoftwareRaster.integerState0282;
             }
           }
-          SoftwareRaster.performAction0655(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1, integerArgument2);
+          SoftwareRaster.drawHorizontalLineAlpha(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1, integerArgument2);
         }
     }
 
@@ -245,7 +245,7 @@ final class PolygonScanlineRasterizer {
           integerLocal1 = integerState0565;
           integerLocal2 = integerState0563;
           integerLocal3 = integerState0561;
-          SoftwareRaster.performAction0639(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1);
+          SoftwareRaster.drawHorizontalLine(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1);
         }
     }
 

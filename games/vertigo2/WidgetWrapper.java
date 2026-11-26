@@ -145,8 +145,8 @@ abstract class WidgetWrapper extends UiWidget implements dq {
           var6 = Archive.field_f * var4 + 2;
           var7 = jf.a(var5, 12, var2_int, 1);
           var8 = dm.a(20, 0, var6, var3);
-          bi.e(var7, var8, var5, var6, 0);
-          bi.b(1 + var7, var8 + 1, var5 - 2, var6 - 2, 16777088);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5 - 2, var6 - 2, 16777088);
           AccountRequestState.field_b.field_z.a(param0, var7 + 3, -AccountRequestState.field_b.field_z.field_z + (1 + (var8 + hc.field_b)), 500, 1000, 0, -1, 0, 0, Archive.field_f);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "oh.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -1358,38 +1358,38 @@ final class LevelScreen extends ib {
               if (var8 > 0) {
                 if (var8 > var9 &&
                   mg.field_t <= var9) {
-                  ti.a(var6 + 320 << 4, 240 + var7 << 4, 256, 255 * var9 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 256, 255 * var9 / var8, ei.field_I);
                 } else if (var8 == var9) {
-                  ti.a(320 + var6 << 4, 240 + var7 << 4, 256, var9 * 255 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 256, var9 * 255 / var8, ei.field_B);
                 } else {
-                  ti.a(var6 + 320 << 4, var7 + 240 << 4, 128, 64, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, var7 + 240 << 4, 128, 64, ei.field_I);
                 }
                 var6 = var6 * 9 / 10;
                 var7 = 9 * var7 / 10;
                 if (var8 > var9 &&
                   mg.field_t <= var9) {
-                  ti.a(var6 + 320 << 4, 240 + var7 << 4, 192, var9 * 255 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 192, var9 * 255 / var8, ei.field_I);
                 }
                 if (var9 == var8) {
-                  ti.a(320 + var6 << 4, var7 + 240 << 4, 192, 255 * var9 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, var7 + 240 << 4, 192, 255 * var9 / var8, ei.field_B);
                 }
                 var7 = 9 * var7 / 10;
                 var6 = 9 * var6 / 10;
                 if (var8 > var9 &&
                   var9 >= mg.field_t) {
-                  ti.a(320 + var6 << 4, 240 + var7 << 4, 128, var9 * 255 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 128, var9 * 255 / var8, ei.field_I);
                 }
                 if (~var9 == ~var8) {
-                  ti.a(320 + var6 << 4, var7 + 240 << 4, 128, 255 * var9 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(320 + var6 << 4, var7 + 240 << 4, 128, 255 * var9 / var8, ei.field_B);
                 }
                 var6 = 9 * var6 / 10;
                 var7 = 9 * var7 / 10;
                 if (var8 > var9 &&
                   mg.field_t <= var9) {
-                  ti.a(var6 + 320 << 4, 240 + var7 << 4, 64, var9 * 255 / var8, ei.field_I);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, var9 * 255 / var8, ei.field_I);
                 }
                 if (~var8 == ~var9) {
-                  ti.a(var6 + 320 << 4, 240 + var7 << 4, 64, 255 * var9 / var8, ei.field_B);
+                  SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, 255 * var9 / var8, ei.field_B);
                 }
               }
               var9++;
@@ -1418,7 +1418,7 @@ final class LevelScreen extends ib {
             var2 = qj.field_a;
             var3 = var2.field_N + 200;
             var4 = 4 + (var2.field_x + var2.field_r);
-            ti.b(112, 190, 416, 20 + 5 * var4 + 60, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(112, 190, 416, 20 + 5 * var4 + 60, 0, 192);
             ed.a(-6313, 103, 183, fg.field_P, 434, 80 + var4 * 5 + 14);
             var2.c(qj.field_b, 320, var3, 10742263, -1);
             stackIn_104_0 = var2;
@@ -1459,7 +1459,7 @@ final class LevelScreen extends ib {
             stackIn_153_3 = 6;
             stackIn_154_4 = !(tf.field_a.isEmpty(param0 - 85));
             ((ub) (Object) stackIn_145_0).c(stellarshard.a(stackIn_146_1, stackIn_150_2, stackIn_153_3, stackIn_154_4), 320, 4 * var4 + var3 + 60, 10742263, -1);
-            ti.b(112, 190, 416, 80 + var4 * 5, 16777215, n.field_L);
+            SoftwareRasterizer.fillRectangleAlpha(112, 190, 416, 80 + var4 * 5, 16777215, n.field_L);
           }
           if (decompiledFrameCompleted1) {
             stackIn_156_0 = ~tl.field_c;
@@ -1472,7 +1472,7 @@ final class LevelScreen extends ib {
           }
           if (tl.field_c == 1) {
             hk.field_l[1].e(0, 0);
-            ti.b(12, 96, 616, 336, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(12, 96, 616, 336, 0, 192);
             ed.a(-6313, 3, 89, fg.field_P, 634, 343);
             ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             var2_intLifetime1 = 84;
@@ -1552,13 +1552,13 @@ final class LevelScreen extends ib {
             qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, 1 + var3Lifetime1Lifetime4, 0, -1);
             qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 - 1, 0, -1);
             qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 16777215, -1);
-            ti.b(12, 96, 616, 336, 16777215, n.field_L);
+            SoftwareRasterizer.fillRectangleAlpha(12, 96, 616, 336, 16777215, n.field_L);
           }
           boolean decompiledFrameCompleted0 = true;
           if (tl.field_c == 2) {
             boolean decompiledFrameRemainder1 = true;
             hk.field_l[0].e(0, 0);
-            ti.b(128, 105, 384, 295, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(128, 105, 384, 295, 0, 192);
             ed.a(-6313, 119, 98, fg.field_P, 402, 302);
             ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             if (DualLinkNode.a(-1)) {
@@ -1681,13 +1681,13 @@ final class LevelScreen extends ib {
                     qj.field_a.c(pd.field_p, 321, 160, 0, -1);
                     qj.field_a.c(pd.field_p, 320, 160, 16777215, -1);
                   }
-                  ti.d(129, 0, 511, 479);
+                  SoftwareRasterizer.setClip(129, 0, 511, 479);
                   qj.field_a.c(sj.field_C, 320 - bf.field_c, 366, 0, -1);
                   qj.field_a.c(sj.field_C, -bf.field_c + 320, 368, 0, -1);
                   qj.field_a.c(sj.field_C, 319 - bf.field_c, 367, 0, -1);
                   qj.field_a.c(sj.field_C, -bf.field_c + 321, 367, 0, -1);
                   qj.field_a.c(sj.field_C, 320 - bf.field_c, 367, 16777215, -1);
-                  ti.b();
+                  SoftwareRasterizer.resetClip();
                 }
               }
               ic.a("                                                ", 8, -1, false, 320, 5883647, 411);
@@ -1713,21 +1713,21 @@ final class LevelScreen extends ib {
               }
             }
             if (decompiledFrameCompleted0) {
-              ti.b(128, 105, 384, 295, 16777215, n.field_L);
+              SoftwareRasterizer.fillRectangleAlpha(128, 105, 384, 295, 16777215, n.field_L);
             }
           }
           if (tl.field_c == 3) {
             this.field_r = -1;
-            ti.b(108, 112, 424, 296, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(108, 112, 424, 296, 0, 192);
             ed.a(-6313, 99, 105, fg.field_P, 442, 303);
-            ti.e(175, 129, 282, 82, 4, 2387345);
+            SoftwareRasterizer.drawRoundedRectangleOutline(175, 129, 282, 82, 4, 2387345);
             boolean decompiledSharedTail0 = (3 == bb.field_d);
             if (!decompiledSharedTail0) {
-              ti.e(130, -96 + (qj.field_a.field_N * 5 / 2 + 321), 380, 132, 4, 2387345);
+              SoftwareRasterizer.drawRoundedRectangleOutline(130, -96 + (qj.field_a.field_N * 5 / 2 + 321), 380, 132, 4, 2387345);
               decompiledSharedTail0 = (var14 != 0);
             }
             if (decompiledSharedTail0) {
-              ti.e(126, -98 + (330 + 5 * qj.field_a.field_N / 2) - 7, 388, 132, 4, 2387345);
+              SoftwareRasterizer.drawRoundedRectangleOutline(126, -98 + (330 + 5 * qj.field_a.field_N / 2) - 7, 388, 132, 4, 2387345);
             }
             if (oc.field_d) {
               hk.field_l[3].e(0, 0);
@@ -1778,12 +1778,12 @@ final class LevelScreen extends ib {
                       this.field_r = var7Lifetime2;
                       var8Lifetime1 = 2;
                       if (this.field_u != -1) {
-                        ti.e(var2_intLifetime3 - 2, -2 + var3Lifetime3, 36, 36, 4, 1193544);
+                        SoftwareRasterizer.drawRoundedRectangleOutline(var2_intLifetime3 - 2, -2 + var3Lifetime3, 36, 36, 4, 1193544);
                       }
                     }
                     if (~var7Lifetime2 == ~this.field_u) {
                       var8Lifetime1 = 2;
-                      ti.e(-3 + var2_intLifetime3, var3Lifetime3 - 3, 38, 38, 4, 2387345);
+                      SoftwareRasterizer.drawRoundedRectangleOutline(-3 + var2_intLifetime3, var3Lifetime3 - 3, 38, 38, 4, 2387345);
                     }
                     if (0 == (1 << var7Lifetime2 & var4Lifetime2)) {
                       decompiledFrameRemainder6 = !(oc.field_d);
@@ -1859,7 +1859,7 @@ final class LevelScreen extends ib {
               }
               break;
             }
-            ti.b(stackIn_407_0, stackIn_407_1, 424, 328, 16777215, n.field_L);
+            SoftwareRasterizer.fillRectangleAlpha(stackIn_407_0, stackIn_407_1, 424, 328, 16777215, n.field_L);
           }
           super.a(param0);
           return;

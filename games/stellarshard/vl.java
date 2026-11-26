@@ -169,8 +169,8 @@ final class vl {
           if (this.field_f == 0) {
             if (this.field_n != -4) {
               if (this.field_n == -2) {
-                ti.c(var3_int, var4, 5 + this.field_p, 16777215 - var5, 32);
-                ti.e(var3_int, var4, 1 + this.field_p, var5);
+                SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 5 + this.field_p, 16777215 - var5, 32);
+                SoftwareRasterizer.fillCircle(var3_int, var4, 1 + this.field_p, var5);
               } else {
                 if (this.field_n != -1 &&
                   this.field_n != 0) {
@@ -179,57 +179,57 @@ final class vl {
                     if (this.field_n == 2) {
                       var6_intLifetime1 = (int)(Math.sin(0.1 * (double)this.field_b) * (double)this.field_p);
                       var7Lifetime1 = (int)(Math.cos((double)this.field_b * 0.1) * (double)this.field_p);
-                      ti.c(var3_int + var6_intLifetime1, var4 + var7Lifetime1, this.field_p + 1, 0, 128);
-                      ti.c(var3_int - var6_intLifetime1, -var7Lifetime1 + var4, 1 + this.field_p, 0, 128);
-                      ti.c(var3_int + var6_intLifetime1, var4 + var7Lifetime1, this.field_p, var5, 128);
-                      ti.c(var3_int - var6_intLifetime1, var4 - var7Lifetime1, this.field_p, var5, 128);
-                      ti.e(var3_int + var6_intLifetime1, var4 + var7Lifetime1, 1 + this.field_p / 3, 16777215);
-                      ti.e(var3_int - var6_intLifetime1, -var7Lifetime1 + var4, this.field_p / 3 + 1, 16777215);
+                      SoftwareRasterizer.fillCircleAlpha(var3_int + var6_intLifetime1, var4 + var7Lifetime1, this.field_p + 1, 0, 128);
+                      SoftwareRasterizer.fillCircleAlpha(var3_int - var6_intLifetime1, -var7Lifetime1 + var4, 1 + this.field_p, 0, 128);
+                      SoftwareRasterizer.fillCircleAlpha(var3_int + var6_intLifetime1, var4 + var7Lifetime1, this.field_p, var5, 128);
+                      SoftwareRasterizer.fillCircleAlpha(var3_int - var6_intLifetime1, var4 - var7Lifetime1, this.field_p, var5, 128);
+                      SoftwareRasterizer.fillCircle(var3_int + var6_intLifetime1, var4 + var7Lifetime1, 1 + this.field_p / 3, 16777215);
+                      SoftwareRasterizer.fillCircle(var3_int - var6_intLifetime1, -var7Lifetime1 + var4, this.field_p / 3 + 1, 16777215);
                     } else {
                       if (((this.field_n != 3)) &&
                         ((7 != this.field_n)) &&
                         ((this.field_n != 4)) &&
                         ((this.field_n != 9))) {
                         if (this.field_n == 5) {
-                          ti.c(var3_int, var4, this.field_p + 5, var5, 32);
-                          ti.c(var3_int, var4, 3 + this.field_p, var5, 32);
-                          ti.c(var3_int, var4, this.field_p + 1, 16777215, 32);
+                          SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_p + 5, var5, 32);
+                          SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 3 + this.field_p, var5, 32);
+                          SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_p + 1, 16777215, 32);
                         } else {
                           if (((this.field_n != -3)) && ((this.field_n == 10 ||
                             this.field_n == 11))) {
-                            ti.a(var3_int << 4, var4 << 4, this.field_p + 6 << 4, 192, ei.field_I);
+                            SoftwareRasterizer.addRadialGlow(var3_int << 4, var4 << 4, this.field_p + 6 << 4, 192, ei.field_I);
                           }
                         }
                       }
                     }
                   } else {
-                    ti.e(var3_int, var4, this.field_p + 1, var5);
-                    ti.e((int)(-(this.field_j / 2.0) + (double)var3_int), (int)((double)var4 - this.field_a / 2.0), this.field_p / 2 + 1, var5);
-                    ti.e((int)(-(this.field_j / 4.0) + (double)var3_int), (int)((double)var4 - this.field_a / 4.0), 1 + this.field_p / 4, var5);
+                    SoftwareRasterizer.fillCircle(var3_int, var4, this.field_p + 1, var5);
+                    SoftwareRasterizer.fillCircle((int)(-(this.field_j / 2.0) + (double)var3_int), (int)((double)var4 - this.field_a / 2.0), this.field_p / 2 + 1, var5);
+                    SoftwareRasterizer.fillCircle((int)(-(this.field_j / 4.0) + (double)var3_int), (int)((double)var4 - this.field_a / 4.0), 1 + this.field_p / 4, var5);
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ti.e(var3_int, var4, this.field_p + 1, var5);
-                  ti.c((int)(-this.field_j + (double)var3_int), (int)(-this.field_a + (double)var4), this.field_p / 2 + 1, var5, 128);
-                  ti.c((int)((double)var3_int - this.field_j * 2.0), (int)(-(this.field_a * 2.0) + (double)var4), 1 + this.field_p / 3, var5, 64);
-                  ti.c((int)(-(this.field_j * 3.0) + (double)var3_int), (int)(-(this.field_a * 3.0) + (double)var4), 1 + this.field_p / 4, var5, 32);
-                  ti.e(var3_int, var4, 1 + this.field_p / 2, 16777215);
+                  SoftwareRasterizer.fillCircle(var3_int, var4, this.field_p + 1, var5);
+                  SoftwareRasterizer.fillCircleAlpha((int)(-this.field_j + (double)var3_int), (int)(-this.field_a + (double)var4), this.field_p / 2 + 1, var5, 128);
+                  SoftwareRasterizer.fillCircleAlpha((int)((double)var3_int - this.field_j * 2.0), (int)(-(this.field_a * 2.0) + (double)var4), 1 + this.field_p / 3, var5, 64);
+                  SoftwareRasterizer.fillCircleAlpha((int)(-(this.field_j * 3.0) + (double)var3_int), (int)(-(this.field_a * 3.0) + (double)var4), 1 + this.field_p / 4, var5, 32);
+                  SoftwareRasterizer.fillCircle(var3_int, var4, 1 + this.field_p / 2, 16777215);
                 }
               }
             } else {
-              ti.c(var3_int, var4, 5 + this.field_p, -var5 + 16777215, 32);
-              ti.e(var3_int, var4, this.field_p, var5);
+              SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 5 + this.field_p, -var5 + 16777215, 32);
+              SoftwareRasterizer.fillCircle(var3_int, var4, this.field_p, var5);
             }
           }
           if (this.field_f == 1) {
             param1.e();
-            ti.c(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
+            SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
             pd.field_h.a((byte) -107);
           }
           if (this.field_f == 4) {
             param1.e();
-            ti.c(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
+            SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
             pd.field_h.a((byte) -107);
           }
           if (this.field_f == 2 &&
@@ -249,21 +249,21 @@ final class vl {
             pg.field_hb[var6_intLifetime3].c(-var7Lifetime3Lifetime1 + var3_int, var4 - var7Lifetime3Lifetime1, var7Lifetime3Lifetime1 * 2, var7Lifetime3Lifetime1 * 2, -this.field_b + 255);
           }
           if (3 == this.field_f) {
-            ti.c(var3_int, var4, 7, 0, 128);
-            ti.e(var3_int, var4, 2, var5);
-            ti.c(var3_int, var4, 3, var5, 128);
+            SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 7, 0, 128);
+            SoftwareRasterizer.fillCircle(var3_int, var4, 2, var5);
+            SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 3, var5, 128);
             for (var6_intLifetime4 = 0; var6_intLifetime4 < 5; var6_intLifetime4++) {
-              ti.c((int)((double)var3_int - this.field_j), (int)((double)var4 - this.field_a), 3, var5, 128 - 15 * var6_intLifetime4);
+              SoftwareRasterizer.fillCircleAlpha((int)((double)var3_int - this.field_j), (int)((double)var4 - this.field_a), 3, var5, 128 - 15 * var6_intLifetime4);
             }
           }
           if (this.field_f == 5) {
             if (-5 == this.field_n) {
               for (var6 = 0.0; 1.0 > var6; var6 = var6 + 0.1) {
-                ti.a((int)(var6 * this.field_j + (double)var3_int) << 4, (int)((double)var4 + var6 * this.field_a) << 4, (int)(6.0 + (-var6 + 1.0) * (double)this.field_p) << 4, 32 - (int)(32.0 * var6), ei.field_I);
+                SoftwareRasterizer.addRadialGlow((int)(var6 * this.field_j + (double)var3_int) << 4, (int)((double)var4 + var6 * this.field_a) << 4, (int)(6.0 + (-var6 + 1.0) * (double)this.field_p) << 4, 32 - (int)(32.0 * var6), ei.field_I);
               }
             } else {
               for (var6 = 0.0; var6 < 1.0; var6 = var6 + 0.1) {
-                ti.c((int)((double)var3_int + this.field_j * var6), (int)((double)var4 + var6 * this.field_a), 1 + this.field_p, var5, 255 - 64 * this.field_b);
+                SoftwareRasterizer.fillCircleAlpha((int)((double)var3_int + this.field_j * var6), (int)((double)var4 + var6 * this.field_a), 1 + this.field_p, var5, 255 - 64 * this.field_b);
               }
             }
           }

@@ -58,7 +58,7 @@ final class nl extends fb {
             var14.a((byte) -99);
             if (param4) {
               for (var15 = param2 + param6; var15 < param6 + 2 * param2; var15++) {
-                kh.a(var9, var15, 2 * var8, 0, (-param2 + var15 - param6) * 256 / param2);
+                SoftwareRasterizer.drawHorizontalLineAlpha(var9, var15, 2 * var8, 0, (-param2 + var15 - param6) * 256 / param2);
               }
             }
           }

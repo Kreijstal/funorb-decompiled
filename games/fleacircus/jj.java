@@ -121,15 +121,15 @@ abstract class jj extends db {
         if (param2 != 17344) {
           return;
         }
-        gb.a(6 + param1, param0 + 35, this.field_u - 12, this.field_j - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param1, param0 + 35, this.field_u - 12, this.field_j - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (var8 >= gb.field_b &&
-            var8 < gb.field_i) {
+          if (var8 >= SoftwareRasterizer.field_b &&
+            var8 < SoftwareRasterizer.field_i) {
             var9 = (-var5 + var6) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_u;
@@ -142,7 +142,7 @@ abstract class jj extends db {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  gb.field_a[var8 * gb.field_d + param1 + var10] = var13;
+                  SoftwareRasterizer.field_a[var8 * SoftwareRasterizer.field_d + param1 + var10] = var13;
                 }
                 var10++;
               }
@@ -159,7 +159,7 @@ abstract class jj extends db {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    gb.field_a[var8 * gb.field_d + param1 + var11] = var15;
+                    SoftwareRasterizer.field_a[var8 * SoftwareRasterizer.field_d + param1 + var11] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -170,7 +170,7 @@ abstract class jj extends db {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            gb.b(var10 + param1, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param1, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -183,8 +183,8 @@ abstract class jj extends db {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          gb.b(param1, var8Lifetime1, 6, var9Lifetime1);
-          gb.b(-6 + this.field_u + param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + this.field_u + param1, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -199,8 +199,8 @@ abstract class jj extends db {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          gb.b(param1, var8Lifetime2, 6, var9Lifetime2);
-          gb.b(param1 + (this.field_u - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1 + (this.field_u - 6), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

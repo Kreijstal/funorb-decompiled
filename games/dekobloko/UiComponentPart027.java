@@ -78,7 +78,7 @@ final class UiComponentPart027 extends UiComponent {
               doubleLocal3 = Math.sqrt(-doubleLocal3 + 1.0);
               integerLocal4 = 1.0 <= doubleLocal3 ? 255 : (int)(255.0 * doubleLocal3);
             }
-            SoftwareRaster.performAction0638(integerLocal2, integerLocal1, integerLocal4 << 8 | integerLocal4 | integerLocal4 << 16);
+            SoftwareRaster.setPixel(integerLocal2, integerLocal1, integerLocal4 << 8 | integerLocal4 | integerLocal4 << 16);
           }
         }
         ByteStorage.performAction1060((byte) -5);
@@ -113,13 +113,13 @@ final class UiComponentPart027 extends UiComponent {
           integerLocal5 = -integerLocal13 + integerLocal1;
           integerLocal6 = 128 + (int)(128.0 * (Math.sqrt((double)(integerLocal13 * integerLocal13 - integerLocal5 * integerLocal5)) / (double)integerLocal13));
           integerLocal7 = integerLocal6 >= 256 ? integerLocal3 | integerLocal4 : (integerLocal3 * integerLocal6 & -16711936 | 16711680 & integerLocal4 * integerLocal6) >>> 8;
-          SoftwareRaster.performAction0639(integerLocal2, integerLocal1, this.integerState0675, integerLocal7);
+          SoftwareRaster.drawHorizontalLine(integerLocal2, integerLocal1, this.integerState0675, integerLocal7);
           integerLocal10 = integerArgument2 & 65280;
-          SoftwareRaster.performAction0639(-(this.integerState0675 * 2) + integerLocal2, integerLocal1, this.integerState0675, integerLocal7);
+          SoftwareRaster.drawHorizontalLine(-(this.integerState0675 * 2) + integerLocal2, integerLocal1, this.integerState0675, integerLocal7);
           integerLocal9 = 16711935 & integerArgument2;
           integerLocal11 = integerLocal6 >= 256 ? integerLocal9 | integerLocal10 : (16711680 & integerLocal10 * integerLocal6 | -16711936 & integerLocal9 * integerLocal6) >>> 8;
-          SoftwareRaster.performAction0639(integerLocal2 + this.integerState0675, integerLocal1, this.integerState0675, integerLocal11);
-          SoftwareRaster.performAction0639(-this.integerState0675 + integerLocal2, integerLocal1, this.integerState0675, integerLocal11);
+          SoftwareRaster.drawHorizontalLine(integerLocal2 + this.integerState0675, integerLocal1, this.integerState0675, integerLocal11);
+          SoftwareRaster.drawHorizontalLine(-this.integerState0675 + integerLocal2, integerLocal1, this.integerState0675, integerLocal11);
         }
         ByteStorage.performAction1060((byte) -5);
         return rgbSpriteLocal12;

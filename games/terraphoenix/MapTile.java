@@ -659,7 +659,7 @@ final class MapTile {
               tg.field_l == this.field_r) {
               var9 = oi.field_J;
               oi.field_J.a();
-              SoftwareRasterizer.f(0, 0, 128, 160, 0);
+              SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
               k.field_f.a(0);
             }
             var8 = -(this.field_l * 48 / 100) + param3;
@@ -698,10 +698,10 @@ final class MapTile {
                 if (var11_int < 0) {
                   if (var9 != null) {
                     ((Sprite) (var9)).a();
-                    SoftwareRasterizer.a(32, 124, 16777215);
-                    SoftwareRasterizer.a(64, 108, 16777215);
-                    SoftwareRasterizer.a(64, 139, 16777215);
-                    SoftwareRasterizer.a(95, 124, 16777215);
+                    SoftwareRasterizer.setPixel(32, 124, 16777215);
+                    SoftwareRasterizer.setPixel(64, 108, 16777215);
+                    SoftwareRasterizer.setPixel(64, 139, 16777215);
+                    SoftwareRasterizer.setPixel(95, 124, 16777215);
                     k.field_f.a(0);
                   }
                 } else {
@@ -801,10 +801,10 @@ final class MapTile {
                 } else {
                   if (var9 != null) {
                     ((Sprite) (var9)).a();
-                    SoftwareRasterizer.a(32, 124, 16777215);
-                    SoftwareRasterizer.a(64, 108, 16777215);
-                    SoftwareRasterizer.a(64, 139, 16777215);
-                    SoftwareRasterizer.a(95, 124, 16777215);
+                    SoftwareRasterizer.setPixel(32, 124, 16777215);
+                    SoftwareRasterizer.setPixel(64, 108, 16777215);
+                    SoftwareRasterizer.setPixel(64, 139, 16777215);
+                    SoftwareRasterizer.setPixel(95, 124, 16777215);
                     k.field_f.a(0);
                   }
                 }
@@ -869,7 +869,7 @@ final class MapTile {
             if (this.field_p > 0) {
               li.field_a = true;
               if (this.field_p < 64) {
-                SoftwareRasterizer.b(param0, -24 + var8, 32, 16777215, 4 * this.field_p);
+                SoftwareRasterizer.fillCircleAlpha(param0, -24 + var8, 32, 16777215, 4 * this.field_p);
               }
             }
             if ((this.field_z ||
@@ -917,7 +917,7 @@ final class MapTile {
             tg.field_l == this.field_r) {
             var9Lifetime1 = oi.field_J;
             oi.field_J.a();
-            SoftwareRasterizer.f(0, 0, 128, 160, 0);
+            SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }
           if (tg.field_l < this.field_r) {
@@ -953,10 +953,10 @@ final class MapTile {
                   if (0 > this.field_b) {
                     if (var9Lifetime1 != null) {
                       ((Sprite) (var9Lifetime1)).a();
-                      SoftwareRasterizer.a(32, 124, 16777215);
-                      SoftwareRasterizer.a(64, 108, 16777215);
-                      SoftwareRasterizer.a(64, 139, 16777215);
-                      SoftwareRasterizer.a(95, 124, 16777215);
+                      SoftwareRasterizer.setPixel(32, 124, 16777215);
+                      SoftwareRasterizer.setPixel(64, 108, 16777215);
+                      SoftwareRasterizer.setPixel(64, 139, 16777215);
+                      SoftwareRasterizer.setPixel(95, 124, 16777215);
                       k.field_f.a(0);
                     }
                   } else {
@@ -1118,10 +1118,10 @@ final class MapTile {
                 }
                 if (var9Lifetime1 != null) {
                   ((Sprite) (var9Lifetime1)).a();
-                  SoftwareRasterizer.a(32, 124, 16777215);
-                  SoftwareRasterizer.a(64, 108, 16777215);
-                  SoftwareRasterizer.a(64, 139, 16777215);
-                  SoftwareRasterizer.a(95, 124, 16777215);
+                  SoftwareRasterizer.setPixel(32, 124, 16777215);
+                  SoftwareRasterizer.setPixel(64, 108, 16777215);
+                  SoftwareRasterizer.setPixel(64, 139, 16777215);
+                  SoftwareRasterizer.setPixel(95, 124, 16777215);
                   k.field_f.a(0);
                 }
               } else {
@@ -1159,7 +1159,7 @@ final class MapTile {
                 if (this.field_r == tg.field_l) {
                   var11_intLifetime1Lifetime2 = 65280;
                 }
-                SoftwareRasterizer.d(param0 - 32, -16 + var8Lifetime1, 64, 32, var11_intLifetime1Lifetime2, 128);
+                SoftwareRasterizer.fillRectangleAlpha(param0 - 32, -16 + var8Lifetime1, 64, 32, var11_intLifetime1Lifetime2, 128);
               }
               if (ll.field_c) {
                 if (this.field_g >= 0) {

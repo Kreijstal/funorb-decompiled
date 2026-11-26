@@ -88,10 +88,10 @@ final class bg extends IntrusiveNode {
             sc.field_c = qk.a("benefits", ce.field_a, "arrow", true);
             md.field_a = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font"));
             sc.field_f = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
-            var28 = wj.field_l;
-            var2 = wj.field_k;
-            var3 = wj.field_c;
-            wj.b(ha.field_d);
+            var28 = SoftwareRasterizer.field_l;
+            var2 = SoftwareRasterizer.field_k;
+            var3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ha.field_d);
             var11 = new nh(sc.field_c.field_y + 4, 4 + sc.field_c.field_w);
             var11.c();
             sc.field_c.d(2, 2, rh.field_e);
@@ -118,9 +118,9 @@ final class bg extends IntrusiveNode {
             bc.field_b = null;
             ul.field_c = eg.field_d.a();
             ul.field_c.c();
-            fk.a(2 * wj.field_c / 3, wj.field_k, 0, 64, (byte) 104, 0);
-            wj.a(var28, var2, var3);
-            wj.a(ha.field_d);
+            fk.a(2 * SoftwareRasterizer.field_c / 3, SoftwareRasterizer.field_k, 0, 64, (byte) 104, 0);
+            SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
+            SoftwareRasterizer.restoreClip(ha.field_d);
             ch.field_A = (r.field_b.field_y - DualLinkNode.field_r.field_y) / 2 + 434;
             ka.field_o = 231 + (-DualLinkNode.field_r.field_y + r.field_b.field_y) / 2;
             ce.field_a = null;
@@ -132,10 +132,10 @@ final class bg extends IntrusiveNode {
           }
           if (hf.field_z != null &&
             md.field_a != null) {
-            var29 = wj.field_l;
-            var2Lifetime1 = wj.field_k;
-            var3Lifetime1 = wj.field_c;
-            wj.b(ha.field_d);
+            var29 = SoftwareRasterizer.field_l;
+            var2Lifetime1 = SoftwareRasterizer.field_k;
+            var3Lifetime1 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ha.field_d);
             var14 = a.a(5044, rg.field_d, new String[]{ka.field_p[gd.field_a]});
             var5 = md.field_a.b(var14, ca.field_db);
             var6Lifetime1 = md.field_a.a(var14, ca.field_db, md.field_a.field_S + md.field_a.field_x);
@@ -193,18 +193,18 @@ final class bg extends IntrusiveNode {
             hf.field_z.c(hd.field_B + (hf.field_z.field_z >> 1), (hf.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
             hf.field_z = null;
             qa.field_L.d();
-            wj.a(var29, var2Lifetime1, var3Lifetime1);
-            wj.a(ha.field_d);
+            SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(ha.field_d);
           }
           if (param0 != -11133) {
             field_r = 6;
           }
           if (df.field_b != null &&
             null != sc.field_f) {
-            var30 = wj.field_l;
-            var2Lifetime2 = wj.field_k;
-            var3Lifetime2 = wj.field_c;
-            wj.b(ha.field_d);
+            var30 = SoftwareRasterizer.field_l;
+            var2Lifetime2 = SoftwareRasterizer.field_k;
+            var3Lifetime2 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ha.field_d);
             var16 = new nh(412, 43);
             var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
             df.field_b = null;
@@ -213,15 +213,15 @@ final class bg extends IntrusiveNode {
             p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
             hf.field_D.c();
             var16.d(-hf.field_D.field_D + 199, -hf.field_D.field_v + 83);
-            wj.a(var30, var2Lifetime2, var3Lifetime2);
-            wj.a(ha.field_d);
+            SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(ha.field_d);
           }
           if (null != sa.field_e &&
             null != sc.field_f) {
-            var31 = wj.field_l;
-            var2Lifetime3 = wj.field_k;
-            var3Lifetime3 = wj.field_c;
-            wj.b(ha.field_d);
+            var31 = SoftwareRasterizer.field_l;
+            var2Lifetime3 = SoftwareRasterizer.field_k;
+            var3Lifetime3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ha.field_d);
             var4 = sc.field_f.b(ej.field_b, 640) + 6;
             var5Lifetime1 = 20 + var4 + sa.field_e.field_z;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -231,13 +231,13 @@ final class bg extends IntrusiveNode {
             p.a(var4, 3, 0, 50, 1, -hf.field_D.field_v + 155, var7Lifetime2 + (-hf.field_D.field_D - 4), hf.field_D);
             var8Lifetime1 = -((-sc.field_f.field_S - sc.field_f.field_x + (sa.field_e.field_C - 3)) / 2) - hf.field_D.field_v + 155;
             sa.field_e.d(var6Lifetime2 - hf.field_D.field_D, var8Lifetime1);
-            wj.a(var31, var2Lifetime3, var3Lifetime3);
-            wj.a(ha.field_d);
+            SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(ha.field_d);
             sa.field_e = null;
           }
-          wj.b(ha.field_d);
-          wj.a(16, 16, 608, 112, 15, qf.field_d, em.field_d);
-          wj.a(231, 144, 393, 232, 15, qf.field_d, em.field_d);
+          SoftwareRasterizer.saveClip(ha.field_d);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, qf.field_d, em.field_d);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, qf.field_d, em.field_d);
           if (null != DelegatingCanvas.field_c) {
             DelegatingCanvas.field_c.d(0, 0);
           }

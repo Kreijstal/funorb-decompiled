@@ -41,18 +41,18 @@ final class h implements nn {
             stackIn_4_0 = (ag) (param3);
           }
           var12 = (tb) (stackIn_4_0);
-          si.c(param1 + param3.field_v, param3.field_m + param0, param3.field_s, param3.field_x, this.field_g);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_v, param3.field_m + param0, param3.field_s, param3.field_x, this.field_g);
           if (var12 != null) {
           }
           var7 = param3.field_s - var12.field_G * 2;
           var8 = var12.field_G + param1 + param3.field_v;
           var9 = var12.field_H + param0 + param3.field_m;
-          si.g(var8, var9, var8 + var7, var9, this.field_a);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_a);
           if (param2 != 15430) {
             field_f = (String) null;
           }
           for (var10 = var12.a((byte) 65) - 1; var10 >= 0; var10--) {
-            si.e(var8 + var12.a(var10, -24584) * var7 / var12.j(11884), var9, this.field_h, this.field_e);
+            SoftwareRasterizer.fillCircle(var8 + var12.a(var10, -24584) * var7 / var12.j(11884), var9, this.field_h, this.field_e);
           }
           if (null == this.field_d) {
             return;

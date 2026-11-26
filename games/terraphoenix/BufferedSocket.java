@@ -271,7 +271,7 @@ final class BufferedSocket implements Runnable {
           return false;
         }
         if (param4) {
-          SoftwareRasterizer.d(param3, param2, param0, param5, 16777215, 128);
+          SoftwareRasterizer.fillRectangleAlpha(param3, param2, param0, param5, 16777215, 128);
           return true;
         }
         return true;

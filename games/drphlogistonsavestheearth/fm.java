@@ -42,13 +42,13 @@ final class fm implements cg {
           var12 = (tl) (stackIn_6_0);
           if (var12 == null) {
           }
-          wj.f(param2.field_o + param4, param2.field_m + param3, param2.field_w, param2.field_k, this.field_m);
+          SoftwareRasterizer.fillRectangle(param2.field_o + param4, param2.field_m + param3, param2.field_w, param2.field_k, this.field_m);
           var7 = -(var12.field_L * 2) + param2.field_w;
           var8 = var12.field_L + (param4 + param2.field_o);
           var9 = var12.field_K + (param2.field_m + param3);
-          wj.g(var8, var9, var7 + var8, var9, this.field_f);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_f);
           for (var10 = var12.h(-26) - 1; var10 >= 0; var10--) {
-            wj.b(var7 * var12.a(var10, (byte) 4) / var12.i(-110) + var8, var9, this.field_h, this.field_d);
+            SoftwareRasterizer.fillCircle(var7 * var12.a(var10, (byte) 4) / var12.i(-110) + var8, var9, this.field_h, this.field_d);
           }
           if (this.field_k != null) {
             this.field_k.b(var12.field_p, var8 + var7 / 2, var12.field_K + this.field_k.field_E + var9, this.field_a, this.field_g);

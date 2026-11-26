@@ -72,7 +72,7 @@ final class pk extends ta implements jb, ai {
           lm.field_f.a(this.field_L, 20 + this.field_s + param3, this.field_n + (param0 + 15), this.field_m - 40, this.field_r, 16777215, -1, 1, 0, lm.field_f.field_H);
         }
         if (this.field_K != null) {
-          ul.d(param3 + 10, param0 + 134, -20 + this.field_m, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, param0 + 134, -20 + this.field_m, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

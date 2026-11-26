@@ -27,7 +27,7 @@ final class wa {
           if (var1 == null) {
             var1 = new n();
           }
-          var1.a(na.field_b, -94, na.field_k, na.field_f, na.field_g, na.field_e, na.field_i, na.field_d);
+          var1.a(SoftwareRasterizer.field_b, -94, SoftwareRasterizer.field_k, SoftwareRasterizer.field_f, SoftwareRasterizer.field_g, SoftwareRasterizer.field_e, SoftwareRasterizer.field_i, SoftwareRasterizer.field_d);
           qb.field_g.addLast(1, var1);
           return;
         }

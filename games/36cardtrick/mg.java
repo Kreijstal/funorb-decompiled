@@ -97,10 +97,10 @@ final class mg {
         }
         dl.a(88, id.field_e);
         jb.b();
-        vj.d();
+        SoftwareRasterizer.clearRaster();
         de.b(33);
         if (var5 < 256) {
-          vj.a(0, 0, vj.field_l, vj.field_g, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 0, 256 - var5);
         }
         gg.a(14756);
         if (h.field_F < 150) {
@@ -164,8 +164,8 @@ final class mg {
           for (var1_intLifetime1 = 0; var1_intLifetime1 <= 14; var1_intLifetime1++) {
             ia.field_c[var1_intLifetime1] = new kc(207, 34);
             ia.field_c[var1_intLifetime1].c();
-            vj.c(0, 0, 207, 34, 6962948);
-            vj.g(4, 4, 203, 30);
+            SoftwareRasterizer.fillRectangle(0, 0, 207, 34, 6962948);
+            SoftwareRasterizer.setClip(4, 4, 203, 30);
             field_j[4].b(0, 0);
             var6 = IntrusiveDeque.field_c[var1_intLifetime1];
             var3 = qa.field_b.a(var6);
@@ -182,8 +182,8 @@ final class mg {
           for (var1_intLifetime2 = 15; var1_intLifetime2 <= 21; var1_intLifetime2++) {
             ia.field_c[var1_intLifetime2] = new kc(120, 31);
             ia.field_c[var1_intLifetime2].c();
-            vj.c(0, 0, 207, 34, 6962948);
-            vj.g(2, 2, 118, 29);
+            SoftwareRasterizer.fillRectangle(0, 0, 207, 34, 6962948);
+            SoftwareRasterizer.setClip(2, 2, 118, 29);
             field_j[4].b(0, 0);
             var7 = IntrusiveDeque.field_c[var1_intLifetime2];
             var3Lifetime1 = qa.field_b.a(var7);

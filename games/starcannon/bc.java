@@ -19,7 +19,7 @@ final class bc extends IntrusiveNode {
             field_l = (String) null;
           }
           wj.b(true);
-          ki.a(param0.field_B, param0.field_x, param0.field_q);
+          SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_x, param0.field_q);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "bc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

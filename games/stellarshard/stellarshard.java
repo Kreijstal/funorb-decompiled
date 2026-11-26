@@ -562,7 +562,7 @@ public final class stellarshard extends rb implements cf {
               break;
             }
             var5 = (int)(-((-var6_float + 20.0f) * (-var6_float + 20.0f) / 20.0f) + 40.0f);
-            ti.e(40, (int)(-(var6_float * 2.0f) + 120.0f), var5, (int)(Math.random() * 16.0) * 1052688 | 1);
+            SoftwareRasterizer.fillCircle(40, (int)(-(var6_float * 2.0f) + 120.0f), var5, (int)(Math.random() * 16.0) * 1052688 | 1);
             var6_float = (float)((double)var6_float + 0.1);
           } while (var12 == 0);
           do {
@@ -573,7 +573,7 @@ public final class stellarshard extends rb implements cf {
               break;
             }
             var5 = (int)(40.0f - (var6_float - 20.0f) * (var6_float - 20.0f) / 20.0f);
-            ti.e(40, (int)(120.0f - var6_float * 2.0f), var5, 1 | (int)(16.0 * Math.random()) * 1052688);
+            SoftwareRasterizer.fillCircle(40, (int)(120.0f - var6_float * 2.0f), var5, 1 | (int)(16.0 * Math.random()) * 1052688);
             var6_float = (float)((double)var6_float + 0.1);
           } while (var12 == 0);
           var5 = 0;
@@ -594,7 +594,7 @@ public final class stellarshard extends rb implements cf {
                 var7 = (int)(64.0 * Math.random() + 64.0);
                 var8 = (int)(Math.random() * (double)((128 - var7) * 2) + (double)var7);
                 var9_int = (int)(Math.random() * (double)(2 * (-var7 + 128)) + (double)var7);
-                ti.a(var8 << 4, var9_int << 4, var7 << 4, -var7 + 128, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(var8 << 4, var9_int << 4, var7 << 4, -var7 + 128, eh.field_e);
                 var6++;
               }
               var5++;
@@ -629,7 +629,7 @@ public final class stellarshard extends rb implements cf {
                 }
                 var11 = 0;
                 while (4 > var11) {
-                  ti.a(var7Lifetime1 << 4, var8Lifetime1 << 4, var6Lifetime1 << 4, -var6Lifetime1 + 128, var9);
+                  SoftwareRasterizer.addRadialGlow(var7Lifetime1 << 4, var8Lifetime1 << 4, var6Lifetime1 << 4, -var6Lifetime1 + 128, var9);
                   stackIn_35_0 = 0;
                   stackIn_35_1 = var11;
                   if (stackIn_35_0 == stackIn_35_1) {
@@ -2855,7 +2855,7 @@ public final class stellarshard extends rb implements cf {
           GameApplet.b(-53);
           MouseHandler.clearStaticReferences((byte) -20);
           MouseWheelInput.clearStaticReferences(31147);
-          ti.a();
+          SoftwareRasterizer.clearStaticReferences();
           pf.a(30300);
           t.a(param0 ^ 6079);
           wi.clearStaticReferences((byte) -93);
@@ -3431,7 +3431,7 @@ public final class stellarshard extends rb implements cf {
                 if (1 == var4_int) {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
                   MouseWheelInput.field_d[cg.field_c][var6_int].e();
-                  ti.f(0, 0, 96, 96, 0);
+                  SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
                   MouseWheelInput.field_d[cg.field_c][var6_int].d();
@@ -3439,7 +3439,7 @@ public final class stellarshard extends rb implements cf {
                 if (0 == var4_int) {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
                   MouseWheelInput.field_d[cg.field_c][var6_int].e();
-                  ti.f(0, 0, 96, 96, 0);
+                  SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
                   MouseWheelInput.field_d[cg.field_c][var6_int].d();
@@ -3448,7 +3448,7 @@ public final class stellarshard extends rb implements cf {
                   var4_int == 4) {
                   rd.field_a[cg.field_c - 8][var6_int >> 2] = new Sprite(96, 96);
                   rd.field_a[-8 + cg.field_c][var6_int >> 2].e();
-                  ti.f(0, 0, 96, 96, 0);
+                  SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
                   rd.field_a[-8 + cg.field_c][var6_int >> 2].d();
@@ -3456,7 +3456,7 @@ public final class stellarshard extends rb implements cf {
                 if (var4_int == 3) {
                   cm.field_d[var6_int >> 1] = new Sprite(96, 96);
                   cm.field_d[var6_int >> 1].e();
-                  ti.f(0, 0, 96, 96, 0);
+                  SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, 2500, -1L);
                   cm.field_d[var6_int >> 1].d();
@@ -3615,8 +3615,8 @@ public final class stellarshard extends rb implements cf {
                 }
                 var7_ref = n.a(qd.a(bh.field_a, (String) (var6), "", (byte) 42), (byte) -42, true);
                 var7_ref.e();
-                ti.d(1, 1, 0, 0, 496, 496);
-                var8 = ti.field_a;
+                SoftwareRasterizer.blurRectangle(1, 1, 0, 0, 496, 496);
+                var8 = SoftwareRasterizer.field_a;
                 var9 = 0;
                 scanLoop1: while (true) {
                   if (var8.length > var9) {
@@ -3639,23 +3639,23 @@ public final class stellarshard extends rb implements cf {
                     var10 = stackIn_236_0;
                     while (var10 < 4) {
                       var4_ref.e();
-                      ti.d(2, 2, 126, 126);
+                      SoftwareRasterizer.setClip(2, 2, 126, 126);
                       var7_ref.e(2 + -var9 * 124, -var10 * 124 + 2);
-                      ti.d(0, 2, 1, 126);
+                      SoftwareRasterizer.setClip(0, 2, 1, 126);
                       var4_ref.e(-2, 0);
-                      ti.d(1, 2, 2, 126);
+                      SoftwareRasterizer.setClip(1, 2, 2, 126);
                       var4_ref.e(-1, 0);
-                      ti.d(127, 2, 128, 126);
+                      SoftwareRasterizer.setClip(127, 2, 128, 126);
                       var4_ref.e(2, 0);
-                      ti.d(126, 2, 127, 126);
+                      SoftwareRasterizer.setClip(126, 2, 127, 126);
                       var4_ref.e(1, 0);
-                      ti.d(0, 0, 128, 1);
+                      SoftwareRasterizer.setClip(0, 0, 128, 1);
                       var4_ref.e(0, -2);
-                      ti.d(0, 1, 128, 2);
+                      SoftwareRasterizer.setClip(0, 1, 128, 2);
                       var4_ref.e(0, -1);
-                      ti.d(0, 127, 128, 128);
+                      SoftwareRasterizer.setClip(0, 127, 128, 128);
                       var4_ref.e(0, 2);
-                      ti.d(0, 126, 128, 127);
+                      SoftwareRasterizer.setClip(0, 126, 128, 127);
                       var4_ref.e(0, 1);
                       mf.field_a[var9 + var10 * 4 + var5 * 16] = var4_ref.a();
                       var10++;
@@ -4167,7 +4167,7 @@ public final class stellarshard extends rb implements cf {
             if (decompiledFrameCompleted5) {
               if (this.field_G != null) {
                 this.field_G.e();
-                ti.f(0, 0, 640, 480, 0);
+                SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
                 pd.field_h.a((byte) -107);
                 if (var20 != 0) {
                   this.field_G = new Sprite(640, 480);
@@ -4299,7 +4299,7 @@ public final class stellarshard extends rb implements cf {
                   DualLinkDequeIterator.field_i) {
                   if (ag.field_a > 0 &&
                     128 > ag.field_a) {
-                    ti.e(10, 330, 4, 16711680);
+                    SoftwareRasterizer.fillCircle(10, 330, 4, 16711680);
                   }
                   if (ag.field_a > 0 &&
                     ag.field_a < 128) {
@@ -4330,8 +4330,8 @@ public final class stellarshard extends rb implements cf {
             }
             if (DualLinkDequeIterator.field_i) {
               var5_int = 148;
-              ti.b(1, 351, var5_int, 128, 65280, 64);
-              ti.d(2, 352, var5_int - 1, 478);
+              SoftwareRasterizer.fillRectangleAlpha(1, 351, var5_int, 128, 65280, 64);
+              SoftwareRasterizer.setClip(2, 352, var5_int - 1, 478);
               var6_intLifetime2 = 0;
               while (true) {
                 if (1000 > var6_intLifetime2) {
@@ -4343,7 +4343,7 @@ public final class stellarshard extends rb implements cf {
                     continue;
                   }
                 } else {
-                  ti.b();
+                  SoftwareRasterizer.resetClip();
                 }
                 break;
               }
@@ -4353,20 +4353,20 @@ public final class stellarshard extends rb implements cf {
               }
               boolean decompiledFrameCompleted3 = true;
               var7Lifetime2 = qj.field_a.b(var6) + 10;
-              ti.e(0, 350, var5_int + 2, 130, 4, 0);
-              ti.f(-(var7Lifetime2 / 2) + var5_int / 2 - 3, 341, 6 + var7Lifetime2, 21, 10, 0);
-              ti.e(1, 351, var5_int, 128, 3, 8421504);
-              ti.e(2, 352, var5_int - 2, 126, 2, 8421504);
-              ti.g(3, 351, var5_int - 5, 16777215);
-              ti.f(1, 353, 123, 16777215);
-              ti.g(4, 478, var5_int - 1 - 4, 4210752);
-              ti.f(-1 + var5_int + 1, 354, 123, 4210752);
-              ti.e(3, 353, -4 + var5_int, 124, 1, 0);
-              ti.f(-2 - var7Lifetime2 / 2 + var5_int / 2, 342, 4 + var7Lifetime2, 19, 9, 8421504);
-              ti.e(-2 - var7Lifetime2 / 2 + var5_int / 2, 342, var7Lifetime2 + 4, 19, 9, 16777215);
-              ti.d(-(var7Lifetime2 / 2) + var5_int / 2 - 2, 350, 8 + var5_int / 2 + var7Lifetime2 / 2 - 2, 361);
-              ti.e(-(var7Lifetime2 / 2) + var5_int / 2 - 2, 342, 4 + var7Lifetime2, 19, 9, 4210752);
-              ti.b();
+              SoftwareRasterizer.drawRoundedRectangleOutline(0, 350, var5_int + 2, 130, 4, 0);
+              SoftwareRasterizer.fillRoundedRectangle(-(var7Lifetime2 / 2) + var5_int / 2 - 3, 341, 6 + var7Lifetime2, 21, 10, 0);
+              SoftwareRasterizer.drawRoundedRectangleOutline(1, 351, var5_int, 128, 3, 8421504);
+              SoftwareRasterizer.drawRoundedRectangleOutline(2, 352, var5_int - 2, 126, 2, 8421504);
+              SoftwareRasterizer.drawHorizontalLine(3, 351, var5_int - 5, 16777215);
+              SoftwareRasterizer.drawVerticalLine(1, 353, 123, 16777215);
+              SoftwareRasterizer.drawHorizontalLine(4, 478, var5_int - 1 - 4, 4210752);
+              SoftwareRasterizer.drawVerticalLine(-1 + var5_int + 1, 354, 123, 4210752);
+              SoftwareRasterizer.drawRoundedRectangleOutline(3, 353, -4 + var5_int, 124, 1, 0);
+              SoftwareRasterizer.fillRoundedRectangle(-2 - var7Lifetime2 / 2 + var5_int / 2, 342, 4 + var7Lifetime2, 19, 9, 8421504);
+              SoftwareRasterizer.drawRoundedRectangleOutline(-2 - var7Lifetime2 / 2 + var5_int / 2, 342, var7Lifetime2 + 4, 19, 9, 16777215);
+              SoftwareRasterizer.setClip(-(var7Lifetime2 / 2) + var5_int / 2 - 2, 350, 8 + var5_int / 2 + var7Lifetime2 / 2 - 2, 361);
+              SoftwareRasterizer.drawRoundedRectangleOutline(-(var7Lifetime2 / 2) + var5_int / 2 - 2, 342, 4 + var7Lifetime2, 19, 9, 4210752);
+              SoftwareRasterizer.resetClip();
               if (var7Lifetime2 < 100) {
                 var8Lifetime2 = 0;
                 while (var8Lifetime2 < 15) {
@@ -4380,16 +4380,16 @@ public final class stellarshard extends rb implements cf {
                   if (stackIn_258_0 < stackIn_258_1) {
                     var9Lifetime2 = 9;
                   }
-                  ti.f(var5_int / 2 + (4 + -var7Lifetime2 / 2) - var8Lifetime2, -var9Lifetime2 + 351, var9Lifetime2 * 2, 8421504);
-                  ti.f(-var7Lifetime2 / 2 - var8Lifetime2 - (-4 - var5_int / 2), 1 + (351 - var9Lifetime2), 1, 16777215);
-                  ti.f(4 + (-var8Lifetime2 + (-var7Lifetime2 / 2 + var5_int / 2)), 351 - var9Lifetime2, 1, 0);
-                  ti.f(var5_int / 2 + (-var7Lifetime2 / 2 + (-var8Lifetime2 + 4)), 351 + (var9Lifetime2 - 1), 1, 4210752);
-                  ti.f(var5_int / 2 + (-var7Lifetime2 / 2 - var8Lifetime2 + 4), var9Lifetime2 + 351, 1, 0);
-                  ti.f(var8Lifetime2 - -var7Lifetime2 / 2 - (4 - var5_int / 2), -var9Lifetime2 + 351, 2 * var9Lifetime2, 8421504);
-                  ti.f(var5_int / 2 - 4 - (-var8Lifetime2 + -var7Lifetime2 / 2), 1 - var9Lifetime2 + 351, 1, 16777215);
-                  ti.f(-4 + (-(-var7Lifetime2 / 2) - (-var8Lifetime2 - var5_int / 2)), -var9Lifetime2 + 351, 1, 0);
-                  ti.f(var5_int / 2 - (4 - var8Lifetime2) - -var7Lifetime2 / 2, 351 - (-var9Lifetime2 + 1), 1, 4210752);
-                  ti.f(var5_int / 2 + var8Lifetime2 - (-var7Lifetime2 / 2 + 4), 351 + var9Lifetime2, 1, 0);
+                  SoftwareRasterizer.drawVerticalLine(var5_int / 2 + (4 + -var7Lifetime2 / 2) - var8Lifetime2, -var9Lifetime2 + 351, var9Lifetime2 * 2, 8421504);
+                  SoftwareRasterizer.drawVerticalLine(-var7Lifetime2 / 2 - var8Lifetime2 - (-4 - var5_int / 2), 1 + (351 - var9Lifetime2), 1, 16777215);
+                  SoftwareRasterizer.drawVerticalLine(4 + (-var8Lifetime2 + (-var7Lifetime2 / 2 + var5_int / 2)), 351 - var9Lifetime2, 1, 0);
+                  SoftwareRasterizer.drawVerticalLine(var5_int / 2 + (-var7Lifetime2 / 2 + (-var8Lifetime2 + 4)), 351 + (var9Lifetime2 - 1), 1, 4210752);
+                  SoftwareRasterizer.drawVerticalLine(var5_int / 2 + (-var7Lifetime2 / 2 - var8Lifetime2 + 4), var9Lifetime2 + 351, 1, 0);
+                  SoftwareRasterizer.drawVerticalLine(var8Lifetime2 - -var7Lifetime2 / 2 - (4 - var5_int / 2), -var9Lifetime2 + 351, 2 * var9Lifetime2, 8421504);
+                  SoftwareRasterizer.drawVerticalLine(var5_int / 2 - 4 - (-var8Lifetime2 + -var7Lifetime2 / 2), 1 - var9Lifetime2 + 351, 1, 16777215);
+                  SoftwareRasterizer.drawVerticalLine(-4 + (-(-var7Lifetime2 / 2) - (-var8Lifetime2 - var5_int / 2)), -var9Lifetime2 + 351, 1, 0);
+                  SoftwareRasterizer.drawVerticalLine(var5_int / 2 - (4 - var8Lifetime2) - -var7Lifetime2 / 2, 351 - (-var9Lifetime2 + 1), 1, 4210752);
+                  SoftwareRasterizer.drawVerticalLine(var5_int / 2 + var8Lifetime2 - (-var7Lifetime2 / 2 + 4), 351 + var9Lifetime2, 1, 0);
                   var8Lifetime2++;
                 }
               }
@@ -4397,7 +4397,7 @@ public final class stellarshard extends rb implements cf {
                 stackIn_258_0 = var5_int / 2 - var7Lifetime2 / 2;
                 stackIn_258_1 = 344;
               }
-              ti.f(stackIn_258_0, stackIn_258_1, var7Lifetime2, 15, 7, 0);
+              SoftwareRasterizer.fillRoundedRectangle(stackIn_258_0, stackIn_258_1, var7Lifetime2, 15, 7, 0);
               qj.field_a.c(var6, 1 + (var5_int / 2 - 1), 355, 0, -1);
               qj.field_a.c(var6, -1 + (1 + var5_int / 2), 357, 0, -1);
               qj.field_a.c(var6, -1 + var5_int / 2, 356, 0, -1);
@@ -4491,17 +4491,17 @@ public final class stellarshard extends rb implements cf {
                 var7_ref = ((String) (var7_ref)).toUpperCase();
                 var9Lifetime3 = qj.field_a.b((String) (var7_ref)) + 40;
                 var10_intLifetime1 = 307;
-                ti.f(-20 + var10_intLifetime1, 427, 42, 42, 20, 0);
-                ti.f(-2 + var10_intLifetime1 - var9Lifetime3, 435, var9Lifetime3 + 4 + 19, 26, 12, 0);
-                ti.f(var10_intLifetime1 - var9Lifetime3, 437, 19 + var9Lifetime3, 22, 10, 11186350);
-                ti.f(var10_intLifetime1 - 18, 429, 38, 38, 18, 11186350);
-                ti.a(var10_intLifetime1 - 20 << 4, 7152, 200, 100, eh.field_e);
-                ti.a(var10_intLifetime1 + 10 - var9Lifetime3 << 4, 7152, 200, 150, eh.field_e);
-                ti.a(-var9Lifetime3 + var10_intLifetime1 + 40 << 4, 7152, 200, 150, eh.field_e);
-                ti.a(var10_intLifetime1 + 10 << 4, 7152, 200, 200, eh.field_e);
-                ti.f(-var9Lifetime3 + 2 + var10_intLifetime1, 439, 21 - (-var9Lifetime3 - 96) - 140, 18, 8, 0);
+                SoftwareRasterizer.fillRoundedRectangle(-20 + var10_intLifetime1, 427, 42, 42, 20, 0);
+                SoftwareRasterizer.fillRoundedRectangle(-2 + var10_intLifetime1 - var9Lifetime3, 435, var9Lifetime3 + 4 + 19, 26, 12, 0);
+                SoftwareRasterizer.fillRoundedRectangle(var10_intLifetime1 - var9Lifetime3, 437, 19 + var9Lifetime3, 22, 10, 11186350);
+                SoftwareRasterizer.fillRoundedRectangle(var10_intLifetime1 - 18, 429, 38, 38, 18, 11186350);
+                SoftwareRasterizer.addRadialGlow(var10_intLifetime1 - 20 << 4, 7152, 200, 100, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(var10_intLifetime1 + 10 - var9Lifetime3 << 4, 7152, 200, 150, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(-var9Lifetime3 + var10_intLifetime1 + 40 << 4, 7152, 200, 150, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(var10_intLifetime1 + 10 << 4, 7152, 200, 200, eh.field_e);
+                SoftwareRasterizer.fillRoundedRectangle(-var9Lifetime3 + 2 + var10_intLifetime1, 439, 21 - (-var9Lifetime3 - 96) - 140, 18, 8, 0);
                 qj.field_a.b((String) (var7_ref), -63 + var10_intLifetime1 + 33, 453, 16777215, -1);
-                ti.a(var10_intLifetime1 - 15, 432, 32, 32, 14, 0, 192);
+                SoftwareRasterizer.fillRoundedRectangleAlpha(var10_intLifetime1 - 15, 432, 32, 32, 14, 0, 192);
                 e.field_g[var8Lifetime3].e(var10_intLifetime1 + 33 - 80, 400);
               }
               var9Lifetime3Lifetime1 = 250;
@@ -4528,27 +4528,27 @@ public final class stellarshard extends rb implements cf {
                 var12 = 40 + qj.field_a.b((String) (var10));
                 var13 = 100;
                 var9Lifetime3Lifetime1 += 250;
-                ti.f(var9Lifetime3Lifetime1 - 20 - 1, 427, 42, 42, 20, 0);
-                ti.f(-2 - var12 + var9Lifetime3Lifetime1, 435, 21 - (-4 - var12), 26, 12, 0);
+                SoftwareRasterizer.fillRoundedRectangle(var9Lifetime3Lifetime1 - 20 - 1, 427, 42, 42, 20, 0);
+                SoftwareRasterizer.fillRoundedRectangle(-2 - var12 + var9Lifetime3Lifetime1, 435, 21 - (-4 - var12), 26, 12, 0);
                 if (0 < var13) {
-                  ti.f(var9Lifetime3Lifetime1 - 2, 435, 4 + var13 + 21, 26, 12, 0);
+                  SoftwareRasterizer.fillRoundedRectangle(var9Lifetime3Lifetime1 - 2, 435, 4 + var13 + 21, 26, 12, 0);
                 }
-                ti.f(var9Lifetime3Lifetime1 - var12, 437, 21 + var12, 22, 10, 11186350);
+                SoftwareRasterizer.fillRoundedRectangle(var9Lifetime3Lifetime1 - var12, 437, 21 + var12, 22, 10, 11186350);
                 if (var13 > 0) {
-                  ti.f(var9Lifetime3Lifetime1, 437, var13 + 21, 22, 10, 11186350);
+                  SoftwareRasterizer.fillRoundedRectangle(var9Lifetime3Lifetime1, 437, var13 + 21, 22, 10, 11186350);
                 }
-                ti.f(-1 + (-18 + var9Lifetime3Lifetime1), 429, 38, 38, 18, 11186350);
-                ti.a(-20 + var9Lifetime3Lifetime1 << 4, 7152, 200, 100, eh.field_e);
-                ti.a(var9Lifetime3Lifetime1 + 10 << 4, 7152, 200, 150, eh.field_e);
-                ti.a(40 + (-var12 + var9Lifetime3Lifetime1) << 4, 7152, 200, 150, eh.field_e);
-                ti.a(-var12 - (-20 - var9Lifetime3Lifetime1) << 4, 7152, 200, 200, eh.field_e);
+                SoftwareRasterizer.fillRoundedRectangle(-1 + (-18 + var9Lifetime3Lifetime1), 429, 38, 38, 18, 11186350);
+                SoftwareRasterizer.addRadialGlow(-20 + var9Lifetime3Lifetime1 << 4, 7152, 200, 100, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(var9Lifetime3Lifetime1 + 10 << 4, 7152, 200, 150, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(40 + (-var12 + var9Lifetime3Lifetime1) << 4, 7152, 200, 150, eh.field_e);
+                SoftwareRasterizer.addRadialGlow(-var12 - (-20 - var9Lifetime3Lifetime1) << 4, 7152, 200, 200, eh.field_e);
                 if (0 < var13) {
-                  ti.a(var13 + var9Lifetime3Lifetime1 << 4, 7152, 200, 200, eh.field_e);
+                  SoftwareRasterizer.addRadialGlow(var13 + var9Lifetime3Lifetime1 << 4, 7152, 200, 200, eh.field_e);
                 }
                 boolean decompiledFrameCompleted2 = true;
                 boolean decompiledFrameCompleted0 = true;
                 boolean decompiledFrameCompleted1 = true;
-                ti.f(var9Lifetime3Lifetime1 + 2 - var12, 439, -119 + var12 + 96, 18, 8, 0);
+                SoftwareRasterizer.fillRoundedRectangle(var9Lifetime3Lifetime1 + 2 - var12, 439, -119 + var12 + 96, 18, 8, 0);
                 if (var13 > 0) {
                   var14 = 0;
                   var15 = 0;
@@ -4602,14 +4602,14 @@ public final class stellarshard extends rb implements cf {
                   }
                   var16 = 20 + (2 + var9Lifetime3Lifetime1);
                   var17 = 439;
-                  ti.f(var16, var17, -3 + var13, 18, 8, (var14 & 16711422) >> 1);
+                  SoftwareRasterizer.fillRoundedRectangle(var16, var17, -3 + var13, 18, 8, (var14 & 16711422) >> 1);
                   if (3 == nc.field_H) {
-                    ti.e(var16, var17, -3 + var13, 18, 8, var14);
+                    SoftwareRasterizer.drawRoundedRectangleOutline(var16, var17, -3 + var13, 18, 8, var14);
                     if (var20 != 0) {
-                      ti.e(var16, var17, var13 - 3, 18, 8, 4144959 & var14 >> 2);
+                      SoftwareRasterizer.drawRoundedRectangleOutline(var16, var17, var13 - 3, 18, 8, 4144959 & var14 >> 2);
                     }
                   } else {
-                    ti.e(var16, var17, var13 - 3, 18, 8, 4144959 & var14 >> 2);
+                    SoftwareRasterizer.drawRoundedRectangleOutline(var16, var17, var13 - 3, 18, 8, 4144959 & var14 >> 2);
                   }
                   var16 = var16 << 4;
                   var17 = var17 << 4;
@@ -4633,9 +4633,9 @@ public final class stellarshard extends rb implements cf {
                       var18 = 10 - var18;
                     }
                     if (nc.field_H == 2) {
-                      ti.a((var13 - 35) * (10 * var19) / 10 + (136 + var16), (var18 << 2) + (136 + var17), -var18 + 9 << 4, 50, eh.field_e);
+                      SoftwareRasterizer.addRadialGlow((var13 - 35) * (10 * var19) / 10 + (136 + var16), (var18 << 2) + (136 + var17), -var18 + 9 << 4, 50, eh.field_e);
                     } else {
-                      ti.a((var13 - 35) * (var18 + var19 * 10) / 10 + var16 + 136, 136 + var17, 144, 50, eh.field_e);
+                      SoftwareRasterizer.addRadialGlow((var13 - 35) * (var18 + var19 * 10) / 10 + var16 + 136, 136 + var17, 144, 50, eh.field_e);
                     }
                     var19++;
                   }
@@ -4658,9 +4658,9 @@ public final class stellarshard extends rb implements cf {
                       if (stackIn_447_0 >= stackIn_447_1) {
                         var18Lifetime1 = 10 - var18Lifetime1;
                       }
-                      ti.c((var18Lifetime1 + var19 * 10) * (var13 - 35) / 10 + var16 + 136 >> 4, 136 + var17 >> 4, 9, 0, 32);
-                      ti.c((var13 - 35) * (var18Lifetime1 + var19 * 10) / 10 + (var16 + 136) >> 4, var17 + 136 >> 4, 7, 0, 32);
-                      ti.c(136 + var16 + (var13 - 35) * (var18Lifetime1 + var19 * 10) / 10 >> 4, var17 + 136 >> 4, 5, 0, 32);
+                      SoftwareRasterizer.fillCircleAlpha((var18Lifetime1 + var19 * 10) * (var13 - 35) / 10 + var16 + 136 >> 4, 136 + var17 >> 4, 9, 0, 32);
+                      SoftwareRasterizer.fillCircleAlpha((var13 - 35) * (var18Lifetime1 + var19 * 10) / 10 + (var16 + 136) >> 4, var17 + 136 >> 4, 7, 0, 32);
+                      SoftwareRasterizer.fillCircleAlpha(136 + var16 + (var13 - 35) * (var18Lifetime1 + var19 * 10) / 10 >> 4, var17 + 136 >> 4, 5, 0, 32);
                       var19++;
                     }
                   }
@@ -4671,7 +4671,7 @@ public final class stellarshard extends rb implements cf {
                   stackIn_447_0 = var9Lifetime3Lifetime1 + 32;
                   stackIn_447_1 = 432;
                 }
-                ti.a(stackIn_447_0, stackIn_447_1, 32, 32, 14, 0, 192);
+                SoftwareRasterizer.fillRoundedRectangleAlpha(stackIn_447_0, stackIn_447_1, 32, 32, 14, 0, 192);
                 e.field_g[var11].e(var9Lifetime3Lifetime1, 400);
                 qj.field_a.b((String) (var10), 18 + var9Lifetime3Lifetime1, 453, 16777215, -1);
               }
@@ -4681,16 +4681,16 @@ public final class stellarshard extends rb implements cf {
               }
             }
             if (ig.field_D > 0) {
-              ti.b(0, 0, 640, 480, 16777215, ig.field_D);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, ig.field_D);
             }
-            ti.a(0, 0, 640, 480, 0, 192);
-            ti.a(1, 1, 638, 478, 0, 128);
-            ti.a(2, 2, 636, 476, 0, 64);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(0, 0, 640, 480, 0, 192);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(1, 1, 638, 478, 0, 128);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(2, 2, 636, 476, 0, 64);
             if (na.field_j != null) {
               na.field_j.a((byte) 85);
             }
             if (this.field_R > 0) {
-              ti.b(0, 0, 640, 480, 16777215, this.field_R);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, this.field_R);
             }
             if (nc.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
@@ -4735,7 +4735,7 @@ public final class stellarshard extends rb implements cf {
               if (var8Lifetime4 < 0) {
                 var8Lifetime4 = 0;
               }
-              ti.b(4, 353, -6 + var9Lifetime4, 123, 0, var8Lifetime4);
+              SoftwareRasterizer.fillRectangleAlpha(4, 353, -6 + var9Lifetime4, 123, 0, var8Lifetime4);
               if (var8Lifetime4 == 255) {
                 wh.field_e[var6_ref.field_o].a(-24 + var9Lifetime4 / 2, 369, 48, 48);
                 qj.field_a.a(NanoFrameTimer.field_e[var6_ref.field_o], 8, 425, var9Lifetime4 - 16, 56, 65535, -1, 1, 1, qj.field_a.field_N);
@@ -4748,13 +4748,13 @@ public final class stellarshard extends rb implements cf {
               qj.field_a.c(var5Lifetime1, var9Lifetime4 / 2 + 1, 356, 16777215, -1);
             }
             if (fd.d((byte) -21)) {
-              ti.b(0, 0, 640, 480, 0, 128);
-              ti.f(-(ok.a((byte) 126) / 2) + 320 - 19, -16 - kb.b((byte) -114) / 2 + 240 - 5, ok.a((byte) 125) + 6 + 32, kb.b((byte) 121) + 10 + 32, 0);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
+              SoftwareRasterizer.fillRectangle(-(ok.a((byte) 126) / 2) + 320 - 19, -16 - kb.b((byte) -114) / 2 + 240 - 5, ok.a((byte) 125) + 6 + 32, kb.b((byte) 121) + 10 + 32, 0);
               na.a(28, 256, 28, fg.field_P);
             }
             if (hd.field_b) {
-              ti.b(0, 0, 150, 480, 0, 64);
-              ti.b(0, 0, 150, 480, 16777215);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 150, 480, 0, 64);
+              SoftwareRasterizer.drawRectangleOutline(0, 0, 150, 480, 16777215);
             }
             if (id.b(param0 ^ 20876) &&
               !fd.d((byte) -21)) {

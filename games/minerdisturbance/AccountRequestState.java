@@ -40,7 +40,7 @@ final class AccountRequestState {
             SoftwareRasterizer.setClip(0, param3 - PacketBuffer.field_n.field_G + var4_int, 640, -PacketBuffer.field_n.field_G + param3 + var4_int + 1);
             PacketBuffer.field_n.b(param0, param1, param3, 0, -1);
           }
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "bd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

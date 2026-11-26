@@ -73,7 +73,7 @@ final class uu extends UiComponent {
           !fw.field_h[this.field_Cb].field_e) {
           jha.field_g.b(dj.field_b, 288, 92, 16736256, -1);
         }
-        SoftwareRasterizer.c(8, 10, 75, 83, 2, 16694784);
+        SoftwareRasterizer.drawRectangleBorder(8, 10, 75, 83, 2, 16694784);
         hga.field_U.a((byte) -27);
         return var4;
     }

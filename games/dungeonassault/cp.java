@@ -25,13 +25,13 @@ final class cp extends gd {
         var5 = -3 + (param2 + this.field_i);
         var6 = 5 + (this.field_q + var4);
         var7 = 5 + var5 + this.field_x;
-        if (var4 > gf.field_h) {
+        if (var4 > SoftwareRasterizer.field_h) {
           return;
         }
-        if (gf.field_e >= var5 &&
-          gf.field_j <= var6 &&
-          var7 >= gf.field_f) {
-          gf.b(var4, var5, this.field_q + 5, this.field_x + 5, 0, 128);
+        if (SoftwareRasterizer.field_e >= var5 &&
+          SoftwareRasterizer.field_j <= var6 &&
+          var7 >= SoftwareRasterizer.field_f) {
+          SoftwareRasterizer.fillRectangleAlpha(var4, var5, this.field_q + 5, this.field_x + 5, 0, 128);
           super.b(param0, param1 + 0, param2);
           var8 = this.field_S.field_d.a(40, 0, 40, 0);
           var9 = this.field_x + var5 - 42;
@@ -39,7 +39,7 @@ final class cp extends gd {
           if (var8 != null) {
             var8.c(var10, var9);
           } else {
-            gf.b(var10, var9, 32, 32, 0);
+            SoftwareRasterizer.fillRectangle(var10, var9, 32, 32, 0);
           }
           return;
         }
@@ -99,7 +99,7 @@ final class cp extends gd {
           var12 = new cn(140, var7);
           var13 = new cn(140, var7);
           jh.a(var11);
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var14 = 0;
           for (var15 = 0; var15 < var6.length; var15++) {
             var14 = var14 + la.field_b.field_H;
@@ -131,12 +131,12 @@ final class cp extends gd {
           var14 += 4;
           var12.e();
           var15Lifetime1 = -40 + (var7 - 5);
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var11.e(0, 0, 16744448);
           al.a(52, var14, false, this.field_S, 16744448);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           var13.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var11.e(0, 0, 12690143);
           al.a(52, var14, false, this.field_S, 10449103);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);

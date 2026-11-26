@@ -17,15 +17,15 @@ final class sk {
         int var10 = 0;
         var10 = StarCannon.field_A;
         try {
-          ki.b(param0, param4, param1 + 1, 10000536);
-          ki.b(param0, param2 + param4, 1 + param1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param4, param1 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param2 + param4, 1 + param1, 12105912);
           var5_int = 1;
-          if (ki.field_e > var5_int + param4) {
-            var5_int = -param4 + ki.field_e;
+          if (SoftwareRasterizer.field_e > var5_int + param4) {
+            var5_int = -param4 + SoftwareRasterizer.field_e;
           }
           var6 = param2;
-          if (ki.field_i < var6 + param4) {
-            var6 = -param4 + ki.field_i;
+          if (SoftwareRasterizer.field_i < var6 + param4) {
+            var6 = -param4 + SoftwareRasterizer.field_i;
           }
           if (!param3) {
             field_b = true;
@@ -33,8 +33,8 @@ final class sk {
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + 48 * var7 / param2;
             var9 = var8 << 16 | var8 << 8 | var8;
-            ki.field_a[param0 + ki.field_j * (param4 + var7)] = var9;
-            ki.field_a[param0 + ki.field_j * (param4 + var7) + param1] = var9;
+            SoftwareRasterizer.field_a[param0 + SoftwareRasterizer.field_j * (param4 + var7)] = var9;
+            SoftwareRasterizer.field_a[param0 + SoftwareRasterizer.field_j * (param4 + var7) + param1] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

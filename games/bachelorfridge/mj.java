@@ -30,7 +30,7 @@ final class mj extends lg {
     final void a(byte param0) {
         ew.field_r.draw(this.field_g, this.field_f);
         int var2 = -107 / ((param0 + 54) / 47);
-        SoftwareRasterizer.a(40 + this.field_g, this.field_f + 20, -110 + this.field_d, -30 + this.field_c, 20, 65793, 64);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(40 + this.field_g, this.field_f + 20, -110 + this.field_d, -30 + this.field_c, 20, 65793, 64);
         wq.a(1, 14, 300, 16777215, 16 + this.field_f, 300, 65793, true, this.field_b, 0, this.field_g + 54);
         EventAnimation.field_r.draw(350, 330);
         laa.a(356, (byte) -112, 402, 16777215, BananarangSpecial.field_s, 65793);

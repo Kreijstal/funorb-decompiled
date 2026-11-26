@@ -15,7 +15,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var1 = new nn();
         }
         if (param0 < -12) {
-          var1.a(bi.field_d, bi.field_c, bi.field_f, bi.field_i, bi.field_l, -550, bi.field_j, bi.field_e);
+          var1.a(SoftwareRasterizer.field_d, SoftwareRasterizer.field_c, SoftwareRasterizer.field_f, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l, -550, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e);
           gi.field_v.addFirst(var1, false);
           return;
         }

@@ -1227,7 +1227,7 @@ final class gi {
           var9Lifetime1 = var18.field_t;
           ja.c((byte) 109);
           var18.a();
-          SoftwareRasterizer.h(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();

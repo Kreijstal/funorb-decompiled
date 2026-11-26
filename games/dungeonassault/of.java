@@ -47,7 +47,7 @@ final class of {
             im.field_e.field_A = -8;
           }
           im.field_e.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var1_int = 0;
           for (var2 = 0; var2 < 7; var2++) {
             for (var3 = 0; var3 < 7; var3++) {
@@ -55,7 +55,7 @@ final class of {
               var1_int++;
             }
           }
-          gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
+          SoftwareRasterizer.blurRectangle(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
           jh.b();
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "of.B(" + param0 + ')');

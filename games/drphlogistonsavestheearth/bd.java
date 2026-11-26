@@ -77,7 +77,7 @@ abstract class bd extends pj {
         if (uk.field_f == null) {
           uk.field_f = new nh(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
-          wj.c();
+          SoftwareRasterizer.clearRaster();
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
@@ -87,7 +87,7 @@ abstract class bd extends pj {
         if (this.field_w > uk.field_f.field_y) {
           uk.field_f = new nh(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
-          wj.c();
+          SoftwareRasterizer.clearRaster();
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
@@ -97,7 +97,7 @@ abstract class bd extends pj {
         if (uk.field_f.field_w < this.field_k) {
           uk.field_f = new nh(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
-          wj.c();
+          SoftwareRasterizer.clearRaster();
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
@@ -105,7 +105,7 @@ abstract class bd extends pj {
           return;
         }
         MouseInput.a(uk.field_f, (byte) 79);
-        wj.c();
+        SoftwareRasterizer.clearRaster();
         this.c(0, param2 ^ -68, 0);
         super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
         cl.d((byte) -106);

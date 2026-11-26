@@ -142,8 +142,8 @@ final class ia extends IntrusiveNode {
         if (param0 > -52) {
           field_q = (int[]) null;
           if (var1 != null) {
-            gb.a(var1.field_r, var1.field_i, var1.field_p);
-            gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
+            SoftwareRasterizer.setRasterBuffer(var1.field_r, var1.field_i, var1.field_p);
+            SoftwareRasterizer.setClip(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
             var1.field_r = null;
             fk.field_z.addLast(false, var1);
             return;
@@ -151,8 +151,8 @@ final class ia extends IntrusiveNode {
           throw new IllegalStateException();
         }
         if (var1 != null) {
-          gb.a(var1.field_r, var1.field_i, var1.field_p);
-          gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
+          SoftwareRasterizer.setRasterBuffer(var1.field_r, var1.field_i, var1.field_p);
+          SoftwareRasterizer.setClip(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
           var1.field_r = null;
           fk.field_z.addLast(false, var1);
           return;

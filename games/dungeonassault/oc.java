@@ -220,7 +220,7 @@ final class oc extends kl {
           this.field_o = new cn(var5_int + 4, 4 + var7);
           this.field_o.e();
           this.field_m.e(2, 2, 12690143);
-          gf.d(2, 2, 0, 0, 4 + var5_int, 4 + var7);
+          SoftwareRasterizer.blurRectangle(2, 2, 0, 0, 4 + var5_int, 4 + var7);
           if (!this.field_x) {
             stackIn_16_0 = lp.field_n;
           } else {
@@ -335,7 +335,7 @@ final class oc extends kl {
         var12 = this.field_k + (-this.field_o.field_y + this.field_a >> 1);
         var13 = 79 % ((41 - param0) / 63);
         var14 = 230 + (var11 + (60 - this.field_o.field_v >> 1));
-        gf.b(-8 + var10, var11 - 8, 232, 232, 0);
+        SoftwareRasterizer.fillRectangle(-8 + var10, var11 - 8, 232, 232, 0);
         rp.a(4, 224, (byte) 108, var10 - 4, 224, kc.field_S, var11 - 4);
         if (this.field_C >= 100) {
           this.field_p.a(216, var11, (byte) 102, var10, 216);

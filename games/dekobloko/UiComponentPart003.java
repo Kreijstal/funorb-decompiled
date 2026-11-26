@@ -44,7 +44,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
           NodeHashTable.rgbSpriteState0055 = new RgbSprite(this.integerState0107, this.integerState0108);
         }
         ValidationStatus.performAction1570(true, NodeHashTable.rgbSpriteState0055);
-        SoftwareRaster.performAction0648();
+        SoftwareRaster.clearRaster();
         this.performAction0165(-128, 0, 0);
         super.performAction0162(-this.integerState0110 - integerArgument1, -116, integerArgument3, -integerArgument4 - this.integerState0104);
         ByteStorage.performAction1060((byte) -5);
@@ -389,8 +389,8 @@ abstract class UiComponentPart003 extends ComponentContainer {
         MixedSupport121.computeRgbSprite1601(true, 2).performAction0280(82 + integerArgument1, integerLocal2, 18, 18);
         integerLocal2 = integerLocal2 + ((AgeValidator.integerState0360 == 0 ? 16 : 0) + MixedSupport045.computeInteger0552(188, 0, integerLocal2, MixedSupport067.stringState0301, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
         GameplayControls.performAction1750(TextLineMetrics.integerState0534, integerArgument1 + 190, 3, MixedSupport049.integerState0264, MixedSupport070.integerState0396, integerLocal2, -22981);
-        SoftwareRaster.performAction0665(309 + integerArgument1, 117, 242, 263172);
-        SoftwareRaster.performAction0665(310 + integerArgument1, 117, 242, 6316128);
+        SoftwareRaster.drawVerticalLine(309 + integerArgument1, 117, 242, 263172);
+        SoftwareRaster.drawVerticalLine(310 + integerArgument1, 117, 242, 6316128);
         MixedSupport042.performAction0537(130, integerArgument2 ^ 12362, 16694016, MixedSupport054.stringState0233, 320 + integerArgument1, SceneWidget.renderingSupport009State0007);
         integerLocal1 = 145;
         MixedSupport121.computeRgbSprite1601(true, 0).performAction0280(320 + integerArgument1, integerLocal1, 18, 18);

@@ -62,38 +62,38 @@ class ml extends va {
         if (param0 != -13) {
           ml.a(34, -51, 103, 63, -22, 15);
         }
-        int[] var16 = bi.field_l;
+        int[] var16 = SoftwareRasterizer.field_l;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = bi.field_e;
-        int var8 = bi.field_j;
+        int var7 = SoftwareRasterizer.field_e;
+        int var8 = SoftwareRasterizer.field_j;
         Sprite var9 = new Sprite(16, param4);
         var9.d();
-        bi.e(0, 0, 16, param4, param1, param3);
+        SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 16, param4, param1, param3);
         Object var10 = null;
         Object var11 = null;
         if (param2) {
           var13 = var9.c();
           var10 = var13;
           var13.d();
-          bi.b(0, 0, 5, 0);
-          bi.b(0, 1, 3, 0);
-          bi.b(0, 2, 2, 0);
-          bi.b(0, 3, 1, 0);
-          bi.b(0, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param5) {
           var14 = var9.c();
           var11 = var14;
           var14.d();
-          bi.b(11, 0, 5, 0);
-          bi.b(13, 1, 3, 0);
-          bi.b(14, 2, 2, 0);
-          bi.b(15, 3, 1, 0);
-          bi.b(15, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        bi.a(var16, var7, var8);
+        SoftwareRasterizer.setRasterBuffer(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 

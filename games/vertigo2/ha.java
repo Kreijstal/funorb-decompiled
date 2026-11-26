@@ -411,19 +411,19 @@ final class ha {
         }
         param4 = 0;
         this.field_c.d();
-        bi.f(param2, param4, param0, param3, 12, 16777215);
+        SoftwareRasterizer.fillRoundedRectangle(param2, param4, param0, param3, 12, 16777215);
         if (null == this.field_e ||
           this.field_e.field_y != param0 &&
           param3 != this.field_e.field_t) {
           this.field_e = new Sprite(param0, param3);
         }
         this.field_e.d();
-        bi.f(param2 + var7, var7 + param4, -3 + var7, 4027280);
+        SoftwareRasterizer.fillCircle(param2 + var7, var7 + param4, -3 + var7, 4027280);
         if (!param1) {
           ha.b((byte) -33);
         }
-        bi.b(param2 + 9, param4, -18 + param0, param3, 4027280);
-        bi.f(-15 + param0 + param2, var7 + param4, -2 + (-1 + var7), 4027280);
+        SoftwareRasterizer.fillRectangle(param2 + 9, param4, -18 + param0, param3, 4027280);
+        SoftwareRasterizer.fillCircle(-15 + param0 + param2, var7 + param4, -2 + (-1 + var7), 4027280);
         var10 = 0;
         while (true) {
           stackIn_19_0 = ~var10;
@@ -434,28 +434,28 @@ final class ha {
             stackIn_20_2 = 0;
           }
           if (stackIn_19_0 > ~((stackIn_19_1 - stackIn_20_2) / 10)) {
-            bi.b(-(var10 * 10) + (param0 + param2) - 19, var7 * (var10 % 2) + param4, 10, 14, 3434371);
+            SoftwareRasterizer.fillRectangle(-(var10 * 10) + (param0 + param2) - 19, var7 * (var10 % 2) + param4, 10, 14, 3434371);
             var10++;
             continue;
           }
           break;
         }
-        bi.b(param0 + (param2 - 10), param4 + var7, 9, 7, 3434371);
-        bi.b(param0 + param2 - 10, param4 + var7, 6, 10, 3434371);
+        SoftwareRasterizer.fillRectangle(param0 + (param2 - 10), param4 + var7, 9, 7, 3434371);
+        SoftwareRasterizer.fillRectangle(param0 + param2 - 10, param4 + var7, 6, 10, 3434371);
         if (var6 == 0) {
-          bi.b(3 + param2, 4 + param4, 9, 10, 3434371);
-          bi.b(param2 + 6, 4 + param4, 6, 10, 3434371);
+          SoftwareRasterizer.fillRectangle(3 + param2, 4 + param4, 9, 10, 3434371);
+          SoftwareRasterizer.fillRectangle(param2 + 6, 4 + param4, 6, 10, 3434371);
         }
-        bi.g(param2, param4, -1 + (param2 + var6), param3 + param4);
-        bi.f(param2 + var7, var7 + param4, -2 + (-1 + var7), 7220326);
-        bi.b(9 + param2, param4, param0 - 18, param3, 7220326);
-        bi.f(-15 + (param2 + param0), param4 + param3 / 2, -3 + var7, 7220326);
+        SoftwareRasterizer.setClip(param2, param4, -1 + (param2 + var6), param3 + param4);
+        SoftwareRasterizer.fillCircle(param2 + var7, var7 + param4, -2 + (-1 + var7), 7220326);
+        SoftwareRasterizer.fillRectangle(9 + param2, param4, param0 - 18, param3, 7220326);
+        SoftwareRasterizer.fillCircle(-15 + (param2 + param0), param4 + param3 / 2, -3 + var7, 7220326);
         for (var10Lifetime1 = 0; var6 / 10 > var10Lifetime1; var10Lifetime1++) {
-          bi.b(10 + param2 + var10Lifetime1 * 10, var10Lifetime1 % 2 * var7 + param4, 10, 14, 8795773);
+          SoftwareRasterizer.fillRectangle(10 + param2 + var10Lifetime1 * 10, var10Lifetime1 % 2 * var7 + param4, 10, 14, 8795773);
         }
-        bi.b(1 + param2, param4 + var7, 9, 7, 8795773);
-        bi.b(param2 + 4, var7 + param4, 6, 10, 8795773);
-        bi.a();
+        SoftwareRasterizer.fillRectangle(1 + param2, param4 + var7, 9, 7, 8795773);
+        SoftwareRasterizer.fillRectangle(param2 + 4, var7 + param4, 6, 10, 8795773);
+        SoftwareRasterizer.resetClip();
         pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3, 3355443);
         MidiPcmStream.a(param2, param3, param0, 0, param4);
         ro.field_g.a(-60);

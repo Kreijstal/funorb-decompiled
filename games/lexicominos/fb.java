@@ -56,7 +56,7 @@ final class fb implements rd {
             param2 = param2 & var11.field_D;
           }
           var7 = 5592405;
-          SoftwareRasterizer.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_a);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_a);
           if (param2) {
             var7 = 16777215;
           }
@@ -65,8 +65,8 @@ final class fb implements rd {
           if (param4 != -3284) {
             this.field_q = 93;
           }
-          SoftwareRasterizer.d(var8, var9, this.field_r, this.field_h, 5592405);
-          SoftwareRasterizer.a(var8, var9, this.field_r, this.field_h, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_r, this.field_h, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_r, this.field_h, var7);
           if (var11.field_C) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_r, var9 + this.field_h, 1);
             SoftwareRasterizer.drawLine(this.field_r + var8, var9, var8, var9 + this.field_h, 1);

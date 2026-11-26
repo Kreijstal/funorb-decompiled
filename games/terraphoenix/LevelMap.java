@@ -2896,7 +2896,7 @@ final class LevelMap {
           }
           if (null != u.field_a) {
             u.field_a.a();
-            SoftwareRasterizer.f(0, 0, 128, 160, 0);
+            SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }
           IntrusiveNode.field_c = -1;
@@ -2993,19 +2993,19 @@ final class LevelMap {
                             var16 = null;
                             if (!param1) {
                               u.field_a.a();
-                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
                               var16 = oi.field_J;
                               ((Sprite) (var16)).a();
-                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             }
                             if (null != var16) {
                               ((Sprite) (var16)).a();
-                              SoftwareRasterizer.a(32, 124, 16777215);
-                              SoftwareRasterizer.a(64, 108, 16777215);
-                              SoftwareRasterizer.a(64, 139, 16777215);
-                              SoftwareRasterizer.a(95, 124, 16777215);
+                              SoftwareRasterizer.setPixel(32, 124, 16777215);
+                              SoftwareRasterizer.setPixel(64, 108, 16777215);
+                              SoftwareRasterizer.setPixel(64, 139, 16777215);
+                              SoftwareRasterizer.setPixel(95, 124, 16777215);
                               k.field_f.a(0);
                               u.field_a.a();
                               ((Sprite) (var16)).d(0, 0);
@@ -3065,7 +3065,7 @@ final class LevelMap {
                           if (~var11 == ~IntrusiveNode.field_c &&
                             ~vf.field_a == ~var12 &&
                             param1) {
-                            SoftwareRasterizer.a(var5 << 4, var6 << 4, 384, 255, bj.field_d);
+                            SoftwareRasterizer.addRadialGlow(var5 << 4, var6 << 4, 384, 255, bj.field_d);
                           }
                         }
                       }
@@ -3136,19 +3136,19 @@ final class LevelMap {
                             var16Lifetime2 = null;
                             if (!param1) {
                               u.field_a.a();
-                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
                               var16Lifetime2 = oi.field_J;
                               ((Sprite) (var16Lifetime2)).a();
-                              SoftwareRasterizer.f(0, 0, 128, 160, 0);
+                              SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             }
                             if (null != var16Lifetime2) {
                               ((Sprite) (var16Lifetime2)).a();
-                              SoftwareRasterizer.a(32, 124, 16777215);
-                              SoftwareRasterizer.a(64, 108, 16777215);
-                              SoftwareRasterizer.a(64, 139, 16777215);
-                              SoftwareRasterizer.a(95, 124, 16777215);
+                              SoftwareRasterizer.setPixel(32, 124, 16777215);
+                              SoftwareRasterizer.setPixel(64, 108, 16777215);
+                              SoftwareRasterizer.setPixel(64, 139, 16777215);
+                              SoftwareRasterizer.setPixel(95, 124, 16777215);
                               k.field_f.a(0);
                               u.field_a.a();
                               ((Sprite) (var16Lifetime2)).d(0, 0);
@@ -3236,19 +3236,19 @@ final class LevelMap {
                           var16Lifetime1 = null;
                           if (!param1) {
                             u.field_a.a();
-                            SoftwareRasterizer.f(0, 0, 128, 160, 0);
+                            SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             k.field_f.a(0);
                           } else {
                             var16Lifetime1 = oi.field_J;
                             ((Sprite) (var16Lifetime1)).a();
-                            SoftwareRasterizer.f(0, 0, 128, 160, 0);
+                            SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                           }
                           if (null != var16Lifetime1) {
                             ((Sprite) (var16Lifetime1)).a();
-                            SoftwareRasterizer.a(32, 124, 16777215);
-                            SoftwareRasterizer.a(64, 108, 16777215);
-                            SoftwareRasterizer.a(64, 139, 16777215);
-                            SoftwareRasterizer.a(95, 124, 16777215);
+                            SoftwareRasterizer.setPixel(32, 124, 16777215);
+                            SoftwareRasterizer.setPixel(64, 108, 16777215);
+                            SoftwareRasterizer.setPixel(64, 139, 16777215);
+                            SoftwareRasterizer.setPixel(95, 124, 16777215);
                             k.field_f.a(0);
                             u.field_a.a();
                             ((Sprite) (var16Lifetime1)).d(0, 0);
@@ -3351,10 +3351,10 @@ final class LevelMap {
         try {
           var4_int = param0 - 5 * (this.field_b - 64) / 2;
           var5 = param2 - 5 * (this.field_e - 64) / 2;
-          SoftwareRasterizer.e(-3 + var4_int, -3 + var5, 6 + this.field_b * 5, 5 * this.field_e + 6, 10066329);
-          SoftwareRasterizer.e(-2 + var4_int, -2 + var5, 4 + 5 * this.field_b, 5 * this.field_e + 4, 0);
-          SoftwareRasterizer.e(-1 + var4_int, var5 - 1, 2 + this.field_b * 5, 2 + 5 * this.field_e, 6645093);
-          SoftwareRasterizer.f(var4_int, var5, this.field_b * 5, this.field_e * 5, 0);
+          SoftwareRasterizer.drawRectangleOutline(-3 + var4_int, -3 + var5, 6 + this.field_b * 5, 5 * this.field_e + 6, 10066329);
+          SoftwareRasterizer.drawRectangleOutline(-2 + var4_int, -2 + var5, 4 + 5 * this.field_b, 5 * this.field_e + 4, 0);
+          SoftwareRasterizer.drawRectangleOutline(-1 + var4_int, var5 - 1, 2 + this.field_b * 5, 2 + 5 * this.field_e, 6645093);
+          SoftwareRasterizer.fillRectangle(var4_int, var5, this.field_b * 5, this.field_e * 5, 0);
           vf.field_a = -1;
           IntrusiveNode.field_c = -1;
           var8 = 5597743;
@@ -3368,44 +3368,44 @@ final class LevelMap {
           if (param2 == 50) {
             var7 = 70;
             var6 = 400;
-            SoftwareRasterizer.e(var6 - 13, 47, 176, 326, 10066329);
-            SoftwareRasterizer.e(var6 - 12, 48, 174, 324, 0);
-            SoftwareRasterizer.e(-11 + var6, 49, 172, 322, 6645093);
-            SoftwareRasterizer.f(-10 + var6, 50, 170, 320, 0);
+            SoftwareRasterizer.drawRectangleOutline(var6 - 13, 47, 176, 326, 10066329);
+            SoftwareRasterizer.drawRectangleOutline(var6 - 12, 48, 174, 324, 0);
+            SoftwareRasterizer.drawRectangleOutline(-11 + var6, 49, 172, 322, 6645093);
+            SoftwareRasterizer.fillRectangle(-10 + var6, 50, 170, 320, 0);
             var16_int = 20;
             AccountRequestState.field_f.b(vb.field_e, var6, var7, 16777215, -1);
             AccountRequestState.field_f.b(vb.field_e, 1 + var6, var7, 16777215, -1);
             var7 = var7 + (6 + var16_int);
             AccountRequestState.field_f.b(kj.field_a, var6, var7, 16777215, -1);
             var7 = var7 + (var16_int + 6);
-            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var8);
+            SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var8);
             AccountRequestState.field_f.b(cm.field_e, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var9);
+            SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var9);
             AccountRequestState.field_f.b(gh.field_L, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var10);
+            SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var10);
             AccountRequestState.field_f.b(ab.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             var7 += 6;
             AccountRequestState.field_f.b(mm.field_g, var6, var7, 16777215, -1);
             var7 = var7 + (var16_int + 6);
-            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var11);
+            SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var11);
             AccountRequestState.field_f.b(bm.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var12);
+            SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var12);
             AccountRequestState.field_f.b(am.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, -11 + var7, 12, 12, var13);
+            SoftwareRasterizer.fillRectangle(var6, -11 + var7, 12, 12, var13);
             AccountRequestState.field_f.b(cg.field_I, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, var7 - 11, 12, 12, var15);
+            SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var15);
             AccountRequestState.field_f.b(DualLinkNode.field_h, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, -11 + var7, 12, 12, var14);
+            SoftwareRasterizer.fillRectangle(var6, -11 + var7, 12, 12, var14);
             AccountRequestState.field_f.b(gh.field_O, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
-            SoftwareRasterizer.f(var6, -11 + var7, 12, 12, 16777215);
+            SoftwareRasterizer.fillRectangle(var6, -11 + var7, 12, 12, 16777215);
             AccountRequestState.field_f.b(rj.field_b, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             rh.field_b[0].drawHalfSize(-2 + var6, -13 + var7);
@@ -3570,7 +3570,7 @@ final class LevelMap {
                         var19 = (int)(128.0 + 64.0 * Math.sin((double)(-var18) + (mm.field_f * 2.0 + (double)var17))) * 65793;
                       }
                       if (var19 != 0) {
-                        SoftwareRasterizer.f(var6Lifetime1, var7Lifetime1, 5, 5, var19);
+                        SoftwareRasterizer.fillRectangle(var6Lifetime1, var7Lifetime1, 5, 5, var19);
                         if (var19 == 16777215) {
                           SoftwareRasterizer.drawLine(var6Lifetime1, var7Lifetime1 + 2, var6Lifetime1 + 2, var7Lifetime1, 0);
                           SoftwareRasterizer.drawLine(var6Lifetime1, 3 + var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 1, 0);
@@ -3584,7 +3584,7 @@ final class LevelMap {
                           SoftwareRasterizer.drawLine(var6Lifetime1 + 4, var7Lifetime1, var6Lifetime1 + 2, var7Lifetime1 + 2, 0);
                         }
                         SoftwareRasterizer.addVerticalLine(var6Lifetime1 + 4, var7Lifetime1, 5, 2236962);
-                        SoftwareRasterizer.b(var6Lifetime1, 4 + var7Lifetime1, 4, 2236962);
+                        SoftwareRasterizer.addHorizontalLine(var6Lifetime1, 4 + var7Lifetime1, 4, 2236962);
                       }
                       if (var21 != 0) {
                         SoftwareRasterizer.drawLine(var6Lifetime1, var7Lifetime1, -1 + (5 + var6Lifetime1), -1 + (var7Lifetime1 + 5), 16711680);
@@ -3655,7 +3655,7 @@ final class LevelMap {
               SoftwareRasterizer.drawLine(var6Lifetime1Lifetime1 + 2, 2 + (var7Lifetime1Lifetime1 - var16_intLifetime1), var16_intLifetime1 + (var6Lifetime1Lifetime1 + 2), 2 + var7Lifetime1Lifetime1, 16777215);
               SoftwareRasterizer.drawLine(var6Lifetime1Lifetime1 + (2 + var16_intLifetime1), var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2, 2 + var7Lifetime1Lifetime1 + var16_intLifetime1, 16777215);
               SoftwareRasterizer.drawLine(2 + var6Lifetime1Lifetime1, var16_intLifetime1 + var7Lifetime1Lifetime1 + 2, var6Lifetime1Lifetime1 + 2 - var16_intLifetime1, var7Lifetime1Lifetime1 + 2, 16777215);
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.resetClip();
             }
             var16_intLifetime1 = 0;
             while (true) {
@@ -3668,7 +3668,7 @@ final class LevelMap {
                     if (~eg.field_p != ~this.state.field_F[var16_intLifetime1].field_x) {
                       var17Lifetime1 = 14540032;
                     }
-                    SoftwareRasterizer.f(-1 + var6Lifetime1Lifetime2, -1 + var7Lifetime1Lifetime2, 2, 2, var17Lifetime1);
+                    SoftwareRasterizer.fillRectangle(-1 + var6Lifetime1Lifetime2, -1 + var7Lifetime1Lifetime2, 2, 2, var17Lifetime1);
                   }
                   var16_intLifetime1++;
                   continue;
@@ -3714,8 +3714,8 @@ final class LevelMap {
                           }
                           if (((null != this.state.field_q)) &&
                             (!(!this.state.map.a((byte) -93, this.state.field_q, var16)))) {
-                            SoftwareRasterizer.a(2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 + 2, 4, 16711680);
-                            SoftwareRasterizer.a(var6Lifetime1Lifetime2 + 2, 2 + var7Lifetime1Lifetime2, 5, 8388608);
+                            SoftwareRasterizer.drawCircleOutline(2 + var6Lifetime1Lifetime2, var7Lifetime1Lifetime2 + 2, 4, 16711680);
+                            SoftwareRasterizer.drawCircleOutline(var6Lifetime1Lifetime2 + 2, 2 + var7Lifetime1Lifetime2, 5, 8388608);
                           }
                         }
                         decompiledFrameRemainder0 = false;
@@ -3777,8 +3777,8 @@ final class LevelMap {
                     }
                     if (((null != this.state.field_q)) &&
                       (!(!this.state.map.a((byte) -93, this.state.field_q, var16Lifetime1)))) {
-                      SoftwareRasterizer.a(2 + var6Lifetime1Lifetime3, 2 + var7Lifetime1Lifetime3, 4, 16711680);
-                      SoftwareRasterizer.a(2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 + 2, 5, 8388608);
+                      SoftwareRasterizer.drawCircleOutline(2 + var6Lifetime1Lifetime3, 2 + var7Lifetime1Lifetime3, 4, 16711680);
+                      SoftwareRasterizer.drawCircleOutline(2 + var6Lifetime1Lifetime3, var7Lifetime1Lifetime3 + 2, 5, 8388608);
                     }
                   }
                   decompiledFrameRemainder1 = false;

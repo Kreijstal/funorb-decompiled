@@ -294,8 +294,8 @@ final class pn implements uj {
           if (param0 != -17) {
             field_d = (String) null;
           }
-          SoftwareRasterizer.b(40, 40, 560, 400, 1, 164);
-          SoftwareRasterizer.a(40, 40, 560, 400, 16777215);
+          SoftwareRasterizer.fillRectangleAlpha(40, 40, 560, 400, 1, 164);
+          SoftwareRasterizer.drawRectangleOutline(40, 40, 560, 400, 16777215);
           var1_int = 16;
           var2 = 60;
           var3 = 60;
@@ -322,7 +322,7 @@ final class pn implements uj {
                 }
               }
             }
-            SoftwareRasterizer.b(-10 + var3, -10 + var2, 50, 20 + var1_int, 65330, 120);
+            SoftwareRasterizer.fillRectangleAlpha(-10 + var3, -10 + var2, 50, 20 + var1_int, 65330, 120);
             wi.field_A.a((String) (var6), -10 + var3, var2 - 10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
             wi.field_A.a(var5.field_n, var3 - 10 + 60, var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
             var2 = var2 + (var1_int + 24);

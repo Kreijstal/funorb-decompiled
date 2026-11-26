@@ -37,7 +37,7 @@ final class hm extends UiWidget {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         MessageKeys.a(false);

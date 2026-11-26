@@ -393,7 +393,7 @@ final class fb extends ql {
         try {
           var5_int = param1 + param0;
           for (var6 = (param0 & 1) + param0; var6 < var5_int; var6 += 2) {
-            si.e(param3, var6, param4, 65793, 96);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param3, var6, param4, 65793, 96);
           }
           if (param2 != 11992) {
             fb.a(0.5819263259193922, (byte) 31, 0.515826981495636, 0.17239172967428718, 0.7326247205058647, 1.0288611625496324, -0.6530990291171533, 1.5894862770774536, 1.0324946007427929);

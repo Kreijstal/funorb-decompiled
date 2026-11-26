@@ -41,7 +41,7 @@ final class nc extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            ti.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         id.b((byte) -58);
@@ -197,7 +197,7 @@ final class nc extends UiWidget {
             param3.e(var6, param2);
           }
           id.b((byte) -58);
-          if (this.field_P.field_v + param0 >= ti.field_e) {
+          if (this.field_P.field_v + param0 >= SoftwareRasterizer.field_e) {
             hj.a(this.field_I, param1 ^ 47);
             param3.e(-this.field_z, 0);
             param3.e(-this.field_z + 2 * this.field_M, 0);
@@ -205,7 +205,7 @@ final class nc extends UiWidget {
             id.b((byte) -58);
             this.field_I.e(param0, param2);
           }
-          if (ti.field_c >= var5_int - this.field_P.field_v) {
+          if (SoftwareRasterizer.field_c >= var5_int - this.field_P.field_v) {
             hj.a(this.field_I, 1);
             for (var7 = this.field_z - this.field_P.field_v + this.field_p; 2 * this.field_M < var7; var7 = var7 - 2 * this.field_M) {
             }
@@ -253,13 +253,13 @@ final class nc extends UiWidget {
           var10 = -var5 + var6;
           var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
           var12 = 256 <= var11 ? var9 | var8 : (var11 * var9 & 16711680 | var8 * var11 & -16711936) >>> 8;
-          ti.g(var7, var6, this.field_M, var12);
-          ti.g(var7 - this.field_M * 2, var6, this.field_M, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_M, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_M * 2, var6, this.field_M, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = param0 & 16711935;
           var12Lifetime1 = 256 <= var11 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var9Lifetime1 * var11) >>> 8;
-          ti.g(var7 + this.field_M, var6, this.field_M, var12Lifetime1);
-          ti.g(-this.field_M + var7, var6, this.field_M, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_M, var6, this.field_M, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_M + var7, var6, this.field_M, var12Lifetime1);
         }
         id.b((byte) -58);
         return var14;

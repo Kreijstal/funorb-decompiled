@@ -55,16 +55,16 @@ final class ca extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var11 = CrazyCrystals.field_B;
         try {
-          kh.f(param1, param2, 1 + param4, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param2, 1 + param4, 10000536);
           var5_int = 70 / ((param0 + 78) / 42);
-          kh.f(param1, param2 + param3, 1 + param4, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param2 + param3, 1 + param4, 12105912);
           var6 = 1;
-          if (kh.field_b > param2 + var6) {
-            var6 = -param2 + kh.field_b;
+          if (SoftwareRasterizer.field_b > param2 + var6) {
+            var6 = -param2 + SoftwareRasterizer.field_b;
           }
           var7 = param3;
-          if (kh.field_j < param2 + var7) {
-            var7 = -param2 + kh.field_j;
+          if (SoftwareRasterizer.field_j < param2 + var7) {
+            var7 = -param2 + SoftwareRasterizer.field_j;
           }
           var8 = var6;
           while (true) {
@@ -73,8 +73,8 @@ final class ca extends IntrusiveNode {
             }
             var9 = var8 * 48 / param3 + 152;
             var10 = var9 | (var9 << 8 | var9 << 16);
-            kh.field_i[param1 + kh.field_l * (var8 + param2)] = var10;
-            kh.field_i[param4 + param1 + kh.field_l * (var8 + param2)] = var10;
+            SoftwareRasterizer.field_i[param1 + SoftwareRasterizer.field_l * (var8 + param2)] = var10;
+            SoftwareRasterizer.field_i[param4 + param1 + SoftwareRasterizer.field_l * (var8 + param2)] = var10;
             var8++;
             if (var11 != 0) {
               return;

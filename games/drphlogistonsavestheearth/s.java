@@ -37,7 +37,7 @@ final class s {
           var1 = new nh(540, 140);
           MouseInput.a(var1, (byte) 127);
           uc.b();
-          wj.c();
+          SoftwareRasterizer.clearRaster();
           vb.field_n = 0;
           ah.g((byte) -119);
           var2 = var1.a();
@@ -49,7 +49,7 @@ final class s {
               break;
             }
             var2.c(-2, -2, 16777215);
-            wj.g(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
           } while (var4 == 0);
           if (param0 <= 38) {

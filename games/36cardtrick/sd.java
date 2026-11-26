@@ -18,20 +18,20 @@ final class sd {
         param5 = param5 - param3;
         param9 = param9 - param3;
         int var10 = -param3 + param8;
-        if (param9 < vj.field_h) {
-          param1 = param1 - (-param9 + vj.field_h);
-          param9 = vj.field_h;
+        if (param9 < SoftwareRasterizer.field_h) {
+          param1 = param1 - (-param9 + SoftwareRasterizer.field_h);
+          param9 = SoftwareRasterizer.field_h;
         }
-        if (vj.field_f > param5) {
-          param4 = param4 - (-param5 + vj.field_f);
-          param5 = vj.field_f;
+        if (SoftwareRasterizer.field_f > param5) {
+          param4 = param4 - (-param5 + SoftwareRasterizer.field_f);
+          param5 = SoftwareRasterizer.field_f;
         }
         int var11 = 124 / ((-52 - param6) / 58);
-        if (!(param9 + param1 <= vj.field_b)) {
-          param1 = -param9 + vj.field_b;
+        if (!(param9 + param1 <= SoftwareRasterizer.field_b)) {
+          param1 = -param9 + SoftwareRasterizer.field_b;
         }
-        if (!(vj.field_a >= param5 + param4)) {
-          param4 = -param5 + vj.field_a;
+        if (!(SoftwareRasterizer.field_a >= param5 + param4)) {
+          param4 = -param5 + SoftwareRasterizer.field_a;
         }
         if (param4 <= 0) {
           return;
@@ -53,7 +53,7 @@ final class sd {
           if (var10 <= (param1 + param9 - 1) % param8) {
             param1 = param1 - (-var10 + 1 + (-1 + (param1 + param9)) % param8);
           }
-          ke.a(param1, vj.field_l - param4, param5 % param8, param0, -84, param2, vj.field_l * param9 + param5, param4, vj.field_j, param9 % param8, var10, param7, param3);
+          ke.a(param1, SoftwareRasterizer.field_l - param4, param5 % param8, param0, -84, param2, SoftwareRasterizer.field_l * param9 + param5, param4, SoftwareRasterizer.field_j, param9 % param8, var10, param7, param3);
           return;
         }
     }

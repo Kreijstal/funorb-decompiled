@@ -44,14 +44,14 @@ final class pm extends IOException {
           var7 = param4[param1].field_x;
           param4[0].f(param2, param0);
           param4[2].f(param3 + param2 - var6, param0);
-          SoftwareRasterizer.b(en.field_b);
-          SoftwareRasterizer.f(param2 + var5_int, param0, param2 - (-param3 + var6), param0 + param4[1].field_A);
+          SoftwareRasterizer.saveClip(en.field_b);
+          SoftwareRasterizer.intersectClip(param2 + var5_int, param0, param2 - (-param3 + var6), param0 + param4[1].field_A);
           var8 = param2 + var5_int;
           var9 = param3 + param2 - var6;
           for (param2 = var8; var9 > param2; param2 = param2 + var7) {
             param4[1].f(param2, param0);
           }
-          SoftwareRasterizer.a(en.field_b);
+          SoftwareRasterizer.restoreClip(en.field_b);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

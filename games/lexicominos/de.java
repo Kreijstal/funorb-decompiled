@@ -12,7 +12,7 @@ final class de extends RuntimeException {
             field_b = (PcmStreamMixer) null;
           }
           ja.b((byte) -111);
-          SoftwareRasterizer.a(param0.field_y, param0.field_r, param0.field_x);
+          SoftwareRasterizer.setRasterBuffer(param0.field_y, param0.field_r, param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -79,7 +79,7 @@ final class de extends RuntimeException {
             ug.field_A.a(-14579, qj.field_fb);
           }
           qj.field_fb.a(param0, param2, 125, param1);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           we.a((byte) -65, param3);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

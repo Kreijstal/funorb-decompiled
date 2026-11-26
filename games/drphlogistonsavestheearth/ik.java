@@ -92,10 +92,10 @@ final class ik {
         }
         MouseInput.a(bb.field_f, (byte) 91);
         uc.b();
-        wj.c();
+        SoftwareRasterizer.clearRaster();
         ah.g((byte) -104);
         if (256 > var5) {
-          wj.d(0, 0, wj.field_k, wj.field_c, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, 0, -var5 + 256);
         }
         cl.d((byte) -106);
         if (150 <= vb.field_n) {

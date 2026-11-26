@@ -94,9 +94,9 @@ final class mf {
         for (var10 = 0; var10 < param2; var10++) {
           var12 = (var10 << 8) / (param2 - 1);
           var13 = var12 * var9 & 16711680 | var12 * var8 & -16711936;
-          gf.a(var10, var10, -(2 * var10) + var5, var6 - 2 * var10, -var10 + param2, var13 >>> 8);
+          SoftwareRasterizer.fillRoundedRectangle(var10, var10, -(2 * var10) + var5, var6 - 2 * var10, -var10 + param2, var13 >>> 8);
         }
-        gf.b(param2, param2, param3, param1, 0);
+        SoftwareRasterizer.fillRectangle(param2, param2, param3, param1, 0);
         jh.b();
         var7.field_A = var7.field_A - param2;
         var7.field_w = var7.field_w - param2;
@@ -200,7 +200,7 @@ final class mf {
                 g.a(param2, 18131);
               }
             } else {
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               ah.a(false, 320, 240);
               ob.a(0, -97, param2, 0);
             }

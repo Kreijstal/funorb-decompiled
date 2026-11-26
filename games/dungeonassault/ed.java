@@ -220,20 +220,20 @@ final class ed extends np {
         }
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
-        gf.a(this.field_B);
+        SoftwareRasterizer.saveClip(this.field_B);
         if (this.field_U != null) {
           for (var6 = 0; var6 < 7; var6++) {
-            gf.e(var4, var6 + var5, var4 + this.field_q, var5 - (-var6 - 1));
+            SoftwareRasterizer.setClip(var4, var6 + var5, var4 + this.field_q, var5 - (-var6 - 1));
             this.field_U.d(var4, var5, 32 * (-var6 + 7));
           }
         }
         if (this.field_Q != null) {
           for (var6Lifetime1 = 0; var6Lifetime1 < 7; var6Lifetime1++) {
-            gf.e(var4, var5 + this.field_x - 7 + var6Lifetime1, this.field_q + var4, -6 + (var5 + this.field_x) + var6Lifetime1);
+            SoftwareRasterizer.setClip(var4, var5 + this.field_x - 7 + var6Lifetime1, this.field_q + var4, -6 + (var5 + this.field_x) + var6Lifetime1);
             this.field_Q.d(var4, var5 + this.field_x - 7, (var6Lifetime1 + 1) * 32);
           }
         }
-        gf.b(this.field_B);
+        SoftwareRasterizer.restoreClip(this.field_B);
     }
 
     final void a(int param0, int param1) {

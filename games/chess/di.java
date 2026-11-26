@@ -495,7 +495,7 @@ final class di extends ci {
         }
         hl.a(-416228287, param1);
         if (fn.field_a) {
-          wb.g(qa.field_f.field_a.field_mb, qa.field_f.field_a.field_V, qa.field_f.field_a.field_M, qa.field_f.field_a.field_pb);
+          SoftwareRasterizer.darkenRectangleHalf(qa.field_f.field_a.field_mb, qa.field_f.field_a.field_V, qa.field_f.field_a.field_M, qa.field_f.field_a.field_pb);
           qa.field_f.field_a.a(false, param1);
         }
         SecondaryNodeDeque.a(16384, param1);

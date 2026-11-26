@@ -581,7 +581,7 @@ final class UiComponentPart013 extends ComponentContainer implements CallbackCon
           sceneWidgetState0048 = (SceneWidget) null;
         }
         if (this.interactiveComponentState0004 != null) {
-          SoftwareRaster.performAction0639(10 + integerArgument1, 134 + integerArgument4, -20 + this.integerState0107, 4210752);
+          SoftwareRaster.drawHorizontalLine(10 + integerArgument1, 134 + integerArgument4, -20 + this.integerState0107, 4210752);
         }
         super.performAction0162(integerArgument1, -119, integerArgument3, integerArgument4);
     }

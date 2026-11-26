@@ -61,7 +61,7 @@ final class rk extends jc {
         super.b(param0, param1, param2);
         vd.field_p.a(this.field_bb, param0 + (this.field_h >> 1), param2 + 103, 16777215, -1);
         if (this.field_db != null) {
-          vj.d(20 + param0, -7 + param2 + 120, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
           vd.field_p.a(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, vd.field_p.field_s);
         }
     }

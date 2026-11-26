@@ -18,7 +18,7 @@ final class db extends wk {
         if (param1 < -6) {
           ne.field_v.a(this.field_W, param2 + (this.field_k >> 1), 103 + param0, 16777215, -1);
           if (null != this.field_P) {
-            na.a(20 + param2, -7 + param0 + 120, 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(20 + param2, -7 + param0 + 120, 260, 8421504);
             ne.field_v.a(this.field_P, 20 + param2, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
           }
           return;

@@ -126,29 +126,29 @@ final class di {
           var9 = 0;
           var6_intLifetime1 = param0.field_b;
           var10 = param0.field_g;
-          if (param2 < vj.field_f) {
-            var11 = vj.field_f - param2;
-            param2 = vj.field_f;
+          if (param2 < SoftwareRasterizer.field_f) {
+            var11 = SoftwareRasterizer.field_f - param2;
+            param2 = SoftwareRasterizer.field_f;
             var9 = var9 + var11;
             var10 = var10 - var11;
           }
-          if (var10 + param2 > vj.field_a) {
-            var10 = -param2 + vj.field_a;
+          if (var10 + param2 > SoftwareRasterizer.field_a) {
+            var10 = -param2 + SoftwareRasterizer.field_a;
           }
-          if (param5 < vj.field_h) {
-            var11Lifetime1 = -param5 + vj.field_h;
+          if (param5 < SoftwareRasterizer.field_h) {
+            var11Lifetime1 = -param5 + SoftwareRasterizer.field_h;
             var7 = var7 + var8 * var11Lifetime1;
-            param5 = vj.field_h;
+            param5 = SoftwareRasterizer.field_h;
             var9 = var9 + param0.field_g * var11Lifetime1;
             var6_intLifetime1 = var6_intLifetime1 - var11Lifetime1;
           }
-          if (vj.field_b < var6_intLifetime1 + param5) {
-            var6_intLifetime1 = vj.field_b - param5;
+          if (SoftwareRasterizer.field_b < var6_intLifetime1 + param5) {
+            var6_intLifetime1 = SoftwareRasterizer.field_b - param5;
           }
-          var11Lifetime2 = -var10 + vj.field_l;
+          var11Lifetime2 = -var10 + SoftwareRasterizer.field_l;
           var12 = -var10 + param0.field_g;
-          var13 = param5 * vj.field_l + param2;
-          q.a(vj.field_j, (byte) 122, param3, var13, var6_intLifetime1, var10, var8, var7, param0.field_i, var9, var11Lifetime2, var12, param1);
+          var13 = param5 * SoftwareRasterizer.field_l + param2;
+          q.a(SoftwareRasterizer.field_j, (byte) 122, param3, var13, var6_intLifetime1, var10, var8, var7, param0.field_i, var9, var11Lifetime2, var12, param1);
           if (param4 != 13449) {
             field_d = (rf) null;
           }

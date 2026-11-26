@@ -15,7 +15,7 @@ final class mi extends IntrusiveNode {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         we.a(param0 - 7);
-        gb.g(param2, param4, param1, param3);
+        SoftwareRasterizer.intersectClip(param2, param4, param1, param3);
         if (param0 != -52) {
           mi.a((byte) -106);
         }

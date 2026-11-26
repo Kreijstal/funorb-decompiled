@@ -34,10 +34,10 @@ abstract class en {
           te.a(param1, -4 + (param3 + param4), param2, kc.field_S[0]);
           for (var5_int = 0; var5_int < 5; var5_int++) {
             var6 = 160 - var5_int * 32;
-            gf.d(param1, -2 + param4 - var5_int, param2, 0, var6);
-            gf.d(param1, param4 + var5_int, param2, 0, var6);
-            gf.d(param1, param3 + (param4 + (-5 - var5_int)), param2, 0, var6);
-            gf.d(param1, param4 + (param3 - 3) + var5_int, param2, 0, var6);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, -2 + param4 - var5_int, param2, 0, var6);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, param4 + var5_int, param2, 0, var6);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, param3 + (param4 + (-5 - var5_int)), param2, 0, var6);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, param4 + (param3 - 3) + var5_int, param2, 0, var6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

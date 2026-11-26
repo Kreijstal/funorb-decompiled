@@ -50,32 +50,32 @@ final class rl {
           stackIn_12_0 = m.field_q - param1;
         }
         pk.field_m = stackIn_12_0;
-        if (si.field_j << 2 > v.field_g) {
-          if (si.field_j << 2 > bn.field_p) {
-            bn.field_p = si.field_j << 2;
+        if (SoftwareRasterizer.field_j << 2 > v.field_g) {
+          if (SoftwareRasterizer.field_j << 2 > bn.field_p) {
+            bn.field_p = SoftwareRasterizer.field_j << 2;
           }
-          v.field_g = si.field_j << 2;
+          v.field_g = SoftwareRasterizer.field_j << 2;
         }
-        if (bn.field_p > si.field_a << 2) {
-          bn.field_p = si.field_a << 2;
-          if (v.field_g > si.field_a << 2) {
-            v.field_g = si.field_a << 2;
+        if (bn.field_p > SoftwareRasterizer.field_a << 2) {
+          bn.field_p = SoftwareRasterizer.field_a << 2;
+          if (v.field_g > SoftwareRasterizer.field_a << 2) {
+            v.field_g = SoftwareRasterizer.field_a << 2;
           }
         }
-        if (si.field_b << 2 > pk.field_m) {
-          if (cn.field_r < si.field_b << 2) {
-            cn.field_r = si.field_b << 2;
+        if (SoftwareRasterizer.field_b << 2 > pk.field_m) {
+          if (cn.field_r < SoftwareRasterizer.field_b << 2) {
+            cn.field_r = SoftwareRasterizer.field_b << 2;
           }
-          pk.field_m = si.field_b << 2;
+          pk.field_m = SoftwareRasterizer.field_b << 2;
         }
         if (param0 != -19104) {
           return;
         }
-        if (cn.field_r > si.field_l << 2) {
-          if (si.field_l << 2 < pk.field_m) {
-            pk.field_m = si.field_l << 2;
+        if (cn.field_r > SoftwareRasterizer.field_l << 2) {
+          if (SoftwareRasterizer.field_l << 2 < pk.field_m) {
+            pk.field_m = SoftwareRasterizer.field_l << 2;
           }
-          cn.field_r = si.field_l << 2;
+          cn.field_r = SoftwareRasterizer.field_l << 2;
         }
     }
 

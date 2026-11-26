@@ -199,7 +199,7 @@ final class LevelSession {
             }
             if ((decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3)) {
-              wj.f(0, 0, 640, 430, 7091712, 131328);
+              SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 7091712, 131328);
               var3 = vi.field_g.field_d;
               vi.field_g.a((int)((double)(-var9 * (var3 - 640)) / var7), 0, 128);
               var3 = cc.field_w.field_d * 2;
@@ -210,7 +210,7 @@ final class LevelSession {
               }
             }
             if (decompiledFrameRemainder4) {
-              wj.f(0, 0, 640, 430, 27648, 512);
+              SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 27648, 512);
               var3 = gb.field_e.field_d;
               gb.field_e.a((int)((double)(-var9 * (-640 + var3)) / var7), 0, 128);
               var3 = b.field_k.field_d * 2;
@@ -220,7 +220,7 @@ final class LevelSession {
                 return;
               }
             }
-            wj.f(0, 0, 640, 430, 27648, 512);
+            SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 27648, 512);
             var3 = ha.field_b.field_d;
             ha.field_b.a((int)((double)((var3 - 640) * -var9) / var7), 0, 128);
             var3 = 2 * nf.field_v.field_d;
@@ -248,7 +248,7 @@ final class LevelSession {
           }
         }
         if (decompiledFrameRemainder5) {
-          wj.f(0, 0, 640, 430, 262656, 11754240);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 262656, 11754240);
           var3 = sg.field_e.field_d;
           var4 = (int)((double)((var3 - 640) * -var9) / var7);
           if (sd.field_e == 2) {
@@ -266,7 +266,7 @@ final class LevelSession {
             return;
           }
         }
-        wj.f(0, 0, 640, 430, 258, 13932);
+        SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 258, 13932);
         if (sd.field_e != 0 &&
           0 <= DrPhlogistonSavesTheEarth.field_K) {
           var11_ref_gg = new gg(ib.field_a, ch.field_y, 70, 0.0, 1.0, 1.0, 1, 1.5, 0.99, 1);
@@ -504,7 +504,7 @@ final class LevelSession {
           }
         }
         bc.field_d.c();
-        wj.c();
+        SoftwareRasterizer.clearRaster();
         lb.field_C.a(119);
         fc.field_a = 0;
         this.field_b = 0;
@@ -801,13 +801,13 @@ final class LevelSession {
             }
             var9 = stackIn_11_0;
             while (var9 <= 1) {
-              wj.g(var4 + var9, var8 + var5, var6, var7, 16711680);
+              SoftwareRasterizer.drawLine(var4 + var9, var8 + var5, var6, var7, 16711680);
               var9++;
             }
             var8++;
             continue scanLoop1;
           }
-          wj.b(89, 464, 3, 16711680);
+          SoftwareRasterizer.fillCircle(89, 464, 3, 16711680);
           var8 = this.field_H;
           stackIn_11_0 = -1;
           break;
@@ -853,8 +853,8 @@ final class LevelSession {
           pi.field_S[this.field_w].e(383, 438);
         }
         dh.field_R[ah.field_J].a(408, 429);
-        wj.b(this.field_t);
-        wj.f(400, 425, 515, 475);
+        SoftwareRasterizer.saveClip(this.field_t);
+        SoftwareRasterizer.setClip(400, 425, 515, 475);
         if (this.field_J - pa.field_c <= 10) {
           dh.field_R[ib.field_t].a(408, -((-pa.field_c + this.field_J) * 5) + 479);
           if (var17 != 0) {
@@ -863,7 +863,7 @@ final class LevelSession {
         } else {
           dh.field_R[ib.field_t].a(408, 429);
         }
-        wj.a(this.field_t);
+        SoftwareRasterizer.restoreClip(this.field_t);
         var10 = "x" + this.field_A;
         var11 = cb.field_b;
         var12 = new nh(var11.b(var10), var11.field_x + var11.field_S);
@@ -893,13 +893,13 @@ final class LevelSession {
             }
             var16 = stackIn_52_0;
             while (var16 <= 1) {
-              wj.g(var4Lifetime1 + var16, var5Lifetime1 + var15_int, var6Lifetime1, var7Lifetime1, 16711680);
+              SoftwareRasterizer.drawLine(var4Lifetime1 + var16, var5Lifetime1 + var15_int, var6Lifetime1, var7Lifetime1, 16711680);
               var16++;
             }
             var15_int++;
             continue scanLoop2;
           }
-          wj.b(89, 464, 3, 16711680);
+          SoftwareRasterizer.fillCircle(89, 464, 3, 16711680);
           stackIn_52_0 = this.field_F ? 1 : 0;
           break;
         }
@@ -989,7 +989,7 @@ final class LevelSession {
               var3_ref_he__ = ii.field_b;
               var6 = var3_ref_he__[(-1 + var3_ref_he__.length) * (225 - this.field_fb) / 225];
               var2 = var6;
-              wj.d(0, 0, 640, 430, 16777215, this.field_fb * 255 / 225);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 430, 16777215, this.field_fb * 255 / 225);
               var2.a(-var6.field_a + (int)this.field_N, -var6.field_f + (int)this.field_D, (225 - this.field_fb) * 256 / 225);
             }
           } else {
@@ -998,7 +998,7 @@ final class LevelSession {
               var3_ref_he__ = ii.field_b;
               var6 = var3_ref_he__[(-1 + var3_ref_he__.length) * (225 - this.field_fb) / 225];
               var2 = var6;
-              wj.d(0, 0, 640, 430, 16777215, this.field_fb * 255 / 225);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 430, 16777215, this.field_fb * 255 / 225);
               var2.a(-var6.field_a + (int)this.field_N, -var6.field_f + (int)this.field_D, (225 - this.field_fb) * 256 / 225);
             }
           }
@@ -1006,7 +1006,7 @@ final class LevelSession {
           var3_ref_he__ = ii.field_b;
           var6 = var3_ref_he__[(-1 + var3_ref_he__.length) * (225 - this.field_fb) / 225];
           var2 = var6;
-          wj.d(0, 0, 640, 430, 16777215, this.field_fb * 255 / 225);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 430, 16777215, this.field_fb * 255 / 225);
           var2.a(-var6.field_a + (int)this.field_N, -var6.field_f + (int)this.field_D, (225 - this.field_fb) * 256 / 225);
         }
         if (param0 != -5651) {
@@ -1042,7 +1042,7 @@ final class LevelSession {
               } else {
                 stackIn_20_4 = DualLinkNode.field_l;
               }
-              wj.a(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_19_3, stackIn_20_4);
+              SoftwareRasterizer.addRadialGlow(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_19_3, stackIn_20_4);
             }
             var3++;
             continue;
@@ -1195,7 +1195,7 @@ final class LevelSession {
               }
               if (null != rh.field_b) {
                 var6 = rh.field_b;
-                kg.a(wj.field_l, 0, var6.field_B, 0, var6.field_B.length);
+                kg.a(SoftwareRasterizer.field_l, 0, var6.field_B, 0, var6.field_B.length);
               } else {
                 rh.field_b = be.b();
               }
@@ -1578,11 +1578,11 @@ final class LevelSession {
           var4 = var4 - (255 - var5_int) / 2;
           fk.field_m.a(var3, var4, var5_int);
         }
-        wj.f(var3 + 94, 101 + var4, var3 + 116, var4 + 131);
+        SoftwareRasterizer.setClip(var3 + 94, 101 + var4, var3 + 116, var4 + 131);
         var5_int = 0;
         do {
           if (var5_int > 3) {
-            wj.a();
+            SoftwareRasterizer.resetClip();
             cb.field_b.b(a.field_f, 320, 45 + var4, 16777215, 0);
             break;
           }
@@ -2468,7 +2468,7 @@ final class LevelSession {
         }
         if (decompiledNaturalLoopExit0) {
           bc.field_d.c();
-          wj.f(0, 0, bc.field_d.field_y, bc.field_d.field_w, 0);
+          SoftwareRasterizer.fillRectangle(0, 0, bc.field_d.field_y, bc.field_d.field_w, 0);
           lb.field_C.a(124);
           stackIn_20_0 = this.levelNumber;
         }
@@ -2638,7 +2638,7 @@ final class LevelSession {
         if (var2 == 2) {
           var2 = 0;
           while (var2 < 64) {
-            wj.a(var2 * 10, i.field_c[var2], 20, 16777215, 64);
+            SoftwareRasterizer.drawVerticalLineAlpha(var2 * 10, i.field_c[var2], 20, 16777215, 64);
             var2++;
             if (var3 != 0) {
               decompiledFrameCompleted0 = false;
@@ -3446,10 +3446,10 @@ final class LevelSession {
         if (0 != sd.field_e) {
           this.G(param0 ^ 6212);
           if (DrPhlogistonSavesTheEarth.field_D) {
-            wj.c();
+            SoftwareRasterizer.clearRaster();
           }
         } else {
-          wj.c();
+          SoftwareRasterizer.clearRaster();
         }
         this.e((byte) 97);
         this.l(-1601);

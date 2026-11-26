@@ -95,34 +95,34 @@ final class re {
           var5_int = 0;
           var6 = param4.field_o;
           var7 = param4.field_p;
-          if (vj.field_h > param2) {
-            var8 = -param2 + vj.field_h;
-            param2 = vj.field_h;
+          if (SoftwareRasterizer.field_h > param2) {
+            var8 = -param2 + SoftwareRasterizer.field_h;
+            param2 = SoftwareRasterizer.field_h;
             var6 = var6 - var8;
             var5_int = var5_int + var7 * var8;
           }
-          if (param1 < vj.field_f) {
-            var8Lifetime1 = vj.field_f - param1;
-            param1 = vj.field_f;
+          if (param1 < SoftwareRasterizer.field_f) {
+            var8Lifetime1 = SoftwareRasterizer.field_f - param1;
+            param1 = SoftwareRasterizer.field_f;
             var5_int = var5_int + var8Lifetime1;
             var7 = var7 - var8Lifetime1;
           }
-          if (vj.field_b < var6 + param2) {
-            var6 = vj.field_b - param2;
+          if (SoftwareRasterizer.field_b < var6 + param2) {
+            var6 = SoftwareRasterizer.field_b - param2;
           }
-          if (param1 + var7 > vj.field_a) {
-            var7 = vj.field_a - param1;
+          if (param1 + var7 > SoftwareRasterizer.field_a) {
+            var7 = SoftwareRasterizer.field_a - param1;
           }
-          var8Lifetime2 = param2 * vj.field_l + param1;
+          var8Lifetime2 = param2 * SoftwareRasterizer.field_l + param1;
           var9 = param4.field_p - var7;
           if (param3 < 46) {
             var11 = (kc) null;
             re.a(-101, 85, 79, (byte) -16, (kc) null);
           }
-          var10 = vj.field_l - var7;
+          var10 = SoftwareRasterizer.field_l - var7;
           if (var7 > 0 &&
             var6 > 0) {
-            hf.a(var9, var6, param0, 0, param4.field_r, var5_int, var8Lifetime2, var10, var7, vj.field_j, 125);
+            hf.a(var9, var6, param0, 0, param4.field_r, var5_int, var8Lifetime2, var10, var7, SoftwareRasterizer.field_j, 125);
             return;
           }
           return;

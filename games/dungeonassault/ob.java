@@ -62,40 +62,40 @@ final class ob extends ok {
           }
           param1 = param1 + param0.field_w;
           param3 = param3 + param0.field_A;
-          var5_int = gf.field_i * param3 + param1;
+          var5_int = SoftwareRasterizer.field_i * param3 + param1;
           var6 = 0;
           var7 = param0.field_v;
           var8 = param0.field_y;
-          var9 = -var8 + gf.field_i;
-          if (param3 < gf.field_f) {
-            var11 = gf.field_f - param3;
-            param3 = gf.field_f;
-            var5_int = var5_int + var11 * gf.field_i;
+          var9 = -var8 + SoftwareRasterizer.field_i;
+          if (param3 < SoftwareRasterizer.field_f) {
+            var11 = SoftwareRasterizer.field_f - param3;
+            param3 = SoftwareRasterizer.field_f;
+            var5_int = var5_int + var11 * SoftwareRasterizer.field_i;
             var7 = var7 - var11;
             var6 = var6 + var8 * var11;
           }
           var10 = 0;
-          if (gf.field_e < param3 + var7) {
-            var7 = var7 - (-gf.field_e + var7 + param3);
+          if (SoftwareRasterizer.field_e < param3 + var7) {
+            var7 = var7 - (-SoftwareRasterizer.field_e + var7 + param3);
           }
-          if (param1 < gf.field_j) {
-            var11Lifetime1 = gf.field_j - param1;
+          if (param1 < SoftwareRasterizer.field_j) {
+            var11Lifetime1 = SoftwareRasterizer.field_j - param1;
             var8 = var8 - var11Lifetime1;
             var10 = var10 + var11Lifetime1;
             var6 = var6 + var11Lifetime1;
-            param1 = gf.field_j;
+            param1 = SoftwareRasterizer.field_j;
             var5_int = var5_int + var11Lifetime1;
             var9 = var9 + var11Lifetime1;
           }
-          if (param1 + var8 > gf.field_h) {
-            var11Lifetime2 = var8 + param1 - gf.field_h;
+          if (param1 + var8 > SoftwareRasterizer.field_h) {
+            var11Lifetime2 = var8 + param1 - SoftwareRasterizer.field_h;
             var10 = var10 + var11Lifetime2;
             var9 = var9 + var11Lifetime2;
             var8 = var8 - var11Lifetime2;
           }
           if (0 < var8 &&
             0 < var7) {
-            o.a(var8, 0, gf.field_b, var6, param0.field_B, var7, param2, var5_int, 0, var9, var10);
+            o.a(var8, 0, SoftwareRasterizer.field_b, var6, param0.field_B, var7, param2, var5_int, 0, var9, var10);
             return;
           }
           return;

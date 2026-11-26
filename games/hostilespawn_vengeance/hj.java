@@ -26,7 +26,7 @@ final class hj extends DualLinkNode {
           }
           while (var9 < param4 + param1) {
             var8 = param3 + (-param3 + param2) * (var9 - param1) / param4;
-            si.e(param0, var9, param6, var7_int, var8);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param0, var9, param6, var7_int, var8);
             var9++;
           }
           return;

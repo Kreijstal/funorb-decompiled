@@ -118,21 +118,21 @@ final class h extends TextureOperator {
         RuntimeException var5 = null;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
-          bi.b(param0, param2, 1 + param3, 10000536);
-          bi.b(param0, param2 + param4, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param2, 1 + param3, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param2 + param4, param3 + 1, 12105912);
           var5_int = param1;
           var6 = param4;
-          if (bi.field_f > var5_int + param2) {
-            var5_int = -param2 + bi.field_f;
+          if (SoftwareRasterizer.field_f > var5_int + param2) {
+            var5_int = -param2 + SoftwareRasterizer.field_f;
           }
-          if (bi.field_c < param2 + var6) {
-            var6 = -param2 + bi.field_c;
+          if (SoftwareRasterizer.field_c < param2 + var6) {
+            var6 = -param2 + SoftwareRasterizer.field_c;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = var7 * 48 / param4 + 152;
             var9 = var8 << 16 | var8 << 8 | var8;
-            bi.field_l[bi.field_e * (var7 + param2) + param0] = var9;
-            bi.field_l[param3 + (var7 + param2) * bi.field_e + param0] = var9;
+            SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * (var7 + param2) + param0] = var9;
+            SoftwareRasterizer.field_l[param3 + (var7 + param2) * SoftwareRasterizer.field_e + param0] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

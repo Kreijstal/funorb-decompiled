@@ -44,8 +44,8 @@ class va implements WidgetListener, qa {
           if (!wq.field_H) {
             return;
           }
-          bi.b(40, 40, 560, 400, 1, 164);
-          bi.e(40, 40, 560, 400, 16777215);
+          SoftwareRasterizer.fillRectangleAlpha(40, 40, 560, 400, 1, 164);
+          SoftwareRasterizer.drawRectangleOutline(40, 40, 560, 400, 16777215);
           var1_int = 16;
           var2 = 60;
           var3 = 60;
@@ -99,9 +99,9 @@ class va implements WidgetListener, qa {
             }
             if (decompiledFrameRemainder0) {
               if (var11 != 0) {
-                bi.b(-10 + var3, var2 - 10, 50, 20 + var1_int, var8, 120);
+                SoftwareRasterizer.fillRectangleAlpha(-10 + var3, var2 - 10, 50, 20 + var1_int, var8, 120);
               } else {
-                bi.b(var3 - 10, -10 + var2, 50, 20 + var1_int, var8);
+                SoftwareRasterizer.fillRectangle(var3 - 10, -10 + var2, 50, 20 + var1_int, var8);
               }
               tk.field_c.a((String) (var6), var3 - 10, -10 + var2, 50, 20 + var1_int, 16777215, 5592405, 1, 1, 0);
               tk.field_c.a(var7, -10 + (var3 + 60), var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);

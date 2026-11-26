@@ -57,7 +57,7 @@ final class kf {
         UiPanel stackIn_135_0 = null;
         boolean stackIn_136_1 = false;
         java.applet.Applet var3;
-        jb.a(0, bi.field_e + 640 >> 1, -640 + bi.field_e >> 1, -30486, bi.field_j);
+        jb.a(0, SoftwareRasterizer.field_e + 640 >> 1, -640 + SoftwareRasterizer.field_e >> 1, -30486, SoftwareRasterizer.field_j);
         if (param0 == -7393) {
           if (rk.field_y <= 0) {
             if (!(0 >= ko.field_P) ||

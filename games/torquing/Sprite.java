@@ -1309,7 +1309,7 @@ class Sprite extends SpriteState {
     }
 
     final void e() {
-        SoftwareRasterizer.a(this.field_y, this.field_s, this.field_t);
+        SoftwareRasterizer.setRasterBuffer(this.field_y, this.field_s, this.field_t);
     }
 
     final static void copyRegion(Sprite param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7) {

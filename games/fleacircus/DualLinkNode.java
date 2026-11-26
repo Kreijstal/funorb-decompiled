@@ -311,7 +311,7 @@ class DualLinkNode extends IntrusiveNode {
                   var18 = var18 + var20;
                   var25 = var25 + var27;
                   var29 = var29 + var31;
-                  var36Lifetime2 = var36Lifetime2 + gb.field_d;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_d;
                 }
               }
               var36Lifetime3 = param14 - param1;
@@ -463,7 +463,7 @@ class DualLinkNode extends IntrusiveNode {
               var22 = var22 + var24;
               var21 = var21 + var23;
               var17_int = var17_int + var19;
-              var35Lifetime1 = var35Lifetime1 + gb.field_d;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_d;
               var25 = var25 + var27;
               var18 = var18 + var20;
               var26 = var26 + var28;

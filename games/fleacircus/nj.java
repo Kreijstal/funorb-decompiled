@@ -190,30 +190,30 @@ final class nj {
         int var12 = 0;
         var12 = fleas.field_A ? 1 : 0;
         try {
-          if (gb.field_l > param3) {
-            param2 = param2 - (gb.field_l - param3);
-            param3 = gb.field_l;
+          if (SoftwareRasterizer.field_l > param3) {
+            param2 = param2 - (SoftwareRasterizer.field_l - param3);
+            param3 = SoftwareRasterizer.field_l;
           }
-          if (param2 + param3 > gb.field_h) {
-            param2 = gb.field_h - param3;
+          if (param2 + param3 > SoftwareRasterizer.field_h) {
+            param2 = SoftwareRasterizer.field_h - param3;
           }
-          if (param0 < gb.field_b) {
-            param4 = param4 - (-param0 + gb.field_b);
-            param0 = gb.field_b;
+          if (param0 < SoftwareRasterizer.field_b) {
+            param4 = param4 - (-param0 + SoftwareRasterizer.field_b);
+            param0 = SoftwareRasterizer.field_b;
           }
-          if (gb.field_i < param4 + param0) {
-            param4 = -param0 + gb.field_i;
+          if (SoftwareRasterizer.field_i < param4 + param0) {
+            param4 = -param0 + SoftwareRasterizer.field_i;
           }
           if (0 < param2 &&
             0 < param4) {
-            var6_int = param0 * gb.field_d + param3;
-            var7 = gb.field_d - param2;
+            var6_int = param0 * SoftwareRasterizer.field_d + param3;
+            var7 = SoftwareRasterizer.field_d - param2;
             if (param5 != 1067) {
               nj.a((byte) 101);
             }
             for (param0 = -param4; 0 > param0; param0++) {
               for (param3 = -param2; 0 > param3; param3++) {
-                var8 = gb.field_a[var6_int];
+                var8 = SoftwareRasterizer.field_a[var6_int];
                 if (param1 < ((65280 & var8) >> 8) &&
                   (var8 >> 8 & 255) >= (16711680 & var8) >> 16) {
                   var9 = -60 + (510 & var8 >> 15);
@@ -223,7 +223,7 @@ final class nj {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = (255 & var8) >> 3;
-                  gb.field_a[var6_int] = ne.a(ne.a(var9 << 16, var10), var11);
+                  SoftwareRasterizer.field_a[var6_int] = ne.a(ne.a(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }

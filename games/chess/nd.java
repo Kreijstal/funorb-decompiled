@@ -53,14 +53,14 @@ final class nd implements jm {
           if (param0 < 58) {
             return;
           }
-          wb.f(param4.field_u + param1, param4.field_r + param2, param4.field_y, param4.field_C, this.field_k);
+          SoftwareRasterizer.fillRectangle(param4.field_u + param1, param4.field_r + param2, param4.field_y, param4.field_C, this.field_k);
           var8 = this.field_c + param4.field_u + param1;
           var9 = param2 + (param4.field_r + this.field_d);
-          wb.c(var8, var9, this.field_f, this.field_a, 5592405);
-          wb.f(var8, var9, this.field_f, this.field_a, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_f, this.field_a, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_f, this.field_a, var7);
           if (var11.field_I) {
-            wb.b(var8, var9, this.field_f + var8, var9 + this.field_a, 1);
-            wb.b(this.field_f + var8, var9, var8, this.field_a + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_f + var8, var9 + this.field_a, 1);
+            SoftwareRasterizer.drawLine(this.field_f + var8, var9, var8, this.field_a + var9, 1);
           }
           if (this.field_m == null) {
             return;

@@ -42,7 +42,7 @@ final class jk {
             fq.field_F.a(false, ub.field_E, ra.field_e);
             VertexMesh.field_l.b(4096, 1326547364, tj.field_l, ra.field_e + VertexMesh.field_l.field_t / 2, VertexMesh.field_l.field_s / 2 + ub.field_E);
           }
-          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
           if (param0 >= -32) {
             var4 = (String) null;
             jk.a((String) null, (byte) -13, true);

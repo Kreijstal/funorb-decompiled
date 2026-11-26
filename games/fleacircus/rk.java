@@ -48,8 +48,8 @@ final class rk extends wi {
     }
 
     final void b(byte param0) {
-        gb.a(ia.field_q);
-        gb.a(this.field_l, this.field_a, this.field_n + this.field_l, this.field_a + this.field_d);
+        SoftwareRasterizer.saveClip(ia.field_q);
+        SoftwareRasterizer.setClip(this.field_l, this.field_a, this.field_n + this.field_l, this.field_a + this.field_d);
         bi var2 = this.field_t ? this.field_r : this.field_v;
         var2.a(this.field_l, this.field_a);
         if (param0 >= -17) {
@@ -59,7 +59,7 @@ final class rk extends wi {
         if (null != this.field_x) {
           this.field_x.c(this.field_q, this.field_l + var2.field_c + 5, this.field_x.field_N / 2 + (this.field_a + var2.field_a / 2), this.field_y, this.field_z);
         }
-        gb.b(ia.field_q);
+        SoftwareRasterizer.restoreClip(ia.field_q);
     }
 
     final static String a(String param0, int param1) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na {
+final class SoftwareRasterizer {
     static int field_g;
     static int field_i;
     static int field_k;
@@ -15,7 +15,7 @@ final class na {
     private static int[] field_j;
     static int[] field_c;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var5Lifetime1;
@@ -24,17 +24,17 @@ final class na {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            na.a(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            na.a(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            na.d(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            na.d(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -91,7 +91,7 @@ final class na {
         }
     }
 
-    private final static void f(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -132,7 +132,7 @@ final class na {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }
@@ -149,18 +149,18 @@ final class na {
         field_i = param1;
         field_b = param2;
         field_f = param3;
-        na.b();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
-    final static void d() {
+    final static void resetClip() {
         field_g = 0;
         field_i = 0;
         field_b = field_e;
         field_f = field_k;
-        na.b();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurVerticalInPlace(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -401,7 +401,7 @@ final class na {
         }
     }
 
-    final static void a() {
+    final static void clearRaster() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -447,14 +447,14 @@ final class na {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void setRasterBuffer(int[] param0, int param1, int param2) {
         field_d = param0;
         field_e = param1;
         field_k = param2;
-        na.e(0, 0, param1, param2);
+        SoftwareRasterizer.setClip(0, 0, param1, param2);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurHorizontalInPlace(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -615,17 +615,17 @@ final class na {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawRectangleShadow(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          na.f(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          na.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int param0, int param1, int param2, int param3) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -653,7 +653,7 @@ final class na {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          na.a(param0, param1, param3);
+          SoftwareRasterizer.setPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -746,7 +746,7 @@ final class na {
         return;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleVerticalGradient(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -790,7 +790,7 @@ final class na {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_d = null;
         field_c = null;
         field_h = null;
@@ -799,7 +799,7 @@ final class na {
         field_a = null;
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -844,14 +844,14 @@ final class na {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
-        na.a(param0, param1, param2, param4);
-        na.a(param0, param1 + param3 - 1, param2, param4);
-        na.d(param0, param1, param3, param4);
-        na.d(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangleOutline(int param0, int param1, int param2, int param3, int param4) {
+        SoftwareRasterizer.drawHorizontalLine(param0, param1, param2, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.drawVerticalLine(param0, param1, param3, param4);
+        SoftwareRasterizer.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param1 >= field_i) {
@@ -873,7 +873,7 @@ final class na {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -911,7 +911,7 @@ final class na {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setPixel(int param0, int param1, int param2) {
         if (param0 >= field_g) {
           if (param1 < field_i ||
             param0 >= field_b ||
@@ -923,12 +923,12 @@ final class na {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        na.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
-        na.a(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer.blurHorizontalInPlace(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
+        SoftwareRasterizer.blurVerticalInPlace(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void intersectClip(int param0, int param1, int param2, int param3) {
         if (field_g < param0) {
           field_g = param0;
         }
@@ -941,15 +941,15 @@ final class na {
         if (field_f > param3) {
           field_f = param3;
         }
-        na.b();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
-    private final static void b() {
+    private final static void clearScanlineMask() {
         field_c = null;
         field_h = null;
     }
 
-    private final static void d(int param0, int param1, int param2, int param3) {
+    private final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param0 >= field_g) {
@@ -974,14 +974,14 @@ final class na {
         }
     }
 
-    final static void b(int[] param0) {
+    final static void saveClip(int[] param0) {
         param0[0] = field_g;
         param0[1] = field_i;
         param0[2] = field_b;
         param0[3] = field_f;
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -1011,7 +1011,7 @@ final class na {
         }
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1050,12 +1050,12 @@ final class na {
         }
     }
 
-    final static void a(int[] param0) {
+    final static void restoreClip(int[] param0) {
         field_g = param0[0];
         field_i = param0[1];
         field_b = param0[2];
         field_f = param0[3];
-        na.b();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
     static {

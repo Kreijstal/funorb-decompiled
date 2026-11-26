@@ -42,7 +42,7 @@ abstract class kh extends WidgetContainer {
           hf.field_y = new Sprite(this.width, this.height);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.clearRaster();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
@@ -51,7 +51,7 @@ abstract class kh extends WidgetContainer {
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
@@ -62,7 +62,7 @@ abstract class kh extends WidgetContainer {
           hf.field_y = new Sprite(this.width, this.height);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.clearRaster();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
@@ -71,7 +71,7 @@ abstract class kh extends WidgetContainer {
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
@@ -82,7 +82,7 @@ abstract class kh extends WidgetContainer {
           hf.field_y = new Sprite(this.width, this.height);
           if (param1 <= -106) {
             il.a(1, hf.field_y);
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.clearRaster();
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
@@ -91,7 +91,7 @@ abstract class kh extends WidgetContainer {
           }
           this.field_G = 14;
           il.a(1, hf.field_y);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
@@ -100,7 +100,7 @@ abstract class kh extends WidgetContainer {
         }
         if (param1 <= -106) {
           il.a(1, hf.field_y);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
@@ -109,7 +109,7 @@ abstract class kh extends WidgetContainer {
         }
         this.field_G = 14;
         il.a(1, hf.field_y);
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clearRaster();
         this.a(0, 0, (byte) 82);
         super.a(-param0 - this.x, -127, param2, -param3 - this.y);
         MessageKeys.a(false);

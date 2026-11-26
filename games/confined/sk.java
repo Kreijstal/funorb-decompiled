@@ -1006,8 +1006,8 @@ final class sk extends wj {
         if (field_j > field_G) {
           field_j = field_G;
         }
-        var1Lifetime2 = ti.field_l[0] % fn.field_g;
-        var2Lifetime2 = ti.field_l[0] / fn.field_g;
+        var1Lifetime2 = ti.field_l[0] % SoftwareRasterizer.field_g;
+        var2Lifetime2 = ti.field_l[0] / SoftwareRasterizer.field_g;
         field_u = field_u + var1Lifetime2;
         field_h = field_h + var1Lifetime2;
         field_j = field_j + var2Lifetime2;

@@ -134,7 +134,7 @@ abstract class ca implements wa {
                   if (param6 >= ka.field_a) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + sb.field_c;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_c;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -187,7 +187,7 @@ abstract class ca implements wa {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + sb.field_c;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_c;
             }
             return;
           }

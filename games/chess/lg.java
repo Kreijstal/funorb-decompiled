@@ -210,7 +210,7 @@ final class lg {
                   if (nh.field_l <= param3) {
                     return;
                   }
-                  var36Lifetime2 = var36Lifetime2 + wb.field_h;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_h;
                   var22 = var22 + var24;
                   var17_int = var17_int + var19;
                   var29 = var29 + var31;
@@ -372,7 +372,7 @@ final class lg {
               var29 = var29 + var31;
               var25 = var25 + var27;
               var17_int = var17_int + var19;
-              var35Lifetime1 = var35Lifetime1 + wb.field_h;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_h;
               var30 = var30 + var32;
               var21 = var21 + var23;
             }

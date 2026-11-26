@@ -51,7 +51,7 @@ final class dk {
           if (var7 == -1) {
             var7 = this.field_m.field_C + this.field_m.field_D;
           }
-          var8 = ge.field_h >> 2;
+          var8 = SoftwareRasterizer.field_h >> 2;
           var9 = this.field_m.a(param1);
           var10 = this.field_m.field_D + this.field_m.field_C;
           var11 = 1;
@@ -78,15 +78,15 @@ final class dk {
           }
           var12 = -40 / ((-24 - param0) / 34);
           var13Lifetime1 = param3;
-          if (ge.field_h < var5_int + (var9 + var13Lifetime1)) {
-            var13Lifetime1 = -var5_int + ge.field_h - var9;
+          if (SoftwareRasterizer.field_h < var5_int + (var9 + var13Lifetime1)) {
+            var13Lifetime1 = -var5_int + SoftwareRasterizer.field_h - var9;
           }
           var14Lifetime1 = 32 - this.field_m.field_j + param2;
-          if (ge.field_g < var14Lifetime1 - (-var10 - var6)) {
+          if (SoftwareRasterizer.field_g < var14Lifetime1 - (-var10 - var6)) {
             var14Lifetime1 = -var6 + (param2 - var10);
           }
-          ge.f(var13Lifetime1, var14Lifetime1, var5_int + var9, var10 + var6, this.field_r);
-          ge.d(1 + var13Lifetime1, var14Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_s);
+          SoftwareRasterizer.drawRectangleOutline(var13Lifetime1, var14Lifetime1, var5_int + var9, var10 + var6, this.field_r);
+          SoftwareRasterizer.fillRectangle(1 + var13Lifetime1, var14Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_s);
           this.field_m.a(param1, var13Lifetime1 + this.field_p, var14Lifetime1 + this.field_k, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,7 +173,7 @@ final class dk {
         if (param4 < 82) {
           dk.clearStaticReferences(41);
         }
-        ge.c(param0, param6, param5, param3, param1, param2);
+        SoftwareRasterizer.fillRectangleAlpha(param0, param6, param5, param3, param1, param2);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -303,15 +303,15 @@ final class dk {
           var5_int = this.field_m.a(param1);
           var6 = this.field_m.field_j + this.field_m.field_D;
           var7 = param3;
-          if (ge.field_h < var7 + var5_int + 6) {
-            var7 = -var5_int + ge.field_h - 6;
+          if (SoftwareRasterizer.field_h < var7 + var5_int + 6) {
+            var7 = -var5_int + SoftwareRasterizer.field_h - 6;
           }
           var8 = param0 - this.field_m.field_j + 32;
-          if (var8 + var6 + 6 > ge.field_g) {
-            var8 = -var6 + (ge.field_g - 6);
+          if (var8 + var6 + 6 > SoftwareRasterizer.field_g) {
+            var8 = -var6 + (SoftwareRasterizer.field_g - 6);
           }
-          ge.f(var7, var8, 6 + var5_int, var6 + 6, this.field_c);
-          ge.d(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_s);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_c);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_s);
           this.field_m.b(param1, var7 + 3, var8 + 3 + this.field_m.field_j, this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -359,7 +359,7 @@ final class dk {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ge.e(param2, param3, param5, param4, param1);
+        SoftwareRasterizer.drawLine(param2, param3, param5, param4, param1);
         if (param0 != 13421772) {
           this.a(126, 26, -59, -95, -111, -126);
         }

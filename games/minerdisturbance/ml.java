@@ -824,7 +824,7 @@ final class ml {
                     if (var5 == 11) {
                       SoftwareRasterizer.setClip(-param2, 0, 640, 480);
                       wk.field_a.d(117);
-                      SoftwareRasterizer.a();
+                      SoftwareRasterizer.resetClip();
                     } else {
                       if (var5 != 4) {
                         if ((var5 == 9)) {
@@ -1504,16 +1504,16 @@ final class ml {
           SoftwareRasterizer.fillCircle(2 + var10 + var17Lifetime1, 28 + var11, 4, var12);
           SoftwareRasterizer.fillCircle(2 + (144 + var17Lifetime1) + var10, 28 + var11, 4, var12);
           SoftwareRasterizer.fillCircle(-1 + (var10 + var17Lifetime1), var11 + 26, 3, var15Lifetime3);
-          SoftwareRasterizer.d(var17Lifetime1 + var10 - 1, 26 + var11, 4, 1);
+          SoftwareRasterizer.drawCircleOutline(var17Lifetime1 + var10 - 1, 26 + var11, 4, 1);
           SoftwareRasterizer.fillCircle(-1 + (var10 + var17Lifetime1 + 144), var11 + 26, 3, var15Lifetime3);
-          SoftwareRasterizer.d(143 + var10 + var17Lifetime1, var11 + 26, 4, 1);
-          SoftwareRasterizer.e(var17Lifetime1 + var10, 23 + var11, 144, 10, var12);
+          SoftwareRasterizer.drawCircleOutline(143 + var10 + var17Lifetime1, var11 + 26, 4, 1);
+          SoftwareRasterizer.fillRectangle(var17Lifetime1 + var10, 23 + var11, 144, 10, var12);
           SoftwareRasterizer.drawHorizontalLine(var10 + var17Lifetime1, var11 + 30, 144, 1);
-          SoftwareRasterizer.e(var17Lifetime1 + var10, 23 + var11, 144, 7, var15Lifetime3);
+          SoftwareRasterizer.fillRectangle(var17Lifetime1 + var10, 23 + var11, 144, 7, var15Lifetime3);
           SoftwareRasterizer.drawHorizontalLine(var17Lifetime1 + var10, 22 + var11, 144, 1);
           var18Lifetime1 = -2 + var17Lifetime1 + (var10 + ee.field_J * 144 / 256);
-          SoftwareRasterizer.a(var18Lifetime1 - 1, 18 + var11, 6, 18, 1);
-          SoftwareRasterizer.e(var18Lifetime1, var11 + 19, 4, 16, var15Lifetime3);
+          SoftwareRasterizer.drawRectangleOutline(var18Lifetime1 - 1, 18 + var11, 6, 18, 1);
+          SoftwareRasterizer.fillRectangle(var18Lifetime1, var11 + 19, 4, 16, var15Lifetime3);
         }
         if (var6 == 5) {
           var15Lifetime4 = var13;
@@ -1525,16 +1525,16 @@ final class ml {
           SoftwareRasterizer.fillCircle(var17Lifetime2 + var10 + 2, 28 + var11, 4, var12);
           SoftwareRasterizer.fillCircle(144 + var10 + var17Lifetime2 + 2, 28 + var11, 4, var12);
           SoftwareRasterizer.fillCircle(-1 + var10 + var17Lifetime2, 26 + var11, 3, var15Lifetime4);
-          SoftwareRasterizer.d(var17Lifetime2 + var10 - 1, 26 + var11, 4, 1);
+          SoftwareRasterizer.drawCircleOutline(var17Lifetime2 + var10 - 1, 26 + var11, 4, 1);
           SoftwareRasterizer.fillCircle(var10 + var17Lifetime2 + 143, 26 + var11, 3, var15Lifetime4);
-          SoftwareRasterizer.d(144 + (var10 + var17Lifetime2 - 1), 26 + var11, 4, 1);
-          SoftwareRasterizer.e(var10 + var17Lifetime2, 23 + var11, 144, 10, var12);
+          SoftwareRasterizer.drawCircleOutline(144 + (var10 + var17Lifetime2 - 1), 26 + var11, 4, 1);
+          SoftwareRasterizer.fillRectangle(var10 + var17Lifetime2, 23 + var11, 144, 10, var12);
           SoftwareRasterizer.drawHorizontalLine(var17Lifetime2 + var10, 30 + var11, 144, 1);
-          SoftwareRasterizer.e(var17Lifetime2 + var10, 23 + var11, 144, 7, var15Lifetime4);
+          SoftwareRasterizer.fillRectangle(var17Lifetime2 + var10, 23 + var11, 144, 7, var15Lifetime4);
           SoftwareRasterizer.drawHorizontalLine(var10 + var17Lifetime2, var11 + 22, 144, 1);
           var18Lifetime2 = -2 + (144 * oc.field_f / 256 + var17Lifetime2) + var10;
-          SoftwareRasterizer.a(-1 + var18Lifetime2, 18 + var11, 6, 18, 1);
-          SoftwareRasterizer.e(var18Lifetime2, var11 + 19, 4, 16, var15Lifetime4);
+          SoftwareRasterizer.drawRectangleOutline(-1 + var18Lifetime2, 18 + var11, 6, 18, 1);
+          SoftwareRasterizer.fillRectangle(var18Lifetime2, var11 + 19, 4, 16, var15Lifetime4);
         }
         return;
     }

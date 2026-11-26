@@ -36,10 +36,10 @@ abstract class ByteStorage {
         }
         r.a(nj.field_b, 45);
         bl.b();
-        gb.c();
+        SoftwareRasterizer.clearRaster();
         mj.a(-515966495);
         if (256 > var5) {
-          gb.g(0, 0, gb.field_d, gb.field_k, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, -var5 + 256);
         }
         ia.a(-74);
         if (150 <= vg.field_z) {

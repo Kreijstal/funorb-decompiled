@@ -54,15 +54,15 @@ final class MusicPatchPcmStream extends PcmStream {
           mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (BitmapFont) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
           fo.field_c = nq.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
           va.field_h = nq.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
-          var5 = bi.field_e;
-          var6 = bi.field_j;
-          var15 = bi.field_l;
+          var5 = SoftwareRasterizer.field_e;
+          var6 = SoftwareRasterizer.field_j;
+          var15 = SoftwareRasterizer.field_l;
           fm.field_g = new Sprite(10, 14);
           fm.field_g.d();
           for (var8 = param1; var8 < 7; var8++) {
-            bi.e(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          bi.a(var15, var5, var6);
+          SoftwareRasterizer.setRasterBuffer(var15, var5, var6);
           lr.field_H = fj.a(va.field_h, fo.field_c, var4, 10, mp.field_g);
           ql.field_L.field_M = new IntrusiveDeque();
           return;
@@ -430,10 +430,10 @@ final class MusicPatchPcmStream extends PcmStream {
         Sprite var6 = new Sprite(param1, param0);
         int var7 = 47 % ((3 - param4) / 57);
         var6.d();
-        bi.f(0, 0, param1, param0, 12, 5921370);
-        bi.f(4, 4, -8 + param1, -8 + param0, 8, 0);
+        SoftwareRasterizer.fillRoundedRectangle(0, 0, param1, param0, 12, 5921370);
+        SoftwareRasterizer.fillRoundedRectangle(4, 4, -8 + param1, -8 + param0, 8, 0);
         ro.field_g.a(-125);
-        bi.b(param3, param2, param1, param0, 12, 0, param5);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(param3, param2, param1, param0, 12, 0, param5);
         var6.e(param3, param2);
     }
 

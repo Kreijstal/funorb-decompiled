@@ -1442,7 +1442,7 @@ final class rb {
                       var14 = 12;
                     }
                     var15 = 8;
-                    SoftwareRasterizer.e(var7_int, var13, var15, var14, 0);
+                    SoftwareRasterizer.fillRectangle(var7_int, var13, var15, var14, 0);
                     if (!this.field_g[var12 - 1]) {
                       if ((this.field_b[var12] ||
                         !param5[var10 >> 2][var11 + 1 >> 2].field_a) &&
@@ -1452,7 +1452,7 @@ final class rb {
                         if (this.field_g[var12 - 1 + this.field_k]) {
                           SoftwareRasterizer.setClip(-8 + var7_int, var13 - 8, var7_int, var13 + 8);
                           SoftwareRasterizer.fillCircle(var7_int, var13 + 8, 6, 0);
-                          SoftwareRasterizer.a();
+                          SoftwareRasterizer.resetClip();
                         }
                       }
                     }
@@ -1465,7 +1465,7 @@ final class rb {
                         if (this.field_g[this.field_k + (var12 + 1)]) {
                           SoftwareRasterizer.setClip(8 + var7_int, var13 - 8, 16 + var7_int, var13 + 8);
                           SoftwareRasterizer.fillCircle(8 + var7_int, var13 + 8, 6, 0);
-                          SoftwareRasterizer.a();
+                          SoftwareRasterizer.resetClip();
                         }
                       }
                     }
@@ -1509,15 +1509,15 @@ final class rb {
                       if (this.field_b[var14Lifetime1 + this.field_k]) {
                         var16Lifetime1 = this.field_i[var14Lifetime1];
                         var17 = (this.field_i[-1 + var14Lifetime1] + (var16Lifetime1 + this.field_i[1 + var14Lifetime1])) / 3;
-                        SoftwareRasterizer.b(var7_intLifetime1, -var17 + var8Lifetime1 + 8, 8, var17, var15Lifetime1, var10Lifetime1);
+                        SoftwareRasterizer.fillRectangleAlpha(var7_intLifetime1, -var17 + var8Lifetime1 + 8, 8, var17, var15Lifetime1, var10Lifetime1);
                       } else {
                         if (this.field_p[var14Lifetime1] > 16) {
                           var16Lifetime1 = this.field_p[var14Lifetime1 + this.field_k] + this.field_p[-this.field_k + var14Lifetime1] + (this.field_p[var14Lifetime1 - 1] + this.field_p[var14Lifetime1]) >> 2;
-                          SoftwareRasterizer.b(var7_intLifetime1, var8Lifetime1, 8, 8, 65280, var16Lifetime1);
+                          SoftwareRasterizer.fillRectangleAlpha(var7_intLifetime1, var8Lifetime1, 8, 8, 65280, var16Lifetime1);
                         }
                       }
                     } else {
-                      SoftwareRasterizer.b(var7_intLifetime1, var8Lifetime1, 8, 8, var15Lifetime1, var10Lifetime1);
+                      SoftwareRasterizer.fillRectangleAlpha(var7_intLifetime1, var8Lifetime1, 8, 8, var15Lifetime1, var10Lifetime1);
                     }
                   } else {
                     var9 = this.field_c[var14Lifetime1];
@@ -1549,7 +1549,7 @@ final class rb {
                     if (9 <= var9) {
                       var15Lifetime1 = 16777215;
                     }
-                    SoftwareRasterizer.b(var7_intLifetime1 - 4, var8Lifetime1 + 4, 16, 16, var15Lifetime1, var10Lifetime1);
+                    SoftwareRasterizer.fillRectangleAlpha(var7_intLifetime1 - 4, var8Lifetime1 + 4, 16, 16, var15Lifetime1, var10Lifetime1);
                   }
                 }
               }
@@ -1568,14 +1568,14 @@ final class rb {
                     if (this.field_d[var14Lifetime2] &&
                       !this.field_g[var14Lifetime2 - this.field_k]) {
                       var16Lifetime2 = 8;
-                      SoftwareRasterizer.f(ll.a((byte) -73, 8) + var7_intLifetime2, -var15Lifetime2 + (var8Lifetime2 - ll.a((byte) -73, 4)), 4, 16711680, 110);
+                      SoftwareRasterizer.fillCircleAlpha(ll.a((byte) -73, 8) + var7_intLifetime2, -var15Lifetime2 + (var8Lifetime2 - ll.a((byte) -73, 4)), 4, 16711680, 110);
                       if (8 < var16Lifetime2 + (8 - var15Lifetime2)) {
                         var16Lifetime2 = -var15Lifetime2 + 8;
                       }
-                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -ll.a((byte) -73, 4) + var8Lifetime2 - (var15Lifetime2 - 1) << 4, 64, 4, re.field_c);
-                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -var15Lifetime2 + var8Lifetime2 + (-ll.a((byte) -73, 4) + 1) << 4, 64, 4, re.field_c);
-                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + (-ll.a((byte) -73, 6) + (var8Lifetime2 - var15Lifetime2)) << 4, 80, 5, re.field_c);
-                      SoftwareRasterizer.a(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + var8Lifetime2 - var15Lifetime2 - ll.a((byte) -73, 6) << 4, 80, 5, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -ll.a((byte) -73, 4) + var8Lifetime2 - (var15Lifetime2 - 1) << 4, 64, 4, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, -var15Lifetime2 + var8Lifetime2 + (-ll.a((byte) -73, 4) + 1) << 4, 64, 4, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + (-ll.a((byte) -73, 6) + (var8Lifetime2 - var15Lifetime2)) << 4, 80, 5, re.field_c);
+                      SoftwareRasterizer.addRadialGlow(var7_intLifetime2 + ll.a((byte) -73, 8) << 4, 1 + var8Lifetime2 - var15Lifetime2 - ll.a((byte) -73, 6) << 4, 80, 5, re.field_c);
                     }
                   }
                 }

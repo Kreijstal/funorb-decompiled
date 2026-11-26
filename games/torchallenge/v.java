@@ -55,7 +55,7 @@ abstract class v extends b {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = TorChallenge.field_F ? 1 : 0;
-        SoftwareRasterizer.c(param2 + 6, 35 + param1, this.field_p - 12, -40 + this.field_l, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param2 + 6, 35 + param1, this.field_p - 12, -40 + this.field_l, 2105376, 0);
         if (param0 != 103) {
           field_S = (int[]) null;
         }
@@ -190,10 +190,10 @@ abstract class v extends b {
         }
         FullscreenFocusCanvas.a(123, bd.field_t);
         oc.c();
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearRaster();
         AccountServiceResult.a(3);
         if (256 > var5) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
         ie.b((byte) -9);
         if (param2 < 40) {

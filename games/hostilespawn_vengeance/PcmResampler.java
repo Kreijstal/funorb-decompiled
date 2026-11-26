@@ -160,7 +160,7 @@ final class PcmResampler {
                 var11 = var4 - 12;
                 gl.a(var10 << 4, var11 << 4, 384, 128, ni.field_c);
                 if (um.field_e > 0) {
-                  si.a(var10 << 4, var11 << 4, Math.abs(-um.field_e + 50) + 24 << 4, um.field_e, VolumeRampingMidiPcmStream.field_bb);
+                  SoftwareRasterizer.addRadialGlow(var10 << 4, var11 << 4, Math.abs(-um.field_e + 50) + 24 << 4, um.field_e, VolumeRampingMidiPcmStream.field_bb);
                 }
                 if (0 < eh.field_g) {
                   var12_ref_bd__ = ng.field_p[nh.field_H];
@@ -306,7 +306,7 @@ final class PcmResampler {
                     var13Lifetime1 = var4 - 12;
                     var14 = 24 * var8.field_z + var4 - 12;
                     var4 = var4 + var12Lifetime1;
-                    si.d(0, var13Lifetime1, 640, var14);
+                    SoftwareRasterizer.setClip(0, var13Lifetime1, 640, var14);
                     var15 = 2 * c.field_f.length - 2;
                     var16 = sg.field_i / 2 % var15;
                     if (var16 >= c.field_f.length) {
@@ -319,7 +319,7 @@ final class PcmResampler {
                       c.field_f[var16].e(-12 + var3, var4);
                       var4 = var4 + var11Lifetime1;
                     }
-                    si.c();
+                    SoftwareRasterizer.resetClip();
                   }
                 }
                 var11Lifetime1Lifetime1 = var8.field_i;

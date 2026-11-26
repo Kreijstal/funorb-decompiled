@@ -513,14 +513,14 @@ public final class StarCannon extends ag {
                                     if (stackIn_71_0 <= stackIn_71_1) {
                                         /* Inlined CFG state: 74. */
                                         {
-                                            ki.d(var8, 465 + param0, 4, 4, var5);
+                                            SoftwareRasterizer.fillRectangle(var8, 465 + param0, 4, 4, var5);
                                             statePc = 75;
                                             continue scanLoop1;
                                         }
                                     } else {
                                         /* Inlined CFG state: 72. */
                                         {
-                                            ki.d(var8, 460 + param0, 4, 14, var5);
+                                            SoftwareRasterizer.fillRectangle(var8, 460 + param0, 4, 14, var5);
                                             statePc = 75;
                                             continue scanLoop1;
                                         }
@@ -854,12 +854,12 @@ public final class StarCannon extends ag {
                     }
                 }
                 case 127: {
-                    ki.d(-(var3 >> 1) + (320 + var7) - 5, 27, 10 + (var3 - 20), 11, var6);
+                    SoftwareRasterizer.fillRectangle(-(var3 >> 1) + (320 + var7) - 5, 27, 10 + (var3 - 20), 11, var6);
                     statePc = 130;
                     continue scanLoop1;
                 }
                 case 129: {
-                    ki.c(320 + (var7 - (var3 >> 1)), 32, 5, var6, 255 - Math.abs(var7 - (var3 >> 1)));
+                    SoftwareRasterizer.fillCircleAlpha(320 + (var7 - (var3 >> 1)), 32, 5, var6, 255 - Math.abs(var7 - (var3 >> 1)));
                     statePc = 130;
                     continue scanLoop1;
                 }
@@ -937,15 +937,15 @@ public final class StarCannon extends ag {
                         /* Inlined CFG state: 141. */
                         {
                             var21 = new int[4];
-                            ki.a(var21);
-                            ki.c(var5, var8, var5 + var7, var8 + var11);
-                            ki.b(var5 + 19, 14 + var8, var7 - 38, -28 + var11, 0, 128);
+                            SoftwareRasterizer.saveClip(var21);
+                            SoftwareRasterizer.intersectClip(var5, var8, var5 + var7, var8 + var11);
+                            SoftwareRasterizer.fillRectangleAlpha(var5 + 19, 14 + var8, var7 - 38, -28 + var11, 0, 128);
                             ba.a(var11, rd.field_p, (byte) 115, var5, var7, var8);
                             BufferedSocket.a(true, var7, 10596798, 0, var8, 16711680, var5, var11 >> 1);
                             BufferedSocket.a(true, var7, 0, 10596798, (var11 >> 1) + var8, 16711680, var5, -(var11 >> 1) + var11);
-                            ki.c(var5 + 19, var8 + 14, var7 + (var5 - 19), -14 + (var11 + var8));
+                            SoftwareRasterizer.intersectClip(var5 + 19, var8 + 14, var7 + (var5 - 19), -14 + (var11 + var8));
                             a.field_b.b(ne.field_i, 320, (a.field_b.field_p - a.field_b.field_q >> 1) + 240, 16777215, -1);
-                            ki.b(var21);
+                            SoftwareRasterizer.restoreClip(var21);
                             statePc = 144;
                             continue scanLoop1;
                         }
@@ -3197,7 +3197,7 @@ public final class StarCannon extends ag {
         gg.clearStaticReferences((byte) 121);
         MouseInput.clearStaticReferences(true);
         MouseWheelSource.a(15686);
-        ki.a();
+        SoftwareRasterizer.clearStaticReferences();
         ue.clearStaticReferences(0);
         qe.clearStaticReferences();
         oh.clearStaticReferences(-1);
@@ -3462,7 +3462,7 @@ public final class StarCannon extends ag {
           return;
         }
         if (FullscreenFocusCanvas.field_d == 0) {
-          ki.b();
+          SoftwareRasterizer.clearRaster();
         } else {
           var3_int = (320 - fi.field_e.field_f) / 48;
           eb.field_b[qd.field_E[2]].a(var3_int, 240 + hc.field_c, 320, 240);
@@ -3567,12 +3567,12 @@ public final class StarCannon extends ag {
         if (nh.field_e != 0) {
           var4Lifetime1 = 256 * jb.field_e / 50;
           if (0 < var4Lifetime1) {
-            ki.b(0, 0, ki.field_j, ki.field_f, 0, var4Lifetime1);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, 0, var4Lifetime1);
           }
         }
         if (gh.f(-23093)) {
-          ki.b(0, 0, 640, 480, 0, 128);
-          ki.d(-12 + (-(ClientException.a(6940) / 2) + 320), -12 - wc.d(20) / 2 + 240, 24 + ClientException.a(6940), 24 + wc.d(20), 0);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
+          SoftwareRasterizer.fillRectangle(-12 + (-(ClientException.a(6940) / 2) + 320), -12 - wc.d(20) / 2 + 240, 24 + ClientException.a(6940), 24 + wc.d(20), 0);
           fg.a(32513, jk.field_f, 12, 12);
         }
         if (cb.a(false) &&

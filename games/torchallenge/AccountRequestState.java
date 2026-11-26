@@ -33,15 +33,15 @@ final class AccountRequestState {
           }
           var17 = -param4 + var15 >> 1;
           de.field_a.d();
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           GzipDecoder.drawNineSlice(param8, param4, param0, (byte) -96, var17, var16);
-          SoftwareRasterizer.a(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
           if (gf.field_n == null) {
             gf.field_n = new Sprite(var14_int, var15);
           }
           gf.field_n.d();
-          SoftwareRasterizer.b();
-          SoftwareRasterizer.b(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
+          SoftwareRasterizer.clearRaster();
+          SoftwareRasterizer.fillRoundedRectangle(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
           de.field_a.d();
           od.b(gf.field_n, 0, 0, 0, param13);
           SectorCacheStore.field_f.bindAsTarget(-97);

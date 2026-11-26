@@ -356,10 +356,10 @@ abstract class qe extends DualLinkNode {
               }
               param1 = param1 + this.field_v[var8];
               if (field_B != -1) {
-                ki.b(var11, param2 + (int)((double)this.field_x * 0.7), param1 - var11, field_B);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_x * 0.7), param1 - var11, field_B);
               }
               if (field_C != -1) {
-                ki.b(var11, param2 + this.field_x + 1, param1 - var11, field_C);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_x + 1, param1 - var11, field_C);
               }
               var5 = var8;
             }

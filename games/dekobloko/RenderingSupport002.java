@@ -146,13 +146,13 @@ final class RenderingSupport002 {
     final static void performAction0249(boolean booleanArgument1, int integerArgument2) {
         if (UiComponentPart017.integerState0437 > 0 &&
           SceneWidgetPart013.booleanState0202) {
-          SoftwareRaster.performAction0658(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
+          SoftwareRaster.darkenRectangleHalf(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
           SceneWidgetPart011.sceneWidgetState0115.performAction1767(integerArgument2 ^ 1141039779, booleanArgument1);
         }
         if ((!(RenderingSupport001.integerState0064 <= 0) ||
           !(MixedSupport121.integerState0778 <= 0)) &&
           MixedSupport026.booleanState0028) {
-          SoftwareRaster.performAction0658(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
+          SoftwareRaster.darkenRectangleHalf(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
           MixedSupport083.sceneWidgetState0087.performAction1767(1141039778, booleanArgument1);
         }
         if (integerArgument2 != 1) {

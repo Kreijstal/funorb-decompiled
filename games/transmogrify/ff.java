@@ -111,7 +111,7 @@ final class ff extends aj implements fb, df {
         }
         int var5 = -124 / ((param3 - 77) / 34);
         if (this.field_J != null) {
-          sb.d(10 + param0, param1 + 134, this.field_l - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param0, param1 + 134, this.field_l - 20, 4210752);
         }
         super.a(param0, param1, param2, (byte) 119);
     }

@@ -151,7 +151,7 @@ final class sb {
         }
         try {
           pf.b(511);
-          si.a(param0.field_D, param0.field_u, param0.field_r);
+          SoftwareRasterizer.setRasterBuffer(param0.field_D, param0.field_u, param0.field_r);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "sb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

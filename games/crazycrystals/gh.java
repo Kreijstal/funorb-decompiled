@@ -643,12 +643,12 @@ final class gh extends ea implements Cloneable {
         stackIn_4_0 = param0;
         stackIn_5_1 = (!(0.0 < 4.0 * (double)var14 - var15 * 13.856406460551018)) ? 0 : 1;
         if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
-          kh.a(var10 - var17, var18 + (var11 + param5 * (int)((double)param7 * 8.0)), param4 << 1, 15, rn.field_j);
+          SoftwareRasterizer.addRadialGlow(var10 - var17, var18 + (var11 + param5 * (int)((double)param7 * 8.0)), param4 << 1, 15, rn.field_j);
         }
         stackIn_11_0 = (var15 * 13.856406460551018 + 4.0 * (double)var14 > 0.0) ? 0 : 1;
         stackIn_14_1 = (param0) ? 0 : 1;
         if (stackIn_11_0 == stackIn_14_1) {
-          kh.a(var10 + var17, var11 - var18 + (int)((double)param7 * 8.0) * param5, param4 << 1, 15, rn.field_j);
+          SoftwareRasterizer.addRadialGlow(var10 + var17, var11 - var18 + (int)((double)param7 * 8.0) * param5, param4 << 1, 15, rn.field_j);
         }
         return;
     }
@@ -808,12 +808,12 @@ final class gh extends ea implements Cloneable {
         stackIn_5_0 = (!(0.0 < -(var16 * 11.313708498984761) + 5.656854249492381 * var14)) ? 0 : 1;
         stackIn_8_1 = (param0) ? 0 : 1;
         if (stackIn_5_0 != stackIn_8_1) {
-          kh.a(param3 * var18 + var10, var11 - var19, param1 << 1, 15, rn.field_j);
+          SoftwareRasterizer.addRadialGlow(param3 * var18 + var10, var11 - var19, param1 << 1, 15, rn.field_j);
         }
         stackIn_13_0 = (!(5.656854249492381 * var14 - 11.313708498984761 * var16 < 0.0)) ? 0 : 1;
         stackIn_16_1 = (param0) ? 0 : 1;
         if (stackIn_13_0 != stackIn_16_1) {
-          kh.a(var10 + param3 * var18, var11 + var19, param1 << 1, 15, rn.field_j);
+          SoftwareRasterizer.addRadialGlow(var10 + param3 * var18, var11 + var19, param1 << 1, 15, rn.field_j);
         }
     }
 

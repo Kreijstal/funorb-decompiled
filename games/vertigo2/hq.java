@@ -55,14 +55,14 @@ final class hq extends IntrusiveNode {
         int var4Lifetime1;
         if (param1 < -126) {
           var4 = var3 - param0 * param0;
-          AccountNameAvailabilityValidator.field_o.a(94, 199, -124 + (bi.field_j - 90), 90, var2 - var4 * 199 / var3);
-          lb.field_c.a(118, 438, bi.field_j - 124, 0, var4 * 438 / var3 + (202 + var2));
+          AccountNameAvailabilityValidator.field_o.a(94, 199, -124 + (SoftwareRasterizer.field_j - 90), 90, var2 - var4 * 199 / var3);
+          lb.field_c.a(118, 438, SoftwareRasterizer.field_j - 124, 0, var4 * 438 / var3 + (202 + var2));
           return;
         }
         hq.a(false);
         var4Lifetime1 = var3 - param0 * param0;
-        AccountNameAvailabilityValidator.field_o.a(94, 199, -124 + (bi.field_j - 90), 90, var2 - var4Lifetime1 * 199 / var3);
-        lb.field_c.a(118, 438, bi.field_j - 124, 0, var4Lifetime1 * 438 / var3 + (202 + var2));
+        AccountNameAvailabilityValidator.field_o.a(94, 199, -124 + (SoftwareRasterizer.field_j - 90), 90, var2 - var4Lifetime1 * 199 / var3);
+        lb.field_c.a(118, 438, SoftwareRasterizer.field_j - 124, 0, var4Lifetime1 * 438 / var3 + (202 + var2));
     }
 
     hq() {

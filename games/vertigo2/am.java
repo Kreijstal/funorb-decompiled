@@ -815,7 +815,7 @@ final class am {
             }
           }
           if (gi.field_r) {
-            bi.a(0, 0, 640, 480);
+            SoftwareRasterizer.grayscaleRectangle(0, 0, 640, 480);
           }
           var18 = var16Lifetime1 - 240;
           if (param4.h(9979) == 1 &&

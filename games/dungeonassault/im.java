@@ -37,7 +37,7 @@ final class im implements ca {
             stackIn_4_0 = null;
           }
           var12 = (eb) (stackIn_4_0);
-          gf.b(param1.field_q + param2, param3 + param1.field_v, param1.field_x, param1.field_s, this.field_k);
+          SoftwareRasterizer.fillRectangle(param1.field_q + param2, param3 + param1.field_v, param1.field_x, param1.field_s, this.field_k);
           if (var12 != null) {
           }
           var7 = param1.field_x - var12.field_J * 2;
@@ -46,9 +46,9 @@ final class im implements ca {
           }
           var8 = var12.field_J + (param2 + param1.field_q);
           var9 = var12.field_N + param1.field_v + param3;
-          gf.c(var8, var9, var7 + var8, var9, this.field_h);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_h);
           for (var10 = -1 + var12.i(97); var10 >= 0; var10--) {
-            gf.f(var8 + var7 * var12.a(-1, var10) / var12.a(-116), var9, this.field_f, this.field_i);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a(-1, var10) / var12.a(-116), var9, this.field_f, this.field_i);
           }
           if (this.field_j == null) {
             return;

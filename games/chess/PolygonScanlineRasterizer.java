@@ -121,7 +121,7 @@ final class PolygonScanlineRasterizer {
           }
           var2++;
           field_h = var2;
-          if (var2 >= wb.field_b) {
+          if (var2 >= SoftwareRasterizer.field_b) {
             return false;
           }
           var3 = field_f;
@@ -219,8 +219,8 @@ final class PolygonScanlineRasterizer {
         }
         PolygonScanlineRasterizer.sortEdgesByStartY(0, field_c);
         int var0 = field_g[1];
-        if (var0 < wb.field_a) {
-          var0 = wb.field_a;
+        if (var0 < SoftwareRasterizer.field_a) {
+          var0 = SoftwareRasterizer.field_a;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_c; var2 += 4) {
@@ -287,15 +287,15 @@ final class PolygonScanlineRasterizer {
           var5 = field_e;
           var6 = field_h;
           if (param2 != null) {
-            var7 = var6 - wb.field_a;
-            if (var4 < param2[var7] + wb.field_i) {
-              var4 = param2[var7] + wb.field_i;
+            var7 = var6 - SoftwareRasterizer.field_a;
+            if (var4 < param2[var7] + SoftwareRasterizer.field_i) {
+              var4 = param2[var7] + SoftwareRasterizer.field_i;
             }
-            if (var5 > param2[var7] + param3[var7] + wb.field_i) {
-              var5 = param2[var7] + param3[var7] + wb.field_i;
+            if (var5 > param2[var7] + param3[var7] + SoftwareRasterizer.field_i) {
+              var5 = param2[var7] + param3[var7] + SoftwareRasterizer.field_i;
             }
           }
-          wb.e(var4, var6, var5 - var4, param0, param1);
+          SoftwareRasterizer.drawHorizontalLineAlpha(var4, var6, var5 - var4, param0, param1);
         }
     }
 
@@ -308,7 +308,7 @@ final class PolygonScanlineRasterizer {
           var1 = field_a;
           var2 = field_e;
           var3 = field_h;
-          wb.a(var1, var3, var2 - var1, param0);
+          SoftwareRasterizer.drawHorizontalLine(var1, var3, var2 - var1, param0);
         }
     }
 
@@ -318,7 +318,7 @@ final class PolygonScanlineRasterizer {
 
     private final static void fillPolygonSliceAlphaMasked(int[] param0, int param1, int param2, int param3, int param4, int[] param5, int[] param6) {
         if (param5 != null &&
-          wb.field_b - wb.field_a != param5.length) {
+          SoftwareRasterizer.field_b - SoftwareRasterizer.field_a != param5.length) {
           throw new IllegalStateException();
         }
         PolygonScanlineRasterizer.resetEdges();

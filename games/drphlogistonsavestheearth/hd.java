@@ -55,13 +55,13 @@ final class hd extends vg {
           var10 = -var5 + var6;
           var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5)) + 128;
           var12 = 256 <= var11 ? var8 | var9 : (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
-          wj.g(var7, var6, this.field_J, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_J, var12);
           var9Lifetime1 = 65280 & param0;
-          wj.g(-(2 * this.field_J) + var7, var6, this.field_J, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_J) + var7, var6, this.field_J, var12);
           var8Lifetime1 = param0 & 16711935;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (16711680 & var9Lifetime1 * var11 | -16711936 & var8Lifetime1 * var11) >>> 8;
-          wj.g(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
-          wj.g(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
         cl.d((byte) -115);
         return var14;
@@ -299,7 +299,7 @@ final class hd extends vg {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
             }
-            wj.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
         if (param0 != 101) {
@@ -364,7 +364,7 @@ final class hd extends vg {
             param2.d(var6, param3);
           }
           cl.d((byte) -67);
-          if (this.field_C.field_y + param1 >= wj.field_g) {
+          if (this.field_C.field_y + param1 >= SoftwareRasterizer.field_g) {
             MouseInput.a(this.field_F, (byte) 84);
             param2.d(-this.field_z, 0);
             param2.d(2 * this.field_J - this.field_z, 0);
@@ -372,7 +372,7 @@ final class hd extends vg {
             cl.d((byte) -120);
             this.field_F.d(param1, param3);
           }
-          if (-this.field_C.field_y + var5_int <= wj.field_b) {
+          if (-this.field_C.field_y + var5_int <= SoftwareRasterizer.field_b) {
             MouseInput.a(this.field_F, (byte) 63);
             for (var7 = this.field_z + (-this.field_C.field_y + this.field_w); this.field_J * 2 < var7; var7 = var7 - 2 * this.field_J) {
             }

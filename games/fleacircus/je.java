@@ -3151,11 +3151,11 @@ final class je extends bb {
               r.a(pb.field_c, 45);
               if (var11 != 0) {
                 r.a(pb.field_c, 45);
-                gb.c();
+                SoftwareRasterizer.clearRaster();
               }
             } else {
               r.a(pb.field_c, 45);
-              gb.c();
+              SoftwareRasterizer.clearRaster();
             }
             var7.a(112, 144, var7.field_x << 4, var7.field_r << 4, -this.field_L << 10, 4096);
             ia.a(-80);

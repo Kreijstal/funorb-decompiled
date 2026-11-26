@@ -197,7 +197,7 @@ final class pq {
                   }
                   var17_int = var17_int + var19;
                   var18 = var18 + var20;
-                  var36Lifetime2 = var36Lifetime2 + bi.field_e;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_e;
                   var26 = var26 + var28;
                   var25 = var25 + var27;
                   var21 = var21 + var23;
@@ -352,7 +352,7 @@ final class pq {
                 return;
               }
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + bi.field_e;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_e;
               var17_int = var17_int + var19;
               var30 = var30 + var32;
               var29 = var29 + var31;

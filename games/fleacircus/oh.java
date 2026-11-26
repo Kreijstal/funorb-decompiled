@@ -211,22 +211,22 @@ abstract class oh extends jj {
         var17 = fleas.field_A ? 1 : 0;
         if (param8 < param11) {
           if (param0 > param11) {
-            DualLinkNode.a(param6, param11, param4, param3, param2, param15, param14, param8, param9, param12, param13, gb.field_a, param1, param7, param0, 32679, param10);
+            DualLinkNode.a(param6, param11, param4, param3, param2, param15, param14, param8, param9, param12, param13, SoftwareRasterizer.field_a, param1, param7, param0, 32679, param10);
           } else {
             if (param0 <= param8) {
-              DualLinkNode.a(param9, param8, param14, param15, param4, param12, param2, param0, param1, param3, param10, gb.field_a, param6, param13, param11, param5 + 32679, param7);
+              DualLinkNode.a(param9, param8, param14, param15, param4, param12, param2, param0, param1, param3, param10, SoftwareRasterizer.field_a, param6, param13, param11, param5 + 32679, param7);
             } else {
-              DualLinkNode.a(param1, param0, param14, param3, param2, param12, param4, param8, param9, param15, param13, gb.field_a, param6, param10, param11, 32679, param7);
+              DualLinkNode.a(param1, param0, param14, param3, param2, param12, param4, param8, param9, param15, param13, SoftwareRasterizer.field_a, param6, param10, param11, 32679, param7);
             }
           }
         } else {
           if (param8 < param0) {
-            DualLinkNode.a(param9, param8, param4, param12, param14, param15, param2, param11, param6, param3, param7, gb.field_a, param1, param13, param0, 32679, param10);
+            DualLinkNode.a(param9, param8, param4, param12, param14, param15, param2, param11, param6, param3, param7, SoftwareRasterizer.field_a, param1, param13, param0, 32679, param10);
           } else {
             if (param0 <= param11) {
-              DualLinkNode.a(param6, param11, param2, param15, param4, param3, param14, param0, param1, param12, param10, gb.field_a, param9, param7, param8, 32679, param13);
+              DualLinkNode.a(param6, param11, param2, param15, param4, param3, param14, param0, param1, param12, param10, SoftwareRasterizer.field_a, param9, param7, param8, 32679, param13);
             } else {
-              DualLinkNode.a(param1, param0, param2, param12, param14, param3, param4, param11, param6, param15, param7, gb.field_a, param9, param10, param8, param5 ^ 32679, param13);
+              DualLinkNode.a(param1, param0, param2, param12, param14, param3, param4, param11, param6, param15, param7, SoftwareRasterizer.field_a, param9, param10, param8, param5 ^ 32679, param13);
             }
           }
         }

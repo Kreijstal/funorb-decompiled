@@ -358,10 +358,10 @@ abstract class lh extends DualLinkNode {
               }
               param1 = param1 + this.field_I[var8];
               if (field_B != -1) {
-                wb.a(var11, param2 + (int)((double)this.field_q * 0.7), param1 - var11, field_B);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_q * 0.7), param1 - var11, field_B);
               }
               if (field_y != -1) {
-                wb.a(var11, param2 + this.field_q + 1, param1 - var11, field_y);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_q + 1, param1 - var11, field_y);
               }
               var5 = var8;
             }

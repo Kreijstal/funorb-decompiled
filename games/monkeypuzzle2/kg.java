@@ -36,7 +36,7 @@ final class kg {
             wg.field_j.b((byte) -74, vl.field_f);
           }
           vl.field_f.a(param1, param0, 4210752, param2);
-          ge.d();
+          SoftwareRasterizer.clearRaster();
           vj.a(1, true);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "kg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -580,7 +580,7 @@ class kp extends d {
 
     final static void i(int param0) {
         if (BufferedSocket.field_a) {
-          bi.d(bi.field_d, bi.field_f, -bi.field_d + bi.field_i, bi.field_c - bi.field_f);
+          SoftwareRasterizer.darkenRectangleHalf(SoftwareRasterizer.field_d, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_d + SoftwareRasterizer.field_i, SoftwareRasterizer.field_c - SoftwareRasterizer.field_f);
           ql.field_L.b(false, param0 ^ 0);
           if (param0 != 0) {
             kp.i(-128);

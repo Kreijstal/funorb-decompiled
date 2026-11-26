@@ -26,12 +26,12 @@ final class jn implements ca {
         double var9Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        gf.b(param1.field_q + param2, param3 + param1.field_v, param1.field_x, param1.field_s, this.field_i);
+        SoftwareRasterizer.fillRectangle(param1.field_q + param2, param3 + param1.field_v, param1.field_x, param1.field_s, this.field_i);
         if (var14 != null) {
         }
         int var7 = param2 + param1.field_q + var14.field_I;
         int var8 = var14.field_R + param1.field_v + param3;
-        gf.f(var7, var8, var14.field_M, this.field_h);
+        SoftwareRasterizer.fillCircle(var7, var8, var14.field_M, this.field_h);
         if (param0 != 34) {
           return;
         }
@@ -40,13 +40,13 @@ final class jn implements ca {
             var9 = 2.0 * ((double)var14.field_P * 3.141592653589793) / (double)var14.field_N;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_M);
             var12 = (int)(Math.cos(var9) * (double)var14.field_M);
-            gf.f(var7 + var11, var8 + var12, 1, this.field_b);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_b);
           }
-          gf.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_K * 3.141592653589793 * 2.0 / (double)var14.field_N;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_M);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_M);
-          gf.c(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (null != this.field_g) {
             var13 = this.field_e + var14.field_I + var14.field_M;
             this.field_g.a(param1.field_w, param1.field_q + param2 + var13, this.field_m + param1.field_v + param3, -this.field_e - var13 + param1.field_x, -(this.field_e << 1) + param1.field_s, this.field_f, this.field_j, 1, 1, 0);

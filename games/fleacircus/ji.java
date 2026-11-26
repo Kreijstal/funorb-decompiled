@@ -66,20 +66,20 @@ final class ji {
           ji.a((ResourceArchive) null, 11, 87, -10);
         } else {
           var2 = this.field_c * 240 / 255;
-          gb.a((int)this.field_e[0] << 4, (int)this.field_g[0] << 4, 64, this.field_c, this.field_d);
+          SoftwareRasterizer.addRadialGlow((int)this.field_e[0] << 4, (int)this.field_g[0] << 4, 64, this.field_c, this.field_d);
           for (var3 = 1; 20 > var3; var3++) {
             var2Lifetime3 = (-var3 + 20) * (this.field_c * 12) / 255;
-            gb.a((int)this.field_e[var3] << 4, (int)this.field_g[var3] << 4, 32, var2Lifetime3, this.field_d);
-            gb.a((int)(this.field_e[-1 + var3] + this.field_e[var3]) << 3, (int)(this.field_g[var3] + this.field_g[var3 - 1]) << 3, 32, var2Lifetime3, this.field_d);
+            SoftwareRasterizer.addRadialGlow((int)this.field_e[var3] << 4, (int)this.field_g[var3] << 4, 32, var2Lifetime3, this.field_d);
+            SoftwareRasterizer.addRadialGlow((int)(this.field_e[-1 + var3] + this.field_e[var3]) << 3, (int)(this.field_g[var3] + this.field_g[var3 - 1]) << 3, 32, var2Lifetime3, this.field_d);
           }
           return;
         }
         var2Lifetime1 = this.field_c * 240 / 255;
-        gb.a((int)this.field_e[0] << 4, (int)this.field_g[0] << 4, 64, this.field_c, this.field_d);
+        SoftwareRasterizer.addRadialGlow((int)this.field_e[0] << 4, (int)this.field_g[0] << 4, 64, this.field_c, this.field_d);
         for (var3Lifetime1 = 1; 20 > var3Lifetime1; var3Lifetime1++) {
           var2Lifetime2 = (-var3Lifetime1 + 20) * (this.field_c * 12) / 255;
-          gb.a((int)this.field_e[var3Lifetime1] << 4, (int)this.field_g[var3Lifetime1] << 4, 32, var2Lifetime2, this.field_d);
-          gb.a((int)(this.field_e[-1 + var3Lifetime1] + this.field_e[var3Lifetime1]) << 3, (int)(this.field_g[var3Lifetime1] + this.field_g[var3Lifetime1 - 1]) << 3, 32, var2Lifetime2, this.field_d);
+          SoftwareRasterizer.addRadialGlow((int)this.field_e[var3Lifetime1] << 4, (int)this.field_g[var3Lifetime1] << 4, 32, var2Lifetime2, this.field_d);
+          SoftwareRasterizer.addRadialGlow((int)(this.field_e[-1 + var3Lifetime1] + this.field_e[var3Lifetime1]) << 3, (int)(this.field_g[var3Lifetime1] + this.field_g[var3Lifetime1 - 1]) << 3, 32, var2Lifetime2, this.field_d);
         }
     }
 

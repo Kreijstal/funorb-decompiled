@@ -116,11 +116,11 @@ final class go extends ln {
           var4 = param1 * 12 + 252;
           var5 = 228 - 12 * param0;
           var6 = 12 * param0 + 252;
-          kh.d(0, 0, 480, var5, 0, 64);
-          kh.d(0, var5, var3_int, -var5 + var6, 0, 64);
-          kh.d(var3_int, var5, -var3_int + var4, -var5 + var6, 0, 192);
-          kh.d(var4, var5, 480 - var4, var6 - var5, 0, 64);
-          kh.d(0, var6, 480, 480 - var6, 0, 64);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, 480, var5, 0, 64);
+          SoftwareRasterizer.fillRectangleAlpha(0, var5, var3_int, -var5 + var6, 0, 64);
+          SoftwareRasterizer.fillRectangleAlpha(var3_int, var5, -var3_int + var4, -var5 + var6, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(var4, var5, 480 - var4, var6 - var5, 0, 64);
+          SoftwareRasterizer.fillRectangleAlpha(0, var6, 480, 480 - var6, 0, 64);
           var7 = tm.field_d[0][0].a((byte) -46);
           var8 = le.field_g[var7][0];
           for (var9 = -1; param1 >= var9; var9++) {

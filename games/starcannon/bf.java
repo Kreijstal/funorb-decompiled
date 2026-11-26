@@ -2273,14 +2273,14 @@ final class bf extends IntrusiveNode {
                                     stackIn_107_0 = (2 != this.field_l) ? 0 : 16711680;
                                     var10 = stackIn_107_0;
                                     var11 = ~var10 & 65793 - var9;
-                                    ki.c(var4, this.field_u, 20 + this.field_o, var10 | var9 * 96, 32);
-                                    ki.c(var4, this.field_u, this.field_o + 19, var9 * 160 | var10, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 20 + this.field_o, var10 | var9 * 96, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, this.field_o + 19, var9 * 160 | var10, 32);
                                     var10 = 255 * var9 | var10;
-                                    ki.c(var4, this.field_u, 18 + this.field_o, var10, 32);
-                                    ki.c(var4, this.field_u, this.field_o + 17, var10 | var11 * 32, 32);
-                                    ki.c(var4, this.field_u, 16 + this.field_o, var11 * 96 | var10, 32);
-                                    ki.c(var4, this.field_u, 14 + this.field_o, 160 * var11 | var10, 32);
-                                    ki.c(var4, this.field_u, 12 + this.field_o, var10 | var11 * 240, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 18 + this.field_o, var10, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, this.field_o + 17, var10 | var11 * 32, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 16 + this.field_o, var11 * 96 | var10, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 14 + this.field_o, 160 * var11 | var10, 32);
+                                    SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, 12 + this.field_o, var10 | var11 * 240, 32);
                                   }
                                   af.field_w[this.field_v * 8 + this.field_l].c(var4 - 16, -16 + this.field_u);
                                 }
@@ -2377,22 +2377,22 @@ final class bf extends IntrusiveNode {
               }
               if (0 < SpriteState.field_p &&
                 !ti.field_d) {
-                ki.c(var4, this.field_u, SpriteState.field_p, 65535, -(SpriteState.field_p * 255 / eg.field_l) + 256);
+                SoftwareRasterizer.fillCircleAlpha(var4, this.field_u, SpriteState.field_p, 65535, -(SpriteState.field_p * 255 / eg.field_l) + 256);
               } else if (0 < ha.field_d &&
                 !ti.field_d) {
                 for (var9 = 0; 314 > var9; var9 += 16) {
                   var10 = var4 + (int)(Math.cos((double)(var9 + ha.field_d) / 50.1) * (double)ha.field_d);
                   var11 = (int)(Math.sin((double)(var9 + ha.field_d) / 50.1) * (double)ha.field_d) + this.field_u;
-                  ki.c(var10, var11, 3, 65535, 128);
+                  SoftwareRasterizer.fillCircleAlpha(var10, var11, 3, 65535, 128);
                 }
               } else {
-                ki.c(4 + (var4 - this.field_v), this.field_u, 20, 24831, 32);
-                ki.c(var4 + (4 - this.field_v), this.field_u, 19, 41215, 32);
-                ki.c(var4 + 4 - this.field_v, this.field_u, 18, 65535, 32);
-                ki.c(var4 - (-4 + this.field_v), this.field_u, 17, 2162687, 32);
-                ki.c(-this.field_v + var4 + 4, this.field_u, 16, 6356991, 32);
-                ki.c(var4 + (4 - this.field_v), this.field_u, 14, 10551295, 32);
-                ki.c(-this.field_v + (var4 + 4), this.field_u, 12, 15794175, 32);
+                SoftwareRasterizer.fillCircleAlpha(4 + (var4 - this.field_v), this.field_u, 20, 24831, 32);
+                SoftwareRasterizer.fillCircleAlpha(var4 + (4 - this.field_v), this.field_u, 19, 41215, 32);
+                SoftwareRasterizer.fillCircleAlpha(var4 + 4 - this.field_v, this.field_u, 18, 65535, 32);
+                SoftwareRasterizer.fillCircleAlpha(var4 - (-4 + this.field_v), this.field_u, 17, 2162687, 32);
+                SoftwareRasterizer.fillCircleAlpha(-this.field_v + var4 + 4, this.field_u, 16, 6356991, 32);
+                SoftwareRasterizer.fillCircleAlpha(var4 + (4 - this.field_v), this.field_u, 14, 10551295, 32);
+                SoftwareRasterizer.fillCircleAlpha(-this.field_v + (var4 + 4), this.field_u, 12, 15794175, 32);
               }
               var9 = jl.field_j;
               switch (var9) {

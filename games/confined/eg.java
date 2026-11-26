@@ -472,8 +472,8 @@ final class eg {
         int var4Lifetime1Lifetime1;
         var17 = Confined.field_J ? 1 : 0;
         this.d(983);
-        var2 = fn.field_b;
-        fn.field_b = 376;
+        var2 = SoftwareRasterizer.field_b;
+        SoftwareRasterizer.field_b = 376;
         if (param0 < 118) {
           this.a((String) null, 60, 120, -123, (String) null, (String) null);
         }
@@ -606,7 +606,7 @@ final class eg {
               }
               var4++;
             }
-            eg.a(0, 240640, fn.field_h, this.field_h);
+            eg.a(0, 240640, SoftwareRasterizer.field_h, this.field_h);
             stackIn_51_0 = null;
             break;
           }
@@ -635,7 +635,7 @@ final class eg {
             }
           }
         }
-        fn.field_b = var2;
+        SoftwareRasterizer.field_b = var2;
         return;
     }
 
@@ -820,28 +820,28 @@ final class eg {
         if (null == this.field_f) {
           return;
         }
-        var6 = fn.field_i;
-        var36 = fn.field_h;
+        var6 = SoftwareRasterizer.field_i;
+        var36 = SoftwareRasterizer.field_h;
         var2 = var36;
         if (param0 != 983) {
           this.a(2, (String) null, -122, (String) null, (String) null, -111, -17);
         }
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder1 = true;
-        var3 = fn.field_g;
-        var4 = fn.field_l;
-        var7 = fn.field_b;
-        var5 = fn.field_c;
-        fn.field_g = this.field_f.field_u;
-        var8 = fn.field_j;
-        fn.field_h = this.field_f.field_z;
-        fn.field_l = this.field_f.field_w;
-        fn.c();
+        var3 = SoftwareRasterizer.field_g;
+        var4 = SoftwareRasterizer.field_l;
+        var7 = SoftwareRasterizer.field_b;
+        var5 = SoftwareRasterizer.field_c;
+        SoftwareRasterizer.field_g = this.field_f.field_u;
+        var8 = SoftwareRasterizer.field_j;
+        SoftwareRasterizer.field_h = this.field_f.field_z;
+        SoftwareRasterizer.field_l = this.field_f.field_w;
+        SoftwareRasterizer.resetClip();
         ti.b();
         if (this.field_h != 1) {
           if (this.field_h != 3) {
             if (4 == this.field_h) {
-              fn.d();
+              SoftwareRasterizer.clearRaster();
               var9_ref_int__ = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
               boolean decompiledSharedTail0 = !(this.field_a < 170);
               if (!decompiledSharedTail0) {
@@ -931,7 +931,7 @@ final class eg {
               if (this.field_h != 7) {
                 if (this.field_h != 10) {
                   var9_int = jg.field_f[this.field_h - 6];
-                  fn.d();
+                  SoftwareRasterizer.clearRaster();
                   var10 = (int)(0.5 + 64.0 * uh.field_e[var9_int]);
                   var11_int = 64 - var10 >> 1;
                   m.field_i[var9_int].b(var11_int, var11_int, var10, var10);
@@ -939,30 +939,30 @@ final class eg {
                   decompiledFrameRemainder1 = (var35 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  fn.d();
+                  SoftwareRasterizer.clearRaster();
                   var9_int = (176 + (3 * this.field_a - 105)) % 176;
                   if (88 < var9_int) {
                     var9_int = 176 - var9_int;
                   }
-                  fn.field_b = var9_int;
+                  SoftwareRasterizer.field_b = var9_int;
                   dn.field_c[1].d(0, 0);
                   decompiledFrameRemainder1 = (var35 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
-                fn.d();
+                SoftwareRasterizer.clearRaster();
                 var9_intLifetime2 = (2 * this.field_a - 70 + 176) % 176;
                 if (var9_intLifetime2 > 88) {
                   var9_intLifetime2 = -var9_intLifetime2 + 176;
                 }
-                fn.field_b = var9_intLifetime2;
+                SoftwareRasterizer.field_b = var9_intLifetime2;
                 dn.field_c[0].d(0, 0);
                 if (240 <= this.field_a) {
                   var9_intLifetime3 = (2 * this.field_a - 392) % 176;
                   if (var9_intLifetime3 > 88) {
                     var9_intLifetime3 = -var9_intLifetime3 + 176;
                   }
-                  fn.field_b = var9_intLifetime3;
+                  SoftwareRasterizer.field_b = var9_intLifetime3;
                   dn.field_c[2].d(32, 0);
                 }
                 decompiledFrameRemainder1 = (var35 != 0);
@@ -979,7 +979,7 @@ final class eg {
               var9_intLifetime1++;
             }
             var12 = var9_intLifetime1 * 7 % 18;
-            fn.d();
+            SoftwareRasterizer.clearRaster();
             var13_intLifetime1 = (int)(0.5 + uh.field_e[var12] * 64.0);
             var14Lifetime1 = var13_intLifetime1;
             if (var11_int == 0) {
@@ -994,7 +994,7 @@ final class eg {
             var14Lifetime1 = (int)Math.floor(0.5 + (double)var14Lifetime1 / var17);
             var19_intLifetime1 = 64 - var13_intLifetime1 >> 1;
             var20Lifetime1 = -var14Lifetime1 + 64 >> 1;
-            fn.e(31, 31, 31, 1);
+            SoftwareRasterizer.fillCircle(31, 31, 31, 1);
             if (var11_int == 0) {
               m.field_i[var12].b(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1);
             }
@@ -1007,7 +1007,7 @@ final class eg {
           }
         }
         if (decompiledFrameRemainder1) {
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           var9 = Math.pow(1.007, (double)this.field_a);
           if (8.0 <= var9) {
             var9 = -(Math.exp((-var9 + 8.0) / 2.0) * 2.0) + 10.0;
@@ -1034,7 +1034,7 @@ final class eg {
                 var27 = 0.04908738521234052 * (double)var24Lifetime1;
                 var22 = (int)(var19 + var11 * (Math.cos(var27) * (double)ga.field_I[var21Lifetime1]));
                 var23 = (int)(52.0 + Math.sin(var27) * (double)ga.field_I[var21Lifetime1] * var15);
-                fn.f(var25Lifetime1, var26_intLifetime1, var22, var23, 2121792);
+                SoftwareRasterizer.drawLine(var25Lifetime1, var26_intLifetime1, var22, var23, 2121792);
                 var24Lifetime1--;
               }
               var21Lifetime1++;
@@ -1048,7 +1048,7 @@ final class eg {
           }
           var24Lifetime2 = stackIn_68_0;
           s.field_M[2].a(var21Lifetime1, var22, -var21Lifetime1 + var23, var24Lifetime2 - var22);
-          fn.a((int)(var19 * 16.0), 832, (int)(var9 * 5.0 * 16.0), 255, mm.field_cb);
+          SoftwareRasterizer.addRadialGlow((int)(var19 * 16.0), 832, (int)(var9 * 5.0 * 16.0), 255, mm.field_cb);
           var25Lifetime2 = 0;
           while (var25Lifetime2 < 7) {
             var26 = (double)this.field_a * 0.6 / (double)ga.field_I[var25Lifetime2] + d.field_c[var25Lifetime2] - var17;
@@ -1082,32 +1082,32 @@ final class eg {
                 var34 = cd.field_o[0];
               }
             } else {
-              fn.e((int)var28, (int)var30, (int)(var32 + 1.0), 0);
+              SoftwareRasterizer.fillCircle((int)var28, (int)var30, (int)(var32 + 1.0), 0);
               var34 = pm.field_w[0];
             }
-            if (var21Lifetime2 < fn.field_i &&
-              fn.field_c < var23Lifetime1 &&
-              var22Lifetime1 < fn.field_j &&
-              fn.field_b < var24Lifetime3) {
+            if (var21Lifetime2 < SoftwareRasterizer.field_i &&
+              SoftwareRasterizer.field_c < var23Lifetime1 &&
+              var22Lifetime1 < SoftwareRasterizer.field_j &&
+              SoftwareRasterizer.field_b < var24Lifetime3) {
               var34.a(var21Lifetime2, var22Lifetime1, var23Lifetime1 - var21Lifetime2, -var22Lifetime1 + var24Lifetime3);
             }
             if (3 == var25Lifetime2) {
-              fn.a((int)(var28 * 16.0), (int)(16.0 * var30), (int)(var32 * 16.0), 96, mm.field_gb);
+              SoftwareRasterizer.addRadialGlow((int)(var28 * 16.0), (int)(16.0 * var30), (int)(var32 * 16.0), 96, mm.field_gb);
             }
             if (var25Lifetime2 == 4) {
-              fn.a((int)(var28 * 16.0), (int)(var30 * 16.0), (int)(var32 * 16.0), 128, mm.field_cb);
+              SoftwareRasterizer.addRadialGlow((int)(var28 * 16.0), (int)(var30 * 16.0), (int)(var32 * 16.0), 128, mm.field_cb);
             }
             if (5 == var25Lifetime2) {
-              fn.a((int)(var28 * 16.0), (int)(var30 * 16.0), (int)(16.0 * var32), 64, mm.field_cb);
+              SoftwareRasterizer.addRadialGlow((int)(var28 * 16.0), (int)(var30 * 16.0), (int)(16.0 * var32), 64, mm.field_cb);
             }
             var25Lifetime2++;
           }
         }
         if (decompiledFrameCompleted0) {
-          fn.field_g = var3;
-          fn.field_h = var36;
-          fn.field_l = var4;
-          fn.h(var5, var7, var6, var8);
+          SoftwareRasterizer.field_g = var3;
+          SoftwareRasterizer.field_h = var36;
+          SoftwareRasterizer.field_l = var4;
+          SoftwareRasterizer.setClip(var5, var7, var6, var8);
           stackIn_98_0 = 0;
           stackIn_98_1 = 0;
         }

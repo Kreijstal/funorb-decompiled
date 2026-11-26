@@ -41,7 +41,7 @@ final class pl {
           var1 = new bd(540, 140);
           sb.a(var1, -118);
           ge.b();
-          si.d();
+          SoftwareRasterizer.clearRaster();
           tk.field_e = 0;
           uc.b(-40);
           var2 = var1.h();
@@ -51,7 +51,7 @@ final class pl {
           }
           for (var3 = 0; var3 < 15; var3++) {
             var2.a(-2, -2, 16777215);
-            si.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ti.field_c.a();
           var1.f(0, 0);

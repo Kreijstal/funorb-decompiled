@@ -80,7 +80,7 @@ final class kd {
           }
           this.field_q = new Sprite(622, 47);
           ArchiveProvider.a(this.field_q, 125);
-          SoftwareRasterizer.c(0, 0, 622, 47, 4540749, 65793);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           if (param0 > -69) {
             kd.a(28, (byte) 95);
           }
@@ -96,8 +96,8 @@ final class kd {
           var9 = var11;
           var5 = new Sprite(121, 122);
           ArchiveProvider.a(var5, 127);
-          SoftwareRasterizer.c(0, 0, var5.field_y, var5.field_C / 2, 16180917, 16306250);
-          SoftwareRasterizer.c(0, var5.field_C / 2, var5.field_y, var5.field_C, 16306250, 15568919);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, var5.field_y, var5.field_C / 2, 16180917, 16306250);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, var5.field_C / 2, var5.field_y, var5.field_C, 16306250, 15568919);
           var6 = dn.field_s;
           var7 = sn.field_e;
           this.a((byte) 116, 0.5f, var5, var13, DualLinkNode.field_r, -16, var5.field_y, var6, var5.field_C, 0);
@@ -252,21 +252,21 @@ final class kd {
         int var2Lifetime2;
         int var3Lifetime1;
         var4 = MinerDisturbance.field_ab;
-        SoftwareRasterizer.c(9, 9, 622, 47, 4540749, 65793);
-        SoftwareRasterizer.e(9, 257, 622, 33, 2585);
-        SoftwareRasterizer.c(9, 265, 622, 11, 2585, 1515566);
+        SoftwareRasterizer.fillRectangleVerticalGradient(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRasterizer.fillRectangle(9, 257, 622, 33, 2585);
+        SoftwareRasterizer.fillRectangleVerticalGradient(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          SoftwareRasterizer.c(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
           var3 += 121;
           var2++;
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          SoftwareRasterizer.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          SoftwareRasterizer.e(508, 42 + var3Lifetime1, 127, 42, 12410);
+          SoftwareRasterizer.fillRectangleVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRasterizer.fillRectangle(508, 42 + var3Lifetime1, 127, 42, 12410);
           var2Lifetime1++;
           var3Lifetime1 += 91;
         }

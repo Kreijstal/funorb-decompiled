@@ -18,12 +18,12 @@ final class sd extends bi {
           if (null == this.field_U) {
             return;
           }
-          sb.d(param2 + 20, -7 + (param0 + 120), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(param2 + 20, -7 + (param0 + 120), 260, 8421504);
           rh.field_q.a(this.field_U, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, rh.field_q.field_y);
           return;
         }
         if (null != this.field_U) {
-          sb.d(param2 + 20, -7 + (param0 + 120), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(param2 + 20, -7 + (param0 + 120), 260, 8421504);
           rh.field_q.a(this.field_U, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, rh.field_q.field_y);
           return;
         }

@@ -45,7 +45,7 @@ final class rn implements WidgetRenderer {
             stackIn_4_0 = (UiWidget) (param4);
           }
           var12 = (ri) (stackIn_4_0);
-          SoftwareRasterizer.d(param2 + param4.x, param1 + param4.y, param4.width, param4.height, this.field_i);
+          SoftwareRasterizer.fillRectangle(param2 + param4.x, param1 + param4.y, param4.width, param4.height, this.field_i);
           if (var12 != null) {
           }
           if (param0 < 89) {

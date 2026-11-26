@@ -74,7 +74,7 @@ final class sl extends pn {
           ec.field_m = param0;
           int var4_int = 37 / ((param2 - 58) / 47);
           gh.field_F = param1;
-          mh.a(kh.field_l / 2, -20, kh.field_d / 2);
+          mh.a(SoftwareRasterizer.field_l / 2, -20, SoftwareRasterizer.field_d / 2);
           mo.a(param0.field_u + param0.field_A, param1.field_A, param0.field_A, param1.field_A + param1.field_u, (byte) -16);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sl.BA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -376,7 +376,7 @@ final class sl extends pn {
         int var9 = 0;
         if (this.field_p &&
           this.field_o.field_s >= 0) {
-          var10 = jf.a(kh.field_j, param4, 0, param4 + param1 * 2, kh.field_b);
+          var10 = jf.a(SoftwareRasterizer.field_j, param4, 0, param4 + param1 * 2, SoftwareRasterizer.field_b);
           if (var10 == null) {
             return;
           }

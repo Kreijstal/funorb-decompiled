@@ -67,7 +67,7 @@ final class nc extends ue {
         var9 = 640 - var8;
         var10 = var8 + this.field_j * (-var8 + var9) * this.field_j / 400;
         wi.a(var8, jn.field_o, 110, 260, (byte) -71, -var8 + var10);
-        kh.d(var8 + param0, 118, var10 - var8 - 16, 244, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(var8 + param0, 118, var10 - var8 - 16, 244, 0, 192);
         if (0 != this.field_f.field_f) {
           return;
         }

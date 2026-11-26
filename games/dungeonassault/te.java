@@ -8,18 +8,18 @@ final class te {
 
     final static void a(int param0, int param1, int param2, int[] param3) {
         int var5 = 0;
-        if (param1 < gf.field_f ||
-          param1 >= gf.field_e) {
+        if (param1 < SoftwareRasterizer.field_f ||
+          param1 >= SoftwareRasterizer.field_e) {
           return;
         }
-        if (param0 < gf.field_j) {
-          param2 = param2 - (gf.field_j - param0);
-          param0 = gf.field_j;
+        if (param0 < SoftwareRasterizer.field_j) {
+          param2 = param2 - (SoftwareRasterizer.field_j - param0);
+          param0 = SoftwareRasterizer.field_j;
         }
-        if (param0 + param2 > gf.field_h) {
-          param2 = gf.field_h - param0;
+        if (param0 + param2 > SoftwareRasterizer.field_h) {
+          param2 = SoftwareRasterizer.field_h - param0;
         }
-        int var4 = param1 * gf.field_i + param0;
+        int var4 = param1 * SoftwareRasterizer.field_i + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
@@ -32,7 +32,7 @@ final class te {
           if (var5 > 31) {
             var5 = 31;
           }
-          gf.field_b[var4] = param3[var5];
+          SoftwareRasterizer.field_b[var4] = param3[var5];
           param0++;
           var4++;
         }
@@ -238,18 +238,18 @@ final class te {
 
     final static void b(int param0, int param1, int param2, int[] param3) {
         int var5 = 0;
-        if (param0 < gf.field_j ||
-          param0 >= gf.field_h) {
+        if (param0 < SoftwareRasterizer.field_j ||
+          param0 >= SoftwareRasterizer.field_h) {
           return;
         }
-        if (param1 < gf.field_f) {
-          param2 = param2 - (gf.field_f - param1);
-          param1 = gf.field_f;
+        if (param1 < SoftwareRasterizer.field_f) {
+          param2 = param2 - (SoftwareRasterizer.field_f - param1);
+          param1 = SoftwareRasterizer.field_f;
         }
-        if (param1 + param2 > gf.field_e) {
-          param2 = gf.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
-        int var4 = param1 * gf.field_i + param0;
+        int var4 = param1 * SoftwareRasterizer.field_i + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
@@ -262,9 +262,9 @@ final class te {
           if (var5 > 31) {
             var5 = 31;
           }
-          gf.field_b[var4] = param3[var5];
+          SoftwareRasterizer.field_b[var4] = param3[var5];
           param1++;
-          var4 = var4 + gf.field_i;
+          var4 = var4 + SoftwareRasterizer.field_i;
         }
     }
 

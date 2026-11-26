@@ -73,7 +73,7 @@ final class vj {
           var9Lifetime1 = var17.storedHeight;
           BufferedSocket.b((byte) -128);
           var17.d();
-          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();

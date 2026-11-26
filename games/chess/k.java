@@ -85,15 +85,15 @@ abstract class k extends eh {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Chess.field_G;
-        wb.c(6 + param2, 35 + param1, -12 + this.field_y, this.field_C - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param2, 35 + param1, -12 + this.field_y, this.field_C - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var7 < var4) {
-          if (wb.field_a <= var8 &&
-            var8 < wb.field_b) {
+          if (SoftwareRasterizer.field_a <= var8 &&
+            var8 < SoftwareRasterizer.field_b) {
             var9 = var5 + var7 * (var6 - var5) / var4;
             var10 = 0;
             var11 = this.field_y;
@@ -106,7 +106,7 @@ abstract class k extends eh {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  wb.field_d[param2 + (var8 * wb.field_h + var10)] = var13;
+                  SoftwareRasterizer.field_d[param2 + (var8 * SoftwareRasterizer.field_h + var10)] = var13;
                 }
                 var10++;
               }
@@ -120,7 +120,7 @@ abstract class k extends eh {
                   if (var14 >= 420) {
                     var15 = (-var14 + 462) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    wb.field_d[var11 + var8 * wb.field_h + param2] = var15;
+                    SoftwareRasterizer.field_d[var11 + var8 * SoftwareRasterizer.field_h + param2] = var15;
                   } else {
                     var12Lifetime1 = 1 + var11;
                   }
@@ -132,7 +132,7 @@ abstract class k extends eh {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            wb.a(var10 + param2, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param2, var8, var11 - var10, var9);
           }
           var7++;
           var8++;
@@ -148,8 +148,8 @@ abstract class k extends eh {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          wb.a(param2, var8Lifetime1, 6, var9Lifetime1);
-          wb.a(-6 + (param2 + this.field_y), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param2 + this.field_y), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -164,8 +164,8 @@ abstract class k extends eh {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          wb.a(param2, var8Lifetime2, 6, var9Lifetime2);
-          wb.a(this.field_y + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.field_y + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

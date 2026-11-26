@@ -667,11 +667,11 @@ final class pl {
     final static void a(int param0, int param1, int param2) {
         param0 = param0 * 16;
         param2 = param2 * 16;
-        gb.a(si.field_R);
+        SoftwareRasterizer.saveClip(si.field_R);
         int var3 = PacketBuffer.field_j * 2 % 16;
-        gb.a(var3 + param2, param0 - 4, 16 + (param2 + var3), 16 + param0);
-        gb.h(var3 + param2, 4 + param0, 8, 13421632);
-        gb.b(si.field_R);
+        SoftwareRasterizer.setClip(var3 + param2, param0 - 4, 16 + (param2 + var3), 16 + param0);
+        SoftwareRasterizer.drawCircleOutline(var3 + param2, 4 + param0, 8, 13421632);
+        SoftwareRasterizer.restoreClip(si.field_R);
         if (param1 <= -63) {
           return;
         }

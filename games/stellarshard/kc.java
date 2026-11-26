@@ -30,8 +30,8 @@ final class kc {
         int var3Lifetime1;
         var4 = stellarshard.field_B;
         try {
-          ti.b(243, 197, 369, 143, 16777215);
-          ti.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (ed.field_a == null) {
             if (fj.field_f != null) {
               fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

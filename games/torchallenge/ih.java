@@ -234,9 +234,9 @@ final class ih extends kj implements sg {
             var10 = SoftwareRasterizer.width;
             var11 = SoftwareRasterizer.height;
             var29 = new int[4];
-            SoftwareRasterizer.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param5.d();
-            SoftwareRasterizer.a(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6 * param5.storedWidth + param1;
             var14 = -param0 + param5.storedWidth;
             var25 = var21.pixels;
@@ -272,7 +272,7 @@ final class ih extends kj implements sg {
             }
             var21.drawTransparent(-param5.offsetX, -param5.offsetY);
             SoftwareRasterizer.setTarget(var30, var10, var11);
-            SoftwareRasterizer.b(var29);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

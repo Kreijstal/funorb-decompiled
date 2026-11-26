@@ -131,8 +131,8 @@ final class oh implements ca {
             if (0 > var4) {
               var4 = var4 + (30 + var2);
             }
-            gf.b(-8 + var3, -8 + var4, of.field_f.field_y + 16, of.field_f.field_v + 16, 16777215, 16);
-            gf.b(var3 - 4, -4 + var4, 8 + of.field_f.field_y, of.field_f.field_v + 8, 0, 64);
+            SoftwareRasterizer.fillRectangleAlpha(-8 + var3, -8 + var4, of.field_f.field_y + 16, of.field_f.field_v + 16, 16777215, 16);
+            SoftwareRasterizer.fillRectangleAlpha(var3 - 4, -4 + var4, 8 + of.field_f.field_y, of.field_f.field_v + 8, 0, 64);
             bp.a(var4, uo.field_a, var3, (byte) 99);
             of.field_f.h(var3, var4);
           }
@@ -168,17 +168,17 @@ final class oh implements ca {
           if (param4) {
             var7 = 16777215;
           }
-          gf.b(param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, this.field_g);
+          SoftwareRasterizer.fillRectangle(param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, this.field_g);
           if (param0 != 34) {
             oh.a(32, '￴');
           }
           var8 = param2 + param1.field_q + this.field_d;
           var9 = param3 + (param1.field_v + this.field_h);
-          gf.a(var8, var9, this.field_l, this.field_e, 5592405);
-          gf.b(var8, var9, this.field_l, this.field_e, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_l, this.field_e, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_l, this.field_e, var7);
           if (var11.field_E) {
-            gf.c(var8, var9, this.field_l + var8, this.field_e + var9, 1);
-            gf.c(var8 + this.field_l, var9, var8, var9 + this.field_e, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_l + var8, this.field_e + var9, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_e, 1);
           }
           if (null != this.field_m) {
             var10 = this.field_k + this.field_l + this.field_d;

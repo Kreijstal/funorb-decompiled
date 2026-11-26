@@ -16,7 +16,7 @@ final class tk implements uj {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_y, var1.field_n, var1.field_s);
+        SoftwareRasterizer.setRasterBuffer(var1.field_y, var1.field_n, var1.field_s);
         SoftwareRasterizer.setClip(var1.field_r, var1.field_o, var1.field_t, var1.field_q);
         var1.field_y = null;
         ah.field_g.addLast((byte) 91, var1);

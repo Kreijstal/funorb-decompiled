@@ -83,7 +83,7 @@ final class TileRack {
         int[][] var13 = null;
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
-          sb.a(nc.field_p);
+          SoftwareRasterizer.saveClip(nc.field_p);
           if (param2 != 3) {
             this.clear(false);
           }
@@ -91,7 +91,7 @@ final class TileRack {
           var6 = var13;
           for (var7 = 0; var13.length > var7; var7++) {
             var8 = var13[var7];
-            sb.g(var8[0], var8[1], var8[2], var8[3]);
+            SoftwareRasterizer.intersectClip(var8[0], var8[1], var8[2], var8[3]);
             var9 = this.tiles;
             for (var10 = 0; var9.length > var10; var10++) {
               var11 = var9[var10];
@@ -103,7 +103,7 @@ final class TileRack {
                 }
               }
             }
-            sb.b(nc.field_p);
+            SoftwareRasterizer.restoreClip(nc.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

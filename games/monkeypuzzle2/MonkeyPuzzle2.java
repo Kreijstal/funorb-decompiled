@@ -69,7 +69,7 @@ public final class MonkeyPuzzle2 extends bi {
           tk.a(119);
           qh.clearStaticReferences(8);
           MouseWheelInput.clearStaticReferences(256);
-          ge.c();
+          SoftwareRasterizer.clearStaticReferences();
           ad.clearStaticReferences((byte) 123);
           el.a(true);
           vj.a(17812);
@@ -365,7 +365,7 @@ public final class MonkeyPuzzle2 extends bi {
                 ProxyAuthenticationRequiredException.field_d[l.field_f].b((byte) 125);
               }
             }
-            gl.a(ge.field_i, 0, lb.field_H.field_s, 0, 307200);
+            gl.a(SoftwareRasterizer.field_i, 0, lb.field_H.field_s, 0, 307200);
             hf.field_f.b(-76);
             uk.a(ej.field_b, (byte) 123, lb.field_H);
             decompiledFrameRemainder0 = false;
@@ -397,7 +397,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (sc.field_e != 0) {
             var3 = 256 * ej.field_b / 25;
             if (0 < var3) {
-              ge.c(0, 0, ge.field_h, ge.field_g, 0, var3);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g, 0, var3);
             }
           }
           oh.a(0, (byte) 16, 0, (java.awt.Canvas) (var5));

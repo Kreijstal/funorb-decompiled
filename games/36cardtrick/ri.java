@@ -26,13 +26,13 @@ final class ri {
           var1 = new kc(540, 140);
           dl.a(-78, var1);
           jb.b();
-          vj.d();
+          SoftwareRasterizer.clearRaster();
           h.field_F = 0;
           de.b(30);
           var2 = var1.b();
           for (var3 = 0; var3 < 15; var3++) {
             var2.d(-2, -2, 16777215);
-            vj.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           rc.field_i.c();
           var3Lifetime1 = -29 / ((param0 - 1) / 58);

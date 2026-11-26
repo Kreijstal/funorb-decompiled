@@ -25,11 +25,11 @@ final class dk {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param0 == 4) {
-          SoftwareRasterizer.a(param5, param4, param1, param3, param2, param6);
+          SoftwareRasterizer.fillRectangleAlpha(param5, param4, param1, param3, param2, param6);
           return;
         }
         this.a(121, -123, (byte) 22, 3, -114, 122);
-        SoftwareRasterizer.a(param5, param4, param1, param3, param2, param6);
+        SoftwareRasterizer.fillRectangleAlpha(param5, param4, param1, param3, param2, param6);
     }
 
     private final void a(String param0, int param1, int param2, int param3) {
@@ -93,8 +93,8 @@ final class dk {
           if (var6 + (var13Lifetime1 + var10) > SoftwareRasterizer.height) {
             var13Lifetime1 = -var6 + (-var10 + param2);
           }
-          SoftwareRasterizer.b(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
-          SoftwareRasterizer.f(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var6 + var10 - 2, this.field_p);
+          SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
+          SoftwareRasterizer.fillRectangle(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var6 + var10 - 2, this.field_p);
           this.field_t.a(param0, this.field_k + var12, this.field_h + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -327,8 +327,8 @@ final class dk {
           if (!(6 + (var9 + var7) <= SoftwareRasterizer.height)) {
             var9 = -6 + (SoftwareRasterizer.height - var7);
           }
-          SoftwareRasterizer.b(var8, var9, var5_int + 6, var7 + 6, this.field_b);
-          SoftwareRasterizer.f(1 + var8, 1 + var9, var5_int + 4, 4 + var7, this.field_p);
+          SoftwareRasterizer.drawRectangleOutline(var8, var9, var5_int + 6, var7 + 6, this.field_b);
+          SoftwareRasterizer.fillRectangle(1 + var8, 1 + var9, var5_int + 4, 4 + var7, this.field_p);
           this.field_t.c(param1, var8 + 3, 3 + (var9 + this.field_t.field_t), this.field_b, -1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "dk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

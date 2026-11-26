@@ -73,15 +73,15 @@ abstract class wk extends ri {
         if (param1 >= -6) {
           this.field_K = -102;
         }
-        na.b(param2 + 6, param0 + 35, -12 + this.field_k, this.field_m - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param2 + 6, param0 + 35, -12 + this.field_k, this.field_m - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var7 < var4) {
-          if (var8 >= na.field_i &&
-            var8 < na.field_f) {
+          if (var8 >= SoftwareRasterizer.field_i &&
+            var8 < SoftwareRasterizer.field_f) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_k;
@@ -94,7 +94,7 @@ abstract class wk extends ri {
                   }
                   var13 = (-var12 + 462) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  na.field_d[var10 + (na.field_e * var8 + param2)] = var13;
+                  SoftwareRasterizer.field_d[var10 + (SoftwareRasterizer.field_e * var8 + param2)] = var13;
                 }
                 var10++;
               }
@@ -109,7 +109,7 @@ abstract class wk extends ri {
                   if (var14 >= 420) {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    na.field_d[param2 + na.field_e * var8 + var11] = var15;
+                    SoftwareRasterizer.field_d[param2 + SoftwareRasterizer.field_e * var8 + var11] = var15;
                   } else {
                     var12Lifetime1 = 1 + var11;
                   }
@@ -122,7 +122,7 @@ abstract class wk extends ri {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            na.a(var10 + param2, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param2, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -135,8 +135,8 @@ abstract class wk extends ri {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          na.a(param2, var8Lifetime1, 6, var9Lifetime1);
-          na.a(-6 + (param2 + this.field_k), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param2 + this.field_k), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -151,8 +151,8 @@ abstract class wk extends ri {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          na.a(param2, var8Lifetime2, 6, var9Lifetime2);
-          na.a(this.field_k + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.field_k + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

@@ -62,8 +62,8 @@ final class ei {
         int var3Lifetime1;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          ul.d(243, 197, 369, 143, 16777215);
-          ul.h(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (dm.field_b == null) {
             if (rc.field_a != null) {
               rc.field_a.a(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

@@ -42,8 +42,8 @@ abstract class wd {
         int var3Lifetime1;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          wj.d(243, 197, 369, 143, 16777215);
-          wj.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == ClientException.field_e) {
             if (sc.field_f != null) {
               sc.field_f.a(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

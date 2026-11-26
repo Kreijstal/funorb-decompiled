@@ -125,7 +125,7 @@ abstract class bb extends WidgetContainer {
           RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
@@ -134,7 +134,7 @@ abstract class bb extends WidgetContainer {
           }
           this.a((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
@@ -145,7 +145,7 @@ abstract class bb extends WidgetContainer {
           RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
@@ -154,7 +154,7 @@ abstract class bb extends WidgetContainer {
           }
           this.a((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
@@ -165,7 +165,7 @@ abstract class bb extends WidgetContainer {
           RandomAccessCacheFile.field_b = new Sprite(this.width, this.height);
           if (param1 <= -7) {
             GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
@@ -174,7 +174,7 @@ abstract class bb extends WidgetContainer {
           }
           this.a((byte) -26);
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
@@ -183,7 +183,7 @@ abstract class bb extends WidgetContainer {
         }
         if (param1 <= -7) {
           GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
@@ -192,7 +192,7 @@ abstract class bb extends WidgetContainer {
         }
         this.a((byte) -26);
         GzipDecompressor.a((byte) -109, RandomAccessCacheFile.field_b);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearRaster();
         this.b(0, 0, (byte) -127);
         super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
         r.a(126);

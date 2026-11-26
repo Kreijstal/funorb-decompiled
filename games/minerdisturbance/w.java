@@ -215,7 +215,7 @@ final class w extends tn {
                 ArchiveProvider.a(this.field_Q, 126);
               } else {
                 ArchiveProvider.a(this.field_Q, 127);
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -265,7 +265,7 @@ final class w extends tn {
                 ArchiveProvider.a(this.field_Q, 126);
               } else {
                 ArchiveProvider.a(this.field_Q, 127);
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -312,7 +312,7 @@ final class w extends tn {
             } else {
               if (this.field_Q.field_C >= var12Lifetime2) {
                 ArchiveProvider.a(this.field_Q, 127);
-                SoftwareRasterizer.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_Q = new Sprite(var11Lifetime2, var12Lifetime2);
                 ArchiveProvider.a(this.field_Q, 126);
@@ -362,7 +362,7 @@ final class w extends tn {
           } else {
             if (this.field_Q.field_C >= var12Lifetime3) {
               ArchiveProvider.a(this.field_Q, 127);
-              SoftwareRasterizer.d();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_Q = new Sprite(var11Lifetime3, var12Lifetime3);
               ArchiveProvider.a(this.field_Q, 126);

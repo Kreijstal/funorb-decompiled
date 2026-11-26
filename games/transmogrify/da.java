@@ -31,7 +31,7 @@ final class da extends fi {
         try {
           if (bi.field_L >= 10) {
             if (!ki.b(true)) {
-              sb.c();
+              SoftwareRasterizer.clearRaster();
               ub.a(320, 240, (byte) 116);
               DelegatingCanvas.a(0, 0, (byte) 110, param2);
             } else {

@@ -64,30 +64,30 @@ abstract class hh {
         int[] var30 = null;
         var19 = StarCannon.field_A;
         try {
-          if (ki.field_l > param0) {
-            param7 = param7 - (ki.field_l - param0);
-            param0 = ki.field_l;
+          if (SoftwareRasterizer.field_l > param0) {
+            param7 = param7 - (SoftwareRasterizer.field_l - param0);
+            param0 = SoftwareRasterizer.field_l;
           }
-          if (ki.field_e > param1) {
-            param3 = param3 - (ki.field_e - param1);
-            param1 = ki.field_e;
+          if (SoftwareRasterizer.field_e > param1) {
+            param3 = param3 - (SoftwareRasterizer.field_e - param1);
+            param1 = SoftwareRasterizer.field_e;
           }
-          if (param7 + param0 > ki.field_g) {
-            param7 = ki.field_g - param0;
+          if (param7 + param0 > SoftwareRasterizer.field_g) {
+            param7 = SoftwareRasterizer.field_g - param0;
           }
-          if (ki.field_i < param3 + param1) {
-            param3 = -param1 + ki.field_i;
+          if (SoftwareRasterizer.field_i < param3 + param1) {
+            param3 = -param1 + SoftwareRasterizer.field_i;
           }
           if (param7 > 0 &&
             param3 > 0) {
             var21 = param6.c();
-            var30 = ki.field_a;
-            var10 = ki.field_j;
-            var11 = ki.field_f;
+            var30 = SoftwareRasterizer.field_a;
+            var10 = SoftwareRasterizer.field_j;
+            var11 = SoftwareRasterizer.field_f;
             var29 = new int[4];
-            ki.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param6.e();
-            ki.c(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6.field_u * param1 + param0;
             var14 = param6.field_u - param7;
             var25 = var21.field_B;
@@ -99,19 +99,19 @@ abstract class hh {
                 if (0 != var18) {
                   if (0 < var17 &&
                     0 == var15[var13 - 1]) {
-                    ki.e(var17, var16, param2, param5);
+                    SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                   } else {
                     if (var16 > 0 &&
                       var15[var13 - param6.field_u] == 0) {
-                      ki.e(var17, var16, param2, param5);
+                      SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                     } else {
                       if (var17 < param6.field_u - 1 &&
                         var15[1 + var13] == 0) {
-                        ki.e(var17, var16, param2, param5);
+                        SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                       } else {
                         if (var16 < param6.field_v - 1 &&
                           var15[var13 + param6.field_u] == 0) {
-                          ki.e(var17, var16, param2, param5);
+                          SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                         }
                       }
                     }
@@ -122,8 +122,8 @@ abstract class hh {
               var13 = var13 + var14;
             }
             var21.e(-param6.field_w, -param6.field_y);
-            ki.a(var30, var10, var11);
-            ki.b(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             if (param4) {
               field_a = 19;
             }

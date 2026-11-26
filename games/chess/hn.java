@@ -280,7 +280,7 @@ final class hn implements Runnable {
           var9Lifetime1 = var17.field_t;
           r.k(3029);
           var17.e();
-          wb.d(0, 0, wb.field_h, wb.field_c);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           var15 = new km(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();

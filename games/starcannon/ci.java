@@ -45,16 +45,16 @@ final class ci implements de {
             stackIn_4_0 = (UiWidget) (param4);
           }
           var13 = (sj) (stackIn_4_0);
-          ki.d(param4.field_s + param0, param4.field_j + param3, param4.field_i, param4.field_f, this.field_a);
+          SoftwareRasterizer.fillRectangle(param4.field_s + param0, param4.field_j + param3, param4.field_i, param4.field_f, this.field_a);
           var7 = 14 / ((2 - param2) / 54);
           if (var13 == null) {
           }
           var8 = param4.field_i - 2 * var13.field_G;
           var9 = param4.field_s + (param0 + var13.field_G);
           var10 = param3 - (-param4.field_j - var13.field_A);
-          ki.a(var9, var10, var8 + var9, var10, this.field_f);
+          SoftwareRasterizer.drawLine(var9, var10, var8 + var9, var10, this.field_f);
           for (var11 = -1 + var13.e((byte) 114); var11 >= 0; var11--) {
-            ki.e(var13.a(2, var11) * var8 / var13.e(-32242) + var9, var10, this.field_i, this.field_c);
+            SoftwareRasterizer.fillCircle(var13.a(2, var11) * var8 / var13.e(-32242) + var9, var10, this.field_i, this.field_c);
           }
           if (null == this.field_h) {
             return;

@@ -25,13 +25,13 @@ final class ql extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        gb.a(si.field_R);
+        SoftwareRasterizer.saveClip(si.field_R);
         int var4 = param3;
         int var5 = param2;
         int var6 = 26 % ((-63 - param1) / 50);
-        gb.a(var4, var5, 16 + var4, 16 + var5);
+        SoftwareRasterizer.setClip(var4, var5, 16 + var4, 16 + var5);
         se.field_a[param0].f(-4, -4, 128);
-        gb.b(si.field_R);
+        SoftwareRasterizer.restoreClip(si.field_R);
     }
 
     final static fh a(int param0, int param1) {

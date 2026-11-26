@@ -45,7 +45,7 @@ abstract class MouseWheelInput {
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param1) {
-          ge.c(0, 0, ge.field_h, ge.field_g, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g, 0, 192);
           vj.a(1, param1);
           if (param0 == 192) {
             return;
@@ -53,7 +53,7 @@ abstract class MouseWheelInput {
           MouseWheelInput.clearStaticReferences(-77);
           return;
         }
-        ge.d();
+        SoftwareRasterizer.clearRaster();
         vj.a(1, param1);
         if (param0 == 192) {
           return;

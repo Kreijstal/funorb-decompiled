@@ -34,7 +34,7 @@ final class sj implements j {
           var12 = (hh) (stackIn_4_0);
           if (var12 == null) {
           }
-          SoftwareRasterizer.b(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
+          SoftwareRasterizer.fillRectangle(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
           var7 = -(var12.field_I * 2) + param4.field_t;
           if (param0 < 113) {
             this.field_e = (BitmapFont) null;

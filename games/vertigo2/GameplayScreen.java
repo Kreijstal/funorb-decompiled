@@ -840,7 +840,7 @@ final class GameplayScreen {
               MusicPatchPcmStream.a(30 + var5 + 2 * var7, var4 + var6 * 2, var8 - var7, -(var4 / 2) + 320 - var6, -62, 150);
               tk.field_c.a(var3, 320 - var4 / 2, var8, var4, var5, 16777215, -1, 1, 1, 0);
               var8 = var8 + (var7 / 2 + var5);
-              bi.b(320 - (var4 - 30) / 2, var8, var4 - 30, 5921370);
+              SoftwareRasterizer.drawHorizontalLine(320 - (var4 - 30) / 2, var8, var4 - 30, 5921370);
               if (this.field_D.field_r.field_n >= 100 &&
                 1 == this.field_D.field_r.h(9979)) {
                 var8 += 5;

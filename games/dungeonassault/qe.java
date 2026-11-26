@@ -44,28 +44,28 @@ abstract class qe {
         int var11;
         int var12;
         int var14;
-        if (param1 >= gf.field_f &&
-          param1 < gf.field_e) {
-          if (param0 < gf.field_j) {
-            param2 = param2 - (gf.field_j - param0);
-            param0 = gf.field_j;
+        if (param1 >= SoftwareRasterizer.field_f &&
+          param1 < SoftwareRasterizer.field_e) {
+          if (param0 < SoftwareRasterizer.field_j) {
+            param2 = param2 - (SoftwareRasterizer.field_j - param0);
+            param0 = SoftwareRasterizer.field_j;
           }
-          if (param0 + param2 > gf.field_h) {
-            param2 = gf.field_h - param0;
+          if (param0 + param2 > SoftwareRasterizer.field_h) {
+            param2 = SoftwareRasterizer.field_h - param0;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * gf.field_i;
+          var12 = param0 + param1 * SoftwareRasterizer.field_i;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (gf.field_b[var12] >> 16 & 255) * var5;
-            var10 = (gf.field_b[var12] >> 8 & 255) * var5;
-            var11 = (gf.field_b[var12] & 255) * var5;
+            var9 = (SoftwareRasterizer.field_b[var12] >> 16 & 255) * var5;
+            var10 = (SoftwareRasterizer.field_b[var12] >> 8 & 255) * var5;
+            var11 = (SoftwareRasterizer.field_b[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
             incrementValue$0 = var12;
             var12++;
-            gf.field_b[incrementValue$0] = gf.field_b[var12] & -16777216 | var14;
+            SoftwareRasterizer.field_b[incrementValue$0] = SoftwareRasterizer.field_b[var12] & -16777216 | var14;
           }
           return;
         }
@@ -111,29 +111,29 @@ abstract class qe {
         int var12;
         int var13;
         int var15;
-        if (param1 >= gf.field_f &&
-          param1 < gf.field_e) {
-          if (param0 < gf.field_j) {
-            param2 = param2 - (gf.field_j - param0);
-            param0 = gf.field_j;
+        if (param1 >= SoftwareRasterizer.field_f &&
+          param1 < SoftwareRasterizer.field_e) {
+          if (param0 < SoftwareRasterizer.field_j) {
+            param2 = param2 - (SoftwareRasterizer.field_j - param0);
+            param0 = SoftwareRasterizer.field_j;
           }
-          if (param0 + param2 > gf.field_h) {
-            param2 = gf.field_h - param0;
+          if (param0 + param2 > SoftwareRasterizer.field_h) {
+            param2 = SoftwareRasterizer.field_h - param0;
           }
           var6 = 256 - param4;
           var7 = (param3 >> 16 & 255) * param4;
           var8 = (param3 >> 8 & 255) * param4;
           var9 = (param3 & 255) * param4;
           param5 = param5 << 24;
-          var13 = param0 + param1 * gf.field_i;
+          var13 = param0 + param1 * SoftwareRasterizer.field_i;
           for (var14 = 0; var14 < param2; var14++) {
-            var10 = (gf.field_b[var13] >> 16 & 255) * var6;
-            var11 = (gf.field_b[var13] >> 8 & 255) * var6;
-            var12 = (gf.field_b[var13] & 255) * var6;
+            var10 = (SoftwareRasterizer.field_b[var13] >> 16 & 255) * var6;
+            var11 = (SoftwareRasterizer.field_b[var13] >> 8 & 255) * var6;
+            var12 = (SoftwareRasterizer.field_b[var13] & 255) * var6;
             var15 = (var7 + var10 >> 8 << 16) + (var8 + var11 >> 8 << 8) + (var9 + var12 >> 8);
             incrementValue$0 = var13;
             var13++;
-            gf.field_b[incrementValue$0] = param5 | var15;
+            SoftwareRasterizer.field_b[incrementValue$0] = param5 | var15;
           }
           return;
         }
@@ -352,28 +352,28 @@ abstract class qe {
         int var12;
         int var13;
         int var15;
-        if (param0 >= gf.field_j &&
-          param0 < gf.field_h) {
-          if (param1 < gf.field_f) {
-            param2 = param2 - (gf.field_f - param1);
-            param1 = gf.field_f;
+        if (param0 >= SoftwareRasterizer.field_j &&
+          param0 < SoftwareRasterizer.field_h) {
+          if (param1 < SoftwareRasterizer.field_f) {
+            param2 = param2 - (SoftwareRasterizer.field_f - param1);
+            param1 = SoftwareRasterizer.field_f;
           }
-          if (param1 + param2 > gf.field_e) {
-            param2 = gf.field_e - param1;
+          if (param1 + param2 > SoftwareRasterizer.field_e) {
+            param2 = SoftwareRasterizer.field_e - param1;
           }
           var6 = 256 - param4;
           var7 = (param3 >> 16 & 255) * param4;
           var8 = (param3 >> 8 & 255) * param4;
           var9 = (param3 & 255) * param4;
           param5 = param5 << 24;
-          var13 = param0 + param1 * gf.field_i;
+          var13 = param0 + param1 * SoftwareRasterizer.field_i;
           for (var14 = 0; var14 < param2; var14++) {
-            var10 = (gf.field_b[var13] >> 16 & 255) * var6;
-            var11 = (gf.field_b[var13] >> 8 & 255) * var6;
-            var12 = (gf.field_b[var13] & 255) * var6;
+            var10 = (SoftwareRasterizer.field_b[var13] >> 16 & 255) * var6;
+            var11 = (SoftwareRasterizer.field_b[var13] >> 8 & 255) * var6;
+            var12 = (SoftwareRasterizer.field_b[var13] & 255) * var6;
             var15 = (var7 + var10 >> 8 << 16) + (var8 + var11 >> 8 << 8) + (var9 + var12 >> 8);
-            gf.field_b[var13] = param5 | var15;
-            var13 = var13 + gf.field_i;
+            SoftwareRasterizer.field_b[var13] = param5 | var15;
+            var13 = var13 + SoftwareRasterizer.field_i;
           }
           return;
         }
@@ -515,7 +515,7 @@ abstract class qe {
         for (var5Lifetime1 = 0; var5Lifetime1 < 480; var5Lifetime1++) {
           var6 = 0;
           while (var6 < 640) {
-            gf.field_b[var4Lifetime1] = -16777216 | (gf.field_b[var4Lifetime1] & 16579836) >>> 2;
+            SoftwareRasterizer.field_b[var4Lifetime1] = -16777216 | (SoftwareRasterizer.field_b[var4Lifetime1] & 16579836) >>> 2;
             var6++;
             var4Lifetime1++;
           }
@@ -533,7 +533,7 @@ abstract class qe {
     }
 
     final static void a(int param0, int param1, ai param2) {
-        gf.b(param0 - 4, param1 - 4, 120, 120, 0);
+        SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
         rp.a(4, 112, (byte) 108, param0, 112, kc.field_V, param1);
         if (param2 != null) {
           if (param2.field_c != null) {
@@ -602,41 +602,41 @@ abstract class qe {
         int var11;
         int var12;
         int var14;
-        if (param0 >= gf.field_j &&
-          param0 < gf.field_h) {
-          if (param1 < gf.field_f) {
-            param2 = param2 - (gf.field_f - param1);
-            param1 = gf.field_f;
+        if (param0 >= SoftwareRasterizer.field_j &&
+          param0 < SoftwareRasterizer.field_h) {
+          if (param1 < SoftwareRasterizer.field_f) {
+            param2 = param2 - (SoftwareRasterizer.field_f - param1);
+            param1 = SoftwareRasterizer.field_f;
           }
-          if (param1 + param2 > gf.field_e) {
-            param2 = gf.field_e - param1;
+          if (param1 + param2 > SoftwareRasterizer.field_e) {
+            param2 = SoftwareRasterizer.field_e - param1;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * gf.field_i;
+          var12 = param0 + param1 * SoftwareRasterizer.field_i;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (gf.field_b[var12] >> 16 & 255) * var5;
-            var10 = (gf.field_b[var12] >> 8 & 255) * var5;
-            var11 = (gf.field_b[var12] & 255) * var5;
+            var9 = (SoftwareRasterizer.field_b[var12] >> 16 & 255) * var5;
+            var10 = (SoftwareRasterizer.field_b[var12] >> 8 & 255) * var5;
+            var11 = (SoftwareRasterizer.field_b[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            gf.field_b[var12] = gf.field_b[var12] & -16777216 | var14;
-            var12 = var12 + gf.field_i;
+            SoftwareRasterizer.field_b[var12] = SoftwareRasterizer.field_b[var12] & -16777216 | var14;
+            var12 = var12 + SoftwareRasterizer.field_i;
           }
           return;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        gf.b(param0 - 1, param1 - 1, param2 + 2, param3 + 2, 0);
+        SoftwareRasterizer.fillRectangle(param0 - 1, param1 - 1, param2 + 2, param3 + 2, 0);
         ob.a(param0, param1, (byte) -102, param3, param2);
         qe.a(param0 + 2, param1 + 2, param2 - 4, param3 - 4, 256, 64, 4, 128);
         rp.a(5, param2 - 4, (byte) 108, param0 + 2, param3 - 4, kc.field_S, param1 + 2);
     }
 
     final static void a(int param0, int param1, wd param2, int[][] param3) {
-        gf.b(param0 - 4, param1 - 4, 120, 120, 0);
+        SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
         rp.a(4, 112, (byte) 108, param0, 112, param3, param1);
         if (param2 != null) {
           param2.a(108, param1 + 2, (byte) 102, param0 + 2, 108);
@@ -763,10 +763,10 @@ abstract class qe {
     }
 
     final static void a(int param0, int param1, Raider param2) {
-        gf.b(param0 - 4, param1 - 4, 120, 120, 0);
+        SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
         rp.a(4, 112, (byte) 108, param0, 112, kc.field_S, param1);
         if (param2 == null) {
-          gf.b(param0 + 2, param1 + 2, 108, 108, 0);
+          SoftwareRasterizer.fillRectangle(param0 + 2, param1 + 2, 108, 108, 0);
         } else {
           param2.field_b.a(108, param1 + 2, (byte) 102, param0 + 2, 108);
           if (param2.field_i != null) {
@@ -795,7 +795,7 @@ abstract class qe {
           var15 = 256 - var14;
           param6 = var9 * var15 + var11 * var14 & -16711936;
           param7 = var10 * var15 + var12 * var14 & 16711680;
-          gf.c(param0 + 26 + var13, param1 + 6, 4, (param6 | param7) >>> 8);
+          SoftwareRasterizer.drawVerticalLine(param0 + 26 + var13, param1 + 6, 4, (param6 | param7) >>> 8);
         }
     }
 
@@ -826,7 +826,7 @@ abstract class qe {
           var15 = 256 - var14;
           param6 = var9 * var15 + var11 * var14 & -16711936;
           param7 = var10 * var15 + var12 * var14 & 16711680;
-          gf.c(param0 - 27 - var13, param1 + 6, 4, (param6 | param7) >>> 8);
+          SoftwareRasterizer.drawVerticalLine(param0 - 27 - var13, param1 + 6, 4, (param6 | param7) >>> 8);
         }
     }
 
@@ -901,7 +901,7 @@ abstract class qe {
           var0 += 640;
         }
         var14Lifetime1 = 307200;
-        qe.a(gf.field_b, field_m, 0, 0, 0, var14Lifetime1 - 1);
+        qe.a(SoftwareRasterizer.field_b, field_m, 0, 0, 0, var14Lifetime1 - 1);
     }
 
     private final static void b(int param0, int param1, cn[] param2, int[][] param3, int[] param4) {
@@ -945,32 +945,32 @@ abstract class qe {
         int var8;
         int var9;
         int var12;
-        if (param0 < gf.field_j) {
-          param2 = param2 - (gf.field_j - param0);
-          param0 = gf.field_j;
+        if (param0 < SoftwareRasterizer.field_j) {
+          param2 = param2 - (SoftwareRasterizer.field_j - param0);
+          param0 = SoftwareRasterizer.field_j;
         }
-        if (param1 < gf.field_f) {
-          param3 = param3 - (gf.field_f - param1);
-          param1 = gf.field_f;
+        if (param1 < SoftwareRasterizer.field_f) {
+          param3 = param3 - (SoftwareRasterizer.field_f - param1);
+          param1 = SoftwareRasterizer.field_f;
         }
-        if (param0 + param2 > gf.field_h) {
-          param2 = gf.field_h - param0;
+        if (param0 + param2 > SoftwareRasterizer.field_h) {
+          param2 = SoftwareRasterizer.field_h - param0;
         }
-        if (param1 + param3 > gf.field_e) {
-          param3 = gf.field_e - param1;
+        if (param1 + param3 > SoftwareRasterizer.field_e) {
+          param3 = SoftwareRasterizer.field_e - param1;
         }
         param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
         param6 = param6 << 24;
         var7 = 256 - param5;
-        var8 = gf.field_i - param2;
-        var9 = param0 + param1 * gf.field_i;
+        var8 = SoftwareRasterizer.field_i - param2;
+        var9 = param0 + param1 * SoftwareRasterizer.field_i;
         for (var10 = 0; var10 < param3; var10++) {
           for (var11 = -param2; var11 < 0; var11++) {
-            var12 = gf.field_b[var9];
+            var12 = SoftwareRasterizer.field_b[var9];
             var12 = ((var12 & 16711935) * var7 >> 8 & 16711935) + ((var12 & 65280) * var7 >> 8 & 65280);
             incrementValue$0 = var9;
             var9++;
-            gf.field_b[incrementValue$0] = param6 | param4 + var12;
+            SoftwareRasterizer.field_b[incrementValue$0] = param6 | param4 + var12;
           }
           var9 = var9 + var8;
         }

@@ -108,71 +108,71 @@ abstract class uk {
               var19 = param2 * var8 / (var8 + var9) + param3;
               var18 = param2 * var8 / (var8 + var9) + param3;
             }
-            vj.a(kg.field_a);
+            SoftwareRasterizer.saveClip(kg.field_a);
             if (param0[0] != null) {
-              vj.f(param5, param3, var16, var18);
+              SoftwareRasterizer.intersectClip(param5, param3, var16, var18);
               param0[0].d(param5, param3);
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (null != param0[2]) {
-              vj.f(var17, param3, var10, var18);
+              SoftwareRasterizer.intersectClip(var17, param3, var10, var18);
               param0[2].d(var13, param3);
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (param0[6] != null) {
-              vj.f(param5, var19, var16, var11);
+              SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
               param0[6].d(param5, var15);
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (param0[8] != null) {
-              vj.f(var17, var19, var10, var11);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param0[8].d(var13, var15);
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (null != param0[1] &&
               0 != param0[1].field_l) {
-              vj.f(var16, param3, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param3, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_l) {
                 param0[1].d(var20, param3);
               }
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (null != param0[7] &&
               param0[7].field_l != 0) {
-              vj.f(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].field_l) {
                 param0[7].d(var20Lifetime1, var15);
               }
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (null != param0[3] &&
               param0[3].field_k != 0) {
-              vj.f(param5, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param5, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].field_k) {
                 param0[3].d(param5, var20Lifetime2);
               }
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (param0[5] != null &&
               0 != param0[5].field_k) {
-              vj.f(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].field_k) {
                 param0[5].d(var13, var20Lifetime3);
               }
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             if (null != param0[4] &&
               param0[4].field_l != 0) {
               if (param0[4].field_k == 0) {
                 return;
               }
-              vj.f(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_k) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param0[4].field_l) {
                   param0[4].d(var21, var20Lifetime4);
                 }
               }
-              vj.b(kg.field_a);
+              SoftwareRasterizer.restoreClip(kg.field_a);
             }
             return;
           }

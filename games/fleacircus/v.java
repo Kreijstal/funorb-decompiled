@@ -124,7 +124,7 @@ final class v extends ja {
               var11 <= this.field_Q.field_w &&
               this.field_Q.field_t >= var12) {
               r.a(this.field_Q, 45);
-              gb.c();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_Q = new dd(var11, var12);
               r.a(this.field_Q, 45);
@@ -166,7 +166,7 @@ final class v extends ja {
             } else {
               if (this.field_Q.field_t >= var12Lifetime4) {
                 r.a(this.field_Q, 45);
-                gb.c();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_Q = new dd(var11Lifetime4, var12Lifetime4);
                 r.a(this.field_Q, 45);
@@ -222,7 +222,7 @@ final class v extends ja {
                 r.a(this.field_Q, 45);
               } else {
                 r.a(this.field_Q, 45);
-                gb.c();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -246,7 +246,7 @@ final class v extends ja {
             var11Lifetime2 <= this.field_Q.field_w &&
             this.field_Q.field_t >= var12Lifetime2) {
             r.a(this.field_Q, 45);
-            gb.c();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_Q = new dd(var11Lifetime2, var12Lifetime2);
             r.a(this.field_Q, 45);
@@ -283,7 +283,7 @@ final class v extends ja {
           } else {
             if (this.field_Q.field_t >= var12Lifetime3) {
               r.a(this.field_Q, 45);
-              gb.c();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_Q = new dd(var11Lifetime3, var12Lifetime3);
               r.a(this.field_Q, 45);

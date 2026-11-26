@@ -151,7 +151,7 @@ abstract class oe extends ga {
           if (ga.field_K == null) {
             ga.field_K = new nf(this.field_F, this.field_z);
             vm.a(ga.field_K, -8409);
-            fn.d();
+            SoftwareRasterizer.clearRaster();
             this.b(0, (byte) -90, 0);
             super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
             ib.b(false);
@@ -161,7 +161,7 @@ abstract class oe extends ga {
           if (this.field_F > ga.field_K.field_u) {
             ga.field_K = new nf(this.field_F, this.field_z);
             vm.a(ga.field_K, -8409);
-            fn.d();
+            SoftwareRasterizer.clearRaster();
             this.b(0, (byte) -90, 0);
             super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
             ib.b(false);
@@ -170,7 +170,7 @@ abstract class oe extends ga {
           }
           if (ga.field_K.field_w >= this.field_z) {
             vm.a(ga.field_K, -8409);
-            fn.d();
+            SoftwareRasterizer.clearRaster();
             this.b(0, (byte) -90, 0);
             super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
             ib.b(false);
@@ -179,7 +179,7 @@ abstract class oe extends ga {
           }
           ga.field_K = new nf(this.field_F, this.field_z);
           vm.a(ga.field_K, -8409);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
@@ -189,7 +189,7 @@ abstract class oe extends ga {
         if (ga.field_K == null) {
           ga.field_K = new nf(this.field_F, this.field_z);
           vm.a(ga.field_K, -8409);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
@@ -199,7 +199,7 @@ abstract class oe extends ga {
         if (this.field_F > ga.field_K.field_u) {
           ga.field_K = new nf(this.field_F, this.field_z);
           vm.a(ga.field_K, -8409);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
@@ -208,7 +208,7 @@ abstract class oe extends ga {
         }
         if (ga.field_K.field_w >= this.field_z) {
           vm.a(ga.field_K, -8409);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
@@ -217,7 +217,7 @@ abstract class oe extends ga {
         }
         ga.field_K = new nf(this.field_F, this.field_z);
         vm.a(ga.field_K, -8409);
-        fn.d();
+        SoftwareRasterizer.clearRaster();
         this.b(0, (byte) -90, 0);
         super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
         ib.b(false);

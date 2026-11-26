@@ -167,13 +167,13 @@ final class bs extends UiPanel {
           var1 = new Sprite(540, 140);
           lq.a(var1, (byte) -94);
           oo.c();
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           hm.field_F = 0;
           bq.h(-105);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            bi.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           pl.field_h.d();
           var1.b(0, 0);

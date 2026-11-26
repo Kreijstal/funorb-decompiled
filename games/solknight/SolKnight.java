@@ -208,7 +208,7 @@ public final class SolKnight extends ab {
           GameApplet.d((byte) -41);
           na.a(-13357);
           MouseWheelInput.b(18609);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.clearStaticReferences();
           Archive.b(-127);
           BitmapFont.clearStaticReferences();
           bk.a((byte) 84);
@@ -704,7 +704,7 @@ public final class SolKnight extends ab {
             eh.field_b[var14].a();
             var15.drawSilhouette(-var15.field_s, -var15.field_n, 65793);
             var15.c(-var15.field_s, -var15.field_n, 64);
-            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
+            SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           }
           hj.field_e.a(true);
           fh.field_c = null;
@@ -928,7 +928,7 @@ public final class SolKnight extends ab {
             ih.a(20753, (java.awt.Canvas) (var2));
             return;
           }
-          SoftwareRasterizer.e(-320 - ArchiveSource.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(-320 - ArchiveSource.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
           kc.field_O = kc.field_O + 1;
           var3 = 0;
           if (nf.field_W.length < kc.field_O) {
@@ -975,7 +975,7 @@ public final class SolKnight extends ab {
                 vd.screens[kd.currentScreenIndex].d(582);
               }
               ll.a(1 + ua.field_H, 256, false, false);
-              SoftwareRasterizer.a(0, 0, 640, 480, 16769381, ua.field_H << 4);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16769381, ua.field_H << 4);
             } else {
               if (ri.field_f != -1) {
                 vd.screens[ri.field_f].d(582);
@@ -983,7 +983,7 @@ public final class SolKnight extends ab {
                 d.a(false, (byte) -48);
               }
               ll.a(1 - ua.field_H + 32, 256, false, false);
-              SoftwareRasterizer.a(0, 0, 640, 480, 16769381, 32 - ua.field_H << 4);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16769381, 32 - ua.field_H << 4);
             }
           }
           var4 = (la) (lc.field_t.beginBackward((byte) 51));
@@ -1004,13 +1004,13 @@ public final class SolKnight extends ab {
             SocketConnector.field_g.a(BufferedCacheFile.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
           }
           if (RandomAccessCacheFile.b((byte) -115)) {
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
             ai.a(h.field_d, (byte) -83, h.field_d[0].field_t, h.field_d[0].field_p);
           }
           if (je.field_d != 0) {
             var5Lifetime2 = ua.field_H * 256 / 32;
             if (0 < var5Lifetime2) {
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, var5Lifetime2);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, var5Lifetime2);
             }
           }
           if (lb.g((byte) -94) &&

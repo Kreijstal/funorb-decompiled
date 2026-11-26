@@ -29,8 +29,8 @@ final class eh {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
-        int var6 = si.field_e;
-        int var7 = si.field_k;
+        int var6 = SoftwareRasterizer.field_e;
+        int var7 = SoftwareRasterizer.field_k;
         param4 = param4 - param2;
         param5 = param5 - param3;
         param3 = param3 - param2;
@@ -67,10 +67,10 @@ final class eh {
           var8 = param2;
           for (var16 = -var11; var16 < 0; var16++) {
             var9 = var8 >> 16;
-            var10 = si.field_i[var13];
+            var10 = SoftwareRasterizer.field_i[var13];
             incrementValue$0 = var13;
             var13++;
-            si.field_i[incrementValue$0] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
+            SoftwareRasterizer.field_i[incrementValue$0] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
             var8 = var8 + param3;
           }
           param2 = param2 + param4;
@@ -87,8 +87,8 @@ final class eh {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        si.a(var1.field_i, var1.field_j, var1.field_p);
-        si.d(var1.field_m, var1.field_o, var1.field_r, var1.field_n);
+        SoftwareRasterizer.setRasterBuffer(var1.field_i, var1.field_j, var1.field_p);
+        SoftwareRasterizer.setClip(var1.field_m, var1.field_o, var1.field_r, var1.field_n);
         var1.field_i = null;
         ij.field_J.addLast(var1, 114);
     }

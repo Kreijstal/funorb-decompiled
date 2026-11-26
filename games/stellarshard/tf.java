@@ -90,14 +90,14 @@ abstract class tf {
           var7 = param2[1].field_w;
           param2[0].e(param3, param4);
           param2[2].e(-var6 + param0 + param3, param4);
-          ti.a(og.field_b);
-          ti.a(var5_int + param3, param4, -var6 + param3 + param0, param2[1].field_x + param4);
+          SoftwareRasterizer.saveClip(og.field_b);
+          SoftwareRasterizer.intersectClip(var5_int + param3, param4, -var6 + param3 + param0, param2[1].field_x + param4);
           var8 = param3 + var5_int;
           var9 = -var6 + (param3 + param0);
           for (param3 = var8; param3 < var9; param3 = param3 + var7) {
             param2[1].e(param3, param4);
           }
-          ti.b(og.field_b);
+          SoftwareRasterizer.restoreClip(og.field_b);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "tf.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

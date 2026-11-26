@@ -271,7 +271,7 @@ final class IntrusiveDeque {
             return;
           }
           if (!uk.h(250)) {
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.clearRaster();
             vg.b(240, 320, 18);
             uf.a((byte) 99, 0, 0, param0);
             return;

@@ -299,13 +299,13 @@ abstract class MouseWheelInput {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
         if (param6 == 63) {
-          wb.a(-param3 + param2, param1 - param3, param3 * 2 + param7 - param2, -param1 + param4 + param3 * 2, param3, param5, 170);
-          wb.a(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(-param3 + param2, param1 - param3, param3 * 2 + param7 - param2, -param1 + param4 + param3 * 2, param3, param5, 170);
+          SoftwareRasterizer.drawRoundedRectangleOutline(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
           return;
         }
         MouseWheelInput.a(90, -50, (byte) -48);
-        wb.a(-param3 + param2, param1 - param3, param3 * 2 + param7 - param2, -param1 + param4 + param3 * 2, param3, param5, 170);
-        wb.a(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(-param3 + param2, param1 - param3, param3 * 2 + param7 - param2, -param1 + param4 + param3 * 2, param3, param5, 170);
+        SoftwareRasterizer.drawRoundedRectangleOutline(param2 - param3, -param3 + param1, param3 * 2 + param7 - param2, param4 - param1 + 2 * param3, param3, param0);
     }
 
     public static void clearStaticReferences(byte param0) {

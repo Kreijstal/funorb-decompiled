@@ -40,15 +40,15 @@ final class mc implements ml {
             var12 = (UiWidget) null;
             this.a(false, (UiWidget) null, 106, 30, 56);
           }
-          ge.d(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
+          SoftwareRasterizer.fillRectangle(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
           if (var13 == null) {
           }
           var7 = -(2 * var13.field_B) + param1.field_l;
           var8 = var13.field_B + param1.field_r + param3;
           var9 = var13.field_F + (param1.field_e + param2);
-          ge.e(var8, var9, var8 + var7, var9, this.field_k);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_k);
           for (var10 = -1 + var13.a(true); var10 >= 0; var10--) {
-            ge.f(var13.a(false, var10) * var7 / var13.k(-64) + var8, var9, this.field_h, this.field_d);
+            SoftwareRasterizer.fillCircle(var13.a(false, var10) * var7 / var13.k(-64) + var8, var9, this.field_h, this.field_d);
           }
           if (null == this.field_f) {
             return;
@@ -87,7 +87,7 @@ final class mc implements ml {
             mc.a(100);
           }
           vf.a((byte) 109);
-          ge.a(param1.field_s, param1.field_m, param1.field_n);
+          SoftwareRasterizer.setRasterBuffer(param1.field_s, param1.field_m, param1.field_n);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "mc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

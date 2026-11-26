@@ -371,7 +371,7 @@ final class db extends qe {
         var6 = o.a(3, (byte) 110, param1);
         var7 = kf.a(param1, 3, -114);
         if (ke.a(76, var3)) {
-          gf.e(-4 + var4, -6 + var6, 8 + var5 - var4, var7 + 8, 0);
+          SoftwareRasterizer.drawRectangleOutline(-4 + var4, -6 + var6, 8 + var5 - var4, var7 + 8, 0);
           db.b(var4, var6 - 2, var5 - var4, var7, 8421504, 128, 128);
           rp.a(4, var5 - var4, (byte) 108, var4, var7, kc.field_S, var6 - 2);
           db.a(var4, -2 + var6, var5 - var4, var7, 224, 64, 3, 128);
@@ -692,7 +692,7 @@ final class db extends qe {
         var4 = 130;
         var5 = kk.field_l.field_E + kk.field_l.field_H;
         var6 = 40;
-        gf.b(var3 - 3, var4 - 16, 186, 70, 16777215, var6);
+        SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 70, 16777215, var6);
         field_v.b(jk.a(new String[]{gh.a(var19.field_N, (byte) -118)}, kk.field_s, 30496), var3, var4, 0, -1);
         var4 += 16;
         field_v.b(jk.a(new String[]{gh.a(var19.field_m, (byte) -101)}, mm.field_j, 30496), var3, var4, 0, -1);
@@ -731,7 +731,7 @@ final class db extends qe {
         boolean decompiledFrameCompleted0 = true;
         var11 = -55 + bl.field_s.field_y;
         var12 = 2 + kk.field_l.c(var9, var11) + kk.field_l.c(var10Lifetime1, var11);
-        gf.b(-3 + var3, -16 + var4, 186, 6 + var12 * 16, 16777215, var6);
+        SoftwareRasterizer.fillRectangleAlpha(-3 + var3, -16 + var4, 186, 6 + var12 * 16, 16777215, var6);
         field_v.b(p.field_r, var3, var4, 0, -1);
         var4 += 16;
         var12Lifetime1 = kk.field_l.a(var9, 10 + var3, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
@@ -762,7 +762,7 @@ final class db extends qe {
               }
             }
             var4 = var13;
-            gf.b(var3 - 3, var4 - 16, 186, 20 + kk.field_l.field_H * 6, 16777215, var6);
+            SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 20 + kk.field_l.field_H * 6, 16777215, var6);
             field_v.b(oh.field_o, var3, var4, 0, -1);
             var4 += 16;
             stackIn_21_0 = 0;
@@ -824,10 +824,10 @@ final class db extends qe {
         var6 = var7;
         var5 = var6;
         var2 = var5;
-        gf.a(var7);
-        gf.e(41, 48, 599, 416);
+        SoftwareRasterizer.saveClip(var7);
+        SoftwareRasterizer.setClip(41, 48, 599, 416);
         am.field_a.h(-(am.field_a.field_E / 2) + 320, 48);
-        gf.b(var7);
+        SoftwareRasterizer.restoreClip(var7);
         jh.b();
         this.field_s = new tf[this.field_w.field_i];
         this.a((byte) -127);
@@ -879,10 +879,10 @@ final class db extends qe {
         var11.e();
         field_v.b(var8, 0, la.field_b.field_H, var6, -1);
         var12.e();
-        gf.a();
+        SoftwareRasterizer.clearRaster();
         var11.e(0, 0, 16744448);
         var13.e();
-        gf.a();
+        SoftwareRasterizer.clearRaster();
         var11.e(0, 0, var7);
         var14 = -55 % ((-49 - param2) / 36);
         jh.b();
@@ -933,15 +933,15 @@ final class db extends qe {
           stackIn_8_0 = 4;
         }
         var11 = new int[stackIn_8_0];
-        gf.a(var11);
-        gf.e(41, 48, 599, 416);
+        SoftwareRasterizer.saveClip(var11);
+        SoftwareRasterizer.setClip(41, 48, 599, 416);
         var3 = 10;
         var4 = 88;
         le.field_f.h(40 + var3, var4 - 28);
         SecondaryNodeDeque.a(32, 360, 220, 120);
-        gf.b(var11);
-        gf.b(80, 250, 256, 85, 1118481, 128);
-        gf.e(80, 250, 256, 85, 5592405, 128);
+        SoftwareRasterizer.restoreClip(var11);
+        SoftwareRasterizer.fillRectangleAlpha(80, 250, 256, 85, 1118481, 128);
+        SoftwareRasterizer.drawRectangleOutlineAlpha(80, 250, 256, 85, 5592405, 128);
         var5 = (rj) (this.field_p.beginBackward(-24172));
         scanLoop1: while (true) {
           if (var5 != null) {
@@ -1024,7 +1024,7 @@ final class db extends qe {
         }
         var3 = 170;
         if (null != mk.field_j.field_l) {
-          gf.b(370, 110, 182, 124, 0, 208);
+          SoftwareRasterizer.fillRectangleAlpha(370, 110, 182, 124, 0, 208);
           var4_int = ((lk) (mk.field_j.field_l)).field_O;
           wd.field_l[var4_int].a(var3, var2, true, 100);
           field_v.c(li.field_b[var4_int], var2, var3 + 90, 0, -1);

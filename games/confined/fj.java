@@ -237,13 +237,13 @@ class fj extends IntrusiveNode {
           incrementValue$15 = param0;
           param0--;
           if (0 == incrementValue$15) {
-            fn.h(84, 88, 204, 114);
+            SoftwareRasterizer.setClip(84, 88, 204, 114);
             IntrusiveDeque.field_c.d(-76, 88);
-            fn.h(78, 114, 210, 166);
+            SoftwareRasterizer.setClip(78, 114, 210, 166);
             IntrusiveDeque.field_c.d(-76, 88);
-            fn.h(80, 166, 202, 192);
+            SoftwareRasterizer.setClip(80, 166, 202, 192);
             IntrusiveDeque.field_c.d(-76, 88);
-            fn.c();
+            SoftwareRasterizer.resetClip();
             var2_intLifetime2 = 0;
             while (true) {
               if (var2_intLifetime2 < 3) {
@@ -263,13 +263,13 @@ class fj extends IntrusiveNode {
                 tj.a(11038741, 204, (byte) 87, 212, 212, 170);
                 tj.a(11038741, 170, (byte) 104, 218, 212, 170);
                 pn.field_a.a(rj.field_d, 226, 160, 334, 60, 4243584, -1, 0, 0, 20);
-                fn.h(90, 0, 640, 254);
+                SoftwareRasterizer.setClip(90, 0, 640, 254);
                 IntrusiveDeque.field_c.d(-470, 224);
-                fn.h(110, 254, 640, 288);
+                SoftwareRasterizer.setClip(110, 254, 640, 288);
                 IntrusiveDeque.field_c.d(-470, 224);
-                fn.h(118, 288, 640, 307);
+                SoftwareRasterizer.setClip(118, 288, 640, 307);
                 IntrusiveDeque.field_c.d(-470, 224);
-                fn.c();
+                SoftwareRasterizer.resetClip();
                 ol.a(122, 30613, 2, 9, 232);
                 pn.field_a.a(ug.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);
                 pn.field_a.a(b.field_j, 466, 296, 4243584, -1);

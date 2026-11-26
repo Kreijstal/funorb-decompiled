@@ -60,9 +60,9 @@ final class ak extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        kh.f(param1, param2 + 10, 79, 4, 0);
-        kh.f(param1 + 1, param2 + 9, 77, 6, 0);
-        kh.f(param1 + 1, 10 + param2, 77, 4, param4);
+        SoftwareRasterizer.fillRectangle(param1, param2 + 10, 79, 4, 0);
+        SoftwareRasterizer.fillRectangle(param1 + 1, param2 + 9, 77, 6, 0);
+        SoftwareRasterizer.fillRectangle(param1 + 1, 10 + param2, 77, 4, param4);
         oc.a(DirectByteStorage.field_c, 26, param2, param3 + param1, 15, -123);
         if (param0 != 61) {
           ak.a(-86);

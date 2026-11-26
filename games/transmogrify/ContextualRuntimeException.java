@@ -20,34 +20,34 @@ final class ContextualRuntimeException extends RuntimeException {
           if (param1 < param5) {
             if (param3 <= param5) {
               if (param3 <= param1) {
-                rf.a(param10, param8, param14, param11, param12, param5, param6, sb.field_h, 0, param4, param7, param2, param1, param15, param0, param13, param3);
+                rf.a(param10, param8, param14, param11, param12, param5, param6, SoftwareRasterizer.field_h, 0, param4, param7, param2, param1, param15, param0, param13, param3);
                 if (var17 == 0) {
                   return;
                 }
               }
-              rf.a(param13, param2, param7, param11, param12, param5, param15, sb.field_h, param9 - 44, param4, param14, param8, param3, param6, param0, param10, param1);
+              rf.a(param13, param2, param7, param11, param12, param5, param15, SoftwareRasterizer.field_h, param9 - 44, param4, param14, param8, param3, param6, param0, param10, param1);
               if (var17 == 0) {
                 return;
               }
             }
-            rf.a(param13, param12, param7, param6, param2, param3, param15, sb.field_h, param9 - 44, param10, param0, param8, param5, param11, param14, param4, param1);
+            rf.a(param13, param12, param7, param6, param2, param3, param15, SoftwareRasterizer.field_h, param9 - 44, param10, param0, param8, param5, param11, param14, param4, param1);
             if (var17 == 0) {
               return;
             }
           }
           if (param1 >= param3) {
             if (param5 < param3) {
-              rf.a(param4, param2, param0, param15, param8, param1, param11, sb.field_h, 0, param13, param14, param12, param3, param6, param7, param10, param5);
+              rf.a(param4, param2, param0, param15, param8, param1, param11, SoftwareRasterizer.field_h, 0, param13, param14, param12, param3, param6, param7, param10, param5);
               if (var17 == 0) {
                 return;
               }
             }
-            rf.a(param10, param12, param14, param15, param8, param1, param6, sb.field_h, 0, param13, param0, param2, param5, param11, param7, param4, param3);
+            rf.a(param10, param12, param14, param15, param8, param1, param6, SoftwareRasterizer.field_h, 0, param13, param0, param2, param5, param11, param7, param4, param3);
             if (var17 == 0) {
               return;
             }
           }
-          rf.a(param4, param8, param0, param6, param2, param3, param11, sb.field_h, param9 - 44, param10, param7, param12, param1, param15, param14, param13, param5);
+          rf.a(param4, param8, param0, param6, param2, param3, param11, SoftwareRasterizer.field_h, param9 - 44, param10, param7, param12, param1, param15, param14, param13, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

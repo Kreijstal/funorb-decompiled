@@ -3256,7 +3256,7 @@ final class MessageKeys {
           if (var1 == null) {
             throw new IllegalStateException();
           }
-          SoftwareRasterizer.a(var1.field_p, var1.field_h, var1.field_q);
+          SoftwareRasterizer.setRasterBuffer(var1.field_p, var1.field_h, var1.field_q);
           SoftwareRasterizer.setClip(var1.field_o, var1.field_i, var1.field_l, var1.field_n);
           if (param0) {
             field_a = (String[]) null;

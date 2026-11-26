@@ -18,7 +18,7 @@ final class kb extends kn {
     final static void f(byte param0) {
         if (param0 == 100) {
           if (an.field_c) {
-            wb.g(wb.field_i, wb.field_a, -wb.field_i + wb.field_j, -wb.field_a + wb.field_b);
+            SoftwareRasterizer.darkenRectangleHalf(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_j, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_b);
             rh.field_c.a(false, false);
           }
           return;

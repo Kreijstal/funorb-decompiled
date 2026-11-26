@@ -81,7 +81,7 @@ final class il extends hf {
             if (var23 < 0) {
               var23 = 0;
             }
-            var24 = fn.field_h[var23 * 640 + var22];
+            var24 = SoftwareRasterizer.field_h[var23 * 640 + var22];
             var25 = 64 + (jd.field_h[var20] * param10 >> 17);
             if (var25 < 0) {
               var25 = -var25;
@@ -93,7 +93,7 @@ final class il extends hf {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            fn.field_h[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_h[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -118,7 +118,7 @@ final class il extends hf {
             if (var23Lifetime1 < 0) {
               var23Lifetime1 = 0;
             }
-            var24Lifetime1 = fn.field_h[var23Lifetime1 * 640 + var22Lifetime1];
+            var24Lifetime1 = SoftwareRasterizer.field_h[var23Lifetime1 * 640 + var22Lifetime1];
             var25Lifetime1 = 64 + (jd.field_h[var20Lifetime1] * param10 >> 17);
             if (var25Lifetime1 < 0) {
               var25Lifetime1 = -var25Lifetime1;
@@ -129,7 +129,7 @@ final class il extends hf {
             var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
             var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
             var15Lifetime1--;
-            fn.field_h[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_h[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
             continue;
           }
           break;
@@ -352,7 +352,7 @@ final class il extends hf {
             } else {
               stackIn_16_4 = mm.field_cb;
             }
-            fn.a(stackIn_12_0, stackIn_12_1, stackIn_13_2, stackIn_15_3, stackIn_16_4);
+            SoftwareRasterizer.addRadialGlow(stackIn_12_0, stackIn_12_1, stackIn_13_2, stackIn_15_3, stackIn_16_4);
             stackIn_18_0 = var20;
             stackIn_18_1 = var21;
             if (var22 <= 32768) {
@@ -435,7 +435,7 @@ final class il extends hf {
             if (var23 > 375) {
               var23 = 375;
             }
-            var24 = fn.field_h[var23 * 640 + var22];
+            var24 = SoftwareRasterizer.field_h[var23 * 640 + var22];
             var25 = 64 + (jd.field_h[var20] * param10 >> 17);
             if (var25 < 0) {
               throw new Error();
@@ -447,7 +447,7 @@ final class il extends hf {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            fn.field_h[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_h[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -472,7 +472,7 @@ final class il extends hf {
             if (var23Lifetime1 > 375) {
               var23Lifetime1 = 375;
             }
-            var24Lifetime1 = fn.field_h[var23Lifetime1 * 640 + var22Lifetime1];
+            var24Lifetime1 = SoftwareRasterizer.field_h[var23Lifetime1 * 640 + var22Lifetime1];
             var25Lifetime1 = 64 + (jd.field_h[var20Lifetime1] * param10 >> 17);
             if (var25Lifetime1 < 0) {
               var25Lifetime1 = -var25Lifetime1;
@@ -483,7 +483,7 @@ final class il extends hf {
             var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
             var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
             var15Lifetime1--;
-            fn.field_h[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_h[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
             continue;
           }
           break;

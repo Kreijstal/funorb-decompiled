@@ -456,7 +456,7 @@ final class BattleScreen extends dfa {
           stackIn_66_4 = (var4Lifetime1 == 0) ? 8421504 : 16711680;
           ((BinaryBitmapFont) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
         }
-        SoftwareRasterizer.c();
+        SoftwareRasterizer.resetClip();
         if (this.field_d) {
           this.f(8910);
         }
@@ -659,7 +659,7 @@ final class BattleScreen extends dfa {
         } else {
           var2Lifetime1 = Math.max(CreatureActor.field_h.a(cd.field_o[this.field_h.field_o - 1]), CreatureActor.field_h.a(tw.field_b));
         }
-        SoftwareRasterizer.a(635 + (-var2Lifetime1 - 10), -ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(635 + (-var2Lifetime1 - 10), -ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
         if (this.field_h.field_J <= this.field_h.field_A) {
           CreatureActor.field_h.b(tw.field_b, 630, i.field_a.field_rb - ScavengerAnimation.field_w.field_p - 12, 0, -1);
         } else {
@@ -675,7 +675,7 @@ final class BattleScreen extends dfa {
         for (var4 = 0; var4 < this.field_h.playerCount; var4++) {
           var5 = var4 * 132 + 40;
           b.field_t.a(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
-          SoftwareRasterizer.a(7 + (var3 + var5), 14 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(7 + (var3 + var5), 14 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
           if (this.field_h.field_o == 1) {
             for (var6 = 0; 7 > var6; var6++) {
               if (this.field_h.rosters[var4].field_b[var6] != null) {
@@ -1152,7 +1152,7 @@ final class BattleScreen extends dfa {
           if (i.field_a.field_rb < var7 + var3) {
             var3 = var3 + (i.field_a.field_rb - var3 - var7);
           }
-          SoftwareRasterizer.a(var2, var3, var5, var7, 5, 65793, 192);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(var2, var3, var5, var7, 5, 65793, 192);
           CreatureActor.field_h.a(BuffVendorAnimation.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);
           CreatureActor.field_h.drawParagraph(BuffVendorAnimation.field_w[var4].field_d, 10 + var2, var3 + 20, -20 + var5, 80, 0, -1, 1, 0, 12);
         }
@@ -2465,7 +2465,7 @@ final class BattleScreen extends dfa {
           }
           this.field_x = new Sprite(45, 45);
           this.field_x.b();
-          SoftwareRasterizer.a(352, 352, 352, 255, var16);
+          SoftwareRasterizer.addRadialGlow(352, 352, 352, 255, var16);
           hga.field_U.a((byte) 120);
           var17 = nga.field_i;
           for (var7 = 0; var7 < 8; var7++) {

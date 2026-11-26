@@ -77,13 +77,13 @@ final class ra {
           var1 = new Sprite(540, 140);
           CrossfadingMidiPcmStream.a(var1, 256);
           ka.c();
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           si.field_l = 0;
           f.a((byte) 16);
           var2 = var1.a();
           for (var3 = 0; var3 < 15; var3++) {
             var2.d(-2, -2, 16777215);
-            sb.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ac.field_m.e();
           var1.d(param0, 0);

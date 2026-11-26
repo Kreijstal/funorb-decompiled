@@ -64,14 +64,14 @@ final class GzipInflater {
             var8 = param1[1].field_l;
             param1[0].a(param3, param4, param2);
             param1[2].a(param0 + param3 - var7, param4, param2);
-            vj.a(sg.field_c);
-            vj.f(var6_int + param3, param4, -var7 + param0 + param3, param1[1].field_k + param4);
+            SoftwareRasterizer.saveClip(sg.field_c);
+            SoftwareRasterizer.intersectClip(var6_int + param3, param4, -var7 + param0 + param3, param1[1].field_k + param4);
             var9 = var6_int + param3;
             var10 = -var7 + param3 + param0;
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param1[1].a(param3, param4, param2);
             }
-            vj.b(sg.field_c);
+            SoftwareRasterizer.restoreClip(sg.field_c);
             return;
           }
           return;

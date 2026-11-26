@@ -845,7 +845,7 @@ final class fo {
         } else {
           stackIn_67_4 = 8947850;
         }
-        bi.b(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_66_3, stackIn_67_4);
+        SoftwareRasterizer.fillRectangle(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_66_3, stackIn_67_4);
         stackIn_69_0 = var10 + var18;
         stackIn_69_1 = -5 + var9;
         stackIn_69_2 = 120 - var18;
@@ -855,8 +855,8 @@ final class fo {
         } else {
           stackIn_70_4 = 16777215;
         }
-        bi.b(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_70_4);
-        bi.d(var10, -5 + var9, 121, 10, 2, 1);
+        SoftwareRasterizer.fillRectangle(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_70_4);
+        SoftwareRasterizer.drawRectangleBorder(var10, -5 + var9, 121, 10, 2, 1);
         var19 = or.field_b;
         if (param1) {
           var19 = cd.field_b;

@@ -268,17 +268,17 @@ final class vb implements fc {
             param3 = param3 & var12.field_y;
           }
           var7 = 5592405;
-          na.e(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, this.field_h);
+          SoftwareRasterizer.fillRectangle(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, this.field_h);
           if (param3) {
             var7 = 16777215;
           }
           var9 = this.field_a + param4 + param1.field_r;
           var10 = param0 + param1.field_i + this.field_p;
-          na.d(var9, var10, this.field_d, this.field_l, 5592405);
-          na.e(var9, var10, this.field_d, this.field_l, var7);
+          SoftwareRasterizer.drawRectangleShadow(var9, var10, this.field_d, this.field_l, 5592405);
+          SoftwareRasterizer.fillRectangle(var9, var10, this.field_d, this.field_l, var7);
           if (var12.field_z) {
-            na.a(var9, var10, this.field_d + var9, var10 + this.field_l, 1);
-            na.a(this.field_d + var9, var10, var9, var10 + this.field_l, 1);
+            SoftwareRasterizer.drawLine(var9, var10, this.field_d + var9, var10 + this.field_l, 1);
+            SoftwareRasterizer.drawLine(this.field_d + var9, var10, var9, var10 + this.field_l, 1);
           }
           if (null != this.field_n) {
             var11 = this.field_i + this.field_a + this.field_d;

@@ -245,21 +245,21 @@ final class pp extends IntrusiveNode {
         if (param2 < param1) {
           if (param0 <= param1) {
             if (param2 < param0) {
-              qp.a((byte) 99, param4, param5, param1, kh.field_i, param2, param6, param7, param0);
+              qp.a((byte) 99, param4, param5, param1, SoftwareRasterizer.field_i, param2, param6, param7, param0);
             } else {
-              qp.a((byte) 99, param7, param5, param1, kh.field_i, param0, param6, param4, param2);
+              qp.a((byte) 99, param7, param5, param1, SoftwareRasterizer.field_i, param0, param6, param4, param2);
             }
           } else {
-            qp.a((byte) 99, param5, param4, param0, kh.field_i, param2, param6, param7, param1);
+            qp.a((byte) 99, param5, param4, param0, SoftwareRasterizer.field_i, param2, param6, param7, param1);
           }
         } else {
           if (param0 > param2) {
-            qp.a((byte) 99, param7, param4, param0, kh.field_i, param1, param6, param5, param2);
+            qp.a((byte) 99, param7, param4, param0, SoftwareRasterizer.field_i, param1, param6, param5, param2);
           } else {
             if (param0 <= param1) {
-              qp.a((byte) 99, param5, param7, param2, kh.field_i, param0, param6, param4, param1);
+              qp.a((byte) 99, param5, param7, param2, SoftwareRasterizer.field_i, param0, param6, param4, param1);
             } else {
-              qp.a((byte) 99, param4, param7, param2, kh.field_i, param1, param6, param5, param0);
+              qp.a((byte) 99, param4, param7, param2, SoftwareRasterizer.field_i, param1, param6, param5, param0);
             }
           }
         }

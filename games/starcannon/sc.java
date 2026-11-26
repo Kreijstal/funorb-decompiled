@@ -21,24 +21,24 @@ final class sc {
             sc.a((Sprite) null, -46, 99, -84, -72, -58, -75, 1, -19);
           }
           var11 = (param0.field_v >> 1) + param0.field_y + param7;
-          ki.c(var9_int, 0, var10, var11 + param8);
+          SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param8);
           param0.f(param3 - 1, param7 - 1, param2);
           param0.f(param3 - 1, 1 + param7, param2);
-          ki.b(wc.field_b);
-          ki.c(1 + var9_int, 0, 1 + var10, var11 + param8);
+          SoftwareRasterizer.restoreClip(wc.field_b);
+          SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, var11 + param8);
           param0.f(param3 + 1, -1 + param7, param2);
           param0.f(param3 + 1, 1 + param7, param2);
-          ki.b(wc.field_b);
+          SoftwareRasterizer.restoreClip(wc.field_b);
           var10Lifetime1 = -param6 + param0.field_u + (param0.field_w + param3) - param5;
           var9_intLifetime1 = param0.field_w + (param0.field_u + param3 - (param5 + param4));
-          ki.c(var9_intLifetime1, -param8 + var11, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1, -param8 + var11, var10Lifetime1, 480);
           param0.f(-1 + param3, -1 + param7, param2);
           param0.f(-1 + param3, param7 + 1, param2);
-          ki.b(wc.field_b);
-          ki.c(var9_intLifetime1 + 1, -param8 + var11, var10Lifetime1 + 1, 480);
+          SoftwareRasterizer.restoreClip(wc.field_b);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1 + 1, -param8 + var11, var10Lifetime1 + 1, 480);
           param0.f(param3 + 1, -1 + param7, param2);
           param0.f(param3 + 1, param7 + 1, param2);
-          ki.b(wc.field_b);
+          SoftwareRasterizer.restoreClip(wc.field_b);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -80,8 +80,8 @@ final class sc {
 
     final static void a(int param0, int[] param1, int param2, int param3) {
         try {
-          kh.a(param1, 120, 0, ki.field_a, 0, 0, 0, param0, 160, 1920, -93, 0);
-          nb.a(0, 0, 0, ki.field_a, 0, 16384, 0, param2, 120, 160);
+          kh.a(param1, 120, 0, SoftwareRasterizer.field_a, 0, 0, 0, param0, 160, 1920, -93, 0);
+          nb.a(0, 0, 0, SoftwareRasterizer.field_a, 0, 16384, 0, param2, 120, 160);
           if (param3 != 30603) {
             String var5 = (String) null;
             sc.a(true, (byte) -89, (String) null);

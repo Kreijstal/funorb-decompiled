@@ -732,27 +732,27 @@ final class BoardView {
                     if (var5.field_s.statusId == 2) {
                       SoftwareRasterizer.setClip(var19.field_c + 42, var19.field_a - 28, var19.field_c + 88, var19.field_a);
                       ala.field_a[(this.field_i.field_L >> 2) % 4 + 8].draw(42 + var19.field_c, var19.field_a - 42);
-                      SoftwareRasterizer.c();
+                      SoftwareRasterizer.resetClip();
                     } else {
                       if (var5.field_s.statusId == 29) {
                         SoftwareRasterizer.setClip(42 + var19.field_c, -28 + var19.field_a, 88 + var19.field_c, var19.field_a);
                         ala.field_a[0 + (this.field_i.field_L >> 2) % 4].draw(var19.field_c + 42, -42 + var19.field_a);
-                        SoftwareRasterizer.c();
+                        SoftwareRasterizer.resetClip();
                       } else {
                         if (1 == var5.field_s.statusId) {
                           SoftwareRasterizer.setClip(var19.field_c + 42, -28 + var19.field_a, var19.field_c + 88, var19.field_a);
                           ala.field_a[(this.field_i.field_L >> 2) % 4 + 4].draw(var19.field_c + 42, -42 + var19.field_a);
-                          SoftwareRasterizer.c();
+                          SoftwareRasterizer.resetClip();
                         } else {
                           if (var5.field_s.statusId == 12) {
                             SoftwareRasterizer.setClip(var19.field_c + 42, -28 + var19.field_a, 88 + var19.field_c, var19.field_a);
                             ala.field_a[(this.field_i.field_L >> 2) % 4 + 12].draw(42 + var19.field_c, -42 + var19.field_a);
-                            SoftwareRasterizer.c();
+                            SoftwareRasterizer.resetClip();
                           } else {
                             if (var5.field_s.statusId == 37) {
                               SoftwareRasterizer.setClip(var19.field_c + 42, var19.field_a - 28, var19.field_c + 88, var19.field_a);
                               ala.field_a[(this.field_i.field_L >> 2) % 4 + 16].draw(42 + var19.field_c, -42 + var19.field_a);
-                              SoftwareRasterizer.c();
+                              SoftwareRasterizer.resetClip();
                             }
                           }
                         }
@@ -1378,7 +1378,7 @@ final class BoardView {
           var5[var3] = 65793 * var3;
         }
         this.field_y.b();
-        SoftwareRasterizer.a(400, 400, 384, 128, var10);
+        SoftwareRasterizer.addRadialGlow(400, 400, 384, 128, var10);
         this.field_x = new Sprite(128, 64);
         this.field_x.b();
         this.field_p.e(0, 0, 2302755);
@@ -1399,7 +1399,7 @@ final class BoardView {
         }
         this.field_n = new Sprite(84, 84);
         this.field_n.b();
-        SoftwareRasterizer.a(672, 672, 672, 128, var10);
+        SoftwareRasterizer.addRadialGlow(672, 672, 672, 128, var10);
         this.field_A = new Sprite(128, 64);
         this.field_A.b();
         this.field_p.drawSilhouette(0, 0, 65280);

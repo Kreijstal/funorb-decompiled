@@ -72,10 +72,10 @@ final class ClientException extends RuntimeException {
           } else {
             var1_int = 4;
           }
-          SoftwareRasterizer.f(0, 0, 640, 60, 1);
-          SoftwareRasterizer.f(0, 419, 640, 60, 1);
-          SoftwareRasterizer.a(pf.field_g);
-          SoftwareRasterizer.a(0, 59, 640, 419);
+          SoftwareRasterizer.fillRectangle(0, 0, 640, 60, 1);
+          SoftwareRasterizer.fillRectangle(0, 419, 640, 60, 1);
+          SoftwareRasterizer.saveClip(pf.field_g);
+          SoftwareRasterizer.intersectClip(0, 59, 640, 419);
           if (param0 != 68) {
             field_g = (int[]) null;
           }
@@ -84,7 +84,7 @@ final class ClientException extends RuntimeException {
             var3 = -cg.field_e[1] + (gh.field_k[var1_int][var8][1] + 59 << 4);
             AccountServiceResult.field_h[var1_int][var8].b(0, 0, var2, var3, 0, 4096);
           }
-          SoftwareRasterizer.b(pf.field_g);
+          SoftwareRasterizer.restoreClip(pf.field_g);
           if (var4 != 0) {
             dg.a(var5, true);
           }

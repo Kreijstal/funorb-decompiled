@@ -86,12 +86,12 @@ final class id {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 == 734) {
           h.k(125);
-          ul.i(param1, param3, param0, param2);
+          SoftwareRasterizer.intersectClip(param1, param3, param0, param2);
           return;
         }
         id.a(92, -81, -78, 79, -42);
         h.k(125);
-        ul.i(param1, param3, param0, param2);
+        SoftwareRasterizer.intersectClip(param1, param3, param0, param2);
     }
 
     static {

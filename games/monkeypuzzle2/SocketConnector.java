@@ -60,10 +60,10 @@ abstract class SocketConnector {
         ne.field_a[1].b(0, 0);
         var3 = 50 + (int)(ProxySocketConnector.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
         ne.field_a[0].b(0, 0, var3);
-        ge.h(80, 0, 560, 480);
+        SoftwareRasterizer.setClip(80, 0, 560, 480);
         SpriteState.field_p[i.field_n].b(100, 0, 70);
         cl.field_c[sk.field_G].b(0, 0, 100);
-        ge.b();
+        SoftwareRasterizer.resetClip();
         return;
     }
 

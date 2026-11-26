@@ -54,15 +54,15 @@ final class wf extends IntrusiveNode {
           throw new IllegalStateException();
         }
         if (param0 < -54) {
-          ki.a(var1.field_m, var1.field_o, var1.field_g);
-          ki.d(var1.field_f, var1.field_k, var1.field_n, var1.field_i);
+          SoftwareRasterizer.setRasterBuffer(var1.field_m, var1.field_o, var1.field_g);
+          SoftwareRasterizer.setClip(var1.field_f, var1.field_k, var1.field_n, var1.field_i);
           var1.field_m = null;
           va.field_h.addLast(120, var1);
           return;
         }
         field_f = -72L;
-        ki.a(var1.field_m, var1.field_o, var1.field_g);
-        ki.d(var1.field_f, var1.field_k, var1.field_n, var1.field_i);
+        SoftwareRasterizer.setRasterBuffer(var1.field_m, var1.field_o, var1.field_g);
+        SoftwareRasterizer.setClip(var1.field_f, var1.field_k, var1.field_n, var1.field_i);
         var1.field_m = null;
         va.field_h.addLast(120, var1);
     }

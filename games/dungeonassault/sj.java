@@ -303,15 +303,15 @@ abstract class sj extends rf {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = DungeonAssault.field_K;
-        gf.c(6 + param1, param0 + 35, this.field_x - 12, -40 + this.field_s, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param1, param0 + 35, this.field_x - 12, -40 + this.field_s, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (var8 >= gf.field_f &&
-            gf.field_e > var8) {
+          if (var8 >= SoftwareRasterizer.field_f &&
+            SoftwareRasterizer.field_e > var8) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_x;
@@ -324,7 +324,7 @@ abstract class sj extends rf {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  gf.field_b[var8 * gf.field_i + (param1 + var10)] = var13;
+                  SoftwareRasterizer.field_b[var8 * SoftwareRasterizer.field_i + (param1 + var10)] = var13;
                 }
                 var10++;
               }
@@ -341,7 +341,7 @@ abstract class sj extends rf {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    gf.field_b[gf.field_i * var8 + param1 + var11] = var15;
+                    SoftwareRasterizer.field_b[SoftwareRasterizer.field_i * var8 + param1 + var11] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -352,7 +352,7 @@ abstract class sj extends rf {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            gf.b(param1 + var10, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(param1 + var10, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -365,8 +365,8 @@ abstract class sj extends rf {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          gf.b(param1, var8Lifetime1, 6, var9Lifetime1);
-          gf.b(this.field_x + (param1 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_x + (param1 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -384,8 +384,8 @@ abstract class sj extends rf {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          gf.b(param1, var8Lifetime2, 6, var9Lifetime2);
-          gf.b(param1 + this.field_x - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1 + this.field_x - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

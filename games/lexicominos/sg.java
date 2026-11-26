@@ -215,11 +215,11 @@ final class sg {
 
     private final void a(byte param0, int param1, int param2) {
         try {
-          SoftwareRasterizer.b(param2, param1, 40, 40, 6, 12845056);
+          SoftwareRasterizer.drawRoundedRectangleOutline(param2, param1, 40, 40, 6, 12845056);
           int var4_int = 22 / ((param0 - 2) / 34);
-          SoftwareRasterizer.b(param2 + 1, 1 + param1, 38, 38, 4, 12845056);
-          SoftwareRasterizer.b(param2 + 2, param1 + 2, 36, 36, 2, 12845056);
-          SoftwareRasterizer.b(param2 + 2, param1 + 2, 36, 36, 3, 12845056);
+          SoftwareRasterizer.drawRoundedRectangleOutline(param2 + 1, 1 + param1, 38, 38, 4, 12845056);
+          SoftwareRasterizer.drawRoundedRectangleOutline(param2 + 2, param1 + 2, 36, 36, 2, 12845056);
+          SoftwareRasterizer.drawRoundedRectangleOutline(param2 + 2, param1 + 2, 36, 36, 3, 12845056);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "sg.R(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -1732,7 +1732,7 @@ final class sg {
                 var11.a((byte) -34);
                 var11 = (gd) (this.field_m.field_j.nextForward(2));
               }
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.resetClip();
             }
           }
           return;

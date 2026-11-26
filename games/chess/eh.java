@@ -146,7 +146,7 @@ abstract class eh extends ma {
         if (null == ud.field_c) {
           ud.field_c = new km(this.field_y, this.field_C);
           tl.a((byte) -67, ud.field_c);
-          wb.b();
+          SoftwareRasterizer.clearRaster();
           this.b(-14239, 0, 0);
           if (param2 < -80) {
             super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
@@ -163,7 +163,7 @@ abstract class eh extends ma {
         if (this.field_y > ud.field_c.field_w) {
           ud.field_c = new km(this.field_y, this.field_C);
           tl.a((byte) -67, ud.field_c);
-          wb.b();
+          SoftwareRasterizer.clearRaster();
           this.b(-14239, 0, 0);
           if (param2 < -80) {
             super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
@@ -179,7 +179,7 @@ abstract class eh extends ma {
         }
         if (this.field_C <= ud.field_c.field_t) {
           tl.a((byte) -67, ud.field_c);
-          wb.b();
+          SoftwareRasterizer.clearRaster();
           this.b(-14239, 0, 0);
           if (param2 < -80) {
             super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
@@ -195,7 +195,7 @@ abstract class eh extends ma {
         }
         ud.field_c = new km(this.field_y, this.field_C);
         tl.a((byte) -67, ud.field_c);
-        wb.b();
+        SoftwareRasterizer.clearRaster();
         this.b(-14239, 0, 0);
         if (param2 < -80) {
           super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);

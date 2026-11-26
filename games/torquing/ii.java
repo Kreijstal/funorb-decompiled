@@ -58,7 +58,7 @@ final class ii extends IntrusiveNode {
             return;
           }
           if (!pl.b(-109)) {
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             jf.a(param2 ^ -527, 320, 240);
             ni.a(param0, 0, 0, -109);
             return;

@@ -69,7 +69,7 @@ final class rm extends mf {
             param1.b(var6, param0);
           }
           fd.a(param2 + 28773);
-          if (wb.field_i <= param3 + this.field_P.field_w) {
+          if (SoftwareRasterizer.field_i <= param3 + this.field_P.field_w) {
             tl.a((byte) -67, this.field_I);
             param1.b(-this.field_G, 0);
             param1.b(this.field_T * 2 - this.field_G, 0);
@@ -77,7 +77,7 @@ final class rm extends mf {
             fd.a(28773);
             this.field_I.b(param3, param0);
           }
-          if (-this.field_P.field_w + var5_int <= wb.field_j) {
+          if (-this.field_P.field_w + var5_int <= SoftwareRasterizer.field_j) {
             tl.a((byte) -67, this.field_I);
             for (var7 = this.field_G - this.field_P.field_w + this.field_y; var7 > this.field_T * 2; var7 = var7 - this.field_T * 2) {
             }
@@ -186,7 +186,7 @@ final class rm extends mf {
               var6 = Math.sqrt(1.0 - var6);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            wb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         fd.a(param0 + 28765);
@@ -268,8 +268,8 @@ final class rm extends mf {
             stackIn_7_0 = (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8;
           }
           var12 = stackIn_7_0;
-          wb.a(var7, var6, this.field_T, var12);
-          wb.a(-(this.field_T * 2) + var7, var6, this.field_T, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_T, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_T * 2) + var7, var6, this.field_T, var12);
           var8Lifetime1 = param1 & 16711935;
           var9Lifetime1 = param1 & 65280;
           if (var11 < 256) {
@@ -278,8 +278,8 @@ final class rm extends mf {
             stackIn_10_0 = var9Lifetime1 | var8Lifetime1;
           }
           var12Lifetime1 = stackIn_10_0;
-          wb.a(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
-          wb.a(var7 - this.field_T, var6, this.field_T, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_T, var6, this.field_T, var12Lifetime1);
         }
         if (param0 > -14) {
           field_Q = -78;

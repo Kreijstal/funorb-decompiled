@@ -103,14 +103,14 @@ final class jm {
             var7 = param2[1].field_E;
             param2[param3].h(param0, param4);
             param2[2].h(param0 + param1 - var6, param4);
-            gf.a(mk.field_i);
-            gf.a(param0 + var5_int, param4, param1 + (param0 - var6), param4 + param2[1].field_G);
+            SoftwareRasterizer.saveClip(mk.field_i);
+            SoftwareRasterizer.intersectClip(param0 + var5_int, param4, param1 + (param0 - var6), param4 + param2[1].field_G);
             var8 = var5_int + param0;
             var9 = param1 + param0 - var6;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param2[1].h(param0, param4);
             }
-            gf.b(mk.field_i);
+            SoftwareRasterizer.restoreClip(mk.field_i);
             return;
           }
           return;
@@ -152,8 +152,8 @@ final class jm {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        gf.e(param1, param4, param2, param0, 0);
-        gf.e(param1 - 1, param4 - 1, param2 + 2, 2 + param0, 12632256);
+        SoftwareRasterizer.drawRectangleOutline(param1, param4, param2, param0, 0);
+        SoftwareRasterizer.drawRectangleOutline(param1 - 1, param4 - 1, param2 + 2, 2 + param0, 12632256);
         qe.b(param1 - 1, -1 + param4, 2 + param2, param0 + 2, 192, 64, 3, 192);
         if (param3 >= -73) {
           la var6 = (la) null;

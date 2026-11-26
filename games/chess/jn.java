@@ -138,7 +138,7 @@ final class jn extends fb {
               } else {
                 if (var10 <= ca.field_a.field_t) {
                   tl.a((byte) -67, ca.field_a);
-                  wb.b();
+                  SoftwareRasterizer.clearRaster();
                 } else {
                   ca.field_a = new km(var9, var10);
                   tl.a((byte) -67, ca.field_a);
@@ -170,7 +170,7 @@ final class jn extends fb {
             ca.field_a.field_w >= var9Lifetime3 &&
             var10Lifetime3 <= ca.field_a.field_t) {
             tl.a((byte) -67, ca.field_a);
-            wb.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             ca.field_a = new km(var9Lifetime3, var10Lifetime3);
             tl.a((byte) -67, ca.field_a);
@@ -202,7 +202,7 @@ final class jn extends fb {
             } else {
               if (var10Lifetime1 <= ca.field_a.field_t) {
                 tl.a((byte) -67, ca.field_a);
-                wb.b();
+                SoftwareRasterizer.clearRaster();
               } else {
                 ca.field_a = new km(var9Lifetime1, var10Lifetime1);
                 tl.a((byte) -67, ca.field_a);
@@ -237,7 +237,7 @@ final class jn extends fb {
           if (ca.field_a.field_w >= var9Lifetime2 &&
             var10Lifetime2 <= ca.field_a.field_t) {
             tl.a((byte) -67, ca.field_a);
-            wb.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             ca.field_a = new km(var9Lifetime2, var10Lifetime2);
             tl.a((byte) -67, ca.field_a);

@@ -33,7 +33,7 @@ final class vd {
           if (2 == param1) {
             param0 = param0 - var6_int;
           }
-          gf.e(param4, param5, param4 + param0, 8 + param5);
+          SoftwareRasterizer.setClip(param4, param5, param4 + param0, 8 + param5);
           var7 = 0;
           if (param2 != -14561) {
             vd.a(-78, 112, -21, -44, 75, -60);

@@ -700,7 +700,7 @@ public final class Chess extends gb {
           jb.a(-7093, ak.a(true));
         }
         if (ga.a(param0)) {
-          wb.g(0, 0, wb.field_h, wb.field_c);
+          SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           nj.a(em.field_r, (byte) -17, em.field_r[0].field_t, em.field_r[0].field_w);
         }
         if (d.a(param0) &&
@@ -714,14 +714,14 @@ public final class Chess extends gb {
         } else {
           if (ug.a(param0) &&
             !ga.a(true)) {
-            wb.g(0, 0, wb.field_h, wb.field_c);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
             qm.a(em.field_r, -105, em.field_r[0].field_t, em.field_r[0].field_w);
           }
         }
         if (n.field_f != n.field_e) {
           var3_int = ji.field_S * 256 / 16;
           if (var3_int > 0) {
-            wb.b(0, 0, wb.field_h, wb.field_c, 0, var3_int);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 0, var3_int);
           }
         }
         if (sk.field_t >= 2) {
@@ -962,10 +962,10 @@ public final class Chess extends gb {
         km var3 = new km(25, 25);
         int[] var4 = new int[]{12, 3, 19, 10, 15, 10, 15, 18, 10, 18, 10, 10, 6, 10, 12, 4};
         var6.e();
-        wb.h(0, 0, wb.field_h, wb.field_c, 4, 1647364);
+        SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 4, 1647364);
         PolygonScanlineRasterizer.fillPolygon(var4, 16777215);
         var3.e();
-        wb.h(0, 0, wb.field_h, wb.field_c, 4, 1647364);
+        SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 4, 1647364);
         PolygonScanlineRasterizer.fillPolygon(var4, 255);
         be.field_d = var6.c();
         df.field_e = var3.c();
@@ -982,7 +982,7 @@ public final class Chess extends gb {
         vn.field_xb = var3.c();
         bg.field_Z = new km(77, 20);
         bg.field_Z.e();
-        wb.h(0, 0, wb.field_h, wb.field_c, -1 + wb.field_c / 2, 1449732);
+        SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, -1 + SoftwareRasterizer.field_c / 2, 1449732);
         ph.field_j.b(48);
         MouseWheelInput.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
         IsaacCipher.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
@@ -1146,7 +1146,7 @@ public final class Chess extends gb {
               for (var13 = 0; 7 > var13; var13++) {
                 var8 = new km(45, 45);
                 var8.e();
-                wb.f(0, 0, 45, 45, var9Lifetime1);
+                SoftwareRasterizer.fillRectangle(0, 0, 45, 45, var9Lifetime1);
                 rl.field_d[var12][var13].a(0, 0);
                 cl.field_c[var10Lifetime2][var11Lifetime1][var12][var13] = var8;
               }
@@ -1515,8 +1515,8 @@ public final class Chess extends gb {
         }
         ph.field_f = new km(var2.field_w * 2, var2.field_t * 2);
         ph.field_f.e();
-        var2.a(0, 0, wb.field_h, wb.field_c);
-        wb.e(2, 2, 0, 0, wb.field_h, wb.field_c);
+        var2.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+        SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
         ph.field_j.b(48);
         var3Lifetime1 = qm.field_g;
         if (var3Lifetime1 != 1) {
@@ -1562,7 +1562,7 @@ public final class Chess extends gb {
         qk.a(true);
         rl.b(1);
         MouseWheelInput.clearStaticReferences((byte) 30);
-        wb.d();
+        SoftwareRasterizer.clearStaticReferences();
         ResourceArchive.d((byte) 73);
         lh.clearStaticReferences();
         jf.a((byte) -8);
@@ -2040,8 +2040,8 @@ public final class Chess extends gb {
         try {
           var3 = new km(2 * param1.field_w, param1.field_t * 2);
           var3.e();
-          param1.a(0, 0, wb.field_h, wb.field_c);
-          wb.e(param0, 2, 0, 0, wb.field_h, wb.field_c);
+          param1.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+          SoftwareRasterizer.blurRectangle(param0, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           ph.field_j.b(48);
           stackIn_1_0 = var3;
           return stackIn_1_0;
@@ -2066,10 +2066,10 @@ public final class Chess extends gb {
         tb.field_a = new km(270, 325);
         tb.field_a.field_r = 145;
         tb.field_a.e();
-        wb.c(0, 0, 270, 325, 13875857, 15987691);
-        wb.d(0, 0, 270, 325, 1);
-        wb.f(0, 0, 4, wb.field_c, 0);
-        wb.f(4, 0, wb.field_c, 1);
+        SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 270, 325, 13875857, 15987691);
+        SoftwareRasterizer.drawRectangleOutline(0, 0, 270, 325, 1);
+        SoftwareRasterizer.fillRectangle(0, 0, 4, SoftwareRasterizer.field_c, 0);
+        SoftwareRasterizer.drawVerticalLine(4, 0, SoftwareRasterizer.field_c, 1);
         ph.field_j.b(48);
         tb.field_a.d();
     }

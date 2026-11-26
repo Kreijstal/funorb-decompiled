@@ -21,7 +21,7 @@ final class us implements ir {
             stackIn_4_0 = (ea) (param3);
           }
           pf var12 = (pf) (stackIn_4_0);
-          SoftwareRasterizer.b(param2 + param3.field_p, param3.field_h + param4, param3.field_q, param3.field_n, this.field_f);
+          SoftwareRasterizer.fillRectangle(param2 + param3.field_p, param3.field_h + param4, param3.field_q, param3.field_n, this.field_f);
           if (var12 == null) {
           }
           int var7 = -(var12.field_B * 2) + param3.field_q;
@@ -30,9 +30,9 @@ final class us implements ir {
           }
           int var8 = var12.field_B + param2 + param3.field_p;
           int var9 = var12.field_x + param3.field_h + param4;
-          SoftwareRasterizer.f(var8, var9, var8 + var7, var9, this.field_b);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_b);
           for (int var10 = -1 + var12.c(true); var10 >= 0; var10--) {
-            SoftwareRasterizer.g(var7 * var12.a(false, var10) / var12.a(param1 ^ 7589) + var8, var9, this.field_c, this.field_d);
+            SoftwareRasterizer.fillCircle(var7 * var12.a(false, var10) / var12.a(param1 ^ 7589) + var8, var9, this.field_c, this.field_d);
           }
           if (null != this.field_g) {
             this.field_g.drawCenteredText(var12.field_f, var7 / 2 + var8, var12.field_x + var9 + this.field_g.lineAdvance, this.field_e, this.field_a);

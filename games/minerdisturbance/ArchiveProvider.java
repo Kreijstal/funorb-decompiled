@@ -28,7 +28,7 @@ abstract class ArchiveProvider {
     final static void a(Sprite param0, int param1) {
         try {
           ti.a((byte) 126);
-          SoftwareRasterizer.a(param0.field_D, param0.field_x, param0.field_A);
+          SoftwareRasterizer.setRasterBuffer(param0.field_D, param0.field_x, param0.field_A);
           if (param1 < 124) {
             ArchiveProvider.a(-15);
           }

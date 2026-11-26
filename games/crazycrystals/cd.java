@@ -374,7 +374,7 @@ final class cd extends ea implements Cloneable {
                   var25 = var25 + var27;
                   var22 = var22 + var24;
                   var18 = var18 + var20;
-                  var36Lifetime2 = var36Lifetime2 + kh.field_l;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_l;
                   var26 = var26 + var28;
                   var21 = var21 + var23;
                 }
@@ -459,7 +459,7 @@ final class cd extends ea implements Cloneable {
               var29 = var29 + var31;
               var21 = var21 + var23;
               var25 = var25 + var27;
-              var35Lifetime1 = var35Lifetime1 + kh.field_l;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_l;
               var22 = var22 + var24;
               var26 = var26 + var28;
               var17_int = var17_int + var19;
@@ -538,8 +538,8 @@ final class cd extends ea implements Cloneable {
         int var14 = (int)(13.856406460551018 * (Math.sin(var12) * (double)param3));
         int var15 = (int)(13.856406460551018 * (Math.cos(var12) * (double)param1));
         int var16 = (this.field_x - this.field_y) * (this.field_C + this.field_t);
-        kh.a(var9 - var14 * var16, var11 - var15 + (int)((double)param1 * 4.0) * param2, param3 << 1, 15, f.field_c);
-        kh.a(var16 * var14 + var9, (int)(4.0 * (double)param1) * param2 + (var11 + var15), param3 << 1, 15, f.field_c);
+        SoftwareRasterizer.addRadialGlow(var9 - var14 * var16, var11 - var15 + (int)((double)param1 * 4.0) * param2, param3 << 1, 15, f.field_c);
+        SoftwareRasterizer.addRadialGlow(var16 * var14 + var9, (int)(4.0 * (double)param1) * param2 + (var11 + var15), param3 << 1, 15, f.field_c);
     }
 
     final f a(f[][] param0, int param1, f param2, int param3, int param4) {

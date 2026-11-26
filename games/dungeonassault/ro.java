@@ -56,7 +56,7 @@ final class ro extends kl {
         super.b(-125);
         int var2 = (this.field_a - 200 >> 1) + this.field_k;
         int var3 = this.field_j + 80;
-        gf.b(var2 - 5, -5 + var3, 210, 210, 0);
+        SoftwareRasterizer.fillRectangle(var2 - 5, -5 + var3, 210, 210, 0);
         rp.a(4, 202, (byte) 108, var2 - 1, 202, kc.field_S, -1 + var3);
         this.field_o.a(200, var3, (byte) 102, var2, 200);
         if (this.field_w == null) {

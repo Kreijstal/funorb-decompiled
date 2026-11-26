@@ -48,18 +48,18 @@ final class qj {
             var8 = param0[1].field_t;
             param0[0].b(param4, param1, param5);
             param0[2].b(-var7 + param4 + param2, param1, param5);
-            fn.b(hj.field_l);
+            SoftwareRasterizer.saveClip(hj.field_l);
             if (param3 <= 43) {
               var12 = (nf[]) null;
               qj.a((nf[]) null, 54, 102, 49, -15, -58);
             }
-            fn.f(param4 + var6_int, param1, -var7 + param2 + param4, param1 + param0[1].field_x);
+            SoftwareRasterizer.intersectClip(param4 + var6_int, param1, -var7 + param2 + param4, param1 + param0[1].field_x);
             var9 = var6_int + param4;
             var10 = -var7 + (param2 + param4);
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].b(param4, param1, param5);
             }
-            fn.a(hj.field_l);
+            SoftwareRasterizer.restoreClip(hj.field_l);
             return;
           }
           return;

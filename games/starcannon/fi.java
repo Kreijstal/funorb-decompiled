@@ -25,13 +25,13 @@ abstract class fi {
           var1 = new Sprite(540, 140);
           bc.a(var1, 26095);
           gl.b();
-          ki.b();
+          SoftwareRasterizer.clearRaster();
           qb.field_h = 0;
           GzipDecompressor.a(-1196777214);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            ki.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ak.field_f.e();
           var1.a(0, 0);

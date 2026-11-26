@@ -107,7 +107,7 @@ abstract class RasterBuffer {
     }
 
     final void a(int param0) {
-        bi.a(this.field_e, this.field_i, this.field_d);
+        SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_i, this.field_d);
         int var2 = -99 / ((param0 + 92) / 32);
     }
 

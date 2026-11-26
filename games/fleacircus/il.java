@@ -26,8 +26,8 @@ final class il {
         int var3Lifetime1;
         var4 = fleas.field_A ? 1 : 0;
         try {
-          gb.b(243, 197, 369, 143, 16777215);
-          gb.e(244, param0, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, param0, 367, 141, 0);
           if (null == wa.field_k) {
             if (qj.field_H != null) {
               qj.field_H.a(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

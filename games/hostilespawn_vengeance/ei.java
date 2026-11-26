@@ -915,7 +915,7 @@ final class ei extends IntrusiveNode {
           } else {
             stackIn_5_5 = -50 + 2 * jf.field_d;
           }
-          si.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, -(stackIn_5_5 * 5) + 250);
+          SoftwareRasterizer.fillRectangleAlpha(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, -(stackIn_5_5 * 5) + 250);
           var1 = -72 + mm.field_m[0].field_j.field_e * 24 - uj.field_p.field_e;
           var2 = -48 + 24 * mm.field_m[0].field_j.field_g - uj.field_p.field_g;
           if (MusicPatchPcmStream.field_n != null) {
@@ -949,7 +949,7 @@ final class ei extends IntrusiveNode {
                   MusicPatchPcmStream.field_n.c(-((50 - jf.field_d) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, -jf.field_d + MusicPatchPcmStream.field_n.field_u + 50, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, -(25 * jf.field_d) + 1250);
                 } else {
                   MusicPatchPcmStream.field_n.a(var1 - (-jf.field_d + 50) / 2, var2 - (50 - jf.field_d) / 2, 50 + (MusicPatchPcmStream.field_n.field_u - jf.field_d), 50 + (MusicPatchPcmStream.field_n.field_r - jf.field_d));
-                  si.a(-((-jf.field_d + 50) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, MusicPatchPcmStream.field_n.field_u + 50 - jf.field_d, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, 0, (10200 - 255 * jf.field_d) / 40);
+                  SoftwareRasterizer.fillRectangleAlpha(-((-jf.field_d + 50) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, MusicPatchPcmStream.field_n.field_u + 50 - jf.field_d, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, 0, (10200 - 255 * jf.field_d) / 40);
                 }
               } else {
                 if (jf.field_d < 40) {

@@ -493,7 +493,7 @@ final class pa extends dg {
             var11 <= this.field_Q.field_p &&
             var12 <= this.field_Q.field_o) {
             dl.a(-60, this.field_Q);
-            vj.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_Q = new kc(var11, var12);
             dl.a(-33, this.field_Q);

@@ -112,7 +112,7 @@ public final class Torquing extends tg {
           ClientException.a(2712);
           MouseInputHandler.a(18133);
           MouseWheelInput.clearStaticReferences(0);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.d(param0 + 99);
           uc.clearStaticReferences();
           l.a((byte) 88);
@@ -503,7 +503,7 @@ public final class Torquing extends tg {
           if (param0 < 30) {
             this.b(61);
           }
-          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.PA(" + param0 + ',' + param1 + ')');
         }
@@ -882,10 +882,10 @@ public final class Torquing extends tg {
                 var16_ref_t.field_r = -var38.field_t + var38.field_u >> 1;
                 var38.e();
                 var17 = var9_ref_int__[var15];
-                SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, var17);
+                SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, var17);
                 var37.d(0, 0, var13_int, var14_int);
                 if (16777215 == var17) {
-                  SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+                  SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
                 }
                 var67 = var38.field_y;
                 for (var19_int = 0; var67.length > var19_int; var19_int++) {
@@ -1723,13 +1723,13 @@ public final class Torquing extends tg {
               return;
             }
             if (on.b(160)) {
-              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+              SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
               qk.a(14, 14, s.field_t, (byte) -4);
             }
             if (pb.field_e != -1) {
               var3 = oo.field_b << 3;
               if (var3 > 0) {
-                SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3);
               }
             }
             if (hh.a(64) &&
@@ -1786,7 +1786,7 @@ public final class Torquing extends tg {
           var4.field_e.b(34, -127, 159);
           wj.field_k.a(-(wj.field_k.field_c / 2) + 219, 414);
           qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
-          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
         }
@@ -2030,7 +2030,7 @@ public final class Torquing extends tg {
           mh.field_d[param1].a(0, 0, 76);
           GameKeyHandler.field_a[param1].a(0, 0);
           pa.field_e[param1].a(0, 0);
-          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
         }
@@ -2084,7 +2084,7 @@ public final class Torquing extends tg {
             }
             if (var2_int > 0) {
               AccountRequestState.field_b.e();
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
             }
           }
           if (var2_int > 0) {

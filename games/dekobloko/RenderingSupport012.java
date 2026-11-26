@@ -323,30 +323,30 @@ final class RenderingSupport012 {
         int integerLocal8 = SoftwareRaster.integerState0284;
         RgbSprite rgbSpriteLocal9 = new RgbSprite(16, integerArgument2);
         rgbSpriteLocal9.performAction0256();
-        SoftwareRaster.performAction0660(0, 0, 16, integerArgument2, integerArgument4, integerArgument5);
+        SoftwareRaster.fillRectangleVerticalGradient(0, 0, 16, integerArgument2, integerArgument4, integerArgument5);
         Object objectLocal10 = null;
         if (booleanArgument3) {
           rgbSpriteLocal1 = rgbSpriteLocal9.computeRgbSprite0277();
           objectLocal10 = rgbSpriteLocal1;
           rgbSpriteLocal1.performAction0256();
-          SoftwareRaster.performAction0639(0, 0, 5, 0);
-          SoftwareRaster.performAction0639(0, 1, 3, 0);
-          SoftwareRaster.performAction0639(0, 2, 2, 0);
-          SoftwareRaster.performAction0639(0, 3, 1, 0);
-          SoftwareRaster.performAction0639(0, 4, 1, 0);
+          SoftwareRaster.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRaster.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRaster.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRaster.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRaster.drawHorizontalLine(0, 4, 1, 0);
         }
         Object objectLocal11 = null;
         if (booleanArgument1) {
           rgbSpriteLocal2 = rgbSpriteLocal9.computeRgbSprite0277();
           objectLocal11 = rgbSpriteLocal2;
           rgbSpriteLocal2.performAction0256();
-          SoftwareRaster.performAction0639(11, 0, 5, 0);
-          SoftwareRaster.performAction0639(13, 1, 3, 0);
-          SoftwareRaster.performAction0639(14, 2, 2, 0);
-          SoftwareRaster.performAction0639(15, 3, 1, 0);
-          SoftwareRaster.performAction0639(15, 4, 1, 0);
+          SoftwareRaster.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRaster.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRaster.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRaster.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRaster.drawHorizontalLine(15, 4, 1, 0);
         }
-        SoftwareRaster.performAction0645(integerArrayLocal3, integerLocal7, integerLocal8);
+        SoftwareRaster.setRasterBuffer(integerArrayLocal3, integerLocal7, integerLocal8);
         return new RgbSprite[]{null, null, null, (RgbSprite) (objectLocal10), rgbSpriteLocal9, (RgbSprite) (objectLocal11), null, null, null};
     }
 

@@ -52,18 +52,18 @@ final class ja extends IntrusiveNode {
           var8_int = -param2 - param1 + param0;
           var9 = -param1 + param3 - param2;
           var10 = param2 + param1 + param0;
-          if (var10 > ti.field_c) {
-            var10 = ti.field_c;
+          if (var10 > SoftwareRasterizer.field_c) {
+            var10 = SoftwareRasterizer.field_c;
           }
           var11 = param2 + (param3 + param1);
-          if (var8_int < ti.field_e) {
-            var8_int = ti.field_e;
+          if (var8_int < SoftwareRasterizer.field_e) {
+            var8_int = SoftwareRasterizer.field_e;
           }
-          if (ti.field_f > var9) {
-            var9 = ti.field_f;
+          if (SoftwareRasterizer.field_f > var9) {
+            var9 = SoftwareRasterizer.field_f;
           }
-          if (var11 > ti.field_l) {
-            var11 = ti.field_l;
+          if (var11 > SoftwareRasterizer.field_l) {
+            var11 = SoftwareRasterizer.field_l;
           }
           var33 = new int[32];
           var32 = var33;
@@ -94,7 +94,7 @@ final class ja extends IntrusiveNode {
                 if (var24 != 0) {
                   if (var24 >= var18) {
                     if (var24 >= var19) {
-                      var17.field_z[var20] = ti.field_a[var26 * ti.field_i + var27];
+                      var17.field_z[var20] = SoftwareRasterizer.field_a[var26 * SoftwareRasterizer.field_i + var27];
                       var20++;
                       var25++;
                       var23++;
@@ -106,17 +106,17 @@ final class ja extends IntrusiveNode {
                     var30 = -(param5 * (65536 - lc.a((var29 << 7) / param2, false)) >> 11) + var28;
                     var27 = param0 + var23 * var30 / var28;
                     var26 = param3 + var21 * var30 / var28;
-                    if (var26 < ti.field_f) {
-                      var26 = ti.field_f;
+                    if (var26 < SoftwareRasterizer.field_f) {
+                      var26 = SoftwareRasterizer.field_f;
                     }
-                    if (ti.field_e > var27) {
-                      var27 = ti.field_e;
+                    if (SoftwareRasterizer.field_e > var27) {
+                      var27 = SoftwareRasterizer.field_e;
                     }
-                    if (var26 >= ti.field_l) {
-                      var26 = ti.field_l;
+                    if (var26 >= SoftwareRasterizer.field_l) {
+                      var26 = SoftwareRasterizer.field_l;
                     }
-                    if (var27 >= ti.field_c) {
-                      var27 = ti.field_c;
+                    if (var27 >= SoftwareRasterizer.field_c) {
+                      var27 = SoftwareRasterizer.field_c;
                     }
                   } else {
                     var28 = ma.a((byte) -118, var24 << 12);
@@ -124,21 +124,21 @@ final class ja extends IntrusiveNode {
                     var30 = var28 - ((-lc.a((var29 << 7) / param1, param4) + 65536) * param5 >> 11);
                     var26 = param3 + var30 * var21 / var28;
                     var27 = param0 + var30 * var23 / var28;
-                    if (var26 < ti.field_f) {
-                      var26 = ti.field_f;
+                    if (var26 < SoftwareRasterizer.field_f) {
+                      var26 = SoftwareRasterizer.field_f;
                     }
-                    if (var27 < ti.field_e) {
-                      var27 = ti.field_e;
+                    if (var27 < SoftwareRasterizer.field_e) {
+                      var27 = SoftwareRasterizer.field_e;
                     }
-                    if (ti.field_l <= var26) {
-                      var26 = ti.field_l;
+                    if (SoftwareRasterizer.field_l <= var26) {
+                      var26 = SoftwareRasterizer.field_l;
                     }
-                    if (ti.field_c <= var27) {
-                      var27 = ti.field_c;
+                    if (SoftwareRasterizer.field_c <= var27) {
+                      var27 = SoftwareRasterizer.field_c;
                     }
                   }
                 }
-                var17.field_z[var20] = ti.field_a[var26 * ti.field_i + var27];
+                var17.field_z[var20] = SoftwareRasterizer.field_a[var26 * SoftwareRasterizer.field_i + var27];
                 var20++;
                 var25++;
                 var23++;
@@ -147,7 +147,7 @@ final class ja extends IntrusiveNode {
               var21++;
             }
             var17.d(var8_int, var9);
-            ti.b(param0 << 4, param3 << 4, param1 + param2 << 4, 255, var33);
+            SoftwareRasterizer.addRadialGlowClippedSpans(param0 << 4, param3 << 4, param1 + param2 << 4, 255, var33);
             return;
           }
           return;

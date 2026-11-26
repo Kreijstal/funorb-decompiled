@@ -273,7 +273,7 @@ final class dc extends TextureOperator {
           field_L = (FullscreenFocusCanvas) null;
         }
         if (IntrusiveDeque.field_b != null) {
-          bi.d(bi.field_d, bi.field_f, bi.field_i - bi.field_d, bi.field_c - bi.field_f);
+          SoftwareRasterizer.darkenRectangleHalf(SoftwareRasterizer.field_d, SoftwareRasterizer.field_f, SoftwareRasterizer.field_i - SoftwareRasterizer.field_d, SoftwareRasterizer.field_c - SoftwareRasterizer.field_f);
           IntrusiveDeque.field_b.b(param0, param1 + 110);
         }
     }

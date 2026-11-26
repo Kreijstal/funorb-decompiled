@@ -66,17 +66,17 @@ final class mg {
           if (param3 < this.field_a[4].field_f + this.field_a[2].field_f + this.field_a[0].field_f) {
             throw new RuntimeException();
           }
-          sb.a(ic.field_d);
+          SoftwareRasterizer.saveClip(ic.field_d);
           this.field_a[0].a(param4, param1);
           var10Lifetime1 = param4 + (-this.field_a[4].field_f - this.field_a[2].field_f + param3 + this.field_a[0].field_f >> 1);
-          sb.g(param4 + this.field_a[0].field_f, 0, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(param4 + this.field_a[0].field_f, 0, var10Lifetime1, 480);
           for (var11Lifetime1 = param4 + this.field_a[0].field_f; var11Lifetime1 < var10Lifetime1; var11Lifetime1 = var11Lifetime1 + this.field_a[1].field_f) {
             this.field_a[1].a(var11Lifetime1, param1);
           }
-          sb.b(ic.field_d);
+          SoftwareRasterizer.restoreClip(ic.field_d);
           this.field_a[2].b(var10Lifetime1, param1);
           var11Lifetime1 = -this.field_a[4].field_f + (param4 + param3);
-          sb.g(var10Lifetime1 + this.field_a[2].field_f, 0, var11Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var10Lifetime1 + this.field_a[2].field_f, 0, var11Lifetime1, 480);
           for (var12Lifetime1 = this.field_a[2].field_f + var10Lifetime1; var11Lifetime1 > var12Lifetime1; var12Lifetime1 = var12Lifetime1 + this.field_a[3].field_f) {
             this.field_a[3].a(var12Lifetime1, param1);
           }
@@ -85,22 +85,22 @@ final class mg {
           if (param3 < this.field_a[4].field_f + this.field_a[2].field_f + this.field_a[0].field_f) {
             throw new RuntimeException();
           }
-          sb.a(ic.field_d);
+          SoftwareRasterizer.saveClip(ic.field_d);
           this.field_a[0].a(param4, param1);
           var10Lifetime1 = param4 + (-this.field_a[4].field_f - this.field_a[2].field_f + param3 + this.field_a[0].field_f >> 1);
-          sb.g(param4 + this.field_a[0].field_f, 0, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(param4 + this.field_a[0].field_f, 0, var10Lifetime1, 480);
           for (var11Lifetime1 = param4 + this.field_a[0].field_f; var11Lifetime1 < var10Lifetime1; var11Lifetime1 = var11Lifetime1 + this.field_a[1].field_f) {
             this.field_a[1].a(var11Lifetime1, param1);
           }
-          sb.b(ic.field_d);
+          SoftwareRasterizer.restoreClip(ic.field_d);
           this.field_a[2].b(var10Lifetime1, param1);
           var11Lifetime1 = -this.field_a[4].field_f + (param4 + param3);
-          sb.g(var10Lifetime1 + this.field_a[2].field_f, 0, var11Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var10Lifetime1 + this.field_a[2].field_f, 0, var11Lifetime1, 480);
           for (var12Lifetime1 = this.field_a[2].field_f + var10Lifetime1; var11Lifetime1 > var12Lifetime1; var12Lifetime1 = var12Lifetime1 + this.field_a[3].field_f) {
             this.field_a[3].a(var12Lifetime1, param1);
           }
         }
-        sb.b(ic.field_d);
+        SoftwareRasterizer.restoreClip(ic.field_d);
         this.field_a[4].a(var11Lifetime1, param1);
     }
 

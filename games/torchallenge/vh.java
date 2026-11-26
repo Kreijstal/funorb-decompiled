@@ -213,7 +213,7 @@ final class vh {
           var13 = SoftwareRasterizer.width;
           var14 = SoftwareRasterizer.height;
           var44 = new int[4];
-          SoftwareRasterizer.a(var44);
+          SoftwareRasterizer.saveClip(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
             var6[var16_int] = -param1 + param0[var16_int].field_f;
             var7[var16_int] = param0[var16_int].field_g - param1;
@@ -259,7 +259,7 @@ final class vh {
           var16.field_K = var16.field_K - param1;
           var16.field_x = var16.field_x - param1;
           SoftwareRasterizer.setTarget(var45, var13, var14);
-          SoftwareRasterizer.b(var44);
+          SoftwareRasterizer.restoreClip(var44);
           if (param2 < 24) {
             field_h = -21;
           }

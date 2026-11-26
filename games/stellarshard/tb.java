@@ -39,15 +39,15 @@ abstract class tb extends ui {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = stellarshard.field_B;
-        ti.c(param2 + 6, param1 + 35, -12 + this.field_p, this.field_t - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param2 + 6, param1 + 35, -12 + this.field_p, this.field_t - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var4 > var7) {
-          if (ti.field_f <= var8 &&
-            var8 < ti.field_l) {
+          if (SoftwareRasterizer.field_f <= var8 &&
+            var8 < SoftwareRasterizer.field_l) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_p;
@@ -60,7 +60,7 @@ abstract class tb extends ui {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  ti.field_a[var10 + param2 + ti.field_i * var8] = var13;
+                  SoftwareRasterizer.field_a[var10 + param2 + SoftwareRasterizer.field_i * var8] = var13;
                 }
                 var10++;
               }
@@ -75,7 +75,7 @@ abstract class tb extends ui {
                   if (var14 >= 420) {
                     var15 = (-var14 + 462) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    ti.field_a[var8 * ti.field_i + param2 + var11] = var15;
+                    SoftwareRasterizer.field_a[var8 * SoftwareRasterizer.field_i + param2 + var11] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -88,7 +88,7 @@ abstract class tb extends ui {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            ti.g(var10 + param2, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param2, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -104,8 +104,8 @@ abstract class tb extends ui {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          ti.g(param2, var8Lifetime1, 6, var9Lifetime1);
-          ti.g(-6 + (param2 + this.field_p), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param2 + this.field_p), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -120,8 +120,8 @@ abstract class tb extends ui {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          ti.g(param2, var8Lifetime2, 6, var9Lifetime2);
-          ti.g(this.field_p + param2 - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.field_p + param2 - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

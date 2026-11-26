@@ -480,9 +480,9 @@ final class TutorialController {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param2) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, 0, 192);
         } else {
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
         }
         oi.a(-22417, param2);
         if (param1 != 0) {
@@ -521,9 +521,9 @@ final class TutorialController {
         if (this.field_l == 0 &&
           this.field_d == 0) {
           if (this.field_w >= 0) {
-            SoftwareRasterizer.d(0, var2, 640, 480 - var2, 0, 255 - (128 + this.field_w) / 2);
+            SoftwareRasterizer.fillRectangleAlpha(0, var2, 640, 480 - var2, 0, 255 - (128 + this.field_w) / 2);
           } else {
-            SoftwareRasterizer.d(0, var2, 640, 480 - var2, 0, 128);
+            SoftwareRasterizer.fillRectangleAlpha(0, var2, 640, 480 - var2, 0, 128);
           }
         }
         if (34 == this.field_l) {
@@ -545,15 +545,15 @@ final class TutorialController {
             AccountRequestState.field_f.c(this.field_f, -1 + (this.field_k + this.field_t) / 2, this.field_q - 3, 0, -1);
             AccountRequestState.field_f.c(this.field_f, 1 + (this.field_k + this.field_t) / 2, -3 + this.field_q, 0, -1);
             AccountRequestState.field_f.c(this.field_f, (this.field_k + this.field_t) / 2, -3 + this.field_q, var6, -1);
-            SoftwareRasterizer.e(-this.field_j + this.field_k, this.field_q - this.field_j, 1 + this.field_t + (-this.field_k + this.field_j * 2), 2 * this.field_j + 1 - this.field_q + this.field_y, var6);
-            SoftwareRasterizer.e(this.field_k + 1 - this.field_j, -this.field_j + 1 + this.field_q, 2 * this.field_j - this.field_k + this.field_t - 1, -1 + this.field_y - (this.field_q - this.field_j * 2), 0);
-            SoftwareRasterizer.e(this.field_k - 1 - this.field_j, -this.field_j - 1 + this.field_q, 3 + (-this.field_k + (this.field_t + this.field_j * 2)), 2 * this.field_j + (3 + (-this.field_q + this.field_y)), 0);
+            SoftwareRasterizer.drawRectangleOutline(-this.field_j + this.field_k, this.field_q - this.field_j, 1 + this.field_t + (-this.field_k + this.field_j * 2), 2 * this.field_j + 1 - this.field_q + this.field_y, var6);
+            SoftwareRasterizer.drawRectangleOutline(this.field_k + 1 - this.field_j, -this.field_j + 1 + this.field_q, 2 * this.field_j - this.field_k + this.field_t - 1, -1 + this.field_y - (this.field_q - this.field_j * 2), 0);
+            SoftwareRasterizer.drawRectangleOutline(this.field_k - 1 - this.field_j, -this.field_j - 1 + this.field_q, 3 + (-this.field_k + (this.field_t + this.field_j * 2)), 2 * this.field_j + (3 + (-this.field_q + this.field_y)), 0);
           }
           var3 = AccountRequestState.field_f.field_s * (AccountRequestState.field_f.c(this.field_b, var4) + 1) + 32;
           if (0 != this.field_p) {
-            SoftwareRasterizer.d(643 - (var4 + 12), var2 + 3, 6 + var4, var3 - 6, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(643 - (var4 + 12), var2 + 3, 6 + var4, var3 - 6, 0, 192);
           } else {
-            SoftwareRasterizer.d(3, var2 + 3, 6 + var4, var3 - 6, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(3, var2 + 3, 6 + var4, var3 - 6, 0, 192);
           }
           if (this.field_p == 0) {
             jl.a(jc.field_G, var3, var2, 12 + var4, (byte) -121, 0);
@@ -577,17 +577,17 @@ final class TutorialController {
           var7 = this.field_d;
           if (this.field_p == 0) {
             if (0 < this.field_w) {
-              SoftwareRasterizer.d(3, var2 + 3, 6 + var4, -6 + var3, 0, this.field_w);
+              SoftwareRasterizer.fillRectangleAlpha(3, var2 + 3, 6 + var4, -6 + var3, 0, this.field_w);
             }
             if (this.field_w < 0) {
-              SoftwareRasterizer.d(3, 3 + var2, 12 + (var4 - 6), var3 - 6, 16711680, -this.field_w);
+              SoftwareRasterizer.fillRectangleAlpha(3, 3 + var2, 12 + (var4 - 6), var3 - 6, 16711680, -this.field_w);
             }
           } else {
             if (this.field_w > 0) {
-              SoftwareRasterizer.d(640 + (-var4 - 12) + 3, var2 + 3, 12 + (-6 + var4), var3 - 6, 0, this.field_w);
+              SoftwareRasterizer.fillRectangleAlpha(640 + (-var4 - 12) + 3, var2 + 3, 12 + (-6 + var4), var3 - 6, 0, this.field_w);
             }
             if (this.field_w < 0) {
-              SoftwareRasterizer.d(-var4 + 640 - 9, var2 + 3, var4 + 6, var3 - 6, 16711680, -this.field_w);
+              SoftwareRasterizer.fillRectangleAlpha(-var4 + 640 - 9, var2 + 3, var4 + 6, var3 - 6, 16711680, -this.field_w);
             }
           }
           var5 = 0;
@@ -603,13 +603,13 @@ final class TutorialController {
               this.field_g < wh.field_e.field_r + var5 &&
               var3 + var2 <= this.field_c &&
               this.field_c < wh.field_e.field_t + (var3 + var2)) {
-              SoftwareRasterizer.d(var5, var3 + var2, wh.field_e.field_r, wh.field_e.field_t, 16777215, 128);
+              SoftwareRasterizer.fillRectangleAlpha(var5, var3 + var2, wh.field_e.field_r, wh.field_e.field_t, 16777215, 128);
             }
             if (this.field_s) {
               var8 = 6250335 + 1052688 * this.field_j;
-              SoftwareRasterizer.e(this.field_k, this.field_q, 1 + (this.field_t - this.field_k), 1 - this.field_q + this.field_y, var8);
-              SoftwareRasterizer.e(this.field_k + 1, 1 + this.field_q, -this.field_k + this.field_t - 1, this.field_y - this.field_q - 1, 0);
-              SoftwareRasterizer.e(this.field_k - 1, this.field_q - 1, 3 + (-this.field_k + this.field_t), this.field_y + (-this.field_q + 3), 0);
+              SoftwareRasterizer.drawRectangleOutline(this.field_k, this.field_q, 1 + (this.field_t - this.field_k), 1 - this.field_q + this.field_y, var8);
+              SoftwareRasterizer.drawRectangleOutline(this.field_k + 1, 1 + this.field_q, -this.field_k + this.field_t - 1, this.field_y - this.field_q - 1, 0);
+              SoftwareRasterizer.drawRectangleOutline(this.field_k - 1, this.field_q - 1, 3 + (-this.field_k + this.field_t), this.field_y + (-this.field_q + 3), 0);
             }
           } else {
             if (this.field_p == 0) {
@@ -618,7 +618,7 @@ final class TutorialController {
                 qh.field_b.field_r + var5 > this.field_g &&
                 var3 + var2 <= this.field_c &&
                 qh.field_b.field_t + var3 + var2 > this.field_c) {
-                SoftwareRasterizer.d(var5, var3 + var2, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var5, var3 + var2, qh.field_b.field_r, qh.field_b.field_t, 16777215, 128);
               }
             }
           }

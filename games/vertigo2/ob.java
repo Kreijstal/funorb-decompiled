@@ -129,7 +129,7 @@ final class ob extends WidgetContainer implements ih, ij {
           qc.field_x.a(this.field_P, this.x + param2 + 20, 15 + this.y + param3, this.width - 40, this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
         }
         if (null != this.field_K) {
-          bi.b(10 + param2, 134 + param3, this.width - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param2, 134 + param3, this.width - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

@@ -178,7 +178,7 @@ abstract class ul extends vd {
           if (q.field_f == null) {
             q.field_f = new bd(this.field_s, this.field_x);
             sb.a(q.field_f, -119);
-            si.d();
+            SoftwareRasterizer.clearRaster();
             this.b(0, -238948511, 0);
             super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
             eh.b(false);
@@ -188,7 +188,7 @@ abstract class ul extends vd {
           if (this.field_s > q.field_f.field_z) {
             q.field_f = new bd(this.field_s, this.field_x);
             sb.a(q.field_f, -119);
-            si.d();
+            SoftwareRasterizer.clearRaster();
             this.b(0, -238948511, 0);
             super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
             eh.b(false);
@@ -198,7 +198,7 @@ abstract class ul extends vd {
           if (q.field_f.field_A < this.field_x) {
             q.field_f = new bd(this.field_s, this.field_x);
             sb.a(q.field_f, -119);
-            si.d();
+            SoftwareRasterizer.clearRaster();
             this.b(0, -238948511, 0);
             super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
             eh.b(false);
@@ -206,7 +206,7 @@ abstract class ul extends vd {
             return;
           }
           sb.a(q.field_f, -119);
-          si.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
           super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
           eh.b(false);
@@ -227,7 +227,7 @@ abstract class ul extends vd {
         if (q.field_f == null) {
           q.field_f = new bd(this.field_s, this.field_x);
           sb.a(q.field_f, -119);
-          si.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
           super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
           eh.b(false);
@@ -237,7 +237,7 @@ abstract class ul extends vd {
         if (this.field_s > q.field_f.field_z) {
           q.field_f = new bd(this.field_s, this.field_x);
           sb.a(q.field_f, -119);
-          si.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
           super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
           eh.b(false);
@@ -247,7 +247,7 @@ abstract class ul extends vd {
         if (q.field_f.field_A < this.field_x) {
           q.field_f = new bd(this.field_s, this.field_x);
           sb.a(q.field_f, -119);
-          si.d();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
           super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
           eh.b(false);
@@ -255,7 +255,7 @@ abstract class ul extends vd {
           return;
         }
         sb.a(q.field_f, -119);
-        si.d();
+        SoftwareRasterizer.clearRaster();
         this.b(0, -238948511, 0);
         super.a(-this.field_m - param0, -this.field_v - param1, (byte) 47, param3);
         eh.b(false);

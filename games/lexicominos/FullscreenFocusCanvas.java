@@ -45,10 +45,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
         de.a(be.field_d, param1 ^ 144);
         MeshRasterState.b();
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clearRaster();
         rg.b(0);
         if (var5 < 256) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, -var5 + 256);
           pd.a(param1 ^ -22835);
           if (param1 <= mc.field_k) {
             nc.field_n.b(var3 + 15, var4 + 10, var5);

@@ -508,8 +508,8 @@ final class ti extends qa {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        gf.a(var1.field_j, var1.field_i, var1.field_q);
-        gf.e(var1.field_m, var1.field_p, var1.field_z, var1.field_k);
+        SoftwareRasterizer.setRasterBuffer(var1.field_j, var1.field_i, var1.field_q);
+        SoftwareRasterizer.setClip(var1.field_m, var1.field_p, var1.field_z, var1.field_k);
         var1.field_j = null;
         cd.field_g.addFirst(var1, !param0 ? true : false);
     }

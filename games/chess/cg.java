@@ -52,7 +52,7 @@ final class cg {
             lh var5 = (lh) null;
             cg.a(-72, -128, (lh) null, (lh) null);
           }
-          di.a(wb.field_h / 2, -104, wb.field_c / 2);
+          di.a(SoftwareRasterizer.field_h / 2, -104, SoftwareRasterizer.field_c / 2);
           DelegatingCanvas.a((byte) -116, param3.field_H, param2.field_t + param2.field_H, param3.field_t + param3.field_H, param2.field_H);
         } catch (RuntimeException runtimeException) {
           throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

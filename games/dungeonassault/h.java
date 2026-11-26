@@ -42,7 +42,7 @@ final class h {
         int var8 = DungeonAssault.field_K;
         int var5_int = pi.field_b.field_y;
         jh.c();
-        gf.e(param2, param4, var5_int + param2, param4 + param1);
+        SoftwareRasterizer.setClip(param2, param4, var5_int + param2, param4 + param1);
         for (var6 = 0; var6 < param1; var6 = var6 + pi.field_b.field_v) {
           pi.field_b.c(param2, var6 + param4);
         }
@@ -53,8 +53,8 @@ final class h {
           if (param0) {
             for (var6 = 0; 8 > var6; var6++) {
               var7 = 192 - 24 * var6;
-              gf.d(param2, param4 + var6, var5_int, 0, var7);
-              gf.d(param2, param4 + (param1 - 1 - var6), var5_int, 0, var7);
+              SoftwareRasterizer.drawHorizontalLineAlpha(param2, param4 + var6, var5_int, 0, var7);
+              SoftwareRasterizer.drawHorizontalLineAlpha(param2, param4 + (param1 - 1 - var6), var5_int, 0, var7);
             }
           }
           jh.b();

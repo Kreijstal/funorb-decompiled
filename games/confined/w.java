@@ -88,7 +88,7 @@ final class w extends ga implements uj, el {
           w.k(-83);
         }
         if (null != this.field_P) {
-          fn.b(param3 + 10, 134 + param0, this.field_F - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param0, this.field_F - 20, 4210752);
         }
         super.a(param0, param1, (byte) 61, param3);
     }

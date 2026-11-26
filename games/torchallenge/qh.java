@@ -45,7 +45,7 @@ final class qh extends kj implements tl, sg {
         var9 = TorChallenge.field_F ? 1 : 0;
         if (null != uk.field_N) {
           uk.field_N.d();
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
         } else {
           uk.field_N = new Sprite(640, 480);
           uk.field_N.d();

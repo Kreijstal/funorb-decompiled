@@ -219,7 +219,7 @@ final class MixedSupport143 {
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
           return;
         }
-        SoftwareRaster.performAction0642(integerArgument4 - 3, integerArgument3 + 36 - 3, 60, 60, 4, 65280, 100);
+        SoftwareRaster.fillRoundedRectangleAlpha(integerArgument4 - 3, integerArgument3 + 36 - 3, 60, 60, 4, 65280, 100);
         RenderingSupport002.performAction0243(integerArgument6, 2, 6, integerArgument4, 1 + (72 + integerArgument3), 2, -2);
         RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
         RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);

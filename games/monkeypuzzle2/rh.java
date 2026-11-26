@@ -137,7 +137,7 @@ abstract class rh extends WidgetContainer {
             vg.field_M = new Sprite(this.field_l, this.field_p);
           }
           mc.a(param0 ^ -8495, vg.field_M);
-          ge.d();
+          SoftwareRasterizer.clearRaster();
           this.a(false, 0, 0);
           super.a(param0, param1, -param2 - this.field_e, -this.field_r - param3);
           tj.b(653);

@@ -63,8 +63,8 @@ final class rh {
         int var3Lifetime1;
         var4 = CrazyCrystals.field_B;
         try {
-          kh.c(243, 197, 369, 143, 16777215);
-          kh.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == nl.field_f) {
             if (null != rn.field_k) {
               rn.field_k.a(vl.field_b, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

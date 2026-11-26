@@ -105,7 +105,7 @@ final class g implements j {
         int var12Lifetime1;
         try {
           var14 = !(param0 instanceof uc) ? null : (uc) (param0);
-          SoftwareRasterizer.f(param0.field_m + param2, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_c);
+          SoftwareRasterizer.fillRectangle(param0.field_m + param2, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_c);
           if (var14 == null) {
           }
           var7 = var14.field_S + param0.field_m + param2;

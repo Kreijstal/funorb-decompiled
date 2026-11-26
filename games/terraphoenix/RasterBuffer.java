@@ -175,7 +175,7 @@ abstract class RasterBuffer {
           var9 = param3;
           param3 = param3 - param4;
           if (param1 == 0) {
-            SoftwareRasterizer.a(param2, param3, param5);
+            SoftwareRasterizer.setPixel(param2, param3, param5);
             return;
           }
           if (0 > param1) {
@@ -306,7 +306,7 @@ abstract class RasterBuffer {
         if (param0 != 0) {
           return;
         }
-        SoftwareRasterizer.a(this.pixels, this.field_b, this.field_f);
+        SoftwareRasterizer.setRasterBuffer(this.pixels, this.field_b, this.field_f);
     }
 
     abstract void a(int param0, int param1, byte param2, java.awt.Component param3);

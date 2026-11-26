@@ -95,24 +95,24 @@ final class ug implements ci {
           var14 = (se) (stackIn_3_0);
           if (var14 != null) {
           }
-          vj.c(param1.field_o + param0, param3 + param1.field_i, param1.field_h, param1.field_q, this.field_g);
+          SoftwareRasterizer.fillRectangle(param1.field_o + param0, param3 + param1.field_i, param1.field_h, param1.field_q, this.field_g);
           var7 = param0 + param1.field_o + var14.field_E;
           var8 = param1.field_i + param3 + var14.field_M;
-          vj.b(var7, var8, var14.field_H, this.field_i);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_H, this.field_i);
           if (-1 != var14.field_I) {
             var9 = (double)var14.field_I * 3.141592653589793 * 2.0 / (double)var14.field_N;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_H);
             var12 = (int)(Math.cos(var9) * (double)var14.field_H);
-            vj.b(var11 + var7, var8 + var12, 1, this.field_e);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_e);
           }
-          vj.b(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_L * 3.141592653589793 * 2.0 / (double)var14.field_N;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_H);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_H);
           if (param2 != 11447) {
             this.field_f = -46;
           }
-          vj.e(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_c == null) {
             return;
           }

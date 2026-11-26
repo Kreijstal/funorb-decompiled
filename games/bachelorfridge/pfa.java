@@ -193,7 +193,7 @@ final class pfa {
           }
           SoftwareRasterizer.setClip(param3, param4, param3 + var7_int, 28 + param4);
           param0.draw(param3, param4);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pfa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -335,8 +335,8 @@ final class pfa {
             }
             CreatureType.a(true, this.field_e[var3_int].field_rb, this.field_e[var3_int].field_kb, this.field_e[var3_int].field_zb, 117);
             if (!this.field_f.field_s.c((byte) -10, this.field_e[var3_int].field_zb)) {
-              SoftwareRasterizer.d(4 + this.field_e[var3_int].field_kb, 4 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 15), this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1) + 15, 65793, 4);
-              SoftwareRasterizer.d(5 + this.field_e[var3_int].field_kb, 5 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 14), 14 + this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1), 16711680, 2);
+              SoftwareRasterizer.drawThickLine(4 + this.field_e[var3_int].field_kb, 4 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 15), this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1) + 15, 65793, 4);
+              SoftwareRasterizer.drawThickLine(5 + this.field_e[var3_int].field_kb, 5 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 14), 14 + this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1), 16711680, 2);
             }
           }
         }
@@ -366,7 +366,7 @@ final class pfa {
           var16 = pna.field_zb[this.field_f.field_s.statusId].description;
           var5Lifetime1 = CreatureActor.field_h.c(var16, 200) + 10;
           var6Lifetime1 = CreatureActor.field_h.measureWrappedHeight(var16, 200, 0) + (CreatureActor.field_h.field_F << 1);
-          SoftwareRasterizer.a(mk.field_p + 17, 4 + gd.field_m, var5Lifetime1 + 6, var6Lifetime1, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(mk.field_p + 17, 4 + gd.field_m, var5Lifetime1 + 6, var6Lifetime1, 10, 65793, 128);
           CreatureActor.field_h.drawText(var3, 20 + (mk.field_p + 4), 20 + gd.field_m, 0, -1);
           CreatureActor.field_h.drawParagraph(var16, 4 + (mk.field_p + 20), gd.field_m + 24, 200, 200, 0, -1, 0, 0, 0);
         }

@@ -282,7 +282,7 @@ final class tk extends ng {
             var9 <= lh.field_v.storedWidth &&
             var10 <= lh.field_v.storedHeight) {
             FullscreenFocusCanvas.a(-50, lh.field_v);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             lh.field_v = new Sprite(var9, var10);
             FullscreenFocusCanvas.a(120, lh.field_v);

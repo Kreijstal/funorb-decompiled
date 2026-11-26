@@ -1045,10 +1045,10 @@ final class he extends ip {
             DelegatingCanvas.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
             dc.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
             tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
-            var27 = gf.field_b;
-            var2 = gf.field_i;
-            var3 = gf.field_c;
-            gf.a(rp.field_e);
+            var27 = SoftwareRasterizer.field_b;
+            var2 = SoftwareRasterizer.field_i;
+            var3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(rp.field_e);
             var11 = new cn(4 + DelegatingCanvas.field_c.field_y, DelegatingCanvas.field_c.field_v + 4);
             var11.e();
             DelegatingCanvas.field_c.c(2, 2, uj.field_d);
@@ -1075,9 +1075,9 @@ final class he extends ip {
             PacketBuffer.field_l = null;
             IntrusiveNode.field_d = DirectByteStorage.field_g.d();
             IntrusiveNode.field_d.e();
-            jj.a(64, -971598481, 0, 0, 2 * gf.field_c / 3, gf.field_i);
-            gf.a(var27, var2, var3);
-            gf.b(rp.field_e);
+            jj.a(64, -971598481, 0, 0, 2 * SoftwareRasterizer.field_c / 3, SoftwareRasterizer.field_i);
+            SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
+            SoftwareRasterizer.restoreClip(rp.field_e);
             AccountCreationResultPanel.field_Qb = null;
             mi.field_f = 390 + (tl.field_i.field_v - MouseWheelInput.field_g.field_v) / 2;
             rm.field_T = 434 + (tl.field_i.field_y - MouseWheelInput.field_g.field_y) / 2;
@@ -1089,10 +1089,10 @@ final class he extends ip {
           }
           if (qc.field_z != null &&
             dc.field_e != null) {
-            var28 = gf.field_b;
-            var2Lifetime1 = gf.field_i;
-            var3Lifetime1 = gf.field_c;
-            gf.a(rp.field_e);
+            var28 = SoftwareRasterizer.field_b;
+            var2Lifetime1 = SoftwareRasterizer.field_i;
+            var3Lifetime1 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(rp.field_e);
             var14 = jk.a(new String[]{kl.field_c[wo.field_g]}, rn.field_e, 30496);
             var5 = dc.field_e.b(var14, wm.field_b);
             var6Lifetime1 = dc.field_e.a(var14, wm.field_b, dc.field_e.field_E + dc.field_e.field_H);
@@ -1150,15 +1150,15 @@ final class he extends ip {
             qc.field_z.e((qc.field_z.field_E >> 1) + je.field_b, (qc.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
             qc.field_z = null;
             ud.field_r.c();
-            gf.a(var28, var2Lifetime1, var3Lifetime1);
-            gf.b(rp.field_e);
+            SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(rp.field_e);
           }
           if (lg.field_m != null &&
             null != tg.field_l) {
-            var29 = gf.field_b;
-            var2Lifetime2 = gf.field_i;
-            var3Lifetime2 = gf.field_c;
-            gf.a(rp.field_e);
+            var29 = SoftwareRasterizer.field_b;
+            var2Lifetime2 = SoftwareRasterizer.field_i;
+            var3Lifetime2 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(rp.field_e);
             var16 = new cn(412, 43);
             var5_ref_String = jk.a(new String[]{lg.field_m}, je.field_a, 30496);
             lg.field_m = null;
@@ -1167,15 +1167,15 @@ final class he extends ip {
             uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
             rf.field_Q.e();
             var16.h(199 - rf.field_Q.field_w, 83 - rf.field_Q.field_A);
-            gf.a(var29, var2Lifetime2, var3Lifetime2);
-            gf.b(rp.field_e);
+            SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(rp.field_e);
           }
           if (ol.field_b != null &&
             tg.field_l != null) {
-            var30 = gf.field_b;
-            var2Lifetime3 = gf.field_i;
-            var3Lifetime3 = gf.field_c;
-            gf.a(rp.field_e);
+            var30 = SoftwareRasterizer.field_b;
+            var2Lifetime3 = SoftwareRasterizer.field_i;
+            var3Lifetime3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(rp.field_e);
             var4 = 6 + tg.field_l.b(rp.field_h, 640);
             var5Lifetime1 = 20 + ol.field_b.field_E + var4;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -1185,14 +1185,14 @@ final class he extends ip {
             uc.a(1, 3, var4, rf.field_Q, -rf.field_Q.field_w + (var7Lifetime2 - 4), 50, -rf.field_Q.field_A + 155, false);
             var8Lifetime1 = -((-tg.field_l.field_E - tg.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 - rf.field_Q.field_A);
             ol.field_b.h(-rf.field_Q.field_w + var6Lifetime2, var8Lifetime1);
-            gf.a(var30, var2Lifetime3, var3Lifetime3);
-            gf.b(rp.field_e);
+            SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(rp.field_e);
             ol.field_b = null;
           }
-          gf.a(rp.field_e);
+          SoftwareRasterizer.saveClip(rp.field_e);
           var1_int = -53 / ((param0 + 30) / 57);
-          gf.a(16, 16, 608, 112, 15, ld.field_c, lj.field_u);
-          gf.a(231, 144, 393, 232, 15, ld.field_c, lj.field_u);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ld.field_c, lj.field_u);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ld.field_c, lj.field_u);
           if (null != ia.field_Q) {
             ia.field_Q.h(0, 0);
           }

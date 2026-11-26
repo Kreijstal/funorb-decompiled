@@ -599,11 +599,11 @@ final class kb extends IntrusiveNode {
             var9 = var4_int + this.field_r[var6].field_b * DualLinkDequeIterator.field_e;
             var10 = var5 + DualLinkDequeIterator.field_e * this.field_r[var6].field_g;
             var11 = (-this.field_y + this.field_r[var6].field_c) * 4;
-            ul.f(var7 - 1, var8, -1 + var9, var10, 11176191, var11);
-            ul.f(var7 + 1, var8, 1 + var9, var10, 11176191, var11);
-            ul.f(var7, -1 + var8, var9, -1 + var10, 11176191, var11);
-            ul.f(var7, 1 + var8, var9, 1 + var10, 11176191, var11);
-            ul.f(var7, var8, var9, var10, 16777215, var11);
+            SoftwareRasterizer.addLineWithIntensity(var7 - 1, var8, -1 + var9, var10, 11176191, var11);
+            SoftwareRasterizer.addLineWithIntensity(var7 + 1, var8, 1 + var9, var10, 11176191, var11);
+            SoftwareRasterizer.addLineWithIntensity(var7, -1 + var8, var9, -1 + var10, 11176191, var11);
+            SoftwareRasterizer.addLineWithIntensity(var7, 1 + var8, var9, 1 + var10, 11176191, var11);
+            SoftwareRasterizer.addLineWithIntensity(var7, var8, var9, var10, 16777215, var11);
             var6 = (1 + var6) % this.field_r.length;
             if (var12 != 0) {
               return;
@@ -889,11 +889,11 @@ final class kb extends IntrusiveNode {
               if (!(this.field_t <= (this.field_n - 20))) {
                 var10 = DualLinkDequeIterator.field_e / 2 + var4_int;
                 var11 = -8 + (var5 + DualLinkDequeIterator.field_e / 2);
-                ul.f(var6 - 1, var7, -1 + var10, var11, 11176191, -(10 * (this.field_n - this.field_t)) + 200);
-                ul.f(var6 + 1, var7, 1 + var10, var11, 11176191, -(10 * (-this.field_t + this.field_n)) + 200);
-                ul.f(var6, -1 + var7, var10, var11 - 1, 11176191, 200 - (-this.field_t + this.field_n) * 10);
-                ul.f(var6, 1 + var7, var10, 1 + var11, 11176191, 200 - 10 * (-this.field_t + this.field_n));
-                ul.f(var6, var7, var10, var11, 16777215, 200 - 10 * (this.field_n - this.field_t));
+                SoftwareRasterizer.addLineWithIntensity(var6 - 1, var7, -1 + var10, var11, 11176191, -(10 * (this.field_n - this.field_t)) + 200);
+                SoftwareRasterizer.addLineWithIntensity(var6 + 1, var7, 1 + var10, var11, 11176191, -(10 * (-this.field_t + this.field_n)) + 200);
+                SoftwareRasterizer.addLineWithIntensity(var6, -1 + var7, var10, var11 - 1, 11176191, 200 - (-this.field_t + this.field_n) * 10);
+                SoftwareRasterizer.addLineWithIntensity(var6, 1 + var7, var10, 1 + var11, 11176191, 200 - 10 * (-this.field_t + this.field_n));
+                SoftwareRasterizer.addLineWithIntensity(var6, var7, var10, var11, 16777215, 200 - 10 * (this.field_n - this.field_t));
               }
               decompiledFrameRemainder1 = false;
             } else {
@@ -906,11 +906,11 @@ final class kb extends IntrusiveNode {
                 this.field_E == null ||
                 !(-this.field_E.field_h + this.field_E.field_o > 0));
               if (!decompiledSharedTail0) {
-                ul.f(var6 - 1, var7, var8 - 1, var9, 16776960, 200 - (-this.field_t + this.field_n) * 10);
-                ul.f(1 + var6, var7, var8 + 1, var9, 16776960, -((-this.field_t + this.field_n) * 10) + 200);
-                ul.f(var6, -1 + var7, var8, -1 + var9, 16776960, 200 - (this.field_n - this.field_t) * 10);
-                ul.f(var6, var7 + 1, var8, 1 + var9, 16776960, 200 - (this.field_n - this.field_t) * 10);
-                ul.f(var6, var7, var8, var9, 16777215, 200 - (-this.field_t + this.field_n) * 10);
+                SoftwareRasterizer.addLineWithIntensity(var6 - 1, var7, var8 - 1, var9, 16776960, 200 - (-this.field_t + this.field_n) * 10);
+                SoftwareRasterizer.addLineWithIntensity(1 + var6, var7, var8 + 1, var9, 16776960, -((-this.field_t + this.field_n) * 10) + 200);
+                SoftwareRasterizer.addLineWithIntensity(var6, -1 + var7, var8, -1 + var9, 16776960, 200 - (this.field_n - this.field_t) * 10);
+                SoftwareRasterizer.addLineWithIntensity(var6, var7 + 1, var8, 1 + var9, 16776960, 200 - (this.field_n - this.field_t) * 10);
+                SoftwareRasterizer.addLineWithIntensity(var6, var7, var8, var9, 16777215, 200 - (-this.field_t + this.field_n) * 10);
                 decompiledSharedTail0 = (var15 != 0);
               }
               if ((decompiledSharedTail0) && (50 >= this.field_t &&
@@ -918,11 +918,11 @@ final class kb extends IntrusiveNode {
                 this.field_E.field_o - this.field_E.field_h > 0)) {
                 this.field_x = this.field_E.field_u;
                 this.field_A = this.field_E.field_z;
-                ul.f(-1 + var6, var7, -1 + var8, var9, 16776960, 250 - 5 * this.field_t);
-                ul.f(var6 + 1, var7, 1 + var8, var9, 16776960, 250 - this.field_t * 5);
-                ul.f(var6, var7 - 1, var8, var9 - 1, 16776960, 5 * (-this.field_t + 50));
-                ul.f(var6, 1 + var7, var8, var9 + 1, 16776960, (-this.field_t + 50) * 5);
-                ul.f(var6, var7, var8, var9, 16777215, 5 * (50 - this.field_t));
+                SoftwareRasterizer.addLineWithIntensity(-1 + var6, var7, -1 + var8, var9, 16776960, 250 - 5 * this.field_t);
+                SoftwareRasterizer.addLineWithIntensity(var6 + 1, var7, 1 + var8, var9, 16776960, 250 - this.field_t * 5);
+                SoftwareRasterizer.addLineWithIntensity(var6, var7 - 1, var8, var9 - 1, 16776960, 5 * (-this.field_t + 50));
+                SoftwareRasterizer.addLineWithIntensity(var6, 1 + var7, var8, var9 + 1, 16776960, (-this.field_t + 50) * 5);
+                SoftwareRasterizer.addLineWithIntensity(var6, var7, var8, var9, 16777215, 5 * (50 - this.field_t));
               }
             }
           }
@@ -1005,12 +1005,12 @@ final class kb extends IntrusiveNode {
                         }
                       }
                       var11Lifetime1 = 11176191;
-                      ul.f(var6Lifetime1 - 1, var7Lifetime1, -1 + var8Lifetime1, var9Lifetime1, var11Lifetime1, var10Lifetime1);
+                      SoftwareRasterizer.addLineWithIntensity(var6Lifetime1 - 1, var7Lifetime1, -1 + var8Lifetime1, var9Lifetime1, var11Lifetime1, var10Lifetime1);
                       var12Lifetime2 = 16777215;
-                      ul.f(var6Lifetime1 + 1, var7Lifetime1, var8Lifetime1 + 1, var9Lifetime1, var11Lifetime1, var10Lifetime1);
-                      ul.f(var6Lifetime1, -1 + var7Lifetime1, var8Lifetime1, -1 + var9Lifetime1, var11Lifetime1, var10Lifetime1);
-                      ul.f(var6Lifetime1, var7Lifetime1 + 1, var8Lifetime1, var9Lifetime1 + 1, var11Lifetime1, var10Lifetime1);
-                      ul.f(var6Lifetime1, var7Lifetime1, var8Lifetime1, var9Lifetime1, var12Lifetime2, var10Lifetime1);
+                      SoftwareRasterizer.addLineWithIntensity(var6Lifetime1 + 1, var7Lifetime1, var8Lifetime1 + 1, var9Lifetime1, var11Lifetime1, var10Lifetime1);
+                      SoftwareRasterizer.addLineWithIntensity(var6Lifetime1, -1 + var7Lifetime1, var8Lifetime1, -1 + var9Lifetime1, var11Lifetime1, var10Lifetime1);
+                      SoftwareRasterizer.addLineWithIntensity(var6Lifetime1, var7Lifetime1 + 1, var8Lifetime1, var9Lifetime1 + 1, var11Lifetime1, var10Lifetime1);
+                      SoftwareRasterizer.addLineWithIntensity(var6Lifetime1, var7Lifetime1, var8Lifetime1, var9Lifetime1, var12Lifetime2, var10Lifetime1);
                       decompiledFrameRemainder0 = (var15 != 0);
                     }
                   }
@@ -1080,7 +1080,7 @@ final class kb extends IntrusiveNode {
                     var12Lifetime1 = (this.field_h * this.field_g + var8Lifetime1Lifetime1) % var10Lifetime1Lifetime1 + var5 - (var10Lifetime1Lifetime1 >> 1);
                     var13 = -(var9Lifetime1Lifetime1 >> 1) - (-var4_int - (var8Lifetime1Lifetime1 * var8Lifetime1Lifetime1 + this.field_g) % var9Lifetime1Lifetime1);
                     var14 = var8Lifetime1Lifetime1 * var8Lifetime1Lifetime1 % var10Lifetime1Lifetime1 + var5 - (var10Lifetime1Lifetime1 >> 1);
-                    ul.f(var11Lifetime1Lifetime1, var12Lifetime1, var13, var14, 16777215, 200);
+                    SoftwareRasterizer.addLineWithIntensity(var11Lifetime1Lifetime1, var12Lifetime1, var13, var14, 16777215, 200);
                   }
                   decompiledFrameRemainder0 = (var15 != 0);
                 }
@@ -1138,21 +1138,21 @@ final class kb extends IntrusiveNode {
                 var6Lifetime2Lifetime5 = 16777215;
               }
               var7Lifetime2 = 4;
-              ul.i(var4_int, var5, var7Lifetime2, var6Lifetime2Lifetime5, 128);
+              SoftwareRasterizer.fillCircleAlpha(var4_int, var5, var7Lifetime2, var6Lifetime2Lifetime5, 128);
               if (DualLinkDequeIterator.field_e >> 2 > 2) {
-                ul.i(var4_int, var5, -1 + var7Lifetime2, var6Lifetime2Lifetime5, 128);
+                SoftwareRasterizer.fillCircleAlpha(var4_int, var5, -1 + var7Lifetime2, var6Lifetime2Lifetime5, 128);
               }
               if (DualLinkDequeIterator.field_e >> 2 > 3) {
-                ul.i(var4_int, var5, -2 + var7Lifetime2, var6Lifetime2Lifetime5, 128);
+                SoftwareRasterizer.fillCircleAlpha(var4_int, var5, -2 + var7Lifetime2, var6Lifetime2Lifetime5, 128);
               }
-              ul.g(var4_int, var5, var7Lifetime2, 0);
+              SoftwareRasterizer.drawCircleOutline(var4_int, var5, var7Lifetime2, 0);
             }
             if (this.field_F < 4 &&
               ui.field_a[this.field_C][this.field_F + 1] <= this.field_f.field_e[0].b(true) &&
               this.field_F < jk.field_j[this.field_C]) {
               var7Lifetime2Lifetime1 = 64 + (int)(Math.sin((double)ji.correctedCurrentTimeMillis(param2 ^ 91) * 0.01 + (double)this.field_g + (double)this.field_h) * 48.0);
               var6Lifetime2Lifetime6 = 16777215;
-              ul.a(var4_int << 4, var5 << 4, var7Lifetime2Lifetime1, 255, ki.field_f);
+              SoftwareRasterizer.addRadialGlow(var4_int << 4, var5 << 4, var7Lifetime2Lifetime1, 255, ki.field_f);
             }
             var5 += 15;
           }
@@ -1170,9 +1170,9 @@ final class kb extends IntrusiveNode {
             if (this.field_v <= 0) {
               var6Lifetime3 = 16711680;
             }
-            ul.h(-1 + var4_int, -5 + var5, 4, 11, 0);
-            ul.h(var4_int, var5 - 4, 2, 4, var6Lifetime3);
-            ul.h(var4_int, var5 + 3, 2, 2, var6Lifetime3);
+            SoftwareRasterizer.fillRectangle(-1 + var4_int, -5 + var5, 4, 11, 0);
+            SoftwareRasterizer.fillRectangle(var4_int, var5 - 4, 2, 4, var6Lifetime3);
+            SoftwareRasterizer.fillRectangle(var4_int, var5 + 3, 2, 2, var6Lifetime3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,7 +10,7 @@ final class dl extends IntrusiveNode {
     final static void a(int param0, kc param1) {
         try {
           ji.a(true);
-          vj.a(param1.field_r, param1.field_l, param1.field_k);
+          SoftwareRasterizer.setRasterBuffer(param1.field_r, param1.field_l, param1.field_k);
           int var2_int = -40 % ((param0 - 27) / 52);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

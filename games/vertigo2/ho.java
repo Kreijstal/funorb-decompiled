@@ -87,8 +87,8 @@ final class ho {
         UiPanel var14 = null;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
-          om.field_D = bi.field_j;
-          qg.field_G = bi.field_e;
+          om.field_D = SoftwareRasterizer.field_j;
+          qg.field_G = SoftwareRasterizer.field_e;
           if (param1) {
             stackIn_4_0 = ko.field_P;
           } else {
@@ -207,7 +207,7 @@ final class ho {
               }
             }
           }
-          wc.field_m.a(param0 ^ 81, 360, -20 + (-124 + bi.field_j), 10, bi.field_e - 360 >> 1);
+          wc.field_m.a(param0 ^ 81, 360, -20 + (-124 + SoftwareRasterizer.field_j), 10, SoftwareRasterizer.field_e - 360 >> 1);
           he.field_x.a(77, wc.field_m.field_Fb, 24, 0, 0);
           lr.field_P.a(116, wc.field_m.field_Fb, -24 + wc.field_m.field_db, 24, 0);
           lr.field_P.field_Bb = vl.a(lr.field_P.field_db, 3, 0, 1, 11579568, 8421504);

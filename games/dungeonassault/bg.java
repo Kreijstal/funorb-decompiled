@@ -22,11 +22,11 @@ final class bg extends qe {
         var5 = DungeonAssault.field_K;
         super.a(param0);
         this.field_e.b(0, 0);
-        gf.e(41, 48, 599, 416);
+        SoftwareRasterizer.setClip(41, 48, 599, 416);
         for (var2 = 41; var2 < 599; var2 = var2 + df.field_c.field_E) {
           df.field_c.c(var2, 48);
         }
-        gf.b();
+        SoftwareRasterizer.resetClip();
         this.a(117, 122);
         this.a(20, 84, 117);
         var8 = (rj) (this.field_p.beginBackward(-24172));
@@ -61,8 +61,8 @@ final class bg extends qe {
         if (null != this.field_b) {
           var6 = 0;
           var3Lifetime1 = var6;
-          while (gf.field_b.length > var6) {
-            gf.field_b[var6] = nb.a(gf.field_b[var6], -50529028) >>> 2;
+          while (SoftwareRasterizer.field_b.length > var6) {
+            SoftwareRasterizer.field_b[var6] = nb.a(SoftwareRasterizer.field_b[var6], -50529028) >>> 2;
             var6++;
           }
           this.field_b.b(111);
@@ -402,10 +402,10 @@ final class bg extends qe {
             var6[var7] = 65793 * var8;
           }
           for (var7Lifetime1 = 3; var7Lifetime1 < 24; var7Lifetime1++) {
-            gf.d(66, param0 + var7Lifetime1, 490, 1285 * (-var7Lifetime1 + 24) + (14614528 - 131072 * var7Lifetime1), 128);
+            SoftwareRasterizer.drawHorizontalLineAlpha(66, param0 + var7Lifetime1, 490, 1285 * (-var7Lifetime1 + 24) + (14614528 - 131072 * var7Lifetime1), 128);
           }
-          gf.b(66, 2 + param0, 490, 7895160);
-          gf.b(66, 24 + param0, 490, 6771538);
+          SoftwareRasterizer.drawHorizontalLine(66, 2 + param0, 490, 7895160);
+          SoftwareRasterizer.drawHorizontalLine(66, 24 + param0, 490, 6771538);
           if (param1 != 48) {
             var13 = (String) null;
             this.a(false, 22, -55, 111, 82, (String) null);

@@ -902,14 +902,14 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (gi.a(true)) {
               var3 = true;
-              SoftwareRasterizer.f(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+              SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
               ee.c((byte) 14);
             }
             if (0 != bg.field_b) {
               var3 = true;
               int var5_intLifetime1 = 256 * ec.menuTransitionTicks / 40;
               if (var5_intLifetime1 > 0) {
-                SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, var5_intLifetime1);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, var5_intLifetime1);
               }
             }
             if (jf.a(obfuscationGuard + 14850) &&

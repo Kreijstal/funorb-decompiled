@@ -52,14 +52,14 @@ final class db implements ci {
           if (param4) {
             var7 = 16777215;
           }
-          vj.c(param1.field_o + param0, param3 + param1.field_i, param1.field_h, param1.field_q, this.field_i);
+          SoftwareRasterizer.fillRectangle(param1.field_o + param0, param3 + param1.field_i, param1.field_h, param1.field_q, this.field_i);
           var8 = this.field_q + param0 + param1.field_o;
           var9 = this.field_t + param1.field_i + param3;
-          vj.f(var8, var9, this.field_d, this.field_g, 5592405);
-          vj.c(var8, var9, this.field_d, this.field_g, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_d, this.field_g, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_d, this.field_g, var7);
           if (var11.field_D) {
-            vj.e(var8, var9, this.field_d + var8, this.field_g + var9, 1);
-            vj.e(this.field_d + var8, var9, var8, this.field_g + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_d + var8, this.field_g + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_d + var8, var9, var8, this.field_g + var9, 1);
           }
           if (null != this.field_n) {
             var10 = this.field_d + (this.field_q + this.field_j);

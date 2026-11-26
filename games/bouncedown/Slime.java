@@ -45,7 +45,7 @@ final class Slime {
         if (param1) {
           this.a((Platform[]) null, (PcmStreamMixer) null, 62, (PcmSample[]) null, -0.16860739722231136, (byte) 54);
         }
-        na.d();
+        SoftwareRasterizer.resetClip();
         var5 = 0;
         if (PcmResampler.field_g ||
           MusicPatchPcmStream.field_o != null &&
@@ -53,7 +53,7 @@ final class Slime {
           if (0 == param0) {
             var5 = 32 + param2 / 2;
             var4 = param2 / 2;
-            na.e(2, -32 + (2 + var5), -4 + param2, 156, 0);
+            SoftwareRasterizer.fillRectangle(2, -32 + (2 + var5), -4 + param2, 156, 0);
             ve.a(160, var5 - 32, cl.field_p, (byte) -99, param2, 0);
             gk.field_e.a(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
             jh.field_s.a(gd.field_b[nj.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
@@ -61,7 +61,7 @@ final class Slime {
           if (param0 == 1) {
             var4 = -1 + (-(param2 / 2) + 640);
             var5 = param2 / 2 + 32;
-            na.e(640 - param2 + 2, var5 - 30, param2 - 4, 156, 0);
+            SoftwareRasterizer.fillRectangle(640 - param2 + 2, var5 - 30, param2 - 4, 156, 0);
             ve.a(160, -32 + var5, cl.field_p, (byte) -116, param2, 640 - param2);
             gk.field_e.a(c.field_a, var4, var5 + 64, 16777215, -1);
             if (2 != field_a) {
@@ -75,13 +75,13 @@ final class Slime {
           if (param0 == 2) {
             var5 = 32 + (param2 / 2 + 240);
             var4 = param2 / 2;
-            na.e(2, 2 + (var5 - 32), param2 - 4, 156, 0);
+            SoftwareRasterizer.fillRectangle(2, 2 + (var5 - 32), param2 - 4, 156, 0);
             ve.a(160, -32 + var5, cl.field_p, (byte) -112, param2, 0);
             gk.field_e.a(bk.field_b, var4, var5 + 64, 16777215, -1);
             jh.field_s.a(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[db.field_S], var4, var5 + 64 + 24, 8454016, -1);
           }
         }
-        na.e(param2, 0, 512 + param2, 446);
+        SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
         if (this.field_p == 0) {
           var6 = new tg(100, 100);
           var8 = (int)((double)param2 + this.field_u) - 50;
@@ -148,7 +148,7 @@ final class Slime {
             MusicPatchPcmStream.field_o.field_d) && 0 < this.field_n) {
             var6.a(var4, var5);
           }
-          na.e(param2, 0, 512 + param2, 446);
+          SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
           if (this.field_i / 5 % 2 == 0 &&
             this.field_n > 0) {
             var6.c(-1 + var8, var9, 0);
@@ -167,9 +167,9 @@ final class Slime {
               null != MusicPatchPcmStream.field_o &&
               MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
-              na.d();
+              SoftwareRasterizer.resetClip();
               w.field_c[8 * param0 + 7].a(var4 - 25, var5 - 75);
-              na.e(param2, 0, 512 + param2, 446);
+              SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
             }
           }
           if (this.field_p == 2) {
@@ -186,9 +186,9 @@ final class Slime {
               MusicPatchPcmStream.field_o != null &&
               MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
-              na.d();
+              SoftwareRasterizer.resetClip();
               vb.field_m[2 + param0 * 3].b(var4, 0, -741572379, (int)this.field_o, var5);
-              na.e(param2, 0, 512 + param2, 446);
+              SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
             }
           }
           if (this.field_p == 3) {
@@ -196,10 +196,10 @@ final class Slime {
             if (PcmResampler.field_g ||
               MusicPatchPcmStream.field_o != null &&
               MusicPatchPcmStream.field_o.field_d) {
-              na.d();
+              SoftwareRasterizer.resetClip();
               var5 += 18;
               ci.field_G[param0].b(var4, 0, -741572379, (int)this.field_o, var5);
-              na.e(param2, 0, 512 + param2, 446);
+              SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
             }
           }
         }
@@ -651,22 +651,22 @@ final class Slime {
         var17 = Bounce.field_N;
         if (param13 < param9) {
           if (param9 < param10) {
-            ek.a(param4, na.field_d, param11, param15, param6, param12, param1, param9, param5, false, param14, param0, param10, param13, param2, param8, param3);
+            ek.a(param4, SoftwareRasterizer.field_d, param11, param15, param6, param12, param1, param9, param5, false, param14, param0, param10, param13, param2, param8, param3);
           } else {
             if (param13 >= param10) {
-              ek.a(param6, na.field_d, param1, param14, param8, param3, param2, param13, param12, false, param0, param15, param9, param10, param11, param4, param5);
+              ek.a(param6, SoftwareRasterizer.field_d, param1, param14, param8, param3, param2, param13, param12, false, param0, param15, param9, param10, param11, param4, param5);
             } else {
-              ek.a(param8, na.field_d, param2, param14, param6, param3, param1, param10, param5, false, param15, param0, param9, param13, param11, param4, param12);
+              ek.a(param8, SoftwareRasterizer.field_d, param2, param14, param6, param3, param1, param10, param5, false, param15, param0, param9, param13, param11, param4, param12);
             }
           }
         } else {
           if (param13 < param10) {
-            ek.a(param6, na.field_d, param1, param15, param4, param12, param11, param13, param3, false, param0, param14, param10, param9, param2, param8, param5);
+            ek.a(param6, SoftwareRasterizer.field_d, param1, param15, param4, param12, param11, param13, param3, false, param0, param14, param10, param9, param2, param8, param5);
           } else {
             if (param10 > param9) {
-              ek.a(param8, na.field_d, param2, param0, param4, param5, param11, param10, param3, false, param15, param14, param13, param9, param1, param6, param12);
+              ek.a(param8, SoftwareRasterizer.field_d, param2, param0, param4, param5, param11, param10, param3, false, param15, param14, param13, param9, param1, param6, param12);
             } else {
-              ek.a(param4, na.field_d, param11, param0, param8, param5, param2, param9, param12, false, param14, param15, param13, param10, param1, param6, param3);
+              ek.a(param4, SoftwareRasterizer.field_d, param11, param0, param8, param5, param2, param9, param12, false, param14, param15, param13, param10, param1, param6, param3);
             }
           }
         }

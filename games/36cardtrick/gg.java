@@ -77,8 +77,8 @@ final class gg {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        vj.a(var1.field_h, var1.field_i, var1.field_g);
-        vj.g(var1.field_k, var1.field_n, var1.field_m, var1.field_j);
+        SoftwareRasterizer.setRasterBuffer(var1.field_h, var1.field_i, var1.field_g);
+        SoftwareRasterizer.setClip(var1.field_k, var1.field_n, var1.field_m, var1.field_j);
         var1.field_h = null;
         lk.field_g.addLast(var1, 27362);
         if (param0 == 14756) {

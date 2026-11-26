@@ -29,14 +29,14 @@ final class tg {
             var7 = param1[1].field_u;
             param1[0].e(param4, param3);
             param1[2].e(param2 + param4 - var6, param3);
-            si.b(ia.field_i);
-            si.f(param4 + var5_int, param3, param4 - (-param2 + var6), param1[1].field_r + param3);
+            SoftwareRasterizer.saveClip(ia.field_i);
+            SoftwareRasterizer.intersectClip(param4 + var5_int, param3, param4 - (-param2 + var6), param1[1].field_r + param3);
             var8 = param4 + var5_int;
             var9 = param4 + param2 - var6;
             for (param4 = var8; param4 < var9; param4 = param4 + var7) {
               param1[1].e(param4, param3);
             }
-            si.a(ia.field_i);
+            SoftwareRasterizer.restoreClip(ia.field_i);
             return;
           }
           return;
@@ -292,7 +292,7 @@ final class tg {
                     return;
                   }
                   var18 = var18 + var20;
-                  var36Lifetime2 = var36Lifetime2 + si.field_e;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_e;
                   var25 = var25 + var27;
                   var29 = var29 + var31;
                   var17_int = var17_int + var19;
@@ -386,7 +386,7 @@ final class tg {
               var30 = var30 + var32;
               var21 = var21 + var23;
               var26 = var26 + var28;
-              var35Lifetime1 = var35Lifetime1 + si.field_e;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_e;
             }
             return;
           }

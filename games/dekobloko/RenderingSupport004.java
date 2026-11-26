@@ -106,11 +106,11 @@ abstract class RenderingSupport004 extends DualNode {
     final static void performAction0579(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         IterableNodeCollection.performAction1656(-9074);
         if (integerArgument2 == 20763) {
-          SoftwareRaster.performAction0663(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
+          SoftwareRaster.intersectClip(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
           return;
         }
         RenderingSupport004.computeInteger0581(119, 2);
-        SoftwareRaster.performAction0663(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
+        SoftwareRaster.intersectClip(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
     }
 
     public static void performAction0582(int integerArgument1) {

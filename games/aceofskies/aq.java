@@ -21,7 +21,7 @@ final class aq {
           Sprite var2 = var1.copy();
           for (int var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
-            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           oo.field_W.makeRasterTarget();
           var1.d(0, 0);

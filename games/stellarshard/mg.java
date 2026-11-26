@@ -171,7 +171,7 @@ final class mg {
                   if (param4 >= cc.field_c) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + ti.field_i;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_i;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -223,7 +223,7 @@ final class mg {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + ti.field_i;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_i;
               var10 = var10 + var12;
             }
             return;

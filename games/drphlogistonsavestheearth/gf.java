@@ -372,14 +372,14 @@ final class gf {
             if (26 == var17) {
               var13 = -this.field_a + 255;
               this.field_g.c();
-              wj.b(this.field_g.field_y / 2, this.field_g.field_w / 2, var13, 1);
+              SoftwareRasterizer.fillCircle(this.field_g.field_y / 2, this.field_g.field_w / 2, var13, 1);
               lb.field_C.a(119);
               var15 = (int)this.field_m + this.field_g.field_w / 2;
               var14 = (int)this.field_i + this.field_g.field_y / 2;
               var3 = 255;
               var4 = 128;
               var2 = 0;
-              wj.c(var14, var15, var13, 16777215, this.field_a);
+              SoftwareRasterizer.fillCircleAlpha(var14, var15, var13, 16777215, this.field_a);
               var21 = new int[255];
               var20 = var21;
               var16 = var20;
@@ -387,7 +387,7 @@ final class gf {
                 var18 = (var17 >> 5) + 1;
                 var16[var17] = (var3 / var18 << 8) + (var2 / var18 << 16) + var4 / var18;
               }
-              wj.a(var14 << 4, var15 << 4, var13 << 3, 254, var21);
+              SoftwareRasterizer.addRadialGlow(var14 << 4, var15 << 4, var13 << 3, 254, var21);
             } else {
               if (gg.field_n[this.field_I] != 0) {
                 this.field_g.a((int)this.field_i, (int)this.field_m, this.field_a);

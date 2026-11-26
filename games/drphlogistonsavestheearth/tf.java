@@ -223,7 +223,7 @@ final class tf extends ca {
         super.c(param0, 59, param2);
         wi.field_e.b(this.field_lb, param2 + (this.field_w >> 1), 103 + param0, 16777215, -1);
         if (this.field_ob != null) {
-          wj.g(20 + param2, 120 + (param0 - 7), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param2, 120 + (param0 - 7), 260, 8421504);
           wi.field_e.a(this.field_ob, param2 + 20, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, wi.field_e.field_x);
         }
         if (param1 >= 26) {

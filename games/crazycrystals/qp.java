@@ -9,7 +9,7 @@ final class qp extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         hd.a(false);
-        kh.a(param0, param4, param2, param1);
+        SoftwareRasterizer.intersectClip(param0, param4, param2, param1);
         if (param3 != 73) {
           qp.a(90, 81, -14, (byte) -52, 17);
         }
@@ -151,7 +151,7 @@ final class qp extends IntrusiveNode {
                   if (param5 >= nb.field_b) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + kh.field_l;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_l;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -202,7 +202,7 @@ final class qp extends IntrusiveNode {
               if (nb.field_b <= param5) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + kh.field_l;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_l;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

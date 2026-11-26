@@ -980,11 +980,11 @@ final class Asteroid {
           }
           if (kb.field_b != 0) {
             hf.field_c[2].a(64, var5, 110, var6, var4);
-            SoftwareRasterizer.a(-var8 + var4, -var9 + var5, this.field_i / 40 + 1, 16776960, 128);
+            SoftwareRasterizer.fillCircleAlpha(-var8 + var4, -var9 + var5, this.field_i / 40 + 1, 16776960, 128);
             SoftwareRasterizer.fillCircle(-var8 + var4, -var9 + var5, 1 + this.field_n / 60, 16777215);
           } else {
             hf.field_c[0].a(128, var5, 125, var6, var4);
-            SoftwareRasterizer.a(var4 - var8, -var9 + var5, 1 + this.field_i / 30, 16776960, 128);
+            SoftwareRasterizer.fillCircleAlpha(var4 - var8, -var9 + var5, 1 + this.field_i / 30, 16776960, 128);
             SoftwareRasterizer.fillCircle(var4 - var8, var5 - var9, this.field_n / 40 + 1, 16777215);
           }
         } else {
@@ -1053,15 +1053,15 @@ final class Asteroid {
                                 break;
                               case 18:
                                 if (this.field_e * 8 < 255) {
-                                  SoftwareRasterizer.a(var4, var5, 2 * this.field_e, 65280, -(this.field_e * 8) + 255);
+                                  SoftwareRasterizer.fillCircleAlpha(var4, var5, 2 * this.field_e, 65280, -(this.field_e * 8) + 255);
                                 }
                                 if (this.field_e * 16 >= 255) {
                                   break;
                                 }
-                                SoftwareRasterizer.a(var4, var5, this.field_e, 16776960, -(this.field_e * 16) + 255);
+                                SoftwareRasterizer.fillCircleAlpha(var4, var5, this.field_e, 16776960, -(this.field_e * 16) + 255);
                                 break;
                               case 19:
-                                SoftwareRasterizer.a((this.field_c >> 4) + var4, (this.field_d >> 4) + var5, this.field_g + 4, 16711680, 32);
+                                SoftwareRasterizer.fillCircleAlpha((this.field_c >> 4) + var4, (this.field_d >> 4) + var5, this.field_g + 4, 16711680, 32);
                                 SoftwareRasterizer.fillCircle(var4, var5, this.field_g, 16777215);
                                 break;
                               case 25:
@@ -1083,8 +1083,8 @@ final class Asteroid {
                                 if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
-                                SoftwareRasterizer.b(var4 - this.field_g / 2, -2 + var5, this.field_g - this.field_e * this.field_g / 4, 4, 16744576);
-                                SoftwareRasterizer.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
+                                SoftwareRasterizer.fillRectangle(var4 - this.field_g / 2, -2 + var5, this.field_g - this.field_e * this.field_g / 4, 4, 16744576);
+                                SoftwareRasterizer.drawRectangleOutline(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 break;
                               case 28:
                                 wi.field_i[this.field_m].a(96, var5, 116, 0, var4);
@@ -1105,8 +1105,8 @@ final class Asteroid {
                                 if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
-                                SoftwareRasterizer.b(var4 - this.field_g / 2, var5 - 2, -(this.field_e * this.field_g / 72) + this.field_g, 4, 16744576);
-                                SoftwareRasterizer.g(-(this.field_g / 2) + var4, var5 - 2, this.field_g, 4, 16711680);
+                                SoftwareRasterizer.fillRectangle(var4 - this.field_g / 2, var5 - 2, -(this.field_e * this.field_g / 72) + this.field_g, 4, 16744576);
+                                SoftwareRasterizer.drawRectangleOutline(-(this.field_g / 2) + var4, var5 - 2, this.field_g, 4, 16711680);
                                 break;
                               case 29:
                                 wi.field_i[this.field_m].a(128, var5, 92, 0, var4);
@@ -1125,8 +1125,8 @@ final class Asteroid {
                                   }
                                 }
                                 if (-1 == kd.currentScreenIndex) {
-                                  SoftwareRasterizer.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 128, 4, 16744576);
-                                  SoftwareRasterizer.g(var4 - this.field_g / 2, var5 - 2, this.field_g, 4, 16711680);
+                                  SoftwareRasterizer.fillRectangle(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 128, 4, 16744576);
+                                  SoftwareRasterizer.drawRectangleOutline(var4 - this.field_g / 2, var5 - 2, this.field_g, 4, 16711680);
                                 }
                                 break;
                               case 30:
@@ -1148,8 +1148,8 @@ final class Asteroid {
                                 if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
-                                SoftwareRasterizer.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_g * this.field_e / 256, 4, 16744576);
-                                SoftwareRasterizer.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
+                                SoftwareRasterizer.fillRectangle(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_g * this.field_e / 256, 4, 16744576);
+                                SoftwareRasterizer.drawRectangleOutline(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 break;
                               case 31:
                               default:
@@ -1194,8 +1194,8 @@ final class Asteroid {
                                   }
                                 }
                                 if (kd.currentScreenIndex == -1) {
-                                  SoftwareRasterizer.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 36, 4, 16744576);
-                                  SoftwareRasterizer.g(-(this.field_g / 2) + var4, -2 + var5, this.field_g, 4, 16711680);
+                                  SoftwareRasterizer.fillRectangle(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 36, 4, 16744576);
+                                  SoftwareRasterizer.drawRectangleOutline(-(this.field_g / 2) + var4, -2 + var5, this.field_g, 4, 16711680);
                                 }
                                 break;
                               case 26:
@@ -1215,13 +1215,13 @@ final class Asteroid {
                                   }
                                 }
                                 if (kd.currentScreenIndex == -1) {
-                                  SoftwareRasterizer.b(var4 - this.field_g / 2, -2 + var5, -(this.field_g * this.field_e / 12) + this.field_g, 4, 16744576);
-                                  SoftwareRasterizer.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
+                                  SoftwareRasterizer.fillRectangle(var4 - this.field_g / 2, -2 + var5, -(this.field_g * this.field_e / 12) + this.field_g, 4, 16744576);
+                                  SoftwareRasterizer.drawRectangleOutline(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 }
                                 break;
                               case 17:
                                 if (255 > this.field_e * 16) {
-                                  SoftwareRasterizer.a(var4, var5, this.field_e * 4, 65280, 255 - 16 * this.field_e);
+                                  SoftwareRasterizer.fillCircleAlpha(var4, var5, this.field_e * 4, 65280, 255 - 16 * this.field_e);
                                 }
                                 break;
                               case 11:
@@ -1271,7 +1271,7 @@ final class Asteroid {
               } else {
                 var6 = (int)(128.0 * Math.atan2((double)(-this.field_c), (double)(-this.field_d)) / 3.141592653589793);
                 hf.field_c[3].a(128, var5, 89, var6, var4);
-                SoftwareRasterizer.a(-var8 + var4, -var9 + var5, 1 + this.field_i / 20, 16776960, 128);
+                SoftwareRasterizer.fillCircleAlpha(-var8 + var4, -var9 + var5, 1 + this.field_i / 20, 16776960, 128);
                 SoftwareRasterizer.fillCircle(var4 - var8, -var9 + var5, 1 + this.field_n / 24, 16777215);
               }
             } else {
@@ -1282,7 +1282,7 @@ final class Asteroid {
                 var9 = this.field_d * 12 / var10;
                 var8 = this.field_c * 12 / var10;
               }
-              SoftwareRasterizer.a(var4 - var8, -var9 + var5, this.field_i / 24 + 1, 16776960, 128);
+              SoftwareRasterizer.fillCircleAlpha(var4 - var8, -var9 + var5, this.field_i / 24 + 1, 16776960, 128);
               SoftwareRasterizer.fillCircle(var4 - var8, var5 - var9, 1 + this.field_n / 30, 16777215);
             }
           } else {
@@ -1293,7 +1293,7 @@ final class Asteroid {
               var9 = 12 * this.field_d / var10;
               var8 = 12 * this.field_c / var10;
             }
-            SoftwareRasterizer.a(-var8 + var4, var5 - var9, 1 + this.field_i / 30, 16776960, 128);
+            SoftwareRasterizer.fillCircleAlpha(-var8 + var4, var5 - var9, 1 + this.field_i / 30, 16776960, 128);
             SoftwareRasterizer.fillCircle(-var8 + var4, -var9 + var5, this.field_n / 40 + 1, 16777215);
           }
         }

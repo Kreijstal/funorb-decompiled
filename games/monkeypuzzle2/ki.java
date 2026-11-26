@@ -286,8 +286,8 @@ final class ki extends DualLinkNode {
             this.field_m > 0 ||
             this.field_w == 5 &&
             1 < this.field_m) {
-            ge.c((int)this.field_B, (int)this.field_q, 16, 16777215, 100);
-            ge.e((int)this.field_B, (int)this.field_q, 16, 1);
+            SoftwareRasterizer.fillCircleAlpha((int)this.field_B, (int)this.field_q, 16, 16777215, 100);
+            SoftwareRasterizer.drawCircleOutline((int)this.field_B, (int)this.field_q, 16, 1);
           }
           if (this.field_I != null) {
             this.field_I.c((int)((float)this.field_G + this.field_B), (int)((float)this.field_y + this.field_q));

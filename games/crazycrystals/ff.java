@@ -13,7 +13,7 @@ abstract class ff extends te {
         if (!param1) {
           this.b((byte) 13);
         }
-        kh.d(0, 0, 480, 480, 0, kb.field_g);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 480, 480, 0, kb.field_g);
         oj.a(false, kk.field_a, 480, 480, (double)(-jj.field_b) + (double)kk.field_a.length * param0, 0, param0, 0, (byte) -32, param0 * (double)kk.field_a[0].length);
     }
 

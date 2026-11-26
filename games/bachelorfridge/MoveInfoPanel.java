@@ -493,8 +493,8 @@ final class MoveInfoPanel {
                     CreatureActor.field_h.drawText(Integer.toString(var15_int), 2 + (this.field_d.field_kb + var8.field_kb), var8.field_rb + this.field_d.field_rb + 20, 2, -1);
                   }
                 }
-                SoftwareRasterizer.d(this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb, (var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb + 6, 6 + (var8.field_rb + this.field_d.field_rb) + (var8.field_p >> 1), 65793, 4);
-                SoftwareRasterizer.d(this.field_d.field_kb + var8.field_kb + 1, 1 + (this.field_d.field_rb + var8.field_rb), 5 + ((var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb), 5 + (var8.field_p >> 1) + (var8.field_rb + this.field_d.field_rb), 16711680, 2);
+                SoftwareRasterizer.drawThickLine(this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb, (var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb + 6, 6 + (var8.field_rb + this.field_d.field_rb) + (var8.field_p >> 1), 65793, 4);
+                SoftwareRasterizer.drawThickLine(this.field_d.field_kb + var8.field_kb + 1, 1 + (this.field_d.field_rb + var8.field_rb), 5 + ((var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb), 5 + (var8.field_p >> 1) + (var8.field_rb + this.field_d.field_rb), 16711680, 2);
               }
               var8 = (jj) (this.field_d.children.nextForward(0));
             }
@@ -543,7 +543,7 @@ final class MoveInfoPanel {
                 if (var16 + var14_int > i.field_a.field_rb) {
                   var14_int = var14_int + (-var14_int - var16 + i.field_a.field_rb);
                 }
-                SoftwareRasterizer.a(13 + var13, var14_int, var15_int + 6, var16, 10, 65793, 128);
+                SoftwareRasterizer.fillRoundedRectangleAlpha(13 + var13, var14_int, var15_int + 6, var16, 10, 65793, 128);
                 CreatureActor.field_h.drawText(var30, var13 + 20, var14_int + 16, 0, -1);
                 CreatureActor.field_h.drawParagraph(var29, var13 + 20, 20 + var14_int, 200, 200, 0, -1, 0, 0, 0);
               }
@@ -572,7 +572,7 @@ final class MoveInfoPanel {
                 if (i.field_a.field_rb < var13 + var18) {
                   var13 = var13 + (i.field_a.field_rb - var13 - var18);
                 }
-                SoftwareRasterizer.a(var12 + 13, var13, 6 + var17, var18, 10, 65793, 164);
+                SoftwareRasterizer.fillRoundedRectangleAlpha(var12 + 13, var13, 6 + var17, var18, 10, 65793, 164);
                 CreatureActor.field_h.drawText(var14, 20 + var12, var13 + 20, 0, -1);
                 CreatureActor.field_h.drawParagraph(var15, 20 + var12, var13 + 24, 200, 200, 0, -1, 0, 0, 10);
                 var19 = CreatureActor.field_h.measureWrappedHeight(var15, 200, 8);
@@ -962,7 +962,7 @@ final class MoveInfoPanel {
           this.field_b = a.a(12889, 64, 16763049, 46335);
           this.field_k = new Sprite(84, 84);
           this.field_k.b();
-          SoftwareRasterizer.a(672, 672, 672, 128, this.field_o);
+          SoftwareRasterizer.addRadialGlow(672, 672, 672, 128, this.field_o);
           hga.field_U.a((byte) 114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

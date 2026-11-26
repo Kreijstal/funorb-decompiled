@@ -97,22 +97,22 @@ final class li {
             wm.field_c.field_A = -16;
           }
           bn.field_f.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var1_int = 0;
           for (var2 = 0; var2 < 7; var2++) {
             for (var3 = 0; var3 < 7; var3++) {
               if (null != qj.field_c[var1_int]) {
-                gf.b(var3 * 36 + 4, 4 + 36 * var2, 32, 32, 16777215);
+                SoftwareRasterizer.fillRectangle(var3 * 36 + 4, 4 + 36 * var2, 32, 32, 16777215);
               }
               var1_int++;
             }
           }
           wm.field_c.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           bn.field_f.e(16, 16, 8454143);
-          gf.d(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
+          SoftwareRasterizer.blurRectangle(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
           bn.field_f.e(16, 16, 0);
-          gf.d(4, 4, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
           jh.b();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -91,69 +91,69 @@ final class ve {
               var19 = param1 + var8 * param0 / (var8 + var9);
               var18 = param1 + var8 * param0 / (var8 + var9);
             }
-            na.b(AccountNameAvailabilityValidator.field_j);
+            SoftwareRasterizer.saveClip(AccountNameAvailabilityValidator.field_j);
             if (param2[0] != null) {
-              na.c(param5, param1, var16, var18);
+              SoftwareRasterizer.intersectClip(param5, param1, var16, var18);
               param2[0].a(param5, param1);
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[2]) {
-              na.c(var17, param1, var10, var18);
+              SoftwareRasterizer.intersectClip(var17, param1, var10, var18);
               param2[2].a(var13, param1);
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[6] != null) {
-              na.c(param5, var19, var16, var11);
+              SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
               param2[6].a(param5, var15);
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[8]) {
-              na.c(var17, var19, var10, var11);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param2[8].a(var13, var15);
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[1] != null &&
               0 != param2[1].field_t) {
-              na.c(var16, param1, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param1, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_t) {
                 param2[1].a(var20, param1);
               }
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[7] != null &&
               param2[7].field_t != 0) {
-              na.c(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param2[7].field_t) {
                 param2[7].a(var20Lifetime1, var15);
               }
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[3] &&
               param2[3].field_o != 0) {
-              na.c(param5, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param5, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_o) {
                 param2[3].a(param5, var20Lifetime2);
               }
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[5] != null &&
               param2[5].field_o != 0) {
-              na.c(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_o) {
                 param2[5].a(var13, var20Lifetime3);
               }
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[4] &&
               param2[4].field_t != 0 &&
               param2[4].field_o != 0) {
-              na.c(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param2[4].field_o) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param2[4].field_t) {
                   param2[4].a(var21, var20Lifetime4);
                 }
               }
-              na.a(AccountNameAvailabilityValidator.field_j);
+              SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
               return;
             }
             return;
@@ -212,8 +212,8 @@ final class ve {
     final static void a(int param0) {
         n var1 = (n) (qb.field_g.removeLast((byte) 60));
         if (var1 != null) {
-          na.a(var1.field_g, var1.field_k, var1.field_h);
-          na.e(var1.field_l, var1.field_j, var1.field_i, var1.field_n);
+          SoftwareRasterizer.setRasterBuffer(var1.field_g, var1.field_k, var1.field_h);
+          SoftwareRasterizer.setClip(var1.field_l, var1.field_j, var1.field_i, var1.field_n);
           if (param0 > -118) {
             ve.b((byte) -90);
           }

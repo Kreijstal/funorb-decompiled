@@ -51,7 +51,7 @@ final class ValidationStatus {
     final static void performAction1570(boolean booleanArgument1, RgbSprite rgbSpriteArgument2) {
         try {
           IterableNodeCollection.performAction1656(-9074);
-          SoftwareRaster.performAction0645(rgbSpriteArgument2.integerArrayState0024, rgbSpriteArgument2.integerState0254, rgbSpriteArgument2.integerState0260);
+          SoftwareRaster.setRasterBuffer(rgbSpriteArgument2.integerArrayState0024, rgbSpriteArgument2.integerState0254, rgbSpriteArgument2.integerState0260);
           if (!booleanArgument1) {
             ValidationStatus.performAction1568(60, 93, -89);
           }

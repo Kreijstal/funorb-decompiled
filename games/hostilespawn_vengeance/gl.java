@@ -55,17 +55,17 @@ final class gl {
         int var7 = param0 + param2 + 15 >> 4;
         int var8 = param1 - param2 >> 4;
         int var9 = param1 + param2 + 15 >> 4;
-        if (var6 < si.field_b) {
-          var6 = si.field_b;
+        if (var6 < SoftwareRasterizer.field_b) {
+          var6 = SoftwareRasterizer.field_b;
         }
-        if (var7 > si.field_l) {
-          var7 = si.field_l;
+        if (var7 > SoftwareRasterizer.field_l) {
+          var7 = SoftwareRasterizer.field_l;
         }
-        if (var8 < si.field_j) {
-          var8 = si.field_j;
+        if (var8 < SoftwareRasterizer.field_j) {
+          var8 = SoftwareRasterizer.field_j;
         }
-        if (var9 > si.field_a) {
-          var9 = si.field_a;
+        if (var9 > SoftwareRasterizer.field_a) {
+          var9 = SoftwareRasterizer.field_a;
         }
         int var10 = (var6 << 4) - param0;
         var10 = var10 * var10;
@@ -85,8 +85,8 @@ final class gl {
         int var19 = var17 - var16;
         int var20 = var18 - var17;
         int var21 = var20 - var19;
-        int var22 = var6 + var8 * si.field_e;
-        int var23 = si.field_e + var6 - var7;
-        gl.a(0, 0, 0, 0, 0, var15, var5, var22, si.field_i, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        int var22 = var6 + var8 * SoftwareRasterizer.field_e;
+        int var23 = SoftwareRasterizer.field_e + var6 - var7;
+        gl.a(0, 0, 0, 0, 0, var15, var5, var22, SoftwareRasterizer.field_i, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 }

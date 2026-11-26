@@ -170,24 +170,24 @@ class DualLinkNode extends IntrusiveNode {
         int var10 = 0;
         var10 = DungeonAssault.field_K;
         try {
-          gf.b(param1, param4, param2 + 1, 10000536);
-          gf.b(param1, param3 + param4, 1 + param2, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param4, param2 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param3 + param4, 1 + param2, 12105912);
           var5_int = 1;
           var6 = param3;
           if (param0 != 2) {
             field_s = (String) null;
           }
-          if (gf.field_f > var5_int + param4) {
-            var5_int = -param4 + gf.field_f;
+          if (SoftwareRasterizer.field_f > var5_int + param4) {
+            var5_int = -param4 + SoftwareRasterizer.field_f;
           }
-          if (var6 + param4 > gf.field_e) {
-            var6 = -param4 + gf.field_e;
+          if (var6 + param4 > SoftwareRasterizer.field_e) {
+            var6 = -param4 + SoftwareRasterizer.field_e;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + var7 * 48 / param3;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            gf.field_b[param1 + (param4 + var7) * gf.field_i] = var9;
-            gf.field_b[(var7 + param4) * gf.field_i + (param1 + param2)] = var9;
+            SoftwareRasterizer.field_b[param1 + (param4 + var7) * SoftwareRasterizer.field_i] = var9;
+            SoftwareRasterizer.field_b[(var7 + param4) * SoftwareRasterizer.field_i + (param1 + param2)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

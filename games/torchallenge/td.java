@@ -109,13 +109,13 @@ final class td {
           var1 = new Sprite(540, 140);
           FullscreenFocusCanvas.a(-32, var1);
           oc.c();
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           jc.field_c = 0;
           AccountServiceResult.a(3);
           var2 = var1.c();
           for (var3 = 0; 15 > var3; var3++) {
             var2.drawMask(-2, -2, 16777215);
-            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ul.field_k.d();
           var1.drawHalfSize(0, 0);

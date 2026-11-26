@@ -52,17 +52,17 @@ abstract class ic implements w {
           var7_int = 48 + (l.field_f.b(param0) + nj.field_f[param1]);
         }
         jf.field_n[0].e(param4 - var7_int / 2, -(jf.field_n[0].field_x / 2) + (2 + param6) + (-(l.field_f.field_N / 2) + 2));
-        ti.d(-(var7_int / 2) + (param4 + jf.field_n[0].field_w), 0, -jf.field_n[2].field_w + param4 + var7_int / 2, 480);
+        SoftwareRasterizer.setClip(-(var7_int / 2) + (param4 + jf.field_n[0].field_w), 0, -jf.field_n[2].field_w + param4 + var7_int / 2, 480);
         for (var8_int = jf.field_n[0].field_w + param4 - var7_int / 2; -jf.field_n[2].field_w + var7_int / 2 + param4 > var8_int; var8_int = var8_int + jf.field_n[1].field_w) {
           jf.field_n[1].e(var8_int, 2 + (2 + param6) + (-(l.field_f.field_N / 2) - jf.field_n[0].field_x / 2));
         }
-        ti.b();
+        SoftwareRasterizer.resetClip();
         jf.field_n[2].e(-jf.field_n[2].field_w + (param4 + var7_int / 2), 2 + (param6 - (-2 + l.field_f.field_N / 2)) - jf.field_n[0].field_x / 2);
         if (!(nj.field_f[param1] <= 0)) {
-          ti.a(param4 - (var7_int / 2 - 12) << 4, param6 + 2 - (l.field_f.field_N / 2 - 2) << 4, 512, nj.field_f[param1] * 4, ei.field_I);
-          ti.a(-14 + (var7_int / 2 + param4) << 4, -(l.field_f.field_N / 2) + 2 + param6 + 2 << 4, 512, nj.field_f[param1] * 4, ei.field_I);
-          ti.a(param4 - (var7_int / 2 - 12) << 4, -(l.field_f.field_N / 2) + (2 + param6 + 2) << 4, 256, nj.field_f[param1] * 2, ei.field_B);
-          ti.a(-14 + (var7_int / 2 + param4) << 4, 2 - l.field_f.field_N / 2 + (2 + param6) << 4, 256, nj.field_f[param1] * 2, ei.field_B);
+          SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, param6 + 2 - (l.field_f.field_N / 2 - 2) << 4, 512, nj.field_f[param1] * 4, ei.field_I);
+          SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, -(l.field_f.field_N / 2) + 2 + param6 + 2 << 4, 512, nj.field_f[param1] * 4, ei.field_I);
+          SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, -(l.field_f.field_N / 2) + (2 + param6 + 2) << 4, 256, nj.field_f[param1] * 2, ei.field_B);
+          SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, 2 - l.field_f.field_N / 2 + (2 + param6) << 4, 256, nj.field_f[param1] * 2, ei.field_B);
         }
         if (param3) {
           return;

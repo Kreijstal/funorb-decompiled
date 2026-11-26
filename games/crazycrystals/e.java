@@ -122,7 +122,7 @@ final class e {
           var9Lifetime1 = var17.field_u;
           hd.a(false);
           var17.a();
-          kh.e(0, 0, kh.field_l, kh.field_d);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d);
           var15 = new dl(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();

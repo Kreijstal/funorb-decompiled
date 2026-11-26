@@ -28,8 +28,8 @@ final class km extends sd {
             var8 = param3[1].field_u;
             param3[0].d(param1, param0, param4);
             param3[2].d(-var7 + param2 + param1, param0, param4);
-            si.b(ia.field_i);
-            si.f(param1 + var6_int, param0, param2 + (param1 - var7), param0 + param3[1].field_r);
+            SoftwareRasterizer.saveClip(ia.field_i);
+            SoftwareRasterizer.intersectClip(param1 + var6_int, param0, param2 + (param1 - var7), param0 + param3[1].field_r);
             var9 = param1 + var6_int;
             if (param5 <= 107) {
               return;
@@ -38,7 +38,7 @@ final class km extends sd {
             for (param1 = var9; var10 > param1; param1 = param1 + var8) {
               param3[1].d(param1, param0, param4);
             }
-            si.a(ia.field_i);
+            SoftwareRasterizer.restoreClip(ia.field_i);
             return;
           }
           return;
@@ -106,7 +106,7 @@ final class km extends sd {
             im.field_e.c(hj.field_t, 98);
           }
           hj.field_t.a(param2, param1, 127, param0);
-          si.d();
+          SoftwareRasterizer.clearRaster();
           if (param3 <= 122) {
             int[] var5 = (int[]) null;
             km.a((byte) -37, 35, -17, (int[]) null, 25, -125, (byte) 42, 124, 121, 123, 63);
@@ -215,9 +215,9 @@ final class km extends sd {
                     var25 = var20 >> 2;
                     var26 = var15 >> 2;
                     var27 = -(param3[-(param9 * var24 / param10) + param9] & 255) + 256;
-                    var28 = var25 + var26 * si.field_e;
-                    var29 = si.field_i[var28];
-                    si.field_i[var28] = ll.a(ua.a(16711680, var27 * ua.a(var29, 65280)) >> 8, ua.a(16711935, var27 * ua.a(16711935, var29) >> 8));
+                    var28 = var25 + var26 * SoftwareRasterizer.field_e;
+                    var29 = SoftwareRasterizer.field_i[var28];
+                    SoftwareRasterizer.field_i[var28] = ll.a(ua.a(16711680, var27 * ua.a(var29, 65280)) >> 8, ua.a(16711935, var27 * ua.a(16711935, var29) >> 8));
                   }
                 } else if (param6 != 2 &&
                   var13 < var23) {
@@ -226,9 +226,9 @@ final class km extends sd {
                     var25 = var20 >> 2;
                     var26 = var15 >> 2;
                     var27 = -(param3[-(var24 * param9 / param4) + param9] & 255) + 256;
-                    var28 = var25 + var26 * si.field_e;
-                    var29 = si.field_i[var28];
-                    si.field_i[var28] = ll.a(ua.a(var27 * ua.a(var29, 65280) >> 8, 65280), ua.a(ua.a(var29, 16711935) * var27 >> 8, 16711935));
+                    var28 = var25 + var26 * SoftwareRasterizer.field_e;
+                    var29 = SoftwareRasterizer.field_i[var28];
+                    SoftwareRasterizer.field_i[var28] = ll.a(ua.a(var27 * ua.a(var29, 65280) >> 8, 65280), ua.a(ua.a(var29, 16711935) * var27 >> 8, 16711935));
                   }
                 } else {
                   var24 = var21 * var12 - var19 >> 2;
@@ -240,9 +240,9 @@ final class km extends sd {
                     var26 = var20 >> 2;
                     var27 = var15 >> 2;
                     var28 = -(param3[param9 - (var24 << 2) * param9 / var25 / var14] & 255) + 256;
-                    var29 = var26 + si.field_e * var27;
-                    var30 = si.field_i[var29];
-                    si.field_i[var29] = ll.a(ua.a(var28 * ua.a(65280, var30) >> 8, 65280), ua.a(var28 * ua.a(var30, 16711935) >> 8, 16711935));
+                    var29 = var26 + SoftwareRasterizer.field_e * var27;
+                    var30 = SoftwareRasterizer.field_i[var29];
+                    SoftwareRasterizer.field_i[var29] = ll.a(ua.a(var28 * ua.a(65280, var30) >> 8, 65280), ua.a(var28 * ua.a(var30, 16711935) >> 8, 16711935));
                   }
                 }
               }

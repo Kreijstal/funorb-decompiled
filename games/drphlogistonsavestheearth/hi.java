@@ -39,7 +39,7 @@ final class hi {
             this.field_k[var2] >= 0 &&
             5.0 < this.field_b[var2] &&
             this.field_e[var2] > 5.0) {
-            wj.c((int)this.field_b[var2], (int)this.field_e[var2], (int)this.field_c[var2], this.field_f[var2], this.field_k[var2]);
+            SoftwareRasterizer.fillCircleAlpha((int)this.field_b[var2], (int)this.field_e[var2], (int)this.field_c[var2], this.field_f[var2], this.field_k[var2]);
           }
         }
         var3 = 39 / ((param0 - 56) / 63);

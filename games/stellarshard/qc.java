@@ -648,7 +648,7 @@ final class qc {
                   var25 = var25 + var27;
                   var26 = var26 + var28;
                   var29 = var29 + var31;
-                  var36Lifetime2 = var36Lifetime2 + ti.field_i;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_i;
                   var30 = var30 + var32;
                   var18 = var18 + var20;
                   var21 = var21 + var23;
@@ -803,7 +803,7 @@ final class qc {
               var21 = var21 + var23;
               var30 = var30 + var32;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + ti.field_i;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_i;
               var22 = var22 + var24;
               var25 = var25 + var27;
               var17_int = var17_int + var19;

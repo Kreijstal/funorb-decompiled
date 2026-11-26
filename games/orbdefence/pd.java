@@ -100,7 +100,7 @@ final class pd extends IntrusiveNode {
         if (!this.field_n) {
         }
         if (12 == this.field_y) {
-          ul.a(var4 << 4, var5 << 4, 64, 255, ki.field_f);
+          SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, 64, 255, ki.field_f);
           return;
         }
         if (1 == this.field_y) {
@@ -166,13 +166,13 @@ final class pd extends IntrusiveNode {
                   var18 = var23 + (var7 * (var15 + var24) >> 12);
                   decompiledFrameRemainder0 = !(var17 < 0);
                   if ((decompiledFrameRemainder0) &&
-                    (decompiledFrameRemainder0 = !(ul.field_f <= var17)) &&
+                    (decompiledFrameRemainder0 = !(SoftwareRasterizer.field_f <= var17)) &&
                     (decompiledFrameRemainder0 = !(var18 < 0)) &&
-                    (decompiledFrameRemainder0 = !(ul.field_l <= var18))) {
+                    (decompiledFrameRemainder0 = !(SoftwareRasterizer.field_l <= var18))) {
                     var21 = (255 & var30.field_v[var16]) >> 2;
                     var19 = (16711680 & var30.field_v[var16]) >> 18;
                     var20 = (65280 & var30.field_v[var16]) >> 10;
-                    var26 = ul.field_b[ul.field_f * var18 + var17];
+                    var26 = SoftwareRasterizer.field_b[SoftwareRasterizer.field_f * var18 + var17];
                     var21 = var21 + ((var26 & 255) >> 1);
                     var20 = var20 + (var26 >> 9 & 127);
                     var19 = var19 + (127 & var26 >> 17);
@@ -199,7 +199,7 @@ final class pd extends IntrusiveNode {
           var16Lifetime1 = -(var13Lifetime1 >> 1) + var5 + (this.field_z * this.field_u + var14Lifetime1) % var13Lifetime1;
           var17Lifetime1 = var14Lifetime1 * var14Lifetime1 % var12Lifetime1 - ((var12Lifetime1 >> 1) - var4);
           var18Lifetime1 = var5 - (var13Lifetime1 >> 1) + var14Lifetime1 * var14Lifetime1 % var13Lifetime1;
-          ul.f(var15Lifetime1, var16Lifetime1, var17Lifetime1, var18Lifetime1, 16777215, 200);
+          SoftwareRasterizer.addLineWithIntensity(var15Lifetime1, var16Lifetime1, var17Lifetime1, var18Lifetime1, 16777215, 200);
         }
         if (param1 <= 73) {
           this.a(68, (byte) 10, -119);

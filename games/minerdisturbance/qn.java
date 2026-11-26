@@ -114,7 +114,7 @@ final class qn extends hc {
           }
           if (ha.field_d.field_C >= var10) {
             ArchiveProvider.a(ha.field_d, 125);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clearRaster();
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
@@ -149,7 +149,7 @@ final class qn extends hc {
           }
           if (ha.field_d.field_C >= var10Lifetime1) {
             ArchiveProvider.a(ha.field_d, 125);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clearRaster();
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);

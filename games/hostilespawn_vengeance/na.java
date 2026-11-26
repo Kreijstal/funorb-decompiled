@@ -49,7 +49,7 @@ final class na {
           if (var7 == -1) {
             var7 = this.field_i.field_F + this.field_i.field_y;
           }
-          var8 = si.field_e >> 2;
+          var8 = SoftwareRasterizer.field_e >> 2;
           var9 = this.field_i.a(param3);
           var10 = this.field_i.field_F + this.field_i.field_y;
           var11 = 1;
@@ -75,15 +75,15 @@ final class na {
             }
           }
           var12 = param1;
-          if (var9 + (var12 + var5_int) > si.field_e) {
-            var12 = -var9 + si.field_e - var5_int;
+          if (var9 + (var12 + var5_int) > SoftwareRasterizer.field_e) {
+            var12 = -var9 + SoftwareRasterizer.field_e - var5_int;
           }
           var13Lifetime1 = 32 + (param2 - this.field_i.field_N);
-          if (var6 + var13Lifetime1 + var10 > si.field_k) {
+          if (var6 + var13Lifetime1 + var10 > SoftwareRasterizer.field_k) {
             var13Lifetime1 = -var6 + param2 - var10;
           }
-          si.a(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_f);
-          si.c(1 + var12, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + var10 + var6, this.field_a);
+          SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_f);
+          SoftwareRasterizer.fillRectangle(1 + var12, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + var10 + var6, this.field_a);
           this.field_i.a(param3, this.field_p + var12, var13Lifetime1 + this.field_r, var9, var10, this.field_k, -1, param0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,16 +208,16 @@ final class na {
           var5_int = this.field_i.a(param2);
           var6 = this.field_i.field_F + this.field_i.field_N;
           var7 = param1;
-          if (si.field_e < var7 + var5_int + 6) {
-            var7 = -var5_int + (si.field_e - 6);
+          if (SoftwareRasterizer.field_e < var7 + var5_int + 6) {
+            var7 = -var5_int + (SoftwareRasterizer.field_e - 6);
           }
           var8 = param0 - (this.field_i.field_N - 32);
-          if (6 + var6 + var8 > si.field_k) {
-            var8 = -var6 + si.field_k - 6;
+          if (6 + var6 + var8 > SoftwareRasterizer.field_k) {
+            var8 = -var6 + SoftwareRasterizer.field_k - 6;
           }
           int var9 = 75 / ((2 - param3) / 35);
-          si.a(var7, var8, 6 + var5_int, var6 + 6, this.field_k);
-          si.c(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_a);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_k);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_a);
           this.field_i.c(param2, var7 + 3, var8 + 3 + this.field_i.field_N, this.field_k, -1);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "na.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -228,14 +228,14 @@ final class na {
         if (param6 != 11776) {
           return;
         }
-        si.a(param0, param5, param1, param4, param3, param2);
+        SoftwareRasterizer.fillRectangleAlpha(param0, param5, param1, param4, param3, param2);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 != 1077952576) {
           return;
         }
-        si.g(param3, param5, param1, param2, param4);
+        SoftwareRasterizer.drawLine(param3, param5, param1, param2, param4);
     }
 
     final void a(int param0, String param1, int param2, int param3) {

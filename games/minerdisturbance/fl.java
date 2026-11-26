@@ -37,7 +37,7 @@ final class fl implements ad {
             stackIn_4_0 = null;
           }
           var12 = (ne) (stackIn_4_0);
-          SoftwareRasterizer.e(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_l);
+          SoftwareRasterizer.fillRectangle(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_l);
           if (param0 != 12088) {
             return;
           }

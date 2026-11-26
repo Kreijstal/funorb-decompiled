@@ -562,10 +562,10 @@ abstract class kg extends DualLinkNode {
               }
               var16 = this.field_x[var11];
               if (field_w != -1) {
-                sb.d(param1, param2 + (int)((double)this.field_C * 0.7), var16, field_w);
+                SoftwareRasterizer.drawHorizontalLine(param1, param2 + (int)((double)this.field_C * 0.7), var16, field_w);
               }
               if (field_m != -1) {
-                sb.d(param1, param2 + this.field_C, var16, field_m);
+                SoftwareRasterizer.drawHorizontalLine(param1, param2 + this.field_C, var16, field_m);
               }
               param1 = param1 + var16;
               var7 = var11;
@@ -695,10 +695,10 @@ abstract class kg extends DualLinkNode {
               }
               param1 = param1 + this.field_x[var8];
               if (field_w != -1) {
-                sb.d(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_w);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_w);
               }
               if (field_m != -1) {
-                sb.d(var11, param2 + this.field_C + 1, param1 - var11, field_m);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_C + 1, param1 - var11, field_m);
               }
               var5 = var8;
             }

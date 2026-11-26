@@ -526,10 +526,10 @@ final class MenuScreen {
           stackIn_24_0 = td.field_l;
         }
         var16 = stackIn_24_0;
-        SoftwareRasterizer.b(var15 + 1, var4 + (var11 >> 1), 65, 4, var9);
-        SoftwareRasterizer.b(var15 + (var16 >> 2), 2 + ((var11 - 20 >> 1) + var4), 3, 20, var9);
-        SoftwareRasterizer.b(var15, -1 + var4 + (var11 >> 1), 65, 4, var8);
-        SoftwareRasterizer.b(var15 + (var16 >> 2) - 1, 1 + (-20 + var11 >> 1) + var4, 3, 20, var8);
+        SoftwareRasterizer.fillRectangle(var15 + 1, var4 + (var11 >> 1), 65, 4, var9);
+        SoftwareRasterizer.fillRectangle(var15 + (var16 >> 2), 2 + ((var11 - 20 >> 1) + var4), 3, 20, var9);
+        SoftwareRasterizer.fillRectangle(var15, -1 + var4 + (var11 >> 1), 65, 4, var8);
+        SoftwareRasterizer.fillRectangle(var15 + (var16 >> 2) - 1, 1 + (-20 + var11 >> 1) + var4, 3, 20, var8);
         return;
     }
 
@@ -537,7 +537,7 @@ final class MenuScreen {
         if (param2 < 20) {
           field_c = (long[][]) null;
         }
-        SoftwareRasterizer.g(param0, param1, 8, 16711680);
+        SoftwareRasterizer.drawCircleOutline(param0, param1, 8, 16711680);
         SoftwareRasterizer.drawHorizontalLine(param0 - 8, param1, 4, 16711680);
         SoftwareRasterizer.drawHorizontalLine(param0 + 8 - 4, param1, 4, 16711680);
         SoftwareRasterizer.drawVerticalLine(param0, -8 + param1, 4, 16711680);
@@ -789,33 +789,33 @@ final class MenuScreen {
         }
         if (400 <= ClientException.field_b) {
           var2 = (-ClientException.field_b + 500) * 96 / 100;
-          SoftwareRasterizer.a(320, 240, var2, 16711680, 128);
-          SoftwareRasterizer.a(320, 240, var2 * 62 / 64, 16776960, 128);
-          SoftwareRasterizer.a(320, 240, 60 * var2 / 64, 16776960, 128);
-          SoftwareRasterizer.a(320, 240, var2 * 58 / 64, 16777215, 128);
-          SoftwareRasterizer.a(320, 240, var2 * 57 / 64, 16777215, 128);
-          SoftwareRasterizer.a(320, 240, 56 * var2 / 64, 16777215, 128);
-          SoftwareRasterizer.a(320, 240, 55 * var2 / 64, 16777215, 128);
-          SoftwareRasterizer.a(320, 240, var2 * 54 / 64, 16777215, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, var2, 16711680, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, var2 * 62 / 64, 16776960, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, 60 * var2 / 64, 16776960, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, var2 * 58 / 64, 16777215, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, var2 * 57 / 64, 16777215, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, 56 * var2 / 64, 16777215, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, 55 * var2 / 64, 16777215, 128);
+          SoftwareRasterizer.fillCircleAlpha(320, 240, var2 * 54 / 64, 16777215, 128);
         } else {
           if (ClientException.field_b >= 350) {
             var2 = 96;
             var3 = -(440 * (ClientException.field_b - 350) / 50) + 440;
-            SoftwareRasterizer.a(320, 240, var2, 16711680, 128);
-            SoftwareRasterizer.a(320, 240, 62 * var2 / 64, 16776960, 128);
-            SoftwareRasterizer.a(320, 240, 60 * var2 / 64, 16776960, 128);
-            SoftwareRasterizer.a(320, 240, 58 * var2 / 64, 16777215, 128);
-            SoftwareRasterizer.a(320, 240, 57 * var2 / 64, 16777215, 128);
-            SoftwareRasterizer.a(320, 240, var2 * 56 / 64, 16777215, 128);
-            SoftwareRasterizer.a(320, 240, 55 * var2 / 64, 16777215, 128);
-            SoftwareRasterizer.a(320, 240, 54 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, var2, 16711680, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, 62 * var2 / 64, 16776960, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, 60 * var2 / 64, 16776960, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, 58 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, 57 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, var2 * 56 / 64, 16777215, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, 55 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.fillCircleAlpha(320, 240, 54 * var2 / 64, 16777215, 128);
             hj.field_n.drawScaled(320 - hj.field_n.field_q * 200 / hj.field_n.field_r, -440 + var3, hj.field_n.field_q * 400 / hj.field_n.field_r, 400);
           } else {
             if (ClientException.field_b >= 250) {
               hj.field_n.drawScaled(320 - 250 * hj.field_n.field_q / hj.field_n.field_r, -10, 500 * hj.field_n.field_q / hj.field_n.field_r, 500);
               hj.field_p.d(320 - hj.field_p.field_q / 2, 3 * (480 - hj.field_p.field_r) / 5);
               if (330 <= ClientException.field_b) {
-                SoftwareRasterizer.a(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
               }
             }
           }
@@ -1132,7 +1132,7 @@ final class MenuScreen {
               var4 <= BufferedSocket.field_m &&
               BufferedSocket.field_m <= 32 + var4) {
               var7 = var8;
-              SoftwareRasterizer.b(-2 + var3, var4 - 2, 36, 36, 6, 1134591);
+              SoftwareRasterizer.drawRoundedRectangleOutline(-2 + var3, var4 - 2, 36, 36, 6, 1134591);
             }
             if (this.field_a >= var3 &&
               var3 + 32 >= this.field_a &&
@@ -1146,7 +1146,7 @@ final class MenuScreen {
               this.field_a = -1;
             }
             if (var8 == this.field_e) {
-              SoftwareRasterizer.b(var3 - 2, var4 - 2, 36, 36, 6, 16776960);
+              SoftwareRasterizer.drawRoundedRectangleOutline(var3 - 2, var4 - 2, 36, 36, 6, 16776960);
             }
             incrementValue$0 = var6;
             var6++;

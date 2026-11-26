@@ -37,7 +37,7 @@ final class f implements WidgetActionListener {
         int var12Lifetime1;
         try {
           var14 = !(param1 instanceof gh) ? null : (gh) (param1);
-          SoftwareRasterizer.f(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_d);
+          SoftwareRasterizer.fillRectangle(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_d);
           if (param3 != -24381) {
             this.field_b = 13;
           }

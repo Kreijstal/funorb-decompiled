@@ -154,27 +154,27 @@ final class vg extends wi {
           this.field_F = -98;
         }
         if (this.field_A >= 255) {
-          gb.e(this.field_l, this.field_a, this.field_n, this.field_d, this.field_E);
+          SoftwareRasterizer.fillRectangle(this.field_l, this.field_a, this.field_n, this.field_d, this.field_E);
           for (var4 = 0; var4 < this.field_D; var4++) {
-            gb.d(this.field_l + var4, var4 + this.field_a, -var4 + (this.field_l + this.field_n), var4 + this.field_a, var3);
-            gb.d(var4 + this.field_l, this.field_a + var4, this.field_l + var4, -var4 + (this.field_a + this.field_d), var3);
-            gb.d(var4 + this.field_l, -var4 + this.field_a + this.field_d, this.field_n + this.field_l - var4, -var4 + this.field_d + this.field_a, var2);
-            gb.d(this.field_n + (this.field_l - var4), var4 + this.field_a, this.field_l - (-this.field_n + var4), this.field_a + (this.field_d - var4), var2);
+            SoftwareRasterizer.drawLine(this.field_l + var4, var4 + this.field_a, -var4 + (this.field_l + this.field_n), var4 + this.field_a, var3);
+            SoftwareRasterizer.drawLine(var4 + this.field_l, this.field_a + var4, this.field_l + var4, -var4 + (this.field_a + this.field_d), var3);
+            SoftwareRasterizer.drawLine(var4 + this.field_l, -var4 + this.field_a + this.field_d, this.field_n + this.field_l - var4, -var4 + this.field_d + this.field_a, var2);
+            SoftwareRasterizer.drawLine(this.field_n + (this.field_l - var4), var4 + this.field_a, this.field_l - (-this.field_n + var4), this.field_a + (this.field_d - var4), var2);
           }
         } else {
           if (0 < this.field_A) {
-            gb.g(this.field_l, this.field_a, this.field_n, this.field_d, this.field_E, this.field_A);
+            SoftwareRasterizer.fillRectangleAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_E, this.field_A);
             for (var4 = 0; this.field_D > var4; var4++) {
-              gb.f(var4 + this.field_l, var4 + this.field_a, -var4 + this.field_n + this.field_l, this.field_a + var4, var3, this.field_A);
-              gb.f(this.field_l + var4, var4 + this.field_a, var4 + this.field_l, -var4 + (this.field_d + this.field_a), var3, this.field_A);
-              gb.f(this.field_l + var4, this.field_a + this.field_d - var4, -var4 + this.field_n + this.field_l, this.field_d + (this.field_a - var4), var2, this.field_A);
-              gb.f(this.field_n + (this.field_l - var4), var4 + this.field_a, this.field_l - (-this.field_n + var4), this.field_a + (this.field_d - var4), var2, this.field_A);
+              SoftwareRasterizer.drawLineAlpha(var4 + this.field_l, var4 + this.field_a, -var4 + this.field_n + this.field_l, this.field_a + var4, var3, this.field_A);
+              SoftwareRasterizer.drawLineAlpha(this.field_l + var4, var4 + this.field_a, var4 + this.field_l, -var4 + (this.field_d + this.field_a), var3, this.field_A);
+              SoftwareRasterizer.drawLineAlpha(this.field_l + var4, this.field_a + this.field_d - var4, -var4 + this.field_n + this.field_l, this.field_d + (this.field_a - var4), var2, this.field_A);
+              SoftwareRasterizer.drawLineAlpha(this.field_n + (this.field_l - var4), var4 + this.field_a, this.field_l - (-this.field_n + var4), this.field_a + (this.field_d - var4), var2, this.field_A);
             }
           }
         }
-        gb.a(ia.field_q);
+        SoftwareRasterizer.saveClip(ia.field_q);
         this.field_G.a(this.field_t, (this.field_n >> 1) + this.field_l + this.field_y, this.field_a + (this.field_C + (this.field_d >> 1)) + (this.field_G.field_y >> 1), this.field_F, this.field_x);
-        gb.b(ia.field_q);
+        SoftwareRasterizer.restoreClip(ia.field_q);
     }
 
     vg(String param0, int param1, int param2, fa param3) {

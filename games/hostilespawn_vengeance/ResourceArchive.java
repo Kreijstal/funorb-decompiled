@@ -322,7 +322,7 @@ final class ResourceArchive {
                 ad.a(param1, param0);
               }
             } else {
-              si.d();
+              SoftwareRasterizer.clearRaster();
               dc.a((byte) 11, 240, 320);
               DualLinkDeque.a(0, param1, (byte) -29, 0);
             }

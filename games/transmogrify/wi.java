@@ -61,14 +61,14 @@ final class wi implements WidgetRenderer {
           if (param2) {
             var7 = 16777215;
           }
-          sb.a(param4.field_p + param0, param4.field_n + param1, param4.field_l, param4.field_h, this.field_k);
+          SoftwareRasterizer.fillRectangle(param4.field_p + param0, param4.field_n + param1, param4.field_l, param4.field_h, this.field_k);
           var8 = param0 - (-param4.field_p - this.field_b);
           var9 = param4.field_n + param1 + this.field_g;
-          sb.c(var8, var9, this.field_n, this.field_c, 5592405);
-          sb.a(var8, var9, this.field_n, this.field_c, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_n, this.field_c, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_n, this.field_c, var7);
           if (var12.field_y) {
-            sb.e(var8, var9, var8 + this.field_n, this.field_c + var9, 1);
-            sb.e(var8 + this.field_n, var9, var8, var9 + this.field_c, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_n, this.field_c + var9, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_n, var9, var8, var9 + this.field_c, 1);
           }
           var10 = -41 % ((51 - param3) / 47);
           if (null == this.field_i) {

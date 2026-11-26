@@ -120,7 +120,7 @@ final class km {
         RuntimeException var7 = null;
         var13 = OrbDefence.field_D ? 1 : 0;
         try {
-          var7_int = param4 + ul.field_f * param3;
+          var7_int = param4 + SoftwareRasterizer.field_f * param3;
           var8 = param2 & 16711935;
           param2 = param2 & 65280;
           var9 = 0;
@@ -129,14 +129,14 @@ final class km {
           }
           while (param6 > var9) {
             var10 = (1 + var9) * (-param5 + param0) / (1 + param6) + param5;
-            var11 = ul.field_b[var7_int];
+            var11 = SoftwareRasterizer.field_b[var7_int];
             var12 = 16711935 & var11;
             var11 = var11 & 65280;
             var12 = (var8 * var10 & -16711936) + ((256 - var10) * var12 & -16711936);
             var11 = (16711680 & var10 * param2) + (16711680 & (-var10 + 256) * var11);
             incrementValue$2 = var7_int;
             var7_int++;
-            ul.field_b[incrementValue$2] = ge.a(var12, var11) >>> 8;
+            SoftwareRasterizer.field_b[incrementValue$2] = ge.a(var12, var11) >>> 8;
             var9++;
           }
           return;

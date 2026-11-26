@@ -12,7 +12,7 @@ final class nd extends jj {
         super.b(param0, param1, param2);
         rg.field_o.a(this.field_eb, param1 + (this.field_u >> 1), 103 + param0, 16777215, -1);
         if (this.field_bb != null) {
-          gb.b(20 + param1, 120 + param0 - 7, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + param0 - 7, 260, 8421504);
           rg.field_o.a(this.field_bb, param1 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, rg.field_o.field_H);
         }
     }

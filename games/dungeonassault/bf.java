@@ -129,8 +129,8 @@ final class bf {
         int var3 = 0;
         var4 = DungeonAssault.field_K;
         try {
-          gf.a(kd.field_g);
-          gf.e(41, 48, 599, 416);
+          SoftwareRasterizer.saveClip(kd.field_g);
+          SoftwareRasterizer.setClip(41, 48, 599, 416);
           if (!param0) {
             for (var2_int = 41; var2_int < 599; var2_int = var2_int + df.field_c.field_E) {
               df.field_c.c(var2_int, 48);
@@ -142,7 +142,7 @@ final class bf {
             IterableNodeHashTable.field_f[var3].c(-IterableNodeHashTable.field_f[0].field_y + 599, 48);
             df.field_c.c(41 + dm.field_d[var2_int].field_y, 48);
           }
-          gf.b(kd.field_g);
+          SoftwareRasterizer.restoreClip(kd.field_g);
           c.a(0, 640, 0, (byte) 80);
           c.a(0, 640, 40, (byte) 46);
           vf.a(432, true, 33, -75, 48);
@@ -175,8 +175,8 @@ final class bf {
         int var6;
         int var8;
         var10 = DungeonAssault.field_K;
-        gf.f(param1, param0, param3 >> 1, 0);
-        gf.h(param1, param0, param3 >> 1, this.field_i[63]);
+        SoftwareRasterizer.fillCircle(param1, param0, param3 >> 1, 0);
+        SoftwareRasterizer.drawCircleOutline(param1, param0, param3 >> 1, this.field_i[63]);
         var9 = 0;
         if (!param2) {
           return;
@@ -191,15 +191,15 @@ final class bf {
             }
             var6 = (int)((double)(param3 * this.field_a[var9]) / Math.sqrt((double)(var7 * 3)));
             var7 = var7 * param3;
-            gf.b((var5 >> 1) + (param1 << 4), (var6 >> 1) + (param0 << 4), var7 >> 10, var8, this.field_i);
+            SoftwareRasterizer.addRadialGlow((var5 >> 1) + (param1 << 4), (var6 >> 1) + (param0 << 4), var7 >> 10, var8, this.field_i);
           }
           var9++;
         }
-        gf.g(param1, param0, param3 >> 1, 0, 50);
-        gf.a(param1 << 4, param0 << 4, param3 + 2 << 4 >> 1, 192, this.field_n);
-        gf.a(param1 << 4, param0 << 4, 2 + param3 << 3, 192, this.field_n);
-        gf.a(param1 << 4, param0 << 4, param3 + 2 << 3, 192, this.field_n);
-        gf.a(param1 << 4, param0 << 4, 2 + param3 << 3, 192, this.field_n);
+        SoftwareRasterizer.fillCircleAlpha(param1, param0, param3 >> 1, 0, 50);
+        SoftwareRasterizer.addRadialGlowClippedSpans(param1 << 4, param0 << 4, param3 + 2 << 4 >> 1, 192, this.field_n);
+        SoftwareRasterizer.addRadialGlowClippedSpans(param1 << 4, param0 << 4, 2 + param3 << 3, 192, this.field_n);
+        SoftwareRasterizer.addRadialGlowClippedSpans(param1 << 4, param0 << 4, param3 + 2 << 3, 192, this.field_n);
+        SoftwareRasterizer.addRadialGlowClippedSpans(param1 << 4, param0 << 4, 2 + param3 << 3, 192, this.field_n);
     }
 
     public static void clearStaticReferences(byte param0) {

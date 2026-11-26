@@ -142,7 +142,7 @@ final class qa {
         SoftwareRasterizer.clearFramebuffer();
         OpenGlFramebuffer.e((byte) -124);
         if (var5 < 256) {
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
           sl.c(2765);
           if (it.field_c < 150) {
             wd.field_v.d(var3, var4);

@@ -103,7 +103,7 @@ final class se {
             } else {
               stackIn_12_4 = mm.field_gb;
             }
-            fn.a(stackIn_8_0, stackIn_8_1, stackIn_9_2, stackIn_11_3, stackIn_12_4);
+            SoftwareRasterizer.addRadialGlow(stackIn_8_0, stackIn_8_1, stackIn_9_2, stackIn_11_3, stackIn_12_4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

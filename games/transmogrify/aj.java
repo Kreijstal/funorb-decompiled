@@ -376,7 +376,7 @@ class aj extends UiWidget implements pb {
           var9Lifetime1 = var17.field_m;
           og.a((byte) 108);
           var17.e();
-          sb.b(0, 0, sb.field_c, sb.field_g);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();

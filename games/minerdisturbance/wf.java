@@ -73,7 +73,7 @@ abstract class wf extends cc {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = MinerDisturbance.field_ab;
-        SoftwareRasterizer.c(6 + param2, 35 + param1, this.field_v - 12, -40 + this.field_q, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param2, 35 + param1, this.field_v - 12, -40 + this.field_q, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -195,7 +195,7 @@ abstract class wf extends cc {
           field_N = (String) null;
         }
         ti.a((byte) 127);
-        SoftwareRasterizer.f(param1, param0, param3, param4);
+        SoftwareRasterizer.intersectClip(param1, param0, param3, param4);
     }
 
     void o(int param0) {

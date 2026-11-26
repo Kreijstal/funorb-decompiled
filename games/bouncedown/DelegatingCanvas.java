@@ -50,14 +50,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var9 = param3[1].field_t;
             param3[0].b(param4, param2, param0);
             param3[2].b(-var8 + param5 + param4, param2, param0);
-            na.b(hh.field_h);
-            na.c(var7 + param4, param2, param4 + param5 - var8, param3[1].field_o + param2);
+            SoftwareRasterizer.saveClip(hh.field_h);
+            SoftwareRasterizer.intersectClip(var7 + param4, param2, param4 + param5 - var8, param3[1].field_o + param2);
             var10 = param4 + var7;
             var11 = param5 + (param4 - var8);
             for (param4 = var10; var11 > param4; param4 = param4 + var9) {
               param3[1].b(param4, param2, param0);
             }
-            na.a(hh.field_h);
+            SoftwareRasterizer.restoreClip(hh.field_h);
             return;
           }
           return;

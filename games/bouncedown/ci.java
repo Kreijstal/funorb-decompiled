@@ -36,7 +36,7 @@ final class ci extends lc implements gl, rc {
           sg.field_a.a(this.field_E, this.field_r + (param3 + 20), 15 + (param1 + this.field_i), -40 + this.field_k, this.field_m, 16777215, -1, 1, 0, sg.field_a.field_s);
         }
         if (this.field_H != null) {
-          na.a(10 + param3, 134 + param1, this.field_k - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param3, 134 + param1, this.field_k - 20, 4210752);
         }
         super.a(param0, param1, 37, param3);
         if (param2 <= 33) {

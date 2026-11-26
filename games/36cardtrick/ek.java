@@ -127,17 +127,17 @@ class ek implements ci, ne {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        vj.d(param7, param4, param8, param1);
-        vj.c(param7, 1 + param4, param6 - 1, param1);
+        SoftwareRasterizer.drawHorizontalLine(param7, param4, param8, param1);
+        SoftwareRasterizer.drawVerticalLine(param7, 1 + param4, param6 - 1, param1);
         if (param0 != 92) {
           field_a = (String[]) null;
         }
-        vj.d(param7 + 1, param4 + 1, param8 - 2, param5);
-        vj.c(param7 + 1, 2 + param4, -3 + param6, param5);
-        vj.c(-2 + (param8 + param7), 2 + param4, param6 - 3, param3);
-        vj.d(2 + param7, -2 + param4 + param6, -2 + param8, param3);
-        vj.c(-1 + param7 + param8, param4 + 1, param6 - 1, param2);
-        vj.d(1 + param7, param6 + param4 - 1, -2 + param8, param2);
+        SoftwareRasterizer.drawHorizontalLine(param7 + 1, param4 + 1, param8 - 2, param5);
+        SoftwareRasterizer.drawVerticalLine(param7 + 1, 2 + param4, -3 + param6, param5);
+        SoftwareRasterizer.drawVerticalLine(-2 + (param8 + param7), 2 + param4, param6 - 3, param3);
+        SoftwareRasterizer.drawHorizontalLine(2 + param7, -2 + param4 + param6, -2 + param8, param3);
+        SoftwareRasterizer.drawVerticalLine(-1 + param7 + param8, param4 + 1, param6 - 1, param2);
+        SoftwareRasterizer.drawHorizontalLine(1 + param7, param6 + param4 - 1, -2 + param8, param2);
     }
 
     String b(int param0, lk param1) {
@@ -666,7 +666,7 @@ class ek implements ci, ne {
           ek.clearStaticReferences((byte) 49);
         }
         ji.a(true);
-        vj.f(param2, param0, param1, param4);
+        SoftwareRasterizer.intersectClip(param2, param0, param1, param4);
     }
 
     public final int a(int param0, byte param1, lk param2) {

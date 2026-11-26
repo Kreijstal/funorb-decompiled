@@ -427,7 +427,7 @@ final class he extends IntrusiveNode {
         try {
           param2 = param2 + param0.field_u;
           param4 = param4 + param0.field_l;
-          var5_int = param2 + sb.field_c * param4;
+          var5_int = param2 + SoftwareRasterizer.field_c * param4;
           var6 = 0;
           var7 = param0.field_m;
           if (param3 <= 55) {
@@ -435,36 +435,36 @@ final class he extends IntrusiveNode {
             he.a((Sprite) null, 10, 5, (byte) -107, 1);
           }
           var8 = param0.field_n;
-          var9 = -var8 + sb.field_c;
+          var9 = -var8 + SoftwareRasterizer.field_c;
           var10 = 0;
-          if (param4 < sb.field_e) {
-            var11 = sb.field_e - param4;
-            var5_int = var5_int + sb.field_c * var11;
+          if (param4 < SoftwareRasterizer.field_e) {
+            var11 = SoftwareRasterizer.field_e - param4;
+            var5_int = var5_int + SoftwareRasterizer.field_c * var11;
             var6 = var6 + var11 * var8;
             var7 = var7 - var11;
-            param4 = sb.field_e;
+            param4 = SoftwareRasterizer.field_e;
           }
-          if (param4 + var7 > sb.field_f) {
-            var7 = var7 - (param4 + var7 - sb.field_f);
+          if (param4 + var7 > SoftwareRasterizer.field_f) {
+            var7 = var7 - (param4 + var7 - SoftwareRasterizer.field_f);
           }
-          if (sb.field_d > param2) {
-            var11Lifetime1 = sb.field_d - param2;
+          if (SoftwareRasterizer.field_d > param2) {
+            var11Lifetime1 = SoftwareRasterizer.field_d - param2;
             var8 = var8 - var11Lifetime1;
             var5_int = var5_int + var11Lifetime1;
             var10 = var10 + var11Lifetime1;
             var6 = var6 + var11Lifetime1;
             var9 = var9 + var11Lifetime1;
-            param2 = sb.field_d;
+            param2 = SoftwareRasterizer.field_d;
           }
-          if (sb.field_b < param2 + var8) {
-            var11Lifetime2 = var8 + param2 - sb.field_b;
+          if (SoftwareRasterizer.field_b < param2 + var8) {
+            var11Lifetime2 = var8 + param2 - SoftwareRasterizer.field_b;
             var9 = var9 + var11Lifetime2;
             var10 = var10 + var11Lifetime2;
             var8 = var8 - var11Lifetime2;
           }
           if (var8 > 0 &&
             var7 > 0) {
-            we.a(var6, param1, var7, param0.field_w, var10, var9, var8, 0, sb.field_h, (byte) -53, var5_int);
+            we.a(var6, param1, var7, param0.field_w, var10, var9, var8, 0, SoftwareRasterizer.field_h, (byte) -53, var5_int);
             return;
           }
           return;

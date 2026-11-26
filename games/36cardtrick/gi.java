@@ -167,21 +167,21 @@ final class gi extends IntrusiveNode {
         if (param10 > param7) {
           if (param10 >= param11) {
             if (param11 > param7) {
-              e.a(param7, param4, param6, param0, param15, param13, param5, vj.field_j, param11, param14, param12, param10, (byte) 88, param1, param3, param8, param2);
+              e.a(param7, param4, param6, param0, param15, param13, param5, SoftwareRasterizer.field_j, param11, param14, param12, param10, (byte) 88, param1, param3, param8, param2);
             } else {
-              e.a(param11, param0, param13, param4, param3, param6, param5, vj.field_j, param7, param14, param2, param10, (byte) 96, param1, param15, param8, param12);
+              e.a(param11, param0, param13, param4, param3, param6, param5, SoftwareRasterizer.field_j, param7, param14, param2, param10, (byte) 96, param1, param15, param8, param12);
             }
           } else {
-            e.a(param7, param4, param6, param5, param15, param14, param0, vj.field_j, param10, param13, param12, param11, (byte) 104, param3, param1, param2, param8);
+            e.a(param7, param4, param6, param5, param15, param14, param0, SoftwareRasterizer.field_j, param10, param13, param12, param11, (byte) 104, param3, param1, param2, param8);
           }
         } else {
           if (param7 < param11) {
-            e.a(param10, param5, param14, param4, param1, param6, param0, vj.field_j, param7, param13, param8, param11, (byte) 13, param3, param15, param2, param12);
+            e.a(param10, param5, param14, param4, param1, param6, param0, SoftwareRasterizer.field_j, param7, param13, param8, param11, (byte) 13, param3, param15, param2, param12);
           } else {
             if (param10 < param11) {
-              e.a(param10, param5, param14, param0, param1, param13, param4, vj.field_j, param11, param6, param8, param7, (byte) 62, param15, param3, param12, param2);
+              e.a(param10, param5, param14, param0, param1, param13, param4, SoftwareRasterizer.field_j, param11, param6, param8, param7, (byte) 62, param15, param3, param12, param2);
             } else {
-              e.a(param11, param0, param13, param5, param3, param14, param4, vj.field_j, param10, param6, param2, param7, (byte) 83, param15, param1, param12, param8);
+              e.a(param11, param0, param13, param5, param3, param14, param4, SoftwareRasterizer.field_j, param10, param6, param2, param7, (byte) 83, param15, param1, param12, param8);
             }
           }
         }

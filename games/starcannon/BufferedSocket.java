@@ -81,23 +81,23 @@ final class BufferedSocket implements Runnable {
         try {
           var8_int = 0;
           var9 = 65536 / param7;
-          if (ki.field_l > param6) {
-            param1 = param1 - (ki.field_l - param6);
-            param6 = ki.field_l;
+          if (SoftwareRasterizer.field_l > param6) {
+            param1 = param1 - (SoftwareRasterizer.field_l - param6);
+            param6 = SoftwareRasterizer.field_l;
           }
-          if (param4 < ki.field_e) {
-            param7 = param7 - (-param4 + ki.field_e);
-            var8_int = var8_int + var9 * (ki.field_e - param4);
-            param4 = ki.field_e;
+          if (param4 < SoftwareRasterizer.field_e) {
+            param7 = param7 - (-param4 + SoftwareRasterizer.field_e);
+            var8_int = var8_int + var9 * (SoftwareRasterizer.field_e - param4);
+            param4 = SoftwareRasterizer.field_e;
           }
-          if (param1 + param6 > ki.field_g) {
-            param1 = ki.field_g - param6;
+          if (param1 + param6 > SoftwareRasterizer.field_g) {
+            param1 = SoftwareRasterizer.field_g - param6;
           }
-          if (param4 + param7 > ki.field_i) {
-            param7 = ki.field_i - param4;
+          if (param4 + param7 > SoftwareRasterizer.field_i) {
+            param7 = SoftwareRasterizer.field_i - param4;
           }
-          var10 = -param1 + ki.field_j;
-          var11 = param6 + param4 * ki.field_j;
+          var10 = -param1 + SoftwareRasterizer.field_j;
+          var11 = param6 + param4 * SoftwareRasterizer.field_j;
           if (!param0) {
             return;
           }
@@ -106,12 +106,12 @@ final class BufferedSocket implements Runnable {
             var14 = var8_int >> 8;
             var15 = ((param2 & 16711935) * var13 + (16711935 & param3) * var14 & -16711936) + (16711680 & (param2 & 65280) * var13 + (param3 & 65280) * var14) >>> 8;
             for (var16 = -param1; 0 > var16; var16++) {
-              if (param5 != ki.field_a[var11]) {
+              if (param5 != SoftwareRasterizer.field_a[var11]) {
                 var11++;
               } else {
                 incrementValue$0 = var11;
                 var11++;
-                ki.field_a[incrementValue$0] = var15;
+                SoftwareRasterizer.field_a[incrementValue$0] = var15;
               }
             }
             var8_int = var8_int + var9;

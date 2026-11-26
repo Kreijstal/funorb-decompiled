@@ -28,7 +28,7 @@ final class jc {
           if (2 == param5) {
             param0 = param0 - var6_int;
           }
-          gf.e(param1, param2, 8 + param1, param0 + param2);
+          SoftwareRasterizer.setClip(param1, param2, 8 + param1, param0 + param2);
           for (var7 = 0; var7 < param0; var7 = var7 + be.field_o.field_b) {
             be.field_o.b(param1, param2 + var7);
           }
@@ -41,14 +41,14 @@ final class jc {
           }
           if (1 == param3) {
             for (var7Lifetime1 = 0; 8 > var7Lifetime1; var7Lifetime1++) {
-              gf.d(param1, var7Lifetime1 + param2, 8, 0, -(var7Lifetime1 * 24) + 192);
+              SoftwareRasterizer.drawHorizontalLineAlpha(param1, var7Lifetime1 + param2, 8, 0, -(var7Lifetime1 * 24) + 192);
             }
           }
           if (1 != param5) {
             return;
           }
           for (var7Lifetime2 = 0; var7Lifetime2 < 8; var7Lifetime2++) {
-            gf.d(param1, param2 + (param0 - 1) - var7Lifetime2, 8, 0, 192 - var7Lifetime2 * 24);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, param2 + (param0 - 1) - var7Lifetime2, 8, 0, 192 - var7Lifetime2 * 24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

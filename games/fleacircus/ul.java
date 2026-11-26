@@ -29,7 +29,7 @@ final class ul extends gj implements nk, da {
           ug.field_e.a(this.field_O, 20 + this.field_y + param1, 15 + this.field_z + param0, -40 + this.field_u, this.field_j, 16777215, -1, 1, 0, ug.field_e.field_H);
         }
         if (this.field_N != null) {
-          gb.b(param1 + 10, param0 + 134, this.field_u - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param1 + 10, param0 + 134, this.field_u - 20, 4210752);
         }
         super.b(param0, param1, param2, param3);
     }
@@ -160,8 +160,8 @@ final class ul extends gj implements nk, da {
                 var3 = 123 - var4 / 2;
               }
             }
-            gb.g(0, -4 + var3, var6.b(wa.field_f[var2.field_q]) + 64, 40, 16755200, 128);
-            gb.e(0, var3 - 4, var6.b(wa.field_f[var2.field_q]) + 64, 40, 16746496, 128);
+            SoftwareRasterizer.fillRectangleAlpha(0, -4 + var3, var6.b(wa.field_f[var2.field_q]) + 64, 40, 16755200, 128);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(0, var3 - 4, var6.b(wa.field_f[var2.field_q]) + 64, 40, 16746496, 128);
             il.field_d[var2.field_q].c(8, var3);
             var6.c(wa.field_f[var2.field_q], 48, var3 + var7.field_H, 0, -1);
           }

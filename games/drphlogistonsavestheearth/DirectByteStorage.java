@@ -165,37 +165,37 @@ final class DirectByteStorage extends ByteStorage {
           var7 = param0.field_D * var6_int + (param2 << 8);
           param4 = param4 + param0.field_v;
           param5 = param5 + param0.field_D;
-          var8 = wj.field_k * param4 + param5;
+          var8 = SoftwareRasterizer.field_k * param4 + param5;
           var9 = 0;
           var10 = param0.field_w;
           var11 = param0.field_y;
           if (param3 < 28) {
             DirectByteStorage.c((byte) -103);
           }
-          var12 = wj.field_k - var11;
+          var12 = SoftwareRasterizer.field_k - var11;
           var13 = 0;
-          if (wj.field_e > param4) {
-            var14 = wj.field_e - param4;
-            var8 = var8 + wj.field_k * var14;
-            param4 = wj.field_e;
+          if (SoftwareRasterizer.field_e > param4) {
+            var14 = SoftwareRasterizer.field_e - param4;
+            var8 = var8 + SoftwareRasterizer.field_k * var14;
+            param4 = SoftwareRasterizer.field_e;
             var9 = var9 + var14 * var11;
             var10 = var10 - var14;
           }
-          if (var10 + param4 > wj.field_j) {
-            var10 = var10 - (-wj.field_j + param4 + var10);
+          if (var10 + param4 > SoftwareRasterizer.field_j) {
+            var10 = var10 - (-SoftwareRasterizer.field_j + param4 + var10);
           }
-          if (wj.field_g > param5) {
-            var14Lifetime1 = wj.field_g - param5;
+          if (SoftwareRasterizer.field_g > param5) {
+            var14Lifetime1 = SoftwareRasterizer.field_g - param5;
             var12 = var12 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
-            param5 = wj.field_g;
+            param5 = SoftwareRasterizer.field_g;
             var13 = var13 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
           }
-          if (wj.field_b < var11 + param5) {
-            var14Lifetime2 = var11 + param5 - wj.field_b;
+          if (SoftwareRasterizer.field_b < var11 + param5) {
+            var14Lifetime2 = var11 + param5 - SoftwareRasterizer.field_b;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -214,11 +214,11 @@ final class DirectByteStorage extends ByteStorage {
                   var17 = param0.field_B[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 > 255) {
-                      wj.field_l[var8] = var17;
+                      SoftwareRasterizer.field_l[var8] = var17;
                     } else {
-                      var18 = wj.field_l[var8];
+                      var18 = SoftwareRasterizer.field_l[var8];
                       var19 = var16 * (16711935 & var18) + var15 * (var17 & 16711935) >> 8 & 16711935;
-                      wj.field_l[var8] = (rk.a(rk.a(65280, var18) * var16 + var15 * rk.a(65280, var17), 16711720) >> 8) + var19;
+                      SoftwareRasterizer.field_l[var8] = (rk.a(rk.a(65280, var18) * var16 + var15 * rk.a(65280, var17), 16711720) >> 8) + var19;
                     }
                   }
                   var8++;

@@ -89,28 +89,28 @@ final class ug extends hi {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ul.d(param2, param1, param4, param3, 0);
+        SoftwareRasterizer.drawRectangleOutline(param2, param1, param4, param3, 0);
         param1++;
         param3 -= 2;
         param2++;
         param4 -= 2;
-        ul.a(param2, param1, param4, param3, 11184810, 4605510);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param2, param1, param4, param3, 11184810, 4605510);
         param2 += 2;
         param3 -= 4;
         param1 += 2;
         param4 -= 4;
-        ul.c(param2, param1, param4, param3, 2500134, 5921370);
+        SoftwareRasterizer.addRectangleVerticalGradient(param2, param1, param4, param3, 2500134, 5921370);
         param3 -= 2;
         param1++;
         param4 -= 2;
         param2++;
         if (param0 >= 32) {
-          ul.d(param2, param1, param4, param3, 0);
+          SoftwareRasterizer.drawRectangleOutline(param2, param1, param4, param3, 0);
           param1++;
           param2++;
           param4 -= 2;
           param3 -= 2;
-          ul.a(param2, param1, param4, param3, 394758, 1710618);
+          SoftwareRasterizer.fillRectangleVerticalGradient(param2, param1, param4, param3, 394758, 1710618);
           MouseInputListener.field_a.e(param2, param1, param4, param3, 64);
           return;
         }

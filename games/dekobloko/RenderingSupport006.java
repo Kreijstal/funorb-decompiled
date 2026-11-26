@@ -263,7 +263,7 @@ final class RenderingSupport006 extends HashNode {
           }
         }
         if (integerLocal35 != 2147483647) {
-          SoftwareRaster.performAction0656(integerLocal35 - 2, integerLocal37 - 2, integerLocal36 - integerLocal35 + 4, integerLocal38 - integerLocal37 + 4, 2, 0);
+          SoftwareRaster.fillRoundedRectangle(integerLocal35 - 2, integerLocal37 - 2, integerLocal36 - integerLocal35 + 4, integerLocal38 - integerLocal37 + 4, 2, 0);
         }
         return;
     }
@@ -321,7 +321,7 @@ final class RenderingSupport006 extends HashNode {
           integerLocal17 = SoftwareRaster.integerState0284;
           this.rgbSpriteState0022.performAction0256();
           renderingSupport009State0003.computeInteger1071(stringArgument1, 0, 0, 1 + integerLocal13, integerLocal15, integerArgument2, -1, 1, 1, 8);
-          SoftwareRaster.performAction0645(integerArrayLocal35, integerLocal16, integerLocal17);
+          SoftwareRaster.setRasterBuffer(integerArrayLocal35, integerLocal16, integerLocal17);
           this.integerArrayState0110 = new int[integerLocal13 * integerLocal15];
           integerArrayLocal34 = new int[integerLocal15 * integerLocal13];
           integerArrayLocal33 = integerArrayLocal34;

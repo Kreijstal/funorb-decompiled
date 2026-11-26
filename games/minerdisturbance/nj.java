@@ -122,7 +122,7 @@ final class nj {
             if (!el.field_c) {
               ai.a(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
               IsaacRandom.field_c.g();
-              SoftwareRasterizer.a(4, 4, 0, 0, 640, 480);
+              SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
               IsaacRandom.field_c.drawAdditive(0, 0, 50);
               ResourceArchive.field_e.a((byte) -45);
               lb.field_q = true;
@@ -210,7 +210,7 @@ final class nj {
           } else {
             ai.a(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
             IsaacRandom.field_c.g();
-            SoftwareRasterizer.a(4, 4, 0, 0, 640, 480);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
             IsaacRandom.field_c.drawAdditive(0, 0, 50);
             ResourceArchive.field_e.a((byte) -45);
             lb.field_q = true;

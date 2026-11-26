@@ -96,8 +96,8 @@ final class vj {
           return;
         }
         param1 = param1 * 9;
-        var3 = gf.field_b;
-        var4 = gf.field_i;
+        var3 = SoftwareRasterizer.field_b;
+        var4 = SoftwareRasterizer.field_i;
         var5 = param1 + 9;
         var6 = this.field_j + this.field_e * var4;
         var7 = -this.field_b + var4;
@@ -163,7 +163,7 @@ final class vj {
             var14 = (int)Math.sqrt((double)((-var6 + var12Lifetime2) * (-var6 + var12Lifetime2) + (-var8 + var13) * (-var8 + var13)));
             var15 = (int)Math.sqrt((double)((-var9 + var13) * (var13 - var9) + (-var7 + var12Lifetime2) * (var12Lifetime2 - var7)));
             var16 = (var20[var12Lifetime2] + (var14 < var15 ? var14 : var15) + var21[var13]) * this.field_h * 9 / 640;
-            this.field_g[var12Lifetime2 + this.field_b * var13] = gf.field_b[var12Lifetime2 + this.field_j + (var13 + this.field_e) * gf.field_i];
+            this.field_g[var12Lifetime2 + this.field_b * var13] = SoftwareRasterizer.field_b[var12Lifetime2 + this.field_j + (var13 + this.field_e) * SoftwareRasterizer.field_i];
             this.field_a[this.field_b * var13 + var12Lifetime2] = var16;
           }
         }

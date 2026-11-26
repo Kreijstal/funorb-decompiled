@@ -180,7 +180,7 @@ abstract class mk extends aj {
         if (qk.field_c == null) {
           qk.field_c = new Sprite(this.field_l, this.field_h);
           CrossfadingMidiPcmStream.a(qk.field_c, 256);
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           fi.c(true);
@@ -190,7 +190,7 @@ abstract class mk extends aj {
         if (this.field_l > qk.field_c.field_n) {
           qk.field_c = new Sprite(this.field_l, this.field_h);
           CrossfadingMidiPcmStream.a(qk.field_c, 256);
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           fi.c(true);
@@ -199,7 +199,7 @@ abstract class mk extends aj {
         }
         if (qk.field_c.field_m >= this.field_h) {
           CrossfadingMidiPcmStream.a(qk.field_c, 256);
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           fi.c(true);
@@ -208,7 +208,7 @@ abstract class mk extends aj {
         }
         qk.field_c = new Sprite(this.field_l, this.field_h);
         CrossfadingMidiPcmStream.a(qk.field_c, 256);
-        sb.c();
+        SoftwareRasterizer.clearRaster();
         this.a(0, (byte) -81, 0);
         super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
         fi.c(true);

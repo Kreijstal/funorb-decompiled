@@ -927,7 +927,7 @@ final class bi {
         try {
           if (this.field_c < 0 &&
             this.field_c != -2147483648) {
-            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 16777215);
+            SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 16777215);
             this.field_c = -2147483648;
             return;
           }
@@ -1023,7 +1023,7 @@ final class bi {
               boolean decompiledFrameRemainder0 = true;
               if ((dd.field_d >> var4Lifetime2 & 1) == 0 && ((1 & this.field_z >> var4Lifetime2) == 0 ||
                 this.field_k % 1000 >= 500)) {
-                SoftwareRasterizer.b(var5_intLifetime2, 118, RandomAccessCacheFile.field_c[var4Lifetime2].field_w, RandomAccessCacheFile.field_c[var4Lifetime2].field_u, 16777215, 118);
+                SoftwareRasterizer.fillRectangleAlpha(var5_intLifetime2, 118, RandomAccessCacheFile.field_c[var4Lifetime2].field_w, RandomAccessCacheFile.field_c[var4Lifetime2].field_u, 16777215, 118);
                 RandomAccessCacheFile.field_c[var4Lifetime2 + 8].e(var5_intLifetime2, 118, 81);
                 decompiledFrameRemainder0 = false;
               }

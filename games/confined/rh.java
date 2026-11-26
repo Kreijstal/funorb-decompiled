@@ -92,7 +92,7 @@ final class rh extends na {
                 vm.a(this.field_eb, -8409);
               } else {
                 vm.a(this.field_eb, -8409);
-                fn.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -115,7 +115,7 @@ final class rh extends na {
             var11Lifetime1 <= this.field_eb.field_u &&
             this.field_eb.field_w >= var12Lifetime1) {
             vm.a(this.field_eb, -8409);
-            fn.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_eb = new nf(var11Lifetime1, var12Lifetime1);
             vm.a(this.field_eb, -8409);
@@ -146,7 +146,7 @@ final class rh extends na {
           var11Lifetime2 <= this.field_eb.field_u &&
           this.field_eb.field_w >= var12Lifetime2) {
           vm.a(this.field_eb, -8409);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
         } else {
           this.field_eb = new nf(var11Lifetime2, var12Lifetime2);
           vm.a(this.field_eb, -8409);

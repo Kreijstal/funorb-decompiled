@@ -998,7 +998,7 @@ abstract class ea extends pn {
         if (this.field_s > 0) {
           return;
         }
-        wm var8 = jf.a(kh.field_j, param4, 0, param4 + 2 * param1, kh.field_b);
+        wm var8 = jf.a(SoftwareRasterizer.field_j, param4, 0, param4 + 2 * param1, SoftwareRasterizer.field_b);
         if (var8 != null) {
           var9 = 2 * this.field_m * param1 / this.field_p;
           var10 = param2 * (this.field_m * 2) / this.field_p;

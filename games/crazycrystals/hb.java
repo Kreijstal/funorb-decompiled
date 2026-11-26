@@ -32,19 +32,19 @@ final class hb extends IntrusiveNode {
         int[] var30 = null;
         var19 = CrazyCrystals.field_B;
         try {
-          if (kh.field_c > param7) {
-            param3 = param3 - (-param7 + kh.field_c);
-            param7 = kh.field_c;
+          if (SoftwareRasterizer.field_c > param7) {
+            param3 = param3 - (-param7 + SoftwareRasterizer.field_c);
+            param7 = SoftwareRasterizer.field_c;
           }
-          if (param3 + param7 > kh.field_g) {
-            param3 = -param7 + kh.field_g;
+          if (param3 + param7 > SoftwareRasterizer.field_g) {
+            param3 = -param7 + SoftwareRasterizer.field_g;
           }
-          if (kh.field_b > param2) {
-            param1 = param1 - (-param2 + kh.field_b);
-            param2 = kh.field_b;
+          if (SoftwareRasterizer.field_b > param2) {
+            param1 = param1 - (-param2 + SoftwareRasterizer.field_b);
+            param2 = SoftwareRasterizer.field_b;
           }
-          if (kh.field_j < param2 + param1) {
-            param1 = -param2 + kh.field_j;
+          if (SoftwareRasterizer.field_j < param2 + param1) {
+            param1 = -param2 + SoftwareRasterizer.field_j;
           }
           if (param3 > 0 &&
             param1 > 0) {
@@ -52,13 +52,13 @@ final class hb extends IntrusiveNode {
             if (param5 > -11) {
               return;
             }
-            var30 = kh.field_i;
-            var10 = kh.field_l;
-            var11 = kh.field_d;
+            var30 = SoftwareRasterizer.field_i;
+            var10 = SoftwareRasterizer.field_l;
+            var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
-            kh.b(var29);
+            SoftwareRasterizer.saveClip(var29);
             param4.a();
-            kh.a(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param4.field_l * param2 + param7;
             var14 = -param3 + param4.field_l;
             var25 = var21.field_w;
@@ -70,19 +70,19 @@ final class hb extends IntrusiveNode {
                 if (var18 != 0) {
                   if (var17 > 0 &&
                     var15[var13 - 1] == 0) {
-                    kh.b(var17, var16, param0, param6);
+                    SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                   } else {
                     if (var16 > 0 &&
                       0 == var15[-param4.field_l + var13]) {
-                      kh.b(var17, var16, param0, param6);
+                      SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                     } else {
                       if (var17 < param4.field_l - 1 &&
                         var15[1 + var13] == 0) {
-                        kh.b(var17, var16, param0, param6);
+                        SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                       } else {
                         if (-1 + param4.field_u > var16 &&
                           var15[var13 + param4.field_l] == 0) {
-                          kh.b(var17, var16, param0, param6);
+                          SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                         }
                       }
                     }
@@ -93,8 +93,8 @@ final class hb extends IntrusiveNode {
               var13 = var13 + var14;
             }
             var21.a(-param4.field_v, -param4.field_t);
-            kh.a(var30, var10, var11);
-            kh.a(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

@@ -15,7 +15,7 @@ final class SoftwareRasterizer {
     private static int[] field_g;
     static int clipLeft;
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void darkenRowsHalf(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {
@@ -53,7 +53,7 @@ final class SoftwareRasterizer {
         clipBounds[3] = clipBottom;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurVerticalInPlace(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_39_2 = 0;
         int stackIn_42_2 = 0;
         int stackIn_45_2 = 0;
@@ -263,7 +263,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4) {
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 == 0) {
@@ -276,9 +276,9 @@ final class SoftwareRasterizer {
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            SoftwareRasterizer.d(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            SoftwareRasterizer.d(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -335,7 +335,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int param0, int param1, int param2, int param3) {
         if (param0 < clipLeft) {
           param2 = param2 - (clipLeft - param0);
           param0 = clipLeft;
@@ -372,7 +372,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4) {
         if (param0 < clipLeft) {
           param2 = param2 - (clipLeft - param0);
           param0 = clipLeft;
@@ -399,7 +399,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleVerticalGradient(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         int var7 = 65536 / param3;
         if (param0 < clipLeft) {
@@ -445,8 +445,8 @@ final class SoftwareRasterizer {
     final static void drawRectangle(int x, int y, int width, int height, int color) {
         SoftwareRasterizer.drawHorizontalLine(x, y, width, color);
         SoftwareRasterizer.drawHorizontalLine(x, y + height - 1, width, color);
-        SoftwareRasterizer.d(x, y, height, color);
-        SoftwareRasterizer.d(x + width - 1, y, height, color);
+        SoftwareRasterizer.drawVerticalLine(x, y, height, color);
+        SoftwareRasterizer.drawVerticalLine(x + width - 1, y, height, color);
     }
 
     final static void setPixel(int x, int y, int color) {
@@ -461,7 +461,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int param0, int param1, int param2, int param3) {
         if (param2 == 0) {
           SoftwareRasterizer.setPixel(param0, param1, param3);
           return;
@@ -556,12 +556,12 @@ final class SoftwareRasterizer {
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.a(framebuffer, 0, param2 + param3 * stride, param0, param2, param4, stride - param4, param5);
-        SoftwareRasterizer.a(framebuffer, 0, param2 + param3 * stride, param1, param3, param5, stride - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer.blurHorizontalInPlace(framebuffer, 0, param2 + param3 * stride, param0, param2, param4, stride - param4, param5);
+        SoftwareRasterizer.blurVerticalInPlace(framebuffer, 0, param2 + param3 * stride, param1, param3, param5, stride - param4, param2, param4);
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void darkenRectangleHalf(int param0, int param1, int param2, int param3) {
         if (param0 < clipLeft) {
           param2 = param2 - (clipLeft - param0);
           param0 = clipLeft;
@@ -578,10 +578,10 @@ final class SoftwareRasterizer {
         }
         int var4 = stride - param2;
         int var5 = param0 + param1 * stride;
-        SoftwareRasterizer.a(var5, framebuffer, 0, param2, -param3, var4);
+        SoftwareRasterizer.darkenRowsHalf(var5, framebuffer, 0, param2, -param3, var4);
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         if (param0 >= clipLeft) {
           if (param0 >= clipRight) {
             return;
@@ -626,7 +626,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.clearScanlineMasks();
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurHorizontalInPlace(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var19Lifetime1;
         int var8 = 16384 / (2 * param3 + 1);
         int var9 = 1 + param3 - param5 - param4;
@@ -755,7 +755,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 < clipLeft) {
           param2 = param2 - (clipLeft - param0);
           param0 = clipLeft;
@@ -786,11 +786,11 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawRectangleShadow(int param0, int param1, int param2, int param3, int param4) {
         for (int var6 = 0; var6 < 4; var6++) {
           int var5 = 128 - (var6 << 5);
-          SoftwareRasterizer.a(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          SoftwareRasterizer.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -821,7 +821,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.setClip(0, 0, targetWidth, targetHeight);
     }
 
-    private final static void d(int param0, int param1, int param2, int param3) {
+    private final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         if (param0 >= clipLeft) {
           if (param0 >= clipRight) {
             return;
@@ -877,7 +877,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.clearScanlineMasks();
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         if (param1 >= clipTop) {
           if (param1 >= clipBottom) {
             return;

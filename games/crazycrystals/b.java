@@ -213,22 +213,22 @@ final class b {
         if (param11 <= param13) {
           if (param3 <= param13) {
             if (param3 <= param11) {
-              cd.a(param6, param12, param3, param4, param13, param9, param1, param5, param11, param0, param7, param15, param8, param2, 2, kh.field_i, param14);
+              cd.a(param6, param12, param3, param4, param13, param9, param1, param5, param11, param0, param7, param15, param8, param2, 2, SoftwareRasterizer.field_i, param14);
             } else {
-              cd.a(param2, param12, param11, param5, param13, param7, param1, param4, param3, param14, param9, param15, param8, param6, 2, kh.field_i, param0);
+              cd.a(param2, param12, param11, param5, param13, param7, param1, param4, param3, param14, param9, param15, param8, param6, 2, SoftwareRasterizer.field_i, param0);
             }
           } else {
-            cd.a(param2, param5, param11, param12, param3, param8, param6, param4, param13, param15, param9, param14, param7, param1, 2, kh.field_i, param0);
+            cd.a(param2, param5, param11, param12, param3, param8, param6, param4, param13, param15, param9, param14, param7, param1, 2, SoftwareRasterizer.field_i, param0);
           }
         } else {
           if (param3 <= param11) {
             if (param3 <= param13) {
-              cd.a(param6, param4, param3, param12, param11, param8, param2, param5, param13, param15, param7, param0, param9, param1, 2, kh.field_i, param14);
+              cd.a(param6, param4, param3, param12, param11, param8, param2, param5, param13, param15, param7, param0, param9, param1, 2, SoftwareRasterizer.field_i, param14);
             } else {
-              cd.a(param1, param4, param13, param5, param11, param7, param2, param12, param3, param14, param8, param0, param9, param6, 2, kh.field_i, param15);
+              cd.a(param1, param4, param13, param5, param11, param7, param2, param12, param3, param14, param8, param0, param9, param6, 2, SoftwareRasterizer.field_i, param15);
             }
           } else {
-            cd.a(param1, param5, param13, param4, param3, param9, param6, param12, param11, param0, param8, param14, param7, param2, 2, kh.field_i, param15);
+            cd.a(param1, param5, param13, param4, param3, param9, param6, param12, param11, param0, param8, param14, param7, param2, 2, SoftwareRasterizer.field_i, param15);
           }
         }
     }

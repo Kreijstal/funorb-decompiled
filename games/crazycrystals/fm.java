@@ -309,11 +309,11 @@ final class fm extends pn {
               var16 = 16711935 & (var15 & 16711935) * var13 >> 8;
               var17 = 65280 & var13 * (var15 & 65280) >> 8;
               var15Lifetime1 = var14 ^ (var16 | var17);
-              kh.b(-var12 + var9, var10, var15Lifetime1);
+              SoftwareRasterizer.addPixel(-var12 + var9, var10, var15Lifetime1);
               if (0 < var12) {
-                kh.b(var12 + var9, var10, var15Lifetime1);
-                kh.b(var9, -var12 + var10, var15Lifetime1);
-                kh.b(var9, var12 + var10, var15Lifetime1);
+                SoftwareRasterizer.addPixel(var12 + var9, var10, var15Lifetime1);
+                SoftwareRasterizer.addPixel(var9, -var12 + var10, var15Lifetime1);
+                SoftwareRasterizer.addPixel(var9, var12 + var10, var15Lifetime1);
               }
             }
           }

@@ -102,7 +102,7 @@ final class d {
         if (param4) {
           return;
         }
-        gf.a(param0, param3, param2, param1);
+        SoftwareRasterizer.intersectClip(param0, param3, param2, param1);
     }
 
     public static void clearStaticReferences(int param0) {

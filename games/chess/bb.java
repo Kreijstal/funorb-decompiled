@@ -325,22 +325,22 @@ final class bb {
         }
         if (param3 > param5) {
           if (param3 < param7) {
-            mm.a((byte) -123, param7, wb.field_d, param1, param2, param5, param4, param0, param3);
+            mm.a((byte) -123, param7, SoftwareRasterizer.field_d, param1, param2, param5, param4, param0, param3);
           } else {
             if (param7 <= param5) {
-              mm.a((byte) 108, param3, wb.field_d, param4, param2, param7, param0, param1, param5);
+              mm.a((byte) 108, param3, SoftwareRasterizer.field_d, param4, param2, param7, param0, param1, param5);
             } else {
-              mm.a((byte) -69, param3, wb.field_d, param4, param2, param5, param1, param0, param7);
+              mm.a((byte) -69, param3, SoftwareRasterizer.field_d, param4, param2, param5, param1, param0, param7);
             }
           }
         } else {
           if (param7 > param5) {
-            mm.a((byte) -69, param7, wb.field_d, param1, param2, param3, param0, param4, param5);
+            mm.a((byte) -69, param7, SoftwareRasterizer.field_d, param1, param2, param3, param0, param4, param5);
           } else {
             if (param3 >= param7) {
-              mm.a((byte) -37, param5, wb.field_d, param0, param2, param7, param4, param1, param3);
+              mm.a((byte) -37, param5, SoftwareRasterizer.field_d, param0, param2, param7, param4, param1, param3);
             } else {
-              mm.a((byte) 119, param5, wb.field_d, param0, param2, param3, param1, param4, param7);
+              mm.a((byte) 119, param5, SoftwareRasterizer.field_d, param0, param2, param3, param1, param4, param7);
             }
           }
         }

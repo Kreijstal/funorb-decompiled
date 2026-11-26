@@ -6,33 +6,33 @@ final class lk extends qe {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * ki.field_j;
-        int var10 = ki.field_j - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer.field_j;
+        int var10 = SoftwareRasterizer.field_j - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < ki.field_e) {
-          var13 = ki.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var13 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var13;
-          param2 = ki.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * ki.field_j;
+          var9 = var9 + var13 * SoftwareRasterizer.field_j;
         }
-        if (param2 + param4 > ki.field_i) {
-          param4 = param4 - (param2 + param4 - ki.field_i);
+        if (param2 + param4 > SoftwareRasterizer.field_i) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_i);
         }
-        if (param1 < ki.field_l) {
-          var13Lifetime1 = ki.field_l - param1;
+        if (param1 < SoftwareRasterizer.field_l) {
+          var13Lifetime1 = SoftwareRasterizer.field_l - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = ki.field_l;
+          param1 = SoftwareRasterizer.field_l;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > ki.field_g) {
-          var13Lifetime2 = param1 + param3 - ki.field_g;
+        if (param1 + param3 > SoftwareRasterizer.field_g) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -41,7 +41,7 @@ final class lk extends qe {
           param4 <= 0) {
           return;
         }
-        lk.a(ki.field_a, this.field_A[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        lk.a(SoftwareRasterizer.field_a, this.field_A[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
@@ -55,8 +55,8 @@ final class lk extends qe {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - ki.field_l;
-        var14 = param3 - ki.field_e;
+        var13 = param2 - SoftwareRasterizer.field_l;
+        var14 = param3 - SoftwareRasterizer.field_e;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -98,7 +98,7 @@ final class lk extends qe {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                ki.field_a[incrementValue$1] = param6;
+                SoftwareRasterizer.field_a[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -186,41 +186,41 @@ final class lk extends qe {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * ki.field_j;
-        var9 = ki.field_j - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_j;
+        var9 = SoftwareRasterizer.field_j - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < ki.field_e) {
-          var12 = ki.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var12 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var12;
-          param2 = ki.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * ki.field_j;
+          var8 = var8 + var12 * SoftwareRasterizer.field_j;
         }
-        if (param2 + param4 > ki.field_i) {
-          param4 = param4 - (param2 + param4 - ki.field_i);
+        if (param2 + param4 > SoftwareRasterizer.field_i) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_i);
         }
-        if (param1 < ki.field_l) {
-          var12Lifetime1 = ki.field_l - param1;
+        if (param1 < SoftwareRasterizer.field_l) {
+          var12Lifetime1 = SoftwareRasterizer.field_l - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = ki.field_l;
+          param1 = SoftwareRasterizer.field_l;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > ki.field_g) {
-          var12Lifetime2 = param1 + param3 - ki.field_g;
+        if (param1 + param3 > SoftwareRasterizer.field_g) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (ki.field_h == null) {
-            lk.a(ki.field_a, this.field_A[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer.field_h == null) {
+            lk.a(SoftwareRasterizer.field_a, this.field_A[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            lk.a(ki.field_a, this.field_A[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, ki.field_h, ki.field_d);
+            lk.a(SoftwareRasterizer.field_a, this.field_A[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d);
           }
           return;
         }

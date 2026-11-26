@@ -40,19 +40,19 @@ final class nd extends ig {
           var8 = param5 + param1;
           var9 = -param5 + param3;
           var10 = param5 + param3;
-          if (ti.field_e > var9) {
-            var9 = ti.field_e;
+          if (SoftwareRasterizer.field_e > var9) {
+            var9 = SoftwareRasterizer.field_e;
           }
-          if (var8 > ti.field_l) {
-            var8 = ti.field_l;
+          if (var8 > SoftwareRasterizer.field_l) {
+            var8 = SoftwareRasterizer.field_l;
           }
-          if (var7 < ti.field_f) {
-            var7 = ti.field_f;
+          if (var7 < SoftwareRasterizer.field_f) {
+            var7 = SoftwareRasterizer.field_f;
           }
-          if (ti.field_c < var10) {
-            var10 = ti.field_c;
+          if (SoftwareRasterizer.field_c < var10) {
+            var10 = SoftwareRasterizer.field_c;
           }
-          var26 = ti.field_a;
+          var26 = SoftwareRasterizer.field_a;
           var25 = var26;
           var11 = var25;
           for (var16 = var7; var8 > var16; var16++) {
@@ -65,7 +65,7 @@ final class nd extends ig {
                 if (var15 == 0) {
                   var15 = 1;
                 }
-                var12 = ti.field_i * var16 + var17;
+                var12 = SoftwareRasterizer.field_i * var16 + var17;
                 if (param0 < 0) {
                   var18 = -param0 + 256 - (-param0 + 256) * var15 / var6_int;
                 } else {
@@ -153,24 +153,24 @@ final class nd extends ig {
         int var10 = 0;
         var10 = stellarshard.field_B;
         try {
-          ti.g(param3, param1, 1 + param0, 10000536);
-          ti.g(param3, param2 + param1, 1 + param0, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param1, 1 + param0, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param2 + param1, 1 + param0, 12105912);
           var5_int = 1;
           var6 = param2;
           if (param4 >= -76) {
             field_F = (String) null;
           }
-          if (ti.field_f > param1 + var5_int) {
-            var5_int = ti.field_f - param1;
+          if (SoftwareRasterizer.field_f > param1 + var5_int) {
+            var5_int = SoftwareRasterizer.field_f - param1;
           }
-          if (param1 + var6 > ti.field_l) {
-            var6 = -param1 + ti.field_l;
+          if (param1 + var6 > SoftwareRasterizer.field_l) {
+            var6 = -param1 + SoftwareRasterizer.field_l;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 48 * var7 / param2 + 152;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            ti.field_a[ti.field_i * (param1 + var7) + param3] = var9;
-            ti.field_a[param0 + (var7 + param1) * ti.field_i + param3] = var9;
+            SoftwareRasterizer.field_a[SoftwareRasterizer.field_i * (param1 + var7) + param3] = var9;
+            SoftwareRasterizer.field_a[param0 + (var7 + param1) * SoftwareRasterizer.field_i + param3] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

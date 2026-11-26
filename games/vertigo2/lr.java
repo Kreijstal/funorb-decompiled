@@ -141,7 +141,7 @@ final class lr extends d {
             return;
           }
           lq.a(UiPanel.field_E, (byte) -94);
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
           UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
@@ -176,7 +176,7 @@ final class lr extends d {
             return;
           }
           lq.a(UiPanel.field_E, (byte) -94);
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
           UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);

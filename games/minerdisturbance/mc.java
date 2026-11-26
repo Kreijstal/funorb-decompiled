@@ -851,10 +851,10 @@ final class mc {
           var3 = 345 - (SecondaryNodeDeque.field_d.field_x >> 1);
           var4 = 320 + (SecondaryNodeDeque.field_d.field_x >> 1) - 25;
           while (var3 < var4) {
-            SoftwareRasterizer.a(var3 << 4, this.field_v + 42 << 4, 800, var2, s.field_I);
+            SoftwareRasterizer.addRadialGlow(var3 << 4, this.field_v + 42 << 4, 800, var2, s.field_I);
             var3 += 50;
           }
-          SoftwareRasterizer.a(var4 << 4, 42 + this.field_v << 4, 800, var2, s.field_I);
+          SoftwareRasterizer.addRadialGlow(var4 << 4, 42 + this.field_v << 4, 800, var2, s.field_I);
         }
         var2Lifetime1 = wc.field_c[ah.field_f][0].field_A;
         var3Lifetime1 = wc.field_c[ah.field_f][0].field_x;
@@ -959,7 +959,7 @@ final class mc {
             var21++;
             if (var13_int == 0) {
               this.field_h.g();
-              SoftwareRasterizer.d();
+              SoftwareRasterizer.clearRaster();
               stackIn_70_0 = ce.field_d;
               stackIn_70_1 = Integer.toString(var10Lifetime1 * 100);
               stackIn_70_2 = 10;
@@ -986,8 +986,8 @@ final class mc {
           }
           break;
         }
-        SoftwareRasterizer.b(this.field_v, 440, 640, 40, 4539717, 160);
-        SoftwareRasterizer.a(this.field_v, 441, 640, 41, 10066329);
+        SoftwareRasterizer.fillRectangleAlpha(this.field_v, 440, 640, 40, 4539717, 160);
+        SoftwareRasterizer.drawRectangleOutline(this.field_v, 441, 640, 41, 10066329);
         stackIn_81_1 = (this.field_f == 0) && (this.field_c % 10 < 5);
         stackIn_83_0 = this;
         stackIn_83_2 = -123;

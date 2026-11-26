@@ -21,14 +21,14 @@ final class wo {
         int var8Lifetime1;
         jh.a(var7);
         for (var8 = 0; var8 < param3; var8++) {
-          gf.b(-1 + (param3 - var8), var8, 1 + 2 * var8, param4);
+          SoftwareRasterizer.drawHorizontalLine(-1 + (param3 - var8), var8, 1 + 2 * var8, param4);
         }
         var8Lifetime1 = -param0 + var5 >> 1;
         if (param1 != 1) {
           return (cn) null;
         }
         for (var9 = 0; param2 > var9; var9++) {
-          gf.b(var8Lifetime1, param3 + var9, param0, param4);
+          SoftwareRasterizer.drawHorizontalLine(var8Lifetime1, param3 + var9, param0, param4);
         }
         jh.b();
         return var7;

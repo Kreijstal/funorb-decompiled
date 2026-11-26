@@ -192,14 +192,14 @@ final class RandomAccessCacheFile {
           }
           var5Lifetime1 = 0;
           var5Lifetime2 = 28 + (32 - hc.field_S) / 8;
-          SoftwareRasterizer.a(32 + var3_int << 4, 32 + var4 << 4, var5Lifetime2 << 4, 255, LevelEntity.field_A);
+          SoftwareRasterizer.addRadialGlow(32 + var3_int << 4, 32 + var4 << 4, var5Lifetime2 << 4, 255, LevelEntity.field_A);
           if (param0 != -996593372) {
             return;
           }
           for (var8 = 0; var8 < 10; var8++) {
             var6 = e.b((byte) 57, 2 * var5Lifetime2);
             var7 = e.b((byte) 57, 2 * var5Lifetime2);
-            SoftwareRasterizer.a(var6 + (-var5Lifetime2 + var3_int + 32) << 4, var7 - var5Lifetime2 + (32 + var4) << 4, 64, 128, LevelEntity.field_A);
+            SoftwareRasterizer.addRadialGlow(var6 + (-var5Lifetime2 + var3_int + 32) << 4, var7 - var5Lifetime2 + (32 + var4) << 4, 64, 128, LevelEntity.field_A);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

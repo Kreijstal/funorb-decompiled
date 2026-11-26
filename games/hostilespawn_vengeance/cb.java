@@ -94,7 +94,7 @@ final class cb {
           var2_int = (640 - gj.field_d.field_z) / 2;
           var3 = -gj.field_d.field_A + 478;
           var4 = (gj.field_d.field_z - 4) * ij.k(param0 ^ -547) >> 9;
-          si.c(var2_int + 2, var3 + 3, var4, 2, 16772608);
+          SoftwareRasterizer.fillRectangle(var2_int + 2, var3 + 3, var4, 2, 16772608);
           gj.field_d.e(var2_int, var3);
           al.field_Z.c(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
           al.field_Z.b(bi.field_c[AccountNameAvailabilityValidator.field_s].toUpperCase(), 320, 471, 16776960, -1);

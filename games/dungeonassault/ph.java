@@ -14,33 +14,33 @@ final class ph {
         int var9Lifetime2;
         param0 = param0 + this.field_a.field_w;
         param1 = param1 + this.field_a.field_A;
-        int var3 = param0 + param1 * gf.field_i;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_i;
         int var4 = 0;
         int var5 = this.field_b;
         int var6 = this.field_d;
-        int var7 = gf.field_i - var6;
+        int var7 = SoftwareRasterizer.field_i - var6;
         int var8 = 0;
-        if (param1 < gf.field_f) {
-          var9 = gf.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var9 = SoftwareRasterizer.field_f - param1;
           var5 = var5 - var9;
-          param1 = gf.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * gf.field_i;
+          var3 = var3 + var9 * SoftwareRasterizer.field_i;
         }
-        if (param1 + var5 > gf.field_e) {
-          var5 = var5 - (param1 + var5 - gf.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < gf.field_j) {
-          var9Lifetime1 = gf.field_j - param0;
+        if (param0 < SoftwareRasterizer.field_j) {
+          var9Lifetime1 = SoftwareRasterizer.field_j - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = gf.field_j;
+          param0 = SoftwareRasterizer.field_j;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > gf.field_h) {
-          var9Lifetime2 = param0 + var6 - gf.field_h;
+        if (param0 + var6 > SoftwareRasterizer.field_h) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_h;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -58,33 +58,33 @@ final class ph {
         int var9Lifetime2;
         param0 = param0 + this.field_a.field_w;
         param1 = param1 + (this.field_a.field_G - this.field_a.field_v - this.field_a.field_A);
-        int var3 = param0 + (param1 + this.field_b - 1) * gf.field_i;
+        int var3 = param0 + (param1 + this.field_b - 1) * SoftwareRasterizer.field_i;
         int var4 = 0;
         int var5 = this.field_b;
         int var6 = this.field_d;
-        int var7 = -gf.field_i - var6;
+        int var7 = -SoftwareRasterizer.field_i - var6;
         int var8 = 0;
-        if (param1 < gf.field_f) {
-          var5 = var5 - (gf.field_f - param1);
-          param1 = gf.field_f;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var5 = var5 - (SoftwareRasterizer.field_f - param1);
+          param1 = SoftwareRasterizer.field_f;
         }
-        if (param1 + var5 > gf.field_e) {
-          var9 = param1 + var5 - gf.field_e;
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var9 = param1 + var5 - SoftwareRasterizer.field_e;
           var5 = var5 - var9;
-          var3 = var3 - var9 * gf.field_i;
+          var3 = var3 - var9 * SoftwareRasterizer.field_i;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < gf.field_j) {
-          var9Lifetime1 = gf.field_j - param0;
+        if (param0 < SoftwareRasterizer.field_j) {
+          var9Lifetime1 = SoftwareRasterizer.field_j - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = gf.field_j;
+          param0 = SoftwareRasterizer.field_j;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > gf.field_h) {
-          var9Lifetime2 = param0 + var6 - gf.field_h;
+        if (param0 + var6 > SoftwareRasterizer.field_h) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_h;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -149,33 +149,33 @@ final class ph {
         int var9Lifetime2;
         param0 = param0 + this.field_a.field_w;
         param1 = param1 + (this.field_a.field_G - this.field_b - this.field_a.field_A);
-        int var3 = param0 + (param1 + this.field_b - 1) * gf.field_i;
+        int var3 = param0 + (param1 + this.field_b - 1) * SoftwareRasterizer.field_i;
         int var4 = this.field_d - 1;
         int var5 = this.field_b;
         int var6 = this.field_d;
-        int var7 = -gf.field_i - var6;
+        int var7 = -SoftwareRasterizer.field_i - var6;
         int var8 = var6 + var6;
-        if (param1 < gf.field_f) {
-          var5 = var5 - (gf.field_f - param1);
-          param1 = gf.field_f;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var5 = var5 - (SoftwareRasterizer.field_f - param1);
+          param1 = SoftwareRasterizer.field_f;
         }
-        if (param1 + var5 > gf.field_e) {
-          var9 = param1 + var5 - gf.field_e;
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var9 = param1 + var5 - SoftwareRasterizer.field_e;
           var5 = var5 - var9;
-          var3 = var3 - var9 * gf.field_i;
+          var3 = var3 - var9 * SoftwareRasterizer.field_i;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < gf.field_j) {
-          var9Lifetime1 = gf.field_j - param0;
+        if (param0 < SoftwareRasterizer.field_j) {
+          var9Lifetime1 = SoftwareRasterizer.field_j - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = gf.field_j;
+          param0 = SoftwareRasterizer.field_j;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > gf.field_h) {
-          var9Lifetime2 = param0 + var6 - gf.field_h;
+        if (param0 + var6 > SoftwareRasterizer.field_h) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_h;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -193,33 +193,33 @@ final class ph {
         int var9Lifetime2;
         param0 = param0 + this.field_a.field_w;
         param1 = param1 + this.field_a.field_A;
-        int var3 = param0 + param1 * gf.field_i;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_i;
         int var4 = 0;
         int var5 = this.field_b;
         int var6 = this.field_d;
-        int var7 = gf.field_i - var6;
+        int var7 = SoftwareRasterizer.field_i - var6;
         int var8 = 0;
-        if (param1 < gf.field_f) {
-          var9 = gf.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var9 = SoftwareRasterizer.field_f - param1;
           var5 = var5 - var9;
-          param1 = gf.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * gf.field_i;
+          var3 = var3 + var9 * SoftwareRasterizer.field_i;
         }
-        if (param1 + var5 > gf.field_e) {
-          var5 = var5 - (param1 + var5 - gf.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < gf.field_j) {
-          var9Lifetime1 = gf.field_j - param0;
+        if (param0 < SoftwareRasterizer.field_j) {
+          var9Lifetime1 = SoftwareRasterizer.field_j - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = gf.field_j;
+          param0 = SoftwareRasterizer.field_j;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > gf.field_h) {
-          var9Lifetime2 = param0 + var6 - gf.field_h;
+        if (param0 + var6 > SoftwareRasterizer.field_h) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_h;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -237,33 +237,33 @@ final class ph {
         int var9Lifetime2;
         param0 = param0 + (this.field_a.field_E - this.field_a.field_y - this.field_a.field_w);
         param1 = param1 + this.field_a.field_A;
-        int var3 = param0 + param1 * gf.field_i;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_i;
         int var4 = this.field_a.field_y - 1;
         int var5 = this.field_a.field_v;
         int var6 = this.field_a.field_y;
-        int var7 = gf.field_i - var6;
+        int var7 = SoftwareRasterizer.field_i - var6;
         int var8 = var6 + var6;
-        if (param1 < gf.field_f) {
-          var9 = gf.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var9 = SoftwareRasterizer.field_f - param1;
           var5 = var5 - var9;
-          param1 = gf.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * gf.field_i;
+          var3 = var3 + var9 * SoftwareRasterizer.field_i;
         }
-        if (param1 + var5 > gf.field_e) {
-          var5 = var5 - (param1 + var5 - gf.field_e);
+        if (param1 + var5 > SoftwareRasterizer.field_e) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_e);
         }
-        if (param0 < gf.field_j) {
-          var9Lifetime1 = gf.field_j - param0;
+        if (param0 < SoftwareRasterizer.field_j) {
+          var9Lifetime1 = SoftwareRasterizer.field_j - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = gf.field_j;
+          param0 = SoftwareRasterizer.field_j;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > gf.field_h) {
-          var9Lifetime2 = param0 + var6 - gf.field_h;
+        if (param0 + var6 > SoftwareRasterizer.field_h) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_h;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;

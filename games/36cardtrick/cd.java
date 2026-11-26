@@ -45,8 +45,8 @@ final class cd {
             var7 = param0[1].field_l;
             param0[0].d(param3, param4);
             param0[2].d(param1 + param3 - var6, param4);
-            vj.a(sg.field_c);
-            vj.f(var5_int + param3, param4, -var6 + param1 + param3, param4 + param0[1].field_k);
+            SoftwareRasterizer.saveClip(sg.field_c);
+            SoftwareRasterizer.intersectClip(var5_int + param3, param4, -var6 + param1 + param3, param4 + param0[1].field_k);
             if (param2 != -94) {
               return;
             }
@@ -55,7 +55,7 @@ final class cd {
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
               param0[1].d(param3, param4);
             }
-            vj.b(sg.field_c);
+            SoftwareRasterizer.restoreClip(sg.field_c);
             return;
           }
           return;
@@ -97,22 +97,22 @@ final class cd {
         var9 = Main.field_T;
         if (param0 >= param2) {
           if (param1 > param0) {
-            w.a(vj.field_j, param6, param0, param5, true, param4, param7, param2, param1);
+            w.a(SoftwareRasterizer.field_j, param6, param0, param5, true, param4, param7, param2, param1);
           } else {
             if (param1 > param2) {
-              w.a(vj.field_j, param6, param1, param5, true, param7, param4, param2, param0);
+              w.a(SoftwareRasterizer.field_j, param6, param1, param5, true, param7, param4, param2, param0);
             } else {
-              w.a(vj.field_j, param6, param2, param7, true, param5, param4, param1, param0);
+              w.a(SoftwareRasterizer.field_j, param6, param2, param7, true, param5, param4, param1, param0);
             }
           }
         } else {
           if (param2 < param1) {
-            w.a(vj.field_j, param6, param2, param4, true, param5, param7, param0, param1);
+            w.a(SoftwareRasterizer.field_j, param6, param2, param4, true, param5, param7, param0, param1);
           } else {
             if (param0 >= param1) {
-              w.a(vj.field_j, param6, param0, param7, true, param4, param5, param1, param2);
+              w.a(SoftwareRasterizer.field_j, param6, param0, param7, true, param4, param5, param1, param2);
             } else {
-              w.a(vj.field_j, param6, param1, param4, true, param7, param5, param0, param2);
+              w.a(SoftwareRasterizer.field_j, param6, param1, param4, true, param7, param5, param0, param2);
             }
           }
         }

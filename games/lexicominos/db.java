@@ -1367,7 +1367,7 @@ class db extends ed {
     }
 
     final void b() {
-        SoftwareRasterizer.a(this.field_y, this.field_p, this.field_u);
+        SoftwareRasterizer.setRasterBuffer(this.field_y, this.field_p, this.field_u);
     }
 
     void c(int param0, int param1) {

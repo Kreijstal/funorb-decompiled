@@ -1232,10 +1232,10 @@ final class GameSession {
         }
         ValidationStatus.performAction1570(true, TextFieldValidator.rgbSpriteState0077);
         MixedSupport104.performAction1357();
-        SoftwareRaster.performAction0648();
+        SoftwareRaster.clearRaster();
         GameplayControls.performAction1748(0);
         if (256 > integerLocal3) {
-          SoftwareRaster.performAction0641(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 256 - integerLocal3);
+          SoftwareRaster.fillRectangleAlpha(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 256 - integerLocal3);
         }
         ByteStorage.performAction1060((byte) -5);
         if (MixedSupport046.integerState0250 >= 150) {
@@ -1280,9 +1280,9 @@ final class GameSession {
     }
 
     private final void performAction1329(int integerArgument1) {
-        SoftwareRaster.performAction0641(0, 0, 640, 480, 65793, this.integerState0630 << 1);
+        SoftwareRaster.fillRectangleAlpha(0, 0, 640, 480, 65793, this.integerState0630 << 1);
         int integerLocal1 = -(240 * this.integerState0630 * this.integerState0630 / 3600) + 240;
-        SoftwareRaster.performAction0641(175, 180 + integerLocal1, 290, 180, 0, 180);
+        SoftwareRaster.fillRectangleAlpha(175, 180 + integerLocal1, 290, 180, 0, 180);
         GameplayControls.performAction1749(200, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 310, 170 + integerLocal1, 165);
         int integerLocal2 = this.integerState0640;
         int integerLocal3 = this.mixedSupport028State0001.bucketBoardArrayState0001[0].integerState0466 / integerLocal2;
@@ -1309,8 +1309,8 @@ final class GameSession {
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 300 + integerLocal1, Integer.toString(integerLocal8), 16777215, 455);
         MixedSupport042.performAction0537(320 + integerLocal1, 256, 16694016, UiComponentPart025.stringState0449, 185, SceneWidget.renderingSupport009State0007);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, integerLocal1 + 320, Integer.toString(integerLocal9), 16777215, 455);
-        SoftwareRaster.performAction0640(183, 327 + integerLocal1, 274, 7, 0);
-        SoftwareRaster.performAction0640(185, integerLocal1 + 329, 270, 3, 16777215);
+        SoftwareRaster.fillRectangle(183, 327 + integerLocal1, 274, 7, 0);
+        SoftwareRaster.fillRectangle(185, integerLocal1 + 329, 270, 3, 16777215);
         MixedSupport042.performAction0537(350 + integerLocal1, 256, 16694016, KeyboardInputHandler.stringState0357, 185, SceneWidget.renderingSupport009State0007);
         int integerLocal10 = integerLocal9 + integerLocal7 + integerLocal4 + (integerLocal3 - (-integerLocal5 - integerLocal6 - integerLocal8));
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 350 + integerLocal1, Integer.toString(integerLocal10), 16777215, 455);
@@ -1582,10 +1582,10 @@ final class GameSession {
         int[] integerArrayLocal17 = null;
         try {
           if (integerArgument7 == this.integerState0612) {
-            SoftwareRaster.performAction0641(145 + integerArgument1, integerArgument3, 349, 18, 2587569, 100);
+            SoftwareRaster.fillRectangleAlpha(145 + integerArgument1, integerArgument3, 349, 18, 2587569, 100);
           }
           if (integerArgument7 == this.integerState0625) {
-            SoftwareRaster.performAction0641(integerArgument1 + 145, integerArgument3, 349, 18, 8454016, 40);
+            SoftwareRaster.fillRectangleAlpha(integerArgument1 + 145, integerArgument3, 349, 18, 8454016, 40);
           }
           objectLocal9 = null;
           if (integerArgument4 < 28) {
@@ -1628,7 +1628,7 @@ final class GameSession {
             integerLocal12 = UiComponentPart029.renderingSupport009State0005.computeInteger1066((String) (objectLocal9));
             integerLocal13 = integerArgument1 + (126 - integerLocal12);
             integerLocal14 = integerArgument3;
-            SoftwareRaster.performAction0656(integerLocal13 - 2, integerLocal14 - 3, integerLocal12 + 8, 17, 4, 65793);
+            SoftwareRaster.fillRoundedRectangle(integerLocal13 - 2, integerLocal14 - 3, integerLocal12 + 8, 17, 4, 65793);
             integerArrayLocal15 = new int[]{integerLocal13 + integerLocal12, 11 + integerLocal14, integerLocal13 - (-integerLocal12 - 15), integerLocal14 + 15, 15 + (integerLocal13 + integerLocal12), 15 + integerLocal14, integerLocal12 + (integerLocal13 + 15), 13 + integerLocal14, integerLocal13 + integerLocal12 + 6, 4 + integerLocal14};
             PolygonScanlineRasterizer.fillPolygon(integerArrayLocal15, 65793);
             integerLocal16 = 16777215;
@@ -1639,7 +1639,7 @@ final class GameSession {
             if (integerLocal10 != 0) {
               integerLocal16 = 8421504;
             }
-            SoftwareRaster.performAction0656(integerLocal13 - 1, -3 + integerLocal14 + 1, integerLocal12 + 6, 15, 4, integerLocal16);
+            SoftwareRaster.fillRoundedRectangle(integerLocal13 - 1, -3 + integerLocal14 + 1, integerLocal12 + 6, 15, 4, integerLocal16);
             integerArrayLocal17 = new int[]{1 + integerLocal12 + integerLocal13, 10 + integerLocal14, 14 + integerLocal12 + integerLocal13, integerLocal14 + 14, integerLocal12 + (integerLocal13 + 5), integerLocal14 + 5};
             PolygonScanlineRasterizer.fillPolygon(integerArrayLocal17, integerLocal16);
             UiComponentPart029.renderingSupport009State0005.performAction1069((String) (objectLocal9), integerLocal13 + 2, 10 + integerLocal14, 65793, -1);
@@ -1984,12 +1984,12 @@ final class GameSession {
           for (integerLocal25 = 0; integerLocal25 < 16; integerLocal25++) {
             integerLocal26 = integerLocal53 * 16 + integerLocal25;
             MixedSupport073.rgbSpriteArrayState0017[integerLocal26].performAction0256();
-            SoftwareRaster.performAction0648();
+            SoftwareRaster.clearRaster();
             MixedSupport045.computeInteger0552(144, 1, -9 * integerLocal53, stringArgument10, 0, 36, 16777215, SceneWidget.renderingSupport009State0007, (byte) -126, 1, -9 * integerLocal25);
             integerLocal26++;
           }
         }
-        SoftwareRaster.performAction0645(integerArrayLocal46, integerLocal51, integerLocal52);
+        SoftwareRaster.setRasterBuffer(integerArrayLocal46, integerLocal51, integerLocal52);
         if (nodeDequeArgument14 != null) {
           animatedTileRegionLocal24 = (AnimatedTileRegion) (nodeDequeArgument14.beginBackward((byte) -96));
           while (animatedTileRegionLocal24 != null) {
@@ -2298,8 +2298,8 @@ final class GameSession {
         integerLocal1 = -74 + RichTextLayout.sceneWidgetState0021.integerState0903 / 2;
         integerLocal2 = integerArgument1 + 250;
         integerLocal3 = integerLocal2 + 7;
-        SoftwareRaster.performAction0660(-5 + integerLocal2, -5 + integerLocal1, 150, 142, 14676, 87166);
-        SoftwareRaster.performAction0660(integerLocal2, integerLocal1, 140, 127, 14676, 4427445);
+        SoftwareRaster.fillRectangleVerticalGradient(-5 + integerLocal2, -5 + integerLocal1, 150, 142, 14676, 87166);
+        SoftwareRaster.fillRectangleVerticalGradient(integerLocal2, integerLocal1, 140, 127, 14676, 4427445);
         GameplayControls.performAction1749(158, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, -16 + integerLocal1, -15 + integerLocal2);
         integerLocal4 = integerLocal1;
         MixedSupport029.performAction0407(16777215, 70 + integerLocal2, GameAssets.stringState0503, integerLocal4 + 16, (byte) 75, UiComponentPart029.renderingSupport009State0005);
@@ -2828,8 +2828,8 @@ final class GameSession {
         if (integerArgument7 != 9918) {
           this.integerState0640 = 122;
         }
-        SoftwareRaster.performAction0664(integerArgument2, integerArgument4, integerArgument6, integerArgument3, integerArgument5);
-        SoftwareRaster.performAction0664(integerArgument2 + 1, integerArgument4 + 1, -2 + integerArgument6, -2 + integerArgument3, integerArgument1);
+        SoftwareRaster.drawRectangleOutline(integerArgument2, integerArgument4, integerArgument6, integerArgument3, integerArgument5);
+        SoftwareRaster.drawRectangleOutline(integerArgument2 + 1, integerArgument4 + 1, -2 + integerArgument6, -2 + integerArgument3, integerArgument1);
     }
 
     final void performAction1316(boolean booleanArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, boolean booleanArgument5) {
@@ -3537,8 +3537,8 @@ final class GameSession {
               if (!this.booleanState0140) {
                 stackIntegerLocal15 = (!this.booleanState0147) ? 127 : 167;
                 integerLocal115 = stackIntegerLocal15;
-                SoftwareRaster.performAction0660(447, 61, 150, integerLocal115 + 15 + 27, 14676, 87166);
-                SoftwareRaster.performAction0660(452, 66, 140, integerLocal115, 14676, 4427445);
+                SoftwareRaster.fillRectangleVerticalGradient(447, 61, 150, integerLocal115 + 15 + 27, 14676, 87166);
+                SoftwareRaster.fillRectangleVerticalGradient(452, 66, 140, integerLocal115, 14676, 4427445);
                 GameplayControls.performAction1749(16 + integerLocal115 + 15, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, 50, 437);
                 GameplayControls.performAction1749(45, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, 66 + integerLocal115 + 15 - 13, 437);
                 integerLocal116 = 66;
@@ -3643,10 +3643,10 @@ final class GameSession {
                   MixedSupport035.rgbSpriteArrayArrayState0006[this.integerState0603 % 8][this.integerState0603 % 7].performAction0280(452, 66 + integerLocal115 + 16, 18, 18);
                   MixedSupport035.rgbSpriteArrayArrayState0006[(this.integerState0603 + 1) % 8][(this.integerState0603 + 1) % 7].performAction0280(574, 66 + integerLocal115 + 16, 18, 18);
                   this.performAction1301(0, 473, 16, 66 + integerLocal115 + 17, 12769767, 98, 9918);
-                  SoftwareRaster.performAction0640(476, 66 + integerLocal115 + 20, 92, 10, 0);
-                  SoftwareRaster.performAction0649(0, 0, 476 + 92 * this.integerState0614 / this.computeInteger1318((byte) -122), 480);
+                  SoftwareRaster.fillRectangle(476, 66 + integerLocal115 + 20, 92, 10, 0);
+                  SoftwareRaster.setClip(0, 0, 476 + 92 * this.integerState0614 / this.computeInteger1318((byte) -122), 480);
                   UiComponentPart020.performAction1155(92, 10, 16776960, -1, 16711680, 476, 66 + integerLocal115 + 20);
-                  SoftwareRaster.performAction0657();
+                  SoftwareRaster.resetClip();
                 } else {
                   if (!this.booleanState0147) {
                     integerLocal121 = 3;
@@ -3656,10 +3656,10 @@ final class GameSession {
                     MixedSupport035.rgbSpriteArrayArrayState0006[this.integerState0600 % (integerLocal121 + 1)][this.integerState0600 % 7].performAction0280(452, 66 + integerLocal115 + 16, 18, 18);
                     MixedSupport035.rgbSpriteArrayArrayState0006[(this.integerState0600 + 1) % (integerLocal121 + 1)][(this.integerState0600 + 1) % 7].performAction0280(574, 66 + integerLocal115 + 16, 18, 18);
                     this.performAction1301(0, 473, 16, 66 + integerLocal115 + 17, 12769767, 98, 9918);
-                    SoftwareRaster.performAction0640(476, 66 + integerLocal115 + 20, 92, 10, 0);
-                    SoftwareRaster.performAction0649(0, 0, 476 + 92 * this.integerState0614 / this.computeInteger1318((byte) 125), 480);
+                    SoftwareRaster.fillRectangle(476, 66 + integerLocal115 + 20, 92, 10, 0);
+                    SoftwareRaster.setClip(0, 0, 476 + 92 * this.integerState0614 / this.computeInteger1318((byte) 125), 480);
                     UiComponentPart020.performAction1155(92, 10, 16776960, -1, 16711680, 476, 66 + integerLocal115 + 20);
-                    SoftwareRaster.performAction0657();
+                    SoftwareRaster.resetClip();
                   }
                 }
                 if (this.integerState0644 > 0) {
@@ -3708,7 +3708,7 @@ final class GameSession {
                   }
                   integerLocal55 = 12 + integerLocal47 * 16 + 12 + integerLocal124 * 16 + 8 + integerLocal125 + 8 + integerLocal51 * 16 + 14;
                   integerLocal176 = (480 - integerLocal55) / 2 + integerLocal179;
-                  SoftwareRaster.performAction0641(224, integerLocal176 + 4, 192, integerLocal55 - 8, 0, 160);
+                  SoftwareRaster.fillRectangleAlpha(224, integerLocal176 + 4, 192, integerLocal55 - 8, 0, 160);
                   GameplayControls.performAction1749(integerLocal55, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 200, integerLocal176, 220);
                   integerLocal176 += 12;
                   MixedSupport045.computeInteger0552(164, 0, integerLocal176, stringLocal42, 16, 180, 16777215, MixedSupport001.renderingSupport009State0001, (byte) -128, 1, 239);
@@ -3729,7 +3729,7 @@ final class GameSession {
                         if (this.integerState0628 >= 60) {
                           if (this.integerState0628 >= 80) {
                             if (this.integerState0628 >= 93) {
-                              SoftwareRaster.performAction0642(281, integerLocal176 + 54 - 2, 78, 40, 4, 65280, 100);
+                              SoftwareRaster.fillRoundedRectangleAlpha(281, integerLocal176 + 54 - 2, 78, 40, 4, 65280, 100);
                             } else {
                               integerLocal59 = MixedSupport141.computeInteger1754(23841, 80, SceneWidgetPart013.integerArrayState0239[this.integerState0628 - 80 + 1] * 18 + 40);
                             }
@@ -3777,7 +3777,7 @@ final class GameSession {
                     if ((this.booleanState0147)) {
                       integerLocal122 = UiComponentPart029.renderingSupport009State0005.computeInteger1067(ThemeTips.themeTips[this.integerState0603], 140);
                       integerLocal123 = 32 + integerLocal122 * 16 + 13;
-                      SoftwareRaster.performAction0641(441, integerLocal177 + 4, 163, integerLocal123 - 8, 0, 150);
+                      SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, integerLocal123 - 8, 0, 150);
                       GameplayControls.performAction1749(integerLocal123, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                       MixedSupport042.performAction0537(integerLocal177 + 26, 256, 16777215, NodeHashTableIterator.substituteIndexedPlaceholders(102, DekoBlokoClient.stringState0095, new String[]{Integer.toString(this.integerState0603 + 1)}), 452, SceneWidget.renderingSupport009State0007);
                       MixedSupport045.computeInteger0552(140, 0, integerLocal177 + 32, ThemeTips.themeTips[this.integerState0603], 16, 120, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -126, 0, 452);
@@ -3785,17 +3785,17 @@ final class GameSession {
                     break regionExit4;
                   }
                   if (this.integerState0629 == -1) {
-                    SoftwareRaster.performAction0641(441, integerLocal177 + 4, 163, 140, 0, 150);
+                    SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
                     GameplayControls.performAction1749(148, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                     MixedSupport036.performAction0505(integerLocal177 + 10, (byte) 5, false, 452);
                   } else {
                     if (this.integerState0629 == -2) {
-                      SoftwareRaster.performAction0641(441, integerLocal177 + 4, 163, 140, 0, 150);
+                      SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
                       GameplayControls.performAction1749(148, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                       MixedSupport042.performAction0537(integerLocal177 + 26, 256, 16777215, NetworkSupport006.stringState0339, 452, SceneWidget.renderingSupport009State0007);
                       MixedSupport045.computeInteger0552(140, 0, integerLocal177 + 32, RenderingSupport012.stringState0443, 16, 120, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -126, 0, 452);
                     } else {
-                      SoftwareRaster.performAction0641(441, integerLocal177 + 4, 163, 140, 0, 150);
+                      SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
                       GameplayControls.performAction1749(148, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                       if (this.integerState0629 != 6) {
                         rgbSpriteLocal43 = MixedSupport121.computeRgbSprite1601(true, this.integerState0629);
@@ -3887,7 +3887,7 @@ final class GameSession {
                   objectLocal39 = (String) (objectLocal39) + RenderingSupport002.stringState0086;
                 }
                 integerLocal181 = UiComponentPart029.renderingSupport009State0005.computeInteger1066((String) (objectLocal39));
-                SoftwareRaster.performAction0642(636 - integerLocal181 - 4, 4, 4 + integerLocal181 + 100, 21, 3, 0, 200);
+                SoftwareRaster.fillRoundedRectangleAlpha(636 - integerLocal181 - 4, 4, 4 + integerLocal181 + 100, 21, 3, 0, 200);
                 UiComponentPart029.renderingSupport009State0005.performAction1086((String) (objectLocal39), 636, 19, 16777215, -1);
               }
             }
@@ -4847,12 +4847,12 @@ final class GameSession {
             stackIntegerLocal15 = 192;
           }
           ((RgbSprite) (Object) stackRgbSpriteLocal10).performAction0288(stackIntegerLocal11, stackIntegerLocal12, stackIntegerLocal13, stackIntegerLocal14, stackIntegerLocal15);
-          SoftwareRaster.performAction0652(UiComponentPart012.integerArrayState0051);
+          SoftwareRaster.saveClip(UiComponentPart012.integerArrayState0051);
           integerLocal37 = integerLocal28 + (integerLocal29 - integerLocal28) * 10 / 176;
           integerLocal38 = integerLocal28 + 166 * (-integerLocal28 + integerLocal29) / 176;
           integerLocal39 = integerLocal30 + (-integerLocal30 + integerLocal31) * 115 / 702;
           integerLocal40 = integerLocal30 + 677 * (-integerLocal30 + integerLocal31) / 702;
-          SoftwareRaster.performAction0663(integerLocal37, integerLocal39, integerLocal38, integerLocal40);
+          SoftwareRaster.intersectClip(integerLocal37, integerLocal39, integerLocal38, integerLocal40);
           PasswordValidator.integerState0774 = 0;
           for (integerLocal41 = 0; bucketBoardArgument1.integerState0465 > integerLocal41; integerLocal41++) {
             integerLocal42 = CipherPacketBuffer.integerState0799;
@@ -4962,7 +4962,7 @@ final class GameSession {
             }
             integerLocal46++;
           }
-          SoftwareRaster.performAction0644(UiComponentPart012.integerArrayState0051);
+          SoftwareRaster.restoreClip(UiComponentPart012.integerArrayState0051);
           if (null != bucketBoardArgument1.stringState0335) {
             stackIntegerLocal16 = integerLocal30;
             stackBooleanLocal17 = !(booleanArgument6);
@@ -5080,19 +5080,19 @@ final class GameSession {
         String stringLocal12;
         String stringLocal13;
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        SoftwareRaster.performAction0641(0, 0, 640, 480, 65793, integerArgument1);
+        SoftwareRaster.fillRectangleAlpha(0, 0, 640, 480, 65793, integerArgument1);
         integerLocal2 = RichTextLayout.sceneWidgetState0021.integerState0903 / 2 - 100;
-        SoftwareRaster.performAction0641(integerArgument3 + 145, integerLocal2, 350, 177, 0, 160);
+        SoftwareRaster.fillRectangleAlpha(integerArgument3 + 145, integerLocal2, 350, 177, 0, 160);
         GameplayControls.performAction1749(197, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 370, integerLocal2 - 10, integerArgument3 + 135);
         MixedSupport042.performAction0537(integerLocal2 + 17, 256, 16694016, MixedSupport126.stringState0550, 152 + integerArgument3, SceneWidget.renderingSupport009State0007);
-        SoftwareRaster.performAction0665(integerArgument3 + 300, 4 + integerLocal2, 170, 263172);
-        SoftwareRaster.performAction0665(integerArgument3 + 301, integerLocal2 + 4, 170, 6316128);
+        SoftwareRaster.drawVerticalLine(integerArgument3 + 300, 4 + integerLocal2, 170, 263172);
+        SoftwareRaster.drawVerticalLine(integerArgument3 + 301, integerLocal2 + 4, 170, 6316128);
         MixedSupport029.performAction0407(16694016, 353 + integerArgument3, UiComponentPart031.stringState0529, 17 + integerLocal2, (byte) 75, SceneWidget.renderingSupport009State0007);
-        SoftwareRaster.performAction0665(406 + integerArgument3, 4 + integerLocal2, 170, 263172);
-        SoftwareRaster.performAction0665(integerArgument3 + 407, integerLocal2 + 4, 170, 6316128);
+        SoftwareRaster.drawVerticalLine(406 + integerArgument3, 4 + integerLocal2, 170, 263172);
+        SoftwareRaster.drawVerticalLine(integerArgument3 + 407, integerLocal2 + 4, 170, 6316128);
         MixedSupport029.performAction0407(16694016, 450 + integerArgument3, MixedSupport095.stringState0399, integerLocal2 + 17, (byte) 75, SceneWidget.renderingSupport009State0007);
-        SoftwareRaster.performAction0639(152 + integerArgument3, 22 + integerLocal2, 336, 263172);
-        SoftwareRaster.performAction0639(integerArgument3 + 152, integerLocal2 + 23, 336, 6316128);
+        SoftwareRaster.drawHorizontalLine(152 + integerArgument3, 22 + integerLocal2, 336, 263172);
+        SoftwareRaster.drawHorizontalLine(integerArgument3 + 152, integerLocal2 + 23, 336, 6316128);
         integerLocal2 += 25;
         if (integerArgument2 <= 90) {
           return;
@@ -5117,8 +5117,8 @@ final class GameSession {
             integerLocal2 += 18;
           }
         }
-        SoftwareRaster.performAction0639(152 + integerArgument3, 1 + integerLocal2, 336, 263172);
-        SoftwareRaster.performAction0639(152 + integerArgument3, 2 + integerLocal2, 336, 6316128);
+        SoftwareRaster.drawHorizontalLine(152 + integerArgument3, 1 + integerLocal2, 336, 263172);
+        SoftwareRaster.drawHorizontalLine(152 + integerArgument3, 2 + integerLocal2, 336, 6316128);
         integerLocal2 += 4;
         integerLocal2 = integerLocal2 + (-1 + this.mixedSupport028State0001.integerState0167) * 18;
         integerLocal8 = 0;

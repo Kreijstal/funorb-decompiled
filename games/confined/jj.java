@@ -155,14 +155,14 @@ final class jj extends ug {
         fd.field_k.b(this.field_mb, param0 + (this.field_F >> 1), param2 + 103, 16777215, -1);
         if (param1 < -58) {
           if (this.field_ib != null) {
-            fn.b(20 + param0, param2 + 120 - 7, 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 120 - 7, 260, 8421504);
             fd.field_k.a(this.field_ib, param0 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
           }
           return;
         }
         this.field_ib = (String) null;
         if (this.field_ib != null) {
-          fn.b(20 + param0, param2 + 120 - 7, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 120 - 7, 260, 8421504);
           fd.field_k.a(this.field_ib, param0 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
         }
     }

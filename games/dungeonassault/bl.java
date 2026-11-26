@@ -158,9 +158,9 @@ final class bl {
           }
           var7 = new cn(var5, var6);
           var7.e();
-          gf.b(0, 0, var5, 2, 16416);
-          gf.b(0, 2, var5, var6 - 4, 96);
-          gf.b(0, var6 - 2, var5, 2, 49184);
+          SoftwareRasterizer.fillRectangle(0, 0, var5, 2, 16416);
+          SoftwareRasterizer.fillRectangle(0, 2, var5, var6 - 4, 96);
+          SoftwareRasterizer.fillRectangle(0, var6 - 2, var5, 2, 49184);
           bk.field_e = new ph(var19, var7);
           var5Lifetime1 = var2.field_y;
           var6Lifetime1 = var2.field_v;
@@ -169,9 +169,9 @@ final class bl {
           }
           var8 = new cn(var5Lifetime1, var6Lifetime1);
           var8.e();
-          gf.b(0, 0, 2, var6Lifetime1, 4194336);
-          gf.b(2, 0, var5Lifetime1 - 4, var6Lifetime1, 96);
-          gf.b(-2 + var5Lifetime1, 0, 2, var6Lifetime1, 12582944);
+          SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime1, 4194336);
+          SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime1 - 4, var6Lifetime1, 96);
+          SoftwareRasterizer.fillRectangle(-2 + var5Lifetime1, 0, 2, var6Lifetime1, 12582944);
           be.field_o = new ph(var2, var8);
           var6Lifetime2 = var3.field_v;
           var5Lifetime2 = var3.field_y;
@@ -180,9 +180,9 @@ final class bl {
           }
           var9 = new cn(var5Lifetime2, var6Lifetime2);
           var9.e();
-          gf.b(0, 0, var5Lifetime2, 2, 16416);
-          gf.b(0, 2, var5Lifetime2, -4 + var6Lifetime2, 96);
-          gf.b(0, var6Lifetime2 - 2, var5Lifetime2, 2, 49184);
+          SoftwareRasterizer.fillRectangle(0, 0, var5Lifetime2, 2, 16416);
+          SoftwareRasterizer.fillRectangle(0, 2, var5Lifetime2, -4 + var6Lifetime2, 96);
+          SoftwareRasterizer.fillRectangle(0, var6Lifetime2 - 2, var5Lifetime2, 2, 49184);
           for (var10_int = 0; var10_int < var5Lifetime2 * var6Lifetime2; var10_int++) {
             if (var3.field_B[var10_int] == -2147483648) {
               var3.field_B[var10_int] = 0;
@@ -197,9 +197,9 @@ final class bl {
           }
           var10 = new cn(var5Lifetime3, var6Lifetime3);
           var10.e();
-          gf.b(0, 0, 2, var6Lifetime3, 4194336);
-          gf.b(2, 0, var5Lifetime3 - 4, var6Lifetime3, 96);
-          gf.b(var5Lifetime3 - 2, 0, 2, var6Lifetime3, 12582944);
+          SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime3, 4194336);
+          SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime3 - 4, var6Lifetime3, 96);
+          SoftwareRasterizer.fillRectangle(var5Lifetime3 - 2, 0, 2, var6Lifetime3, 12582944);
           for (var11_int = 0; var11_int < var6Lifetime3 * var5Lifetime3; var11_int++) {
             if (-2147483648 == var4.field_B[var11_int]) {
               var4.field_B[var11_int] = 0;
@@ -376,7 +376,7 @@ final class bl {
           li.field_l[3] = oh.a(hj.field_Z, "", 11091, "scroll_centre_left");
           li.field_l[4] = new cn(li.field_l[0].field_y, li.field_l[0].field_v);
           li.field_l[4].e();
-          gf.b(0, 0, gf.field_i, gf.field_c, 13619075);
+          SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 13619075);
           k.field_h.a(true);
           li.field_l[5] = oh.a(hj.field_Z, "", 11091, "scroll_centre_right");
           li.field_l[6] = oh.a(hj.field_Z, "", 11091, "scroll_bottom_left");
@@ -404,7 +404,7 @@ final class bl {
           for (var14Lifetime3 = 0; var14Lifetime3 < ie.field_j.length; var14Lifetime3++) {
             kd.field_e[var14Lifetime3] = new tf(db.field_v, ie.field_j[var14Lifetime3], cm.field_M);
           }
-          discarded$1 = new cn(gf.field_i, gf.field_c);
+          discarded$1 = new cn(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bl.D(" + param0 + ')');
         }

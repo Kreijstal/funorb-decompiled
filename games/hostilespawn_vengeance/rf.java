@@ -100,17 +100,17 @@ final class rf implements nn {
           if (param4) {
             var7 = 16777215;
           }
-          si.c(param1 + param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, this.field_h);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, this.field_h);
           var8 = param1 + param3.field_v + this.field_r;
           var9 = this.field_d + (param0 + param3.field_m);
-          si.b(var8, var9, this.field_a, this.field_k, 5592405);
-          si.c(var8, var9, this.field_a, this.field_k, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_a, this.field_k, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_a, this.field_k, var7);
           if (param2 != 15430) {
             rf.a(true, '\0');
           }
           if (var11.field_A) {
-            si.g(var8, var9, this.field_a + var8, this.field_k + var9, 1);
-            si.g(this.field_a + var8, var9, var8, this.field_k + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_a + var8, this.field_k + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_a + var8, var9, var8, this.field_k + var9, 1);
           }
           if (null == this.field_n) {
             return;

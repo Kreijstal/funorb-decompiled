@@ -76,10 +76,10 @@ final class eb {
             ge.field_b = vk.a("benefits", 123, "arrow", g.field_a);
             gi.field_b = (qe) ((Object) od.a("benefits", g.field_a, "large_font", -1, AccountRequestState.field_a));
             ah.field_d = (qe) ((Object) od.a("benefits", g.field_a, "small_font", -1, AccountRequestState.field_a));
-            var28 = ki.field_a;
-            var2 = ki.field_j;
-            var3 = ki.field_f;
-            ki.a(wc.field_b);
+            var28 = SoftwareRasterizer.field_a;
+            var2 = SoftwareRasterizer.field_j;
+            var3 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.saveClip(wc.field_b);
             var11 = new Sprite(4 + ge.field_b.field_u, 4 + ge.field_b.field_v);
             var11.e();
             ge.field_b.c(2, 2, mc.field_c);
@@ -106,9 +106,9 @@ final class eb {
             va.field_t = null;
             jh.field_a = re.field_f.c();
             jh.field_a.e();
-            rh.a(0, ki.field_j, 2 * ki.field_f / 3, 0, 64, true);
-            ki.a(var28, var2, var3);
-            ki.b(wc.field_b);
+            rh.a(0, SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_f / 3, 0, 64, true);
+            SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
+            SoftwareRasterizer.restoreClip(wc.field_b);
             mf.field_d = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
             nh.field_f = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 231;
             g.field_a = null;
@@ -120,10 +120,10 @@ final class eb {
           }
           if (re.field_l != null &&
             null != gi.field_b) {
-            var29 = ki.field_a;
-            var2Lifetime1 = ki.field_j;
-            var3Lifetime1 = ki.field_f;
-            ki.a(wc.field_b);
+            var29 = SoftwareRasterizer.field_a;
+            var2Lifetime1 = SoftwareRasterizer.field_j;
+            var3Lifetime1 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.saveClip(wc.field_b);
             var14 = fb.a(u.field_a, 114, new String[]{kc.field_N[fc.field_c]});
             var5 = gi.field_b.c(var14, AccountNameAvailabilityValidator.field_k);
             var6Lifetime1 = gi.field_b.a(var14, AccountNameAvailabilityValidator.field_k, gi.field_b.field_p + gi.field_b.field_q);
@@ -181,15 +181,15 @@ final class eb {
             re.field_l.b((re.field_l.field_x >> 1) + w.field_v, (re.field_l.field_q >> 1) + gi.field_e, eh.field_h, 4096);
             re.field_l = null;
             lh.field_N.d();
-            ki.a(var29, var2Lifetime1, var3Lifetime1);
-            ki.b(wc.field_b);
+            SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(wc.field_b);
           }
           if (ik.field_q != null &&
             null != ah.field_d) {
-            var30 = ki.field_a;
-            var2Lifetime2 = ki.field_j;
-            var3Lifetime2 = ki.field_f;
-            ki.a(wc.field_b);
+            var30 = SoftwareRasterizer.field_a;
+            var2Lifetime2 = SoftwareRasterizer.field_j;
+            var3Lifetime2 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.saveClip(wc.field_b);
             var16 = new Sprite(412, 43);
             var17 = fb.a(jh.field_f, -115, new String[]{ik.field_q});
             ik.field_q = null;
@@ -198,15 +198,15 @@ final class eb {
             hh.a(0, 0, 3, var16.field_v, false, 1, var16, var16.field_u);
             ba.field_c.e();
             var16.e(-ba.field_c.field_w + 199, 83 - ba.field_c.field_y);
-            ki.a(var30, var2Lifetime2, var3Lifetime2);
-            ki.b(wc.field_b);
+            SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(wc.field_b);
           }
           if (null != ja.field_e &&
             null != ah.field_d) {
-            var31 = ki.field_a;
-            var2Lifetime3 = ki.field_j;
-            var3Lifetime3 = ki.field_f;
-            ki.a(wc.field_b);
+            var31 = SoftwareRasterizer.field_a;
+            var2Lifetime3 = SoftwareRasterizer.field_j;
+            var3Lifetime3 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.saveClip(wc.field_b);
             var4 = ah.field_d.c(se.field_t, 640) + 6;
             var5Lifetime1 = 20 + (ja.field_e.field_x + var4);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -216,13 +216,13 @@ final class eb {
             hh.a(-4 + (var7Lifetime2 - ba.field_c.field_w), 155 - ba.field_c.field_y, 3, 50, false, 1, ba.field_c, var4);
             var8Lifetime1 = 155 - (ba.field_c.field_y + (-ah.field_d.field_q + (ja.field_e.field_q + (-3 - ah.field_d.field_p))) / 2);
             ja.field_e.e(var6Lifetime2 - ba.field_c.field_w, var8Lifetime1);
-            ki.a(var31, var2Lifetime3, var3Lifetime3);
-            ki.b(wc.field_b);
+            SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(wc.field_b);
             ja.field_e = null;
           }
-          ki.a(wc.field_b);
-          ki.a(16, 16, 608, 112, 15, jk.field_l, nh.field_i);
-          ki.a(231, 144, 393, 232, 15, jk.field_l, nh.field_i);
+          SoftwareRasterizer.saveClip(wc.field_b);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, jk.field_l, nh.field_i);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, jk.field_l, nh.field_i);
           var1_int = -21 % ((param0 - 30) / 35);
           if (DelayedPcmStream.field_k != null) {
             DelayedPcmStream.field_k.e(0, 0);

@@ -46,30 +46,30 @@ final class rh extends IntrusiveNode {
         int var12 = 0;
         var12 = StarCannon.field_A;
         try {
-          if (ki.field_l > param3) {
-            param1 = param1 - (ki.field_l - param3);
-            param3 = ki.field_l;
+          if (SoftwareRasterizer.field_l > param3) {
+            param1 = param1 - (SoftwareRasterizer.field_l - param3);
+            param3 = SoftwareRasterizer.field_l;
           }
-          if (param0 < ki.field_e) {
-            param2 = param2 - (-param0 + ki.field_e);
-            param0 = ki.field_e;
+          if (param0 < SoftwareRasterizer.field_e) {
+            param2 = param2 - (-param0 + SoftwareRasterizer.field_e);
+            param0 = SoftwareRasterizer.field_e;
           }
-          if (param3 + param1 > ki.field_g) {
-            param1 = -param3 + ki.field_g;
+          if (param3 + param1 > SoftwareRasterizer.field_g) {
+            param1 = -param3 + SoftwareRasterizer.field_g;
           }
-          if (param0 + param2 > ki.field_i) {
-            param2 = -param0 + ki.field_i;
+          if (param0 + param2 > SoftwareRasterizer.field_i) {
+            param2 = -param0 + SoftwareRasterizer.field_i;
           }
           if (!param5) {
             field_f = (Sprite[]) null;
           }
           if (0 < param1 &&
             param2 > 0) {
-            var6_int = param3 + param0 * ki.field_j;
-            var7 = ki.field_j - param1;
+            var6_int = param3 + param0 * SoftwareRasterizer.field_j;
+            var7 = SoftwareRasterizer.field_j - param1;
             for (param0 = -param2; param0 < 0; param0++) {
               for (param3 = -param1; param3 < 0; param3++) {
-                var8 = ki.field_a[var6_int];
+                var8 = SoftwareRasterizer.field_a[var6_int];
                 if ((var8 & 65280) >> 8 > param4 &&
                   (16711680 & var8) >> 16 <= (var8 & 65280) >> 8) {
                   var9 = ((16711680 & var8) >> 15) - 60;
@@ -79,7 +79,7 @@ final class rh extends IntrusiveNode {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (var8 & 255) >> 3;
-                  ki.field_a[var6_int] = cl.a(var11, cl.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_a[var6_int] = cl.a(var11, cl.a(var10, var9 << 16));
                 }
                 var6_int++;
               }

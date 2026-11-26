@@ -27,11 +27,11 @@ class f extends kc {
               var4 = var3 / 20;
               var5 = 32 * (var3 - var4 * 20);
               var4 = var4 * 32;
-              ge.h(var5, var4, var5 + 32, var4 + 32);
+              SoftwareRasterizer.setClip(var5, var4, var5 + 32, var4 + 32);
               ke.field_i.a(0, 0);
             }
           }
-          ge.b();
+          SoftwareRasterizer.resetClip();
           if (param1 <= 69) {
             var7 = (String) null;
             f.a(-43, (String) null);

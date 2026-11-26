@@ -36,7 +36,7 @@ final class sk implements WidgetActionListener {
           var12 = (wi) (stackIn_4_0);
           if (var12 == null) {
           }
-          SoftwareRasterizer.f(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_c);
+          SoftwareRasterizer.fillRectangle(param2 + param1.x, param1.y + param0, param1.width, param1.height, this.field_c);
           var7 = -(2 * var12.field_M) + param1.width;
           var8 = var12.field_M + param2 + param1.x;
           var9 = var12.field_K + (param0 + param1.y);

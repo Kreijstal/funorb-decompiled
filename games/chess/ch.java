@@ -15,7 +15,7 @@ final class ch extends k {
         super.b(param0, param1, param2);
         tk.field_a.b(this.field_ib, param2 + (this.field_y >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_fb) {
-          wb.a(20 + param2, 120 + param1 - 7, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param2, 120 + param1 - 7, 260, 8421504);
           tk.field_a.a(this.field_fb, 20 + param2, 8 + (param1 + 120), 260, 100, 16777215, -1, 1, 0, tk.field_a.field_C);
         }
     }

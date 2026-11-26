@@ -124,7 +124,7 @@ final class rl {
                 ByteStorage.a(param0, param1 - 101);
               }
             } else {
-              ti.d();
+              SoftwareRasterizer.clearRaster();
               n.a(240, (byte) -41, 320);
               pd.a(param0, 0, 0, (byte) -80);
             }

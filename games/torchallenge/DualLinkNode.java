@@ -120,8 +120,8 @@ class DualLinkNode extends IntrusiveNode {
         int var3Lifetime1;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          SoftwareRasterizer.b(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == gi.field_f) {
             if (ek.field_G != null) {
               ek.field_G.a(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

@@ -130,9 +130,9 @@ final class li extends hi {
         int var8_intLifetime2Lifetime1;
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
-          si.g(param4, param2, param7, param0, param6);
-          si.g(param7, param0, param5, param3, param6);
-          si.g(param5, param3, param4, param2, param6);
+          SoftwareRasterizer.drawLine(param4, param2, param7, param0, param6);
+          SoftwareRasterizer.drawLine(param7, param0, param5, param3, param6);
+          SoftwareRasterizer.drawLine(param5, param3, param4, param2, param6);
           if (param0 < param2) {
             var8_int = param4;
             param4 = param7;
@@ -161,23 +161,23 @@ final class li extends hi {
             for (var10 = param2; var10 < param0; var10++) {
               var8_intLifetime3 = param4 + (param5 - param4) * (-param2 + var10) / (-param2 + param3);
               var9 = param4 + (-param4 + param7) * (var10 - param2) / (param0 - param2);
-              si.a(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param6);
+              SoftwareRasterizer.drawHorizontalLine(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param6);
             }
             for (var10 = param0; var10 < param3; var10++) {
               var8_intLifetime3 = param4 + (param5 - param4) * (var10 - param2) / (-param2 + param3);
               var9 = (-param0 + var10) * (-param7 + param5) / (param3 - param0) + param7;
-              si.a(var8_intLifetime3, var10, 1 + (-var8_intLifetime3 + var9), param6);
+              SoftwareRasterizer.drawHorizontalLine(var8_intLifetime3, var10, 1 + (-var8_intLifetime3 + var9), param6);
             }
           } else {
             for (var10 = param2; param0 > var10; var10++) {
               var9 = param4 + (var10 - param2) * (-param4 + param5) / (-param2 + param3);
               var8_intLifetime3 = (-param4 + param7) * (-param2 + var10) / (-param2 + param0) + param4;
-              si.a(var8_intLifetime3, var10, var9 - (var8_intLifetime3 - 1), param6);
+              SoftwareRasterizer.drawHorizontalLine(var8_intLifetime3, var10, var9 - (var8_intLifetime3 - 1), param6);
             }
             for (var10 = param0; param3 > var10; var10++) {
               var9 = param4 + (-param4 + param5) * (-param2 + var10) / (-param2 + param3);
               var8_intLifetime3 = param7 + (var10 - param0) * (-param7 + param5) / (param3 - param0);
-              si.a(var8_intLifetime3, var10, -var8_intLifetime3 + (var9 + 1), param6);
+              SoftwareRasterizer.drawHorizontalLine(var8_intLifetime3, var10, -var8_intLifetime3 + (var9 + 1), param6);
             }
           }
           if (param1 != -1) {

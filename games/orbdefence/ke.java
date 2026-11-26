@@ -237,7 +237,7 @@ final class ke {
                   var22 = var22 + var24;
                   var18 = var18 + var20;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + ul.field_f;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_f;
                   var26 = var26 + var28;
                   var25 = var25 + var27;
                   var30 = var30 + var32;
@@ -326,7 +326,7 @@ final class ke {
               }
               var18 = var18 + var20;
               var25 = var25 + var27;
-              var35Lifetime1 = var35Lifetime1 + ul.field_f;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_f;
               var22 = var22 + var24;
               var17_int = var17_int + var19;
               var29 = var29 + var31;

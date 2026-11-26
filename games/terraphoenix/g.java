@@ -133,7 +133,7 @@ class g extends wa {
         var9 = SoftwareRasterizer.field_d;
         var10 = SoftwareRasterizer.field_f;
         var11 = SoftwareRasterizer.field_c;
-        SoftwareRasterizer.i(this.field_vb, this.field_Bb, this.field_x + this.field_vb, this.field_Bb + this.field_lb);
+        SoftwareRasterizer.intersectClip(this.field_vb, this.field_Bb, this.field_x + this.field_vb, this.field_Bb + this.field_lb);
         var12 = 0;
         if (!mm.field_b &&
           param4 &&
@@ -393,7 +393,7 @@ class g extends wa {
         var13 = SoftwareRasterizer.field_d;
         var14 = SoftwareRasterizer.field_f;
         var15 = SoftwareRasterizer.field_c;
-        SoftwareRasterizer.i(this.field_vb, this.field_Bb, this.field_vb + this.field_x, this.field_Bb + this.field_lb);
+        SoftwareRasterizer.intersectClip(this.field_vb, this.field_Bb, this.field_vb + this.field_x, this.field_Bb + this.field_lb);
         param5 = param5 & this.field_zb;
         if (!this.field_Ab) {
           param10 = this.field_Z;

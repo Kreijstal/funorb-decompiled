@@ -29,7 +29,7 @@ abstract class RasterBuffer {
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
     final void a(int param0) {
-        sb.a(this.field_a, this.field_d, this.field_g);
+        SoftwareRasterizer.setRasterBuffer(this.field_a, this.field_d, this.field_g);
         if (param0 <= 102) {
           java.awt.Graphics var3 = (java.awt.Graphics) null;
           this.a(-68, -104, (java.awt.Graphics) null, 18);

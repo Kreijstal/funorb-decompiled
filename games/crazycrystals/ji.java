@@ -324,11 +324,11 @@ final class ji extends pn {
             var13 = (65280 & ~((255 - this.field_m[var10]) * (255 - this.field_m[var10]))) << 8;
             var14 = this.field_m[var10] << 8 | this.field_m[var10] >> 1;
             var15 = var13 | var14;
-            kh.b(var11, var12, var15);
-            kh.b(-1 + var11, var12, var15 >> 1 & 8355711);
-            kh.b(var11 + 1, var12, (var15 & 16711423) >> 1);
-            kh.b(var11, -1 + var12, var15 >> 1 & 8355711);
-            kh.b(var11, 1 + var12, var15 >> 1 & 8355711);
+            SoftwareRasterizer.addPixel(var11, var12, var15);
+            SoftwareRasterizer.addPixel(-1 + var11, var12, var15 >> 1 & 8355711);
+            SoftwareRasterizer.addPixel(var11 + 1, var12, (var15 & 16711423) >> 1);
+            SoftwareRasterizer.addPixel(var11, -1 + var12, var15 >> 1 & 8355711);
+            SoftwareRasterizer.addPixel(var11, 1 + var12, var15 >> 1 & 8355711);
           }
         }
         if (param5 != 5461) {

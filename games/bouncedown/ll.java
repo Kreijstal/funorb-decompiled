@@ -75,13 +75,13 @@ final class ll extends lk {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = 256 <= var11 ? var9 | var8 : (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 8;
-          na.a(var7, var6, this.field_K, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_K, var12);
           var9Lifetime1 = 65280 & param2;
           var8Lifetime1 = 16711935 & param2;
-          na.a(var7 - this.field_K * 2, var6, this.field_K, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_K * 2, var6, this.field_K, var12);
           var12Lifetime1 = var11 < 256 ? (var11 * var8Lifetime1 & -16711936 | 16711680 & var9Lifetime1 * var11) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          na.a(this.field_K + var7, var6, this.field_K, var12Lifetime1);
-          na.a(var7 - this.field_K, var6, this.field_K, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_K + var7, var6, this.field_K, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_K, var6, this.field_K, var12Lifetime1);
         }
         ve.a(-124);
         return var14;
@@ -183,7 +183,7 @@ final class ll extends lk {
             param0.a(var6, param3);
           }
           ve.a(-125);
-          if (na.field_g <= param1 + this.field_M.field_s) {
+          if (SoftwareRasterizer.field_g <= param1 + this.field_M.field_s) {
             kh.a(this.field_B, 1);
             param0.a(-this.field_w, 0);
             param0.a(-this.field_w + 2 * this.field_K, 0);
@@ -191,7 +191,7 @@ final class ll extends lk {
             ve.a(-119);
             this.field_B.a(param1, param3);
           }
-          if (na.field_b >= var5_int - this.field_M.field_s) {
+          if (SoftwareRasterizer.field_b >= var5_int - this.field_M.field_s) {
             kh.a(this.field_B, 1);
             for (var7 = this.field_k - this.field_M.field_s + this.field_w; var7 > 2 * this.field_K; var7 = var7 - this.field_K * 2) {
             }
@@ -259,7 +259,7 @@ final class ll extends lk {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            na.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
         if (param0 != -21) {

@@ -22,7 +22,7 @@ final class MixedSupport065 {
         try {
           if (UiComponentPart004.integerState0091 >= 10) {
             if (!UiComponentPart009.computeBoolean0376(480)) {
-              SoftwareRaster.performAction0648();
+              SoftwareRaster.clearRaster();
               GameSession.performAction1300(240, 320, integerArgument3 ^ -21986);
               UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
             } else {

@@ -2612,7 +2612,7 @@ class Sprite extends SpriteState {
     }
 
     final void a() {
-        SoftwareRasterizer.a(this.field_v, this.field_p, this.field_t);
+        SoftwareRasterizer.setRasterBuffer(this.field_v, this.field_p, this.field_t);
     }
 
     void drawScaled(int param0, int param1, int param2, int param3) {

@@ -161,7 +161,7 @@ final class tn extends bh {
           var14.h();
           var15 = var14.d();
           var15.e();
-          gf.b(0, 0, param3.field_y, param3.field_v, 0, 160);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, param3.field_y, param3.field_v, 0, 160);
           var15.h();
           var16 = param3.d();
           var16.e();
@@ -281,7 +281,7 @@ final class tn extends bh {
             var11 <= this.field_V.field_y &&
             var12 <= this.field_V.field_v) {
             lm.a(this.field_V, (byte) 38);
-            gf.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_V = new cn(var11, var12);
             lm.a(this.field_V, (byte) -79);

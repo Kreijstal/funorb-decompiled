@@ -26,8 +26,8 @@ final class MixedSupport052 {
         int integerLocal14;
         integerLocal7 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          SoftwareRaster.performAction0664(243, 197, 369, 143, 16777215);
-          SoftwareRaster.performAction0640(244, 198, 367, 141, 0);
+          SoftwareRaster.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRaster.fillRectangle(244, 198, 367, 141, 0);
           if (null == MixedSupport021.rgbSpriteArrayState0008) {
             if (null != MixedSupport013.bitmapFontState0007) {
               MixedSupport013.bitmapFontState0007.computeInteger1071(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

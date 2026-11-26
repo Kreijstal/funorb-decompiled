@@ -96,7 +96,7 @@ final class la extends wd {
                 kh.a(sj.field_c, 1);
               } else {
                 kh.a(sj.field_c, 1);
-                na.a();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -114,7 +114,7 @@ final class la extends wd {
             var9Lifetime1 <= sj.field_c.field_s &&
             var10Lifetime1 <= sj.field_c.field_q) {
             kh.a(sj.field_c, 1);
-            na.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             sj.field_c = new tg(var9Lifetime1, var10Lifetime1);
             kh.a(sj.field_c, 1);
@@ -145,7 +145,7 @@ final class la extends wd {
           var9Lifetime2 <= sj.field_c.field_s &&
           var10Lifetime2 <= sj.field_c.field_q) {
           kh.a(sj.field_c, 1);
-          na.a();
+          SoftwareRasterizer.clearRaster();
         } else {
           sj.field_c = new tg(var9Lifetime2, var10Lifetime2);
           kh.a(sj.field_c, 1);

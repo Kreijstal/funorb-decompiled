@@ -60,14 +60,14 @@ abstract class pe {
           var7 = param0[1].field_z;
           param0[0].d(param2, param4);
           param0[2].d(param3 + (param2 - var6), param4);
-          wj.b(rb.field_e);
-          wj.d(var5_int + param2, param4, -var6 + param2 + param3, param4 + param0[1].field_C);
+          SoftwareRasterizer.saveClip(rb.field_e);
+          SoftwareRasterizer.intersectClip(var5_int + param2, param4, -var6 + param2 + param3, param4 + param0[1].field_C);
           var8 = var5_int + param2;
           var9 = param2 + (param3 - var6);
           for (param2 = var8; var9 > param2; param2 = param2 + var7) {
             param0[1].d(param2, param4);
           }
-          wj.a(rb.field_e);
+          SoftwareRasterizer.restoreClip(rb.field_e);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "pe.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

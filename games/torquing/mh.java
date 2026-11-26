@@ -15,20 +15,20 @@ final class mh {
     private int field_e;
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        SoftwareRasterizer.c(param1, param7, param5, param4, 7, param0);
-        SoftwareRasterizer.e(param1, param7, param5, param4, 7, param6);
+        SoftwareRasterizer.fillRoundedRectangle(param1, param7, param5, param4, 7, param0);
+        SoftwareRasterizer.drawRoundedRectangleOutline(param1, param7, param5, param4, 7, param6);
         int var10 = 121 % ((-55 - param3) / 58);
         int[] var13 = new int[4];
         int[] var12 = var13;
         int[] var11 = var12;
         int[] var9 = var11;
-        SoftwareRasterizer.b(var13);
-        SoftwareRasterizer.f(param1, param7, param5 + param1, param7 + 3);
-        SoftwareRasterizer.e(param1, param7, param5, param4, 7, param2);
-        SoftwareRasterizer.a(var13);
-        SoftwareRasterizer.f(param1, param7, param1 + 3, param7 + param4);
-        SoftwareRasterizer.e(param1, param7, param5, param4, 7, param2);
-        SoftwareRasterizer.a(var13);
+        SoftwareRasterizer.saveClip(var13);
+        SoftwareRasterizer.intersectClip(param1, param7, param5 + param1, param7 + 3);
+        SoftwareRasterizer.drawRoundedRectangleOutline(param1, param7, param5, param4, 7, param2);
+        SoftwareRasterizer.restoreClip(var13);
+        SoftwareRasterizer.intersectClip(param1, param7, param1 + 3, param7 + param4);
+        SoftwareRasterizer.drawRoundedRectangleOutline(param1, param7, param5, param4, 7, param2);
+        SoftwareRasterizer.restoreClip(var13);
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
@@ -845,8 +845,8 @@ final class mh {
             }
             var6.field_u = param1 + var6.field_t;
             wk.field_a.addLast((byte) 68, var6);
-            SoftwareRasterizer.a(var22, var4, var5);
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.setRasterBuffer(var22, var4, var5);
+            SoftwareRasterizer.resetClip();
             be.a(0, 0, param0, 480);
             break;
           }
@@ -1293,7 +1293,7 @@ final class mh {
                   n.field_t <= (var3 + 32) &&
                   k.field_e >= var4 &&
                   k.field_e <= 32 + var4) {
-                  SoftwareRasterizer.e(-2 + var3, var4 - 2, 36, 36, 6, 8421504);
+                  SoftwareRasterizer.drawRoundedRectangleOutline(-2 + var3, var4 - 2, 36, 36, 6, 8421504);
                   var7 = var13;
                 }
                 if (-1 != this.field_j &&
@@ -1309,7 +1309,7 @@ final class mh {
                   }
                 }
                 if (var13 == this.field_e) {
-                  SoftwareRasterizer.e(-2 + var3, -2 + var4, 36, 36, 6, 1579032);
+                  SoftwareRasterizer.drawRoundedRectangleOutline(-2 + var3, -2 + var4, 36, 36, 6, 1579032);
                 }
                 var6++;
                 if (~var11 != ~var6) {
@@ -2498,7 +2498,7 @@ final class mh {
         var3 = 0;
         do {
           if (var9.length <= var3) {
-            SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
+            SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
             break;
           }
           var4_ref_af = var9[var3];
@@ -2576,7 +2576,7 @@ final class mh {
               }
             }
             if (decompiledFrameCompleted0) {
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.resetClip();
               break regionExit1;
             }
           }
@@ -2585,7 +2585,7 @@ final class mh {
               bj.field_L[eq.field_b].a(115, 111);
               SoftwareRasterizer.setClip(0, 150, 640, 480);
               qd.field_c[eq.field_b].a(0, 0);
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.resetClip();
             } else {
               if (this.field_h == 9) {
                 var14 = ol.field_f[rn.field_j];
@@ -2602,8 +2602,8 @@ final class mh {
                 var10.c(0);
                 ti.field_l[rn.field_j].b(51, -116, 195);
                 this.e(param0 ^ 733, rn.field_j).b(414, 216);
-                SoftwareRasterizer.c(414, 216, 160, 120, 16777215);
-                SoftwareRasterizer.c(413, 215, 162, 122, 0);
+                SoftwareRasterizer.drawRectangleOutline(414, 216, 160, 120, 16777215);
+                SoftwareRasterizer.drawRectangleOutline(413, 215, 162, 122, 0);
                 var3 = 195;
                 SoftwareRasterizer.drawHorizontalLine(37, var3, 554, 3355443);
                 SoftwareRasterizer.drawHorizontalLine(35, var3 + 1, 558, 15116313);
@@ -2653,7 +2653,7 @@ final class mh {
                   if (mf.field_t < vi.field_a.length << 2) {
                     vi.a(-(mf.field_t >> 2) + vi.field_a.length, AccountRequestState.field_a[gf.field_h], 245, 199, vi.field_a);
                   }
-                  SoftwareRasterizer.c(243, 197, AccountRequestState.field_a[0].field_j + 4, 4 + AccountRequestState.field_a[0].field_e, 1);
+                  SoftwareRasterizer.drawRectangleOutline(243, 197, AccountRequestState.field_a[0].field_j + 4, 4 + AccountRequestState.field_a[0].field_e, 1);
                   return;
                 }
                 stackIn_96_0 = (this.field_h == 6) ? 0 : 1;

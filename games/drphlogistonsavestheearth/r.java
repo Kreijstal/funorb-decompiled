@@ -165,7 +165,7 @@ final class r {
                   var18 = var18 + var20;
                   var25 = var25 + var27;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + wj.field_k;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_k;
                   var29 = var29 + var31;
                   var22 = var22 + var24;
                 }
@@ -319,7 +319,7 @@ final class r {
               var30 = var30 + var32;
               var22 = var22 + var24;
               var29 = var29 + var31;
-              var35Lifetime1 = var35Lifetime1 + wj.field_k;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_k;
               var18 = var18 + var20;
               var26 = var26 + var28;
               var17_int = var17_int + var19;

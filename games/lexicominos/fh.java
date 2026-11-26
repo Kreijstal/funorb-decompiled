@@ -118,7 +118,7 @@ final class fh {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        SoftwareRasterizer.c(param4, param2, param1, param3, param6, param0);
+        SoftwareRasterizer.fillRectangleAlpha(param4, param2, param1, param3, param6, param0);
         if (param5 != 5092) {
           this.a(73, -8, 37, -27, 112, 75, -68);
         }
@@ -185,8 +185,8 @@ final class fh {
           if (SoftwareRasterizer.field_a < var10 + var13Lifetime1 + var6) {
             var13Lifetime1 = param2 - var10 - var6;
           }
-          SoftwareRasterizer.c(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_c);
-          SoftwareRasterizer.a(1 + var12, 1 + var13Lifetime1, var5_int + var9 - 2, var6 + (var10 - 2), this.field_h);
+          SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_c);
+          SoftwareRasterizer.fillRectangle(1 + var12, 1 + var13Lifetime1, var5_int + var9 - 2, var6 + (var10 - 2), this.field_h);
           if (param0 != -37) {
             this.field_e = 36;
           }
@@ -236,8 +236,8 @@ final class fh {
           if (SoftwareRasterizer.field_a < 6 + (var8 + var6)) {
             var8 = -6 + (SoftwareRasterizer.field_a - var6);
           }
-          SoftwareRasterizer.c(var7, var8, var5_int + 6, 6 + var6, this.field_o);
-          SoftwareRasterizer.a(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_h);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int + 6, 6 + var6, this.field_o);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_h);
           this.field_p.b(param3, var7 + 3, this.field_p.field_t + var8 + 3, this.field_o, -1);
           if (param0 > -8) {
             var9 = (String) null;

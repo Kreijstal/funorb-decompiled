@@ -86,7 +86,7 @@ class IntrusiveNode {
           var10Lifetime1 = var5.field_w;
           mk.b(128);
           var5.d();
-          fn.c(0, 0, fn.field_g, fn.field_l);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l);
           var16 = new nf(var10Lifetime1, var10Lifetime1);
           var18 = var16;
           var18.d();

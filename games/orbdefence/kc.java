@@ -651,10 +651,10 @@ abstract class kc extends DualLinkNode {
               }
               param1 = param1 + this.field_n[var8];
               if (field_p != -1) {
-                ul.d(var11, param2 + (int)((double)this.field_z * 0.7), param1 - var11, field_p);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_z * 0.7), param1 - var11, field_p);
               }
               if (field_C != -1) {
-                ul.d(var11, param2 + this.field_z + 1, param1 - var11, field_C);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_z + 1, param1 - var11, field_C);
               }
               var5 = var8;
             }

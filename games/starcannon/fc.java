@@ -88,7 +88,7 @@ final class fc {
           var9Lifetime1 = var18.field_v;
           wj.b(true);
           var18.e();
-          ki.a(0, 0, ki.field_j, ki.field_f);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.e();

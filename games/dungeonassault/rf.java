@@ -32,7 +32,7 @@ abstract class rf extends ii {
           np.field_F = new cn(this.field_x, this.field_s);
         }
         lm.a(np.field_F, (byte) -102);
-        gf.a();
+        SoftwareRasterizer.clearRaster();
         this.a(0, 0, false);
         super.a(param0, -param1 - this.field_q, param2, -this.field_v - param3);
         ti.c(true);

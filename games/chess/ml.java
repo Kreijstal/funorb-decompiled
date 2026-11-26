@@ -211,8 +211,8 @@ final class ml {
         int var7 = param1[1].field_v;
         param1[0].b(param2, param0);
         param1[2].b(param2 + (param4 - var6), param0);
-        wb.b(IntrusiveNode.field_d);
-        wb.e(var5_int + param2, param0, param4 + (param2 - var6), param1[1].field_u + param0);
+        SoftwareRasterizer.saveClip(IntrusiveNode.field_d);
+        SoftwareRasterizer.intersectClip(var5_int + param2, param0, param4 + (param2 - var6), param1[1].field_u + param0);
         if (param3 > -125) {
           return;
         }
@@ -222,7 +222,7 @@ final class ml {
           for (param2 = var8; param2 < var9; param2 = param2 + var7) {
             param1[1].b(param2, param0);
           }
-          wb.a(IntrusiveNode.field_d);
+          SoftwareRasterizer.restoreClip(IntrusiveNode.field_d);
         } catch (RuntimeException runtimeException) {
           throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ml.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

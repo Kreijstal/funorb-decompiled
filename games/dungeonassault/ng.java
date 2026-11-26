@@ -3342,7 +3342,7 @@ final class ng extends ck {
               !(ta.field_b.field_v >= var10));
             if (!decompiledSharedTail0) {
               lm.a(ta.field_b, (byte) -111);
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               decompiledSharedTail0 = (var11 != 0);
             }
             if (decompiledSharedTail0) {

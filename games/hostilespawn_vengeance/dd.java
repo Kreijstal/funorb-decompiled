@@ -198,7 +198,7 @@ final class dd extends ql {
               var3 = 320;
               var1_int -= 64;
               var4 = 102;
-              si.d(-16 + (var3 / 2 + var1_int), 39 + (var4 + var2Lifetime1Lifetime1), var3 / 2 + (var1_int + 16), 42 + var2Lifetime1Lifetime1 + var4);
+              SoftwareRasterizer.setClip(-16 + (var3 / 2 + var1_int), 39 + (var4 + var2Lifetime1Lifetime1), var3 / 2 + (var1_int + 16), 42 + var2Lifetime1Lifetime1 + var4);
               stackIn_42_0 = var1_int + (var3 / 2 - 3);
               stackIn_42_1 = 39 + (var2Lifetime1Lifetime1 + var4);
               stackIn_42_2 = 32;
@@ -208,7 +208,7 @@ final class dd extends ql {
               } else {
                 stackIn_43_4 = 512 - ca.field_c;
               }
-              si.f(stackIn_42_0, stackIn_42_1, stackIn_42_2, stackIn_42_3, stackIn_43_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_42_0, stackIn_42_1, stackIn_42_2, stackIn_42_3, stackIn_43_4 >> 4);
               stackIn_45_0 = 2 + (var1_int + var3 / 2);
               stackIn_45_1 = var2Lifetime1Lifetime1 + var4 + 39;
               stackIn_45_2 = 32;
@@ -218,7 +218,7 @@ final class dd extends ql {
               } else {
                 stackIn_46_4 = ca.field_c;
               }
-              si.f(stackIn_45_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_46_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_45_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_46_4 >> 4);
               stackIn_48_0 = var1_int + var3 / 2 - 3;
               stackIn_48_1 = 39 + var2Lifetime1Lifetime1 + var4;
               stackIn_48_2 = 24;
@@ -228,7 +228,7 @@ final class dd extends ql {
               } else {
                 stackIn_49_4 = 512 - ca.field_c;
               }
-              si.f(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_49_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_49_4 >> 4);
               stackIn_51_0 = 2 + (var1_int + var3 / 2);
               stackIn_51_1 = var4 + (var2Lifetime1Lifetime1 + 39);
               stackIn_51_2 = 24;
@@ -238,7 +238,7 @@ final class dd extends ql {
               } else {
                 stackIn_52_4 = ca.field_c;
               }
-              si.f(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_52_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_52_4 >> 4);
               stackIn_54_0 = -3 + (var1_int + var3 / 2);
               stackIn_54_1 = 39 + var2Lifetime1Lifetime1 + var4;
               stackIn_54_2 = 16;
@@ -248,7 +248,7 @@ final class dd extends ql {
               } else {
                 stackIn_55_4 = ca.field_c;
               }
-              si.f(stackIn_54_0, stackIn_54_1, stackIn_54_2, stackIn_54_3, stackIn_55_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_54_0, stackIn_54_1, stackIn_54_2, stackIn_54_3, stackIn_55_4 >> 4);
               stackIn_57_0 = 2 + var1_int + var3 / 2;
               stackIn_57_1 = 39 + (var2Lifetime1Lifetime1 + var4);
               stackIn_57_2 = 16;
@@ -258,8 +258,8 @@ final class dd extends ql {
               } else {
                 stackIn_58_4 = 512 - ca.field_c;
               }
-              si.f(stackIn_57_0, stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_58_4 >> 4);
-              si.d(0, 42 + (var4 + var2Lifetime1Lifetime1), 640, 480);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_57_0, stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_58_4 >> 4);
+              SoftwareRasterizer.setClip(0, 42 + (var4 + var2Lifetime1Lifetime1), 640, 480);
               stackIn_60_0 = -3 + (var3 / 2 + var1_int);
               stackIn_60_1 = 39 + var4 + var2Lifetime1Lifetime1;
               stackIn_60_2 = 32;
@@ -269,7 +269,7 @@ final class dd extends ql {
               } else {
                 stackIn_61_4 = ca.field_c;
               }
-              si.f(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_61_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_61_4 >> 4);
               stackIn_63_0 = var3 / 2 + (var1_int + 2);
               stackIn_63_1 = var2Lifetime1Lifetime1 + (var4 + 39);
               stackIn_63_2 = 32;
@@ -279,7 +279,7 @@ final class dd extends ql {
               } else {
                 stackIn_64_4 = ca.field_c;
               }
-              si.f(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_63_3, stackIn_64_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_63_3, stackIn_64_4 >> 4);
               stackIn_66_0 = var1_int + var3 / 2 - 3;
               stackIn_66_1 = var2Lifetime1Lifetime1 + var4 + 39;
               stackIn_66_2 = 24;
@@ -289,7 +289,7 @@ final class dd extends ql {
               } else {
                 stackIn_67_4 = ca.field_c;
               }
-              si.f(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_66_3, stackIn_67_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_66_3, stackIn_67_4 >> 4);
               stackIn_69_0 = 2 + var1_int + var3 / 2;
               stackIn_69_1 = 39 + (var2Lifetime1Lifetime1 + var4);
               stackIn_69_2 = 24;
@@ -299,7 +299,7 @@ final class dd extends ql {
               } else {
                 stackIn_70_4 = 512 - ca.field_c;
               }
-              si.f(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_70_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_70_4 >> 4);
               stackIn_72_0 = var1_int + (var3 / 2 - 3);
               stackIn_72_1 = var4 + (var2Lifetime1Lifetime1 + 39);
               stackIn_72_2 = 16;
@@ -309,7 +309,7 @@ final class dd extends ql {
               } else {
                 stackIn_73_4 = 512 - ca.field_c;
               }
-              si.f(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_73_4 >> 4);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_73_4 >> 4);
               stackIn_75_0 = 2 + (var3 / 2 + var1_int);
               stackIn_75_1 = var4 + (var2Lifetime1Lifetime1 + 39);
               stackIn_75_2 = 16;
@@ -319,8 +319,8 @@ final class dd extends ql {
               } else {
                 stackIn_76_4 = ca.field_c;
               }
-              si.f(stackIn_75_0, stackIn_75_1, stackIn_75_2, stackIn_75_3, stackIn_76_4 >> 4);
-              si.d(0, var2Lifetime1Lifetime1 + var4 + 38, 640, 480);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_75_0, stackIn_75_1, stackIn_75_2, stackIn_75_3, stackIn_76_4 >> 4);
+              SoftwareRasterizer.setClip(0, var2Lifetime1Lifetime1 + var4 + 38, 640, 480);
               stackIn_78_0 = -3 + (var1_int + var3 / 2);
               stackIn_78_1 = var4 + var2Lifetime1Lifetime1 + 39;
               stackIn_78_2 = 4;
@@ -330,7 +330,7 @@ final class dd extends ql {
               } else {
                 stackIn_79_4 = -ca.field_c + 512;
               }
-              si.f(stackIn_78_0, stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_79_4 >> 1);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_78_0, stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_79_4 >> 1);
               stackIn_81_0 = 2 + var1_int + var3 / 2;
               stackIn_81_1 = 39 + (var2Lifetime1Lifetime1 + var4);
               stackIn_81_2 = 4;
@@ -340,7 +340,7 @@ final class dd extends ql {
               } else {
                 stackIn_82_4 = ca.field_c;
               }
-              si.f(stackIn_81_0, stackIn_81_1, stackIn_81_2, stackIn_81_3, stackIn_82_4 >> 1);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_81_0, stackIn_81_1, stackIn_81_2, stackIn_81_3, stackIn_82_4 >> 1);
               stackIn_84_0 = -3 + (var1_int + var3 / 2);
               stackIn_84_1 = var2Lifetime1Lifetime1 + var4 + 39;
               stackIn_84_2 = 2;
@@ -350,7 +350,7 @@ final class dd extends ql {
               } else {
                 stackIn_85_4 = ca.field_c;
               }
-              si.f(stackIn_84_0, stackIn_84_1, stackIn_84_2, stackIn_84_3, stackIn_85_4 >> 1);
+              SoftwareRasterizer.fillCircleAlpha(stackIn_84_0, stackIn_84_1, stackIn_84_2, stackIn_84_3, stackIn_85_4 >> 1);
               stackIn_87_0 = 2 + var3 / 2 + var1_int;
               stackIn_87_1 = 39 + (var4 + var2Lifetime1Lifetime1);
               stackIn_87_2 = 2;
@@ -360,8 +360,8 @@ final class dd extends ql {
               } else {
                 stackIn_88_4 = 512 - ca.field_c;
               }
-              si.f(stackIn_87_0, stackIn_87_1, stackIn_87_2, stackIn_87_3, stackIn_88_4 >> 1);
-              si.c();
+              SoftwareRasterizer.fillCircleAlpha(stackIn_87_0, stackIn_87_1, stackIn_87_2, stackIn_87_3, stackIn_88_4 >> 1);
+              SoftwareRasterizer.resetClip();
             }
             if (ul.field_L == 1 ||
               ul.field_L == 2) {
@@ -386,7 +386,7 @@ final class dd extends ql {
               } else {
                 stackIn_100_5 = 512 - ca.field_c;
               }
-              si.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5 >> 1);
+              SoftwareRasterizer.fillRectangleAlpha(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5 >> 1);
               var5Lifetime1 = 15;
               stackIn_102_0 = -var5Lifetime1 + 3 + var1_intLifetime2 + var3Lifetime1 / 2;
               stackIn_102_1 = 55 + var4Lifetime1 + (var2Lifetime1Lifetime2 - var5Lifetime1);
@@ -398,7 +398,7 @@ final class dd extends ql {
               } else {
                 stackIn_103_5 = -ca.field_c + 512;
               }
-              si.a(stackIn_102_0, stackIn_102_1, stackIn_102_2, stackIn_102_3, stackIn_102_4, stackIn_103_5 >> 2);
+              SoftwareRasterizer.fillRectangleAlpha(stackIn_102_0, stackIn_102_1, stackIn_102_2, stackIn_102_3, stackIn_102_4, stackIn_103_5 >> 2);
               var5Lifetime2 = 16;
               stackIn_105_0 = 3 + (var3Lifetime1 / 2 + (var1_intLifetime2 - var5Lifetime2));
               stackIn_105_1 = 55 + (var4Lifetime1 + var2Lifetime1Lifetime2) - var5Lifetime2;
@@ -410,7 +410,7 @@ final class dd extends ql {
               } else {
                 stackIn_106_5 = 512 - ca.field_c;
               }
-              si.a(stackIn_105_0, stackIn_105_1, stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_106_5 >> 3);
+              SoftwareRasterizer.fillRectangleAlpha(stackIn_105_0, stackIn_105_1, stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_106_5 >> 3);
             }
             if (ul.field_L == 3 &&
               mm.field_m[0].field_j.field_e <= 42 &&

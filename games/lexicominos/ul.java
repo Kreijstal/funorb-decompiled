@@ -486,7 +486,7 @@ final class ul extends IntrusiveNode {
           var9Lifetime1 = var18.field_u;
           ja.b((byte) -116);
           var18.b();
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
           var16 = new db(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.b();

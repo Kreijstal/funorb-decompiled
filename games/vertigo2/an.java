@@ -58,7 +58,7 @@ final class an {
           var6 = var3;
           var7 = new Sprite(var5, var6);
           var7.d();
-          bi.e(32, 32, var7.field_y - 64, var7.field_t - 64, 9361151, 1282259);
+          SoftwareRasterizer.fillRectangleVerticalGradient(32, 32, var7.field_y - 64, var7.field_t - 64, 9361151, 1282259);
           var10 = 0;
           var11 = 128;
           var12 = var11 / 2;
@@ -72,7 +72,7 @@ final class an {
               var10Lifetime1 = stackIn_11_0;
             }
             if (var10Lifetime1 != 0) {
-              bi.b(var8, var9, 657930);
+              SoftwareRasterizer.addPixel(var8, var9, 657930);
             }
           }
           var13 = new Sprite(var4, var3);
@@ -89,7 +89,7 @@ final class an {
               var13.field_F[var16 + var13.field_y] == 0)) {
               var8Lifetime1 = var16 % var13.field_y;
               var9Lifetime1 = var16 / var13.field_y;
-              bi.f(var8Lifetime1, var9Lifetime1, 10, 131359);
+              SoftwareRasterizer.fillCircle(var8Lifetime1, var9Lifetime1, 10, 131359);
             }
           }
           for (var16Lifetime1 = 0; var16Lifetime1 < var13.field_F.length; var16Lifetime1++) {
@@ -99,7 +99,7 @@ final class an {
               var13.field_F[var16Lifetime1 + var13.field_y] == 0)) {
               var9Lifetime2 = var16Lifetime1 / var13.field_y;
               var8Lifetime2 = var16Lifetime1 % var13.field_y;
-              bi.f(var8Lifetime2, var9Lifetime2, 5, 3039099);
+              SoftwareRasterizer.fillCircle(var8Lifetime2, var9Lifetime2, 5, 3039099);
             }
           }
           var13.e(0, 0);
@@ -127,17 +127,17 @@ final class an {
                   if (var16Lifetime3 == 3) {
                     var9Lifetime3 = var17 / var13.field_y;
                     var8Lifetime3 = var17 % var13.field_y;
-                    bi.b(var8Lifetime3, var9Lifetime3, 1118481);
+                    SoftwareRasterizer.addPixel(var8Lifetime3, var9Lifetime3, 1118481);
                   }
                 } else {
                   var8Lifetime3 = var17 % var13.field_y;
                   var9Lifetime3 = var17 / var13.field_y;
-                  bi.b(var8Lifetime3, var9Lifetime3, 2236962);
+                  SoftwareRasterizer.addPixel(var8Lifetime3, var9Lifetime3, 2236962);
                 }
               } else {
                 var8Lifetime3 = var17 % var13.field_y;
                 var9Lifetime3 = var17 / var13.field_y;
-                bi.b(var8Lifetime3, var9Lifetime3, 5592405);
+                SoftwareRasterizer.addPixel(var8Lifetime3, var9Lifetime3, 5592405);
               }
             }
           }
@@ -644,9 +644,9 @@ final class an {
         param1 += 2;
         param3 -= 4;
         param4 += 2;
-        int var5 = param4 * bi.field_e + param1;
-        int var6 = bi.field_e - param2;
-        wn.a(bi.field_l, var5, 0, 0, 0, 0, param2, param3, var6);
+        int var5 = param4 * SoftwareRasterizer.field_e + param1;
+        int var6 = SoftwareRasterizer.field_e - param2;
+        wn.a(SoftwareRasterizer.field_l, var5, 0, 0, 0, 0, param2, param3, var6);
     }
 
     public static void a(boolean param0) {

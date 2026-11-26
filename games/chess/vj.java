@@ -19,7 +19,7 @@ abstract class vj {
         if (param0 != 48) {
           return;
         }
-        wb.a(this.field_b, this.field_e, this.field_i);
+        SoftwareRasterizer.setRasterBuffer(this.field_b, this.field_e, this.field_i);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
@@ -33,21 +33,21 @@ abstract class vj {
         int var10 = 0;
         var10 = Chess.field_G;
         try {
-          wb.a(param4, param0, 1 + param2, 10000536);
-          wb.a(param4, param1 + param0, 1 + param2, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param4, param0, 1 + param2, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param4, param1 + param0, 1 + param2, 12105912);
           var5_int = 1;
           var6 = param1;
-          if (param0 + var5_int < wb.field_a) {
-            var5_int = wb.field_a - param0;
+          if (param0 + var5_int < SoftwareRasterizer.field_a) {
+            var5_int = SoftwareRasterizer.field_a - param0;
           }
-          if (wb.field_b < var6 + param0) {
-            var6 = -param0 + wb.field_b;
+          if (SoftwareRasterizer.field_b < var6 + param0) {
+            var6 = -param0 + SoftwareRasterizer.field_b;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 48 * var7 / param1 + 152;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            wb.field_d[param4 + (var7 + param0) * wb.field_h] = var9;
-            wb.field_d[param4 + (param0 + var7) * wb.field_h + param2] = var9;
+            SoftwareRasterizer.field_d[param4 + (var7 + param0) * SoftwareRasterizer.field_h] = var9;
+            SoftwareRasterizer.field_d[param4 + (param0 + var7) * SoftwareRasterizer.field_h + param2] = var9;
           }
           if (param3 <= 115) {
             field_f = (long[]) null;

@@ -53,7 +53,7 @@ final class hj {
           return;
         }
         try {
-          ti.a(param0.field_z, param0.field_w, param0.field_x);
+          SoftwareRasterizer.setRasterBuffer(param0.field_z, param0.field_w, param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

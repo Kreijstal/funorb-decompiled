@@ -43,7 +43,7 @@ final class ka implements jm {
             stackIn_3_0 = null;
           }
           var14 = (od) (stackIn_3_0);
-          wb.f(param1 + param4.field_u, param2 + param4.field_r, param4.field_y, param4.field_C, this.field_l);
+          SoftwareRasterizer.fillRectangle(param1 + param4.field_u, param2 + param4.field_r, param4.field_y, param4.field_C, this.field_l);
           if (param0 < 58) {
             this.field_p = (lh) null;
           }
@@ -51,18 +51,18 @@ final class ka implements jm {
           }
           var7 = param1 + param4.field_u + var14.field_Q;
           var8 = param4.field_r + (param2 + var14.field_M);
-          wb.c(var7, var8, var14.field_T, this.field_k);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_T, this.field_k);
           if (var14.field_S != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_S) / (double)var14.field_P;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_T);
             var12 = (int)(Math.cos(var9) * (double)var14.field_T);
-            wb.c(var7 + var11, var8 + var12, 1, this.field_n);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_n);
           }
-          wb.c(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var14.field_R * 3.141592653589793) / (double)var14.field_P;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_T);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_T);
-          wb.b(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_p == null) {
             return;
           }

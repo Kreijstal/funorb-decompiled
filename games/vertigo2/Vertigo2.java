@@ -806,7 +806,7 @@ public final class Vertigo2 extends GameShell {
           nr.b((byte) 120);
           fa.a((byte) -128);
           IntrusiveDeque.clearStaticReferences(0);
-          bi.d();
+          SoftwareRasterizer.clearStaticReferences();
           tl.clearStaticReferences(true);
           Archive.clearStaticReferences(-54);
           BitmapFont.clearStaticReferences();
@@ -1267,8 +1267,8 @@ public final class Vertigo2 extends GameShell {
               var4_int = -var4_int;
             }
             var4_int = var4_int << 2;
-            bi.c(var4_int, var4_int, 0, 0, 640, 480);
-            bi.b(0, 0, 640, 480, 1, var4_int << 2);
+            SoftwareRasterizer.blurRectangle(var4_int, var4_int, 0, 0, 640, 480);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 1, var4_int << 2);
           }
           if (!qh.field_g ||
             !lc.field_d) {
@@ -1314,7 +1314,7 @@ public final class Vertigo2 extends GameShell {
           if (t.field_a != t.field_f) {
             var5Lifetime2 = 256 * ok.field_c / 16;
             if (0 < var5Lifetime2) {
-              bi.b(0, 0, bi.field_e, bi.field_j, 0, var5Lifetime2);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, var5Lifetime2);
             }
           }
           ByteStorage.a(0, (byte) -88, var8, 0);

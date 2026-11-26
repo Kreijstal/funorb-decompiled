@@ -50,7 +50,7 @@ final class jf extends s {
             var9 <= MidiPcmStream.field_N.field_o &&
             MidiPcmStream.field_N.field_k >= var10) {
             de.a(-128, MidiPcmStream.field_N);
-            ul.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             MidiPcmStream.field_N = new hj(var9, var10);
             de.a(param2 ^ -1048454, MidiPcmStream.field_N);
@@ -143,34 +143,34 @@ final class jf extends s {
           param4 = param4 + param2.field_u;
           param5 = param5 + param2.field_p;
           var7 = (param3 << 8) + param2.field_p * var6_int;
-          var8 = param5 + ul.field_f * param4;
+          var8 = param5 + SoftwareRasterizer.field_f * param4;
           var9 = 0;
           var10 = param2.field_k;
           var11 = param2.field_o;
-          var12 = -var11 + ul.field_f;
-          if (param4 < ul.field_d) {
-            var14 = ul.field_d - param4;
+          var12 = -var11 + SoftwareRasterizer.field_f;
+          if (param4 < SoftwareRasterizer.field_d) {
+            var14 = SoftwareRasterizer.field_d - param4;
             var9 = var9 + var14 * var11;
             var10 = var10 - var14;
-            param4 = ul.field_d;
-            var8 = var8 + var14 * ul.field_f;
+            param4 = SoftwareRasterizer.field_d;
+            var8 = var8 + var14 * SoftwareRasterizer.field_f;
           }
           var13 = 0;
-          if (ul.field_i > param5) {
-            var14Lifetime1 = ul.field_i - param5;
+          if (SoftwareRasterizer.field_i > param5) {
+            var14Lifetime1 = SoftwareRasterizer.field_i - param5;
             var12 = var12 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
-            param5 = ul.field_i;
+            param5 = SoftwareRasterizer.field_i;
             var13 = var13 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var7 = var7 + var14Lifetime1 * var6_int;
             var9 = var9 + var14Lifetime1;
           }
-          if (ul.field_a < var10 + param4) {
-            var10 = var10 - (-ul.field_a + (var10 + param4));
+          if (SoftwareRasterizer.field_a < var10 + param4) {
+            var10 = var10 - (-SoftwareRasterizer.field_a + (var10 + param4));
           }
-          if (var11 + param5 > ul.field_e) {
-            var14Lifetime2 = -ul.field_e + (var11 + param5);
+          if (var11 + param5 > SoftwareRasterizer.field_e) {
+            var14Lifetime2 = -SoftwareRasterizer.field_e + (var11 + param5);
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -189,11 +189,11 @@ final class jf extends s {
                   var17 = param2.field_v[incrementValue$0];
                   if (0 != var17) {
                     if (var15 <= 255) {
-                      var18 = ul.field_b[var8];
+                      var18 = SoftwareRasterizer.field_b[var8];
                       var19 = 16711935 & var15 * (var17 & 16711935) + var16 * (16711935 & var18) >> 8;
-                      ul.field_b[var8] = var19 + (vi.a(16711715, vi.a(var17, 65280) * var15 + vi.a(var18, 65280) * var16) >> 8);
+                      SoftwareRasterizer.field_b[var8] = var19 + (vi.a(16711715, vi.a(var17, 65280) * var15 + vi.a(var18, 65280) * var16) >> 8);
                     } else {
-                      ul.field_b[var8] = var17;
+                      SoftwareRasterizer.field_b[var8] = var17;
                     }
                   }
                   var8++;

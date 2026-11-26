@@ -167,17 +167,17 @@ final class jn extends fc {
     final static void a(int param0, int param1, int param2, int param3) {
         if (param0 == 100) {
           if (param1 > 0) {
-            si.d(32, 32, 608, 440);
+            SoftwareRasterizer.setClip(32, 32, 608, 440);
             vg.field_c.a(param2, param3, param1);
-            si.c();
+            SoftwareRasterizer.resetClip();
           }
           return;
         }
         field_I = (String[]) null;
         if (param1 > 0) {
-          si.d(32, 32, 608, 440);
+          SoftwareRasterizer.setClip(32, 32, 608, 440);
           vg.field_c.a(param2, param3, param1);
-          si.c();
+          SoftwareRasterizer.resetClip();
         }
     }
 

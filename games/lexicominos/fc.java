@@ -1052,7 +1052,7 @@ final class fc {
           var5 = 64;
           var6 = (-var4 + 311) / 2;
           var7 = (450 - var5) / 2;
-          SoftwareRasterizer.a(var6, var7, var4, var5, 0);
+          SoftwareRasterizer.fillRectangle(var6, var7, var4, var5, 0);
           eh.a(0, lg.field_c, 8 + var6 + 48, 0, var13, var7 + 8);
           eh.a(0, lg.field_c, var6 + 8, 0, var3_ref_String, 24 + (8 + var7));
           return;
@@ -1163,7 +1163,7 @@ final class fc {
           var12.a((byte) -34);
           var12 = (gd) (this.field_j.nextForward(2));
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.resetClip();
         if (this.field_D) {
           bi.field_a.b("FPS: " + tj.field_i, 10, 3 * pa.field_d + 20, 0, -1);
           bi.field_a.b("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
@@ -1286,10 +1286,10 @@ final class fc {
         if (this.field_L > 0 &&
           this.field_L < 30 &&
           this.field_L % 10 < 5) {
-          SoftwareRasterizer.a(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 16777215);
         }
         this.field_Q.a(false, 13551);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.resetClip();
         this.c((byte) 72);
         SoftwareRasterizer.setClip(60, 266 + this.field_M + 120, 252, 450);
         va.field_m.d(0, 0);
@@ -1301,12 +1301,12 @@ final class fc {
           var9Lifetime1 = var8[var3Lifetime1];
           var9Lifetime1.d(0, 0);
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.resetClip();
         oh.a(183, lg.field_c, false, Integer.toString(Math.abs(this.field_r)), 0, 230);
         if (this.field_s > 0 &&
           this.field_s < 30 &&
           5 > this.field_s % 10) {
-          SoftwareRasterizer.a(53, 183, 48, 24, 16777215);
+          SoftwareRasterizer.fillRectangle(53, 183, 48, 24, 16777215);
         }
         oh.a(183, lg.field_c, false, Integer.toString(this.field_d), 0, 77);
         var10 = (bd) (this.field_G.beginForward(true));

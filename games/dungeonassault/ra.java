@@ -94,7 +94,7 @@ final class ra {
             im.field_e.field_w = -8;
           }
           im.field_e.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           for (var1_int = 0; var1_int < 7; var1_int++) {
             var2 = -19 + (-(var1_int * 27) + 189);
             var3 = 20 * var1_int + 8;
@@ -119,7 +119,7 @@ final class ra {
               var4Lifetime1 += 8;
             }
           }
-          gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
+          SoftwareRasterizer.blurRectangle(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
           if (param0 != 8) {
             return;
           }

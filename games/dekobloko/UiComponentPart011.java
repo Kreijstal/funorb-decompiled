@@ -49,7 +49,7 @@ final class UiComponentPart011 extends InteractiveComponent {
               integerLocal4 <= MixedSupport071.rgbSpriteState0027.integerState0258 &&
               integerLocal5 <= MixedSupport071.rgbSpriteState0027.integerState0255) {
               ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
-              SoftwareRaster.performAction0648();
+              SoftwareRaster.clearRaster();
             } else {
               MixedSupport071.rgbSpriteState0027 = new RgbSprite(integerLocal4, integerLocal5);
               ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
@@ -86,7 +86,7 @@ final class UiComponentPart011 extends InteractiveComponent {
             } else {
               if (integerLocal18 <= MixedSupport071.rgbSpriteState0027.integerState0255) {
                 ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
-                SoftwareRaster.performAction0648();
+                SoftwareRaster.clearRaster();
               } else {
                 MixedSupport071.rgbSpriteState0027 = new RgbSprite(integerLocal17, integerLocal18);
                 ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
@@ -126,7 +126,7 @@ final class UiComponentPart011 extends InteractiveComponent {
           } else {
             if (integerLocal16 <= MixedSupport071.rgbSpriteState0027.integerState0255) {
               ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
-              SoftwareRaster.performAction0648();
+              SoftwareRaster.clearRaster();
             } else {
               MixedSupport071.rgbSpriteState0027 = new RgbSprite(integerLocal15, integerLocal16);
               ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);

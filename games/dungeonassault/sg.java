@@ -243,7 +243,7 @@ final class sg {
                   var21 = var21 + var23;
                   var30 = var30 + var32;
                   var26 = var26 + var28;
-                  var36Lifetime2 = var36Lifetime2 + gf.field_i;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_i;
                   var29 = var29 + var31;
                   var22 = var22 + var24;
                   var18 = var18 + var20;
@@ -331,7 +331,7 @@ final class sg {
               var30 = var30 + var32;
               var21 = var21 + var23;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + gf.field_i;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_i;
               var17_int = var17_int + var19;
               var25 = var25 + var27;
               var22 = var22 + var24;

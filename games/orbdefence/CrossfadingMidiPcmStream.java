@@ -452,9 +452,9 @@ final class CrossfadingMidiPcmStream extends PcmStream {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (!param2) {
-          ul.d();
+          SoftwareRasterizer.clearRaster();
         } else {
-          ul.d(0, 0, ul.field_f, ul.field_l, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, 0, 192);
         }
         m.a(param2, 0);
         if (!param1) {

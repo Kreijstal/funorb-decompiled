@@ -27,7 +27,7 @@ final class ib extends kj implements tb, sg {
           }
           if (10 <= li.field_K) {
             if (!eh.a(param1 ^ 43)) {
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
               v.e(240, 320, 101);
               nj.a(0, 0, param0, 0);
             } else {

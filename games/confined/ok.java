@@ -245,10 +245,10 @@ abstract class ok extends DualLinkNode {
               }
               param1 = param1 + this.field_Q[var8];
               if (field_u != -1) {
-                fn.b(var11, param2 + (int)((double)this.field_v * 0.7), param1 - var11, field_u);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_v * 0.7), param1 - var11, field_u);
               }
               if (field_E != -1) {
-                fn.b(var11, param2 + this.field_v + 1, param1 - var11, field_E);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_v + 1, param1 - var11, field_E);
               }
               var5 = var8;
             }

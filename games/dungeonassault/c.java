@@ -17,11 +17,11 @@ abstract class c {
 
     final void a(boolean param0) {
         if (param0) {
-          gf.a(this.field_g, this.field_b, this.field_f);
+          SoftwareRasterizer.setRasterBuffer(this.field_g, this.field_b, this.field_f);
           return;
         }
         field_h = (java.awt.Canvas) null;
-        gf.a(this.field_g, this.field_b, this.field_f);
+        SoftwareRasterizer.setRasterBuffer(this.field_g, this.field_b, this.field_f);
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {

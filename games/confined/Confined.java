@@ -29,7 +29,7 @@ public final class Confined extends i {
           GameAppletShell.b(32575);
           pk.c(param0 - 13733);
           MouseWheelInput.a((byte) 81);
-          fn.a();
+          SoftwareRasterizer.clearStaticReferences();
           mg.a((byte) -121);
           PacketBuffer.clearBufferStatics(param0 - 196);
           ri.a((byte) 28);
@@ -502,22 +502,22 @@ public final class Confined extends i {
             return;
           }
           ca.c(511);
-          fn.d();
-          fn.field_l = 376;
-          fn.c();
+          SoftwareRasterizer.clearRaster();
+          SoftwareRasterizer.field_l = 376;
+          SoftwareRasterizer.resetClip();
           if (null != qn.field_v.field_K) {
             qn.field_v.field_K.b(-108);
           }
           qn.field_v.c((byte) -94);
           if (md.a(-96)) {
-            fn.c(288, 187, 16, 16777215, 64);
-            fn.c(336, 187, 16, 16777215, 64);
-            fn.c(288, 188, 16, 16777215, 64);
-            fn.c(336, 188, 16, 16777215, 64);
-            fn.a(319, 164, 12, 16777215, 64);
-            fn.a(320, 164, 12, 16777215, 64);
-            fn.a(319, 200, 12, 16777215, 64);
-            fn.a(320, 200, 12, 16777215, 64);
+            SoftwareRasterizer.drawHorizontalLineAlpha(288, 187, 16, 16777215, 64);
+            SoftwareRasterizer.drawHorizontalLineAlpha(336, 187, 16, 16777215, 64);
+            SoftwareRasterizer.drawHorizontalLineAlpha(288, 188, 16, 16777215, 64);
+            SoftwareRasterizer.drawHorizontalLineAlpha(336, 188, 16, 16777215, 64);
+            SoftwareRasterizer.drawVerticalLineAlpha(319, 164, 12, 16777215, 64);
+            SoftwareRasterizer.drawVerticalLineAlpha(320, 164, 12, 16777215, 64);
+            SoftwareRasterizer.drawVerticalLineAlpha(319, 200, 12, 16777215, 64);
+            SoftwareRasterizer.drawVerticalLineAlpha(320, 200, 12, 16777215, 64);
           }
           ne.a(-11);
           if (!qn.field_v.field_y &&
@@ -614,7 +614,7 @@ public final class Confined extends i {
             var17_int = stackIn_98_0;
             do {
               if (!(var17_int < mm.field_eb.length)) {
-                Confined.a(0, 0, fn.field_h);
+                Confined.a(0, 0, SoftwareRasterizer.field_h);
                 sk.field_h = 640;
                 sk.field_G = 376;
                 sk.field_j = 0;
@@ -625,7 +625,7 @@ public final class Confined extends i {
               var17_int++;
             } while (var23 == 0);
             var17 = fd.field_e.field_z;
-            fd.field_e.field_z = fn.field_h;
+            fd.field_e.field_z = SoftwareRasterizer.field_h;
             var18Lifetime1 = 128;
             if (ef.field_tb > 2800 &&
               ef.field_tb < 2850) {
@@ -644,12 +644,12 @@ public final class Confined extends i {
           }
           if (pa.field_b >= 0 &&
             0 == (32 & pa.field_b)) {
-            fn.b(0, 0, 640, 376, 16711680, 32);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 376, 16711680, 32);
             vg.field_I.b(fg.field_nb, 320, 76, 16744576, -1);
           }
           boolean decompiledFrameRemainder1 = true;
-          fn.field_l = 480;
-          fn.c();
+          SoftwareRasterizer.field_l = 480;
+          SoftwareRasterizer.resetClip();
           if (rm.field_f != null) {
             rm.field_f.a((byte) 121);
             decompiledFrameRemainder1 = (var23 != 0);
@@ -775,12 +775,12 @@ public final class Confined extends i {
             }
           }
           if (vl.field_b) {
-            fn.b(0, 0, 640, 480, 0, 256 - eg.field_i);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 256 - eg.field_i);
           }
           boolean decompiledSharedTail0 = !(ka.k(-58));
           if (!decompiledSharedTail0) {
-            fn.a(0, 0, 640, 480);
-            fn.b(-30 - hn.d(param0 ^ 43292) / 2 + 320, 240 - IntrusiveNodeHashTable.a(true) / 2 - 20, 60 + hn.d(24860), IntrusiveNodeHashTable.a(true) + 40, 0, 150);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
+            SoftwareRasterizer.fillRectangleAlpha(-30 - hn.d(param0 ^ 43292) / 2 + 320, 240 - IntrusiveNodeHashTable.a(true) / 2 - 20, 60 + hn.d(24860), IntrusiveNodeHashTable.a(true) + 40, 0, 150);
             pi.j(-1101556575);
             decompiledSharedTail0 = (var23 != 0);
           }
@@ -789,7 +789,7 @@ public final class Confined extends i {
             tk.a((byte) -108, var3 != 0);
           }
           if (0 < ci.field_e) {
-            fn.b(0, 0, 640, 480, 0, ci.field_e * 256 / 20);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, ci.field_e * 256 / 20);
           }
           ll.a(0, 0, (java.awt.Canvas) (var2), -107);
           if (param0 != 51200) {

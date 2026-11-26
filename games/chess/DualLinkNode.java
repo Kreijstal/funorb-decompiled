@@ -104,7 +104,7 @@ class DualLinkNode extends IntrusiveNode {
           ki.a(0, param3);
         } else {
           if (param1 == -2) {
-            wb.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             if (!param0) {
               if (0 > param1) {
@@ -149,7 +149,7 @@ class DualLinkNode extends IntrusiveNode {
               }
             } else {
               ki.a(0, false);
-              wb.g(0, 0, 640, 480);
+              SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
               if (0 > param1) {
                 if (param1 == 3) {
                   if (!hj.field_i) {

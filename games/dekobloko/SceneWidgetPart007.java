@@ -79,7 +79,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           if (0 == integerArgument6) {
             integerArgument6 = 65793;
           }
-          SoftwareRaster.performAction0645(integerArrayLocal29, integerLocal15, integerLocal16);
+          SoftwareRaster.setRasterBuffer(integerArrayLocal29, integerLocal15, integerLocal16);
           integerArrayLocal18 = rgbSpriteLocal17.integerArrayState0024;
           rgbSpriteLocal19 = new RgbSprite((2 + integerLocal10) * integerLocal13, integerLocal13 * (2 + integerLocal12));
           rgbSpriteLocal19.performAction0256();
@@ -88,14 +88,14 @@ final class SceneWidgetPart007 extends SceneWidget {
               if (integerArrayLocal18[integerLocal20 * integerLocal10 + integerLocal21] != 0) {
                 integerLocal22 = integerLocal13 * (integerLocal21 + 1);
                 integerLocal23 = (integerLocal20 + 1) * integerLocal13;
-                SoftwareRaster.performAction0661(integerLocal22, integerLocal23, integerLocal13 - integerLocal14, integerArgument6 | -16777216);
-                SoftwareRaster.performAction0661(-1 + integerLocal13 + integerLocal22, integerLocal23, integerLocal13 - integerLocal14, integerArgument6 | -16777216);
-                SoftwareRaster.performAction0661(integerLocal22, integerLocal23 + integerLocal13 - 1, -integerLocal14 + integerLocal13, integerArgument6 | -16777216);
-                SoftwareRaster.performAction0661(integerLocal22 + (integerLocal13 - 1), integerLocal13 + integerLocal23 - 1, -integerLocal14 + integerLocal13, integerArgument6 | -16777216);
+                SoftwareRaster.fillCircle(integerLocal22, integerLocal23, integerLocal13 - integerLocal14, integerArgument6 | -16777216);
+                SoftwareRaster.fillCircle(-1 + integerLocal13 + integerLocal22, integerLocal23, integerLocal13 - integerLocal14, integerArgument6 | -16777216);
+                SoftwareRaster.fillCircle(integerLocal22, integerLocal23 + integerLocal13 - 1, -integerLocal14 + integerLocal13, integerArgument6 | -16777216);
+                SoftwareRaster.fillCircle(integerLocal22 + (integerLocal13 - 1), integerLocal13 + integerLocal23 - 1, -integerLocal14 + integerLocal13, integerArgument6 | -16777216);
               }
             }
           }
-          SoftwareRaster.performAction0645(integerArrayLocal29, integerLocal15, integerLocal16);
+          SoftwareRaster.setRasterBuffer(integerArrayLocal29, integerLocal15, integerLocal16);
           for (integerLocal30 = 0; integerLocal30 < integerLocal12; integerLocal30++) {
             for (integerLocal31 = 0; integerLocal10 > integerLocal31; integerLocal31++) {
               if (0 != integerArrayLocal18[integerLocal31 + integerLocal30 * integerLocal10]) {

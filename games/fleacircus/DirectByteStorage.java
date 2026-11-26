@@ -22,24 +22,24 @@ final class DirectByteStorage extends ByteStorage {
           var9_int = param4 + param8 + (param2.field_q - param3);
           var10 = param1 + (param8 + (param2.field_q + param4));
           var11 = param5 + param2.field_v + (param2.field_t >> 1);
-          gb.g(var9_int, 0, var10, var11 + param0);
+          SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param0);
           param2.a(-1 + param8, param5 - 1, param6);
           param2.a(param8 - 1, param5 + 1, param6);
-          gb.b(ab.field_c);
-          gb.g(1 + var9_int, 0, var10 + 1, var11 + param0);
+          SoftwareRasterizer.restoreClip(ab.field_c);
+          SoftwareRasterizer.intersectClip(1 + var9_int, 0, var10 + 1, var11 + param0);
           param2.a(1 + param8, param5 - 1, param6);
           param2.a(1 + param8, param5 + 1, param6);
-          gb.b(ab.field_c);
+          SoftwareRasterizer.restoreClip(ab.field_c);
           var10Lifetime1 = -param3 + param8 + param2.field_q + (param2.field_w - param4);
           var9_intLifetime1 = param8 + param2.field_w + (param2.field_q - param4 - param1);
-          gb.g(var9_intLifetime1, var11 - param0, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1, var11 - param0, var10Lifetime1, 480);
           param2.a(param8 - 1, param5 - 1, param6);
           param2.a(param8 - 1, 1 + param5, param6);
-          gb.b(ab.field_c);
-          gb.g(1 + var9_intLifetime1, var11 - param0, 1 + var10Lifetime1, 480);
+          SoftwareRasterizer.restoreClip(ab.field_c);
+          SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, var11 - param0, 1 + var10Lifetime1, 480);
           param2.a(param8 + 1, param5 - 1, param6);
           param2.a(1 + param8, 1 + param5, param6);
-          gb.b(ab.field_c);
+          SoftwareRasterizer.restoreClip(ab.field_c);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "qe.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

@@ -383,7 +383,7 @@ public final class OrbDefence extends NetworkGameClient {
         uj.c(0);
         MouseInputListener.a(8);
         MouseWheelInput.b(121);
-        ul.b();
+        SoftwareRasterizer.clearStaticReferences();
         ki.clearStaticReferences(false);
         kc.clearStaticReferences();
         tc.a(true);
@@ -642,7 +642,7 @@ public final class OrbDefence extends NetworkGameClient {
           em.a(0, var7);
           return;
         }
-        ul.d();
+        SoftwareRasterizer.clearRaster();
         if (~kk.field_S != ~kf.field_c) {
           if (5 <= te.field_O) {
             if (kk.field_S != -1) {
@@ -679,13 +679,13 @@ public final class OrbDefence extends NetworkGameClient {
           }
         }
         if (rl.a((byte) 124)) {
-          ul.c(0, 0, ul.field_f, ul.field_l);
+          SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l);
           gl.a(4 + f.field_w[0].field_o, f.field_w[0].field_k + 4, false, f.field_w);
         }
         if (lc.field_r != 0) {
           var3_int = 256 * te.field_O / 10;
           if (var3_int > 0) {
-            ul.d(0, 0, ul.field_f, ul.field_l, 0, var3_int);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, 0, var3_int);
           }
         }
         if (ec.k(783) &&
@@ -716,10 +716,10 @@ public final class OrbDefence extends NetworkGameClient {
           } else {
             var4 = 96 + 2 * (-80 + var5);
           }
-          ul.i(var4, 417, 57, 16777215, 64);
-          ul.i(var4, 417, 56, 16777215, 128);
-          ul.i(var4, 417, 55, 16777215, 192);
-          ul.i(var4, 417, 54, 0, 255);
+          SoftwareRasterizer.fillCircleAlpha(var4, 417, 57, 16777215, 64);
+          SoftwareRasterizer.fillCircleAlpha(var4, 417, 56, 16777215, 128);
+          SoftwareRasterizer.fillCircleAlpha(var4, 417, 55, 16777215, 192);
+          SoftwareRasterizer.fillCircleAlpha(var4, 417, 54, 0, 255);
           bd.field_o[var3.field_k].d(var4 - 32, 370);
           ob.field_I.c(gj.field_j[var3.field_k], var4 - 1, 440 + ob.field_I.field_H, 0, 0);
           ob.field_I.c(gj.field_j[var3.field_k], var4, ob.field_I.field_H + 439, 0, 0);

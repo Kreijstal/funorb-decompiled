@@ -101,7 +101,7 @@ final class ha {
             var12 = var7 - this.field_g.a((byte) -123) + 416 - var10;
             eb.a(param1 ^ 13560, this.field_e.field_m, 0, var6_ref_db, this.field_h[var8], var12, var11);
           }
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.resetClip();
         }
         if (param1 != 13551) {
           this.field_g = (tl) null;

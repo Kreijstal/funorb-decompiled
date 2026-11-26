@@ -60,7 +60,7 @@ abstract class ql extends al {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Lexicominos.field_L ? 1 : 0;
-        SoftwareRasterizer.a(6 + param2, 35 + param0, this.field_j - 12, this.field_v - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param2, 35 + param0, this.field_j - 12, this.field_v - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;

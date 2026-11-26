@@ -249,7 +249,7 @@ final class ih {
                   var29 = var29 + var31;
                   var30 = var30 + var32;
                   var18 = var18 + var20;
-                  var36Lifetime2 = var36Lifetime2 + fn.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_g;
                 }
               }
               var36Lifetime3 = param6 - param10;
@@ -406,7 +406,7 @@ final class ih {
               var18 = var18 + var20;
               var26 = var26 + var28;
               var21 = var21 + var23;
-              var35Lifetime1 = var35Lifetime1 + fn.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_g;
               var22 = var22 + var24;
               var25 = var25 + var27;
             }

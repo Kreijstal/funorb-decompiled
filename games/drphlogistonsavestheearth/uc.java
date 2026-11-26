@@ -26,7 +26,7 @@ final class uc {
     }
 
     final static void b() {
-        uc.a(wj.field_g, wj.field_e, wj.field_b, wj.field_j);
+        uc.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_e, SoftwareRasterizer.field_b, SoftwareRasterizer.field_j);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -37,10 +37,10 @@ final class uc {
         if (field_g.length < field_h) {
           field_g = new int[lg.roundUpPowerOfTwo(2, field_h)];
         }
-        int var4 = param1 * wj.field_k + param0;
+        int var4 = param1 * SoftwareRasterizer.field_k + param0;
         for (var5 = 0; var5 < field_h; var5++) {
           field_g[var5] = var4;
-          var4 = var4 + wj.field_k;
+          var4 = var4 + SoftwareRasterizer.field_k;
         }
     }
 

@@ -29,19 +29,19 @@ final class ab implements td {
         int var12Lifetime1;
         try {
           var15 = param2 instanceof bj ? (bj) (param2) : null;
-          ul.h(param2.field_s + param1, param0 + param2.field_n, param2.field_m, param2.field_r, this.field_a);
+          SoftwareRasterizer.fillRectangle(param2.field_s + param1, param0 + param2.field_n, param2.field_m, param2.field_r, this.field_a);
           if (var15 == null) {
           }
           var7 = var15.field_H + param1 + param2.field_s;
           var8 = param2.field_n + param0 + var15.field_K;
-          ul.f(var7, var8, var15.field_G, this.field_d);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_G, this.field_d);
           if (var15.field_L != -1) {
             var9 = 2.0 * ((double)var15.field_L * 3.141592653589793) / (double)var15.field_I;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_G);
             var12 = (int)(Math.cos(var9) * (double)var15.field_G);
-            ul.f(var7 + var11, var12 + var8, 1, this.field_i);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_i);
           }
-          ul.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_J) / (double)var15.field_I;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_G);
           if (param3 != -4394) {
@@ -49,7 +49,7 @@ final class ab implements td {
             this.a(19, 76, (pj) null, 43, true);
           }
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_G);
-          ul.b(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_k) {
             var13 = this.field_m + (var15.field_H + var15.field_G);
             this.field_k.a(param2.field_l, param2.field_s + (param1 + var13), param0 + param2.field_n + this.field_b, param2.field_m - (var13 + this.field_m), param2.field_r - (this.field_m << 1), this.field_e, this.field_c, 1, 1, 0);

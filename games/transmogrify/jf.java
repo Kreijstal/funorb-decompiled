@@ -36,33 +36,33 @@ final class jf extends Sprite {
         var4 = this.field_m >> 1;
         param0 = param0 + this.field_u / 2;
         param1 = param1 + this.field_l / 2;
-        if (param0 >= sb.field_d) {
+        if (param0 >= SoftwareRasterizer.field_d) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = sb.field_d - param0 << 1;
+          stackIn_3_0 = SoftwareRasterizer.field_d - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= sb.field_b) {
+        if (param0 + var3 <= SoftwareRasterizer.field_b) {
           stackIn_6_0 = this.field_n - 2;
         } else {
-          stackIn_6_0 = (sb.field_b - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.field_b - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= sb.field_e) {
+        if (param1 >= SoftwareRasterizer.field_e) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = sb.field_e - param1 << 1;
+          stackIn_9_0 = SoftwareRasterizer.field_e - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= sb.field_f) {
+        if (param1 + var4 <= SoftwareRasterizer.field_f) {
           stackIn_12_0 = this.field_m - 2;
         } else {
-          stackIn_12_0 = (sb.field_f - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.field_f - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
           var10 = var9 * this.field_n + var5;
-          var11 = (param1 + (var9 >> 1)) * sb.field_c + (param0 + (var5 >> 1));
+          var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.field_c + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -91,8 +91,8 @@ final class jf extends Sprite {
               var16 = var16 / var18 << 8;
               var19Lifetime1 = var18 >> 2;
               var20 = 256 - var19Lifetime1;
-              var21 = sb.field_h[var11];
-              sb.field_h[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRasterizer.field_h[var11];
+              SoftwareRasterizer.field_h[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
             var12 += 2;
             var11++;
@@ -107,33 +107,33 @@ final class jf extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_u;
         param1 = param1 + this.field_l;
-        int var4 = param0 + param1 * sb.field_c;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_c;
         int var5 = 0;
         int var6 = this.field_m;
         int var7 = this.field_n;
-        int var8 = sb.field_c - var7;
+        int var8 = SoftwareRasterizer.field_c - var7;
         int var9 = 0;
-        if (param1 < sb.field_e) {
-          var10 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
           var6 = var6 - var10;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * sb.field_c;
+          var4 = var4 + var10 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var6 > sb.field_f) {
-          var6 = var6 - (param1 + var6 - sb.field_f);
+        if (param1 + var6 > SoftwareRasterizer.field_f) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var10Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var10Lifetime1 = SoftwareRasterizer.field_d - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > sb.field_b) {
-          var10Lifetime2 = param0 + var7 - sb.field_b;
+        if (param0 + var7 > SoftwareRasterizer.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -142,7 +142,7 @@ final class jf extends Sprite {
           var6 <= 0) {
           return;
         }
-        jf.d(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+        jf.d(SoftwareRasterizer.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     jf(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -184,28 +184,28 @@ final class jf extends Sprite {
         var4 = this.field_m >> 2;
         param0 = param0 + this.field_u / 4;
         param1 = param1 + this.field_l / 4;
-        if (param0 >= sb.field_d) {
+        if (param0 >= SoftwareRasterizer.field_d) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = sb.field_d - param0 << 2;
+          stackIn_3_0 = SoftwareRasterizer.field_d - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= sb.field_b) {
+        if (param0 + var3 <= SoftwareRasterizer.field_b) {
           stackIn_6_0 = this.field_n - 4;
         } else {
-          stackIn_6_0 = (sb.field_b - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRasterizer.field_b - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= sb.field_e) {
+        if (param1 >= SoftwareRasterizer.field_e) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = sb.field_e - param1 << 2;
+          stackIn_9_0 = SoftwareRasterizer.field_e - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= sb.field_f) {
+        if (param1 + var4 <= SoftwareRasterizer.field_f) {
           stackIn_12_0 = this.field_m - 4;
         } else {
-          stackIn_12_0 = (sb.field_f - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRasterizer.field_f - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -214,7 +214,7 @@ final class jf extends Sprite {
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
             var12 = var10 * this.field_n + var11;
-            var13 = (param1 + (var10 >> 2)) * sb.field_c + (param0 + (var11 >> 2));
+            var13 = (param1 + (var10 >> 2)) * SoftwareRasterizer.field_c + (param0 + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
                 var9[(var14 << 2) + var15] = this.field_w[var12 + var14 * this.field_n + var15];
@@ -238,8 +238,8 @@ final class jf extends Sprite {
               var17 = var17 / var15Lifetime1 << 8;
               var19Lifetime1 = var15Lifetime1 >> 4;
               var20 = 256 - var19Lifetime1;
-              var21 = sb.field_h[var13];
-              sb.field_h[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRasterizer.field_h[var13];
+              SoftwareRasterizer.field_h[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
           }
         }
@@ -334,30 +334,30 @@ final class jf extends Sprite {
         if (var6 < var10) {
           param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param0 + param1 * sb.field_c;
-        int var14 = sb.field_c - param2;
-        if (param1 + param3 > sb.field_f) {
-          param3 = param3 - (param1 + param3 - sb.field_f);
+        var13Lifetime2 = param0 + param1 * SoftwareRasterizer.field_c;
+        int var14 = SoftwareRasterizer.field_c - param2;
+        if (param1 + param3 > SoftwareRasterizer.field_f) {
+          param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_f);
         }
-        if (param1 < sb.field_e) {
-          var15 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var15 = SoftwareRasterizer.field_e - param1;
           param3 = param3 - var15;
-          var13Lifetime2 = var13Lifetime2 + var15 * sb.field_c;
+          var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_c;
           var8 = var8 + var12 * var15;
         }
-        if (param0 + param2 > sb.field_b) {
-          var15Lifetime1 = param0 + param2 - sb.field_b;
+        if (param0 + param2 > SoftwareRasterizer.field_b) {
+          var15Lifetime1 = param0 + param2 - SoftwareRasterizer.field_b;
           param2 = param2 - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param0 < sb.field_d) {
-          var15Lifetime2 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var15Lifetime2 = SoftwareRasterizer.field_d - param0;
           param2 = param2 - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        jf.d(sb.field_h, this.field_w, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        jf.d(SoftwareRasterizer.field_h, this.field_w, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -420,33 +420,33 @@ final class jf extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_u;
         param1 = param1 + this.field_l;
-        int var3 = param0 + param1 * sb.field_c;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_c;
         int var4 = 0;
         int var5 = this.field_m;
         int var6 = this.field_n;
-        int var7 = sb.field_c - var6;
+        int var7 = SoftwareRasterizer.field_c - var6;
         int var8 = 0;
-        if (param1 < sb.field_e) {
-          var9 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e - param1;
           var5 = var5 - var9;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * sb.field_c;
+          var3 = var3 + var9 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var5 > sb.field_f) {
-          var5 = var5 - (param1 + var5 - sb.field_f);
+        if (param1 + var5 > SoftwareRasterizer.field_f) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var9Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var9Lifetime1 = SoftwareRasterizer.field_d - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > sb.field_b) {
-          var9Lifetime2 = param0 + var6 - sb.field_b;
+        if (param0 + var6 > SoftwareRasterizer.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -455,7 +455,7 @@ final class jf extends Sprite {
           var5 <= 0) {
           return;
         }
-        jf.c(sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
+        jf.c(SoftwareRasterizer.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -464,33 +464,33 @@ final class jf extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_u;
         param1 = param1 + this.field_l;
-        int var4 = param0 + param1 * sb.field_c;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_c;
         int var5 = 0;
         int var6 = this.field_m;
         int var7 = this.field_n;
-        int var8 = sb.field_c - var7;
+        int var8 = SoftwareRasterizer.field_c - var7;
         int var9 = 0;
-        if (param1 < sb.field_e) {
-          var10 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
           var6 = var6 - var10;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * sb.field_c;
+          var4 = var4 + var10 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var6 > sb.field_f) {
-          var6 = var6 - (param1 + var6 - sb.field_f);
+        if (param1 + var6 > SoftwareRasterizer.field_f) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var10Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var10Lifetime1 = SoftwareRasterizer.field_d - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > sb.field_b) {
-          var10Lifetime2 = param0 + var7 - sb.field_b;
+        if (param0 + var7 > SoftwareRasterizer.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -499,7 +499,7 @@ final class jf extends Sprite {
           var6 <= 0) {
           return;
         }
-        jf.b(0, 0, 0, sb.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        jf.b(0, 0, 0, SoftwareRasterizer.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -508,33 +508,33 @@ final class jf extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_u;
         param1 = param1 + this.field_l;
-        int var4 = param0 + param1 * sb.field_c;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_c;
         int var5 = 0;
         int var6 = this.field_m;
         int var7 = this.field_n;
-        int var8 = sb.field_c - var7;
+        int var8 = SoftwareRasterizer.field_c - var7;
         int var9 = 0;
-        if (param1 < sb.field_e) {
-          var10 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
           var6 = var6 - var10;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * sb.field_c;
+          var4 = var4 + var10 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var6 > sb.field_f) {
-          var6 = var6 - (param1 + var6 - sb.field_f);
+        if (param1 + var6 > SoftwareRasterizer.field_f) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var10Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var10Lifetime1 = SoftwareRasterizer.field_d - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > sb.field_b) {
-          var10Lifetime2 = param0 + var7 - sb.field_b;
+        if (param0 + var7 > SoftwareRasterizer.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -543,7 +543,7 @@ final class jf extends Sprite {
           var6 <= 0) {
           return;
         }
-        jf.c(sb.field_h, this.field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        jf.c(SoftwareRasterizer.field_h, this.field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -644,33 +644,33 @@ final class jf extends Sprite {
         int var9Lifetime2;
         param0 = param0 + this.field_u;
         param1 = param1 + this.field_l;
-        int var3 = param0 + param1 * sb.field_c;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_c;
         int var4 = 0;
         int var5 = this.field_m;
         int var6 = this.field_n;
-        int var7 = sb.field_c - var6;
+        int var7 = SoftwareRasterizer.field_c - var6;
         int var8 = 0;
-        if (param1 < sb.field_e) {
-          var9 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e - param1;
           var5 = var5 - var9;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * sb.field_c;
+          var3 = var3 + var9 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var5 > sb.field_f) {
-          var5 = var5 - (param1 + var5 - sb.field_f);
+        if (param1 + var5 > SoftwareRasterizer.field_f) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var9Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var9Lifetime1 = SoftwareRasterizer.field_d - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > sb.field_b) {
-          var9Lifetime2 = param0 + var6 - sb.field_b;
+        if (param0 + var6 > SoftwareRasterizer.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -679,7 +679,7 @@ final class jf extends Sprite {
           var5 <= 0) {
           return;
         }
-        jf.c(sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
+        jf.c(SoftwareRasterizer.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void e(int param0, int param1, int param2) {
@@ -688,33 +688,33 @@ final class jf extends Sprite {
         int var10Lifetime2;
         param0 = param0 + this.field_u;
         param1 = param1 + this.field_l;
-        int var4 = param0 + param1 * sb.field_c;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_c;
         int var5 = 0;
         int var6 = this.field_m;
         int var7 = this.field_n;
-        int var8 = sb.field_c - var7;
+        int var8 = SoftwareRasterizer.field_c - var7;
         int var9 = 0;
-        if (param1 < sb.field_e) {
-          var10 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
           var6 = var6 - var10;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * sb.field_c;
+          var4 = var4 + var10 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var6 > sb.field_f) {
-          var6 = var6 - (param1 + var6 - sb.field_f);
+        if (param1 + var6 > SoftwareRasterizer.field_f) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var10Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var10Lifetime1 = SoftwareRasterizer.field_d - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > sb.field_b) {
-          var10Lifetime2 = param0 + var7 - sb.field_b;
+        if (param0 + var7 > SoftwareRasterizer.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -723,7 +723,7 @@ final class jf extends Sprite {
           var6 <= 0) {
           return;
         }
-        jf.c(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+        jf.c(SoftwareRasterizer.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     jf(int param0, int param1) {

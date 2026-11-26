@@ -321,7 +321,7 @@ final class MixedSupport033 extends HashNode {
         }
         MixedSupport017.performAction0250(booleanArgument2, 0);
         if (UiComponentPart006.booleanState0027) {
-          SoftwareRaster.performAction0658(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0890, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0903, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0896, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0915);
+          SoftwareRaster.darkenRectangleHalf(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0890, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0903, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0896, PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.integerState0915);
           PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1767(integerArgument1 ^ 1141039776, booleanArgument2);
         }
         MixedSupport029.performAction0405((byte) 127, booleanArgument2);

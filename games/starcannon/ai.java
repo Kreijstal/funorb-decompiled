@@ -15,7 +15,7 @@ final class ai {
         qe var4 = null;
         qe var4Lifetime1;
         if (!param1) {
-          ki.b();
+          SoftwareRasterizer.clearRaster();
           wa.a(true, param1);
           if (param2 <= 83) {
             var4 = (qe) null;
@@ -24,7 +24,7 @@ final class ai {
           }
           return;
         }
-        ki.b(0, 0, ki.field_j, ki.field_f, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, 0, 192);
         wa.a(true, param1);
         if (param2 <= 83) {
           var4Lifetime1 = (qe) null;

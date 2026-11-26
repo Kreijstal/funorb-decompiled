@@ -136,7 +136,7 @@ abstract class ug extends oe {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Confined.field_J ? 1 : 0;
-        fn.c(param0 + 6, 35 + param2, this.field_F - 12, -40 + this.field_z, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param0 + 6, 35 + param2, this.field_F - 12, -40 + this.field_z, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -147,8 +147,8 @@ abstract class ug extends oe {
           ug.copyBytes((byte[]) null, 12);
         }
         while (var7 < var4) {
-          if (var8 >= fn.field_b &&
-            var8 < fn.field_j) {
+          if (var8 >= SoftwareRasterizer.field_b &&
+            var8 < SoftwareRasterizer.field_j) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_F;
@@ -161,7 +161,7 @@ abstract class ug extends oe {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  fn.field_h[var10 + (fn.field_g * var8 + param0)] = var13;
+                  SoftwareRasterizer.field_h[var10 + (SoftwareRasterizer.field_g * var8 + param0)] = var13;
                 }
                 var10++;
               }
@@ -175,7 +175,7 @@ abstract class ug extends oe {
                   if (var14 >= 420) {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    fn.field_h[param0 + (var8 * fn.field_g + var11)] = var15;
+                    SoftwareRasterizer.field_h[param0 + (var8 * SoftwareRasterizer.field_g + var11)] = var15;
                   } else {
                     var12Lifetime1 = 1 + var11;
                   }
@@ -187,7 +187,7 @@ abstract class ug extends oe {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            fn.b(var10 + param0, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -200,8 +200,8 @@ abstract class ug extends oe {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          fn.b(param0, var8Lifetime1, 6, var9Lifetime1);
-          fn.b(this.field_F + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_F + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -216,8 +216,8 @@ abstract class ug extends oe {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          fn.b(param0, var8Lifetime2, 6, var9Lifetime2);
-          fn.b(param0 + this.field_F - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0 + this.field_F - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

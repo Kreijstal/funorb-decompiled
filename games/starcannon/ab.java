@@ -68,8 +68,8 @@ class ab extends dk {
         int var4Lifetime1;
         var5 = StarCannon.field_A;
         try {
-          ki.e(243, 197, 369, 143, 16777215);
-          ki.d(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           var1_int = 34 % ((38 - param0) / 32);
           if (og.field_d == null) {
             if (ah.field_d != null) {

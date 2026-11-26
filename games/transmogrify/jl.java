@@ -24,25 +24,25 @@ final class jl extends IntrusiveNode {
         RuntimeException var5 = null;
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
-          sb.d(param0, param1, 1 + param3, 10000536);
-          sb.d(param0, param1 + param4, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param1, 1 + param3, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param1 + param4, 1 + param3, 12105912);
           var5_int = 1;
           if (param2 != 13612) {
             var11 = (java.awt.Component) null;
             jl.a((java.awt.Component) null, 106);
           }
           var6 = param4;
-          if (sb.field_e > param1 + var5_int) {
-            var5_int = -param1 + sb.field_e;
+          if (SoftwareRasterizer.field_e > param1 + var5_int) {
+            var5_int = -param1 + SoftwareRasterizer.field_e;
           }
-          if (sb.field_f < param1 + var6) {
-            var6 = -param1 + sb.field_f;
+          if (SoftwareRasterizer.field_f < param1 + var6) {
+            var6 = -param1 + SoftwareRasterizer.field_f;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + 48 * var7 / param4;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            sb.field_h[param0 + (param1 + var7) * sb.field_c] = var9;
-            sb.field_h[sb.field_c * (var7 + param1) + param0 + param3] = var9;
+            SoftwareRasterizer.field_h[param0 + (param1 + var7) * SoftwareRasterizer.field_c] = var9;
+            SoftwareRasterizer.field_h[SoftwareRasterizer.field_c * (var7 + param1) + param0 + param3] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -44,10 +44,10 @@ final class jf {
         }
         GzipDecompressor.a((byte) -106, field_a);
         be.a();
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearRaster();
         so.b(122);
         if (var5 < 256) {
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
         }
         r.a(125);
         if (param0 != 540) {

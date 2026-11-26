@@ -17,12 +17,12 @@ final class lg {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        gb.a(si.field_R);
+        SoftwareRasterizer.saveClip(si.field_R);
         int var4 = 16 * param3 - 4;
         int var5 = 16 * param1 - 4;
-        gb.a(var4, var5, var4 + 16, var5 + 16);
+        SoftwareRasterizer.setClip(var4, var5, var4 + 16, var5 + 16);
         se.field_a[param2].f(param0, -4, 128);
-        gb.b(si.field_R);
+        SoftwareRasterizer.restoreClip(si.field_R);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {

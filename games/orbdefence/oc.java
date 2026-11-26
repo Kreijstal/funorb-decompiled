@@ -27,8 +27,8 @@ final class oc extends vi implements ib {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        ul.a(var1.field_o, var1.field_p, var1.field_f);
-        ul.e(var1.field_m, var1.field_l, var1.field_t, var1.field_g);
+        SoftwareRasterizer.setRasterBuffer(var1.field_o, var1.field_p, var1.field_f);
+        SoftwareRasterizer.setClip(var1.field_m, var1.field_l, var1.field_t, var1.field_g);
         var1.field_o = null;
         ml.field_f.addLast(-128, var1);
     }

@@ -150,7 +150,7 @@ final class me extends IntrusiveNode {
                     if (this.field_j >= 25) {
                       var9 = (-this.field_j + 50) / 2;
                     }
-                    ul.d((int)(-var7 + (double)var4), (int)((double)var5 - var7), (int)var7 * 2, 2 * (int)var7, 16711935, var9);
+                    SoftwareRasterizer.fillRectangleAlpha((int)(-var7 + (double)var4), (int)((double)var5 - var7), (int)var7 * 2, 2 * (int)var7, 16711935, var9);
                   } else {
                     if (6 != var7_int) {
                       if (var7_int != 7) {
@@ -160,9 +160,9 @@ final class me extends IntrusiveNode {
                           if (this.field_j >= 10) {
                             var9 = -(this.field_j * 25) + 500;
                           }
-                          ul.i(var4, var5, (int)var7, 65535, var9);
-                          ul.i(var4, var5, (int)(var7 * 0.75), 6750207, var9);
-                          ul.i(var4, var5, (int)(0.5 * var7), 16777215, var9);
+                          SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)var7, 65535, var9);
+                          SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(var7 * 0.75), 6750207, var9);
+                          SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(0.5 * var7), 16777215, var9);
                         } else {
                           if (var7_int == 9) {
                             var7 = (double)DualLinkDequeIterator.field_e * 2.0;
@@ -170,9 +170,9 @@ final class me extends IntrusiveNode {
                             if (this.field_j >= 10) {
                               var9 = (20 - this.field_j) * 5;
                             }
-                            ul.i(var4, var5, (int)var7, 65535, var9);
-                            ul.i(var4, var5, (int)(0.75 * var7), 6750207, var9);
-                            ul.i(var4, var5, (int)(0.5 * var7), 16777215, var9);
+                            SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)var7, 65535, var9);
+                            SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(0.75 * var7), 6750207, var9);
+                            SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(0.5 * var7), 16777215, var9);
                           }
                         }
                       } else {
@@ -181,9 +181,9 @@ final class me extends IntrusiveNode {
                         if (this.field_j >= 10) {
                           var9 = -(this.field_j * 25) + 500;
                         }
-                        ul.i(var4, var5, (int)var7, 8926122, var9);
-                        ul.i(var4, var5, (int)(var7 * 0.75), 11176191, var9);
-                        ul.i(var4, var5, (int)(0.5 * var7), 16777215, var9);
+                        SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)var7, 8926122, var9);
+                        SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(var7 * 0.75), 11176191, var9);
+                        SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(0.5 * var7), 16777215, var9);
                       }
                     } else {
                       var7 = (double)DualLinkDequeIterator.field_e * 0.5;
@@ -191,9 +191,9 @@ final class me extends IntrusiveNode {
                       if (5 <= this.field_j) {
                         var9 = (10 - this.field_j) * 10;
                       }
-                      ul.i(var4, var5, (int)var7, 4456516, var9);
-                      ul.i(var4, var5, (int)(0.75 * var7), 8913032, var9);
-                      ul.i(var4, var5, (int)(0.5 * var7), 16711935, var9);
+                      SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)var7, 4456516, var9);
+                      SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(0.75 * var7), 8913032, var9);
+                      SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(0.5 * var7), 16711935, var9);
                     }
                   }
                 }
@@ -202,14 +202,14 @@ final class me extends IntrusiveNode {
                   var7 = 0.1 * (double)DualLinkDequeIterator.field_e;
                   var9 = 16777215 - this.field_j * 328192;
                   var10 = 255 - this.field_j * 5;
-                  ul.i(var4, var5, (int)var7, var9, var10);
-                  ul.i(var4, var5, (int)(-1.0 + var7), var9, var10);
+                  SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)var7, var9, var10);
+                  SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(-1.0 + var7), var9, var10);
                 } else {
                   var7 = 0.1 * (double)DualLinkDequeIterator.field_e;
                   var9 = 16777215;
                   var10 = 255;
-                  ul.i(var4, var5, (int)var7, var9, var10);
-                  ul.i(var4, var5, (int)(var7 - 1.0), var9, var10);
+                  SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)var7, var9, var10);
+                  SoftwareRasterizer.fillCircleAlpha(var4, var5, (int)(var7 - 1.0), var9, var10);
                 }
               }
             } else {

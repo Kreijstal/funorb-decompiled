@@ -336,7 +336,7 @@ final class DisplayModeController {
               integerLocal4 = integerLocal4 + MixedSupport141.computeInteger1754(23841, 80, 40 + integerArgument6 * 18);
             } else {
               if (integerArgument2 >= 93) {
-                SoftwareRaster.performAction0642(-30 + integerArgument5, 54 + integerArgument1 - 2, 60, 40, 4, 65280, 100);
+                SoftwareRaster.fillRoundedRectangleAlpha(-30 + integerArgument5, 54 + integerArgument1 - 2, 60, 40, 4, 65280, 100);
               } else {
                 integerLocal6 = MixedSupport141.computeInteger1754(23841, 80, 40 + SceneWidgetPart013.integerArrayState0239[1 + integerArgument2 - 80] * 18);
               }

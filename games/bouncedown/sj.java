@@ -42,22 +42,22 @@ final class sj implements fc {
           var15 = (fh) (stackIn_3_0);
           if (var15 == null) {
           }
-          na.e(param4 + param1.field_r, param0 + param1.field_i, param1.field_k, param1.field_m, this.field_l);
+          SoftwareRasterizer.fillRectangle(param4 + param1.field_r, param0 + param1.field_i, param1.field_k, param1.field_m, this.field_l);
           var7 = param4 + param1.field_r + var15.field_H;
           var8 = var15.field_D + param0 + param1.field_i;
-          na.b(var7, var8, var15.field_I, this.field_k);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_I, this.field_k);
           if (var15.field_F != -1) {
             var9 = 3.141592653589793 * (double)var15.field_F * 2.0 / (double)var15.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
             var12 = (int)(Math.cos(var9) * (double)var15.field_I);
-            na.b(var7 + var11, var8 + var12, 1, this.field_a);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_a);
           }
-          na.b(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var15.field_J * 2.0 / (double)var15.field_K;
           var13 = 77 % ((param2 + 60) / 56);
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_I);
-          na.a(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (null == this.field_i) {
             return;
           }

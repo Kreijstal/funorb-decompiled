@@ -63,7 +63,7 @@ final class rc implements fe {
             stackIn_5_0 = null;
           }
           var6 = (nj) (stackIn_5_0);
-          fn.e(param3.field_q + param1, param4 + param3.field_m, param3.field_F, param3.field_z, this.field_h);
+          SoftwareRasterizer.fillRectangle(param3.field_q + param1, param4 + param3.field_m, param3.field_F, param3.field_z, this.field_h);
           if (null != var6) {
           }
           var7 = param3.field_F - var6.field_S * 2;
@@ -72,10 +72,10 @@ final class rc implements fe {
           }
           var8 = param1 - (-param3.field_q - var6.field_S);
           var9 = var6.field_Q + (param4 + param3.field_m);
-          fn.f(var8, var9, var7 + var8, var9, this.field_j);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_j);
           var10 = -1 + var6.h((byte) 127);
           while (var10 >= 0) {
-            fn.e(var6.a((byte) 20, var10) * var7 / var6.i((byte) -96) + var8, var9, this.field_f, this.field_e);
+            SoftwareRasterizer.fillCircle(var6.a((byte) 20, var10) * var7 / var6.i((byte) -96) + var8, var9, this.field_f, this.field_e);
             var10--;
             if (var11 != 0) {
               return;

@@ -726,10 +726,10 @@ final class wj extends fb {
             ea.field_l = qd.a(nh.field_g, "arrow", "benefits", (byte) 118);
             o.field_h = (BitmapFont) ((Object) ae.a("benefits", "large_font", nh.field_g, -109, vf.field_E));
             fj.field_f = (BitmapFont) ((Object) ae.a("benefits", "small_font", nh.field_g, -116, vf.field_E));
-            var27 = ti.field_a;
-            var2 = ti.field_i;
-            var3 = ti.field_b;
-            ti.a(pk.field_i);
+            var27 = SoftwareRasterizer.field_a;
+            var2 = SoftwareRasterizer.field_i;
+            var3 = SoftwareRasterizer.field_b;
+            SoftwareRasterizer.saveClip(pk.field_i);
             var11 = new Sprite(ea.field_l.field_v + 4, ea.field_l.field_y + 4);
             var11.e();
             ea.field_l.c(2, 2, ki.field_x);
@@ -756,9 +756,9 @@ final class wj extends fb {
             pk.field_d = null;
             q.field_b = dd.field_a.a();
             q.field_b.e();
-            ob.a(117, 0, 64, ti.field_i, ti.field_b * 2 / 3, 0);
-            ti.a(var27, var2, var3);
-            ti.b(pk.field_i);
+            ob.a(117, 0, 64, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b * 2 / 3, 0);
+            SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
+            SoftwareRasterizer.restoreClip(pk.field_i);
             wc.field_y = 231 + (MouseWheelInput.field_a.field_v - ui.field_F.field_v) / 2;
             cm.field_a = (MouseWheelInput.field_a.field_v - ui.field_F.field_v) / 2 + 434;
             af.field_l = (MouseWheelInput.field_a.field_y - ui.field_F.field_y) / 2 + 390;
@@ -770,10 +770,10 @@ final class wj extends fb {
           }
           if (null != IntrusiveDequeCursor.field_f &&
             null != o.field_h) {
-            var28 = ti.field_a;
-            var2Lifetime1 = ti.field_i;
-            var3Lifetime1 = ti.field_b;
-            ti.a(pk.field_i);
+            var28 = SoftwareRasterizer.field_a;
+            var2Lifetime1 = SoftwareRasterizer.field_i;
+            var3Lifetime1 = SoftwareRasterizer.field_b;
+            SoftwareRasterizer.saveClip(pk.field_i);
             var14 = h.a(hj.field_b, 0, new String[]{IterableNodeHashTable.field_a[ic.field_a]});
             var5 = o.field_h.b(var14, vh.field_i);
             var6Lifetime1 = o.field_h.b(var14, vh.field_i, o.field_h.field_N + o.field_h.field_r);
@@ -831,15 +831,15 @@ final class wj extends fb {
             IntrusiveDequeCursor.field_f.b(pk.field_g + (IntrusiveDequeCursor.field_f.field_w >> 1), (IntrusiveDequeCursor.field_f.field_x >> 1) + t.field_a, bl.field_d, 4096);
             IntrusiveDequeCursor.field_f = null;
             jd.field_a.d();
-            ti.a(var28, var2Lifetime1, var3Lifetime1);
-            ti.b(pk.field_i);
+            SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(pk.field_i);
           }
           if (MouseHandler.field_f != null &&
             null != fj.field_f) {
-            var29 = ti.field_a;
-            var2Lifetime2 = ti.field_i;
-            var3Lifetime2 = ti.field_b;
-            ti.a(pk.field_i);
+            var29 = SoftwareRasterizer.field_a;
+            var2Lifetime2 = SoftwareRasterizer.field_i;
+            var3Lifetime2 = SoftwareRasterizer.field_b;
+            SoftwareRasterizer.saveClip(pk.field_i);
             var16 = new Sprite(412, 43);
             var5_ref_String = h.a(ClientException.field_b, 0, new String[]{MouseHandler.field_f});
             MouseHandler.field_f = null;
@@ -848,15 +848,15 @@ final class wj extends fb {
             IntrusiveDeque.a(var16, 1, 0, var16.field_y, 3, 0, var16.field_v, true);
             ve.field_a.e();
             var16.e(199 - ve.field_a.field_t, 83 - ve.field_a.field_s);
-            ti.a(var29, var2Lifetime2, var3Lifetime2);
-            ti.b(pk.field_i);
+            SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(pk.field_i);
           }
           if (null != eh.field_f &&
             null != fj.field_f) {
-            var30 = ti.field_a;
-            var2Lifetime3 = ti.field_i;
-            var3Lifetime3 = ti.field_b;
-            ti.a(pk.field_i);
+            var30 = SoftwareRasterizer.field_a;
+            var2Lifetime3 = SoftwareRasterizer.field_i;
+            var3Lifetime3 = SoftwareRasterizer.field_b;
+            SoftwareRasterizer.saveClip(pk.field_i);
             var4 = 6 + fj.field_f.b(li.field_a, 640);
             var5Lifetime1 = 20 + eh.field_f.field_w + var4;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -866,13 +866,13 @@ final class wj extends fb {
             IntrusiveDeque.a(ve.field_a, 1, -4 + (var7Lifetime2 - ve.field_a.field_t), 50, 3, 155 - ve.field_a.field_s, var4, true);
             var8Lifetime1 = -ve.field_a.field_s + (155 - (-fj.field_f.field_r - fj.field_f.field_N + (-3 + eh.field_f.field_x)) / 2);
             eh.field_f.e(-ve.field_a.field_t + var6Lifetime2, var8Lifetime1);
-            ti.a(var30, var2Lifetime3, var3Lifetime3);
-            ti.b(pk.field_i);
+            SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(pk.field_i);
             eh.field_f = null;
           }
-          ti.a(pk.field_i);
-          ti.a(16, 16, 608, 112, 15, ki.field_t, jb.field_a);
-          ti.a(231, 144, 393, 232, 15, ki.field_t, jb.field_a);
+          SoftwareRasterizer.saveClip(pk.field_i);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ki.field_t, jb.field_a);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ki.field_t, jb.field_a);
           if (null != tk.field_c) {
             tk.field_c.e(0, 0);
           }

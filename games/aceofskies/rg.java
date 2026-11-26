@@ -14,7 +14,7 @@ abstract class rg extends gm {
 
     void a(boolean param0, int param1, int param2) {
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
-        SoftwareRasterizer.c(param1 + 6, param2 + 35, -12 + this.field_q, this.field_n - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param1 + 6, param2 + 35, -12 + this.field_q, this.field_n - 40, 2105376, 0);
         int var4 = 35;
         int var5 = 211;
         int var6 = 194;

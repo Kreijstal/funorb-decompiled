@@ -27,28 +27,28 @@ final class gd {
         int var9_int = param0 + (param1.field_s + param6 - param4);
         int var10 = param1.field_s + param0 + param6 + param2;
         int var11 = param1.field_n + param5 + (param1.field_t >> 1);
-        SoftwareRasterizer.d(var9_int, 0, var10, param7 + var11);
+        SoftwareRasterizer.intersectClip(var9_int, 0, var10, param7 + var11);
         param1.drawAdditive(param0 - 1, -1 + param5, param8);
         param1.drawAdditive(-1 + param0, 1 + param5, param8);
-        SoftwareRasterizer.a(lj.field_D);
-        SoftwareRasterizer.d(1 + var9_int, 0, 1 + var10, param7 + var11);
+        SoftwareRasterizer.restoreClip(lj.field_D);
+        SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, param7 + var11);
         param1.drawAdditive(param0 + 1, param5 - 1, param8);
         param1.drawAdditive(param0 + 1, param5 + 1, param8);
         if (param3 != 118) {
           return;
         }
         try {
-          SoftwareRasterizer.a(lj.field_D);
+          SoftwareRasterizer.restoreClip(lj.field_D);
           var10 = param0 + (param1.field_s + (param1.field_p - param6)) - param4;
           var9_int = -param2 + (-param6 + param0) + param1.field_s + param1.field_p;
-          SoftwareRasterizer.d(var9_int, var11 - param7, var10, 480);
+          SoftwareRasterizer.intersectClip(var9_int, var11 - param7, var10, 480);
           param1.drawAdditive(param0 - 1, -1 + param5, param8);
           param1.drawAdditive(param0 - 1, param5 + 1, param8);
-          SoftwareRasterizer.a(lj.field_D);
-          SoftwareRasterizer.d(var9_int + 1, var11 - param7, var10 + 1, 480);
+          SoftwareRasterizer.restoreClip(lj.field_D);
+          SoftwareRasterizer.intersectClip(var9_int + 1, var11 - param7, var10 + 1, 480);
           param1.drawAdditive(param0 + 1, param5 - 1, param8);
           param1.drawAdditive(1 + param0, param5 + 1, param8);
-          SoftwareRasterizer.a(lj.field_D);
+          SoftwareRasterizer.restoreClip(lj.field_D);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

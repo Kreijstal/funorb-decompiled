@@ -22,7 +22,7 @@ abstract class RasterBuffer {
     }
 
     final void a(int param0) {
-        SoftwareRasterizer.a(this.field_d, this.field_g, this.field_a);
+        SoftwareRasterizer.setRasterBuffer(this.field_d, this.field_g, this.field_a);
         if (param0 > -82) {
           this.field_d = (int[]) null;
         }

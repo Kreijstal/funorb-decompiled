@@ -67,7 +67,7 @@ class ok extends ko {
     final void a(int param0, boolean param1) {
         im.field_a = !param1 ? true : false;
         ti.field_i = !param1 ? true : false;
-        this.a(gf.field_c, 0, 7183, 0, true, gf.field_i);
+        this.a(SoftwareRasterizer.field_c, 0, 7183, 0, true, SoftwareRasterizer.field_i);
         if (param0 != -2) {
           this.field_sb = 49;
         }
@@ -121,11 +121,11 @@ class ok extends ko {
         var25 = DungeonAssault.field_K;
         this.field_ub = param2 + this.field_D;
         this.field_zb = param0 + this.field_gb;
-        var12 = gf.field_j;
-        var13 = gf.field_f;
-        var14 = gf.field_h;
-        var15 = gf.field_e;
-        gf.a(this.field_zb, this.field_ub, this.field_ob + this.field_zb, this.field_ub + this.field_B);
+        var12 = SoftwareRasterizer.field_j;
+        var13 = SoftwareRasterizer.field_f;
+        var14 = SoftwareRasterizer.field_h;
+        var15 = SoftwareRasterizer.field_e;
+        SoftwareRasterizer.intersectClip(this.field_zb, this.field_ub, this.field_ob + this.field_zb, this.field_ub + this.field_B);
         if (!this.field_O) {
           param5 = this.field_Cb;
           param7 = this.field_hb;
@@ -274,7 +274,7 @@ class ok extends ko {
             var23_ref = (ok) (this.field_F.nextBackward(4));
           }
         }
-        gf.e(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     final static void a(int param0, String[] param1) {
@@ -312,7 +312,7 @@ class ok extends ko {
         if (param1 < 59) {
           ok.f(124);
         }
-        this.a(0, gf.field_c, 0, false, true, false, param0, false, false, gf.field_i, 0);
+        this.a(0, SoftwareRasterizer.field_c, 0, false, true, false, param0, false, false, SoftwareRasterizer.field_i, 0);
     }
 
     private final void a(byte param0, ok param1) {
@@ -515,19 +515,19 @@ class ok extends ko {
         this.field_x = this.field_x - var7Lifetime3;
         this.field_zb = this.field_gb + param1;
         this.field_B = this.field_B + var7Lifetime3;
-        var8 = gf.field_j;
-        var9 = gf.field_f;
-        var10 = gf.field_h;
-        var11 = gf.field_e;
-        gf.a(this.field_zb, this.field_ub, this.field_ob + this.field_zb, this.field_B + this.field_ub);
+        var8 = SoftwareRasterizer.field_j;
+        var9 = SoftwareRasterizer.field_f;
+        var10 = SoftwareRasterizer.field_h;
+        var11 = SoftwareRasterizer.field_e;
+        SoftwareRasterizer.intersectClip(this.field_zb, this.field_ub, this.field_ob + this.field_zb, this.field_B + this.field_ub);
         var12 = 0;
         if (!ti.field_i &&
           param4 &&
           no.field_d != 0 &&
-          gf.field_j <= lc.field_c &&
-          lc.field_c < gf.field_h &&
-          AchievementIconEntry.field_k >= gf.field_f &&
-          gf.field_e > AchievementIconEntry.field_k) {
+          SoftwareRasterizer.field_j <= lc.field_c &&
+          lc.field_c < SoftwareRasterizer.field_h &&
+          AchievementIconEntry.field_k >= SoftwareRasterizer.field_f &&
+          SoftwareRasterizer.field_e > AchievementIconEntry.field_k) {
           var12 = 1;
           this.field_db = lc.field_c - this.field_zb;
           this.field_I = no.field_d;
@@ -542,7 +542,7 @@ class ok extends ko {
         if (la.field_g == 0) {
           this.field_I = 0;
         }
-        stackIn_33_1 = (!im.field_a) && (hj.field_S >= gf.field_j) && (gf.field_h > hj.field_S) && (eh.field_h >= gf.field_f) && (gf.field_e > eh.field_h);
+        stackIn_33_1 = (!im.field_a) && (hj.field_S >= SoftwareRasterizer.field_j) && (SoftwareRasterizer.field_h > hj.field_S) && (eh.field_h >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_e > eh.field_h);
         this.field_V = stackIn_33_1;
         stackIn_38_1 = (this.field_V) && (la.field_g == this.field_I) && (param4);
         this.field_hb = stackIn_38_1;
@@ -559,7 +559,7 @@ class ok extends ko {
         if (var12 != 0) {
           ti.field_i = true;
         }
-        gf.e(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_I != 0 &&
           this.field_bb) {
           this.field_gb = -param1 - this.field_db + hj.field_S;

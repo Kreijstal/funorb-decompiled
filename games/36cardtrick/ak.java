@@ -327,7 +327,7 @@ final class ak extends g implements pi, qh {
             j.field_C.a(this.field_F, 20 + (this.field_o + param0), this.field_i + param1 + 15, this.field_h - 40, this.field_q, 16777215, -1, 1, 0, j.field_C.field_s);
           }
           if (this.field_M != null) {
-            vj.d(10 + param0, param1 + 134, this.field_h - 20, 4210752);
+            SoftwareRasterizer.drawHorizontalLine(10 + param0, param1 + 134, this.field_h - 20, 4210752);
           }
           super.a(param0, param1, param2 ^ 0, param3);
           return;

@@ -63,7 +63,7 @@ final class ul extends sl {
         if (!param1) {
           SoftwareRasterizer.clearFramebuffer();
         } else {
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
         }
         if (param2 != -7395) {
           field_t = (String) null;

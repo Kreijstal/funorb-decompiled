@@ -48,7 +48,7 @@ final class rd extends IntrusiveNode {
               param0[var10_int][0] = e.b((byte) 57, param3 * param7 >> 2);
               param0[var10_int][1] = e.b((byte) 57, param2 * param5 >> 2);
             }
-            SoftwareRasterizer.a(param8 - (param7 >> 2) * (param3 - 4 >> 1) + param0[var10_int][0] << 4, -((param2 >> 2) * (-4 + param5 >> 1)) + (param1 + param0[var10_int][1]) << 4, 64, 128, LevelEntity.field_A);
+            SoftwareRasterizer.addRadialGlow(param8 - (param7 >> 2) * (param3 - 4 >> 1) + param0[var10_int][0] << 4, -((param2 >> 2) * (-4 + param5 >> 1)) + (param1 + param0[var10_int][1]) << 4, 64, 128, LevelEntity.field_A);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

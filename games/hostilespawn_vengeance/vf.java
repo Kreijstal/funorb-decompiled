@@ -105,46 +105,46 @@ final class vf extends ph {
                 ha.field_t == 14) && var16 >= 0) {
                 var17 = var16 & 255;
                 if (3 == var17) {
-                  si.a(var8, var9, 24, 24, 0, 50);
+                  SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                 } else {
                   if (var17 == 17) {
-                    si.a(var8, var9, 24, 24, 0, 50);
+                    SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                   } else {
                     if (19 == var17) {
-                      si.a(var8, var9, 24, 24, 0, 50);
+                      SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                     } else {
                       if (3 == var17) {
-                        si.a(var8, var9, 24, 24, 0, 50);
+                        SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                       } else {
                         if (var17 == 34) {
-                          si.a(var8, var9, 24, 24, 0, 50);
+                          SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                         } else {
                           if (var17 == 35) {
-                            si.a(var8, var9, 24, 24, 0, 50);
+                            SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                           } else {
                             if (48 == var17) {
-                              si.a(var8, var9, 24, 24, 0, 50);
+                              SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                             } else {
                               if (49 == var17) {
-                                si.a(var8, var9, 24, 24, 0, 50);
+                                SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                               } else {
                                 if (var17 == 50) {
-                                  si.a(var8, var9, 24, 24, 0, 50);
+                                  SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                                 } else {
                                   if (var17 == 56) {
-                                    si.a(var8, var9, 24, 24, 0, 50);
+                                    SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                                   } else {
                                     if (var17 == 64) {
-                                      si.a(var8, var9, 24, 24, 0, 50);
+                                      SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                                     } else {
                                       if (var17 == 81) {
-                                        si.a(var8, var9, 24, 24, 0, 50);
+                                        SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                                       } else {
                                         if (128 == var17) {
-                                          si.a(var8, var9, 24, 24, 0, 50);
+                                          SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                                         } else {
                                           if (var17 == 131) {
-                                            si.a(var8, var9, 24, 24, 0, 50);
+                                            SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 50);
                                           }
                                         }
                                       }

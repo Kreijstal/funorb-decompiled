@@ -231,8 +231,8 @@ final class TextLinkRegion extends IntrusiveNode {
             kka.field_h = null;
           }
           SoftwareRasterizer.saveClip(ie.field_b);
-          SoftwareRasterizer.a(16, 16, 608, 112, 15, dp.field_q, BuffVendorSpecial.field_q);
-          SoftwareRasterizer.a(231, 144, 393, 232, 15, dp.field_q, BuffVendorSpecial.field_q);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, dp.field_q, BuffVendorSpecial.field_q);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, dp.field_q, BuffVendorSpecial.field_q);
           if (null != lm.field_b) {
             lm.field_b.draw(0, 0);
           }

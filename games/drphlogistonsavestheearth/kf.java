@@ -12,20 +12,20 @@ final class kf {
         if (param2 >= -110) {
           field_e = (he[]) null;
           if (param1) {
-            wj.d(0, 0, wj.field_k, wj.field_c, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, 0, 192);
             a.a((byte) -123, param1);
             return;
           }
-          wj.c();
+          SoftwareRasterizer.clearRaster();
           a.a((byte) -123, param1);
           return;
         }
         if (param1) {
-          wj.d(0, 0, wj.field_k, wj.field_c, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, 0, 192);
           a.a((byte) -123, param1);
           return;
         }
-        wj.c();
+        SoftwareRasterizer.clearRaster();
         a.a((byte) -123, param1);
     }
 

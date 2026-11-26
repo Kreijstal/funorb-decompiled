@@ -79,8 +79,8 @@ final class wp extends am {
             var8 = param5[1].field_w;
             param5[0].c(param4, param0, param1);
             param5[2].c(param2 + param4 - var7, param0, param1);
-            SoftwareRasterizer.b(SecondaryNodeDeque.field_c);
-            SoftwareRasterizer.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
+            SoftwareRasterizer.saveClip(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
             var9 = var6_int + param4;
             var10 = -var7 + (param4 + param2);
             param4 = var9;
@@ -91,7 +91,7 @@ final class wp extends am {
               param5[1].c(param4, param0, param1);
               param4 = param4 + var8;
             }
-            SoftwareRasterizer.a(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.restoreClip(SecondaryNodeDeque.field_c);
             return;
           }
           return;

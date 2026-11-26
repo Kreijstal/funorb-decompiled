@@ -66,7 +66,7 @@ final class af implements Runnable {
                 be.a(0, param0, (byte) -61, 0);
               }
             } else {
-              gb.c();
+              SoftwareRasterizer.clearRaster();
               ByteStorage.a(320, 240, -27794);
               be.a(0, param0, (byte) -29, 0);
             }

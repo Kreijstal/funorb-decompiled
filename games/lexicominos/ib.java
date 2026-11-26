@@ -32,7 +32,7 @@ final class ib implements rd {
           return;
         }
         try {
-          SoftwareRasterizer.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_j);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_j);
           var7 = var14.field_L + (param1 + param3.field_t);
           var8 = var14.field_F + (param3.field_o + param0);
           SoftwareRasterizer.fillCircle(var7, var8, var14.field_I, this.field_k);

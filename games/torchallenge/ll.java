@@ -114,8 +114,8 @@ final class ll {
             SectorCacheStore.field_f.bindAsTarget(119);
             je.field_i = true;
           }
-          SoftwareRasterizer.a(vd.field_e);
-          SoftwareRasterizer.a(var21, param0, var22, param9);
+          SoftwareRasterizer.saveClip(vd.field_e);
+          SoftwareRasterizer.intersectClip(var21, param0, var22, param9);
           if (2 != param1) {
             var16.drawScaled(var20, param7, var18, var16.fullHeight);
           } else {
@@ -138,7 +138,7 @@ final class ll {
               }
             }
           }
-          SoftwareRasterizer.b(vd.field_e);
+          SoftwareRasterizer.restoreClip(vd.field_e);
           return;
         }
         if (!param6) {
@@ -191,8 +191,8 @@ final class ll {
             SectorCacheStore.field_f.bindAsTarget(119);
             je.field_i = true;
           }
-          SoftwareRasterizer.a(vd.field_e);
-          SoftwareRasterizer.a(var21Lifetime1, param0, var22Lifetime1, param9);
+          SoftwareRasterizer.saveClip(vd.field_e);
+          SoftwareRasterizer.intersectClip(var21Lifetime1, param0, var22Lifetime1, param9);
           if (2 != param1) {
             var16.drawScaled(var20Lifetime1, param7, var18Lifetime1, var16.fullHeight);
           } else {
@@ -215,7 +215,7 @@ final class ll {
               }
             }
           }
-          SoftwareRasterizer.b(vd.field_e);
+          SoftwareRasterizer.restoreClip(vd.field_e);
           return;
         }
         if (param6) {
@@ -268,8 +268,8 @@ final class ll {
           SectorCacheStore.field_f.bindAsTarget(119);
           je.field_i = true;
         }
-        SoftwareRasterizer.a(vd.field_e);
-        SoftwareRasterizer.a(var21Lifetime2, param0, var22Lifetime2, param9);
+        SoftwareRasterizer.saveClip(vd.field_e);
+        SoftwareRasterizer.intersectClip(var21Lifetime2, param0, var22Lifetime2, param9);
         if (2 != param1) {
           var16.drawScaled(var20Lifetime2, param7, var18Lifetime2, var16.fullHeight);
         } else {
@@ -292,7 +292,7 @@ final class ll {
             }
           }
         }
-        SoftwareRasterizer.b(vd.field_e);
+        SoftwareRasterizer.restoreClip(vd.field_e);
         return;
     }
 
@@ -317,7 +317,7 @@ final class ll {
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param1) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           if (param0 != 0) {
             ll.a(80, true, false);
             c.a(param1, false);
@@ -326,7 +326,7 @@ final class ll {
           c.a(param1, false);
           return;
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearRaster();
         if (param0 != 0) {
           ll.a(80, true, false);
           c.a(param1, false);

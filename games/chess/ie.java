@@ -36,13 +36,13 @@ final class ie {
           var1 = new km(param0, 140);
           tl.a((byte) -67, var1);
           nh.a();
-          wb.b();
+          SoftwareRasterizer.clearRaster();
           sl.field_a = 0;
           di.k(9);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
-            wb.e(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           tg.field_u.e();
           var1.c(0, 0);

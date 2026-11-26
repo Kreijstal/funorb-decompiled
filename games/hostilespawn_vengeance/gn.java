@@ -33,14 +33,14 @@ final class gn {
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
           for (var6_int = 1; var6_int < 3; var6_int++) {
-            si.e(var6_int + param2, param0 + var6_int, 9 - var6_int, 16776960, param3);
-            si.d(param2 + var6_int, param0 + var6_int, -var6_int + 9, 16776960, param3);
-            si.e(-9 + param1, var6_int + param0, 9 - var6_int, 16776960, param3);
-            si.d(param1 - var6_int, param0 + var6_int, 9 - var6_int, 16776960, param3);
-            si.e(param2 + var6_int, -var6_int + param4, 9 - var6_int, 16776960, param3);
-            si.d(var6_int + param2, -9 + param4, 9 - var6_int, 16776960, param3);
-            si.e(-9 + param1, param4 - var6_int, 1 - var6_int + 9, 16776960, param3);
-            si.d(-var6_int + param1, param4 - 9, -var6_int + 9, 16776960, param3);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var6_int + param2, param0 + var6_int, 9 - var6_int, 16776960, param3);
+            SoftwareRasterizer.drawVerticalLineAlpha(param2 + var6_int, param0 + var6_int, -var6_int + 9, 16776960, param3);
+            SoftwareRasterizer.drawHorizontalLineAlpha(-9 + param1, var6_int + param0, 9 - var6_int, 16776960, param3);
+            SoftwareRasterizer.drawVerticalLineAlpha(param1 - var6_int, param0 + var6_int, 9 - var6_int, 16776960, param3);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param2 + var6_int, -var6_int + param4, 9 - var6_int, 16776960, param3);
+            SoftwareRasterizer.drawVerticalLineAlpha(var6_int + param2, -9 + param4, 9 - var6_int, 16776960, param3);
+            SoftwareRasterizer.drawHorizontalLineAlpha(-9 + param1, param4 - var6_int, 1 - var6_int + 9, 16776960, param3);
+            SoftwareRasterizer.drawVerticalLineAlpha(-var6_int + param1, param4 - 9, -var6_int + 9, 16776960, param3);
           }
           if (param5 <= 69) {
             var8 = (PacketBuffer) null;

@@ -68,7 +68,7 @@ final class lq {
         }
         try {
           DelegatingCanvas.a((byte) -110);
-          bi.a(param0.field_F, param0.field_x, param0.field_B);
+          SoftwareRasterizer.setRasterBuffer(param0.field_F, param0.field_x, param0.field_B);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "lq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

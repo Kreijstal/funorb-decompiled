@@ -15,7 +15,7 @@ final class on {
           var1 = new dl(540, 140);
           em.a((byte) 38, var1);
           nb.b();
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           sn.field_c = 0;
           ja.d((byte) -67);
           var2 = var1.d();
@@ -25,7 +25,7 @@ final class on {
           }
           while (var3 < 15) {
             var2.g(-2, -2, 16777215);
-            kh.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
           }
           eq.field_k.a();

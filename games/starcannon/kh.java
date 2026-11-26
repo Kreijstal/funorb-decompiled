@@ -492,16 +492,16 @@ final class kh extends vk implements dc, ga, qk {
           if (0 < var14) {
             var14 = 0;
           }
-          var15 = -param7 + (-param8 - param5) + ki.field_j;
+          var15 = -param7 + (-param8 - param5) + SoftwareRasterizer.field_j;
           if (var15 > 0) {
             var15 = 0;
           }
           var16 = 0;
           var17 = 73 / ((param10 - 73) / 45);
           var18 = 1 + param5 + param7;
-          if (ki.field_j < var18) {
-            var16 = var18 - ki.field_j;
-            var18 = ki.field_j;
+          if (SoftwareRasterizer.field_j < var18) {
+            var16 = var18 - SoftwareRasterizer.field_j;
+            var18 = SoftwareRasterizer.field_j;
           }
           for (var19 = -param1; var19 < 0; var19++) {
             var20 = 0;
@@ -537,7 +537,7 @@ final class kh extends vk implements dc, ga, qk {
             param3[incrementValue$0] = var22 / var26 + (var21 / var26 << 8) + (var20 / var26 << 16);
             while (var25Lifetime1 < var14) {
               var24++;
-              if ((param7 + (var25Lifetime1 + param8) + param5) < ki.field_g) {
+              if ((param7 + (var25Lifetime1 + param8) + param5) < SoftwareRasterizer.field_g) {
                 if (param0[param6] != 0) {
                   param11 = param0[param6];
                 } else {

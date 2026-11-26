@@ -637,7 +637,7 @@ public final class Lexicominos extends nk {
             var8 != 0) {
             vg.field_d[param3].c(param0 - 22109);
           }
-          SoftwareRasterizer.a(var5, var6, var7);
+          SoftwareRasterizer.setRasterBuffer(var5, var6, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -930,7 +930,7 @@ public final class Lexicominos extends nk {
           wg.c(param0 + 37);
           da.a((byte) 123);
           MouseWheelInput.a(param0 + 35);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.clearStaticReferences();
           sh.clearStaticReferences(1);
           BitmapFont.clearStaticReferences();
           wd.a((byte) 11);
@@ -1369,7 +1369,7 @@ public final class Lexicominos extends nk {
             cb.field_n.b(0, 0);
             SoftwareRasterizer.setClip(616, 20, 640, 460);
             cb.field_n.b(0, 0);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.resetClip();
           }
           boolean decompiledFrameRemainder0 = true;
           if (aa.field_j != -2 &&
@@ -1441,13 +1441,13 @@ public final class Lexicominos extends nk {
             bi.field_a.c(Integer.toString(tj.field_i), 630, 25, 16711680, -1);
           }
           if (FullscreenFocusCanvas.a(-17977)) {
-            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
             rg.a(GameAppletShell.field_o, 10, (byte) -105, 10);
           }
           if (je.field_a != 0) {
             var3Lifetime1 = ed.field_v << 3;
             if (var3Lifetime1 > 0) {
-              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, var3Lifetime1);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, var3Lifetime1);
             }
           }
           if (pb.c(true) &&

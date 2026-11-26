@@ -20,11 +20,11 @@ final class jb extends TextureOperator {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         DelegatingCanvas.a((byte) -50);
         if (param3 == -30486) {
-          bi.c(param2, param0, param1, param4);
+          SoftwareRasterizer.intersectClip(param2, param0, param1, param4);
           return;
         }
         field_y = 78;
-        bi.c(param2, param0, param1, param4);
+        SoftwareRasterizer.intersectClip(param2, param0, param1, param4);
     }
 
     public static void b(byte param0) {

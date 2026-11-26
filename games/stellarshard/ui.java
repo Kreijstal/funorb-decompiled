@@ -25,7 +25,7 @@ abstract class ui extends WidgetContainer {
         if (UiWidget.field_s == null) {
           UiWidget.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(UiWidget.field_s, 1);
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
@@ -35,7 +35,7 @@ abstract class ui extends WidgetContainer {
         if (this.field_p > UiWidget.field_s.field_v) {
           UiWidget.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(UiWidget.field_s, 1);
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
@@ -45,7 +45,7 @@ abstract class ui extends WidgetContainer {
         if (this.field_t > UiWidget.field_s.field_y) {
           UiWidget.field_s = new Sprite(this.field_p, this.field_t);
           hj.a(UiWidget.field_s, 1);
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
@@ -53,7 +53,7 @@ abstract class ui extends WidgetContainer {
           return;
         }
         hj.a(UiWidget.field_s, 1);
-        ti.d();
+        SoftwareRasterizer.clearRaster();
         this.b(param1 + 58, 0, 0);
         super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
         id.b((byte) -58);

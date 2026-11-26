@@ -121,8 +121,8 @@ final class hm extends ta implements ai {
 
     final static void a(int[] param0, int param1, int param2, int param3) {
         try {
-          pc.$cfr$intArgs$a$c64d0b17f51c(53, 0, 160, 0, param2, 120, ul.field_b, 0, 0, param3, 1920, param0);
-          jl.a(0, 160, param1, 0, -1, 120, 0, 0, ul.field_b, 0);
+          pc.$cfr$intArgs$a$c64d0b17f51c(53, 0, 160, 0, param2, 120, SoftwareRasterizer.field_b, 0, 0, param3, 1920, param0);
+          jl.a(0, 160, param1, 0, -1, 120, 0, 0, SoftwareRasterizer.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

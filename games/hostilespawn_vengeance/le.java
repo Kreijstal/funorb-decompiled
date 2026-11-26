@@ -67,7 +67,7 @@ class le extends cf {
 
     final void a(int param0, boolean param1) {
         int var3 = 44 / ((29 - param0) / 41);
-        this.a(false, 0, param1, (byte) 82, true, si.field_e, false, 0, false, false, si.field_k);
+        this.a(false, 0, param1, (byte) 82, true, SoftwareRasterizer.field_e, false, 0, false, false, SoftwareRasterizer.field_k);
     }
 
     final static void c(byte param0) {
@@ -143,19 +143,19 @@ class le extends cf {
         this.field_K = this.field_tb + param0;
         this.field_sb = this.field_sb + var7Lifetime3;
         this.field_N = this.field_N - var7Lifetime3;
-        var8 = si.field_b;
-        var9 = si.field_j;
-        var10 = si.field_l;
-        var11 = si.field_a;
-        si.f(this.field_K, this.field_mb, this.field_qb + this.field_K, this.field_sb + this.field_mb);
+        var8 = SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_j;
+        var10 = SoftwareRasterizer.field_l;
+        var11 = SoftwareRasterizer.field_a;
+        SoftwareRasterizer.intersectClip(this.field_K, this.field_mb, this.field_qb + this.field_K, this.field_sb + this.field_mb);
         var12 = 0;
         if (!ob.field_n &&
           param3 &&
           pf.field_o != 0 &&
-          si.field_b <= ec.field_a &&
-          si.field_l > ec.field_a &&
-          si.field_j <= rc.field_b &&
-          rc.field_b < si.field_a) {
+          SoftwareRasterizer.field_b <= ec.field_a &&
+          SoftwareRasterizer.field_l > ec.field_a &&
+          SoftwareRasterizer.field_j <= rc.field_b &&
+          rc.field_b < SoftwareRasterizer.field_a) {
           var12 = 1;
           this.field_E = -this.field_mb + rc.field_b;
           this.field_wb = ec.field_a - this.field_K;
@@ -170,7 +170,7 @@ class le extends cf {
         if (0 == ig.field_L) {
           this.field_W = 0;
         }
-        stackIn_36_1 = (!ArchiveIndex.field_u) && (j.field_c >= si.field_b) && (si.field_l > j.field_c) && (si.field_j <= rb.field_m) && (rb.field_m < si.field_a);
+        stackIn_36_1 = (!ArchiveIndex.field_u) && (j.field_c >= SoftwareRasterizer.field_b) && (SoftwareRasterizer.field_l > j.field_c) && (SoftwareRasterizer.field_j <= rb.field_m) && (rb.field_m < SoftwareRasterizer.field_a);
         this.field_Eb = stackIn_36_1;
         stackIn_41_1 = (this.field_Eb) && (ig.field_L == this.field_W) && (param3);
         this.field_S = stackIn_41_1;
@@ -187,7 +187,7 @@ class le extends cf {
         if (var12 != 0) {
           ob.field_n = true;
         }
-        si.d(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_W != 0 &&
           this.field_Db) {
           this.field_zb = -param2 - this.field_E + rb.field_m;
@@ -237,11 +237,11 @@ class le extends cf {
         this.field_mb = param1 + this.field_zb;
         this.field_K = param7 + this.field_tb;
         var14 = -49 % ((param3 + 26) / 60);
-        var12 = si.field_b;
-        var13 = si.field_j;
-        var15 = si.field_l;
-        var16 = si.field_a;
-        si.f(this.field_K, this.field_mb, this.field_K + this.field_qb, this.field_mb + this.field_sb);
+        var12 = SoftwareRasterizer.field_b;
+        var13 = SoftwareRasterizer.field_j;
+        var15 = SoftwareRasterizer.field_l;
+        var16 = SoftwareRasterizer.field_a;
+        SoftwareRasterizer.intersectClip(this.field_K, this.field_mb, this.field_K + this.field_qb, this.field_mb + this.field_sb);
         if (!this.field_y) {
           param0 = this.field_S;
           stackIn_4_0 = (this.field_W != 0);
@@ -390,7 +390,7 @@ class le extends cf {
             var24_ref = (le) (this.field_I.nextForward(12684));
           }
         }
-        si.d(var12, var13, var15, var16);
+        SoftwareRasterizer.setClip(var12, var13, var15, var16);
     }
 
     public static void e(int param0) {
@@ -565,7 +565,7 @@ class le extends cf {
     final void a(boolean param0, boolean param1) {
         ArchiveIndex.field_u = !param0 ? true : false;
         ob.field_n = !param0 ? true : false;
-        this.a(0, si.field_k, 0, param1, (byte) 48, si.field_e);
+        this.a(0, SoftwareRasterizer.field_k, 0, param1, (byte) 48, SoftwareRasterizer.field_e);
     }
 
     private le(long param0, le param1, int param2, int param3, int param4, int param5, String param6) {

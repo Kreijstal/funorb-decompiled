@@ -885,8 +885,8 @@ final class dd extends kk {
         if (field_D > field_eb) {
           field_D = field_eb;
         }
-        var1Lifetime2 = nh.field_p[0] % wb.field_h;
-        var2Lifetime2 = nh.field_p[0] / wb.field_h;
+        var1Lifetime2 = nh.field_p[0] % SoftwareRasterizer.field_h;
+        var2Lifetime2 = nh.field_p[0] / SoftwareRasterizer.field_h;
         field_x = field_x + var1Lifetime2;
         field_Z = field_Z + var1Lifetime2;
         field_D = field_D + var2Lifetime2;

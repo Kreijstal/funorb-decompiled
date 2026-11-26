@@ -47,7 +47,7 @@ abstract class nm extends WidgetContainer {
         if (se.field_C == null) {
           se.field_C = new Sprite(this.width, this.height);
           lq.a(se.field_C, (byte) -94);
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           this.a((byte) -128, 0, 0);
           super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
@@ -57,7 +57,7 @@ abstract class nm extends WidgetContainer {
         if (this.width > se.field_C.field_y) {
           se.field_C = new Sprite(this.width, this.height);
           lq.a(se.field_C, (byte) -94);
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           this.a((byte) -128, 0, 0);
           super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
@@ -67,7 +67,7 @@ abstract class nm extends WidgetContainer {
         if (this.height > se.field_C.field_t) {
           se.field_C = new Sprite(this.width, this.height);
           lq.a(se.field_C, (byte) -94);
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           this.a((byte) -128, 0, 0);
           super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
@@ -75,7 +75,7 @@ abstract class nm extends WidgetContainer {
           return;
         }
         lq.a(se.field_C, (byte) -94);
-        bi.c();
+        SoftwareRasterizer.clearRaster();
         this.a((byte) -128, 0, 0);
         super.a(param0, param1, -this.x - param2, -this.y - param3);
         ln.d(-28558);

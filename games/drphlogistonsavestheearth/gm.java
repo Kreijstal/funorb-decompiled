@@ -34,7 +34,7 @@ final class gm extends hf {
             PcmResampler.field_c.a((byte) -111, (vg) (af.field_g));
           }
           af.field_g.a(param2, param3, 6, param1);
-          wj.c();
+          SoftwareRasterizer.clearRaster();
           a.a((byte) -121, true);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gm.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -159,7 +159,7 @@ final class gm extends hf {
             var9 <= mj.field_v.field_y &&
             mj.field_v.field_w >= var10) {
             MouseInput.a(mj.field_v, (byte) 91);
-            wj.c();
+            SoftwareRasterizer.clearRaster();
           } else {
             mj.field_v = new nh(var9, var10);
             MouseInput.a(mj.field_v, (byte) 125);

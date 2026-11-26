@@ -516,10 +516,10 @@ abstract class se extends DualLinkNode {
               }
               param1 = param1 + this.field_M[var8];
               if (field_w != -1) {
-                gf.b(var11, param2 + (int)((double)this.field_R * 0.7), param1 - var11, field_w);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_R * 0.7), param1 - var11, field_w);
               }
               if (field_S != -1) {
-                gf.b(var11, param2 + this.field_R + 1, param1 - var11, field_S);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_R + 1, param1 - var11, field_S);
               }
               var5 = var8;
             }

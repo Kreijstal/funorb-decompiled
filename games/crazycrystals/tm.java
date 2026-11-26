@@ -218,14 +218,14 @@ final class tm {
             var8 = param3[1].field_n;
             param3[0].b(param0, param2, param1);
             param3[2].b(-var7 + param4 + param0, param2, param1);
-            kh.b(ob.field_b);
-            kh.a(var6_int + param0, param2, param4 + (param0 - var7), param3[1].field_o + param2);
+            SoftwareRasterizer.saveClip(ob.field_b);
+            SoftwareRasterizer.intersectClip(var6_int + param0, param2, param4 + (param0 - var7), param3[1].field_o + param2);
             var9 = var6_int + param0;
             var10 = -var7 + (param4 + param0);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param3[1].b(param0, param2, param1);
             }
-            kh.a(ob.field_b);
+            SoftwareRasterizer.restoreClip(ob.field_b);
             return;
           }
           return;

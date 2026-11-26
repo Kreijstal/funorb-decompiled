@@ -220,7 +220,7 @@ final class kg {
                     return;
                   }
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + na.field_e;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_e;
                   var9_int = var9_int + var11;
                 }
               }
@@ -275,7 +275,7 @@ final class kg {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + na.field_e;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_e;
               var10 = var10 + var12;
             }
             return;

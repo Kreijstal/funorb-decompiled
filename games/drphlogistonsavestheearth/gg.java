@@ -90,12 +90,12 @@ final class gg {
           var13 = hi.a((int)(2.0 * this.field_k), 4, this.field_r);
           var14 = 126 * param7 / this.field_c + 60;
           if (param2) {
-            wj.a(var11 << 4, var12 << 4, param7 << 4, var14, this.field_q);
-            wj.a(var11 << 4, var12 << 4, param7 << 3, var14 / 2, this.field_q);
+            SoftwareRasterizer.addRadialGlow(var11 << 4, var12 << 4, param7 << 4, var14, this.field_q);
+            SoftwareRasterizer.addRadialGlow(var11 << 4, var12 << 4, param7 << 3, var14 / 2, this.field_q);
           }
-          wj.g(param1, param6, var11, var12, param3);
-          wj.g(param1 + 1, param6, var11, var12, param3);
-          wj.g(param1, param6 + 1, var11, var12, param3);
+          SoftwareRasterizer.drawLine(param1, param6, var11, var12, param3);
+          SoftwareRasterizer.drawLine(param1 + 1, param6, var11, var12, param3);
+          SoftwareRasterizer.drawLine(param1, param6 + 1, var11, var12, param3);
           for (var15 = 0; var15 < var13; var15++) {
             this.a(param0, var11, param2, param3, (byte) 47, 1 + param5, var12, (int)(this.field_g * (double)param7), param8 + (-0.5 + this.a(1769212228)) * this.field_m);
           }
@@ -124,14 +124,14 @@ final class gg {
           this.field_q[var8] = GameAppletShell.a(GameAppletShell.a(var9 * var6 >> 8 << 8, var5 * var9 >> 8 << 16), var9 * var7 >> 8);
         }
         if (param2) {
-          wj.a(this.field_a << 4, this.field_j << 4, 2 * this.field_c << 4, 254, this.field_q);
+          SoftwareRasterizer.addRadialGlow(this.field_a << 4, this.field_j << 4, 2 * this.field_c << 4, 254, this.field_q);
         }
         for (var8Lifetime1 = 0; this.field_e > var8Lifetime1; var8Lifetime1++) {
           if (param2) {
-            wj.a(this.field_a << 4, this.field_j << 4, var8Lifetime1 * this.field_c << 4, 254 / (1 + var8Lifetime1), this.field_q);
+            SoftwareRasterizer.addRadialGlow(this.field_a << 4, this.field_j << 4, var8Lifetime1 * this.field_c << 4, 254 / (1 + var8Lifetime1), this.field_q);
           }
           if (param2) {
-            wj.a(this.field_a << 4, this.field_j << 4, var8Lifetime1 * this.field_c << 4, 196 / (1 + var8Lifetime1), this.field_q);
+            SoftwareRasterizer.addRadialGlow(this.field_a << 4, this.field_j << 4, var8Lifetime1 * this.field_c << 4, 196 / (1 + var8Lifetime1), this.field_q);
           }
           this.a(param3, this.field_a, param2, param1, (byte) 31, 0, this.field_j, this.field_c, this.field_h + (this.a(1769212228) - 0.5) * this.field_p);
         }

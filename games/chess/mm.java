@@ -120,7 +120,7 @@ final class mm {
                     return;
                   }
                   var11 = var11 + var13;
-                  var17Lifetime2 = var17Lifetime2 + wb.field_h;
+                  var17Lifetime2 = var17Lifetime2 + SoftwareRasterizer.field_h;
                   var10 = var10 + var12;
                 }
               }
@@ -198,7 +198,7 @@ final class mm {
                 return;
               }
               var10 = var10 + var12;
-              var16Lifetime1 = var16Lifetime1 + wb.field_h;
+              var16Lifetime1 = var16Lifetime1 + SoftwareRasterizer.field_h;
               var11 = var11 + var13;
             }
             return;

@@ -34,7 +34,7 @@ abstract class rb {
         if (param0 <= 100) {
           return;
         }
-        fn.a(this.field_f, this.field_b, this.field_c);
+        SoftwareRasterizer.setRasterBuffer(this.field_f, this.field_b, this.field_c);
     }
 
     static {

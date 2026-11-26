@@ -499,7 +499,7 @@ class bc implements j, gd {
           return;
         }
         BufferedSocket.b((byte) -118);
-        SoftwareRasterizer.a(param1, param2, param3, param0);
+        SoftwareRasterizer.intersectClip(param1, param2, param3, param0);
     }
 
     final static boolean a(int param0, char param1) {

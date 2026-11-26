@@ -146,10 +146,10 @@ final class lm extends TextureOperator {
         }
         lq.a(n.field_a, (byte) -94);
         oo.c();
-        bi.c();
+        SoftwareRasterizer.clearRaster();
         bq.h(-125);
         if (256 > var5) {
-          bi.b(0, 0, bi.field_e, bi.field_j, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, 256 - var5);
         }
         ln.d(-28558);
         if (150 > hm.field_F) {

@@ -44,7 +44,7 @@ final class gja extends tia {
         if (this.field_o == 3) {
           SoftwareRasterizer.setClip(-128 + (param2 - 8), param0 - 32, 1024 - ((this.field_g << 3) + 16) + (param2 - 128), un.field_m.field_p + (param0 - 32));
           un.field_m.a(param2 - 128 - 8, -32 + param0, this.field_g << 1);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
           if (param1 != 25415) {
             var6 = (String) null;
             gja.a(false, (java.applet.Applet) null, (String) null, 115);
@@ -64,7 +64,7 @@ final class gja extends tia {
             }
             SoftwareRasterizer.setClip(OneSpecial.field_r.field_q + (-128 + (-8 + param2) - 1024 + (this.field_g << 3)), -32 + param0 - 64, OneSpecial.field_r.field_q + 16 + param2 - 128, OneSpecial.field_r.field_p - 32 + (param0 - 64));
             OneSpecial.field_r.a(-8 + (param2 - 128), -96 + param0, this.field_g << 1);
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.resetClip();
             if (param1 == 25415) {
               return;
             }
@@ -74,7 +74,7 @@ final class gja extends tia {
           }
           SoftwareRasterizer.setClip(OneSpecial.field_r.field_q + param2 - (1056 - (this.field_g << 3)), param0 - 32, OneSpecial.field_r.field_q + (-128 + param2) + 96, -32 + (param0 + OneSpecial.field_r.field_p));
           OneSpecial.field_r.a(param2 - 128 + 96, param0 - 32, this.field_g << 1);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
           if (param1 == 25415) {
             return;
           }
@@ -84,7 +84,7 @@ final class gja extends tia {
         }
         SoftwareRasterizer.setClip(-8 + param2, -96 + param0, -(this.field_g << 3) - (-1024 - param2) - 16, un.field_m.field_p + param0 - 96);
         un.field_m.a(param2 - 8, -32 + param0 - 64, this.field_g << 1);
-        SoftwareRasterizer.c();
+        SoftwareRasterizer.resetClip();
         if (param1 == 25415) {
           return;
         }

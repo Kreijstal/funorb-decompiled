@@ -231,7 +231,7 @@ final class uj implements Runnable {
         wd.field_h.moveAllToFront(ri.field_b, 0);
         rf.field_a.moveAllToFront(aj.field_b, param0 + param0);
         sb.field_m.e();
-        ge.d();
+        SoftwareRasterizer.clearRaster();
         ac.field_a.a((byte) 114);
         ek.field_b = 0;
         IterableNodeHashTable.field_e = 0;

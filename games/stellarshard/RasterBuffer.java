@@ -248,7 +248,7 @@ abstract class RasterBuffer {
 
     final void a(byte param0) {
         try {
-          ti.a(this.field_e, this.field_g, this.field_f);
+          SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_g, this.field_f);
           if (param0 != -107) {
             this.a((java.awt.Component) null, 82, 120, (byte) 92);
           }

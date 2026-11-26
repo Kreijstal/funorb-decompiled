@@ -50,11 +50,11 @@ final class fa extends IntrusiveNode {
             var7 = var7 - param0;
             param0 = 0;
           }
-          if (gf.field_i < param4 + param3) {
-            param4 = gf.field_i - param3;
+          if (SoftwareRasterizer.field_i < param4 + param3) {
+            param4 = SoftwareRasterizer.field_i - param3;
           }
-          if (param0 + param2 > gf.field_c) {
-            param2 = -param0 + gf.field_c;
+          if (param0 + param2 > SoftwareRasterizer.field_c) {
+            param2 = -param0 + SoftwareRasterizer.field_c;
           }
           if (param4 < 0) {
             return null;
@@ -70,15 +70,15 @@ final class fa extends IntrusiveNode {
             !(param5.field_v >= param2)) {
             param5 = new cn(param4, param2);
           }
-          var8 = -param4 + gf.field_i;
+          var8 = -param4 + SoftwareRasterizer.field_i;
           var9 = -param4 + param5.field_y;
-          var10 = param3 + gf.field_i * param0;
+          var10 = param3 + SoftwareRasterizer.field_i * param0;
           var11 = -1;
           for (var12 = -param2; var12 < 0; var12++) {
             var13 = -param4;
             while (0 > var13) {
               var11++;
-              param5.field_B[var11] = gf.field_b[var10];
+              param5.field_B[var11] = SoftwareRasterizer.field_b[var10];
               var13++;
               var10++;
             }

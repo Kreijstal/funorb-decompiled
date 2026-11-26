@@ -132,10 +132,10 @@ final class ck {
           if (this.field_h[var2] >= 0.0) {
             var5 = this.field_a[var2];
             if (var5 == 0) {
-              wj.c((int)this.field_m[var2], (int)this.field_g[var2], (int)this.field_h[var2], this.field_i[var2], 128);
+              SoftwareRasterizer.fillCircleAlpha((int)this.field_m[var2], (int)this.field_g[var2], (int)this.field_h[var2], this.field_i[var2], 128);
             } else {
               if (var5 == 1) {
-                wj.a((int)this.field_m[var2] << 4, (int)this.field_g[var2] << 4, (int)this.field_h[var2] << 4, 0, IntrusiveDeque.field_b);
+                SoftwareRasterizer.addRadialGlow((int)this.field_m[var2] << 4, (int)this.field_g[var2] << 4, (int)this.field_h[var2] << 4, 0, IntrusiveDeque.field_b);
               }
             }
           }

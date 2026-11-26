@@ -114,7 +114,7 @@ final class th {
             th.a(-70, false, 43, (CharSequence) null);
           }
           IntrusiveNode.field_d = param2;
-          ki.a(ti.field_i / 2, ti.field_b / 2, -116);
+          ki.a(SoftwareRasterizer.field_i / 2, SoftwareRasterizer.field_b / 2, -116);
           GameEntity.a(param0.field_x, -29770, param1.field_r + param1.field_x, param1.field_x, param0.field_r + param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "th.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -165,13 +165,13 @@ final class th {
           hj.a(var1, 1);
           cc.a();
           int var2 = 104 / ((param0 + 41) / 39);
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           ni.field_d = 0;
           ja.a(4);
           var3 = var1.a();
           for (var4 = 0; var4 < 15; var4++) {
             var3.b(-2, -2, 16777215);
-            ti.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           pd.field_s.e();
           var1.b(0, 0);

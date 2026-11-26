@@ -79,7 +79,7 @@ abstract class ByteStorage {
         int var3_intLifetime1Lifetime3;
         var11 = CrazyCrystals.field_B;
         try {
-          kh.f(param0, 0, 160, 480, 0);
+          SoftwareRasterizer.fillRectangle(param0, 0, 160, 480, 0);
           var1_int = 480;
           if (!uh.field_n &&
             uh.field_p == null &&
@@ -103,17 +103,17 @@ abstract class ByteStorage {
           }
           if (!vh.field_a ||
             li.field_a != null) {
-            kh.d(480, 54, 640, 168);
+            SoftwareRasterizer.setClip(480, 54, 640, 168);
             qc.a(160, 54, 116, mg.field_b, 480, 160, 2);
-            kh.c();
+            SoftwareRasterizer.resetClip();
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder1 = true;
           if (null == li.field_a) {
             if (!vh.field_a) {
-              kh.d(480, 168, 640, 270);
+              SoftwareRasterizer.setClip(480, 168, 640, 270);
               qc.a(160, 166, 106, mg.field_b, 480, 160, 2);
-              kh.c();
+              SoftwareRasterizer.resetClip();
               var2 = 480;
               if (!uh.field_n &&
                 null == uh.field_p &&
@@ -127,9 +127,9 @@ abstract class ByteStorage {
                   var2 -= 20;
                 }
               }
-              kh.d(480, 270, 640, var2);
+              SoftwareRasterizer.setClip(480, 270, 640, var2);
               qc.a(160, 268, -268 + var2, mg.field_b, 480, 160, 2);
-              kh.c();
+              SoftwareRasterizer.resetClip();
               var3_int = 182;
               var4_int = 0;
               while (2 > var4_int) {
@@ -182,21 +182,21 @@ abstract class ByteStorage {
                 (cn.field_d == null) &&
                 (!(ab.field_D instanceof ja)) &&
                 (!go.field_i)) {
-                kh.d(484, 58, 636, var1_int - 4);
+                SoftwareRasterizer.setClip(484, 58, 636, var1_int - 4);
                 co.d((byte) -51);
-                kh.c();
+                SoftwareRasterizer.resetClip();
                 if (var11 != 0) {
-                  kh.d(480, 168, 640, var1_int);
+                  SoftwareRasterizer.setClip(480, 168, 640, var1_int);
                   qc.a(160, 166, -166 + var1_int, mg.field_b, 480, 160, param0 - 478);
-                  kh.c();
+                  SoftwareRasterizer.resetClip();
                   li.field_a.b(-51);
                 }
               }
             }
           } else {
-            kh.d(480, 168, 640, var1_int);
+            SoftwareRasterizer.setClip(480, 168, 640, var1_int);
             qc.a(160, 166, -166 + var1_int, mg.field_b, 480, 160, param0 - 478);
-            kh.c();
+            SoftwareRasterizer.resetClip();
             li.field_a.b(-51);
           }
           if (decompiledFrameCompleted0) {
@@ -362,9 +362,9 @@ abstract class ByteStorage {
                 }
               }
             }
-            kh.d(0, 0, 640, 54);
+            SoftwareRasterizer.setClip(0, 0, 640, 54);
             ip.a(224, h.field_d, 162, 56, 2, 480, 0);
-            kh.c();
+            SoftwareRasterizer.resetClip();
             var2 = rc.field_a.size();
             stackIn_247_0 = 1;
             stackIn_247_1 = jo.field_o;

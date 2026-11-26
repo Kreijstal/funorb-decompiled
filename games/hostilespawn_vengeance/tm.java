@@ -52,9 +52,9 @@ final class tm extends IntrusiveNode {
             param3.field_i = -1;
           }
           if (0 <= param3.field_e) {
-            si.e(param1, param2, 1, 65535, -(param3.field_e * 4) + 128);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, param2, 1, 65535, -(param3.field_e * 4) + 128);
           } else {
-            si.e(param1, param2, 1, 16777215, 128);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param1, param2, 1, 16777215, 128);
           }
           var4_int = 117 / ((-79 - param0) / 33);
           return;

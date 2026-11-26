@@ -233,7 +233,7 @@ final class w extends hd {
             ti.field_b.a((byte) 93, (UiWidget) (ve.field_f));
           }
           ve.field_f.a(param0, param2, param3, true);
-          ki.b();
+          SoftwareRasterizer.clearRaster();
           wa.a(true, true);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "w.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -36,14 +36,14 @@ final class pk {
             var8 = param1[1].field_x;
             param1[0].b(param0, param4, param2);
             param1[2].b(-var7 + (param5 + param0), param4, param2);
-            SoftwareRasterizer.b(en.field_b);
-            SoftwareRasterizer.f(var6_int + param0, param4, param0 + (param5 - var7), param1[1].field_A + param4);
+            SoftwareRasterizer.saveClip(en.field_b);
+            SoftwareRasterizer.intersectClip(var6_int + param0, param4, param0 + (param5 - var7), param1[1].field_A + param4);
             var9 = var6_int + param0;
             var10 = -var7 + (param5 + param0);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param1[1].b(param0, param4, param2);
             }
-            SoftwareRasterizer.a(en.field_b);
+            SoftwareRasterizer.restoreClip(en.field_b);
             return;
           }
           return;

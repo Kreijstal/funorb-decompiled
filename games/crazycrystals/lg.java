@@ -13,8 +13,8 @@ final class lg {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        kh.a(var1.field_k, var1.field_g, var1.field_m);
-        kh.d(var1.field_f, var1.field_l, var1.field_o, var1.field_j);
+        SoftwareRasterizer.setRasterBuffer(var1.field_k, var1.field_g, var1.field_m);
+        SoftwareRasterizer.setClip(var1.field_f, var1.field_l, var1.field_o, var1.field_j);
         var1.field_k = null;
         if (param0 == 1) {
           IntrusiveDeque.field_e.addLast(0, var1);

@@ -72,8 +72,8 @@ final class cf extends ci {
         int var15 = 0;
         var13 = Chess.field_G;
         try {
-          vi.field_d = wb.field_h;
-          fn.field_c = wb.field_c;
+          vi.field_d = SoftwareRasterizer.field_h;
+          fn.field_c = SoftwareRasterizer.field_c;
           if (param1) {
             stackIn_4_0 = AccountServiceResult.field_c;
           } else {
@@ -199,7 +199,7 @@ final class cf extends ci {
           if (param0 <= 121) {
             field_Nb = true;
           }
-          ah.field_i.a(wb.field_h - 360 >> 1, 360, -2147483648, -10 + (-120 + wb.field_c - 14), 10);
+          ah.field_i.a(SoftwareRasterizer.field_h - 360 >> 1, 360, -2147483648, -10 + (-120 + SoftwareRasterizer.field_c - 14), 10);
           qf.field_f.a(0, ah.field_i.field_M, -2147483648, 24, 0);
           dn.field_c.a(0, ah.field_i.field_M, -2147483648, -24 + ah.field_i.field_pb, 24);
           dn.field_c.field_Ab = wh.a(67, dn.field_c.field_pb, 3, 11579568, 8421504, 1);
@@ -343,9 +343,9 @@ final class cf extends ci {
           cf.a((CharSequence) null, -29, false);
         }
         if (!param1) {
-          wb.b();
+          SoftwareRasterizer.clearRaster();
         } else {
-          wb.b(0, 0, wb.field_h, wb.field_c, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 0, 192);
         }
         qe.a((byte) -31, param1);
     }
@@ -369,7 +369,7 @@ final class cf extends ci {
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
         r.k(param3 + 2949);
-        wb.e(param4, param2, param1, param0);
+        SoftwareRasterizer.intersectClip(param4, param2, param1, param0);
         if (param3 != 80) {
           cf.createAccountSuccessResult(77, false);
         }

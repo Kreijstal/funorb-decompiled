@@ -90,30 +90,30 @@ final class p {
         int[] var30 = null;
         var19 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (wj.field_g > param6) {
-            param0 = param0 - (-param6 + wj.field_g);
-            param6 = wj.field_g;
+          if (SoftwareRasterizer.field_g > param6) {
+            param0 = param0 - (-param6 + SoftwareRasterizer.field_g);
+            param6 = SoftwareRasterizer.field_g;
           }
-          if (wj.field_e > param5) {
-            param3 = param3 - (-param5 + wj.field_e);
-            param5 = wj.field_e;
+          if (SoftwareRasterizer.field_e > param5) {
+            param3 = param3 - (-param5 + SoftwareRasterizer.field_e);
+            param5 = SoftwareRasterizer.field_e;
           }
-          if (param6 + param0 > wj.field_b) {
-            param0 = -param6 + wj.field_b;
+          if (param6 + param0 > SoftwareRasterizer.field_b) {
+            param0 = -param6 + SoftwareRasterizer.field_b;
           }
-          if (param5 + param3 > wj.field_j) {
-            param3 = -param5 + wj.field_j;
+          if (param5 + param3 > SoftwareRasterizer.field_j) {
+            param3 = -param5 + SoftwareRasterizer.field_j;
           }
           if (param0 > 0 &&
             param3 > 0) {
             var21 = param7.a();
-            var30 = wj.field_l;
-            var10 = wj.field_k;
-            var11 = wj.field_c;
+            var30 = SoftwareRasterizer.field_l;
+            var10 = SoftwareRasterizer.field_k;
+            var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
-            wj.b(var29);
+            SoftwareRasterizer.saveClip(var29);
             param7.c();
-            wj.d(var29[param2], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[param2], var29[1], var29[2], var29[3]);
             var13 = param6 + param7.field_y * param5;
             var14 = param7.field_y - param0;
             var25 = var21.field_B;
@@ -130,15 +130,15 @@ final class p {
                   var15[var13 + 1] == 0 ||
                   !(var16 >= -1 + param7.field_w) &&
                   var15[param7.field_y + var13] == 0)) {
-                  wj.b(var17, var16, param1, param4);
+                  SoftwareRasterizer.fillCircle(var17, var16, param1, param4);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var21.d(-param7.field_D, -param7.field_v);
-            wj.a(var30, var10, var11);
-            wj.a(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

@@ -21,7 +21,7 @@ final class qk {
     }
 
     final static void c() {
-        qk.a(na.field_g, na.field_i, na.field_b, na.field_f);
+        qk.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, SoftwareRasterizer.field_f);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -32,10 +32,10 @@ final class qk {
         if (field_b.length < field_g) {
           field_b = new int[ke.roundUpPowerOfTwo(field_g, 24636)];
         }
-        int var4 = param1 * na.field_e + param0;
+        int var4 = param1 * SoftwareRasterizer.field_e + param0;
         for (var5 = 0; var5 < field_g; var5++) {
           field_b[var5] = var4;
-          var4 = var4 + na.field_e;
+          var4 = var4 + SoftwareRasterizer.field_e;
         }
     }
 

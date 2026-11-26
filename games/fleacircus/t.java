@@ -133,7 +133,7 @@ final class t {
                     var3.c(var12, 180, var8, var10, -1);
                     var3.b(Integer.toString(var11), 500, var8, var10, -1);
                     for (var13 = 180; var13 < 500; var13 += 2) {
-                      gb.b(var13, 1 + var8, 1, 1);
+                      SoftwareRasterizer.drawHorizontalLine(var13, 1 + var8, 1, 1);
                     }
                     var2 = "";
                   }
@@ -364,7 +364,7 @@ final class t {
               32 + var4 >= ag.field_f &&
               kc.field_b >= var5 &&
               32 + var5 >= kc.field_b) {
-              gb.d(-3 + var4, var5 - 3, 37, 37, 6, 8421504);
+              SoftwareRasterizer.drawRoundedRectangleOutline(-3 + var4, var5 - 3, 37, 37, 6, 8421504);
               var8 = var9;
             }
             if (this.field_g >= var4 &&
@@ -379,7 +379,7 @@ final class t {
               this.field_g = -1;
             }
             if (this.field_f == var9) {
-              gb.d(var4 - 3, -3 + var5, 37, 37, 6, 16777215);
+              SoftwareRasterizer.drawRoundedRectangleOutline(var4 - 3, -3 + var5, 37, 37, 6, 16777215);
             }
             incrementValue$1 = var7;
             var7++;
@@ -393,7 +393,7 @@ final class t {
           }
         }
         for (var9Lifetime1 = 0; var9Lifetime1 < 2; var9Lifetime1++) {
-          gb.b(100, var9Lifetime1 * 2 + 200, 440, 1);
+          SoftwareRasterizer.drawHorizontalLine(100, var9Lifetime1 * 2 + 200, 440, 1);
         }
         if (this.field_f >= 0) {
           var8 = this.field_f;
@@ -472,7 +472,7 @@ final class t {
           }
         } else {
           fc.c(param0 ^ 124);
-          gb.d(0, 0, 640, 480);
+          SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
         }
         var2 = null;
         var3 = null;
@@ -622,7 +622,7 @@ final class t {
         og.a(ResourceArchive.field_c.field_a + 22, ad.field_b, 93, -4 + ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_d - 17, ResourceArchive.field_c.field_n + 9);
         ResourceArchive.field_c.c(-1);
         if (ResourceArchive.field_c.field_i) {
-          gb.e(ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_D.field_N + ResourceArchive.field_c.field_a, ResourceArchive.field_c.field_n + 1, ResourceArchive.field_c.field_d - ResourceArchive.field_c.field_D.field_N + 1, 32928, 256);
+          SoftwareRasterizer.drawRectangleOutlineAlpha(ResourceArchive.field_c.field_l, ResourceArchive.field_c.field_D.field_N + ResourceArchive.field_c.field_a, ResourceArchive.field_c.field_n + 1, ResourceArchive.field_c.field_d - ResourceArchive.field_c.field_D.field_N + 1, 32928, 256);
         }
         stackIn_6_0 = (ResourceArchive.field_c.field_x > hj.field_a[fleas.field_E]) ? 0 : 1;
         var2 = stackIn_6_0;
@@ -642,7 +642,7 @@ final class t {
           var8_int = -(mf.field_g.field_x / 4) + var6 / 2 + (var4 + 13);
           var9_int = -(mf.field_g.field_t / 4) + var5 + 14 + var7 / 2;
           if (var2 == 0) {
-            gb.e(var4 + 13, var5 + 14, var6, var7, 1);
+            SoftwareRasterizer.fillRectangle(var4 + 13, var5 + 14, var6, var7, 1);
             tl.field_p.a(fc.field_b, 25 + var4 + 13, 30 + var5 + 14, 0, -1);
             tl.field_p.a(fc.field_b, var6 + var4 - 12, -15 + (var5 - (-var7 - 14)), 0, -1);
             cb.field_u.e(var8_int, var9_int);
@@ -1390,7 +1390,7 @@ final class t {
             for (var5 = 4; var5 <= 6; var5++) {
               var6 = 88 + ib.field_a[g.field_s][var5];
               var7 = ga.field_s[g.field_s][var5] + 7;
-              gb.f(var6, var7, 3, 1);
+              SoftwareRasterizer.fillCircle(var6, var7, 3, 1);
             }
           } else {
             if (2 == g.field_s) {
@@ -1416,7 +1416,7 @@ final class t {
                     for (var5 = 0; var5 < ga.field_s[g.field_s].length; var5++) {
                       var6 = ib.field_a[g.field_s][var5] + 88;
                       var7 = 7 + ga.field_s[g.field_s][var5];
-                      gb.f(var6, var7, 3, 1);
+                      SoftwareRasterizer.fillCircle(var6, var7, 3, 1);
                     }
                   }
                   decompiledFrameRemainder0 = false;

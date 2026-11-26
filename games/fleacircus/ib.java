@@ -42,14 +42,14 @@ final class ib implements ComponentLayout {
           if (param0 > -36) {
             this.field_l = -111;
           }
-          gb.e(param3.field_y + param1, param3.field_z + param4, param3.field_u, param3.field_j, this.field_h);
+          SoftwareRasterizer.fillRectangle(param3.field_y + param1, param3.field_z + param4, param3.field_u, param3.field_j, this.field_h);
           var7 = param3.field_u - var6.field_M * 2;
           var8 = param1 + (param3.field_y + var6.field_M);
           var9 = var6.field_P + param4 + param3.field_z;
-          gb.d(var8, var9, var8 + var7, var9, this.field_l);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_l);
           var10 = -1 + var6.i(119);
           while (var10 >= 0) {
-            gb.f(var7 * var6.a(var10, 100) / var6.a((byte) 9) + var8, var9, this.field_b, this.field_j);
+            SoftwareRasterizer.fillCircle(var7 * var6.a(var10, 100) / var6.a((byte) 9) + var8, var9, this.field_b, this.field_j);
             var10--;
             if (var11 != 0) {
               return;

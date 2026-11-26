@@ -41,18 +41,18 @@ final class ni implements de {
             param1 = param1 & var12.field_u;
           }
           var7 = 5592405;
-          ki.d(param0 + param4.field_s, param3 + param4.field_j, param4.field_i, param4.field_f, this.field_d);
+          SoftwareRasterizer.fillRectangle(param0 + param4.field_s, param3 + param4.field_j, param4.field_i, param4.field_f, this.field_d);
           if (param1) {
             var7 = 16777215;
           }
           var10 = 97 % ((2 - param2) / 54);
           var8 = param4.field_s + (param0 + this.field_l);
           var9 = this.field_g + param4.field_j + param3;
-          ki.b(var8, var9, this.field_b, this.field_c, 5592405);
-          ki.d(var8, var9, this.field_b, this.field_c, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_b, this.field_c, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_b, this.field_c, var7);
           if (var12.field_z) {
-            ki.a(var8, var9, var8 + this.field_b, var9 + this.field_c, 1);
-            ki.a(this.field_b + var8, var9, var8, this.field_c + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_b, var9 + this.field_c, 1);
+            SoftwareRasterizer.drawLine(this.field_b + var8, var9, var8, this.field_c + var9, 1);
           }
           if (this.field_m != null) {
             var11 = this.field_b + this.field_l + this.field_i;

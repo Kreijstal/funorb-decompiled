@@ -15,7 +15,7 @@ final class lb {
           gk.field_a = param1;
           jc.field_h = param0;
           ba.field_E = param3;
-          l.a(na.field_k / 2, (byte) 127, na.field_e / 2);
+          l.a(SoftwareRasterizer.field_k / 2, (byte) 127, SoftwareRasterizer.field_e / 2);
           int var4_int = -4 % ((param2 + 34) / 39);
           hh.b(param0.field_x + param0.field_F, param3.field_F, param0.field_F, param3.field_F + param3.field_x, 0);
         } catch (RuntimeException runtimeException) {

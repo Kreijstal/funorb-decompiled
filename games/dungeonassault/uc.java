@@ -38,7 +38,7 @@ final class uc extends lm {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
             }
-            gf.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         ti.c(param0);
@@ -68,13 +68,13 @@ final class uc extends lm {
           var10 = var6 - var5;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = 256 > var11 ? (var11 * var9 & 16711680 | var11 * var8 & -16711936) >>> 8 : var9 | var8;
-          gf.b(var7, var6, this.field_B, var12);
-          gf.b(var7 - this.field_B * 2, var6, this.field_B, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_B, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_B * 2, var6, this.field_B, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = 16711935 & param0;
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (var11 * var9Lifetime1 & 16711680 | var8Lifetime1 * var11 & -16711936) >>> 8;
-          gf.b(this.field_B + var7, var6, this.field_B, var12Lifetime1);
-          gf.b(var7 - this.field_B, var6, this.field_B, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_B + var7, var6, this.field_B, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_B, var6, this.field_B, var12Lifetime1);
         }
         ti.c(true);
         var6Lifetime1 = 87 / ((15 - param1) / 57);
@@ -103,7 +103,7 @@ final class uc extends lm {
             var6 = var6 + param3.field_y;
           }
           ti.c(true);
-          if (gf.field_j <= param2 + this.field_D.field_y) {
+          if (SoftwareRasterizer.field_j <= param2 + this.field_D.field_y) {
             lm.a(this.field_P, (byte) -107);
             param3.h(-this.field_O, 0);
             param3.h(-this.field_O + 2 * this.field_B, 0);
@@ -111,7 +111,7 @@ final class uc extends lm {
             ti.c(true);
             this.field_P.h(param2, param1);
           }
-          if (gf.field_h >= var5_int - this.field_D.field_y) {
+          if (SoftwareRasterizer.field_h >= var5_int - this.field_D.field_y) {
             lm.a(this.field_P, (byte) -94);
             for (var7Lifetime1 = this.field_x + (-this.field_D.field_y + this.field_O); var7Lifetime1 > this.field_B * 2; var7Lifetime1 = var7Lifetime1 - this.field_B * 2) {
             }
@@ -169,30 +169,30 @@ final class uc extends lm {
         int[] var30 = null;
         var19 = DungeonAssault.field_K;
         try {
-          if (gf.field_j > param4) {
-            param2 = param2 - (-param4 + gf.field_j);
-            param4 = gf.field_j;
+          if (SoftwareRasterizer.field_j > param4) {
+            param2 = param2 - (-param4 + SoftwareRasterizer.field_j);
+            param4 = SoftwareRasterizer.field_j;
           }
-          if (gf.field_f > param6) {
-            param5 = param5 - (-param6 + gf.field_f);
-            param6 = gf.field_f;
+          if (SoftwareRasterizer.field_f > param6) {
+            param5 = param5 - (-param6 + SoftwareRasterizer.field_f);
+            param6 = SoftwareRasterizer.field_f;
           }
-          if (param2 + param4 > gf.field_h) {
-            param2 = gf.field_h - param4;
+          if (param2 + param4 > SoftwareRasterizer.field_h) {
+            param2 = SoftwareRasterizer.field_h - param4;
           }
-          if (param6 + param5 > gf.field_e) {
-            param5 = -param6 + gf.field_e;
+          if (param6 + param5 > SoftwareRasterizer.field_e) {
+            param5 = -param6 + SoftwareRasterizer.field_e;
           }
           if (0 < param2 &&
             param5 > 0) {
             var21 = param3.d();
-            var30 = gf.field_b;
-            var10 = gf.field_i;
-            var11 = gf.field_c;
+            var30 = SoftwareRasterizer.field_b;
+            var10 = SoftwareRasterizer.field_i;
+            var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
-            gf.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param3.e();
-            gf.a(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param3.field_y * param6 + param4;
             var14 = -param2 + param3.field_y;
             var25 = var21.field_B;
@@ -212,15 +212,15 @@ final class uc extends lm {
                   var15[var13 + 1] == 0 ||
                   !(var16 >= param3.field_v - 1) &&
                   var15[param3.field_y + var13] == 0)) {
-                  gf.f(var17, var16, param1, param0);
+                  SoftwareRasterizer.fillCircle(var17, var16, param1, param0);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var21.h(-param3.field_w, -param3.field_A);
-            gf.a(var30, var10, var11);
-            gf.b(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

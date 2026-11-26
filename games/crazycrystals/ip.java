@@ -46,13 +46,13 @@ final class ip implements wo {
           }
           if (var12 == null) {
           }
-          kh.f(param3.field_r + param2, param0 + param3.field_j, param3.field_g, param3.field_f, this.field_g);
+          SoftwareRasterizer.fillRectangle(param3.field_r + param2, param0 + param3.field_j, param3.field_g, param3.field_f, this.field_g);
           var7 = -(2 * var12.field_E) + param3.field_g;
           var8 = param2 - (-param3.field_r - var12.field_E);
           var9 = param0 + (param3.field_j + var12.field_J);
-          kh.e(var8, var9, var7 + var8, var9, this.field_a);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_a);
           for (var10 = var12.e((byte) -49) - 1; var10 >= 0; var10--) {
-            kh.b(var12.a(var10, 6) * var7 / var12.h(-1) + var8, var9, this.field_c, this.field_d);
+            SoftwareRasterizer.fillCircle(var12.a(var10, 6) * var7 / var12.h(-1) + var8, var9, this.field_c, this.field_d);
           }
           if (this.field_f == null) {
             return;

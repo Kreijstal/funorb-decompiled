@@ -94,7 +94,7 @@ final class ca {
           var9Lifetime1 = var17.field_o;
           ji.a(true);
           var17.c();
-          vj.e(0, 0, vj.field_l, vj.field_g);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
           var15 = new kc(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.c();

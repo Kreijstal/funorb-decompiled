@@ -103,7 +103,7 @@ final class qe extends pn {
               } else {
                 if (var12 <= this.field_bb.field_t) {
                   lq.a(this.field_bb, (byte) -94);
-                  bi.c();
+                  SoftwareRasterizer.clearRaster();
                 } else {
                   this.field_bb = new Sprite(var11, var12);
                   lq.a(this.field_bb, (byte) -94);
@@ -135,7 +135,7 @@ final class qe extends pn {
             this.field_bb.field_y >= var11Lifetime4 &&
             var12Lifetime4 <= this.field_bb.field_t) {
             lq.a(this.field_bb, (byte) -94);
-            bi.c();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_bb = new Sprite(var11Lifetime4, var12Lifetime4);
             lq.a(this.field_bb, (byte) -94);
@@ -170,7 +170,7 @@ final class qe extends pn {
               } else {
                 if (var12Lifetime1 <= this.field_bb.field_t) {
                   lq.a(this.field_bb, (byte) -94);
-                  bi.c();
+                  SoftwareRasterizer.clearRaster();
                 } else {
                   this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
                   lq.a(this.field_bb, (byte) -94);
@@ -202,7 +202,7 @@ final class qe extends pn {
             this.field_bb.field_y >= var11Lifetime1Lifetime1 &&
             var12Lifetime1Lifetime1 <= this.field_bb.field_t) {
             lq.a(this.field_bb, (byte) -94);
-            bi.c();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_bb = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             lq.a(this.field_bb, (byte) -94);
@@ -242,7 +242,7 @@ final class qe extends pn {
                 lq.a(this.field_bb, (byte) -94);
               } else {
                 lq.a(this.field_bb, (byte) -94);
-                bi.c();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -271,7 +271,7 @@ final class qe extends pn {
           this.field_bb.field_y >= var11Lifetime3 &&
           var12Lifetime3 <= this.field_bb.field_t) {
           lq.a(this.field_bb, (byte) -94);
-          bi.c();
+          SoftwareRasterizer.clearRaster();
         } else {
           this.field_bb = new Sprite(var11Lifetime3, var12Lifetime3);
           lq.a(this.field_bb, (byte) -94);

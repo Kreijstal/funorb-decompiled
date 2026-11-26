@@ -18,7 +18,7 @@ final class tg {
             qe.field_g.b(param2 ^ 3223, td.field_b);
           }
           td.field_b.a(8405024, param3, param0, param1);
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           d.a((byte) -75, true);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

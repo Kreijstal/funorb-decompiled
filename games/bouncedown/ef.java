@@ -48,7 +48,7 @@ abstract class ef {
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
     final void c(int param0) {
-        na.a(this.field_g, this.field_h, this.field_b);
+        SoftwareRasterizer.setRasterBuffer(this.field_g, this.field_h, this.field_b);
         if (param0 != 64) {
           ef.b(-45);
         }

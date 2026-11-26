@@ -41,7 +41,7 @@ abstract class im extends bb {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = Torquing.field_u;
-        SoftwareRasterizer.a(param1 + 6, 35 + param0, this.width - 12, this.height - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param1 + 6, 35 + param0, this.width - 12, this.height - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;

@@ -130,22 +130,22 @@ final class dd {
         if (param6 < param7) {
           if (param7 >= param5) {
             if (param6 < param5) {
-              mg.a(param7, param3, param2, param4, param6, ti.field_a, -445834032, param1, param5);
+              mg.a(param7, param3, param2, param4, param6, SoftwareRasterizer.field_a, -445834032, param1, param5);
             } else {
-              mg.a(param7, param3, param2, param1, param5, ti.field_a, -445834032, param4, param6);
+              mg.a(param7, param3, param2, param1, param5, SoftwareRasterizer.field_a, -445834032, param4, param6);
             }
           } else {
-            mg.a(param5, param1, param2, param4, param6, ti.field_a, -445834032, param3, param7);
+            mg.a(param5, param1, param2, param4, param6, SoftwareRasterizer.field_a, -445834032, param3, param7);
           }
         } else {
           if (param5 <= param6) {
             if (param5 <= param7) {
-              mg.a(param6, param4, param2, param1, param5, ti.field_a, param0 - 445802484, param3, param7);
+              mg.a(param6, param4, param2, param1, param5, SoftwareRasterizer.field_a, param0 - 445802484, param3, param7);
             } else {
-              mg.a(param6, param4, param2, param3, param7, ti.field_a, -445834032, param1, param5);
+              mg.a(param6, param4, param2, param3, param7, SoftwareRasterizer.field_a, -445834032, param1, param5);
             }
           } else {
-            mg.a(param5, param1, param2, param3, param7, ti.field_a, -445834032, param4, param6);
+            mg.a(param5, param1, param2, param3, param7, SoftwareRasterizer.field_a, -445834032, param4, param6);
           }
         }
         if (param0 != -31548) {

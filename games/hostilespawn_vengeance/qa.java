@@ -204,11 +204,11 @@ final class qa {
                 var22 <= 0 &&
                 var23 <= 0 &&
                 var24 <= 0) {
-                si.a(var8, var9, 24, 24, 0, 255);
+                SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 255);
               } else if (var22 == var21 &&
                 var21 == var23 &&
                 var24 == var21) {
-                si.a(var8, var9, 24, 24, 0, 256 - var21);
+                SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, 256 - var21);
               } else {
                 eh.a(var8, var9, var21, var22, var23, var24);
               }
@@ -294,14 +294,14 @@ final class qa {
                   if (var21 == var22 &&
                     var23 == var21 &&
                     var24 == var21) {
-                    si.a(var8, var9, 24, 24, 0, var21);
+                    SoftwareRasterizer.fillRectangleAlpha(var8, var9, 24, 24, 0, var21);
                   } else {
                     for (var28 = 0; var28 < 24; var28 += 6) {
                       var26 = (24 - var28) * var23 + var28 * var24 >> 4;
                       var25Lifetime1Lifetime8 = var21 * (24 - var28) + var22 * var28 >> 4;
                       for (var29 = 0; 24 > var29; var29 += 6) {
                         var20Lifetime1 = (24 - var29) * var25Lifetime1Lifetime8 + var26 * var29 >> 4;
-                        si.a(var8 + var28, var29 + var9, 6, 6, 0, var20Lifetime1);
+                        SoftwareRasterizer.fillRectangleAlpha(var8 + var28, var29 + var9, 6, 6, 0, var20Lifetime1);
                       }
                     }
                   }

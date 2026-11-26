@@ -123,7 +123,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
               integerLocal14 <= this.rgbSpriteState0039.integerState0258 &&
               integerLocal15 <= this.rgbSpriteState0039.integerState0255) {
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
-              SoftwareRaster.performAction0648();
+              SoftwareRaster.clearRaster();
             } else {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal14, integerLocal15);
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
@@ -164,7 +164,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
                 ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
               } else {
                 ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
-                SoftwareRaster.performAction0648();
+                SoftwareRaster.clearRaster();
               }
             }
           }
@@ -211,7 +211,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
               integerLocal40 <= this.rgbSpriteState0039.integerState0258 &&
               integerLocal43 <= this.rgbSpriteState0039.integerState0255) {
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
-              SoftwareRaster.performAction0648();
+              SoftwareRaster.clearRaster();
             } else {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal40, integerLocal43);
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
@@ -252,7 +252,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
                 ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
               } else {
                 ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
-                SoftwareRaster.performAction0648();
+                SoftwareRaster.clearRaster();
               }
             }
           }
@@ -296,7 +296,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
             } else {
               if (integerLocal44 <= this.rgbSpriteState0039.integerState0255) {
                 ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
-                SoftwareRaster.performAction0648();
+                SoftwareRaster.clearRaster();
               } else {
                 this.rgbSpriteState0039 = new RgbSprite(integerLocal41, integerLocal44);
                 ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
@@ -339,7 +339,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
           } else {
             if (integerLocal45 <= this.rgbSpriteState0039.integerState0255) {
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
-              SoftwareRaster.performAction0648();
+              SoftwareRaster.clearRaster();
             } else {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal42, integerLocal45);
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);

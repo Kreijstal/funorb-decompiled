@@ -105,40 +105,40 @@ final class bp {
           if (param3 != 99) {
             return;
           }
-          var4_int = param2 + param0 * gf.field_i;
+          var4_int = param2 + param0 * SoftwareRasterizer.field_i;
           var5 = 0;
           var6 = param1.field_v;
           var7 = param1.field_y;
-          var8 = gf.field_i - var7;
-          if (gf.field_f > param0) {
-            var10 = -param0 + gf.field_f;
+          var8 = SoftwareRasterizer.field_i - var7;
+          if (SoftwareRasterizer.field_f > param0) {
+            var10 = -param0 + SoftwareRasterizer.field_f;
             var5 = var5 + var7 * var10;
-            param0 = gf.field_f;
+            param0 = SoftwareRasterizer.field_f;
             var6 = var6 - var10;
-            var4_int = var4_int + var10 * gf.field_i;
+            var4_int = var4_int + var10 * SoftwareRasterizer.field_i;
           }
           var9 = 0;
-          if (var6 + param0 > gf.field_e) {
-            var6 = var6 - (-gf.field_e + param0 + var6);
+          if (var6 + param0 > SoftwareRasterizer.field_e) {
+            var6 = var6 - (-SoftwareRasterizer.field_e + param0 + var6);
           }
-          if (gf.field_j > param2) {
-            var10Lifetime1 = gf.field_j - param2;
+          if (SoftwareRasterizer.field_j > param2) {
+            var10Lifetime1 = SoftwareRasterizer.field_j - param2;
             var7 = var7 - var10Lifetime1;
-            param2 = gf.field_j;
+            param2 = SoftwareRasterizer.field_j;
             var9 = var9 + var10Lifetime1;
             var8 = var8 + var10Lifetime1;
             var5 = var5 + var10Lifetime1;
             var4_int = var4_int + var10Lifetime1;
           }
-          if (gf.field_h < param2 + var7) {
-            var10Lifetime2 = param2 + (var7 - gf.field_h);
+          if (SoftwareRasterizer.field_h < param2 + var7) {
+            var10Lifetime2 = param2 + (var7 - SoftwareRasterizer.field_h);
             var8 = var8 + var10Lifetime2;
             var7 = var7 - var10Lifetime2;
             var9 = var9 + var10Lifetime2;
           }
           if (var7 > 0 &&
             var6 > 0) {
-            SecondaryNodeDequeIterator.a(var4_int, 0, (byte) 104, var6, var9, param1.field_B, var5, var7, gf.field_b, var8);
+            SecondaryNodeDequeIterator.a(var4_int, 0, (byte) 104, var6, var9, param1.field_B, var5, var7, SoftwareRasterizer.field_b, var8);
             return;
           }
           return;

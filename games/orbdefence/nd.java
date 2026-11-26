@@ -54,7 +54,7 @@ final class nd {
                 em.a(0, param1);
               }
             } else {
-              ul.d();
+              SoftwareRasterizer.clearRaster();
               cd.a(320, false, 240);
               kg.a(0, (byte) -83, 0, param1);
             }

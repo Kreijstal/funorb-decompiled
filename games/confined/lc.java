@@ -563,7 +563,7 @@ final class lc {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         mk.b(128);
-        fn.f(param0, param3, param1, param2);
+        SoftwareRasterizer.intersectClip(param0, param3, param1, param2);
         if (param4 != 14907) {
           CharSequence var6 = (CharSequence) null;
           lc.a((CharSequence) null, -78);

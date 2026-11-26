@@ -63,9 +63,9 @@ final class dj extends pj implements ke {
         if (param0 < var5) {
           var5 = param0;
         }
-        wj.f(-var5 + 311, param4, 18 + 2 * var5, param1, 13875857, 15987691);
-        wj.e(-var5 + 311, param4, 2 * (var5 + 9), 0, 25);
-        wj.e(-var5 + 311, param4 + param1, var5 * 2 + 18, 0, 25);
+        SoftwareRasterizer.fillRectangleVerticalGradient(-var5 + 311, param4, 18 + 2 * var5, param1, 13875857, 15987691);
+        SoftwareRasterizer.drawHorizontalLineAlpha(-var5 + 311, param4, 2 * (var5 + 9), 0, 25);
+        SoftwareRasterizer.drawHorizontalLineAlpha(-var5 + 311, param4 + param1, var5 * 2 + 18, 0, 25);
         ek.field_m.a(0, -10 + param4, -var5 + 253, ek.field_m.field_c);
         ek.field_m.a(388 + var5, param4 - 10, 253, ek.field_m.field_c);
         ek.field_m.a(0, -70 + (param1 + param4), 253 - var5, ek.field_m.field_c);

@@ -58,7 +58,7 @@ final class qg implements ad {
         int var12Lifetime1;
         try {
           var14 = !(param2 instanceof s) ? null : (s) (param2);
-          SoftwareRasterizer.e(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_m);
+          SoftwareRasterizer.fillRectangle(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_m);
           if (var14 != null) {
           }
           var7 = param1 - (-param2.field_u - var14.field_M);

@@ -36,7 +36,7 @@ abstract class kh {
         if (param0 != 200) {
           return;
         }
-        vj.a(this.field_h, this.field_b, this.field_d);
+        SoftwareRasterizer.setRasterBuffer(this.field_h, this.field_b, this.field_d);
     }
 
     static {

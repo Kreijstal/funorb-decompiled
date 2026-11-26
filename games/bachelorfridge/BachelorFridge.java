@@ -356,7 +356,7 @@ public final class BachelorFridge extends NetworkGameClient {
               } else {
                 var4 = var5 / 2 - 32;
               }
-              SoftwareRasterizer.a(4, 8 + var4, LinkTextWidget.field_D.a(EventEffect.field_g[var3.field_h]) + 56, LinkTextWidget.field_D.field_B + LinkTextWidget.field_D.field_u, 5, 0, 128);
+              SoftwareRasterizer.fillRoundedRectangleAlpha(4, 8 + var4, LinkTextWidget.field_D.a(EventEffect.field_g[var3.field_h]) + 56, LinkTextWidget.field_D.field_B + LinkTextWidget.field_D.field_u, 5, 0, 128);
               og.field_a[var3.field_h].drawQuarterSize(8, var4);
               LinkTextWidget.field_D.drawText(EventEffect.field_g[var3.field_h], 48, -2 + (8 + var4) + LinkTextWidget.field_D.field_u, 12320512, -1);
             }

@@ -139,7 +139,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         if (integerArgument1 > -127) {
           return;
         }
-        SoftwareRaster.performAction0660(6 + integerArgument3, 35 + integerArgument2, -12 + this.integerState0107, this.integerState0108 - 40, 2105376, 0);
+        SoftwareRaster.fillRectangleVerticalGradient(6 + integerArgument3, 35 + integerArgument2, -12 + this.integerState0107, this.integerState0108 - 40, 2105376, 0);
         integerLocal2 = 211;
         integerLocal1 = 35;
         integerLocal3 = 194;
@@ -188,7 +188,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
               integerLocal8 = integerLocal26;
             }
             integerLocal6 = integerLocal6 | (integerLocal6 << 16 | integerLocal6 << 8);
-            SoftwareRaster.performAction0639(integerLocal7 + integerArgument3, integerLocal5, -integerLocal7 + integerLocal8, integerLocal6);
+            SoftwareRaster.drawHorizontalLine(integerLocal7 + integerArgument3, integerLocal5, -integerLocal7 + integerLocal8, integerLocal6);
           }
           integerLocal4++;
           integerLocal5++;
@@ -201,8 +201,8 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         while (integerLocal20 < integerLocal14) {
           integerLocal24 = (-integerLocal16 + integerLocal18) * integerLocal20 / integerLocal14 + integerLocal16;
           integerLocal24 = integerLocal24 | (integerLocal24 << 16 | integerLocal24 << 8);
-          SoftwareRaster.performAction0639(integerArgument3, integerLocal22, 6, integerLocal24);
-          SoftwareRaster.performAction0639(integerArgument3 + this.integerState0107 - 6, integerLocal22, 6, integerLocal24);
+          SoftwareRaster.drawHorizontalLine(integerArgument3, integerLocal22, 6, integerLocal24);
+          SoftwareRaster.drawHorizontalLine(integerArgument3 + this.integerState0107 - 6, integerLocal22, 6, integerLocal24);
           integerLocal20++;
           integerLocal22++;
         }
@@ -217,8 +217,8 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
         while (integerLocal21 < integerLocal15) {
           integerLocal25 = integerLocal17 + integerLocal21 * (integerLocal19 - integerLocal17) / integerLocal15;
           integerLocal25 = integerLocal25 | (integerLocal25 << 16 | integerLocal25 << 8);
-          SoftwareRaster.performAction0639(integerArgument3, integerLocal23, 6, integerLocal25);
-          SoftwareRaster.performAction0639(-6 + (this.integerState0107 + integerArgument3), integerLocal23, 6, integerLocal25);
+          SoftwareRaster.drawHorizontalLine(integerArgument3, integerLocal23, 6, integerLocal25);
+          SoftwareRaster.drawHorizontalLine(-6 + (this.integerState0107 + integerArgument3), integerLocal23, 6, integerLocal25);
           integerLocal23++;
           integerLocal21++;
         }

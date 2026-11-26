@@ -163,7 +163,7 @@ final class fm {
           var4_int = -(param1 / 2) + 320;
           var5Lifetime1 = -(param2 / 2) + 240;
           uc.field_E.b(var4_int, var5Lifetime1);
-          gf.b(var4_int, var5Lifetime1, param1, param2, 6637335);
+          SoftwareRasterizer.fillRectangle(var4_int, var5Lifetime1, param1, param2, 6637335);
           qe.b(var4_int, var5Lifetime1, param1, param2, 8421504, 128, 128);
           var6 = be.field_o.field_d / 2;
           var7 = bk.field_e.field_b / 2;
@@ -205,9 +205,9 @@ final class fm {
                 var23 = param0[var19][3];
                 var20 += 2;
                 var23 -= 4;
-                gf.e(var20, var21, var22 + var20, var21 + var23);
+                SoftwareRasterizer.setClip(var20, var21, var22 + var20, var21 + var23);
                 en.a((byte) -1, var20, var22, 4 + var23, var21);
-                gf.b();
+                SoftwareRasterizer.resetClip();
                 rp.a(4, var22, (byte) 108, var20, var23, kc.field_S, var21);
               }
             }

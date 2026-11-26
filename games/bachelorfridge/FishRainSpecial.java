@@ -159,7 +159,7 @@ final class FishRainSpecial extends SpecialOrder {
               WidgetWrapper.field_z.drawText(Integer.toString(var2.field_yb.field_g), 28 + var2.field_kb + ug.field_q.field_kb, qg.field_b.field_rb + (32 + (var2.field_rb + ug.field_q.field_rb)), 65793, -1);
               var2 = (kr) (qg.field_b.children.nextForward(0));
             }
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.resetClip();
           }
           jha.field_g.drawText(hka.field_g, 452, 306, 65793, -1);
           var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, kt.field_k, true)}, vla.field_u);

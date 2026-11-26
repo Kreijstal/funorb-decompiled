@@ -66,15 +66,15 @@ final class qb {
             var7 = param1[1].field_m;
             param1[0].c(param3, param0);
             param1[2].c(param4 + (param3 - var6), param0);
-            ge.b(si.field_u);
-            ge.c(param3 + var5_int, param0, -var6 + param3 + param4, param0 + param1[1].field_n);
+            SoftwareRasterizer.saveClip(si.field_u);
+            SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + param3 + param4, param0 + param1[1].field_n);
             var10 = 29 % ((param2 - 22) / 48);
             var8 = param3 + var5_int;
             var9 = param4 + (param3 - var6);
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
               param1[1].c(param3, param0);
             }
-            ge.a(si.field_u);
+            SoftwareRasterizer.restoreClip(si.field_u);
             return;
           }
           return;

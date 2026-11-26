@@ -12,7 +12,7 @@ abstract class uc {
     static nf field_e;
 
     final void a(byte param0) {
-        gb.a(this.field_g, this.field_h, this.field_f);
+        SoftwareRasterizer.setRasterBuffer(this.field_g, this.field_h, this.field_f);
         if (param0 <= 56) {
           this.a((byte) -122);
         }

@@ -56,7 +56,7 @@ final class gf {
           var2_int = (int)((double)var2_int + (double)var7 * Math.sin((double)pa.field_d * 3.14 / 16384.0) / 3.0);
           var3 = (int)((double)var3 + Math.cos((double)pa.field_d * 3.14 / 16384.0) * (double)var7 / 3.0);
           for (var8 = 0; var8 < 4; var8++) {
-            SoftwareRasterizer.f(var2_int, var3, -(var8 * 8) + 64, 16777215, 16);
+            SoftwareRasterizer.fillCircleAlpha(var2_int, var3, -(var8 * 8) + 64, 16777215, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,7 +172,7 @@ final class gf {
               var9 += 8;
               var7Lifetime1++;
             }
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.resetClip();
             return;
           }
           return;

@@ -22,9 +22,9 @@ final class MixedSupport127 {
 
     final static void performAction1631(boolean booleanArgument1, boolean booleanArgument2, int integerArgument3) {
         if (!booleanArgument1) {
-          SoftwareRaster.performAction0648();
+          SoftwareRaster.clearRaster();
         } else {
-          SoftwareRaster.performAction0641(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 192);
+          SoftwareRaster.fillRectangleAlpha(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284, 0, 192);
         }
         if (integerArgument3 <= 39) {
           return;

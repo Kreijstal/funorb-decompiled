@@ -170,7 +170,7 @@ final class w extends PacketBuffer {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + vj.field_l;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_l;
                   var10 = var10 + var12;
                 }
               }
@@ -251,7 +251,7 @@ final class w extends PacketBuffer {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + vj.field_l;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_l;
               var10 = var10 + var12;
             }
             return;

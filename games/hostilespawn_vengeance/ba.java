@@ -89,13 +89,13 @@ final class ba extends ag {
           var10 = var6 - var5;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
           var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
-          si.a(var7, var6, this.field_y, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_y, var12);
           var9Lifetime1 = param2 & 65280;
           var8Lifetime1 = param2 & 16711935;
-          si.a(var7 - 2 * this.field_y, var6, this.field_y, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_y, var6, this.field_y, var12);
           var12Lifetime1 = 256 > var11 ? (-16711936 & var8Lifetime1 * var11 | var11 * var9Lifetime1 & 16711680) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          si.a(var7 + this.field_y, var6, this.field_y, var12Lifetime1);
-          si.a(var7 - this.field_y, var6, this.field_y, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_y, var6, this.field_y, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_y, var6, this.field_y, var12Lifetime1);
         }
         eh.b(false);
         return var14;
@@ -147,7 +147,7 @@ final class ba extends ag {
             return;
           }
           eh.b(false);
-          if (this.field_D.field_z + param2 >= si.field_b) {
+          if (this.field_D.field_z + param2 >= SoftwareRasterizer.field_b) {
             sb.a(this.field_I, -110);
             param1.e(-this.field_z, 0);
             param1.e(-this.field_z + this.field_y * 2, 0);
@@ -155,7 +155,7 @@ final class ba extends ag {
             eh.b(false);
             this.field_I.e(param2, param0);
           }
-          if (si.field_l >= -this.field_D.field_z + var5_int) {
+          if (SoftwareRasterizer.field_l >= -this.field_D.field_z + var5_int) {
             sb.a(this.field_I, -124);
             for (var7 = this.field_z - this.field_D.field_z + this.field_s; 2 * this.field_y < var7; var7 = var7 - this.field_y * 2) {
             }
@@ -248,7 +248,7 @@ final class ba extends ag {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
             }
-            si.b(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         eh.b(false);

@@ -154,8 +154,8 @@ final class cl extends gb {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        wj.a(var1.field_i, var1.field_u, var1.field_r);
-        wj.f(var1.field_j, var1.field_k, var1.field_o, var1.field_s);
+        SoftwareRasterizer.setRasterBuffer(var1.field_i, var1.field_u, var1.field_r);
+        SoftwareRasterizer.setClip(var1.field_j, var1.field_k, var1.field_o, var1.field_s);
         var1.field_i = null;
         if (param0 > -64) {
           field_n = (he[]) null;

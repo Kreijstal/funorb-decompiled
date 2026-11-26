@@ -21,7 +21,7 @@ final class nb {
     }
 
     final static void b() {
-        nb.a(kh.field_c, kh.field_b, kh.field_g, kh.field_j);
+        nb.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_b, SoftwareRasterizer.field_g, SoftwareRasterizer.field_j);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -32,10 +32,10 @@ final class nb {
         if (field_a.length < field_b) {
           field_a = new int[pb.roundUpPowerOfTwo(field_b, (byte) -99)];
         }
-        int var4 = param1 * kh.field_l + param0;
+        int var4 = param1 * SoftwareRasterizer.field_l + param0;
         for (var5 = 0; var5 < field_b; var5++) {
           field_a[var5] = var4;
-          var4 = var4 + kh.field_l;
+          var4 = var4 + SoftwareRasterizer.field_l;
         }
     }
 

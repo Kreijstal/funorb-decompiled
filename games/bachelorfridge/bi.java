@@ -84,7 +84,7 @@ abstract class bi extends jla {
           if (param6 + var17 > param0) {
             param6 = param6 + (param0 + (-param6 - var17));
           }
-          SoftwareRasterizer.a(param4 + 13, param6, 6 + var16, var17, 10, 65793, 192);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(param4 + 13, param6, 6 + var16, var17, 10, 65793, 192);
           CreatureActor.field_h.drawText(var27, 20 + param4, 16 + param6, 0, -1);
           CreatureActor.field_h.drawParagraph(var11, param4 + 20, param6 + 24, 200, 200, 0, -1, 0, 0, var13);
           var18 = CreatureActor.field_h.measureWrappedHeight(var11, 200, 0);

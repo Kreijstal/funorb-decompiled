@@ -130,13 +130,13 @@ final class pp extends IntrusiveNode {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         Sprite var8 = new Sprite(param3, param6);
-        int[] var9 = bi.field_l;
-        int var10 = bi.field_e;
-        int var11 = bi.field_j;
+        int[] var9 = SoftwareRasterizer.field_l;
+        int var10 = SoftwareRasterizer.field_e;
+        int var11 = SoftwareRasterizer.field_j;
         var8.d();
         int var12 = -9 % ((11 - param1) / 38);
-        bi.a(0, 0, param3, param6, 12, param0, param7);
-        bi.a(var9, var10, var11);
+        SoftwareRasterizer.fillRoundedRectangleVerticalGradient(0, 0, param3, param6, 12, param0, param7);
+        SoftwareRasterizer.setRasterBuffer(var9, var10, var11);
         var8.f(param4, param2);
         var8.d(param4, param2, param5);
     }

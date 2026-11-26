@@ -64,13 +64,13 @@ final class jo implements WidgetListener {
           }
           if (var12 == null) {
           }
-          bi.b(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_e);
+          SoftwareRasterizer.fillRectangle(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_e);
           var7 = param3.width - 2 * var12.field_K;
           var8 = var12.field_K + param3.x + param1;
           var9 = param4 + (param3.y + var12.field_L);
-          bi.a(var8, var9, var7 + var8, var9, this.field_a);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_a);
           for (var10 = var12.a((byte) -104) - 1; var10 >= 0; var10--) {
-            bi.f(var8 + var12.a(var10, (byte) 122) * var7 / var12.c(param2), var9, this.field_j, this.field_k);
+            SoftwareRasterizer.fillCircle(var8 + var12.a(var10, (byte) 122) * var7 / var12.c(param2), var9, this.field_j, this.field_k);
           }
           if (null == this.field_i) {
             return;

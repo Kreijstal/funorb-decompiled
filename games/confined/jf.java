@@ -158,10 +158,10 @@ abstract class jf {
         }
         vm.a(mi.field_a, -8409);
         ti.b();
-        fn.d();
+        SoftwareRasterizer.clearRaster();
         of.a(false);
         if (var5 < 256) {
-          fn.b(0, 0, fn.field_g, fn.field_l, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, -var5 + 256);
           ib.b(false);
           if (tg.field_H < 150) {
             mi.field_a.b(var3, var4);

@@ -131,7 +131,7 @@ final class ea extends se {
                 tl.a((byte) -67, this.field_T);
               } else {
                 tl.a((byte) -67, this.field_T);
-                wb.b();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -181,7 +181,7 @@ final class ea extends se {
                 tl.a((byte) -67, this.field_T);
               } else {
                 tl.a((byte) -67, this.field_T);
-                wb.b();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -222,7 +222,7 @@ final class ea extends se {
             var11Lifetime2 <= this.field_T.field_w) {
             if (var12Lifetime2 <= this.field_T.field_t) {
               tl.a((byte) -67, this.field_T);
-              wb.b();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_T = new km(var11Lifetime2, var12Lifetime2);
               tl.a((byte) -67, this.field_T);
@@ -262,7 +262,7 @@ final class ea extends se {
             } else {
               if (var12Lifetime3 <= this.field_T.field_t) {
                 tl.a((byte) -67, this.field_T);
-                wb.b();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_T = new km(var11Lifetime3, var12Lifetime3);
                 tl.a((byte) -67, this.field_T);
@@ -304,7 +304,7 @@ final class ea extends se {
               tl.a((byte) -67, this.field_T);
             } else {
               tl.a((byte) -67, this.field_T);
-              wb.b();
+              SoftwareRasterizer.clearRaster();
             }
           }
         }

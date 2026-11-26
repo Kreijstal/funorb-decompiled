@@ -163,7 +163,7 @@ final class vg extends jj {
                   mc.a(param0 ^ -8495, this.field_I);
                 } else {
                   mc.a(-8497, this.field_I);
-                  ge.d();
+                  SoftwareRasterizer.clearRaster();
                 }
               }
             }
@@ -187,7 +187,7 @@ final class vg extends jj {
               this.field_I.field_k >= var11Lifetime2 &&
               this.field_I.field_j >= var12Lifetime2) {
               mc.a(-8497, this.field_I);
-              ge.d();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_I = new Sprite(var11Lifetime2, var12Lifetime2);
               mc.a(param0 ^ -8495, this.field_I);
@@ -227,7 +227,7 @@ final class vg extends jj {
                 mc.a(param0 ^ -8495, this.field_I);
               } else {
                 mc.a(-8497, this.field_I);
-                ge.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -254,7 +254,7 @@ final class vg extends jj {
             this.field_I.field_k >= var11Lifetime1 &&
             this.field_I.field_j >= var12Lifetime1) {
             mc.a(-8497, this.field_I);
-            ge.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_I = new Sprite(var11Lifetime1, var12Lifetime1);
             mc.a(param0 ^ -8495, this.field_I);
@@ -280,7 +280,7 @@ final class vg extends jj {
             this.field_I.field_k >= var11Lifetime1 &&
             this.field_I.field_j >= var12Lifetime1) {
             mc.a(-8497, this.field_I);
-            ge.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_I = new Sprite(var11Lifetime1, var12Lifetime1);
             mc.a(param0 ^ -8495, this.field_I);

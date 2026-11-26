@@ -140,7 +140,7 @@ final class qh {
                 this.field_w[var6][var7] == 0 ||
                 this.field_w[var6][var7] == 3 &&
                 this.field_n[var6][var7]) {
-                si.c(var2, var3, 16, 16, 0);
+                SoftwareRasterizer.fillRectangle(var2, var3, 16, 16, 0);
               }
             }
           }
@@ -224,10 +224,10 @@ final class qh {
               if (this.field_w[var6Lifetime2][var7Lifetime2] == 0 ||
                 this.field_w[var6Lifetime2][var7Lifetime2] == 3 &&
                 this.field_n[var6Lifetime2][var7Lifetime2]) {
-                si.c(var2Lifetime2, var3Lifetime2, 16, 16, 0);
+                SoftwareRasterizer.fillRectangle(var2Lifetime2, var3Lifetime2, 16, 16, 0);
               }
               if (this.field_n[var6Lifetime2][var7Lifetime2]) {
-                si.a(var2Lifetime2, var3Lifetime2, 16, 16, 16711680, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var2Lifetime2, var3Lifetime2, 16, 16, 16711680, 128);
               }
             }
           }
@@ -238,16 +238,16 @@ final class qh {
               var3Lifetime3 = 16 * var7Lifetime3 - this.field_f;
               var2Lifetime3 = 16 * var6Lifetime3 - this.field_t;
               if (this.field_w[var6Lifetime3][var7Lifetime3] == 0) {
-                si.a(var2Lifetime3, var3Lifetime3, 16, 16, 16711680, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var2Lifetime3, var3Lifetime3, 16, 16, 16711680, 128);
               }
               if (this.field_w[var6Lifetime3][var7Lifetime3] == 1) {
-                si.a(var2Lifetime3, var3Lifetime3, 16, 16, 16776960, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var2Lifetime3, var3Lifetime3, 16, 16, 16776960, 128);
               }
               if (this.field_w[var6Lifetime3][var7Lifetime3] == 2) {
-                si.a(var2Lifetime3, var3Lifetime3, 16, 16, 65280, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var2Lifetime3, var3Lifetime3, 16, 16, 65280, 128);
               }
               if (this.field_w[var6Lifetime3][var7Lifetime3] == 3) {
-                si.a(var2Lifetime3, var3Lifetime3, 16, 16, 255, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var2Lifetime3, var3Lifetime3, 16, 16, 255, 128);
               }
             }
           }
@@ -258,24 +258,24 @@ final class qh {
               var2Lifetime4 = -this.field_t + 16 * var6Lifetime4;
               var3Lifetime4 = 16 * var7Lifetime4 - this.field_f;
               if (this.field_w[var6Lifetime4][var7Lifetime4] == 0) {
-                si.c(var2Lifetime4, var3Lifetime4, 16, 16, 0);
+                SoftwareRasterizer.fillRectangle(var2Lifetime4, var3Lifetime4, 16, 16, 0);
               }
               if (this.field_w[var6Lifetime4][var7Lifetime4] == 0 ||
                 this.field_w[var6Lifetime4][var7Lifetime4] == 3 &&
                 this.field_n[var6Lifetime4][var7Lifetime4]) {
-                si.c(var2Lifetime4, var3Lifetime4, 16, 16, 0);
+                SoftwareRasterizer.fillRectangle(var2Lifetime4, var3Lifetime4, 16, 16, 0);
               }
               if (this.field_d[var6Lifetime4][var7Lifetime4]) {
-                si.a(var2Lifetime4, var3Lifetime4, 16, 16, 65535, 128);
+                SoftwareRasterizer.fillRectangleAlpha(var2Lifetime4, var3Lifetime4, 16, 16, 65535, 128);
               }
             }
           }
         }
         var3Lifetime5 = this.field_p * 16 - this.field_f;
         var2Lifetime5 = -this.field_t + this.field_j * 16;
-        si.a(var2Lifetime5, var3Lifetime5, 16 * var4, var5 * 16, 16777215);
+        SoftwareRasterizer.drawRectangleOutline(var2Lifetime5, var3Lifetime5, 16 * var4, var5 * 16, 16777215);
         if (this.field_r) {
-          si.a(0, 0, 640, 480, 0, 128);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
           for (var6Lifetime5 = 0; var6Lifetime5 < 8; var6Lifetime5++) {
             for (var7Lifetime5 = 0; var7Lifetime5 < 20; var7Lifetime5++) {
               var2Lifetime6 = 16 * var6Lifetime5;
@@ -291,7 +291,7 @@ final class qh {
           }
           var2Lifetime6Lifetime1 = 16 * this.field_j;
           var3Lifetime6Lifetime1 = this.field_p * 16;
-          si.a(var2Lifetime6Lifetime1, var3Lifetime6Lifetime1, var4 * 16, var5 * 16, 16777215);
+          SoftwareRasterizer.drawRectangleOutline(var2Lifetime6Lifetime1, var3Lifetime6Lifetime1, var4 * 16, var5 * 16, 16777215);
         }
     }
 

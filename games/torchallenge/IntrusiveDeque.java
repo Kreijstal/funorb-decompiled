@@ -138,7 +138,7 @@ final class IntrusiveDeque {
             var28 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
-            SoftwareRasterizer.a(ck.field_c);
+            SoftwareRasterizer.saveClip(ck.field_c);
             var11 = new Sprite(4 + le.field_e.storedWidth, le.field_e.storedHeight + 4);
             var11.d();
             le.field_e.drawTinted(2, 2, vh.field_h);
@@ -167,7 +167,7 @@ final class IntrusiveDeque {
             dg.field_R.d();
             ii.a(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 4, 0, 0);
             SoftwareRasterizer.setTarget(var28, var2, var3);
-            SoftwareRasterizer.b(ck.field_c);
+            SoftwareRasterizer.restoreClip(ck.field_c);
             ii.field_a = 390 + (-ub.field_e.storedHeight + NodeHashTableIterator.field_b.storedHeight) / 2;
             wc.field_b = (NodeHashTableIterator.field_b.storedWidth - ub.field_e.storedWidth) / 2 + 231;
             IterableNodeHashTable.field_c = null;
@@ -182,7 +182,7 @@ final class IntrusiveDeque {
             var29 = SoftwareRasterizer.pixels;
             var2Lifetime1 = SoftwareRasterizer.width;
             var3Lifetime1 = SoftwareRasterizer.height;
-            SoftwareRasterizer.a(ck.field_c);
+            SoftwareRasterizer.saveClip(ck.field_c);
             var14 = ni.a(new String[]{nk.field_g[di.field_A]}, 0, ClientException.field_f);
             var5 = tk.field_R.b(var14, IterableNodeHashTable.field_f);
             var6Lifetime1 = tk.field_R.b(var14, IterableNodeHashTable.field_f, tk.field_R.field_K + tk.field_R.field_x);
@@ -241,14 +241,14 @@ final class IntrusiveDeque {
             vk.field_d = null;
             cf.field_c.h();
             SoftwareRasterizer.setTarget(var29, var2Lifetime1, var3Lifetime1);
-            SoftwareRasterizer.b(ck.field_c);
+            SoftwareRasterizer.restoreClip(ck.field_c);
           }
           if (null != ia.field_l &&
             ek.field_G != null) {
             var30 = SoftwareRasterizer.pixels;
             var2Lifetime2 = SoftwareRasterizer.width;
             var3Lifetime2 = SoftwareRasterizer.height;
-            SoftwareRasterizer.a(ck.field_c);
+            SoftwareRasterizer.saveClip(ck.field_c);
             var16 = new Sprite(412, 43);
             var17 = ni.a(new String[]{ia.field_l}, 0, DualLinkNode.field_n);
             ia.field_l = null;
@@ -258,14 +258,14 @@ final class IntrusiveDeque {
             ResourceArchive.field_f.d();
             var16.drawTransparent(199 - ResourceArchive.field_f.offsetX, 83 - ResourceArchive.field_f.offsetY);
             SoftwareRasterizer.setTarget(var30, var2Lifetime2, var3Lifetime2);
-            SoftwareRasterizer.b(ck.field_c);
+            SoftwareRasterizer.restoreClip(ck.field_c);
           }
           if (ProxySocketConnector.field_m != null &&
             null != ek.field_G) {
             var31 = SoftwareRasterizer.pixels;
             var2Lifetime3 = SoftwareRasterizer.width;
             var3Lifetime3 = SoftwareRasterizer.height;
-            SoftwareRasterizer.a(ck.field_c);
+            SoftwareRasterizer.saveClip(ck.field_c);
             var4 = ek.field_G.b(ImageProducerRasterBuffer.field_r, 640) + 6;
             var5Lifetime1 = var4 + (ProxySocketConnector.field_m.fullWidth + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -276,12 +276,12 @@ final class IntrusiveDeque {
             var8Lifetime1 = -((ProxySocketConnector.field_m.fullHeight - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-ResourceArchive.field_f.offsetY + 155);
             ProxySocketConnector.field_m.drawTransparent(var6Lifetime2 - ResourceArchive.field_f.offsetX, var8Lifetime1);
             SoftwareRasterizer.setTarget(var31, var2Lifetime3, var3Lifetime3);
-            SoftwareRasterizer.b(ck.field_c);
+            SoftwareRasterizer.restoreClip(ck.field_c);
             ProxySocketConnector.field_m = null;
           }
-          SoftwareRasterizer.a(ck.field_c);
-          SoftwareRasterizer.a(16, 16, 608, 112, 15, gf.field_u, ea.field_c);
-          SoftwareRasterizer.a(231, 144, 393, 232, 15, gf.field_u, ea.field_c);
+          SoftwareRasterizer.saveClip(ck.field_c);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, gf.field_u, ea.field_c);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, gf.field_u, ea.field_c);
           if (IntrusiveNode.field_b != null) {
             IntrusiveNode.field_b.drawTransparent(0, 0);
           }

@@ -509,10 +509,10 @@ abstract class BitmapFont extends DualNode {
               }
               integerArgument2 = integerArgument2 + this.integerArrayState0160[integerLocal7];
               if (integerState0525 != -1) {
-                SoftwareRaster.performAction0639(integerLocal13, integerArgument3 + (int)((double)this.integerState0516 * 0.7), integerArgument2 - integerLocal13, integerState0525);
+                SoftwareRaster.drawHorizontalLine(integerLocal13, integerArgument3 + (int)((double)this.integerState0516 * 0.7), integerArgument2 - integerLocal13, integerState0525);
               }
               if (integerState0520 != -1) {
-                SoftwareRaster.performAction0639(integerLocal13, integerArgument3 + this.integerState0516 + 1, integerArgument2 - integerLocal13, integerState0520);
+                SoftwareRaster.drawHorizontalLine(integerLocal13, integerArgument3 + this.integerState0516 + 1, integerArgument2 - integerLocal13, integerState0520);
               }
               integerLocal5 = integerLocal7;
             }

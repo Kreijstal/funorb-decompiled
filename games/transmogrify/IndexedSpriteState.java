@@ -56,14 +56,14 @@ abstract class IndexedSpriteState {
             var7 = param3[1].field_r;
             param3[0].c(param2, param0);
             param3[2].c(-var6 + (param2 + param4), param0);
-            sb.a(q.field_i);
-            sb.g(var5_int + param2, param0, param2 + param4 - var6, param3[1].field_s + param0);
+            SoftwareRasterizer.saveClip(q.field_i);
+            SoftwareRasterizer.intersectClip(var5_int + param2, param0, param2 + param4 - var6, param3[1].field_s + param0);
             var8 = param2 + var5_int;
             var9 = -var6 + param2 + param4;
             for (param2 = var8; param2 < var9; param2 = param2 + var7) {
               param3[1].c(param2, param0);
             }
-            sb.b(q.field_i);
+            SoftwareRasterizer.restoreClip(q.field_i);
             return;
           }
           return;

@@ -126,19 +126,19 @@ final class h {
         int[] var30 = null;
         var19 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (param2 < ge.field_a) {
-            param6 = param6 - (-param2 + ge.field_a);
-            param2 = ge.field_a;
+          if (param2 < SoftwareRasterizer.field_a) {
+            param6 = param6 - (-param2 + SoftwareRasterizer.field_a);
+            param2 = SoftwareRasterizer.field_a;
           }
-          if (param2 + param6 > ge.field_j) {
-            param6 = ge.field_j - param2;
+          if (param2 + param6 > SoftwareRasterizer.field_j) {
+            param6 = SoftwareRasterizer.field_j - param2;
           }
-          if (ge.field_f > param5) {
-            param4 = param4 - (-param5 + ge.field_f);
-            param5 = ge.field_f;
+          if (SoftwareRasterizer.field_f > param5) {
+            param4 = param4 - (-param5 + SoftwareRasterizer.field_f);
+            param5 = SoftwareRasterizer.field_f;
           }
-          if (ge.field_k < param4 + param5) {
-            param4 = ge.field_k - param5;
+          if (SoftwareRasterizer.field_k < param4 + param5) {
+            param4 = SoftwareRasterizer.field_k - param5;
           }
           if (param6 > 0 &&
             param4 > 0) {
@@ -146,13 +146,13 @@ final class h {
               h.countSetBits(31, (byte) 107);
             }
             var21 = param7.d();
-            var30 = ge.field_i;
-            var10 = ge.field_h;
-            var11 = ge.field_g;
+            var30 = SoftwareRasterizer.field_i;
+            var10 = SoftwareRasterizer.field_h;
+            var11 = SoftwareRasterizer.field_g;
             var29 = new int[4];
-            ge.b(var29);
+            SoftwareRasterizer.saveClip(var29);
             param7.e();
-            ge.c(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param5 * param7.field_k + param2;
             var14 = -param6 + param7.field_k;
             var25 = var21.field_s;
@@ -169,15 +169,15 @@ final class h {
                   var15[var13 + 1] == 0 ||
                   !(param7.field_j - 1 <= var16) &&
                   var15[var13 + param7.field_k] == 0)) {
-                  ge.f(var17, var16, param0, param1);
+                  SoftwareRasterizer.fillCircle(var17, var16, param0, param1);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var21.c(-param7.field_r, -param7.field_q);
-            ge.a(var30, var10, var11);
-            ge.a(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

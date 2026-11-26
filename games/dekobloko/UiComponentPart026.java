@@ -352,7 +352,7 @@ final class UiComponentPart026 extends UiComponentPart030 {
           return;
         }
         if (null != this.stringState0458) {
-          SoftwareRaster.performAction0639(integerArgument3 + 20, integerArgument2 + 113, 260, 8421504);
+          SoftwareRaster.drawHorizontalLine(integerArgument3 + 20, integerArgument2 + 113, 260, 8421504);
           GameDomainSupport002.bitmapFontState0012.computeInteger1071(this.stringState0458, integerArgument3 + 20, 128 + integerArgument2, 260, 100, 16777215, -1, 1, 0, GameDomainSupport002.bitmapFontState0012.integerState0518);
         }
     }

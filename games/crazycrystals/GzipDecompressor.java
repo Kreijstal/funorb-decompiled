@@ -75,7 +75,7 @@ final class GzipDecompressor {
         try {
           if (param1 > 96) {
             gi.field_n.a();
-            kh.a();
+            SoftwareRasterizer.clearRaster();
             go.field_l.a(param2, 0, 20, 16760896, -1);
             dk.field_o.a(param0 ^ -6963);
             gi.field_n.c(538, param3 - 20, 24576 / param1, 25);

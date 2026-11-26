@@ -211,7 +211,7 @@ class cn implements nn, mi {
           if (param0 <= 125) {
             cn.clearStaticReferences(122);
           }
-          ArchiveIndex.a(si.field_e / 2, si.field_k / 2, -1);
+          ArchiveIndex.a(SoftwareRasterizer.field_e / 2, SoftwareRasterizer.field_k / 2, -1);
           ub.a(param1.field_F + param1.field_N, param3.field_F + param3.field_N, param3.field_N, param1.field_N, (byte) -127);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "cn.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

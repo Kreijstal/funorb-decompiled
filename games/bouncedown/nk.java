@@ -381,7 +381,7 @@ final class nk {
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
         ve.a(param2, param0, ig.field_d, (byte) -87, param4, param1);
-        na.a(4 + param1, param0 + param3, -8 + param4, param2 - 8, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(4 + param1, param0 + param3, -8 + param4, param2 - 8, 0, 192);
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8, int param9) {
@@ -531,7 +531,7 @@ final class nk {
           this.field_l = this.field_l + 10;
           var7 = -this.field_l - 40 + this.field_g;
           this.a(this.field_l, 80, var7, 4, 480);
-          na.e(84, this.field_l + 4, 556, -4 + var7 + this.field_l);
+          SoftwareRasterizer.setClip(84, this.field_l + 4, 556, -4 + var7 + this.field_l);
           var8 = AppletShell.field_b;
           this.field_l = this.field_l - var8;
           var9 = 6;
@@ -588,7 +588,7 @@ final class nk {
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 ^ -16741889, 0, 12, 16777215, Bounce.field_A[16], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[17], 1, 80, this.field_l);
-          na.d();
+          SoftwareRasterizer.resetClip();
           this.field_l = var6_int;
         }
         var4Lifetime1 = 320;
@@ -616,7 +616,7 @@ final class nk {
           var8Lifetime1 = 295;
           this.a(var7Lifetime1, 80, var8Lifetime1, 4, 480);
           AccountRequestState.field_b.a(320 - AccountRequestState.field_b.field_t / 2, this.field_g - 120);
-          na.e(84, var7Lifetime1 + 4, 556, -4 + (var7Lifetime1 + var8Lifetime1));
+          SoftwareRasterizer.setClip(84, var7Lifetime1 + 4, 556, -4 + (var7Lifetime1 + var8Lifetime1));
         }
         if (this.field_i == 1) {
           stackIn_68_0 = l.field_e;
@@ -771,7 +771,7 @@ final class nk {
                       od.field_f.b(var25[2], var4Lifetime1 + 75, this.field_g - 4, var5Lifetime1, -1);
                     }
                     if ((this.field_i == -10)) {
-                      na.d();
+                      SoftwareRasterizer.resetClip();
                     }
                   }
                 }
@@ -877,9 +877,9 @@ final class nk {
                 }
                 if (ua.field_a == var11) {
                   var13Lifetime2 = 2;
-                  na.b(var7Lifetime3Lifetime1 + 16, 16 + var8Lifetime4, 20, 0);
-                  na.b(16 + var7Lifetime3Lifetime1, 16 + var8Lifetime4, 18, 16741888);
-                  na.b(16 + var7Lifetime3Lifetime1, var8Lifetime4 + 16, 16, 0);
+                  SoftwareRasterizer.fillCircle(var7Lifetime3Lifetime1 + 16, 16 + var8Lifetime4, 20, 0);
+                  SoftwareRasterizer.fillCircle(16 + var7Lifetime3Lifetime1, 16 + var8Lifetime4, 18, 16741888);
+                  SoftwareRasterizer.fillCircle(16 + var7Lifetime3Lifetime1, var8Lifetime4 + 16, 16, 0);
                 }
                 if ((var9Lifetime3 & 1 << var11) == 0) {
                   if (kb.field_a > 0) {

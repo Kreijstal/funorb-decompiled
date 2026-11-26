@@ -107,18 +107,18 @@ final class MixedSupport105 implements CallbackContract004 {
             stackUiComponentLocal2 = null;
           }
           uiComponentPart002Local12 = (UiComponentPart002) (stackUiComponentLocal2);
-          SoftwareRaster.performAction0640(uiComponentArgument5.integerState0110 + integerArgument2, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0660);
+          SoftwareRaster.fillRectangle(uiComponentArgument5.integerState0110 + integerArgument2, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0660);
           if (uiComponentPart002Local12 != null) {
           }
           integerLocal8 = -(2 * uiComponentPart002Local12.integerState0049) + uiComponentArgument5.integerState0107;
           integerLocal9 = uiComponentPart002Local12.integerState0049 + uiComponentArgument5.integerState0110 + integerArgument2;
           integerLocal10 = uiComponentArgument5.integerState0104 + integerArgument3 + uiComponentPart002Local12.integerState0048;
-          SoftwareRaster.performAction0650(integerLocal9, integerLocal10, integerLocal8 + integerLocal9, integerLocal10, this.integerState0659);
+          SoftwareRaster.drawLine(integerLocal9, integerLocal10, integerLocal8 + integerLocal9, integerLocal10, this.integerState0659);
           if (byteArgument4 > -60) {
             return;
           }
           for (integerLocal1 = -1 + uiComponentPart002Local12.computeInteger0081(true); integerLocal1 >= 0; integerLocal1--) {
-            SoftwareRaster.performAction0661(uiComponentPart002Local12.computeInteger0080(-1, integerLocal1) * integerLocal8 / uiComponentPart002Local12.computeInteger0083(-15317) + integerLocal9, integerLocal10, this.integerState0658, this.integerState0655);
+            SoftwareRaster.fillCircle(uiComponentPart002Local12.computeInteger0080(-1, integerLocal1) * integerLocal8 / uiComponentPart002Local12.computeInteger0083(-15317) + integerLocal9, integerLocal10, this.integerState0658, this.integerState0655);
           }
           if (null == this.bitmapFontState0018) {
             return;

@@ -29,7 +29,7 @@ final class bp extends TextureOperator {
             tq.a(bh.field_M, var3_int != 0, MidiPcmStream.h(2), (byte) -128, od.a((byte) -18));
           } else {
             if (!nl.a((byte) 107)) {
-              bi.c();
+              SoftwareRasterizer.clearRaster();
               lm.a((byte) 115, 240, 320);
               ByteStorage.a(0, (byte) -97, param2, 0);
             } else {

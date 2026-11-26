@@ -49,13 +49,13 @@ final class sg {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(wb.field_c < param2 + param0 + param1)) {
+        if (!(SoftwareRasterizer.field_c < param2 + param0 + param1)) {
           return param2 + param0;
         }
         if (-param1 + param0 >= param3) {
           return param0 - param1;
         }
-        return -param1 + wb.field_c;
+        return -param1 + SoftwareRasterizer.field_c;
     }
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {

@@ -105,7 +105,7 @@ final class oi extends fe {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(var6 >= 1.0) ? (int)(var6 * 255.0) : 255;
             }
-            SoftwareRasterizer.b(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         tk.b(true);

@@ -118,7 +118,7 @@ final class cl extends a {
           if (param0 > -91) {
             cl.e((byte) 101);
           }
-          SoftwareRasterizer.a(param1.field_v, param1.field_q, param1.field_r);
+          SoftwareRasterizer.setRasterBuffer(param1.field_v, param1.field_q, param1.field_r);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

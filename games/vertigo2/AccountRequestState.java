@@ -237,7 +237,7 @@ final class AccountRequestState {
         }
         kf.a(-7393, param1);
         if (bg.field_c) {
-          bi.d(IterableNodeHashTable.field_e.field_b.field_wb, IterableNodeHashTable.field_e.field_b.field_N, IterableNodeHashTable.field_e.field_b.field_Fb, IterableNodeHashTable.field_e.field_b.field_db);
+          SoftwareRasterizer.darkenRectangleHalf(IterableNodeHashTable.field_e.field_b.field_wb, IterableNodeHashTable.field_e.field_b.field_N, IterableNodeHashTable.field_e.field_b.field_Fb, IterableNodeHashTable.field_e.field_b.field_db);
           IterableNodeHashTable.field_e.field_b.b(param1, param0 ^ 8);
         }
         ImageProducerRasterBuffer.a(param1, 78);

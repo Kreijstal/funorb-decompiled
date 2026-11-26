@@ -161,7 +161,7 @@ final class ek extends ji {
                   }
                   var17_int = var17_int + var19;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + na.field_e;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_e;
                   var30 = var30 + var32;
                   var22 = var22 + var24;
                   var26 = var26 + var28;
@@ -319,7 +319,7 @@ final class ek extends ji {
               var18 = var18 + var20;
               var17_int = var17_int + var19;
               var22 = var22 + var24;
-              var35Lifetime1 = var35Lifetime1 + na.field_e;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_e;
               var25 = var25 + var27;
               var29 = var29 + var31;
               var26 = var26 + var28;

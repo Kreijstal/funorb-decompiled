@@ -539,10 +539,10 @@ abstract class vm extends DualLinkNode {
               }
               param1 = param1 + this.field_E[var8];
               if (field_z != -1) {
-                si.a(var11, param2 + (int)((double)this.field_u * 0.7), param1 - var11, field_z);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_u * 0.7), param1 - var11, field_z);
               }
               if (field_J != -1) {
-                si.a(var11, param2 + this.field_u + 1, param1 - var11, field_J);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_u + 1, param1 - var11, field_J);
               }
               var5 = var8;
             }

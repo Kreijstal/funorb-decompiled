@@ -124,13 +124,13 @@ final class sj implements jm {
           var12 = (nc) (stackIn_4_0);
           if (var12 == null) {
           }
-          wb.f(param1 + param4.field_u, param4.field_r + param2, param4.field_y, param4.field_C, this.field_o);
+          SoftwareRasterizer.fillRectangle(param1 + param4.field_u, param4.field_r + param2, param4.field_y, param4.field_C, this.field_o);
           var7 = param4.field_y - 2 * var12.field_U;
           var8 = param4.field_u + param1 + var12.field_U;
           var9 = var12.field_M + (param4.field_r + param2);
-          wb.b(var8, var9, var7 + var8, var9, this.field_r);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_r);
           for (var10 = -1 + var12.a(-1); var10 >= 0; var10--) {
-            wb.c(var8 + var12.a(var10, (byte) 86) * var7 / var12.f((byte) 118), var9, this.field_q, this.field_b);
+            SoftwareRasterizer.fillCircle(var8 + var12.a(var10, (byte) 86) * var7 / var12.f((byte) 118), var9, this.field_q, this.field_b);
           }
           if (param0 < 58) {
             sj.a((byte) 20);
@@ -170,8 +170,8 @@ final class sj implements jm {
           var7 = ao.a(var5, true, var2_int, 12);
           var8 = sg.a(var3, var6, 20, 0);
           int var9 = -59 / ((param1 + 64) / 37);
-          wb.d(var7, var8, var5, var6, 0);
-          wb.f(1 + var7, var8 + 1, -2 + var5, -2 + var6, 16777088);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, -2 + var5, -2 + var6, 16777088);
           qn.field_P.field_xb.a(param0, 3 + var7, -qn.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
         } catch (RuntimeException runtimeException) {
           throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -259,7 +259,7 @@ final class e {
                   var26 = var26 + var28;
                   var17_int = var17_int + var19;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + vj.field_l;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_l;
                   var30 = var30 + var32;
                   var18 = var18 + var20;
                 }
@@ -347,7 +347,7 @@ final class e {
               var30 = var30 + var32;
               var17_int = var17_int + var19;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + vj.field_l;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_l;
               var22 = var22 + var24;
             }
             return;

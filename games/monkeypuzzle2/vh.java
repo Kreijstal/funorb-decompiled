@@ -53,7 +53,7 @@ final class vh extends ButtonWidget {
             wi.field_e.field_k >= var9 &&
             wi.field_e.field_j >= var10) {
             mc.a(param0 ^ -8495, wi.field_e);
-            ge.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             wi.field_e = new Sprite(var9, var10);
             mc.a(-8497, wi.field_e);

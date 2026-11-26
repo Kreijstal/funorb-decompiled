@@ -125,7 +125,7 @@ final class ik extends IntrusiveNode {
         if (param1) {
           ik.clearStaticReferences((byte) 45);
         }
-        SoftwareRasterizer.a(var16, var8Lifetime1, var9Lifetime1);
+        SoftwareRasterizer.setRasterBuffer(var16, var8Lifetime1, var9Lifetime1);
     }
 
     final void a(int param0) {

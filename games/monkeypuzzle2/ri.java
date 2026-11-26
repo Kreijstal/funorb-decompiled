@@ -103,7 +103,7 @@ final class ri {
           var6 = 410;
           var7 = var20.field_D + var20.field_C + 52;
           ke.field_f[0].e();
-          ge.d(3, 3, var6 - 6, -6 + var7, 16249775);
+          SoftwareRasterizer.fillRectangle(3, 3, var6 - 6, -6 + var7, 16249775);
           lb.a(0, var6, (byte) -9, NodeHashTableIterator.field_e, 0, var7);
           var8 = 0;
           if (param2) {
@@ -143,7 +143,7 @@ final class ri {
                 var9Lifetime1 <= var11 + 32 &&
                 var12 <= var10 &&
                 var12 + 32 >= var10) {
-                ge.h(0, 6, var6, var7 - 6);
+                SoftwareRasterizer.setClip(0, 6, var6, var7 - 6);
                 var14_float = ProxySocketConnector.a(true, (float)jk.field_B * 0.10000000149011612f);
                 if ((var4 & 1 << var13) == 0) {
                   stackIn_34_0 = ByteStorage.field_b;
@@ -170,10 +170,10 @@ final class ri {
             }
           }
           ke.field_f[2].e();
-          ge.d(3, 3, 172, 184, 16249775);
+          SoftwareRasterizer.fillRectangle(3, 3, 172, 184, 16249775);
           lb.a(0, 178, (byte) 112, NodeHashTableIterator.field_e, 0, 190);
           ke.field_f[1].e();
-          ge.d(3, 3, 215, 184, 16249775);
+          SoftwareRasterizer.fillRectangle(3, 3, 215, 184, 16249775);
           lb.a(0, 221, (byte) -119, NodeHashTableIterator.field_e, 0, 190);
           if (ee.field_F >= 0) {
             var5 = ee.field_F;

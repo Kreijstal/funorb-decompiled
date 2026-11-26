@@ -15,7 +15,7 @@ final class vk {
     final static void a(boolean param0, boolean param1) {
         if (!param0) {
           if (null != cd.field_x) {
-            wb.g(wb.field_i, wb.field_a, wb.field_j - wb.field_i, -wb.field_a + wb.field_b);
+            SoftwareRasterizer.darkenRectangleHalf(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j - SoftwareRasterizer.field_i, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_b);
             cd.field_x.a(param0, param1);
           }
           return;

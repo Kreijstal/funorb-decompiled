@@ -140,7 +140,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + ul.field_f;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_f;
                 }
               }
               var16Lifetime3 = param8 - param1;
@@ -194,7 +194,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
               var9_int = var9_int + var11;
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + ul.field_f;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_f;
             }
             return;
           }

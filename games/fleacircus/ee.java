@@ -41,23 +41,23 @@ final class ee implements ComponentLayout {
             stackIn_5_0 = (UiComponent) (param3);
           }
           var14 = (md) (stackIn_5_0);
-          gb.e(param1 + param3.field_y, param3.field_z + param4, param3.field_u, param3.field_j, this.field_j);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_y, param3.field_z + param4, param3.field_u, param3.field_j, this.field_j);
           if (var14 != null) {
           }
           var7 = param3.field_y + (param1 + var14.field_U);
           var8 = param4 + param3.field_z + var14.field_R;
-          gb.f(var7, var8, var14.field_O, this.field_c);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_O, this.field_c);
           if (-1 != var14.field_K) {
             var9 = 3.141592653589793 * (double)var14.field_K * 2.0 / (double)var14.field_N;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_O);
             var12 = (int)(Math.cos(var9) * (double)var14.field_O);
-            gb.f(var7 + var11, var12 + var8, 1, this.field_g);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_g);
           }
-          gb.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_Q * 3.141592653589793 * 2.0 / (double)var14.field_N;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_O);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_O);
-          gb.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null == this.field_d) {
             return;
           }

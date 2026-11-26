@@ -17,13 +17,13 @@ final class ta {
           var1 = new tg(540, 140);
           kh.a(var1, param0 + 1);
           qk.c();
-          na.a();
+          SoftwareRasterizer.clearRaster();
           oa.field_a = 0;
           jf.c(param0);
           var2 = var1.b();
           for (var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
-            na.c(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           Bounce.field_G.d();
           var1.c(0, 0);

@@ -191,7 +191,7 @@ final class sb extends pc {
                 em.a((byte) 38, tk.field_l);
               } else {
                 em.a((byte) 38, tk.field_l);
-                kh.a();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -210,7 +210,7 @@ final class sb extends pc {
             var9Lifetime1 <= tk.field_l.field_l &&
             tk.field_l.field_u >= var10Lifetime1) {
             em.a((byte) 38, tk.field_l);
-            kh.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             tk.field_l = new dl(var9Lifetime1, var10Lifetime1);
             em.a((byte) 38, tk.field_l);
@@ -241,7 +241,7 @@ final class sb extends pc {
           var9Lifetime2 <= tk.field_l.field_l &&
           tk.field_l.field_u >= var10Lifetime2) {
           em.a((byte) 38, tk.field_l);
-          kh.a();
+          SoftwareRasterizer.clearRaster();
         } else {
           tk.field_l = new dl(var9Lifetime2, var10Lifetime2);
           em.a((byte) 38, tk.field_l);

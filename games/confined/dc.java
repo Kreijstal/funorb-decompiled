@@ -305,14 +305,14 @@ abstract class dc extends DualLinkNode {
                   }
                   if (decompiledFrameRemainder0) {
                     var25 = -var24 + 256;
-                    var26 = fn.field_h[var20Lifetime1Lifetime1];
+                    var26 = SoftwareRasterizer.field_h[var20Lifetime1Lifetime1];
                     var27 = (16711935 & var26) + (var25 * (var10Lifetime1 & 16711935) >>> 8 & -1895890689);
                     var28 = (16711935 & var27 >>> 8) * 255;
                     var27 = 16711935 & (var28 | var27);
                     var29 = (var26 & 65280) + (2063662848 & var25 * (65280 & var10Lifetime1) >>> 8);
                     var30 = 255 * (var29 >>> 8 & 65280);
                     var29 = (var30 | var29) & 65280;
-                    fn.field_h[var20Lifetime1Lifetime1] = nl.a(var29, var27);
+                    SoftwareRasterizer.field_h[var20Lifetime1Lifetime1] = nl.a(var29, var27);
                   }
                 }
               }
@@ -342,14 +342,14 @@ abstract class dc extends DualLinkNode {
                   }
                 }
                 var25Lifetime1 = -var24Lifetime1 + 256;
-                var26Lifetime1 = fn.field_h[var20Lifetime1Lifetime1];
+                var26Lifetime1 = SoftwareRasterizer.field_h[var20Lifetime1Lifetime1];
                 var27Lifetime1 = ((var10Lifetime1 & 16711935) * var25Lifetime1 >>> 8 & -1593900801) + (var26Lifetime1 & 16711935);
                 var28Lifetime1 = (16711935 & var27Lifetime1 >>> 8) * 255;
                 var27Lifetime1 = 16711935 & (var27Lifetime1 | var28Lifetime1);
                 var29Lifetime1 = ((var10Lifetime1 & 65280) * var25Lifetime1 >>> 8 & -1392443648) + (65280 & var26Lifetime1);
                 var30Lifetime1 = 255 * ((var29Lifetime1 & 16711680) >>> 8);
                 var29Lifetime1 = 65280 & (var29Lifetime1 | var30Lifetime1);
-                fn.field_h[var20Lifetime1Lifetime1] = nl.a(var27Lifetime1, var29Lifetime1);
+                SoftwareRasterizer.field_h[var20Lifetime1Lifetime1] = nl.a(var27Lifetime1, var29Lifetime1);
               }
               var20Lifetime1Lifetime1++;
               var21Lifetime1Lifetime2 += 16;
@@ -383,14 +383,14 @@ abstract class dc extends DualLinkNode {
                   }
                 }
                 var25Lifetime2 = 256 - var24Lifetime2;
-                var26Lifetime2 = fn.field_h[var20Lifetime1Lifetime2];
+                var26Lifetime2 = SoftwareRasterizer.field_h[var20Lifetime1Lifetime2];
                 var27Lifetime2 = ((-16711840 & (16711935 & var10Lifetime1) * var25Lifetime2) >>> 8) + (var26Lifetime2 & 16711935);
                 var28Lifetime2 = 255 * (var27Lifetime2 >>> 8 & 16711935);
                 var27Lifetime2 = 16711935 & (var27Lifetime2 | var28Lifetime2);
                 var29Lifetime2 = (65280 & var26Lifetime2) + ((65280 & var10Lifetime1) * var25Lifetime2 >>> 8 & -687800576);
                 var30Lifetime2 = 255 * (65280 & var29Lifetime2 >>> 8);
                 var29Lifetime2 = (var30Lifetime2 | var29Lifetime2) & 65280;
-                fn.field_h[var20Lifetime1Lifetime2] = nl.a(var27Lifetime2, var29Lifetime2);
+                SoftwareRasterizer.field_h[var20Lifetime1Lifetime2] = nl.a(var27Lifetime2, var29Lifetime2);
               }
               var21Lifetime1Lifetime3 -= 16;
               continue;
@@ -599,14 +599,14 @@ abstract class dc extends DualLinkNode {
               var16 = (int)(Math.sqrt((double)((var15 - var4) * (var15 - var4) + (var14 - var5) * (var14 - var5))) * 256.0) / var6;
               if (256 > var16) {
                 var17 = -var16 + 256;
-                var18 = fn.field_h[var11];
+                var18 = SoftwareRasterizer.field_h[var11];
                 var19 = ((-16711907 & var17 * (16711935 & var13)) >>> 8) + (var18 & 16711935);
                 var20 = (16711935 & var19 >>> 8) * 255;
                 var19 = 16711935 & (var19 | var20);
                 var21 = (738262784 & (var13 & 65280) * var17 >>> 8) + (65280 & var18);
                 var22 = 255 * (var21 >>> 8 & 65280);
                 var21 = (var21 | var22) & 65280;
-                fn.field_h[var11] = nl.a(var21, var19);
+                SoftwareRasterizer.field_h[var11] = nl.a(var21, var19);
               }
             }
             var11++;
@@ -1063,14 +1063,14 @@ abstract class dc extends DualLinkNode {
               var16 = (int)(256.0 * Math.sqrt((double)((-var5 + var14) * (var14 - var5) + (var15 - var4) * (-var4 + var15)))) / var6;
               if (256 > var16) {
                 var17 = 256 - var16;
-                var18 = fn.field_h[var11];
+                var18 = SoftwareRasterizer.field_h[var11];
                 var19 = (16711935 & var18) + (((var13 & 16711935) * var17 & -16711820) >>> 8);
                 var20 = 255 * ((var19 & -16711936) >>> 8);
                 var19 = (var19 | var20) & 16711935;
                 var21 = ((16711815 & (var13 & 65280) * var17) >>> 8) + (65280 & var18);
                 var22 = 255 * (var21 >>> 8 & 65280);
                 var21 = (var21 | var22) & 65280;
-                fn.field_h[var11] = nl.a(var21, var19);
+                SoftwareRasterizer.field_h[var11] = nl.a(var21, var19);
               }
             }
             var11++;

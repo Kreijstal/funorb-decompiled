@@ -20,30 +20,30 @@ final class ld {
         int var12 = 0;
         var12 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (ul.field_i > param4) {
-            param0 = param0 - (-param4 + ul.field_i);
-            param4 = ul.field_i;
+          if (SoftwareRasterizer.field_i > param4) {
+            param0 = param0 - (-param4 + SoftwareRasterizer.field_i);
+            param4 = SoftwareRasterizer.field_i;
           }
-          if (ul.field_e < param0 + param4) {
-            param0 = ul.field_e - param4;
+          if (SoftwareRasterizer.field_e < param0 + param4) {
+            param0 = SoftwareRasterizer.field_e - param4;
           }
-          if (param3 < ul.field_d) {
-            param5 = param5 - (-param3 + ul.field_d);
-            param3 = ul.field_d;
+          if (param3 < SoftwareRasterizer.field_d) {
+            param5 = param5 - (-param3 + SoftwareRasterizer.field_d);
+            param3 = SoftwareRasterizer.field_d;
           }
-          if (param3 + param5 > ul.field_a) {
-            param5 = -param3 + ul.field_a;
+          if (param3 + param5 > SoftwareRasterizer.field_a) {
+            param5 = -param3 + SoftwareRasterizer.field_a;
           }
           if (param0 > 0 &&
             param5 > 0) {
             if (param1 < 77) {
               return;
             }
-            var6_int = param3 * ul.field_f + param4;
-            var7 = ul.field_f - param0;
+            var6_int = param3 * SoftwareRasterizer.field_f + param4;
+            var7 = SoftwareRasterizer.field_f - param0;
             for (param3 = -param5; 0 > param3; param3++) {
               for (param4 = -param0; param4 < 0; param4++) {
-                var8 = ul.field_b[var6_int];
+                var8 = SoftwareRasterizer.field_b[var6_int];
                 if ((var8 >> 8 & 255) > param2 &&
                   (16711680 & var8) >> 16 <= (255 & var8 >> 8)) {
                   var9 = -60 + ((16711680 & var8) >> 15);
@@ -53,7 +53,7 @@ final class ld {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (255 & var8) >> 3;
-                  ul.field_b[var6_int] = ge.a(ge.a(var10, var9 << 16), var11);
+                  SoftwareRasterizer.field_b[var6_int] = ge.a(ge.a(var10, var9 << 16), var11);
                 }
                 var6_int++;
               }

@@ -335,7 +335,7 @@ class hl implements jm, mg {
         if (param0 != -416228287) {
           hl.a(60, false);
         }
-        cf.b(wb.field_c, wb.field_h + 640 >> 1, 0, param0 ^ -416228335, -640 + wb.field_h >> 1);
+        cf.b(SoftwareRasterizer.field_c, SoftwareRasterizer.field_h + 640 >> 1, 0, param0 ^ -416228335, -640 + SoftwareRasterizer.field_h >> 1);
         if (an.field_e > 0) {
           if (null != ig.field_h) {
             ig.field_h.d(ql.field_d.field_mb, 0);

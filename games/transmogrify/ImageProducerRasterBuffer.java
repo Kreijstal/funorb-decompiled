@@ -255,35 +255,35 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           var13 = param0 - param4;
           var14 = param4 + var9;
           var15 = var13;
-          if (var15 < sb.field_e) {
-            var15 = sb.field_e;
+          if (var15 < SoftwareRasterizer.field_e) {
+            var15 = SoftwareRasterizer.field_e;
           }
           var16 = var15;
           var17 = var11;
-          if (sb.field_d > var17) {
-            var17 = sb.field_d;
+          if (SoftwareRasterizer.field_d > var17) {
+            var17 = SoftwareRasterizer.field_d;
           }
           var18 = param1;
-          if (var18 > sb.field_b) {
-            var18 = sb.field_b;
+          if (var18 > SoftwareRasterizer.field_b) {
+            var18 = SoftwareRasterizer.field_b;
           }
           var19 = var8_int;
-          if (sb.field_b < var19) {
-            var19 = sb.field_b;
+          if (SoftwareRasterizer.field_b < var19) {
+            var19 = SoftwareRasterizer.field_b;
           }
           var20 = var12;
-          if (var20 > sb.field_b) {
-            var20 = sb.field_b;
+          if (var20 > SoftwareRasterizer.field_b) {
+            var20 = SoftwareRasterizer.field_b;
           }
           var21 = (-var16 + param0 + 1) * (1 - var16 + param0);
           var22 = (1 + param1 - var17) * (-var17 + (param1 + 1));
           var23 = param0;
-          if (sb.field_f < var23) {
-            var23 = sb.field_f;
+          if (SoftwareRasterizer.field_f < var23) {
+            var23 = SoftwareRasterizer.field_f;
           }
           while (var23 > var16) {
             var21 = var21 + ((-param0 + var16 << 1) - 1);
-            var24 = var17 + sb.field_c * var16;
+            var24 = var17 + SoftwareRasterizer.field_c * var16;
             var25 = var17;
             var26 = var21 + var22;
             while (var25 < var18) {
@@ -291,11 +291,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               if (var26 <= var10) {
                 var27 = var24;
                 var28 = param6[(var10 - var26) * param7 / var10];
-                var29 = sb.field_h[var27];
+                var29 = SoftwareRasterizer.field_h[var27];
                 var30 = var29 + var28;
                 var28 = (var29 & 16711935) + (var28 & 16711935);
                 var29 = (16777472 & var28) + (var30 - var28 & 65536);
-                sb.field_h[var27] = cl.b(-(var29 >>> 8) + var29, var30 - var29);
+                SoftwareRasterizer.field_h[var27] = cl.b(-(var29 >>> 8) + var29, var30 - var29);
               }
               var24++;
               var25++;
@@ -305,11 +305,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             while (var25 < var19) {
               var28Lifetime5 = var24;
               var29Lifetime5 = var27Lifetime5;
-              var30Lifetime5 = sb.field_h[var28Lifetime5];
+              var30Lifetime5 = SoftwareRasterizer.field_h[var28Lifetime5];
               var31 = var30Lifetime5 + var29Lifetime5;
               var29Lifetime5 = (var29Lifetime5 & 16711935) + (var30Lifetime5 & 16711935);
               var30Lifetime5 = (16777472 & var29Lifetime5) + (65536 & -var29Lifetime5 + var31);
-              sb.field_h[var28Lifetime5] = cl.b(var30Lifetime5 - (var30Lifetime5 >>> 8), var31 - var30Lifetime5);
+              SoftwareRasterizer.field_h[var28Lifetime5] = cl.b(var30Lifetime5 - (var30Lifetime5 >>> 8), var31 - var30Lifetime5);
               var24++;
               var25++;
             }
@@ -318,11 +318,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               if (var10 >= var26Lifetime5) {
                 var28Lifetime6 = var24;
                 var29Lifetime6 = param6[param7 * (-var26Lifetime5 + var10) / var10];
-                var30Lifetime6 = sb.field_h[var28Lifetime6];
+                var30Lifetime6 = SoftwareRasterizer.field_h[var28Lifetime6];
                 var31Lifetime5 = var30Lifetime6 + var29Lifetime6;
                 var29Lifetime6 = (16711935 & var30Lifetime6) + (var29Lifetime6 & 16711935);
                 var30Lifetime6 = (var29Lifetime6 & 16777472) + (var31Lifetime5 - var29Lifetime6 & 65536);
-                sb.field_h[var28Lifetime6] = cl.b(-(var30Lifetime6 >>> 8) + var30Lifetime6, var31Lifetime5 - var30Lifetime6);
+                SoftwareRasterizer.field_h[var28Lifetime6] = cl.b(-(var30Lifetime6 >>> 8) + var30Lifetime6, var31Lifetime5 - var30Lifetime6);
                 var24++;
                 var25++;
                 continue;
@@ -332,41 +332,41 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var16++;
           }
           var23Lifetime1 = param4 + param0;
-          if (var23Lifetime1 > sb.field_f) {
-            var23Lifetime1 = sb.field_f;
+          if (var23Lifetime1 > SoftwareRasterizer.field_f) {
+            var23Lifetime1 = SoftwareRasterizer.field_f;
           }
           if (param2 <= 76) {
             field_j = 46L;
           }
           while (var23Lifetime1 > var16) {
             var21 = var21 + ((-param0 + var16 << 1) - 1);
-            var24Lifetime1 = sb.field_c * var16 + var17;
+            var24Lifetime1 = SoftwareRasterizer.field_c * var16 + var17;
             var25Lifetime1 = var17;
             var26Lifetime1 = var22;
             while (var16 + (param1 - param0) > var25Lifetime1) {
               var26Lifetime1 = var26Lifetime1 + ((var25Lifetime1 - param1 << 1) - 1);
-              if (var25Lifetime1 < sb.field_b) {
+              if (var25Lifetime1 < SoftwareRasterizer.field_b) {
                 var27Lifetime1 = var24Lifetime1;
                 var28Lifetime1 = param6[(var10 - var26Lifetime1) * param7 / var10];
-                var29Lifetime1 = sb.field_h[var27Lifetime1];
+                var29Lifetime1 = SoftwareRasterizer.field_h[var27Lifetime1];
                 var30Lifetime1 = var29Lifetime1 + var28Lifetime1;
                 var28Lifetime1 = (var29Lifetime1 & 16711935) + (16711935 & var28Lifetime1);
                 var29Lifetime1 = (16777472 & var28Lifetime1) + (65536 & var30Lifetime1 - var28Lifetime1);
-                sb.field_h[var27Lifetime1] = cl.b(var29Lifetime1 - (var29Lifetime1 >>> 8), -var29Lifetime1 + var30Lifetime1);
+                SoftwareRasterizer.field_h[var27Lifetime1] = cl.b(var29Lifetime1 - (var29Lifetime1 >>> 8), -var29Lifetime1 + var30Lifetime1);
               }
               var24Lifetime1++;
               var25Lifetime1++;
             }
             var27Lifetime1Lifetime1 = param6[param7 * (var10 - var21) / var10];
             while (var8_int - var16 + param0 > var25Lifetime1) {
-              if (var25Lifetime1 < sb.field_b) {
+              if (var25Lifetime1 < SoftwareRasterizer.field_b) {
                 var28Lifetime1Lifetime1 = var24Lifetime1;
                 var29Lifetime1Lifetime1 = var27Lifetime1Lifetime1;
-                var30Lifetime1Lifetime1 = sb.field_h[var28Lifetime1Lifetime1];
+                var30Lifetime1Lifetime1 = SoftwareRasterizer.field_h[var28Lifetime1Lifetime1];
                 var31Lifetime1 = var30Lifetime1Lifetime1 + var29Lifetime1Lifetime1;
                 var29Lifetime1Lifetime1 = (16711935 & var29Lifetime1Lifetime1) + (var30Lifetime1Lifetime1 & 16711935);
                 var30Lifetime1Lifetime1 = (-var29Lifetime1Lifetime1 + var31Lifetime1 & 65536) + (var29Lifetime1Lifetime1 & 16777472);
-                sb.field_h[var28Lifetime1Lifetime1] = cl.b(-(var30Lifetime1Lifetime1 >>> 8) + var30Lifetime1Lifetime1, -var30Lifetime1Lifetime1 + var31Lifetime1);
+                SoftwareRasterizer.field_h[var28Lifetime1Lifetime1] = cl.b(-(var30Lifetime1Lifetime1 >>> 8) + var30Lifetime1Lifetime1, -var30Lifetime1Lifetime1 + var31Lifetime1);
               }
               var24Lifetime1++;
               var25Lifetime1++;
@@ -376,37 +376,37 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var26Lifetime1Lifetime1 = var26Lifetime1Lifetime1 + ((-var8_int + var25Lifetime1 << 1) - 1);
               var28Lifetime1Lifetime2 = var24Lifetime1;
               var29Lifetime1Lifetime2 = param6[param7 * (-var26Lifetime1Lifetime1 + var10) / var10];
-              var30Lifetime1Lifetime2 = sb.field_h[var28Lifetime1Lifetime2];
+              var30Lifetime1Lifetime2 = SoftwareRasterizer.field_h[var28Lifetime1Lifetime2];
               var31Lifetime1Lifetime1 = var30Lifetime1Lifetime2 + var29Lifetime1Lifetime2;
               var29Lifetime1Lifetime2 = (16711935 & var30Lifetime1Lifetime2) + (var29Lifetime1Lifetime2 & 16711935);
               var30Lifetime1Lifetime2 = (var29Lifetime1Lifetime2 & 16777472) + (var31Lifetime1Lifetime1 - var29Lifetime1Lifetime2 & 65536);
-              sb.field_h[var28Lifetime1Lifetime2] = cl.b(var31Lifetime1Lifetime1 - var30Lifetime1Lifetime2, var30Lifetime1Lifetime2 - (var30Lifetime1Lifetime2 >>> 8));
+              SoftwareRasterizer.field_h[var28Lifetime1Lifetime2] = cl.b(var31Lifetime1Lifetime1 - var30Lifetime1Lifetime2, var30Lifetime1Lifetime2 - (var30Lifetime1Lifetime2 >>> 8));
               var24Lifetime1++;
               var25Lifetime1++;
             }
             var16++;
           }
           var23Lifetime2 = -param4 + var9;
-          if (var23Lifetime2 > sb.field_f) {
-            var23Lifetime2 = sb.field_f;
+          if (var23Lifetime2 > SoftwareRasterizer.field_f) {
+            var23Lifetime2 = SoftwareRasterizer.field_f;
           }
           var24Lifetime2 = -param4 + (param3 - param4 - 1);
           if (var17 > param1 + param4) {
             var24Lifetime2 = var24Lifetime2 + (param4 + param1 - var17);
           }
           while (var16 < var23Lifetime2) {
-            var25Lifetime2 = var17 + var16 * sb.field_c;
+            var25Lifetime2 = var17 + var16 * SoftwareRasterizer.field_c;
             var26Lifetime2 = var22;
             for (var27Lifetime2 = var17; param1 + param4 > var27Lifetime2; var27Lifetime2++) {
               var26Lifetime2 = var26Lifetime2 + (-1 + (-param1 + var27Lifetime2 << 1));
-              if (sb.field_b > var27Lifetime2) {
+              if (SoftwareRasterizer.field_b > var27Lifetime2) {
                 var28Lifetime2 = var25Lifetime2;
                 var29Lifetime2 = param6[(-var26Lifetime2 + var10) * param7 / var10];
-                var30Lifetime2 = sb.field_h[var28Lifetime2];
+                var30Lifetime2 = SoftwareRasterizer.field_h[var28Lifetime2];
                 var31Lifetime2 = var30Lifetime2 + var29Lifetime2;
                 var29Lifetime2 = (var29Lifetime2 & 16711935) + (var30Lifetime2 & 16711935);
                 var30Lifetime2 = (var29Lifetime2 & 16777472) + (65536 & -var29Lifetime2 + var31Lifetime2);
-                sb.field_h[var28Lifetime2] = cl.b(var30Lifetime2 - (var30Lifetime2 >>> 8), var31Lifetime2 - var30Lifetime2);
+                SoftwareRasterizer.field_h[var28Lifetime2] = cl.b(var30Lifetime2 - (var30Lifetime2 >>> 8), var31Lifetime2 - var30Lifetime2);
               }
               var25Lifetime2++;
             }
@@ -414,14 +414,14 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var25Lifetime2 = var25Lifetime2 + var24Lifetime2;
             for (var27Lifetime2Lifetime1 = var8_int - param4; var27Lifetime2Lifetime1 < var20; var27Lifetime2Lifetime1++) {
               var26Lifetime2Lifetime1 = var26Lifetime2Lifetime1 + (-1 + (-var8_int + var27Lifetime2Lifetime1 << 1));
-              if (sb.field_d <= var27Lifetime2Lifetime1) {
+              if (SoftwareRasterizer.field_d <= var27Lifetime2Lifetime1) {
                 var28Lifetime2Lifetime1 = var25Lifetime2;
                 var29Lifetime2Lifetime1 = param6[param7 * (-var26Lifetime2Lifetime1 + var10) / var10];
-                var30Lifetime2Lifetime1 = sb.field_h[var28Lifetime2Lifetime1];
+                var30Lifetime2Lifetime1 = SoftwareRasterizer.field_h[var28Lifetime2Lifetime1];
                 var31Lifetime2Lifetime1 = var29Lifetime2Lifetime1 + var30Lifetime2Lifetime1;
                 var29Lifetime2Lifetime1 = (16711935 & var30Lifetime2Lifetime1) + (var29Lifetime2Lifetime1 & 16711935);
                 var30Lifetime2Lifetime1 = (65536 & -var29Lifetime2Lifetime1 + var31Lifetime2Lifetime1) + (var29Lifetime2Lifetime1 & 16777472);
-                sb.field_h[var28Lifetime2Lifetime1] = cl.b(var31Lifetime2Lifetime1 - var30Lifetime2Lifetime1, var30Lifetime2Lifetime1 - (var30Lifetime2Lifetime1 >>> 8));
+                SoftwareRasterizer.field_h[var28Lifetime2Lifetime1] = cl.b(var31Lifetime2Lifetime1 - var30Lifetime2Lifetime1, var30Lifetime2Lifetime1 - (var30Lifetime2Lifetime1 >>> 8));
               }
               var25Lifetime2++;
             }
@@ -429,38 +429,38 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           var23Lifetime3 = var9;
           var21Lifetime1 = (var9 + (-var16 + 1)) * (1 - var16 + var9);
-          if (var23Lifetime3 > sb.field_f) {
-            var23Lifetime3 = sb.field_f;
+          if (var23Lifetime3 > SoftwareRasterizer.field_f) {
+            var23Lifetime3 = SoftwareRasterizer.field_f;
           }
           while (var16 < var23Lifetime3) {
             var21Lifetime1 = var21Lifetime1 + ((-var9 + var16 << 1) - 1);
-            var25Lifetime3 = sb.field_c * var16 + var17;
+            var25Lifetime3 = SoftwareRasterizer.field_c * var16 + var17;
             var26Lifetime3 = var17;
             var27Lifetime3 = var22;
             while (var26Lifetime3 < var9 + (-var16 + param1)) {
               var27Lifetime3 = var27Lifetime3 + (-1 + (-param1 + var26Lifetime3 << 1));
-              if (var26Lifetime3 < sb.field_b) {
+              if (var26Lifetime3 < SoftwareRasterizer.field_b) {
                 var28Lifetime3 = var25Lifetime3;
                 var29Lifetime3 = param6[param7 * (var10 - var27Lifetime3) / var10];
-                var30Lifetime3 = sb.field_h[var28Lifetime3];
+                var30Lifetime3 = SoftwareRasterizer.field_h[var28Lifetime3];
                 var31Lifetime3 = var29Lifetime3 + var30Lifetime3;
                 var29Lifetime3 = (var29Lifetime3 & 16711935) + (var30Lifetime3 & 16711935);
                 var30Lifetime3 = (var31Lifetime3 - var29Lifetime3 & 65536) + (16777472 & var29Lifetime3);
-                sb.field_h[var28Lifetime3] = cl.b(-var30Lifetime3 + var31Lifetime3, var30Lifetime3 - (var30Lifetime3 >>> 8));
+                SoftwareRasterizer.field_h[var28Lifetime3] = cl.b(-var30Lifetime3 + var31Lifetime3, var30Lifetime3 - (var30Lifetime3 >>> 8));
               }
               var25Lifetime3++;
               var26Lifetime3++;
             }
             var28Lifetime3Lifetime1 = param6[(var10 - var21Lifetime1) * param7 / var10];
             while (var26Lifetime3 < -var9 + var8_int + var16) {
-              if (var26Lifetime3 < sb.field_b) {
+              if (var26Lifetime3 < SoftwareRasterizer.field_b) {
                 var29Lifetime3Lifetime1 = var25Lifetime3;
                 var30Lifetime3Lifetime1 = var28Lifetime3Lifetime1;
-                var31Lifetime3Lifetime1 = sb.field_h[var29Lifetime3Lifetime1];
+                var31Lifetime3Lifetime1 = SoftwareRasterizer.field_h[var29Lifetime3Lifetime1];
                 var32 = var31Lifetime3Lifetime1 + var30Lifetime3Lifetime1;
                 var30Lifetime3Lifetime1 = (var31Lifetime3Lifetime1 & 16711935) + (var30Lifetime3Lifetime1 & 16711935);
                 var31Lifetime3Lifetime1 = (16777472 & var30Lifetime3Lifetime1) + (65536 & var32 - var30Lifetime3Lifetime1);
-                sb.field_h[var29Lifetime3Lifetime1] = cl.b(var31Lifetime3Lifetime1 - (var31Lifetime3Lifetime1 >>> 8), -var31Lifetime3Lifetime1 + var32);
+                SoftwareRasterizer.field_h[var29Lifetime3Lifetime1] = cl.b(var31Lifetime3Lifetime1 - (var31Lifetime3Lifetime1 >>> 8), -var31Lifetime3Lifetime1 + var32);
               }
               var25Lifetime3++;
               var26Lifetime3++;
@@ -470,22 +470,22 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var27Lifetime3Lifetime1 = var27Lifetime3Lifetime1 + ((var26Lifetime3 - var8_int << 1) - 1);
               var29Lifetime3Lifetime2 = var25Lifetime3;
               var30Lifetime3Lifetime2 = param6[param7 * (-var27Lifetime3Lifetime1 + var10) / var10];
-              var31Lifetime3Lifetime2 = sb.field_h[var29Lifetime3Lifetime2];
+              var31Lifetime3Lifetime2 = SoftwareRasterizer.field_h[var29Lifetime3Lifetime2];
               var32Lifetime2 = var30Lifetime3Lifetime2 + var31Lifetime3Lifetime2;
               var30Lifetime3Lifetime2 = (16711935 & var31Lifetime3Lifetime2) + (16711935 & var30Lifetime3Lifetime2);
               var31Lifetime3Lifetime2 = (var30Lifetime3Lifetime2 & 16777472) + (-var30Lifetime3Lifetime2 + var32Lifetime2 & 65536);
-              sb.field_h[var29Lifetime3Lifetime2] = cl.b(var31Lifetime3Lifetime2 - (var31Lifetime3Lifetime2 >>> 8), -var31Lifetime3Lifetime2 + var32Lifetime2);
+              SoftwareRasterizer.field_h[var29Lifetime3Lifetime2] = cl.b(var31Lifetime3Lifetime2 - (var31Lifetime3Lifetime2 >>> 8), -var31Lifetime3Lifetime2 + var32Lifetime2);
               var25Lifetime3++;
               var26Lifetime3++;
             }
             var16++;
           }
           var23Lifetime4 = var14;
-          if (sb.field_f < var23Lifetime4) {
-            var23Lifetime4 = sb.field_f;
+          if (SoftwareRasterizer.field_f < var23Lifetime4) {
+            var23Lifetime4 = SoftwareRasterizer.field_f;
           }
           while (var23Lifetime4 > var16) {
-            var25Lifetime4 = var17 + var16 * sb.field_c;
+            var25Lifetime4 = var17 + var16 * SoftwareRasterizer.field_c;
             var21Lifetime1 = var21Lifetime1 + ((-var9 + var16 << 1) - 1);
             var26Lifetime4 = var17;
             var27Lifetime4 = var21Lifetime1 + var22;
@@ -494,11 +494,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               if (var27Lifetime4 <= var10) {
                 var28Lifetime4 = var25Lifetime4;
                 var29Lifetime4 = param6[(var10 - var27Lifetime4) * param7 / var10];
-                var30Lifetime4 = sb.field_h[var28Lifetime4];
+                var30Lifetime4 = SoftwareRasterizer.field_h[var28Lifetime4];
                 var31Lifetime4 = var30Lifetime4 + var29Lifetime4;
                 var29Lifetime4 = (16711935 & var29Lifetime4) + (var30Lifetime4 & 16711935);
                 var30Lifetime4 = (-var29Lifetime4 + var31Lifetime4 & 65536) + (var29Lifetime4 & 16777472);
-                sb.field_h[var28Lifetime4] = cl.b(var31Lifetime4 - var30Lifetime4, -(var30Lifetime4 >>> 8) + var30Lifetime4);
+                SoftwareRasterizer.field_h[var28Lifetime4] = cl.b(var31Lifetime4 - var30Lifetime4, -(var30Lifetime4 >>> 8) + var30Lifetime4);
               }
               var25Lifetime4++;
               var26Lifetime4++;
@@ -508,11 +508,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             while (var19 > var26Lifetime4) {
               var29Lifetime4Lifetime1 = var25Lifetime4;
               var30Lifetime4Lifetime1 = var28Lifetime4Lifetime1;
-              var31Lifetime4Lifetime1 = sb.field_h[var29Lifetime4Lifetime1];
+              var31Lifetime4Lifetime1 = SoftwareRasterizer.field_h[var29Lifetime4Lifetime1];
               var32Lifetime1 = var31Lifetime4Lifetime1 + var30Lifetime4Lifetime1;
               var30Lifetime4Lifetime1 = (16711935 & var31Lifetime4Lifetime1) + (16711935 & var30Lifetime4Lifetime1);
               var31Lifetime4Lifetime1 = (var30Lifetime4Lifetime1 & 16777472) + (65536 & var32Lifetime1 - var30Lifetime4Lifetime1);
-              sb.field_h[var29Lifetime4Lifetime1] = cl.b(-(var31Lifetime4Lifetime1 >>> 8) + var31Lifetime4Lifetime1, var32Lifetime1 - var31Lifetime4Lifetime1);
+              SoftwareRasterizer.field_h[var29Lifetime4Lifetime1] = cl.b(-(var31Lifetime4Lifetime1 >>> 8) + var31Lifetime4Lifetime1, var32Lifetime1 - var31Lifetime4Lifetime1);
               var25Lifetime4++;
               var26Lifetime4++;
             }
@@ -521,11 +521,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               if (var27Lifetime4Lifetime1 <= var10) {
                 var29Lifetime4Lifetime2 = var25Lifetime4;
                 var30Lifetime4Lifetime2 = param6[(var10 - var27Lifetime4Lifetime1) * param7 / var10];
-                var31Lifetime4Lifetime2 = sb.field_h[var29Lifetime4Lifetime2];
+                var31Lifetime4Lifetime2 = SoftwareRasterizer.field_h[var29Lifetime4Lifetime2];
                 var32Lifetime1Lifetime1 = var30Lifetime4Lifetime2 + var31Lifetime4Lifetime2;
                 var30Lifetime4Lifetime2 = (16711935 & var31Lifetime4Lifetime2) + (var30Lifetime4Lifetime2 & 16711935);
                 var31Lifetime4Lifetime2 = (16777472 & var30Lifetime4Lifetime2) + (-var30Lifetime4Lifetime2 + var32Lifetime1Lifetime1 & 65536);
-                sb.field_h[var29Lifetime4Lifetime2] = cl.b(var32Lifetime1Lifetime1 - var31Lifetime4Lifetime2, -(var31Lifetime4Lifetime2 >>> 8) + var31Lifetime4Lifetime2);
+                SoftwareRasterizer.field_h[var29Lifetime4Lifetime2] = cl.b(var32Lifetime1Lifetime1 - var31Lifetime4Lifetime2, -(var31Lifetime4Lifetime2 >>> 8) + var31Lifetime4Lifetime2);
                 var25Lifetime4++;
                 var26Lifetime4++;
                 continue;

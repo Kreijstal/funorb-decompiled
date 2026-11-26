@@ -278,7 +278,7 @@ final class lb {
           wa.field_l = param2;
           i.field_x = param0;
           n.field_c = param1;
-          wm.a((byte) -52, gf.field_i / 2, gf.field_c / param3);
+          wm.a((byte) -52, SoftwareRasterizer.field_i / 2, SoftwareRasterizer.field_c / param3);
           mi.a(param0.field_N, 25570, param0.field_E + param0.field_N, param1.field_N, param1.field_N + param1.field_E);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lb.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

@@ -82,7 +82,7 @@ final class lb implements ComponentLayout {
             param2 = param2 & var12.field_D;
           }
           var7 = 5592405;
-          gb.e(param1 + param3.field_y, param3.field_z + param4, param3.field_u, param3.field_j, this.field_i);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_y, param3.field_z + param4, param3.field_u, param3.field_j, this.field_i);
           if (param2) {
             var7 = 16777215;
           }
@@ -92,11 +92,11 @@ final class lb implements ComponentLayout {
             this.a(-124, -13, false, (UiComponent) null, -107);
           }
           var9 = this.field_b + param3.field_z + param4;
-          gb.f(var8, var9, this.field_e, this.field_l, 5592405);
-          gb.e(var8, var9, this.field_e, this.field_l, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_e, this.field_l, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_e, this.field_l, var7);
           if (var12.field_G) {
-            gb.d(var8, var9, this.field_e + var8, var9 + this.field_l, 1);
-            gb.d(this.field_e + var8, var9, var8, this.field_l + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_e + var8, var9 + this.field_l, 1);
+            SoftwareRasterizer.drawLine(this.field_e + var8, var9, var8, this.field_l + var9, 1);
           }
           if (null != this.field_h) {
             var10 = this.field_d + (this.field_e + this.field_g);

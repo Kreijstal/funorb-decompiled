@@ -93,15 +93,15 @@ final class pc extends hl {
           if (var14 > 0) {
             var14 = 0;
           }
-          var15 = -param9 - param2 + (-param8 + ul.field_f);
+          var15 = -param9 - param2 + (-param8 + SoftwareRasterizer.field_f);
           if (var15 > 0) {
             var15 = 0;
           }
           var16 = 0;
           var17 = 1 + param9 + param8;
-          if (ul.field_f < var17) {
-            var16 = var17 - ul.field_f;
-            var17 = ul.field_f;
+          if (SoftwareRasterizer.field_f < var17) {
+            var16 = var17 - SoftwareRasterizer.field_f;
+            var17 = SoftwareRasterizer.field_f;
           }
           for (var18 = -param5; 0 > var18; var18++) {
             var19 = 0;
@@ -137,7 +137,7 @@ final class pc extends hl {
             var23 = var23 + var16;
             while (var14 > var24Lifetime1) {
               var23++;
-              if (ul.field_e > param9 + param8 - (-param2 - var24Lifetime1)) {
+              if (SoftwareRasterizer.field_e > param9 + param8 - (-param2 - var24Lifetime1)) {
                 if (0 == param11[param7]) {
                   param3 = param6[var22] >> 1 & 8355711;
                 } else {
@@ -400,15 +400,15 @@ final class pc extends hl {
           if (var14 > 0) {
             var14 = 0;
           }
-          var15 = -param9 - param2 + (-param8 + ul.field_f);
+          var15 = -param9 - param2 + (-param8 + SoftwareRasterizer.field_f);
           if (var15 > 0) {
             var15 = 0;
           }
           var16 = 0;
           var17 = 1 + param9 + param8;
-          if (ul.field_f < var17) {
-            var16 = var17 - ul.field_f;
-            var17 = ul.field_f;
+          if (SoftwareRasterizer.field_f < var17) {
+            var16 = var17 - SoftwareRasterizer.field_f;
+            var17 = SoftwareRasterizer.field_f;
           }
           for (var18 = -param5; 0 > var18; var18++) {
             var19 = 0;
@@ -444,7 +444,7 @@ final class pc extends hl {
             var23 = var23 + var16;
             while (var14 > var24Lifetime1) {
               var23++;
-              if (ul.field_e > param9 + param8 - (-param2 - var24Lifetime1)) {
+              if (SoftwareRasterizer.field_e > param9 + param8 - (-param2 - var24Lifetime1)) {
                 if (0 == param11[param7]) {
                   param3 = param6[var22] >> 1 & 8355711;
                 } else {

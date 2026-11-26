@@ -240,13 +240,13 @@ final class fc {
                 aj.field_t[var7Lifetime2 + 36].d(16 * var3Lifetime2 - 4, 16 * var4Lifetime2 - 4);
                 if (fl.field_f) {
                   var9Lifetime2 = 64 - PacketBuffer.field_j % 64;
-                  gb.a(-2 + (var3Lifetime2 * 16 + 8), 16 * var4Lifetime2 + 6, var9Lifetime2 / 4, 16777215, 256 - 4 * var9Lifetime2);
+                  SoftwareRasterizer.fillCircleAlpha(-2 + (var3Lifetime2 * 16 + 8), 16 * var4Lifetime2 + 6, var9Lifetime2 / 4, 16777215, 256 - 4 * var9Lifetime2);
                 }
               }
               if (var7Lifetime2 == 1 &&
                 fl.field_f) {
                 var9Lifetime2Lifetime1 = PacketBuffer.field_j % 64;
-                gb.a(7 + var3Lifetime2 * 16, 8 + (-1 + 16 * var4Lifetime2), var9Lifetime2Lifetime1 / 4, 16777215, 256 - var9Lifetime2Lifetime1 * 4);
+                SoftwareRasterizer.fillCircleAlpha(7 + var3Lifetime2 * 16, 8 + (-1 + 16 * var4Lifetime2), var9Lifetime2Lifetime1 / 4, 16777215, 256 - var9Lifetime2Lifetime1 * 4);
               }
             }
           }
@@ -269,10 +269,10 @@ final class fc {
               var13_int = mh.field_u + 1;
               aj.field_t[var13_int].a(var11, var12_int, 64);
               if (var13_int == 2) {
-                gb.a(si.field_R);
-                gb.a(4 + var11, var12_int + 4, 4 + var11 + 16, var12_int + 20);
+                SoftwareRasterizer.saveClip(si.field_R);
+                SoftwareRasterizer.setClip(4 + var11, var12_int + 4, 4 + var11 + 16, var12_int + 20);
                 se.field_a[var2].a(0, 0, 64);
-                gb.b(si.field_R);
+                SoftwareRasterizer.restoreClip(si.field_R);
               }
             }
           }
@@ -400,10 +400,10 @@ final class fc {
             lk.field_D.e(-1);
             var23 = (int)(ma.a((double)PacketBuffer.field_j / 25.0, 116) * 64.0 + 64.0);
             var24_int = (int)(64.0 + nb.a((double)PacketBuffer.field_j / 25.0, -128) * 64.0);
-            gb.b(4 + lk.field_D.field_l, lk.field_D.field_a + 1, lk.field_D.field_n - 7, lk.field_D.field_d - 2, 65793 * var23, var24_int * 65793);
+            SoftwareRasterizer.addRectangleVerticalGradient(4 + lk.field_D.field_l, lk.field_D.field_a + 1, lk.field_D.field_n - 7, lk.field_D.field_d - 2, 65793 * var23, var24_int * 65793);
             if (qh.field_z == 0) {
-              gb.a(si.field_R);
-              gb.a(0, 0, 640, 336);
+              SoftwareRasterizer.saveClip(si.field_R);
+              SoftwareRasterizer.setClip(0, 0, 640, 336);
               var25 = pg.field_f;
               if (var25 > 120) {
                 var26 = var25 - 120;
@@ -412,7 +412,7 @@ final class fc {
               tl.field_p.b(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
               var26_ref_String = var14 + "   " + db.a(fleas.field_I, new String[]{var20}, true);
               tl.field_p.a(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + tl.field_p.field_N, 0, 0);
-              gb.b(si.field_R);
+              SoftwareRasterizer.restoreClip(si.field_R);
             }
           }
           if (si.field_y.field_k) {
@@ -441,7 +441,7 @@ final class fc {
             if (0 < GzipDecompressor.field_d) {
               var23Lifetime1 = (int)(64.0 + ma.a((double)PacketBuffer.field_j / 25.0, 123) * 64.0);
               var24_intLifetime1 = (int)(64.0 + 64.0 * nb.a((double)PacketBuffer.field_j / 25.0, -122));
-              gb.b(4 + si.field_y.field_l, 1 + si.field_y.field_a, si.field_y.field_n - 7, si.field_y.field_d - 2, 65793 * var23Lifetime1, var24_intLifetime1 * 65793);
+              SoftwareRasterizer.addRectangleVerticalGradient(4 + si.field_y.field_l, 1 + si.field_y.field_a, si.field_y.field_n - 7, si.field_y.field_d - 2, 65793 * var23Lifetime1, var24_intLifetime1 * 65793);
             }
           }
           if (fl.field_f) {

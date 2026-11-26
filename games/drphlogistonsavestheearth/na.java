@@ -138,11 +138,11 @@ abstract class na {
 
     final void a(int param0) {
         if (param0 >= 94) {
-          wj.a(this.field_e, this.field_f, this.field_g);
+          SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_f, this.field_g);
           return;
         }
         na.a((byte) -78);
-        wj.a(this.field_e, this.field_f, this.field_g);
+        SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_f, this.field_g);
     }
 
     abstract void a(int param0, int param1, byte param2, java.awt.Component param3);

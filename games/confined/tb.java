@@ -180,22 +180,22 @@ final class tb {
         if (param1 >= param3) {
           if (param1 >= param10) {
             if (param10 > param3) {
-              ih.a(true, fn.field_h, param3, param6, param2, param9, param1, param5, param8, param15, param10, param7, param11, param4, param12, param0, param14);
+              ih.a(true, SoftwareRasterizer.field_h, param3, param6, param2, param9, param1, param5, param8, param15, param10, param7, param11, param4, param12, param0, param14);
             } else {
-              ih.a(true, fn.field_h, param10, param14, param9, param2, param1, param5, param12, param15, param3, param7, param11, param0, param8, param4, param6);
+              ih.a(true, SoftwareRasterizer.field_h, param10, param14, param9, param2, param1, param5, param12, param15, param3, param7, param11, param0, param8, param4, param6);
             }
           } else {
-            ih.a(true, fn.field_h, param3, param7, param5, param9, param10, param2, param8, param4, param1, param6, param12, param15, param11, param0, param14);
+            ih.a(true, SoftwareRasterizer.field_h, param3, param7, param5, param9, param10, param2, param8, param4, param1, param6, param12, param15, param11, param0, param14);
           }
         } else {
           if (param10 <= param3) {
             if (param1 >= param10) {
-              ih.a(true, fn.field_h, param10, param7, param5, param2, param3, param9, param12, param0, param1, param14, param8, param15, param11, param4, param6);
+              ih.a(true, SoftwareRasterizer.field_h, param10, param7, param5, param2, param3, param9, param12, param0, param1, param14, param8, param15, param11, param4, param6);
             } else {
-              ih.a(true, fn.field_h, param1, param6, param2, param5, param3, param9, param11, param0, param10, param14, param8, param4, param12, param15, param7);
+              ih.a(true, SoftwareRasterizer.field_h, param1, param6, param2, param5, param3, param9, param11, param0, param10, param14, param8, param4, param12, param15, param7);
             }
           } else {
-            ih.a(true, fn.field_h, param1, param14, param9, param5, param10, param2, param11, param4, param3, param6, param12, param0, param8, param15, param7);
+            ih.a(true, SoftwareRasterizer.field_h, param1, param14, param9, param5, param10, param2, param11, param4, param3, param6, param12, param0, param8, param15, param7);
           }
         }
     }

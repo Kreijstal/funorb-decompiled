@@ -55,7 +55,7 @@ final class AccountNameAvailabilityValidator extends ip {
             wm.field_c.field_w = -16;
           }
           bn.field_f.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           for (var1_int = 0; var1_int < 7; var1_int++) {
             var2 = 27 * (-var1_int + 6);
             var3 = 20 * var1_int;
@@ -103,12 +103,12 @@ final class AccountNameAvailabilityValidator extends ip {
             }
           }
           wm.field_c.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           if (param0 < 35) {
             field_t = -99;
           }
           bn.field_f.e(16, 16, 8454143);
-          gf.d(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
+          SoftwareRasterizer.blurRectangle(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
           bn.field_f.e(16, 16, 0);
           jh.b();
           return;

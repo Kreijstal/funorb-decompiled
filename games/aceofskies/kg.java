@@ -90,7 +90,7 @@ final class kg {
           int var9Lifetime1 = var17.height;
           qk.a((byte) -92);
           var17.makeRasterTarget();
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
           Sprite var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           Sprite var18 = var15;
           var18.makeRasterTarget();

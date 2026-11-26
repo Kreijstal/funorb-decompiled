@@ -117,7 +117,7 @@ abstract class ri extends lc {
         if (ml.field_d == null) {
           ml.field_d = new tg(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
-          na.a();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -11, 0);
           if (param2 >= 33) {
             super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
@@ -134,7 +134,7 @@ abstract class ri extends lc {
         if (ml.field_d.field_s < this.field_k) {
           ml.field_d = new tg(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
-          na.a();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -11, 0);
           if (param2 >= 33) {
             super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
@@ -151,7 +151,7 @@ abstract class ri extends lc {
         if (ml.field_d.field_q < this.field_m) {
           ml.field_d = new tg(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
-          na.a();
+          SoftwareRasterizer.clearRaster();
           this.b(0, -11, 0);
           if (param2 >= 33) {
             super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
@@ -166,7 +166,7 @@ abstract class ri extends lc {
           return;
         }
         kh.a(ml.field_d, 1);
-        na.a();
+        SoftwareRasterizer.clearRaster();
         this.b(0, -11, 0);
         if (param2 >= 33) {
           super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);

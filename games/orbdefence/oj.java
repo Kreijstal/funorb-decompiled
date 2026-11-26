@@ -199,10 +199,10 @@ final class oj extends IntrusiveNode {
           var6 = 200 - var8;
           var7 = 320;
           if (var8 >= 0) {
-            ul.a(var4 << 4, var5 << 4, var7, var6, ki.field_f);
+            SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, var7, var6, ki.field_f);
           } else {
             if (this.field_p) {
-              ul.a(5808, 384, 320, 200, em.field_s);
+              SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, em.field_s);
               return;
             }
             return;
@@ -211,10 +211,10 @@ final class oj extends IntrusiveNode {
         }
         if (0 > var8) {
           if (var8 >= 0) {
-            ul.a(var4 << 4, var5 << 4, var7, var6, ki.field_f);
+            SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, var7, var6, ki.field_f);
           } else {
             if (this.field_p) {
-              ul.a(5808, 384, 320, 200, em.field_s);
+              SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, em.field_s);
               return;
             }
             return;
@@ -224,10 +224,10 @@ final class oj extends IntrusiveNode {
         var4 = (var8 * var9 + var4 * (-var8 + 100)) / 100;
         var5 = (var8 * var10 + var5 * (-var8 + 100)) / 100;
         if (var8 >= 0) {
-          ul.a(var4 << 4, var5 << 4, var7, var6, ki.field_f);
+          SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, var7, var6, ki.field_f);
         } else {
           if (this.field_p) {
-            ul.a(5808, 384, 320, 200, em.field_s);
+            SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, em.field_s);
             return;
           }
           return;

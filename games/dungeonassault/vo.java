@@ -24,11 +24,11 @@ final class vo extends ip {
             return;
           }
           je.a((byte) -96, param1, param2, bf.field_d, param4, param3);
-          var5_int = param4 + gf.field_i * param2;
-          var6 = -param3 + gf.field_i;
+          var5_int = param4 + SoftwareRasterizer.field_i * param2;
+          var6 = -param3 + SoftwareRasterizer.field_i;
           for (var7 = -param1; var7 < 0; var7++) {
             for (var8 = -param3; var8 < 0; var8++) {
-              gf.field_b[var5_int] = mp.a(gf.field_b[var5_int], -2147483648);
+              SoftwareRasterizer.field_b[var5_int] = mp.a(SoftwareRasterizer.field_b[var5_int], -2147483648);
               var5_int++;
             }
             var5_int = var5_int + var6;

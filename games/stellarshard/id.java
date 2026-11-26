@@ -727,8 +727,8 @@ class id implements uk, pj {
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          ti.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_r);
-          ti.d(var1_ref.field_t, var1_ref.field_u, var1_ref.field_n, var1_ref.field_l);
+          SoftwareRasterizer.setRasterBuffer(var1_ref.field_p, var1_ref.field_q, var1_ref.field_r);
+          SoftwareRasterizer.setClip(var1_ref.field_t, var1_ref.field_u, var1_ref.field_n, var1_ref.field_l);
           var1_ref.field_p = null;
           mb.field_b.addLast(param0 - 61, var1_ref);
           return;
@@ -737,8 +737,8 @@ class id implements uk, pj {
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        ti.a(var1_refLifetime1.field_p, var1_refLifetime1.field_q, var1_refLifetime1.field_r);
-        ti.d(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_n, var1_refLifetime1.field_l);
+        SoftwareRasterizer.setRasterBuffer(var1_refLifetime1.field_p, var1_refLifetime1.field_q, var1_refLifetime1.field_r);
+        SoftwareRasterizer.setClip(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_n, var1_refLifetime1.field_l);
         var1_refLifetime1.field_p = null;
         mb.field_b.addLast(param0 - 61, var1_refLifetime1);
     }

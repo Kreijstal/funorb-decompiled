@@ -47,7 +47,7 @@ final class ii extends ig {
           }
           if (ta.field_s.field_y >= var10) {
             hj.a(ta.field_s, 1);
-            ti.d();
+            SoftwareRasterizer.clearRaster();
             var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
             ta.field_s.d(-var15.field_w + var5, -var15.field_x + var6, 256);
@@ -82,7 +82,7 @@ final class ii extends ig {
           }
           if (ta.field_s.field_y >= var10Lifetime1) {
             hj.a(ta.field_s, 1);
-            ti.d();
+            SoftwareRasterizer.clearRaster();
             var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
             ta.field_s.d(-var18.field_w + var5, -var18.field_x + var6, 256);

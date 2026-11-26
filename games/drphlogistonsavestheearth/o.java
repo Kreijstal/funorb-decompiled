@@ -34,7 +34,7 @@ final class o extends em {
             t.a(var3_int != 0, GzipDecompressor.getAssetLoadingProgress(true), tb.b((byte) -81), 2, qe.field_g);
           } else {
             if (!s.a((byte) -81)) {
-              wj.c();
+              SoftwareRasterizer.clearRaster();
               ik.a(param1 + 11435, 320, 240);
               DrPhlogistonSavesTheEarth.a(0, param1 - 423, param2, 0);
             } else {

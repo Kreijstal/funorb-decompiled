@@ -167,7 +167,7 @@ final class rf extends a {
                   }
                   var21 = var21 + var23;
                   var29 = var29 + var31;
-                  var36Lifetime2 = var36Lifetime2 + sb.field_c;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_c;
                   var26 = var26 + var28;
                   var18 = var18 + var20;
                   var17_int = var17_int + var19;
@@ -328,7 +328,7 @@ final class rf extends a {
               var30 = var30 + var32;
               var25 = var25 + var27;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + sb.field_c;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_c;
               var26 = var26 + var28;
             }
             return;

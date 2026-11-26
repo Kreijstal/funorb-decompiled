@@ -74,10 +74,10 @@ final class fm {
             field_b = fk.a(me.field_g, "arrow", param0 - 201, "benefits");
             MidiPcmStream.field_m = (kc) ((Object) b.a("large_font", "benefits", -121, sf.field_q, me.field_g));
             rc.field_a = (kc) ((Object) b.a("small_font", "benefits", -114, sf.field_q, me.field_g));
-            var28 = ul.field_b;
-            var2 = ul.field_f;
-            var3 = ul.field_l;
-            ul.a(rh.field_e);
+            var28 = SoftwareRasterizer.field_b;
+            var2 = SoftwareRasterizer.field_f;
+            var3 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(rh.field_e);
             var11 = new hj(4 + field_b.field_o, 4 + field_b.field_k);
             var11.d();
             field_b.d(2, 2, NodeHashTableIterator.field_d);
@@ -104,9 +104,9 @@ final class fm {
             tb.field_c = null;
             ke.field_c = rh.field_b.f();
             ke.field_c.d();
-            ld.a(ul.field_f, 103, 64, 0, 0, 2 * ul.field_l / 3);
-            ul.a(var28, var2, var3);
-            ul.b(rh.field_e);
+            ld.a(SoftwareRasterizer.field_f, 103, 64, 0, 0, 2 * SoftwareRasterizer.field_l / 3);
+            SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
+            SoftwareRasterizer.restoreClip(rh.field_e);
             gb.field_d = (-bl.field_n.field_o + rl.field_a.field_o) / 2 + 231;
             ua.field_c = (rl.field_a.field_k - bl.field_n.field_k) / 2 + 390;
             ce.field_a = (rl.field_a.field_o - bl.field_n.field_o) / 2 + 434;
@@ -118,10 +118,10 @@ final class fm {
           }
           if (pf.field_b != null &&
             MidiPcmStream.field_m != null) {
-            var29 = ul.field_b;
-            var2Lifetime1 = ul.field_f;
-            var3Lifetime1 = ul.field_l;
-            ul.a(rh.field_e);
+            var29 = SoftwareRasterizer.field_b;
+            var2Lifetime1 = SoftwareRasterizer.field_f;
+            var3Lifetime1 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(rh.field_e);
             var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{li.field_b[ml.field_j]}, se.field_n);
             var5 = MidiPcmStream.field_m.c(var14, vg.field_l);
             var6Lifetime1 = MidiPcmStream.field_m.a(var14, vg.field_l, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
@@ -179,15 +179,15 @@ final class fm {
             pf.field_b.a(qb.field_c + (pf.field_b.field_s >> 1), (pf.field_b.field_t >> 1) + ld.field_a, ba.field_c, 4096);
             pf.field_b = null;
             DualLinkDeque.field_b.a();
-            ul.a(var29, var2Lifetime1, var3Lifetime1);
-            ul.b(rh.field_e);
+            SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(rh.field_e);
           }
           if (pj.field_k != null &&
             rc.field_a != null) {
-            var30 = ul.field_b;
-            var2Lifetime2 = ul.field_f;
-            var3Lifetime2 = ul.field_l;
-            ul.a(rh.field_e);
+            var30 = SoftwareRasterizer.field_b;
+            var2Lifetime2 = SoftwareRasterizer.field_f;
+            var3Lifetime2 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(rh.field_e);
             var16 = new hj(412, 43);
             var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, oc.field_U);
             pj.field_k = null;
@@ -196,15 +196,15 @@ final class fm {
             ve.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
             hc.field_l.d();
             var16.c(199 - hc.field_l.field_p, 83 - hc.field_l.field_u);
-            ul.a(var30, var2Lifetime2, var3Lifetime2);
-            ul.b(rh.field_e);
+            SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(rh.field_e);
           }
           if (lc.field_w != null &&
             null != rc.field_a) {
-            var31 = ul.field_b;
-            var2Lifetime3 = ul.field_f;
-            var3Lifetime3 = ul.field_l;
-            ul.a(rh.field_e);
+            var31 = SoftwareRasterizer.field_b;
+            var2Lifetime3 = SoftwareRasterizer.field_f;
+            var3Lifetime3 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(rh.field_e);
             var4 = rc.field_a.c(aa.field_b, 640) + 6;
             var5Lifetime1 = 20 + (var4 + lc.field_w.field_s);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -214,13 +214,13 @@ final class fm {
             ve.a(3, 50, hc.field_l, var4, 1, -hc.field_l.field_p + (var7Lifetime2 - 4), (byte) 64, 155 - hc.field_l.field_u);
             var8Lifetime1 = -hc.field_l.field_u + (155 - (-rc.field_a.field_B - rc.field_a.field_H - 3 + lc.field_w.field_t) / 2);
             lc.field_w.c(-hc.field_l.field_p + var6Lifetime2, var8Lifetime1);
-            ul.a(var31, var2Lifetime3, var3Lifetime3);
-            ul.b(rh.field_e);
+            SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(rh.field_e);
             lc.field_w = null;
           }
-          ul.a(rh.field_e);
-          ul.a(16, 16, 608, 112, 15, uh.field_a, hd.field_t);
-          ul.a(231, 144, 393, 232, 15, uh.field_a, hd.field_t);
+          SoftwareRasterizer.saveClip(rh.field_e);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, uh.field_a, hd.field_t);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, uh.field_a, hd.field_t);
           if (vg.field_i != null) {
             vg.field_i.c(0, 0);
           }

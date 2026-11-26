@@ -43,7 +43,7 @@ final class MixedSupport117 {
         }
         int integerLocal5 = MixedSupport113.integerArrayState0201[(PlayerNameAvailabilityValidator.integerState0354 + 1) % MixedSupport081.integerArrayState0153.length];
         int integerLocal6 = MixedSupport042.computeInteger0536(integerLocal5, LoginCredentials.integerState0348, integerArgument4, integerLocal4, 114);
-        SoftwareRaster.performAction0660(integerArgument3, integerArgument1, 640, 480, integerLocal3, integerLocal6);
+        SoftwareRaster.fillRectangleVerticalGradient(integerArgument3, integerArgument1, 640, 480, integerLocal3, integerLocal6);
     }
 
     final static long computeLong1528(int integerArgument1) {

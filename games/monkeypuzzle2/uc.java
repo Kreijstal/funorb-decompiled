@@ -36,17 +36,17 @@ final class uc {
         var13 = var13 - param4;
         var14 = var14 + param4;
         var15 = var15 + param4;
-        if (var12 < ge.field_a) {
-          var12 = ge.field_a;
+        if (var12 < SoftwareRasterizer.field_a) {
+          var12 = SoftwareRasterizer.field_a;
         }
-        if (var13 < ge.field_f) {
-          var13 = ge.field_f;
+        if (var13 < SoftwareRasterizer.field_f) {
+          var13 = SoftwareRasterizer.field_f;
         }
-        if (var14 > ge.field_j) {
-          var14 = ge.field_j;
+        if (var14 > SoftwareRasterizer.field_j) {
+          var14 = SoftwareRasterizer.field_j;
         }
-        if (var15 > ge.field_k) {
-          var15 = ge.field_k;
+        if (var15 > SoftwareRasterizer.field_k) {
+          var15 = SoftwareRasterizer.field_k;
         }
         DualLinkNode.field_h = 256 / param4;
         bh.field_j = param6 * 128 / param4;
@@ -55,7 +55,7 @@ final class uc {
         cg.field_h = (var12 - param0) * var8;
         l.field_u = (var12 - param0) * var9;
         ak.field_u = param7;
-        uc.a(param0, param1, param4, param5, 0, 0, var10, ge.field_i, var13 * ge.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, ge.field_h - (var14 - var12));
+        uc.a(param0, param1, param4, param5, 0, 0, var10, SoftwareRasterizer.field_i, var13 * SoftwareRasterizer.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, SoftwareRasterizer.field_h - (var14 - var12));
     }
 
     public static void clearStaticReferences(int param0) {

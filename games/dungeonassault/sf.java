@@ -249,7 +249,7 @@ final class sf implements cl {
           var2_int = bl.field_d[3].field_y;
           var3 = var2_int + 32;
           var4 = var2_int + 7 * var3;
-          gf.b(this.field_a - 4, this.field_d - 4, 8 + var4, var4 + 8, 0);
+          SoftwareRasterizer.fillRectangle(this.field_a - 4, this.field_d - 4, 8 + var4, var4 + 8, 0);
           rp.a(8, 2 + var4, (byte) 108, -1 + this.field_a, var4 + 2, kc.field_S, this.field_d - 1);
           if (this.field_j == null) {
             stackIn_5_0 = this.field_f;
@@ -413,7 +413,7 @@ final class sf implements cl {
           do {
             if (var9 >= 7) {
               jh.c();
-              gf.e(this.field_a, this.field_d, this.field_a + var4, this.field_d + var4);
+              SoftwareRasterizer.setClip(this.field_a, this.field_d, this.field_a + var4, this.field_d + var4);
               var7 = this.field_a;
               var8 = this.field_d;
               break;
@@ -435,11 +435,11 @@ final class sf implements cl {
                 var9 != 4 ||
                 var10Lifetime1 != 3 &&
                 var10Lifetime1 != 4) {
-                gf.b(-1 + var7, -1 + var8, 2 + var2_int, 2 + var2_int, 8421504);
-                gf.b(var7, var8, var2_int, var2_int, 16777215);
+                SoftwareRasterizer.fillRectangle(-1 + var7, -1 + var8, 2 + var2_int, 2 + var2_int, 8421504);
+                SoftwareRasterizer.fillRectangle(var7, var8, var2_int, var2_int, 16777215);
               } else {
-                gf.b(var7 - 2, -2 + var8, var2_int + 4, var2_int + 4, 8421504);
-                gf.b(-1 + var7, -1 + var8, 2 + var2_int, var2_int + 2, 16777215);
+                SoftwareRasterizer.fillRectangle(var7 - 2, -2 + var8, var2_int + 4, var2_int + 4, 8421504);
+                SoftwareRasterizer.fillRectangle(-1 + var7, -1 + var8, 2 + var2_int, var2_int + 2, 16777215);
               }
               var7 = var7 + var3;
               var10Lifetime1++;
@@ -716,7 +716,7 @@ final class sf implements cl {
             if (stackIn_9_0 > stackIn_9_1) {
               var8 = new cn(32, 32);
               var8.e();
-              gf.b(0, 0, 32, 32, 65793);
+              SoftwareRasterizer.fillRectangle(0, 0, 32, 32, 65793);
               var9 = 16777215;
               var10 = 10;
               var11 = -var10 + (32 - var10);
@@ -725,20 +725,20 @@ final class sf implements cl {
               }
               var12 = 0;
               while (var12 < 2) {
-                gf.b(var10, var10, var11, var11, var9);
+                SoftwareRasterizer.fillRectangle(var10, var10, var11, var11, var9);
                 stackIn_9_0 = -1;
                 stackIn_9_1 = ~(var7 & 1);
                 if (stackIn_9_0 != stackIn_9_1) {
-                  gf.b(0, var10, var11 + var10, var11, var9);
+                  SoftwareRasterizer.fillRectangle(0, var10, var11 + var10, var11, var9);
                 }
                 if ((var7 & 2) != 0) {
-                  gf.b(var10, var10, var11 + var10, var11, var9);
+                  SoftwareRasterizer.fillRectangle(var10, var10, var11 + var10, var11, var9);
                 }
                 if ((4 & var7) != 0) {
-                  gf.b(var10, 0, var11, var10 + var11, var9);
+                  SoftwareRasterizer.fillRectangle(var10, 0, var11, var10 + var11, var9);
                 }
                 if ((8 & var7) != 0) {
-                  gf.b(var10, var10, var11, var11 + var10, var9);
+                  SoftwareRasterizer.fillRectangle(var10, var10, var11, var11 + var10, var9);
                 }
                 var9 = 0;
                 var11 -= 2;

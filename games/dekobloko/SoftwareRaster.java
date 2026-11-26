@@ -15,7 +15,7 @@ final class SoftwareRaster {
     static int[] integerArrayState0063;
     static int integerState0285;
 
-    final static void performAction0638(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void setPixel(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument1 >= integerState0282) {
           if (integerArgument2 < integerState0280 ||
             integerArgument1 >= integerState0281 ||
@@ -27,22 +27,22 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0657() {
+    final static void resetClip() {
         integerState0282 = 0;
         integerState0280 = 0;
         integerState0281 = integerState0285;
         integerState0283 = integerState0284;
-        SoftwareRaster.performAction0653();
+        SoftwareRaster.clearScanlineMask();
     }
 
-    final static void performAction0645(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+    final static void setRasterBuffer(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
         integerArrayState0063 = integerArrayArgument1;
         integerState0285 = integerArgument2;
         integerState0284 = integerArgument3;
-        SoftwareRaster.performAction0649(0, 0, integerArgument2, integerArgument3);
+        SoftwareRaster.setClip(0, 0, integerArgument2, integerArgument3);
     }
 
-    final static void performAction0648() {
+    final static void clearRaster() {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -88,12 +88,12 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0651(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
-        SoftwareRaster.performAction0646(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument1, integerArgument3, integerArgument5, integerState0285 - integerArgument5, integerArgument6);
-        SoftwareRaster.performAction0647(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument2, integerArgument4, integerArgument6, integerState0285 - integerArgument5, integerArgument3, integerArgument5);
+    final static void blurRectangle(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+        SoftwareRaster.blurHorizontalInPlace(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument1, integerArgument3, integerArgument5, integerState0285 - integerArgument5, integerArgument6);
+        SoftwareRaster.blurVerticalInPlace(integerArrayState0063, 0, integerArgument3 + integerArgument4 * integerState0285, integerArgument2, integerArgument4, integerArgument6, integerState0285 - integerArgument5, integerArgument3, integerArgument5);
     }
 
-    final static void performAction0665(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void drawVerticalLine(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         if (integerArgument1 >= integerState0282) {
@@ -118,14 +118,14 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0664(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
-        SoftwareRaster.performAction0639(integerArgument1, integerArgument2, integerArgument3, integerArgument5);
-        SoftwareRaster.performAction0639(integerArgument1, integerArgument2 + integerArgument4 - 1, integerArgument3, integerArgument5);
-        SoftwareRaster.performAction0665(integerArgument1, integerArgument2, integerArgument4, integerArgument5);
-        SoftwareRaster.performAction0665(integerArgument1 + integerArgument3 - 1, integerArgument2, integerArgument4, integerArgument5);
+    final static void drawRectangleOutline(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+        SoftwareRaster.drawHorizontalLine(integerArgument1, integerArgument2, integerArgument3, integerArgument5);
+        SoftwareRaster.drawHorizontalLine(integerArgument1, integerArgument2 + integerArgument4 - 1, integerArgument3, integerArgument5);
+        SoftwareRaster.drawVerticalLine(integerArgument1, integerArgument2, integerArgument4, integerArgument5);
+        SoftwareRaster.drawVerticalLine(integerArgument1 + integerArgument3 - 1, integerArgument2, integerArgument4, integerArgument5);
     }
 
-    final static void performAction0640(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void fillRectangle(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -155,7 +155,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0663(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void intersectClip(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerState0282 < integerArgument1) {
           integerState0282 = integerArgument1;
         }
@@ -168,10 +168,10 @@ final class SoftwareRaster {
         if (integerState0283 > integerArgument4) {
           integerState0283 = integerArgument4;
         }
-        SoftwareRaster.performAction0653();
+        SoftwareRaster.clearScanlineMask();
     }
 
-    private final static void performAction0643(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    private final static void darkenRowsHalf(int integerArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         while (integerArgument5 < 0) {
           integerArgument3 = integerArgument1 + integerArgument4 - 7;
           while (integerArgument1 < integerArgument3) {
@@ -202,7 +202,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0646(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    private final static void blurHorizontalInPlace(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -363,7 +363,7 @@ final class SoftwareRaster {
         }
     }
 
-    public static void performAction0637() {
+    public static void clearStaticReferences() {
         integerArrayState0063 = null;
         integerArrayState0061 = null;
         integerArrayState0062 = null;
@@ -372,7 +372,7 @@ final class SoftwareRaster {
         integerArrayState0058 = null;
     }
 
-    final static void performAction0655(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void drawHorizontalLineAlpha(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -413,7 +413,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0662(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    private final static void drawVerticalLineAlpha(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -452,12 +452,12 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0653() {
+    private final static void clearScanlineMask() {
         integerArrayState0061 = null;
         integerArrayState0062 = null;
     }
 
-    final static void performAction0658(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void darkenRectangleHalf(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument1 < integerState0282) {
           integerArgument3 = integerArgument3 - (integerState0282 - integerArgument1);
           integerArgument1 = integerState0282;
@@ -474,10 +474,10 @@ final class SoftwareRaster {
         }
         int integerLocal1 = integerState0285 - integerArgument3;
         int integerLocal2 = integerArgument1 + integerArgument2 * integerState0285;
-        SoftwareRaster.performAction0643(integerLocal2, integerArrayState0063, 0, integerArgument3, -integerArgument4, integerLocal1);
+        SoftwareRaster.darkenRowsHalf(integerLocal2, integerArrayState0063, 0, integerArgument3, -integerArgument4, integerLocal1);
     }
 
-    final static void performAction0656(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void fillRoundedRectangle(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -516,7 +516,7 @@ final class SoftwareRaster {
         int integerLocal36;
         int integerLocal37;
         if (integerArgument5 == 0) {
-          SoftwareRaster.performAction0640(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6);
+          SoftwareRaster.fillRectangle(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6);
           return;
         }
         if (integerArgument5 < 0) {
@@ -636,7 +636,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void performAction0660(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void fillRectangleVerticalGradient(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -680,7 +680,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void performAction0647(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
+    private final static void blurVerticalInPlace(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -921,7 +921,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0641(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    final static void fillRectangleAlpha(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -959,7 +959,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0642(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final static void fillRoundedRectangleAlpha(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1002,11 +1002,11 @@ final class SoftwareRaster {
         int integerLocal40;
         int integerLocal41;
         if (integerArgument7 == 256) {
-          SoftwareRaster.performAction0656(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5, integerArgument6);
+          SoftwareRaster.fillRoundedRectangle(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5, integerArgument6);
           return;
         }
         if (integerArgument5 == 0) {
-          SoftwareRaster.performAction0641(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6, integerArgument7);
+          SoftwareRaster.fillRectangleAlpha(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument6, integerArgument7);
           return;
         }
         integerLocal9 = 256 - integerArgument7;
@@ -1134,7 +1134,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void performAction0661(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void fillCircle(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1162,7 +1162,7 @@ final class SoftwareRaster {
         int integerLocal25;
         int integerLocal26;
         if (integerArgument3 == 0) {
-          SoftwareRaster.performAction0638(integerArgument1, integerArgument2, integerArgument4);
+          SoftwareRaster.setPixel(integerArgument1, integerArgument2, integerArgument4);
           return;
         }
         if (integerArgument3 < 0) {
@@ -1255,14 +1255,14 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void performAction0652(int[] integerArrayArgument1) {
+    final static void saveClip(int[] integerArrayArgument1) {
         integerArrayArgument1[0] = integerState0282;
         integerArrayArgument1[1] = integerState0280;
         integerArrayArgument1[2] = integerState0281;
         integerArrayArgument1[3] = integerState0283;
     }
 
-    final static void performAction0654(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void grayscaleRectangle(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -1307,15 +1307,15 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0644(int[] integerArrayArgument1) {
+    final static void restoreClip(int[] integerArrayArgument1) {
         integerState0282 = integerArrayArgument1[0];
         integerState0280 = integerArrayArgument1[1];
         integerState0281 = integerArrayArgument1[2];
         integerState0283 = integerArrayArgument1[3];
-        SoftwareRaster.performAction0653();
+        SoftwareRaster.clearScanlineMask();
     }
 
-    final static void performAction0650(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void drawLine(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -1324,17 +1324,17 @@ final class SoftwareRaster {
         integerArgument4 = integerArgument4 - integerArgument2;
         if (integerArgument4 == 0) {
           if (integerArgument3 < 0) {
-            SoftwareRaster.performAction0639(integerArgument1 + integerArgument3, integerArgument2, -integerArgument3 + 1, integerArgument5);
+            SoftwareRaster.drawHorizontalLine(integerArgument1 + integerArgument3, integerArgument2, -integerArgument3 + 1, integerArgument5);
           } else {
-            SoftwareRaster.performAction0639(integerArgument1, integerArgument2, integerArgument3 + 1, integerArgument5);
+            SoftwareRaster.drawHorizontalLine(integerArgument1, integerArgument2, integerArgument3 + 1, integerArgument5);
           }
           return;
         }
         if (integerArgument3 == 0) {
           if (integerArgument4 < 0) {
-            SoftwareRaster.performAction0665(integerArgument1, integerArgument2 + integerArgument4, -integerArgument4 + 1, integerArgument5);
+            SoftwareRaster.drawVerticalLine(integerArgument1, integerArgument2 + integerArgument4, -integerArgument4 + 1, integerArgument5);
           } else {
-            SoftwareRaster.performAction0665(integerArgument1, integerArgument2, integerArgument4 + 1, integerArgument5);
+            SoftwareRaster.drawVerticalLine(integerArgument1, integerArgument2, integerArgument4 + 1, integerArgument5);
           }
           return;
         }
@@ -1391,17 +1391,17 @@ final class SoftwareRaster {
         }
     }
 
-    final static void performAction0659(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static void drawRectangleShadow(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         for (integerLocal1 = 0; integerLocal1 < 4; integerLocal1++) {
           integerLocal2 = 128 - (integerLocal1 << 5);
-          SoftwareRaster.performAction0655(integerArgument1 + integerLocal1, integerArgument2 + integerArgument4 + integerLocal1, integerArgument3, integerArgument5, integerLocal2);
-          SoftwareRaster.performAction0662(integerArgument1 + integerArgument3 + integerLocal1, integerArgument2 + integerLocal1, integerArgument4 + 1, integerArgument5, integerLocal2);
+          SoftwareRaster.drawHorizontalLineAlpha(integerArgument1 + integerLocal1, integerArgument2 + integerArgument4 + integerLocal1, integerArgument3, integerArgument5, integerLocal2);
+          SoftwareRaster.drawVerticalLineAlpha(integerArgument1 + integerArgument3 + integerLocal1, integerArgument2 + integerLocal1, integerArgument4 + 1, integerArgument5, integerLocal2);
         }
     }
 
-    final static void performAction0649(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void setClip(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument1 < 0) {
           integerArgument1 = 0;
         }
@@ -1418,10 +1418,10 @@ final class SoftwareRaster {
         integerState0280 = integerArgument2;
         integerState0281 = integerArgument3;
         integerState0283 = integerArgument4;
-        SoftwareRaster.performAction0653();
+        SoftwareRaster.clearScanlineMask();
     }
 
-    final static void performAction0639(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void drawHorizontalLine(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         if (integerArgument2 >= integerState0280) {

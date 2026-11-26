@@ -208,7 +208,7 @@ final class io extends rf {
               var11 <= this.field_K.field_l &&
               var12 <= this.field_K.field_u) {
               em.a((byte) 38, this.field_K);
-              kh.a();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_K = new dl(var11, var12);
               em.a((byte) 38, this.field_K);
@@ -250,7 +250,7 @@ final class io extends rf {
             } else {
               if (var12Lifetime5 <= this.field_K.field_u) {
                 em.a((byte) 38, this.field_K);
-                kh.a();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_K = new dl(var11Lifetime5, var12Lifetime5);
                 em.a((byte) 38, this.field_K);
@@ -296,7 +296,7 @@ final class io extends rf {
               var11Lifetime1 <= this.field_K.field_l &&
               var12Lifetime1 <= this.field_K.field_u) {
               em.a((byte) 38, this.field_K);
-              kh.a();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_K = new dl(var11Lifetime1, var12Lifetime1);
               em.a((byte) 38, this.field_K);
@@ -341,7 +341,7 @@ final class io extends rf {
                 em.a((byte) 38, this.field_K);
               } else {
                 em.a((byte) 38, this.field_K);
-                kh.a();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -382,7 +382,7 @@ final class io extends rf {
               var11Lifetime2 <= this.field_K.field_l &&
               var12Lifetime2 <= this.field_K.field_u) {
               em.a((byte) 38, this.field_K);
-              kh.a();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_K = new dl(var11Lifetime2, var12Lifetime2);
               em.a((byte) 38, this.field_K);
@@ -419,7 +419,7 @@ final class io extends rf {
             var11Lifetime2Lifetime1 <= this.field_K.field_l &&
             var12Lifetime2Lifetime1 <= this.field_K.field_u) {
             em.a((byte) 38, this.field_K);
-            kh.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_K = new dl(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
             em.a((byte) 38, this.field_K);
@@ -459,7 +459,7 @@ final class io extends rf {
             var11Lifetime3 <= this.field_K.field_l &&
             var12Lifetime3 <= this.field_K.field_u) {
             em.a((byte) 38, this.field_K);
-            kh.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_K = new dl(var11Lifetime3, var12Lifetime3);
             em.a((byte) 38, this.field_K);
@@ -501,7 +501,7 @@ final class io extends rf {
           } else {
             if (var12Lifetime4 <= this.field_K.field_u) {
               em.a((byte) 38, this.field_K);
-              kh.a();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_K = new dl(var11Lifetime4, var12Lifetime4);
               em.a((byte) 38, this.field_K);

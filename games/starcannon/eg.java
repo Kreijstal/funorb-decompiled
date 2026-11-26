@@ -106,24 +106,24 @@ final class eg implements de {
         int var12Lifetime1;
         try {
           var15 = param4 instanceof el ? (el) (param4) : null;
-          ki.d(param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, this.field_b);
+          SoftwareRasterizer.fillRectangle(param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, this.field_b);
           if (var15 != null) {
           }
           var7 = var15.field_K + (param4.field_s + param0);
           var8 = var15.field_G + param4.field_j + param3;
-          ki.e(var7, var8, var15.field_I, this.field_g);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_I, this.field_g);
           if (var15.field_E != -1) {
             var9 = (double)var15.field_E * 3.141592653589793 * 2.0 / (double)var15.field_B;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
             var12 = (int)(Math.cos(var9) * (double)var15.field_I);
-            ki.e(var7 + var11, var8 + var12, 1, this.field_j);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_j);
           }
-          ki.e(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var15.field_F * 3.141592653589793 * 2.0 / (double)var15.field_B;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_I);
           int var13 = -54 / ((param2 - 2) / 54);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_I);
-          ki.a(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var14 = var15.field_I + var15.field_K + this.field_d;
             this.field_k.a(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << 1), this.field_c, this.field_m, 1, 1, 0);

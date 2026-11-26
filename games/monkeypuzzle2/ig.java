@@ -13,7 +13,7 @@ final class ig {
     private static int[] field_e;
 
     final static void b() {
-        ig.a(ge.field_a, ge.field_f, ge.field_j, ge.field_k);
+        ig.a(SoftwareRasterizer.field_a, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_k);
     }
 
     public static void clearStaticReferences() {
@@ -37,10 +37,10 @@ final class ig {
         if (field_i.length < field_a) {
           field_i = new int[i.roundUpPowerOfTwo(field_a, true)];
         }
-        int var4 = param1 * ge.field_h + param0;
+        int var4 = param1 * SoftwareRasterizer.field_h + param0;
         for (var5 = 0; var5 < field_a; var5++) {
           field_i[var5] = var4;
-          var4 = var4 + ge.field_h;
+          var4 = var4 + SoftwareRasterizer.field_h;
         }
     }
 

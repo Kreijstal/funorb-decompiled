@@ -109,24 +109,24 @@ final class ij extends vd implements kn, qk {
         RuntimeException var5 = null;
         var10 = HostileSpawn.field_I ? 1 : 0;
         try {
-          si.a(param3, param2, param1 + 1, 10000536);
-          si.a(param3, param2 + param0, param1 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param2, param1 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param2 + param0, param1 + 1, 12105912);
           var5_int = 1;
-          if (si.field_j > param2 + var5_int) {
-            var5_int = si.field_j - param2;
+          if (SoftwareRasterizer.field_j > param2 + var5_int) {
+            var5_int = SoftwareRasterizer.field_j - param2;
           }
           if (param4) {
             field_J = (IntrusiveDeque) null;
           }
           var6 = param0;
-          if (si.field_a < var6 + param2) {
-            var6 = si.field_a - param2;
+          if (SoftwareRasterizer.field_a < var6 + param2) {
+            var6 = SoftwareRasterizer.field_a - param2;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + var7 * 48 / param0;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            si.field_i[si.field_e * (param2 + var7) + param3] = var9;
-            si.field_i[param1 + (param3 + si.field_e * (param2 + var7))] = var9;
+            SoftwareRasterizer.field_i[SoftwareRasterizer.field_e * (param2 + var7) + param3] = var9;
+            SoftwareRasterizer.field_i[param1 + (param3 + SoftwareRasterizer.field_e * (param2 + var7))] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -68,7 +68,7 @@ final class pf {
         if (param0 != 511) {
           pf.b((byte) 22);
         }
-        var1.a(si.field_e, si.field_i, si.field_a, -12131, si.field_j, si.field_l, si.field_b, si.field_k);
+        var1.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -12131, SoftwareRasterizer.field_j, SoftwareRasterizer.field_l, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
         ak.field_i.addLast(var1, 114);
     }
 
@@ -232,7 +232,7 @@ final class pf {
                 if (param4 == 16728128) {
                   var9 = 262401 * (((16713802 & var9) >> 16) / 4);
                 }
-                si.a(-1 + param0 + (var12.field_u - var8), var7 + param1, var9);
+                SoftwareRasterizer.addPixel(-1 + param0 + (var12.field_u - var8), var7 + param1, var9);
               }
             }
             var6 = var6 + var12.field_u;

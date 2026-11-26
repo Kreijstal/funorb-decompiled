@@ -23,7 +23,7 @@ final class cl extends od {
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
         wj.b(param0);
-        ki.c(param2, param3, param4, param1);
+        SoftwareRasterizer.intersectClip(param2, param3, param4, param1);
     }
 
     final static Sprite a(int param0, Sprite param1, boolean param2, boolean param3, int[] param4, int param5) {

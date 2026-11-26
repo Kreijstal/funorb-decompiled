@@ -41,7 +41,7 @@ final class li implements fe {
             stackIn_3_0 = (fj) (param3);
           }
           var14 = (jh) (stackIn_3_0);
-          fn.e(param3.field_q + param1, param4 + param3.field_m, param3.field_F, param3.field_z, this.field_d);
+          SoftwareRasterizer.fillRectangle(param3.field_q + param1, param4 + param3.field_m, param3.field_F, param3.field_z, this.field_d);
           if (var14 == null) {
           }
           var7 = var14.field_P + param3.field_q + param1;
@@ -49,18 +49,18 @@ final class li implements fe {
           if (param0 > -97) {
             field_n = (String) null;
           }
-          fn.e(var7, var8, var14.field_W, this.field_j);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_W, this.field_j);
           if (var14.field_T != -1) {
             var9 = (double)var14.field_T * 3.141592653589793 * 2.0 / (double)var14.field_Q;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_W);
             var12 = (int)(Math.cos(var9) * (double)var14.field_W);
-            fn.e(var11 + var7, var12 + var8, 1, this.field_h);
+            SoftwareRasterizer.fillCircle(var11 + var7, var12 + var8, 1, this.field_h);
           }
-          fn.e(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_V * 3.141592653589793 * 2.0 / (double)var14.field_Q;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_W);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_W);
-          fn.f(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_i == null) {
             return;
           }

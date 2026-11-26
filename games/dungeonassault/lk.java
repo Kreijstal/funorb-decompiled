@@ -103,10 +103,10 @@ final class lk extends gd {
             db.field_v.b(var10, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
               this.field_H.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_K.e(0, 0, 16744448);
               this.field_z.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_K.e(0, 0, 12690143);
               jh.b();
               this.field_K.field_A = this.field_x - var7 >> 1;
@@ -121,10 +121,10 @@ final class lk extends gd {
             }
             db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
             this.field_H.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
             this.field_z.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7 >> 1;
@@ -156,10 +156,10 @@ final class lk extends gd {
             db.field_v.b(var11, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
               this.field_H.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_K.e(0, 0, 16744448);
               this.field_z.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_K.e(0, 0, 12690143);
               jh.b();
               this.field_K.field_A = this.field_x - var7Lifetime2 >> 1;
@@ -174,10 +174,10 @@ final class lk extends gd {
             }
             db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
             this.field_H.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
             this.field_z.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7Lifetime2 >> 1;
@@ -209,10 +209,10 @@ final class lk extends gd {
             db.field_v.b(var12, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
               this.field_H.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_K.e(0, 0, 16744448);
               this.field_z.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_K.e(0, 0, 12690143);
               jh.b();
               this.field_K.field_A = this.field_x - var7Lifetime3 >> 1;
@@ -227,10 +227,10 @@ final class lk extends gd {
             }
             db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
             this.field_H.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
             this.field_z.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7Lifetime3 >> 1;
@@ -262,10 +262,10 @@ final class lk extends gd {
           db.field_v.b(var13, 0, la.field_b.field_H, 12632256, -1);
           if (var14 == null) {
             this.field_H.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
             this.field_z.e();
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7Lifetime4 >> 1;
@@ -280,10 +280,10 @@ final class lk extends gd {
           }
           db.field_v.b(var14, 0, la.field_b.field_H * 2, 8421504, -1);
           this.field_H.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           this.field_K.e(0, 0, 16744448);
           this.field_z.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           this.field_K.e(0, 0, 12690143);
           jh.b();
           this.field_K.field_A = this.field_x - var7Lifetime4 >> 1;
@@ -317,10 +317,10 @@ final class lk extends gd {
         db.field_v.b(var15, 0, la.field_b.field_H, 12632256, -1);
         if (var4 == null) {
           this.field_H.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           this.field_K.e(0, 0, 16744448);
           this.field_z.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           this.field_K.e(0, 0, 12690143);
           jh.b();
           this.field_K.field_A = this.field_x - var7Lifetime1 >> 1;
@@ -335,10 +335,10 @@ final class lk extends gd {
         }
         db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
         this.field_H.e();
-        gf.a();
+        SoftwareRasterizer.clearRaster();
         this.field_K.e(0, 0, 16744448);
         this.field_z.e();
-        gf.a();
+        SoftwareRasterizer.clearRaster();
         this.field_K.e(0, 0, 12690143);
         jh.b();
         this.field_K.field_A = this.field_x - var7Lifetime1 >> 1;
@@ -422,7 +422,7 @@ final class lk extends gd {
         int var5 = param1 + this.field_i;
         int var7 = 63 / ((param2 - 41) / 61);
         for (var6 = 0; 10 > var6; var6++) {
-          gf.g(30 + var4, 20 + var5, 20 + var6, 0, 16);
+          SoftwareRasterizer.fillCircleAlpha(30 + var4, 20 + var5, 20 + var6, 0, 16);
         }
     }
 

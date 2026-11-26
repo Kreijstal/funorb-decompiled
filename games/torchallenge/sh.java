@@ -46,11 +46,11 @@ abstract class sh extends DualLinkNode {
           var9 = param2[var7_int - 1] + param2[0] >> 1;
           for (var10 = 0; var10 < 3; var10++) {
             we.field_e[var10][param3].d();
-            SoftwareRasterizer.a(ae.field_y);
+            SoftwareRasterizer.saveClip(ae.field_y);
             if (var7_int > 0) {
-              SoftwareRasterizer.a(0, 0, var7_int, var8);
+              SoftwareRasterizer.intersectClip(0, 0, var7_int, var8);
               od.a(cg.field_b[var10][param0][var7_int - 1], param2);
-              SoftwareRasterizer.b(ae.field_y);
+              SoftwareRasterizer.restoreClip(ae.field_y);
               SectorCacheStore.field_f.bindAsTarget(-106);
             }
           }
@@ -58,7 +58,7 @@ abstract class sh extends DualLinkNode {
           var10Lifetime1 = var12;
           while (var12 <= 1) {
             re.field_v[var12][param3].d();
-            SoftwareRasterizer.a(ae.field_y);
+            SoftwareRasterizer.saveClip(ae.field_y);
             if (var12 == 0 &&
               param0 == 0) {
               var7_intLifetime1 = param5[param3][1] - param4[param3][0];
@@ -72,9 +72,9 @@ abstract class sh extends DualLinkNode {
               var7_intLifetime1 = param4[param3][1] - param5[param3][0];
             }
             if (var7_intLifetime1 > 0) {
-              SoftwareRasterizer.a(0, 0, var7_intLifetime1, var8);
+              SoftwareRasterizer.intersectClip(0, 0, var7_intLifetime1, var8);
               od.a(fh.field_a[param0][var7_intLifetime1 - 1], var9);
-              SoftwareRasterizer.b(ae.field_y);
+              SoftwareRasterizer.restoreClip(ae.field_y);
               SectorCacheStore.field_f.bindAsTarget(-106);
             }
             var12++;

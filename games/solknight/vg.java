@@ -43,10 +43,10 @@ class vg extends pj {
         }
         cl.a(-118, tg.field_J);
         hk.a();
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clearRaster();
         ee.g(95);
         if (256 > var5) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, -var5 + 256);
         }
         MidiPcmStream.e(4096);
         if (BufferedSocket.field_h < 150) {

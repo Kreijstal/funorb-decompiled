@@ -19,7 +19,7 @@ final class nb extends TextureOperator {
           if (param3 >= -56) {
             field_A = (String) null;
           }
-          tn.a(bi.field_j / 2, bi.field_e / 2, 55);
+          tn.a(SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2, 55);
           ar.a(param1.field_M + param1.field_t, (byte) 92, param2.field_M + param2.field_t, param1.field_t, param2.field_t);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "nb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

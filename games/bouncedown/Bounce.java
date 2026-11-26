@@ -107,7 +107,7 @@ public final class Bounce extends GameClient {
           AppletShell.e((byte) 118);
           ha.a(false);
           MouseWheelInput.a((byte) 53);
-          na.c();
+          SoftwareRasterizer.clearStaticReferences();
           gk.b(false);
           ob.clearStaticReferences(640);
           PacketBuffer.clearStaticReferences((byte) -127);
@@ -1530,7 +1530,7 @@ public final class Bounce extends GameClient {
           }
           var3 = 64;
           mb.field_q.b(0, 0);
-          na.e(var3, 0, var3 + 512, 446);
+          SoftwareRasterizer.setClip(var3, 0, var3 + 512, 446);
           PacketBuffer.field_j.a(var3, eg.field_n);
           PacketBuffer.field_j.a(128 + var3, eg.field_n);
           PacketBuffer.field_j.a(var3 + 256, eg.field_n);
@@ -1539,10 +1539,10 @@ public final class Bounce extends GameClient {
           var5_int = 0;
           do {
             if (640 <= var5_int) {
-              na.d();
+              SoftwareRasterizer.resetClip();
               pc.field_o.a(-pc.field_o.field_s + 640, 0);
               pc.field_o.d(0, 0);
-              na.e(var3, 0, var3 + 512, 446);
+              SoftwareRasterizer.setClip(var3, 0, var3 + 512, 446);
               break;
             }
             var4 = (3 + var4) % 8;
@@ -1582,7 +1582,7 @@ public final class Bounce extends GameClient {
           regionExit2: {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameCompleted1 = true;
-            na.d();
+            SoftwareRasterizer.resetClip();
             if (PcmResampler.field_g) {
               if (vk.field_b == 1 &&
                 he.field_n[0].field_n > 1) {
@@ -1743,7 +1743,7 @@ public final class Bounce extends GameClient {
           }
           if (-1 != jk.field_q &&
             PcmResampler.field_g) {
-            na.a(64, 0, 512, 480, 0, 64);
+            SoftwareRasterizer.fillRectangleAlpha(64, 0, 512, 480, 0, 64);
             if (jk.field_q == 0 ||
               jk.field_q == 1 ||
               jk.field_q == 2) {
@@ -1773,14 +1773,14 @@ public final class Bounce extends GameClient {
             decompiledFrameRemainder1 = (var9 != 0);
           }
           if (decompiledFrameRemainder1) {
-            na.a(var3, 0, 512, 480, 0, 112);
+            SoftwareRasterizer.fillRectangleAlpha(var3, 0, 512, 480, 0, 112);
             if (bk.field_c == 1) {
             }
             if (3 != bk.field_c) {
             }
             if (bk.field_c == 2) {
             }
-            na.d();
+            SoftwareRasterizer.resetClip();
             if (null != MusicPatchPcmStream.field_o &&
               rj.field_j == -1) {
               MusicPatchPcmStream.field_o.a(23417);
@@ -1793,7 +1793,7 @@ public final class Bounce extends GameClient {
             }
             if (PcmResampler.field_g) {
               var5_int = od.field_f.b(ui.field_j + "100000");
-              na.e(-4 - var5_int / 2 + 322, 451, 8 + (var5_int - 4), 26, 0);
+              SoftwareRasterizer.fillRectangle(-4 - var5_int / 2 + 322, 451, 8 + (var5_int - 4), 26, 0);
               ve.a(30, 449, ig.field_d, (byte) -100, var5_int + 8, -(var5_int / 2) + 316);
               var6_int = od.field_f.b(ui.field_j + fa.field_c);
               var7 = od.field_f.b(ui.field_j);
@@ -1824,9 +1824,9 @@ public final class Bounce extends GameClient {
                 var6_intLifetime1 = 8;
               }
             }
-            na.b(4, var6_intLifetime1 - 4, 56 + od.field_f.b(lj.field_b[var5_ref.field_h]), 40, 0);
-            na.b(5, var6_intLifetime1 - 3, od.field_f.b(lj.field_b[var5_ref.field_h]) + 54, 38, 16741888);
-            na.b(6, var6_intLifetime1 - 2, 52 + od.field_f.b(lj.field_b[var5_ref.field_h]), 36, 0);
+            SoftwareRasterizer.drawRectangleOutline(4, var6_intLifetime1 - 4, 56 + od.field_f.b(lj.field_b[var5_ref.field_h]), 40, 0);
+            SoftwareRasterizer.drawRectangleOutline(5, var6_intLifetime1 - 3, od.field_f.b(lj.field_b[var5_ref.field_h]) + 54, 38, 16741888);
+            SoftwareRasterizer.drawRectangleOutline(6, var6_intLifetime1 - 2, 52 + od.field_f.b(lj.field_b[var5_ref.field_h]), 36, 0);
             DualLinkNode.field_h[var5_ref.field_h].b(8, var6_intLifetime1, 32, 32);
             od.field_f.b(lj.field_b[var5_ref.field_h], 47, var6_intLifetime1 + od.field_f.field_s, 0, 0);
             od.field_f.b(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + (-1 + var6_intLifetime1), 0, 0);
@@ -1859,7 +1859,7 @@ public final class Bounce extends GameClient {
               var6 = gk.field_e;
               var7Lifetime2 = 200 + var6.field_s;
               var8 = var6.field_F + var6.field_x + 4;
-              na.e(112, 190, 416, 64 + 5 * var8 + 20, 0);
+              SoftwareRasterizer.fillRectangle(112, 190, 416, 64 + 5 * var8 + 20, 0);
               ve.a(84 + (5 * var8 + 6), 187, ig.field_d, (byte) -94, 422, 109);
               var6.a(tc.field_q, 320, var7Lifetime2, 16777088, -1);
               stackIn_320_0 = var6;
@@ -1894,8 +1894,8 @@ public final class Bounce extends GameClient {
           }
           boolean decompiledSharedTail0 = !(vc.d((byte) 119));
           if (!decompiledSharedTail0) {
-            na.a(0, 0, 640, 480, 0, 128);
-            na.e(-7 - hj.a(24777) / 2 + 320, 240 - (nd.a(-21065) / 2 + 8), 14 + hj.a(24777), 16 + nd.a(-21065), 0);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
+            SoftwareRasterizer.fillRectangle(-7 - hj.a(24777) / 2 + 320, 240 - (nd.a(-21065) / 2 + 8), 14 + hj.a(24777), 16 + nd.a(-21065), 0);
             PacketBuffer.a(ig.field_d, 12, 12, (byte) -126);
             decompiledSharedTail0 = (var9 != 0);
           }

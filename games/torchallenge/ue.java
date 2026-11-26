@@ -52,13 +52,13 @@ final class ue extends IntrusiveNode {
           var2 = rd.field_i[0].fullHeight;
           ii.field_h[3] = new Sprite(var3, 480);
           ii.field_h[3].d();
-          SoftwareRasterizer.c(var1_int, var2, var3, var4, si.field_H[0], si.field_H[2]);
-          SoftwareRasterizer.c(var1_int + 1, var2, 1, var4, ih.field_N[0], ih.field_N[2]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var1_int, var2, var3, var4, si.field_H[0], si.field_H[2]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var1_int + 1, var2, 1, var4, ih.field_N[0], ih.field_N[2]);
           ii.field_h[3].h();
           ii.field_h[4] = new Sprite(var3, 480);
           ii.field_h[4].d();
-          SoftwareRasterizer.c(var1_int, var2, var3, var4, si.field_H[1], si.field_H[3]);
-          SoftwareRasterizer.c(var1_int + 1, var2, 1, var4, ih.field_N[1], ih.field_N[3]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var1_int, var2, var3, var4, si.field_H[1], si.field_H[3]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var1_int + 1, var2, 1, var4, ih.field_N[1], ih.field_N[3]);
           ii.field_h[4].h();
           var1_intLifetime1 = 0;
           var2Lifetime1 = rd.field_i[0].fullHeight;
@@ -66,8 +66,8 @@ final class ue extends IntrusiveNode {
           var4Lifetime1 = -(rd.field_i[0].fullWidth * 2) + 640;
           ii.field_h[1] = new Sprite(var3Lifetime1, 640);
           ii.field_h[1].d();
-          SoftwareRasterizer.c(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[0], si.field_H[1]);
-          SoftwareRasterizer.c(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[0], ih.field_N[1]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[0], si.field_H[1]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[0], ih.field_N[1]);
           var5 = new int[640 * var3Lifetime1];
           for (var7 = 0; var7 < 640; var7++) {
             for (var8 = 0; var3Lifetime1 > var8; var8++) {
@@ -85,8 +85,8 @@ final class ue extends IntrusiveNode {
           ii.field_h[1].h();
           ii.field_h[6] = new Sprite(var3Lifetime1, 640);
           ii.field_h[6].d();
-          SoftwareRasterizer.c(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[2], si.field_H[3]);
-          SoftwareRasterizer.c(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[2], ih.field_N[3]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[2], si.field_H[3]);
+          SoftwareRasterizer.fillRectangleVerticalGradient(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[2], ih.field_N[3]);
           for (var7Lifetime1 = 0; var7Lifetime1 < 640; var7Lifetime1++) {
             for (var8Lifetime1 = 0; var8Lifetime1 < var3Lifetime1; var8Lifetime1++) {
               var6[var7Lifetime1 + var8Lifetime1 * 640] = ii.field_h[6].pixels[var8Lifetime1 + var7Lifetime1 * var3Lifetime1];

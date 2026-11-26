@@ -350,7 +350,7 @@ final class BoundedRandomAccessFile {
                   }
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + gb.field_d;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_d;
                 }
               }
               var16Lifetime3 = param7 - param4;
@@ -427,7 +427,7 @@ final class BoundedRandomAccessFile {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + gb.field_d;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_d;
               var10 = var10 + var12;
             }
             return;

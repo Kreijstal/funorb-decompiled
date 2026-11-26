@@ -30,15 +30,15 @@ final class wj {
             var7 = param1[1].field_x;
             param1[0].e(param2, param3);
             param1[2].e(param2 + param4 - var6, param3);
-            ki.a(be.field_c);
-            ki.c(var5_int + param2, param3, -var6 + param2 + param4, param1[1].field_q + param3);
+            SoftwareRasterizer.saveClip(be.field_c);
+            SoftwareRasterizer.intersectClip(var5_int + param2, param3, -var6 + param2 + param4, param1[1].field_q + param3);
             var8 = param2 + var5_int;
             var9 = 80 % ((param0 - 53) / 32);
             var10 = param2 + (param4 - var6);
             for (param2 = var8; var10 > param2; param2 = param2 + var7) {
               param1[1].e(param2, param3);
             }
-            ki.b(be.field_c);
+            SoftwareRasterizer.restoreClip(be.field_c);
             return;
           }
           return;
@@ -134,13 +134,13 @@ final class wj {
           var1 = new bc();
         }
         if (param0) {
-          var1.a(ki.field_j, ki.field_g, ki.field_i, ki.field_a, ki.field_l, ki.field_e, ki.field_f, false);
+          var1.a(SoftwareRasterizer.field_j, SoftwareRasterizer.field_g, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, false);
           gi.field_a.addLast(70, var1);
           return;
         }
         Sprite[] var2 = (Sprite[]) null;
         wj.a(-47, (Sprite[]) null, 85, -18, 75);
-        var1.a(ki.field_j, ki.field_g, ki.field_i, ki.field_a, ki.field_l, ki.field_e, ki.field_f, false);
+        var1.a(SoftwareRasterizer.field_j, SoftwareRasterizer.field_g, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, false);
         gi.field_a.addLast(70, var1);
     }
 

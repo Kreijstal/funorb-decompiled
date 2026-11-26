@@ -149,7 +149,7 @@ abstract class dd {
         if (param0 != 1) {
           return;
         }
-        SoftwareRasterizer.a(this.field_b, this.field_a, this.field_c);
+        SoftwareRasterizer.setRasterBuffer(this.field_b, this.field_a, this.field_c);
     }
 
     static {

@@ -443,7 +443,7 @@ final class lj implements cl {
             this.field_f.field_A = -16;
           }
           this.field_c.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var2_int = 0;
           while (true) {
             stackIn_6_0 = -8;
@@ -528,9 +528,9 @@ final class lj implements cl {
                 this.field_w = (int[][]) null;
               }
               this.field_f.e();
-              gf.a();
+              SoftwareRasterizer.clearRaster();
               this.field_c.e(16, 16, 16744448);
-              gf.d(8, 8, 0, 0, this.field_f.field_y, this.field_f.field_v);
+              SoftwareRasterizer.blurRectangle(8, 8, 0, 0, this.field_f.field_y, this.field_f.field_v);
               this.field_c.e(16, 16, 0);
               jh.b();
               return;
@@ -742,8 +742,8 @@ final class lj implements cl {
             }
           }
           var10Lifetime1 = 0;
-          var11Lifetime1 = param3 + param0.field_w + gf.field_i * (param0.field_A + param4);
-          var12Lifetime1 = -param0.field_y + gf.field_i;
+          var11Lifetime1 = param3 + param0.field_w + SoftwareRasterizer.field_i * (param0.field_A + param4);
+          var12Lifetime1 = -param0.field_y + SoftwareRasterizer.field_i;
           var14Lifetime1 = -param0.field_v;
           while (var14Lifetime1 < 0) {
             if (var19 != 0) {
@@ -762,7 +762,7 @@ final class lj implements cl {
                 var16Lifetime1 = var16Lifetime1 * var6_int;
                 var18 = var18 * var8;
                 var15Lifetime1 = 65280 & var18 | (16711680 & var17 | var16Lifetime1 & -16777216);
-                gf.field_b[var11Lifetime1] = mp.a(var15Lifetime1 >>> 8, -16777216);
+                SoftwareRasterizer.field_b[var11Lifetime1] = mp.a(var15Lifetime1 >>> 8, -16777216);
               }
               var11Lifetime1++;
               var13Lifetime1++;
@@ -802,16 +802,16 @@ final class lj implements cl {
             this.field_b.field_A = -16;
           }
           this.field_d.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var4_int = 0;
           var5 = 0;
           ri.field_d[5].e(var4_int, var5, 16777215);
           ri.field_d[4].e(var4_int + 32, var5, 16777215);
           this.b(var5, param2, -127, 16777215, var4_int);
           this.field_b.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           this.field_d.e(16, 16, param1);
-          gf.d(16, 16, 0, 0, this.field_b.field_y, this.field_b.field_v);
+          SoftwareRasterizer.blurRectangle(16, 16, 0, 0, this.field_b.field_y, this.field_b.field_v);
           this.field_d.e(16, 16, 0);
           jh.b();
           this.field_t = 80;
@@ -1222,8 +1222,8 @@ final class lj implements cl {
               }
               break;
             }
-            gf.b(-(var2_int * 4 / 3) + this.field_q, var2_int + (18 + this.field_l), 8 * var2_int / 3, 0);
-            gf.b(-(4 * var2_int / 3) + this.field_q, -var2_int + 336 + 18 + this.field_l, 8 * var2_int / 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(-(var2_int * 4 / 3) + this.field_q, var2_int + (18 + this.field_l), 8 * var2_int / 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(-(4 * var2_int / 3) + this.field_q, -var2_int + 336 + 18 + this.field_l, 8 * var2_int / 3, 0);
             var2_int++;
           } while (var13 == 0);
           var2_int = 0;

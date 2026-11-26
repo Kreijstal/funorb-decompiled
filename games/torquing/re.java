@@ -192,7 +192,7 @@ final class re {
           var9Lifetime1 = var17.field_t;
           bp.a((byte) -95);
           var17.e();
-          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
@@ -338,9 +338,9 @@ final class re {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (param1) {
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         } else {
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
         }
         DirectByteStorage.a(param1, -127);
         if (!param0) {

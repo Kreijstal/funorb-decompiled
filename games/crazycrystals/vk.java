@@ -59,7 +59,7 @@ final class vk extends og implements ho, vd {
           ai.field_h.a(this.field_B, 20 + (param2 + this.field_r), 15 + param0 + this.field_j, -40 + this.field_g, this.field_f, 16777215, -1, 1, 0, ai.field_h.field_o);
         }
         if (null != this.field_H) {
-          kh.f(10 + param2, 134 + param0, this.field_g - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param2, 134 + param0, this.field_g - 20, 4210752);
         }
         if (param1 <= -12) {
           super.a(param0, (byte) -71, param2, param3);

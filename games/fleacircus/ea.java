@@ -58,8 +58,8 @@ final class ea {
         param5 = param5 * 16;
         param2 = param2 * 16;
         param3 = param3 * 16;
-        gb.g(param5 - 4, param2 - 4, param4, param3, 16711680, param0 + 96);
-        gb.e(param5 - 4, param2 - 4, param4, param3, 16711680, param0 + 128);
+        SoftwareRasterizer.fillRectangleAlpha(param5 - 4, param2 - 4, param4, param3, 16711680, param0 + 96);
+        SoftwareRasterizer.drawRectangleOutlineAlpha(param5 - 4, param2 - 4, param4, param3, 16711680, param0 + 128);
     }
 
     final static void a(int param0, java.awt.Component param1) {

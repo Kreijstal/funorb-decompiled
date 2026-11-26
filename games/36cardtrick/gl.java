@@ -212,7 +212,7 @@ final class gl extends hl {
           }
           if (var10 <= hb.field_c.field_o) {
             dl.a(param2 + 96, hb.field_c);
-            vj.d();
+            SoftwareRasterizer.clearRaster();
             var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
             hb.field_c.b(var5 - var15.field_l, -var15.field_k + var6, 256);
@@ -247,7 +247,7 @@ final class gl extends hl {
           }
           if (var10Lifetime1 <= hb.field_c.field_o) {
             dl.a(param2 + 96, hb.field_c);
-            vj.d();
+            SoftwareRasterizer.clearRaster();
             var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
             hb.field_c.b(var5 - var16.field_l, -var16.field_k + var6, 256);

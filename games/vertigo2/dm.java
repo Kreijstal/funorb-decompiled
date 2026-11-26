@@ -310,13 +310,13 @@ final class dm extends UiPanel {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(param2 + (param3 + param0) > bi.field_j)) {
+        if (!(param2 + (param3 + param0) > SoftwareRasterizer.field_j)) {
           return param0 + param3;
         }
         if (-param2 + param3 >= param1) {
           return param3 - param2;
         }
-        return bi.field_j - param2;
+        return SoftwareRasterizer.field_j - param2;
     }
 
     dm(long param0, UiPanel param1, UiPanel param2, ie param3, UiPanel param4, String param5, String param6) {

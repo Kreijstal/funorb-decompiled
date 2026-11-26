@@ -46,7 +46,7 @@ final class sea implements WidgetRenderer {
           SoftwareRasterizer.fillRectangle(param1.x + param0, param1.y + param3, param1.width, param1.height, this.field_e);
           var8 = param1.x + param0 + this.field_h;
           var9 = this.field_a + param1.y + param3;
-          SoftwareRasterizer.e(var8, var9, this.field_f, this.field_m, 5592405);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_f, this.field_m, 5592405);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_f, this.field_m, var7);
           if (param2 != 32679) {
             sea.releaseStatics((byte) 118);

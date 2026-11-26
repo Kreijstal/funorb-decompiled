@@ -189,7 +189,7 @@ final class e {
             discarded$0 = this.a(false);
           }
           for (var9_int = param2; var9_int < param5; var9_int++) {
-            si.d(param0, var9_int, param7, var9_int + 1);
+            SoftwareRasterizer.setClip(param0, var9_int, param7, var9_int + 1);
             var10 = var9_int * param1.length / param5;
             var11 = param1[-1 + (param1.length - var10)];
             param6.a(param3, param0, param2, param7, param5, var11, -1, 1, 1, 0);
@@ -472,7 +472,7 @@ final class e {
           ra.field_e != null) {
           this.field_i = new bd(622, 47);
           sb.a(this.field_i, -119);
-          si.c(0, 0, 622, 47, 4540749, 65793);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
           var3 = 10068666;
           var11 = AccountCreationResultPanel.a(true, var2, var3);
@@ -485,8 +485,8 @@ final class e {
           var8 = AccountCreationResultPanel.a(true, 526344, 526344);
           var5 = new bd(121, 122);
           sb.a(var5, -121);
-          si.c(0, 0, var5.field_z, var5.field_A / 2, 16180917, 16306250);
-          si.c(0, var5.field_A / 2, var5.field_z, var5.field_A, 16306250, 15568919);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, var5.field_z, var5.field_A / 2, 16180917, 16306250);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, var5.field_A / 2, var5.field_z, var5.field_A, 16306250, 15568919);
           var6 = FullscreenFocusCanvas.field_b;
           var7 = sg.field_m;
           this.a(-16, var5.field_A, var8, ra.field_e, 0, var6, 0.5f, param0, var5, var5.field_z);
@@ -509,24 +509,24 @@ final class e {
         int var2Lifetime2;
         int var3Lifetime1;
         var4 = HostileSpawn.field_I ? 1 : 0;
-        si.c(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRasterizer.fillRectangleVerticalGradient(9, 9, 622, 47, 4540749, 65793);
         if (param0 != -67) {
           this.a((byte) 85);
         }
-        si.c(9, 257, 622, 33, 2585);
-        si.c(9, 265, 622, 11, 2585, 1515566);
+        SoftwareRasterizer.fillRectangle(9, 257, 622, 33, 2585);
+        SoftwareRasterizer.fillRectangleVerticalGradient(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          si.c(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRasterizer.fillRectangleVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
           var3 += 121;
           var2++;
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          si.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          si.c(508, var3Lifetime1 + 42, 127, 42, 12410);
+          SoftwareRasterizer.fillRectangleVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRasterizer.fillRectangle(508, var3Lifetime1 + 42, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }

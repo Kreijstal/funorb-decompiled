@@ -58,7 +58,7 @@ final class dc {
         }
         sb.a(il.field_f, -120);
         ge.b();
-        si.d();
+        SoftwareRasterizer.clearRaster();
         uc.b(-45);
         if (var5 >= 256) {
           eh.b(false);
@@ -95,7 +95,7 @@ final class dc {
           }
           return;
         }
-        si.a(0, 0, si.field_e, si.field_k, 0, -var5 + 256);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, -var5 + 256);
         eh.b(false);
         if (150 <= tk.field_e) {
           ob.field_C.b(var3 + 15, 10 + var4, var5);

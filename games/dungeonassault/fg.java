@@ -20,25 +20,25 @@ final class fg extends gj {
         int var16 = 53 % ((param12 - 24) / 48);
         if (param3 >= param2) {
           if (param3 < param0) {
-            sg.a(gf.field_b, param7, param8, param0, param13, param11, param1, param3, (byte) -13, param2, param6, param9, param4, param10, param14, param5, param15);
+            sg.a(SoftwareRasterizer.field_b, param7, param8, param0, param13, param11, param1, param3, (byte) -13, param2, param6, param9, param4, param10, param14, param5, param15);
             return;
           }
           if (param2 < param0) {
-            sg.a(gf.field_b, param4, param8, param3, param1, param15, param13, param0, (byte) -13, param2, param6, param5, param7, param10, param14, param9, param11);
+            sg.a(SoftwareRasterizer.field_b, param4, param8, param3, param1, param15, param13, param0, (byte) -13, param2, param6, param5, param7, param10, param14, param9, param11);
             return;
           }
-          sg.a(gf.field_b, param4, param7, param3, param10, param14, param13, param2, (byte) -13, param0, param5, param6, param8, param1, param15, param9, param11);
+          sg.a(SoftwareRasterizer.field_b, param4, param7, param3, param10, param14, param13, param2, (byte) -13, param0, param5, param6, param8, param1, param15, param9, param11);
           return;
         }
         if (param0 > param2) {
-          sg.a(gf.field_b, param7, param4, param0, param10, param14, param1, param2, (byte) -13, param3, param9, param6, param8, param13, param11, param5, param15);
+          sg.a(SoftwareRasterizer.field_b, param7, param4, param0, param10, param14, param1, param2, (byte) -13, param3, param9, param6, param8, param13, param11, param5, param15);
           return;
         }
         if (param0 <= param3) {
-          sg.a(gf.field_b, param8, param7, param2, param13, param11, param10, param3, (byte) -13, param0, param5, param9, param4, param1, param15, param6, param14);
+          sg.a(SoftwareRasterizer.field_b, param8, param7, param2, param13, param11, param10, param3, (byte) -13, param0, param5, param9, param4, param1, param15, param6, param14);
           return;
         }
-        sg.a(gf.field_b, param8, param4, param2, param1, param15, param10, param0, (byte) -13, param3, param9, param5, param7, param13, param11, param6, param14);
+        sg.a(SoftwareRasterizer.field_b, param8, param4, param2, param1, param15, param10, param0, (byte) -13, param3, param9, param5, param7, param13, param11, param6, param14);
     }
 
     final int b(long param0, int param1) {

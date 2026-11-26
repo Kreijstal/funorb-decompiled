@@ -56,8 +56,8 @@ final class ji {
           if (var7 + var10 + 6 > SoftwareRasterizer.field_d) {
             var10 = RandomAccessCacheFile.field_h + (-var7 - 6);
           }
-          SoftwareRasterizer.c(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
-          SoftwareRasterizer.d(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
+          SoftwareRasterizer.drawRectangleOutline(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
+          SoftwareRasterizer.fillRectangle(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
           param1.a(param3, 3 + var9Lifetime1, 3 + var10, var6_int, var7, param2, -1, 0, 0, param1.field_x + param1.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

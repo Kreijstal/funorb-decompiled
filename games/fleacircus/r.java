@@ -23,7 +23,7 @@ abstract class r extends gg implements nk {
           if (param1 != 45) {
             field_l = 45;
           }
-          gb.a(param0.field_B, param0.field_x, param0.field_r);
+          SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_x, param0.field_r);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

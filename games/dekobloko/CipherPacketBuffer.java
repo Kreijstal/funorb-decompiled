@@ -105,8 +105,8 @@ final class CipherPacketBuffer extends PacketBuffer {
               integerLocal3 = integerLocal3 + (16 * integerLocal5 + 20 + 8);
               integerLocal5 = 0;
               if (integerLocal1 < 4) {
-                SoftwareRaster.performAction0639(integerArgument1 + 80, -5 + integerLocal3, 480, 394758);
-                SoftwareRaster.performAction0639(integerArgument1 + 80, -4 + integerLocal3, 480, 6316128);
+                SoftwareRaster.drawHorizontalLine(integerArgument1 + 80, -5 + integerLocal3, 480, 394758);
+                SoftwareRaster.drawHorizontalLine(integerArgument1 + 80, -4 + integerLocal3, 480, 6316128);
               }
             }
           }

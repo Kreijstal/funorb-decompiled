@@ -43,10 +43,10 @@ final class ub {
         if (param2 != 116) {
           ub.clearStaticReferences(-11);
           ka.c();
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           f.a((byte) 16);
           if (256 > var5) {
-            sb.c(0, 0, sb.field_c, sb.field_g, 0, 256 - var5);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
           }
           fi.c(true);
           if (150 > si.field_l) {
@@ -71,10 +71,10 @@ final class ub {
           }
         } else {
           ka.c();
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           f.a((byte) 16);
           if (256 > var5) {
-            sb.c(0, 0, sb.field_c, sb.field_g, 0, 256 - var5);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
             fi.c(true);
             if (150 > si.field_l) {
               ug.field_f.d(var3, var4);

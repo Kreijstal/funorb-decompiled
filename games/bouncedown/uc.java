@@ -251,7 +251,7 @@ final class uc extends lc implements rc {
           var9Lifetime1 = var17.field_q;
           wa.a(true);
           var17.d();
-          na.f(0, 0, na.field_e, na.field_k);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k);
           var15 = new tg(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();

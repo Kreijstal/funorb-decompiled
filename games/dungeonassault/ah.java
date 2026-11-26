@@ -33,10 +33,10 @@ final class ah {
         }
         lm.a(hc.field_a, (byte) -91);
         re.b();
-        gf.a();
+        SoftwareRasterizer.clearRaster();
         SecondaryNodeDequeIterator.a(439027688);
         if (var5 < 256) {
-          gf.b(0, 0, gf.field_i, gf.field_c, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, 256 - var5);
         }
         ti.c(true);
         if (MouseWheelInput.field_d < 150) {

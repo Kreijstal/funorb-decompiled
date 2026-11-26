@@ -21,25 +21,25 @@ final class da {
         }
         if (param7 <= param2) {
           if (param4 > param2) {
-            mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1, (byte) 112);
+            mb.a(param4, param6, param2, param7, param5, SoftwareRasterizer.field_h, param0, param1, (byte) 112);
             return;
           }
           if (param4 <= param7) {
-            mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5, (byte) 112);
+            mb.a(param2, param6, param7, param4, param0, SoftwareRasterizer.field_h, param1, param5, (byte) 112);
             return;
           }
-          mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0, (byte) 112);
+          mb.a(param2, param6, param4, param7, param5, SoftwareRasterizer.field_h, param1, param0, (byte) 112);
           return;
         }
         if (param7 < param4) {
-          mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5, (byte) 112);
+          mb.a(param4, param6, param7, param2, param1, SoftwareRasterizer.field_h, param0, param5, (byte) 112);
           return;
         }
         if (param2 >= param4) {
-          mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1, (byte) 112);
+          mb.a(param7, param6, param2, param4, param0, SoftwareRasterizer.field_h, param5, param1, (byte) 112);
           return;
         }
-        mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0, (byte) 112);
+        mb.a(param7, param6, param4, param2, param1, SoftwareRasterizer.field_h, param5, param0, (byte) 112);
     }
 
     final void a(double param0, byte param1) {

@@ -181,17 +181,17 @@ class hj extends tk {
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
         var22 = var22 + 15 >> 4;
-        if (var19 < ul.field_i) {
-          var19 = ul.field_i;
+        if (var19 < SoftwareRasterizer.field_i) {
+          var19 = SoftwareRasterizer.field_i;
         }
-        if (var20 > ul.field_e) {
-          var20 = ul.field_e;
+        if (var20 > SoftwareRasterizer.field_e) {
+          var20 = SoftwareRasterizer.field_e;
         }
-        if (var21 < ul.field_d) {
-          var21 = ul.field_d;
+        if (var21 < SoftwareRasterizer.field_d) {
+          var21 = SoftwareRasterizer.field_d;
         }
-        if (var22 > ul.field_a) {
-          var22 = ul.field_a;
+        if (var22 > SoftwareRasterizer.field_a) {
+          var22 = SoftwareRasterizer.field_a;
         }
         var20 = var19 - var20;
         if (var20 >= 0) {
@@ -201,7 +201,7 @@ class hj extends tk {
         if (var22 >= 0) {
           return;
         }
-        var23 = var21 * ul.field_f + var19;
+        var23 = var21 * SoftwareRasterizer.field_f + var19;
         var24 = 16777216.0 / (double)param5;
         var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
         var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
@@ -219,7 +219,7 @@ class hj extends tk {
               var37 = var20;
               if (var35 < 0) {
                 var33++;
-                var23 = var23 + ul.field_f;
+                var23 = var23 + SoftwareRasterizer.field_f;
                 continue;
               }
               if (var36 >= 0 &&
@@ -232,13 +232,13 @@ class hj extends tk {
                   } else {
                     incrementValue$8 = var34;
                     var34++;
-                    ul.field_b[incrementValue$8] = var38;
+                    SoftwareRasterizer.field_b[incrementValue$8] = var38;
                   }
                   var37++;
                 }
               }
               var33++;
-              var23 = var23 + ul.field_f;
+              var23 = var23 + SoftwareRasterizer.field_f;
             }
             return;
           }
@@ -268,7 +268,7 @@ class hj extends tk {
                   } else {
                     incrementValue$6 = var34Lifetime5;
                     var34Lifetime5++;
-                    ul.field_b[incrementValue$6] = var38Lifetime5;
+                    SoftwareRasterizer.field_b[incrementValue$6] = var38Lifetime5;
                   }
                   var36Lifetime5 = var36Lifetime5 + var26;
                   var37Lifetime5++;
@@ -276,7 +276,7 @@ class hj extends tk {
               }
               var33Lifetime5++;
               var30 = var30 - var26;
-              var23 = var23 + ul.field_f;
+              var23 = var23 + SoftwareRasterizer.field_f;
             }
             return;
           }
@@ -290,7 +290,7 @@ class hj extends tk {
               if (var35Lifetime6 - (this.field_o << 12) >= 0) {
                 var33Lifetime6++;
                 var30 = var30 - var26;
-                var23 = var23 + ul.field_f;
+                var23 = var23 + SoftwareRasterizer.field_f;
                 continue;
               }
               var32Lifetime5 = var36Lifetime6 - (this.field_k << 12);
@@ -311,7 +311,7 @@ class hj extends tk {
                 } else {
                   incrementValue$7 = var34Lifetime6;
                   var34Lifetime6++;
-                  ul.field_b[incrementValue$7] = var38Lifetime6;
+                  SoftwareRasterizer.field_b[incrementValue$7] = var38Lifetime6;
                 }
                 var36Lifetime6 = var36Lifetime6 + var26;
                 var37Lifetime6++;
@@ -319,7 +319,7 @@ class hj extends tk {
             }
             var33Lifetime6++;
             var30 = var30 - var26;
-            var23 = var23 + ul.field_f;
+            var23 = var23 + SoftwareRasterizer.field_f;
           }
           return;
         }
@@ -350,7 +350,7 @@ class hj extends tk {
                   } else {
                     incrementValue$2 = var34Lifetime1;
                     var34Lifetime1++;
-                    ul.field_b[incrementValue$2] = var38Lifetime1;
+                    SoftwareRasterizer.field_b[incrementValue$2] = var38Lifetime1;
                   }
                   var35Lifetime1 = var35Lifetime1 + var27;
                   var37Lifetime1++;
@@ -358,7 +358,7 @@ class hj extends tk {
               }
               var33Lifetime1++;
               var31 = var31 + var27;
-              var23 = var23 + ul.field_f;
+              var23 = var23 + SoftwareRasterizer.field_f;
             }
             return;
           }
@@ -398,7 +398,7 @@ class hj extends tk {
                 } else {
                   incrementValue$0 = var34Lifetime1Lifetime1;
                   var34Lifetime1Lifetime1++;
-                  ul.field_b[incrementValue$0] = var38Lifetime1Lifetime1;
+                  SoftwareRasterizer.field_b[incrementValue$0] = var38Lifetime1Lifetime1;
                 }
                 var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27;
                 var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26;
@@ -407,7 +407,7 @@ class hj extends tk {
               var33Lifetime1Lifetime1++;
               var30 = var30 - var26;
               var31 = var31 + var27;
-              var23 = var23 + ul.field_f;
+              var23 = var23 + SoftwareRasterizer.field_f;
             }
             return;
           }
@@ -447,7 +447,7 @@ class hj extends tk {
               } else {
                 incrementValue$1 = var34Lifetime1Lifetime2;
                 var34Lifetime1Lifetime2++;
-                ul.field_b[incrementValue$1] = var38Lifetime1Lifetime2;
+                SoftwareRasterizer.field_b[incrementValue$1] = var38Lifetime1Lifetime2;
               }
               var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27;
               var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26;
@@ -456,7 +456,7 @@ class hj extends tk {
             var33Lifetime1Lifetime2++;
             var30 = var30 - var26;
             var31 = var31 + var27;
-            var23 = var23 + ul.field_f;
+            var23 = var23 + SoftwareRasterizer.field_f;
           }
           return;
         }
@@ -487,7 +487,7 @@ class hj extends tk {
                 } else {
                   incrementValue$5 = var34Lifetime2;
                   var34Lifetime2++;
-                  ul.field_b[incrementValue$5] = var38Lifetime2;
+                  SoftwareRasterizer.field_b[incrementValue$5] = var38Lifetime2;
                 }
                 var35Lifetime2 = var35Lifetime2 + var27;
                 var37Lifetime2++;
@@ -495,7 +495,7 @@ class hj extends tk {
             }
             var33Lifetime2++;
             var31 = var31 + var27;
-            var23 = var23 + ul.field_f;
+            var23 = var23 + SoftwareRasterizer.field_f;
           }
           return;
         }
@@ -536,7 +536,7 @@ class hj extends tk {
               } else {
                 incrementValue$3 = var34Lifetime3;
                 var34Lifetime3++;
-                ul.field_b[incrementValue$3] = var38Lifetime3;
+                SoftwareRasterizer.field_b[incrementValue$3] = var38Lifetime3;
               }
               var35Lifetime3 = var35Lifetime3 + var27;
               var36Lifetime3 = var36Lifetime3 + var26;
@@ -545,7 +545,7 @@ class hj extends tk {
             var33Lifetime3++;
             var30 = var30 - var26;
             var31 = var31 + var27;
-            var23 = var23 + ul.field_f;
+            var23 = var23 + SoftwareRasterizer.field_f;
           }
           return;
         }
@@ -586,7 +586,7 @@ class hj extends tk {
             } else {
               incrementValue$4 = var34Lifetime4;
               var34Lifetime4++;
-              ul.field_b[incrementValue$4] = var38Lifetime4;
+              SoftwareRasterizer.field_b[incrementValue$4] = var38Lifetime4;
             }
             var35Lifetime4 = var35Lifetime4 + var27;
             var36Lifetime4 = var36Lifetime4 + var26;
@@ -595,7 +595,7 @@ class hj extends tk {
           var33Lifetime4++;
           var30 = var30 - var26;
           var31 = var31 + var27;
-          var23 = var23 + ul.field_f;
+          var23 = var23 + SoftwareRasterizer.field_f;
         }
         return;
     }
@@ -633,33 +633,33 @@ class hj extends tk {
         int var9Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var3 = param0 + param1 * ul.field_f;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_f;
         int var4 = 0;
         int var5 = this.field_k;
         int var6 = this.field_o;
-        int var7 = ul.field_f - var6;
+        int var7 = SoftwareRasterizer.field_f - var6;
         int var8 = 0;
-        if (param1 < ul.field_d) {
-          var9 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var9 = SoftwareRasterizer.field_d - param1;
           var5 = var5 - var9;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * ul.field_f;
+          var3 = var3 + var9 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var5 > ul.field_a) {
-          var5 = var5 - (param1 + var5 - ul.field_a);
+        if (param1 + var5 > SoftwareRasterizer.field_a) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var9Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var9Lifetime1 = SoftwareRasterizer.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > ul.field_e) {
-          var9Lifetime2 = param0 + var6 - ul.field_e;
+        if (param0 + var6 > SoftwareRasterizer.field_e) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_e;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -668,7 +668,7 @@ class hj extends tk {
           if (var5 <= 0) {
             return;
           }
-          hj.a(ul.field_b, this.field_v, var4, var3, var6, var5, var7, var8);
+          hj.a(SoftwareRasterizer.field_b, this.field_v, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -725,7 +725,7 @@ class hj extends tk {
     }
 
     final void d() {
-        ul.a(this.field_v, this.field_o, this.field_k);
+        SoftwareRasterizer.setRasterBuffer(this.field_v, this.field_o, this.field_k);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -748,8 +748,8 @@ class hj extends tk {
         while (var8 < param7) {
           var9 = 0;
           while (var9 < param6) {
-            var11 = ul.field_b[param2] & 16711935;
-            var12 = ul.field_b[param2] & 65280;
+            var11 = SoftwareRasterizer.field_b[param2] & 16711935;
+            var12 = SoftwareRasterizer.field_b[param2] & 65280;
             var13 = 0;
             var14 = 0;
             dupTemp$0 = param0[param1];
@@ -790,7 +790,7 @@ class hj extends tk {
             }
             incrementValue$4 = param2;
             param2++;
-            ul.field_b[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
+            SoftwareRasterizer.field_b[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
             var9++;
             param1 += 2;
           }
@@ -906,30 +906,30 @@ class hj extends tk {
           if (var6 < var10) {
             param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param0 + param1 * ul.field_f;
-          var14 = ul.field_f - param2;
-          if (param1 + param3 > ul.field_a) {
-            param3 = param3 - (param1 + param3 - ul.field_a);
+          var13Lifetime2 = param0 + param1 * SoftwareRasterizer.field_f;
+          var14 = SoftwareRasterizer.field_f - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_a) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_a);
           }
-          if (param1 < ul.field_d) {
-            var15 = ul.field_d - param1;
+          if (param1 < SoftwareRasterizer.field_d) {
+            var15 = SoftwareRasterizer.field_d - param1;
             param3 = param3 - var15;
-            var13Lifetime2 = var13Lifetime2 + var15 * ul.field_f;
+            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_f;
             var8 = var8 + var12 * var15;
           }
-          if (param0 + param2 > ul.field_e) {
-            var15Lifetime1 = param0 + param2 - ul.field_e;
+          if (param0 + param2 > SoftwareRasterizer.field_e) {
+            var15Lifetime1 = param0 + param2 - SoftwareRasterizer.field_e;
             param2 = param2 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param0 < ul.field_i) {
-            var15Lifetime2 = ul.field_i - param0;
+          if (param0 < SoftwareRasterizer.field_i) {
+            var15Lifetime2 = SoftwareRasterizer.field_i - param0;
             param2 = param2 - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          hj.b(ul.field_b, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          hj.b(SoftwareRasterizer.field_b, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -962,26 +962,26 @@ class hj extends tk {
         var7 = param2 << 8;
         var8 = (param3 - param2 << 8) / var5;
         var9 = 0;
-        if (param0 < ul.field_i) {
-          var6 = var6 - (ul.field_i - param0);
-          var9 = var9 + (ul.field_i - param0);
-          param0 = ul.field_i;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var6 = var6 - (SoftwareRasterizer.field_i - param0);
+          var9 = var9 + (SoftwareRasterizer.field_i - param0);
+          param0 = SoftwareRasterizer.field_i;
         }
-        if (param1 < ul.field_d) {
-          var7 = var7 + (ul.field_d - param1) * var8;
-          var5 = var5 - (ul.field_d - param1);
-          var9 = var9 + (ul.field_d - param1) * this.field_o;
-          param1 = ul.field_d;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var7 = var7 + (SoftwareRasterizer.field_d - param1) * var8;
+          var5 = var5 - (SoftwareRasterizer.field_d - param1);
+          var9 = var9 + (SoftwareRasterizer.field_d - param1) * this.field_o;
+          param1 = SoftwareRasterizer.field_d;
         }
-        if (param0 + var6 > ul.field_e) {
-          var6 = ul.field_e - param0;
+        if (param0 + var6 > SoftwareRasterizer.field_e) {
+          var6 = SoftwareRasterizer.field_e - param0;
         }
-        if (param1 + var5 > ul.field_a) {
-          var5 = ul.field_a - param1;
+        if (param1 + var5 > SoftwareRasterizer.field_a) {
+          var5 = SoftwareRasterizer.field_a - param1;
         }
-        var10 = ul.field_f - var6;
+        var10 = SoftwareRasterizer.field_f - var6;
         var11 = this.field_o - var6;
-        var12 = param0 + param1 * ul.field_f;
+        var12 = param0 + param1 * SoftwareRasterizer.field_f;
         for (param1 = -var5; param1 < 0; param1++) {
           var13 = var7 >> 8;
           var14 = 256 - var13;
@@ -996,7 +996,7 @@ class hj extends tk {
                 } else {
                   incrementValue$3 = var12;
                   var12++;
-                  ul.field_b[incrementValue$3] = var15;
+                  SoftwareRasterizer.field_b[incrementValue$3] = var15;
                 }
               }
             } else {
@@ -1007,11 +1007,11 @@ class hj extends tk {
                 if (var15 == 0) {
                   var12++;
                 } else {
-                  var16 = ul.field_b[var12];
+                  var16 = SoftwareRasterizer.field_b[var12];
                   var17 = (var16 & 16711935) * var14 + (var15 & 16711935) * var13 >> 8 & 16711935;
                   incrementValue$1 = var12;
                   var12++;
-                  ul.field_b[incrementValue$1] = var17 + ((var16 & 65280) * var14 + (var15 & 65280) * var13 >> 8 & 65280);
+                  SoftwareRasterizer.field_b[incrementValue$1] = var17 + ((var16 & 65280) * var14 + (var15 & 65280) * var13 >> 8 & 65280);
                 }
               }
             }
@@ -1029,33 +1029,33 @@ class hj extends tk {
         int var10Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * ul.field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_f;
         int var5 = 0;
         int var6 = this.field_k;
         int var7 = this.field_o;
-        int var8 = ul.field_f - var7;
+        int var8 = SoftwareRasterizer.field_f - var7;
         int var9 = 0;
-        if (param1 < ul.field_d) {
-          var10 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * ul.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var6 > ul.field_a) {
-          var6 = var6 - (param1 + var6 - ul.field_a);
+        if (param1 + var6 > SoftwareRasterizer.field_a) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var10Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var10Lifetime1 = SoftwareRasterizer.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > ul.field_e) {
-          var10Lifetime2 = param0 + var7 - ul.field_e;
+        if (param0 + var7 > SoftwareRasterizer.field_e) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1064,7 +1064,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.a(ul.field_b, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          hj.a(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1075,33 +1075,33 @@ class hj extends tk {
         int var10Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * ul.field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_f;
         int var5 = 0;
         int var6 = this.field_k;
         int var7 = this.field_o;
-        int var8 = ul.field_f - var7;
+        int var8 = SoftwareRasterizer.field_f - var7;
         int var9 = 0;
-        if (param1 < ul.field_d) {
-          var10 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * ul.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var6 > ul.field_a) {
-          var6 = var6 - (param1 + var6 - ul.field_a);
+        if (param1 + var6 > SoftwareRasterizer.field_a) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var10Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var10Lifetime1 = SoftwareRasterizer.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > ul.field_e) {
-          var10Lifetime2 = param0 + var7 - ul.field_e;
+        if (param0 + var7 > SoftwareRasterizer.field_e) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1111,9 +1111,9 @@ class hj extends tk {
             return;
           }
           if (param2 == 256) {
-            hj.a(0, 0, 0, ul.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
+            hj.a(0, 0, 0, SoftwareRasterizer.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            hj.a(0, 0, 0, ul.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            hj.a(0, 0, 0, SoftwareRasterizer.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1227,7 +1227,7 @@ class hj extends tk {
           if (var18 == 0) {
             var18 = 1;
           }
-          ul.field_b[param0] = var18;
+          SoftwareRasterizer.field_b[param0] = var18;
         } else {
           var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
           var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
@@ -1237,7 +1237,7 @@ class hj extends tk {
           if (var18 == 0) {
             var18 = 1;
           }
-          ul.field_b[param0] = var18;
+          SoftwareRasterizer.field_b[param0] = var18;
         }
     }
 
@@ -1314,11 +1314,11 @@ class hj extends tk {
     void d(int param0, int param1) {
         param0 = param0 + (this.field_p >> 1);
         param1 = param1 + (this.field_u >> 1);
-        int var3 = param0 < ul.field_i ? ul.field_i - param0 << 1 : 0;
-        int var4 = param0 + (this.field_o >> 1) > ul.field_e ? ul.field_e - param0 << 1 : this.field_o;
-        int var5 = param1 < ul.field_d ? ul.field_d - param1 << 1 : 0;
-        int var6 = param1 + (this.field_k >> 1) > ul.field_a ? ul.field_a - param1 << 1 : this.field_k;
-        hj.a(this.field_v, var5 * this.field_o + var3, (param1 + (var5 >> 1)) * ul.field_f + (param0 + (var3 >> 1)), (this.field_o << 1) - (var4 - var3) + (this.field_o & 1), ul.field_f - (var4 - var3 >> 1), this.field_o, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var3 = param0 < SoftwareRasterizer.field_i ? SoftwareRasterizer.field_i - param0 << 1 : 0;
+        int var4 = param0 + (this.field_o >> 1) > SoftwareRasterizer.field_e ? SoftwareRasterizer.field_e - param0 << 1 : this.field_o;
+        int var5 = param1 < SoftwareRasterizer.field_d ? SoftwareRasterizer.field_d - param1 << 1 : 0;
+        int var6 = param1 + (this.field_k >> 1) > SoftwareRasterizer.field_a ? SoftwareRasterizer.field_a - param1 << 1 : this.field_k;
+        hj.a(this.field_v, var5 * this.field_o + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_o << 1) - (var4 - var3) + (this.field_o & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_o, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     void d(int param0, int param1, int param2, int param3, int param4) {
@@ -1365,30 +1365,30 @@ class hj extends tk {
           if (var7 < var11) {
             param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * ul.field_f;
-          var15 = ul.field_f - param2;
-          if (param1 + param3 > ul.field_a) {
-            param3 = param3 - (param1 + param3 - ul.field_a);
+          var14Lifetime2 = param0 + param1 * SoftwareRasterizer.field_f;
+          var15 = SoftwareRasterizer.field_f - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_a) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_a);
           }
-          if (param1 < ul.field_d) {
-            var16 = ul.field_d - param1;
+          if (param1 < SoftwareRasterizer.field_d) {
+            var16 = SoftwareRasterizer.field_d - param1;
             param3 = param3 - var16;
-            var14Lifetime2 = var14Lifetime2 + var16 * ul.field_f;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRasterizer.field_f;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > ul.field_e) {
-            var16Lifetime1 = param0 + param2 - ul.field_e;
+          if (param0 + param2 > SoftwareRasterizer.field_e) {
+            var16Lifetime1 = param0 + param2 - SoftwareRasterizer.field_e;
             param2 = param2 - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < ul.field_i) {
-            var16Lifetime2 = ul.field_i - param0;
+          if (param0 < SoftwareRasterizer.field_i) {
+            var16Lifetime2 = SoftwareRasterizer.field_i - param0;
             param2 = param2 - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          hj.a(ul.field_b, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          hj.a(SoftwareRasterizer.field_b, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1399,33 +1399,33 @@ class hj extends tk {
         int var10Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * ul.field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_f;
         int var5 = 0;
         int var6 = this.field_k;
         int var7 = this.field_o;
-        int var8 = ul.field_f - var7;
+        int var8 = SoftwareRasterizer.field_f - var7;
         int var9 = 0;
-        if (param1 < ul.field_d) {
-          var10 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * ul.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var6 > ul.field_a) {
-          var6 = var6 - (param1 + var6 - ul.field_a);
+        if (param1 + var6 > SoftwareRasterizer.field_a) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var10Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var10Lifetime1 = SoftwareRasterizer.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > ul.field_e) {
-          var10Lifetime2 = param0 + var7 - ul.field_e;
+        if (param0 + var7 > SoftwareRasterizer.field_e) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1434,7 +1434,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.b(ul.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          hj.b(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1467,33 +1467,33 @@ class hj extends tk {
         int var9Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var3 = param0 + param1 * ul.field_f;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_f;
         int var4 = 0;
         int var5 = this.field_k;
         int var6 = this.field_o;
-        int var7 = ul.field_f - var6;
+        int var7 = SoftwareRasterizer.field_f - var6;
         int var8 = 0;
-        if (param1 < ul.field_d) {
-          var9 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var9 = SoftwareRasterizer.field_d - param1;
           var5 = var5 - var9;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * ul.field_f;
+          var3 = var3 + var9 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var5 > ul.field_a) {
-          var5 = var5 - (param1 + var5 - ul.field_a);
+        if (param1 + var5 > SoftwareRasterizer.field_a) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var9Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var9Lifetime1 = SoftwareRasterizer.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > ul.field_e) {
-          var9Lifetime2 = param0 + var6 - ul.field_e;
+        if (param0 + var6 > SoftwareRasterizer.field_e) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_e;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1502,7 +1502,7 @@ class hj extends tk {
           if (var5 <= 0) {
             return;
           }
-          hj.b(ul.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          hj.b(SoftwareRasterizer.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1842,17 +1842,17 @@ class hj extends tk {
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
         var22 = var22 + 15 >> 4;
-        if (var19 < ul.field_i) {
-          var19 = ul.field_i;
+        if (var19 < SoftwareRasterizer.field_i) {
+          var19 = SoftwareRasterizer.field_i;
         }
-        if (var20 > ul.field_e) {
-          var20 = ul.field_e;
+        if (var20 > SoftwareRasterizer.field_e) {
+          var20 = SoftwareRasterizer.field_e;
         }
-        if (var21 < ul.field_d) {
-          var21 = ul.field_d;
+        if (var21 < SoftwareRasterizer.field_d) {
+          var21 = SoftwareRasterizer.field_d;
         }
-        if (var22 > ul.field_a) {
-          var22 = ul.field_a;
+        if (var22 > SoftwareRasterizer.field_a) {
+          var22 = SoftwareRasterizer.field_a;
         }
         var20 = var19 - var20;
         if (var20 >= 0) {
@@ -1862,8 +1862,8 @@ class hj extends tk {
         if (var22 >= 0) {
           return;
         }
-        var23 = var21 * ul.field_f + var19;
-        var24 = ul.field_f + var20;
+        var23 = var21 * SoftwareRasterizer.field_f + var19;
+        var24 = SoftwareRasterizer.field_f + var20;
         var25 = 16777216.0 / (double)param5;
         var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
         var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
@@ -2174,33 +2174,33 @@ class hj extends tk {
         int var10Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * ul.field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_f;
         int var5 = 0;
         int var6 = this.field_k;
         int var7 = this.field_o;
-        int var8 = ul.field_f - var7;
+        int var8 = SoftwareRasterizer.field_f - var7;
         int var9 = 0;
-        if (param1 < ul.field_d) {
-          var10 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * ul.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var6 > ul.field_a) {
-          var6 = var6 - (param1 + var6 - ul.field_a);
+        if (param1 + var6 > SoftwareRasterizer.field_a) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var10Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var10Lifetime1 = SoftwareRasterizer.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > ul.field_e) {
-          var10Lifetime2 = param0 + var7 - ul.field_e;
+        if (param0 + var7 > SoftwareRasterizer.field_e) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -2209,7 +2209,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.a(ul.field_b, this.field_v, param2, var5, var4, var7, var6, var8, var9);
+          hj.a(SoftwareRasterizer.field_b, this.field_v, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -2220,33 +2220,33 @@ class hj extends tk {
         int var9Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var3 = param0 + param1 * ul.field_f;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_f;
         int var4 = 0;
         int var5 = this.field_k;
         int var6 = this.field_o;
-        int var7 = ul.field_f - var6;
+        int var7 = SoftwareRasterizer.field_f - var6;
         int var8 = 0;
-        if (param1 < ul.field_d) {
-          var9 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var9 = SoftwareRasterizer.field_d - param1;
           var5 = var5 - var9;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * ul.field_f;
+          var3 = var3 + var9 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var5 > ul.field_a) {
-          var5 = var5 - (param1 + var5 - ul.field_a);
+        if (param1 + var5 > SoftwareRasterizer.field_a) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var9Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var9Lifetime1 = SoftwareRasterizer.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > ul.field_e) {
-          var9Lifetime2 = param0 + var6 - ul.field_e;
+        if (param0 + var6 > SoftwareRasterizer.field_e) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_e;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -2255,7 +2255,7 @@ class hj extends tk {
           if (var5 <= 0) {
             return;
           }
-          hj.a(0, ul.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          hj.a(0, SoftwareRasterizer.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2312,17 +2312,17 @@ class hj extends tk {
           var6 = param0 + ((this.field_p + this.field_o) * param2 + this.field_s - 1) / this.field_s;
           var7 = param1 + this.field_u * param3 / this.field_t;
           var8 = param1 + ((this.field_u + this.field_k) * param3 + this.field_t - 1) / this.field_t;
-          if (var5 < ul.field_i) {
-            var5 = ul.field_i;
+          if (var5 < SoftwareRasterizer.field_i) {
+            var5 = SoftwareRasterizer.field_i;
           }
-          if (var6 > ul.field_e) {
-            var6 = ul.field_e;
+          if (var6 > SoftwareRasterizer.field_e) {
+            var6 = SoftwareRasterizer.field_e;
           }
-          if (var7 < ul.field_d) {
-            var7 = ul.field_d;
+          if (var7 < SoftwareRasterizer.field_d) {
+            var7 = SoftwareRasterizer.field_d;
           }
-          if (var8 > ul.field_a) {
-            var8 = ul.field_a;
+          if (var8 > SoftwareRasterizer.field_a) {
+            var8 = SoftwareRasterizer.field_a;
           }
           if (var5 >= var6) {
             return;
@@ -2330,8 +2330,8 @@ class hj extends tk {
           if (var7 >= var8) {
             return;
           }
-          var9 = var7 * ul.field_f + var5;
-          var10 = ul.field_f - (var6 - var5);
+          var9 = var7 * SoftwareRasterizer.field_f + var5;
+          var10 = SoftwareRasterizer.field_f - (var6 - var5);
           for (var11 = var7; var11 < var8; var11++) {
             for (var12 = var5; var12 < var6; var12++) {
               var13 = var12 - param0 << 4;
@@ -2401,7 +2401,7 @@ class hj extends tk {
                   if (var28Lifetime1 == 0) {
                     var28Lifetime1 = 1;
                   }
-                  ul.field_b[var9] = var28Lifetime1;
+                  SoftwareRasterizer.field_b[var9] = var28Lifetime1;
                 }
                 var9++;
               }
@@ -2457,33 +2457,33 @@ class hj extends tk {
           if (var7 < var11) {
             param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * ul.field_f;
-          var15 = ul.field_f - param2;
-          if (param1 + param3 > ul.field_a) {
-            param3 = param3 - (param1 + param3 - ul.field_a);
+          var14Lifetime2 = param0 + param1 * SoftwareRasterizer.field_f;
+          var15 = SoftwareRasterizer.field_f - param2;
+          if (param1 + param3 > SoftwareRasterizer.field_a) {
+            param3 = param3 - (param1 + param3 - SoftwareRasterizer.field_a);
           }
-          if (param1 < ul.field_d) {
-            var16 = ul.field_d - param1;
+          if (param1 < SoftwareRasterizer.field_d) {
+            var16 = SoftwareRasterizer.field_d - param1;
             param3 = param3 - var16;
-            var14Lifetime2 = var14Lifetime2 + var16 * ul.field_f;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRasterizer.field_f;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > ul.field_e) {
-            var16Lifetime1 = param0 + param2 - ul.field_e;
+          if (param0 + param2 > SoftwareRasterizer.field_e) {
+            var16Lifetime1 = param0 + param2 - SoftwareRasterizer.field_e;
             param2 = param2 - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < ul.field_i) {
-            var16Lifetime2 = ul.field_i - param0;
+          if (param0 < SoftwareRasterizer.field_i) {
+            var16Lifetime2 = SoftwareRasterizer.field_i - param0;
             param2 = param2 - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            hj.a(0, 0, 0, var8, this.field_v, ul.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            hj.a(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            hj.a(0, 0, 0, var8, this.field_v, ul.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            hj.a(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -2495,33 +2495,33 @@ class hj extends tk {
         int var10Lifetime2;
         param0 = param0 + this.field_p;
         param1 = param1 + this.field_u;
-        int var4 = param0 + param1 * ul.field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_f;
         int var5 = 0;
         int var6 = this.field_k;
         int var7 = this.field_o;
-        int var8 = ul.field_f - var7;
+        int var8 = SoftwareRasterizer.field_f - var7;
         int var9 = 0;
-        if (param1 < ul.field_d) {
-          var10 = ul.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var10 = SoftwareRasterizer.field_d - param1;
           var6 = var6 - var10;
-          param1 = ul.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * ul.field_f;
+          var4 = var4 + var10 * SoftwareRasterizer.field_f;
         }
-        if (param1 + var6 > ul.field_a) {
-          var6 = var6 - (param1 + var6 - ul.field_a);
+        if (param1 + var6 > SoftwareRasterizer.field_a) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_a);
         }
-        if (param0 < ul.field_i) {
-          var10Lifetime1 = ul.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var10Lifetime1 = SoftwareRasterizer.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = ul.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > ul.field_e) {
-          var10Lifetime2 = param0 + var7 - ul.field_e;
+        if (param0 + var7 > SoftwareRasterizer.field_e) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -2530,7 +2530,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.a(ul.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          hj.a(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2612,33 +2612,33 @@ class hj extends tk {
         var4 = this.field_k >> 2;
         param0 = param0 + this.field_p / 4;
         param1 = param1 + this.field_u / 4;
-        if (param0 >= ul.field_i) {
+        if (param0 >= SoftwareRasterizer.field_i) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = ul.field_i - param0 << 2;
+          stackIn_3_0 = SoftwareRasterizer.field_i - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= ul.field_e) {
+        if (param0 + var3 <= SoftwareRasterizer.field_e) {
           stackIn_6_0 = this.field_o - 4;
         } else {
-          stackIn_6_0 = (ul.field_e - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRasterizer.field_e - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= ul.field_d) {
+        if (param1 >= SoftwareRasterizer.field_d) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = ul.field_d - param1 << 2;
+          stackIn_9_0 = SoftwareRasterizer.field_d - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= ul.field_a) {
+        if (param1 + var4 <= SoftwareRasterizer.field_a) {
           stackIn_12_0 = this.field_k - 4;
         } else {
-          stackIn_12_0 = (ul.field_a - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRasterizer.field_a - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
           var10 = var9 * this.field_o + var5;
-          var11 = (param1 + (var9 >> 2)) * ul.field_f + (param0 + (var5 >> 2));
+          var11 = (param1 + (var9 >> 2)) * SoftwareRasterizer.field_f + (param0 + (var5 >> 2));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -2648,13 +2648,13 @@ class hj extends tk {
               for (var17 = 0; var17 < 4; var17++) {
                 var13Lifetime1 = this.field_v[var10 + var16 * this.field_o + var17];
                 if (var13Lifetime1 == 0) {
-                  var13Lifetime1 = ul.field_b[var11];
+                  var13Lifetime1 = SoftwareRasterizer.field_b[var11];
                 }
                 var14 = var14 + (var13Lifetime1 & 16711935);
                 var15 = var15 + (var13Lifetime1 & 65280);
               }
             }
-            ul.field_b[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
+            SoftwareRasterizer.field_b[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
             var12 += 4;
             var10 += 4;
             var11++;

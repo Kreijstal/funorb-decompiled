@@ -46,18 +46,18 @@ final class b implements fe {
           if (param2) {
             var7 = 16777215;
           }
-          fn.e(param1 + param3.field_q, param3.field_m + param4, param3.field_F, param3.field_z, this.field_c);
+          SoftwareRasterizer.fillRectangle(param1 + param3.field_q, param3.field_m + param4, param3.field_F, param3.field_z, this.field_c);
           var8 = param3.field_q + (param1 + this.field_h);
           if (param0 >= -97) {
             var11 = (fj) null;
             this.a((byte) 21, -47, false, (fj) null, -45);
           }
           var9 = param3.field_m + (param4 + this.field_m);
-          fn.d(var8, var9, this.field_i, this.field_d, 5592405);
-          fn.e(var8, var9, this.field_i, this.field_d, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_i, this.field_d, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_i, this.field_d, var7);
           if (var12.field_O) {
-            fn.f(var8, var9, this.field_i + var8, var9 + this.field_d, 1);
-            fn.f(this.field_i + var8, var9, var8, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_i + var8, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, var9 + this.field_d, 1);
           }
           if (null != this.field_g) {
             var10 = this.field_i + this.field_h + this.field_l;

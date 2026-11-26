@@ -60,7 +60,7 @@ class ta extends pj implements c {
         vi.field_I = param3;
         jd.field_a = param1;
         ck.field_g = param2;
-        jk.b(ul.field_l / 2, ul.field_f / 2, param0 ^ 249);
+        jk.b(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_f / 2, param0 ^ 249);
         if (param0 != 0) {
           return;
         }
@@ -264,13 +264,13 @@ class ta extends pj implements c {
           var1 = new hj(540, 140);
           de.a(-128, var1);
           wi.c();
-          ul.d();
+          SoftwareRasterizer.clearRaster();
           ji.field_b = 0;
           bj.j(92);
           var2 = var1.f();
           for (var3 = param0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            ul.e(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           jc.field_k.d();
           var1.d(0, 0);

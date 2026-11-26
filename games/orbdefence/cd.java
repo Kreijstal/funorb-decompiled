@@ -143,10 +143,10 @@ final class cd extends wj {
         }
         de.a(-121, kf.field_a);
         wi.c();
-        ul.d();
+        SoftwareRasterizer.clearRaster();
         bj.j(97);
         if (var5 < 256) {
-          ul.d(0, 0, ul.field_f, ul.field_l, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, 0, 256 - var5);
           oc.g((byte) -105);
           if (150 <= ji.field_b) {
             CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);

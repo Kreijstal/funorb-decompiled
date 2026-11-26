@@ -105,69 +105,69 @@ final class dn {
               var20 = var9 * param6 / (var9 + var10) + param2;
               var19 = var9 * param6 / (var9 + var10) + param2;
             }
-            fn.b(fj.field_E);
+            SoftwareRasterizer.saveClip(fj.field_E);
             if (null != param3[0]) {
-              fn.f(param1, param2, var17, var19);
+              SoftwareRasterizer.intersectClip(param1, param2, var17, var19);
               param3[0].a(param1, param2, param4);
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[2] != null) {
-              fn.f(var18, param2, var11, var19);
+              SoftwareRasterizer.intersectClip(var18, param2, var11, var19);
               param3[2].a(var14, param2, param4);
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[6] != null) {
-              fn.f(param1, var20, var17, var12);
+              SoftwareRasterizer.intersectClip(param1, var20, var17, var12);
               param3[6].a(param1, var16, param4);
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[8] != null) {
-              fn.f(var18, var20, var11, var12);
+              SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
               param3[8].a(var14, var16, param4);
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (null != param3[1] &&
               param3[1].field_t != 0) {
-              fn.f(var17, param2, var18, var19);
+              SoftwareRasterizer.intersectClip(var17, param2, var18, var19);
               for (var21 = var13; var14 > var21; var21 = var21 + param3[1].field_t) {
                 param3[1].a(var21, param2, param4);
               }
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[7] != null &&
               0 != param3[7].field_t) {
-              fn.f(var17, var20, var18, var12);
+              SoftwareRasterizer.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param3[7].field_t) {
                 param3[7].a(var21Lifetime1, var16, param4);
               }
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[3] != null &&
               param3[3].field_x != 0) {
-              fn.f(param1, var19, var17, var20);
+              SoftwareRasterizer.intersectClip(param1, var19, var17, var20);
               for (var21Lifetime2 = var15; var16 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param3[3].field_x) {
                 param3[3].a(param1, var21Lifetime2, param4);
               }
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[5] != null &&
               param3[5].field_x != 0) {
-              fn.f(var18, var19, var11, var20);
+              SoftwareRasterizer.intersectClip(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param3[5].field_x) {
                 param3[5].a(var14, var21Lifetime3, param4);
               }
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
             }
             if (param3[4] != null &&
               0 != param3[4].field_t &&
               param3[4].field_x != 0) {
-              fn.f(var17, var19, var18, var20);
+              SoftwareRasterizer.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param3[4].field_x) {
                 for (var22 = var13; var22 < var14; var22 = var22 + param3[4].field_t) {
                   param3[4].a(var22, var21Lifetime4, param4);
                 }
               }
-              fn.a(fj.field_E);
+              SoftwareRasterizer.restoreClip(fj.field_E);
               return;
             }
             return;

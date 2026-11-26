@@ -19,7 +19,7 @@ final class mk extends ai {
             vg.field_Z.c(ui.field_c, 0);
           }
           ui.field_c.a(-67, param1, param2, param0);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           if (param3 > -34) {
             mk.b(41);
           }
@@ -54,7 +54,7 @@ final class mk extends ai {
           if (var1 == null) {
             var1 = new ud();
           }
-          var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
+          var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_l, (byte) 90, SoftwareRasterizer.field_b, SoftwareRasterizer.field_g, SoftwareRasterizer.field_i, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h);
           AccountRequestState.field_b.addLast((IntrusiveNode) (var1), (byte) 114);
           return;
         }
@@ -63,7 +63,7 @@ final class mk extends ai {
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new ud();
         }
-        var1Lifetime1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
+        var1Lifetime1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_l, (byte) 90, SoftwareRasterizer.field_b, SoftwareRasterizer.field_g, SoftwareRasterizer.field_i, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h);
         AccountRequestState.field_b.addLast((IntrusiveNode) (var1Lifetime1), (byte) 114);
     }
 

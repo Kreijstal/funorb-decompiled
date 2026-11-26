@@ -751,10 +751,10 @@ abstract class vc extends DualLinkNode {
               }
               param1 = param1 + this.field_G[var8];
               if (field_m != -1) {
-                kh.f(var11, param2 + (int)((double)this.field_y * 0.7), param1 - var11, field_m);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_y * 0.7), param1 - var11, field_m);
               }
               if (field_n != -1) {
-                kh.f(var11, param2 + this.field_y + 1, param1 - var11, field_n);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_y + 1, param1 - var11, field_n);
               }
               var5 = var8;
             }

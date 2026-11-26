@@ -57,20 +57,20 @@ final class vc {
         if (param0 >= -61) {
           vc.a((byte) 54);
           if (!param2) {
-            ti.d();
+            SoftwareRasterizer.clearRaster();
             af.a(param2, (byte) -98);
             return;
           }
-          ti.b(0, 0, ti.field_i, ti.field_b, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, 0, 192);
           af.a(param2, (byte) -98);
           return;
         }
         if (!param2) {
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           af.a(param2, (byte) -98);
           return;
         }
-        ti.b(0, 0, ti.field_i, ti.field_b, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, 0, 192);
         af.a(param2, (byte) -98);
     }
 

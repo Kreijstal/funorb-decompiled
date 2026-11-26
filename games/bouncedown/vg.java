@@ -141,16 +141,16 @@ final class vg implements fc {
             stackIn_4_0 = (lk) (param1);
           }
           var13 = (d) (stackIn_4_0);
-          na.e(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, this.field_b);
+          SoftwareRasterizer.fillRectangle(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, this.field_b);
           if (var13 == null) {
           }
           var7 = -(var13.field_C * 2) + param1.field_k;
           var8 = var13.field_C + (param4 + param1.field_r);
           var9 = param0 + param1.field_i + var13.field_G;
-          na.a(var8, var9, var7 + var8, var9, this.field_i);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_i);
           var10 = 8 / ((-60 - param2) / 56);
           for (var11 = -1 + var13.d((byte) -116); var11 >= 0; var11--) {
-            na.b(var8 + var13.b(87, var11) * var7 / var13.a(false), var9, this.field_h, this.field_c);
+            SoftwareRasterizer.fillCircle(var8 + var13.b(87, var11) * var7 / var13.a(false), var9, this.field_h, this.field_c);
           }
           if (this.field_d == null) {
             return;

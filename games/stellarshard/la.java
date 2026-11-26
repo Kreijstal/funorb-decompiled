@@ -328,7 +328,7 @@ final class la extends WidgetContainer implements ec, oi {
           si.field_V.a(this.field_G, param3 + this.field_w + 20, 15 + this.field_k + param2, this.field_p - 40, this.field_t, 16777215, -1, 1, 0, si.field_V.field_N);
         }
         if (this.field_E != null) {
-          ti.g(param3 + 10, 134 + param2, -20 + this.field_p, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param2, -20 + this.field_p, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

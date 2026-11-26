@@ -213,7 +213,7 @@ final class kf extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         if (param0) {

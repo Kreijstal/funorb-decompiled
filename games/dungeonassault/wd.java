@@ -44,7 +44,7 @@ final class wd {
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         if (null == this.field_n) {
-          gf.b(param3, param1, param0, param4, 0);
+          SoftwareRasterizer.fillRectangle(param3, param1, param0, param4, 0);
           return;
         }
         if (this.field_e > 0) {
@@ -54,7 +54,7 @@ final class wd {
           return;
         }
         if (this.field_e < 256) {
-          gf.b(param3, param1, param0, param4, 0, 256 - this.field_e);
+          SoftwareRasterizer.fillRectangleAlpha(param3, param1, param0, param4, 0, 256 - this.field_e);
         }
     }
 
@@ -252,7 +252,7 @@ final class wd {
         int var7Lifetime2;
         int var7Lifetime3;
         if (var8 == null) {
-          gf.b(param3, param0, param2, param4, 0);
+          SoftwareRasterizer.fillRectangle(param3, param0, param2, param4, 0);
           return;
         }
         if (param1 != 1) {

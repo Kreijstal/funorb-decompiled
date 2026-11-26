@@ -95,22 +95,22 @@ final class oj extends WidgetContainer implements ij {
         if (param5 >= param6) {
           if (param5 >= param0) {
             if (param6 < param0) {
-              hm.a(bi.field_l, param6, param3, param5, param1, (byte) -29, param0, param7, param2);
+              hm.a(SoftwareRasterizer.field_l, param6, param3, param5, param1, (byte) -29, param0, param7, param2);
             } else {
-              hm.a(bi.field_l, param0, param2, param5, param1, (byte) -73, param6, param7, param3);
+              hm.a(SoftwareRasterizer.field_l, param0, param2, param5, param1, (byte) -73, param6, param7, param3);
             }
           } else {
-            hm.a(bi.field_l, param6, param1, param0, param3, (byte) -125, param5, param7, param2);
+            hm.a(SoftwareRasterizer.field_l, param6, param1, param0, param3, (byte) -125, param5, param7, param2);
           }
         } else {
           if (param0 <= param6) {
             if (param5 < param0) {
-              hm.a(bi.field_l, param5, param3, param6, param2, (byte) -54, param0, param7, param1);
+              hm.a(SoftwareRasterizer.field_l, param5, param3, param6, param2, (byte) -54, param0, param7, param1);
             } else {
-              hm.a(bi.field_l, param0, param1, param6, param2, (byte) -43, param5, param7, param3);
+              hm.a(SoftwareRasterizer.field_l, param0, param1, param6, param2, (byte) -43, param5, param7, param3);
             }
           } else {
-            hm.a(bi.field_l, param5, param2, param0, param3, (byte) -125, param6, param7, param1);
+            hm.a(SoftwareRasterizer.field_l, param5, param2, param0, param3, (byte) -125, param6, param7, param1);
           }
         }
         if (param4 < 80) {

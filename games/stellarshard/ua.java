@@ -63,34 +63,34 @@ final class ua {
           param4 = param4 + param2.field_t;
           param5 = param5 + param2.field_s;
           var7 = (param1 << 8) + var6_int * param2.field_t;
-          var8 = param4 + param5 * ti.field_i;
+          var8 = param4 + param5 * SoftwareRasterizer.field_i;
           var9 = 0;
           var10 = param2.field_y;
           var11 = param2.field_v;
-          var12 = ti.field_i - var11;
+          var12 = SoftwareRasterizer.field_i - var11;
           var13 = param3;
-          if (param5 < ti.field_f) {
-            var14 = ti.field_f - param5;
-            param5 = ti.field_f;
-            var8 = var8 + ti.field_i * var14;
+          if (param5 < SoftwareRasterizer.field_f) {
+            var14 = SoftwareRasterizer.field_f - param5;
+            param5 = SoftwareRasterizer.field_f;
+            var8 = var8 + SoftwareRasterizer.field_i * var14;
             var10 = var10 - var14;
             var9 = var9 + var14 * var11;
           }
-          if (param4 < ti.field_e) {
-            var14Lifetime1 = ti.field_e - param4;
+          if (param4 < SoftwareRasterizer.field_e) {
+            var14Lifetime1 = SoftwareRasterizer.field_e - param4;
             var9 = var9 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
-            param4 = ti.field_e;
+            param4 = SoftwareRasterizer.field_e;
             var7 = var7 + var14Lifetime1 * var6_int;
           }
-          if (var10 + param5 > ti.field_l) {
-            var10 = var10 - (param5 + var10 - ti.field_l);
+          if (var10 + param5 > SoftwareRasterizer.field_l) {
+            var10 = var10 - (param5 + var10 - SoftwareRasterizer.field_l);
           }
-          if (ti.field_c < var11 + param4) {
-            var14Lifetime2 = -ti.field_c + param4 + var11;
+          if (SoftwareRasterizer.field_c < var11 + param4) {
+            var14Lifetime2 = -SoftwareRasterizer.field_c + param4 + var11;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -109,11 +109,11 @@ final class ua {
                   var17 = param2.field_z[incrementValue$0];
                   if (0 != var17) {
                     if (var15 > 255) {
-                      ti.field_a[var8] = var17;
+                      SoftwareRasterizer.field_a[var8] = var17;
                     } else {
-                      var18 = ti.field_a[var8];
+                      var18 = SoftwareRasterizer.field_a[var8];
                       var19 = var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8 & 16711935;
-                      ti.field_a[var8] = (DirectByteStorage.a(16711841, var15 * DirectByteStorage.a(65280, var17) + var16 * DirectByteStorage.a(65280, var18)) >> 8) + var19;
+                      SoftwareRasterizer.field_a[var8] = (DirectByteStorage.a(16711841, var15 * DirectByteStorage.a(65280, var17) + var16 * DirectByteStorage.a(65280, var18)) >> 8) + var19;
                     }
                   }
                   var8++;

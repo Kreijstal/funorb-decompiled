@@ -51,7 +51,7 @@ final class se {
             nb.field_a.b(em.field_g, (byte) -35);
           }
           em.field_g.a(param0, param3, param2, -122);
-          gb.c();
+          SoftwareRasterizer.clearRaster();
           kb.a(0, true);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "se.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

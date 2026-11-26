@@ -204,7 +204,7 @@ final class ff implements Runnable {
           sl.field_o = param2;
           fe.field_a = param1;
           rk.field_h = param3;
-          tf.a((byte) 56, ge.field_g / 2, ge.field_h / 2);
+          tf.a((byte) 56, SoftwareRasterizer.field_g / 2, SoftwareRasterizer.field_h / 2);
           wf.a(param2.field_D + param2.field_j, param1.field_j, param2.field_j, 8192, param1.field_j + param1.field_D);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ff.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

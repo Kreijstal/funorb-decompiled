@@ -15,7 +15,7 @@ final class hd {
           if (var1 == null) {
             var1 = new pe();
           }
-          var1.a(kh.field_l, kh.field_i, kh.field_d, -26690, kh.field_g, kh.field_j, kh.field_c, kh.field_b);
+          var1.a(SoftwareRasterizer.field_l, SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, -26690, SoftwareRasterizer.field_g, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c, SoftwareRasterizer.field_b);
           ok.field_a.addLast(0, var1);
           return;
         }
@@ -24,7 +24,7 @@ final class hd {
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new pe();
         }
-        var1Lifetime1.a(kh.field_l, kh.field_i, kh.field_d, -26690, kh.field_g, kh.field_j, kh.field_c, kh.field_b);
+        var1Lifetime1.a(SoftwareRasterizer.field_l, SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, -26690, SoftwareRasterizer.field_g, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c, SoftwareRasterizer.field_b);
         ok.field_a.addLast(0, var1Lifetime1);
     }
 

@@ -78,8 +78,8 @@ final class mh {
         int var3Lifetime1;
         var4 = Terraphoenix.field_V;
         try {
-          SoftwareRasterizer.e(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (rk.field_f == null) {
             if (null != ja.field_m) {
               ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

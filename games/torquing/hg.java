@@ -575,8 +575,8 @@ final class hg {
             var7 = param4[1].field_w;
             param4[0].d(param1, param3);
             param4[2].d(param1 - (-param2 + var6), param3);
-            SoftwareRasterizer.b(SecondaryNodeDeque.field_c);
-            SoftwareRasterizer.f(param1 + var5_int, param3, -var6 + param2 + param1, param3 + param4[1].field_u);
+            SoftwareRasterizer.saveClip(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.intersectClip(param1 + var5_int, param3, -var6 + param2 + param1, param3 + param4[1].field_u);
             var8 = var5_int + param1;
             var9 = -var6 + param1 + param2;
             param1 = var8;
@@ -587,7 +587,7 @@ final class hg {
                 return;
               }
             }
-            SoftwareRasterizer.a(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.restoreClip(SecondaryNodeDeque.field_c);
             return;
           }
           return;

@@ -12,7 +12,7 @@ final class ih {
             bm.field_d.b((byte) 74, (pj) (na.field_c));
           }
           na.field_c.a(param3, param0, param2, 2113632);
-          ul.d();
+          SoftwareRasterizer.clearRaster();
           m.a(true, param1);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

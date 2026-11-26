@@ -110,24 +110,24 @@ final class ra implements nn {
           var14 = (g) (stackIn_3_0);
           if (var14 == null) {
           }
-          si.c(param3.field_v + param1, param3.field_m + param0, param3.field_s, param3.field_x, this.field_h);
+          SoftwareRasterizer.fillRectangle(param3.field_v + param1, param3.field_m + param0, param3.field_s, param3.field_x, this.field_h);
           var7 = var14.field_P + (param1 + param3.field_v);
           var8 = var14.field_Q + (param0 + param3.field_m);
-          si.e(var7, var8, var14.field_J, this.field_g);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_J, this.field_g);
           if (var14.field_L != -1) {
             var9 = 3.141592653589793 * (double)var14.field_L * 2.0 / (double)var14.field_I;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_J);
             var12 = (int)(Math.cos(var9) * (double)var14.field_J);
-            si.e(var11 + var7, var8 + var12, 1, this.field_j);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_j);
           }
-          si.e(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_H) / (double)var14.field_I;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_J);
           if (param2 != 15430) {
             return;
           }
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_J);
-          si.g(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_l == null) {
             return;
           }

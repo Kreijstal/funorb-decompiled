@@ -204,7 +204,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
           return;
         }
         if (null != MixedSupport067.sceneWidgetPart001State0001) {
-          SoftwareRaster.performAction0658(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
+          SoftwareRaster.darkenRectangleHalf(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
           MixedSupport067.sceneWidgetPart001State0001.performAction1767(1141039778, booleanArgument1);
           return;
         }

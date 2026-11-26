@@ -36,7 +36,7 @@ class IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         wa.a(true);
-        na.c(param3, param2, param0, param1);
+        SoftwareRasterizer.intersectClip(param3, param2, param0, param1);
         if (param4 != -19852) {
           field_a = (String[]) null;
         }

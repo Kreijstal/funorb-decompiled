@@ -263,7 +263,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
                   if (param0 >= uc.field_h) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + wj.field_k;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_k;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -344,7 +344,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
               if (param0 >= uc.field_h) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + wj.field_k;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_k;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

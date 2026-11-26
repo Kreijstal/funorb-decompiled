@@ -733,8 +733,8 @@ class rm extends ck {
           jh.c();
           for (var1_int = 0; var1_int < ga.field_o.length; var1_int++) {
             ga.field_o[var1_int].e();
-            gf.e(0, 0, gf.field_i, gf.field_c, 0);
-            gf.e(1, 1, -2 + gf.field_i, -2 + gf.field_c, 0, 128);
+            SoftwareRasterizer.drawRectangleOutline(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(1, 1, -2 + SoftwareRasterizer.field_i, -2 + SoftwareRasterizer.field_c, 0, 128);
           }
           jh.b();
           sg.field_b = rc.a("", sb.field_a, "logo.jpg", (byte) 71);

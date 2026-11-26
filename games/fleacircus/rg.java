@@ -128,30 +128,30 @@ final class rg extends ef {
         int[] var30 = null;
         var19 = fleas.field_A ? 1 : 0;
         try {
-          if (gb.field_l > param0) {
-            param2 = param2 - (gb.field_l - param0);
-            param0 = gb.field_l;
+          if (SoftwareRasterizer.field_l > param0) {
+            param2 = param2 - (SoftwareRasterizer.field_l - param0);
+            param0 = SoftwareRasterizer.field_l;
           }
-          if (param2 + param0 > gb.field_h) {
-            param2 = gb.field_h - param0;
+          if (param2 + param0 > SoftwareRasterizer.field_h) {
+            param2 = SoftwareRasterizer.field_h - param0;
           }
-          if (gb.field_b > param7) {
-            param3 = param3 - (-param7 + gb.field_b);
-            param7 = gb.field_b;
+          if (SoftwareRasterizer.field_b > param7) {
+            param3 = param3 - (-param7 + SoftwareRasterizer.field_b);
+            param7 = SoftwareRasterizer.field_b;
           }
-          if (param7 + param3 > gb.field_i) {
-            param3 = gb.field_i - param7;
+          if (param7 + param3 > SoftwareRasterizer.field_i) {
+            param3 = SoftwareRasterizer.field_i - param7;
           }
           if (param2 > 0 &&
             param3 > 0) {
             var21 = param1.c();
-            var30 = gb.field_a;
-            var10 = gb.field_d;
-            var11 = gb.field_k;
+            var30 = SoftwareRasterizer.field_a;
+            var10 = SoftwareRasterizer.field_d;
+            var11 = SoftwareRasterizer.field_k;
             var29 = new int[4];
-            gb.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param1.f();
-            gb.g(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param7 * param1.field_w + param0;
             var14 = param1.field_w - param2;
             var25 = var21.field_B;
@@ -163,19 +163,19 @@ final class rg extends ef {
                 if (0 != var18) {
                   if (var17 > 0 &&
                     var15[-1 + var13] == 0) {
-                    gb.f(var17, var16, param6, param4);
+                    SoftwareRasterizer.fillCircle(var17, var16, param6, param4);
                   } else {
                     if (var16 > 0 &&
                       var15[-param1.field_w + var13] == 0) {
-                      gb.f(var17, var16, param6, param4);
+                      SoftwareRasterizer.fillCircle(var17, var16, param6, param4);
                     } else {
                       if (-1 + param1.field_w > var17 &&
                         var15[1 + var13] == 0) {
-                        gb.f(var17, var16, param6, param4);
+                        SoftwareRasterizer.fillCircle(var17, var16, param6, param4);
                       } else {
                         if (var16 < param1.field_t - 1 &&
                           0 == var15[var13 + param1.field_w]) {
-                          gb.f(var17, var16, param6, param4);
+                          SoftwareRasterizer.fillCircle(var17, var16, param6, param4);
                         }
                       }
                     }
@@ -186,8 +186,8 @@ final class rg extends ef {
               var13 = var13 + var14;
             }
             var21.d(-param1.field_q, -param1.field_v);
-            gb.a(var30, var10, var11);
-            gb.b(var29);
+            SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             if (param5 > -3) {
               field_n = 126;
             }

@@ -35,7 +35,7 @@ class d extends UiWidget {
         try {
           if (0 < rk.field_y &&
             ce.field_c) {
-            bi.d(0, 0, bi.field_e, td.field_c.field_C);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_e, td.field_c.field_C);
             oc.field_v.b(param1, 0);
           }
           if (param0 < 47) {
@@ -46,7 +46,7 @@ class d extends UiWidget {
             return;
           }
           if (im.field_g) {
-            bi.d(0, 0, bi.field_e, td.field_c.field_C);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_e, td.field_c.field_C);
             wc.field_m.b(param1, 0);
           }
           return;

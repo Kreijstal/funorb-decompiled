@@ -221,7 +221,7 @@ final class wf extends ma implements ha, mj {
           rb.field_b.a(this.field_V, 20 + (this.field_u + param3), this.field_r + param0 + 15, -40 + this.field_y, this.field_C, 16777215, -1, 1, 0, rb.field_b.field_C);
         }
         if (null != this.field_L) {
-          wb.a(param3 + 10, 134 + param0, -20 + this.field_y, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param0, -20 + this.field_y, 4210752);
         }
         super.a(param0, param1, -117, param3);
     }

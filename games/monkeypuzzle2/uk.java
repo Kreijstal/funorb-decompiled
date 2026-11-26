@@ -108,11 +108,11 @@ final class uk extends wj {
               var5 = var4 / 20;
               var6 = 32 * (var4 - var5 * 20);
               var5 = var5 * 32;
-              ge.h(var6, var5, var6 + 32, 32 + var5);
+              SoftwareRasterizer.setClip(var6, var5, var6 + 32, 32 + var5);
               param2.a(0, 0);
             }
           }
-          ge.b();
+          SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "uk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

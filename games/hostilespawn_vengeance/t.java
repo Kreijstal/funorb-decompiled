@@ -238,7 +238,7 @@ final class t extends IntrusiveNode {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + si.field_e;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_e;
                 }
               }
               var16Lifetime3 = param3 - param6;
@@ -290,7 +290,7 @@ final class t extends IntrusiveNode {
               if (ge.field_f <= param5) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + si.field_e;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_e;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

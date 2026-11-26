@@ -57,7 +57,7 @@ final class tl extends ci {
             ac var3 = (ac) null;
             tl.a((ac) null, -55, (byte) 64);
           }
-          wb.a(param1.field_x, param1.field_v, param1.field_u);
+          SoftwareRasterizer.setRasterBuffer(param1.field_x, param1.field_v, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

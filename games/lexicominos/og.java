@@ -45,7 +45,7 @@ final class og implements rd {
           var12 = (wi) (stackIn_4_0);
           if (var12 != null) {
           }
-          SoftwareRasterizer.a(param3.field_t + param1, param3.field_o + param0, param3.field_j, param3.field_v, this.field_d);
+          SoftwareRasterizer.fillRectangle(param3.field_t + param1, param3.field_o + param0, param3.field_j, param3.field_v, this.field_d);
           var7 = -(var12.field_G * 2) + param3.field_j;
           var8 = var12.field_G + param3.field_t + param1;
           var9 = param0 - (-param3.field_o - var12.field_H);

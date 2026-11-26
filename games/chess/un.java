@@ -87,7 +87,7 @@ final class un {
           }
         }
         var3 = stackIn_10_0;
-        wb.f(0, param0 + AccountNameAvailabilityValidator.field_m.field_wb, 640, 480, 1);
+        SoftwareRasterizer.fillRectangle(0, param0 + AccountNameAvailabilityValidator.field_m.field_wb, 640, 480, 1);
         stackIn_12_0 = qh.field_b;
         stackIn_12_1 = qh.field_b;
         stackIn_13_2 = (var3 == 0) ? -2147483647 : -1;
@@ -309,12 +309,12 @@ final class un {
         }
         var3 = stackIn_3_0;
         if (var3 != 0) {
-          cl.field_g.field_w = wb.field_h;
-          cl.field_g.field_t = wb.field_c;
-          cl.field_g.field_x = wb.field_d;
+          cl.field_g.field_w = SoftwareRasterizer.field_h;
+          cl.field_g.field_t = SoftwareRasterizer.field_c;
+          cl.field_g.field_x = SoftwareRasterizer.field_d;
           ResourceArchive.field_c.e();
         }
-        wb.a(4, 4, 108, 327, 11, 0, 64);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(4, 4, 108, 327, 11, 0, 64);
         stackIn_8_0 = 8;
         stackIn_8_1 = 8;
         stackIn_8_2 = 100;
@@ -322,15 +322,15 @@ final class un {
         stackIn_8_4 = 11;
         stackIn_8_5 = 16777215;
         stackIn_9_6 = (this.field_y | this.field_g) ? 96 : 256;
-        wb.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5, stackIn_9_6);
-        wb.a(8, 169, 100, 158, 11, 0, 96);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5, stackIn_9_6);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(8, 169, 100, 158, 11, 0, 96);
         stackIn_11_0 = DirectByteStorage.field_g;
         stackIn_11_1 = var2;
         stackIn_11_2 = 169;
         stackIn_12_3 = (this.field_B.field_l == this.field_B.field_k) ? 0 : 3;
         ((rk) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2 + stackIn_12_3);
-        wb.c(14, 179, 88, 40, 8750469, 5592405);
-        wb.d(13, 178, 90, 42, 1);
+        SoftwareRasterizer.fillRectangleVerticalGradient(14, 179, 88, 40, 8750469, 5592405);
+        SoftwareRasterizer.drawRectangleOutline(13, 178, 90, 42, 1);
         ph.field_l.a(8, 173);
         se.a(16777215, pg.field_v, 20, 186, 3, param0 + 166, 0, this.field_e / 50, 35, da.field_y);
         stackIn_14_0 = DirectByteStorage.field_g;
@@ -338,8 +338,8 @@ final class un {
         stackIn_14_2 = 111;
         stackIn_15_3 = (this.field_B.field_l != this.field_B.field_k) ? 0 : 3;
         ((rk) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2 + stackIn_15_3);
-        wb.c(14, 121, 88, 40, 8750469, 5592405);
-        wb.d(13, 120, 90, 42, 1);
+        SoftwareRasterizer.fillRectangleVerticalGradient(14, 121, 88, 40, 8750469, 5592405);
+        SoftwareRasterizer.drawRectangleOutline(13, 120, 90, 42, 1);
         ph.field_l.a(8, 115);
         se.a(16711680, pg.field_v, 20, 128, 3, 60, 0, this.field_v / 50, 35, da.field_y);
         var4 = 4;
@@ -399,23 +399,23 @@ final class un {
         } else {
           if (this.field_g && (!(qb.field_a < 400) ||
             !this.field_b)) {
-            wb.a(548, 3, 89, 117, 11, 0, 64);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(548, 3, 89, 117, 11, 0, 64);
             var16 = -2 + tj.field_n.field_i;
             var17 = hd.field_g.field_m.field_v + (hd.field_g.field_i + 2);
             var18_int = tj.field_n.field_k - 2;
             var19 = 4 + tj.field_n.field_m.field_t + var18_int;
-            wb.a(var16, var18_int, var17 - var16, -var18_int + var19, 3, 2105376, 128);
-            wb.b(this.field_F);
-            wb.b(0, 0, 640, var18_int);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(var16, var18_int, var17 - var16, -var18_int + var19, 3, 2105376, 128);
+            SoftwareRasterizer.saveClip(this.field_F);
+            SoftwareRasterizer.setClip(0, 0, 640, var18_int);
             var20 = -2 + rf.field_d.field_i;
             var22 = -2 + rf.field_d.field_k;
             var21 = rf.field_d.field_m.field_v + 4;
             var23 = 4 + (b.field_b.field_k + b.field_b.field_m.field_u);
             var23 = var23 - (2 + var22);
-            wb.a(var20, var22, var21, var23, 3, 2105376, 128);
-            wb.b(0, var19, 640, 480);
-            wb.a(var20, var22, var21, var23, 3, 2105376, 128);
-            wb.a(this.field_F);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(var20, var22, var21, var23, 3, 2105376, 128);
+            SoftwareRasterizer.setClip(0, var19, 640, 480);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(var20, var22, var21, var23, 3, 2105376, 128);
+            SoftwareRasterizer.restoreClip(this.field_F);
             tj.field_n.a(true);
             hd.field_g.a(true);
             rf.field_d.a(true);
@@ -426,13 +426,13 @@ final class un {
           var16Lifetime2 = stackIn_59_0;
           var17Lifetime2 = 150 + var16Lifetime2;
           if (this.field_t.e(0, 65)) {
-            wb.a(548, var17Lifetime2, 89, 50, 9, 1, 128);
-            wb.a(548, var17Lifetime2, 89, 50, 9, 1);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(548, var17Lifetime2, 89, 50, 9, 1, 128);
+            SoftwareRasterizer.drawRoundedRectangleOutline(548, var17Lifetime2, 89, 50, 9, 1);
             v.field_j.a(DualLinkNode.field_k, 548, var17Lifetime2, 89, 50, 16777215, 0, var15, 1, 1, v.field_j.field_C);
           }
           if (this.field_t.e(4096, param0 + 217)) {
-            wb.a(548, var17Lifetime2, 89, 50, 9, 16777215, 128);
-            wb.a(548, var17Lifetime2, 89, 50, 9, 16777215);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(548, var17Lifetime2, 89, 50, 9, 16777215, 128);
+            SoftwareRasterizer.drawRoundedRectangleOutline(548, var17Lifetime2, 89, 50, 9, 16777215);
             v.field_j.a(sj.field_c, 548, var17Lifetime2, 89, 50, 0, 16777215, var15, 1, 1, v.field_j.field_C);
           }
           if (!this.field_b) {
@@ -441,8 +441,8 @@ final class un {
             } else {
               var18 = mh.field_e;
             }
-            wb.a(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13, 128);
-            wb.a(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13, 128);
+            SoftwareRasterizer.drawRoundedRectangleOutline(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13);
             jj.field_b.b(var18, 592, 152, var14, var13, var15);
           } else {
             if (0 <= this.field_B.field_l) {
@@ -451,8 +451,8 @@ final class un {
               var30 = oc.a(rc.field_f, new String[]{var20_ref_String}, (byte) -43);
               var18 = var30;
               var18 = var30;
-              wb.a(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13, 128);
-              wb.a(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13);
+              SoftwareRasterizer.fillRoundedRectangleAlpha(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13, 128);
+              SoftwareRasterizer.drawRoundedRectangleOutline(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13);
               ((lh) ((Object) var19_ref_c)).a(var30, 549, 150 - ((lh) ((Object) var19_ref_c)).field_C, 87, var16Lifetime2, var14, -1, var15, 1, 1, ((lh) ((Object) var19_ref_c)).field_C);
             }
           }
@@ -477,8 +477,8 @@ final class un {
           var20Lifetime1 = -(var19Lifetime1Lifetime1 * v.field_j.field_C) + (-v.field_j.field_t + 474);
           var21Lifetime1 = (int)(((double)var19Lifetime1Lifetime1 + 0.5) * (double)v.field_j.field_C);
           var22Lifetime1 = v.field_j.field_C / 2 - 1;
-          wb.a(-var22Lifetime1 + 150, var20Lifetime1, var22Lifetime1 * 2 + 340, var21Lifetime1, var22Lifetime1, var13, 128);
-          wb.a(150 - var22Lifetime1, var20Lifetime1, 340 + 2 * var22Lifetime1, var21Lifetime1, var22Lifetime1, var13);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(-var22Lifetime1 + 150, var20Lifetime1, var22Lifetime1 * 2 + 340, var21Lifetime1, var22Lifetime1, var13, 128);
+          SoftwareRasterizer.drawRoundedRectangleOutline(150 - var22Lifetime1, var20Lifetime1, 340 + 2 * var22Lifetime1, var21Lifetime1, var22Lifetime1, var13);
           v.field_j.a(var16_ref_String, 150, var20Lifetime1, 340, var21Lifetime1, var14, var13, var15 / 2 + 128, 1, 1, v.field_j.field_C);
         }
         if (param0 != -106) {
@@ -486,8 +486,8 @@ final class un {
         }
         var16Lifetime1 = ec.field_d.field_k - 72;
         var17Lifetime1 = var16Lifetime1 + 4;
-        wb.a(548, var16Lifetime1, 89, 50, 8, 65793, 64);
-        wb.a(552, var17Lifetime1, 81, 42, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(548, var16Lifetime1, 89, 50, 8, 65793, 64);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(552, var17Lifetime1, 81, 42, 8, 65793, 128);
         jj.field_b.a(gg.field_k, 552, var17Lifetime1, 81, 42, 16777215, -1, 1, 1, jj.field_b.field_C);
         if (var3 != 0) {
           cl.field_g.e();
@@ -828,9 +828,9 @@ final class un {
         String var20;
         int[] var24;
         var19 = Chess.field_G;
-        var24 = wb.field_d;
-        var4 = wb.field_h;
-        var5 = wb.field_c;
+        var24 = SoftwareRasterizer.field_d;
+        var4 = SoftwareRasterizer.field_h;
+        var5 = SoftwareRasterizer.field_c;
         if (this.field_b && (!(qb.field_a >= 400) ||
           qb.field_c) && !hl.field_h) {
           ResourceArchive.field_c.e();
@@ -918,8 +918,8 @@ final class un {
             stackIn_60_0 = (var15 != 0) ? 16777215 : 1;
             var17 = stackIn_60_0;
             var18 = 127 + (int)(Math.sin((double)qb.field_a / 7.9) * 127.0);
-            wb.a(var13, var14, var12, var11, var11 / 2 - 1, var16, 128);
-            wb.a(var13, var14, var12, var11, var11 / 2 - 1, var16);
+            SoftwareRasterizer.fillRoundedRectangleAlpha(var13, var14, var12, var11, var11 / 2 - 1, var16, 128);
+            SoftwareRasterizer.drawRoundedRectangleOutline(var13, var14, var12, var11, var11 / 2 - 1, var16);
             ((lh) ((Object) var10)).a(var9, var13 + var7, var14 + ((lh) ((Object) var10)).field_C, var17, var16, var18);
           }
         }
@@ -930,18 +930,18 @@ final class un {
             if (qb.field_a >= 400) {
               if (qb.field_c) {
                 qb.field_c = false;
-                wb.b();
-                wb.a(var24, var4, var5);
+                SoftwareRasterizer.clearRaster();
+                SoftwareRasterizer.setRasterBuffer(var24, var4, var5);
               }
             } else {
               this.a(-104, qb.field_a, false);
-              wb.a(var24, var4, var5);
+              SoftwareRasterizer.setRasterBuffer(var24, var4, var5);
               ResourceArchive.field_c.b(0, 0, 64);
             }
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        wb.a();
+        SoftwareRasterizer.resetClip();
         if (this.field_B.field_f != -2 &&
           !this.field_p) {
           this.field_p = true;

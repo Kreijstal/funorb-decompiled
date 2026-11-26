@@ -321,7 +321,7 @@ final class pa extends ab {
               var11 <= this.field_K.field_u &&
               var12 <= this.field_K.field_v) {
               bc.a(this.field_K, 26095);
-              ki.b();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_K = new Sprite(var11, var12);
               bc.a(this.field_K, 26095);
@@ -366,7 +366,7 @@ final class pa extends ab {
                 bc.a(this.field_K, 26095);
               } else {
                 bc.a(this.field_K, 26095);
-                ki.b();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -419,7 +419,7 @@ final class pa extends ab {
                 bc.a(this.field_K, 26095);
               } else {
                 bc.a(this.field_K, 26095);
-                ki.b();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -443,7 +443,7 @@ final class pa extends ab {
             var11Lifetime2 <= this.field_K.field_u &&
             var12Lifetime2 <= this.field_K.field_v) {
             bc.a(this.field_K, 26095);
-            ki.b();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
             bc.a(this.field_K, 26095);
@@ -480,7 +480,7 @@ final class pa extends ab {
           } else {
             if (var12Lifetime3 <= this.field_K.field_v) {
               bc.a(this.field_K, 26095);
-              ki.b();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
               bc.a(this.field_K, 26095);

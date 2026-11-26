@@ -21,7 +21,7 @@ final class mj {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (!param2) {
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           ByteStorage.a(param2, (byte) -106);
           if (param0) {
             field_b = (String) null;
@@ -29,7 +29,7 @@ final class mj {
           }
           return;
         }
-        gf.b(0, 0, gf.field_i, gf.field_c, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, 192);
         ByteStorage.a(param2, (byte) -106);
         if (param0) {
           field_b = (String) null;

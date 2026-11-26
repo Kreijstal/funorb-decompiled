@@ -125,24 +125,24 @@ final class eb extends WidgetContainer implements sh, ql {
         int var10 = 0;
         var10 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          ge.a(param0, param4, param3 + 1, 10000536);
-          ge.a(param0, param4 + param2, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param4, param3 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param4 + param2, param3 + 1, 12105912);
           if (param1 != 0) {
             field_E = (String) null;
           }
           var5_int = 1;
-          if (param4 + var5_int < ge.field_f) {
-            var5_int = -param4 + ge.field_f;
+          if (param4 + var5_int < SoftwareRasterizer.field_f) {
+            var5_int = -param4 + SoftwareRasterizer.field_f;
           }
           var6 = param2;
-          if (var6 + param4 > ge.field_k) {
-            var6 = ge.field_k - param4;
+          if (var6 + param4 > SoftwareRasterizer.field_k) {
+            var6 = SoftwareRasterizer.field_k - param4;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + 48 * var7 / param2;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            ge.field_i[ge.field_h * (param4 + var7) + param0] = var9;
-            ge.field_i[(param4 + var7) * ge.field_h - (-param0 - param3)] = var9;
+            SoftwareRasterizer.field_i[SoftwareRasterizer.field_h * (param4 + var7) + param0] = var9;
+            SoftwareRasterizer.field_i[(param4 + var7) * SoftwareRasterizer.field_h - (-param0 - param3)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

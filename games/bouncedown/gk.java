@@ -419,14 +419,14 @@ final class gk {
           var7 = param2[1].field_t;
           param2[0].a(param0, param3);
           param2[2].a(param4 + (param0 - var6), param3);
-          na.b(hh.field_h);
-          na.c(var5_int + param0, param3, param4 + param0 - var6, param3 + param2[param1].field_o);
+          SoftwareRasterizer.saveClip(hh.field_h);
+          SoftwareRasterizer.intersectClip(var5_int + param0, param3, param4 + param0 - var6, param3 + param2[param1].field_o);
           var8 = param0 + var5_int;
           var9 = param4 + (param0 - var6);
           for (param0 = var8; var9 > param0; param0 = param0 + var7) {
             param2[1].a(param0, param3);
           }
-          na.a(hh.field_h);
+          SoftwareRasterizer.restoreClip(hh.field_h);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "gk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

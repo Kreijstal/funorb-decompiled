@@ -245,7 +245,7 @@ abstract class ab extends og {
         if (hp.field_g == null) {
           hp.field_g = new dl(this.field_g, this.field_f);
           em.a((byte) 38, hp.field_g);
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           this.b(30, 0, 0);
           super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
@@ -258,7 +258,7 @@ abstract class ab extends og {
         if (this.field_g > hp.field_g.field_l) {
           hp.field_g = new dl(this.field_g, this.field_f);
           em.a((byte) 38, hp.field_g);
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           this.b(30, 0, 0);
           super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
@@ -271,7 +271,7 @@ abstract class ab extends og {
         if (hp.field_g.field_u < this.field_f) {
           hp.field_g = new dl(this.field_g, this.field_f);
           em.a((byte) 38, hp.field_g);
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           this.b(30, 0, 0);
           super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
@@ -282,7 +282,7 @@ abstract class ab extends og {
           return;
         }
         em.a((byte) 38, hp.field_g);
-        kh.a();
+        SoftwareRasterizer.clearRaster();
         this.b(30, 0, 0);
         super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
         lg.a(1);

@@ -417,15 +417,15 @@ final class kl extends g implements cl, qh, wi {
         RuntimeException var5 = null;
         var10 = Main.field_T;
         try {
-          vj.d(param2, param1, param4 + 1, 10000536);
-          vj.d(param2, param0 + param1, 1 + param4, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param2, param1, param4 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param2, param0 + param1, 1 + param4, 12105912);
           var5_int = 1;
-          if (param1 + var5_int < vj.field_h) {
-            var5_int = vj.field_h - param1;
+          if (param1 + var5_int < SoftwareRasterizer.field_h) {
+            var5_int = SoftwareRasterizer.field_h - param1;
           }
           var6 = param0;
-          if (vj.field_b < param1 + var6) {
-            var6 = vj.field_b - param1;
+          if (SoftwareRasterizer.field_b < param1 + var6) {
+            var6 = SoftwareRasterizer.field_b - param1;
           }
           if (param3 != 48) {
             return;
@@ -433,8 +433,8 @@ final class kl extends g implements cl, qh, wi {
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + var7 * 48 / param0;
             var9 = var8 << 16 | var8 << 8 | var8;
-            vj.field_j[(var7 + param1) * vj.field_l + param2] = var9;
-            vj.field_j[param2 + (var7 + param1) * vj.field_l + param4] = var9;
+            SoftwareRasterizer.field_j[(var7 + param1) * SoftwareRasterizer.field_l + param2] = var9;
+            SoftwareRasterizer.field_j[param2 + (var7 + param1) * SoftwareRasterizer.field_l + param4] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

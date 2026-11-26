@@ -174,8 +174,8 @@ final class ih extends qe {
         this.field_y.d();
         this.field_D.d();
         if (this.field_b != null) {
-          for (var5_int = 0; gf.field_b.length > var5_int; var5_int++) {
-            gf.field_b[var5_int] = nb.a(-50529028, gf.field_b[var5_int]) >>> 2;
+          for (var5_int = 0; SoftwareRasterizer.field_b.length > var5_int; var5_int++) {
+            SoftwareRasterizer.field_b[var5_int] = nb.a(-50529028, SoftwareRasterizer.field_b[var5_int]) >>> 2;
           }
           this.field_b.b(108);
         }
@@ -194,7 +194,7 @@ final class ih extends qe {
           }
           var8 = stackIn_36_0;
           if (var8 == null) {
-            gf.b(var6, var7, 40, 40, 0, 128);
+            SoftwareRasterizer.fillRectangleAlpha(var6, var7, 40, 40, 0, 128);
           } else {
             var8.d(var6, var7, 128);
           }
@@ -779,9 +779,9 @@ final class ih extends qe {
           while (4 > var4) {
             var5 = 195 + 102 * var4;
             var6 = 60 + 104 * var3;
-            gf.e(var5, var6, 96, 96, 0);
+            SoftwareRasterizer.drawRectangleOutline(var5, var6, 96, 96, 0);
             var7 = 0;
-            gf.b(var5 + 4, 4 + var6, 88, 88, var7);
+            SoftwareRasterizer.fillRectangle(var5 + 4, 4 + var6, 88, 88, var7);
             rp.a(4, 88, (byte) 108, var5 + 4, 88, kc.field_S, 4 + var6);
             if (7 != var2) {
               var4++;

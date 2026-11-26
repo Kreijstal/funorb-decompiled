@@ -53,16 +53,16 @@ final class wn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          var10 = bi.field_l;
+          var10 = SoftwareRasterizer.field_l;
           var7 = var10;
-          var8 = bi.field_e;
-          var9 = bi.field_j;
-          bi.a(this.field_a);
+          var8 = SoftwareRasterizer.field_e;
+          var9 = SoftwareRasterizer.field_j;
+          SoftwareRasterizer.saveClip(this.field_a);
           this.field_h.d();
-          bi.b(this.field_a);
+          SoftwareRasterizer.restoreClip(this.field_a);
           this.field_f.b(param4, param3, param5, param0, param2);
-          bi.a(var10, var8, var9);
-          bi.b(this.field_a);
+          SoftwareRasterizer.setRasterBuffer(var10, var8, var9);
+          SoftwareRasterizer.restoreClip(this.field_a);
           this.field_e = true;
           if (param1 <= 51) {
             this.field_h = (Sprite) null;
@@ -87,17 +87,17 @@ final class wn {
         int var3 = 0;
         int var4 = 0;
         if (this.field_e) {
-          var2_ref_int__ = bi.field_l;
-          var3 = bi.field_e;
-          var4 = bi.field_j;
-          bi.a(this.field_a);
+          var2_ref_int__ = SoftwareRasterizer.field_l;
+          var3 = SoftwareRasterizer.field_e;
+          var4 = SoftwareRasterizer.field_j;
+          SoftwareRasterizer.saveClip(this.field_a);
           this.field_h.d();
           an.a((byte) 41, 0, 640, 480, 0);
-          bi.a(var2_ref_int__, var3, var4);
-          bi.b(this.field_a);
+          SoftwareRasterizer.setRasterBuffer(var2_ref_int__, var3, var4);
+          SoftwareRasterizer.restoreClip(this.field_a);
           this.field_h.e(0, 0);
           this.field_h.d();
-          bi.c();
+          SoftwareRasterizer.clearRaster();
           ro.field_g.a(-39);
           this.field_e = false;
         }
@@ -342,8 +342,8 @@ final class wn {
             if (param0[param1] > 1) {
               param2 = param1 - 1;
               param3 = param1 + 1;
-              param4 = param1 - bi.field_e;
-              param5 = param1 + bi.field_e;
+              param4 = param1 - SoftwareRasterizer.field_e;
+              param5 = param1 + SoftwareRasterizer.field_e;
               if (param0[param4 + 1] == 0) {
                 param0[param4 + 1] = 1;
               }
@@ -374,11 +374,11 @@ final class wn {
               if (param0[param3 + 1] == 0) {
                 param0[param3 + 1] = 1;
               }
-              if (param0[param4 - bi.field_e] == 0) {
-                param0[param4 - bi.field_e] = 1;
+              if (param0[param4 - SoftwareRasterizer.field_e] == 0) {
+                param0[param4 - SoftwareRasterizer.field_e] = 1;
               }
-              if (param0[param5 + bi.field_e] == 0) {
-                param0[param5 + bi.field_e] = 1;
+              if (param0[param5 + SoftwareRasterizer.field_e] == 0) {
+                param0[param5 + SoftwareRasterizer.field_e] = 1;
               }
             }
             param1++;
@@ -595,22 +595,22 @@ final class wn {
     }
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int[] var16 = bi.field_l;
+        int[] var16 = SoftwareRasterizer.field_l;
         int[] var15 = var16;
         int[] var14 = var15;
         int[] var11 = var14;
-        int var12 = bi.field_e;
-        int var13 = bi.field_j;
-        bi.a(this.field_a);
+        int var12 = SoftwareRasterizer.field_e;
+        int var13 = SoftwareRasterizer.field_j;
+        SoftwareRasterizer.saveClip(this.field_a);
         this.field_h.d();
         if (param6 != 1) {
           return;
         }
         try {
-          bi.b(this.field_a);
+          SoftwareRasterizer.restoreClip(this.field_a);
           this.field_f.a(param2, param5, param4, param7, param3, param9, param1, param0, param8, this.field_f.field_D + 4);
-          bi.a(var16, var12, var13);
-          bi.b(this.field_a);
+          SoftwareRasterizer.setRasterBuffer(var16, var12, var13);
+          SoftwareRasterizer.restoreClip(this.field_a);
           this.field_e = true;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "wn.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');

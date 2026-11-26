@@ -66,36 +66,36 @@ final class wh {
 
     final static km[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         km var17 = null;
-        int[] var19 = wb.field_d;
+        int[] var19 = SoftwareRasterizer.field_d;
         int[] var18 = var19;
         int[] var16 = var18;
         int[] var6 = var16;
-        int var7 = wb.field_h;
+        int var7 = SoftwareRasterizer.field_h;
         int var8 = 7 % ((param0 + 10) / 58);
-        int var9 = wb.field_c;
+        int var9 = SoftwareRasterizer.field_c;
         km var10 = new km(param2, param1 - 2 * param2);
         var10.e();
-        wb.c(0, 0, param2, -(2 * param2) + param1, param3, param4);
+        SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, param2, -(2 * param2) + param1, param3, param4);
         km var11 = new km(param2, param2);
         var11.e();
-        wb.f(0, 0, param2, param2, param3);
+        SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param3);
         km var12 = new km(16, param2);
         var12.e();
-        wb.f(0, 0, 16, param2, param3);
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param3);
         km var13 = new km(param2, param2);
         var13.e();
-        wb.f(0, 0, param2, param2, param4);
+        SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param4);
         km var14 = new km(16, param2);
         var14.e();
-        wb.f(0, 0, 16, param2, param4);
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param4);
         Object var15 = null;
         if (param5 > 0) {
           var17 = new km(16, 16);
           var15 = var17;
           var17.e();
-          wb.f(0, 0, 16, 16, param5);
+          SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param5);
         }
-        wb.a(var19, var7, var9);
+        SoftwareRasterizer.setRasterBuffer(var19, var7, var9);
         return new km[]{var11, var12, var11, var10, (km) (var15), var10, var13, var14, var13};
     }
 

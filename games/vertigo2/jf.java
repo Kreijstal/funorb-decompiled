@@ -48,13 +48,13 @@ final class jf extends d {
         if (param3 != 1) {
           return -100;
         }
-        if (bi.field_e >= param0 + param2) {
+        if (SoftwareRasterizer.field_e >= param0 + param2) {
           return param2;
         }
         if (0 <= -param0 + (param1 + param2)) {
           return -param0 + param2 + param1;
         }
-        return bi.field_e - param0;
+        return SoftwareRasterizer.field_e - param0;
     }
 
     final int c(boolean param0) {

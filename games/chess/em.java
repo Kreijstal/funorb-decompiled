@@ -113,9 +113,9 @@ final class em {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, boolean param9) {
         int var11;
         var11 = Chess.field_G;
-        if (!param2 && (wb.field_h != vi.field_d ||
-          fn.field_c != wb.field_c) && (wb.field_c == ph.field_j.field_i &&
-          wb.field_h == ph.field_j.field_e)) {
+        if (!param2 && (SoftwareRasterizer.field_h != vi.field_d ||
+          fn.field_c != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == ph.field_j.field_i &&
+          SoftwareRasterizer.field_h == ph.field_j.field_e)) {
           if (pd.field_Rb != null) {
             cf.a(127, false);
           } else {
@@ -294,75 +294,75 @@ final class em {
             }
             var18 = var14;
             var19 = var15;
-            wb.b(GameAppletShell.field_d);
+            SoftwareRasterizer.saveClip(GameAppletShell.field_d);
             if (var19 < var18) {
               var19 = param5 * var8 / (var9 + var8) + param0;
               var18 = param5 * var8 / (var9 + var8) + param0;
             }
             if (null != param1[0]) {
-              wb.e(param3, param0, var16, var18);
+              SoftwareRasterizer.intersectClip(param3, param0, var16, var18);
               param1[0].b(param3, param0);
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[2] != null) {
-              wb.e(var17, param0, var10, var18);
+              SoftwareRasterizer.intersectClip(var17, param0, var10, var18);
               param1[2].b(var13, param0);
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[6] != null) {
-              wb.e(param3, var19, var16, var11);
+              SoftwareRasterizer.intersectClip(param3, var19, var16, var11);
               param1[6].b(param3, var15);
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[8] != null) {
-              wb.e(var17, var19, var10, var11);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param1[8].b(var13, var15);
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (null != param1[1] &&
               param1[1].field_v != 0) {
-              wb.e(var16, param0, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param0, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_v) {
                 param1[1].b(var20, param0);
               }
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[7] != null &&
               0 != param1[7].field_v) {
-              wb.e(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_v) {
                 param1[7].b(var20Lifetime1, var15);
               }
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (null != param1[3] &&
               param1[3].field_u != 0) {
-              wb.e(param3, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param3, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param1[3].field_u) {
                 param1[3].b(param3, var20Lifetime2);
               }
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (null != param1[5] &&
               param1[5].field_u != 0) {
-              wb.e(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_u) {
                 param1[5].b(var13, var20Lifetime3);
               }
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (null != param1[4] &&
               0 != param1[4].field_v) {
               if (param1[4].field_u == 0) {
                 return;
               }
-              wb.e(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].field_u) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param1[4].field_v) {
                   param1[4].b(var21, var20Lifetime4);
                 }
               }
-              wb.a(GameAppletShell.field_d);
+              SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             return;
           }

@@ -75,7 +75,7 @@ final class lf extends kc {
         if (null == this.field_X) {
           return;
         }
-        ki.b(param0 + 20, 120 + param2 - 7, 260, 8421504);
+        SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param2 - 7, 260, 8421504);
         tk.field_a.a(this.field_X, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, tk.field_a.field_p);
     }
 

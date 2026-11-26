@@ -18,25 +18,25 @@ final class ke {
         int var16 = -36 / ((57 - param7) / 40);
         if (param12 >= param1) {
           if (param12 < param8) {
-            qc.a(param4, param5, ti.field_a, param15, param6, param13, param14, param8, param9, param1, param12, param10, (byte) 127, param3, param2, param0, param11);
+            qc.a(param4, param5, SoftwareRasterizer.field_a, param15, param6, param13, param14, param8, param9, param1, param12, param10, (byte) 127, param3, param2, param0, param11);
             return;
           }
           if (param1 < param8) {
-            qc.a(param11, param15, ti.field_a, param5, param9, param13, param2, param12, param6, param1, param8, param10, (byte) 127, param3, param14, param0, param4);
+            qc.a(param11, param15, SoftwareRasterizer.field_a, param5, param9, param13, param2, param12, param6, param1, param8, param10, (byte) 127, param3, param14, param0, param4);
             return;
           }
-          qc.a(param11, param15, ti.field_a, param0, param9, param4, param2, param12, param3, param8, param1, param14, (byte) 127, param6, param10, param5, param13);
+          qc.a(param11, param15, SoftwareRasterizer.field_a, param0, param9, param4, param2, param12, param3, param8, param1, param14, (byte) 127, param6, param10, param5, param13);
           return;
         }
         if (param8 > param1) {
-          qc.a(param4, param5, ti.field_a, param0, param6, param11, param14, param8, param3, param12, param1, param2, (byte) 127, param9, param10, param15, param13);
+          qc.a(param4, param5, SoftwareRasterizer.field_a, param0, param6, param11, param14, param8, param3, param12, param1, param2, (byte) 127, param9, param10, param15, param13);
           return;
         }
         if (param12 >= param8) {
-          qc.a(param13, param0, ti.field_a, param15, param3, param4, param10, param1, param9, param8, param12, param14, (byte) 127, param6, param2, param5, param11);
+          qc.a(param13, param0, SoftwareRasterizer.field_a, param15, param3, param4, param10, param1, param9, param8, param12, param14, (byte) 127, param6, param2, param5, param11);
           return;
         }
-        qc.a(param13, param0, ti.field_a, param5, param3, param11, param10, param1, param6, param12, param8, param2, (byte) 127, param9, param14, param15, param4);
+        qc.a(param13, param0, SoftwareRasterizer.field_a, param5, param3, param11, param10, param1, param6, param12, param8, param2, (byte) 127, param9, param14, param15, param4);
     }
 
     final static void a(int param0, int param1) {

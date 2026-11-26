@@ -69,7 +69,7 @@ final class jg extends dk {
             } else {
               if (fe.field_H.field_v >= var10) {
                 bc.a(fe.field_H, 26095);
-                ki.b();
+                SoftwareRasterizer.clearRaster();
               } else {
                 fe.field_H = new Sprite(var9, var10);
                 bc.a(fe.field_H, 26095);
@@ -107,7 +107,7 @@ final class jg extends dk {
           } else {
             if (fe.field_H.field_v >= var10Lifetime1) {
               bc.a(fe.field_H, 26095);
-              ki.b();
+              SoftwareRasterizer.clearRaster();
             } else {
               fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
               bc.a(fe.field_H, 26095);

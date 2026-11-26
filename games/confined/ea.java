@@ -26,15 +26,15 @@ final class ea {
         int var10 = 0;
         var10 = Confined.field_J ? 1 : 0;
         try {
-          fn.b(param2, param1, param4 + 1, 10000536);
-          fn.b(param2, param3 + param1, param4 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param2, param1, param4 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param2, param3 + param1, param4 + 1, 12105912);
           var5_int = 1;
-          if (fn.field_b > var5_int + param1) {
-            var5_int = fn.field_b - param1;
+          if (SoftwareRasterizer.field_b > var5_int + param1) {
+            var5_int = SoftwareRasterizer.field_b - param1;
           }
           var6 = param3;
-          if (fn.field_j < param1 + var6) {
-            var6 = fn.field_j - param1;
+          if (SoftwareRasterizer.field_j < param1 + var6) {
+            var6 = SoftwareRasterizer.field_j - param1;
           }
           if (!param0) {
             field_a = 105;
@@ -42,8 +42,8 @@ final class ea {
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = var7 * 48 / param3 + 152;
             var9 = var8 << 8 | var8 << 16 | var8;
-            fn.field_h[(var7 + param1) * fn.field_g + param2] = var9;
-            fn.field_h[param4 + param2 + (var7 + param1) * fn.field_g] = var9;
+            SoftwareRasterizer.field_h[(var7 + param1) * SoftwareRasterizer.field_g + param2] = var9;
+            SoftwareRasterizer.field_h[param4 + param2 + (var7 + param1) * SoftwareRasterizer.field_g] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

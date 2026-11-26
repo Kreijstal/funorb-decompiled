@@ -34,14 +34,14 @@ abstract class ab extends DualLinkNode {
             var8 = param5[1].field_v;
             param5[0].e(param2, param3, param0);
             param5[2].e(param1 + (param2 - var7), param3, param0);
-            wb.b(IntrusiveNode.field_d);
-            wb.e(param2 + var6_int, param3, -var7 + (param1 + param2), param3 + param5[1].field_u);
+            SoftwareRasterizer.saveClip(IntrusiveNode.field_d);
+            SoftwareRasterizer.intersectClip(param2 + var6_int, param3, -var7 + (param1 + param2), param3 + param5[1].field_u);
             var9 = param2 + var6_int;
             var10 = -var7 + (param1 + param2);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
               param5[1].e(param2, param3, param0);
             }
-            wb.a(IntrusiveNode.field_d);
+            SoftwareRasterizer.restoreClip(IntrusiveNode.field_d);
             return;
           }
           return;

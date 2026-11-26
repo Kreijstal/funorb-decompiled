@@ -75,7 +75,7 @@ abstract class sg extends ta {
           me.field_f = new hj(this.field_m, this.field_r);
         }
         de.a(param2 ^ -1048454, me.field_f);
-        ul.d();
+        SoftwareRasterizer.clearRaster();
         this.a(0, 0, -9111);
         super.a(-param0 - this.field_n, param1, param2, -this.field_s - param3);
         oc.g((byte) -105);

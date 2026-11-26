@@ -142,15 +142,15 @@ final class ud extends qe {
           return;
         }
         if (ia.field_K == null) {
-          gf.a();
+          SoftwareRasterizer.clearRaster();
         } else {
           if (ia.field_K.field_w > ia.field_K.field_g) {
-            gf.a();
+            SoftwareRasterizer.clearRaster();
             var2 = -sg.field_b.field_y + 640 >> 1;
             var3 = -sg.field_b.field_v + 480 >> 1;
             sg.field_b.h(var2, var3);
             if (sf.field_g != 0) {
-              gf.b(0, 0, 640, 480, 0, sf.field_g);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, sf.field_g);
             }
             rf.field_O.b(false, 84);
             (rf.field_O.field_hb ? ok.field_Y : ub.field_i).b(rf.field_O.field_D, 32, rf.field_O.field_gb + rf.field_O.field_ob / 2 - ok.field_Y.field_i / 2);

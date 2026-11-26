@@ -637,7 +637,7 @@ final class ak {
                   }
                   var29 = var29 + var31;
                   var22 = var22 + var24;
-                  var37Lifetime2 = var37Lifetime2 + ki.field_j;
+                  var37Lifetime2 = var37Lifetime2 + SoftwareRasterizer.field_j;
                   var25 = var25 + var27;
                   var21 = var21 + var23;
                   var30 = var30 + var32;
@@ -722,7 +722,7 @@ final class ak {
               if (param0 >= gl.field_a) {
                 return;
               }
-              var36Lifetime1 = var36Lifetime1 + ki.field_j;
+              var36Lifetime1 = var36Lifetime1 + SoftwareRasterizer.field_j;
               var21 = var21 + var23;
               var18 = var18 + var20;
               var26 = var26 + var28;

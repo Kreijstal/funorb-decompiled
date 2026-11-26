@@ -57,7 +57,7 @@ final class ci implements td {
             param4 = param4 & var12.field_F;
           }
           var7 = 5592405;
-          ul.h(param2.field_s + param1, param0 + param2.field_n, param2.field_m, param2.field_r, this.field_i);
+          SoftwareRasterizer.fillRectangle(param2.field_s + param1, param0 + param2.field_n, param2.field_m, param2.field_r, this.field_i);
           if (param3 != -4394) {
             var11 = (pj) null;
             this.a(118, -50, (pj) null, 88, false);
@@ -67,11 +67,11 @@ final class ci implements td {
           }
           var8 = param1 + param2.field_s + this.field_a;
           var9 = param2.field_n + param0 + this.field_k;
-          ul.a(var8, var9, this.field_j, this.field_d, 5592405);
-          ul.h(var8, var9, this.field_j, this.field_d, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_j, this.field_d, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_j, this.field_d, var7);
           if (var12.field_D) {
-            ul.b(var8, var9, this.field_j + var8, var9 + this.field_d, 1);
-            ul.b(this.field_j + var8, var9, var8, this.field_d + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_j + var8, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(this.field_j + var8, var9, var8, this.field_d + var9, 1);
           }
           if (this.field_f == null) {
             return;

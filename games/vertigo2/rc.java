@@ -41,7 +41,7 @@ final class rc {
           va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
           var13.a(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           mp.field_a.e(60, 290);
-          bi.c(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
+          SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
           var13.a(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           var13.a(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
           va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
@@ -56,7 +56,7 @@ final class rc {
           var10 = 0;
           var11 = 3;
           bh.a(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
-          bi.c(320, var3 + 130 + 4, 320 - (80 - (var3 + 4)), 16777215, 100);
+          SoftwareRasterizer.drawVerticalLineAlpha(320, var3 + 130 + 4, 320 - (80 - (var3 + 4)), 16777215, 100);
           var6 += 300;
           var11 += 3;
           var10 += 3;
@@ -79,7 +79,7 @@ final class rc {
             var10Lifetime1 += 4;
             var6Lifetime1 += 300;
             var11Lifetime1 += 3;
-            bi.c(320, 134 + var3, 320 - (80 + (-4 - var3)), 16777215, 100);
+            SoftwareRasterizer.drawVerticalLineAlpha(320, 134 + var3, 320 - (80 + (-4 - var3)), 16777215, 100);
             bh.a(var10Lifetime1, var8Lifetime1, var2, ag.field_a, var11Lifetime1, var13, 225, var6Lifetime1, bg.field_e, var7Lifetime1, param0 + 32291, vj.field_g, var9Lifetime1);
             if (var12 == 0) {
               va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
@@ -111,7 +111,7 @@ final class rc {
         bh.a(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, 128, IntrusiveNode.field_i, var9Lifetime2);
         var11Lifetime2 += 3;
         var10Lifetime2 += 3;
-        bi.c(320, 134 + var3, -80 - (-4 - var3) + 320, 16777215, 100);
+        SoftwareRasterizer.drawVerticalLineAlpha(320, 134 + var3, -80 - (-4 - var3) + 320, 16777215, 100);
         var6Lifetime2 += 300;
         bh.a(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, param0 + 32291, IntrusiveNode.field_i, var9Lifetime2);
         if (var12 == 0) {
@@ -122,7 +122,7 @@ final class rc {
         va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
         var13.a(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
         mp.field_a.e(60, 290);
-        bi.c(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
+        SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
         var13.a(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
         var13.a(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
         va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));

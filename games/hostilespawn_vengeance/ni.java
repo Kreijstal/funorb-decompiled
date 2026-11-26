@@ -77,7 +77,7 @@ final class ni {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        si.a(param5, param3, param1, param4, 0, 128 * param2 / 256);
+        SoftwareRasterizer.fillRectangleAlpha(param5, param3, param1, param4, 0, 128 * param2 / 256);
         int var6 = -60 % ((-23 - param0) / 45);
         gn.a(param3, -1 + (param5 + param1), param5, param2, param4 + (param3 - 1), (byte) 101);
     }

@@ -37,7 +37,7 @@ final class tf extends pd {
           mb.field_a = param0;
           rc.field_o = param3;
           c.field_u = param2;
-          ue.a(vj.field_g / 2, -2694, vj.field_l / 2);
+          ue.a(SoftwareRasterizer.field_g / 2, -2694, SoftwareRasterizer.field_l / 2);
           kj.a(param2.field_q, param0.field_x + param0.field_q, param2.field_x + param2.field_q, -88, param0.field_q);
           if (param1 != -114) {
             tf.a((ee) null, (byte) -45, (ee) null, -84);

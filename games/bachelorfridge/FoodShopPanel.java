@@ -111,7 +111,7 @@ final class FoodShopPanel {
         if (this.field_a == 0 ||
           this.field_i > 0) {
           this.c(true);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
           if (this.field_p != null) {
             this.field_p.a(true);
           }
@@ -194,7 +194,7 @@ final class FoodShopPanel {
                   var10 = (5 + var4) / 5;
                   SoftwareRasterizer.setClip(45 * var9 + 696 + (-this.field_b - (34 - param0)), 87 + var10 * 35, 45 * var9 + (-this.field_b + 696) - (34 + (-param0 - 42)), 30 + (-65 + (var10 * 35 + 150)));
                   var8_ref_jfa.field_v.a(2048, 34 * var10 + 39, 128, 8, 2048, param0 - 34 + var9 * 45 + (-this.field_b + 642));
-                  SoftwareRasterizer.c();
+                  SoftwareRasterizer.resetClip();
                   var4++;
                 }
               } else {
@@ -206,7 +206,7 @@ final class FoodShopPanel {
                   SoftwareRasterizer.setClip(param0 + 662 + (-this.field_b + 45 * var7), -63 + (35 * var8 + 150), -this.field_b + (696 + var7 * 45 - (34 - param0) + 42), -65 + 35 * var8 + 150 + 30);
                   var6_ref_jfa.field_v.a(2048, 104 + (34 * var8 - 65), 192, 8, 2048, -this.field_b + 642 + var7 * 45 + (-34 + param0));
                   var3++;
-                  SoftwareRasterizer.c();
+                  SoftwareRasterizer.resetClip();
                 }
               }
               var5++;
@@ -545,7 +545,7 @@ final class FoodShopPanel {
               }
             }
             if (decompiledFrameCompleted0) {
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.resetClip();
             }
           }
         }

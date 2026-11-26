@@ -52,10 +52,10 @@ abstract class bc {
           }
           em.a((byte) 38, rk.field_a);
           nb.b();
-          kh.a();
+          SoftwareRasterizer.clearRaster();
           ja.d((byte) -67);
           if (var5 < 256) {
-            kh.d(0, 0, kh.field_l, kh.field_d, 0, 256 - var5);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, 0, 256 - var5);
           }
           lg.a(1);
           if (sn.field_c < 150) {
@@ -112,10 +112,10 @@ abstract class bc {
         }
         em.a((byte) 38, rk.field_a);
         nb.b();
-        kh.a();
+        SoftwareRasterizer.clearRaster();
         ja.d((byte) -67);
         if (var5Lifetime1 < 256) {
-          kh.d(0, 0, kh.field_l, kh.field_d, 0, 256 - var5Lifetime1);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, 0, 256 - var5Lifetime1);
         }
         lg.a(1);
         if (sn.field_c >= 150) {
@@ -210,7 +210,7 @@ abstract class bc {
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
     final void a(int param0) {
-        kh.a(this.field_c, this.field_d, this.field_e);
+        SoftwareRasterizer.setRasterBuffer(this.field_c, this.field_d, this.field_e);
         if (param0 != 6945) {
           java.awt.Component var3 = (java.awt.Component) null;
           this.a(-44, -26, (java.awt.Component) null, 65);

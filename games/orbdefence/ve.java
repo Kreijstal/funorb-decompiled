@@ -72,30 +72,30 @@ final class ve extends ej {
         int[] var31 = null;
         var19 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (ul.field_i > param5) {
-            param3 = param3 - (ul.field_i - param5);
-            param5 = ul.field_i;
+          if (SoftwareRasterizer.field_i > param5) {
+            param3 = param3 - (SoftwareRasterizer.field_i - param5);
+            param5 = SoftwareRasterizer.field_i;
           }
-          if (ul.field_d > param7) {
-            param1 = param1 - (ul.field_d - param7);
-            param7 = ul.field_d;
+          if (SoftwareRasterizer.field_d > param7) {
+            param1 = param1 - (SoftwareRasterizer.field_d - param7);
+            param7 = SoftwareRasterizer.field_d;
           }
-          if (ul.field_e < param5 + param3) {
-            param3 = ul.field_e - param5;
+          if (SoftwareRasterizer.field_e < param5 + param3) {
+            param3 = SoftwareRasterizer.field_e - param5;
           }
-          if (param7 + param1 > ul.field_a) {
-            param1 = ul.field_a - param7;
+          if (param7 + param1 > SoftwareRasterizer.field_a) {
+            param1 = SoftwareRasterizer.field_a - param7;
           }
           if (param3 > 0 &&
             param1 > 0) {
             var22 = param2.f();
-            var31 = ul.field_b;
-            var10 = ul.field_f;
-            var11 = ul.field_l;
+            var31 = SoftwareRasterizer.field_b;
+            var10 = SoftwareRasterizer.field_f;
+            var11 = SoftwareRasterizer.field_l;
             var30 = new int[4];
-            ul.a(var30);
+            SoftwareRasterizer.saveClip(var30);
             param2.d();
-            ul.i(var30[0], var30[1], var30[2], var30[3]);
+            SoftwareRasterizer.intersectClip(var30[0], var30[1], var30[2], var30[3]);
             var13 = param5 + param7 * param2.field_o;
             var14 = -param3 + param2.field_o;
             var26 = var22.field_v;
@@ -116,15 +116,15 @@ final class ve extends ej {
                   var15[1 + var13] == 0 ||
                   !(var16 >= -1 + param2.field_k) &&
                   var15[param2.field_o + var13] == 0)) {
-                  ul.f(var17, var16, param0, param4);
+                  SoftwareRasterizer.fillCircle(var17, var16, param0, param4);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var22.c(-param2.field_p, -param2.field_u);
-            ul.a(var31, var10, var11);
-            ul.b(var30);
+            SoftwareRasterizer.setRasterBuffer(var31, var10, var11);
+            SoftwareRasterizer.restoreClip(var30);
             return;
           }
           return;
@@ -190,7 +190,7 @@ final class ve extends ej {
         super.a(param0, param1, param2);
         qc.field_b.c(this.field_S, param0 + (this.field_m >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_P) {
-          ul.d(param0 + 20, param1 + 113, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 20, param1 + 113, 260, 8421504);
           qc.field_b.a(this.field_P, param0 + 20, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, qc.field_b.field_H);
         }
     }

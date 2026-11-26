@@ -64,7 +64,7 @@ final class ql extends tb {
         super.b(param0, param1, param2);
         DualLinkDequeIterator.field_c.c(this.field_P, param2 + (this.field_p >> 1), param1 + 103, 16777215, -1);
         if (this.field_R != null) {
-          ti.g(20 + param2, -7 + param1 + 120, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param2, -7 + param1 + 120, 260, 8421504);
           DualLinkDequeIterator.field_c.a(this.field_R, 20 + param2, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, DualLinkDequeIterator.field_c.field_N);
         }
     }

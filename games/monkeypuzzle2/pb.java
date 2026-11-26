@@ -62,17 +62,17 @@ final class pb implements ml {
             param0 = param0 & var11.field_w;
           }
           var7 = 5592405;
-          ge.d(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
+          SoftwareRasterizer.fillRectangle(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
           if (param0) {
             var7 = 16777215;
           }
           var8 = this.field_k + (param1.field_r + param3);
           var9 = param2 + (param1.field_e + this.field_m);
-          ge.a(var8, var9, this.field_o, this.field_d, 5592405);
-          ge.d(var8, var9, this.field_o, this.field_d, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_o, this.field_d, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_o, this.field_d, var7);
           if (var11.field_u) {
-            ge.e(var8, var9, var8 + this.field_o, var9 + this.field_d, 1);
-            ge.e(var8 + this.field_o, var9, var8, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_o, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_o, var9, var8, var9 + this.field_d, 1);
           }
           if (param4 < 19) {
             return;

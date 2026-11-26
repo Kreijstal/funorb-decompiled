@@ -541,7 +541,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   if (0 <= var10) {
                     ak.field_b[var10].a(var3_int, var4, param1, param1);
                     if (r.field_a == 0) {
-                      si.a(var3_int, var4, param1, param1, 0, 128);
+                      SoftwareRasterizer.fillRectangleAlpha(var3_int, var4, param1, param1, 0, 128);
                     }
                   }
                   var11 = ln.field_a.field_i[var5];
@@ -551,10 +551,10 @@ public final class HostileSpawn extends NetworkGameClient {
                     var11 = var11 * 5;
                   }
                   if (var11 <= 0) {
-                    si.c(var3_int, var4, param1, param1, 0);
+                    SoftwareRasterizer.fillRectangle(var3_int, var4, param1, param1, 0);
                   } else {
                     if (var11 < 25) {
-                      si.a(var3_int, var4, param1, param1, 0, 255 - 10 * var11);
+                      SoftwareRasterizer.fillRectangleAlpha(var3_int, var4, param1, param1, 0, 255 - 10 * var11);
                     }
                   }
                   var9_int++;
@@ -582,9 +582,9 @@ public final class HostileSpawn extends NetworkGameClient {
               if (stackIn_37_0) {
                 var3_intLifetime1 = 1 + param1 * var9.field_j.field_e;
                 var4Lifetime1 = 1 + var9.field_j.field_g * param1;
-                si.c(var3_intLifetime1 - 1, var4Lifetime1 - 1, param1, param1, 16776960);
-                si.a(-2 + var3_intLifetime1, var4Lifetime1 - 2, param1 + 2, 2 + param1, 16776960, 32);
-                si.a(var3_intLifetime1 - 3, var4Lifetime1 - 3, param1 + 4, param1 + 4, 16776960, 32);
+                SoftwareRasterizer.fillRectangle(var3_intLifetime1 - 1, var4Lifetime1 - 1, param1, param1, 16776960);
+                SoftwareRasterizer.fillRectangleAlpha(-2 + var3_intLifetime1, var4Lifetime1 - 2, param1 + 2, 2 + param1, 16776960, 32);
+                SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime1 - 3, var4Lifetime1 - 3, param1 + 4, param1 + 4, 16776960, 32);
               }
               var5Lifetime1++;
               continue;
@@ -615,9 +615,9 @@ public final class HostileSpawn extends NetworkGameClient {
                   ln.field_a.field_i[var9_ref.field_j.b(-4)] > 0)) {
                   var3_intLifetime2 = param1 * var9_ref.field_j.field_e + 1;
                   var4Lifetime2 = 1 + var9_ref.field_j.field_g * param1;
-                  si.e(param1 / 2 + var3_intLifetime2, param1 / 2 + var4Lifetime2, param1 / 2, 16711680);
-                  si.f(var3_intLifetime2 + param1 / 2, var4Lifetime2 + param1 / 2, param1 / 2 + 1, 16711680, 128);
-                  si.f(var3_intLifetime2 + param1 / 2, param1 / 2 + var4Lifetime2, param1 / 2 + 2, 16711680, 64);
+                  SoftwareRasterizer.fillCircle(param1 / 2 + var3_intLifetime2, param1 / 2 + var4Lifetime2, param1 / 2, 16711680);
+                  SoftwareRasterizer.fillCircleAlpha(var3_intLifetime2 + param1 / 2, var4Lifetime2 + param1 / 2, param1 / 2 + 1, 16711680, 128);
+                  SoftwareRasterizer.fillCircleAlpha(var3_intLifetime2 + param1 / 2, param1 / 2 + var4Lifetime2, param1 / 2 + 2, 16711680, 64);
                 }
                 var5Lifetime2++;
                 continue;
@@ -641,9 +641,9 @@ public final class HostileSpawn extends NetworkGameClient {
                       if (stackIn_155_0 == stackIn_155_1) {
                         var4Lifetime2 = var9_ref.field_j.field_g * param1 + 1;
                         var3_intLifetime2 = var9_ref.field_j.field_e * param1 + 1;
-                        si.c(var3_intLifetime2 - 1, -1 + var4Lifetime2, 2 * param1, param1 * 2, 16711680);
-                        si.a(var3_intLifetime2 - 2, -2 + var4Lifetime2, 2 * param1 + 2, param1 * 2 + 2, 16711680, 32);
-                        si.a(var3_intLifetime2 - 3, var4Lifetime2 - 3, 4 + param1 * 2, 4 + param1 * 2, 16711680, 32);
+                        SoftwareRasterizer.fillRectangle(var3_intLifetime2 - 1, -1 + var4Lifetime2, 2 * param1, param1 * 2, 16711680);
+                        SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 2, -2 + var4Lifetime2, 2 * param1 + 2, param1 * 2 + 2, 16711680, 32);
+                        SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 3, var4Lifetime2 - 3, 4 + param1 * 2, 4 + param1 * 2, 16711680, 32);
                       }
                     }
                     decompiledFrameRemainder0 = false;
@@ -653,8 +653,8 @@ public final class HostileSpawn extends NetworkGameClient {
                       if (!(nh.field_E.field_e < 0)) {
                         var4Lifetime2 = 1 + param1 * nh.field_E.field_g;
                         var3_intLifetime2 = 1 + nh.field_E.field_e * param1;
-                        si.f(var3_intLifetime2, var4Lifetime2, 2 + param1, 16711680, 32);
-                        si.b(var3_intLifetime2, var4Lifetime2, param1 + 4, 16711680);
+                        SoftwareRasterizer.fillCircleAlpha(var3_intLifetime2, var4Lifetime2, 2 + param1, 16711680, 32);
+                        SoftwareRasterizer.drawCircleOutline(var3_intLifetime2, var4Lifetime2, param1 + 4, 16711680);
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -668,9 +668,9 @@ public final class HostileSpawn extends NetworkGameClient {
                             var9Lifetime1.field_h == 11) {
                             var4Lifetime2 = 1 + param1 * var9Lifetime1.field_j.field_g;
                             var3_intLifetime2 = var9Lifetime1.field_j.field_e * param1 + 1;
-                            si.c(-1 + var3_intLifetime2, var4Lifetime2 - 1, param1, param1, 16711680);
-                            si.a(-2 + var3_intLifetime2, var4Lifetime2 - 2, param1 + 2, 2 + param1, 16711680, 32);
-                            si.a(var3_intLifetime2 - 3, -3 + var4Lifetime2, 4 + param1, param1 + 4, 16711680, 32);
+                            SoftwareRasterizer.fillRectangle(-1 + var3_intLifetime2, var4Lifetime2 - 1, param1, param1, 16711680);
+                            SoftwareRasterizer.fillRectangleAlpha(-2 + var3_intLifetime2, var4Lifetime2 - 2, param1 + 2, 2 + param1, 16711680, 32);
+                            SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 3, -3 + var4Lifetime2, 4 + param1, param1 + 4, 16711680, 32);
                           }
                         }
                         decompiledFrameRemainder0 = false;
@@ -697,9 +697,9 @@ public final class HostileSpawn extends NetworkGameClient {
                       if (stackIn_111_0Lifetime1 == stackIn_111_1Lifetime1) {
                         var4Lifetime2 = 1 + (var8.field_g - 1) * param1;
                         var3_intLifetime2 = 1 + (-1 + var8.field_e) * param1;
-                        si.c(var3_intLifetime2, var4Lifetime2, param1 * 3, param1 * 3, 255);
-                        si.a(var3_intLifetime2 - 1, -1 + var4Lifetime2, 3 * param1 + 2, 3 * param1 + 2, 255, 32);
-                        si.a(var3_intLifetime2 - 2, -2 + var4Lifetime2, 3 * param1 + 4, 4 + 3 * param1, 255, 32);
+                        SoftwareRasterizer.fillRectangle(var3_intLifetime2, var4Lifetime2, param1 * 3, param1 * 3, 255);
+                        SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 1, -1 + var4Lifetime2, 3 * param1 + 2, 3 * param1 + 2, 255, 32);
+                        SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 2, -2 + var4Lifetime2, 3 * param1 + 4, 4 + 3 * param1, 255, 32);
                       }
                       var8.field_g = var8.field_g + 1;
                     }
@@ -720,9 +720,9 @@ public final class HostileSpawn extends NetworkGameClient {
                   if (stackIn_155_0 == stackIn_155_1) {
                     var4Lifetime2 = 1 + var9_ref.field_j.field_g * param1;
                     var3_intLifetime2 = 1 + var9_ref.field_j.field_e * param1;
-                    si.c(var3_intLifetime2, var4Lifetime2, param1, param1, 16711680);
-                    si.a(var3_intLifetime2 - 1, -1 + var4Lifetime2, param1 + 2, 2 + param1, 16711680, 32);
-                    si.a(var3_intLifetime2 - 2, -2 + var4Lifetime2, 4 + param1, param1 + 4, 16711680, 32);
+                    SoftwareRasterizer.fillRectangle(var3_intLifetime2, var4Lifetime2, param1, param1, 16711680);
+                    SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 1, -1 + var4Lifetime2, param1 + 2, 2 + param1, 16711680, 32);
+                    SoftwareRasterizer.fillRectangleAlpha(var3_intLifetime2 - 2, -2 + var4Lifetime2, 4 + param1, param1 + 4, 16711680, 32);
                   }
                 }
               }
@@ -738,7 +738,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           var4Lifetime3 = param1 * mm.field_m[0].field_j.field_g;
           var3_intLifetime3 = mm.field_m[0].field_j.field_e * param1;
-          si.c(var3_intLifetime3, var4Lifetime3, param1, param1, 16777215);
+          SoftwareRasterizer.fillRectangle(var3_intLifetime3, var4Lifetime3, param1, param1, 16777215);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1103,7 +1103,7 @@ public final class HostileSpawn extends NetworkGameClient {
           KeyboardInput.b(-69);
           MouseInput.b(-31);
           MouseWheelInput.c((byte) -63);
-          si.b();
+          SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.b(-16199);
           gf.clearStaticReferences((byte) -105);
           il.a(-91);
@@ -2043,7 +2043,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != ei.field_o) {
-            si.d();
+            SoftwareRasterizer.clearRaster();
             ei.field_o.a(104);
             decompiledFrameRemainder0 = (var4 != 0);
           }
@@ -2363,22 +2363,22 @@ public final class HostileSpawn extends NetworkGameClient {
               stackIn_10_0 = (wa.field_q != null);
               hi.a(stackIn_10_0, (byte) 127);
               if (field_I) {
-                si.a(0, 0, 640, 480, 0, 128);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
                 var3_int = -8 + (320 - lm.e(0) / 2 - 8);
                 var4 = -8 + (240 - ti.a((byte) -1) / 2) - 8;
                 var5 = 16 + lm.e(param1 ^ 67) + 16;
                 var6 = 16 + (ti.a((byte) -1) + 16);
-                si.c(var3_int - 8, -8 + var4, var5 + 16, var6 + 16, 0);
+                SoftwareRasterizer.fillRectangle(var3_int - 8, -8 + var4, var5 + 16, var6 + 16, 0);
                 wh.b(param1 + 44);
               }
             }
           } else {
-            si.a(0, 0, 640, 480, 0, 128);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
             var3_int = -8 + (320 - lm.e(0) / 2 - 8);
             var4 = -8 + (240 - ti.a((byte) -1) / 2) - 8;
             var5 = 16 + lm.e(param1 ^ 67) + 16;
             var6 = 16 + (ti.a((byte) -1) + 16);
-            si.c(var3_int - 8, -8 + var4, var5 + 16, var6 + 16, 0);
+            SoftwareRasterizer.fillRectangle(var3_int - 8, -8 + var4, var5 + 16, var6 + 16, 0);
             wh.b(param1 + 44);
           }
           if (param1 != 67) {

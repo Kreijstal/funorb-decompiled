@@ -104,9 +104,9 @@ final class MatchingFieldValidator extends TextFieldValidator {
             integerLocal10 = SoftwareRaster.integerState0285;
             integerLocal11 = SoftwareRaster.integerState0284;
             integerArrayLocal12 = new int[4];
-            SoftwareRaster.performAction0652(integerArrayLocal12);
+            SoftwareRaster.saveClip(integerArrayLocal12);
             rgbSpriteArgument5.performAction0256();
-            SoftwareRaster.performAction0663(integerArrayLocal12[0], integerArrayLocal12[1], integerArrayLocal12[integerArgument4], integerArrayLocal12[3]);
+            SoftwareRaster.intersectClip(integerArrayLocal12[0], integerArrayLocal12[1], integerArrayLocal12[integerArgument4], integerArrayLocal12[3]);
             integerLocal13 = integerArgument6 * rgbSpriteArgument5.integerState0258 + integerArgument3;
             integerLocal14 = rgbSpriteArgument5.integerState0258 - integerArgument7;
             integerArrayLocal15 = rgbSpriteLocal7.integerArrayState0024;
@@ -128,7 +128,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
                   integerArrayLocal15[1 + integerLocal13] == 0 ||
                   !(-1 + rgbSpriteArgument5.integerState0255 <= integerLocal16) &&
                   integerArrayLocal15[rgbSpriteArgument5.integerState0258 + integerLocal13] == 0)) {
-                  SoftwareRaster.performAction0661(integerLocal17, integerLocal16, integerArgument1, integerArgument2);
+                  SoftwareRaster.fillCircle(integerLocal17, integerLocal16, integerArgument1, integerArgument2);
                 }
                 integerLocal13++;
                 integerLocal17++;
@@ -139,8 +139,8 @@ final class MatchingFieldValidator extends TextFieldValidator {
               integerLocal16++;
             }
             rgbSpriteLocal7.performAction0278(-rgbSpriteArgument5.integerState0259, -rgbSpriteArgument5.integerState0256);
-            SoftwareRaster.performAction0645(integerArrayLocal9, integerLocal10, integerLocal11);
-            SoftwareRaster.performAction0644(integerArrayLocal12);
+            SoftwareRaster.setRasterBuffer(integerArrayLocal9, integerLocal10, integerLocal11);
+            SoftwareRaster.restoreClip(integerArrayLocal12);
             return;
           }
           return;

@@ -42,14 +42,14 @@ final class hj extends gd {
           this.a(-8, 106, (cn) null, (byte) 40);
         }
         var11 = new int[4];
-        gf.a(var11);
-        gf.e(var4 + 5, 5 + var5, 40 + var4 - 5, 40 + var5 - 5);
+        SoftwareRasterizer.saveClip(var11);
+        SoftwareRasterizer.setClip(var4 + 5, 5 + var5, 40 + var4 - 5, 40 + var5 - 5);
         if (k.field_c != this.field_V.field_b.field_n) {
           this.field_V.field_b.a(60, var5, (byte) 102, -10 + var4, 60);
         } else {
           this.field_V.field_b.a(40, var5, (byte) 102, var4, 40);
         }
-        gf.b(var11);
+        SoftwareRasterizer.restoreClip(var11);
         if (this.field_V.field_i != null) {
           qe.a(var4 + 38, -2 + (40 + var5), 2, this.field_V.field_i, this.field_V.field_i.length);
         }
@@ -67,14 +67,14 @@ final class hj extends gd {
         var6 = 77 % ((41 - param2) / 61);
         var5 = param1 + this.field_i;
         if (0 != (4 & this.field_V.field_o)) {
-          gf.b(var4 + 5, var5 + 5, this.field_q - 10, this.field_x - 10, 16711680, 64);
+          SoftwareRasterizer.fillRectangleAlpha(var4 + 5, var5 + 5, this.field_q - 10, this.field_x - 10, 16711680, 64);
         } else {
           if ((2 & this.field_V.field_o) != 0) {
-            gf.b(var4 + 5, 5 + var5, this.field_q - 10, -10 + this.field_x, 16776960, 64);
+            SoftwareRasterizer.fillRectangleAlpha(var4 + 5, 5 + var5, this.field_q - 10, -10 + this.field_x, 16776960, 64);
           }
         }
-        gf.e(var4, var5, 40, 40, 0);
-        gf.e(4 + var4, 4 + var5, 32, 32, 0);
+        SoftwareRasterizer.drawRectangleOutline(var4, var5, 40, 40, 0);
+        SoftwareRasterizer.drawRectangleOutline(4 + var4, 4 + var5, 32, 32, 0);
         rp.a(6, 32, (byte) 108, 4 + var4, 32, kc.field_S, 4 + var5);
     }
 
@@ -244,11 +244,11 @@ final class hj extends gd {
                   var12 = var9 * (16711935 & var10);
                   var10 = (var12 & -16711936) + (-var12 + var10 * var9 & 16711680) >>> 8;
                 }
-                var12Lifetime1 = gf.field_b[var6];
+                var12Lifetime1 = SoftwareRasterizer.field_b[var6];
                 var13 = var10 + var12Lifetime1;
                 var10 = (16711935 & var10) + (var12Lifetime1 & 16711935);
                 var12Lifetime2 = (16777472 & var10) + (65536 & -var10 + var13);
-                gf.field_b[var6] = mp.a(var13 - var12Lifetime2, var12Lifetime2 - (var12Lifetime2 >>> 8));
+                SoftwareRasterizer.field_b[var6] = mp.a(var13 - var12Lifetime2, var12Lifetime2 - (var12Lifetime2 >>> 8));
               }
               var7++;
               var5_intLifetime1++;

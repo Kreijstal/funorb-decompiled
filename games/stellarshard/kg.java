@@ -19,7 +19,7 @@ final class kg extends dg {
           if (var1 == null) {
             var1 = new ma();
           }
-          var1.a(543992579, ti.field_f, ti.field_b, ti.field_e, ti.field_a, ti.field_c, ti.field_i, ti.field_l);
+          var1.a(543992579, SoftwareRasterizer.field_f, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, SoftwareRasterizer.field_a, SoftwareRasterizer.field_c, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l);
           dd.field_g.addLast(-105, var1);
           return;
         }

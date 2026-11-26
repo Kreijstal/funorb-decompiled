@@ -146,8 +146,8 @@ final class qh {
         int var3Lifetime1;
         var4 = DungeonAssault.field_K;
         try {
-          gf.e(243, 197, 369, 143, 16777215);
-          gf.b(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (param0 != 245) {
             field_R = (String[]) null;
           }

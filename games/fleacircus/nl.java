@@ -38,12 +38,12 @@ final class nl {
 
     final static void a(int param0, int param1, int param2) {
         param2 = param2 * 16;
-        gb.a(si.field_R);
+        SoftwareRasterizer.saveClip(si.field_R);
         param0 = param0 * 16;
         int var3 = -(PacketBuffer.field_j * 2 % 16);
-        gb.a(var3 + param2, param1 + param0, var3 + param2 + 16, 16 + param0);
-        gb.h(16 + (param2 + var3), param0 + 4, 8, 13421632);
-        gb.b(si.field_R);
+        SoftwareRasterizer.setClip(var3 + param2, param1 + param0, var3 + param2 + 16, 16 + param0);
+        SoftwareRasterizer.drawCircleOutline(16 + (param2 + var3), param0 + 4, 8, 13421632);
+        SoftwareRasterizer.restoreClip(si.field_R);
     }
 
     final static boolean a(int param0) {

@@ -25,15 +25,15 @@ final class wi {
         if (field_i.length < field_a) {
           field_i = new int[ua.roundUpPowerOfTwo(field_a, 0)];
         }
-        int var4 = param1 * ul.field_f + param0;
+        int var4 = param1 * SoftwareRasterizer.field_f + param0;
         for (var5 = 0; var5 < field_a; var5++) {
           field_i[var5] = var4;
-          var4 = var4 + ul.field_f;
+          var4 = var4 + SoftwareRasterizer.field_f;
         }
     }
 
     final static void c() {
-        wi.a(ul.field_i, ul.field_d, ul.field_e, ul.field_a);
+        wi.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, SoftwareRasterizer.field_a);
     }
 
     public static void clearStaticReferences() {

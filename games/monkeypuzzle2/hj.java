@@ -229,7 +229,7 @@ final class hj {
             if (this.field_O <= param4 + var8) {
               var8 = this.field_O - param4;
             }
-            ge.d(-1 + param1, param4, var8, 5592405);
+            SoftwareRasterizer.addVerticalLine(-1 + param1, param4, var8, 5592405);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1423,24 +1423,24 @@ final class hj {
                 var2_int = -((-30 + this.field_ib) * 255 / 65) + 255;
                 fi.field_a[fi.field_a.length - 1].a(0, 0, var2_int, 15387868);
                 hf.field_d.e(-(hf.field_d.field_m >> 2) + 320, this.field_ib);
-                ge.h(0, 0, 640, 70);
-                ge.a(5120, (hf.field_d.field_m >> 2) + this.field_ib << 4, hf.field_d.field_m << 3, 50, cf.field_a);
-                ge.h(0, 0, 640, 480);
+                SoftwareRasterizer.setClip(0, 0, 640, 70);
+                SoftwareRasterizer.addRadialGlow(5120, (hf.field_d.field_m >> 2) + this.field_ib << 4, hf.field_d.field_m << 3, 50, cf.field_a);
+                SoftwareRasterizer.setClip(0, 0, 640, 480);
               }
             } else {
               var2_int = -100 + this.field_ib;
               if (this.field_ib >= 240) {
-                ge.a(77, 0, 486, 150, 265542, 5383094);
+                SoftwareRasterizer.fillRectangleVerticalGradient(77, 0, 486, 150, 265542, 5383094);
               } else {
-                ge.h(77, 0, 563, 146);
+                SoftwareRasterizer.setClip(77, 0, 563, 146);
                 if (0 < var2_int) {
-                  ge.a(77, var2_int - 145, 486, 145, 265542, 5383094);
+                  SoftwareRasterizer.fillRectangleVerticalGradient(77, var2_int - 145, 486, 145, 265542, 5383094);
                 }
                 if (var2_int < 145) {
-                  ge.a(77, var2_int, 486, 145, 5383094, 8374005);
+                  SoftwareRasterizer.fillRectangleVerticalGradient(77, var2_int, 486, 145, 5383094, 8374005);
                 }
-                ge.d(77, var2_int + 145, 486, 145, 8374005);
-                ge.h(0, 0, 640, 480);
+                SoftwareRasterizer.fillRectangle(77, var2_int + 145, 486, 145, 8374005);
+                SoftwareRasterizer.setClip(0, 0, 640, 480);
                 hf.field_d.c(320 - (hf.field_d.field_m >> 1), this.field_ib);
               }
             }
@@ -1457,7 +1457,7 @@ final class hj {
             if (var4Lifetime1 > 100) {
               var4Lifetime1 = 100;
             }
-            ge.c(70, 0, 500, 480, 265542, var4Lifetime1);
+            SoftwareRasterizer.fillRectangleAlpha(70, 0, 500, 480, 265542, var4Lifetime1);
             var5Lifetime1 = this.field_ib - 100;
             var6 = 0;
             if (this.field_ib > 100) {
@@ -1467,19 +1467,19 @@ final class hj {
                 var6 = 50 - (9000 - this.field_ib * 50) / 80;
               }
             }
-            ge.h(0, 0, 640, 145);
+            SoftwareRasterizer.setClip(0, 0, 640, 145);
             if (this.field_ib < 250) {
-              ge.a(5120, (hf.field_d.field_m >> 1) + this.field_ib << 4, hf.field_d.field_m << 4, -var6 + 50, cf.field_a);
+              SoftwareRasterizer.addRadialGlow(5120, (hf.field_d.field_m >> 1) + this.field_ib << 4, hf.field_d.field_m << 4, -var6 + 50, cf.field_a);
             }
             if (var2_intLifetime1 != 0) {
-              ge.a(320 - qa.field_i.field_m << 4, var3Lifetime1 - (-(qa.field_i.field_n >> 1) + 8) << 4, qa.field_i.field_m << 4, 50, sk.field_D);
+              SoftwareRasterizer.addRadialGlow(320 - qa.field_i.field_m << 4, var3Lifetime1 - (-(qa.field_i.field_n >> 1) + 8) << 4, qa.field_i.field_m << 4, 50, sk.field_D);
             }
             if (var6 < 50) {
               var7_int = 145;
               var8 = 0;
               while (var7_int < 290) {
-                ge.h(0, var7_int, 640, 2 + var7_int);
-                ge.a(5120, -(4 * var8) + this.field_ib + (hf.field_d.field_m >> 1) << 4, hf.field_d.field_m << 4, 50 - var6, cf.field_a);
+                SoftwareRasterizer.setClip(0, var7_int, 640, 2 + var7_int);
+                SoftwareRasterizer.addRadialGlow(5120, -(4 * var8) + this.field_ib + (hf.field_d.field_m >> 1) << 4, hf.field_d.field_m << 4, 50 - var6, cf.field_a);
                 var8 += 2;
                 var7_int += 2;
               }
@@ -1489,7 +1489,7 @@ final class hj {
               if (var7_intLifetime4 > 100) {
                 var7_intLifetime4 = 100;
               }
-              ge.h(0, 0, 640, var7_intLifetime4);
+              SoftwareRasterizer.setClip(0, 0, 640, var7_intLifetime4);
               var8Lifetime5 = 256 * var7_intLifetime4 / 100;
               if (256 < var8Lifetime5) {
                 var8Lifetime5 = 256;
@@ -1502,7 +1502,7 @@ final class hj {
             }
           } else {
             if (aa.field_a == 0) {
-              ge.h(0, 0, 640, 480);
+              SoftwareRasterizer.setClip(0, 0, 640, 480);
               fi.field_a[0].c(0, 0);
               j.field_f[this.field_p].b(this.field_a, this.field_ob, this.field_i, this.field_bb);
               var2_intLifetime1 = 80;
@@ -1516,27 +1516,27 @@ final class hj {
                 }
               }
               this.field_N.c();
-              ge.a(this.field_N.field_s, this.field_N.field_k, this.field_N.field_j);
+              SoftwareRasterizer.setRasterBuffer(this.field_N.field_s, this.field_N.field_k, this.field_N.field_j);
               kl.a(100, 5, this.field_d, 0, 0, this.field_N.field_k, this.field_N.field_j);
               this.field_q.e();
               this.field_N.a(this.field_N.field_m << 3, this.field_N.field_n << 3, 3200, 1600, 63535, 4096);
               ac.field_a.a((byte) 116);
-              ge.h(80, 0, 560, 480);
+              SoftwareRasterizer.setClip(80, 0, 560, 480);
               fi.field_a[1].c(0, 0);
               this.field_q.b(80, 317, 580, 200, 100);
-              ge.h(80, 316, 560, 371);
+              SoftwareRasterizer.setClip(80, 316, 560, 371);
               var3Lifetime1 = 70;
               fi.field_a[0].c(0, 0);
               var4Lifetime1 = 0;
               while (var3Lifetime1 < 290) {
-                ge.h(0, var3Lifetime1, 640, var3Lifetime1 + 2);
-                ge.a(5120, (hf.field_d.field_m >> 2) + (this.field_ib - 2 * var4Lifetime1) << 4, hf.field_d.field_m << 3, 50, cf.field_a);
+                SoftwareRasterizer.setClip(0, var3Lifetime1, 640, var3Lifetime1 + 2);
+                SoftwareRasterizer.addRadialGlow(5120, (hf.field_d.field_m >> 2) + (this.field_ib - 2 * var4Lifetime1) << 4, hf.field_d.field_m << 3, 50, cf.field_a);
                 var3Lifetime1 += 2;
                 var4Lifetime1 += 2;
               }
-              ge.h(80, 0, 560, 480);
+              SoftwareRasterizer.setClip(80, 0, 560, 480);
               j.field_f[this.field_p].b(this.field_a, this.field_ob, this.field_i, this.field_bb);
-              ge.b();
+              SoftwareRasterizer.resetClip();
             }
           }
           if (this.field_C &&
@@ -1591,9 +1591,9 @@ final class hj {
           df.f(18180);
           var2_intLifetime3 = (int)(ProxySocketConnector.a(true, (float)this.field_H * 0.00800000037997961f) * 50.0f);
           var3Lifetime4 = 727655;
-          ge.c(80, this.field_O, 480, 480, var3Lifetime4, 120);
+          SoftwareRasterizer.fillRectangleAlpha(80, this.field_O, 480, 480, var3Lifetime4, 120);
           var4Lifetime4 = 0;
-          ge.h(80, 0, 560, 480);
+          SoftwareRasterizer.setClip(80, 0, 560, 480);
           var5Lifetime3 = 0;
           var6Lifetime1 = 0;
           var7_intLifetime1 = this.field_d / 2 % 480;
@@ -1612,7 +1612,7 @@ final class hj {
             } else {
               var5Lifetime3 = var11;
             }
-            ge.g(var10, var11, var9, var3Lifetime4, 120);
+            SoftwareRasterizer.drawVerticalLineAlpha(var10, var11, var9, var3Lifetime4, 120);
             this.a(30717, var10, var9, var2_intLifetime3, var11, 5);
             this.a(30717, var10, var9, -50 + var2_intLifetime3, var11, 30);
             this.a(30717, var10, var9, var2_intLifetime3 - 60, var11, 30);
@@ -1627,17 +1627,17 @@ final class hj {
             var8Lifetime2 = -this.field_O + var7_intLifetime2;
             if (var8Lifetime2 <= 85) {
               var9Lifetime1 = var8Lifetime2 | (var8Lifetime2 << 8 | var8Lifetime2 << 16);
-              ge.i(var7_intLifetime2 + var2_intLifetime3, var7_intLifetime2, 5, -var9Lifetime1 + 5592405);
-              ge.i(var7_intLifetime2 - (50 - var2_intLifetime3), var7_intLifetime2, 30, -var9Lifetime1 + 5592405);
-              ge.i(var2_intLifetime3 + (-60 + var7_intLifetime2), var7_intLifetime2, 30, -var9Lifetime1 + 5592405);
-              ge.i(var7_intLifetime2 + (-80 + var2_intLifetime3), var7_intLifetime2, 5, 5592405 - var9Lifetime1);
+              SoftwareRasterizer.addHorizontalLine(var7_intLifetime2 + var2_intLifetime3, var7_intLifetime2, 5, -var9Lifetime1 + 5592405);
+              SoftwareRasterizer.addHorizontalLine(var7_intLifetime2 - (50 - var2_intLifetime3), var7_intLifetime2, 30, -var9Lifetime1 + 5592405);
+              SoftwareRasterizer.addHorizontalLine(var2_intLifetime3 + (-60 + var7_intLifetime2), var7_intLifetime2, 30, -var9Lifetime1 + 5592405);
+              SoftwareRasterizer.addHorizontalLine(var7_intLifetime2 + (-80 + var2_intLifetime3), var7_intLifetime2, 5, 5592405 - var9Lifetime1);
               continue;
             }
             break;
           }
           if (this.field_S) {
-            ge.b(1, 1, 80, this.field_O, 480, 4);
-            ge.b(2, 2, 80, this.field_O + 4, 480, 476 - this.field_O);
+            SoftwareRasterizer.blurRectangle(1, 1, 80, this.field_O, 480, 4);
+            SoftwareRasterizer.blurRectangle(2, 2, 80, this.field_O + 4, 480, 476 - this.field_O);
           }
           if (this.field_jb == 0 ||
             this.field_jb == 13 ||
@@ -1660,14 +1660,14 @@ final class hj {
                 var8Lifetime3 = 255;
               }
               for (var9Lifetime2 = 0; var9Lifetime2 < 10; var9Lifetime2++) {
-                ge.a((var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) % 480 + 80 << 4, -90 + this.field_k + (int)(4.0f * ProxySocketConnector.a(true, (float)(var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) * 0.10000000149011612f)) << 4, ll.field_c[var9Lifetime2] << 4, jf.field_f[var9Lifetime2], cf.field_a);
+                SoftwareRasterizer.addRadialGlow((var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) % 480 + 80 << 4, -90 + this.field_k + (int)(4.0f * ProxySocketConnector.a(true, (float)(var9Lifetime2 * lb.field_D[var9Lifetime2] + this.field_d) * 0.10000000149011612f)) << 4, ll.field_c[var9Lifetime2] << 4, jf.field_f[var9Lifetime2], cf.field_a);
               }
               uc.a(78, -90 + this.field_k, 558, this.field_k - 90, 3, var8Lifetime3, var7_intLifetime3, this.field_fb);
             }
           }
-          ge.h(0, 0, 640, 480);
-          ge.c(70, var5Lifetime3, 10, -var5Lifetime3 + 480, var3Lifetime4, 120);
-          ge.c(560, var6Lifetime1, 10, -var6Lifetime1 + 480, var3Lifetime4, 120);
+          SoftwareRasterizer.setClip(0, 0, 640, 480);
+          SoftwareRasterizer.fillRectangleAlpha(70, var5Lifetime3, 10, -var5Lifetime3 + 480, var3Lifetime4, 120);
+          SoftwareRasterizer.fillRectangleAlpha(560, var6Lifetime1, 10, -var6Lifetime1 + 480, var3Lifetime4, 120);
           ByteStorage.b(0);
           var7 = qh.field_a[this.field_ab];
           var7.b(var7.field_m << 3, var7.field_n << 3, (int)this.field_B << 4, (int)this.field_Z << 4, this.field_g, 4096);
@@ -1721,10 +1721,10 @@ final class hj {
           }
           var9Lifetime3 = (23040 - 144 * (480 - this.field_O)) / 480;
           if (var9Lifetime3 > 0) {
-            ge.c(25, 48 - var9Lifetime3 + 412, 28, var9Lifetime3, 1203134, 120);
+            SoftwareRasterizer.fillRectangleAlpha(25, 48 - var9Lifetime3 + 412, 28, var9Lifetime3, 1203134, 120);
           }
           boolean decompiledFrameRemainder0 = true;
-          ge.c(37, 460, 4, 20, 1203134, 120);
+          SoftwareRasterizer.fillRectangleAlpha(37, 460, 4, 20, 1203134, 120);
           j.field_g.c(-(j.field_g.field_m >> 1) + this.field_M - 20, -j.field_g.field_n + this.field_k);
           if (2 == this.field_u && (2 <= this.field_Y ||
             4 == this.field_jb)) {
@@ -1976,7 +1976,7 @@ final class hj {
           fl.b(-114);
           this.field_m.e();
           for (var1_int = 0; var1_int < 134; var1_int++) {
-            ge.b(pf.a((byte) 109, 480), pf.a((byte) -100, 100), 16777215);
+            SoftwareRasterizer.addPixel(pf.a((byte) 109, 480), pf.a((byte) -100, 100), 16777215);
           }
           ac.field_a.a((byte) 111);
           this.field_N = new Sprite(480, 200);

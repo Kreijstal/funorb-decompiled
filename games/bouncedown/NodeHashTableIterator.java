@@ -41,15 +41,15 @@ final class NodeHashTableIterator implements Iterator {
         int var10 = 0;
         var10 = Bounce.field_N;
         try {
-          na.a(param3, param0, param2 + 1, 10000536);
-          na.a(param3, param0 + param4, param2 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param0, param2 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param0 + param4, param2 + 1, 12105912);
           var5_int = 1;
           var6 = param4;
-          if (var5_int + param0 < na.field_i) {
-            var5_int = na.field_i - param0;
+          if (var5_int + param0 < SoftwareRasterizer.field_i) {
+            var5_int = SoftwareRasterizer.field_i - param0;
           }
-          if (param0 + var6 > na.field_f) {
-            var6 = -param0 + na.field_f;
+          if (param0 + var6 > SoftwareRasterizer.field_f) {
+            var6 = -param0 + SoftwareRasterizer.field_f;
           }
           if (param1 != 1232050056) {
             return;
@@ -57,8 +57,8 @@ final class NodeHashTableIterator implements Iterator {
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 48 * var7 / param4 + 152;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            na.field_d[param3 + na.field_e * (var7 + param0)] = var9;
-            na.field_d[param3 + (param0 + var7) * na.field_e + param2] = var9;
+            SoftwareRasterizer.field_d[param3 + SoftwareRasterizer.field_e * (var7 + param0)] = var9;
+            SoftwareRasterizer.field_d[param3 + (param0 + var7) * SoftwareRasterizer.field_e + param2] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ final class NodeHashTableIterator implements Iterator {
             q.field_N.b(q.field_A, false);
           }
           q.field_A.a(param0, param2, param1, 65536);
-          na.a();
+          SoftwareRasterizer.clearRaster();
           pj.a(true, 1);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

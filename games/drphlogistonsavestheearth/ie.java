@@ -23,30 +23,30 @@ final class ie extends l {
         int var16Lifetime5;
         if (param1 >= param13) {
           if (param1 < param14) {
-            r.a(param5, param9, param8, param0, param11, wj.field_l, param10, param12, param1, param6, param7, param14, param3, param2, param15, (byte) -112, param13);
+            r.a(param5, param9, param8, param0, param11, SoftwareRasterizer.field_l, param10, param12, param1, param6, param7, param14, param3, param2, param15, (byte) -112, param13);
             var16 = 116 / ((53 - param4) / 62);
             return;
           }
           if (param13 >= param14) {
-            r.a(param11, param8, param6, param15, param2, wj.field_l, param7, param10, param13, param9, param12, param1, param0, param5, param3, (byte) -88, param14);
+            r.a(param11, param8, param6, param15, param2, SoftwareRasterizer.field_l, param7, param10, param13, param9, param12, param1, param0, param5, param3, (byte) -88, param14);
             var16Lifetime4 = 116 / ((53 - param4) / 62);
             return;
           }
-          r.a(param2, param8, param9, param0, param11, wj.field_l, param7, param12, param14, param6, param10, param1, param15, param5, param3, (byte) -67, param13);
+          r.a(param2, param8, param9, param0, param11, SoftwareRasterizer.field_l, param7, param12, param14, param6, param10, param1, param15, param5, param3, (byte) -67, param13);
           var16Lifetime5 = 116 / ((53 - param4) / 62);
           return;
         }
         if (param13 < param14) {
-          r.a(param11, param9, param6, param3, param5, wj.field_l, param10, param7, param13, param8, param12, param14, param0, param2, param15, (byte) -60, param1);
+          r.a(param11, param9, param6, param3, param5, SoftwareRasterizer.field_l, param10, param7, param13, param8, param12, param14, param0, param2, param15, (byte) -60, param1);
           var16Lifetime1 = 116 / ((53 - param4) / 62);
           return;
         }
         if (param14 <= param1) {
-          r.a(param5, param6, param8, param15, param2, wj.field_l, param12, param10, param1, param9, param7, param13, param3, param11, param0, (byte) -65, param14);
+          r.a(param5, param6, param8, param15, param2, SoftwareRasterizer.field_l, param12, param10, param1, param9, param7, param13, param3, param11, param0, (byte) -65, param14);
           var16Lifetime2 = 116 / ((53 - param4) / 62);
           return;
         }
-        r.a(param2, param6, param9, param3, param5, wj.field_l, param12, param7, param14, param8, param10, param13, param15, param11, param0, (byte) -66, param1);
+        r.a(param2, param6, param9, param3, param5, SoftwareRasterizer.field_l, param12, param7, param14, param8, param10, param13, param15, param11, param0, (byte) -66, param1);
         var16Lifetime3 = 116 / ((53 - param4) / 62);
     }
 

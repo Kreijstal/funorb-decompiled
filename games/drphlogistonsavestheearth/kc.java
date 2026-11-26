@@ -19,49 +19,49 @@ final class kc extends IntrusiveNode {
         if (param7 == 28183) {
           if (param5 < param3) {
             if (param4 > param3) {
-              fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, wj.field_l);
+              fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, SoftwareRasterizer.field_l);
               return;
             }
             if (param4 <= param5) {
-              fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, wj.field_l);
+              fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, SoftwareRasterizer.field_l);
               return;
             }
-            fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, wj.field_l);
+            fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, SoftwareRasterizer.field_l);
             return;
           }
           if (param5 < param4) {
-            fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, wj.field_l);
+            fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, SoftwareRasterizer.field_l);
             return;
           }
           if (param4 > param3) {
-            fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, wj.field_l);
+            fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, SoftwareRasterizer.field_l);
             return;
           }
-          fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, wj.field_l);
+          fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, SoftwareRasterizer.field_l);
           return;
         }
         field_l = (he[]) null;
         if (param5 < param3) {
           if (param4 > param3) {
-            fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, wj.field_l);
+            fa.a(param5, (byte) -124, param2, param4, param0, param3, param1, param6, SoftwareRasterizer.field_l);
             return;
           }
           if (param4 <= param5) {
-            fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, wj.field_l);
+            fa.a(param4, (byte) -124, param1, param3, param0, param5, param6, param2, SoftwareRasterizer.field_l);
             return;
           }
-          fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, wj.field_l);
+          fa.a(param5, (byte) -124, param6, param3, param0, param4, param1, param2, SoftwareRasterizer.field_l);
           return;
         }
         if (param5 < param4) {
-          fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, wj.field_l);
+          fa.a(param3, (byte) -124, param1, param4, param0, param5, param2, param6, SoftwareRasterizer.field_l);
           return;
         }
         if (param4 > param3) {
-          fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, wj.field_l);
+          fa.a(param3, (byte) -124, param6, param5, param0, param4, param2, param1, SoftwareRasterizer.field_l);
           return;
         }
-        fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, wj.field_l);
+        fa.a(param4, (byte) -124, param2, param5, param0, param3, param6, param1, SoftwareRasterizer.field_l);
     }
 
     public static void a(byte param0) {

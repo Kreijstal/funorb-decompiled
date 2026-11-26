@@ -29,25 +29,25 @@ final class m {
         }
         if (param0 <= param2) {
           if (param2 < param5) {
-            fl.a(param5, param4, param3, param1, param2, param7, ki.field_a, (byte) -43, param0);
+            fl.a(param5, param4, param3, param1, param2, param7, SoftwareRasterizer.field_a, (byte) -43, param0);
             return;
           }
           if (param5 <= param0) {
-            fl.a(param2, param7, param3, param4, param0, param1, ki.field_a, (byte) -43, param5);
+            fl.a(param2, param7, param3, param4, param0, param1, SoftwareRasterizer.field_a, (byte) -43, param5);
             return;
           }
-          fl.a(param2, param1, param3, param4, param5, param7, ki.field_a, (byte) -43, param0);
+          fl.a(param2, param1, param3, param4, param5, param7, SoftwareRasterizer.field_a, (byte) -43, param0);
           return;
         }
         if (param0 < param5) {
-          fl.a(param5, param7, param3, param1, param0, param4, ki.field_a, (byte) -43, param2);
+          fl.a(param5, param7, param3, param1, param0, param4, SoftwareRasterizer.field_a, (byte) -43, param2);
           return;
         }
         if (param5 <= param2) {
-          fl.a(param0, param4, param3, param7, param2, param1, ki.field_a, (byte) -43, param5);
+          fl.a(param0, param4, param3, param7, param2, param1, SoftwareRasterizer.field_a, (byte) -43, param5);
           return;
         }
-        fl.a(param0, param1, param3, param7, param5, param4, ki.field_a, (byte) -43, param2);
+        fl.a(param0, param1, param3, param7, param5, param4, SoftwareRasterizer.field_a, (byte) -43, param2);
     }
 
     final static boolean a(int param0) {

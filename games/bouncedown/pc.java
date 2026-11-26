@@ -352,10 +352,10 @@ final class pc implements Runnable {
         }
         kh.a(bi.field_j, 1);
         qk.c();
-        na.a();
+        SoftwareRasterizer.clearRaster();
         jf.c(0);
         if (var5 < 256) {
-          na.a(0, 0, na.field_e, na.field_k, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, 256 - var5);
         }
         ve.a(-121);
         if (oa.field_a < 150) {

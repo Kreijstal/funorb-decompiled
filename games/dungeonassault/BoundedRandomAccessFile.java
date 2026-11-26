@@ -49,13 +49,13 @@ final class BoundedRandomAccessFile {
         var5 = DungeonAssault.field_K;
         var6 = new cn(20, 20);
         jh.a(var6);
-        gf.b(0, 0, 20, 20, 16711680);
-        gf.f(10, 10, 6, 0);
+        SoftwareRasterizer.fillRectangle(0, 0, 20, 20, 16711680);
+        SoftwareRasterizer.fillCircle(10, 10, 6, 0);
         if (!param0) {
           return (cn) null;
         }
         for (var2 = 0; var2 < 20; var2++) {
-          gf.b(-var2 + 18, var2, 4, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(-var2 + 18, var2, 4, 16711680);
         }
         var2Lifetime1 = 0;
         for (var3 = 0; 20 > var3; var3++) {

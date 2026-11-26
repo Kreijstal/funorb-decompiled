@@ -36,12 +36,12 @@ final class de {
         if (param0 != 88) {
           field_h = (ResourceArchive) null;
         }
-        gb.a(si.field_R);
+        SoftwareRasterizer.saveClip(si.field_R);
         int var4 = param1 * 16;
         int var5 = 16 * param3;
-        gb.a(var4, var5, var4 + 16, var5 + 16);
+        SoftwareRasterizer.setClip(var4, var5, var4 + 16, var5 + 16);
         se.field_a[param2].f(0, 0);
-        gb.b(si.field_R);
+        SoftwareRasterizer.restoreClip(si.field_R);
     }
 
     static {

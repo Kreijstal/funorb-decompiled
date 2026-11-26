@@ -49,7 +49,7 @@ final class wg extends IntrusiveNode {
                     tl.field_b.c(15, 79);
                   } else {
                     if (var3 == 2) {
-                      ge.h(15, 15, 42, 106);
+                      SoftwareRasterizer.setClip(15, 15, 42, 106);
                       NodeHashTableIterator.field_h.c(15, 15);
                       hb.field_m[4][0].c(15, 47);
                       ak.field_t[4].c(15, 79);

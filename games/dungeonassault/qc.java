@@ -35,7 +35,7 @@ final class qc extends qe {
           of.field_j.h(640 - of.field_j.field_y >> 1, var6);
           var6 += 4;
         } else {
-          gf.e(var4 - 4, var6 - 6, var5 + (-var4 + 8), var7 + 8, 0);
+          SoftwareRasterizer.drawRectangleOutline(var4 - 4, var6 - 6, var5 + (-var4 + 8), var7 + 8, 0);
           qc.b(var4, -2 + var6, var5 - var4, var7, 8421504, 128, 128);
           rp.a(4, var5 - var4, (byte) 108, var4, var7, kc.field_S, -2 + var6);
           qc.a(var4, var6 - 2, var5 - var4, var7, 224, 64, 3, 128);
@@ -79,7 +79,7 @@ final class qc extends qe {
     }
 
     private final void c(int param0, int param1, int param2, int param3, int param4) {
-        gf.b(param3, param1, param4, param2, 1, param0);
+        SoftwareRasterizer.fillRectangleAlpha(param3, param1, param4, param2, 1, param0);
     }
 
     private final void c(int param0, int param1) {
@@ -108,7 +108,7 @@ final class qc extends qe {
         var5 = DungeonAssault.field_K;
         super.a(param0);
         if (this.field_B == 12) {
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           if (!om.b(124)) {
             return;
           }
@@ -184,7 +184,7 @@ final class qc extends qe {
           }
         }
         if (this.field_b != null) {
-          gf.g(0, 0, 640, 480);
+          SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
           this.field_b.b(-113);
         }
         oh.a((byte) 113);
@@ -535,8 +535,8 @@ final class qc extends qe {
           discarded$0 = this.e(6, 36);
         }
         if (nj.field_f != null) {
-          gf.a(kd.field_g);
-          gf.e(94, 90, 546, 184);
+          SoftwareRasterizer.saveClip(kd.field_g);
+          SoftwareRasterizer.setClip(94, 90, 546, 184);
           var3 = ig.b(31131);
           var4 = (AchievementIconEntry) (nj.field_f.beginBackward(-24172));
           while (var4 != null) {
@@ -574,7 +574,7 @@ final class qc extends qe {
             }
             var4 = (AchievementIconEntry) (nj.field_f.nextBackward(4));
           }
-          gf.b(kd.field_g);
+          SoftwareRasterizer.restoreClip(kd.field_g);
         }
         if (null != dd.field_E &&
           dd.field_E.field_w) {
@@ -667,7 +667,7 @@ final class qc extends qe {
           }
           var12Lifetime1 = 355 - cf.field_f.field_G;
           var13 = (2 * var12Lifetime1 + cf.field_f.field_G) / 2 + IntrusiveNode.field_c.field_E;
-          gf.b(239, var12Lifetime1 - 6, 306, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(239, var12Lifetime1 - 6, 306, 8421504);
           la.field_b.b(op.field_a + sg.field_c[var3Lifetime1], 239, var13, 16777215, -1);
           var14 = 120;
           la.field_b.b(mp.field_f, var14 + 239, var13, 16777215, -1);
@@ -832,7 +832,7 @@ final class qc extends qe {
           jh.c();
           var3 = new cn(64, 64);
           var3.e();
-          gf.h(32, 31, 14, 16777215);
+          SoftwareRasterizer.drawCircleOutline(32, 31, 14, 16777215);
           ud.field_s[46] = var3;
           jh.b();
           stackIn_18_0 = (9 != this.field_B) ? 0 : 1;
@@ -916,13 +916,13 @@ final class qc extends qe {
         jh.a(this.field_e);
         stackIn_67_0 = (mn.field_b != 8) && (9 != mn.field_b);
         bf.a(stackIn_67_0, -128);
-        gf.a(kd.field_g);
-        gf.e(41, 48, 599, 416);
+        SoftwareRasterizer.saveClip(kd.field_g);
+        SoftwareRasterizer.setClip(41, 48, 599, 416);
         if (mn.field_b != 8 &&
           mn.field_b != 9) {
           tm.field_p.h(640 - tm.field_p.field_y >> 1, 0);
         }
-        gf.b(kd.field_g);
+        SoftwareRasterizer.restoreClip(kd.field_g);
         jh.b();
     }
 

@@ -3154,7 +3154,7 @@ final class BattleState {
           rk.field_c = 32;
           wb.field_g = 20;
           hh.field_m.a();
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           k.field_f.a(0);
           var4 = -88 % ((-66 - param0) / 59);
           var3_int = 0;
@@ -4121,7 +4121,7 @@ final class BattleState {
                   stackIn_176_0Lifetime1 = -1;
                   stackIn_176_1Lifetime1 = ~gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1];
                   if (stackIn_176_0Lifetime1 > stackIn_176_1Lifetime1) {
-                    SoftwareRasterizer.a(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, (2048 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] + (gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] * 16 + 262144 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1])) % 16777215);
+                    SoftwareRasterizer.setPixel(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, (2048 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] + (gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1] * 16 + 262144 * gd.field_a[var6Lifetime1Lifetime1][var7Lifetime1Lifetime1])) % 16777215);
                   }
                   var7Lifetime1Lifetime1++;
                 }
@@ -4194,7 +4194,7 @@ final class BattleState {
                           }
                           cc.field_i[((oh) (var9_refLifetime2)).field_g].a(192, 93, 383, var8 + 46, (byte) 21);
                           if (this.field_q.field_nb == var9_refLifetime2) {
-                            SoftwareRasterizer.e(310, var8 + 10, 148, 73, 16777215);
+                            SoftwareRasterizer.drawRectangleOutline(310, var8 + 10, 148, 73, 16777215);
                             if (this.field_L == 1) {
                               stackIn_256_0 = 1;
                               if (this.field_m) {
@@ -4203,7 +4203,7 @@ final class BattleState {
                                 stackIn_257_1 = 1;
                               }
                               if (stackIn_256_0 == stackIn_257_1) {
-                                SoftwareRasterizer.e(311, 11 + var8, 146, 71, 16711680);
+                                SoftwareRasterizer.drawRectangleOutline(311, 11 + var8, 146, 71, 16711680);
                               }
                             }
                           }
@@ -4235,7 +4235,7 @@ final class BattleState {
                                 } else {
                                   stackIn_277_4 = 65280;
                                 }
-                                SoftwareRasterizer.f(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_273_3, stackIn_277_4);
+                                SoftwareRasterizer.fillRectangle(stackIn_329_0, stackIn_329_1, stackIn_329_2, stackIn_273_3, stackIn_277_4);
                                 var12Lifetime2++;
                               }
                             }
@@ -4259,7 +4259,7 @@ final class BattleState {
                               }
                               if (((oh) (var9_refLifetime2)).field_c <= 0 &&
                                 mm.field_f <= 3.14) {
-                                SoftwareRasterizer.d(324, 50 + var8, 30, 30, 16711680, 128);
+                                SoftwareRasterizer.fillRectangleAlpha(324, 50 + var8, 30, 30, 16711680, 128);
                               }
                             }
                           }
@@ -4292,12 +4292,12 @@ final class BattleState {
                         } else {
                           cc.field_i[((oh) (var9_refLifetime2)).field_g].a(192, 93, var10_int + 73, 36 + var8 + 10, (byte) 21);
                         }
-                        SoftwareRasterizer.c();
+                        SoftwareRasterizer.resetClip();
                         if (var9_refLifetime2 == this.field_q.field_nb) {
-                          SoftwareRasterizer.e(var10_int, 10 + var8, 73, 73, 16777215);
+                          SoftwareRasterizer.drawRectangleOutline(var10_int, 10 + var8, 73, 73, 16777215);
                           if (1 == this.field_L &&
                             !this.field_m) {
-                            SoftwareRasterizer.e(1 + var10_int, var8 + 11, 71, 71, 16711680);
+                            SoftwareRasterizer.drawRectangleOutline(1 + var10_int, var8 + 11, 71, 71, 16711680);
                           }
                         }
                         if (0 < ((oh) (var9_refLifetime2)).a(true)) {
@@ -4327,7 +4327,7 @@ final class BattleState {
                               } else {
                                 stackIn_368_4 = 65280;
                               }
-                              SoftwareRasterizer.f(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_364_3, stackIn_368_4);
+                              SoftwareRasterizer.fillRectangle(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_364_3, stackIn_368_4);
                               var13Lifetime1++;
                             }
                           }
@@ -4337,7 +4337,7 @@ final class BattleState {
                             nb.field_d[7].b(478, var8 + 50);
                             if (((oh) (var9_refLifetime2)).field_c <= 0 &&
                               3.14 >= mm.field_f) {
-                              SoftwareRasterizer.d(478, var8 + 50, 30, 30, 16711680, 128);
+                              SoftwareRasterizer.fillRectangleAlpha(478, var8 + 50, 30, 30, 16711680, 128);
                               if (-464 + (var10_int + 478) <= ef.field_j &&
                                 -464 + (508 + var10_int) >= ef.field_j &&
                                 MouseWheelInput.field_b >= (var8 + 50) &&
@@ -4365,18 +4365,18 @@ final class BattleState {
                         if (this.field_q.field_b.field_g == 11) {
                           var10.b(547 - var10.field_p, -3 + (var8 - (-32 - var10.field_v / 2)));
                         }
-                        SoftwareRasterizer.c();
+                        SoftwareRasterizer.resetClip();
                         if (this.field_m) {
-                          SoftwareRasterizer.e(547, var8 + 35, 48, 48, 16777215);
-                          SoftwareRasterizer.e(548, var8 + 36, 46, 46, 16711680);
+                          SoftwareRasterizer.drawRectangleOutline(547, var8 + 35, 48, 48, 16777215);
+                          SoftwareRasterizer.drawRectangleOutline(548, var8 + 36, 46, 46, 16711680);
                         }
                         AccountRequestState.field_f.a(Integer.toString(this.field_q.field_b.field_d), 589, var8 + 81, 16777215, -1);
                       }
                       if (this.field_q.field_B == 0) {
-                        SoftwareRasterizer.d(100, var8 + 67, 24, 24, 0, 128);
+                        SoftwareRasterizer.fillRectangleAlpha(100, var8 + 67, 24, 24, 0, 128);
                       }
                       if (this.field_q.field_B == 1) {
-                        SoftwareRasterizer.d(128, 67 + var8, 24, 24, 0, 128);
+                        SoftwareRasterizer.fillRectangleAlpha(128, 67 + var8, 24, 24, 0, 128);
                       }
                       if (eg.field_p != 0) {
                         break regionExit1;
@@ -4387,30 +4387,30 @@ final class BattleState {
                       stackIn_426_3 = 24;
                       stackIn_426_4 = 0;
                     }
-                    SoftwareRasterizer.d(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_426_3, stackIn_426_4, 128);
+                    SoftwareRasterizer.fillRectangleAlpha(stackIn_426_0, stackIn_426_1, stackIn_426_2, stackIn_426_3, stackIn_426_4, 128);
                   }
                   if (5 <= eg.field_p) {
-                    SoftwareRasterizer.d(213, var8 + 67, 24, 24, 0, 128);
+                    SoftwareRasterizer.fillRectangleAlpha(213, var8 + 67, 24, 24, 0, 128);
                   }
                   var10_int = 133;
                   var11_intLifetime1 = this.field_q.field_P * var10_int / this.field_q.field_mb;
                   var12Lifetime2 = var10_int * this.field_q.field_T / this.field_q.field_mb;
                   var13Lifetime1 = (this.field_q.field_u + this.field_q.field_m) * var10_int / 200;
-                  SoftwareRasterizer.d(var11_intLifetime1 + 159, var8 + 28, var10_int - var11_intLifetime1, 7, 16776960, 128);
-                  SoftwareRasterizer.d(var11_intLifetime1 + 159 + var12Lifetime2, var8 + 28, -var12Lifetime2 - (var11_intLifetime1 - var10_int), 7, 0, 192);
-                  SoftwareRasterizer.d(159 + var13Lifetime1, 45 + var8, var10_int - var13Lifetime1, 7, 0, 192);
+                  SoftwareRasterizer.fillRectangleAlpha(var11_intLifetime1 + 159, var8 + 28, var10_int - var11_intLifetime1, 7, 16776960, 128);
+                  SoftwareRasterizer.fillRectangleAlpha(var11_intLifetime1 + 159 + var12Lifetime2, var8 + 28, -var12Lifetime2 - (var11_intLifetime1 - var10_int), 7, 0, 192);
+                  SoftwareRasterizer.fillRectangleAlpha(159 + var13Lifetime1, 45 + var8, var10_int - var13Lifetime1, 7, 0, 192);
                   var14 = this.field_q.field_jb;
                   boolean decompiledSharedTail1 = (this.field_q.field_B == 0);
                   if (!decompiledSharedTail1) {
                     var15 = var10_int * this.field_q.field_jb / this.field_q.field_v;
-                    SoftwareRasterizer.d(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
+                    SoftwareRasterizer.fillRectangleAlpha(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
                     decompiledSharedTail1 = (var19 != 0);
                   }
                   if (decompiledSharedTail1) {
                     var14 = 2 * var14 / 3;
                     var15 = var10_int * var14 / this.field_q.field_v;
-                    SoftwareRasterizer.d(159, var8 + 11, var15, 7, 16777215, 128);
-                    SoftwareRasterizer.d(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
+                    SoftwareRasterizer.fillRectangleAlpha(159, var8 + 11, var15, 7, 16777215, 128);
+                    SoftwareRasterizer.fillRectangleAlpha(159 + var15, var8 + 11, -var15 + var10_int, 7, 0, 192);
                   }
                   var14Lifetime2 = this.field_q.field_jb;
                   var15_ref_String = Integer.toString(var14Lifetime2);
@@ -4437,25 +4437,25 @@ final class BattleState {
                 }
                 if (ha.field_o) {
                   if (this.field_B < 2) {
-                    SoftwareRasterizer.f(306, 7 + var8, 234, 79, 0);
+                    SoftwareRasterizer.fillRectangle(306, 7 + var8, 234, 79, 0);
                   }
                   if (this.field_B < 7) {
-                    SoftwareRasterizer.f(241, 66 + var8, 26, 26, 0);
+                    SoftwareRasterizer.fillRectangle(241, 66 + var8, 26, 26, 0);
                   }
                   if (this.field_B < 9) {
-                    SoftwareRasterizer.f(269, var8 + 66, 26, 26, 0);
+                    SoftwareRasterizer.fillRectangle(269, var8 + 66, 26, 26, 0);
                   }
                   if (this.field_B < 10) {
-                    SoftwareRasterizer.f(606, 7 + var8, 29, 79, 0);
+                    SoftwareRasterizer.fillRectangle(606, 7 + var8, 29, 79, 0);
                   }
                   if (this.field_B < 11) {
-                    SoftwareRasterizer.f(99, 66 + var8, 54, 26, 0);
+                    SoftwareRasterizer.fillRectangle(99, 66 + var8, 54, 26, 0);
                   }
                   if (this.field_B < 12) {
-                    SoftwareRasterizer.f(184, var8 + 66, 54, 26, 0);
+                    SoftwareRasterizer.fillRectangle(184, var8 + 66, 54, 26, 0);
                   }
                   if (this.field_B < 14) {
-                    SoftwareRasterizer.f(541, 7 + var8, 54, 54, 0);
+                    SoftwareRasterizer.fillRectangle(541, 7 + var8, 54, 54, 0);
                   }
                 }
                 var9 = 0;
@@ -4585,7 +4585,7 @@ final class BattleState {
             var8_ref_dlLifetime1 = stackIn_573_0;
             if (null != var8_ref_dlLifetime1) {
               if (null != oi.field_J) {
-                SoftwareRasterizer.f(0, 100, oi.field_J.field_q, oi.field_J.field_u, 16711823);
+                SoftwareRasterizer.fillRectangle(0, 100, oi.field_J.field_q, oi.field_J.field_u, 16711823);
                 oi.field_J.b(0, 100);
               }
               var9_refLifetime1 = var8_ref_dlLifetime1.unit;
@@ -4811,7 +4811,7 @@ final class BattleState {
                 var8 = 320;
               }
               var9 = 24 * vc.field_f.c(this.field_K, var8);
-              SoftwareRasterizer.f(320 - var8 / 2 - 10, 237 - (var9 / 2 - 122), var8 + 20, 8 + var9, 8388608);
+              SoftwareRasterizer.fillRectangle(320 - var8 / 2 - 10, 237 - (var9 / 2 - 122), var8 + 20, 8 + var9, 8388608);
               jl.a(jc.field_G, 6 + var9 + 8, 116 + (-(var9 / 2) + 240), 20 + var8 + 6, (byte) -115, -13 + (-(var8 / 2) + 320));
               kb.a(116, 24, var8 + (-(var8 / 2) + 320), this.field_K, -(var8 / 2) + 320, 50 + (240 - var9 + 105), 16777215);
               this.field_K = null;
@@ -4841,7 +4841,7 @@ final class BattleState {
               var8 = AccountRequestState.field_f.b(jc.field_B);
             }
             var9 = 24 + 24 * vc.field_f.c(this.field_K, var8);
-            SoftwareRasterizer.f(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
+            SoftwareRasterizer.fillRectangle(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
             stackIn_753_0 = jc.field_G;
             stackIn_753_1 = var9 + 14;
             stackIn_753_2 = 209 + (-(var9 / 2) + 50);
@@ -4902,8 +4902,8 @@ final class BattleState {
             this.client.field_Eb = null;
           }
           if (this.field_J) {
-            SoftwareRasterizer.d(162, 7, 364, 33, 0, 128);
-            SoftwareRasterizer.b(162, 39, 364, 4473924);
+            SoftwareRasterizer.fillRectangleAlpha(162, 7, 364, 33, 0, 128);
+            SoftwareRasterizer.addHorizontalLine(162, 39, 364, 4473924);
             ua.field_b.b(0, 0);
             if (null != this.client.field_Eb) {
               boolean decompiledSharedTail0 = (this.client.field_Eb.length != 1);

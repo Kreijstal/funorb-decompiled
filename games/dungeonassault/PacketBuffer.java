@@ -31,36 +31,36 @@ class PacketBuffer extends IntrusiveNode {
         try {
           param0 = param0 + param3.field_A;
           param1 = param1 + param3.field_w;
-          var6_int = param1 + gf.field_i * param0;
+          var6_int = param1 + SoftwareRasterizer.field_i * param0;
           var7 = 0;
           var8 = param3.field_v;
           var9 = param3.field_y;
-          var10 = gf.field_i - var9;
+          var10 = SoftwareRasterizer.field_i - var9;
           var11 = 0;
-          if (gf.field_f > param0) {
-            var12 = -param0 + gf.field_f;
+          if (SoftwareRasterizer.field_f > param0) {
+            var12 = -param0 + SoftwareRasterizer.field_f;
             var7 = var7 + var12 * var9;
-            var6_int = var6_int + var12 * gf.field_i;
-            param0 = gf.field_f;
+            var6_int = var6_int + var12 * SoftwareRasterizer.field_i;
+            param0 = SoftwareRasterizer.field_f;
             var8 = var8 - var12;
           }
-          if (gf.field_j > param1) {
-            var12Lifetime1 = gf.field_j - param1;
+          if (SoftwareRasterizer.field_j > param1) {
+            var12Lifetime1 = SoftwareRasterizer.field_j - param1;
             var6_int = var6_int + var12Lifetime1;
             var9 = var9 - var12Lifetime1;
             var10 = var10 + var12Lifetime1;
             var7 = var7 + var12Lifetime1;
-            param1 = gf.field_j;
+            param1 = SoftwareRasterizer.field_j;
             var11 = var11 + var12Lifetime1;
           }
-          if (gf.field_e < param0 + var8) {
-            var8 = var8 - (var8 + (param0 - gf.field_e));
+          if (SoftwareRasterizer.field_e < param0 + var8) {
+            var8 = var8 - (var8 + (param0 - SoftwareRasterizer.field_e));
           }
           if (param2 > -60) {
             return;
           }
-          if (gf.field_h < (var9 + param1)) {
-            var12Lifetime2 = -gf.field_h + param1 + var9;
+          if (SoftwareRasterizer.field_h < (var9 + param1)) {
+            var12Lifetime2 = -SoftwareRasterizer.field_h + param1 + var9;
             var10 = var10 + var12Lifetime2;
             var11 = var11 + var12Lifetime2;
             var9 = var9 - var12Lifetime2;
@@ -68,12 +68,12 @@ class PacketBuffer extends IntrusiveNode {
           if (var9 > 0 &&
             var8 > 0) {
             if (param5 != 256) {
-              qj.a(param4, 0, 0, var7, param3.field_B, var10, param5, var11, 0, 0, 0, 105, gf.field_b, var9, var6_int, var8);
+              qj.a(param4, 0, 0, var7, param3.field_B, var10, param5, var11, 0, 0, 0, 105, SoftwareRasterizer.field_b, var9, var6_int, var8);
               if (DungeonAssault.field_K == 0) {
                 return;
               }
             }
-            he.a(gf.field_b, 0, false, var8, var9, param4, 0, var10, var6_int, var7, var11, 0, 0, 0, param3.field_B);
+            he.a(SoftwareRasterizer.field_b, 0, false, var8, var9, param4, 0, var10, var6_int, var7, var11, 0, 0, 0, param3.field_B);
             return;
           }
           return;

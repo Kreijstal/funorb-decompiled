@@ -1978,7 +1978,7 @@ final class BattleUnit {
           }
           if (null != GameShell.field_p) {
             GameShell.field_p.a();
-            SoftwareRasterizer.f(0, 0, GameShell.field_p.field_r, GameShell.field_p.field_t, 0);
+            SoftwareRasterizer.fillRectangle(0, 0, GameShell.field_p.field_r, GameShell.field_p.field_t, 0);
             if (var10 != 0) {
               GameShell.field_p = new Sprite(d.field_N[0].field_f, d.field_N[0].field_i);
               GameShell.field_p.a();

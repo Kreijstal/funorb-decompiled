@@ -187,7 +187,7 @@ final class ta extends me {
           for (var6 = 0; var2_intLifetime3 > var6; var6++) {
             for (var7 = 0; var7 < var3Lifetime2; var7++) {
               if (var5[var4++]) {
-                si.a(var7, var6, 16384);
+                SoftwareRasterizer.addPixel(var7, var6, 16384);
               }
             }
           }

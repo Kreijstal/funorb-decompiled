@@ -33,14 +33,14 @@ final class eb extends pk {
     private int field_D;
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        wb.a(this.field_i, this.field_k, this.field_l, this.field_c, -1 + (this.field_c >> 1), param8, param5);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(this.field_i, this.field_k, this.field_l, this.field_c, -1 + (this.field_c >> 1), param8, param5);
         int var11 = this.field_c - (this.field_K << 1);
-        wb.a(this.field_K + this.field_i, this.field_k + this.field_K, this.field_l - (this.field_K << 1), var11, (var11 >> 1) - 1, param4, param3);
-        wb.b(this.field_n);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(this.field_K + this.field_i, this.field_k + this.field_K, this.field_l - (this.field_K << 1), var11, (var11 >> 1) - 1, param4, param3);
+        SoftwareRasterizer.saveClip(this.field_n);
         if (param6 == 12054) {
-          wb.b(this.field_i, this.field_k, this.field_i + this.field_l, this.field_k + this.field_c);
+          SoftwareRasterizer.setClip(this.field_i, this.field_k, this.field_i + this.field_l, this.field_k + this.field_c);
           this.field_J.a(this.field_q, param0 + this.field_i, this.field_k + param1, this.field_l, this.field_c, param9, param7, param2, this.field_m, this.field_L, this.field_x);
-          wb.a(this.field_n);
+          SoftwareRasterizer.restoreClip(this.field_n);
           return;
         }
     }

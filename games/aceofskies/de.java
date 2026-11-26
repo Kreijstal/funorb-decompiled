@@ -14,23 +14,23 @@ final class de implements ir {
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
         try {
           cn var14 = !(param3 instanceof cn) ? null : (cn) (param3);
-          SoftwareRasterizer.b(param3.field_p + param2, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_b);
+          SoftwareRasterizer.fillRectangle(param3.field_p + param2, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_b);
           if (var14 != null) {
           }
           int var7 = param2 + (param3.field_p + var14.field_C);
           int var8 = param4 + param3.field_h + var14.field_x;
-          SoftwareRasterizer.g(var7, var8, var14.field_A, this.field_g);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_A, this.field_g);
           if (var14.field_B != -1) {
             double var9 = 3.141592653589793 * (double)var14.field_B * 2.0 / (double)var14.field_w;
             int var11 = (int)(-Math.sin(var9) * (double)var14.field_A);
             int var12 = (int)(Math.cos(var9) * (double)var14.field_A);
-            SoftwareRasterizer.g(var7 + var11, var8 + var12, 1, this.field_f);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_f);
           }
-          SoftwareRasterizer.g(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           double var9Lifetime1 = 2.0 * ((double)var14.field_y * 3.141592653589793) / (double)var14.field_w;
           int var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_A);
           int var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_A);
-          SoftwareRasterizer.f(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (param1 != -7592) {
             this.field_e = 72;
           }

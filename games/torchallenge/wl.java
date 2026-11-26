@@ -43,14 +43,14 @@ final class wl {
             be.field_b = true;
           }
           if (ub.field_i) {
-            SoftwareRasterizer.a(sh.field_w);
+            SoftwareRasterizer.saveClip(sh.field_w);
           }
           ba.field_i.a(true, 18, true, (Sprite) null, 3, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
           NodeHashTableIterator.field_j = null;
           ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
           ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
           if (ub.field_i) {
-            SoftwareRasterizer.b(sh.field_w);
+            SoftwareRasterizer.restoreClip(sh.field_w);
           }
           if (param0 != 48) {
             this.c((byte) -13);
@@ -102,7 +102,7 @@ final class wl {
           this.b((byte) 6);
           return;
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearRaster();
     }
 
     final void c(byte param0) {

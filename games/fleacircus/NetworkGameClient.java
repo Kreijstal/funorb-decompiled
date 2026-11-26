@@ -824,23 +824,23 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (param5 >= param1) {
           if (param5 < param2) {
-            BoundedRandomAccessFile.a(param7, param1, gb.field_a, param0, param5, param4, param6, param2, (byte) -115);
+            BoundedRandomAccessFile.a(param7, param1, SoftwareRasterizer.field_a, param0, param5, param4, param6, param2, (byte) -115);
           } else {
             if (param2 > param1) {
-              BoundedRandomAccessFile.a(param7, param1, gb.field_a, param6, param2, param4, param0, param5, (byte) -115);
+              BoundedRandomAccessFile.a(param7, param1, SoftwareRasterizer.field_a, param6, param2, param4, param0, param5, (byte) -115);
             } else {
-              BoundedRandomAccessFile.a(param0, param2, gb.field_a, param6, param1, param4, param7, param5, (byte) -115);
+              BoundedRandomAccessFile.a(param0, param2, SoftwareRasterizer.field_a, param6, param1, param4, param7, param5, (byte) -115);
             }
           }
         } else {
           if (param2 <= param1) {
             if (param2 <= param5) {
-              BoundedRandomAccessFile.a(param0, param2, gb.field_a, param7, param5, param4, param6, param1, (byte) -115);
+              BoundedRandomAccessFile.a(param0, param2, SoftwareRasterizer.field_a, param7, param5, param4, param6, param1, (byte) -115);
             } else {
-              BoundedRandomAccessFile.a(param6, param5, gb.field_a, param7, param2, param4, param0, param1, (byte) -115);
+              BoundedRandomAccessFile.a(param6, param5, SoftwareRasterizer.field_a, param7, param2, param4, param0, param1, (byte) -115);
             }
           } else {
-            BoundedRandomAccessFile.a(param6, param5, gb.field_a, param0, param1, param4, param7, param2, (byte) -115);
+            BoundedRandomAccessFile.a(param6, param5, SoftwareRasterizer.field_a, param0, param1, param4, param7, param2, (byte) -115);
           }
         }
     }

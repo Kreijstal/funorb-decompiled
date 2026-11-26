@@ -128,7 +128,7 @@ final class ba extends rg {
               jg.field_g.field_u >= var9 &&
               var10 <= jg.field_g.field_w) {
               vm.a(jg.field_g, -8409);
-              fn.d();
+              SoftwareRasterizer.clearRaster();
             } else {
               jg.field_g = new nf(var9, var10);
               vm.a(jg.field_g, -8409);
@@ -165,7 +165,7 @@ final class ba extends rg {
             } else {
               if (var10Lifetime2 <= jg.field_g.field_w) {
                 vm.a(jg.field_g, -8409);
-                fn.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 jg.field_g = new nf(var9Lifetime2, var10Lifetime2);
                 vm.a(jg.field_g, -8409);
@@ -207,7 +207,7 @@ final class ba extends rg {
           } else {
             if (var10Lifetime1 <= jg.field_g.field_w) {
               vm.a(jg.field_g, -8409);
-              fn.d();
+              SoftwareRasterizer.clearRaster();
             } else {
               jg.field_g = new nf(var9Lifetime1, var10Lifetime1);
               vm.a(jg.field_g, -8409);

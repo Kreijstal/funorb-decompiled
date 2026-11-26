@@ -24,7 +24,7 @@ final class nb extends ig {
             nb.a(true, 0.3101823627948761f, (String) null, (byte) 81);
           }
           qf.field_d.a(param0, param1, true, param2);
-          ti.d();
+          SoftwareRasterizer.clearRaster();
           af.a(true, (byte) -79);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "nb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

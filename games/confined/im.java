@@ -63,13 +63,13 @@ final class im {
           vm.a(var1, -8409);
           ti.b();
           int var2 = -113 / ((param0 - 32) / 49);
-          fn.d();
+          SoftwareRasterizer.clearRaster();
           tg.field_H = 0;
           of.a(false);
           var3 = var1.c();
           for (var4 = 0; var4 < 15; var4++) {
             var3.d(-2, -2, 16777215);
-            fn.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           KeyboardInput.field_c.d();
           var1.b(0, 0);

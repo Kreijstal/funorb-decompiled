@@ -170,8 +170,8 @@ abstract class fi extends UiWidget implements pb {
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          sb.a(var1_ref.field_o, var1_ref.field_h, var1_ref.field_n);
-          sb.a(var1_ref.field_k, var1_ref.field_g, var1_ref.field_p, var1_ref.field_m);
+          SoftwareRasterizer.setRasterBuffer(var1_ref.field_o, var1_ref.field_h, var1_ref.field_n);
+          SoftwareRasterizer.setClip(var1_ref.field_k, var1_ref.field_g, var1_ref.field_p, var1_ref.field_m);
           var1_ref.field_o = null;
           kk.field_f.addLast(var1_ref, -128);
           return;
@@ -180,8 +180,8 @@ abstract class fi extends UiWidget implements pb {
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        sb.a(var1_refLifetime1.field_o, var1_refLifetime1.field_h, var1_refLifetime1.field_n);
-        sb.a(var1_refLifetime1.field_k, var1_refLifetime1.field_g, var1_refLifetime1.field_p, var1_refLifetime1.field_m);
+        SoftwareRasterizer.setRasterBuffer(var1_refLifetime1.field_o, var1_refLifetime1.field_h, var1_refLifetime1.field_n);
+        SoftwareRasterizer.setClip(var1_refLifetime1.field_k, var1_refLifetime1.field_g, var1_refLifetime1.field_p, var1_refLifetime1.field_m);
         var1_refLifetime1.field_o = null;
         kk.field_f.addLast(var1_refLifetime1, -128);
     }

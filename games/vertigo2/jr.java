@@ -126,8 +126,8 @@ final class jr implements Runnable {
     }
 
     final static void a(int param0) {
-        qg.field_G = bi.field_e;
-        om.field_D = bi.field_j;
+        qg.field_G = SoftwareRasterizer.field_e;
+        om.field_D = SoftwareRasterizer.field_j;
         km.i(202);
         qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));
         bf.field_c.a(86, MouseWheelInput.field_k.field_Fb, Archive.field_f, 0, 0);

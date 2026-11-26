@@ -521,8 +521,8 @@ final class p extends qe {
         boolean decompiledFrameCompleted0 = true;
         if (null != this.field_b) {
           var5Lifetime2 = 0;
-          while (var5Lifetime2 < gf.field_b.length) {
-            gf.field_b[var5Lifetime2] = nb.a(gf.field_b[var5Lifetime2] >>> 2, 1061109567);
+          while (var5Lifetime2 < SoftwareRasterizer.field_b.length) {
+            SoftwareRasterizer.field_b[var5Lifetime2] = nb.a(SoftwareRasterizer.field_b[var5Lifetime2] >>> 2, 1061109567);
             var5Lifetime2++;
             if (var15 != 0) {
               decompiledFrameCompleted0 = false;
@@ -623,7 +623,7 @@ final class p extends qe {
             stackIn_18_0 = 0;
             break;
           }
-          gf.d(stackIn_18_0, 0, gf.field_i, gf.field_c);
+          SoftwareRasterizer.grayscaleRectangle(stackIn_18_0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
           var15 = new cn(var9, var9);
           var18 = var15;
           var18.e();
@@ -1488,8 +1488,8 @@ final class p extends qe {
           var9 = (((var7 & 65280) >> 10) + 192) * var6_int / 255;
           var10 = (((var7 & 255) >> 2) + 192) * var6_int / 255;
           var11 = 0;
-          var12 = (param4.field_A + param3) * gf.field_i + (param0 + param4.field_w);
-          var13 = -param4.field_y + gf.field_i;
+          var12 = (param4.field_A + param3) * SoftwareRasterizer.field_i + (param0 + param4.field_w);
+          var13 = -param4.field_y + SoftwareRasterizer.field_i;
           var15 = -param4.field_v;
           if (param1 <= 54) {
             this.a((gd) null, (String) null, (byte) -123, (String) null, (String) null);
@@ -1511,7 +1511,7 @@ final class p extends qe {
                 var17 = var17 * var8;
                 var19 = var19 * var10;
                 var16 = var17 & -16777216 | var18 & 16711680 | var19 & 65280;
-                gf.field_b[var12] = var16 >>> 8;
+                SoftwareRasterizer.field_b[var12] = var16 >>> 8;
               }
               var12++;
               var11++;
@@ -1581,8 +1581,8 @@ final class p extends qe {
             var5 = 0;
             break;
           }
-          gf.b(-(var5 * 4 / 3) + param2, var5 + 18 + param1, var5 * 8 / 3, 0);
-          gf.b(param2 - var5 * 4 / 3, -var5 + 280 + param1 + 18, var5 * 8 / 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(-(var5 * 4 / 3) + param2, var5 + 18 + param1, var5 * 8 / 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(param2 - var5 * 4 / 3, -var5 + 280 + param1 + 18, var5 * 8 / 3, 0);
           var5++;
         } while (var13 == 0);
         while (true) {

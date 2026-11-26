@@ -94,10 +94,10 @@ final class lg implements cg {
           var14 = (nd) (stackIn_3_0);
           if (var14 != null) {
           }
-          wj.f(param4 + param2.field_o, param3 + param2.field_m, param2.field_w, param2.field_k, this.field_e);
+          SoftwareRasterizer.fillRectangle(param4 + param2.field_o, param3 + param2.field_m, param2.field_w, param2.field_k, this.field_e);
           var7 = var14.field_O + (param4 + param2.field_o);
           var8 = var14.field_S + param3 + param2.field_m;
-          wj.b(var7, var8, var14.field_J, this.field_k);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_J, this.field_k);
           if (param1 < 94) {
             return;
           }
@@ -105,13 +105,13 @@ final class lg implements cg {
             var9 = 3.141592653589793 * (double)var14.field_I * 2.0 / (double)var14.field_T;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_J);
             var12 = (int)(Math.cos(var9) * (double)var14.field_J);
-            wj.b(var7 + var11, var12 + var8, 1, this.field_c);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_c);
           }
-          wj.b(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_N * 2.0 / (double)var14.field_T;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_J);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_J);
-          wj.g(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
           if (null == this.field_d) {
             return;
           }

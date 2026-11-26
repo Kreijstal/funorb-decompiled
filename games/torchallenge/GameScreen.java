@@ -712,15 +712,15 @@ final class GameScreen {
               var23 = 0;
             }
           }
-          SoftwareRasterizer.a(pf.field_g);
-          SoftwareRasterizer.a(0, var19, 640, 480);
+          SoftwareRasterizer.saveClip(pf.field_g);
+          SoftwareRasterizer.intersectClip(0, var19, 640, 480);
           GzipDecoder.drawNineSlice(var22, var22[0].fullHeight + var21, var20 + 3, (byte) -74, var23 + (-var22[0].fullHeight + var19), var18);
-          SoftwareRasterizer.b(pf.field_g);
+          SoftwareRasterizer.restoreClip(pf.field_g);
           if (!vc.field_e) {
             ba.a(this.screenId, kk.field_d, param1, -128, cj.field_g);
           }
-          SoftwareRasterizer.a(pf.field_g);
-          SoftwareRasterizer.a(0, var19, 640, 480);
+          SoftwareRasterizer.saveClip(pf.field_g);
+          SoftwareRasterizer.intersectClip(0, var19, 640, 480);
           var27 = 0;
           scanLoop1: while (true) {
             if (6 > var27) {
@@ -770,7 +770,7 @@ final class GameScreen {
               var27++;
               continue scanLoop1;
             }
-            SoftwareRasterizer.b(pf.field_g);
+            SoftwareRasterizer.restoreClip(pf.field_g);
             var5_int = ue.field_j[0];
             stackIn_51_0 = 47;
             stackIn_51_1 = (-66 - param3) / 48;
@@ -787,7 +787,7 @@ final class GameScreen {
           var6Lifetime2 = ue.field_j[1];
           var7Lifetime2 = ue.field_j[2];
           var28 = we.field_m[ok.field_b + 1];
-          SoftwareRasterizer.a(pf.field_g);
+          SoftwareRasterizer.saveClip(pf.field_g);
           SoftwareRasterizer.setClip(var24 + var5_intLifetime1, var24 + var6Lifetime2, -var24 + (var7Lifetime2 + var5_intLifetime1), -var24 + var8Lifetime2 + var6Lifetime2);
           var5_intLifetime1 = var5_intLifetime1 + (var7Lifetime2 - var28.fullWidth >> 1);
           var6Lifetime2 = (var8Lifetime2 - var28.fullHeight >> 1) + var6Lifetime2;
@@ -796,7 +796,7 @@ final class GameScreen {
             var6Lifetime2 += 96;
           }
           var28.drawTransparent(var5_intLifetime1, var6Lifetime2);
-          SoftwareRasterizer.b(pf.field_g);
+          SoftwareRasterizer.restoreClip(pf.field_g);
           var5_intLifetime2 = ue.field_j[0];
           var6Lifetime3 = ue.field_j[1];
           var22Lifetime1[0].drawTransparent(var5_intLifetime2, var6Lifetime3);
@@ -1308,7 +1308,7 @@ final class GameScreen {
           var19 = 0;
           var20 = 60;
           var21 = var20;
-          SoftwareRasterizer.a(pf.field_g);
+          SoftwareRasterizer.saveClip(pf.field_g);
           if (param12 <= param5) {
             if (param5 > (param6 - param12)) {
               var21 = (-param5 + param6) * var20 / param12;
@@ -1329,8 +1329,8 @@ final class GameScreen {
             var19Lifetime1 = param5 * 256 / param12;
             var21 = var20 * param5 / param12;
           }
-          SoftwareRasterizer.f(0, 0, 640, var21, 1);
-          SoftwareRasterizer.f(0, 479 - var21, 640, var21, 1);
+          SoftwareRasterizer.fillRectangle(0, 0, 640, var21, 1);
+          SoftwareRasterizer.fillRectangle(0, 479 - var21, 640, var21, 1);
           var22 = 35 / ((param7 + 3) / 59);
           SoftwareRasterizer.setClip(0, var21, 640, -var21 + 480);
           var18 = -param0[1];
@@ -1407,7 +1407,7 @@ final class GameScreen {
               param9.drawTransparentWithIntensity(var17_intLifetime2, var18Lifetime2, var19Lifetime1);
             }
           }
-          SoftwareRasterizer.b(pf.field_g);
+          SoftwareRasterizer.restoreClip(pf.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1494,10 +1494,10 @@ final class GameScreen {
             }
             GzipDecoder.drawNineSlice(var7, var5, var4, (byte) 106, var3, var2_int);
             var6 = we.field_m[var9 + 1];
-            SoftwareRasterizer.a(pf.field_g);
+            SoftwareRasterizer.saveClip(pf.field_g);
             var2_int = var2_int + var8;
             var3 = var8 + var3;
-            SoftwareRasterizer.a(var2_int, var3, var2_int + var4 - 2 * var8, -var8 + (var5 >> 1) + var3);
+            SoftwareRasterizer.intersectClip(var2_int, var3, var2_int + var4 - 2 * var8, -var8 + (var5 >> 1) + var3);
             var2_intLifetime1 = bg.field_I[var9][0];
             var2_intLifetime1 = (-(var6.fullWidth >> 1) + var4 >> 1) + var2_intLifetime1;
             var3Lifetime1 = bg.field_I[var9][1];
@@ -1507,7 +1507,7 @@ final class GameScreen {
               var2_intLifetime1 -= 16;
             }
             od.a(var6, var2_intLifetime1, var3Lifetime1);
-            SoftwareRasterizer.b(pf.field_g);
+            SoftwareRasterizer.restoreClip(pf.field_g);
             var3Lifetime2 = bg.field_I[var9][1];
             var2_intLifetime2 = bg.field_I[var9][0];
             var7[0].drawTransparent(var2_intLifetime2, var3Lifetime2);
@@ -1887,7 +1887,7 @@ final class GameScreen {
                   ph.field_d >= var16 &&
                   var16 + 36 >= ph.field_d) {
                   var19 = var20;
-                  SoftwareRasterizer.e(var15 - 2, -2 + var16, 36, 36, 6, 8421504);
+                  SoftwareRasterizer.drawRoundedRectangleOutline(var15 - 2, -2 + var16, 36, 36, 6, 8421504);
                 }
                 if (this.field_g >= var15 &&
                   var15 + 32 >= this.field_g &&
@@ -1901,7 +1901,7 @@ final class GameScreen {
                   }
                 }
                 if (~var20 == ~this.field_b) {
-                  SoftwareRasterizer.e(-2 + var15, var16 - 2, 36, 36, 6, 1);
+                  SoftwareRasterizer.drawRoundedRectangleOutline(-2 + var15, var16 - 2, 36, 36, 6, 1);
                 }
                 var18++;
                 if (var18 != var9) {
@@ -2484,7 +2484,7 @@ final class GameScreen {
         try {
           var14 = -99 / ((param0 + 30) / 59);
           if (RandomAccessCacheFile.field_e <= 0) {
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             return;
           }
           if (rj.field_g != 0) {
@@ -2902,7 +2902,7 @@ final class GameScreen {
                 oj.field_d = new Sprite(640, 480);
               }
               oj.field_d.d();
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
               var3_intLifetime1Lifetime1 = 0;
               while (true) {
                 if (var3_intLifetime1Lifetime1 < this.field_k.field_b) {
@@ -3317,7 +3317,7 @@ final class GameScreen {
           if (0 <= var16Lifetime1) {
             LevelEntity.field_E.d();
             var8 = 0;
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             var9 = 0;
           }
           GzipDecoder.drawNineSlice(ui.field_i, var11, var10, (byte) -74, var9, var8);
@@ -4612,7 +4612,7 @@ final class GameScreen {
         var16 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param5) {
-            SoftwareRasterizer.a(ui.field_f);
+            SoftwareRasterizer.saveClip(ui.field_f);
           }
           this.c(false);
           var8_int = ja.a((byte) 109, ResourceArchive.field_n[param4].field_L) ? 1 : 0;
@@ -4697,7 +4697,7 @@ final class GameScreen {
             return;
           }
           SectorCacheStore.field_f.bindAsTarget(-98);
-          SoftwareRasterizer.b(ui.field_f);
+          SoftwareRasterizer.restoreClip(ui.field_f);
           var11Lifetime1 = jj.field_a[param4].fullWidth;
           var12Lifetime1 = jj.field_a[param4].fullHeight;
           if (param0 != 42) {
@@ -4800,7 +4800,7 @@ final class GameScreen {
               var14 = var8 + var14;
               var16_int = ue.field_j[3];
               var16_int = var16_int - var8 * 2;
-              SoftwareRasterizer.a(pf.field_g);
+              SoftwareRasterizer.saveClip(pf.field_g);
               SoftwareRasterizer.setClip(var13, var14, var15 + var13, var16_int + var14);
               var15 = ue.field_j[2];
               var14 = ue.field_j[1];
@@ -4813,7 +4813,7 @@ final class GameScreen {
                 var13 -= 32;
               }
               var11.drawTransparent(var13, var14);
-              SoftwareRasterizer.b(pf.field_g);
+              SoftwareRasterizer.restoreClip(pf.field_g);
               var12[0].drawTransparent(var2_int, var3);
               var12[2].drawTransparent(var4 + var2_int - var12[2].fullWidth, var3);
               var12[6].drawTransparent(var2_int, -var12[6].fullHeight + var5 + var3);
@@ -4863,10 +4863,10 @@ final class GameScreen {
             var12 = dh.field_cb[0];
             var36 = -(2 * var8) + (var24 + (var28 - var24) * (-(aa.field_f >> 2) + cd.field_b) / (aa.field_f >> 2));
             GzipDecoder.drawNineSlice(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
-            SoftwareRasterizer.a(pf.field_g);
+            SoftwareRasterizer.saveClip(pf.field_g);
             SoftwareRasterizer.setClip(var33, var34, var35 + var33, var36 + var34);
             var11.drawScaled(var29, var30, var31, var32);
-            SoftwareRasterizer.b(pf.field_g);
+            SoftwareRasterizer.restoreClip(pf.field_g);
             var12[0].drawTransparent(var33 - var8, var34 - var8);
             var12[2].drawTransparent(var8 + var33 + var35 - var12[2].fullWidth, -var8 + var34);
             var12[6].drawTransparent(var33 - var8, var36 + var34 + var8 - var12[6].fullHeight);
@@ -4900,12 +4900,12 @@ final class GameScreen {
                 oj.field_d = new Sprite(640, 480);
               }
               oj.field_d.d();
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
               GzipDecoder.drawNineSlice(var12, var5, var4, (byte) -55, var3, var2_int);
               var3 = var8 + var3;
-              SoftwareRasterizer.a(pf.field_g);
+              SoftwareRasterizer.saveClip(pf.field_g);
               var2_int = var8 + var2_int;
-              SoftwareRasterizer.a(var2_int, var3, -(2 * var8) + var4 + var2_int, (var5 >> 1) + (var3 - var8));
+              SoftwareRasterizer.intersectClip(var2_int, var3, -(2 * var8) + var4 + var2_int, (var5 >> 1) + (var3 - var8));
               var2_int = bg.field_I[var13][0];
               var3 = bg.field_I[var13][1];
               var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
@@ -4916,7 +4916,7 @@ final class GameScreen {
                 var3 += 48;
               }
               od.a(var11, var2_int, var3);
-              SoftwareRasterizer.b(pf.field_g);
+              SoftwareRasterizer.restoreClip(pf.field_g);
               var14 = AccountServiceResult.field_j[0];
               var2_int = lg.field_d[8][1] + (lg.field_d[8][7] + lg.field_d[8][5]) * var13;
               var3 = lg.field_d[8][3];
@@ -4925,9 +4925,9 @@ final class GameScreen {
               var15 = AccountServiceResult.field_j[1];
               var2_int = -(-var4 + var14 >> 1) + var2_int;
               var3 = var3 - (-var5 + var15 >> 1);
-              SoftwareRasterizer.a(pf.field_g);
+              SoftwareRasterizer.saveClip(pf.field_g);
               var3 = var3 + var10;
-              SoftwareRasterizer.a(0, var3, 640, var9 - var12[7].fullHeight);
+              SoftwareRasterizer.intersectClip(0, var3, 640, var9 - var12[7].fullHeight);
               de.field_a.drawTransparent(var2_int, var3);
               var17 = var13;
               switch ((var37 == 0
@@ -4999,9 +4999,9 @@ final class GameScreen {
               var2_int = var2_int - (-var4 + var14 >> 1);
               var10 = (-var3 + var9) * cd.field_b / (aa.field_f >> 2);
               var3 = var3 - (var15 - var5 >> 1);
-              SoftwareRasterizer.a(pf.field_g);
+              SoftwareRasterizer.saveClip(pf.field_g);
               var3 = var3 + var10;
-              SoftwareRasterizer.a(0, var3, 640, -var12[7].fullHeight + var9);
+              SoftwareRasterizer.intersectClip(0, var3, 640, -var12[7].fullHeight + var9);
               de.field_a.drawTransparent(var2_int, var3);
               var17 = var13;
               switch (var17) {
@@ -5031,17 +5031,17 @@ final class GameScreen {
               var4 = bg.field_I[var13][2];
               var3 = var10 + var3;
               this.a((byte) 42, var4, var2_int, var5, var13, true, var3);
-              SoftwareRasterizer.b(pf.field_g);
+              SoftwareRasterizer.restoreClip(pf.field_g);
               oj.field_d.d();
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
               var4 = bg.field_I[var13][2];
               var5 = bg.field_I[var13][3];
               var2_int = bg.field_I[var13][0];
               var3 = bg.field_I[var13][1];
               var2_int = var8 + var2_int;
-              SoftwareRasterizer.a(pf.field_g);
+              SoftwareRasterizer.saveClip(pf.field_g);
               var3 = var8 + var3;
-              SoftwareRasterizer.a(var2_int, var3, -(2 * var8) + (var2_int + var4), -lg.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
+              SoftwareRasterizer.intersectClip(var2_int, var3, -(2 * var8) + (var2_int + var4), -lg.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
               var2_int = bg.field_I[var13][0];
               var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
               var3 = bg.field_I[var13][1];
@@ -5362,8 +5362,8 @@ final class GameScreen {
             return;
           }
           if (lg.field_d[param1][17] == 0) {
-            SoftwareRasterizer.c(0, 0, 25, 2048, 14022908, 10533565);
-            SoftwareRasterizer.c(615, 0, 25, 2048, 14022908, 10533565);
+            SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 25, 2048, 14022908, 10533565);
+            SoftwareRasterizer.fillRectangleVerticalGradient(615, 0, 25, 2048, 14022908, 10533565);
             if (null != kd.field_m) {
               MouseWheelInput.a(sj.field_N, eh.field_n, -15516);
             }
@@ -5659,30 +5659,30 @@ final class GameScreen {
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
                       var12Lifetime1Lifetime1 = var3;
                       var13Lifetime1Lifetime1 = -(2 * ui.field_i[0].fullWidth) + 557;
-                      SoftwareRasterizer.a(pf.field_g);
-                      SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 240 + var11Lifetime2Lifetime1, 64 + var12Lifetime1Lifetime1);
+                      SoftwareRasterizer.saveClip(pf.field_g);
+                      SoftwareRasterizer.intersectClip(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 240 + var11Lifetime2Lifetime1, 64 + var12Lifetime1Lifetime1);
                       ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 107, false, 0);
                       var11Lifetime2Lifetime1 += 16;
-                      SoftwareRasterizer.b(pf.field_g);
+                      SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + (af.field_f[3] + (var3 + 8 + var8));
                       SecondaryNodeDequeIterator.field_e.c(IntrusiveDeque.field_d[0], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
                       var11Lifetime2Lifetime1 = var13Lifetime1Lifetime1 + var2_intLifetime1 - 240;
                       var12Lifetime1Lifetime1 = var3;
-                      SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 240, var12Lifetime1Lifetime1 + 64);
+                      SoftwareRasterizer.intersectClip(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 240, var12Lifetime1Lifetime1 + 64);
                       var11Lifetime2Lifetime1 = var11Lifetime2Lifetime1 - 400;
                       ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 93, false, 0);
-                      SoftwareRasterizer.b(pf.field_g);
+                      SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = 16 + (var3 + af.field_f[3] + var8 - SecondaryNodeDequeIterator.field_e.field_K);
                       var11Lifetime2Lifetime1 = -50 - nh.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
                       var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(IntrusiveDeque.field_d[1], 220, 0);
                       SecondaryNodeDequeIterator.field_e.a(IntrusiveDeque.field_d[1], var11Lifetime2Lifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var12Lifetime1Lifetime1 = -16 + (-ob.field_b[3] + 391 - ui.field_i[0].fullHeight);
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
-                      SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
+                      SoftwareRasterizer.intersectClip(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
                       var12Lifetime1Lifetime1 = 16 + ob.field_b[3] + (-480 + var12Lifetime1Lifetime1);
                       ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 80, false, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + 16;
-                      SoftwareRasterizer.b(pf.field_g);
+                      SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + (-(var8 * 3) + (-16 - ui.field_i[0].fullHeight)) + (391 - ob.field_b[3]);
                       var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(IntrusiveDeque.field_d[2], 240, 0);
                       SecondaryNodeDequeIterator.field_e.a(IntrusiveDeque.field_d[2], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1 - SecondaryNodeDequeIterator.field_e.field_x, 240, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
@@ -6013,7 +6013,7 @@ final class GameScreen {
             var23 = var6 + (-var22 + var12 >> 1);
             var19.c(var11, var23, (var21 >> 1) + var20Lifetime1 + (var5_int + ba.field_b[0].storedHeight), var17, -1);
             var23 = var23 + (8 + UiComponent.field_s);
-            SoftwareRasterizer.b(var23, var5_int + (var13 / 2 - 1), 129, 2, var17);
+            SoftwareRasterizer.drawRectangleOutline(var23, var5_int + (var13 / 2 - 1), 129, 2, var17);
             if (var10 != 12) {
               stackIn_80_0 = nk.field_h;
             } else {

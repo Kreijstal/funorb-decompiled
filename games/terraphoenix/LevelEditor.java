@@ -565,7 +565,7 @@ final class LevelEditor {
                 break regionExit1;
               }
               if (stackIn_37_0 == stackIn_37_1) {
-                SoftwareRasterizer.e(var2Lifetime2, var3Lifetime2, var4, var5, 65280);
+                SoftwareRasterizer.drawRectangleOutline(var2Lifetime2, var3Lifetime2, var4, var5, 65280);
               }
               var6++;
             }

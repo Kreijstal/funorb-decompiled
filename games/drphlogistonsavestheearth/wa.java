@@ -150,7 +150,7 @@ final class wa extends pj implements kd, ke {
           DualLinkNode.field_i.a(this.field_J, 20 + (param0 + this.field_o), this.field_m + (param3 + 15), this.field_w - 40, this.field_k, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
         }
         if (null != this.field_K) {
-          wj.g(10 + param0, param3 + 134, -20 + this.field_w, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param0, param3 + 134, -20 + this.field_w, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

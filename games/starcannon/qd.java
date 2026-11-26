@@ -39,7 +39,7 @@ abstract class qd extends vk {
         if (le.field_c == null) {
           le.field_c = new Sprite(this.field_i, this.field_f);
           bc.a(le.field_c, 26095);
-          ki.b();
+          SoftwareRasterizer.clearRaster();
           this.c(0, (byte) 73, 0);
           super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
@@ -49,7 +49,7 @@ abstract class qd extends vk {
         if (le.field_c.field_u < this.field_i) {
           le.field_c = new Sprite(this.field_i, this.field_f);
           bc.a(le.field_c, 26095);
-          ki.b();
+          SoftwareRasterizer.clearRaster();
           this.c(0, (byte) 73, 0);
           super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
@@ -58,7 +58,7 @@ abstract class qd extends vk {
         }
         if (le.field_c.field_v >= this.field_f) {
           bc.a(le.field_c, 26095);
-          ki.b();
+          SoftwareRasterizer.clearRaster();
           this.c(0, (byte) 73, 0);
           super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
           wf.a(param2 ^ -15);
@@ -67,7 +67,7 @@ abstract class qd extends vk {
         }
         le.field_c = new Sprite(this.field_i, this.field_f);
         bc.a(le.field_c, 26095);
-        ki.b();
+        SoftwareRasterizer.clearRaster();
         this.c(0, (byte) 73, 0);
         super.a(param0, -param1 - this.field_s, param2, -this.field_j - param3);
         wf.a(param2 ^ -15);

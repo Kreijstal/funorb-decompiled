@@ -273,10 +273,10 @@ final class IntrusiveDeque {
         }
         tl.a((byte) -67, gf.field_f);
         nh.a();
-        wb.b();
+        SoftwareRasterizer.clearRaster();
         di.k(9);
         if (var5 < 256) {
-          wb.b(0, 0, wb.field_h, wb.field_c, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 0, -var5 + 256);
         }
         fd.a(28773);
         if (sl.field_a >= 150) {

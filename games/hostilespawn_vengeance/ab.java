@@ -431,7 +431,7 @@ final class ab extends IOException {
           var9Lifetime1 = var17.field_A;
           pf.b(511);
           var17.a();
-          si.g(0, 0, si.field_e, si.field_k);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k);
           var15 = new bd(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();

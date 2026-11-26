@@ -27,7 +27,7 @@ final class em extends fb {
             em.b(5);
           }
           hd.a(false);
-          kh.a(param1.field_w, param1.field_n, param1.field_o);
+          SoftwareRasterizer.setRasterBuffer(param1.field_w, param1.field_n, param1.field_o);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "em.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

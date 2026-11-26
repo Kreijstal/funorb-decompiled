@@ -47,11 +47,11 @@ abstract class ba {
 
     final void a(byte param0) {
         if (param0 >= 106) {
-          ge.a(this.field_e, this.field_g, this.field_i);
+          SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_g, this.field_i);
           return;
         }
         this.field_e = (int[]) null;
-        ge.a(this.field_e, this.field_g, this.field_i);
+        SoftwareRasterizer.setRasterBuffer(this.field_e, this.field_g, this.field_i);
     }
 
     static {

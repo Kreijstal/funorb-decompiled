@@ -228,21 +228,21 @@ final class tl {
         int var10 = OrbDefence.field_D ? 1 : 0;
         int var7Lifetime1;
         try {
-          ul.d(param2, param1, param3 + 1, 10000536);
-          ul.d(param2, param1 + param0, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param2, param1, param3 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param2, param1 + param0, param3 + 1, 12105912);
           var5_int = 1;
           var6 = param0;
-          if (var5_int + param1 < ul.field_d) {
-            var5_int = -param1 + ul.field_d;
+          if (var5_int + param1 < SoftwareRasterizer.field_d) {
+            var5_int = -param1 + SoftwareRasterizer.field_d;
           }
-          if (!(var6 + param1 <= ul.field_a)) {
-            var6 = -param1 + ul.field_a;
+          if (!(var6 + param1 <= SoftwareRasterizer.field_a)) {
+            var6 = -param1 + SoftwareRasterizer.field_a;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + var7 * 48 / param0;
             var9 = var8 << 16 | var8 << 8 | var8;
-            ul.field_b[(var7 + param1) * ul.field_f + param2] = var9;
-            ul.field_b[param3 + ul.field_f * (param1 + var7) + param2] = var9;
+            SoftwareRasterizer.field_b[(var7 + param1) * SoftwareRasterizer.field_f + param2] = var9;
+            SoftwareRasterizer.field_b[param3 + SoftwareRasterizer.field_f * (param1 + var7) + param2] = var9;
           }
           var7Lifetime1 = -80 % ((85 - param4) / 33);
         } catch (RuntimeException runtimeException) {

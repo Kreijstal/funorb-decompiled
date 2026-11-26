@@ -87,14 +87,14 @@ final class SecondaryNodeDeque implements Iterable {
             var7 = param4[1].fullWidth;
             param4[0].drawTransparent(param0, param2);
             param4[2].drawTransparent(param1 + (param0 - var6), param2);
-            SoftwareRasterizer.a(bk.field_s);
-            SoftwareRasterizer.a(var5_int + param0, param2, -var6 + (param0 + param1), param4[1].fullHeight + param2);
+            SoftwareRasterizer.saveClip(bk.field_s);
+            SoftwareRasterizer.intersectClip(var5_int + param0, param2, -var6 + (param0 + param1), param4[1].fullHeight + param2);
             var8 = var5_int + param0;
             var9 = param1 + param0 - var6;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
               param4[1].drawTransparent(param0, param2);
             }
-            SoftwareRasterizer.b(bk.field_s);
+            SoftwareRasterizer.restoreClip(bk.field_s);
             return;
           }
           return;

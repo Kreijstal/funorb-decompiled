@@ -101,7 +101,7 @@ final class GzipDecompressor {
     final static void a(byte param0, Sprite param1) {
         try {
           bp.a((byte) -78);
-          SoftwareRasterizer.a(param1.field_y, param1.field_w, param1.field_u);
+          SoftwareRasterizer.setRasterBuffer(param1.field_y, param1.field_w, param1.field_u);
           int var2_int = 10 % ((param0 + 52) / 47);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

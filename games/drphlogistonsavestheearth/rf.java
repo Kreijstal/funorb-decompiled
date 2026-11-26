@@ -159,10 +159,10 @@ abstract class rf extends DualLinkNode {
               }
               param1 = param1 + this.field_u[var8];
               if (field_D != -1) {
-                wj.g(var11, param2 + (int)((double)this.field_E * 0.7), param1 - var11, field_D);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_E * 0.7), param1 - var11, field_D);
               }
               if (field_K != -1) {
-                wj.g(var11, param2 + this.field_E + 1, param1 - var11, field_K);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_E + 1, param1 - var11, field_K);
               }
               var5 = var8;
             }

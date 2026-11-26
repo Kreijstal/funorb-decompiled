@@ -36,8 +36,8 @@ final class PolygonScanlineRasterizer {
         }
         PolygonScanlineRasterizer.sortEdgesByStartY(0, field_a);
         int var0 = field_d[1];
-        if (var0 < fn.field_b) {
-          var0 = fn.field_b;
+        if (var0 < SoftwareRasterizer.field_b) {
+          var0 = SoftwareRasterizer.field_b;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_a; var2 += 4) {
@@ -174,7 +174,7 @@ final class PolygonScanlineRasterizer {
           var1 = field_h;
           var2 = field_f;
           var3 = field_c;
-          fn.b(var1, var3, var2 - var1, param0);
+          SoftwareRasterizer.drawHorizontalLine(var1, var3, var2 - var1, param0);
         }
     }
 
@@ -237,7 +237,7 @@ final class PolygonScanlineRasterizer {
           }
           var2++;
           field_c = var2;
-          if (var2 >= fn.field_j) {
+          if (var2 >= SoftwareRasterizer.field_j) {
             return false;
           }
           var3 = field_g;

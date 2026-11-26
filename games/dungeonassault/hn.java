@@ -39,13 +39,13 @@ final class hn extends kl {
           if (param0 != -117) {
             field_t = -63;
           }
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           MouseWheelInput.field_d = 0;
           SecondaryNodeDequeIterator.a(param0 ^ -439027613);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
-            gf.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ie.field_l.e();
           var1.a(0, 0);
@@ -114,33 +114,33 @@ final class hn extends kl {
         for (var6 = 0; this.field_n - 1 > var6; var6++) {
           var7 = var6 * (this.field_a - 64) / (this.field_n - 2) + (32 + this.field_k);
           for (var8 = 0; var8 < 4; var8++) {
-            gf.c(-var8 + var7, var4 - (2 - var8), 8 - var8 * 2, 16711680);
-            gf.c(var7 - (-1 - var8), var8 - 2 + var4, -(2 * var8) + 8, 16744576);
+            SoftwareRasterizer.drawVerticalLine(-var8 + var7, var4 - (2 - var8), 8 - var8 * 2, 16711680);
+            SoftwareRasterizer.drawVerticalLine(var7 - (-1 - var8), var8 - 2 + var4, -(2 * var8) + 8, 16744576);
           }
         }
         var6Lifetime1 = this.field_k + (32 + (this.field_q - 1) * (this.field_a - 64) / (this.field_n - 2));
         for (var7Lifetime1 = 0; var7Lifetime1 < 8; var7Lifetime1++) {
-          gf.b(-var7Lifetime1 + var6Lifetime1, var7Lifetime1 + var4 - 6, 2, 8421504);
-          gf.b(var7Lifetime1 + var6Lifetime1, var7Lifetime1 - 6 + var4, 2, 8421504);
-          gf.b(-var7Lifetime1 + var6Lifetime1, var4 + 9 - var7Lifetime1, 2, 8421504);
-          gf.b(var7Lifetime1 + var6Lifetime1, 9 + var4 - var7Lifetime1, 2, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(-var7Lifetime1 + var6Lifetime1, var7Lifetime1 + var4 - 6, 2, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(var7Lifetime1 + var6Lifetime1, var7Lifetime1 - 6 + var4, 2, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(-var7Lifetime1 + var6Lifetime1, var4 + 9 - var7Lifetime1, 2, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(var7Lifetime1 + var6Lifetime1, 9 + var4 - var7Lifetime1, 2, 8421504);
         }
         var6Lifetime2 = this.field_k + (32 + (-64 + this.field_a) * (this.field_o - 1) / (this.field_n - 2));
         for (var7Lifetime2 = 0; 8 > var7Lifetime2; var7Lifetime2++) {
-          gf.b(var6Lifetime2 - var7Lifetime2, var7Lifetime2 + (-6 + var4), 2, 16744576);
-          gf.b(var6Lifetime2 + var7Lifetime2, var7Lifetime2 + (var4 - 6), 2, 16711680);
-          gf.b(var6Lifetime2 - var7Lifetime2, -var7Lifetime2 + (9 + var4), 2, 16744576);
-          gf.b(var7Lifetime2 + var6Lifetime2, -var7Lifetime2 + var4 + 9, 2, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(var6Lifetime2 - var7Lifetime2, var7Lifetime2 + (-6 + var4), 2, 16744576);
+          SoftwareRasterizer.drawHorizontalLine(var6Lifetime2 + var7Lifetime2, var7Lifetime2 + (var4 - 6), 2, 16711680);
+          SoftwareRasterizer.drawHorizontalLine(var6Lifetime2 - var7Lifetime2, -var7Lifetime2 + (9 + var4), 2, 16744576);
+          SoftwareRasterizer.drawHorizontalLine(var7Lifetime2 + var6Lifetime2, -var7Lifetime2 + var4 + 9, 2, 16711680);
         }
         var7Lifetime3 = this.a((byte) 55, hj.field_S, eh.field_h);
         if (var7Lifetime3 != -1 + this.field_o &&
           var7Lifetime3 != -1) {
           var6Lifetime3 = 32 + (this.field_k + (this.field_a - 64) * (var7Lifetime3 - 1) / (-2 + this.field_n));
           for (var8Lifetime1 = 0; var8Lifetime1 < 8; var8Lifetime1++) {
-            gf.b(-var8Lifetime1 + var6Lifetime3, var4 + (-6 + var8Lifetime1), 2, 16776960);
-            gf.b(var8Lifetime1 + var6Lifetime3, var4 - 6 + var8Lifetime1, 2, 16776960);
-            gf.b(var6Lifetime3 - var8Lifetime1, 9 + var4 - var8Lifetime1, 2, 16776960);
-            gf.b(var8Lifetime1 + var6Lifetime3, -var8Lifetime1 + (var4 + 9), 2, 16776960);
+            SoftwareRasterizer.drawHorizontalLine(-var8Lifetime1 + var6Lifetime3, var4 + (-6 + var8Lifetime1), 2, 16776960);
+            SoftwareRasterizer.drawHorizontalLine(var8Lifetime1 + var6Lifetime3, var4 - 6 + var8Lifetime1, 2, 16776960);
+            SoftwareRasterizer.drawHorizontalLine(var6Lifetime3 - var8Lifetime1, 9 + var4 - var8Lifetime1, 2, 16776960);
+            SoftwareRasterizer.drawHorizontalLine(var8Lifetime1 + var6Lifetime3, -var8Lifetime1 + (var4 + 9), 2, 16776960);
           }
         }
         qe.field_i[0].h(-50 + var2, var4 + 20);

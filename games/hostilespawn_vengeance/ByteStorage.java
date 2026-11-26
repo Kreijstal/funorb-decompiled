@@ -106,7 +106,7 @@ abstract class ByteStorage {
                         break regionExit1;
                       case 2:
                         var10 = 16711680;
-                        si.f(var2, var3, var8_ref_p.field_e * 2, var10, 128 - var8_ref_p.field_e * 4);
+                        SoftwareRasterizer.fillCircleAlpha(var2, var3, var8_ref_p.field_e * 2, var10, 128 - var8_ref_p.field_e * 4);
                         break regionExit1;
                       case 3:
                         PcmResampler.a(var2, var8_ref_p, var3, param0 ^ 11187);

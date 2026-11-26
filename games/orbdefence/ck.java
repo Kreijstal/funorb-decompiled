@@ -41,16 +41,16 @@ final class ck implements td {
           var12 = (ue) (stackIn_4_0);
           if (var12 != null) {
           }
-          ul.h(param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, this.field_o);
+          SoftwareRasterizer.fillRectangle(param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, this.field_o);
           var7 = -(var12.field_I * 2) + param2.field_m;
           var8 = param2.field_s + param1 + var12.field_I;
           if (param3 != -4394) {
             field_j = (rf) null;
           }
           var9 = param2.field_n + (param0 + var12.field_L);
-          ul.b(var8, var9, var7 + var8, var9, this.field_d);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_d);
           for (var10 = -1 + var12.a((byte) -90); var10 >= 0; var10--) {
-            ul.f(var8 + var7 * var12.a(-1, var10) / var12.j(1), var9, this.field_b, this.field_a);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a(-1, var10) / var12.j(1), var9, this.field_b, this.field_a);
           }
           if (null == this.field_m) {
             return;

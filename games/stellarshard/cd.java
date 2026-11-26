@@ -254,7 +254,7 @@ final class cd extends rg {
                 hj.a(this.field_O, param1 ^ -58);
               } else {
                 hj.a(this.field_O, param1 ^ -58);
-                ti.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -304,7 +304,7 @@ final class cd extends rg {
                 hj.a(this.field_O, param1 ^ -58);
               } else {
                 hj.a(this.field_O, param1 ^ -58);
-                ti.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -353,7 +353,7 @@ final class cd extends rg {
             } else {
               if (var12Lifetime2 <= this.field_O.field_y) {
                 hj.a(this.field_O, param1 ^ -58);
-                ti.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
                 hj.a(this.field_O, param1 ^ -58);
@@ -400,7 +400,7 @@ final class cd extends rg {
             } else {
               if (var12Lifetime3 <= this.field_O.field_y) {
                 hj.a(this.field_O, param1 ^ -58);
-                ti.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_O = new Sprite(var11Lifetime3, var12Lifetime3);
                 hj.a(this.field_O, param1 ^ -58);
@@ -431,7 +431,7 @@ final class cd extends rg {
             } else {
               if (var12Lifetime4 <= this.field_O.field_y) {
                 hj.a(this.field_O, param1 ^ -58);
-                ti.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_O = new Sprite(var11Lifetime4, var12Lifetime4);
                 hj.a(this.field_O, param1 ^ -58);
@@ -463,7 +463,7 @@ final class cd extends rg {
           this.field_O.field_v >= var11Lifetime5) {
           if (var12Lifetime5 <= this.field_O.field_y) {
             hj.a(this.field_O, param1 ^ -58);
-            ti.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_O = new Sprite(var11Lifetime5, var12Lifetime5);
             hj.a(this.field_O, param1 ^ -58);

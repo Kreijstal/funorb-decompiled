@@ -218,7 +218,7 @@ final class gaa extends lg {
 
     final void e(int param0) {
         ew.field_r.draw(this.field_g, this.field_f);
-        SoftwareRasterizer.a(this.field_g + 40, this.field_f + 20, this.field_d - 110, this.field_c - 30, 20, 65793, 64);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(this.field_g + 40, this.field_f + 20, this.field_d - 110, this.field_c - 30, 20, 65793, 64);
         this.field_h.field_v.a(false, false, 2048, 2048, param0, -28, 256, 230, 150);
         if (this.field_j) {
           wq.a(1, 14, 300, 16777215, this.field_f + 10, 300, 65793, true, qi.field_a, 0, this.field_g + 54);

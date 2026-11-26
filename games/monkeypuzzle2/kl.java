@@ -14,15 +14,15 @@ final class kl {
         int var20 = 0;
         int var21 = 0;
         int incrementValue$0 = 0;
-        int var6 = param0 + param1 * ge.field_h;
+        int var6 = param0 + param1 * SoftwareRasterizer.field_h;
         int var7 = 255 - param5;
         int var8 = param4 >> 16;
         int var9 = param4 >> 8 & 255;
         int var10 = param4 & 255;
-        int var11 = ge.field_h - param2;
+        int var11 = SoftwareRasterizer.field_h - param2;
         for (var12 = param3 - 1; var12 >= 0; var12--) {
           for (var13 = param2 - 1; var13 >= 0; var13--) {
-            var14 = ge.field_i[var6];
+            var14 = SoftwareRasterizer.field_i[var6];
             var15 = var14 >> 16 & 255;
             var16 = var14 >> 8 & 255;
             var17 = var14 & 255;
@@ -32,7 +32,7 @@ final class kl {
             var21 = var18 * var10 >> 8;
             incrementValue$0 = var6;
             var6++;
-            ge.field_i[incrementValue$0] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
+            SoftwareRasterizer.field_i[incrementValue$0] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
           }
           var6 = var6 + var11;
         }
@@ -45,34 +45,34 @@ final class kl {
         int var9;
         int var11;
         int var12;
-        if (param3 >= ge.field_j) {
+        if (param3 >= SoftwareRasterizer.field_j) {
           return;
         }
-        if (param3 + param5 < ge.field_a) {
+        if (param3 + param5 < SoftwareRasterizer.field_a) {
           return;
         }
-        if (param4 >= ge.field_k) {
+        if (param4 >= SoftwareRasterizer.field_k) {
           return;
         }
-        if (param4 + param6 < ge.field_f) {
+        if (param4 + param6 < SoftwareRasterizer.field_f) {
           return;
         }
-        if (param3 < ge.field_a) {
-          param3 = ge.field_a;
+        if (param3 < SoftwareRasterizer.field_a) {
+          param3 = SoftwareRasterizer.field_a;
         }
-        if (param4 < ge.field_f) {
-          param4 = ge.field_f;
+        if (param4 < SoftwareRasterizer.field_f) {
+          param4 = SoftwareRasterizer.field_f;
         }
-        if (param3 + param5 >= ge.field_j) {
-          param5 = ge.field_j - param3;
+        if (param3 + param5 >= SoftwareRasterizer.field_j) {
+          param5 = SoftwareRasterizer.field_j - param3;
         }
-        if (param4 + param6 >= ge.field_k) {
-          param6 = ge.field_k - param4;
+        if (param4 + param6 >= SoftwareRasterizer.field_k) {
+          param6 = SoftwareRasterizer.field_k - param4;
         }
-        param4 = param4 * ge.field_h;
+        param4 = param4 * SoftwareRasterizer.field_h;
         var8 = 6.2831854820251465f / (float)param0;
         var9 = param3 + param5;
-        for (var10 = param4 + (param6 - 1) * ge.field_h; var10 >= param4; var10 = var10 - ge.field_h) {
+        for (var10 = param4 + (param6 - 1) * SoftwareRasterizer.field_h; var10 >= param4; var10 = var10 - SoftwareRasterizer.field_h) {
           var11 = (int)((float)param1 * ProxySocketConnector.a(true, var8 * (float)(var10 + param2)));
           if (var11 > 0) {
             for (var12 = var9 - 1; var12 >= param3; var12--) {
@@ -80,7 +80,7 @@ final class kl {
               if (var7 < param3) {
                 var7 = param3;
               }
-              ge.field_i[var12 + var10] = ge.field_i[var10 + var7];
+              SoftwareRasterizer.field_i[var12 + var10] = SoftwareRasterizer.field_i[var10 + var7];
             }
           } else {
             if (var11 > 0) {
@@ -89,7 +89,7 @@ final class kl {
                 if (var7 >= var9) {
                   var7 = var9 - 1;
                 }
-                ge.field_i[var12 + var10] = ge.field_i[var10 + var7];
+                SoftwareRasterizer.field_i[var12 + var10] = SoftwareRasterizer.field_i[var10 + var7];
               }
             }
           }

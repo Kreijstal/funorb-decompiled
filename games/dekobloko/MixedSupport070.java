@@ -116,17 +116,17 @@ final class MixedSupport070 implements CallbackContract004 {
             booleanArgument1 = booleanArgument1 & uiComponentPart009Local11.booleanState0035;
           }
           integerLocal7 = 5592405;
-          SoftwareRaster.performAction0640(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0394);
+          SoftwareRaster.fillRectangle(integerArgument2 + uiComponentArgument5.integerState0110, integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, this.integerState0394);
           if (booleanArgument1) {
             integerLocal7 = 16777215;
           }
           integerLocal8 = integerArgument2 + uiComponentArgument5.integerState0110 + this.integerState0401;
           integerLocal9 = uiComponentArgument5.integerState0104 + integerArgument3 + this.integerState0393;
-          SoftwareRaster.performAction0659(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, 5592405);
-          SoftwareRaster.performAction0640(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, integerLocal7);
+          SoftwareRaster.drawRectangleShadow(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, 5592405);
+          SoftwareRaster.fillRectangle(integerLocal8, integerLocal9, this.integerState0404, this.integerState0392, integerLocal7);
           if (uiComponentPart009Local11.booleanState0034) {
-            SoftwareRaster.performAction0650(integerLocal8, integerLocal9, this.integerState0404 + integerLocal8, integerLocal9 + this.integerState0392, 1);
-            SoftwareRaster.performAction0650(integerLocal8 + this.integerState0404, integerLocal9, integerLocal8, this.integerState0392 + integerLocal9, 1);
+            SoftwareRaster.drawLine(integerLocal8, integerLocal9, this.integerState0404 + integerLocal8, integerLocal9 + this.integerState0392, 1);
+            SoftwareRaster.drawLine(integerLocal8 + this.integerState0404, integerLocal9, integerLocal8, this.integerState0392 + integerLocal9, 1);
           }
           if (this.bitmapFontState0016 == null) {
             return;

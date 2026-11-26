@@ -75,7 +75,7 @@ final class wj extends ph {
           var9 <= ng.field_s.field_z &&
           var10 <= ng.field_s.field_A) {
           sb.a(ng.field_s, -127);
-          si.d();
+          SoftwareRasterizer.clearRaster();
         } else {
           ng.field_s = new bd(var9, var10);
           sb.a(ng.field_s, -121);

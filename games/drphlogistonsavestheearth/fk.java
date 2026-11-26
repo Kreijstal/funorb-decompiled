@@ -81,28 +81,28 @@ final class fk extends IntrusiveNode {
         int var13 = 0;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (param5 < wj.field_g) {
-            param1 = param1 - (wj.field_g - param5);
-            param5 = wj.field_g;
+          if (param5 < SoftwareRasterizer.field_g) {
+            param1 = param1 - (SoftwareRasterizer.field_g - param5);
+            param5 = SoftwareRasterizer.field_g;
           }
-          if (param2 < wj.field_e) {
-            param0 = param0 - (wj.field_e - param2);
-            param2 = wj.field_e;
+          if (param2 < SoftwareRasterizer.field_e) {
+            param0 = param0 - (SoftwareRasterizer.field_e - param2);
+            param2 = SoftwareRasterizer.field_e;
           }
-          if (wj.field_b < param5 + param1) {
-            param1 = -param5 + wj.field_b;
+          if (SoftwareRasterizer.field_b < param5 + param1) {
+            param1 = -param5 + SoftwareRasterizer.field_b;
           }
-          if (param0 + param2 > wj.field_j) {
-            param0 = -param2 + wj.field_j;
+          if (param0 + param2 > SoftwareRasterizer.field_j) {
+            param0 = -param2 + SoftwareRasterizer.field_j;
           }
           if (param1 > 0 &&
             param0 > 0) {
-            var6_int = param5 + wj.field_k * param2;
+            var6_int = param5 + SoftwareRasterizer.field_k * param2;
             var8 = 9 % ((22 - param4) / 43);
-            var7 = wj.field_k - param1;
+            var7 = SoftwareRasterizer.field_k - param1;
             for (param2 = -param0; param2 < 0; param2++) {
               for (param5 = -param1; param5 < 0; param5++) {
-                var9 = wj.field_l[var6_int];
+                var9 = SoftwareRasterizer.field_l[var6_int];
                 if (param3 < (255 & var9 >> 8) &&
                   (255 & var9 >> 16) <= (255 & var9 >> 8)) {
                   var10 = (510 & var9 >> 15) - 60;
@@ -112,7 +112,7 @@ final class fk extends IntrusiveNode {
                   var11 = 65280 & var9;
                   var11 = 65280 & (var11 >> 1) - (var11 >> 5);
                   var12 = (255 & var9) >> 3;
-                  wj.field_l[var6_int] = GameAppletShell.a(GameAppletShell.a(var10 << 16, var11), var12);
+                  SoftwareRasterizer.field_l[var6_int] = GameAppletShell.a(GameAppletShell.a(var10 << 16, var11), var12);
                 }
                 var6_int++;
               }

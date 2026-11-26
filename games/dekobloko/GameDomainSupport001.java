@@ -18,13 +18,13 @@ final class GameDomainSupport001 {
           rgbSpriteLocal1 = new RgbSprite(540, 140);
           ValidationStatus.performAction1570(booleanArgument1, rgbSpriteLocal1);
           MixedSupport104.performAction1357();
-          SoftwareRaster.performAction0648();
+          SoftwareRaster.clearRaster();
           MixedSupport046.integerState0250 = 0;
           GameplayControls.performAction1748(0);
           rgbSpriteLocal2 = rgbSpriteLocal1.computeRgbSprite0277();
           for (integerLocal3 = 0; 15 > integerLocal3; integerLocal3++) {
             rgbSpriteLocal2.performAction0286(-2, -2, 16777215);
-            SoftwareRaster.performAction0651(4, 4, 0, 0, 540, 140);
+            SoftwareRaster.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           UiComponentPart025.rgbSpriteState0045.performAction0256();
           rgbSpriteLocal1.performAction0285(0, 0);

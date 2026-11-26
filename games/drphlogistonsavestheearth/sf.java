@@ -106,14 +106,14 @@ final class sf {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        wj.d(param6, param4, param2, param5, param1, param3);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param4, param2, param5, param1, param3);
         if (param0) {
           this.field_b = (cg) null;
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
-        wj.g(param3, param5, param2, param1, param4);
+        SoftwareRasterizer.drawLine(param3, param5, param2, param1, param4);
         if (param0 != 95) {
           this.field_b = (cg) null;
         }
@@ -186,7 +186,7 @@ final class sf {
           if (-1 == var7) {
             var7 = this.field_g.field_S + this.field_g.field_x;
           }
-          var8 = wj.field_k >> 2;
+          var8 = SoftwareRasterizer.field_k >> 2;
           var9 = this.field_g.b(param2);
           var11 = 118 / ((param3 - 87) / 38);
           var10 = this.field_g.field_x + this.field_g.field_S;
@@ -213,15 +213,15 @@ final class sf {
             }
           }
           var13 = param1;
-          if (wj.field_k < var13 + var9 + var5_int) {
-            var13 = -var5_int + (wj.field_k - var9);
+          if (SoftwareRasterizer.field_k < var13 + var9 + var5_int) {
+            var13 = -var5_int + (SoftwareRasterizer.field_k - var9);
           }
           var14Lifetime1 = -this.field_g.field_L + param0 + 32;
-          if (var6 + var10 + var14Lifetime1 > wj.field_c) {
+          if (var6 + var10 + var14Lifetime1 > SoftwareRasterizer.field_c) {
             var14Lifetime1 = -var6 + param0 - var10;
           }
-          wj.d(var13, var14Lifetime1, var5_int + var9, var10 + var6, this.field_r);
-          wj.f(1 + var13, 1 + var14Lifetime1, -2 + var9 + var5_int, var6 + (var10 - 2), this.field_k);
+          SoftwareRasterizer.drawRectangleOutline(var13, var14Lifetime1, var5_int + var9, var10 + var6, this.field_r);
+          SoftwareRasterizer.fillRectangle(1 + var13, 1 + var14Lifetime1, -2 + var9 + var5_int, var6 + (var10 - 2), this.field_k);
           this.field_g.a(param2, this.field_s + var13, var14Lifetime1 + this.field_c, var9, var10, this.field_o, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -426,15 +426,15 @@ final class sf {
           var5_int = this.field_g.b(param3);
           var6 = this.field_g.field_L + this.field_g.field_S;
           var7 = param0;
-          if (wj.field_k < 6 + var7 + var5_int) {
-            var7 = -var5_int + (wj.field_k - 6);
+          if (SoftwareRasterizer.field_k < 6 + var7 + var5_int) {
+            var7 = -var5_int + (SoftwareRasterizer.field_k - 6);
           }
           var8 = 32 - this.field_g.field_L + param2;
-          if (6 + var8 + var6 > wj.field_c) {
-            var8 = -6 + (-var6 + wj.field_c);
+          if (6 + var8 + var6 > SoftwareRasterizer.field_c) {
+            var8 = -6 + (-var6 + SoftwareRasterizer.field_c);
           }
-          wj.d(var7, var8, var5_int + 6, var6 + 6, this.field_o);
-          wj.f(var7 + 1, var8 + 1, 4 + var5_int, 4 + var6, this.field_k);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int + 6, var6 + 6, this.field_o);
+          SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, 4 + var5_int, 4 + var6, this.field_k);
           this.field_g.c(param3, 3 + var7, 3 + var8 + this.field_g.field_L, this.field_o, -1);
           if (param1 != -23) {
             this.field_t = -69;

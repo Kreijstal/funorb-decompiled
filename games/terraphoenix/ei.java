@@ -226,7 +226,7 @@ abstract class ei extends kh {
         int var15Lifetime1;
         int var13Lifetime2;
         var16 = Terraphoenix.field_V;
-        SoftwareRasterizer.b(6 + param0, param1 + 35, this.width - 12, this.height - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param0, param1 + 35, this.width - 12, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;

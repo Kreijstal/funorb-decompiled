@@ -71,7 +71,7 @@ final class BufferedSocket implements Runnable {
           var9 = var17.field_y;
           kg.d(false);
           var17.e();
-          ti.c(0, 0, ti.field_i, ti.field_b);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b);
           var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.e();

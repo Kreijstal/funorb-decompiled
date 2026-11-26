@@ -160,7 +160,7 @@ final class j extends ne {
           var9Lifetime1 = var17.field_t;
           we.a(-111);
           var17.f();
-          gb.e(0, 0, gb.field_d, gb.field_k);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
           var15 = new dd(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.f();

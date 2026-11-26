@@ -193,7 +193,7 @@ final class hm extends TextureOperator {
                   if (param1 >= oo.field_b) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + bi.field_e;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_e;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -227,7 +227,7 @@ final class hm extends TextureOperator {
                   if (param1 >= oo.field_b) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + bi.field_e;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_e;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -283,7 +283,7 @@ final class hm extends TextureOperator {
               if (param1 >= oo.field_b) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + bi.field_e;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_e;
               var9_int = var9_int + var11;
               var10 = var10 + var12;
             }

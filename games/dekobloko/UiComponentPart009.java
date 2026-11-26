@@ -38,7 +38,7 @@ final class UiComponentPart009 extends InteractiveComponent {
             if (rgbSpriteArgument3 != null) {
               rgbSpriteArgument3.performAction0291(0, integerArgument4, integerArgument5);
             } else {
-              SoftwareRaster.performAction0640(0, 0, 640, 480, 0);
+              SoftwareRaster.fillRectangle(0, 0, 640, 480, 0);
             }
           } else {
             MixedSupport078.performAction0960(integerArgument5, integerArgument4, 0, true);

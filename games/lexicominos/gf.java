@@ -277,76 +277,76 @@ final class gf {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.b(IterableNodeHashTable.field_a);
+            SoftwareRasterizer.saveClip(IterableNodeHashTable.field_a);
             if (var18 > var19) {
               var19 = param4 + param1 * var8 / (var9 + var8);
               var18 = param4 + param1 * var8 / (var9 + var8);
             }
             if (null != param2[0]) {
-              SoftwareRasterizer.f(param0, param4, var16, var18);
+              SoftwareRasterizer.intersectClip(param0, param4, var16, var18);
               param2[0].d(param0, param4);
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (param5 <= 77) {
               return;
             }
             if (param2[2] != null) {
-              SoftwareRasterizer.f(var17, param4, var10, var18);
+              SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
               param2[2].d(var13, param4);
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (param2[6] != null) {
-              SoftwareRasterizer.f(param0, var19, var16, var11);
+              SoftwareRasterizer.intersectClip(param0, var19, var16, var11);
               param2[6].d(param0, var15);
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (null != param2[8]) {
-              SoftwareRasterizer.f(var17, var19, var10, var11);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param2[8].d(var13, var15);
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (null != param2[1] &&
               0 != param2[1].field_r) {
-              SoftwareRasterizer.f(var16, param4, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_r) {
                 param2[1].d(var20, param4);
               }
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (null != param2[7] &&
               0 != param2[7].field_r) {
-              SoftwareRasterizer.f(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param2[7].field_r) {
                 param2[7].d(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (null != param2[3] &&
               param2[3].field_x != 0) {
-              SoftwareRasterizer.f(param0, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param0, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_x) {
                 param2[3].d(param0, var20Lifetime2);
               }
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (param2[5] != null &&
               param2[5].field_x != 0) {
-              SoftwareRasterizer.f(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_x) {
                 param2[5].d(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (param2[4] != null &&
               0 != param2[4].field_r &&
               param2[4].field_x != 0) {
-              SoftwareRasterizer.f(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param2[4].field_x) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param2[4].field_r) {
                   param2[4].d(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.a(IterableNodeHashTable.field_a);
+              SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
               return;
             }
             return;

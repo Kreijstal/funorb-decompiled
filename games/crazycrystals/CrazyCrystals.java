@@ -553,7 +553,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ai.clearStaticReferences(8076);
           MouseInputHandler.a(true);
           MouseWheelInput.clearStaticReferences(-122);
-          kh.d();
+          SoftwareRasterizer.clearStaticReferences();
           db.b((byte) 127);
           dg.clearStaticReferences((byte) 64);
           hf.b(4);
@@ -965,7 +965,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 var3 = qn.field_n;
                 if (640 > var3) {
                   var4_ref_int__ = ge.field_d.field_w;
-                  var5_ref_int__ = kh.field_i;
+                  var5_ref_int__ = SoftwareRasterizer.field_i;
                   var6 = (var3 << 7) / 640 + 128;
                   var7 = 0;
                   CrazyCrystals.a(0, var6, 0, var3, var5_ref_int__, var4_ref_int__, 0, var7);
@@ -1012,7 +1012,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               var8 = -20 - var4Lifetime2 / 2 + 240;
               var9 = var4Lifetime2 / 2 + 240 + 20;
               wi.a(var5, jn.field_o, var8, var9 - var8, (byte) -71, -var5 + var7Lifetime1);
-              kh.d(var5 + 8, var8 + 8, -16 + (var7Lifetime1 - var5), -16 - var8 + var9, 0, 192);
+              SoftwareRasterizer.fillRectangleAlpha(var5 + 8, var8 + 8, -16 + (var7Lifetime1 - var5), -16 - var8 + var9, 0, 192);
               if (fj.a(136) &&
                 20 == cb.field_w) {
                 wp.b((byte) -110);

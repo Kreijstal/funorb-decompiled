@@ -120,7 +120,7 @@ final class og {
           if (var1 == null) {
             var1 = new ia();
           }
-          var1.a(sb.field_g, sb.field_b, sb.field_f, sb.field_d, sb.field_c, sb.field_e, 6, sb.field_h);
+          var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_b, SoftwareRasterizer.field_f, SoftwareRasterizer.field_d, SoftwareRasterizer.field_c, SoftwareRasterizer.field_e, 6, SoftwareRasterizer.field_h);
           AccountServiceResult.field_c.addLast(var1, -109);
           return;
         }

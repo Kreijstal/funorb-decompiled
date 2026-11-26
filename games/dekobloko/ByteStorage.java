@@ -44,8 +44,8 @@ abstract class ByteStorage {
           if (mixedSupport144Local1 == null) {
             throw new IllegalStateException();
           }
-          SoftwareRaster.performAction0645(mixedSupport144Local1.integerArrayState0258, mixedSupport144Local1.integerState0926, mixedSupport144Local1.integerState0924);
-          SoftwareRaster.performAction0649(mixedSupport144Local1.integerState0922, mixedSupport144Local1.integerState0921, mixedSupport144Local1.integerState0925, mixedSupport144Local1.integerState0923);
+          SoftwareRaster.setRasterBuffer(mixedSupport144Local1.integerArrayState0258, mixedSupport144Local1.integerState0926, mixedSupport144Local1.integerState0924);
+          SoftwareRaster.setClip(mixedSupport144Local1.integerState0922, mixedSupport144Local1.integerState0921, mixedSupport144Local1.integerState0925, mixedSupport144Local1.integerState0923);
           mixedSupport144Local1.integerArrayState0258 = null;
           MixedSupport118.nodeDequeState0032.addFirst(mixedSupport144Local1, byteArgument1 ^ -2782);
           return;
@@ -54,8 +54,8 @@ abstract class ByteStorage {
         if (mixedSupport144Local3 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRaster.performAction0645(mixedSupport144Local3.integerArrayState0258, mixedSupport144Local3.integerState0926, mixedSupport144Local3.integerState0924);
-        SoftwareRaster.performAction0649(mixedSupport144Local3.integerState0922, mixedSupport144Local3.integerState0921, mixedSupport144Local3.integerState0925, mixedSupport144Local3.integerState0923);
+        SoftwareRaster.setRasterBuffer(mixedSupport144Local3.integerArrayState0258, mixedSupport144Local3.integerState0926, mixedSupport144Local3.integerState0924);
+        SoftwareRaster.setClip(mixedSupport144Local3.integerState0922, mixedSupport144Local3.integerState0921, mixedSupport144Local3.integerState0925, mixedSupport144Local3.integerState0923);
         mixedSupport144Local3.integerArrayState0258 = null;
         MixedSupport118.nodeDequeState0032.addFirst(mixedSupport144Local3, byteArgument1 ^ -2782);
     }

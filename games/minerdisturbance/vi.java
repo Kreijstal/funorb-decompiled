@@ -25,7 +25,7 @@ final class vi {
         if (param1 != 0) {
           vi.clearStaticReferences(69);
         }
-        SoftwareRasterizer.b(param5, param6, param4, param2, param3, param0);
+        SoftwareRasterizer.fillRectangleAlpha(param5, param6, param4, param2, param3, param0);
     }
 
     final void a(int param0, we param1) {
@@ -179,8 +179,8 @@ final class vi {
           if (var6 + var8 + 6 > SoftwareRasterizer.field_c) {
             var8 = -var6 + (SoftwareRasterizer.field_c - 6);
           }
-          SoftwareRasterizer.a(var7, var8, 6 + var5_int, var6 + 6, this.field_f);
-          SoftwareRasterizer.e(1 + var7, var8 + 1, param0 + var5_int, var6 + 4, this.field_k);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_f);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, param0 + var5_int, var6 + 4, this.field_k);
           this.field_p.a(param1, var7 + 3, this.field_p.field_N + var8 + 3, this.field_f, -1);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -253,8 +253,8 @@ final class vi {
           if (var6 + var13Lifetime1 + var10 > SoftwareRasterizer.field_c) {
             var13Lifetime1 = -var10 + param1 - var6;
           }
-          SoftwareRasterizer.a(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_g);
-          SoftwareRasterizer.e(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + (var6 + var10), this.field_k);
+          SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_g);
+          SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + (var6 + var10), this.field_k);
           this.field_p.a(param3, var12 + this.field_r, var13Lifetime1 + this.field_i, var9, var10, this.field_f, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

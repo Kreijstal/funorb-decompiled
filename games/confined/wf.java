@@ -24,7 +24,7 @@ final class wf {
             return;
           }
           if (!hl.a((byte) 27)) {
-            fn.d();
+            SoftwareRasterizer.clearRaster();
             jf.a(256, 320, 240);
             ll.a(0, 0, param1, -96);
             return;

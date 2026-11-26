@@ -47,10 +47,10 @@ final class rp {
             return;
           }
           for (var7_int = 0; var7_int < param5.length / param0 + 1; var7_int++) {
-            gf.b(-1 + (-var7_int + param3), param6 - (1 + var7_int), param1 + 2 * var7_int + 2, 59416);
-            gf.c(param3 + (-var7_int - 1), param6 - var7_int, param4 + var7_int * 2, 15204376);
-            gf.b(-1 + (param3 - var7_int), param4 + (param6 + var7_int), 2 + (param1 + var7_int * 2), 6168);
-            gf.c(var7_int + param3 + param1, -var7_int + param6, 2 * var7_int + param4, 1572888);
+            SoftwareRasterizer.drawHorizontalLine(-1 + (-var7_int + param3), param6 - (1 + var7_int), param1 + 2 * var7_int + 2, 59416);
+            SoftwareRasterizer.drawVerticalLine(param3 + (-var7_int - 1), param6 - var7_int, param4 + var7_int * 2, 15204376);
+            SoftwareRasterizer.drawHorizontalLine(-1 + (param3 - var7_int), param4 + (param6 + var7_int), 2 + (param1 + var7_int * 2), 6168);
+            SoftwareRasterizer.drawVerticalLine(var7_int + param3 + param1, -var7_int + param6, 2 * var7_int + param4, 1572888);
           }
           jh.b();
           var7_intLifetime1 = 0;

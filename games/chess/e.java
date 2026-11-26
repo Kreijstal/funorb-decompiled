@@ -112,8 +112,8 @@ final class e extends ma implements mj {
         int var1Lifetime1;
         int var2Lifetime1;
         int var3Lifetime1;
-        vi.field_d = wb.field_h;
-        fn.field_c = wb.field_c;
+        vi.field_d = SoftwareRasterizer.field_h;
+        fn.field_c = SoftwareRasterizer.field_c;
         tf.a(90);
         wf.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb - 40), true);
         fe.field_h.a(0, dc.field_q.field_M, -2147483648, fe.field_g, 0);

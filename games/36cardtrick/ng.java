@@ -111,7 +111,7 @@ final class ng extends lk {
             var6 = var6 + param0.field_p;
           }
           gg.a(14756);
-          if (this.field_D.field_p + param3 >= vj.field_f) {
+          if (this.field_D.field_p + param3 >= SoftwareRasterizer.field_f) {
             dl.a(80, this.field_F);
             param0.d(-this.field_B, 0);
             param0.d(this.field_G * 2 - this.field_B, 0);
@@ -119,7 +119,7 @@ final class ng extends lk {
             gg.a(14756);
             this.field_F.d(param3, param1);
           }
-          if (vj.field_a >= -this.field_D.field_p + var5_int) {
+          if (SoftwareRasterizer.field_a >= -this.field_D.field_p + var5_int) {
             dl.a(-103, this.field_F);
             for (var7 = this.field_h - this.field_D.field_p + this.field_B; var7 > 2 * this.field_G; var7 = var7 - 2 * this.field_G) {
             }
@@ -176,7 +176,7 @@ final class ng extends lk {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            vj.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
         gg.a(14756);
@@ -208,13 +208,13 @@ final class ng extends lk {
           var10 = -var5 + var6;
           var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
           var12 = var11 < 256 ? (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
-          vj.d(var7, var6, this.field_G, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_G, var12);
           var8Lifetime1 = 16711935 & param1;
           var9Lifetime1 = param1 & 65280;
-          vj.d(var7 - 2 * this.field_G, var6, this.field_G, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_G, var6, this.field_G, var12);
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (var11 * var9Lifetime1 & 16711680 | -16711936 & var11 * var8Lifetime1) >>> 8;
-          vj.d(this.field_G + var7, var6, this.field_G, var12Lifetime1);
-          vj.d(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_G + var7, var6, this.field_G, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
         }
         gg.a(param2 ^ 14844);
         return var14;

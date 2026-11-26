@@ -141,7 +141,7 @@ final class ci extends qa {
                 MouseInput.a(this.field_Z, (byte) 85);
               } else {
                 MouseInput.a(this.field_Z, (byte) 83);
-                wj.c();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -188,7 +188,7 @@ final class ci extends qa {
             } else {
               if (this.field_Z.field_w >= var12Lifetime1) {
                 MouseInput.a(this.field_Z, (byte) 83);
-                wj.c();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
                 MouseInput.a(this.field_Z, (byte) 85);
@@ -234,7 +234,7 @@ final class ci extends qa {
             this.field_Z.field_y >= var11Lifetime2) {
             if (this.field_Z.field_w >= var12Lifetime2) {
               MouseInput.a(this.field_Z, (byte) 83);
-              wj.c();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_Z = new nh(var11Lifetime2, var12Lifetime2);
               MouseInput.a(this.field_Z, (byte) 85);
@@ -287,7 +287,7 @@ final class ci extends qa {
               MouseInput.a(this.field_Z, (byte) 85);
             } else {
               MouseInput.a(this.field_Z, (byte) 83);
-              wj.c();
+              SoftwareRasterizer.clearRaster();
             }
           }
         }

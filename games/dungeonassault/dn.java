@@ -250,7 +250,7 @@ final class dn extends ii implements jo, vg {
           lp.field_C.a(this.field_S, 20 + this.field_q + param1, param3 + this.field_v + 15, -40 + this.field_x, this.field_s, 16777215, -1, 1, 0, lp.field_C.field_H);
         }
         if (null != this.field_V) {
-          gf.b(10 + param1, param3 + 134, this.field_x - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param1, param3 + 134, this.field_x - 20, 4210752);
         }
         super.a(param0, param1, param2 ^ param2, param3);
     }

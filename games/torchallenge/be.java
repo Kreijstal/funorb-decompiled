@@ -67,7 +67,7 @@ final class be {
           var14 = var13 / var12;
           var15 = 1;
           ie.field_f[param2][1].drawTransparentWithOpacity(param4, param3, 160);
-          SoftwareRasterizer.a(sh.field_w);
+          SoftwareRasterizer.saveClip(sh.field_w);
           var18 = ie.field_f[param2][1].fullWidth;
           if (param5 != 25) {
             field_e = (TorChallenge) null;
@@ -80,7 +80,7 @@ final class be {
               var18 = (param1 - ResourceArchive.field_b / 25 - 1) * var18 / 4 + var17;
               SoftwareRasterizer.setClip(param4, param3, param4 + var18, param3 + var19);
               IterableNodeHashTable.field_h.drawTransparentWithOpacity(param4, param3, var8_int);
-              SoftwareRasterizer.b(sh.field_w);
+              SoftwareRasterizer.restoreClip(sh.field_w);
             } else {
               if (0 < fh.field_d) {
                 var17 = var18 / 4;
@@ -88,12 +88,12 @@ final class be {
                 var18 = var17 + param1 * var18 / 4;
                 SoftwareRasterizer.setClip(param4, param3, var18 + param4, var19 + param3);
                 IterableNodeHashTable.field_h.drawTransparentWithOpacity(param4, param3, var8_int);
-                SoftwareRasterizer.b(sh.field_w);
+                SoftwareRasterizer.restoreClip(sh.field_w);
               } else {
                 var18 = var18 * param1 / 4;
                 SoftwareRasterizer.setClip(param4, param3, param4 + var18, param3 + var19);
                 IterableNodeHashTable.field_h.drawTransparentWithOpacity(param4, param3, var8_int);
-                SoftwareRasterizer.b(sh.field_w);
+                SoftwareRasterizer.restoreClip(sh.field_w);
               }
             }
           } else {
@@ -119,11 +119,11 @@ final class be {
                 }
               }
             }
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clearRaster();
             SoftwareRasterizer.setClip(0, 0, var18, var19);
             IterableNodeHashTable.field_h.drawTransparent(0, 0);
-            SoftwareRasterizer.d(2, 2, 0, 0, var18, var19);
-            SoftwareRasterizer.b(sh.field_w);
+            SoftwareRasterizer.blurRectangle(2, 2, 0, 0, var18, var19);
+            SoftwareRasterizer.restoreClip(sh.field_w);
             SectorCacheStore.field_f.bindAsTarget(-123);
             if (param1 == 4) {
               var19 += 2;
@@ -137,7 +137,7 @@ final class be {
             }
             SoftwareRasterizer.setClip(param4, param3, var18 + param4, var19 + param3);
             ac.field_a.drawTransparentWithOpacity(param4, param3, var8_int);
-            SoftwareRasterizer.b(sh.field_w);
+            SoftwareRasterizer.restoreClip(sh.field_w);
           }
           stackIn_28_0 = param6;
           return stackIn_28_0;

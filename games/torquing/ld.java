@@ -44,7 +44,7 @@ final class ld implements WidgetRenderer {
           var6 = (va) (stackIn_7_0);
           if (var6 == null) {
           }
-          SoftwareRasterizer.d(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_h);
+          SoftwareRasterizer.fillRectangle(param4.x + param2, param4.y + param1, param4.width, param4.height, this.field_h);
           var7 = param2 + param4.x + var6.field_G;
           var8 = var6.field_F + (param1 + param4.y);
           SoftwareRasterizer.fillCircle(var7, var8, var6.field_C, this.field_a);
@@ -241,7 +241,7 @@ final class ld implements WidgetRenderer {
           if (param4 > -90) {
             ld.b((byte) -123);
           }
-          SoftwareRasterizer.f(param1, param3, param0, param2);
+          SoftwareRasterizer.intersectClip(param1, param3, param0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

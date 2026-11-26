@@ -15,22 +15,22 @@ final class kd {
         var9 = DungeonAssault.field_K;
         if (param3 >= param7) {
           if (param3 < param6) {
-            ue.a(param7, gf.field_b, param5, param6, param1, param3, param0, param2, 16);
+            ue.a(param7, SoftwareRasterizer.field_b, param5, param6, param1, param3, param0, param2, 16);
           } else {
             if (param6 > param7) {
-              ue.a(param7, gf.field_b, param5, param3, param2, param6, param0, param1, 16);
+              ue.a(param7, SoftwareRasterizer.field_b, param5, param3, param2, param6, param0, param1, 16);
             } else {
-              ue.a(param6, gf.field_b, param5, param3, param0, param7, param2, param1, 16);
+              ue.a(param6, SoftwareRasterizer.field_b, param5, param3, param0, param7, param2, param1, 16);
             }
           }
         } else {
           if (param7 < param6) {
-            ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2, 16);
+            ue.a(param3, SoftwareRasterizer.field_b, param5, param6, param0, param7, param1, param2, 16);
           } else {
             if (param3 >= param6) {
-              ue.a(param6, gf.field_b, param5, param7, param1, param3, param2, param0, 16);
+              ue.a(param6, SoftwareRasterizer.field_b, param5, param7, param1, param3, param2, param0, 16);
             } else {
-              ue.a(param3, gf.field_b, param5, param7, param2, param6, param1, param0, 16);
+              ue.a(param3, SoftwareRasterizer.field_b, param5, param7, param2, param6, param1, param0, 16);
             }
           }
         }

@@ -43,9 +43,9 @@ final class dn {
     final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5) {
         try {
           if (10 > param0) {
-            si.a(param3 << 4, param5 << 4, 5 + param0 * 8 << 4, (-1 + param2.length) * (-param0 + 10) / 10, param2);
+            SoftwareRasterizer.addRadialGlow(param3 << 4, param5 << 4, 5 + param0 * 8 << 4, (-1 + param2.length) * (-param0 + 10) / 10, param2);
           }
-          si.a(param3 << 4, param5 << 4, -param0 + 20 << 4, param1.length + param4, param1);
+          SoftwareRasterizer.addRadialGlow(param3 << 4, param5 << 4, -param0 + 20 << 4, param1.length + param4, param1);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "dn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -120,7 +120,7 @@ final class dn {
                 var9 = var11.field_D[var8 + var6];
                 if (0 != var9) {
                   var9 = ((var9 & 16754296) >> 16) / 4 * 262401;
-                  si.a(param0 + var8, param3 + var7, var9);
+                  SoftwareRasterizer.addPixel(param0 + var8, param3 + var7, var9);
                 }
               }
               var6 = var6 + var11.field_u;

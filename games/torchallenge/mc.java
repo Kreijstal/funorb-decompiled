@@ -125,14 +125,14 @@ final class mc implements j {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.f(param0.field_m + param2, param0.field_i + param1, param0.field_p, param0.field_l, this.field_f);
+          SoftwareRasterizer.fillRectangle(param0.field_m + param2, param0.field_i + param1, param0.field_p, param0.field_l, this.field_f);
           var8 = this.field_h + param0.field_m + param2;
           if (param3 != 97) {
             field_o = (String) null;
           }
           var9 = param1 + (param0.field_i + this.field_a);
-          SoftwareRasterizer.a(var8, var9, this.field_n, this.field_j, 5592405);
-          SoftwareRasterizer.f(var8, var9, this.field_n, this.field_j, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_n, this.field_j, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_n, this.field_j, var7);
           if (var11.field_D) {
             SoftwareRasterizer.drawLine(var8, var9, this.field_n + var8, var9 + this.field_j, 1);
             SoftwareRasterizer.drawLine(var8 + this.field_n, var9, var8, this.field_j + var9, 1);

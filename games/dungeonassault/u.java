@@ -95,7 +95,7 @@ final class u extends gd {
           var12 = new cn(140, var7);
           var13 = new cn(140, var7);
           jh.a(var11);
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var14 = 0;
           for (var15 = 0; var6.length > var15; var15++) {
             var14 = var14 + la.field_b.field_H;
@@ -127,12 +127,12 @@ final class u extends gd {
           var14 += 4;
           var12.e();
           var15Lifetime1 = -45 + var7;
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var11.e(0, 0, 16744448);
           gk.a(52, this.field_Q, 95, 16744448, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           var13.e();
-          gf.a();
+          SoftwareRasterizer.clearRaster();
           var11.e(0, 0, 12690143);
           gk.a(52, this.field_Q, 118, 10449103, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
@@ -217,19 +217,19 @@ final class u extends gd {
         int var5 = -3 + (param2 + this.field_i);
         int var6 = this.field_q + var4 + 5;
         int var7 = this.field_x + var5 + 5;
-        if (var4 > gf.field_h) {
+        if (var4 > SoftwareRasterizer.field_h) {
           return;
         }
-        if (gf.field_e < var5) {
+        if (SoftwareRasterizer.field_e < var5) {
           return;
         }
-        if (gf.field_j > var6) {
+        if (SoftwareRasterizer.field_j > var6) {
           return;
         }
-        if (gf.field_f > var7) {
+        if (SoftwareRasterizer.field_f > var7) {
           return;
         }
-        gf.b(var4, var5, 5 + this.field_q, this.field_x + 5, 0, 128);
+        SoftwareRasterizer.fillRectangleAlpha(var4, var5, 5 + this.field_q, this.field_x + 5, 0, 128);
         super.b(param0, param1, param2);
         cn var13 = null == this.field_Q.field_e ? null : this.field_Q.field_e.a(40, 0, 40, 0);
         cn var8 = var13;
@@ -239,7 +239,7 @@ final class u extends gd {
           var13.c(var10, var9);
           return;
         }
-        gf.b(var10, var9, 32, 32, 0);
+        SoftwareRasterizer.fillRectangle(var10, var9, 32, 32, 0);
     }
 
     final static String a(se param0, byte param1, String param2, int param3, int param4, int param5) {

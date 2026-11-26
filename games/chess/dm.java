@@ -126,15 +126,15 @@ abstract class dm {
           vj.field_g = AccountServiceResult.a(1513239, 65793, 2245737, 65793, 0, 5138823, (lh) null, 4020342, 65793, (byte) 116, param2, 8947848, 1127256);
           wk.field_c = AccountServiceResult.a(0, 0, 0, 0, 16764006, 0, param0, 0, 0, (byte) -95, 0, 0, 0);
           va.field_d = AccountServiceResult.a(0, 0, 0, 0, 16777215, 0, param0, 0, 0, (byte) -28, 0, 0, 0);
-          var5 = wb.field_h;
-          var6 = wb.field_c;
-          var16 = wb.field_d;
+          var5 = SoftwareRasterizer.field_h;
+          var6 = SoftwareRasterizer.field_c;
+          var16 = SoftwareRasterizer.field_d;
           mc.field_b = new km(10, 14);
           mc.field_b.e();
           for (var8 = 2; var8 < 7; var8++) {
-            wb.f(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
-          wb.a(var16, var5, var6);
+          SoftwareRasterizer.setRasterBuffer(var16, var5, var6);
           ng.field_c = vc.a((byte) 88, vj.field_g, va.field_d, wk.field_c, var4);
           rh.field_c.field_I = new IntrusiveDeque();
           return;

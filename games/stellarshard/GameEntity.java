@@ -115,7 +115,7 @@ final class GameEntity {
             if (var23 < 0) {
               var23 = 0;
             }
-            var24 = ti.field_a[var23 * 640 + var22];
+            var24 = SoftwareRasterizer.field_a[var23 * 640 + var22];
             var25 = 64 + (ni.field_c[var20] * param10 >> 17);
             if (var25 < 0) {
               var25 = -var25;
@@ -127,7 +127,7 @@ final class GameEntity {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            ti.field_a[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_a[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -154,7 +154,7 @@ final class GameEntity {
           if (var23Lifetime1 < 0) {
             var23Lifetime1 = 0;
           }
-          var24Lifetime1 = ti.field_a[var23Lifetime1 * 640 + var22Lifetime1];
+          var24Lifetime1 = SoftwareRasterizer.field_a[var23Lifetime1 * 640 + var22Lifetime1];
           var25Lifetime1 = 64 + (ni.field_c[var20Lifetime1] * param10 >> 17);
           if (var25Lifetime1 < 0) {
             var25Lifetime1 = -var25Lifetime1;
@@ -165,7 +165,7 @@ final class GameEntity {
           var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
           var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
           var15Lifetime1--;
-          ti.field_a[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+          SoftwareRasterizer.field_a[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
         }
     }
 
@@ -775,7 +775,7 @@ final class GameEntity {
             if (var23 > 479) {
               var23 = 479;
             }
-            var24 = ti.field_a[var23 * 640 + var22];
+            var24 = SoftwareRasterizer.field_a[var23 * 640 + var22];
             var25 = 64 + (ni.field_c[var20] * param10 >> 17);
             if (var25 < 0) {
               throw new Error();
@@ -787,7 +787,7 @@ final class GameEntity {
             var26 = (var26 | var26 >>> 1) & 1077952512;
             incrementValue$1 = var15;
             var15++;
-            ti.field_a[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
+            SoftwareRasterizer.field_a[incrementValue$1] = (var24Lifetime2 | var26 - (var26 >>> 8)) >>> 6;
             var16 = var16 + var17;
             var17 = var17 + param3;
             continue;
@@ -814,7 +814,7 @@ final class GameEntity {
           if (var23Lifetime1 > 479) {
             var23Lifetime1 = 479;
           }
-          var24Lifetime1 = ti.field_a[var23Lifetime1 * 640 + var22Lifetime1];
+          var24Lifetime1 = SoftwareRasterizer.field_a[var23Lifetime1 * 640 + var22Lifetime1];
           var25Lifetime1 = 64 + (ni.field_c[var20Lifetime1] * param10 >> 17);
           if (var25Lifetime1 < 0) {
             var25Lifetime1 = -var25Lifetime1;
@@ -825,7 +825,7 @@ final class GameEntity {
           var26Lifetime1 = (var26Lifetime1 & -1073692672) + (var25Lifetime1 & 12582912);
           var26Lifetime1 = (var26Lifetime1 | var26Lifetime1 >>> 1) & 1077952512;
           var15Lifetime1--;
-          ti.field_a[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
+          SoftwareRasterizer.field_a[var15Lifetime1] = (var24Lifetime1Lifetime1 | var26Lifetime1 - (var26Lifetime1 >>> 8)) >>> 6;
         }
     }
 
@@ -1105,40 +1105,40 @@ final class GameEntity {
             var5 = var5 + var4_ref_pb.field_t;
             var6 = var3;
             var6 = var6 + var4_ref_pb.field_s;
-            var7 = var5 + ti.field_i * var6;
+            var7 = var5 + SoftwareRasterizer.field_i * var6;
             var8 = 0;
             var9 = var4_ref_pb.field_y;
             var10 = var4_ref_pb.field_v;
-            var11 = ti.field_i - var10;
+            var11 = SoftwareRasterizer.field_i - var10;
             var12 = 0;
-            if (var6 < ti.field_f) {
-              var13_int = -var6 + ti.field_f;
+            if (var6 < SoftwareRasterizer.field_f) {
+              var13_int = -var6 + SoftwareRasterizer.field_f;
               var9 = var9 - var13_int;
-              var7 = var7 + ti.field_i * var13_int;
+              var7 = var7 + SoftwareRasterizer.field_i * var13_int;
               var8 = var8 + var13_int * var10;
-              var6 = ti.field_f;
+              var6 = SoftwareRasterizer.field_f;
             }
-            if (ti.field_l < var9 + var6) {
-              var9 = var9 - (-ti.field_l + var6 + var9);
+            if (SoftwareRasterizer.field_l < var9 + var6) {
+              var9 = var9 - (-SoftwareRasterizer.field_l + var6 + var9);
             }
-            if (var5 < ti.field_e) {
-              var13_int = -var5 + ti.field_e;
+            if (var5 < SoftwareRasterizer.field_e) {
+              var13_int = -var5 + SoftwareRasterizer.field_e;
               var7 = var7 + var13_int;
               var12 = var12 + var13_int;
               var8 = var8 + var13_int;
               var11 = var11 + var13_int;
               var10 = var10 - var13_int;
-              var5 = ti.field_e;
+              var5 = SoftwareRasterizer.field_e;
             }
-            if (ti.field_c < var10 + var5) {
-              var13_int = var10 + (var5 - ti.field_c);
+            if (SoftwareRasterizer.field_c < var10 + var5) {
+              var13_int = var10 + (var5 - SoftwareRasterizer.field_c);
               var12 = var12 + var13_int;
               var11 = var11 + var13_int;
               var10 = var10 - var13_int;
             }
             if (var10 > 0 &&
               0 < var9) {
-              var38 = ti.field_a;
+              var38 = SoftwareRasterizer.field_a;
               var37 = var38;
               var13 = var37;
               var14 = var4_ref_pb.field_z;
@@ -1168,7 +1168,7 @@ final class GameEntity {
             16 != this.field_c &&
             qi.level == 1 &&
             null == na.field_j) {
-            ti.b(24 + var2 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, ki.field_s + 48, 48 + ki.field_s, 65535);
+            SoftwareRasterizer.drawRectangleOutline(24 + var2 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, ki.field_s + 48, 48 + ki.field_s, 65535);
             stackIn_176_0 = qj.field_a;
             stackIn_176_1 = cd.field_P;
             stackIn_176_2 = 48 + var2;
@@ -1179,7 +1179,7 @@ final class GameEntity {
           if (this.kind == 13 &&
             4 == qi.level &&
             na.field_j == null) {
-            ti.b(24 + (var2 - ki.field_s / 2), -(ki.field_s / 2) + 24 + var3, 48 + ki.field_s, ki.field_s + 48, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(24 + (var2 - ki.field_s / 2), -(ki.field_s / 2) + 24 + var3, 48 + ki.field_s, ki.field_s + 48, 16711680);
             stackIn_184_0 = qj.field_a;
             stackIn_184_1 = FrameTimer.field_d;
             stackIn_184_2 = 48 + var2;
@@ -1192,11 +1192,11 @@ final class GameEntity {
             if (50 < this.field_i) {
               var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
               var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
-              ti.a(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, AccountServiceResult.field_c);
+              SoftwareRasterizer.addRadialGlow(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, AccountServiceResult.field_c);
             }
             if (qi.level == 5 &&
               null == na.field_j) {
-              ti.b(var2 - (-24 + ki.field_s / 2), -(ki.field_s / 2) + (24 + var3), 48 + ki.field_s, 48 + ki.field_s, 16711680);
+              SoftwareRasterizer.drawRectangleOutline(var2 - (-24 + ki.field_s / 2), -(ki.field_s / 2) + (24 + var3), 48 + ki.field_s, 48 + ki.field_s, 16711680);
               stackIn_197_0 = qj.field_a;
               stackIn_197_1 = mc.field_b;
               stackIn_197_2 = var2 + 48;
@@ -1208,7 +1208,7 @@ final class GameEntity {
           if (this.kind == 15 &&
             7 == qi.level &&
             null == na.field_j) {
-            ti.b(var2 + 24 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, 48 + ki.field_s, 48 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(var2 + 24 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, 48 + ki.field_s, 48 + ki.field_s, 16711680);
             stackIn_206_0 = qj.field_a;
             stackIn_206_1 = he.field_k;
             stackIn_206_2 = 48 + var2;
@@ -1219,7 +1219,7 @@ final class GameEntity {
           if (this.kind == 7 &&
             qi.level == 8 &&
             null == na.field_j) {
-            ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
             stackIn_215_0 = qj.field_a;
             stackIn_215_1 = hc.field_h;
             stackIn_215_2 = var2 + 48;
@@ -1230,7 +1230,7 @@ final class GameEntity {
           if (this.kind == 6 &&
             qi.level == 9 &&
             na.field_j == null) {
-            ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
             stackIn_223_0 = qj.field_a;
             stackIn_223_1 = hc.field_h;
             stackIn_223_2 = var2 + 48;
@@ -1241,7 +1241,7 @@ final class GameEntity {
           if (this.kind == 14 &&
             qi.level == 10 &&
             null == na.field_j) {
-            ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, ki.field_s + 96, 96 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, ki.field_s + 96, 96 + ki.field_s, 16711680);
             stackIn_230_0 = qj.field_a;
             stackIn_230_1 = jf.field_l;
             stackIn_230_2 = 48 + var2;
@@ -1292,7 +1292,7 @@ final class GameEntity {
           }
           var9_ref_bj = vl.field_r[var8];
           this.currentSprite(640).e();
-          ti.f(0, 0, 96, 96, 0);
+          SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
           cc.a();
           var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
           pd.field_h.a((byte) -107);
@@ -1337,7 +1337,7 @@ final class GameEntity {
                   var35 = this.currentSprite(640);
                   var35.e();
                   for (var11 = -(3 & gh.field_b); var11 < var35.field_x; var11 += 3) {
-                    ti.g(0, var11, var35.field_w, 0);
+                    SoftwareRasterizer.drawHorizontalLine(0, var11, var35.field_w, 0);
                   }
                   pd.field_h.a((byte) -107);
                   if ((gh.field_b & 48) <= 0) {
@@ -1377,14 +1377,14 @@ final class GameEntity {
                 var18 = stackIn_69_0;
                 for (var19 = var17; var19 < var18; var19++) {
                   if (var34.field_z[var19 + var15] != 0) {
-                    ti.field_a[var19 + var16 - 1] = 16777215;
-                    ti.field_a[1 + var19 + var16] = 16777215;
-                    ti.field_a[-640 + (var19 + var16)] = 16777215;
-                    ti.field_a[640 + (var19 + var16)] = 16777215;
-                    ti.field_a[var19 + var16 - 640 - 1] = 16777215;
-                    ti.field_a[var19 + (var16 + 639)] = 16777215;
-                    ti.field_a[var16 + var19 - 640 + 1] = 16777215;
-                    ti.field_a[var16 - (-var19 - 640 - 1)] = 16777215;
+                    SoftwareRasterizer.field_a[var19 + var16 - 1] = 16777215;
+                    SoftwareRasterizer.field_a[1 + var19 + var16] = 16777215;
+                    SoftwareRasterizer.field_a[-640 + (var19 + var16)] = 16777215;
+                    SoftwareRasterizer.field_a[640 + (var19 + var16)] = 16777215;
+                    SoftwareRasterizer.field_a[var19 + var16 - 640 - 1] = 16777215;
+                    SoftwareRasterizer.field_a[var19 + (var16 + 639)] = 16777215;
+                    SoftwareRasterizer.field_a[var16 + var19 - 640 + 1] = 16777215;
+                    SoftwareRasterizer.field_a[var16 - (-var19 - 640 - 1)] = 16777215;
                   }
                 }
               }
@@ -1418,18 +1418,18 @@ final class GameEntity {
         var2 = 1 + 64 * (int)(this.x + 256.0 + 320.0) / 496;
         var3 = 352 + (int)(this.y + 256.0 + 240.0) * 64 / 496;
         if (-1 == this.kind) {
-          ti.e(var2, var3, 4, 16777215);
-          ti.b(var2, var3, 4, 0);
+          SoftwareRasterizer.fillCircle(var2, var3, 4, 16777215);
+          SoftwareRasterizer.drawCircleOutline(var2, var3, 4, 0);
         } else {
           if (this.kind == 0) {
-            ti.c(var2, var3, 4, 65280, 64);
-            ti.b(var2, var3, 4, 0);
+            SoftwareRasterizer.fillCircleAlpha(var2, var3, 4, 65280, 64);
+            SoftwareRasterizer.drawCircleOutline(var2, var3, 4, 0);
           } else {
             if (this.kind != 1) {
               if (2 != this.kind) {
                 if (3 == this.kind) {
-                  ti.c(var2, var3, 5, 65280, 64);
-                  ti.b(var2, var3, 5, 0);
+                  SoftwareRasterizer.fillCircleAlpha(var2, var3, 5, 65280, 64);
+                  SoftwareRasterizer.drawCircleOutline(var2, var3, 5, 0);
                 } else {
                   if (4 != this.kind) {
                     if (this.kind != 5) {
@@ -1437,27 +1437,27 @@ final class GameEntity {
                         this.kind != 14 &&
                         this.kind != 7) {
                         if (8 == this.kind) {
-                          ti.c(var2, var3, 3, 65280, 64);
-                          ti.b(var2, var3, 3, 0);
+                          SoftwareRasterizer.fillCircleAlpha(var2, var3, 3, 65280, 64);
+                          SoftwareRasterizer.drawCircleOutline(var2, var3, 3, 0);
                         } else {
                           if (this.kind == 9) {
-                            ti.c(var2, var3, 3, 65280, 64);
-                            ti.b(var2, var3, 3, 0);
+                            SoftwareRasterizer.fillCircleAlpha(var2, var3, 3, 65280, 64);
+                            SoftwareRasterizer.drawCircleOutline(var2, var3, 3, 0);
                           } else {
                             if (this.kind == 10) {
-                              ti.c(var2, var3, 2, 65280, 64);
-                              ti.b(var2, var3, 2, 0);
+                              SoftwareRasterizer.fillCircleAlpha(var2, var3, 2, 65280, 64);
+                              SoftwareRasterizer.drawCircleOutline(var2, var3, 2, 0);
                             } else {
                               if (this.kind == 11 &&
                                 16 != this.field_c) {
-                                ti.c(var2, var3, 3, 16777215, 192);
-                                ti.b(var2, var3, 3, 0);
+                                SoftwareRasterizer.fillCircleAlpha(var2, var3, 3, 16777215, 192);
+                                SoftwareRasterizer.drawCircleOutline(var2, var3, 3, 0);
                               } else {
                                 if ((this.kind == 12 ||
                                   this.kind == 13 ||
                                   this.kind == 15)) {
-                                  ti.c(var2, var3, 4, 16711680, 192);
-                                  ti.b(var2, var3, 4, 0);
+                                  SoftwareRasterizer.fillCircleAlpha(var2, var3, 4, 16711680, 192);
+                                  SoftwareRasterizer.drawCircleOutline(var2, var3, 4, 0);
                                 }
                               }
                             }
@@ -1466,25 +1466,25 @@ final class GameEntity {
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        ti.c(var2, var3, 5, 16711680, 192);
-                        ti.b(var2, var3, 5, 0);
+                        SoftwareRasterizer.fillCircleAlpha(var2, var3, 5, 16711680, 192);
+                        SoftwareRasterizer.drawCircleOutline(var2, var3, 5, 0);
                       }
                     } else {
-                      ti.c(var2, var3, 5, 65280, 64);
-                      ti.b(var2, var3, 5, 0);
+                      SoftwareRasterizer.fillCircleAlpha(var2, var3, 5, 65280, 64);
+                      SoftwareRasterizer.drawCircleOutline(var2, var3, 5, 0);
                     }
                   } else {
-                    ti.c(var2, var3, 4, 65280, 64);
-                    ti.b(var2, var3, 4, 0);
+                    SoftwareRasterizer.fillCircleAlpha(var2, var3, 4, 65280, 64);
+                    SoftwareRasterizer.drawCircleOutline(var2, var3, 4, 0);
                   }
                 }
               } else {
-                ti.c(var2, var3, 4, 65280, 64);
-                ti.b(var2, var3, 4, 0);
+                SoftwareRasterizer.fillCircleAlpha(var2, var3, 4, 65280, 64);
+                SoftwareRasterizer.drawCircleOutline(var2, var3, 4, 0);
               }
             } else {
-              ti.c(var2, var3, 5, 65280, 64);
-              ti.b(var2, var3, 5, 0);
+              SoftwareRasterizer.fillCircleAlpha(var2, var3, 5, 65280, 64);
+              SoftwareRasterizer.drawCircleOutline(var2, var3, 5, 0);
             }
           }
         }

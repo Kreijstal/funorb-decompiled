@@ -33,12 +33,12 @@ final class ib {
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 > 6) {
           MouseInput.a(true);
-          wj.d(param4, param0, param3, param1);
+          SoftwareRasterizer.intersectClip(param4, param0, param3, param1);
           return;
         }
         ib.a(108, -87, (byte) 42, 13, 35);
         MouseInput.a(true);
-        wj.d(param4, param0, param3, param1);
+        SoftwareRasterizer.intersectClip(param4, param0, param3, param1);
     }
 
     private final void c(byte param0) {
@@ -243,7 +243,7 @@ final class ib {
             if (this.field_c < 25) {
               var2 = -(this.field_c * 4) + 100;
               var3 = this.field_c * 10;
-              wj.c((int)this.field_d + this.field_e, (int)this.field_k + this.field_i, var2, 16777215, var3);
+              SoftwareRasterizer.fillCircleAlpha((int)this.field_d + this.field_e, (int)this.field_k + this.field_i, var2, 16777215, var3);
             }
             this.field_n.a((int)this.field_d, (int)this.field_k);
             return;
@@ -260,7 +260,7 @@ final class ib {
           if (this.field_c < 25) {
             var2Lifetime1 = -(this.field_c * 4) + 100;
             var3Lifetime1 = this.field_c * 10;
-            wj.c((int)this.field_d + this.field_e, (int)this.field_k + this.field_i, var2Lifetime1, 16777215, var3Lifetime1);
+            SoftwareRasterizer.fillCircleAlpha((int)this.field_d + this.field_e, (int)this.field_k + this.field_i, var2Lifetime1, 16777215, var3Lifetime1);
           }
           this.field_n.a((int)this.field_d, (int)this.field_k);
           return;

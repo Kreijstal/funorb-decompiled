@@ -152,21 +152,21 @@ final class pj extends cb {
         int var10 = 0;
         var10 = fleas.field_A ? 1 : 0;
         try {
-          gb.b(param3, param2, 1 + param1, 10000536);
-          gb.b(param3, param4 + param2, 1 + param1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param2, 1 + param1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param4 + param2, 1 + param1, 12105912);
           var5_int = 1;
           var6 = param4;
-          if (param2 + var5_int < gb.field_b) {
-            var5_int = -param2 + gb.field_b;
+          if (param2 + var5_int < SoftwareRasterizer.field_b) {
+            var5_int = -param2 + SoftwareRasterizer.field_b;
           }
-          if (gb.field_i < var6 + param2) {
-            var6 = gb.field_i - param2;
+          if (SoftwareRasterizer.field_i < var6 + param2) {
+            var6 = SoftwareRasterizer.field_i - param2;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + 48 * var7 / param4;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            gb.field_a[param3 + (param2 + var7) * gb.field_d] = var9;
-            gb.field_a[param1 + ((param2 + var7) * gb.field_d + param3)] = var9;
+            SoftwareRasterizer.field_a[param3 + (param2 + var7) * SoftwareRasterizer.field_d] = var9;
+            SoftwareRasterizer.field_a[param1 + ((param2 + var7) * SoftwareRasterizer.field_d + param3)] = var9;
           }
           if (param0 != 127) {
             pj.h(100);

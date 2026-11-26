@@ -420,7 +420,7 @@ final class mb extends ka {
                   if (ti.field_g <= param3) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + fn.field_g;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_g;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -471,7 +471,7 @@ final class mb extends ka {
               if (param3 >= ti.field_g) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + fn.field_g;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_g;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

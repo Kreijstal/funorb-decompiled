@@ -268,13 +268,13 @@ final class si extends ic {
           for (var9 = 0; 2 > var9; var9++) {
             for (var10 = 0; var10 <= 1; var10++) {
               sf.field_d[var9][param2][var10].d();
-              SoftwareRasterizer.a(ae.field_y);
+              SoftwareRasterizer.saveClip(ae.field_y);
               var6_int = param3[param2][var10][1] - param3[param2][var10][0];
               if (var6_int > 0) {
-                SoftwareRasterizer.a(0, 0, var6_int, var7);
+                SoftwareRasterizer.intersectClip(0, 0, var6_int, var7);
                 var8 = param1[var10][param2];
                 od.a(nj.field_e[var9][var6_int - 1], var8);
-                SoftwareRasterizer.b(ae.field_y);
+                SoftwareRasterizer.restoreClip(ae.field_y);
                 SectorCacheStore.field_f.bindAsTarget(-38);
               }
             }

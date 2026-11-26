@@ -73,33 +73,33 @@ final class bm extends ld {
         int var9Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_e;
-        int var3 = param0 + param1 * fn.field_g;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_g;
         int var4 = 0;
         int var5 = this.field_h;
         int var6 = this.field_g;
-        int var7 = fn.field_g - var6;
+        int var7 = SoftwareRasterizer.field_g - var6;
         int var8 = 0;
-        if (param1 < fn.field_b) {
-          var9 = fn.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var9 = SoftwareRasterizer.field_b - param1;
           var5 = var5 - var9;
-          param1 = fn.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * fn.field_g;
+          var3 = var3 + var9 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var5 > fn.field_j) {
-          var5 = var5 - (param1 + var5 - fn.field_j);
+        if (param1 + var5 > SoftwareRasterizer.field_j) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_j);
         }
-        if (param0 < fn.field_c) {
-          var9Lifetime1 = fn.field_c - param0;
+        if (param0 < SoftwareRasterizer.field_c) {
+          var9Lifetime1 = SoftwareRasterizer.field_c - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = fn.field_c;
+          param0 = SoftwareRasterizer.field_c;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > fn.field_i) {
-          var9Lifetime2 = param0 + var6 - fn.field_i;
+        if (param0 + var6 > SoftwareRasterizer.field_i) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_i;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -108,7 +108,7 @@ final class bm extends ld {
           var5 <= 0) {
           return;
         }
-        bm.a(fn.field_h, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
+        bm.a(SoftwareRasterizer.field_h, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void a() {
@@ -189,33 +189,33 @@ final class bm extends ld {
         int var10Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_e;
-        int var4 = param0 + param1 * fn.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = this.field_h;
         int var7 = this.field_g;
-        int var8 = fn.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param1 < fn.field_b) {
-          var10 = fn.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var10 = SoftwareRasterizer.field_b - param1;
           var6 = var6 - var10;
-          param1 = fn.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * fn.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var6 > fn.field_j) {
-          var6 = var6 - (param1 + var6 - fn.field_j);
+        if (param1 + var6 > SoftwareRasterizer.field_j) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_j);
         }
-        if (param0 < fn.field_c) {
-          var10Lifetime1 = fn.field_c - param0;
+        if (param0 < SoftwareRasterizer.field_c) {
+          var10Lifetime1 = SoftwareRasterizer.field_c - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = fn.field_c;
+          param0 = SoftwareRasterizer.field_c;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > fn.field_i) {
-          var10Lifetime2 = param0 + var7 - fn.field_i;
+        if (param0 + var7 > SoftwareRasterizer.field_i) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_i;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -224,6 +224,6 @@ final class bm extends ld {
           var6 <= 0) {
           return;
         }
-        bm.b(fn.field_h, this.field_n, this.field_m, var5, var4, var7, var6, var8, var9, param2);
+        bm.b(SoftwareRasterizer.field_h, this.field_n, this.field_m, var5, var4, var7, var6, var8, var9, param2);
     }
 }

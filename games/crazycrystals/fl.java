@@ -47,17 +47,17 @@ final class fl implements wo {
           if (param1) {
             field_g = 26;
           }
-          kh.f(param2 + param3.field_r, param3.field_j + param0, param3.field_g, param3.field_f, this.field_b);
+          SoftwareRasterizer.fillRectangle(param2 + param3.field_r, param3.field_j + param0, param3.field_g, param3.field_f, this.field_b);
           if (param4) {
             var7 = 16777215;
           }
           var8 = this.field_r + param3.field_r + param2;
           var9 = this.field_j + param3.field_j + param0;
-          kh.b(var8, var9, this.field_h, this.field_d, 5592405);
-          kh.f(var8, var9, this.field_h, this.field_d, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_h, this.field_d, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_h, this.field_d, var7);
           if (var11.field_A) {
-            kh.e(var8, var9, var8 + this.field_h, var9 + this.field_d, 1);
-            kh.e(this.field_h + var8, var9, var8, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_h, var9 + this.field_d, 1);
+            SoftwareRasterizer.drawLine(this.field_h + var8, var9, var8, var9 + this.field_d, 1);
           }
           if (null == this.field_p) {
             return;

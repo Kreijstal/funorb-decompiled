@@ -41,13 +41,13 @@ class aa extends e {
           var1 = new dd(540, 140);
           r.a(var1, 45);
           bl.b();
-          gb.c();
+          SoftwareRasterizer.clearRaster();
           vg.field_z = 0;
           mj.a(param0 ^ 515966558);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
-            gb.h(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           uc.field_d.f();
           var1.e(0, 0);

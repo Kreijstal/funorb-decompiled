@@ -163,10 +163,10 @@ abstract class ta extends DualLinkNode {
               }
               param1 = param1 + this.field_n[var8];
               if (field_x != -1) {
-                ge.a(var11, param2 + (int)((double)this.field_t * 0.7), param1 - var11, field_x);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_t * 0.7), param1 - var11, field_x);
               }
               if (field_o != -1) {
-                ge.a(var11, param2 + this.field_t + 1, param1 - var11, field_o);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_t + 1, param1 - var11, field_o);
               }
               var5 = var8;
             }

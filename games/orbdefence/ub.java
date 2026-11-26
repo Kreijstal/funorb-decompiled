@@ -23,22 +23,22 @@ final class ub {
         int var12;
         int var15;
         if (param0 >= param2.length) {
-          ul.h(0, 0, ul.field_f, ul.field_l, param1);
+          SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, param1);
           return;
         }
         var3 = param2[param0];
         if (var3 == 0) {
           return;
         }
-        var4 = ul.field_b;
-        var5 = ul.field_i;
-        var6 = ul.field_d;
-        var7 = ul.field_e - var5;
-        var8 = ul.field_a - var6;
-        var9 = ul.field_f - var7;
-        var10 = var5 + var6 * ul.field_f;
+        var4 = SoftwareRasterizer.field_b;
+        var5 = SoftwareRasterizer.field_i;
+        var6 = SoftwareRasterizer.field_d;
+        var7 = SoftwareRasterizer.field_e - var5;
+        var8 = SoftwareRasterizer.field_a - var6;
+        var9 = SoftwareRasterizer.field_f - var7;
+        var10 = var5 + var6 * SoftwareRasterizer.field_f;
         var11 = var6 - 1 << 2;
-        var12 = ul.field_e;
+        var12 = SoftwareRasterizer.field_e;
         for (var13 = -var8; var13 < 0; var13++) {
           var11 = var11 + 4 & 12;
           for (var14 = -var7; var14 < 0; var14++) {

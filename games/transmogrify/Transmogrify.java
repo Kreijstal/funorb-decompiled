@@ -609,13 +609,13 @@ public final class Transmogrify extends SessionGameApplet {
             return;
           }
           if (ll.c(true)) {
-            sb.e(0, 0, 640, 480);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
             og.b(false);
           }
           if (0 != lb.field_i) {
             var3Lifetime1 = 256 * MidiPcmStream.field_q / 16;
             if (var3Lifetime1 > 0) {
-              sb.c(0, 0, sb.field_c, sb.field_g, 0, var3Lifetime1);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, var3Lifetime1);
             }
           }
           if (ByteStorage.b(-1) &&
@@ -856,10 +856,10 @@ public final class Transmogrify extends SessionGameApplet {
               tb.field_b[var8_int] = new Sprite(var5_int, var7_int);
               tb.field_b[var8_int].e();
               dk.a(var7_int, mk.field_B, -28018, 0, 0, var5_int);
-              for (var9_int = 0; sb.field_h.length > var9_int; var9_int++) {
-                if (sb.field_h[var9_int] != 0 &&
-                  7500402 > sb.field_h[var9_int]) {
-                  sb.field_h[var9_int] = 7500402;
+              for (var9_int = 0; SoftwareRasterizer.field_h.length > var9_int; var9_int++) {
+                if (SoftwareRasterizer.field_h[var9_int] != 0 &&
+                  7500402 > SoftwareRasterizer.field_h[var9_int]) {
+                  SoftwareRasterizer.field_h[var9_int] = 7500402;
                 }
               }
               IntrusiveNode.field_d.c(mc.countdownLabels[var8_int], var5_int >> 1, IntrusiveNode.field_d.field_y + 2, 1, -1);
@@ -884,9 +884,9 @@ public final class Transmogrify extends SessionGameApplet {
             var12.e();
             dk.a(377, ck.field_C, -28018, 258, 72, 361);
             mk.field_y.d(337, 14, 0);
-            for (var4Lifetime2 = 0; var4Lifetime2 < sb.field_h.length; var4Lifetime2++) {
-              if (sb.field_h[var4Lifetime2] != 0) {
-                sb.field_h[var4Lifetime2] = 16777215;
+            for (var4Lifetime2 = 0; var4Lifetime2 < SoftwareRasterizer.field_h.length; var4Lifetime2++) {
+              if (SoftwareRasterizer.field_h[var4Lifetime2] != 0) {
+                SoftwareRasterizer.field_h[var4Lifetime2] = 16777215;
               }
             }
             rk.field_r[4].e();
@@ -1153,7 +1153,7 @@ public final class Transmogrify extends SessionGameApplet {
           GameKeyHandler.clearStaticReferences((byte) -127);
           MouseInputHandler.a(74);
           MouseWheelInput.a(false);
-          sb.a();
+          SoftwareRasterizer.clearStaticReferences();
           mh.a(0);
           gb.clearStaticReferences(param0 - 5);
           PacketBuffer.clearStaticReferences((byte) -99);

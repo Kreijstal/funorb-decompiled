@@ -49,7 +49,7 @@ final class de {
     final static void a(int param0, hj param1) {
         try {
           h.k(125);
-          ul.a(param1.field_v, param1.field_s, param1.field_t);
+          SoftwareRasterizer.setRasterBuffer(param1.field_v, param1.field_s, param1.field_t);
           if (param0 >= -120) {
             de.clearStaticReferences(-128);
           }

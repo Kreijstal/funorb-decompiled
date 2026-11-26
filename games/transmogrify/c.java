@@ -13,7 +13,7 @@ final class c {
           return;
         }
         og.a((byte) 89);
-        sb.g(param1, param4, param0, param3);
+        SoftwareRasterizer.intersectClip(param1, param4, param0, param3);
     }
 
     public static void a(int param0) {

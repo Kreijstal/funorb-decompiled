@@ -63,7 +63,7 @@ final class ul extends nf {
         super.a(param0, param1, param2);
         IntrusiveDeque.field_c.a(this.field_T, param1 + (this.field_l >> 1), param2 + 103, 16777215, -1);
         if (null != this.field_P) {
-          ge.a(20 + param1, 113 + param2, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param1, 113 + param2, 260, 8421504);
           IntrusiveDeque.field_c.a(this.field_P, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, IntrusiveDeque.field_c.field_C);
           if (param0) {
             this.field_R = true;

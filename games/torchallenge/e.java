@@ -59,14 +59,14 @@ final class e extends IntrusiveNode {
             }
             vj.field_d[var4].d();
             if (0 == var4) {
-              SoftwareRasterizer.a(ui.field_f);
-              SoftwareRasterizer.a(0, 0, -(2 * param1) + SoftwareRasterizer.width, SoftwareRasterizer.height);
+              SoftwareRasterizer.saveClip(ui.field_f);
+              SoftwareRasterizer.intersectClip(0, 0, -(2 * param1) + SoftwareRasterizer.width, SoftwareRasterizer.height);
             }
             we.field_m[1 + var4].drawMask(param1, param1, 16777215);
             if (var4 == 0) {
-              SoftwareRasterizer.b(ui.field_f);
+              SoftwareRasterizer.restoreClip(ui.field_f);
             }
-            SoftwareRasterizer.d(param1, param1, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+            SoftwareRasterizer.blurRectangle(param1, param1, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             SectorCacheStore.field_f.bindAsTarget(-32);
             vj.field_d[var4].h();
           }

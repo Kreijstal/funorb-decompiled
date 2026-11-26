@@ -14,10 +14,10 @@ final class em extends hi {
         int var4 = 0;
         int var5 = 0;
         int var6 = OrbDefence.field_D ? 1 : 0;
-        int var1_int = ul.field_f;
-        int var2 = ul.field_l;
+        int var1_int = SoftwareRasterizer.field_f;
+        int var2 = SoftwareRasterizer.field_l;
         for (var3 = -1 + var2 * var1_int; var3 >= 0; var3--) {
-          var4 = ul.field_b[var3];
+          var4 = SoftwareRasterizer.field_b[var3];
           var5 = 0;
           if ((var4 & 8388608) == 8388608) {
             var5 = var5 | var4 & 8323072;

@@ -16,7 +16,7 @@ final class pg {
           jl.field_I.a((UiWidget) (vi.field_n), (byte) -1);
         }
         vi.field_n.a((byte) 60, param1, param2, param0);
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clearRaster();
         if (param3 <= 53) {
           return;
         }

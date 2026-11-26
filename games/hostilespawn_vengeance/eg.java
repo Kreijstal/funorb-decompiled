@@ -45,7 +45,7 @@ final class eg {
           uf.field_i[4].b(0, 0, this.field_y);
           this.b(-7068);
           if (0 <= this.field_z) {
-            si.a(0, 0, 640, 480, 0, 256 - this.field_z * 4);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 256 - this.field_z * 4);
             return;
           }
           return;
@@ -58,7 +58,7 @@ final class eg {
         int var2 = -(736 * this.field_z / 50) + 480;
         int var3 = 256 + var2;
         if (var2 > 0) {
-          si.c(0, 0, 640, var2, 0);
+          SoftwareRasterizer.fillRectangle(0, 0, 640, var2, 0);
         }
         if (var3 > 0) {
           hj.a(0, var2, 0, 256, -var2 + var3, 32101, 640);

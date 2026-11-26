@@ -733,10 +733,10 @@ final class rd extends id {
               var26 = 188 + (int)(640.0 * (var21 / var23));
               var27 = (int)(this.field_C / var23 * 640.0);
               if ((6 & this.field_V) != 0) {
-                fn.g(var25 - 1, -1 + var26, var27, 16711680);
-                fn.g(var25, var26 - 1, var27, 16711680);
-                fn.g(-1 + var25, var26, var27, 16711680);
-                fn.g(var25, var26, var27, 16711680);
+                SoftwareRasterizer.drawCircleOutline(var25 - 1, -1 + var26, var27, 16711680);
+                SoftwareRasterizer.drawCircleOutline(var25, var26 - 1, var27, 16711680);
+                SoftwareRasterizer.drawCircleOutline(-1 + var25, var26, var27, 16711680);
+                SoftwareRasterizer.drawCircleOutline(var25, var26, var27, 16711680);
               }
               pn.field_a.b(di.field_f, var25, -8 + var26 - var27, 16711680, -1);
             }

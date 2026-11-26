@@ -90,7 +90,7 @@ final class ReturnedShape {
             MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -107, NetworkSupport010.uiComponentPart026State0001);
           }
           NetworkSupport010.uiComponentPart026State0001.performAction1391(booleanArgument2, floatArgument3, 4210752, stringArgument4);
-          SoftwareRaster.performAction0648();
+          SoftwareRaster.clearRaster();
           RenderingSupport002.performAction0248(true, integerArgument1 + 106);
           if (integerArgument1 != 12) {
             mixedSupport106State0009 = (MixedSupport106) null;

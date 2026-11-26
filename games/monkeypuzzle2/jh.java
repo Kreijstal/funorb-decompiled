@@ -92,9 +92,9 @@ final class jh extends UiWidget {
             stackIn_7_0 = var9 | var8;
           }
           var12 = stackIn_7_0;
-          ge.a(var7, var6, this.field_v, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_v, var12);
           var9Lifetime1 = 65280 & param1;
-          ge.a(-(2 * this.field_v) + var7, var6, this.field_v, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_v) + var7, var6, this.field_v, var12);
           var8Lifetime1 = param1 & 16711935;
           if (256 > var11) {
             stackIn_10_0 = (var8Lifetime1 * var11 & -16711936 | var9Lifetime1 * var11 & 16711680) >>> 8;
@@ -102,8 +102,8 @@ final class jh extends UiWidget {
             stackIn_10_0 = var9Lifetime1 | var8Lifetime1;
           }
           var12Lifetime1 = stackIn_10_0;
-          ge.a(var7 + this.field_v, var6, this.field_v, var12Lifetime1);
-          ge.a(var7 - this.field_v, var6, this.field_v, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_v, var6, this.field_v, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_v, var6, this.field_v, var12Lifetime1);
         }
         if (param0 != 86) {
           this.field_x = -11;
@@ -139,7 +139,7 @@ final class jh extends UiWidget {
             param1.c(var6, param3);
           }
           tj.b(653);
-          if (ge.field_a <= param2 + this.field_w.field_k) {
+          if (SoftwareRasterizer.field_a <= param2 + this.field_w.field_k) {
             mc.a(-8497, this.field_B);
             param1.c(-this.field_u, 0);
             param1.c(this.field_v * 2 - this.field_u, 0);
@@ -147,7 +147,7 @@ final class jh extends UiWidget {
             tj.b(653);
             this.field_B.c(param2, param3);
           }
-          if (-this.field_w.field_k + var5_int <= ge.field_j) {
+          if (-this.field_w.field_k + var5_int <= SoftwareRasterizer.field_j) {
             mc.a(-8497, this.field_B);
             for (var7 = this.field_u + (this.field_l - this.field_w.field_k); var7 > 2 * this.field_v; var7 = var7 - this.field_v * 2) {
             }
@@ -225,7 +225,7 @@ final class jh extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = 1.0 <= var6 ? 255 : (int)(255.0 * var6);
             }
-            ge.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         tj.b(653);

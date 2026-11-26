@@ -71,7 +71,7 @@ final class s extends vc {
             this.field_K.field_s >= var11 &&
             this.field_K.field_q >= var12) {
             kh.a(this.field_K, 1);
-            na.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_K = new tg(var11, var12);
             kh.a(this.field_K, 1);

@@ -26,15 +26,15 @@ final class od {
         int var6;
         int var5Lifetime1;
         var6 = OrbDefence.field_D ? 1 : 0;
-        var2 = ul.field_b;
-        var3 = ul.field_f;
+        var2 = SoftwareRasterizer.field_b;
+        var3 = SoftwareRasterizer.field_f;
         this.field_o = 0;
         this.field_m = new int[200];
         this.field_e = 0;
         if (param0 > -58) {
           od.b((byte) -52);
         }
-        var4 = ul.field_l;
+        var4 = SoftwareRasterizer.field_l;
         this.field_d = new int[200];
         this.field_b = new int[200];
         this.field_g = 320;
@@ -52,10 +52,10 @@ final class od {
           this.field_n[var5Lifetime1] = var5Lifetime1 * 262660;
           this.field_n[31 - var5Lifetime1] = var5Lifetime1 * 262660;
         }
-        ul.field_f = var3;
-        ul.field_b = var2;
-        ul.field_l = var4;
-        ul.c();
+        SoftwareRasterizer.field_f = var3;
+        SoftwareRasterizer.field_b = var2;
+        SoftwareRasterizer.field_l = var4;
+        SoftwareRasterizer.resetClip();
     }
 
     final void a(boolean param0) {
@@ -125,8 +125,8 @@ final class od {
           this.field_g = this.field_g + 370;
         }
         var4 = 108;
-        ul.f(this.field_g, var3, var4 >> 1, 0);
-        ul.g(this.field_g, var3, var4 >> 1, 7798903);
+        SoftwareRasterizer.fillCircle(this.field_g, var3, var4 >> 1, 0);
+        SoftwareRasterizer.drawCircleOutline(this.field_g, var3, var4 >> 1, 7798903);
         var6 = -102 / ((param0 + 55) / 63);
         for (var10 = 0; var10 < 200; var10++) {
           var8 = ((this.field_d[var10] >> 4) * (this.field_d[var10] >> 4) + (this.field_c[var10] >> 4) * (this.field_c[var10] >> 4)) / 3;
@@ -141,17 +141,17 @@ final class od {
             if (var9 > 63) {
               var9 = 63;
             }
-            ul.a((var5 >> 1) + (this.field_g << 4), (var3 << 4) + (var7 >> 1), var8 >> 2 >> 1, var9, this.field_i);
+            SoftwareRasterizer.addRadialGlow((var5 >> 1) + (this.field_g << 4), (var3 << 4) + (var7 >> 1), var8 >> 2 >> 1, var9, this.field_i);
           }
         }
-        ul.i(this.field_g, var3, var4 >> 1, 0, 50);
-        ul.b(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
+        SoftwareRasterizer.fillCircleAlpha(this.field_g, var3, var4 >> 1, 0, 50);
+        SoftwareRasterizer.addRadialGlowClippedSpans(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
         if (param1 < 25) {
-          ul.i(this.field_g, var3, 48, 0, 250 - 10 * param1);
+          SoftwareRasterizer.fillCircleAlpha(this.field_g, var3, 48, 0, 250 - 10 * param1);
         }
-        ul.b(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
-        ul.b(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
-        ul.b(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
+        SoftwareRasterizer.addRadialGlowClippedSpans(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
+        SoftwareRasterizer.addRadialGlowClippedSpans(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
+        SoftwareRasterizer.addRadialGlowClippedSpans(this.field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, this.field_n);
     }
 
     final void b(int param0) {

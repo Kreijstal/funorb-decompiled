@@ -82,10 +82,10 @@ final class lh {
         }
         bc.a(wj.field_g, 26095);
         gl.b();
-        ki.b();
+        SoftwareRasterizer.clearRaster();
         GzipDecompressor.a(-1196777214);
         if (var5 < 256) {
-          ki.b(0, 0, ki.field_j, ki.field_f, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, 0, 256 - var5);
         }
         wf.a(-123);
         if (qb.field_h >= 150) {

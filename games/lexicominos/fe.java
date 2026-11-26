@@ -23,14 +23,14 @@ final class fe implements rd {
             var8 = param0[param3].field_r;
             param0[0].a(param4, param5, param1);
             param0[2].a(-var7 + (param4 + param2), param5, param1);
-            SoftwareRasterizer.b(CrossfadingMidiPcmStream.field_C);
-            SoftwareRasterizer.f(param4 + var6_int, param5, -var7 + (param2 + param4), param0[1].field_x + param5);
+            SoftwareRasterizer.saveClip(CrossfadingMidiPcmStream.field_C);
+            SoftwareRasterizer.intersectClip(param4 + var6_int, param5, -var7 + (param2 + param4), param0[1].field_x + param5);
             var9 = var6_int + param4;
             var10 = -var7 + param2 + param4;
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].a(param4, param5, param1);
             }
-            SoftwareRasterizer.a(CrossfadingMidiPcmStream.field_C);
+            SoftwareRasterizer.restoreClip(CrossfadingMidiPcmStream.field_C);
             return;
           }
           return;

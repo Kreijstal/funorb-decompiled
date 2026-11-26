@@ -89,7 +89,7 @@ abstract class ld extends kf {
         int var13Lifetime1;
         int var14Lifetime1;
         var17 = SolKnight.field_L ? 1 : 0;
-        SoftwareRasterizer.e(param0 + 6, 35 + param2, -12 + this.field_t, this.field_x - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(param0 + 6, 35 + param2, -12 + this.field_t, this.field_x - 40, 2105376, 0);
         var5 = 211;
         var6 = -45 % ((param1 + 55) / 39);
         var4 = 35;

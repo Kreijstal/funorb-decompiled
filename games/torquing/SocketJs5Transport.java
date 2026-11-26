@@ -3787,7 +3787,7 @@ final class SocketJs5Transport extends Js5Transport {
             dc.field_a.a(d.field_r, (byte) 97);
           }
           d.field_r.a(param2, 116, param3, param0);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clearRaster();
           if (param1 != -98) {
             field_u = 78;
           }

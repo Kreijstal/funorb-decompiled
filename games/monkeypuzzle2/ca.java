@@ -280,7 +280,7 @@ final class ca extends rf {
                   if (ig.field_a <= param2) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + ge.field_h;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_h;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -336,7 +336,7 @@ final class ca extends rf {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + ge.field_h;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_h;
             }
             return;
           }

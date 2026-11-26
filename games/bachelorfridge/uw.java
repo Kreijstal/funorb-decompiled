@@ -23,7 +23,7 @@ final class uw extends DualLinkNode {
           }
           for (var3 = 0; 15 > var3; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
-            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           rg.field_j.b();
           var1.drawHalfSize(0, 0);

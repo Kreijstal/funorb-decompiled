@@ -63,8 +63,8 @@ final class co extends BitmapFont {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - bi.field_d;
-        var14 = param3 - bi.field_f;
+        var13 = param2 - SoftwareRasterizer.field_d;
+        var14 = param3 - SoftwareRasterizer.field_f;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -106,7 +106,7 @@ final class co extends BitmapFont {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                bi.field_l[incrementValue$1] = param6;
+                SoftwareRasterizer.field_l[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -146,41 +146,41 @@ final class co extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * bi.field_e;
-        var9 = bi.field_e - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_e;
+        var9 = SoftwareRasterizer.field_e - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < bi.field_f) {
-          var12 = bi.field_f - param2;
+        if (param2 < SoftwareRasterizer.field_f) {
+          var12 = SoftwareRasterizer.field_f - param2;
           param4 = param4 - var12;
-          param2 = bi.field_f;
+          param2 = SoftwareRasterizer.field_f;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * bi.field_e;
+          var8 = var8 + var12 * SoftwareRasterizer.field_e;
         }
-        if (param2 + param4 > bi.field_c) {
-          param4 = param4 - (param2 + param4 - bi.field_c);
+        if (param2 + param4 > SoftwareRasterizer.field_c) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_c);
         }
-        if (param1 < bi.field_d) {
-          var12Lifetime1 = bi.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var12Lifetime1 = SoftwareRasterizer.field_d - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = bi.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > bi.field_i) {
-          var12Lifetime2 = param1 + param3 - bi.field_i;
+        if (param1 + param3 > SoftwareRasterizer.field_i) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_i;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (bi.field_b == null) {
-            co.a(bi.field_l, this.field_Q[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer.field_b == null) {
+            co.a(SoftwareRasterizer.field_l, this.field_Q[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            co.a(bi.field_l, this.field_Q[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, bi.field_b, bi.field_a);
+            co.a(SoftwareRasterizer.field_l, this.field_Q[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a);
           }
           return;
         }
@@ -188,33 +188,33 @@ final class co extends BitmapFont {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * bi.field_e;
-        int var10 = bi.field_e - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer.field_e;
+        int var10 = SoftwareRasterizer.field_e - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < bi.field_f) {
-          var13 = bi.field_f - param2;
+        if (param2 < SoftwareRasterizer.field_f) {
+          var13 = SoftwareRasterizer.field_f - param2;
           param4 = param4 - var13;
-          param2 = bi.field_f;
+          param2 = SoftwareRasterizer.field_f;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * bi.field_e;
+          var9 = var9 + var13 * SoftwareRasterizer.field_e;
         }
-        if (param2 + param4 > bi.field_c) {
-          param4 = param4 - (param2 + param4 - bi.field_c);
+        if (param2 + param4 > SoftwareRasterizer.field_c) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_c);
         }
-        if (param1 < bi.field_d) {
-          var13Lifetime1 = bi.field_d - param1;
+        if (param1 < SoftwareRasterizer.field_d) {
+          var13Lifetime1 = SoftwareRasterizer.field_d - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = bi.field_d;
+          param1 = SoftwareRasterizer.field_d;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > bi.field_i) {
-          var13Lifetime2 = param1 + param3 - bi.field_i;
+        if (param1 + param3 > SoftwareRasterizer.field_i) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_i;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -223,6 +223,6 @@ final class co extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        co.a(bi.field_l, this.field_Q[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        co.a(SoftwareRasterizer.field_l, this.field_Q[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 }

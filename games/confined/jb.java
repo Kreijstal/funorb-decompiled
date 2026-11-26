@@ -202,7 +202,7 @@ final class jb {
           var4 = this.field_k * 18 / (4 + var2);
           var5 = (-var4 + this.field_k) / 2 + this.field_s;
           var6 = (-var3 + this.field_b) / 2 + this.field_c;
-          fn.b(var5 + 4, 4 + var6, -8 + var4, -8 + var3, 0, 150);
+          SoftwareRasterizer.fillRectangleAlpha(var5 + 4, 4 + var6, -8 + var4, -8 + var3, 0, 150);
           di.a(var3, cj.field_a, (byte) -56, var5, var4, var6);
           return;
         }
@@ -215,12 +215,12 @@ final class jb {
           var4Lifetime1 = (1 + var2Lifetime1) * (var2Lifetime1 + 1) * this.field_k / 225;
           var5Lifetime1 = this.field_s + (-var4Lifetime1 + this.field_k) / 2;
           var6Lifetime1 = (this.field_b - var3Lifetime1) / 2 + this.field_c;
-          fn.b(var5Lifetime1 + 4, 4 + var6Lifetime1, var4Lifetime1 - 8, var3Lifetime1 - 8, 0, 150);
+          SoftwareRasterizer.fillRectangleAlpha(var5Lifetime1 + 4, 4 + var6Lifetime1, var4Lifetime1 - 8, var3Lifetime1 - 8, 0, 150);
           di.a(var3Lifetime1, cj.field_a, (byte) -94, var5Lifetime1, var4Lifetime1, var6Lifetime1);
           return;
         }
         var2Lifetime2 = -5 / ((param0 + 48) / 34);
-        fn.b(0 + (this.field_s + 4), this.field_c + 4, this.field_k - 8, -8 + this.field_b, 0, 150);
+        SoftwareRasterizer.fillRectangleAlpha(0 + (this.field_s + 4), this.field_c + 4, this.field_k - 8, -8 + this.field_b, 0, 150);
         di.a(this.field_b, cj.field_a, (byte) -49, this.field_s - 0, this.field_k, this.field_c);
     }
 
@@ -959,13 +959,13 @@ final class jb {
             }
             var10 = var3.field_j + (var8 + (var3.field_f - 128 + 5)) / 2;
             if (this.field_p.field_i == var2) {
-              fn.d(-1 + var10, var5 + 14, 2, 12384);
-              fn.d(128 + var10, var5 + 14, 2, 12384);
-              fn.b(var10 + 0, 13 + var5, 128, 12384);
-              fn.b(0 + var10, 16 + var5, 128, 12384);
-              fn.e(0 + var10, var5 + 14, 128, 2, 3178608);
+              SoftwareRasterizer.drawVerticalLine(-1 + var10, var5 + 14, 2, 12384);
+              SoftwareRasterizer.drawVerticalLine(128 + var10, var5 + 14, 2, 12384);
+              SoftwareRasterizer.drawHorizontalLine(var10 + 0, 13 + var5, 128, 12384);
+              SoftwareRasterizer.drawHorizontalLine(0 + var10, 16 + var5, 128, 12384);
+              SoftwareRasterizer.fillRectangle(0 + var10, var5 + 14, 128, 2, 3178608);
             } else {
-              fn.e(0 + var10, 14 + var5, 128, 2, 2121792);
+              SoftwareRasterizer.fillRectangle(0 + var10, 14 + var5, 128, 2, 2121792);
             }
             if (7 != var3.field_d) {
               if (var3.field_d != 8) {
@@ -980,13 +980,13 @@ final class jb {
               var11 = fa.field_S * 128 / 128;
             }
             pn.field_a.a(var4, var3.field_j + 0, var5, -5 + (var10 - var3.field_j), var6, var7, -1, 2, 1, 20);
-            fn.e(var11 - 2 + var10 - 0, var5 + 7, 3, 8, var7);
-            fn.e(-2 + (var10 + var11), 8 + (7 + var5), 4, 2, var7);
-            fn.e(0 + var11 + (var10 - 2), var5 + 7 + 10, 5, 6, var7);
+            SoftwareRasterizer.fillRectangle(var11 - 2 + var10 - 0, var5 + 7, 3, 8, var7);
+            SoftwareRasterizer.fillRectangle(-2 + (var10 + var11), 8 + (7 + var5), 4, 2, var7);
+            SoftwareRasterizer.fillRectangle(0 + var11 + (var10 - 2), var5 + 7 + 10, 5, 6, var7);
           }
           var2++;
         }
-        fn.c();
+        SoftwareRasterizer.resetClip();
     }
 
     final static void a(byte param0, double param1, double[] param2) {

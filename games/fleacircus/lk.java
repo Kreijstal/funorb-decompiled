@@ -43,13 +43,13 @@ final class lk extends UiComponent {
           var10 = var6 - var5;
           var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
           var12 = var11 >= 256 ? var9 | var8 : (16711680 & var11 * var9 | -16711936 & var8 * var11) >>> 8;
-          gb.b(var7, var6, this.field_N, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_N, var12);
           var8Lifetime1 = 16711935 & param0;
           var9Lifetime1 = param0 & 65280;
-          gb.b(var7 - this.field_N * 2, var6, this.field_N, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_N * 2, var6, this.field_N, var12);
           var12Lifetime1 = 256 > var11 ? (16711680 & var9Lifetime1 * var11 | var8Lifetime1 * var11 & -16711936) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          gb.b(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
-          gb.b(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
         }
         ia.a(-121);
         var6Lifetime1 = 83 % ((9 - param2) / 48);
@@ -249,7 +249,7 @@ final class lk extends UiComponent {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            gb.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         ia.a(-106);
@@ -288,7 +288,7 @@ final class lk extends UiComponent {
             var6 = var6 + param0.field_w;
           }
           ia.a(param2 ^ -81);
-          if (gb.field_l <= this.field_P.field_w + param3) {
+          if (SoftwareRasterizer.field_l <= this.field_P.field_w + param3) {
             r.a(this.field_M, 45);
             param0.d(-this.field_B, 0);
             param0.d(this.field_N * 2 - this.field_B, 0);
@@ -296,7 +296,7 @@ final class lk extends UiComponent {
             ia.a(-70);
             this.field_M.d(param3, param1);
           }
-          if (var5_int - this.field_P.field_w <= gb.field_h) {
+          if (var5_int - this.field_P.field_w <= SoftwareRasterizer.field_h) {
             r.a(this.field_M, 45);
             for (var7 = this.field_B + (-this.field_P.field_w + this.field_u); var7 > this.field_N * 2; var7 = var7 - 2 * this.field_N) {
             }

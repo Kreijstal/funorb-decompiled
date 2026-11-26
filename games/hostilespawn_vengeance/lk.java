@@ -24,7 +24,7 @@ final class lk extends vd implements cd, qk {
           lk.j(21);
         }
         if (this.field_P != null) {
-          si.a(param1 + 10, 134 + param0, -20 + this.field_s, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param1 + 10, 134 + param0, -20 + this.field_s, 4210752);
         }
         super.a(param0, param1, (byte) 123, param3);
     }

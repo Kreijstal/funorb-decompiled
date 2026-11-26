@@ -94,17 +94,17 @@ final class nl {
             var7 = param2[1].field_t;
             param2[0].d(param1, param4);
             param2[2].d(param1 + param3 - var6, param4);
-            fn.b(hj.field_l);
+            SoftwareRasterizer.saveClip(hj.field_l);
             if (param0 <= 101) {
               field_e = (String) null;
             }
-            fn.f(var5_int + param1, param4, param1 + (param3 - var6), param4 + param2[1].field_x);
+            SoftwareRasterizer.intersectClip(var5_int + param1, param4, param1 + (param3 - var6), param4 + param2[1].field_x);
             var8 = param1 + var5_int;
             var9 = -var6 + (param1 + param3);
             for (param1 = var8; param1 < var9; param1 = param1 + var7) {
               param2[1].d(param1, param4);
             }
-            fn.a(hj.field_l);
+            SoftwareRasterizer.restoreClip(hj.field_l);
             return;
           }
           return;
@@ -127,7 +127,7 @@ final class nl {
           dn.field_f = param2;
           wg.field_a = param1;
           rn.field_e = param0;
-          ud.a(fn.field_g / 2, (byte) -12, fn.field_l / param3);
+          ud.a(SoftwareRasterizer.field_g / 2, (byte) -12, SoftwareRasterizer.field_l / param3);
           ue.a(param0.field_D + param0.field_y, param2.field_y + param2.field_D, param2.field_y, param0.field_y, 243);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "nl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

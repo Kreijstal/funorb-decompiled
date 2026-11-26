@@ -63,7 +63,7 @@ final class lh {
           var9Lifetime1 = var18.field_j;
           vf.a((byte) 34);
           var18.e();
-          ge.g(0, 0, ge.field_h, ge.field_g);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.e();

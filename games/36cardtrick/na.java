@@ -51,81 +51,81 @@ final class na extends la {
           if (param1 <= 45) {
             return;
           }
-          if (vj.field_f >= param4) {
-            stackIn_6_0 = vj.field_f;
+          if (SoftwareRasterizer.field_f >= param4) {
+            stackIn_6_0 = SoftwareRasterizer.field_f;
           } else {
             stackIn_6_0 = param4;
           }
           var7 = stackIn_6_0;
-          if (vj.field_h >= param0) {
-            stackIn_9_0 = vj.field_h;
+          if (SoftwareRasterizer.field_h >= param0) {
+            stackIn_9_0 = SoftwareRasterizer.field_h;
           } else {
             stackIn_9_0 = param0;
           }
           var8 = stackIn_9_0;
-          if (vj.field_a > var5_int) {
+          if (SoftwareRasterizer.field_a > var5_int) {
             stackIn_12_0 = var5_int;
           } else {
-            stackIn_12_0 = vj.field_a;
+            stackIn_12_0 = SoftwareRasterizer.field_a;
           }
           var9 = stackIn_12_0;
-          if (vj.field_b <= var6) {
-            stackIn_15_0 = vj.field_b;
+          if (SoftwareRasterizer.field_b <= var6) {
+            stackIn_15_0 = SoftwareRasterizer.field_b;
           } else {
             stackIn_15_0 = var6;
           }
           var10 = stackIn_15_0;
-          if (param4 >= vj.field_f &&
-            param4 < vj.field_a) {
-            var11 = param4 + var8 * vj.field_l;
+          if (param4 >= SoftwareRasterizer.field_f &&
+            param4 < SoftwareRasterizer.field_a) {
+            var11 = param4 + var8 * SoftwareRasterizer.field_l;
             var12 = 1 + (var10 - var8) >> 1;
             while (true) {
               var12--;
               if (0 > var12) {
                 break;
               }
-              vj.field_j[var11] = 16777215;
-              var11 = var11 + vj.field_l * 2;
+              SoftwareRasterizer.field_j[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_l * 2;
             }
           }
-          if (vj.field_h <= param0 &&
-            vj.field_b > var6) {
-            var11Lifetime1 = var7 + param0 * vj.field_l;
+          if (SoftwareRasterizer.field_h <= param0 &&
+            SoftwareRasterizer.field_b > var6) {
+            var11Lifetime1 = var7 + param0 * SoftwareRasterizer.field_l;
             var12Lifetime1 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              vj.field_j[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_j[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (vj.field_f <= var5_int &&
-            var5_int < vj.field_a) {
-            var11Lifetime2 = var5_int + vj.field_l * (var8 + (1 & var5_int - param4));
+          if (SoftwareRasterizer.field_f <= var5_int &&
+            var5_int < SoftwareRasterizer.field_a) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.field_l * (var8 + (1 & var5_int - param4));
             var12Lifetime2 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              vj.field_j[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + vj.field_l * 2;
+              SoftwareRasterizer.field_j[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_l * 2;
             }
           }
-          if (param0 >= vj.field_h) {
-            if (vj.field_b <= var6) {
+          if (param0 >= SoftwareRasterizer.field_h) {
+            if (SoftwareRasterizer.field_b <= var6) {
               return;
             }
-            var11Lifetime3 = var7 + (vj.field_l * var6 + (-param0 + var6 & 1));
+            var11Lifetime3 = var7 + (SoftwareRasterizer.field_l * var6 + (-param0 + var6 & 1));
             var12Lifetime3 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (0 > var12Lifetime3) {
                 return;
               }
-              vj.field_j[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_j[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }

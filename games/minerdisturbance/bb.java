@@ -28,8 +28,8 @@ final class bb {
           if (6 + (var8 + var6) > SoftwareRasterizer.field_c) {
             var8 = -var6 + (SoftwareRasterizer.field_c - 6);
           }
-          SoftwareRasterizer.a(var7, var8, 6 + var5_int, var6 + 6, param1);
-          SoftwareRasterizer.e(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, param3);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, param1);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, param3);
           param2.a(param0, 3 + var7, var8 + 3 + param2.field_N, param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

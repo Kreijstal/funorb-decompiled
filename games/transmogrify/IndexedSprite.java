@@ -73,33 +73,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var9Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_b;
-        int var3 = param0 + param1 * sb.field_c;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_c;
         int var4 = 0;
         int var5 = this.field_g;
         int var6 = this.field_f;
-        int var7 = sb.field_c - var6;
+        int var7 = SoftwareRasterizer.field_c - var6;
         int var8 = 0;
-        if (param1 < sb.field_e) {
-          var9 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e - param1;
           var5 = var5 - var9;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * sb.field_c;
+          var3 = var3 + var9 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var5 > sb.field_f) {
-          var5 = var5 - (param1 + var5 - sb.field_f);
+        if (param1 + var5 > SoftwareRasterizer.field_f) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var9Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var9Lifetime1 = SoftwareRasterizer.field_d - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > sb.field_b) {
-          var9Lifetime2 = param0 + var6 - sb.field_b;
+        if (param0 + var6 > SoftwareRasterizer.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -108,7 +108,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(sb.field_h, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(SoftwareRasterizer.field_h, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1) {
@@ -117,33 +117,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var9Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_b;
-        int var3 = param0 + param1 * sb.field_c;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_c;
         int var4 = 0;
         int var5 = this.field_g;
         int var6 = this.field_f;
-        int var7 = sb.field_c - var6;
+        int var7 = SoftwareRasterizer.field_c - var6;
         int var8 = 0;
-        if (param1 < sb.field_e) {
-          var9 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var9 = SoftwareRasterizer.field_e - param1;
           var5 = var5 - var9;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * sb.field_c;
+          var3 = var3 + var9 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var5 > sb.field_f) {
-          var5 = var5 - (param1 + var5 - sb.field_f);
+        if (param1 + var5 > SoftwareRasterizer.field_f) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var9Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var9Lifetime1 = SoftwareRasterizer.field_d - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > sb.field_b) {
-          var9Lifetime2 = param0 + var6 - sb.field_b;
+        if (param0 + var6 > SoftwareRasterizer.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -152,7 +152,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(sb.field_h, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(SoftwareRasterizer.field_h, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -238,33 +238,33 @@ final class IndexedSprite extends IndexedSpriteState {
         int var10Lifetime2;
         param0 = param0 + this.field_c;
         param1 = param1 + this.field_b;
-        int var4 = param0 + param1 * sb.field_c;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_c;
         int var5 = 0;
         int var6 = this.field_g;
         int var7 = this.field_f;
-        int var8 = sb.field_c - var7;
+        int var8 = SoftwareRasterizer.field_c - var7;
         int var9 = 0;
-        if (param1 < sb.field_e) {
-          var10 = sb.field_e - param1;
+        if (param1 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param1;
           var6 = var6 - var10;
-          param1 = sb.field_e;
+          param1 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * sb.field_c;
+          var4 = var4 + var10 * SoftwareRasterizer.field_c;
         }
-        if (param1 + var6 > sb.field_f) {
-          var6 = var6 - (param1 + var6 - sb.field_f);
+        if (param1 + var6 > SoftwareRasterizer.field_f) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_f);
         }
-        if (param0 < sb.field_d) {
-          var10Lifetime1 = sb.field_d - param0;
+        if (param0 < SoftwareRasterizer.field_d) {
+          var10Lifetime1 = SoftwareRasterizer.field_d - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = sb.field_d;
+          param0 = SoftwareRasterizer.field_d;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > sb.field_b) {
-          var10Lifetime2 = param0 + var7 - sb.field_b;
+        if (param0 + var7 > SoftwareRasterizer.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -273,7 +273,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.b(sb.field_h, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.b(SoftwareRasterizer.field_h, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
     }
 
     IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {

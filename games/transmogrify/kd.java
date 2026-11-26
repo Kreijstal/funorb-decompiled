@@ -327,7 +327,7 @@ final class kd implements WidgetRenderer {
             fc.field_h[var15.field_i].e(8, var9Lifetime2);
             IntrusiveNode.field_d.b(IntrusiveDeque.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
           }
-          var9Lifetime3 = sb.field_h[(2147483647 & nc.field_t) % sb.field_h.length];
+          var9Lifetime3 = SoftwareRasterizer.field_h[(2147483647 & nc.field_t) % SoftwareRasterizer.field_h.length];
           vh.field_n = vh.field_n - var9Lifetime3;
           DirectByteStorage.field_j = DirectByteStorage.field_j - var9Lifetime3;
           return;

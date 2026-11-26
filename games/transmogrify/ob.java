@@ -90,7 +90,7 @@ final class ob extends le {
             this.field_H.field_n >= var12 &&
             var13 <= this.field_H.field_m) {
             CrossfadingMidiPcmStream.a(this.field_H, 256);
-            sb.c();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_H = new Sprite(var12, var13);
             CrossfadingMidiPcmStream.a(this.field_H, 256);
@@ -137,14 +137,14 @@ final class ob extends le {
             tj.field_s = new Sprite(wl.field_K.field_n, wl.field_K.field_m);
           }
           tj.field_s.e();
-          sb.c();
+          SoftwareRasterizer.clearRaster();
           param2.draw(param3, -param2.y, 1, -param2.x);
           var11 = ue.field_c[param1];
           var12 = var11;
           var11.field_j[0] = 0;
           var5 = param0;
-          for (var6 = 0; var6 < sb.field_h.length; var6++) {
-            var7 = sb.field_h[var6];
+          for (var6 = 0; var6 < SoftwareRasterizer.field_h.length; var6++) {
+            var7 = SoftwareRasterizer.field_h[var6];
             var8 = -1;
             for (var9 = 0; var5 > var9; var9++) {
               if (~var12.field_j[var9] != ~var7) {

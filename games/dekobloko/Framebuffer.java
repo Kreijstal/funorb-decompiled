@@ -17,7 +17,7 @@ abstract class Framebuffer {
         if (byteArgument1 > -82) {
           this.performAction0420((byte) 23);
         }
-        SoftwareRaster.performAction0645(this.integerArrayState0040, this.integerState0190, this.integerState0191);
+        SoftwareRaster.setRasterBuffer(this.integerArrayState0040, this.integerState0190, this.integerState0191);
     }
 
     abstract void performAction0424(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4);

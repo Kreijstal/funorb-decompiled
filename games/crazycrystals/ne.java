@@ -25,28 +25,28 @@ final class ne {
         int var13 = 0;
         var13 = CrazyCrystals.field_B;
         try {
-          if (kh.field_c > param4) {
-            param1 = param1 - (-param4 + kh.field_c);
-            param4 = kh.field_c;
+          if (SoftwareRasterizer.field_c > param4) {
+            param1 = param1 - (-param4 + SoftwareRasterizer.field_c);
+            param4 = SoftwareRasterizer.field_c;
           }
-          if (kh.field_b > param0) {
-            param5 = param5 - (-param0 + kh.field_b);
-            param0 = kh.field_b;
+          if (SoftwareRasterizer.field_b > param0) {
+            param5 = param5 - (-param0 + SoftwareRasterizer.field_b);
+            param0 = SoftwareRasterizer.field_b;
           }
-          if (kh.field_g < param1 + param4) {
-            param1 = kh.field_g - param4;
+          if (SoftwareRasterizer.field_g < param1 + param4) {
+            param1 = SoftwareRasterizer.field_g - param4;
           }
           var6_int = 121 / ((-55 - param2) / 41);
-          if (kh.field_j < param5 + param0) {
-            param5 = kh.field_j - param0;
+          if (SoftwareRasterizer.field_j < param5 + param0) {
+            param5 = SoftwareRasterizer.field_j - param0;
           }
           if (0 < param1 &&
             param5 > 0) {
-            var7 = kh.field_l * param0 + param4;
-            var8 = -param1 + kh.field_l;
+            var7 = SoftwareRasterizer.field_l * param0 + param4;
+            var8 = -param1 + SoftwareRasterizer.field_l;
             for (param0 = -param5; 0 > param0; param0++) {
               for (param4 = -param1; param4 < 0; param4++) {
-                var9 = kh.field_i[var7];
+                var9 = SoftwareRasterizer.field_i[var7];
                 if (((65280 & var9) >> 8) > param3 &&
                   (var9 & 65280) >> 8 >= (var9 & 16711680) >> 16) {
                   var10 = -60 + ((16711680 & var9) >> 15);
@@ -56,7 +56,7 @@ final class ne {
                   var11 = var9 & 65280;
                   var11 = -(var11 >> 5) + (var11 >> 1) & 65280;
                   var12 = var9 >> 3 & 31;
-                  kh.field_i[var7] = hm.a(hm.a(var10 << 16, var11), var12);
+                  SoftwareRasterizer.field_i[var7] = hm.a(hm.a(var10 << 16, var11), var12);
                 }
                 var7++;
               }

@@ -294,7 +294,7 @@ final class eca extends bi {
     final void l(int param0) {
         this.i(-12988);
         InsanoSauceEvent.a(wa.field_l, 40, 16760896, true, 320, false);
-        SoftwareRasterizer.a(40, 60, 560, 335, 20, 0, 80);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(40, 60, 560, 335, 20, 0, 80);
         if (param0 != 9) {
           this.field_k = (BitmapFont) null;
           if (AttackUpAllAnimation.e(param0 - 29928)) {

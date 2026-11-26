@@ -77,10 +77,10 @@ final class ed {
             MouseWheelInput.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
             ql.field_k = (fa) ((Object) ub.a("benefits", ub.field_b, "large_font", SecondaryNodeDeque.field_b, 32));
             qj.field_H = (fa) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
-            var27 = gb.field_a;
-            var2 = gb.field_d;
-            var3 = gb.field_k;
-            gb.a(ab.field_c);
+            var27 = SoftwareRasterizer.field_a;
+            var2 = SoftwareRasterizer.field_d;
+            var3 = SoftwareRasterizer.field_k;
+            SoftwareRasterizer.saveClip(ab.field_c);
             var11 = new dd(4 + MouseWheelInput.field_f.field_w, 4 + MouseWheelInput.field_f.field_t);
             var11.f();
             MouseWheelInput.field_f.d(2, 2, SecondaryNodeDequeIterator.field_e);
@@ -107,9 +107,9 @@ final class ed {
             vg.field_u = null;
             kf.field_i = sg.field_f.c();
             kf.field_i.f();
-            nj.a(0, 64, gb.field_d, 0, gb.field_k * 2 / 3, 1067);
-            gb.a(var27, var2, var3);
-            gb.b(ab.field_c);
+            nj.a(0, 64, SoftwareRasterizer.field_d, 0, SoftwareRasterizer.field_k * 2 / 3, 1067);
+            SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
+            SoftwareRasterizer.restoreClip(ab.field_c);
             ub.field_b = null;
             GzipDecompressor.field_e = (vj.field_c.field_t - df.field_b.field_t) / 2 + 390;
             mh.field_w = (vj.field_c.field_w - df.field_b.field_w) / 2 + 434;
@@ -121,10 +121,10 @@ final class ed {
           }
           if (pb.field_g != null &&
             null != ql.field_k) {
-            var28 = gb.field_a;
-            var2Lifetime1 = gb.field_d;
-            var3Lifetime1 = gb.field_k;
-            gb.a(ab.field_c);
+            var28 = SoftwareRasterizer.field_a;
+            var2Lifetime1 = SoftwareRasterizer.field_d;
+            var3Lifetime1 = SoftwareRasterizer.field_k;
+            SoftwareRasterizer.saveClip(ab.field_c);
             var14 = db.a(hb.field_q, new String[]{ng.field_g[di.field_d]}, true);
             var5 = ql.field_k.c(var14, wa.field_m);
             var6Lifetime1 = ql.field_k.b(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
@@ -182,15 +182,15 @@ final class ed {
             pb.field_g.c(aj.field_q + (pb.field_g.field_x >> 1), (pb.field_g.field_r >> 1) + t.field_d, kh.field_d, 4096);
             pb.field_g = null;
             uf.field_f.d();
-            gb.a(var28, var2Lifetime1, var3Lifetime1);
-            gb.b(ab.field_c);
+            SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(ab.field_c);
           }
           if (DualLinkNode.field_k != null &&
             qj.field_H != null) {
-            var29 = gb.field_a;
-            var2Lifetime2 = gb.field_d;
-            var3Lifetime2 = gb.field_k;
-            gb.a(ab.field_c);
+            var29 = SoftwareRasterizer.field_a;
+            var2Lifetime2 = SoftwareRasterizer.field_d;
+            var3Lifetime2 = SoftwareRasterizer.field_k;
+            SoftwareRasterizer.saveClip(ab.field_c);
             var16 = new dd(412, 43);
             var5_ref_String = db.a(fk.field_B, new String[]{DualLinkNode.field_k}, true);
             DualLinkNode.field_k = null;
@@ -199,15 +199,15 @@ final class ed {
             rg.a(0, var16, var16.field_w, var16.field_t, 1, -27, 3, 0);
             GameAppletShell.field_b.f();
             var16.d(199 - GameAppletShell.field_b.field_q, 83 - GameAppletShell.field_b.field_v);
-            gb.a(var29, var2Lifetime2, var3Lifetime2);
-            gb.b(ab.field_c);
+            SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(ab.field_c);
           }
           if (dl.field_s != null &&
             qj.field_H != null) {
-            var30 = gb.field_a;
-            var2Lifetime3 = gb.field_d;
-            var3Lifetime3 = gb.field_k;
-            gb.a(ab.field_c);
+            var30 = SoftwareRasterizer.field_a;
+            var2Lifetime3 = SoftwareRasterizer.field_d;
+            var3Lifetime3 = SoftwareRasterizer.field_k;
+            SoftwareRasterizer.saveClip(ab.field_c);
             var4 = qj.field_H.c(ContextualRuntimeException.field_d, 640) + 6;
             var5Lifetime1 = var4 + dl.field_s.field_x + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -217,13 +217,13 @@ final class ed {
             rg.a(-GameAppletShell.field_b.field_q + (var7Lifetime2 - 4), GameAppletShell.field_b, var4, 50, 1, -90, 3, 155 - GameAppletShell.field_b.field_v);
             var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + dl.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
             dl.field_s.d(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
-            gb.a(var30, var2Lifetime3, var3Lifetime3);
-            gb.b(ab.field_c);
+            SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(ab.field_c);
             dl.field_s = null;
           }
-          gb.a(ab.field_c);
-          gb.a(16, 16, 608, 112, 15, fi.field_j, pb.field_i);
-          gb.a(231, 144, 393, 232, 15, fi.field_j, pb.field_i);
+          SoftwareRasterizer.saveClip(ab.field_c);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, fi.field_j, pb.field_i);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, fi.field_j, pb.field_i);
           if (null != mf.field_b) {
             mf.field_b.d(0, 0);
           }

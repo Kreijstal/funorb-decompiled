@@ -40,7 +40,7 @@ final class ee {
                 dd.a(param1, 0, 0, -23466);
               }
             } else {
-              ki.b();
+              SoftwareRasterizer.clearRaster();
               lh.a(240, (byte) -95, 320);
               dd.a(param1, 0, 0, param0 - 23786);
             }

@@ -43,7 +43,7 @@ final class we extends UiWidget {
             var6 = var6 + param1.field_y;
           }
           ln.d(-28558);
-          if (bi.field_d <= param0 + this.field_I.field_y) {
+          if (SoftwareRasterizer.field_d <= param0 + this.field_I.field_y) {
             lq.a(this.field_Q, (byte) -94);
             param1.e(-this.field_P, 0);
             param1.e(-this.field_P + 2 * this.field_O, 0);
@@ -51,7 +51,7 @@ final class we extends UiWidget {
             ln.d(-28558);
             this.field_Q.e(param0, param3);
           }
-          if (var5_int - this.field_I.field_y <= bi.field_i) {
+          if (var5_int - this.field_I.field_y <= SoftwareRasterizer.field_i) {
             lq.a(this.field_Q, (byte) -94);
             for (var7 = this.field_P + (this.width - this.field_I.field_y); 2 * this.field_O < var7; var7 = var7 - 2 * this.field_O) {
             }
@@ -191,13 +191,13 @@ final class we extends UiWidget {
           var10 = -var5 + var6;
           var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5)) + 128;
           var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var11 * var8 | 16711680 & var9 * var11) >>> 8;
-          bi.b(var7, var6, this.field_O, var12);
-          bi.b(-(this.field_O * 2) + var7, var6, this.field_O, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_O, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_O * 2) + var7, var6, this.field_O, var12);
           var8Lifetime1 = 16711935 & param1;
           var9Lifetime1 = param1 & 65280;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (16711680 & var11 * var9Lifetime1 | -16711936 & var8Lifetime1 * var11) >>> 8;
-          bi.b(var7 + this.field_O, var6, this.field_O, var12Lifetime1);
-          bi.b(-this.field_O + var7, var6, this.field_O, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_O, var6, this.field_O, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_O + var7, var6, this.field_O, var12Lifetime1);
           var6++;
         }
         ln.d(-28558);
@@ -265,7 +265,7 @@ final class we extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            bi.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         ln.d(-28558);
@@ -363,7 +363,7 @@ final class we extends UiWidget {
           var9Lifetime1 = var17.field_t;
           DelegatingCanvas.a((byte) -123);
           var17.d();
-          bi.a(0, 0, bi.field_e, bi.field_j);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();

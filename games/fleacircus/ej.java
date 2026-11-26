@@ -14,8 +14,8 @@ final class ej {
         param0 = param0 * 16;
         param5 = param5 * 16;
         param4 = param4 * 16;
-        gb.g(param4, param1, param0, param5, 16711680, param2 + 96);
-        gb.e(param4, param1, param0, param5, 16711680, param2 + 128);
+        SoftwareRasterizer.fillRectangleAlpha(param4, param1, param0, param5, 16711680, param2 + 96);
+        SoftwareRasterizer.drawRectangleOutlineAlpha(param4, param1, param0, param5, 16711680, param2 + 128);
         int var6 = 1 / ((17 - param3) / 34);
     }
 

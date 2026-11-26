@@ -8,12 +8,12 @@ final class oj extends IntrusiveNode {
     static String field_j;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        gb.a(si.field_R);
+        SoftwareRasterizer.saveClip(si.field_R);
         int var4 = param2;
         int var5 = param0;
-        gb.a(var4, var5, 16 + var4, var5 + 16);
+        SoftwareRasterizer.setClip(var4, var5, 16 + var4, var5 + 16);
         se.field_a[param3].f(0, param1);
-        gb.b(si.field_R);
+        SoftwareRasterizer.restoreClip(si.field_R);
     }
 
     oj(byte[] param0) {

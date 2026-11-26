@@ -170,7 +170,7 @@ final class RenderingSupport003 {
           integerLocal21 = SoftwareRaster.integerState0285;
           integerLocal22 = SoftwareRaster.integerState0284;
           integerArrayLocal44 = new int[4];
-          SoftwareRaster.performAction0652(integerArrayLocal44);
+          SoftwareRaster.saveClip(integerArrayLocal44);
           for (integerLocal1 = 0; integerLocal1 < 256; integerLocal1++) {
             integerArrayLocal13[integerLocal1] = indexedSpriteArrayArgument4[integerLocal1].integerState0427 - integerArgument3;
             integerArrayLocal15[integerLocal1] = indexedSpriteArrayArgument4[integerLocal1].integerState0428 - integerArgument3;
@@ -184,14 +184,14 @@ final class RenderingSupport003 {
             integerLocal27 = indexedSpriteArrayArgument4[integerLocal1].integerState0426;
             integerLocal28 = integerArrayLocal39[integerLocal1];
             integerLocal29 = integerLocal28 - integerLocal26;
-            SoftwareRaster.performAction0645(new int[integerArrayLocal40[integerLocal1] * integerArrayLocal39[integerLocal1]], integerArrayLocal39[integerLocal1], integerArrayLocal40[integerLocal1]);
+            SoftwareRaster.setRasterBuffer(new int[integerArrayLocal40[integerLocal1] * integerArrayLocal39[integerLocal1]], integerArrayLocal39[integerLocal1], integerArrayLocal40[integerLocal1]);
             integerLocal30 = 0;
             for (integerLocal31 = 0; integerLocal31 < integerLocal27; integerLocal31++) {
               for (integerLocal32 = 0; integerLocal26 > integerLocal32; integerLocal32++) {
                 previousIntegerLocal3 = integerLocal30;
                 integerLocal30++;
                 if (0 != byteArrayLocal25[previousIntegerLocal3]) {
-                  SoftwareRaster.performAction0640(integerLocal32, integerLocal31, (integerArgument3 << 1) + 1, (integerArgument3 << 1) + 1, 2);
+                  SoftwareRaster.fillRectangle(integerLocal32, integerLocal31, (integerArgument3 << 1) + 1, (integerArgument3 << 1) + 1, 2);
                 }
               }
             }
@@ -217,8 +217,8 @@ final class RenderingSupport003 {
           renderingSupport010Local23.integerState0517 = renderingSupport010Local23.integerState0517 - integerArgument3;
           renderingSupport010Local23.integerState0523 = renderingSupport010Local23.integerState0523 - integerArgument3;
           renderingSupport010Local23.integerState0518 = renderingSupport010Local23.integerState0518 - integerArgument3;
-          SoftwareRaster.performAction0645(integerArrayLocal45, integerLocal21, integerLocal22);
-          SoftwareRaster.performAction0644(integerArrayLocal44);
+          SoftwareRaster.setRasterBuffer(integerArrayLocal45, integerLocal21, integerLocal22);
+          SoftwareRaster.restoreClip(integerArrayLocal44);
           stackRenderingSupport010Local6 = renderingSupport010Local23;
           return stackRenderingSupport010Local6;
         } catch (java.lang.RuntimeException caughtParameterLocal50) {

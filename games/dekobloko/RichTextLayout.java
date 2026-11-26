@@ -103,28 +103,28 @@ final class RichTextLayout extends TextLayout {
         int integerLocal10 = SoftwareRaster.integerState0284;
         RgbSprite rgbSpriteLocal11 = new RgbSprite(integerArgument3, integerArgument4 - integerArgument3 * 2);
         rgbSpriteLocal11.performAction0256();
-        SoftwareRaster.performAction0660(0, 0, integerArgument3, integerArgument4 - 2 * integerArgument3, integerArgument6, integerArgument5);
+        SoftwareRaster.fillRectangleVerticalGradient(0, 0, integerArgument3, integerArgument4 - 2 * integerArgument3, integerArgument6, integerArgument5);
         RgbSprite rgbSpriteLocal12 = new RgbSprite(integerArgument3, integerArgument3);
         rgbSpriteLocal12.performAction0256();
-        SoftwareRaster.performAction0640(0, 0, integerArgument3, integerArgument3, integerArgument6);
+        SoftwareRaster.fillRectangle(0, 0, integerArgument3, integerArgument3, integerArgument6);
         RgbSprite rgbSpriteLocal13 = new RgbSprite(16, integerArgument3);
         if (integerArgument2 == -20982) {
           rgbSpriteLocal13.performAction0256();
-          SoftwareRaster.performAction0640(0, 0, 16, integerArgument3, integerArgument6);
+          SoftwareRaster.fillRectangle(0, 0, 16, integerArgument3, integerArgument6);
           rgbSpriteLocal1 = new RgbSprite(integerArgument3, integerArgument3);
           rgbSpriteLocal1.performAction0256();
-          SoftwareRaster.performAction0640(0, 0, integerArgument3, integerArgument3, integerArgument5);
+          SoftwareRaster.fillRectangle(0, 0, integerArgument3, integerArgument3, integerArgument5);
           rgbSpriteLocal2 = new RgbSprite(16, integerArgument3);
           rgbSpriteLocal2.performAction0256();
-          SoftwareRaster.performAction0640(0, 0, 16, integerArgument3, integerArgument5);
+          SoftwareRaster.fillRectangle(0, 0, 16, integerArgument3, integerArgument5);
           objectLocal3 = null;
           if (integerArgument1 > 0) {
             rgbSpriteLocal4 = new RgbSprite(16, 16);
             objectLocal3 = rgbSpriteLocal4;
             rgbSpriteLocal4.performAction0256();
-            SoftwareRaster.performAction0640(0, 0, 16, 16, integerArgument1);
+            SoftwareRaster.fillRectangle(0, 0, 16, 16, integerArgument1);
           }
-          SoftwareRaster.performAction0645(integerArrayLocal5, integerLocal9, integerLocal10);
+          SoftwareRaster.setRasterBuffer(integerArrayLocal5, integerLocal9, integerLocal10);
           return new RgbSprite[]{rgbSpriteLocal12, rgbSpriteLocal13, rgbSpriteLocal12, rgbSpriteLocal11, (RgbSprite) (objectLocal3), rgbSpriteLocal11, rgbSpriteLocal1, rgbSpriteLocal2, rgbSpriteLocal1};
         }
         return (RgbSprite[]) null;

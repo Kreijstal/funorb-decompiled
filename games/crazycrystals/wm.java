@@ -42,7 +42,7 @@ final class wm {
     }
 
     final void a(byte param0) {
-        kh.d(this.field_c, this.field_g, this.field_f, this.field_b);
+        SoftwareRasterizer.setClip(this.field_c, this.field_g, this.field_f, this.field_b);
         if (param0 >= -2) {
           wm.b((byte) -27);
         }
@@ -58,24 +58,24 @@ final class wm {
           var9_int = param3 + param2.field_v + (param0 - param8);
           var10 = param2.field_v + (param3 + param0) + param6;
           var11 = (param2.field_u >> 1) + (param1 + param2.field_t);
-          kh.a(var9_int, 0, var10, var11 + param5);
+          SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param5);
           param2.d(param3 - 1, -1 + param1, param7);
           param2.d(-1 + param3, 1 + param1, param7);
-          kh.a(mc.field_m);
-          kh.a(1 + var9_int, 0, var10 + 1, param5 + var11);
+          SoftwareRasterizer.restoreClip(mc.field_m);
+          SoftwareRasterizer.intersectClip(1 + var9_int, 0, var10 + 1, param5 + var11);
           param2.d(param3 + 1, -1 + param1, param7);
           param2.d(param3 + 1, 1 + param1, param7);
-          kh.a(mc.field_m);
+          SoftwareRasterizer.restoreClip(mc.field_m);
           var10Lifetime1 = param3 + param2.field_l + param2.field_v - (param0 + param8);
           var9_intLifetime1 = -param0 + param2.field_l + (param2.field_v + param3 - param6);
-          kh.a(var9_intLifetime1, -param5 + var11, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1, -param5 + var11, var10Lifetime1, 480);
           param2.d(param3 - 1, -1 + param1, param7);
           param2.d(param3 - 1, param1 + 1, param7);
-          kh.a(mc.field_m);
-          kh.a(1 + var9_intLifetime1, var11 - param5, 1 + var10Lifetime1, param4);
+          SoftwareRasterizer.restoreClip(mc.field_m);
+          SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, var11 - param5, 1 + var10Lifetime1, param4);
           param2.d(param3 + 1, param1 - 1, param7);
           param2.d(param3 + 1, param1 + 1, param7);
-          kh.a(mc.field_m);
+          SoftwareRasterizer.restoreClip(mc.field_m);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "wm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

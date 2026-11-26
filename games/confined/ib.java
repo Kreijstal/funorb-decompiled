@@ -107,11 +107,11 @@ final class ib extends fj {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        fn.a(var1.field_s, var1.field_u, var1.field_m);
+        SoftwareRasterizer.setRasterBuffer(var1.field_s, var1.field_u, var1.field_m);
         if (param0) {
           field_W = -15;
         }
-        fn.h(var1.field_t, var1.field_n, var1.field_r, var1.field_p);
+        SoftwareRasterizer.setClip(var1.field_t, var1.field_n, var1.field_r, var1.field_p);
         var1.field_s = null;
         m.field_d.addLast((IntrusiveNode) (var1), (byte) -108);
     }
@@ -184,13 +184,13 @@ final class ib extends fj {
           var10 = var6 - var5;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
           var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8 : var8 | var9;
-          fn.b(var7, var6, this.field_P, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_P, var12);
           var9Lifetime1 = param2 & 65280;
           var8Lifetime1 = param2 & 16711935;
-          fn.b(var7 - this.field_P * 2, var6, this.field_P, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_P * 2, var6, this.field_P, var12);
           var12Lifetime1 = 256 <= var11 ? var8Lifetime1 | var9Lifetime1 : (var11 * var9Lifetime1 & 16711680 | var8Lifetime1 * var11 & -16711936) >>> 8;
-          fn.b(this.field_P + var7, var6, this.field_P, var12Lifetime1);
-          fn.b(var7 - this.field_P, var6, this.field_P, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_P + var7, var6, this.field_P, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_P, var6, this.field_P, var12Lifetime1);
         }
         ib.b(false);
         return var14;
@@ -216,7 +216,7 @@ final class ib extends fj {
           }
           var7 = -39 % ((param0 - 61) / 63);
           ib.b(false);
-          if (fn.field_c <= this.field_K.field_u + param2) {
+          if (SoftwareRasterizer.field_c <= this.field_K.field_u + param2) {
             vm.a(this.field_L, -8409);
             param1.d(-this.field_H, 0);
             param1.d(-this.field_H + this.field_P * 2, 0);
@@ -224,7 +224,7 @@ final class ib extends fj {
             ib.b(false);
             this.field_L.d(param2, param3);
           }
-          if (fn.field_i >= var5_int - this.field_K.field_u) {
+          if (SoftwareRasterizer.field_i >= var5_int - this.field_K.field_u) {
             vm.a(this.field_L, -8409);
             for (var7Lifetime1 = -this.field_K.field_u + this.field_F + this.field_H; 2 * this.field_P < var7Lifetime1; var7Lifetime1 = var7Lifetime1 - this.field_P * 2) {
             }
@@ -268,7 +268,7 @@ final class ib extends fj {
               var7 = Math.sqrt(-var7 + 1.0);
               var9 = !(1.0 <= var7) ? (int)(255.0 * var7) : 255;
             }
-            fn.a(var6, var4, var9 << 16 | (var9 << 8 | var9));
+            SoftwareRasterizer.setPixel(var6, var4, var9 << 16 | (var9 << 8 | var9));
           }
           var4++;
         }

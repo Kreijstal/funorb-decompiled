@@ -142,10 +142,10 @@ final class nj {
         }
         mc.a(-8497, rj.field_H);
         ig.b();
-        ge.d();
+        SoftwareRasterizer.clearRaster();
         ec.b(-128);
         if (var5 < 256) {
-          ge.c(0, 0, ge.field_h, ge.field_g, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g, 0, 256 - var5);
         }
         tj.b(653);
         if (uj.field_i >= 150) {

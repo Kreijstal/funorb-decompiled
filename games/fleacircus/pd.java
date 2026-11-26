@@ -72,11 +72,11 @@ final class pd extends IntrusiveNode {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (param1) {
-          gb.g(0, 0, gb.field_d, gb.field_k, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, 192);
           kb.a(param2, param1);
           return;
         }
-        gb.c();
+        SoftwareRasterizer.clearRaster();
         kb.a(param2, param1);
     }
 

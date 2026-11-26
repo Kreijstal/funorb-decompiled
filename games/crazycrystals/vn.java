@@ -74,7 +74,7 @@ final class vn extends ue {
         var3 = stackIn_5_0;
         var4 = this.field_l;
         wi.a(30, jn.field_o, var3, var4 - var3, (byte) -71, -30 + var2);
-        kh.d(38, var3 + 8, -46 + var2, -16 + (var4 - var3), 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(38, var3 + 8, -46 + var2, -16 + (var4 - var3), 0, 192);
         if (this.field_g.field_f != 0) {
           return;
         }

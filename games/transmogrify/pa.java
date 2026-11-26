@@ -41,21 +41,21 @@ final class pa implements WidgetRenderer {
           var8 = 6 % ((param3 - 51) / 47);
           if (var15 != null) {
           }
-          sb.a(param4.field_p + param0, param4.field_n + param1, param4.field_l, param4.field_h, this.field_j);
+          SoftwareRasterizer.fillRectangle(param4.field_p + param0, param4.field_n + param1, param4.field_l, param4.field_h, this.field_j);
           var7 = var15.field_H + (param0 + param4.field_p);
           var9 = var15.field_G + (param4.field_n + param1);
-          sb.c(var7, var9, var15.field_A, this.field_d);
+          SoftwareRasterizer.fillCircle(var7, var9, var15.field_A, this.field_d);
           if (-1 != var15.field_D) {
             var10 = (double)var15.field_D * 3.141592653589793 * 2.0 / (double)var15.field_C;
             var12 = (int)(-Math.sin(var10) * (double)var15.field_A);
             var13 = (int)(Math.cos(var10) * (double)var15.field_A);
-            sb.c(var12 + var7, var13 + var9, 1, this.field_c);
+            SoftwareRasterizer.fillCircle(var12 + var7, var13 + var9, 1, this.field_c);
           }
-          sb.c(var7, var9, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var9, 2, 1);
           var10Lifetime1 = 3.141592653589793 * (double)var15.field_B * 2.0 / (double)var15.field_C;
           var12Lifetime1 = (int)(-Math.sin(var10Lifetime1) * (double)var15.field_A);
           var13Lifetime1 = (int)(Math.cos(var10Lifetime1) * (double)var15.field_A);
-          sb.e(var7, var9, var7 + var12Lifetime1, var9 + var13Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var9, var7 + var12Lifetime1, var9 + var13Lifetime1, 1);
           if (this.field_g == null) {
             return;
           }

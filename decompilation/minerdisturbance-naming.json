@@ -1596,6 +1596,14 @@
       "renamedSymbol": "M:eg.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:eh.a()V",
+      "originalName": "a",
+      "to": "resetClip",
+      "evidence": "Source-purpose review: Set clip left/top to zero and right/bottom to framebuffer dimensions, then clear both scanline masks in original order. Original body SHA256 00bfe9c1e5b60d20ee4ce187279087777251d9d79e513cea9cffc313f0e3e7fa. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.resetClip()V"
+    },
+    {
       "symbol": "M:eh.a(III)V",
       "originalName": "a",
       "to": "plotAdditive",
@@ -1612,12 +1620,124 @@
       "renamedSymbol": "M:SoftwareRasterizer.setClip(IIII)V"
     },
     {
+      "symbol": "M:eh.a(IIIII)V",
+      "originalName": "a",
+      "to": "drawRectangleOutline",
+      "evidence": "Source-purpose review: Draw top,bottom,left and right solid edge strokes with the existing line helpers in original order, including degenerate/full-int dimensions and repeated corner writes. Original body SHA256 213908332fff19dda2ef015a7af2be9b7f3fd2c89d8c22f1301b87d0b8076c5b. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.drawRectangleOutline(IIIII)V"
+    },
+    {
+      "symbol": "M:eh.a(IIIIII)V",
+      "originalName": "a",
+      "to": "blurRectangle",
+      "evidence": "Source-purpose review: Run the in-place horizontal smoothing kernel followed by the vertical smoothing kernel on the supplied rectangle with separate X/Y radii. Retain full integer domains, scratch allocation, RGB sums, clamp/edge/division behavior and first-pass partial writes if the second pass fails. Original body SHA256 b0c0ceb808d8dd9efea5f18aa99b5f673aaa1269350257940ad400d40f0c6d40. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.blurRectangle(IIIIII)V"
+    },
+    {
       "symbol": "M:eh.a(IIIIIIII[II[IIIIIIII)V",
       "originalName": "a",
       "to": "addRadialGlowScanlines",
       "evidence": "Source-purpose review: Radial glow scanline recurrence selects intensity lookup by (radius-distance)*count/radius and saturating-adds to destination;retainall full-intdivisions and no extra validation. Original identity M:eh.a(IIIIIIII[II[IIIIIIII)V. Pinned original body SHA256 e024c9f37a23a399e57ae4168ebf3a94404518ab3c8a3c96b8fac3b825ef3524. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoftwareRasterizer.addRadialGlowScanlines(IIIIIIII[II[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:eh.a(IIII[I)V",
+      "originalName": "a",
+      "to": "addRadialGlow",
+      "evidence": "Source-purpose review: Build4-bit fixed-point radial-glow rectangle bounds and squared-distance differences,then invoke the palette-additive scanline kernel. Original body SHA256 90f38845cc86052f9036acb59f8da8924b1d6e151f2c1930bc1e985063981fb0. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.addRadialGlow(IIII[I)V"
+    },
+    {
+      "symbol": "M:eh.a([I)V",
+      "originalName": "a",
+      "to": "restoreClip",
+      "evidence": "Source-purpose review: Read four clip boundaries from array slots0..3 into shared state, then clear row masks; preserve partial assignment before index/null exceptions. Original body SHA256 c0264c467c52f4069d2dc24c76c96e698a4848be5523222336de55eac027239f. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.restoreClip([I)V"
+    },
+    {
+      "symbol": "M:eh.a([III)V",
+      "originalName": "a",
+      "to": "setRasterBuffer",
+      "evidence": "Source-purpose review: Install framebuffer array, stride and height, then reset clip to the supplied dimensions using the existing clip setter; preserve argument order, shared aliases and mask reset. Original body SHA256 e1fdc0b1c8c2b6abc539ea544fe1449936c71594be392516bc77f5665983a2f0. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.setRasterBuffer([III)V"
+    },
+    {
+      "symbol": "M:eh.a([IIIIIIII)V",
+      "originalName": "a",
+      "to": "blurHorizontalInPlace",
+      "evidence": "Source-purpose review: Compute horizontal moving RGB sums directly into the framebuffer region, dividing by available edge sample counts and using the original 14-bit reciprocal in the interior. Preserve nonstandard clipping, edge sums/clamps, all scratch arguments, overflow and in-place read/write order. Original body SHA256 8182721ccc74f485d04970a721e79e600e3789d658a3c7c233d730f720dee86e. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V"
+    },
+    {
+      "symbol": "M:eh.a([IIIIIIIII)V",
+      "originalName": "a",
+      "to": "blurVerticalInPlace",
+      "evidence": "Source-purpose review: Compute vertical moving RGB sums using the three reusable channel arrays, with original allocation/clear order, edge sample divisors, 14-bit interior reciprocal, clamps and exact in-place scan order. Preserve all integer domains and failures. Original body SHA256 d9ebd3d8257da768361690f6b99e1d03404b0daf20aef75f6d7b79543cba363c. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V"
+    },
+    {
+      "symbol": "M:eh.b()V",
+      "originalName": "b",
+      "to": "clearScanlineMask",
+      "evidence": "Source-purpose review: Null both per-row mask arrays. Their only external consumer is the bitmap glyph rasterizer, where they supply clip-relative horizontal row offsets and widths; preserve the two assignment order. Original body SHA256 9b3dce486d37042568b62c2384df80b4cfae59799442fb056df151a5667c7a4e. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.clearScanlineMask()V"
+    },
+    {
+      "symbol": "M:eh.b(III)V",
+      "originalName": "b",
+      "to": "setPixel",
+      "evidence": "Source-purpose review: Write one solid pixel only when X/Y lie inside the current clip rectangle; retain original comparisons, stride multiplication and indexing. Original body SHA256 46075ec0b0bcb2cb329eb867ba11f763ab8e996c1faa9bfdf47cab0bc913310e. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.setPixel(III)V"
+    },
+    {
+      "symbol": "M:eh.b(IIII)V",
+      "originalName": "b",
+      "to": "grayscaleRectangle",
+      "evidence": "Source-purpose review: Replace each clipped framebuffer pixel with equal RGB channels computed by the exact original weighted expression (((pixel>>15 &510)+(pixel&255))/3+(pixel>>8&255))>>1. Preserve arithmetic and evaluation/store order. Original body SHA256 b1fac2149fd3186ca39ee3c2cd18796c1f84a006b15e911b7c089081b4083009. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.grayscaleRectangle(IIII)V"
+    },
+    {
+      "symbol": "M:eh.b(IIIII)V",
+      "originalName": "b",
+      "to": "drawRectangleShadow",
+      "evidence": "Source-purpose review: Draw four descending-opacity bottom and right shadow strokes using the existing 256-scale horizontal/vertical alpha helpers; retain coordinates, width, height-plus-one and call order. Original body SHA256 a2ddd82ddbf167e61a46183edd1031bc0dfe507315cb08764512f5e7710b8adc. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.drawRectangleShadow(IIIII)V"
+    },
+    {
+      "symbol": "M:eh.b(IIIIII)V",
+      "originalName": "b",
+      "to": "fillRectangleAlpha",
+      "evidence": "Source-purpose review: Blend a uniform color over a clipped rectangle with alpha and 256-minus-alpha using the original separate packed RGB arithmetic; retain full integer alpha domain, signed shifts and partial writes. Original body SHA256 ceb4600dc345c42709a2165f0a0600e0c7d15bd5bfebec4cbab3c9fe68917087. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V"
+    },
+    {
+      "symbol": "M:eh.b([I)V",
+      "originalName": "b",
+      "to": "saveClip",
+      "evidence": "Source-purpose review: Store left, top, right and bottom clip values into slots0..3 of the supplied array in order; preserve partial writes and null/index failures. Original body SHA256 bbc190e55aaafe2d652faa04c95c325adfc058fde0908302e5d6a235c28874ec. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.saveClip([I)V"
+    },
+    {
+      "symbol": "M:eh.c()V",
+      "originalName": "c",
+      "to": "clearStaticReferences",
+      "evidence": "Source-purpose review: Null the framebuffer, both scanline masks and the three blur channel arrays in their original order without resetting primitive dimensions or clip values. Original body SHA256 eb38f6c3396fa0856afe36327481efbb2f154d994db6df913759445090d16562. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.clearStaticReferences()V"
     },
     {
       "symbol": "M:eh.c(IIII)V",
@@ -1636,6 +1756,30 @@
       "renamedSymbol": "M:SoftwareRasterizer.drawVerticalLineAlpha(IIIII)V"
     },
     {
+      "symbol": "M:eh.c(IIIIII)V",
+      "originalName": "c",
+      "to": "fillRectangleVerticalGradient",
+      "evidence": "Source-purpose review: Fill a clipped rectangle with a top-to-bottom RGB interpolation using original 16-bit Y phase and 256-scale component weights. Preserve initial division-by-height, clipping adjustments, unsigned shift and iteration order. Original body SHA256 abf3b84dd5da00e7d6c82f7fa3d9544335281ffac58cb0886fe0cdaca6f3f0e0. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V"
+    },
+    {
+      "symbol": "M:eh.d()V",
+      "originalName": "d",
+      "to": "clearRaster",
+      "evidence": "Source-purpose review: Clear width-times-height framebuffer entries to zero using the original eight-store unrolled loop and scalar tail, ignoring the clip rectangle; retain overflow and partial stores. Original body SHA256 3d298475ff66572dfb81f89f72ed656d866af142b8b70f3cf7fa7f057b041da8. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.clearRaster()V"
+    },
+    {
+      "symbol": "M:eh.d(IIII)V",
+      "originalName": "d",
+      "to": "drawCircleOutline",
+      "evidence": "Source-purpose review: Draw a solid midpoint-style circular boundary using direct eight-way symmetric stores when inside clip and individually clipped stores otherwise;retain radius0,negative-radius and all guards. Original body SHA256 381dfcd2230bbbf9b25ffc9fd6d6c99636902a952e5ee508d10507ced399047a. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.drawCircleOutline(IIII)V"
+    },
+    {
       "symbol": "M:eh.d(IIIII)V",
       "originalName": "d",
       "to": "drawLine",
@@ -1650,6 +1794,30 @@
       "evidence": "Source-purpose review: Horizontal flatcolour clippedrun,contiguousdestination offsets. Original identity M:eh.e(IIII)V. Pinned original body SHA256 93a6d28e1b2cd44a5dfdf5eaf2616f16034ce3b80bd362ae8107fff0b58ee9da. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoftwareRasterizer.drawHorizontalLine(IIII)V"
+    },
+    {
+      "symbol": "M:eh.e(IIIII)V",
+      "originalName": "e",
+      "to": "fillRectangle",
+      "evidence": "Source-purpose review: Fill the clipped rectangular region with a solid color using original negative width/height loop counters and framebuffer stride; preserve primitive domains and stores. Original body SHA256 04d791c141bb00290bdb8696fc548ad30668d241c6eabe64c8cf722cfa6d873f. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.fillRectangle(IIIII)V"
+    },
+    {
+      "symbol": "M:eh.f(IIII)V",
+      "originalName": "f",
+      "to": "intersectClip",
+      "evidence": "Source-purpose review: Intersect each current clip boundary with the supplied rectangle using the original independent comparisons, then clear scanline masks; preserve invalid/reversed/full-int rectangles without normalization. Original body SHA256 8cec20b87c468ce3014a66a4ae37f95d72d2d3f19ac50e4fb643a1cc74f5a11f. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.intersectClip(IIII)V"
+    },
+    {
+      "symbol": "M:eh.f(IIIII)V",
+      "originalName": "f",
+      "to": "fillCircleAlpha",
+      "evidence": "Source-purpose review: Fill clipped circular scanlines with256-scale per-channel alpha blending;retain alpha0/256 cases,negative radii,scanline recurrence and exact destination-read/store order. Original body SHA256 76214ba399495358a6dd82adf92535d775c97b14b3d287662abc60871e15d07e. Reviewed reference/alternative body,parameter slots,all shared field roles,callee/helper contracts and representative incoming contexts. Naming only;preserve full original JVM primitive domains,modifiers,operators/constants,strings,integer overflow,FP/casts,guards,aliases,allocation,partial writes and exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareRasterizer.fillCircleAlpha(IIIII)V"
     },
     {
       "symbol": "M:eh.g(IIII)V",
@@ -68635,7 +68803,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -68646,7 +68814,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -68657,7 +68825,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#10",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#10",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#10",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -68668,7 +68836,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#11",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#11",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#11",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -68679,7 +68847,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#12",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#12",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#12",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -68690,7 +68858,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#13",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#13",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#13",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -68701,7 +68869,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#14",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#14",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#14",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -68712,7 +68880,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#15",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#15",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#15",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -68723,7 +68891,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#16",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#16",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#16",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -68734,7 +68902,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#17",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#17",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#17",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -68745,7 +68913,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#18",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#18",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#18",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -68756,7 +68924,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -68767,7 +68935,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -68778,7 +68946,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -68789,7 +68957,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -68800,7 +68968,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -68811,7 +68979,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -68822,7 +68990,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#8",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -68833,7 +69001,7 @@
     },
     {
       "symbol": "L:eh.a(IIII[I)V#9",
-      "renamedSymbol": "L:SoftwareRasterizer.a(IIII[I)V#9",
+      "renamedSymbol": "L:SoftwareRasterizer.addRadialGlow(IIII[I)V#9",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -68844,7 +69012,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#0",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -68855,7 +69023,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#1",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -68866,7 +69034,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#10",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#10",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -68877,7 +69045,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#11",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#11",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -68888,7 +69056,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#12",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#12",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -68899,7 +69067,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#13",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#13",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -68910,7 +69078,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#14",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#14",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -68921,7 +69089,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#15",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#15",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -68932,7 +69100,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#16",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#16",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -68943,7 +69111,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#17",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#17",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#17",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -68954,7 +69122,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#18",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#18",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#18",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -68965,7 +69133,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#19",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#19",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#19",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -68976,7 +69144,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -68987,7 +69155,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#20",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#20",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#20",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -68998,7 +69166,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#21",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#21",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#21",
       "originalName": "var21Lifetime1",
       "renamedName": "var21Lifetime1",
       "declaration": {
@@ -69009,7 +69177,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#22",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#22",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#22",
       "originalName": "var21Lifetime2",
       "renamedName": "var21Lifetime2",
       "declaration": {
@@ -69020,7 +69188,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#23",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#23",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#23",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -69031,7 +69199,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#24",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#24",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#24",
       "originalName": "var22Lifetime2",
       "renamedName": "var22Lifetime2",
       "declaration": {
@@ -69042,7 +69210,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#25",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#25",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#25",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -69053,7 +69221,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#26",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#26",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#26",
       "originalName": "var23Lifetime2",
       "renamedName": "var23Lifetime2",
       "declaration": {
@@ -69064,7 +69232,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#3",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -69075,7 +69243,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#4",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -69086,7 +69254,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69097,7 +69265,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69108,7 +69276,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69119,7 +69287,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -69130,7 +69298,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIII)V#9",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIII)V#9",
+      "renamedSymbol": "L:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -69141,7 +69309,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#0",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -69152,7 +69320,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#1",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -69163,7 +69331,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#10",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#10",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#10",
       "originalName": "stackIn_44_0",
       "renamedName": "stackIn_44_0",
       "declaration": {
@@ -69174,7 +69342,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#11",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#11",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#11",
       "originalName": "stackIn_44_1",
       "renamedName": "stackIn_44_1",
       "declaration": {
@@ -69185,7 +69353,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#12",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#12",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#12",
       "originalName": "stackIn_45_2",
       "renamedName": "stackIn_45_2",
       "declaration": {
@@ -69196,7 +69364,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#13",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#13",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69207,7 +69375,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#14",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#14",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69218,7 +69386,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#15",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#15",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -69229,7 +69397,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#16",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#16",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -69240,7 +69408,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#17",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#17",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -69251,7 +69419,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#18",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#18",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -69262,7 +69430,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#19",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#19",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -69273,7 +69441,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#2",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -69284,7 +69452,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#20",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#20",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -69295,7 +69463,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#21",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#21",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#21",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -69306,7 +69474,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#22",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#22",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#22",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -69317,7 +69485,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#23",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#23",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -69328,7 +69496,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#24",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#24",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -69339,7 +69507,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#25",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#25",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#25",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -69350,7 +69518,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#26",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#26",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#26",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -69361,7 +69529,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#27",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#27",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#27",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -69372,7 +69540,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#28",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#28",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#28",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -69383,7 +69551,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#29",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#29",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#29",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -69394,7 +69562,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#3",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -69405,7 +69573,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#30",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#30",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#30",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -69416,7 +69584,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#31",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#31",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#31",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -69427,7 +69595,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#32",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#32",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#32",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -69438,7 +69606,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#33",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#33",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#33",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -69449,7 +69617,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#34",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#34",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#34",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -69460,7 +69628,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#35",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#35",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#35",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -69471,7 +69639,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#36",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#36",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#36",
       "originalName": "var18Lifetime2",
       "renamedName": "var18Lifetime2",
       "declaration": {
@@ -69482,7 +69650,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#37",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#37",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#37",
       "originalName": "var18Lifetime3",
       "renamedName": "var18Lifetime3",
       "declaration": {
@@ -69493,7 +69661,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#38",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#38",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#38",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -69504,7 +69672,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#39",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#39",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#39",
       "originalName": "var20Lifetime2",
       "renamedName": "var20Lifetime2",
       "declaration": {
@@ -69515,7 +69683,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#4",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -69526,7 +69694,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#40",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#40",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#40",
       "originalName": "var21Lifetime1",
       "renamedName": "var21Lifetime1",
       "declaration": {
@@ -69537,7 +69705,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#41",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#41",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#41",
       "originalName": "var21Lifetime2",
       "renamedName": "var21Lifetime2",
       "declaration": {
@@ -69548,7 +69716,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#42",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#42",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#42",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -69559,7 +69727,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#43",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#43",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#43",
       "originalName": "var22Lifetime2",
       "renamedName": "var22Lifetime2",
       "declaration": {
@@ -69570,7 +69738,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#44",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#44",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#44",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -69581,7 +69749,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#45",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#45",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#45",
       "originalName": "var23Lifetime2",
       "renamedName": "var23Lifetime2",
       "declaration": {
@@ -69592,7 +69760,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#46",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#46",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#46",
       "originalName": "var20Lifetime3",
       "renamedName": "var20Lifetime3",
       "declaration": {
@@ -69603,7 +69771,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#47",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#47",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#47",
       "originalName": "var20Lifetime1Lifetime1",
       "renamedName": "var20Lifetime1Lifetime1",
       "declaration": {
@@ -69614,7 +69782,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#48",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#48",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#48",
       "originalName": "var20Lifetime1Lifetime2",
       "renamedName": "var20Lifetime1Lifetime2",
       "declaration": {
@@ -69625,7 +69793,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#49",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#49",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#49",
       "originalName": "var20Lifetime2Lifetime1",
       "renamedName": "var20Lifetime2Lifetime1",
       "declaration": {
@@ -69636,7 +69804,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#5",
       "originalName": "stackIn_38_1",
       "renamedName": "stackIn_38_1",
       "declaration": {
@@ -69647,7 +69815,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#50",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#50",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#50",
       "originalName": "var21Lifetime1Lifetime1",
       "renamedName": "var21Lifetime1Lifetime1",
       "declaration": {
@@ -69658,7 +69826,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#51",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#51",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#51",
       "originalName": "var21Lifetime1Lifetime2",
       "renamedName": "var21Lifetime1Lifetime2",
       "declaration": {
@@ -69669,7 +69837,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#52",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#52",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#52",
       "originalName": "var21Lifetime1Lifetime3",
       "renamedName": "var21Lifetime1Lifetime3",
       "declaration": {
@@ -69680,7 +69848,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#6",
       "originalName": "stackIn_39_2",
       "renamedName": "stackIn_39_2",
       "declaration": {
@@ -69691,7 +69859,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#7",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -69702,7 +69870,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#8",
       "originalName": "stackIn_41_1",
       "renamedName": "stackIn_41_1",
       "declaration": {
@@ -69713,7 +69881,7 @@
     },
     {
       "symbol": "L:eh.a([IIIIIIIII)V#9",
-      "renamedSymbol": "L:SoftwareRasterizer.a([IIIIIIIII)V#9",
+      "renamedSymbol": "L:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#9",
       "originalName": "stackIn_42_2",
       "renamedName": "stackIn_42_2",
       "declaration": {
@@ -69724,7 +69892,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69735,7 +69903,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69746,7 +69914,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -69757,7 +69925,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69768,7 +69936,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69779,7 +69947,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69790,7 +69958,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -69801,7 +69969,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#7",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -69812,7 +69980,7 @@
     },
     {
       "symbol": "L:eh.b(IIII)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIII)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.grayscaleRectangle(IIII)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69823,7 +69991,7 @@
     },
     {
       "symbol": "L:eh.b(IIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.drawRectangleShadow(IIIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69834,7 +70002,7 @@
     },
     {
       "symbol": "L:eh.b(IIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.drawRectangleShadow(IIIII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69845,7 +70013,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -69856,7 +70024,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -69867,7 +70035,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -69878,7 +70046,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69889,7 +70057,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -69900,7 +70068,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -69911,7 +70079,7 @@
     },
     {
       "symbol": "L:eh.b(IIIIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.b(IIIIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -70318,7 +70486,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -70329,7 +70497,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -70340,7 +70508,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -70351,7 +70519,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70362,7 +70530,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70373,7 +70541,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70384,7 +70552,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -70395,7 +70563,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -70406,7 +70574,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -70417,7 +70585,7 @@
     },
     {
       "symbol": "L:eh.c(IIIIII)V#9",
-      "renamedSymbol": "L:SoftwareRasterizer.c(IIIIII)V#9",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -70428,7 +70596,7 @@
     },
     {
       "symbol": "L:eh.d()V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -70439,7 +70607,7 @@
     },
     {
       "symbol": "L:eh.d()V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -70450,7 +70618,7 @@
     },
     {
       "symbol": "L:eh.d()V#10",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#10",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#10",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -70461,7 +70629,7 @@
     },
     {
       "symbol": "L:eh.d()V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#2",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -70472,7 +70640,7 @@
     },
     {
       "symbol": "L:eh.d()V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#3",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -70483,7 +70651,7 @@
     },
     {
       "symbol": "L:eh.d()V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#4",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -70494,7 +70662,7 @@
     },
     {
       "symbol": "L:eh.d()V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#5",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -70505,7 +70673,7 @@
     },
     {
       "symbol": "L:eh.d()V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#6",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -70516,7 +70684,7 @@
     },
     {
       "symbol": "L:eh.d()V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#7",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -70527,7 +70695,7 @@
     },
     {
       "symbol": "L:eh.d()V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#8",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -70538,7 +70706,7 @@
     },
     {
       "symbol": "L:eh.d()V#9",
-      "renamedSymbol": "L:SoftwareRasterizer.d()V#9",
+      "renamedSymbol": "L:SoftwareRasterizer.clearRaster()V#9",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -70549,7 +70717,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -70560,7 +70728,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -70571,7 +70739,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -70582,7 +70750,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70593,7 +70761,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70604,7 +70772,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70615,7 +70783,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70626,7 +70794,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -70637,7 +70805,7 @@
     },
     {
       "symbol": "L:eh.d(IIII)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.d(IIII)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.drawCircleOutline(IIII)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -70714,7 +70882,7 @@
     },
     {
       "symbol": "L:eh.e(IIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangle(IIIII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -70725,7 +70893,7 @@
     },
     {
       "symbol": "L:eh.e(IIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangle(IIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -70736,7 +70904,7 @@
     },
     {
       "symbol": "L:eh.e(IIIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangle(IIIII)V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -70747,7 +70915,7 @@
     },
     {
       "symbol": "L:eh.e(IIIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangle(IIIII)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -70758,7 +70926,7 @@
     },
     {
       "symbol": "L:eh.e(IIIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.e(IIIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.fillRectangle(IIIII)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -70769,7 +70937,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#0",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#0",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#0",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -70780,7 +70948,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#1",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#1",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -70791,7 +70959,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#10",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#10",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -70802,7 +70970,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#11",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#11",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -70813,7 +70981,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#12",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#12",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -70824,7 +70992,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#13",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#13",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -70835,7 +71003,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#14",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#14",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -70846,7 +71014,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#15",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#15",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -70857,7 +71025,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#16",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#16",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -70868,7 +71036,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#17",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#17",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -70879,7 +71047,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#18",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#18",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -70890,7 +71058,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#19",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#19",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#19",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -70901,7 +71069,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#2",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#2",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -70912,7 +71080,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#20",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#20",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#20",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -70923,7 +71091,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#21",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#21",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#21",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -70934,7 +71102,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#22",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#22",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#22",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -70945,7 +71113,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#23",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#23",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#23",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -70956,7 +71124,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#24",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#24",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#24",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -70967,7 +71135,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#25",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#25",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#25",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -70978,7 +71146,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#26",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#26",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#26",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -70989,7 +71157,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#27",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#27",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#27",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -71000,7 +71168,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#28",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#28",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#28",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -71011,7 +71179,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#29",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#29",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#29",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -71022,7 +71190,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#3",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#3",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#3",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -71033,7 +71201,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#30",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#30",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#30",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -71044,7 +71212,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#31",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#31",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#31",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -71055,7 +71223,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#32",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#32",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#32",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -71066,7 +71234,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#33",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#33",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#33",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -71077,7 +71245,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#34",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#34",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#34",
       "originalName": "var21Lifetime1",
       "renamedName": "var21Lifetime1",
       "declaration": {
@@ -71088,7 +71256,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#35",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#35",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#35",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -71099,7 +71267,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#36",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#36",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#36",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -71110,7 +71278,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#37",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#37",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#37",
       "originalName": "var24Lifetime1",
       "renamedName": "var24Lifetime1",
       "declaration": {
@@ -71121,7 +71289,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#4",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#4",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#4",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -71132,7 +71300,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#5",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#5",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#5",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -71143,7 +71311,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#6",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#6",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -71154,7 +71322,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#7",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#7",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -71165,7 +71333,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#8",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#8",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -71176,7 +71344,7 @@
     },
     {
       "symbol": "L:eh.f(IIIII)V#9",
-      "renamedSymbol": "L:SoftwareRasterizer.f(IIIII)V#9",
+      "renamedSymbol": "L:SoftwareRasterizer.fillCircleAlpha(IIIII)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -180703,9 +180871,9 @@
     },
     {
       "symbol": "M:eh.a()V",
-      "renamedSymbol": "M:SoftwareRasterizer.a()V",
+      "renamedSymbol": "M:SoftwareRasterizer.resetClip()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetClip",
       "declaration": {
         "file": "eh.java",
         "start": 402,
@@ -180736,9 +180904,9 @@
     },
     {
       "symbol": "M:eh.a(IIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a(IIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.drawRectangleOutline(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawRectangleOutline",
       "declaration": {
         "file": "eh.java",
         "start": 2521,
@@ -180747,9 +180915,9 @@
     },
     {
       "symbol": "M:eh.a(IIIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a(IIIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.blurRectangle(IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blurRectangle",
       "declaration": {
         "file": "eh.java",
         "start": 10972,
@@ -180769,9 +180937,9 @@
     },
     {
       "symbol": "M:eh.a(IIII[I)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a(IIII[I)V",
+      "renamedSymbol": "M:SoftwareRasterizer.addRadialGlow(IIII[I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addRadialGlow",
       "declaration": {
         "file": "eh.java",
         "start": 43600,
@@ -180780,9 +180948,9 @@
     },
     {
       "symbol": "M:eh.a([I)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a([I)V",
+      "renamedSymbol": "M:SoftwareRasterizer.restoreClip([I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "restoreClip",
       "declaration": {
         "file": "eh.java",
         "start": 7756,
@@ -180791,9 +180959,9 @@
     },
     {
       "symbol": "M:eh.a([III)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a([III)V",
+      "renamedSymbol": "M:SoftwareRasterizer.setRasterBuffer([III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setRasterBuffer",
       "declaration": {
         "file": "eh.java",
         "start": 47126,
@@ -180802,9 +180970,9 @@
     },
     {
       "symbol": "M:eh.a([IIIIIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a([IIIIIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blurHorizontalInPlace",
       "declaration": {
         "file": "eh.java",
         "start": 11299,
@@ -180813,9 +180981,9 @@
     },
     {
       "symbol": "M:eh.a([IIIIIIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.a([IIIIIIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blurVerticalInPlace",
       "declaration": {
         "file": "eh.java",
         "start": 16526,
@@ -180824,9 +180992,9 @@
     },
     {
       "symbol": "M:eh.b()V",
-      "renamedSymbol": "M:SoftwareRasterizer.b()V",
+      "renamedSymbol": "M:SoftwareRasterizer.clearScanlineMask()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "clearScanlineMask",
       "declaration": {
         "file": "eh.java",
         "start": 10889,
@@ -180835,9 +181003,9 @@
     },
     {
       "symbol": "M:eh.b(III)V",
-      "renamedSymbol": "M:SoftwareRasterizer.b(III)V",
+      "renamedSymbol": "M:SoftwareRasterizer.setPixel(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setPixel",
       "declaration": {
         "file": "eh.java",
         "start": 47311,
@@ -180846,9 +181014,9 @@
     },
     {
       "symbol": "M:eh.b(IIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.b(IIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.grayscaleRectangle(IIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "grayscaleRectangle",
       "declaration": {
         "file": "eh.java",
         "start": 9358,
@@ -180857,9 +181025,9 @@
     },
     {
       "symbol": "M:eh.b(IIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.b(IIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.drawRectangleShadow(IIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawRectangleShadow",
       "declaration": {
         "file": "eh.java",
         "start": 32001,
@@ -180868,9 +181036,9 @@
     },
     {
       "symbol": "M:eh.b(IIIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.b(IIIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "fillRectangleAlpha",
       "declaration": {
         "file": "eh.java",
         "start": 29371,
@@ -180879,9 +181047,9 @@
     },
     {
       "symbol": "M:eh.b([I)V",
-      "renamedSymbol": "M:SoftwareRasterizer.b([I)V",
+      "renamedSymbol": "M:SoftwareRasterizer.saveClip([I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "saveClip",
       "declaration": {
         "file": "eh.java",
         "start": 10718,
@@ -180890,9 +181058,9 @@
     },
     {
       "symbol": "M:eh.c()V",
-      "renamedSymbol": "M:SoftwareRasterizer.c()V",
+      "renamedSymbol": "M:SoftwareRasterizer.clearStaticReferences()V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "clearStaticReferences",
       "declaration": {
         "file": "eh.java",
         "start": 27909,
@@ -180923,9 +181091,9 @@
     },
     {
       "symbol": "M:eh.c(IIIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.c(IIIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "fillRectangleVerticalGradient",
       "declaration": {
         "file": "eh.java",
         "start": 7935,
@@ -180934,9 +181102,9 @@
     },
     {
       "symbol": "M:eh.d()V",
-      "renamedSymbol": "M:SoftwareRasterizer.d()V",
+      "renamedSymbol": "M:SoftwareRasterizer.clearRaster()V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "clearRaster",
       "declaration": {
         "file": "eh.java",
         "start": 549,
@@ -180945,9 +181113,9 @@
     },
     {
       "symbol": "M:eh.d(IIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.d(IIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.drawCircleOutline(IIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "drawCircleOutline",
       "declaration": {
         "file": "eh.java",
         "start": 32385,
@@ -180978,9 +181146,9 @@
     },
     {
       "symbol": "M:eh.e(IIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.e(IIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.fillRectangle(IIIII)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "fillRectangle",
       "declaration": {
         "file": "eh.java",
         "start": 46203,
@@ -180989,9 +181157,9 @@
     },
     {
       "symbol": "M:eh.f(IIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.f(IIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.intersectClip(IIII)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "intersectClip",
       "declaration": {
         "file": "eh.java",
         "start": 38691,
@@ -181000,9 +181168,9 @@
     },
     {
       "symbol": "M:eh.f(IIIII)V",
-      "renamedSymbol": "M:SoftwareRasterizer.f(IIIII)V",
+      "renamedSymbol": "M:SoftwareRasterizer.fillCircleAlpha(IIIII)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "fillCircleAlpha",
       "declaration": {
         "file": "eh.java",
         "start": 2824,
@@ -215815,7 +215983,7 @@
     },
     {
       "symbol": "P:eh.a(IIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleOutline(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -215826,7 +215994,7 @@
     },
     {
       "symbol": "P:eh.a(IIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleOutline(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -215837,7 +216005,7 @@
     },
     {
       "symbol": "P:eh.a(IIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleOutline(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -215848,7 +216016,7 @@
     },
     {
       "symbol": "P:eh.a(IIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleOutline(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -215859,7 +216027,7 @@
     },
     {
       "symbol": "P:eh.a(IIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleOutline(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -215870,7 +216038,7 @@
     },
     {
       "symbol": "P:eh.a(IIIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.blurRectangle(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -215881,7 +216049,7 @@
     },
     {
       "symbol": "P:eh.a(IIIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.blurRectangle(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -215892,7 +216060,7 @@
     },
     {
       "symbol": "P:eh.a(IIIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.blurRectangle(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -215903,7 +216071,7 @@
     },
     {
       "symbol": "P:eh.a(IIIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.blurRectangle(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -215914,7 +216082,7 @@
     },
     {
       "symbol": "P:eh.a(IIIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.blurRectangle(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -215925,7 +216093,7 @@
     },
     {
       "symbol": "P:eh.a(IIIIII)V#5",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIIIII)V#5",
+      "renamedSymbol": "P:SoftwareRasterizer.blurRectangle(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -216134,7 +216302,7 @@
     },
     {
       "symbol": "P:eh.a(IIII[I)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIII[I)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.addRadialGlow(IIII[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216145,7 +216313,7 @@
     },
     {
       "symbol": "P:eh.a(IIII[I)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIII[I)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.addRadialGlow(IIII[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216156,7 +216324,7 @@
     },
     {
       "symbol": "P:eh.a(IIII[I)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIII[I)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.addRadialGlow(IIII[I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216167,7 +216335,7 @@
     },
     {
       "symbol": "P:eh.a(IIII[I)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIII[I)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.addRadialGlow(IIII[I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216178,7 +216346,7 @@
     },
     {
       "symbol": "P:eh.a(IIII[I)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.a(IIII[I)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.addRadialGlow(IIII[I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216189,7 +216357,7 @@
     },
     {
       "symbol": "P:eh.a([I)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a([I)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.restoreClip([I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216200,7 +216368,7 @@
     },
     {
       "symbol": "P:eh.a([III)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a([III)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.setRasterBuffer([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216211,7 +216379,7 @@
     },
     {
       "symbol": "P:eh.a([III)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.a([III)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.setRasterBuffer([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216222,7 +216390,7 @@
     },
     {
       "symbol": "P:eh.a([III)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.a([III)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.setRasterBuffer([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216233,7 +216401,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216244,7 +216412,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216255,7 +216423,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216266,7 +216434,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216277,7 +216445,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216288,7 +216456,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#5",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#5",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -216299,7 +216467,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#6",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#6",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -216310,7 +216478,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIII)V#7",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIII)V#7",
+      "renamedSymbol": "P:SoftwareRasterizer.blurHorizontalInPlace([IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -216321,7 +216489,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216332,7 +216500,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216343,7 +216511,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216354,7 +216522,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216365,7 +216533,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216376,7 +216544,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#5",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#5",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -216387,7 +216555,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#6",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#6",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -216398,7 +216566,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#7",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#7",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -216409,7 +216577,7 @@
     },
     {
       "symbol": "P:eh.a([IIIIIIIII)V#8",
-      "renamedSymbol": "P:SoftwareRasterizer.a([IIIIIIIII)V#8",
+      "renamedSymbol": "P:SoftwareRasterizer.blurVerticalInPlace([IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -216420,7 +216588,7 @@
     },
     {
       "symbol": "P:eh.b(III)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.b(III)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.setPixel(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216431,7 +216599,7 @@
     },
     {
       "symbol": "P:eh.b(III)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.b(III)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.setPixel(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216442,7 +216610,7 @@
     },
     {
       "symbol": "P:eh.b(III)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.b(III)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.setPixel(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216453,7 +216621,7 @@
     },
     {
       "symbol": "P:eh.b(IIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.grayscaleRectangle(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216464,7 +216632,7 @@
     },
     {
       "symbol": "P:eh.b(IIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.grayscaleRectangle(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216475,7 +216643,7 @@
     },
     {
       "symbol": "P:eh.b(IIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.grayscaleRectangle(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216486,7 +216654,7 @@
     },
     {
       "symbol": "P:eh.b(IIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.grayscaleRectangle(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216497,7 +216665,7 @@
     },
     {
       "symbol": "P:eh.b(IIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleShadow(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216508,7 +216676,7 @@
     },
     {
       "symbol": "P:eh.b(IIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleShadow(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216519,7 +216687,7 @@
     },
     {
       "symbol": "P:eh.b(IIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleShadow(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216530,7 +216698,7 @@
     },
     {
       "symbol": "P:eh.b(IIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleShadow(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216541,7 +216709,7 @@
     },
     {
       "symbol": "P:eh.b(IIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.drawRectangleShadow(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216552,7 +216720,7 @@
     },
     {
       "symbol": "P:eh.b(IIIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216563,7 +216731,7 @@
     },
     {
       "symbol": "P:eh.b(IIIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216574,7 +216742,7 @@
     },
     {
       "symbol": "P:eh.b(IIIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216585,7 +216753,7 @@
     },
     {
       "symbol": "P:eh.b(IIIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216596,7 +216764,7 @@
     },
     {
       "symbol": "P:eh.b(IIIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216607,7 +216775,7 @@
     },
     {
       "symbol": "P:eh.b(IIIIII)V#5",
-      "renamedSymbol": "P:SoftwareRasterizer.b(IIIIII)V#5",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleAlpha(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -216618,7 +216786,7 @@
     },
     {
       "symbol": "P:eh.b([I)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.b([I)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.saveClip([I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216728,7 +216896,7 @@
     },
     {
       "symbol": "P:eh.c(IIIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.c(IIIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216739,7 +216907,7 @@
     },
     {
       "symbol": "P:eh.c(IIIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.c(IIIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216750,7 +216918,7 @@
     },
     {
       "symbol": "P:eh.c(IIIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.c(IIIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216761,7 +216929,7 @@
     },
     {
       "symbol": "P:eh.c(IIIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.c(IIIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216772,7 +216940,7 @@
     },
     {
       "symbol": "P:eh.c(IIIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.c(IIIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216783,7 +216951,7 @@
     },
     {
       "symbol": "P:eh.c(IIIIII)V#5",
-      "renamedSymbol": "P:SoftwareRasterizer.c(IIIIII)V#5",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangleVerticalGradient(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -216794,7 +216962,7 @@
     },
     {
       "symbol": "P:eh.d(IIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.drawCircleOutline(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216805,7 +216973,7 @@
     },
     {
       "symbol": "P:eh.d(IIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.drawCircleOutline(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216816,7 +216984,7 @@
     },
     {
       "symbol": "P:eh.d(IIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.drawCircleOutline(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216827,7 +216995,7 @@
     },
     {
       "symbol": "P:eh.d(IIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.d(IIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.drawCircleOutline(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216937,7 +217105,7 @@
     },
     {
       "symbol": "P:eh.e(IIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangle(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216948,7 +217116,7 @@
     },
     {
       "symbol": "P:eh.e(IIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangle(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216959,7 +217127,7 @@
     },
     {
       "symbol": "P:eh.e(IIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangle(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -216970,7 +217138,7 @@
     },
     {
       "symbol": "P:eh.e(IIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangle(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -216981,7 +217149,7 @@
     },
     {
       "symbol": "P:eh.e(IIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.e(IIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.fillRectangle(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -216992,7 +217160,7 @@
     },
     {
       "symbol": "P:eh.f(IIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.intersectClip(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -217003,7 +217171,7 @@
     },
     {
       "symbol": "P:eh.f(IIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.intersectClip(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -217014,7 +217182,7 @@
     },
     {
       "symbol": "P:eh.f(IIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.intersectClip(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -217025,7 +217193,7 @@
     },
     {
       "symbol": "P:eh.f(IIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.intersectClip(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -217036,7 +217204,7 @@
     },
     {
       "symbol": "P:eh.f(IIIII)V#0",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIIII)V#0",
+      "renamedSymbol": "P:SoftwareRasterizer.fillCircleAlpha(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -217047,7 +217215,7 @@
     },
     {
       "symbol": "P:eh.f(IIIII)V#1",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIIII)V#1",
+      "renamedSymbol": "P:SoftwareRasterizer.fillCircleAlpha(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -217058,7 +217226,7 @@
     },
     {
       "symbol": "P:eh.f(IIIII)V#2",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIIII)V#2",
+      "renamedSymbol": "P:SoftwareRasterizer.fillCircleAlpha(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -217069,7 +217237,7 @@
     },
     {
       "symbol": "P:eh.f(IIIII)V#3",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIIII)V#3",
+      "renamedSymbol": "P:SoftwareRasterizer.fillCircleAlpha(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -217080,7 +217248,7 @@
     },
     {
       "symbol": "P:eh.f(IIIII)V#4",
-      "renamedSymbol": "P:SoftwareRasterizer.f(IIIII)V#4",
+      "renamedSymbol": "P:SoftwareRasterizer.fillCircleAlpha(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -264472,7 +264640,7 @@
       "original": "MinerDisturbance.java",
       "renamed": "MinerDisturbance.java",
       "inputSha256": "4658ac9113fe2f4fb9901c9545f1c453e90e3e918a8266a9803dfa7b5853d04f",
-      "outputSha256": "c5503ea5118d6a2dd1d1c76df087dde4ae21afbd97ab2d2c2a85f0c85767d9af",
+      "outputSha256": "37937639cacd30dd7d8ab10c0304a780616d24b08e318da42542aa7d0c859ceb",
       "edits": [
         {
           "start": 4839,
@@ -264517,11 +264685,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7516,
+          "end": 7517,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 7572,
           "end": 7574,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7575,
+          "end": 7576,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 8022,
@@ -264536,6 +264718,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8129,
+          "end": 8130,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
         },
         {
           "start": 8432,
@@ -264814,6 +265003,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 30119,
+          "end": 30120,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 30388,
           "end": 30390,
           "symbol": "C:db",
@@ -264907,11 +265103,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 40642,
+          "end": 40643,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 40696,
           "end": 40698,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 40699,
+          "end": 40700,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 40763,
@@ -264921,11 +265131,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 40766,
+          "end": 40767,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 40811,
           "end": 40813,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 40814,
+          "end": 40815,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 41053,
@@ -268019,6 +268243,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 184148,
+          "end": 184149,
+          "symbol": "M:eh.c()V",
+          "original": "c",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 184190,
           "end": 184192,
           "symbol": "C:bj",
@@ -268971,11 +269202,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 193385,
+          "end": 193386,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 193435,
           "end": 193437,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 193438,
+          "end": 193439,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 193778,
@@ -268985,11 +269230,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 193781,
+          "end": 193782,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 193849,
           "end": 193851,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 193852,
+          "end": 193853,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 194362,
@@ -268999,11 +269258,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 194365,
+          "end": 194366,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 194433,
           "end": 194435,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 194436,
+          "end": 194437,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 194786,
@@ -269013,11 +269286,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 194789,
+          "end": 194790,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 194857,
           "end": 194859,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 194860,
+          "end": 194861,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 195429,
@@ -269027,11 +269314,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 195432,
+          "end": 195433,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 195500,
           "end": 195502,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 195503,
+          "end": 195504,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 195879,
@@ -269041,11 +269342,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 195882,
+          "end": 195883,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 195950,
           "end": 195952,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 195953,
+          "end": 195954,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 196461,
@@ -269055,11 +269370,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 196464,
+          "end": 196465,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 196532,
           "end": 196534,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 196535,
+          "end": 196536,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 196880,
@@ -269069,11 +269398,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 196883,
+          "end": 196884,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 196951,
           "end": 196953,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 196954,
+          "end": 196955,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 197330,
@@ -269329,11 +269672,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 216919,
+          "end": 216920,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 216947,
           "end": 216949,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 216950,
+          "end": 216951,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 217094,
@@ -269399,6 +269756,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 217591,
+          "end": 217592,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 217781,
           "end": 217783,
           "symbol": "C:di",
@@ -269411,6 +269775,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 219082,
+          "end": 219083,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 219308,
@@ -269609,11 +269980,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 236726,
+          "end": 236727,
+          "symbol": "M:eh.b(III)V",
+          "original": "b",
+          "renamed": "setPixel"
+        },
+        {
           "start": 238265,
           "end": 238267,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 238268,
+          "end": 238269,
+          "symbol": "M:eh.b(III)V",
+          "original": "b",
+          "renamed": "setPixel"
         },
         {
           "start": 238609,
@@ -269637,11 +270022,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 238706,
+          "end": 238707,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
+        },
+        {
           "start": 238785,
           "end": 238787,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 238788,
+          "end": 238789,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 239784,
@@ -270190,6 +270589,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 278756,
+          "end": 278757,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
+        },
+        {
           "start": 279073,
           "end": 279075,
           "symbol": "C:eh",
@@ -270326,11 +270732,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 283386,
+          "end": 283387,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 283413,
           "end": 283415,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 283416,
+          "end": 283417,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 283616,
@@ -270354,6 +270774,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 283769,
+          "end": 283770,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 283848,
           "end": 283850,
           "symbol": "C:eh",
@@ -270361,11 +270788,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 283851,
+          "end": 283852,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 283940,
           "end": 283942,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 283943,
+          "end": 283944,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 284036,
@@ -270380,6 +270821,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 284076,
+          "end": 284077,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
         },
         {
           "start": 284366,
@@ -270403,6 +270851,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 284410,
+          "end": 284411,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 284682,
           "end": 284684,
           "symbol": "C:eh",
@@ -270422,6 +270877,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 284770,
+          "end": 284771,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 285611,
@@ -272477,7 +272939,7 @@
       "original": "bb.java",
       "renamed": "bb.java",
       "inputSha256": "24a43a2144f79324b823be6def4fe9bfb6e0e8da42df494d3fa0df2f17789350",
-      "outputSha256": "f5e8d0d9f960f47c52ba631abb4dea4a64276a4bcd84c7f7c6ec433da12a84ac",
+      "outputSha256": "cdc5dcc4fe4a7f532c1b4368f740132e80ee5a55281df9881d66d31908e404b2",
       "edits": [
         {
           "start": 93,
@@ -272522,11 +272984,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1005,
+          "end": 1006,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
+        },
+        {
           "start": 1062,
           "end": 1064,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1065,
+          "end": 1066,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 1902,
@@ -272864,7 +273340,7 @@
       "original": "bd.java",
       "renamed": "AccountRequestState.java",
       "inputSha256": "19ef13b20facb811913f6b24385ac92f5ada1d51e61ca59cc0ffce23be656f4b",
-      "outputSha256": "0846e1c057c4b51b43b27f95ed14184e6638551d48bcdbaedd75ae6716a205cd",
+      "outputSha256": "4a04ef2a59c058505337f5b3b211aded2b03dfe728a4e8825d3c1b5ff8749a71",
       "edits": [
         {
           "start": 50,
@@ -272998,6 +273474,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1328,
+          "end": 1329,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 1406,
@@ -274735,7 +275218,7 @@
       "original": "cc.java",
       "renamed": "cc.java",
       "inputSha256": "cbc84cc3b798b8fb6b9ce2abc0f950775b148c7445194dd0260103ccef39afeb",
-      "outputSha256": "9edaa51d0566a744e3eb09fe8724ada0d67486c69d45af65e81b2ee409968ab7",
+      "outputSha256": "1beb10242722e64757ab450071fb5f1cad4084baa8634efd1d2f80b4744aa888",
       "edits": [
         {
           "start": 635,
@@ -274759,6 +275242,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 713,
+          "end": 714,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 1042,
           "end": 1044,
           "symbol": "C:ea",
@@ -274780,6 +275270,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1120,
+          "end": 1121,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 1433,
           "end": 1435,
           "symbol": "C:vb",
@@ -274792,6 +275289,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1469,
+          "end": 1470,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 1747,
@@ -274813,6 +275317,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1821,
+          "end": 1822,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 2233,
@@ -275096,7 +275607,7 @@
       "original": "ci.java",
       "renamed": "ci.java",
       "inputSha256": "f41dcc01d3c3443915fcf6d5ae832c9d66e090a06f825fd161c9cb03494a7569",
-      "outputSha256": "67e9216ddcdf9ae5435b2b667c5b46e25b4658d6552e3168772c457dc69252b7",
+      "outputSha256": "d3a4e695a5730ff4e55e0f7984a1b1bf0abea880cd5d6bb7cb408753100e2e9b",
       "edits": [
         {
           "start": 260,
@@ -275160,6 +275671,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2201,
+          "end": 2202,
+          "symbol": "M:eh.a([III)V",
+          "original": "a",
+          "renamed": "setRasterBuffer"
         },
         {
           "start": 4385,
@@ -277350,7 +277868,7 @@
       "original": "ea.java",
       "renamed": "Sprite.java",
       "inputSha256": "748ba53396fdb23e486d76adbb5d47c9e59b8f34c1fda706bfa4a9eea3368d0d",
-      "outputSha256": "0b5f65ca901cd4f512b2dc33c874315531e4864da7c20a70b18defae174fdf86",
+      "outputSha256": "308ea8e03887112901ed0a6f9204e73dffe6cfd109c9050c87082994ee613075",
       "edits": [
         {
           "start": 44,
@@ -277744,6 +278262,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 30758,
+          "end": 30759,
+          "symbol": "M:eh.a([III)V",
+          "original": "a",
+          "renamed": "setRasterBuffer"
         },
         {
           "start": 31055,
@@ -280725,7 +281250,7 @@
       "original": "eh.java",
       "renamed": "SoftwareRasterizer.java",
       "inputSha256": "511c72b071ed20e13bd8aefaa6f5eb690e27f2c96e8017af728d1f4b47e6ca32",
-      "outputSha256": "b63aa378aaa72201ec3489cfab634f8304e6b9610d1ff645ca9710442f31b23b",
+      "outputSha256": "738af8492bedb332a589722416865b7cf478a7d9ac5a1156499136c5c6328323",
       "edits": [
         {
           "start": 50,
@@ -280735,6 +281260,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 402,
+          "end": 403,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
+        },
+        {
           "start": 512,
           "end": 514,
           "symbol": "C:eh",
@@ -280742,11 +281274,32 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 515,
+          "end": 516,
+          "symbol": "M:eh.b()V",
+          "original": "b",
+          "renamed": "clearScanlineMask"
+        },
+        {
+          "start": 549,
+          "end": 550,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 1899,
           "end": 1900,
           "symbol": "M:eh.e(IIII)V",
           "original": "e",
           "renamed": "drawHorizontalLine"
+        },
+        {
+          "start": 2521,
+          "end": 2522,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 2593,
@@ -280805,6 +281358,13 @@
           "renamed": "drawVerticalLine"
         },
         {
+          "start": 2824,
+          "end": 2825,
+          "symbol": "M:eh.f(IIIII)V",
+          "original": "f",
+          "renamed": "fillCircleAlpha"
+        },
+        {
           "start": 3887,
           "end": 3889,
           "symbol": "C:eh",
@@ -280819,11 +281379,60 @@
           "renamed": "fillCircle"
         },
         {
+          "start": 7756,
+          "end": 7757,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 7898,
           "end": 7900,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7901,
+          "end": 7902,
+          "symbol": "M:eh.b()V",
+          "original": "b",
+          "renamed": "clearScanlineMask"
+        },
+        {
+          "start": 7935,
+          "end": 7936,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
+          "start": 9358,
+          "end": 9359,
+          "symbol": "M:eh.b(IIII)V",
+          "original": "b",
+          "renamed": "grayscaleRectangle"
+        },
+        {
+          "start": 10718,
+          "end": 10719,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
+          "start": 10889,
+          "end": 10890,
+          "symbol": "M:eh.b()V",
+          "original": "b",
+          "renamed": "clearScanlineMask"
+        },
+        {
+          "start": 10972,
+          "end": 10973,
+          "symbol": "M:eh.a(IIIIII)V",
+          "original": "a",
+          "renamed": "blurRectangle"
         },
         {
           "start": 11056,
@@ -280833,11 +281442,39 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 11059,
+          "end": 11060,
+          "symbol": "M:eh.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blurHorizontalInPlace"
+        },
+        {
           "start": 11159,
           "end": 11161,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 11162,
+          "end": 11163,
+          "symbol": "M:eh.a([IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blurVerticalInPlace"
+        },
+        {
+          "start": 11299,
+          "end": 11300,
+          "symbol": "M:eh.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blurHorizontalInPlace"
+        },
+        {
+          "start": 16526,
+          "end": 16527,
+          "symbol": "M:eh.a([IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blurVerticalInPlace"
         },
         {
           "start": 18479,
@@ -280924,6 +281561,13 @@
           "renamed": "drawVerticalLine"
         },
         {
+          "start": 27909,
+          "end": 27910,
+          "symbol": "M:eh.c()V",
+          "original": "c",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 28096,
           "end": 28097,
           "symbol": "M:eh.c(IIIII)V",
@@ -280931,11 +281575,25 @@
           "renamed": "drawVerticalLineAlpha"
         },
         {
+          "start": 29371,
+          "end": 29372,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 30659,
           "end": 30660,
           "symbol": "M:eh.g(IIIII)V",
           "original": "g",
           "renamed": "drawHorizontalLineAlpha"
+        },
+        {
+          "start": 32001,
+          "end": 32002,
+          "symbol": "M:eh.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawRectangleShadow"
         },
         {
           "start": 32198,
@@ -280966,6 +281624,13 @@
           "renamed": "drawVerticalLineAlpha"
         },
         {
+          "start": 32385,
+          "end": 32386,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
+        },
+        {
           "start": 32669,
           "end": 32671,
           "symbol": "C:eh",
@@ -280973,11 +281638,32 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 32672,
+          "end": 32673,
+          "symbol": "M:eh.b(III)V",
+          "original": "b",
+          "renamed": "setPixel"
+        },
+        {
+          "start": 38691,
+          "end": 38692,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
+        },
+        {
           "start": 39031,
           "end": 39033,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 39034,
+          "end": 39035,
+          "symbol": "M:eh.b()V",
+          "original": "b",
+          "renamed": "clearScanlineMask"
         },
         {
           "start": 39068,
@@ -280994,11 +281680,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 39808,
+          "end": 39809,
+          "symbol": "M:eh.b(III)V",
+          "original": "b",
+          "renamed": "setPixel"
+        },
+        {
           "start": 42926,
           "end": 42927,
           "symbol": "M:eh.g(IIII)V",
           "original": "g",
           "renamed": "drawVerticalLine"
+        },
+        {
+          "start": 43600,
+          "end": 43601,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
         },
         {
           "start": 44898,
@@ -281036,6 +281736,27 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 46169,
+          "end": 46170,
+          "symbol": "M:eh.b()V",
+          "original": "b",
+          "renamed": "clearScanlineMask"
+        },
+        {
+          "start": 46203,
+          "end": 46204,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
+          "start": 47126,
+          "end": 47127,
+          "symbol": "M:eh.a([III)V",
+          "original": "a",
+          "renamed": "setRasterBuffer"
+        },
+        {
           "start": 47254,
           "end": 47256,
           "symbol": "C:eh",
@@ -281048,6 +281769,13 @@
           "symbol": "M:eh.a(IIII)V",
           "original": "a",
           "renamed": "setClip"
+        },
+        {
+          "start": 47311,
+          "end": 47312,
+          "symbol": "M:eh.b(III)V",
+          "original": "b",
+          "renamed": "setPixel"
         },
         {
           "start": 47636,
@@ -283441,7 +284169,7 @@
       "original": "fl.java",
       "renamed": "fl.java",
       "inputSha256": "431a6147e2e3c85a4e79e9140b04b70da3b6c59918d190886e47e0293c780513",
-      "outputSha256": "e96d3d7371d47f3e63971f0265c2de85ca5de753787dfa26726327705ffe1f6e",
+      "outputSha256": "0a9c5ebe0315b6538bf37982d743ab330dfb15b63a1eb7246d7902d44dfa5bb9",
       "edits": [
         {
           "start": 130,
@@ -283456,6 +284184,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1129,
+          "end": 1130,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 1522,
@@ -283941,7 +284676,7 @@
       "original": "g.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "e6db1ca78d87be66e0452e2b4cbe0985ee9be41c1de87905c89774045ac7d035",
-      "outputSha256": "d840d8ad2d30551617995ae9395c7b2d7fa55956c5684db5b0161667071d1dc4",
+      "outputSha256": "3674ec006ea1e4dc99bc25093b10eb3dc6ad329194ae2bf775954d5d7d93c625",
       "edits": [
         {
           "start": 50,
@@ -283965,6 +284700,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1022,
+          "end": 1023,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 1030,
           "end": 1032,
           "symbol": "C:eh",
@@ -283984,6 +284726,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1093,
+          "end": 1094,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 1162,
@@ -284056,11 +284805,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6542,
+          "end": 6543,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 6608,
           "end": 6610,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6611,
+          "end": 6612,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 6701,
@@ -284070,11 +284833,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6704,
+          "end": 6705,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 6784,
           "end": 6786,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6787,
+          "end": 6788,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 6875,
@@ -284084,11 +284861,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6878,
+          "end": 6879,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 6958,
           "end": 6960,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6961,
+          "end": 6962,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 7049,
@@ -284098,11 +284889,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7052,
+          "end": 7053,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 7132,
           "end": 7134,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7135,
+          "end": 7136,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 7221,
@@ -284112,11 +284917,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7224,
+          "end": 7225,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 7344,
           "end": 7346,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7347,
+          "end": 7348,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 7539,
@@ -284126,11 +284945,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7542,
+          "end": 7543,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 7662,
           "end": 7664,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7665,
+          "end": 7666,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 7900,
@@ -284140,11 +284973,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7903,
+          "end": 7904,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 8023,
           "end": 8025,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8026,
+          "end": 8027,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 8263,
@@ -284154,11 +285001,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8266,
+          "end": 8267,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 8386,
           "end": 8388,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8389,
+          "end": 8390,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         },
         {
           "start": 8624,
@@ -284168,6 +285029,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8627,
+          "end": 8628,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
+        },
+        {
           "start": 8831,
           "end": 8833,
           "symbol": "C:eh",
@@ -284175,11 +285043,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8834,
+          "end": 8835,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
+        },
+        {
           "start": 9177,
           "end": 9179,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9180,
+          "end": 9181,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
         },
         {
           "start": 9823,
@@ -285583,7 +286465,7 @@
       "original": "gf.java",
       "renamed": "gf.java",
       "inputSha256": "ef92f46cda557a434aef87fd9df25ef5e2cb2cf1e8a1c219d148b3ad7753ce78",
-      "outputSha256": "f93f8b302b278d91fb41bd4df14f3bbe66db1ede193cf64d85e037a4231f7205",
+      "outputSha256": "b68564f65844fc8e31f5ad7555073bf818ea218c373a9243e550d6019c5cbced",
       "edits": [
         {
           "start": 996,
@@ -285605,6 +286487,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1942,
+          "end": 1943,
+          "symbol": "M:eh.f(IIIII)V",
+          "original": "f",
+          "renamed": "fillCircleAlpha"
         },
         {
           "start": 2226,
@@ -285689,6 +286578,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6326,
+          "end": 6327,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 6584,
@@ -289084,7 +289980,7 @@
       "original": "ii.java",
       "renamed": "ii.java",
       "inputSha256": "9e58ba46b14f018ced32a04c2b709d73c74239181607820070232479d0c26256",
-      "outputSha256": "2c75e0707d3a91637cf7fc053824113f6c8a4175136224e6cadc7fd8f4d7958d",
+      "outputSha256": "f68939c0cda3fbd2e58b9108b4378f22dd9e8880f24a1b2aca3cc47999a26de8",
       "edits": [
         {
           "start": 93,
@@ -289157,6 +290053,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1762,
+          "end": 1763,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 1834,
           "end": 1836,
           "symbol": "C:ea",
@@ -289176,6 +290079,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2024,
+          "end": 2025,
+          "symbol": "M:eh.a(IIIIII)V",
+          "original": "a",
+          "renamed": "blurRectangle"
         },
         {
           "start": 2102,
@@ -291356,7 +292266,7 @@
       "original": "je.java",
       "renamed": "je.java",
       "inputSha256": "73d917dbe9fdea92ae8c931dc0b37e87022e39e09b411b24c550d804a06fb6cb",
-      "outputSha256": "0dd83e2b13b6e071d439009dd34b3caa5b5256c143d4e2e08adbc603b4cd62f8",
+      "outputSha256": "7e1637a8cfd9258078943ad73a6215f002ee03364007a51c1d805ddf73793811",
       "edits": [
         {
           "start": 150,
@@ -291513,11 +292423,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 10574,
+          "end": 10575,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 10679,
           "end": 10681,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10682,
+          "end": 10683,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 10788,
@@ -291527,11 +292451,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 10791,
+          "end": 10792,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 10898,
           "end": 10900,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10901,
+          "end": 10902,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 13611,
@@ -291693,6 +292631,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 32167,
+          "end": 32168,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 39457,
@@ -291863,11 +292808,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 45829,
+          "end": 45830,
+          "symbol": "M:eh.f(IIIII)V",
+          "original": "f",
+          "renamed": "fillCircleAlpha"
+        },
+        {
           "start": 45942,
           "end": 45944,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 45945,
+          "end": 45946,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
         },
         {
           "start": 46069,
@@ -291877,6 +292836,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 46072,
+          "end": 46073,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
+        },
+        {
           "start": 46196,
           "end": 46198,
           "symbol": "C:eh",
@@ -291884,11 +292850,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 46199,
+          "end": 46200,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
+        },
+        {
           "start": 46323,
           "end": 46325,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 46326,
+          "end": 46327,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
         },
         {
           "start": 46476,
@@ -291947,11 +292927,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 50961,
+          "end": 50962,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 51079,
           "end": 51081,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 51082,
+          "end": 51083,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 51601,
@@ -292178,6 +293172,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 64470,
+          "end": 64471,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
+        },
+        {
           "start": 64815,
           "end": 64817,
           "symbol": "C:di",
@@ -292381,6 +293382,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 66702,
+          "end": 66703,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
+        },
+        {
           "start": 66741,
           "end": 66743,
           "symbol": "C:pd",
@@ -292575,6 +293583,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 68308,
+          "end": 68309,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 68347,
@@ -292773,6 +293788,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 69882,
+          "end": 69883,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
+        },
+        {
           "start": 69917,
           "end": 69919,
           "symbol": "C:pd",
@@ -292785,6 +293807,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 69983,
+          "end": 69984,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
         },
         {
           "start": 70002,
@@ -292815,6 +293844,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 70546,
+          "end": 70547,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 70565,
           "end": 70567,
           "symbol": "C:eh",
@@ -292836,11 +293872,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 70643,
+          "end": 70644,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
           "start": 70704,
           "end": 70706,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 70707,
+          "end": 70708,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 70934,
@@ -292869,6 +293919,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 71175,
+          "end": 71176,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 71570,
@@ -293240,7 +294297,7 @@
       "original": "jf.java",
       "renamed": "jf.java",
       "inputSha256": "af0445ed72297c15726ebb57fc135b8fe646ec05d75ac7a9f81236839f333cb4",
-      "outputSha256": "1457049d8385d98eb851e367dc5fbb6d38edaeaa7a7f423d0a80d1107078d356",
+      "outputSha256": "c79605d812a8efba86622581463d62da4d5a1c8fac171c4731167601e5f9e99f",
       "edits": [
         {
           "start": 217,
@@ -293290,6 +294347,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2320,
+          "end": 2321,
+          "symbol": "M:eh.b(IIII)V",
+          "original": "b",
+          "renamed": "grayscaleRectangle"
         },
         {
           "start": 2328,
@@ -294089,7 +295153,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "a669ea547d662632669a1e19b9e018028e8ea3c14c7da4b0c5fd3ab57814bb07",
-      "outputSha256": "20021879cf0c5bb488690185ae38a8de60a28022a0cdfd3b450327461ab8e94e",
+      "outputSha256": "1363074944978b8244f49c97306baf2a75d91b2229c24d686196ab1a95971075",
       "edits": [
         {
           "start": 116,
@@ -294190,6 +295254,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 2323,
+          "end": 2324,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
           "start": 2570,
           "end": 2572,
           "symbol": "C:al",
@@ -294232,11 +295303,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 2949,
+          "end": 2950,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
           "start": 3020,
           "end": 3022,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3023,
+          "end": 3024,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
         },
         {
           "start": 3201,
@@ -294330,11 +295415,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8554,
+          "end": 8555,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
           "start": 8596,
           "end": 8598,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8599,
+          "end": 8600,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 8633,
@@ -294344,11 +295443,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8636,
+          "end": 8637,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
           "start": 8745,
           "end": 8747,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8748,
+          "end": 8749,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
         },
         {
           "start": 8941,
@@ -294358,11 +295471,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8944,
+          "end": 8945,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
+        },
+        {
           "start": 9004,
           "end": 9006,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9007,
+          "end": 9008,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 9387,
@@ -299583,7 +300710,7 @@
       "original": "mc.java",
       "renamed": "mc.java",
       "inputSha256": "9abc11e1b5a89a45f6149e17f68da3c65c839a6f655d858ff7b97b49036f2f0b",
-      "outputSha256": "3601f659a1c552ce0a9ee19c09f5154dd73a9bf31662b490ea46334246d15592",
+      "outputSha256": "1e64bf7c52b8528240f9117d48c2991dbdd2b544d7de832027ad2d012522cff5",
       "edits": [
         {
           "start": 221,
@@ -299726,11 +300853,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 27956,
+          "end": 27957,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
+        },
+        {
           "start": 28062,
           "end": 28064,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 28065,
+          "end": 28066,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
         },
         {
           "start": 28403,
@@ -299786,6 +300927,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 31911,
+          "end": 31912,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 32560,
           "end": 32562,
           "symbol": "C:ea",
@@ -299835,11 +300983,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 32892,
+          "end": 32893,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 32945,
           "end": 32947,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 32948,
+          "end": 32949,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 33141,
@@ -300525,7 +301687,7 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "b4828221c5374d1b07208127aade05d91daf83502eb3014b986aa03756f64730",
-      "outputSha256": "a81bcdc4d2a53497fff68f7d3182a5952a7d18edc09e9fe9670fb5ff2b383729",
+      "outputSha256": "70586f7b7048399e5c3887ecbfd086815a4b22f17b123cc2387c2c17cd48bd46",
       "edits": [
         {
           "start": 735,
@@ -300542,6 +301704,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1701,
+          "end": 1702,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 1991,
           "end": 1993,
           "symbol": "C:eh",
@@ -300549,11 +301718,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1994,
+          "end": 1995,
+          "symbol": "M:eh.b(IIIII)V",
+          "original": "b",
+          "renamed": "drawRectangleShadow"
+        },
+        {
           "start": 2056,
           "end": 2058,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2059,
+          "end": 2060,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 2151,
@@ -300610,7 +301793,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "b9386468a4ccc243362fb60765715a6ba85c263bdb9982e541a50d4db07e35ed",
-      "outputSha256": "0d41434719ad55cdc6ced4cc1ee06319618baa67436f5d507fb7cd5ca5807d3a",
+      "outputSha256": "d6fc5ed2a407f94d9864948b878d77f7f62b986e5b29692ced58fba634e7ac22",
       "edits": [
         {
           "start": 1176,
@@ -300758,6 +301941,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 37488,
+          "end": 37489,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 37822,
@@ -300941,6 +302131,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 61985,
+          "end": 61986,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
+        },
+        {
           "start": 62044,
           "end": 62046,
           "symbol": "C:eh",
@@ -300962,11 +302159,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 62131,
+          "end": 62132,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
+        },
+        {
           "start": 62192,
           "end": 62194,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 62195,
+          "end": 62196,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 62260,
@@ -300990,6 +302201,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 62323,
+          "end": 62324,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 62396,
           "end": 62398,
           "symbol": "C:eh",
@@ -301011,11 +302229,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 62542,
+          "end": 62543,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
+        },
+        {
           "start": 62597,
           "end": 62599,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 62600,
+          "end": 62601,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 62890,
@@ -301067,6 +302299,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 63107,
+          "end": 63108,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
+        },
+        {
           "start": 63166,
           "end": 63168,
           "symbol": "C:eh",
@@ -301088,11 +302327,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 63246,
+          "end": 63247,
+          "symbol": "M:eh.d(IIII)V",
+          "original": "d",
+          "renamed": "drawCircleOutline"
+        },
+        {
           "start": 63313,
           "end": 63315,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 63316,
+          "end": 63317,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 63381,
@@ -301116,6 +302369,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 63444,
+          "end": 63445,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 63517,
           "end": 63519,
           "symbol": "C:eh",
@@ -301137,11 +302397,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 63663,
+          "end": 63664,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
+        },
+        {
           "start": 63719,
           "end": 63721,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 63722,
+          "end": 63723,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 64178,
@@ -301374,7 +302648,7 @@
       "original": "mn.java",
       "renamed": "mn.java",
       "inputSha256": "1a12b290aa652b70e846a2eae10165d13004c46dd42f1841d0e136354d48e061",
-      "outputSha256": "eeabaec9b68bd6e86653ff24bf34aedc0339484dbae76221dfba6799d27eb896",
+      "outputSha256": "923c8623e2a052132ea9259fabe855489d24de00efb7f9e15d1f0253d0c74e6d",
       "edits": [
         {
           "start": 77,
@@ -301424,6 +302698,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1950,
+          "end": 1951,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 2589,
@@ -302038,7 +303319,7 @@
       "original": "nj.java",
       "renamed": "nj.java",
       "inputSha256": "0621789fbaeaf878adea31e9a171d7d263cc188b2f756b4784b8489c22ec592e",
-      "outputSha256": "1d02fb2f14d03e71d70524a70e1d0f1db9cc87367804abfa41fceeed1f7fc1df",
+      "outputSha256": "444ebb73651caa451d4fd87e99d7baef018328f2375b9c8a89a02876ec6d4a92",
       "edits": [
         {
           "start": 93,
@@ -302165,6 +303446,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 4440,
+          "end": 4441,
+          "symbol": "M:eh.a(IIIIII)V",
+          "original": "a",
+          "renamed": "blurRectangle"
         },
         {
           "start": 4479,
@@ -302319,6 +303607,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7105,
+          "end": 7106,
+          "symbol": "M:eh.a(IIIIII)V",
+          "original": "a",
+          "renamed": "blurRectangle"
         },
         {
           "start": 7142,
@@ -305378,7 +306673,7 @@
       "original": "oi.java",
       "renamed": "oi.java",
       "inputSha256": "fd76ae82a16f307644d6d95e01005a913e6e9458daa9f3b46da22a0c671a3460",
-      "outputSha256": "7fef619414fd579194c63ac06c424c0bc93abdbf029e0094960a0c468745a576",
+      "outputSha256": "eb57de7fb41e62258e4c0869d69eacd36e6dd6362a9b9f3f1c224a76c60e1384",
       "edits": [
         {
           "start": 78,
@@ -305547,6 +306842,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3748,
+          "end": 3749,
+          "symbol": "M:eh.b(III)V",
+          "original": "b",
+          "renamed": "setPixel"
         },
         {
           "start": 4054,
@@ -306641,7 +307943,7 @@
       "original": "pd.java",
       "renamed": "GzipDecompressor.java",
       "inputSha256": "567be2c8444058e07705575dc0eab3e2a717d41368ee899e8a18ff081cc05db3",
-      "outputSha256": "26785ffe3a879bbb36c78b1cc80b4b5b202f89f553f19991eab203d54ecb858a",
+      "outputSha256": "430e22d2ccb8f62a36e3e974d56b06932f4db207ba955e7c88e40f853d988763",
       "edits": [
         {
           "start": 71,
@@ -306672,11 +307974,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 813,
+          "end": 814,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 881,
           "end": 883,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 884,
+          "end": 885,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
         },
         {
           "start": 892,
@@ -307915,7 +309231,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "1988b08e32158d22435be48e7ae028fea6b084252de9ffa6275127add6cc67f7",
-      "outputSha256": "e4c422887979c894ce9d7745b186380dc82ea510c1b3e42dda0b1ffc91db549e",
+      "outputSha256": "297681c5ddb5572733857d31d67fa1e4a550de39a993ec5864121457b068d3b3",
       "edits": [
         {
           "start": 89,
@@ -307960,6 +309276,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1195,
+          "end": 1196,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 1222,
           "end": 1224,
           "symbol": "C:eh",
@@ -307967,11 +309290,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1225,
+          "end": 1226,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
+        },
+        {
           "start": 1545,
           "end": 1547,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1548,
+          "end": 1549,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
         },
         {
           "start": 2070,
@@ -308127,7 +309464,7 @@
       "original": "pm.java",
       "renamed": "pm.java",
       "inputSha256": "5f9d7dc003754f764587e4b1debe4cdc78cef364377679bf4ff57883a66ff60f",
-      "outputSha256": "00548aa60574c36e879aa82c1a0ea2d955aa69c2d2b1f24024dfa53f66e9631a",
+      "outputSha256": "bdf6931a20fd1e9bdb2c5a23d987b55e491d5373bb5d80c0407657d00f90b4b5",
       "edits": [
         {
           "start": 504,
@@ -308158,6 +309495,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1457,
+          "end": 1458,
+          "symbol": "M:eh.b([I)V",
+          "original": "b",
+          "renamed": "saveClip"
+        },
+        {
           "start": 1482,
           "end": 1484,
           "symbol": "C:eh",
@@ -308165,11 +309509,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1485,
+          "end": 1486,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
+        },
+        {
           "start": 1781,
           "end": 1783,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1784,
+          "end": 1785,
+          "symbol": "M:eh.a([I)V",
+          "original": "a",
+          "renamed": "restoreClip"
         },
         {
           "start": 1872,
@@ -308184,7 +309542,7 @@
       "original": "pn.java",
       "renamed": "pn.java",
       "inputSha256": "b7f2dc57a46c54fdbda8ef3aced3b60aaa7f3ce366e728c71afcdefa7e883237",
-      "outputSha256": "dead55892f5bf61c6a928e10a9aae78ea52d5ffd3e1c98d4bd36ef2b029e4a84",
+      "outputSha256": "8b6788283d947752d86075735bc17e87f073e0a472efc8567754e28081481c22",
       "edits": [
         {
           "start": 557,
@@ -308551,11 +309909,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 10863,
+          "end": 10864,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 10902,
           "end": 10904,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10905,
+          "end": 10906,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
         },
         {
           "start": 11178,
@@ -308570,6 +309942,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 11801,
+          "end": 11802,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
         },
         {
           "start": 12259,
@@ -309745,7 +311124,7 @@
       "original": "qg.java",
       "renamed": "qg.java",
       "inputSha256": "c53b5a759ac4f61fbb7afccb872be6f778a94945287178fa9a4dc3a2b3f1a567",
-      "outputSha256": "85e217b0b5ccd4e2efffc650ac1fe1281d9a5e83326fba1f61d65e8ebc4faf75",
+      "outputSha256": "2dd1994c56f71094f36c5c316daa40b09f848ea73401547e67914d92ab0a4d64",
       "edits": [
         {
           "start": 326,
@@ -309774,6 +311153,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1768,
+          "end": 1769,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 2039,
@@ -310409,7 +311795,7 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "a485906d2c81b19cd275735578a0c0ccc11702f2bdb842de6e002073d3812214",
-      "outputSha256": "0179f6c0a7e7c063b3db0b2001e53707669a9fed390544a558d18fb0eaed70b8",
+      "outputSha256": "19f713f54cb3ea58fb97e6436aa19a23ac106dc4584158e1574440a9bccdb7d5",
       "edits": [
         {
           "start": 150,
@@ -310531,6 +311917,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 4113,
+          "end": 4114,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 4263,
           "end": 4264,
           "symbol": "M:ea.g(III)V",
@@ -310620,6 +312013,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 5651,
+          "end": 5652,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 5801,
@@ -310783,7 +312183,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "f259e7d3686b1868c5a88ffffe2476f2fe521aa9288b1e626ec6489f0e1a4ee4",
-      "outputSha256": "bdb3fd50c478b2ebd00a40fdbd61bdd3d7914896e8622c6566d974550c7ca439",
+      "outputSha256": "536ba636a875b3337f97a64fbd3f344244f738332afd8a1c68a8eec1305ba1ac",
       "edits": [
         {
           "start": 5339,
@@ -310884,6 +312284,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 53727,
+          "end": 53728,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
+        },
+        {
           "start": 54025,
           "end": 54027,
           "symbol": "C:eh",
@@ -310933,6 +312340,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 54326,
+          "end": 54327,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
+        },
+        {
           "start": 54664,
           "end": 54666,
           "symbol": "C:eh",
@@ -310980,6 +312394,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 54979,
+          "end": 54980,
+          "symbol": "M:eh.a()V",
+          "original": "a",
+          "renamed": "resetClip"
         },
         {
           "start": 55276,
@@ -311045,11 +312466,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 57364,
+          "end": 57365,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 57786,
           "end": 57788,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 57789,
+          "end": 57790,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
         },
         {
           "start": 57956,
@@ -311059,11 +312494,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 57959,
+          "end": 57960,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
+        },
+        {
           "start": 59177,
           "end": 59179,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 59180,
+          "end": 59181,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
         },
         {
           "start": 59638,
@@ -311080,11 +312529,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 60215,
+          "end": 60216,
+          "symbol": "M:eh.f(IIIII)V",
+          "original": "f",
+          "renamed": "fillCircleAlpha"
+        },
+        {
           "start": 60513,
           "end": 60515,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 60516,
+          "end": 60517,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
         },
         {
           "start": 60672,
@@ -311094,6 +312557,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 60675,
+          "end": 60676,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
+        },
+        {
           "start": 60832,
           "end": 60834,
           "symbol": "C:eh",
@@ -311101,11 +312571,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 60835,
+          "end": 60836,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
+        },
+        {
           "start": 60993,
           "end": 60995,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 60996,
+          "end": 60997,
+          "symbol": "M:eh.a(IIII[I)V",
+          "original": "a",
+          "renamed": "addRadialGlow"
         },
         {
           "start": 61836,
@@ -318931,7 +320415,7 @@
       "original": "tk.java",
       "renamed": "tk.java",
       "inputSha256": "fc051b4a2a6aa930192fb4af0e01d5d3b1de6e0db07b6946a822eea45f98025d",
-      "outputSha256": "8ca7615d259537a111f03c0744a51ae93a944e1e765266ddba64a546d436a25b",
+      "outputSha256": "31131cf3ac5d4f31b0ab5252d960bedc9adabd262375cdee65f92e796e610cf2",
       "edits": [
         {
           "start": 357,
@@ -318946,6 +320430,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 462,
+          "end": 463,
+          "symbol": "M:eh.a([III)V",
+          "original": "a",
+          "renamed": "setRasterBuffer"
         },
         {
           "start": 515,
@@ -320932,7 +322423,7 @@
       "original": "vb.java",
       "renamed": "ArchiveProvider.java",
       "inputSha256": "109891d0a182179ef655a2da1f084d581249b5d4c863148e2dbb932478a3fc4d",
-      "outputSha256": "8bace924e32e392b51066a21a44b1e45624d55452dc37d2dac61adba6a6caac6",
+      "outputSha256": "9231ee3b266c1d5b71e6c48d69354e34fdbd7cc62f9d3c0d1421f5d95958e83d",
       "edits": [
         {
           "start": 53,
@@ -320975,6 +322466,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 640,
+          "end": 641,
+          "symbol": "M:eh.a([III)V",
+          "original": "a",
+          "renamed": "setRasterBuffer"
         },
         {
           "start": 733,
@@ -323809,7 +325307,7 @@
       "original": "vi.java",
       "renamed": "vi.java",
       "inputSha256": "453414024003087854d365e5f955ffc236ac236e46353562065b6d7875812d80",
-      "outputSha256": "60cc1cd9761ce15fd17fdb4bbcea64422d2ef8053f22a0422d4bb82afc118d63",
+      "outputSha256": "244a8a26d6db37d597f981e2f02f4b0a336eabd8276ba6603f1949894df3c2cc",
       "edits": [
         {
           "start": 551,
@@ -323824,6 +325322,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 579,
+          "end": 580,
+          "symbol": "M:eh.b(IIIIII)V",
+          "original": "b",
+          "renamed": "fillRectangleAlpha"
         },
         {
           "start": 736,
@@ -323987,11 +325492,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6894,
+          "end": 6895,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
+        },
+        {
           "start": 6957,
           "end": 6959,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6960,
+          "end": 6961,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 7194,
@@ -324036,11 +325555,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 9732,
+          "end": 9733,
+          "symbol": "M:eh.a(IIIII)V",
+          "original": "a",
+          "renamed": "drawRectangleOutline"
+        },
+        {
           "start": 9813,
           "end": 9815,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9816,
+          "end": 9817,
+          "symbol": "M:eh.e(IIIII)V",
+          "original": "e",
+          "renamed": "fillRectangle"
         },
         {
           "start": 10568,
@@ -324549,7 +326082,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "0383c304bf3c68ce0db73c4ac950179092a5c7794977f32df4648e5d9f4d6aa7",
-      "outputSha256": "661affa9912809b6339f434c06248314995e939d20ad5649a305df839c0babb4",
+      "outputSha256": "aaec424429369734899ffc6fda3e1eeb982446b84667f0cff497519452c5043f",
       "edits": [
         {
           "start": 144,
@@ -324762,6 +326295,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6954,
+          "end": 6955,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 7142,
           "end": 7143,
           "symbol": "M:ea.g(III)V",
@@ -324860,6 +326400,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8941,
+          "end": 8942,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
+        },
+        {
           "start": 9129,
           "end": 9130,
           "symbol": "M:ea.g(III)V",
@@ -324942,6 +326489,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10869,
+          "end": 10870,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 10932,
@@ -325040,6 +326594,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 12835,
+          "end": 12836,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 12894,
@@ -325252,7 +326813,7 @@
       "original": "wc.java",
       "renamed": "wc.java",
       "inputSha256": "ec41ff62e196812252b8f7f8618c4b8ae0fc0cfaa334bacd1d92edfdb56ab938",
-      "outputSha256": "cc499af8e4e6bff153d07636a35052b5a5466e4b8523fd9bc6c440499fba4949",
+      "outputSha256": "6e724c2c765b11ed5da2230face43dce601c3e3c3b2b7f4de4b2b1fd5c7fb46e",
       "edits": [
         {
           "start": 108,
@@ -325323,6 +326884,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1983,
+          "end": 1984,
+          "symbol": "M:eh.d()V",
+          "original": "d",
+          "renamed": "clearRaster"
         },
         {
           "start": 2002,
@@ -325436,7 +327004,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "0da9701370d6f81239faa589481c6c17f3c4e18deec03f0895c7d63c9efe4b3b",
-      "outputSha256": "ecda84e1b7b5eea90945d34e9a20e15504841599a6e73902db4f23eaf4621900",
+      "outputSha256": "89fbb65ddb5b8c7fc8269c85aef5f31bee330399d4de430df450781a474801cc",
       "edits": [
         {
           "start": 1166,
@@ -325451,6 +327019,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1975,
+          "end": 1976,
+          "symbol": "M:eh.c(IIIIII)V",
+          "original": "c",
+          "renamed": "fillRectangleVerticalGradient"
         },
         {
           "start": 2198,
@@ -325577,6 +327152,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6395,
+          "end": 6396,
+          "symbol": "M:eh.f(IIII)V",
+          "original": "f",
+          "renamed": "intersectClip"
         }
       ]
     },
@@ -326896,10 +328478,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/minerdisturbance"
     },
-    "rulesSha256": "4389495028768aadcccc536b030988ed9cf8474fca1743f184fcdcf30ae9625c",
+    "rulesSha256": "fa9784178cc3e2ae92d551f782a6084fd6b83dd31b160ef3b9fcef8b85497985",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
-    "outputTreeSha256": "2a81935f24793d1137dae2c691c5c716da1341c0e99058f51421e0a6466d3286",
+    "outputTreeSha256": "ce119635ae0858d7a029399ba8b74706ed680dcb749f45cc03f855f78b8dcc20",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

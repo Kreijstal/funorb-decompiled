@@ -35,15 +35,15 @@ final class ij implements WidgetRenderer {
             stackIn_4_0 = (UiWidget) (param4);
           }
           var13 = (fk) (stackIn_4_0);
-          sb.a(param4.field_p + param0, param1 + param4.field_n, param4.field_l, param4.field_h, this.field_c);
+          SoftwareRasterizer.fillRectangle(param4.field_p + param0, param1 + param4.field_n, param4.field_l, param4.field_h, this.field_c);
           if (var13 != null) {
           }
           var7 = param4.field_l - 2 * var13.field_B;
           var8 = var13.field_B + param4.field_p + param0;
           var9 = var13.field_G + (param4.field_n + param1);
-          sb.e(var8, var9, var7 + var8, var9, this.field_j);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_j);
           for (var10 = -1 + var13.h(-1); 0 <= var10; var10--) {
-            sb.c(var7 * var13.b((byte) 117, var10) / var13.i(-24733) + var8, var9, this.field_e, this.field_f);
+            SoftwareRasterizer.fillCircle(var7 * var13.b((byte) 117, var10) / var13.i(-24733) + var8, var9, this.field_e, this.field_f);
           }
           var11 = -49 % ((51 - param3) / 47);
           if (this.field_i != null) {

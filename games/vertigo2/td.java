@@ -41,21 +41,21 @@ final class td implements WidgetListener {
           var14 = (ao) (stackIn_3_0);
           if (var14 != null) {
           }
-          bi.b(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_h);
+          SoftwareRasterizer.fillRectangle(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_h);
           var7 = var14.field_J + param3.x + param1;
           var8 = param3.y + param4 + var14.field_M;
-          bi.f(var7, var8, var14.field_L, this.field_e);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_L, this.field_e);
           if (var14.field_I != -1) {
             var9 = 2.0 * ((double)var14.field_I * 3.141592653589793) / (double)var14.field_S;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_L);
             var12 = (int)(Math.cos(var9) * (double)var14.field_L);
-            bi.f(var11 + var7, var12 + var8, 1, this.field_i);
+            SoftwareRasterizer.fillCircle(var11 + var7, var12 + var8, 1, this.field_i);
           }
-          bi.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_T) / (double)var14.field_S;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_L);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_L);
-          bi.a(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
           if (!param2) {
             return;
           }
@@ -156,9 +156,9 @@ final class td implements WidgetListener {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param1) {
-          bi.b(0, 0, bi.field_e, bi.field_j, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, 192);
         } else {
-          bi.c();
+          SoftwareRasterizer.clearRaster();
         }
         if (param2 != -77) {
           td.clearStaticReferences((byte) -93);

@@ -266,11 +266,11 @@ abstract class in {
                 pf.a(var2, -16 + var3, 0, var5, var6);
               }
               if (var1_int != 0) {
-                si.d(515, 0, 640, 480);
-                si.c();
+                SoftwareRasterizer.setClip(515, 0, 640, 480);
+                SoftwareRasterizer.resetClip();
               } else {
-                si.d(0, 0, 125, 480);
-                si.c();
+                SoftwareRasterizer.setClip(0, 0, 125, 480);
+                SoftwareRasterizer.resetClip();
               }
               if (var7 != -1) {
                 if (var1_int == 0) {
@@ -340,7 +340,7 @@ abstract class in {
                 } else {
                   stackIn_66_4 = 8421504;
                 }
-                si.c(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4);
+                SoftwareRasterizer.fillRectangle(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4);
               }
               ti.field_j.e(var5Lifetime1, var6Lifetime1);
               if (var1_intLifetime2 > 0 &&
@@ -351,7 +351,7 @@ abstract class in {
                     var11 = di.field_b[var1_intLifetime2].field_D[var8 + var10];
                     var11 = (255 & var11 >> 16) / 4;
                     var11 = var11 * 262401;
-                    si.a(4 + var10 / 2 + var5Lifetime1, var9 / 2 + var6Lifetime1, var11);
+                    SoftwareRasterizer.addPixel(4 + var10 / 2 + var5Lifetime1, var9 / 2 + var6Lifetime1, var11);
                   }
                   var8 = var8 + di.field_b[var1_intLifetime2].field_u * 2;
                 }
@@ -371,7 +371,7 @@ abstract class in {
                 var7Lifetime1 = 1;
               }
               if (var7Lifetime1 != 0) {
-                si.c(var5Lifetime1 + 24, var6Lifetime1 + 16, 9, 10, 16776960);
+                SoftwareRasterizer.fillRectangle(var5Lifetime1 + 24, var6Lifetime1 + 16, 9, 10, 16776960);
               }
               stackIn_85_0 = al.field_Z;
               stackIn_85_1 = Integer.toString(1 + var1_intLifetime2);

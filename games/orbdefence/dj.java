@@ -142,7 +142,7 @@ final class dj {
           var9Lifetime1 = var18.field_k;
           h.k(126);
           var18.d();
-          ul.h(0, 0, ul.field_f, ul.field_l);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l);
           var16 = new hj(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.d();

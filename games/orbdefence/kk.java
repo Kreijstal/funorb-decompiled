@@ -158,7 +158,7 @@ final class kk extends te {
             var11 <= this.field_W.field_o &&
             this.field_W.field_k >= var12) {
             de.a(-123, this.field_W);
-            ul.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_W = new hj(var11, var12);
             de.a(param2 - 1048697, this.field_W);

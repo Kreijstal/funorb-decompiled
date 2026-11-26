@@ -189,25 +189,25 @@ final class la extends ca {
           var7 = (param4 << 8) + var6_int * param2.field_c;
           param5 = param5 + param2.field_b;
           param3 = param3 + param2.field_c;
-          var8 = si.field_e * param5 + param3;
+          var8 = SoftwareRasterizer.field_e * param5 + param3;
           var9 = 0;
           var10 = param2.field_f;
           var11 = param2.field_a;
-          var12 = -var11 + si.field_e;
-          if (param5 < si.field_j) {
-            var14 = si.field_j - param5;
+          var12 = -var11 + SoftwareRasterizer.field_e;
+          if (param5 < SoftwareRasterizer.field_j) {
+            var14 = SoftwareRasterizer.field_j - param5;
             var10 = var10 - var14;
             var9 = var9 + var14 * var11;
-            param5 = si.field_j;
-            var8 = var8 + var14 * si.field_e;
+            param5 = SoftwareRasterizer.field_j;
+            var8 = var8 + var14 * SoftwareRasterizer.field_e;
           }
           var13 = 0;
-          if (si.field_a < var10 + param5) {
-            var10 = var10 - (-si.field_a + (param5 + var10));
+          if (SoftwareRasterizer.field_a < var10 + param5) {
+            var10 = var10 - (-SoftwareRasterizer.field_a + (param5 + var10));
           }
-          if (param3 < si.field_b) {
-            var14Lifetime1 = si.field_b - param3;
-            param3 = si.field_b;
+          if (param3 < SoftwareRasterizer.field_b) {
+            var14Lifetime1 = SoftwareRasterizer.field_b - param3;
+            param3 = SoftwareRasterizer.field_b;
             var11 = var11 - var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var7 = var7 + var14Lifetime1 * var6_int;
@@ -215,8 +215,8 @@ final class la extends ca {
             var9 = var9 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
           }
-          if (si.field_l < var11 + param3) {
-            var14Lifetime2 = -si.field_l + (param3 + var11);
+          if (SoftwareRasterizer.field_l < var11 + param3) {
+            var14Lifetime2 = -SoftwareRasterizer.field_l + (param3 + var11);
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
@@ -239,11 +239,11 @@ final class la extends ca {
                   var18 = param2.field_k[255 & param2.field_j[incrementValue$0]];
                   if (var18 != 0) {
                     if (var16 > 255) {
-                      si.field_i[var8] = var18;
+                      SoftwareRasterizer.field_i[var8] = var18;
                     } else {
-                      var19 = si.field_i[var8];
+                      var19 = SoftwareRasterizer.field_i[var8];
                       var20 = var16 * (var18 & 16711935) + var17 * (var19 & 16711935) >> 8 & 16711935;
-                      si.field_i[var8] = var20 + (ua.a(16711749, var16 * ua.a(65280, var18) + ua.a(var19, 65280) * var17) >> 8);
+                      SoftwareRasterizer.field_i[var8] = var20 + (ua.a(16711749, var16 * ua.a(65280, var18) + ua.a(var19, 65280) * var17) >> 8);
                     }
                   }
                   var8++;

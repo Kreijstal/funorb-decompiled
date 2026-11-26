@@ -54,7 +54,7 @@ final class mn extends gk {
             mb.field_b.b(1, AccountRequestState.field_e);
           }
           AccountRequestState.field_e.a(param0 ^ 68, param3, param1, param2);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearRaster();
           pf.a(0, true);
           if (param0 == -63) {
             return;

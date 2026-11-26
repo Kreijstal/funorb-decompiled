@@ -1568,7 +1568,7 @@ class jla {
             var2 = var2 + mr.field_f.field_q;
             continue scanLoop1;
           }
-          SoftwareRasterizer.a(10, 10, 620, 460, 10, 0, 192);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(10, 10, 620, 460, 10, 0, 192);
           stackIn_11_0 = -124 % ((param0 - 65) / 33);
           break;
         }

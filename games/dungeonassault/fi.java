@@ -306,7 +306,7 @@ final class fi extends qe {
         var5 = this.a(param2, (byte) -93);
         var6 = this.a(false, param2);
         var7 = this.c(30, param2);
-        gf.e(-4 + var4, -6 + var6, 8 + (var5 - var4), 8 + var7, 0);
+        SoftwareRasterizer.drawRectangleOutline(-4 + var4, -6 + var6, 8 + (var5 - var4), 8 + var7, 0);
         fi.b(var4, var6 - 2, -var4 + var5, var7, 8421504, 128, 128);
         var9 = 106 % ((param1 - 71) / 37);
         var8 = nk.field_Fb[param2];

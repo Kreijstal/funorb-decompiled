@@ -49,7 +49,7 @@ final class sa {
           this.field_r = new cn(this.field_u.field_y + 4, 4 + this.field_u.field_v);
           jh.a(this.field_r);
           this.field_u.e(2, 2, 12690143);
-          gf.d(2, 2, 0, 0, this.field_r.field_y, this.field_r.field_v);
+          SoftwareRasterizer.blurRectangle(2, 2, 0, 0, this.field_r.field_y, this.field_r.field_v);
           jh.b();
           var7 = this.field_r;
           this.field_r.field_A = -2;
@@ -132,18 +132,18 @@ final class sa {
           var11 = var13;
           var10 = var11;
           var16 = var10;
-          gf.a(var13);
+          SoftwareRasterizer.saveClip(var13);
           for (var7 = 1; var7 < this.field_k; var7++) {
             var8 = var7 * param3 / this.field_k;
-            gf.e(this.field_m, var7 + this.field_j, this.field_m + this.field_b, 1 + (this.field_j + var7));
+            SoftwareRasterizer.setClip(this.field_m, var7 + this.field_j, this.field_m + this.field_b, 1 + (this.field_j + var7));
             param4.b(param2, param0, var8);
-            gf.e(this.field_m, this.field_y + (this.field_j - 1) - var7, this.field_b + this.field_m, -var7 + (this.field_j + this.field_y));
+            SoftwareRasterizer.setClip(this.field_m, this.field_y + (this.field_j - 1) - var7, this.field_b + this.field_m, -var7 + (this.field_j + this.field_y));
             param4.b(param2, param0, var8);
           }
           var8Lifetime1 = -112 / ((param1 - 27) / 32);
-          gf.e(this.field_m, this.field_k + this.field_j, this.field_m + this.field_b, this.field_j + this.field_y - this.field_k);
+          SoftwareRasterizer.setClip(this.field_m, this.field_k + this.field_j, this.field_m + this.field_b, this.field_j + this.field_y - this.field_k);
           param4.b(param2, param0, param3);
-          gf.b(var16);
+          SoftwareRasterizer.restoreClip(var16);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -163,18 +163,18 @@ final class sa {
           var10 = var12;
           var9 = var10;
           var15 = var9;
-          gf.a(var12);
+          SoftwareRasterizer.saveClip(var12);
           for (var6 = 1; this.field_k > var6; var6++) {
             var7 = (var6 << 8) / this.field_k;
-            gf.e(this.field_m, this.field_j + var6, this.field_m + this.field_b, var6 + (this.field_j + 1));
+            SoftwareRasterizer.setClip(this.field_m, this.field_j + var6, this.field_m + this.field_b, var6 + (this.field_j + 1));
             param2.d(param0, param1, var7);
-            gf.e(this.field_m, -var6 + (-1 + (this.field_y + this.field_j)), this.field_b + this.field_m, this.field_y + this.field_j - var6);
+            SoftwareRasterizer.setClip(this.field_m, -var6 + (-1 + (this.field_y + this.field_j)), this.field_b + this.field_m, this.field_y + this.field_j - var6);
             param2.d(param0, param1, var7);
           }
           var6Lifetime1 = -73 / ((param3 + 20) / 35);
-          gf.e(this.field_m, this.field_j + this.field_k, this.field_b + this.field_m, this.field_j + (this.field_y - this.field_k));
+          SoftwareRasterizer.setClip(this.field_m, this.field_j + this.field_k, this.field_b + this.field_m, this.field_j + (this.field_y - this.field_k));
           param2.h(param0, param1);
-          gf.b(var15);
+          SoftwareRasterizer.restoreClip(var15);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

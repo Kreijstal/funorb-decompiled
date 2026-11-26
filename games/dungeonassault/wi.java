@@ -82,7 +82,7 @@ final class wi extends sj {
         super.a(param0, param1, param2);
         hc.field_f.c(this.field_jb, param1 + (this.field_x >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_ib) {
-          gf.b(20 + param1, 120 + (param0 - 7), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + (param0 - 7), 260, 8421504);
           hc.field_f.a(this.field_ib, param1 + 20, param0 + 128, 260, 100, 16777215, -1, 1, 0, hc.field_f.field_H);
         }
     }

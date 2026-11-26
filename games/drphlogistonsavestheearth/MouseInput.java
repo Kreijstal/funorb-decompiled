@@ -58,24 +58,24 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var5 = null;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          wj.g(param1, param2, 1 + param0, 10000536);
-          wj.g(param1, param2 + param3, param0 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param2, 1 + param0, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param2 + param3, param0 + 1, 12105912);
           var5_int = 1;
-          if (param2 + var5_int < wj.field_e) {
-            var5_int = wj.field_e - param2;
+          if (param2 + var5_int < SoftwareRasterizer.field_e) {
+            var5_int = SoftwareRasterizer.field_e - param2;
           }
           var6 = param3;
           if (param4 <= 42) {
             return;
           }
-          if (wj.field_j < param2 + var6) {
-            var6 = wj.field_j - param2;
+          if (SoftwareRasterizer.field_j < param2 + var6) {
+            var6 = SoftwareRasterizer.field_j - param2;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 152 + 48 * var7 / param3;
             var9 = var8 << 16 | var8 << 8 | var8;
-            wj.field_l[wj.field_k * (param2 + var7) + param1] = var9;
-            wj.field_l[wj.field_k * (var7 + param2) - (-param1 - param0)] = var9;
+            SoftwareRasterizer.field_l[SoftwareRasterizer.field_k * (param2 + var7) + param1] = var9;
+            SoftwareRasterizer.field_l[SoftwareRasterizer.field_k * (var7 + param2) - (-param1 - param0)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         if (var1 == null) {
           var1 = new ek();
         }
-        var1.a(wj.field_j, wj.field_l, wj.field_b, wj.field_c, (byte) 69, wj.field_k, wj.field_g, wj.field_e);
+        var1.a(SoftwareRasterizer.field_j, SoftwareRasterizer.field_l, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, (byte) 69, SoftwareRasterizer.field_k, SoftwareRasterizer.field_g, SoftwareRasterizer.field_e);
         hl.field_c.addLast(var1, 255);
         if (!param0) {
           field_f = (String) null;
@@ -318,7 +318,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     final static void a(nh param0, byte param1) {
         try {
           MouseInput.a(true);
-          wj.a(param0.field_B, param0.field_z, param0.field_C);
+          SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_z, param0.field_C);
           if (param1 < 46) {
             field_d = -91;
           }

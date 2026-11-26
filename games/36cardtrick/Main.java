@@ -1731,31 +1731,31 @@ public final class Main extends c {
           var6_ref.field_f = var6_ref.field_b;
           td.field_c[0] = new kc(415, 415);
           td.field_c[0].c();
-          vj.c(0, 0, 415, 415, 9351922);
+          SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 9351922);
           var6_ref.field_j[1] = 8024722;
           var6_ref.a(0, var7);
-          vj.b(0, 261, 415, 154, 8090514, 11373689);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 8090514, 11373689);
           lh.a("hs", mh.field_c, "", -89).a(0, 0);
           td.field_c[3] = new kc(415, 415);
           td.field_c[3].c();
-          vj.c(0, 0, 415, 415, 10932727);
+          SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 10932727);
           var6_ref.field_j[1] = 9675196;
           var6_ref.a(0, var7);
-          vj.b(0, 261, 415, 154, 9675196, 11645356);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 9675196, 11645356);
           lh.a("atl", mh.field_c, "", -108).a(0, 0);
           td.field_c[5] = new kc(415, 415);
           td.field_c[5].c();
-          vj.c(0, 0, 415, 415, 13869944);
+          SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 13869944);
           var6_ref.field_j[1] = 11698531;
           var6_ref.a(0, var7);
-          vj.b(0, 261, 415, 154, 11698531, 13734228);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 11698531, 13734228);
           lh.a("atg", mh.field_c, "", -21).a(0, 0);
           td.field_c[4] = new kc(415, 415);
           td.field_c[4].c();
-          vj.c(0, 0, 415, 415, 10211583);
+          SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 10211583);
           var6_ref.field_j[1] = 5081598;
           var6_ref.a(0, var7);
-          vj.b(0, 261, 415, 154, 5081598, 11974562);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 5081598, 11974562);
           lh.a("ld", mh.field_c, "", -96).a(0, 0);
           td.field_c[2] = DelegatingCanvas.a(-127, "lc", "", mh.field_c);
           td.field_c[1] = DelegatingCanvas.a(-127, "go", "", mh.field_c);
@@ -1773,17 +1773,17 @@ public final class Main extends c {
               mg.field_j[2] = dupTemp$0;
               mg.field_j[0] = dupTemp$0;
               mg.field_j[0].c();
-              vj.c(0, 0, vj.field_l, vj.field_g, 6962948);
+              SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 6962948);
               dupTemp$1 = new kc(256, 4);
               mg.field_j[7] = dupTemp$1;
               mg.field_j[1] = dupTemp$1;
               mg.field_j[1].c();
-              vj.c(0, 0, vj.field_l, vj.field_g, 6962948);
+              SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 6962948);
               dupTemp$2 = new kc(4, 256);
               mg.field_j[5] = dupTemp$2;
               mg.field_j[3] = dupTemp$2;
               mg.field_j[3].c();
-              vj.c(0, 0, vj.field_l, vj.field_g, 6962948);
+              SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 6962948);
               break;
             }
             var10_ref_kc = var8[var9_int];
@@ -1795,9 +1795,9 @@ public final class Main extends c {
           mg.field_j[4] = new kc(640, 480);
           mg.field_j[4].c();
           var10 = var8_array.length >> 2;
-          var11_int = -1 + vj.field_j.length;
+          var11_int = -1 + SoftwareRasterizer.field_j.length;
           while (var11_int >= 0) {
-            vj.field_j[var11_int] = var8_array[var8_array.length + (-1 - AccountCreationResultPanel.a(var10, -2147483648, var9))];
+            SoftwareRasterizer.field_j[var11_int] = var8_array[var8_array.length + (-1 - AccountCreationResultPanel.a(var10, -2147483648, var9))];
             var11_int--;
             if (var46 == 0) {
               continue;
@@ -1806,18 +1806,18 @@ public final class Main extends c {
           }
           var11 = new kc(1, 40);
           var12_int = 0;
-          scanLoop1: while (var12_int < vj.field_l) {
+          scanLoop1: while (var12_int < SoftwareRasterizer.field_l) {
             var13_int = 0;
             while (true) {
               if (10 > var13_int) {
-                var14 = AccountCreationResultPanel.a(vj.field_g, -2147483648, var9);
+                var14 = AccountCreationResultPanel.a(SoftwareRasterizer.field_g, -2147483648, var9);
                 var15_int = 5 + AccountCreationResultPanel.a(12, -2147483648, var9);
                 var16_int = var8_array[(var8_array.length >> 1) + AccountCreationResultPanel.a(var8_array.length >> 1, -2147483648, var9)];
                 var17_int = var8_array[var10];
                 var11.c();
-                vj.d();
-                vj.b(0, 20 - var15_int, 1, var15_int, var16_int, var17_int);
-                vj.b(0, 20, 1, var15_int, var17_int, var16_int);
+                SoftwareRasterizer.clearRaster();
+                SoftwareRasterizer.fillRectangleVerticalGradient(0, 20 - var15_int, 1, var15_int, var16_int, var17_int);
+                SoftwareRasterizer.fillRectangleVerticalGradient(0, 20, 1, var15_int, var17_int, var16_int);
                 mg.field_j[4].c();
                 var11.e(var12_int, var14 - 20, AccountCreationResultPanel.a(56, -2147483648, var9) + 200);
                 var13_int++;
@@ -1836,13 +1836,13 @@ public final class Main extends c {
           }
           var12 = new kc(640, 480);
           var12.c();
-          vj.b(0, 0, 640, 300, 21670, 39641);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 300, 21670, 39641);
           var13 = lh.a("canyonmask", mh.field_c, "", 127);
           var14Lifetime1 = var13.field_c;
           var13.field_f = var13.field_b;
           var13.field_c = 0;
           di.a(var13, 4997716, 0, 5000797, 13449, var14Lifetime1);
-          vj.b(0, 316, 640, 164, 5066333, 9336387);
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 316, 640, 164, 5066333, 9336387);
           var15 = DelegatingCanvas.a(-127, "cloud1mask", "", mh.field_c);
           var16 = DelegatingCanvas.a(-127, "cloud2mask", "", mh.field_c);
           var17 = DelegatingCanvas.a(-128, "cloud3mask", "", mh.field_c);
@@ -1877,10 +1877,10 @@ public final class Main extends c {
           d.field_u[2] = DelegatingCanvas.a(-126, "titlescreen", "", mh.field_c);
           d.field_u[3] = var12.b();
           d.field_u[3].c();
-          vj.g(153, 105, 491, 397);
+          SoftwareRasterizer.setClip(153, 105, 491, 397);
           mg.field_j[4].b(0, 0);
-          vj.a();
-          vj.c(169, 121, 308, 261, 16777215);
+          SoftwareRasterizer.resetClip();
+          SoftwareRasterizer.fillRectangle(169, 121, 308, 261, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 103, 8475405, 296, 151, 342);
           cg.field_i.d(174, 128);
           cg.field_i.d(461, 128);
@@ -1895,7 +1895,7 @@ public final class Main extends c {
           var24 = new kc(640, 480);
           var24.c();
           mg.field_j[4].b(0, 0);
-          vj.c(18, 18, 604, 444, 16777215);
+          SoftwareRasterizer.fillRectangle(18, 18, 604, 444, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 0, 8475405, 480, 0, 640);
           cg.field_i.d(23, 25);
           cg.field_i.d(-cg.field_i.field_p + 617, 25);
@@ -1934,10 +1934,10 @@ public final class Main extends c {
           var27 = DelegatingCanvas.a(-127, "achextra2", "", mh.field_c);
           var27.d(0, 0);
           var23.d(0, -38);
-          vj.g(225, 93, 589, 407);
+          SoftwareRasterizer.setClip(225, 93, 589, 407);
           mg.field_j[4].b(0, 0);
-          vj.a();
-          vj.c(236, 103, 343, 291, 16777215);
+          SoftwareRasterizer.resetClip();
+          SoftwareRasterizer.fillRectangle(236, 103, 343, 291, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 91, 8475405, 318, 223, 368);
           cg.field_i.d(242, 109);
           cg.field_i.d(562, 109);
@@ -1954,7 +1954,7 @@ public final class Main extends c {
           re.a(16777215, 0, 0, (byte) 100, var21);
           DelegatingCanvas.a(-128, "ropeout", "", mh.field_c).d(0, 0);
           DelegatingCanvas.a(-128, "ropein", "", mh.field_c).e(0, 0, 116);
-          vj.c(198, 33, 415, 415, 1);
+          SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           a.a(16777215, vk.field_j, -1, 39, 6697779, 113);
           a.a(16777215, tj.field_D, -1, 98, 6697779, 162);
@@ -1969,7 +1969,7 @@ public final class Main extends c {
           re.a(16777215, 0, 0, (byte) 116, var20);
           var23.d(0, -38);
           var27.d(-5, 0);
-          vj.c(198, 33, 415, 415, 1);
+          SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           gf.field_e.a(200);
           tc.field_a = new kc[9];
@@ -2077,7 +2077,7 @@ public final class Main extends c {
           rf.clearStaticReferences(param0 ^ -19749);
           MouseInputHandler.a((byte) 98);
           MouseWheelInput.a(87);
-          vj.c();
+          SoftwareRasterizer.clearStaticReferences();
           ee.clearStaticReferences();
           wh.clearStaticReferences(120);
           ii.a(4308);
@@ -2341,7 +2341,7 @@ public final class Main extends c {
             nl.a((java.awt.Canvas) (var2), param0 + 34);
             return;
           }
-          vj.d();
+          SoftwareRasterizer.clearRaster();
           if (ff.field_b != -1) {
             this.q((byte) -111);
             if (var6 != 0) {
@@ -2371,27 +2371,27 @@ public final class Main extends c {
               }
               bf.a(stackIn_48_0, (byte) -8);
               if (var6 != 0) {
-                vj.a(0, 0, vj.field_l, vj.field_g);
+                SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
                 tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
                 if (ff.field_b == 9) {
                   var3 = hb.field_d << 3;
                   var4 = qf.m(-32749);
                   var5 = v.g((byte) -111);
                   if (0 < var3) {
-                    vj.a((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
+                    SoftwareRasterizer.fillRectangleAlpha((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
                   }
                 }
               }
             }
           } else {
-            vj.a(0, 0, vj.field_l, vj.field_g);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
             tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
             if (ff.field_b == 9) {
               var3 = hb.field_d << 3;
               var4 = qf.m(-32749);
               var5 = v.g((byte) -111);
               if (0 < var3) {
-                vj.a((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
+                SoftwareRasterizer.fillRectangleAlpha((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
               }
             }
           }
@@ -2498,11 +2498,11 @@ public final class Main extends c {
               var8 != 0) {
               if (6 == var3) {
                 var3 = 24 * hb.field_d;
-                vj.g(0, 0, 640, var3);
+                SoftwareRasterizer.setClip(0, 0, 640, var3);
                 this.field_E[rk.field_X].a(0, 0, 0);
-                vj.g(0, var3, 640, 480);
+                SoftwareRasterizer.setClip(0, var3, 640, 480);
                 this.field_E[dj.field_a].a(0, 0, var3);
-                vj.a();
+                SoftwareRasterizer.resetClip();
                 decompiledFrameRemainder5 = (var8 != 0);
               } else {
                 decompiledFrameRemainder5 = (var3 == 8);
@@ -2559,7 +2559,7 @@ public final class Main extends c {
             var2_int = hb.field_d << 3;
             decompiledFrameRemainder5 = !(0 >= var2_int);
             if (decompiledFrameRemainder5) {
-              vj.a(0, 0, vj.field_l, vj.field_g, 0, var2_int);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 0, var2_int);
               decompiledFrameRemainder5 = (var8 != 0);
             }
           }

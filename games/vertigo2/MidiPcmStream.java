@@ -212,13 +212,13 @@ final class MidiPcmStream extends PcmStream {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         Sprite var5 = new Sprite(param2, param1);
-        int[] var6 = bi.field_l;
-        int var7 = bi.field_e;
-        int var8 = bi.field_j;
+        int[] var6 = SoftwareRasterizer.field_l;
+        int var7 = SoftwareRasterizer.field_e;
+        int var8 = SoftwareRasterizer.field_j;
         var5.d();
-        bi.f(param3, 0, param2, param1, 12, 5921370);
-        bi.f(4, 4, param2 - 8, -8 + param1, 8, 0);
-        bi.a(var6, var7, var8);
+        SoftwareRasterizer.fillRoundedRectangle(param3, 0, param2, param1, 12, 5921370);
+        SoftwareRasterizer.fillRoundedRectangle(4, 4, param2 - 8, -8 + param1, 8, 0);
+        SoftwareRasterizer.setRasterBuffer(var6, var7, var8);
         var5.e(param0, param4);
     }
 

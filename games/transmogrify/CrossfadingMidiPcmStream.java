@@ -187,7 +187,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           if (param1 != 256) {
             CrossfadingMidiPcmStream.pollAccountCreationResult((byte) 117);
           }
-          sb.a(param0.field_w, param0.field_r, param0.field_s);
+          SoftwareRasterizer.setRasterBuffer(param0.field_w, param0.field_r, param0.field_s);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "oj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

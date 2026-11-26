@@ -166,7 +166,7 @@ final class vg {
                 32 + var4 >= PacketBuffer.field_j &&
                 param2 + var5 <= bk.field_a &&
                 bk.field_a <= param2 + (var5 + 32)) {
-                sb.b(-2 + var4, -2 + var5, 36, 36, 6, 8421504);
+                SoftwareRasterizer.drawRoundedRectangleOutline(-2 + var4, -2 + var5, 36, 36, 6, 8421504);
                 var8 = var9;
               }
               if (var4 <= this.field_d &&
@@ -181,7 +181,7 @@ final class vg {
                 }
               }
               if (this.field_e == var9) {
-                sb.b(var4 - 2, var5 - 2, 36, 36, 6, 1579032);
+                SoftwareRasterizer.drawRoundedRectangleOutline(var4 - 2, var5 - 2, 36, 36, 6, 1579032);
               }
               incrementValue$0 = var7;
               var7++;
@@ -1216,7 +1216,7 @@ final class vg {
             }
             this.field_c = var6 + var7 - (-var12 + 81) >> 1;
           }
-          sb.d(this.field_c, fd.field_b[this.field_i] / 2 + var5 - 1, 81, 2, var10);
+          SoftwareRasterizer.drawRectangleOutline(this.field_c, fd.field_b[this.field_i] / 2 + var5 - 1, 81, 2, var10);
           if (var8 != 12) {
             stackIn_40_0 = (lb.field_a << 8) / 128;
           } else {
@@ -1224,7 +1224,7 @@ final class vg {
           }
           var12 = stackIn_40_0;
           var12 = 80 * var12 / 256;
-          sb.d(var12 + (this.field_c - 1), 3 + var5, 3, -6 + fd.field_b[this.field_i], var10);
+          SoftwareRasterizer.drawRectangleOutline(var12 + (this.field_c - 1), 3 + var5, 3, -6 + fd.field_b[this.field_i], var10);
           if (param0) {
             le.field_A.a(var9, this.field_c, var5 + var11.field_y, var10, -1);
           } else {

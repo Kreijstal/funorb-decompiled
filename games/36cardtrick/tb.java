@@ -41,13 +41,13 @@ final class tb implements ci {
           if (param2 != 11447) {
             return;
           }
-          vj.c(param0 + param1.field_o, param1.field_i + param3, param1.field_h, param1.field_q, this.field_f);
+          SoftwareRasterizer.fillRectangle(param0 + param1.field_o, param1.field_i + param3, param1.field_h, param1.field_q, this.field_f);
           var7 = -(2 * var12.field_K) + param1.field_h;
           var8 = param1.field_o + (param0 + var12.field_K);
           var9 = var12.field_J + param3 + param1.field_i;
-          vj.e(var8, var9, var8 + var7, var9, this.field_l);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_l);
           for (var10 = var12.a(true) - 1; 0 <= var10; var10--) {
-            vj.b(var8 + var12.a((byte) -63, var10) * var7 / var12.f((byte) -40), var9, this.field_j, this.field_a);
+            SoftwareRasterizer.fillCircle(var8 + var12.a((byte) -63, var10) * var7 / var12.f((byte) -40), var9, this.field_j, this.field_a);
           }
           if (this.field_g == null) {
             return;

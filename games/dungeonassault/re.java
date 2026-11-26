@@ -21,7 +21,7 @@ final class re {
     }
 
     final static void b() {
-        re.a(gf.field_j, gf.field_f, gf.field_h, gf.field_e);
+        re.a(SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_e);
     }
 
     private final static void a() {
@@ -37,10 +37,10 @@ final class re {
         if (field_e.length < field_i) {
           field_e = new int[gk.roundUpPowerOfTwo(-912121912, field_i)];
         }
-        int var4 = param1 * gf.field_i + param0;
+        int var4 = param1 * SoftwareRasterizer.field_i + param0;
         for (var5 = 0; var5 < field_i; var5++) {
           field_e[var5] = var4;
-          var4 = var4 + gf.field_i;
+          var4 = var4 + SoftwareRasterizer.field_i;
         }
     }
 

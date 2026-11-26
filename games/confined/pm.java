@@ -126,10 +126,10 @@ abstract class pm extends DualLinkNode {
           var13[2] = (int)(this.field_D * (double)param0);
           var13[1] = (int)((double)param0 * this.field_t);
           param5.a(var27, -99);
-          var14 = fn.field_h;
-          fn.field_h = fd.field_e.field_z;
+          var14 = SoftwareRasterizer.field_h;
+          SoftwareRasterizer.field_h = fd.field_e.field_z;
           var12.a(param6.a(param0, false), var27);
-          fn.field_h = var14;
+          SoftwareRasterizer.field_h = var14;
           var12.a();
           if (param1) {
             var15 = -param6.field_T + this.field_E;
@@ -145,12 +145,12 @@ abstract class pm extends DualLinkNode {
             }
             pm.b((int)qn.field_v.a((double)param9, param3 ^ 44, this.field_D) >> 2, var23);
           }
-          fn.h(sk.field_u, sk.field_j, sk.field_h, sk.field_G);
+          SoftwareRasterizer.setClip(sk.field_u, sk.field_j, sk.field_h, sk.field_G);
           fd.field_e.a(0, 0, -(param9 >> 1) + 256);
-          fn.field_h = fd.field_e.field_z;
-          fn.e(0, 0, 640, 376, 0);
-          fn.field_h = var14;
-          fn.c();
+          SoftwareRasterizer.field_h = fd.field_e.field_z;
+          SoftwareRasterizer.fillRectangle(0, 0, 640, 376, 0);
+          SoftwareRasterizer.field_h = var14;
+          SoftwareRasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -325,11 +325,11 @@ abstract class pm extends DualLinkNode {
             var12 = var22[var8Lifetime1] & 255;
             if (var12 != 0) {
               var22[var8Lifetime1] = (byte) 0;
-              var13 = fn.field_h[var8Lifetime1];
+              var13 = SoftwareRasterizer.field_h[var8Lifetime1];
               var14 = ~var13 & 16711935;
               var15 = ~var13 & 65280;
               var16 = var14 * var12 & -16711936 | var15 * var12 & 16711680;
-              fn.field_h[var8Lifetime1] = var13 + (var16 >>> 8);
+              SoftwareRasterizer.field_h[var8Lifetime1] = var13 + (var16 >>> 8);
             }
             var8Lifetime1++;
           }

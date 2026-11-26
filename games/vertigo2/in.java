@@ -36,9 +36,9 @@ final class in {
     final static void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4, int param5, int param6, int param7, byte param8, boolean param9) {
         int var11;
         var11 = Vertigo2.field_L ? 1 : 0;
-        if (!param9 && (qg.field_G != bi.field_e ||
-          bi.field_j != om.field_D) && (bi.field_j == ro.field_g.field_d &&
-          ro.field_g.field_i == bi.field_e)) {
+        if (!param9 && (qg.field_G != SoftwareRasterizer.field_e ||
+          SoftwareRasterizer.field_j != om.field_D) && (SoftwareRasterizer.field_j == ro.field_g.field_d &&
+          ro.field_g.field_i == SoftwareRasterizer.field_e)) {
           if (null != gd.field_j) {
             ho.a(param8 ^ -66, false);
           } else {

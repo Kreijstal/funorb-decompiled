@@ -106,12 +106,12 @@ final class db implements ml {
             stackIn_3_0 = null;
           }
           var14 = (fj) (stackIn_3_0);
-          ge.d(param1.field_r + param3, param1.field_e + param2, param1.field_l, param1.field_p, this.field_i);
+          SoftwareRasterizer.fillRectangle(param1.field_r + param3, param1.field_e + param2, param1.field_l, param1.field_p, this.field_i);
           if (var14 != null) {
           }
           var7 = var14.field_I + (param3 + param1.field_r);
           var8 = param2 + (param1.field_e + var14.field_C);
-          ge.f(var7, var8, var14.field_G, this.field_c);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_G, this.field_c);
           if (param4 <= 19) {
             return;
           }
@@ -119,13 +119,13 @@ final class db implements ml {
             var9 = 2.0 * ((double)var14.field_H * 3.141592653589793) / (double)var14.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_G);
             var12 = (int)(Math.cos(var9) * (double)var14.field_G);
-            ge.f(var7 + var11, var12 + var8, 1, this.field_j);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_j);
           }
-          ge.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_D) / (double)var14.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_G);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_G);
-          ge.e(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_a == null) {
             return;
           }

@@ -40,7 +40,7 @@ final class qe extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            sb.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         if (param0 != -29239) {
@@ -93,13 +93,13 @@ final class qe extends UiWidget {
           var10 = var6 - var5;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
           var12 = var11 < 256 ? (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> 8 : var9 | var8;
-          sb.d(var7, var6, this.field_t, var12);
-          sb.d(var7 - 2 * this.field_t, var6, this.field_t, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_t, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_t, var6, this.field_t, var12);
           var9Lifetime1 = param1 & 65280;
           var8Lifetime1 = 16711935 & param1;
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (var9Lifetime1 * var11 & 16711680 | var11 * var8Lifetime1 & -16711936) >>> 8;
-          sb.d(var7 + this.field_t, var6, this.field_t, var12Lifetime1);
-          sb.d(-this.field_t + var7, var6, this.field_t, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_t, var6, this.field_t, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_t + var7, var6, this.field_t, var12Lifetime1);
         }
         fi.c(true);
         return var14;
@@ -170,7 +170,7 @@ final class qe extends UiWidget {
             var6 = var6 + param1.field_n;
           }
           fi.c(true);
-          if (param3 + this.field_y.field_n >= sb.field_d) {
+          if (param3 + this.field_y.field_n >= SoftwareRasterizer.field_d) {
             CrossfadingMidiPcmStream.a(this.field_K, 256);
             param1.c(-this.field_G, 0);
             param1.c(this.field_t * 2 - this.field_G, 0);
@@ -178,7 +178,7 @@ final class qe extends UiWidget {
             fi.c(true);
             this.field_K.c(param3, param2);
           }
-          if (var5_int - this.field_y.field_n <= sb.field_b) {
+          if (var5_int - this.field_y.field_n <= SoftwareRasterizer.field_b) {
             CrossfadingMidiPcmStream.a(this.field_K, 256);
             for (var7 = this.field_G + this.field_l - this.field_y.field_n; 2 * this.field_t < var7; var7 = var7 - 2 * this.field_t) {
             }

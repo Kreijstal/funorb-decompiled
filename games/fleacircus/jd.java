@@ -31,7 +31,7 @@ final class jd {
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        gb.g(param6, param5, param1, param4, param3, param0);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param5, param1, param4, param3, param0);
         if (param2) {
           String var9 = (String) null;
           this.a((byte) 19, -104, (String) null, -15);
@@ -55,15 +55,15 @@ final class jd {
             jd.a(true, 96);
           }
           var7 = param1;
-          if (gb.field_d < var5_int + var7 + 6) {
-            var7 = gb.field_d - var5_int - 6;
+          if (SoftwareRasterizer.field_d < var5_int + var7 + 6) {
+            var7 = SoftwareRasterizer.field_d - var5_int - 6;
           }
           var8 = 32 + param3 - this.field_a.field_y;
-          if (gb.field_k < 6 + var6 + var8) {
-            var8 = -6 + gb.field_k - var6;
+          if (SoftwareRasterizer.field_k < 6 + var6 + var8) {
+            var8 = -6 + SoftwareRasterizer.field_k - var6;
           }
-          gb.b(var7, var8, var5_int + 6, var6 + 6, this.field_m);
-          gb.e(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_f);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int + 6, var6 + 6, this.field_m);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_f);
           this.field_a.c(param2, 3 + var7, this.field_a.field_y + (3 + var8), this.field_m, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,7 +138,7 @@ final class jd {
           if (var7 == -1) {
             var7 = this.field_a.field_H + this.field_a.field_K;
           }
-          var8 = gb.field_d >> 2;
+          var8 = SoftwareRasterizer.field_d >> 2;
           var9 = this.field_a.b(param2);
           var10 = this.field_a.field_K + this.field_a.field_H;
           var11 = 1;
@@ -164,15 +164,15 @@ final class jd {
             }
           }
           var12 = param1;
-          if (var5_int + (var12 + var9) > gb.field_d) {
-            var12 = -var5_int + gb.field_d - var9;
+          if (var5_int + (var12 + var9) > SoftwareRasterizer.field_d) {
+            var12 = -var5_int + SoftwareRasterizer.field_d - var9;
           }
           var13Lifetime1 = 32 - this.field_a.field_y + param3;
-          if (gb.field_k < var6 + (var13Lifetime1 + var10)) {
+          if (SoftwareRasterizer.field_k < var6 + (var13Lifetime1 + var10)) {
             var13Lifetime1 = param3 + (-var10 - var6);
           }
-          gb.b(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
-          gb.e(1 + var12, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_f);
+          SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
+          SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_f);
           this.field_a.a(param2, var12 + this.field_c, this.field_e + var13Lifetime1, var9, var10, this.field_m, -1, 0, 0, var7);
           if (!param0) {
             this.field_i = (ComponentLayout) null;
@@ -310,7 +310,7 @@ final class jd {
         if (param0 != 4) {
           field_g = (String[]) null;
         }
-        gb.d(param5, param2, param1, param3, param4);
+        SoftwareRasterizer.drawLine(param5, param2, param1, param3, param4);
     }
 
     final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {

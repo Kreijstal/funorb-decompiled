@@ -55,9 +55,9 @@ final class ina extends bi {
     final void l(int param0) {
         this.i(-12988);
         InsanoSauceEvent.a(rc.field_k, 40, 16760896, true, 320, false);
-        SoftwareRasterizer.a(40, 60, 342, 335, 20, 0, 80);
-        SoftwareRasterizer.a(390, 60, 210, 335, 20, 0, 80);
-        SoftwareRasterizer.a(399, 69, 192, 136, 11, 0, 80);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(40, 60, 342, 335, 20, 0, 80);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(390, 60, 210, 335, 20, 0, 80);
+        SoftwareRasterizer.fillRoundedRectangleAlpha(399, 69, 192, 136, 11, 0, 80);
         this.e(true);
         this.p(param0 - 2);
         this.c(true);

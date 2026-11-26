@@ -523,8 +523,8 @@ final class RenderingSupport007 {
         int integerLocal8 = 0;
         integerLocal8 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          SoftwareRaster.performAction0639(integerArgument1, integerArgument2, 1 + integerArgument3, 10000536);
-          SoftwareRaster.performAction0639(integerArgument1, integerArgument4 + integerArgument2, 1 + integerArgument3, 12105912);
+          SoftwareRaster.drawHorizontalLine(integerArgument1, integerArgument2, 1 + integerArgument3, 10000536);
+          SoftwareRaster.drawHorizontalLine(integerArgument1, integerArgument4 + integerArgument2, 1 + integerArgument3, 12105912);
           integerLocal3 = 1;
           if (integerArgument2 + integerLocal3 < SoftwareRaster.integerState0280) {
             integerLocal3 = -integerArgument2 + SoftwareRaster.integerState0280;
@@ -581,7 +581,7 @@ final class RenderingSupport007 {
         }
         RgbSprite rgbSpriteLocal2 = MixedSupport086.rgbSpriteState0036;
         rgbSpriteLocal2.performAction0278(320 - rgbSpriteLocal2.integerState0254 / 2, -(integerLocal1 >> 2) + (50 - rgbSpriteLocal2.integerState0260 / 2));
-        SoftwareRaster.performAction0641(integerLocal1 + 4 + this.integerState0374, this.integerState0375 + 4, -8 + this.integerState0368, -8 + this.integerState0372, 0, 150);
+        SoftwareRaster.fillRectangleAlpha(integerLocal1 + 4 + this.integerState0374, this.integerState0375 + 4, -8 + this.integerState0368, -8 + this.integerState0372, 0, 150);
         GameplayControls.performAction1749(this.integerState0372, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, integerLocal1 + this.integerState0374);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 362, SceneWidgetPart013.computeString1709(this.integerState0367, 26135), 16777215, 560 + integerLocal1);
         GameDomainSupport006.performAction1823(72, this.integerState0367, integerLocal1);
@@ -802,7 +802,7 @@ final class RenderingSupport007 {
           this.integerState0372 = -96;
         }
         int integerLocal3 = !this.booleanState0094 ? 0 : 23;
-        SoftwareRaster.performAction0641(integerLocal1 + (4 + this.integerState0374), -8 + (this.integerState0372 + this.integerState0375), -8 + this.integerState0368, integerLocal3 + 142, 0, 150);
+        SoftwareRaster.fillRectangleAlpha(integerLocal1 + (4 + this.integerState0374), -8 + (this.integerState0372 + this.integerState0375), -8 + this.integerState0368, integerLocal3 + 142, 0, 150);
         GameplayControls.performAction1749(integerLocal3 + 150, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, -13 + this.integerState0375 + this.integerState0372, integerLocal1 + this.integerState0374);
         MixedSupport036.performAction0505(this.integerState0372 + this.integerState0375, (byte) 5, this.booleanState0094, integerLocal1 + 185);
         TextLineMetrics.performAction1104(this.integerState0370, integerLocal1 + 333, (byte) 74, this.integerState0372 + this.integerState0375, this.integerState0371);
@@ -1644,7 +1644,7 @@ final class RenderingSupport007 {
         int integerLocal19;
         integerLocal17 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         integerLocal5 = -(this.integerState0369 >> 2) + (640 - this.integerState0363 * (this.integerState0363 * 640) / 400);
-        SoftwareRaster.performAction0641(4 + this.integerState0374 + integerLocal5, this.integerState0375 + 4, this.integerState0368 - 8, -8 + this.integerState0372, 0, 150);
+        SoftwareRaster.fillRectangleAlpha(4 + this.integerState0374 + integerLocal5, this.integerState0375 + 4, this.integerState0368 - 8, -8 + this.integerState0372, 0, 150);
         GameplayControls.performAction1749(this.integerState0372, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, this.integerState0374 + integerLocal5);
         if (integerArgument2 != 15764) {
           this.booleanState0095 = false;
@@ -1664,7 +1664,7 @@ final class RenderingSupport007 {
             if (this.mixedSupport116State0002.integerState0756 - 1 > integerLocal1) {
               integerLocal9 += 3;
             }
-            SoftwareRaster.performAction0649(0, integerLocal10, 640, integerLocal11 + integerLocal10);
+            SoftwareRaster.setClip(0, integerLocal10, 640, integerLocal11 + integerLocal10);
           }
           integerLocal18 = 16694016;
           if (integerLocal1 != this.mixedSupport116State0002.integerState0754) {
@@ -1748,8 +1748,8 @@ final class RenderingSupport007 {
               integerLocal19 = integerLocal13;
             }
             integerLocal14 = (integerLocal19 + 5 + (-128 + gameDomainSupport002Local6.integerState0176)) / 2 + gameDomainSupport002Local6.integerState0174;
-            SoftwareRaster.performAction0640(-1 + integerLocal14 + integerLocal5, integerLocal8 + 11, 130, 8, 65793);
-            SoftwareRaster.performAction0640(1 + (integerLocal14 + integerLocal5), 13 + integerLocal8, 126, 4, integerLocal18);
+            SoftwareRaster.fillRectangle(-1 + integerLocal14 + integerLocal5, integerLocal8 + 11, 130, 8, 65793);
+            SoftwareRaster.fillRectangle(1 + (integerLocal14 + integerLocal5), 13 + integerLocal8, 126, 4, integerLocal18);
             if (gameDomainSupport002Local6.integerState0179 != 6) {
               stackIntegerLocal3 = MixedSupport001.integerState0011 * 128 / 128;
             } else {
@@ -1763,12 +1763,12 @@ final class RenderingSupport007 {
           }
           if (gameDomainSupport002Local6.integerState0179 == 2 && (!(UiComponentPart015.integerState0319 >= 3) ||
             MixedSupport051.computeBoolean0607(false))) {
-            SoftwareRaster.performAction0654(8 + (integerLocal5 + gameDomainSupport002Local6.integerState0174), integerLocal8 + 3, gameDomainSupport002Local6.integerState0176 - 16, 2);
-            SoftwareRaster.performAction0654(4 + (integerLocal5 + gameDomainSupport002Local6.integerState0174), integerLocal8 + 5, gameDomainSupport002Local6.integerState0176 - 8, -10 + integerLocal9);
-            SoftwareRaster.performAction0654(8 + (integerLocal5 + gameDomainSupport002Local6.integerState0174), -5 + (integerLocal9 + integerLocal8), -16 + gameDomainSupport002Local6.integerState0176, 2);
+            SoftwareRaster.grayscaleRectangle(8 + (integerLocal5 + gameDomainSupport002Local6.integerState0174), integerLocal8 + 3, gameDomainSupport002Local6.integerState0176 - 16, 2);
+            SoftwareRaster.grayscaleRectangle(4 + (integerLocal5 + gameDomainSupport002Local6.integerState0174), integerLocal8 + 5, gameDomainSupport002Local6.integerState0176 - 8, -10 + integerLocal9);
+            SoftwareRaster.grayscaleRectangle(8 + (integerLocal5 + gameDomainSupport002Local6.integerState0174), -5 + (integerLocal9 + integerLocal8), -16 + gameDomainSupport002Local6.integerState0176, 2);
           }
         }
-        SoftwareRaster.performAction0657();
+        SoftwareRaster.resetClip();
     }
 
     final void performAction0865(int integerArgument1, boolean booleanArgument2) {

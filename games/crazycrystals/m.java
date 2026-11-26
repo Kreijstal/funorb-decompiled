@@ -274,7 +274,7 @@ final class m extends ue {
         stackIn_6_0 = (!this.field_q) ? 110 : 80;
         var3 = stackIn_6_0;
         wi.a(30, jn.field_o, var3, -var3 + 407, (byte) -71, -30 + var2);
-        kh.d(38, param0 + var3, var2 - 46, -var3 + 407 - 16, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(38, param0 + var3, var2 - 46, -var3 + 407 - 16, 0, 192);
         if (this.field_g.field_f != 0) {
           return;
         }

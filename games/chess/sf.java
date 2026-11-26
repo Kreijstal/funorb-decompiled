@@ -50,10 +50,10 @@ final class sf extends hl {
           var2 -= 32;
           var2 = var2 > 8 ? 8 : var2;
           var4 = v.field_j.b(da.field_m[var6.field_k]);
-          wb.a();
+          SoftwareRasterizer.resetClip();
           var5 = 40;
-          wb.a(4, var2 - 4, 8 + var4 + 56, var5, 8, 1, 128);
-          wb.a(4, -4 + var2, 8 + (56 + var4), var5, 8, 16777215);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(4, var2 - 4, 8 + var4 + 56, var5, 8, 1, 128);
+          SoftwareRasterizer.drawRoundedRectangleOutline(4, -4 + var2, 8 + (56 + var4), var5, 8, 16777215);
           me.field_c[var6.field_k].c(12, var2);
           v.field_j.a(da.field_m[var6.field_k], 56, v.field_j.field_H / 2 + (var2 + 16), 16777215, 0);
         }

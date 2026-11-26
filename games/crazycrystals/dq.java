@@ -73,7 +73,7 @@ final class dq extends pc {
             return;
           }
           if (go.field_i) {
-            kh.d(0, 0, 480, 480, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, 480, 480, 0, 192);
             return;
           }
           return;
@@ -85,7 +85,7 @@ final class dq extends pc {
         if (!go.field_i) {
           return;
         }
-        kh.d(0, 0, 480, 480, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 480, 480, 0, 192);
     }
 
     final static boolean a(String param0, int param1, String param2) {

@@ -42,37 +42,37 @@ final class d extends bb {
           var7 = var6_int * param2.field_q + (param0 << 8);
           param3 = param3 + param2.field_q;
           param1 = param1 + param2.field_v;
-          var8 = param3 + gb.field_d * param1;
+          var8 = param3 + SoftwareRasterizer.field_d * param1;
           var9 = 0;
           var10 = param2.field_t;
           if (param4 != 2147483647) {
             d.j(-47);
           }
           var11 = param2.field_w;
-          var12 = -var11 + gb.field_d;
+          var12 = -var11 + SoftwareRasterizer.field_d;
           var13 = 0;
-          if (gb.field_b > param1) {
-            var14 = -param1 + gb.field_b;
-            param1 = gb.field_b;
-            var8 = var8 + gb.field_d * var14;
+          if (SoftwareRasterizer.field_b > param1) {
+            var14 = -param1 + SoftwareRasterizer.field_b;
+            param1 = SoftwareRasterizer.field_b;
+            var8 = var8 + SoftwareRasterizer.field_d * var14;
             var9 = var9 + var14 * var11;
             var10 = var10 - var14;
           }
-          if (var10 + param1 > gb.field_i) {
-            var10 = var10 - (var10 + (param1 - gb.field_i));
+          if (var10 + param1 > SoftwareRasterizer.field_i) {
+            var10 = var10 - (var10 + (param1 - SoftwareRasterizer.field_i));
           }
-          if (gb.field_l > param3) {
-            var14Lifetime1 = gb.field_l - param3;
+          if (SoftwareRasterizer.field_l > param3) {
+            var14Lifetime1 = SoftwareRasterizer.field_l - param3;
             var8 = var8 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
-            param3 = gb.field_l;
+            param3 = SoftwareRasterizer.field_l;
             var11 = var11 - var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
           }
-          if (var11 + param3 > gb.field_h) {
-            var14Lifetime2 = var11 + (param3 - gb.field_h);
+          if (var11 + param3 > SoftwareRasterizer.field_h) {
+            var14Lifetime2 = var11 + (param3 - SoftwareRasterizer.field_h);
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -91,11 +91,11 @@ final class d extends bb {
                   var17 = param2.field_B[incrementValue$0];
                   if (0 != var17) {
                     if (255 < var15) {
-                      gb.field_a[var8] = var17;
+                      SoftwareRasterizer.field_a[var8] = var17;
                     } else {
-                      var18 = gb.field_a[var8];
+                      var18 = SoftwareRasterizer.field_a[var8];
                       var19 = (16711935 & var17) * var15 + (var18 & 16711935) * var16 >> 8 & 16711935;
-                      gb.field_a[var8] = (sc.a(16711908, sc.a(var17, 65280) * var15 + sc.a(65280, var18) * var16) >> 8) + var19;
+                      SoftwareRasterizer.field_a[var8] = (sc.a(16711908, sc.a(var17, 65280) * var15 + sc.a(65280, var18) * var16) >> 8) + var19;
                     }
                   }
                   var8++;

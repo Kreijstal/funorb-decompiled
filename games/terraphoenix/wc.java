@@ -234,8 +234,8 @@ abstract class wc extends DualLinkNode {
                 }
                 if (((p.field_a[var4_intLifetime1].field_d == param0.field_q)) &&
                   (!(!fd.field_o))) {
-                  SoftwareRasterizer.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 16, 16777215);
-                  SoftwareRasterizer.a(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 17, 255);
+                  SoftwareRasterizer.drawCircleOutline(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 16, 16777215);
+                  SoftwareRasterizer.drawCircleOutline(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 17, 255);
                 }
                 break regionExit1;
               }
@@ -266,8 +266,8 @@ abstract class wc extends DualLinkNode {
                 rh.field_b[p.field_a[var4_intLifetime1].field_b].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
                 if (param0.field_q != null &&
                   param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d)) {
-                  SoftwareRasterizer.a(16 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e, 16, 16711680);
-                  SoftwareRasterizer.a(p.field_a[var4_intLifetime1].field_f + 16, 16 + p.field_a[var4_intLifetime1].field_e, 17, 8388608);
+                  SoftwareRasterizer.drawCircleOutline(16 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e, 16, 16711680);
+                  SoftwareRasterizer.drawCircleOutline(p.field_a[var4_intLifetime1].field_f + 16, 16 + p.field_a[var4_intLifetime1].field_e, 17, 8388608);
                 }
               }
             }

@@ -138,8 +138,8 @@ final class lc extends ro {
         int var3Lifetime1;
         var4 = Torquing.field_u;
         try {
-          SoftwareRasterizer.c(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.d(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == nc.field_d) {
             if (null != DelayedPcmStream.field_o) {
               DelayedPcmStream.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -411,7 +411,7 @@ final class lc extends ro {
           }
           var1Lifetime3[var1Lifetime3.length - 1].c(0);
           hg.field_b = var1Lifetime3;
-          SoftwareRasterizer.a(var45, var6, var7);
+          SoftwareRasterizer.setRasterBuffer(var45, var6, var7);
           be.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -90,17 +90,17 @@ final class te {
             var8 = param0[1].field_r;
             param0[0].a(param5, param2, param1);
             param0[2].a(-var7 + param5 + param3, param2, param1);
-            sb.a(q.field_i);
+            SoftwareRasterizer.saveClip(q.field_i);
             if (param4 < 13) {
               te.clearStaticReferences((byte) 8);
             }
-            sb.g(param5 + var6_int, param2, -var7 + (param5 + param3), param2 + param0[1].field_s);
+            SoftwareRasterizer.intersectClip(param5 + var6_int, param2, -var7 + (param5 + param3), param2 + param0[1].field_s);
             var9 = param5 + var6_int;
             var10 = param3 + param5 - var7;
             for (param5 = var9; var10 > param5; param5 = param5 + var8) {
               param0[1].a(param5, param2, param1);
             }
-            sb.b(q.field_i);
+            SoftwareRasterizer.restoreClip(q.field_i);
             return;
           }
           return;

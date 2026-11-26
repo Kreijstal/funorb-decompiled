@@ -389,8 +389,8 @@ final class bl extends l {
         int var6Lifetime1;
         int var8Lifetime1;
         var13 = Vertigo2.field_L ? 1 : 0;
-        bi.a(bm.field_E);
-        bi.g(this.field_g, this.field_c + 4, -this.field_E + this.field_g + this.field_f, -4 + this.field_l.field_k + this.field_j + this.field_c);
+        SoftwareRasterizer.saveClip(bm.field_E);
+        SoftwareRasterizer.setClip(this.field_g, this.field_c + 4, -this.field_E + this.field_g + this.field_f, -4 + this.field_l.field_k + this.field_j + this.field_c);
         if (!this.field_n) {
           this.field_D = 0;
           this.field_L = 0;
@@ -400,13 +400,13 @@ final class bl extends l {
         while (true) {
           if (this.field_k.length <= var3 &&
             this.field_j + this.field_c < var2) {
-            bi.b(bm.field_E);
+            SoftwareRasterizer.restoreClip(bm.field_E);
             var3 = param0 + (-this.field_E + (this.field_f + this.field_g));
             var4 = this.field_l.field_k + this.field_c;
             if (this.field_n) {
-              bi.b(var3, var4, this.field_E, -this.field_l.field_k + this.field_j, ir.field_f & this.field_J, this.field_J >>> uq.field_d);
-              bi.b(var3, var4, this.field_E, this.field_E, this.field_J & ir.field_f, this.field_J >>> uq.field_d);
-              bi.b(var3, -this.field_E + (this.field_j + this.field_c), this.field_E, this.field_E, this.field_J & ir.field_f, this.field_J >>> uq.field_d);
+              SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_E, -this.field_l.field_k + this.field_j, ir.field_f & this.field_J, this.field_J >>> uq.field_d);
+              SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_E, this.field_E, this.field_J & ir.field_f, this.field_J >>> uq.field_d);
+              SoftwareRasterizer.fillRectangleAlpha(var3, -this.field_E + (this.field_j + this.field_c), this.field_E, this.field_E, this.field_J & ir.field_f, this.field_J >>> uq.field_d);
               var5 = (float)(this.field_L - 3) / (float)(this.field_k.length - 8);
               var6 = 0;
               if (this.field_A != null) {
@@ -431,16 +431,16 @@ final class bl extends l {
                 var9.e(var3, var4);
                 var10.g(var3, -var10.field_B + this.field_c + this.field_j);
               }
-              bi.f(var3, 2 + (var4 + this.field_E), this.field_E, this.field_j - (this.field_l.field_k - (-(2 * this.field_M.field_t) - 4)), 3, 4013373);
-              bi.f(var3 + 2, this.field_E + var4 + 4, -4 + this.field_E, -8 + (-this.field_l.field_k + this.field_j - 2 * this.field_M.field_t), 3, 5921370);
+              SoftwareRasterizer.fillRoundedRectangle(var3, 2 + (var4 + this.field_E), this.field_E, this.field_j - (this.field_l.field_k - (-(2 * this.field_M.field_t) - 4)), 3, 4013373);
+              SoftwareRasterizer.fillRoundedRectangle(var3 + 2, this.field_E + var4 + 4, -4 + this.field_E, -8 + (-this.field_l.field_k + this.field_j - 2 * this.field_M.field_t), 3, 5921370);
               this.field_A.e(-(this.field_A.field_x / 2) + this.field_E / 2 + var3, -(this.field_A.field_t / 2) + var8 + var4);
             }
             this.field_l.b(param0 ^ 109);
             if (this.field_n) {
-              bi.b(this.field_g, this.field_c + 2, this.field_f, this.field_m);
-              bi.b(this.field_g, 3 + this.field_c, this.field_f, this.field_m);
-              bi.b(this.field_g, -4 + (this.field_j + (this.field_c + this.field_l.field_k)), this.field_f, this.field_m);
-              bi.b(this.field_g, -3 + this.field_l.field_k + (this.field_j + this.field_c), this.field_f, this.field_m);
+              SoftwareRasterizer.drawHorizontalLine(this.field_g, this.field_c + 2, this.field_f, this.field_m);
+              SoftwareRasterizer.drawHorizontalLine(this.field_g, 3 + this.field_c, this.field_f, this.field_m);
+              SoftwareRasterizer.drawHorizontalLine(this.field_g, -4 + (this.field_j + (this.field_c + this.field_l.field_k)), this.field_f, this.field_m);
+              SoftwareRasterizer.drawHorizontalLine(this.field_g, -3 + this.field_l.field_k + (this.field_j + this.field_c), this.field_f, this.field_m);
             }
             return;
           }

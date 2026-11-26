@@ -57,7 +57,7 @@ final class td {
             stackIn_14_1 = (var2 == 0);
             this.field_i = stackIn_14_1;
             var3 = this.field_k * vh.field_e[this.field_n];
-            wj.c(this.field_l, this.field_a, var3, 16777215, var2);
+            SoftwareRasterizer.fillCircleAlpha(this.field_l, this.field_a, var3, 16777215, var2);
             var4 = 250 - var2;
             if (1 > var4) {
               var4 = 1;
@@ -67,7 +67,7 @@ final class td {
             }
             if (var3 >= 2 &&
               !((double)var3 > 181.25)) {
-              wj.a(this.field_l << 4, this.field_a << 4, var3 << 3, var4, this.field_p);
+              SoftwareRasterizer.addRadialGlow(this.field_l << 4, this.field_a << 4, var3 << 3, var4, this.field_p);
             } else {
               return;
             }

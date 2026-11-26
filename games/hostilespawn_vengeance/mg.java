@@ -56,9 +56,9 @@ final class mg {
 
     final static void a(p param0, int param1, int param2, int param3) {
         try {
-          si.f(param1, param2, param0.field_e * 2 + 3, 65280, 128 - param0.field_e * 4);
-          si.f(param1, param2, param0.field_e + 2, 16776960, 128 - 4 * param0.field_e);
-          si.f(param1, param2, param0.field_e / param3 + 1, 16777215, 128 - param0.field_e * 4);
+          SoftwareRasterizer.fillCircleAlpha(param1, param2, param0.field_e * 2 + 3, 65280, 128 - param0.field_e * 4);
+          SoftwareRasterizer.fillCircleAlpha(param1, param2, param0.field_e + 2, 16776960, 128 - 4 * param0.field_e);
+          SoftwareRasterizer.fillCircleAlpha(param1, param2, param0.field_e / param3 + 1, 16777215, 128 - param0.field_e * 4);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "mg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -138,29 +138,29 @@ final class hd {
           return param3;
         }
         param3 = param3 - var7;
-        bi.b(var6, param3 - var7 - 2 * (var7 + param1), 640 - 2 * var6, (param1 + var7) * 2 + var7, 1, 200);
-        bi.e(var6, -((var7 + param1) * 2) + (param3 - var7), 640 - 2 * var6, var7 + (param1 + var7) * 2, 16777215);
+        SoftwareRasterizer.fillRectangleAlpha(var6, param3 - var7 - 2 * (var7 + param1), 640 - 2 * var6, (param1 + var7) * 2 + var7, 1, 200);
+        SoftwareRasterizer.drawRectangleOutline(var6, -((var7 + param1) * 2) + (param3 - var7), 640 - 2 * var6, var7 + (param1 + var7) * 2, 16777215);
         param3 = param3 - (param1 + var7);
         int var11 = var6 * 2;
         int var12 = (param1 + tk.field_c.field_z + tk.field_c.field_M) / 2;
-        bi.e(var11, param3, param4, param1, 16776960);
+        SoftwareRasterizer.drawRectangleOutline(var11, param3, param4, param1, 16776960);
         var11 = var11 + (var6 + param4);
         String var18 = "start <gt>= auth tic";
         tk.field_c.b(var18, var11, var12 + param3, 16777215, -1);
         var11 = var11 + (tk.field_c.a(var18, 640) + var6);
-        bi.e(var11, param3, param4, param1, 16711680);
+        SoftwareRasterizer.drawRectangleOutline(var11, param3, param4, param1, 16711680);
         String var19 = "end <lt>= auth tic";
         var11 = var11 + (param4 + var6);
         tk.field_c.b(var19, var11, param3 + var12, 16777215, -1);
         var11 = var11 + (var6 + tk.field_c.a(var19, 640));
-        bi.e(var11, param3, param4, param1, 65280);
+        SoftwareRasterizer.drawRectangleOutline(var11, param3, param4, param1, 65280);
         var11 = var11 + (param4 + var6);
         String var20 = "startTic<lt>=authoritativeTic&&authoritativeTic<lt>endTic";
         tk.field_c.b(var20, var11, var12 + param3, 16777215, -1);
         var11 = var11 + (var6 + tk.field_c.a(var20, 640));
         param3 = param3 - (var7 + param1);
         var11 = 2 * var6;
-        bi.b(var11, param3, param4, param1, 34816, 180);
+        SoftwareRasterizer.fillRectangleAlpha(var11, param3, param4, param1, 34816, 180);
         String var21 = "got ack";
         var11 = var11 + (param4 + var6);
         tk.field_c.b(var21, var11, param3 + var12, 16777215, -1);
@@ -168,13 +168,13 @@ final class hd {
           this.a((byte) -125, 58);
         }
         var11 = var11 + (var6 + tk.field_c.a(var21, 640));
-        bi.b(var11, param3, param4, param1, 8912896, 180);
+        SoftwareRasterizer.fillRectangleAlpha(var11, param3, param4, param1, 8912896, 180);
         var11 = var11 + (var6 + param4);
         String var22 = "transmitted";
         String var13 = var22;
         tk.field_c.b(var13, var11, param3 + var12, 16777215, -1);
         var11 = var11 + (var6 + tk.field_c.a(var22, 640));
-        bi.b(var11, param3, param4, param1, 7829367, 180);
+        SoftwareRasterizer.fillRectangleAlpha(var11, param3, param4, param1, 7829367, 180);
         String var23 = "not transmitted";
         var13 = var23;
         var11 = var11 + (param4 + var6);
@@ -190,17 +190,17 @@ final class hd {
         bo var16_ref = (bo) (this.field_e.beginForward((byte) -24));
         while (var16_ref != null) {
           if (var16_ref.field_n) {
-            bi.b(var14, param3, param4, param1, 8912896, 180);
+            SoftwareRasterizer.fillRectangleAlpha(var14, param3, param4, param1, 8912896, 180);
           } else {
-            bi.b(var14, param3, param4, param1, 7829367, 180);
+            SoftwareRasterizer.fillRectangleAlpha(var14, param3, param4, param1, 7829367, 180);
           }
           if (var16_ref.field_s > param0) {
-            bi.e(var14, param3, param4, param1, 16776960);
+            SoftwareRasterizer.drawRectangleOutline(var14, param3, param4, param1, 16776960);
           } else {
             if (var16_ref.field_s + 10 > param0) {
-              bi.e(var14, param3, param4, param1, 65280);
+              SoftwareRasterizer.drawRectangleOutline(var14, param3, param4, param1, 65280);
             } else {
-              bi.e(var14, param3, param4, param1, 16711680);
+              SoftwareRasterizer.drawRectangleOutline(var14, param3, param4, param1, 16711680);
             }
           }
           var15--;

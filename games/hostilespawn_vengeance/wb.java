@@ -85,7 +85,7 @@ abstract class wb extends ul {
         int var15Lifetime1;
         int var13Lifetime2;
         var16 = HostileSpawn.field_I ? 1 : 0;
-        si.c(6 + param2, param0 + 35, -12 + this.field_s, -40 + this.field_x, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param2, param0 + 35, -12 + this.field_s, -40 + this.field_x, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -95,8 +95,8 @@ abstract class wb extends ul {
         var7 = 0;
         var8 = param0;
         while (var7 < var4) {
-          if (var8 >= si.field_j &&
-            var8 < si.field_a) {
+          if (var8 >= SoftwareRasterizer.field_j &&
+            var8 < SoftwareRasterizer.field_a) {
             regionExit1: {
               regionExit2: {
                 var9 = var5 + var7 * (-var5 + var6) / var4;
@@ -121,7 +121,7 @@ abstract class wb extends ul {
                           if (var14 >= 420) {
                             var15 = (-var14 + 462) * var9 / 42;
                             var15 = var15 | (var15 << 8 | var15 << 16);
-                            si.field_i[var8 * si.field_e + (param2 + var11)] = var15;
+                            SoftwareRasterizer.field_i[var8 * SoftwareRasterizer.field_e + (param2 + var11)] = var15;
                           } else {
                             var12 = var11 + 1;
                           }
@@ -132,7 +132,7 @@ abstract class wb extends ul {
                       }
                       var13Lifetime2 = (462 - var12) * var9 / 42;
                       var13Lifetime2 = var13Lifetime2 | (var13Lifetime2 << 8 | var13Lifetime2 << 16);
-                      si.field_i[var10 + si.field_e * var8 + param2] = var13Lifetime2;
+                      SoftwareRasterizer.field_i[var10 + SoftwareRasterizer.field_e * var8 + param2] = var13Lifetime2;
                     }
                     var10++;
                   }
@@ -151,7 +151,7 @@ abstract class wb extends ul {
                   if (var14Lifetime1 >= 420) {
                     var15Lifetime1 = (-var14Lifetime1 + 462) * var9 / 42;
                     var15Lifetime1 = var15Lifetime1 | (var15Lifetime1 << 8 | var15Lifetime1 << 16);
-                    si.field_i[var8 * si.field_e + (param2 + var11)] = var15Lifetime1;
+                    SoftwareRasterizer.field_i[var8 * SoftwareRasterizer.field_e + (param2 + var11)] = var15Lifetime1;
                   } else {
                     var12 = var11 + 1;
                   }
@@ -162,7 +162,7 @@ abstract class wb extends ul {
               var11 = var12;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            si.a(var10 + param2, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param2, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -175,8 +175,8 @@ abstract class wb extends ul {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          si.a(param2, var8Lifetime1, 6, var9Lifetime1);
-          si.a(this.field_s + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_s + (param2 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -191,8 +191,8 @@ abstract class wb extends ul {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          si.a(param2, var8Lifetime2, 6, var9Lifetime2);
-          si.a(-6 + this.field_s + param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + this.field_s + param2, var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

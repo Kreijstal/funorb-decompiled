@@ -67,8 +67,8 @@ final class DirectByteStorage extends ByteStorage {
             var8 = param2[1].field_m;
             param2[0].a(param4, param3, param1);
             param2[2].a(-var7 + (param0 + param4), param3, param1);
-            ge.b(si.field_u);
-            ge.c(var6_int + param4, param3, param4 + param0 - var7, param2[1].field_n + param3);
+            SoftwareRasterizer.saveClip(si.field_u);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param3, param4 + param0 - var7, param2[1].field_n + param3);
             var9 = param4 + var6_int;
             var10 = -var7 + param0 + param4;
             if (param5 <= 24) {
@@ -77,7 +77,7 @@ final class DirectByteStorage extends ByteStorage {
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param2[1].a(param4, param3, param1);
             }
-            ge.a(si.field_u);
+            SoftwareRasterizer.restoreClip(si.field_u);
             return;
           }
           return;

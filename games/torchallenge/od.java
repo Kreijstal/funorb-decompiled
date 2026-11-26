@@ -595,8 +595,8 @@ final class od {
             var21 = 270;
           }
           param7.d();
-          SoftwareRasterizer.b();
-          SoftwareRasterizer.c(0, 0, var19, var20, var15Lifetime1, var16Lifetime1);
+          SoftwareRasterizer.clearRaster();
+          SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, var19, var20, var15Lifetime1, var16Lifetime1);
           SectorCacheStore.field_f.bindAsTarget(-99);
           var22 = param0;
           var23 = param1;
@@ -615,7 +615,7 @@ final class od {
           SectorCacheStore.field_f.bindAsTarget(-86);
         }
         param6.d();
-        SoftwareRasterizer.f(param0 + var10, param1 + var11, param4, param5 + 1, var9);
+        SoftwareRasterizer.fillRectangle(param0 + var10, param1 + var11, param4, param5 + 1, var9);
         SectorCacheStore.field_f.bindAsTarget(115);
     }
 

@@ -23,7 +23,7 @@ abstract class cc extends kn {
         if (null == mn.field_t) {
           mn.field_t = new Sprite(this.field_v, this.field_q);
           ArchiveProvider.a(mn.field_t, 127);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearRaster();
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
@@ -33,7 +33,7 @@ abstract class cc extends kn {
         if (this.field_v > mn.field_t.field_y) {
           mn.field_t = new Sprite(this.field_v, this.field_q);
           ArchiveProvider.a(mn.field_t, 127);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearRaster();
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
@@ -42,7 +42,7 @@ abstract class cc extends kn {
         }
         if (mn.field_t.field_C >= this.field_q) {
           ArchiveProvider.a(mn.field_t, 127);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clearRaster();
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
@@ -51,7 +51,7 @@ abstract class cc extends kn {
         }
         mn.field_t = new Sprite(this.field_v, this.field_q);
         ArchiveProvider.a(mn.field_t, 127);
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearRaster();
         this.b(21533, 0, 0);
         super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
         tk.b(true);

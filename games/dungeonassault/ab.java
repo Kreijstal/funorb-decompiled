@@ -31,8 +31,8 @@ final class ab {
             return;
           }
           SecondaryNodeDeque.a(32, vf.field_w, wi.field_kb, qc.field_w);
-          gf.a(ib.field_a);
-          gf.e(vf.field_w, qc.field_w, vf.field_w + 200, wi.field_kb + qc.field_w + 3);
+          SoftwareRasterizer.saveClip(ib.field_a);
+          SoftwareRasterizer.setClip(vf.field_w, qc.field_w, vf.field_w + 200, wi.field_kb + qc.field_w + 3);
           if (-1 == ce.field_p) {
             bo.a(param0 ^ 5, gk.field_L, qc.field_w, vf.field_w);
           } else {
@@ -52,7 +52,7 @@ final class ab {
               bo.a(5, jn.field_l, 20 + qc.field_w - (-var1_intLifetime1 - hc.field_b), vf.field_w);
             }
           }
-          gf.b(ib.field_a);
+          SoftwareRasterizer.restoreClip(ib.field_a);
           var3 = (rj) (pp.field_K.beginBackward(param0 ^ -24172));
           while (var3 != null) {
             var3.d(0);

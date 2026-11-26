@@ -99,71 +99,71 @@ final class GameplayControls {
               integerLocal24 = integerLocal13 * integerArgument1 / (integerLocal13 + integerLocal14) + integerArgument5;
               integerLocal23 = integerLocal13 * integerArgument1 / (integerLocal13 + integerLocal14) + integerArgument5;
             }
-            SoftwareRaster.performAction0652(MixedSupport056.integerArrayState0064);
+            SoftwareRaster.saveClip(MixedSupport056.integerArrayState0064);
             if (null != rgbSpriteArrayArgument3[0]) {
-              SoftwareRaster.performAction0663(integerArgument6, integerArgument5, integerLocal21, integerLocal23);
+              SoftwareRaster.intersectClip(integerArgument6, integerArgument5, integerLocal21, integerLocal23);
               rgbSpriteArrayArgument3[0].performAction0278(integerArgument6, integerArgument5);
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[2]) {
-              SoftwareRaster.performAction0663(integerLocal22, integerArgument5, integerLocal15, integerLocal23);
+              SoftwareRaster.intersectClip(integerLocal22, integerArgument5, integerLocal15, integerLocal23);
               rgbSpriteArrayArgument3[2].performAction0278(integerLocal18, integerArgument5);
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[6]) {
-              SoftwareRaster.performAction0663(integerArgument6, integerLocal24, integerLocal21, integerLocal16);
+              SoftwareRaster.intersectClip(integerArgument6, integerLocal24, integerLocal21, integerLocal16);
               rgbSpriteArrayArgument3[6].performAction0278(integerArgument6, integerLocal20);
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (rgbSpriteArrayArgument3[8] != null) {
-              SoftwareRaster.performAction0663(integerLocal22, integerLocal24, integerLocal15, integerLocal16);
+              SoftwareRaster.intersectClip(integerLocal22, integerLocal24, integerLocal15, integerLocal16);
               rgbSpriteArrayArgument3[8].performAction0278(integerLocal18, integerLocal20);
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[1] &&
               rgbSpriteArrayArgument3[1].integerState0254 != 0) {
-              SoftwareRaster.performAction0663(integerLocal21, integerArgument5, integerLocal22, integerLocal23);
+              SoftwareRaster.intersectClip(integerLocal21, integerArgument5, integerLocal22, integerLocal23);
               for (integerLocal25 = integerLocal17; integerLocal25 < integerLocal18; integerLocal25 = integerLocal25 + rgbSpriteArrayArgument3[1].integerState0254) {
                 rgbSpriteArrayArgument3[1].performAction0278(integerLocal25, integerArgument5);
               }
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[7] &&
               rgbSpriteArrayArgument3[7].integerState0254 != 0) {
-              SoftwareRaster.performAction0663(integerLocal21, integerLocal24, integerLocal22, integerLocal16);
+              SoftwareRaster.intersectClip(integerLocal21, integerLocal24, integerLocal22, integerLocal16);
               for (integerLocal27 = integerLocal17; integerLocal27 < integerLocal18; integerLocal27 = integerLocal27 + rgbSpriteArrayArgument3[7].integerState0254) {
                 rgbSpriteArrayArgument3[7].performAction0278(integerLocal27, integerLocal20);
               }
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (rgbSpriteArrayArgument3[3] != null &&
               rgbSpriteArrayArgument3[3].integerState0260 != 0) {
-              SoftwareRaster.performAction0663(integerArgument6, integerLocal23, integerLocal21, integerLocal24);
+              SoftwareRaster.intersectClip(integerArgument6, integerLocal23, integerLocal21, integerLocal24);
               for (integerLocal28 = integerLocal19; integerLocal20 > integerLocal28; integerLocal28 = integerLocal28 + rgbSpriteArrayArgument3[3].integerState0260) {
                 rgbSpriteArrayArgument3[3].performAction0278(integerArgument6, integerLocal28);
               }
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[5] &&
               rgbSpriteArrayArgument3[5].integerState0260 != 0) {
-              SoftwareRaster.performAction0663(integerLocal22, integerLocal23, integerLocal15, integerLocal24);
+              SoftwareRaster.intersectClip(integerLocal22, integerLocal23, integerLocal15, integerLocal24);
               for (integerLocal29 = integerLocal19; integerLocal29 < integerLocal20; integerLocal29 = integerLocal29 + rgbSpriteArrayArgument3[5].integerState0260) {
                 rgbSpriteArrayArgument3[5].performAction0278(integerLocal18, integerLocal29);
               }
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (rgbSpriteArrayArgument3[4] != null &&
               0 != rgbSpriteArrayArgument3[4].integerState0254) {
               if (rgbSpriteArrayArgument3[4].integerState0260 == 0) {
                 return;
               }
-              SoftwareRaster.performAction0663(integerLocal21, integerLocal23, integerLocal22, integerLocal24);
+              SoftwareRaster.intersectClip(integerLocal21, integerLocal23, integerLocal22, integerLocal24);
               for (integerLocal30 = integerLocal19; integerLocal30 < integerLocal20; integerLocal30 = integerLocal30 + rgbSpriteArrayArgument3[4].integerState0260) {
                 for (integerLocal1 = integerLocal17; integerLocal1 < integerLocal18; integerLocal1 = integerLocal1 + rgbSpriteArrayArgument3[4].integerState0254) {
                   rgbSpriteArrayArgument3[4].performAction0278(integerLocal1, integerLocal30);
                 }
               }
-              SoftwareRaster.performAction0644(MixedSupport056.integerArrayState0064);
+              SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             return;
           }
@@ -205,7 +205,7 @@ final class GameplayControls {
             integerLocal1 = integerLocal1 + MixedSupport141.computeInteger1754(23841, 80, 40 + 18 * integerArgument1);
           } else {
             if (integerArgument5 >= 93) {
-              SoftwareRaster.performAction0642(-48 + integerArgument2, -2 + integerArgument6 + 54, 96, 40, 4, 65280, 100);
+              SoftwareRaster.fillRoundedRectangleAlpha(-48 + integerArgument2, -2 + integerArgument6 + 54, 96, 40, 4, 65280, 100);
             } else {
               integerLocal2 = MixedSupport141.computeInteger1754(23841, 80, 40 + 18 * SceneWidgetPart013.integerArrayState0239[-79 + integerArgument5]);
             }

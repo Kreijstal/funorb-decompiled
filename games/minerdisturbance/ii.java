@@ -55,7 +55,7 @@ final class ii {
         Sprite var1 = new Sprite(540, 140);
         ArchiveProvider.a(var1, 127);
         dj.a();
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearRaster();
         mn.field_x = 0;
         oj.o(param0 - 1236579268);
         Sprite var2 = var1.c();
@@ -65,7 +65,7 @@ final class ii {
         try {
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
-            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           lc.field_u.g();
           var1.drawHalfSize(0, 0);

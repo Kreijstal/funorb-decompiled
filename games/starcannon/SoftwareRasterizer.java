@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki {
+final class SoftwareRasterizer {
     static int field_e;
     static int field_f;
     private static int[] field_b;
@@ -15,15 +15,15 @@ final class ki {
     private static int[] field_c;
     static int field_j;
 
-    final static void b(int[] param0) {
+    final static void restoreClip(int[] param0) {
         field_l = param0[0];
         field_e = param0[1];
         field_g = param0[2];
         field_i = param0[3];
-        ki.c();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param1 >= field_e) {
@@ -45,7 +45,7 @@ final class ki {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -83,7 +83,7 @@ final class ki {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param0 >= field_l) {
@@ -108,7 +108,7 @@ final class ki {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillRoundedRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -151,11 +151,11 @@ final class ki {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          ki.c(param0, param1, param2, param3, param4, param5);
+          SoftwareRasterizer.fillRoundedRectangle(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          ki.b(param0, param1, param2, param3, param5, param6);
+          SoftwareRasterizer.fillRectangleAlpha(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -283,7 +283,7 @@ final class ki {
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var5Lifetime1;
@@ -292,17 +292,17 @@ final class ki {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            ki.b(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            ki.b(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            ki.f(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            ki.f(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -359,7 +359,7 @@ final class ki {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRoundedRectangleOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var6;
@@ -383,7 +383,7 @@ final class ki {
         int var22Lifetime2;
         int var22Lifetime3;
         if (param4 == 0) {
-          ki.e(param0, param1, param2, param3, param5);
+          SoftwareRasterizer.drawRectangleOutline(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -458,10 +458,10 @@ final class ki {
                   field_a[var17 + var19] = param5;
                 }
               }
-              ki.f(param0, param1 + var18, param3 - var18 - var18, param5);
-              ki.f(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-              ki.b(param0 + var18, param1, param2 - var18 - var18, param5);
-              ki.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+              SoftwareRasterizer.drawVerticalLine(param0, param1 + var18, param3 - var18 - var18, param5);
+              SoftwareRasterizer.drawVerticalLine(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+              SoftwareRasterizer.drawHorizontalLine(param0 + var18, param1, param2 - var18 - var18, param5);
+              SoftwareRasterizer.drawHorizontalLine(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
               while (true) {
                 incrementValue$1 = var19;
                 var19++;
@@ -539,7 +539,7 @@ final class ki {
         return;
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void fillRoundedRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -578,7 +578,7 @@ final class ki {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          ki.d(param0, param1, param2, param3, param5);
+          SoftwareRasterizer.fillRectangle(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {
@@ -698,7 +698,7 @@ final class ki {
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -743,7 +743,7 @@ final class ki {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -773,7 +773,7 @@ final class ki {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineAlphaExcludingEnd(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -797,17 +797,17 @@ final class ki {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            ki.g(param0 + param2 + 1, param1, -param2, param4, param5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param0 + param2 + 1, param1, -param2, param4, param5);
           } else {
-            ki.g(param0, param1, param2, param4, param5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(param0, param1, param2, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            ki.f(param0, param1 + param3 + 1, -param3, param4, param5);
+            SoftwareRasterizer.drawVerticalLineAlpha(param0, param1 + param3 + 1, -param3, param4, param5);
           } else {
-            ki.f(param0, param1, param3, param4, param5);
+            SoftwareRasterizer.drawVerticalLineAlpha(param0, param1, param3, param4, param5);
           }
           return;
         }
@@ -895,7 +895,7 @@ final class ki {
         return;
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }
@@ -912,10 +912,10 @@ final class ki {
         field_e = param1;
         field_g = param2;
         field_i = param3;
-        ki.c();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int param0, int param1, int param2, int param3) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -943,7 +943,7 @@ final class ki {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          ki.a(param0, param1, param3);
+          SoftwareRasterizer.setPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1036,7 +1036,7 @@ final class ki {
         return;
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void intersectClip(int param0, int param1, int param2, int param3) {
         if (field_l < param0) {
           field_l = param0;
         }
@@ -1049,17 +1049,17 @@ final class ki {
         if (field_i > param3) {
           field_i = param3;
         }
-        ki.c();
+        SoftwareRasterizer.clearScanlineMask();
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void setRasterBuffer(int[] param0, int param1, int param2) {
         field_a = param0;
         field_j = param1;
         field_f = param2;
-        ki.d(0, 0, param1, param2);
+        SoftwareRasterizer.setClip(0, 0, param1, param2);
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1098,7 +1098,7 @@ final class ki {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurVerticalInPlace(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -1339,7 +1339,7 @@ final class ki {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleAlpha(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -1382,7 +1382,7 @@ final class ki {
           return;
         }
         if (param4 == 256) {
-          ki.e(param0, param1, param2, param3);
+          SoftwareRasterizer.fillCircle(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1488,7 +1488,7 @@ final class ki {
         return;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -1497,7 +1497,7 @@ final class ki {
         field_k = null;
     }
 
-    final static void b() {
+    final static void clearRaster() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1543,24 +1543,24 @@ final class ki {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawRectangleShadow(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          ki.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          ki.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
-        ki.b(param0, param1, param2, param4);
-        ki.b(param0, param1 + param3 - 1, param2, param4);
-        ki.f(param0, param1, param3, param4);
-        ki.f(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangleOutline(int param0, int param1, int param2, int param3, int param4) {
+        SoftwareRasterizer.drawHorizontalLine(param0, param1, param2, param4);
+        SoftwareRasterizer.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer.drawVerticalLine(param0, param1, param3, param4);
+        SoftwareRasterizer.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurHorizontalInPlace(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -1721,12 +1721,12 @@ final class ki {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ki.a(field_a, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, param5);
-        ki.a(field_a, 0, param2 + param3 * field_j, param1, param3, param5, field_j - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer.blurHorizontalInPlace(field_a, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, param5);
+        SoftwareRasterizer.blurVerticalInPlace(field_a, 0, param2 + param3 * field_j, param1, param3, param5, field_j - param4, param2, param4);
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1767,7 +1767,7 @@ final class ki {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleVerticalGradient(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -1811,19 +1811,19 @@ final class ki {
         }
     }
 
-    final static void a(int[] param0) {
+    final static void saveClip(int[] param0) {
         param0[0] = field_l;
         param0[1] = field_e;
         param0[2] = field_g;
         param0[3] = field_i;
     }
 
-    private final static void c() {
+    private final static void clearScanlineMask() {
         field_h = null;
         field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setPixel(int param0, int param1, int param2) {
         if (param0 >= field_l) {
           if (param1 < field_e ||
             param0 >= field_g ||

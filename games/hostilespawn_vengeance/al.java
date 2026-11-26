@@ -201,7 +201,7 @@ final class al extends cj {
               this.field_P.field_z >= var11 &&
               this.field_P.field_A >= var12) {
               sb.a(this.field_P, -117);
-              si.d();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_P = new bd(var11, var12);
               sb.a(this.field_P, -120);
@@ -241,7 +241,7 @@ final class al extends cj {
             } else {
               if (this.field_P.field_A >= var12Lifetime5) {
                 sb.a(this.field_P, -117);
-                si.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_P = new bd(var11Lifetime5, var12Lifetime5);
                 sb.a(this.field_P, -120);
@@ -287,7 +287,7 @@ final class al extends cj {
               this.field_P.field_z >= var11Lifetime1 &&
               this.field_P.field_A >= var12Lifetime1) {
               sb.a(this.field_P, -117);
-              si.d();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_P = new bd(var11Lifetime1, var12Lifetime1);
               sb.a(this.field_P, -120);
@@ -330,7 +330,7 @@ final class al extends cj {
                 sb.a(this.field_P, -120);
               } else {
                 sb.a(this.field_P, -117);
-                si.d();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -383,7 +383,7 @@ final class al extends cj {
             } else {
               if (this.field_P.field_A >= var12Lifetime2) {
                 sb.a(this.field_P, -117);
-                si.d();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_P = new bd(var11Lifetime2, var12Lifetime2);
                 sb.a(this.field_P, -120);
@@ -426,7 +426,7 @@ final class al extends cj {
             this.field_P.field_z >= var11Lifetime3 &&
             this.field_P.field_A >= var12Lifetime3) {
             sb.a(this.field_P, -117);
-            si.d();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_P = new bd(var11Lifetime3, var12Lifetime3);
             sb.a(this.field_P, -120);
@@ -461,7 +461,7 @@ final class al extends cj {
           this.field_P.field_z >= var11Lifetime4 &&
           this.field_P.field_A >= var12Lifetime4) {
           sb.a(this.field_P, -117);
-          si.d();
+          SoftwareRasterizer.clearRaster();
         } else {
           this.field_P = new bd(var11Lifetime4, var12Lifetime4);
           sb.a(this.field_P, -120);

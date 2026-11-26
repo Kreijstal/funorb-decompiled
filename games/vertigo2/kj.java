@@ -213,14 +213,14 @@ final class kj extends TextureOperator {
             var7 = param3[param0].field_x;
             param3[0].e(param2, param4);
             param3[2].e(param1 + (param2 - var6), param4);
-            bi.a(ak.field_d);
-            bi.c(param2 + var5_int, param4, -var6 + param2 + param1, param4 + param3[1].field_B);
+            SoftwareRasterizer.saveClip(ak.field_d);
+            SoftwareRasterizer.intersectClip(param2 + var5_int, param4, -var6 + param2 + param1, param4 + param3[1].field_B);
             var8 = param2 + var5_int;
             var9 = param2 + param1 - var6;
             for (param2 = var8; param2 < var9; param2 = param2 + var7) {
               param3[1].e(param2, param4);
             }
-            bi.b(ak.field_d);
+            SoftwareRasterizer.restoreClip(ak.field_d);
             return;
           }
           return;

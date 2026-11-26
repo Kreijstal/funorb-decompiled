@@ -20,12 +20,12 @@ final class h extends kj {
           var1 = new vh();
         }
         if (param0 > 120) {
-          var1.a(ul.field_b, 95, ul.field_i, ul.field_a, ul.field_f, ul.field_l, ul.field_d, ul.field_e);
+          var1.a(SoftwareRasterizer.field_b, 95, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e);
           GzipDecompressor.field_a.addLast(-115, var1);
           return;
         }
         h.l(-54);
-        var1.a(ul.field_b, 95, ul.field_i, ul.field_a, ul.field_f, ul.field_l, ul.field_d, ul.field_e);
+        var1.a(SoftwareRasterizer.field_b, 95, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e);
         GzipDecompressor.field_a.addLast(-115, var1);
     }
 

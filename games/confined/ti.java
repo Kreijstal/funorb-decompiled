@@ -22,8 +22,8 @@ final class ti {
 
     final static void a(int param0, int param1) {
         int var2 = field_l[0];
-        int var3 = var2 / fn.field_g;
-        int var4 = var2 - var3 * fn.field_g;
+        int var3 = var2 / SoftwareRasterizer.field_g;
+        int var4 = var2 - var3 * SoftwareRasterizer.field_g;
         field_k = param0 - var4;
         field_f = param1 - var3;
     }
@@ -785,20 +785,20 @@ final class ti {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  ti.a(fn.field_h, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
-                  param0 = param0 + fn.field_g;
+                  param0 = param0 + SoftwareRasterizer.field_g;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                ti.a(fn.field_h, param0, param6, 0, param3 >> 16, param5 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 param1--;
               }
               return;
@@ -809,20 +809,20 @@ final class ti {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                ti.a(fn.field_h, param0, param6, 0, param4 >> 16, param3 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              ti.a(fn.field_h, param0, param6, 0, param5 >> 16, param3 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               param1--;
             }
             return;
@@ -850,20 +850,20 @@ final class ti {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                ti.a(fn.field_h, param0, param6, 0, param3 >> 16, param5 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              ti.a(fn.field_h, param0, param6, 0, param4 >> 16, param5 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               param2--;
             }
             return;
@@ -874,20 +874,20 @@ final class ti {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              ti.a(fn.field_h, param0, param6, 0, param5 >> 16, param3 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            ti.a(fn.field_h, param0, param6, 0, param5 >> 16, param4 >> 16);
+            ti.a(SoftwareRasterizer.field_h, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
-            param0 = param0 + fn.field_g;
+            param0 = param0 + SoftwareRasterizer.field_g;
             param2--;
           }
           return;
@@ -923,20 +923,20 @@ final class ti {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  ti.a(fn.field_h, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
-                  param2 = param2 + fn.field_g;
+                  param2 = param2 + SoftwareRasterizer.field_g;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                ti.a(fn.field_h, param2, param6, 0, param5 >> 16, param4 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 param0--;
               }
               return;
@@ -947,20 +947,20 @@ final class ti {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                ti.a(fn.field_h, param2, param6, 0, param3 >> 16, param5 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              ti.a(fn.field_h, param2, param6, 0, param4 >> 16, param5 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               param0--;
             }
             return;
@@ -985,20 +985,20 @@ final class ti {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                ti.a(fn.field_h, param2, param6, 0, param5 >> 16, param4 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              ti.a(fn.field_h, param2, param6, 0, param3 >> 16, param4 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               param1--;
             }
             return;
@@ -1009,20 +1009,20 @@ final class ti {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              ti.a(fn.field_h, param2, param6, 0, param4 >> 16, param5 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            ti.a(fn.field_h, param2, param6, 0, param4 >> 16, param3 >> 16);
+            ti.a(SoftwareRasterizer.field_h, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
-            param2 = param2 + fn.field_g;
+            param2 = param2 + SoftwareRasterizer.field_g;
             param1--;
           }
           return;
@@ -1057,20 +1057,20 @@ final class ti {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                ti.a(fn.field_h, param1, param6, 0, param4 >> 16, param5 >> 16);
+                ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
-                param1 = param1 + fn.field_g;
+                param1 = param1 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              ti.a(fn.field_h, param1, param6, 0, param4 >> 16, param3 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               param2--;
             }
             return;
@@ -1081,20 +1081,20 @@ final class ti {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              ti.a(fn.field_h, param1, param6, 0, param5 >> 16, param4 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            ti.a(fn.field_h, param1, param6, 0, param3 >> 16, param4 >> 16);
+            ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             param2--;
           }
           return;
@@ -1122,20 +1122,20 @@ final class ti {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              ti.a(fn.field_h, param1, param6, 0, param4 >> 16, param3 >> 16);
+              ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            ti.a(fn.field_h, param1, param6, 0, param5 >> 16, param3 >> 16);
+            ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             param0--;
           }
           return;
@@ -1146,20 +1146,20 @@ final class ti {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            ti.a(fn.field_h, param1, param6, 0, param3 >> 16, param4 >> 16);
+            ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          ti.a(fn.field_h, param1, param6, 0, param3 >> 16, param5 >> 16);
+          ti.a(SoftwareRasterizer.field_h, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
-          param1 = param1 + fn.field_g;
+          param1 = param1 + SoftwareRasterizer.field_g;
           param0--;
         }
         return;
@@ -1383,22 +1383,22 @@ final class ti {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  ti.a(fn.field_h, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
+                  ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
                   param4 = param4 + var17;
                   param3 = param3 + var16;
                   param6 = param6 + var20;
-                  param0 = param0 + fn.field_g;
+                  param0 = param0 + SoftwareRasterizer.field_g;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                ti.a(fn.field_h, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var15;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 param1--;
               }
               return;
@@ -1409,22 +1409,22 @@ final class ti {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                ti.a(fn.field_h, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
+                ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
                 param4 = param4 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              ti.a(fn.field_h, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var15;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               param1--;
             }
             return;
@@ -1453,22 +1453,22 @@ final class ti {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                ti.a(fn.field_h, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              ti.a(fn.field_h, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
+              ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
               param5 = param5 + var17;
               param4 = param4 + var15;
               param6 = param6 + var20;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               param2--;
             }
             return;
@@ -1479,22 +1479,22 @@ final class ti {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              ti.a(fn.field_h, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var17;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            ti.a(fn.field_h, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
+            ti.a(SoftwareRasterizer.field_h, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
             param5 = param5 + var17;
             param4 = param4 + var15;
             param6 = param6 + var20;
-            param0 = param0 + fn.field_g;
+            param0 = param0 + SoftwareRasterizer.field_g;
             param2--;
           }
           return;
@@ -1532,22 +1532,22 @@ final class ti {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  ti.a(fn.field_h, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
+                  ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
                   param3 = param3 + var15;
                   param5 = param5 + var17;
                   param8 = param8 + var20;
-                  param2 = param2 + fn.field_g;
+                  param2 = param2 + SoftwareRasterizer.field_g;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                ti.a(fn.field_h, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var16;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 param0--;
               }
               return;
@@ -1558,22 +1558,22 @@ final class ti {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                ti.a(fn.field_h, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
+                ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
                 param3 = param3 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              ti.a(fn.field_h, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var16;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               param0--;
             }
             return;
@@ -1599,22 +1599,22 @@ final class ti {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                ti.a(fn.field_h, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              ti.a(fn.field_h, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
+              ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
               param4 = param4 + var15;
               param3 = param3 + var16;
               param8 = param8 + var20;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               param1--;
             }
             return;
@@ -1625,22 +1625,22 @@ final class ti {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              ti.a(fn.field_h, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var15;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            ti.a(fn.field_h, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
+            ti.a(SoftwareRasterizer.field_h, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
             param4 = param4 + var15;
             param3 = param3 + var16;
             param8 = param8 + var20;
-            param2 = param2 + fn.field_g;
+            param2 = param2 + SoftwareRasterizer.field_g;
             param1--;
           }
           return;
@@ -1677,22 +1677,22 @@ final class ti {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                ti.a(fn.field_h, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
+                ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
                 param5 = param5 + var16;
                 param4 = param4 + var15;
                 param7 = param7 + var20;
-                param1 = param1 + fn.field_g;
+                param1 = param1 + SoftwareRasterizer.field_g;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              ti.a(fn.field_h, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var17;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               param2--;
             }
             return;
@@ -1703,22 +1703,22 @@ final class ti {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              ti.a(fn.field_h, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
+              ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
               param5 = param5 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            ti.a(fn.field_h, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var17;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             param2--;
           }
           return;
@@ -1747,22 +1747,22 @@ final class ti {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              ti.a(fn.field_h, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            ti.a(fn.field_h, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
+            ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
             param3 = param3 + var16;
             param5 = param5 + var17;
             param7 = param7 + var20;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             param0--;
           }
           return;
@@ -1773,22 +1773,22 @@ final class ti {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            ti.a(fn.field_h, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var16;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          ti.a(fn.field_h, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
+          ti.a(SoftwareRasterizer.field_h, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
           param3 = param3 + var16;
           param5 = param5 + var17;
           param7 = param7 + var20;
-          param1 = param1 + fn.field_g;
+          param1 = param1 + SoftwareRasterizer.field_g;
           param0--;
         }
         return;
@@ -1802,10 +1802,10 @@ final class ti {
         if (field_l.length < field_g) {
           field_l = new int[lb.roundUpPowerOfTwo(675001474, field_g)];
         }
-        int var4 = param1 * fn.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer.field_g + param0;
         for (var5 = 0; var5 < field_g; var5++) {
           field_l[var5] = var4;
-          var4 = var4 + fn.field_g;
+          var4 = var4 + SoftwareRasterizer.field_g;
         }
     }
 
@@ -1935,11 +1935,11 @@ final class ti {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    ti.a(fn.field_h, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
-                    param0 = param0 + fn.field_g;
+                    param0 = param0 + SoftwareRasterizer.field_g;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -1949,11 +1949,11 @@ final class ti {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + fn.field_g;
+                  param0 = param0 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1967,11 +1967,11 @@ final class ti {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + fn.field_g;
+                  param0 = param0 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1981,11 +1981,11 @@ final class ti {
               }
               param1--;
               while (param1 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2020,11 +2020,11 @@ final class ti {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + fn.field_g;
+                  param0 = param0 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2034,11 +2034,11 @@ final class ti {
               }
               param2--;
               while (param2 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2052,11 +2052,11 @@ final class ti {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + fn.field_g;
+                param0 = param0 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2066,11 +2066,11 @@ final class ti {
             }
             param2--;
             while (param2 >= 0) {
-              ti.a(fn.field_h, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
-              param0 = param0 + fn.field_g;
+              param0 = param0 + SoftwareRasterizer.field_g;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2115,11 +2115,11 @@ final class ti {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    ti.a(fn.field_h, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
-                    param2 = param2 + fn.field_g;
+                    param2 = param2 + SoftwareRasterizer.field_g;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -2129,11 +2129,11 @@ final class ti {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + fn.field_g;
+                  param2 = param2 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2147,11 +2147,11 @@ final class ti {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + fn.field_g;
+                  param2 = param2 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2161,11 +2161,11 @@ final class ti {
               }
               param0--;
               while (param0 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2198,11 +2198,11 @@ final class ti {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + fn.field_g;
+                  param2 = param2 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2212,11 +2212,11 @@ final class ti {
               }
               param1--;
               while (param1 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2230,11 +2230,11 @@ final class ti {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + fn.field_g;
+                param2 = param2 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2244,11 +2244,11 @@ final class ti {
             }
             param1--;
             while (param1 >= 0) {
-              ti.a(fn.field_h, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
-              param2 = param2 + fn.field_g;
+              param2 = param2 + SoftwareRasterizer.field_g;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2292,11 +2292,11 @@ final class ti {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  ti.a(fn.field_h, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
-                  param1 = param1 + fn.field_g;
+                  param1 = param1 + SoftwareRasterizer.field_g;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -2306,11 +2306,11 @@ final class ti {
               }
               param2--;
               while (param2 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + fn.field_g;
+                param1 = param1 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2324,11 +2324,11 @@ final class ti {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + fn.field_g;
+                param1 = param1 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2338,11 +2338,11 @@ final class ti {
             }
             param2--;
             while (param2 >= 0) {
-              ti.a(fn.field_h, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2377,11 +2377,11 @@ final class ti {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                ti.a(fn.field_h, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + fn.field_g;
+                param1 = param1 + SoftwareRasterizer.field_g;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -2391,11 +2391,11 @@ final class ti {
             }
             param0--;
             while (param0 >= 0) {
-              ti.a(fn.field_h, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2409,11 +2409,11 @@ final class ti {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              ti.a(fn.field_h, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + fn.field_g;
+              param1 = param1 + SoftwareRasterizer.field_g;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -2423,11 +2423,11 @@ final class ti {
           }
           param0--;
           while (param0 >= 0) {
-            ti.a(fn.field_h, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            ti.a(SoftwareRasterizer.field_h, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
-            param1 = param1 + fn.field_g;
+            param1 = param1 + SoftwareRasterizer.field_g;
             var32 = var32 + var34;
             var35 = var35 + var37;
             var38 = var38 + var40;
@@ -2440,7 +2440,7 @@ final class ti {
     }
 
     final static void b() {
-        ti.a(fn.field_c, fn.field_b, fn.field_i, fn.field_j);
+        ti.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_b, SoftwareRasterizer.field_i, SoftwareRasterizer.field_j);
     }
 
     static {

@@ -387,7 +387,7 @@ class ci extends gf implements ka {
           var9Lifetime1 = var18.field_t;
           fl.b((byte) 91);
           var18.a();
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();

@@ -47,8 +47,8 @@ final class ra {
               var10 = SocketConnector.field_l[param0][param2][0][0];
             }
           }
-          SoftwareRasterizer.a(ae.field_y);
-          SoftwareRasterizer.a(var9, param1, var10, param4);
+          SoftwareRasterizer.saveClip(ae.field_y);
+          SoftwareRasterizer.intersectClip(var9, param1, var10, param4);
           if ((1 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, param1);
           }
@@ -61,7 +61,7 @@ final class ra {
           if ((8 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
             sf.field_d[param6][param2][var11].drawOpaque(var9, 48 + param1);
           }
-          SoftwareRasterizer.b(ae.field_y);
+          SoftwareRasterizer.restoreClip(ae.field_y);
         }
         return;
     }
@@ -236,7 +236,7 @@ final class ra {
           var16 = null;
           var17 = null;
           je.field_i = false;
-          SoftwareRasterizer.a(vd.field_e);
+          SoftwareRasterizer.saveClip(vd.field_e);
           if (var10_int < 0) {
             var11 = var11 - var10_int;
             var10_int = 0;
@@ -250,22 +250,22 @@ final class ra {
           if (param4 == 3 &&
             param2) {
             if (ub.field_i) {
-              SoftwareRasterizer.a(0, 0, 640, 480 - td.field_n);
+              SoftwareRasterizer.intersectClip(0, 0, 640, 480 - td.field_n);
             }
-            SoftwareRasterizer.c(0, 0, 25, this.field_a * 64, 14022908, 10533565);
-            SoftwareRasterizer.c(615, 0, 25, 64 * this.field_a, 14022908, 10533565);
+            SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 25, this.field_a * 64, 14022908, 10533565);
+            SoftwareRasterizer.fillRectangleVerticalGradient(615, 0, 25, 64 * this.field_a, 14022908, 10533565);
             MouseWheelInput.a(param5, param6, -15516);
             if (ub.field_i) {
-              SoftwareRasterizer.b(vd.field_e);
+              SoftwareRasterizer.restoreClip(vd.field_e);
             }
           }
           for (var18 = -24; 0 >= var18; var18++) {
             if (var18 < -16) {
-              SoftwareRasterizer.b(vd.field_e);
-              SoftwareRasterizer.a(0, 0, 25, 480);
+              SoftwareRasterizer.restoreClip(vd.field_e);
+              SoftwareRasterizer.intersectClip(0, 0, 25, 480);
             } else {
               if (var18 == -16) {
-                SoftwareRasterizer.b(vd.field_e);
+                SoftwareRasterizer.restoreClip(vd.field_e);
               }
             }
             regionExit1: {
@@ -344,7 +344,7 @@ final class ra {
                         }
                       } else {
                         if (-16 > var18) {
-                          SoftwareRasterizer.b(vd.field_e);
+                          SoftwareRasterizer.restoreClip(vd.field_e);
                           stackIn_68_0 = (var21 == 0) ? 0 : 615;
                           stackIn_70_1 = 0;
                           if (0 == var21) {
@@ -352,10 +352,10 @@ final class ra {
                           } else {
                             stackIn_71_2 = 640;
                           }
-                          SoftwareRasterizer.a(stackIn_68_0, stackIn_70_1, stackIn_71_2, 480);
+                          SoftwareRasterizer.intersectClip(stackIn_68_0, stackIn_70_1, stackIn_71_2, 480);
                         } else {
                           if (var18 == -16) {
-                            SoftwareRasterizer.b(vd.field_e);
+                            SoftwareRasterizer.restoreClip(vd.field_e);
                           }
                         }
                         var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
@@ -376,24 +376,24 @@ final class ra {
                         }
                         if (6 == param4 &&
                           param0) {
-                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.saveClip(ae.field_y);
                           var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 6 &&
                           0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.saveClip(ae.field_y);
                           var22 = this.field_r[vb.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22, -10440);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 2 &&
                           param0) {
-                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.saveClip(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (6 == param4) {
                           if (SocketConnector.field_l[var19][var21][0][0] <= param7 &&
@@ -406,10 +406,10 @@ final class ra {
                           if (vb.field_a[var19][var21] == this.field_l &&
                             this.field_i == var20 &&
                             ol.field_a) {
-                            SoftwareRasterizer.a(ae.field_y);
-                            SoftwareRasterizer.b(vd.field_e);
-                            SoftwareRasterizer.b(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
-                            SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                            SoftwareRasterizer.saveClip(ae.field_y);
+                            SoftwareRasterizer.restoreClip(vd.field_e);
+                            SoftwareRasterizer.drawRectangleOutline(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
+                            SoftwareRasterizer.intersectClip(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                             if (var16 != null &&
                               NodeHashTableIterator.field_j == null) {
                               NodeHashTableIterator.field_j = (LevelEntity) (var16);
@@ -449,7 +449,7 @@ final class ra {
                           break;
                         }
                         if (-16 > var18) {
-                          SoftwareRasterizer.b(vd.field_e);
+                          SoftwareRasterizer.restoreClip(vd.field_e);
                           stackIn_68_0Lifetime2 = (var21 == 0) ? 0 : 615;
                           stackIn_70_1Lifetime2 = 0;
                           if (0 == var21) {
@@ -457,10 +457,10 @@ final class ra {
                           } else {
                             stackIn_71_2Lifetime2 = 640;
                           }
-                          SoftwareRasterizer.a(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
+                          SoftwareRasterizer.intersectClip(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
                         } else {
                           if (var18 == -16) {
-                            SoftwareRasterizer.b(vd.field_e);
+                            SoftwareRasterizer.restoreClip(vd.field_e);
                           }
                         }
                         var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
@@ -481,24 +481,24 @@ final class ra {
                         }
                         if (6 == param4 &&
                           param0) {
-                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.saveClip(ae.field_y);
                           var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 6 &&
                           0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.saveClip(ae.field_y);
                           var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
                           this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (param4 == 2 &&
                           param0) {
-                          SoftwareRasterizer.a(ae.field_y);
+                          SoftwareRasterizer.saveClip(ae.field_y);
                           var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                          SoftwareRasterizer.b(ae.field_y);
+                          SoftwareRasterizer.restoreClip(ae.field_y);
                         }
                         if (6 != param4) {
                           continue;
@@ -519,10 +519,10 @@ final class ra {
                         if (!ol.field_a) {
                           continue;
                         }
-                        SoftwareRasterizer.a(ae.field_y);
-                        SoftwareRasterizer.b(vd.field_e);
-                        SoftwareRasterizer.b(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
-                        SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                        SoftwareRasterizer.saveClip(ae.field_y);
+                        SoftwareRasterizer.restoreClip(vd.field_e);
+                        SoftwareRasterizer.drawRectangleOutline(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
+                        SoftwareRasterizer.intersectClip(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                         if (var16 != null &&
                           NodeHashTableIterator.field_j == null) {
                           NodeHashTableIterator.field_j = (LevelEntity) (var16);
@@ -540,7 +540,7 @@ final class ra {
                   }
                   while (true) {
                     if (-16 > var18) {
-                      SoftwareRasterizer.b(vd.field_e);
+                      SoftwareRasterizer.restoreClip(vd.field_e);
                       stackIn_68_0Lifetime2 = (var21 == 0) ? 0 : 615;
                       stackIn_70_1Lifetime2 = 0;
                       if (0 == var21) {
@@ -548,10 +548,10 @@ final class ra {
                       } else {
                         stackIn_71_2Lifetime2 = 640;
                       }
-                      SoftwareRasterizer.a(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
+                      SoftwareRasterizer.intersectClip(stackIn_68_0Lifetime2, stackIn_70_1Lifetime2, stackIn_71_2Lifetime2, 480);
                     } else {
                       if (var18 == -16) {
-                        SoftwareRasterizer.b(vd.field_e);
+                        SoftwareRasterizer.restoreClip(vd.field_e);
                       }
                     }
                     var14 = SocketConnector.field_l[var19][var21][1][1] - SocketConnector.field_l[var19][var21][1][0];
@@ -572,24 +572,24 @@ final class ra {
                     }
                     if (6 == param4 &&
                       param0) {
-                      SoftwareRasterizer.a(ae.field_y);
+                      SoftwareRasterizer.saveClip(ae.field_y);
                       var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                      SoftwareRasterizer.b(ae.field_y);
+                      SoftwareRasterizer.restoreClip(ae.field_y);
                       var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                      SoftwareRasterizer.b(ae.field_y);
+                      SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (param4 == 6 &&
                       0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                      SoftwareRasterizer.a(ae.field_y);
+                      SoftwareRasterizer.saveClip(ae.field_y);
                       var22Lifetime2 = this.field_r[vb.field_a[var19][var21]][var20];
                       this.a(var19, var12Lifetime1, var21, var18, var12Lifetime1 + 64, var20, var22Lifetime2, -10440);
-                      SoftwareRasterizer.b(ae.field_y);
+                      SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (param4 == 2 &&
                       param0) {
-                      SoftwareRasterizer.a(ae.field_y);
+                      SoftwareRasterizer.saveClip(ae.field_y);
                       var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                      SoftwareRasterizer.b(ae.field_y);
+                      SoftwareRasterizer.restoreClip(ae.field_y);
                     }
                     if (6 == param4) {
                       if (SocketConnector.field_l[var19][var21][0][0] <= param7 &&
@@ -602,10 +602,10 @@ final class ra {
                       if (vb.field_a[var19][var21] == this.field_l &&
                         this.field_i == var20 &&
                         ol.field_a) {
-                        SoftwareRasterizer.a(ae.field_y);
-                        SoftwareRasterizer.b(vd.field_e);
-                        SoftwareRasterizer.b(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
-                        SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                        SoftwareRasterizer.saveClip(ae.field_y);
+                        SoftwareRasterizer.restoreClip(vd.field_e);
+                        SoftwareRasterizer.drawRectangleOutline(SocketConnector.field_l[var19][var21][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21][0][0] + SocketConnector.field_l[var19][var21][0][1], 64, 16777215);
+                        SoftwareRasterizer.intersectClip(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                         if (var16 != null &&
                           NodeHashTableIterator.field_j == null) {
                           NodeHashTableIterator.field_j = (LevelEntity) (var16);
@@ -657,7 +657,7 @@ final class ra {
                       }
                     } else {
                       if (-16 > var18) {
-                        SoftwareRasterizer.b(vd.field_e);
+                        SoftwareRasterizer.restoreClip(vd.field_e);
                         stackIn_68_0Lifetime1 = (var21Lifetime1 == 0) ? 0 : 615;
                         stackIn_70_1Lifetime1 = 0;
                         if (0 == var21Lifetime1) {
@@ -665,10 +665,10 @@ final class ra {
                         } else {
                           stackIn_71_2Lifetime1 = 640;
                         }
-                        SoftwareRasterizer.a(stackIn_68_0Lifetime1, stackIn_70_1Lifetime1, stackIn_71_2Lifetime1, 480);
+                        SoftwareRasterizer.intersectClip(stackIn_68_0Lifetime1, stackIn_70_1Lifetime1, stackIn_71_2Lifetime1, 480);
                       } else {
                         if (var18 == -16) {
-                          SoftwareRasterizer.b(vd.field_e);
+                          SoftwareRasterizer.restoreClip(vd.field_e);
                         }
                       }
                       var14Lifetime1 = SocketConnector.field_l[var19][var21Lifetime1][1][1] - SocketConnector.field_l[var19][var21Lifetime1][1][0];
@@ -689,24 +689,24 @@ final class ra {
                       }
                       if (6 == param4 &&
                         param0) {
-                        SoftwareRasterizer.a(ae.field_y);
+                        SoftwareRasterizer.saveClip(ae.field_y);
                         var17 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 0, 101, var20Lifetime2);
-                        SoftwareRasterizer.b(ae.field_y);
+                        SoftwareRasterizer.restoreClip(ae.field_y);
                         var16 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 1, 115, var20Lifetime2);
-                        SoftwareRasterizer.b(ae.field_y);
+                        SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (param4 == 6 &&
                         0 == (16 & ic.field_E[vb.field_a[var19][var21Lifetime1]][var20Lifetime2])) {
-                        SoftwareRasterizer.a(ae.field_y);
+                        SoftwareRasterizer.saveClip(ae.field_y);
                         var22Lifetime1Lifetime1 = this.field_r[vb.field_a[var19][var21Lifetime1]][var20Lifetime2];
                         this.a(var19, var12Lifetime1, var21Lifetime1, var18, var12Lifetime1 + 64, var20Lifetime2, var22Lifetime1Lifetime1, -10440);
-                        SoftwareRasterizer.b(ae.field_y);
+                        SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (param4 == 2 &&
                         param0) {
-                        SoftwareRasterizer.a(ae.field_y);
+                        SoftwareRasterizer.saveClip(ae.field_y);
                         var16 = hi.a(param6, vb.field_a[var19][var21Lifetime1], param5, 2, 113, var20Lifetime2);
-                        SoftwareRasterizer.b(ae.field_y);
+                        SoftwareRasterizer.restoreClip(ae.field_y);
                       }
                       if (6 == param4) {
                         if (SocketConnector.field_l[var19][var21Lifetime1][0][0] <= param7 &&
@@ -719,10 +719,10 @@ final class ra {
                         if (vb.field_a[var19][var21Lifetime1] == this.field_l &&
                           this.field_i == var20Lifetime2 &&
                           ol.field_a) {
-                          SoftwareRasterizer.a(ae.field_y);
-                          SoftwareRasterizer.b(vd.field_e);
-                          SoftwareRasterizer.b(SocketConnector.field_l[var19][var21Lifetime1][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21Lifetime1][0][0] + SocketConnector.field_l[var19][var21Lifetime1][0][1], 64, 16777215);
-                          SoftwareRasterizer.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
+                          SoftwareRasterizer.saveClip(ae.field_y);
+                          SoftwareRasterizer.restoreClip(vd.field_e);
+                          SoftwareRasterizer.drawRectangleOutline(SocketConnector.field_l[var19][var21Lifetime1][0][0], var12Lifetime1, -SocketConnector.field_l[var19][var21Lifetime1][0][0] + SocketConnector.field_l[var19][var21Lifetime1][0][1], 64, 16777215);
+                          SoftwareRasterizer.intersectClip(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                           if (var16 != null &&
                             NodeHashTableIterator.field_j == null) {
                             NodeHashTableIterator.field_j = (LevelEntity) (var16);
@@ -765,7 +765,7 @@ final class ra {
             mb.field_c.storedWidth = mb.field_c.fullWidth;
             mb.field_c.pixels = SoftwareRasterizer.pixels;
             mb.field_c.storedHeight = mb.field_c.fullHeight;
-            SoftwareRasterizer.f(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
+            SoftwareRasterizer.fillRectangle(0, var19Lifetime1 + 16, 640, 480 - (16 + var19Lifetime1), 1);
             for (var20Lifetime1 = 0; var18Lifetime1 > var20Lifetime1; var20Lifetime1++) {
               Sprite.copyRegion(jf.field_qb, mb.field_c, 0, var19Lifetime1, 0, var19Lifetime1 + 16, 640, 16);
               var19Lifetime1 += 16;

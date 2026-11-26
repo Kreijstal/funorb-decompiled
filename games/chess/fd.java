@@ -19,8 +19,8 @@ final class fd extends IntrusiveNode {
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          wb.a(var1_ref.field_q, var1_ref.field_j, var1_ref.field_r);
-          wb.b(var1_ref.field_l, var1_ref.field_o, var1_ref.field_p, var1_ref.field_k);
+          SoftwareRasterizer.setRasterBuffer(var1_ref.field_q, var1_ref.field_j, var1_ref.field_r);
+          SoftwareRasterizer.setClip(var1_ref.field_l, var1_ref.field_o, var1_ref.field_p, var1_ref.field_k);
           var1_ref.field_q = null;
           ni.field_c.addFirst((IntrusiveNode) (var1_ref), (byte) 105);
           return;
@@ -29,8 +29,8 @@ final class fd extends IntrusiveNode {
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        wb.a(var1_refLifetime1.field_q, var1_refLifetime1.field_j, var1_refLifetime1.field_r);
-        wb.b(var1_refLifetime1.field_l, var1_refLifetime1.field_o, var1_refLifetime1.field_p, var1_refLifetime1.field_k);
+        SoftwareRasterizer.setRasterBuffer(var1_refLifetime1.field_q, var1_refLifetime1.field_j, var1_refLifetime1.field_r);
+        SoftwareRasterizer.setClip(var1_refLifetime1.field_l, var1_refLifetime1.field_o, var1_refLifetime1.field_p, var1_refLifetime1.field_k);
         var1_refLifetime1.field_q = null;
         ni.field_c.addFirst((IntrusiveNode) (var1_refLifetime1), (byte) 105);
     }

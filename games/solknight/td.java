@@ -158,14 +158,14 @@ final class td implements j {
             param2 = param2 & var11.field_B;
           }
           var7 = 5592405;
-          SoftwareRasterizer.b(param4.field_m + param3, param4.field_j + param1, param4.field_t, param4.field_x, this.field_f);
+          SoftwareRasterizer.fillRectangle(param4.field_m + param3, param4.field_j + param1, param4.field_t, param4.field_x, this.field_f);
           if (param2) {
             var7 = 16777215;
           }
           var8 = this.field_c + (param3 + param4.field_m);
           var9 = param1 - (-param4.field_j - this.field_o);
-          SoftwareRasterizer.d(var8, var9, this.field_k, this.field_j, 5592405);
-          SoftwareRasterizer.b(var8, var9, this.field_k, this.field_j, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_k, this.field_j, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_k, this.field_j, var7);
           if (param0 <= 113) {
             field_e = (Sprite[]) null;
           }

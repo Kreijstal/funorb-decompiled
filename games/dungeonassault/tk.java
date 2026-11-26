@@ -229,8 +229,8 @@ final class tk {
             } else {
               this.field_l[var2].a((int)to.a(this.field_A[var2], this.field_e[var2], var5, 127), (int)to.a(this.field_y[var2], this.field_m[var2], var5, -109), (int)to.a(this.field_j[var2], this.field_f[var2], var5, 76), (int)to.a(this.field_q[var2], this.field_x[var2], var5, -110), (int)to.a(this.field_c[var2], this.field_h[var2], var5, -45), (int)to.a(this.field_n[var2], this.field_s[var2], var5, 77));
             }
-            gf.b(0, 0, gf.field_i, this.field_r, 0);
-            gf.b(0, gf.field_c - this.field_r, gf.field_i, this.field_r, 0);
+            SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_i, this.field_r, 0);
+            SoftwareRasterizer.fillRectangle(0, SoftwareRasterizer.field_c - this.field_r, SoftwareRasterizer.field_i, this.field_r, 0);
             if (this.field_o != null) {
               if (this.field_t[var2] != null) {
                 var7 = this.field_o.field_E + this.field_o.field_H;
@@ -258,18 +258,18 @@ final class tk {
               }
               if (var3 < 25 &&
                 this.field_B[var2]) {
-                gf.b(0, 0, gf.field_i, gf.field_c, this.field_a[var2], 256 - var3 * 10);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, this.field_a[var2], 256 - var3 * 10);
               }
             } else {
               if (var3 < 25 &&
                 this.field_B[var2]) {
-                gf.b(0, 0, gf.field_i, gf.field_c, this.field_a[var2], 256 - var3 * 10);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, this.field_a[var2], 256 - var3 * 10);
               }
             }
             var3 = -var3 + var4;
             if (25 > var3 &&
               this.field_i[var2]) {
-              gf.b(0, 0, gf.field_i, gf.field_c, this.field_u[var2], 256 - 10 * var3);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, this.field_u[var2], 256 - 10 * var3);
             }
           }
           var2++;

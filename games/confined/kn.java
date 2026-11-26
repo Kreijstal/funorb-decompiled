@@ -211,7 +211,7 @@ final class kn {
                     var50 + 10240.0 > var52Lifetime1 &&
                     -var50 < var54Lifetime1 &&
                     var54Lifetime1 < var50 + 6016.0) {
-                    fn.a((int)var52Lifetime1, (int)var54Lifetime1, (int)(0.5 + var50), 255, tl.field_d);
+                    SoftwareRasterizer.addRadialGlow((int)var52Lifetime1, (int)var54Lifetime1, (int)(0.5 + var50), 255, tl.field_d);
                   }
                 } else {
                   if (var52Lifetime1 > -16.0 &&
@@ -220,7 +220,7 @@ final class kn {
                     var54Lifetime1 < 6032.0) {
                     var56 = (int)(0.5 + var50 * 0.99609375 * var50);
                     if (var56 > 0) {
-                      fn.a((int)var52Lifetime1, (int)var54Lifetime1, 16, var56, tl.field_d);
+                      SoftwareRasterizer.addRadialGlow((int)var52Lifetime1, (int)var54Lifetime1, 16, var56, tl.field_d);
                     }
                   }
                 }
@@ -290,7 +290,7 @@ final class kn {
                   var18 < var22 + 10240.0 &&
                   var20 > -var22 &&
                   6016.0 + var22 > var20) {
-                  fn.a((int)var18, (int)var20, (int)(var22 + 0.5), 255 * param1 >> 8, tl.field_d);
+                  SoftwareRasterizer.addRadialGlow((int)var18, (int)var20, (int)(var22 + 0.5), 255 * param1 >> 8, tl.field_d);
                 }
               } else {
                 if (var18 > -16.0 &&
@@ -299,7 +299,7 @@ final class kn {
                   var20 < 6032.0) {
                   var24 = (int)(var22 * 0.99609375 * var22 + 0.5);
                   if (0 < var24) {
-                    fn.a((int)var18, (int)var20, 16, param1 * var24 >> 8, tl.field_d);
+                    SoftwareRasterizer.addRadialGlow((int)var18, (int)var20, 16, param1 * var24 >> 8, tl.field_d);
                   }
                 }
               }

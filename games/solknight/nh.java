@@ -6,7 +6,7 @@ final class nh {
         String var4 = null;
         String var4Lifetime1;
         if (!param1) {
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           if (param0 >= -28) {
             var4 = (String) null;
             nh.a((Archive) null, (String) null, 2, (String) null);
@@ -16,7 +16,7 @@ final class nh {
           uf.a(false, param1);
           return;
         }
-        SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, 192);
         if (param0 >= -28) {
           var4Lifetime1 = (String) null;
           nh.a((Archive) null, (String) null, 2, (String) null);

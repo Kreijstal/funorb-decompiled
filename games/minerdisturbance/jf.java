@@ -52,7 +52,7 @@ final class jf {
         var9Lifetime1 = var17.field_C;
         ti.a((byte) -15);
         var17.g();
-        SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c);
+        SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c);
         Sprite var15 = new Sprite(var9Lifetime1, var9Lifetime1);
         Sprite var18 = var15;
         var18.g();

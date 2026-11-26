@@ -108,7 +108,7 @@ abstract class MixedSupport043 {
             if (integerArgument5 < 93) {
               integerLocal2 = MixedSupport141.computeInteger1754(23841, 80, 18 * SceneWidgetPart013.integerArrayState0239[1 + integerArgument5 - 80] + 40);
             } else {
-              SoftwareRaster.performAction0642(integerArgument2 - 36 - 3, integerArgument3 + 36 - 3, 78, 60, 4, 65280, 100);
+              SoftwareRaster.fillRoundedRectangleAlpha(integerArgument2 - 36 - 3, integerArgument3 + 36 - 3, 78, 60, 4, 65280, 100);
             }
           }
         } else {

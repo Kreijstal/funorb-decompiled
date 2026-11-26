@@ -40,7 +40,7 @@ final class co extends qm {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            kh.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         lg.a(1);
@@ -184,13 +184,13 @@ final class co extends qm {
           var10 = -var5 + var6;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
           var12 = var11 >= 256 ? var8 | var9 : (var11 * var9 & 16711680 | var11 * var8 & -16711936) >>> 8;
-          kh.f(var7, var6, this.field_v, var12);
-          kh.f(-(this.field_v * 2) + var7, var6, this.field_v, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_v, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_v * 2) + var7, var6, this.field_v, var12);
           var9Lifetime1 = param1 & 65280;
           var8Lifetime1 = param1 & 16711935;
           var12Lifetime1 = 256 > var11 ? (16711680 & var9Lifetime1 * var11 | var8Lifetime1 * var11 & -16711936) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          kh.f(this.field_v + var7, var6, this.field_v, var12Lifetime1);
-          kh.f(-this.field_v + var7, var6, this.field_v, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_v + var7, var6, this.field_v, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_v + var7, var6, this.field_v, var12Lifetime1);
         }
         lg.a(1);
         return var14;
@@ -217,7 +217,7 @@ final class co extends qm {
             param1.a(var6, param2);
           }
           lg.a(1);
-          if (this.field_z.field_l + param3 >= kh.field_c) {
+          if (this.field_z.field_l + param3 >= SoftwareRasterizer.field_c) {
             em.a((byte) 38, this.field_D);
             param1.a(-this.field_I, 0);
             param1.a(2 * this.field_v - this.field_I, 0);
@@ -225,7 +225,7 @@ final class co extends qm {
             lg.a(1);
             this.field_D.a(param3, param2);
           }
-          if (kh.field_g >= var5_int - this.field_z.field_l) {
+          if (SoftwareRasterizer.field_g >= var5_int - this.field_z.field_l) {
             em.a((byte) 38, this.field_D);
             for (var7 = this.field_I + (-this.field_z.field_l + this.field_g); var7 > 2 * this.field_v; var7 = var7 - this.field_v * 2) {
             }

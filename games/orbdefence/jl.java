@@ -111,12 +111,12 @@ abstract class jl {
           if (var14 < 0) {
             var14 = 0;
           }
-          var15 = ul.field_f * var14 + param9;
+          var15 = SoftwareRasterizer.field_f * var14 + param9;
           var16 = param0 + param2;
           var17 = 0;
-          if (ul.field_l <= var16) {
-            var17 = 1 + (var16 - ul.field_l);
-            var16 = ul.field_l - 1;
+          if (SoftwareRasterizer.field_l <= var16) {
+            var17 = 1 + (var16 - SoftwareRasterizer.field_l);
+            var16 = SoftwareRasterizer.field_l - 1;
           }
           var18 = 1 + var16 - var14;
           while (var16 >= var14) {
@@ -129,7 +129,7 @@ abstract class jl {
             var15 = var15 + param6;
             var14++;
           }
-          var15 = var15 + ul.field_f * var17;
+          var15 = var15 + SoftwareRasterizer.field_f * var17;
           for (var19Lifetime1 = 0; var19Lifetime1 < param1; var19Lifetime1++) {
             incrementValue$7 = param3;
             param3++;
@@ -141,12 +141,12 @@ abstract class jl {
           if (var19Lifetime2 > 0) {
             var19Lifetime2 = 0;
           }
-          var20 = param9 + ul.field_f * (-param2 + param0);
+          var20 = param9 + SoftwareRasterizer.field_f * (-param2 + param0);
           if (var19Lifetime2 > var14Lifetime1) {
-            var20 = var20 + (-var14Lifetime1 + var19Lifetime2) * ul.field_f;
+            var20 = var20 + (-var14Lifetime1 + var19Lifetime2) * SoftwareRasterizer.field_f;
           }
           while (var14Lifetime1 < var19Lifetime2) {
-            if (param0 + (var14Lifetime1 + param5 + param2) < ul.field_a) {
+            if (param0 + (var14Lifetime1 + param5 + param2) < SoftwareRasterizer.field_a) {
               for (var21 = 0; var21 < param1; var21++) {
                 param7 = param8[var15++];
                 var10[var21] = var10[var21] + (vi.a(16738842, param7) >> 16);
@@ -156,7 +156,7 @@ abstract class jl {
               var15 = var15 + param6;
               var18++;
             } else {
-              var15 = var15 + ul.field_f;
+              var15 = var15 + SoftwareRasterizer.field_f;
             }
             for (var21Lifetime3 = 0; var21Lifetime3 < param1; var21Lifetime3++) {
               var22 = var34[var21Lifetime3] / var18;
@@ -169,7 +169,7 @@ abstract class jl {
             param3 = param3 + param6;
             var14Lifetime1++;
           }
-          var19Lifetime3 = -param2 - param0 + ul.field_l - param5;
+          var19Lifetime3 = -param2 - param0 + SoftwareRasterizer.field_l - param5;
           if (~var19Lifetime3 < param4) {
             var19Lifetime3 = 0;
           }

@@ -510,7 +510,7 @@ public final class TorChallenge extends GameClientBase {
                     c.field_b.h();
                     si.field_F = new Sprite(kj.field_C[0].fullWidth, kj.field_C[0].fullHeight);
                     si.field_F.d();
-                    SoftwareRasterizer.f(33, 30, 68, 90, param0);
+                    SoftwareRasterizer.fillRectangle(33, 30, 68, 90, param0);
                     kj.field_C[1].drawTransparent(0, 0);
                     SectorCacheStore.field_f.bindAsTarget(101);
                     dk.field_c = new Sprite[4][9];
@@ -699,13 +699,13 @@ public final class TorChallenge extends GameClientBase {
             field_G = -107;
           }
           if (vc.a(0)) {
-            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             si.a(true, ui.field_i, ui.field_i[0].storedHeight + 16, 16 + ui.field_i[0].storedWidth);
           }
           if (rb.field_b != 0) {
             var3 = 256 * hk.field_e / 32;
             if (0 < var3) {
-              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var3);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var3);
             }
           }
           if (lc.a(1)) {
@@ -783,9 +783,9 @@ public final class TorChallenge extends GameClientBase {
           if (param3) {
             TorChallenge.q(123);
           }
-          SoftwareRasterizer.a(ae.field_y);
+          SoftwareRasterizer.saveClip(ae.field_y);
           var13 = 64;
-          SoftwareRasterizer.a(var8_int, param1, var9, param4);
+          SoftwareRasterizer.intersectClip(var8_int, param1, var9, param4);
           var14 = var12 - 1;
           if (var14 < 0) {
             var14 += 64;
@@ -798,7 +798,7 @@ public final class TorChallenge extends GameClientBase {
             (64 & ic.field_E[var14][param2]) > 0) {
             SoftwareRasterizer.setClip(var10, param1, var9, param4);
             re.field_v[1][param6].drawOpaque(var10, param1);
-            SoftwareRasterizer.b(ae.field_y);
+            SoftwareRasterizer.restoreClip(ae.field_y);
             if (var16 == 0) {
               return;
             }
@@ -808,23 +808,23 @@ public final class TorChallenge extends GameClientBase {
               0 < (64 & ic.field_E[var15][param2])) {
               SoftwareRasterizer.setClip(var8_int, param1, var11, param4);
               re.field_v[1][param6].drawOpaque(var8_int, param1);
-              SoftwareRasterizer.b(ae.field_y);
+              SoftwareRasterizer.restoreClip(ae.field_y);
               if (var16 == 0) {
                 return;
               }
             }
-            SoftwareRasterizer.f(var11, param1, -var11 + var9, var13, 0);
-            SoftwareRasterizer.a(var8_int, param1, var11, param4);
+            SoftwareRasterizer.fillRectangle(var11, param1, -var11 + var9, var13, 0);
+            SoftwareRasterizer.intersectClip(var8_int, param1, var11, param4);
             re.field_v[0][param6].drawOpaque(var8_int, param1);
-            SoftwareRasterizer.b(ae.field_y);
+            SoftwareRasterizer.restoreClip(ae.field_y);
             if (var16 == 0) {
               return;
             }
           }
-          SoftwareRasterizer.f(var8_int, param1, var10 - var8_int, var13, 0);
-          SoftwareRasterizer.a(var10, param1, var9, param4);
+          SoftwareRasterizer.fillRectangle(var8_int, param1, var10 - var8_int, var13, 0);
+          SoftwareRasterizer.intersectClip(var10, param1, var9, param4);
           re.field_v[0][param6].drawOpaque(var10, param1);
-          SoftwareRasterizer.b(ae.field_y);
+          SoftwareRasterizer.restoreClip(ae.field_y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1859,7 +1859,7 @@ public final class TorChallenge extends GameClientBase {
           if (param0 < 103) {
             TorChallenge.a((String) null, true, -106, 32, (String) null, (String) null, -51);
           }
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.clearStaticReferences();
           BitmapFont.clearStaticReferences();
           qc.a((byte) 26);
           nk.clearStaticReferences(250);

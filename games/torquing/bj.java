@@ -109,7 +109,7 @@ final class bj extends rb {
                   GzipDecompressor.a((byte) 97, this.field_G);
                 } else {
                   GzipDecompressor.a((byte) 31, this.field_G);
-                  SoftwareRasterizer.b();
+                  SoftwareRasterizer.clearRaster();
                 }
               }
             }
@@ -155,7 +155,7 @@ final class bj extends rb {
             } else {
               if (var12Lifetime2 <= this.field_G.field_t) {
                 GzipDecompressor.a((byte) 31, this.field_G);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clearRaster();
               } else {
                 this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
                 GzipDecompressor.a((byte) 97, this.field_G);
@@ -205,7 +205,7 @@ final class bj extends rb {
           } else {
             if (var12Lifetime1 <= this.field_G.field_t) {
               GzipDecompressor.a((byte) 31, this.field_G);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
             } else {
               this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
               GzipDecompressor.a((byte) 97, this.field_G);

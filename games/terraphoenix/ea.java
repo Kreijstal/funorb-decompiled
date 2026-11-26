@@ -49,11 +49,11 @@ final class ea implements WidgetActionListener {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.f(param1.x + param2, param1.y + param0, param1.width, param1.height, this.field_q);
+          SoftwareRasterizer.fillRectangle(param1.x + param2, param1.y + param0, param1.width, param1.height, this.field_q);
           var8 = param1.x + (param2 + this.field_g);
           var9 = this.field_l + (param1.y + param0);
-          SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, 5592405);
-          SoftwareRasterizer.f(var8, var9, this.field_i, this.field_e, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_i, this.field_e, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_C) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_i, var9 + this.field_e, 1);
             SoftwareRasterizer.drawLine(this.field_i + var8, var9, var8, var9 + this.field_e, 1);

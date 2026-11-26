@@ -50,7 +50,7 @@ final class ub extends lg {
                 GzipDecompressor.a((byte) 99, ByteStorage.field_b);
               } else {
                 GzipDecompressor.a((byte) -105, ByteStorage.field_b);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clearRaster();
               }
             }
           }
@@ -88,7 +88,7 @@ final class ub extends lg {
               GzipDecompressor.a((byte) 99, ByteStorage.field_b);
             } else {
               GzipDecompressor.a((byte) -105, ByteStorage.field_b);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clearRaster();
             }
           }
         }

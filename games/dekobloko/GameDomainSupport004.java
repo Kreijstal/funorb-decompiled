@@ -144,9 +144,9 @@ final class GameDomainSupport004 {
           NetworkArchiveRequestManager.rgbSpriteState0044 = new RgbSprite(10, 14);
           NetworkArchiveRequestManager.rgbSpriteState0044.performAction0256();
           for (integerLocal1 = 2; integerLocal1 < 7; integerLocal1++) {
-            SoftwareRaster.performAction0665(integerLocal1, integerLocal1 + 1, 14 - (integerLocal1 << 1), 16777215);
+            SoftwareRaster.drawVerticalLine(integerLocal1, integerLocal1 + 1, 14 - (integerLocal1 << 1), 16777215);
           }
-          SoftwareRaster.performAction0645(integerArrayLocal17, integerLocal11, integerLocal12);
+          SoftwareRaster.setRasterBuffer(integerArrayLocal17, integerLocal11, integerLocal12);
           GameplayControls.sceneWidgetPart005State0003 = MixedSupport079.computeSceneWidgetPart0051001(ResourceSupport001.sceneWidgetState0001, MixedSupport108.sceneWidgetState0103, mixedSupport003Local10, MixedSupport040.sceneWidgetState0031, 0);
           if (byteArgument1 <= 61) {
             return;

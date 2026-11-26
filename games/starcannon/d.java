@@ -22,9 +22,9 @@ final class d {
 
     final void b(int param0, int param1) {
         int var3 = this.field_d + param0 / 16;
-        ki.c(var3, this.field_q, 5, 0, param1);
-        ki.c(var3, this.field_q, 4, 0, 128);
-        ki.c(var3, this.field_q, 3, 0, 128);
+        SoftwareRasterizer.fillCircleAlpha(var3, this.field_q, 5, 0, param1);
+        SoftwareRasterizer.fillCircleAlpha(var3, this.field_q, 4, 0, 128);
+        SoftwareRasterizer.fillCircleAlpha(var3, this.field_q, 3, 0, 128);
     }
 
     d(int param0, int param1, int param2, int param3) {
@@ -351,7 +351,7 @@ final class d {
                   return;
                 }
                 var4 = (param0 >> 4) + this.field_d;
-                ki.d(var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o, (-(this.field_p * 255) + 765) / 3);
+                SoftwareRasterizer.drawLineAlphaExcludingEnd(var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o, (-(this.field_p * 255) + 765) / 3);
               } else {
                 if (var6 == 12) {
                   var4 = this.field_d + (param0 >> 4);
@@ -361,12 +361,12 @@ final class d {
                     var5++;
                     var6 = var6 >> 1;
                   }
-                  ki.c(var4, this.field_q, var5 + 2, this.field_o, 64);
-                  ki.c(var4, this.field_q, var5 + 1, this.field_o, 64);
-                  ki.a(var4, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), 16777215);
-                  ki.a(var4 - 1, this.field_q, var4 - (this.field_j >> 5), -(this.field_e >> 5) + this.field_q, this.field_o);
-                  ki.a(1 + var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o);
-                  ki.e(var4, this.field_q, var5, 16777215);
+                  SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, var5 + 2, this.field_o, 64);
+                  SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, var5 + 1, this.field_o, 64);
+                  SoftwareRasterizer.drawLine(var4, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), 16777215);
+                  SoftwareRasterizer.drawLine(var4 - 1, this.field_q, var4 - (this.field_j >> 5), -(this.field_e >> 5) + this.field_q, this.field_o);
+                  SoftwareRasterizer.drawLine(1 + var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o);
+                  SoftwareRasterizer.fillCircle(var4, this.field_q, var5, 16777215);
                 } else {
                   if (var6 != 1 &&
                     var6 != 10) {
@@ -374,7 +374,7 @@ final class d {
                       case 2:
                         var4 = -(this.field_i - 1 << 1) + this.field_d + (param0 >> 4);
                         if (this.field_i == 1) {
-                          ki.a(var4, this.field_q, -(this.field_j / 32) + var4, this.field_q - this.field_e / 32, this.field_o);
+                          SoftwareRasterizer.drawLine(var4, this.field_q, -(this.field_j / 32) + var4, this.field_q - this.field_e / 32, this.field_o);
                         }
                         jg.field_C[4 + (-5 + 5 * this.field_i)].a(var4 - 3, this.field_q - 3, this.field_o);
                         break regionExit1;
@@ -388,10 +388,10 @@ final class d {
                       case 0:
                         var4 = (param0 >> 4) + this.field_d;
                         if (this.field_p >= 16) {
-                          ki.c(var4, this.field_q, this.field_p >> 2, this.field_o, 128);
+                          SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, this.field_p >> 2, this.field_o, 128);
                           break regionExit1;
                         }
-                        ki.c(var4, this.field_q, this.field_p >> 2, this.field_o, this.field_p << 3);
+                        SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, this.field_p >> 2, this.field_o, this.field_p << 3);
                         break regionExit1;
                       case 4:
                         var4 = this.field_d + (param0 >> 5);
@@ -474,38 +474,38 @@ final class d {
                 return;
               }
               var4 = this.field_d + (param0 >> 4);
-              ki.d(var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o, 128 * (8 - this.field_p) / 8);
+              SoftwareRasterizer.drawLineAlphaExcludingEnd(var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o, 128 * (8 - this.field_p) / 8);
             }
           } else {
             var4 = (param0 >> 4) + this.field_d;
             if (this.field_i == 2) {
-              ki.c(var4, this.field_q, 3, this.field_o, 64);
-              ki.c(var4, this.field_q, 2, this.field_o, 64);
-              ki.a(var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, 16777215);
-              ki.a(var4 - 1, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), this.field_o);
-              ki.a(var4 + 1, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o);
-              ki.e(var4, this.field_q, 1, 16777215);
+              SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, 3, this.field_o, 64);
+              SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, 2, this.field_o, 64);
+              SoftwareRasterizer.drawLine(var4, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, 16777215);
+              SoftwareRasterizer.drawLine(var4 - 1, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), this.field_o);
+              SoftwareRasterizer.drawLine(var4 + 1, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o);
+              SoftwareRasterizer.fillCircle(var4, this.field_q, 1, 16777215);
               if (0 == (16 & this.field_q)) {
-                ki.a(var4, -6 + this.field_q, var4, this.field_q + 6, this.field_o);
-                ki.a(var4, this.field_q - 4, var4, this.field_q + 4, 16777215);
+                SoftwareRasterizer.drawLine(var4, -6 + this.field_q, var4, this.field_q + 6, this.field_o);
+                SoftwareRasterizer.drawLine(var4, this.field_q - 4, var4, this.field_q + 4, 16777215);
               } else {
-                ki.a(var4 + 6, this.field_q, var4 - 6, this.field_q, this.field_o);
-                ki.a(var4 + 4, this.field_q, var4 - 4, this.field_q, 16777215);
+                SoftwareRasterizer.drawLine(var4 + 6, this.field_q, var4 - 6, this.field_q, this.field_o);
+                SoftwareRasterizer.drawLine(var4 + 4, this.field_q, var4 - 4, this.field_q, 16777215);
               }
             } else {
-              ki.c(var4, this.field_q, 4, this.field_o, 64);
-              ki.c(var4, this.field_q, 3, this.field_o, 64);
-              ki.a(var4, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), 16777215);
-              ki.a(var4 - 1, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), this.field_o);
-              ki.a(var4 + 1, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o);
+              SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, 4, this.field_o, 64);
+              SoftwareRasterizer.fillCircleAlpha(var4, this.field_q, 3, this.field_o, 64);
+              SoftwareRasterizer.drawLine(var4, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), 16777215);
+              SoftwareRasterizer.drawLine(var4 - 1, this.field_q, var4 - (this.field_j >> 5), this.field_q - (this.field_e >> 5), this.field_o);
+              SoftwareRasterizer.drawLine(var4 + 1, this.field_q, -(this.field_j >> 5) + var4, -(this.field_e >> 5) + this.field_q, this.field_o);
               if (0 == (this.field_q & 16)) {
-                ki.a(var4 - 8, -8 + this.field_q, var4 + 8, 8 + this.field_q, this.field_o);
-                ki.a(var4 - 5, this.field_q - 5, 5 + var4, 5 + this.field_q, 16777215);
-                ki.e(var4, this.field_q, 2, 16777215);
+                SoftwareRasterizer.drawLine(var4 - 8, -8 + this.field_q, var4 + 8, 8 + this.field_q, this.field_o);
+                SoftwareRasterizer.drawLine(var4 - 5, this.field_q - 5, 5 + var4, 5 + this.field_q, 16777215);
+                SoftwareRasterizer.fillCircle(var4, this.field_q, 2, 16777215);
               } else {
-                ki.a(8 + var4, this.field_q - 8, -8 + var4, 8 + this.field_q, this.field_o);
-                ki.a(var4 + 5, -5 + this.field_q, -5 + var4, 5 + this.field_q, 16777215);
-                ki.e(var4, this.field_q, 2, 16777215);
+                SoftwareRasterizer.drawLine(8 + var4, this.field_q - 8, -8 + var4, 8 + this.field_q, this.field_o);
+                SoftwareRasterizer.drawLine(var4 + 5, -5 + this.field_q, -5 + var4, 5 + this.field_q, 16777215);
+                SoftwareRasterizer.fillCircle(var4, this.field_q, 2, 16777215);
               }
             }
           }

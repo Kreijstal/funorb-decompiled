@@ -619,7 +619,7 @@ final class mk {
           }
           SoftwareRasterizer.setClip(param4, param3, param4 + var7_int, 28 + param3);
           param2.draw(param4, param3);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -778,10 +778,10 @@ final class mk {
           }
           this.field_q = new Sprite(25, 25);
           this.field_q.b();
-          SoftwareRasterizer.a(208, 208, 192, 255, this.field_n);
+          SoftwareRasterizer.addRadialGlow(208, 208, 192, 255, this.field_n);
           this.field_r = new Sprite(25, 25);
           this.field_r.b();
-          SoftwareRasterizer.a(208, 208, 192, 255, this.field_w);
+          SoftwareRasterizer.addRadialGlow(208, 208, 192, 255, this.field_w);
           hga.field_U.a((byte) 125);
           this.field_s.a((byte) 65, BananarangEvent.field_s.field_g.field_o.field_b, 0);
           BananarangEvent.field_s.field_g.field_f = -1;

@@ -46,7 +46,7 @@ final class rb extends ck {
           jh.a(var7);
           for (var5 = 0; var5 < param0; var5++) {
             param1.e(-param1.field_w + param0, param0 - param1.field_A, param2);
-            gf.d(1, 1, 0, 0, var7.field_y, var7.field_v);
+            SoftwareRasterizer.blurRectangle(1, 1, 0, 0, var7.field_y, var7.field_v);
           }
           param1.e(param0 - param1.field_w, -param1.field_A + param0, 0);
           jh.b();
