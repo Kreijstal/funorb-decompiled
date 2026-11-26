@@ -3,17 +3,17 @@
  */
 final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
-    static bd field_h;
+    static RgbSprite field_h;
     static String field_a;
     static int field_l;
     static String field_e;
-    static bd field_d;
+    static RgbSprite field_d;
     static int field_c;
     static String field_k;
-    static bd field_j;
-    static bd field_f;
+    static RgbSprite field_j;
+    static RgbSprite field_f;
     static String field_g;
-    static bd field_i;
+    static RgbSprite field_i;
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
@@ -232,7 +232,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param0, param4);
           if (param1 >= -32) {
-            field_f = (bd) null;
+            field_f = (RgbSprite) null;
           }
           var7.addFocusListener(var7);
           var7.requestFocus();
@@ -263,7 +263,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         qh.field_s = param2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;

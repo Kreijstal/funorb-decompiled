@@ -7,7 +7,7 @@ class DualLinkNode extends IntrusiveNode {
     static int[] field_m;
     static String field_l;
     static int field_o;
-    static bd field_n;
+    static RgbSprite field_n;
     static String field_k;
     DualLinkNode field_i;
     static int field_p;
@@ -62,7 +62,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_l = null;
         field_m = null;
         if (param0 != 71) {

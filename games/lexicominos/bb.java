@@ -9,7 +9,7 @@ final class bb extends nb implements jk {
     static volatile int field_I;
     static String field_K;
     static String[] field_F;
-    static db field_C;
+    static RgbSprite field_C;
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
@@ -235,7 +235,7 @@ final class bb extends nb implements jk {
         field_C = null;
         field_K = null;
         if (param0 != -26) {
-          field_C = (db) null;
+          field_C = (RgbSprite) null;
         }
         field_J = null;
     }
@@ -254,6 +254,6 @@ final class bb extends nb implements jk {
         field_J = new m("email");
         field_K = "Create";
         field_F = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
-        field_C = new db(311, 450);
+        field_C = new RgbSprite(311, 450);
     }
 }

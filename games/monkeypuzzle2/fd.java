@@ -107,10 +107,10 @@ final class fd extends wj {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         if (param0 != -28970) {
-          fd.e(-42);
+          fd.clearDeclaredStaticReferences(-42);
         }
     }
 

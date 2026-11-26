@@ -13,7 +13,7 @@ final class bf {
     private byte[] field_a;
     private long[] field_g;
     private long[] field_c;
-    static bd[][] field_f;
+    static RgbSprite[][] field_f;
     static int[] field_d;
     private byte[] field_i;
 
@@ -172,10 +172,10 @@ final class bf {
 
     public static void clearStaticReferences(int param0) {
         field_j = null;
-        field_f = (bd[][]) null;
+        field_f = (RgbSprite[][]) null;
         field_d = null;
         if (param0 != 2107940192) {
-          field_f = (bd[][]) null;
+          field_f = (RgbSprite[][]) null;
         }
     }
 

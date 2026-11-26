@@ -76,7 +76,7 @@ abstract class t {
         we.field_c[8] = new String[]{s.field_j[0]};
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         int var1 = -33 % ((-11 - param0) / 32);

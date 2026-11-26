@@ -10,7 +10,7 @@ final class cp {
     byte[] field_a;
     int field_f;
     static boolean[] field_k;
-    static dl[] field_d;
+    static RgbSprite[] field_d;
     int field_g;
     int field_i;
     int field_e;
@@ -23,7 +23,7 @@ final class cp {
           field_k = null;
           return;
         }
-        field_d = (dl[]) null;
+        field_d = (RgbSprite[]) null;
         field_h = null;
         field_d = null;
         field_k = null;

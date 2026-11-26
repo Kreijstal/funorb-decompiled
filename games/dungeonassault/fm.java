@@ -15,7 +15,7 @@ final class fm {
     static int field_i;
     private k field_k;
 
-    final static cn b(int param0, int param1) {
+    final static RgbSprite b(int param0, int param1) {
         if (param1 == 0) {
           return null;
         }
@@ -23,7 +23,7 @@ final class fm {
           return tn.field_I;
         }
         if (param0 != -29092) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         if (2 == param1) {
           return qd.field_d;
@@ -124,7 +124,7 @@ final class fm {
         int[] var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        cn var5_ref_cn = null;
+        RgbSprite var5_ref_cn = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;

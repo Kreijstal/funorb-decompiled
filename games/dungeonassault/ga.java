@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga extends ip {
-    static cn[] field_o;
+    static RgbSprite[] field_o;
     static int field_p;
     private be field_q;
     private String field_m;
     static int field_n;
-    static cn field_r;
+    static RgbSprite field_r;
     private boolean field_s;
 
     public static void clearStaticReferences(byte param0) {
         field_r = null;
         if (param0 != 75) {
-          field_o = (cn[]) null;
+          field_o = (RgbSprite[]) null;
           field_o = null;
           return;
         }
@@ -155,7 +155,7 @@ final class ga extends ip {
           }
           var11 = param0.requestFullscreenEnter((byte) -102, param3, param1, param2, param5);
           if (param4 <= 99) {
-            field_o = (cn[]) null;
+            field_o = (RgbSprite[]) null;
           }
           while (var11.status == 0) {
             CombatState.sleepMillis(0, 10L);

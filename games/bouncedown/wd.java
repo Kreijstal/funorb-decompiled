@@ -369,14 +369,14 @@ class wd extends lk {
     }
 
     wd(String param0, sk param1) {
-        this(param0, ma.field_m.field_b, param1);
+        this(param0, SpriteGeometry.field_m.field_b, param1);
     }
 
     protected wd() {
         this.field_y = true;
         this.field_A = false;
         this.field_w = true;
-        this.field_j = ma.field_m.field_l;
+        this.field_j = SpriteGeometry.field_m.field_l;
     }
 
     static {

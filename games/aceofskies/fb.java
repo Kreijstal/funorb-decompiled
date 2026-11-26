@@ -26,7 +26,7 @@ final class fb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = 5 % ((-54 - param0) / 58);
         field_d = (byte[][]) null;

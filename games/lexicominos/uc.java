@@ -6,7 +6,7 @@ class uc extends re implements jk {
     static volatile int field_eb;
     private boolean field_ob;
     private md field_gb;
-    static db[] field_hb;
+    static RgbSprite[] field_hb;
     static String field_nb;
     static int field_fb;
     private boolean field_lb;
@@ -123,7 +123,7 @@ class uc extends re implements jk {
         }
         this.field_D = false;
         if (!param0) {
-          field_hb = (db[]) null;
+          field_hb = (RgbSprite[]) null;
           if (this.field_ib) {
             AccountCreationResultPanel.h(!param0 ? true : false);
             return;

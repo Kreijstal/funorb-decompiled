@@ -4,7 +4,7 @@
 final class jj {
     static int field_c;
     static String field_d;
-    static db[] field_f;
+    static RgbSprite[] field_f;
     static sc field_e;
     static uc field_a;
     static char[] field_b;

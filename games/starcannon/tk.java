@@ -19,7 +19,7 @@ abstract class tk {
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_f = null;
         int var1 = -112 % ((-81 - param0) / 42);
         field_a = null;

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class fd extends DualLinkNode {
-    static tg field_m;
-    static tg[] field_n;
+    static RgbSprite field_m;
+    static RgbSprite[] field_n;
     static String field_o;
 
     public static void a(boolean param0) {

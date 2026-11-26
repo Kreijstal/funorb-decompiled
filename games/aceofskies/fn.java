@@ -6,10 +6,10 @@ abstract class fn {
     static ResourceArchive field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != -5) {
-          fn.a((byte) -34);
+          fn.clearStaticReferences((byte) -34);
           field_b = null;
           return;
         }

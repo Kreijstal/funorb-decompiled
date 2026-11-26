@@ -81,7 +81,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           return;
         }
         try {
-          var3 = ed.field_q;
+          var3 = SpriteGeometry.field_q;
           var3.h(param2, 0);
           var3.writeByte(5, -1);
           var3.writeByte(0, -1);
@@ -465,18 +465,18 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         this.field_u = param1;
     }
 
-    final static db a(sh param0, int param1, byte param2, int param3) {
+    final static RgbSprite a(sh param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
-        db stackIn_2_0 = null;
+        RgbSprite stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        db stackIn_7_0 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -47) {
-            stackIn_2_0 = (db) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           if (nb.a(param1, param3, (byte) 127, param0)) {
@@ -484,7 +484,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (db) (stackIn_5_0);
+          return (RgbSprite) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

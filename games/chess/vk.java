@@ -8,7 +8,7 @@ final class vk {
     static byte[][] field_d;
     static String field_h;
     static ci field_i;
-    static km field_a;
+    static RgbSprite field_a;
     static boolean field_e;
     static String field_f;
 

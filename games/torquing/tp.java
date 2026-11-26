@@ -77,7 +77,7 @@ final class tp {
         this.field_d = null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_h = null;
         field_e = (long[][]) null;

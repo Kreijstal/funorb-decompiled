@@ -3,13 +3,13 @@
  */
 final class ri extends IntrusiveNode {
     static String field_i;
-    static bd field_p;
+    static RgbSprite field_p;
     static int field_h;
     static boolean field_m;
     static int field_n;
     int[] field_j;
     boolean field_l;
-    static bd field_k;
+    static RgbSprite field_k;
     static boolean field_o;
 
     final static void a(byte param0, boolean param1, String param2, String param3) {
@@ -40,11 +40,11 @@ final class ri extends IntrusiveNode {
         this.field_l = false;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         field_i = null;
         if (param0 != -1) {
-          ri.c(-71);
+          ri.clearStaticReferences(-71);
           field_k = null;
           return;
         }

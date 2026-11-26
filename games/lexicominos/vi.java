@@ -16,14 +16,14 @@ final class vi extends IntrusiveNode {
         }
     }
 
-    final static db[] b(int param0) {
+    final static RgbSprite[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Lexicominos.field_L ? 1 : 0;
-        db[] var1 = new db[th.field_t];
+        RgbSprite[] var1 = new RgbSprite[th.field_t];
         for (var2 = 0; var2 < th.field_t; var2++) {
           var3 = pb.field_h[var2] * bd.field_m[var2];
           var4 = be.field_f[var2];
@@ -31,11 +31,11 @@ final class vi extends IntrusiveNode {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = ci.field_b[vg.a((int) var4[var6], 255)];
           }
-          var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
+          var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
         }
         GzipDecompressor.a(param0 ^ 27773);
         if (param0 != 23793) {
-          return (db[]) null;
+          return (RgbSprite[]) null;
         }
         return var1;
     }
@@ -44,7 +44,7 @@ final class vi extends IntrusiveNode {
         th var5 = null;
         int var4 = 0;
         try {
-          var5 = ed.field_q;
+          var5 = SpriteGeometry.field_q;
           var5.h(param0, 0);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -62,7 +62,7 @@ final class vi extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 12 % ((-66 - param0) / 59);
         field_l = null;
     }

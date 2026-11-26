@@ -9,7 +9,7 @@ abstract class ca extends bd {
     private int field_U;
     private int field_ab;
     private int field_X;
-    static nh[] field_W;
+    static RgbSprite[] field_W;
     private int field_Z;
     private int field_eb;
     static he[] field_V;

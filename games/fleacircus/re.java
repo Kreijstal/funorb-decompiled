@@ -16,9 +16,9 @@ final class re {
         SecondaryNodeDeque.a(dh.field_c, false, false);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -26) {
-          re.a((byte) 91);
+          re.clearStaticReferences((byte) 91);
           field_b = null;
           return;
         }

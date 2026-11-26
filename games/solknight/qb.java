@@ -314,7 +314,7 @@ final class qb extends vg implements wj {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_cb = null;
         int var1 = 113 / ((-12 - param0) / 49);
         field_L = null;

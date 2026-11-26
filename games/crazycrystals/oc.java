@@ -5,7 +5,7 @@ final class oc {
     static int field_b;
     static byte[][] field_a;
 
-    final static void a(dl[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;

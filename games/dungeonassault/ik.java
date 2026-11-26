@@ -20,7 +20,7 @@ final class ik {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 0) {
           field_a = null;
           field_b = null;
@@ -29,7 +29,7 @@ final class ik {
           field_e = null;
           return;
         }
-        ik.a(75);
+        ik.clearStaticReferences(75);
         field_a = null;
         field_b = null;
         field_c = null;

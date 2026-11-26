@@ -13,10 +13,10 @@ final class vl extends IntrusiveNode {
     int field_n;
     int field_k;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         if (param0) {
-          vl.a(true);
+          vl.clearStaticReferences(true);
           field_h = null;
           return;
         }
@@ -27,7 +27,7 @@ final class vl extends IntrusiveNode {
         if (param3) {
           return he.a((byte) 67, 1, param1, param0, param2);
         }
-        vl.a(false);
+        vl.clearStaticReferences(false);
         return he.a((byte) 67, 1, param1, param0, param2);
     }
 

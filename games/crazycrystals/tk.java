@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class tk extends bc implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static dl[] field_h;
+    static RgbSprite[] field_h;
     private java.awt.image.ImageConsumer field_g;
     private java.awt.image.ColorModel field_j;
-    static dl field_l;
+    static RgbSprite field_l;
     static mk field_k;
     static java.applet.Applet field_i;
 

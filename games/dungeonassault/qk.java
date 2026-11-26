@@ -3,7 +3,7 @@
  */
 final class qk {
     static String[] field_b;
-    private cn[] field_a;
+    private RgbSprite[] field_a;
     static String field_c;
     static boolean[] field_e;
     static String field_d;
@@ -27,7 +27,7 @@ final class qk {
         field_c = null;
     }
 
-    qk(cn[] param0) {
+    qk(RgbSprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

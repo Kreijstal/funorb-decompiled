@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class r {
-    static bd field_c;
-    static bd field_b;
+    static RgbSprite field_c;
+    static RgbSprite field_b;
     static int field_a;
     static int[] field_d;
-    static bd field_e;
+    static RgbSprite field_e;
 
     final static void a(int param0, int param1, ji param2, int param3, boolean param4) {
         try {
@@ -168,7 +168,7 @@ final class r {
           field_b = null;
           return;
         }
-        field_e = (bd) null;
+        field_e = (RgbSprite) null;
         field_c = null;
         field_e = null;
         field_b = null;

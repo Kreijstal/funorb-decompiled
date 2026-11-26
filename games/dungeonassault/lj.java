@@ -5,26 +5,26 @@ final class lj implements cl {
     static String field_e;
     private int field_s;
     private int field_t;
-    static cn field_o;
+    static RgbSprite field_o;
     static int field_u;
     private CombatState field_h;
     static String field_p;
     private int[][] field_w;
     private wm field_k;
-    private cn field_f;
+    private RgbSprite field_f;
     private int field_q;
     static volatile boolean field_g;
     static String field_j;
     static int field_m;
     private wm field_i;
     private int field_l;
-    private cn field_c;
+    private RgbSprite field_c;
     private rh[][] field_v;
-    private cn field_b;
+    private RgbSprite field_b;
     static int field_r;
     private int[] field_a;
     private int[] field_n;
-    private cn field_d;
+    private RgbSprite field_d;
 
     public final void a(boolean param0) {
         int var2_int = 0;
@@ -37,7 +37,7 @@ final class lj implements cl {
         RuntimeException var2 = null;
         try {
           if (!param0) {
-            this.field_c = (cn) null;
+            this.field_c = (RgbSprite) null;
           }
           if (this.field_t > 0) {
             var2_int = (this.field_t << 8) / 80;
@@ -349,7 +349,7 @@ final class lj implements cl {
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
-        cn var7 = null;
+        RgbSprite var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
         int var9 = 0;
@@ -437,8 +437,8 @@ final class lj implements cl {
         try {
           jh.c();
           if (null == this.field_c) {
-            this.field_c = new cn(448, 356);
-            this.field_f = new cn(480, 388);
+            this.field_c = new RgbSprite(448, 356);
+            this.field_f = new RgbSprite(480, 388);
             this.field_f.field_w = -16;
             this.field_f.field_A = -16;
           }
@@ -604,7 +604,7 @@ final class lj implements cl {
         }
     }
 
-    private final void a(cn param0, int param1, int param2, int param3, int param4) {
+    private final void a(RgbSprite param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_18_0 = false;
         int stackIn_25_0 = 0;
         int stackIn_41_0 = 0;
@@ -796,8 +796,8 @@ final class lj implements cl {
         try {
           jh.c();
           if (this.field_d == null) {
-            this.field_d = new cn(64, 68);
-            this.field_b = new cn(96, 100);
+            this.field_d = new RgbSprite(64, 68);
+            this.field_b = new RgbSprite(96, 100);
             this.field_b.field_w = -16;
             this.field_b.field_A = -16;
           }
@@ -900,14 +900,14 @@ final class lj implements cl {
         int var6 = 0;
         ai var7 = null;
         int var7_int = 0;
-        cn var7_ref = null;
+        RgbSprite var7_ref = null;
         int[] var7_array = null;
         rh[] var7_array2 = null;
         int var8 = 0;
         int var9_int = 0;
         rh var9 = null;
         int var10 = 0;
-        cn var7_refLifetime1;
+        RgbSprite var7_refLifetime1;
         int var7_intLifetime1;
         int var8Lifetime1;
         int var9_intLifetime1;
@@ -1566,7 +1566,7 @@ final class lj implements cl {
             stackIn_23_1 = 123;
           }
           if (stackIn_23_0 <= stackIn_23_1) {
-            this.field_c = (cn) null;
+            this.field_c = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

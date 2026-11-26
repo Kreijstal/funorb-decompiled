@@ -12,10 +12,10 @@ final class ud extends IntrusiveNode {
     int field_u;
     int field_t;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         if (param0 != 98) {
-          ud.b(-36);
+          ud.clearStaticReferences(-36);
         }
     }
 

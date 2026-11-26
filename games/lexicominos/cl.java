@@ -6,7 +6,7 @@ final class cl extends rl implements nd {
     private int field_R;
     static BitmapFont field_T;
     static int[] field_U;
-    static db field_S;
+    static RgbSprite field_S;
     private ma field_V;
     static he field_P;
 
@@ -144,7 +144,7 @@ final class cl extends rl implements nd {
         }
     }
 
-    public static void o(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_S = null;
         field_U = null;
         field_Q = null;
@@ -331,7 +331,7 @@ final class cl extends rl implements nd {
     final void a(ma param0, byte param1) {
         try {
           if (param1 != 23) {
-            cl.o(-17);
+            cl.clearDeclaredStaticReferences(-17);
           }
           this.field_V = param0;
         } catch (RuntimeException runtimeException) {
@@ -351,6 +351,6 @@ final class cl extends rl implements nd {
     static {
         field_U = new int[8192];
         field_Q = "Enter the name you'd prefer. This is the name displayed to other players.";
-        field_S = new db(311, 450);
+        field_S = new RgbSprite(311, 450);
     }
 }

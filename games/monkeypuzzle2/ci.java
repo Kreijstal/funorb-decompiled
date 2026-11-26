@@ -15,7 +15,7 @@ final class ci {
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param0 != -2865) {
-            ci.b((byte) -111);
+            ci.clearStaticReferences((byte) -111);
           }
           SoftwareRasterizer.setClip(80, 0, 560, 480);
           for (var1_int = 0; var1_int < 16; var1_int++) {
@@ -45,7 +45,7 @@ final class ci {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = -69 % ((-87 - param0) / 32);
         field_a = null;
@@ -54,7 +54,7 @@ final class ci {
 
     final static boolean a(byte param0) {
         if (param0 != 78) {
-          ci.b((byte) -103);
+          ci.clearStaticReferences((byte) -103);
         }
         return v.field_c;
     }

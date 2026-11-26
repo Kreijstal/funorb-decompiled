@@ -8,9 +8,9 @@ final class AttackOrder extends CreatureOrder {
     int field_j;
     static String field_i;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -74) {
-          AttackOrder.d((byte) 13);
+          AttackOrder.clearStaticReferences((byte) 13);
         }
         field_i = null;
     }

@@ -30,11 +30,11 @@ final class oj {
           GzipInflater.b(param1 - 6347, param3);
         }
         if (param1 != -99) {
-          oj.a((byte) 15);
+          oj.clearStaticReferences((byte) 15);
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = -5 / ((-50 - param0) / 60);
         field_c = null;
@@ -106,7 +106,7 @@ final class oj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

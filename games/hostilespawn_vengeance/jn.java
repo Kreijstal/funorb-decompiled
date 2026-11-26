@@ -5,7 +5,7 @@ final class jn extends fc {
     int field_D;
     static String field_K;
     static String field_E;
-    static bd field_B;
+    static RgbSprite field_B;
     static boolean field_C;
     static p[] field_F;
     static String[] field_I;
@@ -32,8 +32,8 @@ final class jn extends fc {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        bd var8 = null;
-        bd var9 = null;
+        RgbSprite var8 = null;
+        RgbSprite var9 = null;
         if (0 != param3) {
           return;
         }
@@ -47,7 +47,7 @@ final class jn extends fc {
             return;
           }
           if (256 != this.field_D) {
-            var8 = new bd(this.field_A.field_s, this.field_A.field_x);
+            var8 = new RgbSprite(this.field_A.field_s, this.field_A.field_x);
             sb.a(var8, -125);
             this.field_A.a(0, 0, (byte) 60, param3);
             eh.b(false);
@@ -61,7 +61,7 @@ final class jn extends fc {
           return;
         }
         if (256 != this.field_D) {
-          var9 = new bd(this.field_A.field_s, this.field_A.field_x);
+          var9 = new RgbSprite(this.field_A.field_s, this.field_A.field_x);
           sb.a(var9, -125);
           this.field_A.a(0, 0, (byte) 60, param3);
           eh.b(false);

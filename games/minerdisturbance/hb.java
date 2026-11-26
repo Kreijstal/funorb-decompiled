@@ -33,7 +33,7 @@ final class hb {
         return (fc) null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         int var1 = 97 / ((-10 - param0) / 39);
     }

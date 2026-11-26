@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sa {
-    static km[] field_c;
+    static RgbSprite[] field_c;
     static String field_d;
     static String field_f;
     static char[] field_a;
@@ -22,7 +22,7 @@ final class sa {
           ak.field_m[param4] = param3;
           ak.field_y[param4] = param2;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class sa {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw fk.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -6,7 +6,7 @@ final class nd {
     int field_c;
     static bm field_d;
     int field_b;
-    static bd field_a;
+    static RgbSprite field_a;
 
     public final String toString() {
         throw new IllegalStateException();

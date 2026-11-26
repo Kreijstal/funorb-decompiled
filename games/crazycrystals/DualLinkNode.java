@@ -94,9 +94,9 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 1) {
-          DualLinkNode.d(31);
+          DualLinkNode.clearDeclaredStaticReferences(31);
         }
         field_f = null;
     }

@@ -12,7 +12,7 @@ final class cl extends hk {
     private int field_l;
     static PcmSample field_m;
     private int field_k;
-    static dl[] field_n;
+    static RgbSprite[] field_n;
     private int field_g;
 
     final void a(byte param0) {
@@ -100,7 +100,7 @@ final class cl extends hk {
         return (pb) null;
     }
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_n = null;
         field_j = null;
         field_m = null;

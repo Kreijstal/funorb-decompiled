@@ -32,7 +32,7 @@ final class kb extends kn {
         return !pi.field_c.b((byte) 98) ? true : false;
     }
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_P = null;
         if (param0 != -15237) {
           field_O = (ol) null;
@@ -130,7 +130,7 @@ final class kb extends kn {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class kb extends kn {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "kb.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "kb.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class kb extends kn {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class kb extends kn {
           this.field_U = param7 ? true : false;
           this.field_T = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class kb extends kn {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw fk.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -374,7 +374,7 @@ final class kb extends kn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

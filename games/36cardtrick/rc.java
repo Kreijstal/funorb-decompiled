@@ -8,9 +8,9 @@ final class rc extends IntrusiveNode {
     static int field_o;
     static de field_g;
     static String field_n;
-    static kc field_i;
+    static RgbSprite field_i;
     static ml field_l;
-    static kc[] field_k;
+    static RgbSprite[] field_k;
     static boolean field_m;
 
     public static void b(byte param0) {
@@ -30,7 +30,7 @@ final class rc extends IntrusiveNode {
     final static void a(byte param0, int param1) {
         fd.a(ca.field_c[param1], jd.field_c[param1], false);
         if (param0 != 111) {
-          field_k = (kc[]) null;
+          field_k = (RgbSprite[]) null;
         }
     }
 
@@ -70,7 +70,7 @@ final class rc extends IntrusiveNode {
     static {
         field_g = new de(10, 2, 2, 0);
         field_n = "Select pairs of tiles to reveal them. If they match, they are removed from the<nbsp>game.<br><br>Remember the tiles you've revealed and track them as they move to clear the<nbsp>board.<br><br>Don't waste time, but think before you click, because the number of mistakes you can make is<nbsp>limited.";
-        field_i = new kc(270, 70);
+        field_i = new RgbSprite(270, 70);
         field_l = new ml();
     }
 }

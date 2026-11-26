@@ -10,7 +10,7 @@ final class MixedSupport041 extends MixedSupport001 {
     private int integerState0237;
     private RgbSprite[] rgbSpriteArrayState0012;
 
-    public static void performAction0532(int integerArgument1) {
+    public static void clearDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 != 8) {
           integerArrayState0048 = (int[]) null;
           indexedSpriteArrayArrayState0002 = (IndexedSprite[][]) null;
@@ -39,7 +39,7 @@ final class MixedSupport041 extends MixedSupport001 {
         int integerLocal11 = 0;
         try {
           if (byteArgument4 >= -60) {
-            MixedSupport041.performAction0532(-101);
+            MixedSupport041.clearDeclaredStaticReferences(-101);
           }
           if (!uiComponentArgument5.booleanState0018) {
             stackIntegerLocal1 = (uiComponentArgument5.computeBoolean0220(true)) ? 1 : 0;

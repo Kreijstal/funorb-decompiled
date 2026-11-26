@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i extends IntrusiveNode {
-    static cn[] field_r;
+    static RgbSprite[] field_r;
     static String field_w;
     static String field_y;
     static int[] field_l;
@@ -16,7 +16,7 @@ final class i extends IntrusiveNode {
     static int field_o;
     static int[] field_t;
     int field_m;
-    static cn field_v;
+    static RgbSprite field_v;
     static PlatformTaskDispatcher field_A;
     int field_i;
     static String field_s;
@@ -26,7 +26,7 @@ final class i extends IntrusiveNode {
         try {
           this.field_p = param3;
           if (param6) {
-            field_r = (cn[]) null;
+            field_r = (RgbSprite[]) null;
           }
           this.field_m = param2;
           this.field_k = param1;

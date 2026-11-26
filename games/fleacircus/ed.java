@@ -8,7 +8,7 @@ final class ed {
 
     final static void c(int param0) {
         RuntimeException runtimeException = null;
-        dd var1 = null;
+        RgbSprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -19,12 +19,12 @@ final class ed {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        dd var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
-        dd var11 = null;
-        dd var12 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         String var14 = null;
-        dd var16 = null;
+        RgbSprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -81,13 +81,13 @@ final class ed {
             var2 = SoftwareRasterizer.field_d;
             var3 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
-            var11 = new dd(4 + MouseWheelInput.field_f.field_w, 4 + MouseWheelInput.field_f.field_t);
+            var11 = new RgbSprite(4 + MouseWheelInput.field_f.field_w, 4 + MouseWheelInput.field_f.field_t);
             var11.f();
             MouseWheelInput.field_f.d(2, 2, SecondaryNodeDequeIterator.field_e);
             rg.a(0, var11, var11.field_w, var11.field_t, 1, -122, 2, 0);
             MouseWheelInput.field_f = var11;
             mi.field_o = MouseWheelInput.field_f.b();
-            var12 = new dd(195, 221);
+            var12 = new RgbSprite(195, 221);
             var6 = var12.field_w / 2;
             var12.f();
             ql.field_k.a(db.a(IterableNodeHashTable.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
@@ -171,13 +171,13 @@ final class ed {
               pb.field_g.field_r = pb.field_g.field_r + var9_intLifetime3 * 2;
             }
             pb.field_g.a();
-            var9 = new dd(pb.field_g.field_x, pb.field_g.field_r);
+            var9 = new RgbSprite(pb.field_g.field_x, pb.field_g.field_r);
             var9.f();
             ql.field_k.a(var14, MidiPcmStream.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
             rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
             pb.field_g.f();
             var9.d(0, 0);
-            uf.field_f = new dd(640, 480);
+            uf.field_f = new RgbSprite(640, 480);
             uf.field_f.f();
             pb.field_g.c(aj.field_q + (pb.field_g.field_x >> 1), (pb.field_g.field_r >> 1) + t.field_d, kh.field_d, 4096);
             pb.field_g = null;
@@ -191,7 +191,7 @@ final class ed {
             var2Lifetime2 = SoftwareRasterizer.field_d;
             var3Lifetime2 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
-            var16 = new dd(412, 43);
+            var16 = new RgbSprite(412, 43);
             var5_ref_String = db.a(fk.field_B, new String[]{DualLinkNode.field_k}, true);
             DualLinkNode.field_k = null;
             var16.f();
@@ -330,9 +330,9 @@ final class ed {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 20760) {
-          ed.a(124);
+          ed.clearStaticReferences(124);
         }
         field_c = null;
     }
@@ -351,18 +351,18 @@ final class ed {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        dd var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new dd(param0.a(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) ol.field_e));
+          var2 = new RgbSprite(param0.a(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) ol.field_e));
           var3 = var2.field_w;
           var4 = var2.field_t;
           we.a(-66);
-          pl.field_e = new dd(var3, 3 * var4 / 4);
+          pl.field_e = new RgbSprite(var3, 3 * var4 / 4);
           pl.field_e.f();
           var2.f(0, 0);
-          ge.field_f = new dd(var3, -pl.field_e.field_t + var4);
+          ge.field_f = new RgbSprite(var3, -pl.field_e.field_t + var4);
           ge.field_f.f();
           var2.f(0, -pl.field_e.field_t);
           if (param1 >= -27) {

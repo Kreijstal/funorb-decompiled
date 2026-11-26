@@ -84,7 +84,7 @@ abstract class b extends kj {
         SoftwareRasterizer.intersectClip(var7, param6, var8, param4);
         we.field_e[param1][param2].drawOpaque(var7, param6);
         if (param0 < 105) {
-          b.a(-8);
+          b.clearDeclaredStaticReferences(-8);
         } else {
           SoftwareRasterizer.restoreClip(ae.field_y);
           return;
@@ -94,7 +94,7 @@ abstract class b extends kj {
 
     abstract void c(int param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_N = null;
         field_R = null;
         if (param0 != 0) {

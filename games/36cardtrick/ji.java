@@ -40,7 +40,7 @@ final class ji {
         jc.field_O.field_O[oj.field_c] = dupTemp$1;
     }
 
-    final static void a(byte param0, kc[] param1) {
+    final static void a(byte param0, RgbSprite[] param1) {
         bb var19 = null;
         int var3 = 0;
         int var4 = 0;
@@ -108,8 +108,8 @@ final class ji {
     public static void a(int param0) {
         field_b = null;
         if (param0 >= -15) {
-          kc[] var2 = (kc[]) null;
-          ji.a((byte) -45, (kc[]) null);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          ji.a((byte) -45, (RgbSprite[]) null);
           field_a = null;
           return;
         }

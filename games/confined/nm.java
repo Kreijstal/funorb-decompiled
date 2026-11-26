@@ -13,11 +13,11 @@ final class nm extends gk {
     static int field_I;
     private boolean field_B;
 
-    final static nf[] a(mi param0, String param1, int param2, String param3) {
+    final static RgbSprite[] a(mi param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nf[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

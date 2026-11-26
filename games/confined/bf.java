@@ -34,12 +34,12 @@ final class bf extends ga implements pg, el {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_L = (int[][]) null;
         field_R = (od[][]) null;
         field_S = null;
         if (param0) {
-          bf.b(false);
+          bf.clearStaticReferences(false);
         }
     }
 
@@ -166,7 +166,7 @@ final class bf extends ga implements pg, el {
     public final void a(byte param0) {
         ((AccountNameAvailabilityValidator) (this.field_O.a((byte) -9))).e(639775169);
         if (param0 >= -101) {
-          bf.b(false);
+          bf.clearStaticReferences(false);
         }
     }
 

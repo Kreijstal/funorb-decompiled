@@ -3,7 +3,7 @@
  */
 final class bi extends IntrusiveNode {
     static String[] field_l;
-    static tg field_j;
+    static RgbSprite field_j;
     static String field_i;
     static int field_g;
     static int field_h;
@@ -18,7 +18,7 @@ final class bi extends IntrusiveNode {
         field_j = null;
         field_i = null;
         if (param0) {
-          field_j = (tg) null;
+          field_j = (RgbSprite) null;
           field_k = null;
           return;
         }
@@ -185,7 +185,7 @@ final class bi extends IntrusiveNode {
     }
 
     static {
-        field_j = new tg(540, 140);
+        field_j = new RgbSprite(540, 140);
         field_k = "Log in";
         field_i = "Just play";
     }

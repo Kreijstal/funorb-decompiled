@@ -6,7 +6,7 @@ abstract class hi extends wb implements jb {
     static int field_k;
     static String field_h;
     private vi field_j;
-    static hj[] field_g;
+    static RgbSprite[] field_g;
     static String field_f;
     static String field_e;
     static int[] field_i;

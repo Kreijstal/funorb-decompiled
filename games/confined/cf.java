@@ -12,10 +12,10 @@ final class cf extends hf {
     private double field_ab;
     private double field_fb;
 
-    public static void n(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_db = null;
         if (param0 < 111) {
-          cf.n(-57);
+          cf.releaseDeclaredStaticReferences(-57);
           field_cb = null;
           return;
         }
@@ -175,7 +175,7 @@ final class cf extends hf {
         double var16Lifetime1;
         double var18Lifetime1;
         if (param0 != 256) {
-          cf.n(-92);
+          cf.releaseDeclaredStaticReferences(-92);
           var14 = param3 - this.field_E;
           var16 = param1 - this.field_t;
           var18 = param5 - this.field_D;
@@ -198,7 +198,7 @@ final class cf extends hf {
         int var7_int = 0;
         double var8 = 0.0;
         double stackIn_10_1 = 0.0;
-        nf stackIn_13_1 = null;
+        RgbSprite stackIn_13_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

@@ -56,7 +56,7 @@ final class vh extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_s = null;
         if (param0 == 95) {
           field_k = null;

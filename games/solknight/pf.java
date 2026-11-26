@@ -8,7 +8,7 @@ final class pf {
     static String field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -102 / ((-43 - param0) / 44);
         field_d = null;
         field_b = null;

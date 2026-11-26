@@ -46,7 +46,7 @@ final class MixedSupport029 {
         }
     }
 
-    public static void performAction0410(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0148 = null;
         stringArrayState0011 = null;
         int integerLocal1 = -49 / ((-30 - integerArgument1) / 54);

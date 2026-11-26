@@ -10,7 +10,7 @@ final class lk {
     static PcmSample[] field_e;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_a = null;
         field_e = null;
@@ -20,7 +20,7 @@ final class lk {
           field_b = null;
           return;
         }
-        lk.a(true);
+        lk.clearStaticReferences(true);
         field_b = null;
     }
 

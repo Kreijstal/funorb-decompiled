@@ -69,7 +69,7 @@ final class rb extends ue {
     }
 
     final void b(int param0) {
-        dl var3;
+        RgbSprite var3;
         if (null != ga.field_L) {
           boolean decompiledFrameRemainder0 = true;
           if (!tf.field_c) {
@@ -85,7 +85,7 @@ final class rb extends ue {
             else {
               IntrusiveDeque.a(0, wl.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
               sj.a(wl.a("crystal", ga.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
-              var3 = new dl(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
+              var3 = new RgbSprite(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
               var3.a();
               ee.field_m.d(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
               dk.field_o.a(6945);

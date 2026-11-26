@@ -8,7 +8,7 @@ final class pa extends ql {
     static volatile int field_l;
     private v field_f;
     static boolean field_d;
-    static bd[][] field_i;
+    static RgbSprite[][] field_i;
     private v[] field_g;
     private v field_j;
     private oj[] field_m;
@@ -374,21 +374,21 @@ final class pa extends ql {
     }
 
     public static void g(int param0) {
-        field_i = (bd[][]) null;
+        field_i = (RgbSprite[][]) null;
         if (param0 <= 118) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
           pa.a((byte) 6, (short[]) null, 99, (CipherPacketBuffer) null);
         }
     }
 
-    final static bd[] h(int param0) {
+    final static RgbSprite[] h(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = HostileSpawn.field_I ? 1 : 0;
-        bd[] var1 = new bd[sc.field_c];
+        RgbSprite[] var1 = new RgbSprite[sc.field_c];
         for (var2 = 0; var2 < sc.field_c; var2++) {
           var3 = sf.field_X[var2] * hd.field_r[var2];
           var4 = ja.field_e[var2];
@@ -396,7 +396,7 @@ final class pa extends ql {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = bf.field_d[ua.a((int) var4[var6], 255)];
           }
-          var1[var2] = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var5);
+          var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var5);
         }
         if (param0 != 14) {
           field_d = true;

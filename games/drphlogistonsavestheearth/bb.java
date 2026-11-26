@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bb {
-    static nh field_f;
+    static RgbSprite field_f;
     static int field_g;
     static String[] field_e;
     static String field_d;
@@ -61,7 +61,7 @@ final class bb {
     }
 
     static {
-        field_f = new nh(540, 140);
+        field_f = new RgbSprite(540, 140);
         field_e = new String[]{"Showing by rating", "Showing by win percentage"};
         field_d = "To Customer Support";
         field_c = 20;

@@ -3,11 +3,11 @@
  */
 final class bg extends qe {
     private rh field_w;
-    private cn field_u;
+    private RgbSprite field_u;
     static IntrusiveDeque field_s;
     private rh field_r;
     static String field_x;
-    private cn field_v;
+    private RgbSprite field_v;
     static String field_t;
 
     final void a(boolean param0) {
@@ -386,7 +386,7 @@ final class bg extends qe {
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        cn var11 = null;
+        RgbSprite var11 = null;
         int var12 = 0;
         String var13 = null;
         int var7Lifetime1;
@@ -592,10 +592,10 @@ final class bg extends qe {
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        cn var6 = null;
+        RgbSprite var6 = null;
         String var7 = null;
         int var8 = 0;
-        cn var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
         gp var11 = null;
         var10 = DungeonAssault.field_K;
@@ -611,7 +611,7 @@ final class bg extends qe {
           var3 = var11;
           var4 = -s.field_b[0] + s.field_b[4];
           var5 = ((se) ((Object) var3)).field_E + ((se) ((Object) var3)).field_H;
-          var6 = new cn(var4, var5);
+          var6 = new RgbSprite(var4, var5);
           jh.a(var6);
           ((se) ((Object) var3)).c(Integer.toString(param0.field_b + 1), -s.field_b[0] + (s.field_b[1] + s.field_b[0] >> 1), la.field_b.field_H, 12690143, -1);
           this.a(12690143, -s.field_b[0] + (s.field_b[2] + s.field_b[1] >> 1), 120, param0, -5 + s.field_b[2] - s.field_b[1], la.field_b.field_H);
@@ -661,12 +661,12 @@ final class bg extends qe {
         return uo.a(param0, !param4 ? 0 : 1, param2, param1, 27847, false);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         field_t = null;
         field_s = null;
         if (param0 != 41) {
-          bg.b(-1);
+          bg.clearStaticReferences(-1);
         }
     }
 
@@ -725,7 +725,7 @@ final class bg extends qe {
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        cn var11 = null;
+        RgbSprite var11 = null;
         int var12 = 0;
         var12 = DungeonAssault.field_K;
         try {

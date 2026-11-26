@@ -8,7 +8,7 @@ final class tn extends ab implements dn {
     private mi field_x;
     private mi field_u;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -30 / ((16 - param0) / 51);
         field_w = null;
         field_t = null;

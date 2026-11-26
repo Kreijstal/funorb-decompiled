@@ -10,7 +10,7 @@ final class ik {
     private ge field_c;
     private int field_a;
     static he[] field_f;
-    static nh field_b;
+    static RgbSprite field_b;
     static String field_h;
 
     public static void a(int param0) {

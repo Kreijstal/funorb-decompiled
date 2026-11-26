@@ -132,7 +132,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         }
     }
 
-    public static void performAction1469(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         int integerLocal1 = 8 % ((byteArgument1 + 32) / 55);
         rgbSpriteArrayState0025 = null;
     }

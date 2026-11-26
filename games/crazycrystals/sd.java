@@ -4,7 +4,7 @@
 final class sd extends ga implements lf {
     static String field_T;
     private int field_P;
-    static dl[] field_R;
+    static RgbSprite[] field_R;
     private n field_S;
 
     public final n a(int param0) {
@@ -66,7 +66,7 @@ final class sd extends ga implements lf {
 
     final String a(byte param0) {
         if (param0 >= -23) {
-          field_R = (dl[]) null;
+          field_R = (RgbSprite[]) null;
           if (!this.field_m) {
             return null;
           }

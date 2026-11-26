@@ -13,12 +13,12 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
 
     abstract int computeInteger1280(int integerArgument1);
 
-    public static void performAction1702(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         integerArrayState0238 = null;
         stringArrayState0051 = null;
         resourceArchiveState0024 = null;
         if (integerArgument1 > -17) {
-          UiComponentPart032.performAction1702(-12);
+          UiComponentPart032.clearStaticReferences(-12);
         }
         stringState0580 = null;
         stringState0581 = null;
@@ -36,7 +36,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
 
     public final CallbackContract011 computeCallbackContract0110824(int integerArgument1) {
         if (integerArgument1 > -86) {
-          UiComponentPart032.performAction1702(-30);
+          UiComponentPart032.clearStaticReferences(-30);
         }
         return (CallbackContract011) ((Object) this.inputAdapter002State0001);
     }

@@ -186,14 +186,14 @@ abstract class fi extends UiWidget implements pb {
         kk.field_f.addLast(var1_refLifetime1, -128);
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == 30381) {
           field_w = null;
           field_u = null;
           field_t = null;
           return;
         }
-        fi.h(-100);
+        fi.clearDeclaredStaticReferences(-100);
         field_w = null;
         field_u = null;
         field_t = null;

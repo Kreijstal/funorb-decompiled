@@ -9,7 +9,7 @@ final class fe extends l {
     static int[] field_h;
     static CrazyCrystals field_g;
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_e = null;
         field_h = null;
         if (param0 != -118) {

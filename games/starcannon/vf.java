@@ -106,10 +106,10 @@ final class vf {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (param0) {
-          vf.a(false);
+          vf.clearStaticReferences(false);
         }
     }
 

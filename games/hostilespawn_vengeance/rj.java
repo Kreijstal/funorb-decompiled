@@ -5,7 +5,7 @@ import java.util.*;
 
 final class rj extends fc {
     private int field_D;
-    static bd field_N;
+    static RgbSprite field_N;
     static int[] field_M;
     private int field_I;
     static IntrusiveDeque field_G;
@@ -203,7 +203,7 @@ final class rj extends fc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 <= -96) {
           field_N = null;
           field_G = null;

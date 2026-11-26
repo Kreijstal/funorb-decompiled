@@ -11,7 +11,7 @@ final class d extends bb {
     private int field_R;
     static boolean field_Q;
 
-    final static void a(int param0, int param1, dd param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -46,7 +46,7 @@ final class d extends bb {
           var9 = 0;
           var10 = param2.field_t;
           if (param4 != 2147483647) {
-            d.j(-47);
+            d.discardDeclaredStaticReferences(-47);
           }
           var11 = param2.field_w;
           var12 = -var11 + SoftwareRasterizer.field_d;
@@ -277,7 +277,7 @@ final class d extends bb {
         }
     }
 
-    public static void j(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_O = null;
         if (param0 != -1) {
           field_O = (ed) null;

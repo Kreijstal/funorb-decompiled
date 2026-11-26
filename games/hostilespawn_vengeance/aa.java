@@ -6,8 +6,8 @@ final class aa {
     static int field_f;
     static java.lang.reflect.Method field_e;
     static String field_c;
-    static bd[] field_d;
-    static bd field_b;
+    static RgbSprite[] field_d;
+    static RgbSprite field_b;
 
     final static int a(int param0, int param1) {
         int var2;

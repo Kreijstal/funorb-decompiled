@@ -14,7 +14,7 @@ final class fj extends le {
     private int field_Hb;
     private le field_Nb;
     static int field_Jb;
-    static bd[] field_Kb;
+    static RgbSprite[] field_Kb;
     private le field_Ib;
     static double field_Pb;
     private le field_Mb;
@@ -308,7 +308,7 @@ final class fj extends le {
         try {
           var7 = new s(param6);
           if (param5 != -8) {
-            field_Kb = (bd[]) null;
+            field_Kb = (RgbSprite[]) null;
           }
           var8 = new s(param0);
           stackIn_3_0 = lb.a(param1, (byte) 124, var7, param2, var8, param3, param4);

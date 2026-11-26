@@ -300,7 +300,7 @@ final class hc extends ng {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_T = null;
         field_P = null;
         if (param0 > -23) {

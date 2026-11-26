@@ -36,10 +36,10 @@ final class fk extends IntrusiveNode {
         field_h = null;
     }
 
-    final static nh a(int param0, vj param1, int param2, int param3) {
+    final static RgbSprite a(int param0, vj param1, int param2, int param3) {
         RuntimeException var4 = null;
         vj var5 = null;
-        nh stackIn_6_0 = null;
+        RgbSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

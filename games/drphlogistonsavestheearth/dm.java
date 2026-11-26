@@ -17,7 +17,7 @@ final class dm extends mj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -101) {
-            dm.d((byte) 96);
+            dm.clearStaticReferences((byte) 96);
           }
           stackIn_3_0 = qj.a(param1.field_p.length(), '*', -77);
           return stackIn_3_0;
@@ -70,7 +70,7 @@ final class dm extends mj {
         bd.field_S = null;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_A = null;
         if (param0 < -125) {
           field_z = null;
@@ -79,7 +79,7 @@ final class dm extends mj {
           field_B = null;
           return;
         }
-        dm.d((byte) 37);
+        dm.clearStaticReferences((byte) 37);
         field_z = null;
         field_y = null;
         field_x = null;

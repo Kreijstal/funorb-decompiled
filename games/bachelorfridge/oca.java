@@ -41,14 +41,14 @@ final class oca extends BoardChange {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -20) {
           field_o = null;
           field_n = null;
           field_p = null;
           return;
         }
-        oca.d((byte) 63);
+        oca.clearStaticReferences((byte) 63);
         field_o = null;
         field_n = null;
         field_p = null;

@@ -21,7 +21,7 @@ final class lf extends TextureOperator {
 
     final int[] c(int param0, int param1) {
         if (param1 < 91) {
-          lf.b((byte) 85);
+          lf.clearStaticReferences((byte) 85);
         }
         return rh.field_O;
     }
@@ -64,7 +64,7 @@ final class lf extends TextureOperator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_E = null;
         int var1 = -86 / ((64 - param0) / 42);
         field_z = null;

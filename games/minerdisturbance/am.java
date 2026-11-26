@@ -22,7 +22,7 @@ final class am extends jc {
         this.field_O.a(this.field_L, this.field_K + (var7 + var5), this.field_K + var6, this.field_Q - this.field_K, -(this.field_K * 2) + this.field_q, this.field_M, -1, !this.field_P ? 2 : 0, 1, this.field_O.field_I);
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_N = null;
         if (param0 != 43) {
           field_N = (String) null;

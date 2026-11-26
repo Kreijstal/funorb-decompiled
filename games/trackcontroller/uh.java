@@ -15,7 +15,7 @@ final class uh {
     byte[] field_c;
     int field_j;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = -113 % ((param0 + 9) / 60);
         field_d = null;

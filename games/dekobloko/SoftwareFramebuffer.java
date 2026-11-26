@@ -21,7 +21,7 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         NetworkSupport004.integerState0266 = integerArgument1;
         MixedSupport143.integerState0918 = integerArgument3;
         if (!booleanArgument4) {
-          SoftwareFramebuffer.performAction1803(-31);
+          SoftwareFramebuffer.clearDeclaredStaticReferences(-31);
         }
     }
 
@@ -90,7 +90,7 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         }
     }
 
-    public static void performAction1803(int integerArgument1) {
+    public static void clearDeclaredStaticReferences(int integerArgument1) {
         fontState0001 = null;
         integerArrayState0259 = null;
         mixedSupport132State0011 = null;

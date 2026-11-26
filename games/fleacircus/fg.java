@@ -13,7 +13,7 @@ final class fg extends IntrusiveNode {
     static PlatformTaskDispatcher field_q;
     int[] field_p;
     static PlatformTaskDispatcher field_i;
-    static dd field_j;
+    static RgbSprite field_j;
     static int[] field_u;
     byte[][][] field_w;
     PlatformTask[] field_n;
@@ -151,7 +151,7 @@ final class fg extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_u = null;
         field_t = null;
         if (param0 != -5) {

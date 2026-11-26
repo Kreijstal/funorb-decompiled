@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class qg extends lk implements u {
     lk field_y;
-    static kc field_z;
+    static RgbSprite field_z;
 
     final int f(int param0) {
         if (param0 != -1) {
@@ -272,7 +272,7 @@ abstract class qg extends lk implements u {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 41) {
-            qg.a(-48);
+            qg.clearDeclaredStaticReferences(-48);
           }
           stackIn_7_0 = (this.field_y != null) && (!this.field_y.d(97)) && (this.field_y.a(78, param0));
           return stackIn_7_0;
@@ -353,7 +353,7 @@ abstract class qg extends lk implements u {
             this.field_y.a(this.field_i + param0, param1 + this.field_o, param2, param3 + 0);
           }
           if (param3 != 3) {
-            field_z = (kc) null;
+            field_z = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -411,10 +411,10 @@ abstract class qg extends lk implements u {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_z = null;
         if (param0 != 80) {
-          field_z = (kc) null;
+          field_z = (RgbSprite) null;
         }
     }
 

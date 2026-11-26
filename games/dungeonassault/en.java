@@ -3,7 +3,7 @@
  */
 abstract class en {
     static String[] field_a;
-    static cn[] field_b;
+    static RgbSprite[] field_b;
     static int field_c;
 
     public static void clearStaticReferences(int param0) {
@@ -16,7 +16,7 @@ abstract class en {
 
     abstract void a(int param0, sa param1);
 
-    abstract cn b(byte param0);
+    abstract RgbSprite b(byte param0);
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
@@ -28,7 +28,7 @@ abstract class en {
         try {
           ob.a(param1, param4, (byte) -102, param3, param2);
           if (param0 != -1) {
-            field_b = (cn[]) null;
+            field_b = (RgbSprite[]) null;
           }
           te.a(param1, param4 - 1, param2, kc.field_S[0]);
           te.a(param1, -4 + (param3 + param4), param2, kc.field_S[0]);

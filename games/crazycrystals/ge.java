@@ -3,14 +3,14 @@
  */
 final class ge {
     static int field_c;
-    static dl field_d;
+    static RgbSprite field_d;
     static String field_a;
     static db field_b;
 
     public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 > -101) {
-          field_d = (dl) null;
+          field_d = (RgbSprite) null;
           field_b = null;
           field_a = null;
           return;

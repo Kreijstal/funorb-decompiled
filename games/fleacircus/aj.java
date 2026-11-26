@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj extends DualLinkNode {
-    static dd[] field_t;
+    static RgbSprite[] field_t;
     static String field_x;
     private int[] field_u;
     private int[][] field_s;
     private String[] field_y;
     static long field_w;
-    static dd field_v;
+    static RgbSprite field_v;
     static int field_q;
     int[] field_z;
     static String field_r;
@@ -300,7 +300,7 @@ final class aj extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_t = null;
         field_r = null;
         field_x = null;

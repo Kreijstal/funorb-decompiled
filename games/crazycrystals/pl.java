@@ -26,7 +26,7 @@ final class pl extends IntrusiveNode {
     static String field_s;
     PcmSample field_t;
     int field_w;
-    static dl[] field_B;
+    static RgbSprite[] field_B;
     static PcmSample field_h;
 
     final void d(int param0) {
@@ -37,7 +37,7 @@ final class pl extends IntrusiveNode {
           this.field_A = null;
           return;
         }
-        field_B = (dl[]) null;
+        field_B = (RgbSprite[]) null;
         this.field_t = null;
         this.field_A = null;
     }
@@ -102,7 +102,7 @@ final class pl extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 > -106) {
           return;
         }

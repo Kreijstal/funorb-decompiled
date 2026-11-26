@@ -4,11 +4,11 @@
 final class fl extends IntrusiveNode {
     int field_q;
     static int field_l;
-    static cn field_j;
+    static RgbSprite field_j;
     static String field_o;
     static String field_n;
     il[] field_k;
-    static cn field_i;
+    static RgbSprite field_i;
     static int[] field_m;
     int field_p;
 
@@ -56,7 +56,7 @@ final class fl extends IntrusiveNode {
         try {
           var5 = (fn) (cb.field_a.beginBackward(-24172));
           if (param0 >= -74) {
-            field_i = (cn) null;
+            field_i = (RgbSprite) null;
           }
           while (var5 != null) {
             ch.a((byte) -16, var5, param1);
@@ -99,7 +99,7 @@ final class fl extends IntrusiveNode {
             return null;
           }
           if (param0 != -1) {
-            field_j = (cn) null;
+            field_j = (RgbSprite) null;
           }
           stackIn_6_0 = PacketBuffer.g(0);
           return stackIn_6_0;

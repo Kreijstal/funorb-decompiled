@@ -13,7 +13,7 @@ final class pe {
     static String field_j;
     private int field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -40 / ((36 - param0) / 44);
         field_j = null;
         field_e = null;
@@ -30,10 +30,10 @@ final class pe {
         return this.field_g[fieldTemp$0];
     }
 
-    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, db[] param5, db[] param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, boolean param14) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, RgbSprite[] param5, RgbSprite[] param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, boolean param14) {
         try {
-          db[] var16 = (db[]) null;
-          aj.a(0, param9, 0, ea.field_b, param3, g.field_n, 480, param7, SecondaryNodeDequeIterator.field_c, param8, param13, param0, param5, (db[]) null, param4, true, param12, param6, param2, param10, param1);
+          RgbSprite[] var16 = (RgbSprite[]) null;
+          aj.a(0, param9, 0, ea.field_b, param3, g.field_n, 480, param7, SecondaryNodeDequeIterator.field_c, param8, param13, param0, param5, (RgbSprite[]) null, param4, true, param12, param6, param2, param10, param1);
           if (param11 > -58) {
             field_e = (String) null;
           }

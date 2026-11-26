@@ -27,7 +27,7 @@ final class oj extends k {
         var16 = BachelorFridge.field_y;
         try {
           if (param2 < 76) {
-            oj.e((byte) -89);
+            oj.clearStaticReferences((byte) -89);
           }
           param7--;
           while (param7 >= 0) {
@@ -172,14 +172,14 @@ final class oj extends k {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= -114) {
           field_n = null;
           field_m = null;
           field_o = null;
           return;
         }
-        oj.e((byte) 62);
+        oj.clearStaticReferences((byte) 62);
         field_n = null;
         field_m = null;
         field_o = null;

@@ -12,9 +12,9 @@ final class vc {
     static int[][] field_b;
     static boolean field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          vc.a(true);
+          vc.clearStaticReferences(true);
         }
         field_b = (int[][]) null;
         field_f = null;

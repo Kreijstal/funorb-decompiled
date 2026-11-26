@@ -174,7 +174,7 @@ final class df {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_k = null;
         int var1 = -124 % ((param0 + 2) / 60);

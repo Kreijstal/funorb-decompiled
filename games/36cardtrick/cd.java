@@ -24,7 +24,7 @@ final class cd {
         return var2;
     }
 
-    final static void a(kc[] param0, int param1, byte param2, int param3, int param4) {
+    final static void a(RgbSprite[] param0, int param1, byte param2, int param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -168,7 +168,7 @@ final class cd {
         this.field_d.secondaryNext = this.field_d;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = 46 % ((-45 - param0) / 58);
         field_g = null;

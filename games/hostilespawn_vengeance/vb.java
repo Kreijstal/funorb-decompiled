@@ -7,9 +7,9 @@ final class vb extends le {
     String field_Ib;
     static float field_Jb;
     static String field_Hb;
-    static bd field_Lb;
+    static RgbSprite field_Lb;
     int field_Gb;
-    static bd[] field_Kb;
+    static RgbSprite[] field_Kb;
 
     public static void clearStaticReferences(int param0) {
         field_Hb = null;

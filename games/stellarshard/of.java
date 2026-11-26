@@ -225,10 +225,10 @@ final class of extends dg {
         return 'i';
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_D = null;
         if (param0 > -117) {
-          of.d((byte) 94);
+          of.clearStaticReferences((byte) 94);
         }
     }
 

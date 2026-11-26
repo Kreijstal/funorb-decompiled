@@ -18,7 +18,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private static long[] field_D;
     boolean field_l;
     static nd field_G;
-    static bd field_y;
+    static RgbSprite field_y;
     static ReverbPcmStream field_v;
     static boolean field_t;
     static boolean field_q;
@@ -54,7 +54,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         try {
           this.field_F = param2;
           if (param0 != -9) {
-            field_y = (bd) null;
+            field_y = (RgbSprite) null;
           }
           this.field_s = 1048576;
           this.field_C = param1;
@@ -608,7 +608,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_G = null;
         if (param0 != -13) {
           return;

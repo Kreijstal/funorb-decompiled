@@ -25,7 +25,7 @@ final class th extends om {
           this.field_w.a(param0 + this.field_j, (byte) -45, this.field_r + param2, param3);
           return;
         }
-        dl var6 = new dl(this.field_w.field_g, this.field_w.field_f);
+        RgbSprite var6 = new RgbSprite(this.field_w.field_g, this.field_w.field_f);
         if (param1 <= -12) {
           em.a((byte) 38, var6);
           this.field_w.a(0, (byte) -121, 0, param3);

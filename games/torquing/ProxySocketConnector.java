@@ -135,9 +135,9 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          ProxySocketConnector.b(false);
+          ProxySocketConnector.clearStaticReferences(false);
         }
         field_g = null;
         field_i = null;

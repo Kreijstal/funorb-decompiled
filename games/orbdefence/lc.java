@@ -9,7 +9,7 @@ final class lc extends nf {
     static int field_x;
     static int field_r;
     static String field_u;
-    static hj field_w;
+    static RgbSprite field_w;
     static String field_s;
     private Object field_p;
 
@@ -29,7 +29,7 @@ final class lc extends nf {
         return false;
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_s = null;
         field_w = null;
         field_u = null;

@@ -13,12 +13,12 @@ final class ao {
     static String field_j;
     static ci field_a;
 
-    final static km[] a(ResourceArchive param0, String param1, int param2, String param3) {
+    final static RgbSprite[] a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        km[] stackIn_2_0 = null;
-        km[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -30,7 +30,7 @@ final class ao {
         try {
           var4_int = param0.a(param3, 0);
           if (param2 != 2993) {
-            stackIn_2_0 = (km[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           var5 = param0.a(param1, 7, var4_int);
@@ -58,7 +58,7 @@ final class ao {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

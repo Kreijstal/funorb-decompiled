@@ -232,9 +232,9 @@ final class jh extends UiWidget {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 7434) {
-          jh.a(-65);
+          jh.clearDeclaredStaticReferences(-65);
         }
         field_C = null;
         field_y = null;

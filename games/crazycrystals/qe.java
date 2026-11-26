@@ -185,7 +185,7 @@ final class qe extends ln {
             df.field_a = param10;
             vb.field_m = param7;
             fj.field_d = param11;
-            mc.field_r = param5;
+            SpriteGeometry.field_r = param5;
             tb.field_g = param12;
             if (null == gf.field_b.field_s) {
               return;

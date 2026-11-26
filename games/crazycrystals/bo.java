@@ -84,9 +84,9 @@ abstract class bo extends pn {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
-          bo.f(-4);
+          bo.clearDeclaredStaticReferences(-4);
           field_m = null;
           return;
         }

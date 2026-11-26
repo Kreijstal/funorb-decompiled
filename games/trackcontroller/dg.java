@@ -73,7 +73,7 @@ final class dg extends UiWidget {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -59 / ((param0 + 33) / 41);
         field_H = null;
         field_E = null;

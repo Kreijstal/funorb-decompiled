@@ -9,8 +9,8 @@ final class DualLinkDeque implements Iterable {
     static int field_e;
     DualLinkNode field_a;
     static String field_d;
-    static bd field_c;
-    static bd field_b;
+    static RgbSprite field_c;
+    static RgbSprite field_b;
     static String field_g;
 
     final static void a(double param0, int[] param1, p param2, int param3, int param4, double param5, boolean param6) {

@@ -75,7 +75,7 @@ final class hd {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         int var1 = 33 % ((param0 - 52) / 62);
         field_e = null;

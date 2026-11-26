@@ -7,7 +7,7 @@ final class ea {
     static int field_c;
     static String[] field_a;
     static float field_d;
-    static bd field_e;
+    static RgbSprite field_e;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
@@ -92,7 +92,7 @@ final class ea {
           }
           var8.f(var4, 108);
           if (param2 <= 33) {
-            field_e = (bd) null;
+            field_e = (RgbSprite) null;
           }
           var8.a(var8.field_i - var4, -19720);
         } catch (RuntimeException runtimeException) {

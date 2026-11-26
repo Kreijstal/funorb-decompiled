@@ -7,7 +7,7 @@ final class vd {
     static int field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 80 % ((param0 + 41) / 47);
         field_b = null;
         field_c = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mg {
-    static kc[] field_j;
+    static RgbSprite[] field_j;
     short[] field_g;
     short[] field_N;
     short[] field_J;
@@ -110,7 +110,7 @@ final class mg {
         }
         var6 = h.field_F - 125;
         if (param1 != 207) {
-          field_j = (kc[]) null;
+          field_j = (RgbSprite[]) null;
         }
         if (0 < var6 &&
           var6 < 50) {
@@ -154,7 +154,7 @@ final class mg {
           AccountServiceResult.field_a = new int[]{217, 216, 34, 263, 347, 148, 149, 149, 149, 104, 62};
           fh.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
           kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
-          ia.field_c = new kc[22];
+          ia.field_c = new RgbSprite[22];
           var1_int = qa.field_b.a(IntrusiveDeque.field_c[3]);
           var2 = qa.field_b.a(IntrusiveDeque.field_c[4]);
           if (var1_int < var2) {
@@ -162,7 +162,7 @@ final class mg {
           }
           t.field_i = -80 + (207 + var1_int) >> 1;
           for (var1_intLifetime1 = 0; var1_intLifetime1 <= 14; var1_intLifetime1++) {
-            ia.field_c[var1_intLifetime1] = new kc(207, 34);
+            ia.field_c[var1_intLifetime1] = new RgbSprite(207, 34);
             ia.field_c[var1_intLifetime1].c();
             SoftwareRasterizer.fillRectangle(0, 0, 207, 34, 6962948);
             SoftwareRasterizer.setClip(4, 4, 203, 30);
@@ -180,7 +180,7 @@ final class mg {
             mg.a(-44, 89, -75);
           }
           for (var1_intLifetime2 = 15; var1_intLifetime2 <= 21; var1_intLifetime2++) {
-            ia.field_c[var1_intLifetime2] = new kc(120, 31);
+            ia.field_c[var1_intLifetime2] = new RgbSprite(120, 31);
             ia.field_c[var1_intLifetime2].c();
             SoftwareRasterizer.fillRectangle(0, 0, 207, 34, 6962948);
             SoftwareRasterizer.setClip(2, 2, 118, 29);

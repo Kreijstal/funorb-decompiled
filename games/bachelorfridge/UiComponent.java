@@ -62,11 +62,11 @@ class UiComponent extends UiNode {
     private int field_F;
     boolean field_T;
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_C = null;
         field_fb = null;
         if (param0 != -110) {
-          UiComponent.e((byte) -44);
+          UiComponent.clearStaticReferences((byte) -44);
         }
     }
 
@@ -367,7 +367,7 @@ class UiComponent extends UiNode {
         UiComponent var4 = null;
         int var3 = BachelorFridge.field_y;
         if (param0 < 115) {
-          UiComponent.e((byte) -89);
+          UiComponent.clearStaticReferences((byte) -89);
         }
         if (this.children != null) {
           var4 = (UiComponent) (this.children.beginBackward(6));

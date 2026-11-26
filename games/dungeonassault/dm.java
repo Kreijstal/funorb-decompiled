@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dm {
-    static cn[] field_d;
-    static cn[] field_a;
-    static cn field_g;
-    static cn field_f;
+    static RgbSprite[] field_d;
+    static RgbSprite[] field_a;
+    static RgbSprite field_g;
+    static RgbSprite field_f;
     static String field_c;
     static String[] field_e;
     static String field_b;

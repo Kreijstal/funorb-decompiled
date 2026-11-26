@@ -7,7 +7,7 @@ abstract class ce {
     pm[] field_d;
     static int[] field_b;
     static String field_g;
-    static bd field_a;
+    static RgbSprite field_a;
     static int field_c;
 
     final int b(int param0, int param1) {
@@ -227,12 +227,12 @@ abstract class ce {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_g = null;
         field_a = null;
         if (param0 != 6937) {
-          ce.b(85);
+          ce.clearStaticReferences(85);
         }
         field_f = null;
     }

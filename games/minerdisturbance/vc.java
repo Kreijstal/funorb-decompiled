@@ -24,7 +24,7 @@ final class vc extends IntrusiveNode {
         return stackIn_7_0;
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         field_p = null;
         field_u = null;

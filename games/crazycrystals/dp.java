@@ -9,7 +9,7 @@ final class dp extends IntrusiveNode {
     static String field_i;
     int[] field_g;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_j = null;
         int var1 = -70 % ((-87 - param0) / 39);
         field_i = null;

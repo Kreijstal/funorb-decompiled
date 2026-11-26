@@ -41,7 +41,7 @@ final class ee extends em {
         return -24;
     }
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_H = null;
         if (param0 != 256) {
           field_K = (String) null;

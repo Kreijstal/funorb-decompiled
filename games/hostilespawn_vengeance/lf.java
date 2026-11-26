@@ -11,16 +11,16 @@ class lf {
     final static void a(byte param0) {
         int var5 = 0;
         int var7 = 0;
-        bd stackIn_6_0 = null;
+        RgbSprite stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
-        bd var1 = null;
+        RgbSprite var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         oj var6 = null;
         int var8 = 0;
-        bd var9 = null;
+        RgbSprite var9 = null;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           var4 = -61 / ((-66 - param0) / 51);

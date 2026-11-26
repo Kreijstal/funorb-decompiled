@@ -6,7 +6,7 @@ final class cj {
     static int[][] field_f;
     static boolean[] field_c;
     static String field_i;
-    static nh field_d;
+    static RgbSprite field_d;
     static int field_b;
     static he[] field_h;
     static he field_e;

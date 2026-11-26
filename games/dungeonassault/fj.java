@@ -8,7 +8,7 @@ final class fj {
     static String field_c;
     static Boolean field_e;
     static String field_b;
-    static cn[] field_d;
+    static RgbSprite[] field_d;
     private static String field_z;
 
     public static void clearStaticReferences(byte param0) {

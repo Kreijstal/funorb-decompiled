@@ -10,12 +10,12 @@ final class lb {
     private String field_b;
     static String field_e;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_f = null;
         field_a = null;
         if (param0 != 640) {
-          lb.c(76);
+          lb.clearStaticReferences(76);
         }
     }
 

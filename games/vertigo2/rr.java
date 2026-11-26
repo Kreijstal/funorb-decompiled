@@ -126,7 +126,7 @@ final class rr extends TextureOperator {
         bh.field_c = bh.field_c & CrossfadingMidiPcmStream.field_x;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_z = null;
         field_A = null;
         field_B = null;
@@ -194,7 +194,7 @@ final class rr extends TextureOperator {
         int[][] var14 = null;
         int var9 = Vertigo2.field_L ? 1 : 0;
         if (param0 != -3780) {
-          rr.b((byte) -10);
+          rr.clearStaticReferences((byte) -10);
         }
         int[][] var13 = this.field_v.a(param1, param0 ^ 3778);
         int[][] var11 = var13;

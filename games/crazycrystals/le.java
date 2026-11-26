@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class le extends ln {
-    static dl[][] field_g;
+    static RgbSprite[][] field_g;
 
     final static void a(int param0) {
         int var7 = 0;
@@ -84,9 +84,9 @@ final class le extends ln {
     }
 
     public static void clearStaticReferences(int param0) {
-        field_g = (dl[][]) null;
+        field_g = (RgbSprite[][]) null;
         if (param0 != -1) {
-          field_g = (dl[][]) null;
+          field_g = (RgbSprite[][]) null;
         }
     }
 

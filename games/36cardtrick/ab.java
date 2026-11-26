@@ -23,18 +23,18 @@ final class ab extends la {
     }
 
     final static void a(qk param0, int param1) {
-        kc var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new kc(param0.a((byte) 7, "", "final_frame.jpg"), (java.awt.Component) ((Object) tb.field_c));
+          var2 = new RgbSprite(param0.a((byte) 7, "", "final_frame.jpg"), (java.awt.Component) ((Object) tb.field_c));
           var3 = var2.field_p;
           var4 = var2.field_o;
           ji.a(true);
-          sg.field_d = new kc(var3, 3 * var4 / 4);
+          sg.field_d = new RgbSprite(var3, 3 * var4 / 4);
           sg.field_d.c();
           var2.b(param1, 0);
-          qg.field_z = new kc(var3, var4 - sg.field_d.field_o);
+          qg.field_z = new RgbSprite(var3, var4 - sg.field_d.field_o);
           qg.field_z.c();
           var2.b(0, -sg.field_d.field_o);
           qg.field_z.field_n = sg.field_d.field_o;

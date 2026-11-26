@@ -34,11 +34,11 @@ final class PetAttackEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_s = null;
         if (param0 != -89) {
-          PetAttackEvent.d((byte) 8);
+          PetAttackEvent.clearStaticReferences((byte) 8);
           field_r = null;
           return;
         }

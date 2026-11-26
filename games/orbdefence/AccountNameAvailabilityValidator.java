@@ -5,7 +5,7 @@ final class AccountNameAvailabilityValidator extends hi {
     private String checkedName;
     static int[] field_o;
     static String[] field_t;
-    static hj[] field_q;
+    static RgbSprite[] field_q;
     private boolean nameAvailable;
     static String field_s;
     static int field_r;

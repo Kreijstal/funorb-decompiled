@@ -5,7 +5,7 @@ abstract class qc extends oh {
     static AccountServiceResult field_i;
     static String[] field_g;
     static String field_h;
-    static dl[] field_f;
+    static RgbSprite[] field_f;
 
     final static void a(boolean param0, int param1) {
         if (ph.field_E == null) {
@@ -14,8 +14,8 @@ abstract class qc extends oh {
           q.a(false);
         }
         if (param1 != 0) {
-          dl[] var3 = (dl[]) null;
-          qc.a(9, -14, -108, (dl[]) null, -100, -14, -83);
+          RgbSprite[] var3 = (RgbSprite[]) null;
+          qc.a(9, -14, -108, (RgbSprite[]) null, -100, -14, -83);
         }
     }
 
@@ -81,7 +81,7 @@ abstract class qc extends oh {
         return param1 ? 16 : 2;
     }
 
-    final static void a(int param0, int param1, int param2, dl[] param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5, int param6) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -247,6 +247,6 @@ abstract class qc extends oh {
     static {
         field_g = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_h = "Accept";
-        field_f = new dl[4];
+        field_f = new RgbSprite[4];
     }
 }

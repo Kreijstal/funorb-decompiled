@@ -6,7 +6,7 @@ final class rg {
     static int[] field_d;
     static volatile boolean field_e;
     private int[] field_b;
-    static bd field_a;
+    static RgbSprite field_a;
 
     final static boolean a(byte param0) {
         int var1 = -58 % ((param0 - 55) / 62);
@@ -32,7 +32,7 @@ final class rg {
         field_c = null;
         field_d = null;
         if (param0 != 1) {
-          field_a = (bd) null;
+          field_a = (RgbSprite) null;
         }
         field_a = null;
     }

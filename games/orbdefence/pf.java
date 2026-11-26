@@ -4,8 +4,8 @@
 final class pf {
     static String[] field_a;
     static String field_c;
-    private hj[] field_d;
-    static hj field_b;
+    private RgbSprite[] field_d;
+    static RgbSprite field_b;
 
     final static wa a(int param0, int param1, ki param2, ki param3, int param4) {
         RuntimeException var5 = null;
@@ -52,7 +52,7 @@ final class pf {
           field_c = null;
           return;
         }
-        field_b = (hj) null;
+        field_b = (RgbSprite) null;
         field_b = null;
         field_a = null;
         field_c = null;
@@ -282,7 +282,7 @@ final class pf {
         return;
     }
 
-    pf(hj[] param0) {
+    pf(RgbSprite[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

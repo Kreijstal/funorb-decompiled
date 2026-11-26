@@ -6,7 +6,7 @@ final class mb {
     static boolean field_c;
     static bl field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 106 / ((param0 - 42) / 57);
         field_b = null;

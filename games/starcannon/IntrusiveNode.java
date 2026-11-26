@@ -10,7 +10,7 @@ class IntrusiveNode {
 
     final static String c(int param0) {
         if (param0 != 1) {
-          IntrusiveNode.b(false);
+          IntrusiveNode.clearDeclaredStaticReferences(false);
           return se.field_p.readString(param0 ^ -14);
         }
         return se.field_p.readString(param0 ^ -14);
@@ -41,9 +41,9 @@ class IntrusiveNode {
         this.previous = null;
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (param0) {
-          IntrusiveNode.b(false);
+          IntrusiveNode.clearDeclaredStaticReferences(false);
           field_e = null;
           return;
         }

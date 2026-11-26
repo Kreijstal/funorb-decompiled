@@ -52,10 +52,10 @@ final class ef extends sj {
         }
     }
 
-    public static void n(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_wb = null;
         if (param0 <= 94) {
-          ef.n(-3);
+          ef.discardDeclaredStaticReferences(-3);
           field_ub = null;
           return;
         }

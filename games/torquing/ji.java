@@ -213,7 +213,7 @@ final class ji {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 24 / ((param0 + 45) / 42);
     }

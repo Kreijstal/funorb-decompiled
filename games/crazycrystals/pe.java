@@ -24,7 +24,7 @@ final class pe extends IntrusiveNode {
           this.field_k = param1;
           this.field_m = param2;
           if (param3 != -26690) {
-            pe.d(-95);
+            pe.clearDeclaredStaticReferences(-95);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
@@ -82,9 +82,9 @@ final class pe extends IntrusiveNode {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               tb.a(-31416, var14);
               if (var6_intLifetime1 != 0) {
-                ca.a(mc.field_q, jn.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
+                ca.a(SpriteGeometry.field_q, jn.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
               } else {
-                ca.a(mc.field_q, jn.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
+                ca.a(SpriteGeometry.field_q, jn.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
               }
             }
             go.a(var5, 240);
@@ -141,7 +141,7 @@ final class pe extends IntrusiveNode {
     pe() {
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         if (param0 != 1) {
           field_h = (PcmSample) null;

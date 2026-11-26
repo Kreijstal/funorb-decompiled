@@ -10,7 +10,7 @@ final class pl {
     private int field_b;
     private boolean field_d;
     static int field_g;
-    static dd field_e;
+    static RgbSprite field_e;
     static int field_f;
     private int field_a;
     static String field_i;

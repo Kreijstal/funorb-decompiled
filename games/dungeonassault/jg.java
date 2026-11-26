@@ -4,7 +4,7 @@
 final class jg {
     static ef field_a;
     static String field_d;
-    static cn[] field_c;
+    static RgbSprite[] field_c;
     static String field_b;
     static String field_e;
 

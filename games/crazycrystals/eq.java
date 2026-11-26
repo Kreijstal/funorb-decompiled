@@ -3,7 +3,7 @@
  */
 final class eq extends rl {
     static int[] field_l;
-    static dl field_k;
+    static RgbSprite field_k;
     static int field_j;
 
     final pb b(byte param0) {
@@ -112,6 +112,6 @@ final class eq extends rl {
 
     static {
         field_l = new int[]{1, 2, 3, 5, 10, 1, 3, 5, 1, 2, 5, 10, 5, 2, 5, 10, 1};
-        field_k = new dl(270, 70);
+        field_k = new RgbSprite(270, 70);
     }
 }

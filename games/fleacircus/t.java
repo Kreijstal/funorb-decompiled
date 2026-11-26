@@ -12,7 +12,7 @@ final class t {
     static int field_d;
     static int field_a;
     private int field_i;
-    static dd[] field_h;
+    static RgbSprite[] field_h;
 
     private final boolean a(byte param0, int param1) {
         int var3;
@@ -305,14 +305,14 @@ final class t {
         int incrementValue$1 = 0;
         int var13 = 0;
         int stackIn_5_0 = 0;
-        dd stackIn_16_0 = null;
+        RgbSprite stackIn_16_0 = null;
         int stackIn_54_0 = 0;
         fa stackIn_56_0 = null;
         String stackIn_57_1 = null;
         int stackIn_59_2;
         int stackIn_59_3;
         int stackIn_60_4;
-        dd stackIn_70_0 = null;
+        RgbSprite stackIn_70_0 = null;
         int var4;
         int var5;
         int var6;
@@ -358,7 +358,7 @@ final class t {
               } else {
                 stackIn_16_0 = cb.field_u;
               }
-              ((dd) (Object) stackIn_16_0).c(var4, var5);
+              ((RgbSprite) (Object) stackIn_16_0).c(var4, var5);
             }
             if (ag.field_f >= var4 &&
               32 + var4 >= ag.field_f &&
@@ -440,7 +440,7 @@ final class t {
             } else {
               stackIn_70_0 = mf.field_g;
             }
-            ((dd) (Object) stackIn_70_0).d(420, 252);
+            ((RgbSprite) (Object) stackIn_70_0).d(420, 252);
           }
         } else {
           var15.a(al.field_d, 165, 200, 310, 100, 0, -1, 1, 0, var15.field_N);
@@ -519,7 +519,7 @@ final class t {
           var2Lifetime1 = de.field_a;
         }
         if (var3 != null) {
-          ((dd) (var3)).d((-((dd) (var3)).field_x + 640) / 2, 45);
+          ((RgbSprite) (var3)).d((-((RgbSprite) (var3)).field_x + 640) / 2, 45);
         }
         if (this.field_i != 1 &&
           this.field_i != 7) {
@@ -529,7 +529,7 @@ final class t {
           field_a = 76;
         }
         if (var2Lifetime1 != null) {
-          ((dd) (var2Lifetime1)).d((-((dd) (var2Lifetime1)).field_x + 640) / 2, 10);
+          ((RgbSprite) (var2Lifetime1)).d((-((RgbSprite) (var2Lifetime1)).field_x + 640) / 2, 10);
         }
         if (this.field_i == 2) {
           this.d(-1);
@@ -713,7 +713,7 @@ final class t {
         String var8;
         int var9;
         int var10;
-        dd[] var11;
+        RgbSprite[] var11;
         int var12;
         int var13;
         int var14;
@@ -733,7 +733,7 @@ final class t {
         }
         var9 = this.a(param1, -19631) - var6;
         var10 = this.c(param1, 1205) + 2;
-        var11 = ta.field_z;
+        var11 = SpriteGeometry.field_z;
         if (param2) {
           var11 = a.field_b;
         }
@@ -758,13 +758,13 @@ final class t {
           return;
         }
         var13 = 0;
-        if (ta.field_z != null) {
-          var13 = -var17.field_K + (var10 - ta.field_z[0].field_r - ta.field_z[6].field_r) - var18.field_H;
+        if (SpriteGeometry.field_z != null) {
+          var13 = -var17.field_K + (var10 - SpriteGeometry.field_z[0].field_r - SpriteGeometry.field_z[6].field_r) - var18.field_H;
         }
         var14 = 0;
-        if (ta.field_z != null &&
-          ta.field_z[0] != null) {
-          var14 = ta.field_z[0].field_r;
+        if (SpriteGeometry.field_z != null &&
+          SpriteGeometry.field_z[0] != null) {
+          var14 = SpriteGeometry.field_z[0].field_r;
         }
         var15 = var18.field_H + var5 + (var14 + (var13 >> 1));
         var15 -= 3;
@@ -903,7 +903,7 @@ final class t {
                                   IntrusiveNode.a(false);
                                 } else {
                                   var6 = param0 ? 1 : 0;
-                                  c.a(320, (byte) 78, tl.field_p.field_K + tl.field_p.field_y, a.field_b, 8, 2, tl.field_p, ta.field_z, 240, tl.field_p.field_y, var6 != 0, 8);
+                                  c.a(320, (byte) 78, tl.field_p.field_K + tl.field_p.field_y, a.field_b, 8, 2, tl.field_p, SpriteGeometry.field_z, 240, tl.field_p.field_y, var6 != 0, 8);
                                 }
                                 break regionExit1;
                               }
@@ -1339,17 +1339,17 @@ final class t {
     private final void c(byte param0) {
         int discarded$0 = 0;
         int stackIn_6_0 = 0;
-        dd[] stackIn_14_0 = null;
+        RgbSprite[] stackIn_14_0 = null;
         int stackIn_15_1 = 0;
-        dd[] stackIn_17_0 = null;
+        RgbSprite[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        dd[] stackIn_23_0 = null;
+        RgbSprite[] stackIn_23_0 = null;
         int stackIn_24_1 = 0;
-        dd[] stackIn_26_0 = null;
+        RgbSprite[] stackIn_26_0 = null;
         int stackIn_27_1 = 0;
-        dd[] stackIn_31_0 = null;
+        RgbSprite[] stackIn_31_0 = null;
         int stackIn_32_1 = 0;
-        dd[] stackIn_41_0 = null;
+        RgbSprite[] stackIn_41_0 = null;
         int stackIn_42_1 = 0;
         int var3;
         int var4;
@@ -1407,7 +1407,7 @@ final class t {
               } else {
                 stackIn_42_1 = 9;
               }
-              ((dd) (Object) stackIn_41_0[stackIn_42_1]).d(95, 6 + ga.field_s[g.field_s][6]);
+              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).d(95, 6 + ga.field_s[g.field_s][6]);
             } else {
               if (g.field_s != 3) {
                 if (g.field_s != 4) {
@@ -1432,7 +1432,7 @@ final class t {
                   } else {
                     stackIn_32_1 = 22;
                   }
-                  ((dd) (Object) stackIn_31_0[stackIn_32_1]).d(95, 6 + ga.field_s[g.field_s][4]);
+                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).d(95, 6 + ga.field_s[g.field_s][4]);
                   aj.field_t[24].d(95, ga.field_s[g.field_s][5] + 3);
                   aj.field_t[25].d(95, 3 + ga.field_s[g.field_s][6]);
                 }
@@ -1444,14 +1444,14 @@ final class t {
                 } else {
                   stackIn_15_1 = 27;
                 }
-                ((dd) (Object) stackIn_14_0[stackIn_15_1]).d(95, -5 + ga.field_s[g.field_s][2]);
+                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).d(95, -5 + ga.field_s[g.field_s][2]);
                 stackIn_17_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_18_1 = 14;
                 } else {
                   stackIn_18_1 = 28;
                 }
-                ((dd) (Object) stackIn_17_0[stackIn_18_1]).d(95, ga.field_s[g.field_s][3] + 3);
+                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).d(95, ga.field_s[g.field_s][3] + 3);
                 aj.field_t[30].d(95, ga.field_s[g.field_s][4] + 3);
                 var5 = (int)((double)PacketBuffer.field_j / 2.0 % 16.0 * 2.0);
                 if (var5 > 16) {
@@ -1464,14 +1464,14 @@ final class t {
                 } else {
                   stackIn_24_1 = 29;
                 }
-                ((dd) (Object) stackIn_23_0[stackIn_24_1]).d(95, 3 + ga.field_s[g.field_s][5]);
+                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).d(95, 3 + ga.field_s[g.field_s][5]);
                 stackIn_26_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_27_1 = 17;
                 } else {
                   stackIn_27_1 = 31;
                 }
-                ((dd) (Object) stackIn_26_0[stackIn_27_1]).d(95, 3 + ga.field_s[g.field_s][6]);
+                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).d(95, 3 + ga.field_s[g.field_s][6]);
                 ql.a(var4, -121, ga.field_s[g.field_s][7] + 3, 95);
               }
             }

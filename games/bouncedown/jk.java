@@ -208,14 +208,14 @@ final class jk {
         this.b(-115);
     }
 
-    final static tg[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        tg[] var10;
-        tg[] var11_ref_tg__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_tg__;
         int var11;
         int var12;
-        tg var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -224,10 +224,10 @@ final class jk {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        tg[] var10Lifetime1;
+        RgbSprite[] var10Lifetime1;
         var15 = Bounce.field_N;
         var9 = param1 + (param5 + param8);
-        var10 = new tg[]{new tg(var9, var9), new tg(param6, var9), new tg(var9, var9), new tg(var9, param6), new tg(64, 64), new tg(var9, param6), new tg(var9, var9), new tg(param6, var9), new tg(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param6, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param6), new RgbSprite(64, 64), new RgbSprite(var9, param6), new RgbSprite(var9, var9), new RgbSprite(param6, var9), new RgbSprite(var9, var9)};
         var11_ref_tg__ = var10;
         for (var12 = 0; var12 < var11_ref_tg__.length; var12++) {
           var13 = var11_ref_tg__[var12];

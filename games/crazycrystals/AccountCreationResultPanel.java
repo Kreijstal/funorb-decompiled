@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends na implements vd {
-    static dl[] field_qb;
+    static RgbSprite[] field_qb;
     static lb field_lb;
     private boolean field_ob;
     static am field_mb;

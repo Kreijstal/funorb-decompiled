@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cf {
-    static tg field_c;
+    static RgbSprite field_c;
     static oh field_g;
     static mi field_f;
     static i field_d;

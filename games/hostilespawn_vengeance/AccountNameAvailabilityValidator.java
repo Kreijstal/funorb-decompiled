@@ -8,7 +8,7 @@ final class AccountNameAvailabilityValidator extends hi {
     static cb field_t;
     private String checkedName;
     static int field_s;
-    static bd field_q;
+    static RgbSprite field_q;
     static String[] field_p;
 
     final bm a(String param0, byte param1) {
@@ -61,12 +61,12 @@ final class AccountNameAvailabilityValidator extends hi {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_t = null;
         field_p = null;
         field_q = null;
         if (param0 != -69) {
-          AccountNameAvailabilityValidator.d((byte) 14);
+          AccountNameAvailabilityValidator.clearStaticReferences((byte) 14);
           field_v = null;
           return;
         }
@@ -153,7 +153,7 @@ final class AccountNameAvailabilityValidator extends hi {
     final void f(int param0) {
         this.checkedName = null;
         if (param0 != -2) {
-          AccountNameAvailabilityValidator.d((byte) 54);
+          AccountNameAvailabilityValidator.clearStaticReferences((byte) 54);
         }
     }
 

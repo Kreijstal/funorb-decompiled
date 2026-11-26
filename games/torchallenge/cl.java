@@ -13,7 +13,7 @@ final class cl extends bc {
     static boolean field_z;
     private int field_v;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_w = null;
         field_A = null;
         field_y = null;
@@ -108,7 +108,7 @@ final class cl extends bc {
           var7 = stackIn_14_0;
           uk.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l - this.field_t[0].fullHeight >> 1) + param0.field_i + param1, param0.field_p, this.field_t);
           if (param3 != 97) {
-            cl.c((byte) 98);
+            cl.clearStaticReferences((byte) 98);
           }
           stackIn_19_0 = (!param4) ? 7105644 : 16777215;
           var8 = stackIn_19_0;

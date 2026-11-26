@@ -4,7 +4,7 @@
 abstract class ByteStorage {
     static String field_d;
     static he[] field_b;
-    static nh[] field_c;
+    static RgbSprite[] field_c;
     static int field_a;
     static he[] field_e;
 

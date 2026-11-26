@@ -19,7 +19,7 @@ final class am extends WidgetContainer implements n {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         int var1 = 77 / ((param0 - 7) / 33);
         field_H = null;

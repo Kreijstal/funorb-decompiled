@@ -5,7 +5,7 @@ final class ao {
     static String field_c;
     static String field_d;
     static int field_e;
-    static dl[] field_b;
+    static RgbSprite[] field_b;
     static String field_a;
 
     static long a(long param0, long param1) {
@@ -57,7 +57,7 @@ final class ao {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;

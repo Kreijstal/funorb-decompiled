@@ -89,7 +89,7 @@ final class ra {
         try {
           jh.c();
           if (im.field_e == null) {
-            im.field_e = new cn(394, 296);
+            im.field_e = new RgbSprite(394, 296);
             im.field_e.field_A = -8;
             im.field_e.field_w = -8;
           }

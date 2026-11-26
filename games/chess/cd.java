@@ -63,7 +63,7 @@ final class cd extends pk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -216,28 +216,28 @@ final class cd extends pk {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        km var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new km(param1.a("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
+          var2 = new RgbSprite(param1.a("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
           var3 = var2.field_w;
           var4 = var2.field_t;
           r.k(3029);
-          v.field_i = new km(var3, 3 * var4 / 4);
+          v.field_i = new RgbSprite(var3, 3 * var4 / 4);
           v.field_i.e();
           if (param0 < 125) {
             String var5 = (String) null;
             cd.a((String) null, -127);
           }
           var2.d(0, 0);
-          re.field_u = new km(var3, -v.field_i.field_t + var4);
+          re.field_u = new RgbSprite(var3, -v.field_i.field_t + var4);
           re.field_u.e();
           var2.d(0, -v.field_i.field_t);
           re.field_u.field_r = v.field_i.field_t;
           fd.a(28773);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cd.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cd.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class cd extends pk {
           var6.writeBytes(param1, (byte) -45, 0, param1.length);
           var6.backpatchByteLength(var6.position - var7, -1);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class cd extends pk {
           this.field_r = param3;
           this.field_s = param4;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cd.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -22,7 +22,7 @@ final class vm extends hf {
         }
     }
 
-    final static void a(nf param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         try {
           mk.b(128);
           if (param1 != -8409) {

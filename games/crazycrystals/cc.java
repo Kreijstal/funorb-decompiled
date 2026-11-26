@@ -49,9 +49,9 @@ final class cc {
           pb.field_a = param3;
           qm.field_n = param0;
           mg.field_e = param5;
-          ld.field_v = new dl[param4.length];
+          ld.field_v = new RgbSprite[param4.length];
           for (var7 = 0; var7 < param4.length; var7++) {
-            ld.field_v[var7] = new dl(317, 34);
+            ld.field_v[var7] = new RgbSprite(317, 34);
           }
           var7Lifetime1 = 16 % ((param2 - 5) / 62);
           hf.field_c = param4;

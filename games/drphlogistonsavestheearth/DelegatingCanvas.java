@@ -6,7 +6,7 @@ import java.io.*;
 final class DelegatingCanvas extends java.awt.Canvas {
     static vj field_b;
     private java.awt.Component delegateComponent;
-    static nh field_c;
+    static RgbSprite field_c;
 
     final static int a(int param0, int param1, int param2) {
         if (DualLinkNode.field_r == null) {
@@ -41,7 +41,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != 50) {
-          field_c = (nh) null;
+          field_c = (RgbSprite) null;
           field_c = null;
           return;
         }

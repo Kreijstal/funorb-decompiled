@@ -20,7 +20,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private wk field_r;
     static mf field_z;
     private int[] field_q;
-    static dd[] field_v;
+    static RgbSprite[] field_v;
     private boolean field_w;
 
     private final void a(byte param0, int param1, int param2, MidiPcmStream param3) {
@@ -444,6 +444,6 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         field_s = 0;
         field_n = 0;
         field_D = 256;
-        field_v = new dd[50];
+        field_v = new RgbSprite[50];
     }
 }

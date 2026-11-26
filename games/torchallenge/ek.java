@@ -19,7 +19,7 @@ final class ek extends UiComponent {
     private int field_H;
     static BitmapFont field_G;
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 <= 114) {
           return;
         }

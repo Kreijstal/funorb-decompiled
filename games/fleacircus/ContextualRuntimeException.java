@@ -8,7 +8,7 @@ final class ContextualRuntimeException extends RuntimeException {
     static int[] field_b;
     static String field_d;
     static int[] field_c;
-    static dd[] field_g;
+    static RgbSprite[] field_g;
     Throwable field_e;
 
     final static long b(int param0) {
@@ -19,7 +19,7 @@ final class ContextualRuntimeException extends RuntimeException {
         return lj.correctedCurrentTimeMillis((byte) -35) - ug.field_d;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_g = null;
         int var1 = 112 % ((param0 - 13) / 62);

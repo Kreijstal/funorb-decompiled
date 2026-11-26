@@ -6,7 +6,7 @@ final class ru {
     static int field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -42 / ((param0 - 7) / 39);
         field_a = null;
     }

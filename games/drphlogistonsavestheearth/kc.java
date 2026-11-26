@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kc extends IntrusiveNode {
-    static nh field_q;
+    static RgbSprite field_q;
     static boolean field_k;
     static bb field_n;
     int field_m;
     static he[] field_l;
     static int[][] field_o;
     static int field_r;
-    static nh field_p;
+    static RgbSprite field_p;
     static String field_j;
     int field_h;
-    static nh[] field_i;
+    static RgbSprite[] field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;

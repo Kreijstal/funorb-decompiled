@@ -5,7 +5,7 @@ final class pf extends IntrusiveNode {
     static String field_g;
     static int field_h;
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -106 % ((46 - param0) / 43);
         field_g = null;
     }
@@ -41,14 +41,14 @@ final class pf extends IntrusiveNode {
         }
     }
 
-    final static kc[] a(int param0) {
+    final static RgbSprite[] a(int param0) {
         int var2 = 0;
         int var4 = 0;
         byte[] var5 = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = Main.field_T;
-        kc[] var1 = new kc[cf.field_c];
+        RgbSprite[] var1 = new RgbSprite[cf.field_c];
         int var3 = -56 / ((param0 - 69) / 40);
         for (var2 = 0; var2 < cf.field_c; var2++) {
           var4 = na.field_q[var2] * hb.field_a[var2];
@@ -57,7 +57,7 @@ final class pf extends IntrusiveNode {
           for (var7 = 0; var7 < var4; var7++) {
             var6[var7] = jf.field_i[bc.a((int) var5[var7], 255)];
           }
-          var1[var2] = new kc(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var6);
+          var1[var2] = new RgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var6);
         }
         rh.d(77);
         return var1;

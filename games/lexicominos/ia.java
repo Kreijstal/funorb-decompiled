@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ia extends mg {
-    static db field_G;
+    static RgbSprite field_G;
     static int field_C;
     static String field_F;
-    static db field_H;
+    static RgbSprite field_H;
     int field_E;
 
     final static void a(byte param0) {
@@ -22,7 +22,7 @@ final class ia extends mg {
         if (param0 > 33) {
           return;
         }
-        ia.h(-116);
+        ia.clearStaticReferences(-116);
     }
 
     ia(w param0) {
@@ -37,7 +37,7 @@ final class ia extends mg {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        db var6 = null;
+        RgbSprite var6 = null;
         if (param3 != 0) {
           return;
         }
@@ -48,7 +48,7 @@ final class ia extends mg {
           return;
         }
         if (this.field_E != 256) {
-          var6 = new db(this.field_A.field_j, this.field_A.field_v);
+          var6 = new RgbSprite(this.field_A.field_j, this.field_A.field_v);
           de.a(var6, 6);
           this.field_A.a(param0, 0, 0, param3);
           pd.a(-22949);
@@ -58,12 +58,12 @@ final class ia extends mg {
         this.field_A.a((byte) -115, this.field_o + param1, param2 + this.field_t, param3);
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_H = null;
         field_G = null;
         field_F = null;
         if (param0 != 0) {
-          ia.h(126);
+          ia.clearStaticReferences(126);
         }
     }
 

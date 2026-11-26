@@ -12,12 +12,12 @@ final class ka implements uj {
         return "Fill Cell Water";
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
         if (param0 != 3) {
-          ka.a(-55);
+          ka.clearStaticReferences(-55);
         }
     }
 

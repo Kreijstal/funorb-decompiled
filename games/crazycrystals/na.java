@@ -3,7 +3,7 @@
  */
 class na extends ud implements vd {
     private boolean field_gb;
-    static dl field_eb;
+    static RgbSprite field_eb;
     private boolean field_db;
     private boolean field_ib;
     static int field_kb;
@@ -61,7 +61,7 @@ class na extends ud implements vd {
           this.field_gb = stackIn_6_1;
           this.field_cb.b((byte) -116, 4210752, 8405024);
           if (param1 != 1833) {
-            na.m(-107);
+            na.discardDeclaredStaticReferences(-107);
           }
           var6 = new jd(this, this.field_jb, param2);
           var4 = var6;
@@ -221,7 +221,7 @@ class na extends ud implements vd {
         }
     }
 
-    public static void m(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 != -18883) {
           return;
         }

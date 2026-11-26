@@ -45,14 +45,14 @@ final class qn extends hc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         int var1 = -113 / ((param0 - 5) / 34);
     }
 
     final String h(int param0) {
         if (param0 != -27867) {
-          qn.a((byte) -1);
+          qn.clearStaticReferences((byte) -1);
           if (this.field_x) {
             return this.field_I.a(7320);
           }

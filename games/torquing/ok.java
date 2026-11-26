@@ -88,7 +88,7 @@ final class ok extends lg {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_C = null;
         int var1 = -2 % ((-58 - param0) / 38);
         field_D = null;
@@ -116,7 +116,7 @@ final class ok extends lg {
     final static void a(PacketBuffer param0, java.math.BigInteger param1, PacketBuffer param2, java.math.BigInteger param3, int param4) {
         try {
           if (param4 != -4) {
-            ok.a(-30);
+            ok.clearDeclaredStaticReferences(-30);
           }
           op.a((byte) 20, param2, param3, param1, param0.position, param0.payload, 0);
         } catch (RuntimeException runtimeException) {

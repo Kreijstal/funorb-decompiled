@@ -6,7 +6,7 @@ final class je extends vf {
     private int field_w;
     static String field_v;
     private int field_x;
-    private nf[] field_u;
+    private RgbSprite[] field_u;
 
     public static void clearStaticReferences(int param0) {
         field_v = null;

@@ -4,8 +4,8 @@
 final class lc {
     static int[] field_c;
     static volatile int field_d;
-    static bd field_a;
-    static bd field_b;
+    static RgbSprite field_a;
+    static RgbSprite field_b;
 
     public static void a(int param0) {
         try {

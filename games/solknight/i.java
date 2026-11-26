@@ -24,11 +24,11 @@ final class i extends si {
         this.field_G = (UiWidget) ((Object) this.d((byte) 115));
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_I = null;
         if (param0 != 30) {
-          i.a((byte) -67);
+          i.clearStaticReferences((byte) -67);
         }
     }
 

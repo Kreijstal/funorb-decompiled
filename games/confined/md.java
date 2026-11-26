@@ -377,7 +377,7 @@ final class md {
               }
             }
             if (param1 <= 125) {
-              md.b((byte) 97);
+              md.clearStaticReferences((byte) 97);
             }
             param0.appendCrc32(26199, var4);
             var17.unlink(true);
@@ -401,14 +401,14 @@ final class md {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 84 % ((param0 - 33) / 48);
         field_b = null;
     }
 
     final static bn c(int param0) {
         if (param0 < 6) {
-          md.b((byte) 101);
+          md.clearStaticReferences((byte) 101);
         }
         String var1 = mc.a(16);
         if (var1 != null &&

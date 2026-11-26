@@ -94,18 +94,18 @@ final class ua {
         return param0 + 1;
     }
 
-    final static hj[] a(ki param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(ki param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        hj[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        hj[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 32) {
-            stackIn_2_0 = (hj[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           if (pk.a(-52, param1, param0, param3)) {
@@ -113,7 +113,7 @@ final class ua {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (hj[]) (stackIn_5_0);
+          return (RgbSprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

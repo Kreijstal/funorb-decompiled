@@ -165,7 +165,7 @@ final class rd extends id {
         this.field_Eb.a((byte) 20, var12);
         double[] var3 = tl.field_a[this.field_Sb];
         if (param0 != 96) {
-          rd.n(-108);
+          rd.clearDeclaredStaticReferences(-108);
         }
         double var4 = var3[this.field_Fb];
         double var6 = var3[1 + this.field_Fb];
@@ -449,7 +449,7 @@ final class rd extends id {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Hb = null;
         field_Jb = null;
         field_Ib = null;

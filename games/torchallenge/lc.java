@@ -157,7 +157,7 @@ final class lc extends IntrusiveNode {
         return var2;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_m = null;
         field_n = null;
         field_p = (int[][]) null;

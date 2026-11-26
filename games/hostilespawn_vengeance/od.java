@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class od extends fc {
-    static bd field_D;
+    static RgbSprite field_D;
     static String field_B;
-    static bd[] field_G;
+    static RgbSprite[] field_G;
     static java.lang.reflect.Constructor field_F;
     static String field_E;
     static String field_C;
@@ -22,7 +22,7 @@ final class od extends fc {
         }
     }
 
-    final static bd[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -30,11 +30,11 @@ final class od extends fc {
         int stackIn_34_0 = 0;
         int stackIn_45_0 = 0;
         int var9 = 0;
-        bd[] var10 = null;
-        bd[] var11_ref_bd__ = null;
+        RgbSprite[] var10 = null;
+        RgbSprite[] var11_ref_bd__ = null;
         int var11 = 0;
         int var12 = 0;
-        bd var13 = null;
+        RgbSprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -44,7 +44,7 @@ final class od extends fc {
         int var12Lifetime2Lifetime2;
         var15 = HostileSpawn.field_I ? 1 : 0;
         var9 = param2 + (param4 + param7);
-        var10 = new bd[]{new bd(var9, var9), new bd(param0, var9), new bd(var9, var9), new bd(var9, param0), new bd(64, 64), new bd(var9, param0), new bd(var9, var9), new bd(param0, var9), new bd(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param0), new RgbSprite(64, 64), new RgbSprite(var9, param0), new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9)};
         var11_ref_bd__ = var10;
         var12 = 0;
         scanLoop1: while (true) {
@@ -133,7 +133,7 @@ final class od extends fc {
             break;
           }
           if (stackIn_45_0 < 17) {
-            return (bd[]) null;
+            return (RgbSprite[]) null;
           }
           var11Lifetime1 = 0;
           scanLoop4: while (var11Lifetime1 < param0 >> 1) {
@@ -314,7 +314,7 @@ final class od extends fc {
         return var2Lifetime2;
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_F = null;
         if (param0 <= -43) {
           field_C = null;

@@ -8,7 +8,7 @@ final class cb {
     private int field_i;
     static String field_h;
     private DualLinkNode[] field_f;
-    static bd[][] field_g;
+    static RgbSprite[][] field_g;
     static long field_e;
     static int field_c;
     private long field_j;
@@ -57,7 +57,7 @@ final class cb {
           if (param1 > 18) {
             return null;
           }
-          field_g = (bd[][]) null;
+          field_g = (RgbSprite[][]) null;
           stackIn_29_0 = null;
           return (ll) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,12 +210,12 @@ final class cb {
         field_d = null;
         if (param0 >= -109) {
           field_h = (String) null;
-          field_g = (bd[][]) null;
+          field_g = (RgbSprite[][]) null;
           field_b = null;
           field_h = null;
           return;
         }
-        field_g = (bd[][]) null;
+        field_g = (RgbSprite[][]) null;
         field_b = null;
         field_h = null;
     }

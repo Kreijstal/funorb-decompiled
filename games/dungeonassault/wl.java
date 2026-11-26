@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class wl extends IOException {
-    static cn field_d;
+    static RgbSprite field_d;
     static int[] field_e;
     static int field_f;
     static String[] field_c;
@@ -12,7 +12,7 @@ final class wl extends IOException {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -21,7 +21,7 @@ final class wl extends IOException {
           field_a = null;
           return;
         }
-        wl.a(-114);
+        wl.clearStaticReferences(-114);
         field_d = null;
         field_a = null;
     }

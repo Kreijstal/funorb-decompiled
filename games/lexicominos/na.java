@@ -4,7 +4,7 @@
 final class na {
     private IntrusiveNode[] field_f;
     private IntrusiveNode field_b;
-    static db[] field_a;
+    static RgbSprite[] field_a;
     private int field_c;
     private int field_d;
     private IntrusiveNode field_e;
@@ -57,7 +57,7 @@ final class na {
           this.field_e = this.field_e.next;
           return var5;
         }
-        field_a = (db[]) null;
+        field_a = (RgbSprite[]) null;
         var4Lifetime1 = this.field_f[(int)((long)(this.field_d - 1) & param0)];
         this.field_e = var4Lifetime1.next;
         while (true) {
@@ -123,7 +123,7 @@ final class na {
 
     public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          field_a = (db[]) null;
+          field_a = (RgbSprite[]) null;
           field_a = null;
           return;
         }
@@ -146,7 +146,7 @@ final class na {
           var2_int = param1.length();
           var3 = 0;
           if (param0 != 1048576) {
-            field_a = (db[]) null;
+            field_a = (RgbSprite[]) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var3 = -var3 + (var3 << 5) + ua.a(true, param1.charAt(var4));
@@ -184,7 +184,7 @@ final class na {
           }
           var5 = this.field_f[(int)((long)(-1 + this.field_d) & param2)];
           if (param1 >= -46) {
-            field_a = (db[]) null;
+            field_a = (RgbSprite[]) null;
           }
           param0.previous = var5.previous;
           param0.next = var5;
@@ -254,7 +254,7 @@ final class na {
 
     final static void a(byte param0, wa param1, int param2) {
         int var4 = 0;
-        th var5 = ed.field_q;
+        th var5 = SpriteGeometry.field_q;
         var5.h(param2, 0);
         if (param0 > -77) {
           return;
@@ -277,6 +277,6 @@ final class na {
     }
 
     static {
-        field_a = new db[15];
+        field_a = new RgbSprite[15];
     }
 }

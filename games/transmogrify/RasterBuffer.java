@@ -19,7 +19,7 @@ abstract class RasterBuffer {
         SocketConnector.a(true, param0, 106);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 89 % ((param0 - 40) / 50);
         field_c = null;
         field_e = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be {
-    static dd field_c;
+    static RgbSprite field_c;
     static int field_a;
     static int field_b;
 
@@ -39,7 +39,7 @@ final class be {
     public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (param0) {
-          field_c = (dd) null;
+          field_c = (RgbSprite) null;
         }
     }
 

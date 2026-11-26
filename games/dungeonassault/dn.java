@@ -237,7 +237,7 @@ final class dn extends ii implements jo, vg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_L = null;
         int var1 = -53 % ((param0 + 56) / 38);
         field_W = null;

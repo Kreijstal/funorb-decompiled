@@ -21,7 +21,7 @@ abstract class uj {
           un.field_k = new pe(param2, param0, false, true, true);
           hb.field_x.c(un.field_k, param1 + 32115);
           if (param1 != -32082) {
-            uj.a((byte) 16);
+            uj.clearStaticReferences((byte) 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -255,9 +255,9 @@ abstract class uj {
         return -1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -54) {
-          uj.a((byte) -113);
+          uj.clearStaticReferences((byte) -113);
         }
         field_a = null;
         field_b = null;

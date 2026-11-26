@@ -5,7 +5,7 @@ class p {
     oc field_j;
     static String[] field_g;
     static java.applet.Applet field_a;
-    static bd field_d;
+    static RgbSprite field_d;
     static ic[] field_m;
     static String[] field_k;
     og field_l;

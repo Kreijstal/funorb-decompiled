@@ -19,9 +19,9 @@ final class jf extends IntrusiveNode {
         IndexedSpriteState.field_h = DiskArchiveStore.field_f;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 640) {
-          jf.d(-73);
+          jf.clearStaticReferences(-73);
           field_l = null;
           field_i = null;
           return;

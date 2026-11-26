@@ -11,7 +11,7 @@ final class pm extends IntrusiveNode {
     static int field_m;
     static String field_n;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;

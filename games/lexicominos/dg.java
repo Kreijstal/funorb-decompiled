@@ -52,13 +52,13 @@ final class dg {
     final static void a(int param0) {
         int var3 = 0;
         int var4 = Lexicominos.field_L ? 1 : 0;
-        db var1 = new db(540, 140);
+        RgbSprite var1 = new RgbSprite(540, 140);
         de.a(var1, 6);
         MeshRasterState.b();
         SoftwareRasterizer.clearRaster();
         mc.field_k = 0;
         rg.b(0);
-        db var2 = var1.c();
+        RgbSprite var2 = var1.c();
         for (var3 = 0; var3 < 15; var3++) {
           var2.c(-2, -2, 16777215);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);

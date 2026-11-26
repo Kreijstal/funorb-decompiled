@@ -75,13 +75,13 @@ final class sn {
         return ke.field_U.a((byte) 16);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0 != -18) {
-          sn.b((byte) 110);
+          sn.clearStaticReferences((byte) 110);
         }
     }
 

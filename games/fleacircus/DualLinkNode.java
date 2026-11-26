@@ -4,7 +4,7 @@
 class DualLinkNode extends IntrusiveNode {
     static int field_o;
     long field_j;
-    static dd field_n;
+    static RgbSprite field_n;
     static ResourceArchive field_l;
     static String field_k;
     static String[] field_i;
@@ -144,7 +144,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, dd param1) {
+    final static void a(boolean param0, RgbSprite param1) {
         if (param0) {
           return;
         }
@@ -500,7 +500,7 @@ class DualLinkNode extends IntrusiveNode {
         this.field_m = null;
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         field_l = null;
         field_n = null;

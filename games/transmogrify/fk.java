@@ -21,7 +21,7 @@ final class fk extends lj {
         return -1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 19 % ((param0 - 2) / 44);
         field_F = null;
         field_D = null;
@@ -103,7 +103,7 @@ final class fk extends lj {
           param0 = hd.a('_', (byte) -81, "", param0);
           var3 = vl.b(-1, param2);
           if (param1 != 34) {
-            fk.a((byte) -127);
+            fk.clearStaticReferences((byte) -127);
           }
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (-1 != param0.indexOf(var3));
           return stackIn_7_0;

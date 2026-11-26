@@ -8,7 +8,7 @@ class lc extends DualLinkNode {
     static String field_s;
     static String field_q;
     static int[] field_v;
-    static dd field_t;
+    static RgbSprite field_t;
     static int field_u;
 
     final static void a(PacketBuffer param0, byte param1) {

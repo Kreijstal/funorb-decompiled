@@ -56,7 +56,7 @@ final class ci extends se {
         }
     }
 
-    final static dl[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 == -70) {
           return rc.a(3, 1, param1, param3, 1, param0, param4, param2 ^ -3020, 1);
         }
@@ -210,7 +210,7 @@ final class ci extends se {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = -12 % ((param0 + 6) / 48);
         field_i = null;
         field_k = null;

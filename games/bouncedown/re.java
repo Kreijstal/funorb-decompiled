@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class re {
-    static tg field_a;
+    static RgbSprite field_a;
 
     final static boolean a(int param0, CipherPacketBuffer param1) {
         RuntimeException var2 = null;
@@ -36,7 +36,7 @@ final class re {
     final static void a(byte param0, ke param1, int param2) {
         try {
           if (param0 != 109) {
-            field_a = (tg) null;
+            field_a = (RgbSprite) null;
           }
           uk.field_d.addLast(1, param1);
           qh.a(param1, param2, -22762);

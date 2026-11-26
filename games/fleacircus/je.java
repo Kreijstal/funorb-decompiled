@@ -6,7 +6,7 @@ final class je extends bb {
     static ob field_M;
     private jb field_K;
     static ed field_P;
-    static dd[] field_O;
+    static RgbSprite[] field_O;
     static int[] field_N;
 
     public static void i(int param0) {
@@ -31,7 +31,7 @@ final class je extends bb {
         RuntimeException var5 = null;
         try {
           if (param3 > -85) {
-            field_O = (dd[]) null;
+            field_O = (RgbSprite[]) null;
           }
           this.field_L = this.field_L + 1;
           super.a(param0, param1, param2, (byte) -104);
@@ -3123,13 +3123,13 @@ final class je extends bb {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        dd var7 = null;
+        RgbSprite var7 = null;
         wd var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        dd var7Lifetime1;
-        dd var7Lifetime2;
+        RgbSprite var7Lifetime1;
+        RgbSprite var7Lifetime2;
         var11 = fleas.field_A ? 1 : 0;
         try {
           super.b(param0, param1, param2, param3);
@@ -3147,7 +3147,7 @@ final class je extends bb {
             if (pb.field_c == null ||
               !(pb.field_c.field_w >= var9) ||
               !(var10 <= pb.field_c.field_t)) {
-              pb.field_c = new dd(var9, var10);
+              pb.field_c = new RgbSprite(var9, var10);
               r.a(pb.field_c, 45);
               if (var11 != 0) {
                 r.a(pb.field_c, 45);

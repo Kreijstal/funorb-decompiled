@@ -15,7 +15,7 @@ class DualLinkNode extends IntrusiveNode {
     static String field_u;
     DualLinkNode field_l;
     long field_o;
-    static cn field_q;
+    static RgbSprite field_q;
     static String[] field_t;
 
     final static void a(int param0, byte[] param1, boolean param2, int param3, int[] param4) {

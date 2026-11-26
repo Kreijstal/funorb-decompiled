@@ -8,7 +8,7 @@ final class qm extends db {
     static bm[] field_B;
     static int field_y;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         field_C = null;
         field_B = null;
@@ -29,7 +29,7 @@ final class qm extends db {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -2) {
-            qm.c(67);
+            qm.clearStaticReferences(67);
           }
           stackIn_3_0 = qd.a('*', param0.field_B.length(), (byte) -118);
           return stackIn_3_0;

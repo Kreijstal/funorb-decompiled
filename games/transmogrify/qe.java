@@ -223,14 +223,14 @@ final class qe extends UiWidget {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_E = null;
         field_A = null;
         field_F = null;
         field_z = null;
         field_H = null;
         if (param0 != -156630320) {
-          qe.i(-7);
+          qe.clearStaticReferences(-7);
         }
         field_x = null;
         field_v = null;

@@ -14,14 +14,14 @@ final class bd extends wj {
         super(param0, param1);
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_p = null;
         field_r = null;
         field_v = null;
         field_u = null;
         field_s = null;
         if (!param0) {
-          bd.b(false);
+          bd.clearDeclaredStaticReferences(false);
         }
     }
 

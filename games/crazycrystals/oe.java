@@ -16,13 +16,13 @@ final class oe {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
         field_c = null;
         if (param0 >= -97) {
-          oe.a(50);
+          oe.clearStaticReferences(50);
         }
     }
 

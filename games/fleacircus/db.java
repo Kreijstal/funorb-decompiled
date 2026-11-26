@@ -6,7 +6,7 @@ import java.util.*;
 abstract class db extends gj {
     boolean field_G;
     static int field_H;
-    static dd field_I;
+    static RgbSprite field_I;
     static String field_F;
     static AudioOutput field_J;
     private f field_L;
@@ -63,7 +63,7 @@ abstract class db extends gj {
         if (null == ok.field_y ||
           !(this.field_u <= ok.field_y.field_w) ||
           !(ok.field_y.field_t >= this.field_j)) {
-          ok.field_y = new dd(this.field_u, this.field_j);
+          ok.field_y = new RgbSprite(this.field_u, this.field_j);
         }
         r.a(ok.field_y, 45);
         SoftwareRasterizer.clearRaster();
@@ -260,11 +260,11 @@ abstract class db extends gj {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_F = null;
         field_J = null;
         if (param0 != 0) {
-          field_I = (dd) null;
+          field_I = (RgbSprite) null;
         }
         field_I = null;
     }

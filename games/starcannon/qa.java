@@ -58,14 +58,14 @@ final class qa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -5504) {
           field_b = null;
           field_a = null;
           field_d = null;
           return;
         }
-        qa.a(100);
+        qa.clearStaticReferences(100);
         field_b = null;
         field_a = null;
         field_d = null;

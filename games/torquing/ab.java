@@ -4,7 +4,7 @@
 final class ab extends gf {
     static hh field_l;
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 64) {
           field_l = (hh) null;
           field_l = null;

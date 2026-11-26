@@ -33,7 +33,7 @@ abstract class ed {
         return 0;
     }
 
-    final static tg[] a(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param2 <= 60) {
           ed.a(7);
         }

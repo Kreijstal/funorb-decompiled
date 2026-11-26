@@ -104,7 +104,7 @@ class SceneWidget extends SceneWidgetNode {
         this.integerState0887 = 0;
     }
 
-    public static void performAction1775(byte byteArgument1) {
+    public static void clearDeclaredStaticReferences(byte byteArgument1) {
         rgbSpriteState0068 = null;
         renderingSupport009State0007 = null;
         int integerLocal1 = 10 % ((-8 - byteArgument1) / 47);

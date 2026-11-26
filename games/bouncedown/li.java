@@ -14,10 +14,10 @@ abstract class li {
 
     abstract void a(int param0, int param1);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = (int[][]) null;
         if (param0 < 66) {
-          li.a(78);
+          li.clearStaticReferences(78);
           field_c = null;
           return;
         }

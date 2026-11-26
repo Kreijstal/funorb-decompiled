@@ -5,13 +5,13 @@ final class ta extends pk {
     private int field_r;
     private boolean field_s;
     private boolean field_n;
-    private km field_o;
+    private RgbSprite field_o;
     static long field_t;
-    private km field_v;
+    private RgbSprite field_v;
     private lh field_x;
     private int field_q;
     private boolean field_p;
-    km field_m;
+    RgbSprite field_m;
     private int field_u;
     private String field_w;
     static int field_y;
@@ -150,7 +150,7 @@ final class ta extends pk {
         if (param0 == -9) {
           return this.field_m.c(this.field_i, this.field_k, hn.field_k, rf.field_b);
         }
-        this.field_v = (km) null;
+        this.field_v = (RgbSprite) null;
         return this.field_m.c(this.field_i, this.field_k, hn.field_k, rf.field_b);
     }
 
@@ -192,11 +192,11 @@ final class ta extends pk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    ta(int param0, int param1, km param2, km param3, km param4, boolean param5, boolean param6) {
+    ta(int param0, int param1, RgbSprite param2, RgbSprite param3, RgbSprite param4, boolean param5, boolean param6) {
         this.field_n = false;
         this.field_r = 1;
         this.field_s = false;
@@ -211,7 +211,7 @@ final class ta extends pk {
           this.field_k = param1;
           this.field_o = param3;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ta.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ta.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

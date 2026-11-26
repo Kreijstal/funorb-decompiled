@@ -3,7 +3,7 @@
  */
 final class jf {
     static volatile int field_a;
-    static dl[] field_b;
+    static RgbSprite[] field_b;
 
     public static void a(int param0) {
         field_b = null;

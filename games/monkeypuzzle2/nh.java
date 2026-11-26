@@ -26,7 +26,7 @@ final class nh extends IntrusiveNode {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -19931) {
           field_f = (Sprite[][][]) null;
         }

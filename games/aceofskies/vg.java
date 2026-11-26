@@ -264,10 +264,10 @@ final class vg extends pp {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         if (param0 != 0) {
-          vg.b(-51);
+          vg.clearStaticReferences(-51);
         }
         field_h = null;
         field_e = null;

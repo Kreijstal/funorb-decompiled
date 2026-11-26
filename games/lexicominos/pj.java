@@ -469,7 +469,7 @@ final class pj extends nb implements ue, jk, ag {
               var4 = Class.forName("qi");
               var5 = (dd) (var4.newInstance());
               if (param1 != 99) {
-                pj.e((byte) 89);
+                pj.clearStaticReferences((byte) 89);
               }
               var5.a(false, param0, param2, param3);
               stackIn_3_0 = var5;
@@ -501,12 +501,12 @@ final class pj extends nb implements ue, jk, ag {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         field_L = null;
         field_N = null;
         if (param0 <= 52) {
-          pj.e((byte) 97);
+          pj.clearStaticReferences((byte) 97);
         }
     }
 

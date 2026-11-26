@@ -6,7 +6,7 @@ final class lt extends to {
     private IntrusiveDeque field_w;
     static SpriteData woodenTileSpriteData;
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -1 / ((param0 - 25) / 48);
         woodenTileSpriteData = null;
     }
@@ -91,7 +91,7 @@ final class lt extends to {
         if (param0 == 0) {
           return null;
         }
-        lt.k(30);
+        lt.clearStaticReferences(30);
         return null;
     }
 

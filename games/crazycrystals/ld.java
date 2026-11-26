@@ -7,11 +7,11 @@ final class ld extends wl {
     PacketBuffer field_s;
     byte field_u;
     int field_t;
-    static dl[] field_v;
+    static RgbSprite[] field_v;
     static String field_w;
     static int field_y;
 
-    public static void f(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 == 100) {
           field_r = null;
           field_v = null;

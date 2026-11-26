@@ -29,15 +29,15 @@ final class Slime {
         int var5;
         int var6_int;
         int var10;
-        tg var6;
+        RgbSprite var6;
         int var8;
         int var9;
-        tg var12;
-        tg var13;
-        tg var14;
-        tg var15;
-        tg var16;
-        tg var17;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
         int var6_intLifetime1;
         int var6_intLifetime1Lifetime1;
         var10 = Bounce.field_N;
@@ -83,7 +83,7 @@ final class Slime {
         }
         SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
         if (this.field_p == 0) {
-          var6 = new tg(100, 100);
+          var6 = new RgbSprite(100, 100);
           var8 = (int)((double)param2 + this.field_u) - 50;
           var9 = -50 + (int)(this.field_j - this.field_e / 2.0);
           var6.d();
@@ -93,7 +93,7 @@ final class Slime {
             se.field_A.b((int)(0.8 * this.field_c + 50.0), 0, -741572379, (int)this.field_o + 10, (int)(-(1.0 * this.field_e / 4.0) + 50.0 + this.field_q * 0.6));
           }
           if (2 == param0) {
-            var16 = new tg(100, 100);
+            var16 = new RgbSprite(100, 100);
             var16.d();
             ge.field_b.b((int)(50.0 - this.field_e / 6.0 + 0.8 * this.field_c), 0, -741572379, 96, (int)(this.field_q * 0.6 + (50.0 - 1.0 * this.field_e / 4.0)));
             ge.field_b.b((int)(50.0 + 0.8 * this.field_c), 0, -741572379, 128, (int)(50.0 - 1.0 * this.field_e / 4.0 + this.field_q * 0.6));
@@ -104,7 +104,7 @@ final class Slime {
             var16.c(0, -1, 0);
             var16.c(0, 1, 0);
             var16.a(0, 0);
-            var12 = new tg(100, 100);
+            var12 = new RgbSprite(100, 100);
             var17 = var12;
             var12.d();
             hd.field_a[param0].b((int)(50.0 - this.field_e / 6.0 + this.field_c * 1.2), 0, -741572379, 96, (int)(this.field_q + (50.0 - this.field_e * 1.0 / 4.0)));
@@ -117,7 +117,7 @@ final class Slime {
             var17.c(0, 1, 0);
             var17.a(0, 0);
           } else {
-            var14 = new tg(100, 100);
+            var14 = new RgbSprite(100, 100);
             var14.d();
             ge.field_b.b((int)(-(this.field_e / 10.0) + 50.0 + this.field_c * 0.8), 0, -741572379, 128, (int)(50.0 - this.field_e * 1.0 / 4.0 + this.field_q * 0.6));
             ge.field_b.b((int)(0.8 * this.field_c + (this.field_e / 10.0 + 50.0)), 0, -741572379, 128, (int)(this.field_q * 0.6 + (50.0 - this.field_e * 1.0 / 4.0)));
@@ -127,7 +127,7 @@ final class Slime {
             var14.c(0, -1, 0);
             var14.c(0, 1, 0);
             var14.a(0, 0);
-            var13 = new tg(100, 100);
+            var13 = new RgbSprite(100, 100);
             var15 = var13;
             var15.d();
             hd.field_a[param0].b((int)(50.0 - this.field_e / 10.0 + this.field_c * 1.2), 0, -741572379, 128, (int)(this.field_q + (-(1.0 * this.field_e / 4.0) + 50.0)));

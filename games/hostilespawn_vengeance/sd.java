@@ -4,8 +4,8 @@
 class sd extends cn {
     static String field_v;
     static int field_s;
-    static bd field_w;
-    static bd field_t;
+    static RgbSprite field_w;
+    static RgbSprite field_t;
     static boolean field_u;
 
     final static void a(int param0, int param1) {

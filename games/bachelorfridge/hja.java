@@ -12,9 +12,9 @@ final class hja {
     int field_f;
     String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 55) {
-          hja.a((byte) -52);
+          hja.clearStaticReferences((byte) -52);
           field_g = null;
           return;
         }

@@ -7,9 +7,9 @@ final class da {
     private int[] field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -20) {
-          da.a(121);
+          da.clearStaticReferences(121);
         }
         field_c = null;
         field_d = null;

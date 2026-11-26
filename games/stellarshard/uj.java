@@ -92,11 +92,11 @@ final class uj {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         if (param0 != 0) {
-          uj.b(-20);
+          uj.clearStaticReferences(-20);
         }
     }
 

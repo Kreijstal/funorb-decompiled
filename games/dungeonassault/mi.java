@@ -9,7 +9,7 @@ final class mi {
     static String field_b;
     static ResourceArchive field_e;
 
-    final static void a(pp param0, String param1, se param2, int param3, cn param4) {
+    final static void a(pp param0, String param1, se param2, int param3, RgbSprite param4) {
         int var9_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -24,22 +24,22 @@ final class mi {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        cn var7 = null;
-        cn var8 = null;
-        cn var9 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
         int var11 = 0;
-        cn var12 = null;
-        cn var13 = null;
-        cn var14 = null;
-        cn var15 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
+        RgbSprite var14 = null;
+        RgbSprite var15 = null;
         int var16 = 0;
         var16 = DungeonAssault.field_K;
         try {
           jh.c();
           var5_int = param2.b(param1);
           var6 = param2.field_E + param2.field_H;
-          var7 = new cn(var5_int, var6);
+          var7 = new RgbSprite(var5_int, var6);
           var7.e();
           param2.b(param1, 0, param2.field_H, 16760960, -1);
           var8 = te.a(var5_int, var6, ag.field_c, 32, 32, 0.125);

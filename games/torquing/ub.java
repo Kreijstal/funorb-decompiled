@@ -122,11 +122,11 @@ final class ub extends lg {
         op.sleepIgnoringInterrupts(1L, 93);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = null;
         field_D = null;
         if (param0 != -19) {
-          ub.a((byte) -112);
+          ub.clearStaticReferences((byte) -112);
         }
     }
 
@@ -172,7 +172,7 @@ final class ub extends lg {
         if (param0 == 0) {
           return null;
         }
-        ub.a((byte) 125);
+        ub.clearStaticReferences((byte) 125);
         return null;
     }
 

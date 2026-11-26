@@ -4,7 +4,7 @@
 abstract class pm extends DualLinkNode {
     double field_D;
     hn field_A;
-    static nf[] field_w;
+    static RgbSprite[] field_w;
     double field_E;
     oi field_v;
     static PcmSample field_x;
@@ -633,7 +633,7 @@ abstract class pm extends DualLinkNode {
         return new double[]{this.field_E, this.field_t, this.field_D, 0.0, 0.0, 0.0};
     }
 
-    final void a(nf param0, int param1, vg param2, byte param3, double param4) {
+    final void a(RgbSprite param0, int param1, vg param2, byte param3, double param4) {
         try {
           pa.a(this.field_E, this.field_C, (byte) -11, param1, this.field_D, this.field_t, param0, param4, param2);
           if (param3 != 91) {
@@ -936,7 +936,7 @@ abstract class pm extends DualLinkNode {
         }
     }
 
-    final void a(int param0, nf param1, double param2, vg param3) {
+    final void a(int param0, RgbSprite param1, double param2, vg param3) {
         try {
           int var6_int = -120 % ((-70 - param0) / 41);
           pa.a(this.field_E, this.field_C, (byte) -11, 256, this.field_D, this.field_t, param1, param2, param3);
@@ -958,8 +958,8 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4);
 
-    final void a(nf param0, boolean param1, double param2, vg param3) {
-        nf stackIn_6_0;
+    final void a(RgbSprite param0, boolean param1, double param2, vg param3) {
+        RgbSprite stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
@@ -999,7 +999,7 @@ abstract class pm extends DualLinkNode {
             var20 = (int)(640.0 * (this.field_C / var16));
             var21 = 512.0 * (1.0 - var10 / param2);
             var23 = (int)qn.field_v.a(var21, 0, this.field_D);
-            stackIn_6_0 = (nf) (param0);
+            stackIn_6_0 = (RgbSprite) (param0);
             stackIn_6_1 = -var20 + var18;
             stackIn_6_2 = -var20 + var19;
             stackIn_6_3 = var20 * 2;
@@ -1009,7 +1009,7 @@ abstract class pm extends DualLinkNode {
             } else {
               stackIn_7_5 = var23;
             }
-            ((nf) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+            ((RgbSprite) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1165,7 +1165,7 @@ abstract class pm extends DualLinkNode {
 
     abstract void a(int param0, hf param1);
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = 48 % ((param0 + 80) / 43);
         field_w = null;
         field_u = null;

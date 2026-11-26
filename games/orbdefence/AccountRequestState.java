@@ -9,18 +9,18 @@ final class AccountRequestState {
     static int field_d;
     static String[] field_b;
 
-    final static hj a(int param0, int param1, ki param2, byte param3) {
+    final static RgbSprite a(int param0, int param1, ki param2, byte param3) {
         RuntimeException var4 = null;
-        hj stackIn_2_0 = null;
+        RgbSprite stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        hj stackIn_7_0 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -127) {
-            stackIn_2_0 = (hj) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           if (pk.a(-117, param0, param2, param1)) {
@@ -28,7 +28,7 @@ final class AccountRequestState {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (hj) (stackIn_5_0);
+          return (RgbSprite) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -1053,15 +1053,15 @@ final class AccountRequestState {
           }
           var2Lifetime183 = jk.a(1, "benefits,0");
           if (null != var2Lifetime183) {
-            tk.field_r[0] = bk.a(var2Lifetime183, -12465);
+            SpriteGeometry.field_r[0] = bk.a(var2Lifetime183, -12465);
           }
           var2Lifetime184 = jk.a(1, "benefits,1");
           if (var2Lifetime184 != null) {
-            tk.field_r[1] = bk.a(var2Lifetime184, -12465);
+            SpriteGeometry.field_r[1] = bk.a(var2Lifetime184, -12465);
           }
           var2Lifetime185 = jk.a(1, "benefits,2");
           if (var2Lifetime185 != null) {
-            tk.field_r[2] = bk.a(var2Lifetime185, -12465);
+            SpriteGeometry.field_r[2] = bk.a(var2Lifetime185, -12465);
           }
           md.field_d = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

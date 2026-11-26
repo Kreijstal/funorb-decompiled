@@ -4,7 +4,7 @@
 final class ac {
     static String field_a;
 
-    final static void a(boolean param0, int param1, db[] param2, int param3, int param4) {
+    final static void a(boolean param0, int param1, RgbSprite[] param2, int param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

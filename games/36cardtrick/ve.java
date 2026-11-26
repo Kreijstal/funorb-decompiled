@@ -9,12 +9,12 @@ abstract class ve {
     static RawPcmStream field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
         if (param0 != 8192) {
-          ve.a(-70);
+          ve.clearStaticReferences(-70);
         }
     }
 

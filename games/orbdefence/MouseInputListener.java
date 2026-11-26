@@ -3,7 +3,7 @@
  */
 final class MouseInputListener implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_b;
-    static hj field_a;
+    static RgbSprite field_a;
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         RuntimeException stackIn_6_0 = null;

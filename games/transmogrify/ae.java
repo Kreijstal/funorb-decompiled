@@ -7,7 +7,7 @@ final class ae {
     static String field_b;
     static int[][] field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = (int[][]) null;
         field_d = null;
@@ -17,7 +17,7 @@ final class ae {
 
     final static boolean a(int param0) {
         if (param0 != -12863) {
-          ae.b(8);
+          ae.clearStaticReferences(8);
           if (null == oi.field_k) {
             return false;
           }

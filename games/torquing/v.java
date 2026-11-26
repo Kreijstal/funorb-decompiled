@@ -126,7 +126,7 @@ final class v {
         return this;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -114 / ((38 - param0) / 50);
         field_j = null;
     }
@@ -255,7 +255,7 @@ final class v {
           this.field_k = 0;
           return;
         }
-        v.a((byte) 1);
+        v.clearStaticReferences((byte) 1);
         this.field_h = 0;
         this.field_d = 256;
         this.field_i = 0;

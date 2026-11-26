@@ -442,7 +442,7 @@ abstract class SessionGameApplet extends GameApplet {
             pc.a(1);
             je.a(-11);
             gb.a(2, 88, IndexedSpriteState.field_a);
-            IndexedSpriteState.b(true);
+            IndexedSpriteState.clearDeclaredStaticReferences(true);
             wi.field_p = true;
             qf.field_b = 15000L + lk.correctedCurrentTimeMillis(param0 - 10017);
           }
@@ -629,7 +629,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         field_m = null;
         int var1 = -128 % ((param0 - 21) / 35);

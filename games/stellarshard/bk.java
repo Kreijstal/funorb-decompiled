@@ -8,7 +8,7 @@ final class bk {
     static Sprite field_b;
     private boolean field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = 126 / ((-80 - param0) / 46);
         field_e = null;

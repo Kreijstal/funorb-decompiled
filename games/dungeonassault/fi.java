@@ -5,10 +5,10 @@ final class fi extends qe {
     static String field_t;
     static en[] field_r;
     private tf[] field_w;
-    private cn field_v;
+    private RgbSprite field_v;
     private kl field_z;
     private tf field_A;
-    private cn field_C;
+    private RgbSprite field_C;
     static ResourceArchive field_u;
     private rh field_s;
     private int field_B;
@@ -352,7 +352,7 @@ final class fi extends qe {
         if (param1 > -85) {
           return;
         }
-        cn var7 = new cn(var5, var6);
+        RgbSprite var7 = new RgbSprite(var5, var6);
         jh.a(var7);
         IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
@@ -452,10 +452,10 @@ final class fi extends qe {
         super.f();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         if (param0 > -99) {
-          fi.a((byte) 2);
+          fi.clearStaticReferences((byte) 2);
         }
         field_r = null;
         field_t = null;

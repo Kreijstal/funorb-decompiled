@@ -5,7 +5,7 @@ final class vg {
     static String field_c;
     static boolean field_d;
     static cc field_a;
-    private kc[] field_b;
+    private RgbSprite[] field_b;
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         uk.a(this.field_b, (byte) -104, param2, param1, param4, param3);
@@ -15,7 +15,7 @@ final class vg {
         }
     }
 
-    vg(kc[] param0) {
+    vg(RgbSprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

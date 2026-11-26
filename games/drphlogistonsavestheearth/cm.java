@@ -8,7 +8,7 @@ final class cm extends lb {
     static Random field_M;
     int field_O;
     PacketBuffer field_K;
-    static nh[] field_R;
+    static RgbSprite[] field_R;
     static he[] field_Q;
     static sa field_P;
     static String field_I;
@@ -30,7 +30,7 @@ final class cm extends lb {
     cm() {
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -113) {
           field_S = null;
           field_M = null;
@@ -41,7 +41,7 @@ final class cm extends lb {
           field_I = null;
           return;
         }
-        cm.a((byte) 56);
+        cm.clearStaticReferences((byte) 56);
         field_S = null;
         field_M = null;
         field_R = null;

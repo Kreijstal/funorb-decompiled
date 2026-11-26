@@ -4,7 +4,7 @@
 final class eg {
     static int field_f;
     static String field_e;
-    static kc[] field_c;
+    static RgbSprite[] field_c;
     static String field_a;
     static int field_b;
     static int field_d;

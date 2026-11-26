@@ -112,12 +112,12 @@ final class nj extends rg {
           return -1;
         }
         if (param0 < 14) {
-          nj.a((byte) 123);
+          nj.clearDeclaredStaticReferences((byte) 123);
         }
         return this.field_P.a(param1, 27656);
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -93) {
           return;
         }
@@ -130,7 +130,7 @@ final class nj extends rg {
 
     final int i(byte param0) {
         if (param0 != -96) {
-          nj.a((byte) -113);
+          nj.clearDeclaredStaticReferences((byte) -113);
         }
         return this.field_R;
     }

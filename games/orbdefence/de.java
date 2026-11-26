@@ -46,7 +46,7 @@ final class de {
         }
     }
 
-    final static void a(int param0, hj param1) {
+    final static void a(int param0, RgbSprite param1) {
         try {
           h.k(125);
           SoftwareRasterizer.setRasterBuffer(param1.field_v, param1.field_s, param1.field_t);

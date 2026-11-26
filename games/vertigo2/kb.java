@@ -20,7 +20,7 @@ final class kb implements WidgetListener {
         Sprite var8 = null;
         try {
           if (!param2) {
-            kb.a(10);
+            kb.clearStaticReferences(10);
           }
           var6_int = param1 + param3.x;
           var7 = param3.y + param4;
@@ -49,7 +49,7 @@ final class kb implements WidgetListener {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_e = null;
@@ -59,7 +59,7 @@ final class kb implements WidgetListener {
           field_f = null;
           return;
         }
-        kb.a(105);
+        kb.clearStaticReferences(105);
         field_b = null;
         field_f = null;
     }

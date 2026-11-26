@@ -128,7 +128,7 @@ abstract class lo {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -65 % ((param0 + 64) / 43);
         field_c = (byte[][][]) null;
     }

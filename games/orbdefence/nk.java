@@ -68,7 +68,7 @@ final class nk {
         int[] var11_ref_int__ = null;
         int var12 = 0;
         int var13 = 0;
-        hj var13_ref_hj = null;
+        RgbSprite var13_ref_hj = null;
         int var14_int = 0;
         String var14 = null;
         int var15 = 0;
@@ -84,11 +84,11 @@ final class nk {
         Object var23 = null;
         Object var24 = null;
         kb var25 = null;
-        hj var26 = null;
+        RgbSprite var26 = null;
         int[] var27 = null;
         String var28 = null;
-        hj var29 = null;
-        hj var30 = null;
+        RgbSprite var29 = null;
+        RgbSprite var30 = null;
         String[][] var31 = null;
         String var32 = null;
         int[] var33 = null;
@@ -186,7 +186,7 @@ final class nk {
             var7 = oj.a((byte) 47, var25.field_C);
           }
         }
-        var26 = new hj(64, 64);
+        var26 = new RgbSprite(64, 64);
         var26.d();
         if (this.field_f == 0) {
           hf.field_g[0].a(32 + DualLinkDequeIterator.field_e / 2, 27 + DualLinkDequeIterator.field_e / 2, 0, 1300);

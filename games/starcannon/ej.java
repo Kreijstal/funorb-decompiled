@@ -18,7 +18,7 @@ final class ej extends mi {
         }
         bd.field_b = param1 & 3;
         if (!param0) {
-          ej.f(96);
+          ej.clearDeclaredStaticReferences(96);
         }
         if (bd.field_b > 2) {
           bd.field_b = 2;
@@ -110,7 +110,7 @@ final class ej extends mi {
         return 1;
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_s = null;
         field_t = null;
         int var1 = 2 / ((-62 - param0) / 53);

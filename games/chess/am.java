@@ -29,7 +29,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2), "am.E(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2), "am.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class am {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "am.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "am.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "am.F(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "am.F(" + param0 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "am.C(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "am.C(" + param0 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "am.G(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1_ref), "am.G(" + param0 + ')');
         }
     }
 

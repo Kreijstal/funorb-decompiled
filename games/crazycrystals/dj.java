@@ -2,38 +2,38 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class dj extends bd {
-    private dl[] field_T;
+    private RgbSprite[] field_T;
     private boolean field_X;
     private int field_N;
-    private dl[] field_P;
+    private RgbSprite[] field_P;
     private int field_W;
     private String field_E;
     private int field_H;
     static boolean field_t;
     private int field_z;
-    private dl field_U;
+    private RgbSprite field_U;
     private int field_s;
     private int field_Z;
     static db field_ab;
     private int field_q;
     private int field_F;
-    private dl field_J;
+    private RgbSprite field_J;
     private int field_M;
     private boolean field_B;
-    private dl[] field_O;
+    private RgbSprite[] field_O;
     private int field_x;
     private boolean field_p;
     private boolean field_R;
-    private dl field_C;
-    private dl field_S;
+    private RgbSprite field_C;
+    private RgbSprite field_S;
     private int field_I;
-    private dl[] field_w;
+    private RgbSprite[] field_w;
     private boolean field_G;
     private int field_u;
     private int field_A;
     private int field_y;
-    private dl field_K;
-    private dl[] field_Y;
+    private RgbSprite field_K;
+    private RgbSprite[] field_Y;
     private int field_V;
     private String field_v;
     private int field_D;
@@ -42,7 +42,7 @@ class dj extends bd {
     private boolean field_o;
     private int field_Q;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_ab = null;
         int var1 = -13 % ((-22 - param0) / 36);
     }
@@ -168,7 +168,7 @@ class dj extends bd {
             }
           }
           if (param1 != 2147483647) {
-            dj.a((byte) 15);
+            dj.clearStaticReferences((byte) 15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

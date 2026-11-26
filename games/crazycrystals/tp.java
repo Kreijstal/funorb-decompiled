@@ -14,14 +14,14 @@ final class tp {
     static String field_h;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_h = null;
         field_d = null;
         field_f = null;
         field_c = null;
         if (param0 != 7566) {
-          tp.a(-88);
+          tp.clearStaticReferences(-88);
         }
     }
 

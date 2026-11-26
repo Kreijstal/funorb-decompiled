@@ -6,7 +6,7 @@ import java.util.*;
 class vd extends ag implements ai {
     static ResourceArchive field_C;
     IntrusiveDeque field_z;
-    static bd[][] field_y;
+    static RgbSprite[][] field_y;
     static int field_D;
     static int[] field_B;
     static int field_A;
@@ -429,7 +429,7 @@ class vd extends ag implements ai {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -9015) {
-            field_y = (bd[][]) null;
+            field_y = (RgbSprite[][]) null;
           }
           stackIn_7_0 = (this.i(19011) != null);
           return stackIn_7_0;
@@ -498,7 +498,7 @@ class vd extends ag implements ai {
         try {
           field_C = null;
           field_B = null;
-          field_y = (bd[][]) null;
+          field_y = (RgbSprite[][]) null;
           if (param0 != 75) {
             vd.a((p) null, 114);
           }
@@ -927,7 +927,7 @@ class vd extends ag implements ai {
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param0 != 19011) {
-            field_y = (bd[][]) null;
+            field_y = (RgbSprite[][]) null;
           }
           var2 = new fl(this.field_z);
           var3 = (ag) (var2.b(param0 ^ 19010));

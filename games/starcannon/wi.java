@@ -6,7 +6,7 @@ final class wi {
     static String field_a;
     static rg field_c;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -63 / ((param0 + 15) / 33);
         field_a = null;
         field_c = null;

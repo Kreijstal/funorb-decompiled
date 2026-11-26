@@ -8,7 +8,7 @@ final class hb implements cg {
     private int field_i;
     static int field_g;
     private int field_p;
-    static nh field_a;
+    static RgbSprite field_a;
     private int field_c;
     private int field_d;
     private int field_o;
@@ -78,7 +78,7 @@ final class hb implements cg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -27 / ((-26 - param0) / 63);
         field_m = null;
         field_b = null;

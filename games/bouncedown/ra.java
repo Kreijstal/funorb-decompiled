@@ -345,10 +345,10 @@ final class ra extends oa {
         this.field_g = java.net.ProxySelector.getDefault();
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 <= 109) {
-          ra.b((byte) 102);
+          ra.clearStaticReferences((byte) 102);
         }
     }
 

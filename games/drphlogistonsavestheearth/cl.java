@@ -5,18 +5,18 @@ import java.io.*;
 
 final class cl extends gb {
     static int field_o;
-    static nh field_p;
+    static RgbSprite field_p;
     static String field_q;
-    static nh field_s;
+    static RgbSprite field_s;
     private qe field_r;
     static he[] field_n;
     static he field_t;
 
-    final static nh[] a(String param0, vj param1, int param2, String param3) {
+    final static RgbSprite[] a(String param0, vj param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nh[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -27,7 +27,7 @@ final class cl extends gb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -113) {
-            field_s = (nh) null;
+            field_s = (RgbSprite) null;
           }
           var4_int = param1.a(param0, (byte) -83);
           var5 = param1.a((byte) -99, param3, var4_int);
@@ -391,13 +391,13 @@ final class cl extends gb {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         field_t = null;
         field_n = null;
         field_q = null;
         if (param0 != 0) {
-          field_p = (nh) null;
+          field_p = (RgbSprite) null;
         }
         field_s = null;
     }

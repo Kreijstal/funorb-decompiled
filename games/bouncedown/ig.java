@@ -3,7 +3,7 @@
  */
 final class ig {
     static eh field_c;
-    static tg[] field_d;
+    static RgbSprite[] field_d;
     static eh field_b;
     static int field_a;
 

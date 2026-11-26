@@ -3,7 +3,7 @@
  */
 final class fl {
     static String field_b;
-    static db field_c;
+    static RgbSprite field_c;
     static String field_d;
     static String[] field_a;
 
@@ -40,13 +40,13 @@ final class fl {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         field_d = null;
         field_c = null;
         if (param0) {
-          fl.a(false);
+          fl.clearStaticReferences(false);
         }
     }
 

@@ -154,11 +154,11 @@ final class ve extends lj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         field_D = null;
         if (param0 > -58) {
-          ve.a((byte) 42);
+          ve.clearStaticReferences((byte) 42);
         }
     }
 

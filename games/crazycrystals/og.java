@@ -193,7 +193,7 @@ class og extends qm implements he {
           return 0;
         }
         if (param0 != 0) {
-          og.h(124);
+          og.clearDeclaredStaticReferences(124);
         }
         if (CipherPacketBuffer.field_q <= param2 && CipherPacketBuffer.field_q + fl.field_a.field_l > param2 && param1 >= gf.field_a &&
           !(gf.field_a + fl.field_a.field_u <= param1)) {
@@ -580,7 +580,7 @@ class og extends qm implements he {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_u = null;
         field_w = null;
         field_y = null;

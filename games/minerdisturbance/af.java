@@ -14,7 +14,7 @@ final class af extends IntrusiveNode {
     af() {
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = (String[][]) null;
         field_r = null;
         field_p = null;
@@ -89,7 +89,7 @@ final class af extends IntrusiveNode {
             break;
           }
           if (param2 > -58) {
-            af.a(127);
+            af.clearDeclaredStaticReferences(127);
           }
           param1.addLast((byte) -105, new lj(var8.toString()));
           stackIn_30_0 = var5;

@@ -9,7 +9,7 @@ final class tk extends ng {
     static int[] field_Q;
     private wd field_O;
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_T = null;
         if (param0 < 68) {
           field_R = (BitmapFont) null;
@@ -146,7 +146,7 @@ final class tk extends ng {
           var3 = vh.a(var2, 2, 33, var10, 16301089, 8015912);
           tf.field_x = (BitmapFont) ((Object) var3);
           if (param0 < 101) {
-            tk.c((byte) 15);
+            tk.clearDeclaredStaticReferences((byte) 15);
           }
           var11 = var3.field_O[0];
           var9 = var11;

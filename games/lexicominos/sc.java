@@ -66,7 +66,7 @@ final class sc {
         ea.field_b = param3;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         int var1 = -110 / ((-24 - param0) / 45);

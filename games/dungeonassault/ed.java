@@ -9,9 +9,9 @@ final class ed extends np {
     private int field_S;
     static int field_P;
     private int[] field_B;
-    private cn field_U;
+    private RgbSprite field_U;
     private int field_H;
-    private cn field_Q;
+    private RgbSprite field_Q;
     private int field_O;
     private int field_V;
     static String field_W;
@@ -253,7 +253,7 @@ final class ed extends np {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_W = null;
         int var1 = 100 / ((param0 - 2) / 63);
         field_R = null;
@@ -505,7 +505,7 @@ final class ed extends np {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        cn var6 = null;
+        RgbSprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var5 = gm.field_d.field_L[param2].field_a;

@@ -26,7 +26,7 @@ final class wd {
     short[] field_l;
     short field_w;
     static String field_p;
-    static hj[] field_C;
+    static RgbSprite[] field_C;
     short[] field_y;
     int field_F;
     short[] field_N;
@@ -67,10 +67,10 @@ final class wd {
             stackIn_3_0 = -2;
             return stackIn_3_0;
           }
-          tk.field_n = tk.field_n + 65536;
-          while (tb.a(og.field_a, 723204176, tk.field_n) >= 65536) {
+          SpriteGeometry.field_n = SpriteGeometry.field_n + 65536;
+          while (tb.a(og.field_a, 723204176, SpriteGeometry.field_n) >= 65536) {
             GzipDecompressor.field_c = GzipDecompressor.field_c + 1;
-            tk.field_n = tk.field_n - og.field_a;
+            SpriteGeometry.field_n = SpriteGeometry.field_n - og.field_a;
           }
           var2_int = -1;
           if (null == dm.field_b) {

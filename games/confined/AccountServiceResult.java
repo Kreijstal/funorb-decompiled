@@ -91,7 +91,7 @@ final class AccountServiceResult {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         int var1 = -37 / ((param0 + 64) / 46);

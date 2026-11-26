@@ -207,10 +207,10 @@ class jj extends db implements ButtonListener {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_fb = null;
         if (param0 < 98) {
-          jj.e((byte) 9);
+          jj.clearStaticReferences((byte) 9);
         }
     }
 

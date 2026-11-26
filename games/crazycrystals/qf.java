@@ -279,7 +279,7 @@ abstract class qf extends ea {
         try {
           var1_int = ga.field_J[0];
           if (param0 != -30693) {
-            qf.e((byte) 69);
+            qf.clearDeclaredStaticReferences((byte) 69);
           }
           for (var2 = 1; ga.field_J.length > var2; var2++) {
             var3 = ga.field_J[var2];
@@ -350,7 +350,7 @@ abstract class qf extends ea {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_t = null;
         if (param0 != -72) {
           field_t = (String[]) null;
@@ -522,7 +522,7 @@ abstract class qf extends ea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -31135) {
-            qf.e((byte) 15);
+            qf.clearDeclaredStaticReferences((byte) 15);
           }
           if (0 == (this.field_o | this.field_s)) {
             fp.field_a = fp.field_a + 10;

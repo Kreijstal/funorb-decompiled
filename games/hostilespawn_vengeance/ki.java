@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ki {
-    static bd field_b;
+    static RgbSprite field_b;
     static String field_a;
-    static bd field_c;
+    static RgbSprite field_c;
     static AccountRequestState field_f;
-    static bd field_e;
+    static RgbSprite field_e;
     static String field_d;
 
     final static void a(int param0) {
         g.a((byte) 2, 17);
         if (param0 != -1) {
-          field_c = (bd) null;
+          field_c = (RgbSprite) null;
         }
     }
 
@@ -39,7 +39,7 @@ final class ki {
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, hf.field_h, qc.field_s);
+              var9.fillRect(0, 0, hf.field_h, SpriteGeometry.field_s);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
@@ -58,12 +58,12 @@ final class ki {
               var10.setFont(vh.field_d);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
-              var9.drawImage(he.field_y, -152 + hf.field_h / 2, qc.field_s / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(he.field_y, -152 + hf.field_h / 2, SpriteGeometry.field_s / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref_Exception = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + hf.field_h / 2;
-              var8 = -18 + qc.field_s / 2;
+              var8 = -18 + SpriteGeometry.field_s / 2;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, 2 + var8, 3 * param1, 30);
@@ -78,7 +78,7 @@ final class ki {
             if (IntrusiveNodeHashTable.field_e != null) {
               var9.setFont(vh.field_d);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(IntrusiveNodeHashTable.field_e, hf.field_h / 2 - IntrusiveNodeHashTable.field_e.length() * 6 / 2, qc.field_s / 2 - 26);
+              var9.drawString(IntrusiveNodeHashTable.field_e, hf.field_h / 2 - IntrusiveNodeHashTable.field_e.length() * 6 / 2, SpriteGeometry.field_s / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -106,7 +106,7 @@ final class ki {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, bd param7) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, RgbSprite param7) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;

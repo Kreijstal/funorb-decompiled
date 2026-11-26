@@ -3,8 +3,8 @@
  */
 final class kj {
     private int field_i;
-    nh[] field_c;
-    nh field_e;
+    RgbSprite[] field_c;
+    RgbSprite field_e;
     static int[] field_b;
     static int[][] field_f;
     static int field_a;
@@ -55,11 +55,11 @@ final class kj {
         return this;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_f = (int[][]) null;
         if (param0 != 14970) {
-          kj.a(89);
+          kj.clearStaticReferences(89);
           field_b = null;
           return;
         }
@@ -92,7 +92,7 @@ final class kj {
         return this;
     }
 
-    final kj a(nh[] param0, int param1) {
+    final kj a(RgbSprite[] param0, int param1) {
         RuntimeException var3 = null;
         kj stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -170,7 +170,7 @@ final class kj {
             param5.field_e = this.field_e;
           }
           if (!param2) {
-            kj.a(13);
+            kj.clearStaticReferences(13);
           }
           if (this.field_k >= -1) {
             param5.field_k = this.field_k;
@@ -301,7 +301,7 @@ final class kj {
             this.field_e.d(var6_int, var7);
           }
           if (!param2) {
-            this.field_e = (nh) null;
+            this.field_e = (RgbSprite) null;
           }
           var6 = param0.b(-121, param1);
           if (var6 != null &&

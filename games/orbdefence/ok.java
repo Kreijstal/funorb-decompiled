@@ -10,7 +10,7 @@ final class ok {
     static dj[] field_a;
     static int field_f;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 26 % ((-61 - param0) / 51);
         field_a = null;
     }
@@ -24,7 +24,7 @@ final class ok {
         return (int)(1000000000L / vc.field_j);
     }
 
-    final static void a(int param0, int param1, int param2, hj[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, hj[] param11, int param12, int param13, int param14, hj[] param15, int param16, int param17, int param18, kc param19, kc param20) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, RgbSprite[] param11, int param12, int param13, int param14, RgbSprite[] param15, int param16, int param17, int param18, kc param19, kc param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -108,7 +108,7 @@ final class ok {
           var2 = new u(param1, jd.field_g, wc.field_a, wh.field_b, m.field_a, vc.field_g, fl.field_a);
           if (param0 != -3362) {
             var3 = (kc) null;
-            ok.a(-59, 87, -24, (hj[]) null, 6, 29, -83, 20, 104, 36, 30, (hj[]) null, 1, -123, 74, (hj[]) null, 86, 93, -3, (kc) null, (kc) null);
+            ok.a(-59, 87, -24, (RgbSprite[]) null, 6, 29, -83, 20, 104, 36, 30, (RgbSprite[]) null, 1, -123, 74, (RgbSprite[]) null, 86, 93, -3, (kc) null, (kc) null);
           }
           md.$cfr$intArgs$a$6121ff5511c4(-127);
           stackIn_6_0 = var2;

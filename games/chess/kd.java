@@ -9,7 +9,7 @@ final class kd extends ci {
     static int field_Hb;
     private ci field_Ib;
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -4403) {
           return;
         }
@@ -305,7 +305,7 @@ final class kd extends ci {
             kd.a((byte) 123, (sn) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "kd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "kd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -373,7 +373,7 @@ final class kd extends ci {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

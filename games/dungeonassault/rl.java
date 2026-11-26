@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rl {
-    static cn[] field_d;
+    static RgbSprite[] field_d;
     static String field_c;
     static int field_b;
     static int field_f;

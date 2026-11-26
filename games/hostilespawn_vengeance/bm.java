@@ -8,7 +8,7 @@ final class bm {
     static int[] field_b;
     static String[] field_e;
     static int field_c;
-    static bd field_f;
+    static RgbSprite field_f;
 
     static int a(int param0, int param1) {
         return param0 ^ param1;
@@ -18,7 +18,7 @@ final class bm {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_g = null;
         field_b = null;

@@ -7,7 +7,7 @@ final class pa extends pc {
     static int field_E;
     int field_D;
     int field_I;
-    static dl field_H;
+    static RgbSprite field_H;
     int field_C;
     int field_J;
     static int field_F;

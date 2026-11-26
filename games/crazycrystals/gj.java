@@ -21,11 +21,11 @@ final class gj extends ta {
         return (l) ((Object) new o(60, this.field_p));
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_o = null;
         if (param0 != 19) {
-          gj.d(-48);
+          gj.clearStaticReferences(-48);
           field_m = null;
           return;
         }

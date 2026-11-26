@@ -75,7 +75,7 @@ final class ul extends sl {
         this(qo.field_b, param0);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_t = null;
         field_r = null;
         int var1 = 11 / ((param0 + 50) / 55);

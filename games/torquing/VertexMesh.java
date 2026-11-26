@@ -133,7 +133,7 @@ final class VertexMesh {
     private final void invalidateBounds(byte obfuscationGuard) {
         this.field_y = false;
         if (obfuscationGuard != 32) {
-          VertexMesh.a((byte) -15);
+          VertexMesh.clearStaticReferences((byte) -15);
         }
     }
 
@@ -156,9 +156,9 @@ final class VertexMesh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -81) {
-          VertexMesh.a((byte) -107);
+          VertexMesh.clearStaticReferences((byte) -107);
         }
         field_u = null;
         field_l = null;

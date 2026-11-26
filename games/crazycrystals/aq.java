@@ -14,10 +14,10 @@ final class aq extends wc {
         this(ai.field_h, param0);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         if (param0 >= -23) {
-          aq.b(51);
+          aq.clearStaticReferences(51);
         }
     }
 

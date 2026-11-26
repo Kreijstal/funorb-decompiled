@@ -3,11 +3,11 @@
  */
 final class pn {
     static PcmSample field_k;
-    static nf[] field_l;
+    static RgbSprite[] field_l;
     private int field_j;
-    nf field_d;
+    RgbSprite field_d;
     private int field_m;
-    nf[] field_g;
+    RgbSprite[] field_g;
     private int field_f;
     private int field_c;
     static double field_h;
@@ -32,7 +32,7 @@ final class pn {
         return this;
     }
 
-    final pn a(int param0, nf[] param1) {
+    final pn a(int param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

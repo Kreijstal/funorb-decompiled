@@ -7,7 +7,7 @@ final class ai extends cg {
     static int[] field_j;
     static int field_m;
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         int var1 = -115 % ((-60 - param0) / 37);
         field_k = null;
@@ -146,7 +146,7 @@ final class ai extends cg {
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = ie.a(false, var5);
+          var3_int = SpriteGeometry.a(false, var5);
           if (param1 > -58) {
             stackIn_6_0 = (sg) null;
             return stackIn_6_0;

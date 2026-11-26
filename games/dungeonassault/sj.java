@@ -16,12 +16,12 @@ abstract class sj extends rf {
     static String field_W;
     static String field_eb;
 
-    final static gd a(int param0, int param1, int param2, cn param3, nn param4) {
-        cn var5 = null;
+    final static gd a(int param0, int param1, int param2, RgbSprite param3, nn param4) {
+        RgbSprite var5 = null;
         RuntimeException var5_ref = null;
-        cn var6 = null;
-        cn var7 = null;
-        cn var8 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
         gd var9 = null;
         gd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -91,7 +91,7 @@ abstract class sj extends rf {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_hb = null;
         field_W = null;
         field_db = null;
@@ -109,16 +109,16 @@ abstract class sj extends rf {
         int var3;
         int var4;
         int var5;
-        cn var6;
+        RgbSprite var6;
         String var7;
         String var8;
         String var9;
         var5 = DungeonAssault.field_K;
         if (param0 != 192) {
-          var6 = (cn) null;
-          sj.a((cn) null, -120);
+          var6 = (RgbSprite) null;
+          sj.a((RgbSprite) null, -120);
         }
-        var7 = "(" + wl.field_f + " " + oc.field_E + " " + rd.field_C + ") " + hc.field_c;
+        var7 = "(" + wl.field_f + " " + oc.field_E + " " + SpriteGeometry.field_C + ") " + hc.field_c;
         var1 = var7;
         if (0 < nj.field_b) {
           var1 = var7 + ":";
@@ -144,11 +144,11 @@ abstract class sj extends rf {
         return var1;
     }
 
-    final static pp a(cn param0, int param1) {
-        cn var2 = null;
+    final static pp a(RgbSprite param0, int param1) {
+        RgbSprite var2 = null;
         RuntimeException var2_ref = null;
-        cn var3 = null;
-        cn var4 = null;
+        RgbSprite var3 = null;
+        RgbSprite var4 = null;
         pp stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -156,8 +156,8 @@ abstract class sj extends rf {
         RuntimeException decompiledCaughtException = null;
         try {
           jh.c();
-          var2 = new cn(param0.field_y, param0.field_v);
-          var3 = new cn(param0.field_y, param0.field_v);
+          var2 = new RgbSprite(param0.field_y, param0.field_v);
+          var3 = new RgbSprite(param0.field_y, param0.field_v);
           var2.e();
           param0.e(0, 0, 16744448);
           var3.e();
@@ -237,8 +237,8 @@ abstract class sj extends rf {
         }
         try {
           if (param3 != 32) {
-            cn var7 = (cn) null;
-            sj.a((cn) null, 111);
+            RgbSprite var7 = (RgbSprite) null;
+            sj.a((RgbSprite) null, 111);
           }
           var6.field_a = param4 == null ? null : hd.a(false, param2, "da_monster_" + param4);
           var6.field_p = param5 != null ? hd.a(false, param0, "da_monster_" + param5) : null;

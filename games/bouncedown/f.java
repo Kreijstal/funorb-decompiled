@@ -92,9 +92,9 @@ final class f {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -7355) {
-          f.a(-56);
+          f.clearStaticReferences(-56);
           field_a = null;
           return;
         }

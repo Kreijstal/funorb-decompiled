@@ -134,7 +134,7 @@ final class pj extends cb {
         }
     }
 
-    public static void h(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_y = null;
         field_z = null;
         field_x = null;
@@ -169,7 +169,7 @@ final class pj extends cb {
             SoftwareRasterizer.field_a[param1 + ((param2 + var7) * SoftwareRasterizer.field_d + param3)] = var9;
           }
           if (param0 != 127) {
-            pj.h(100);
+            pj.discardDeclaredStaticReferences(100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

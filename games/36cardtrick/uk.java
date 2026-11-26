@@ -23,7 +23,7 @@ abstract class uk {
 
     abstract void a(int param0, int param1);
 
-    final static void a(kc[] param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, byte param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;

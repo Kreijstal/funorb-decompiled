@@ -45,7 +45,7 @@ final class lb extends ld {
         return fj.field_i == 11 ? true : false;
     }
 
-    public static void m(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_T = null;
         field_W = null;
         if (param0 <= 118) {
@@ -75,7 +75,7 @@ final class lb extends ld {
               return true;
             }
             if (param1 != 6669) {
-              lb.m(14);
+              lb.discardDeclaredStaticReferences(14);
             }
             try {
               var2 = "tuhstatbut";

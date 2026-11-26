@@ -39,7 +39,7 @@ final class rl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = (float[][]) null;
         int var1 = -12 / ((param0 + 37) / 44);
     }

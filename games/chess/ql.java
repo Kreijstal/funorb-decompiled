@@ -10,7 +10,7 @@ final class ql {
     static boolean field_c;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_e = null;
         field_d = null;
@@ -156,7 +156,7 @@ final class ql {
         qd.field_r = param1;
         jb.field_f = param0;
         if (param4 != 66) {
-          ql.a((byte) 119);
+          ql.clearStaticReferences((byte) 119);
         }
     }
 

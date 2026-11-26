@@ -8,9 +8,9 @@ final class pf extends fk {
     static int field_o;
     static he field_n;
 
-    public static void c(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (param0) {
-          pf.c(false);
+          pf.clearDeclaredStaticReferences(false);
           field_l = null;
           field_n = null;
           field_k = null;
@@ -27,7 +27,7 @@ final class pf extends fk {
 
     final bj a(byte param0) {
         if (param0 != 45) {
-          pf.c(true);
+          pf.clearDeclaredStaticReferences(true);
           return jf.field_L;
         }
         return jf.field_L;

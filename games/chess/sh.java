@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sh {
-    static km[] field_b;
+    static RgbSprite[] field_b;
     static String field_a;
     static String field_c;
     static String field_d;
@@ -87,7 +87,7 @@ final class sh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

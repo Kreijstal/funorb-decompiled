@@ -23,7 +23,7 @@ final class MidiPcmStream extends PcmStream {
     private int field_k;
     static String field_B;
     private int[] field_J;
-    static hj field_N;
+    static RgbSprite field_N;
     private int[] field_H;
     static kc field_m;
     private he[][] field_I;
@@ -746,7 +746,7 @@ final class MidiPcmStream extends PcmStream {
 
     final synchronized boolean isMidiReady(int param0) {
         if (param0 >= -20) {
-          field_N = (hj) null;
+          field_N = (RgbSprite) null;
         }
         return this.field_S.hasMidiData();
     }
@@ -996,7 +996,7 @@ final class MidiPcmStream extends PcmStream {
             ByteStorage.field_a = null;
           }
           if (param0) {
-            field_N = (hj) null;
+            field_N = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1321,7 +1321,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           var3_int = this.field_y[param1.field_F];
           if (param0 != 2) {
-            field_N = (hj) null;
+            field_N = (RgbSprite) null;
           }
           if (var3_int >= 8192) {
             stackIn_6_0 = 16384 - ((16384 - var3_int) * (128 - param1.field_q) + 32 >> 6);

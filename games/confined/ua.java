@@ -17,11 +17,11 @@ final class ua {
         }
     }
 
-    final static nf[] a(String param0, int param1, mi param2, String param3) {
+    final static RgbSprite[] a(String param0, int param1, mi param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nf[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

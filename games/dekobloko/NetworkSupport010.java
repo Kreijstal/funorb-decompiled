@@ -12,7 +12,7 @@ final class NetworkSupport010 extends HashNode {
     int integerState0587;
     int integerState0588;
 
-    public static void performAction1255(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         int integerLocal1 = 86 % ((52 - integerArgument1) / 35);
         uiComponentPart026State0001 = null;
         rawSoundState0017 = null;

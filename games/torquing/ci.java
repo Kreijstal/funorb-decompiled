@@ -23,11 +23,11 @@ final class ci {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != 2) {
-          ci.b(-22);
+          ci.clearStaticReferences(-22);
         }
         field_a = null;
     }

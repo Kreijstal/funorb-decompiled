@@ -5,15 +5,15 @@ final class ClientException extends RuntimeException {
     String context;
     static int[] field_g;
     static String field_f;
-    static nh[] field_e;
+    static RgbSprite[] field_e;
     static he[] field_b;
     static int field_c;
     Throwable cause;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, nh param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8) {
         try {
           if (param2 > -91) {
-            field_e = (nh[]) null;
+            field_e = (RgbSprite[]) null;
           }
           ph.field_e = param6;
           af.field_d = param0;
@@ -28,7 +28,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_f = null;
           field_e = null;
@@ -36,7 +36,7 @@ final class ClientException extends RuntimeException {
           field_b = null;
           return;
         }
-        ClientException.a(false);
+        ClientException.clearStaticReferences(false);
         field_f = null;
         field_e = null;
         field_g = null;

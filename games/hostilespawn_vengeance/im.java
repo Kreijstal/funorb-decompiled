@@ -3,7 +3,7 @@
  */
 final class im {
     static String field_b;
-    static bd[] field_a;
+    static RgbSprite[] field_a;
     static gg field_e;
     static String field_d;
     static int field_f;
@@ -11,7 +11,7 @@ final class im {
     static ResourceArchive field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -19,7 +19,7 @@ final class im {
         field_e = null;
         field_d = null;
         if (param0 != -14986) {
-          im.a(-24);
+          im.clearStaticReferences(-24);
         }
     }
 

@@ -3,13 +3,13 @@
  */
 final class qc extends qe {
     private rh field_r;
-    static cn field_z;
+    static RgbSprite field_z;
     private rh field_v;
-    private cn[] field_s;
+    private RgbSprite[] field_s;
     static boolean field_t;
     private int field_B;
     static int field_w;
-    private cn[] field_A;
+    private RgbSprite[] field_A;
     private ae field_x;
     static int field_y;
     private tf[] field_u;
@@ -290,9 +290,9 @@ final class qc extends qe {
         }
     }
 
-    private final cn a(int param0, q param1) {
+    private final RgbSprite a(int param0, q param1) {
         RuntimeException var3 = null;
-        cn stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -357,7 +357,7 @@ final class qc extends qe {
         String var4 = ui.a(var3, 19435);
         int var5 = IntrusiveNode.field_c.b(var4);
         int var6 = IntrusiveNode.field_c.field_H + IntrusiveNode.field_c.field_E;
-        cn var7 = new cn(var5, var6);
+        RgbSprite var7 = new RgbSprite(var5, var6);
         jh.a(var7);
         if (param0 != -125) {
           return;
@@ -398,21 +398,21 @@ final class qc extends qe {
         tf.field_j = null;
     }
 
-    private final cn a(cn param0, int param1) {
+    private final RgbSprite a(RgbSprite param0, int param1) {
         RuntimeException var3 = null;
-        cn var4 = null;
-        cn stackIn_3_0 = null;
+        RgbSprite var4 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           jh.c();
-          var4 = new cn(param0.field_E >> 1, param0.field_G >> 1);
+          var4 = new RgbSprite(param0.field_E >> 1, param0.field_G >> 1);
           var4.e();
           param0.b(param0.field_E >> 3, param0.field_G >> 3, param0.field_E >> 2, param0.field_G >> 2, 16777215);
           if (param1 != 320) {
-            this.field_A = (cn[]) null;
+            this.field_A = (RgbSprite[]) null;
           }
           var4.d(16777215);
           var4.e();
@@ -507,9 +507,9 @@ final class qc extends qe {
         int var3;
         AchievementIconEntry var4;
         int[] var4_array;
-        cn var5_ref_cn;
+        RgbSprite var5_ref_cn;
         int var5;
-        cn var6_ref_cn;
+        RgbSprite var6_ref_cn;
         int var6;
         String var7;
         int var8;
@@ -783,7 +783,7 @@ final class qc extends qe {
         int stackIn_48_0 = 0;
         boolean stackIn_67_0 = false;
         int var2;
-        cn var3;
+        RgbSprite var3;
         int var4;
         int[] var5;
         int var6;
@@ -824,13 +824,13 @@ final class qc extends qe {
         ak.field_n = -1;
         if (this.field_B == 8 ||
           this.field_B == 9) {
-          ud.field_s = new cn[47];
+          ud.field_s = new RgbSprite[47];
           u.field_P = -1;
           for (var3_int = 0; var3_int < 46; var3_int++) {
             ud.field_s[var3_int] = this.a(120, PacketBuffer.field_j[var3_int]);
           }
           jh.c();
-          var3 = new cn(64, 64);
+          var3 = new RgbSprite(64, 64);
           var3.e();
           SoftwareRasterizer.drawCircleOutline(32, 31, 14, 16777215);
           ud.field_s[46] = var3;
@@ -910,9 +910,9 @@ final class qc extends qe {
         }
         this.field_r = new rh(58, 394, 80, 160, 255, 197376, 240);
         this.field_v = new rh(580, 394, 80, 160, 255, 197376, 240);
-        this.field_s = new cn[this.field_x.field_i];
+        this.field_s = new RgbSprite[this.field_x.field_i];
         this.field_u = new tf[this.field_x.field_i];
-        this.field_A = new cn[this.field_x.field_i];
+        this.field_A = new RgbSprite[this.field_x.field_i];
         jh.a(this.field_e);
         stackIn_67_0 = (mn.field_b != 8) && (9 != mn.field_b);
         bf.a(stackIn_67_0, -128);

@@ -421,9 +421,9 @@ final class kg extends h {
     public kg() {
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 7087) {
-          kg.e(96);
+          kg.clearStaticReferences(96);
         }
         field_r = null;
     }

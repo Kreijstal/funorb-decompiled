@@ -37,7 +37,7 @@ final class ld extends gj {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         field_D = null;
         field_z = null;
@@ -46,7 +46,7 @@ final class ld extends gj {
           field_G = null;
           return;
         }
-        ld.g(64);
+        ld.clearStaticReferences(64);
         field_G = null;
     }
 

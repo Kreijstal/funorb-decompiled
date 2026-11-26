@@ -60,7 +60,7 @@ final class uc extends ng {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_R = null;
         field_T = null;
         if (param0 != -15087) {
@@ -96,7 +96,7 @@ final class uc extends ng {
             c.sleepMillis(46, 10L);
           }
           if (param0 >= -75) {
-            uc.a(-124);
+            uc.clearDeclaredStaticReferences(-124);
           }
           if (2 == var8.status) {
             stackIn_12_0 = new ja[]{};

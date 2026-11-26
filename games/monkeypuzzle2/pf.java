@@ -57,7 +57,7 @@ final class pf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 119 / ((61 - param0) / 54);
         field_b = null;
         field_c = null;

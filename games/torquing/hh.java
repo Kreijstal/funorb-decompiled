@@ -12,7 +12,7 @@ final class hh {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_d = null;
         int var1 = -61 / ((17 - param0) / 56);

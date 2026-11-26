@@ -29,7 +29,7 @@ final class ed {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = 60 / ((74 - param0) / 42);
     }
@@ -103,7 +103,7 @@ final class ed {
           var13 = this.field_b * this.field_d;
           var15 = this.field_d * this.field_e;
           if (param1 < 112) {
-            ed.b((byte) -77);
+            ed.clearStaticReferences((byte) -77);
           }
           var17 = this.field_b * this.field_b;
           var19 = this.field_e * this.field_b;

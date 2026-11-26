@@ -7,9 +7,9 @@ final class cd {
     static int field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 8192) {
-          cd.a(-57);
+          cd.clearStaticReferences(-57);
           field_b = null;
           field_a = null;
           return;

@@ -110,9 +110,9 @@ final class cd implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 5) {
-          cd.a(-105);
+          cd.clearStaticReferences(-105);
         }
         field_f = null;
     }

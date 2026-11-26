@@ -11,7 +11,7 @@ final class HudMessage extends IntrusiveNode {
     private int fadeInTicks;
     private String text;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         int var1 = -17 % ((19 - param0) / 35);
         field_g = null;

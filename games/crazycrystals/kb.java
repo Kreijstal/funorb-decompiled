@@ -11,11 +11,11 @@ final class kb {
     static int field_a;
     static int field_g;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_f = null;
         if (param0 >= -71) {
-          kb.a(37);
+          kb.clearStaticReferences(37);
         }
     }
 

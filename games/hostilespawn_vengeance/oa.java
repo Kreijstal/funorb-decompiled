@@ -3,18 +3,18 @@
  */
 final class oa {
     static String field_j;
-    static bd[] field_m;
+    static RgbSprite[] field_m;
     static PcmStreamMixer field_b;
     static int[] field_c;
     static nd field_g;
     static String field_h;
     static je field_k;
     static int field_f;
-    static bd field_i;
+    static RgbSprite field_i;
     static p field_d;
     static int field_a;
     static PlatformTask field_l;
-    static bd field_e;
+    static RgbSprite field_e;
 
     public static void clearStaticReferences(int param0) {
         field_d = null;
@@ -61,7 +61,7 @@ final class oa {
           var4_int = (int)(-var18 + (double)var6);
           var8 = 8;
           if (param0 != -17652) {
-            field_i = (bd) null;
+            field_i = (RgbSprite) null;
           }
           var10 = 1;
           var5 = (int)(-var20 + (double)var7);

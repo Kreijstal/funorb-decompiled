@@ -211,7 +211,7 @@ class ba extends wd {
         this.field_C = false;
         try {
           this.field_D = param2;
-          this.field_j = ma.field_m.field_e;
+          this.field_j = SpriteGeometry.field_m.field_e;
           this.a(true, param0, true);
           this.field_H = true;
           this.field_L = fa.correctedCurrentTimeMillis(-96);

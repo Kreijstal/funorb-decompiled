@@ -103,7 +103,7 @@ final class gf extends ma {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 24) {
-            gf.d((byte) -38);
+            gf.clearDeclaredStaticReferences((byte) -38);
           }
           if (this.field_r instanceof uh) {
             var3 = ((uh) ((Object) this.field_r)).a(-113);
@@ -162,7 +162,7 @@ final class gf extends ma {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_m = (int[][]) null;
         field_o = null;
         field_s = null;

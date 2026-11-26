@@ -7,13 +7,13 @@ class vn extends bj implements mj {
     static int[] field_sb;
     private boolean field_zb;
     static String[] field_ub;
-    static km field_rb;
-    static km field_xb;
+    static RgbSprite field_rb;
+    static RgbSprite field_xb;
     static int[] field_Ab;
     private lh field_Fb;
     private boolean field_Cb;
     private rm field_wb;
-    static km field_Bb;
+    static RgbSprite field_Bb;
     private boolean field_yb;
     static int field_Db;
     private boolean field_tb;
@@ -57,7 +57,7 @@ class vn extends bj implements mj {
           this.field_wb.field_W = true;
           this.b(this.field_wb, 95);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ class vn extends bj implements mj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ class vn extends bj implements mj {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -269,11 +269,11 @@ class vn extends bj implements mj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_sb = null;
         field_Ab = null;
         field_xb = null;
@@ -285,7 +285,7 @@ class vn extends bj implements mj {
           field_Eb = null;
           return;
         }
-        vn.j((byte) 123);
+        vn.releaseDeclaredStaticReferences((byte) 123);
         field_rb = null;
         field_ub = null;
         field_Bb = null;

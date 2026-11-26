@@ -161,7 +161,7 @@ final class wb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 115 / ((param0 - 17) / 43);
         field_d = null;
     }

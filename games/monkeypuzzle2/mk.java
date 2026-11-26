@@ -19,7 +19,7 @@ final class mk extends IntrusiveNode {
           if (param0 > 125) {
             return;
           }
-          mk.a(99);
+          mk.clearDeclaredStaticReferences(99);
           return;
         }
         var1 = qc.field_N;
@@ -32,7 +32,7 @@ final class mk extends IntrusiveNode {
           if (param0 > 125) {
             return;
           }
-          mk.a(99);
+          mk.clearDeclaredStaticReferences(99);
           return;
         }
         if (var1 == 1) {
@@ -44,14 +44,14 @@ final class mk extends IntrusiveNode {
           if (param0 > 125) {
             return;
           }
-          mk.a(99);
+          mk.clearDeclaredStaticReferences(99);
           return;
         }
         if (var1 != 2) {
           if (param0 > 125) {
             return;
           }
-          mk.a(99);
+          mk.clearDeclaredStaticReferences(99);
           return;
         }
         fieldTemp$1 = em.field_B;
@@ -63,11 +63,11 @@ final class mk extends IntrusiveNode {
         if (param0 > 125) {
           return;
         }
-        mk.a(99);
+        mk.clearDeclaredStaticReferences(99);
         return;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 8134) {
           return;
         }

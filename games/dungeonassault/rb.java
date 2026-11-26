@@ -29,12 +29,12 @@ final class rb extends ck {
         return var5;
     }
 
-    final static cn a(int param0, cn param1, int param2, byte param3) {
+    final static RgbSprite a(int param0, RgbSprite param1, int param2, byte param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        cn var7 = null;
-        cn stackIn_5_0 = null;
+        RgbSprite var7 = null;
+        RgbSprite stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -42,7 +42,7 @@ final class rb extends ck {
         int var5Lifetime1;
         var6 = DungeonAssault.field_K;
         try {
-          var7 = new cn(param1.field_y + param0 * 2, param1.field_v + param0 * 2);
+          var7 = new RgbSprite(param1.field_y + param0 * 2, param1.field_v + param0 * 2);
           jh.a(var7);
           for (var5 = 0; var5 < param0; var5++) {
             param1.e(-param1.field_w + param0, param0 - param1.field_A, param2);
@@ -69,10 +69,10 @@ final class rb extends ck {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_O = null;
         if (param0 != 4935) {
-          rb.a(39);
+          rb.clearDeclaredStaticReferences(39);
         }
         field_I = null;
         field_J = null;

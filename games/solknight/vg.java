@@ -470,7 +470,7 @@ class vg extends pj {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_I = null;
         if (param0 <= 96) {
           return;

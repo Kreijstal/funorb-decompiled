@@ -220,7 +220,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_g = null;
         int var1 = -83 / ((param0 + 86) / 33);

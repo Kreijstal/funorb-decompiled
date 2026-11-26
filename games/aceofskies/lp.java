@@ -11,7 +11,7 @@ final class lp extends Exception {
     static int[] field_c;
     static boolean[] heldKeys;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_d = null;
         field_g = null;

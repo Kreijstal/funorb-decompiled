@@ -66,7 +66,7 @@ final class gi extends ii implements vg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_K = null;
         field_S = null;
         field_P = null;

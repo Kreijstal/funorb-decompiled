@@ -5,7 +5,7 @@ final class sh {
     static boolean field_e;
     static IntrusiveDeque field_a;
     static he[][] field_c;
-    static nh field_b;
+    static RgbSprite field_b;
     static String field_d;
     private static String field_z;
 
@@ -17,7 +17,7 @@ final class sh {
           field_a = null;
           return;
         }
-        field_b = (nh) null;
+        field_b = (RgbSprite) null;
         field_b = null;
         field_d = null;
         field_a = null;

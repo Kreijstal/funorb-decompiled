@@ -217,9 +217,9 @@ final class bj extends rb {
         this.field_G.drawAdditive(var9Lifetime1 - (var22.field_w >> 1), var10Lifetime1 - var22.field_u, 256);
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -37) {
-          bj.f((byte) 58);
+          bj.clearStaticReferences((byte) 58);
           field_L = null;
           field_K = null;
           return;

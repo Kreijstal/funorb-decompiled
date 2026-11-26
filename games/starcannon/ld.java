@@ -13,7 +13,7 @@ final class ld extends ca {
         super(0L, (ca) null);
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 8240) {
           field_jb = (String) null;
         }

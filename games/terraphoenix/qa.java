@@ -5,7 +5,7 @@ final class qa {
     static String field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 67 / ((5 - param0) / 61);
         field_a = null;
         field_b = null;

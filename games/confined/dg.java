@@ -36,11 +36,11 @@ final class dg extends IntrusiveNode {
         return (char)var2;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_n = null;
         field_p = null;
         if (param0) {
-          dg.b(false);
+          dg.clearStaticReferences(false);
         }
     }
 

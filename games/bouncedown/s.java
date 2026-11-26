@@ -5,7 +5,7 @@ final class s extends vc {
     private int field_L;
     private String field_I;
     private uh field_H;
-    private tg field_K;
+    private RgbSprite field_K;
 
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
@@ -16,9 +16,9 @@ final class s extends vc {
         int var11;
         int var12;
         int var13;
-        tg var14;
-        tg var15;
-        tg var16;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
         vf var6Lifetime1;
         regionExit1: {
           regionExit2: {
@@ -73,7 +73,7 @@ final class s extends vc {
             kh.a(this.field_K, 1);
             SoftwareRasterizer.clearRaster();
           } else {
-            this.field_K = new tg(var11, var12);
+            this.field_K = new RgbSprite(var11, var12);
             kh.a(this.field_K, 1);
           }
           var16.b(112, 144, var16.field_t << 4, var16.field_o << 4, -this.field_L << 10, 4096);

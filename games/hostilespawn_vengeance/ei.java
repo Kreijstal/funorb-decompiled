@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei extends IntrusiveNode {
-    static bd field_p;
-    static bd field_m;
+    static RgbSprite field_p;
+    static RgbSprite field_m;
     static IntrusiveDeque field_q;
     static int field_l;
     static boolean field_i;
-    static bd field_n;
+    static RgbSprite field_n;
     byte[] field_r;
     long field_j;
     int field_s;
@@ -68,7 +68,7 @@ final class ei extends IntrusiveNode {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        bd[][] var22_ref_bd____ = null;
+        RgbSprite[][] var22_ref_bd____ = null;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
@@ -869,10 +869,10 @@ final class ei extends IntrusiveNode {
         }
     }
 
-    final static bd[] a(int param0, int param1, int param2, int param3, int param4) {
-        bd[] var6 = new bd[9];
-        bd[] var5 = var6;
-        bd dupTemp$0 = el.a(-7, param1, param3);
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = el.a(-7, param1, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
@@ -881,7 +881,7 @@ final class ei extends IntrusiveNode {
         if (param4 <= 101) {
           field_o = (eg) null;
         }
-        bd dupTemp$1 = el.a(-122, param1, param0);
+        RgbSprite dupTemp$1 = el.a(-122, param1, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -1079,12 +1079,12 @@ final class ei extends IntrusiveNode {
         field_q = null;
     }
 
-    final static bd[] a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         oc var6 = null;
-        bd[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

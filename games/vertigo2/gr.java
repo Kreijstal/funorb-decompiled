@@ -114,11 +114,11 @@ final class gr extends sp implements ij {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_W = (int[][]) null;
         field_ab = null;
         if (param0 <= 52) {
-          gr.g((byte) -83);
+          gr.clearStaticReferences((byte) -83);
         }
     }
 

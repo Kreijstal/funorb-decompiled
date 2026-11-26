@@ -72,7 +72,7 @@ abstract class sg extends ta {
         if (me.field_f == null ||
           !(this.field_m <= me.field_f.field_o) ||
           !(me.field_f.field_k >= this.field_r)) {
-          me.field_f = new hj(this.field_m, this.field_r);
+          me.field_f = new RgbSprite(this.field_m, this.field_r);
         }
         de.a(param2 ^ -1048454, me.field_f);
         SoftwareRasterizer.clearRaster();
@@ -180,7 +180,7 @@ abstract class sg extends ta {
         return (pj) (this);
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_F = null;
         field_E = null;
         int var1 = 30 / ((param0 + 17) / 47);

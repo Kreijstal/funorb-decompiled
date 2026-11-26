@@ -10,9 +10,9 @@ abstract class or {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 4) {
-          or.a((byte) -22);
+          or.clearStaticReferences((byte) -22);
           field_b = null;
           return;
         }
@@ -29,7 +29,7 @@ abstract class or {
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
         if (param0 >= -28) {
-          or.a((byte) 107);
+          or.clearStaticReferences((byte) 107);
           Sprite dupTemp$1 = tn.a(param2, param1, true);
           var6[8] = dupTemp$1;
           var5[7] = dupTemp$1;

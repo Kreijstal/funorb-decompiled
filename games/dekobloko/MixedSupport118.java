@@ -563,7 +563,7 @@ final class MixedSupport118 {
         return this;
     }
 
-    public static void performAction1538(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         uiComponentPart005State0001 = null;
         int integerLocal1 = -72 % ((byteArgument1 - 30) / 37);
         nodeDequeState0032 = null;

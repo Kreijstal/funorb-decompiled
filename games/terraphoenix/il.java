@@ -43,7 +43,7 @@ final class il {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = (byte[][]) null;
         int var1 = 117 / ((50 - param0) / 52);
     }

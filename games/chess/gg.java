@@ -377,7 +377,7 @@ final class gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "gg.F(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "gg.F(" + param0 + ')');
         }
     }
 

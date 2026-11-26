@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj extends ql {
-    static bd field_p;
+    static RgbSprite field_p;
     static in field_v;
     private oc field_f;
     private oc[] field_x;
-    static bd[] field_h;
+    static RgbSprite[] field_h;
     static qm[] field_w;
-    static bd[] field_e;
+    static RgbSprite[] field_e;
     static String[] field_j;
     static int field_g;
     static String field_u;
@@ -133,7 +133,7 @@ final class vj extends ql {
           ti.a(228, (byte) 38, 27);
         }
         if (param0 != 0) {
-          field_h = (bd[]) null;
+          field_h = (RgbSprite[]) null;
         }
     }
 
@@ -218,7 +218,7 @@ final class vj extends ql {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_u = null;
         field_w = null;
@@ -227,7 +227,7 @@ final class vj extends ql {
         field_e = null;
         field_p = null;
         if (param0 != 140) {
-          vj.g(39);
+          vj.clearStaticReferences(39);
         }
     }
 

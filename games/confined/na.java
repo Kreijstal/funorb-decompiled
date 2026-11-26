@@ -38,7 +38,7 @@ class na extends rg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_Q = null;
         field_T = null;
         field_S = null;
@@ -155,7 +155,7 @@ class na extends rg {
         int var6 = 0;
         try {
           if (param1 != 11579568) {
-            na.a((byte) 60);
+            na.clearDeclaredStaticReferences((byte) 60);
           }
           super.a(param0, param1 ^ 0, param2, param3);
           this.field_P = null;

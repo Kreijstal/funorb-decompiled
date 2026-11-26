@@ -103,7 +103,7 @@ final class ud extends DualLinkNode {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param1 != -1) {
-            ud.b((byte) -4);
+            ud.clearStaticReferences((byte) -4);
           }
           while (true) {
             var3_int = param0.readUnsignedByte(-11);
@@ -126,14 +126,14 @@ final class ud extends DualLinkNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_w = null;
         field_E = null;
         field_t = null;
         field_A = null;
         field_x = null;
         if (param0 != -37) {
-          ud.b((byte) -106);
+          ud.clearStaticReferences((byte) -106);
         }
     }
 
@@ -143,7 +143,7 @@ final class ud extends DualLinkNode {
         int var3 = Vertigo2.field_L ? 1 : 0;
         int var2Lifetime1;
         if (param0 != 89) {
-          ud.b((byte) -113);
+          ud.clearStaticReferences((byte) -113);
         }
         if (this.field_z != null) {
           for (var2 = 0; this.field_z.length > var2; var2++) {

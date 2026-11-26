@@ -6,10 +6,10 @@ abstract class al extends ck implements gl {
     static String field_g;
     private ba field_i;
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_g = null;
         if (param0 != 24562) {
-          al.c(52);
+          al.clearDeclaredStaticReferences(52);
         }
     }
 

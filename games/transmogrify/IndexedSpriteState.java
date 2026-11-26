@@ -11,7 +11,7 @@ abstract class IndexedSpriteState {
     int field_h;
     int field_g;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_e = (String) null;
           field_e = null;
@@ -26,7 +26,7 @@ abstract class IndexedSpriteState {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void b(boolean param0) {
+    final static void clearDeclaredStaticReferences(boolean param0) {
         if (!param0) {
           field_e = (String) null;
         }

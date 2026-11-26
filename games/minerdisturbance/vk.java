@@ -58,7 +58,7 @@ final class vk {
         int var8 = 255 & param0 >> 8;
         int var9 = param0 & 255;
         if (param2 != 105) {
-          vk.a(114);
+          vk.clearStaticReferences(114);
         }
         for (var10 = 0; var10 < 256; var10++) {
           var11 = -var10 + 256;
@@ -67,12 +67,12 @@ final class vk {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         field_d = null;
         if (param0 <= 5) {
-          vk.a(-78);
+          vk.clearStaticReferences(-78);
         }
     }
 

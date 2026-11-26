@@ -11,7 +11,7 @@ final class mb extends ed {
     private int field_f;
     private String field_m;
     static int field_e;
-    static tg field_q;
+    static RgbSprite field_q;
     private int field_p;
     static String field_k;
     private int field_r;

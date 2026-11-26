@@ -49,7 +49,7 @@ final class rn extends jg {
         this.field_v = 3;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         field_y = null;
         field_w = null;

@@ -19,11 +19,11 @@ final class fk extends IntrusiveNode {
         wh.field_a.a(param0 - 8477, param1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_o = null;
         if (param0 != -30530) {
-          fk.a(116);
+          fk.clearStaticReferences(116);
         }
     }
 

@@ -7,12 +7,12 @@ final class wl {
     static String field_a;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
         if (param0 < 109) {
-          wl.a(58);
+          wl.clearStaticReferences(58);
         }
     }
 

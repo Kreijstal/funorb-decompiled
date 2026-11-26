@@ -62,7 +62,7 @@ final class fg extends kj implements cc, sg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_M = null;
         if (param0 >= -7) {
           field_M = (int[]) null;

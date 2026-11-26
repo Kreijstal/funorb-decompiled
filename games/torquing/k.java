@@ -52,7 +52,7 @@ final class k {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_h = null;
         field_d = null;

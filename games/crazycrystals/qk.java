@@ -5,7 +5,7 @@ import java.io.*;
 
 final class qk extends og implements fd, vd {
     private pc field_C;
-    static dl field_H;
+    static RgbSprite field_H;
     static int[] field_E;
     private pc field_B;
     static int field_F;
@@ -303,7 +303,7 @@ final class qk extends og implements fd, vd {
             param3.field_k == param2.field_g) {
             var4_int = param3.field_p.length;
             if (param1 < 79) {
-              qk.j(-119);
+              qk.releaseDeclaredStaticReferences(-119);
             }
             var5 = param2.field_l[param0].length / var4_int;
             for (var6 = 0; var6 < var5; var6++) {
@@ -347,7 +347,7 @@ final class qk extends og implements fd, vd {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_E = null;
         field_z = null;
         if (param0 != -26005) {

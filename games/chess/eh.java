@@ -80,7 +80,7 @@ abstract class eh extends ma {
     boolean a(int param0) {
         this.field_N = this.h(0);
         if (param0 <= 46) {
-          eh.i(-44);
+          eh.clearDeclaredStaticReferences(-44);
           if (0 != this.field_N) {
             return false;
           }
@@ -105,7 +105,7 @@ abstract class eh extends ma {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_K = null;
         field_M = null;
         field_O = null;
@@ -123,7 +123,7 @@ abstract class eh extends ma {
           this.field_P = false;
           this.field_Q = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ abstract class eh extends ma {
           return;
         }
         if (null == ud.field_c) {
-          ud.field_c = new km(this.field_y, this.field_C);
+          ud.field_c = new RgbSprite(this.field_y, this.field_C);
           tl.a((byte) -67, ud.field_c);
           SoftwareRasterizer.clearRaster();
           this.b(-14239, 0, 0);
@@ -161,7 +161,7 @@ abstract class eh extends ma {
           return;
         }
         if (this.field_y > ud.field_c.field_w) {
-          ud.field_c = new km(this.field_y, this.field_C);
+          ud.field_c = new RgbSprite(this.field_y, this.field_C);
           tl.a((byte) -67, ud.field_c);
           SoftwareRasterizer.clearRaster();
           this.b(-14239, 0, 0);
@@ -193,7 +193,7 @@ abstract class eh extends ma {
           ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
           return;
         }
-        ud.field_c = new km(this.field_y, this.field_C);
+        ud.field_c = new RgbSprite(this.field_y, this.field_C);
         tl.a((byte) -67, ud.field_c);
         SoftwareRasterizer.clearRaster();
         this.b(-14239, 0, 0);
@@ -247,7 +247,7 @@ abstract class eh extends ma {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

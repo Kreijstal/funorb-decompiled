@@ -16,7 +16,7 @@ final class AccountCreationResultPanel extends ci implements ka {
         }
     }
 
-    public static void n(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_ub = null;
         if (param0 != 6) {
           field_ub = (Archive) null;

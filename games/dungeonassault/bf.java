@@ -11,12 +11,12 @@ final class bf {
     static ReverbPcmStream field_h;
     private int field_g;
     static int field_b;
-    static cn field_d;
+    static RgbSprite field_d;
     static String field_o;
     private int[] field_c;
     private int[] field_i;
     static tf field_m;
-    static cn[] field_e;
+    static RgbSprite[] field_e;
 
     private final void a(int param0, int param1) {
         int var3;

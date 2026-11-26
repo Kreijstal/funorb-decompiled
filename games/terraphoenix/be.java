@@ -123,7 +123,7 @@ final class be extends wc {
         return var5;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_w = null;
         int var1 = -77 / ((55 - param0) / 36);
         field_u = null;

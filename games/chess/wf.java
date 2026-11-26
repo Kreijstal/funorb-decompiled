@@ -3,7 +3,7 @@
  */
 final class wf extends ma implements ha, mj {
     private String field_V;
-    static km field_Q;
+    static RgbSprite field_Q;
     private qn field_N;
     private boolean field_Y;
     private fb field_M;
@@ -45,7 +45,7 @@ final class wf extends ma implements ha, mj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -209,13 +209,13 @@ final class wf extends ma implements ha, mj {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param2 >= -80) {
-          wf.a(-118);
+          wf.clearDeclaredStaticReferences(-118);
         }
         if (this.field_V != null) {
           rb.field_b.a(this.field_V, 20 + (this.field_u + param3), this.field_r + param0 + 15, -40 + this.field_y, this.field_C, 16777215, -1, 1, 0, rb.field_b.field_C);
@@ -226,7 +226,7 @@ final class wf extends ma implements ha, mj {
         super.a(param0, param1, -117, param3);
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_S = null;
         if (param0 != 35) {
           field_W = (id) null;
@@ -246,7 +246,7 @@ final class wf extends ma implements ha, mj {
           bj.a(PcmSampleStream.a(param0, 100, 96), true);
           int var2_int = -101 % ((param1 + 24) / 39);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "wf.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wf.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -302,17 +302,17 @@ final class wf extends ma implements ha, mj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public final void a(qn param0, int param1) {
         try {
           if (param1 != 10999) {
-            wf.a(-13);
+            wf.clearDeclaredStaticReferences(-13);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "wf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ final class wf extends ma implements ha, mj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ final class wf extends ma implements ha, mj {
           var3.a(0, false, var4);
           this.field_U.i(param1 ^ -12869);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "wf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class wf extends ma implements ha, mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "wf.J(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "wf.J(" + param0 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class wf extends ma implements ha, mj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -12,18 +12,18 @@ final class qm {
     static String field_e;
     static int field_b;
 
-    final static void a(km[] param0, int param1, int param2, int param3) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3) {
         try {
           if (param1 >= -54) {
-            km[] var5 = (km[]) null;
-            qm.a((km[]) null, 95, 62, -2);
+            RgbSprite[] var5 = (RgbSprite[]) null;
+            qm.a((RgbSprite[]) null, 95, 62, -2);
           }
           de.field_c = new le(param0);
           bb.field_b = param2;
           IntrusiveNode.field_f = param3;
           fi.a((byte) 6);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class qm {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class qm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class qm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class qm {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
         }
     }
 

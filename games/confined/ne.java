@@ -7,7 +7,7 @@ final class ne {
     static String field_d;
     static PcmSample field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -40 / ((-70 - param0) / 52);
         field_b = null;
         field_a = null;

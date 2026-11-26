@@ -204,7 +204,7 @@ abstract class wl extends tb {
         return super.d(true);
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -94 / ((-26 - param0) / 49);
         field_W = null;
         field_T = null;

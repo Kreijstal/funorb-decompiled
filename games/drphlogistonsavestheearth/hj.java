@@ -10,7 +10,7 @@ abstract class hj {
     static ok field_g;
     String field_b;
     static String field_a;
-    static nh field_e;
+    static RgbSprite field_e;
     static gk field_i;
     static String field_c;
 
@@ -24,7 +24,7 @@ abstract class hj {
           field_h = null;
           return;
         }
-        field_e = (nh) null;
+        field_e = (RgbSprite) null;
         field_e = null;
         field_h = null;
     }

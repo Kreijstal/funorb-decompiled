@@ -8,7 +8,7 @@ class wa extends DualLinkNode {
     static String field_t;
     static IndexedSprite[] field_r;
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_t = null;
         field_q = null;
         field_r = null;
@@ -21,7 +21,7 @@ class wa extends DualLinkNode {
         try {
           Archive.field_d = param0;
           if (param1 < 19) {
-            wa.c(-64);
+            wa.releaseDeclaredStaticReferences(-64);
           }
           jh.field_p = param2;
         } catch (RuntimeException runtimeException) {

@@ -54,7 +54,7 @@ final class gn {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -52 % ((param0 - 23) / 50);
         field_l = null;
         field_k = null;
@@ -70,7 +70,7 @@ final class gn {
         }
         if (this.field_b) {
           if (!param0) {
-            gn.a(-27);
+            gn.clearStaticReferences(-27);
           }
           fieldTemp$1 = this.field_o - 1;
           this.field_o = this.field_o - 1;
@@ -93,7 +93,7 @@ final class gn {
           sg.field_a = (this.field_c - hf.field_h) / 2;
         }
         if (hf.field_h != this.field_i ||
-          qc.field_s != this.field_u) {
+          SpriteGeometry.field_s != this.field_u) {
           this.field_h.a((byte) -123, this.field_u, this.field_i);
         }
     }
@@ -133,7 +133,7 @@ final class gn {
 
     final FullscreenFocusCanvas d(int param0) {
         this.field_d = hf.field_h;
-        this.field_f = qc.field_s;
+        this.field_f = SpriteGeometry.field_s;
         if (param0 != 16776960) {
           this.d(47);
         }
@@ -215,11 +215,11 @@ final class gn {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        bd var14 = null;
+        RgbSprite var14 = null;
         var13 = HostileSpawn.field_I ? 1 : 0;
         try {
           var8 = 46 / ((9 - param3) / 50);
-          var14 = new bd(64, 64);
+          var14 = new RgbSprite(64, 64);
           for (var9 = 0; var9 < ll.field_a; var9++) {
             boolean decompiledFrameRemainder0 = true;
             var10 = wh.field_b[var9];
@@ -388,7 +388,7 @@ final class gn {
           }
         }
         if (var2 != hf.field_h ||
-          qc.field_s != var3) {
+          SpriteGeometry.field_s != var3) {
           this.field_h.a((byte) -120, var3, var2);
         }
         if (this.field_c > 0) {

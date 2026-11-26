@@ -17,9 +17,9 @@ abstract class ff extends te {
         oj.a(false, kk.field_a, 480, 480, (double)(-jj.field_b) + (double)kk.field_a.length * param0, 0, param0, 0, (byte) -32, param0 * (double)kk.field_a[0].length);
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -18692) {
-          ff.c(33);
+          ff.clearDeclaredStaticReferences(33);
         }
         field_e = null;
         field_d = null;
@@ -29,7 +29,7 @@ abstract class ff extends te {
     void a(int param0) {
         this.field_c.c((byte) 125);
         if (param0 != -1) {
-          ff.c(113);
+          ff.clearDeclaredStaticReferences(113);
         }
         kk.field_a = (f[][]) null;
     }

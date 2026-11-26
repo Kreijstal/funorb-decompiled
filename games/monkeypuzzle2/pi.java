@@ -242,7 +242,7 @@ final class pi extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         field_l = null;
         field_i = null;
@@ -271,7 +271,7 @@ final class pi extends DualLinkNode {
         StringBuilder discarded$2 = null;
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param0 != -54) {
-          pi.f(62);
+          pi.clearDeclaredStaticReferences(62);
         }
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;

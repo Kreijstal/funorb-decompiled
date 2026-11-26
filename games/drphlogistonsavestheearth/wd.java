@@ -29,16 +29,16 @@ abstract class wd {
 
     final static void b(int param0) {
         RuntimeException decompiledCaughtException = null;
-        nh var1 = null;
+        RgbSprite var1 = null;
         RuntimeException var1_ref = null;
         int var2_int = 0;
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        nh var6 = null;
-        nh var7 = null;
-        nh var8 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
         int var3Lifetime1;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {

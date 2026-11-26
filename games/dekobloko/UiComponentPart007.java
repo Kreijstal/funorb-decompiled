@@ -111,14 +111,14 @@ final class UiComponentPart007 extends ComponentContainer implements CallbackCon
         }
     }
 
-    public static void performAction0357(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         sceneWidgetState0019 = null;
         indexedSpriteArrayState0002 = null;
         stringState0112 = null;
         integerArrayArrayState0006 = (int[][]) null;
         stringState0113 = null;
         if (integerArgument1 != 1) {
-          UiComponentPart007.performAction0357(-31);
+          UiComponentPart007.clearStaticReferences(-31);
         }
         stringState0111 = null;
         stringState0114 = null;
@@ -131,7 +131,7 @@ final class UiComponentPart007 extends ComponentContainer implements CallbackCon
 
     final static RgbSprite[] computeRgbSpriteArray0358(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument2 != 0) {
-          UiComponentPart007.performAction0357(10);
+          UiComponentPart007.clearStaticReferences(10);
         }
         return MixedSupport090.computeRgbSpriteArray1143(integerArgument3, integerArgument1, -3932, 1);
     }

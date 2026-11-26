@@ -25,7 +25,7 @@ final class nc extends fb {
         return -1;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Q = null;
         int var1 = -3 / ((-55 - param0) / 42);
         field_N = null;
@@ -99,7 +99,7 @@ final class nc extends fb {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class nc extends fb {
 
     final static boolean j(int param0) {
         if (param0 < 120) {
-          nc.e((byte) -4);
+          nc.clearStaticReferences((byte) -4);
           if (rm.field_Q < 10) {
             return false;
           }
@@ -188,7 +188,7 @@ final class nc extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1_ref2), "nc.RA(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1_ref2), "nc.RA(" + param0 + ')');
         }
     }
 

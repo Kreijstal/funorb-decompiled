@@ -5,7 +5,7 @@ final class ej {
     static String field_b;
     static String field_a;
     static hg field_c;
-    static km[] field_e;
+    static RgbSprite[] field_e;
     static boolean field_f;
     static String field_d;
     private static String field_z;

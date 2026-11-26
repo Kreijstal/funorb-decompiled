@@ -119,7 +119,7 @@ final class lm extends kn implements f, sh {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 > -85) {
           return;
         }
@@ -157,7 +157,7 @@ final class lm extends kn implements f, sh {
             var3[var4] = ((lj) (var2.removeFirst(63854))).field_n;
           }
           if (param1 != -101) {
-            lm.f((byte) -38);
+            lm.clearDeclaredStaticReferences((byte) -38);
           }
           stackIn_11_0 = var3;
           return stackIn_11_0;

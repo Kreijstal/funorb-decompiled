@@ -40,9 +40,9 @@ abstract class bb {
         field_l = null;
     }
 
-    final static cn[] a(int param0, boolean param1, int param2, int param3) {
+    final static RgbSprite[] a(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-          return (cn[]) null;
+          return (RgbSprite[]) null;
         }
         return pe.a(param3, param0, 25, param2, 1);
     }

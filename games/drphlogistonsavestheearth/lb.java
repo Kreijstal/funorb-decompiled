@@ -11,7 +11,7 @@ abstract class lb extends DualLinkNode {
     static sa field_z;
     static na field_C;
     static int field_A;
-    static nh field_x;
+    static RgbSprite field_x;
     static int field_v;
 
     final static boolean a(char param0, boolean param1) {
@@ -38,7 +38,7 @@ abstract class lb extends DualLinkNode {
 
     abstract byte[] i(int param0);
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         field_w = null;
         field_B = null;

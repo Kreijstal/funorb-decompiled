@@ -43,10 +43,10 @@ final class tf implements de {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 18172) {
-          tf.a(-88);
+          tf.clearStaticReferences(-88);
         }
     }
 

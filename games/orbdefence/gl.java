@@ -23,14 +23,14 @@ final class gl {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, hj[] param3) {
+    final static void a(int param0, int param1, boolean param2, RgbSprite[] param3) {
         try {
           ui.field_b = new pf(param3);
           ak.field_z = param1;
           df.field_d = param0;
           jm.b(-1178583839);
           if (param2) {
-            gl.c(74);
+            gl.clearStaticReferences(74);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -87,7 +87,7 @@ final class gl {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_i = null;
         field_f = null;
@@ -98,7 +98,7 @@ final class gl {
           field_h = null;
           return;
         }
-        gl.c(78);
+        gl.clearStaticReferences(78);
         field_c = null;
         field_h = null;
     }
@@ -132,7 +132,7 @@ final class gl {
             this.field_g = this.field_g + (long)var5_int;
           }
           if (param2 != -4837) {
-            gl.c(7);
+            gl.clearStaticReferences(7);
           }
           stackIn_5_0 = var5_int;
           return stackIn_5_0;
@@ -179,7 +179,7 @@ final class gl {
 
     final long a(int param0) throws IOException {
         if (param0 != 1) {
-          gl.c(-119);
+          gl.clearStaticReferences(-119);
           return this.field_d.length();
         }
         return this.field_d.length();

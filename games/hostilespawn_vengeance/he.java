@@ -12,9 +12,9 @@ final class he extends ch {
     static java.awt.Image field_y;
     static int[] field_s;
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (!param0) {
-          he.b(false);
+          he.clearDeclaredStaticReferences(false);
         }
         field_z = null;
         field_t = null;
@@ -184,7 +184,7 @@ final class he extends ch {
     final void b(int param0) {
         super.b(param0 ^ 0);
         if (param0 != -24) {
-          he.b(false);
+          he.clearDeclaredStaticReferences(false);
         }
     }
 

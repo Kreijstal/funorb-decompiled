@@ -3,7 +3,7 @@
  */
 final class jh {
     static int field_c;
-    static db[] field_b;
+    static RgbSprite[] field_b;
     static BinaryBitmapFont field_d;
     static PlatformTaskDispatcher field_a;
     static int field_e;

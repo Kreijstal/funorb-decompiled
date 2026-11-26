@@ -7,7 +7,7 @@ final class sc {
     static String[] field_b;
     static MouseWheelInput field_e;
     static he[] field_a;
-    static nh field_c;
+    static RgbSprite field_c;
 
     final synchronized static byte[] a(int param0, int param1) {
         int fieldTemp$28 = 0;
@@ -87,8 +87,8 @@ final class sc {
             if (null == IntrusiveNode.field_a) {
               return new byte[param1];
             }
-            for (var2 = 0; mf.field_E.length > var2; var2++) {
-              if (param1 == mf.field_E[var2] &&
+            for (var2 = 0; SpriteGeometry.field_E.length > var2; var2++) {
+              if (param1 == SpriteGeometry.field_E[var2] &&
                 eb.field_b[var2] > 0) {
                 dupTemp$26 = eb.field_b[var2] - 1;
                 arrayValue$27 = IntrusiveNode.field_a[var2];
@@ -114,8 +114,8 @@ final class sc {
             if (null == IntrusiveNode.field_a) {
               return new byte[param1];
             }
-            for (var2Lifetime5 = 0; mf.field_E.length > var2Lifetime5; var2Lifetime5++) {
-              if (param1 == mf.field_E[var2Lifetime5] &&
+            for (var2Lifetime5 = 0; SpriteGeometry.field_E.length > var2Lifetime5; var2Lifetime5++) {
+              if (param1 == SpriteGeometry.field_E[var2Lifetime5] &&
                 eb.field_b[var2Lifetime5] > 0) {
                 dupTemp$23 = eb.field_b[var2Lifetime5] - 1;
                 arrayValue$24 = IntrusiveNode.field_a[var2Lifetime5];
@@ -138,8 +138,8 @@ final class sc {
             if (null == IntrusiveNode.field_a) {
               return new byte[param1];
             }
-            for (var2Lifetime6 = 0; mf.field_E.length > var2Lifetime6; var2Lifetime6++) {
-              if (param1 == mf.field_E[var2Lifetime6] &&
+            for (var2Lifetime6 = 0; SpriteGeometry.field_E.length > var2Lifetime6; var2Lifetime6++) {
+              if (param1 == SpriteGeometry.field_E[var2Lifetime6] &&
                 eb.field_b[var2Lifetime6] > 0) {
                 dupTemp$18 = eb.field_b[var2Lifetime6] - 1;
                 arrayValue$19 = IntrusiveNode.field_a[var2Lifetime6];
@@ -155,8 +155,8 @@ final class sc {
           if (null == IntrusiveNode.field_a) {
             return new byte[param1];
           }
-          for (var2Lifetime7 = 0; mf.field_E.length > var2Lifetime7; var2Lifetime7++) {
-            if (param1 == mf.field_E[var2Lifetime7] &&
+          for (var2Lifetime7 = 0; SpriteGeometry.field_E.length > var2Lifetime7; var2Lifetime7++) {
+            if (param1 == SpriteGeometry.field_E[var2Lifetime7] &&
               eb.field_b[var2Lifetime7] > 0) {
               dupTemp$20 = eb.field_b[var2Lifetime7] - 1;
               arrayValue$21 = IntrusiveNode.field_a[var2Lifetime7];
@@ -179,8 +179,8 @@ final class sc {
           }
           if (param0 == -16705) {
             if (null != IntrusiveNode.field_a) {
-              for (var2Lifetime1 = 0; mf.field_E.length > var2Lifetime1; var2Lifetime1++) {
-                if (param1 == mf.field_E[var2Lifetime1] &&
+              for (var2Lifetime1 = 0; SpriteGeometry.field_E.length > var2Lifetime1; var2Lifetime1++) {
+                if (param1 == SpriteGeometry.field_E[var2Lifetime1] &&
                   eb.field_b[var2Lifetime1] > 0) {
                   dupTemp$3 = eb.field_b[var2Lifetime1] - 1;
                   arrayValue$4 = IntrusiveNode.field_a[var2Lifetime1];
@@ -195,8 +195,8 @@ final class sc {
           }
           field_b = (String[]) null;
           if (null != IntrusiveNode.field_a) {
-            for (var2Lifetime1Lifetime1 = 0; mf.field_E.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
-              if (param1 == mf.field_E[var2Lifetime1Lifetime1] &&
+            for (var2Lifetime1Lifetime1 = 0; SpriteGeometry.field_E.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
+              if (param1 == SpriteGeometry.field_E[var2Lifetime1Lifetime1] &&
                 eb.field_b[var2Lifetime1Lifetime1] > 0) {
                 dupTemp$5 = eb.field_b[var2Lifetime1Lifetime1] - 1;
                 arrayValue$6 = IntrusiveNode.field_a[var2Lifetime1Lifetime1];
@@ -219,8 +219,8 @@ final class sc {
         if (30000 != param1) {
           if (param0 == -16705) {
             if (null != IntrusiveNode.field_a) {
-              for (var2Lifetime2 = 0; mf.field_E.length > var2Lifetime2; var2Lifetime2++) {
-                if (param1 == mf.field_E[var2Lifetime2] &&
+              for (var2Lifetime2 = 0; SpriteGeometry.field_E.length > var2Lifetime2; var2Lifetime2++) {
+                if (param1 == SpriteGeometry.field_E[var2Lifetime2] &&
                   eb.field_b[var2Lifetime2] > 0) {
                   dupTemp$13 = eb.field_b[var2Lifetime2] - 1;
                   arrayValue$14 = IntrusiveNode.field_a[var2Lifetime2];
@@ -235,8 +235,8 @@ final class sc {
           }
           field_b = (String[]) null;
           if (null != IntrusiveNode.field_a) {
-            for (var2Lifetime2Lifetime1 = 0; mf.field_E.length > var2Lifetime2Lifetime1; var2Lifetime2Lifetime1++) {
-              if (param1 == mf.field_E[var2Lifetime2Lifetime1] &&
+            for (var2Lifetime2Lifetime1 = 0; SpriteGeometry.field_E.length > var2Lifetime2Lifetime1; var2Lifetime2Lifetime1++) {
+              if (param1 == SpriteGeometry.field_E[var2Lifetime2Lifetime1] &&
                 eb.field_b[var2Lifetime2Lifetime1] > 0) {
                 dupTemp$15 = eb.field_b[var2Lifetime2Lifetime1] - 1;
                 arrayValue$16 = IntrusiveNode.field_a[var2Lifetime2Lifetime1];
@@ -258,8 +258,8 @@ final class sc {
         }
         if (param0 == -16705) {
           if (null != IntrusiveNode.field_a) {
-            for (var2Lifetime3 = 0; mf.field_E.length > var2Lifetime3; var2Lifetime3++) {
-              if (param1 == mf.field_E[var2Lifetime3] &&
+            for (var2Lifetime3 = 0; SpriteGeometry.field_E.length > var2Lifetime3; var2Lifetime3++) {
+              if (param1 == SpriteGeometry.field_E[var2Lifetime3] &&
                 eb.field_b[var2Lifetime3] > 0) {
                 dupTemp$9 = eb.field_b[var2Lifetime3] - 1;
                 arrayValue$10 = IntrusiveNode.field_a[var2Lifetime3];
@@ -274,8 +274,8 @@ final class sc {
         }
         field_b = (String[]) null;
         if (null != IntrusiveNode.field_a) {
-          for (var2Lifetime4 = 0; mf.field_E.length > var2Lifetime4; var2Lifetime4++) {
-            if (param1 == mf.field_E[var2Lifetime4] &&
+          for (var2Lifetime4 = 0; SpriteGeometry.field_E.length > var2Lifetime4; var2Lifetime4++) {
+            if (param1 == SpriteGeometry.field_E[var2Lifetime4] &&
               eb.field_b[var2Lifetime4] > 0) {
               dupTemp$11 = eb.field_b[var2Lifetime4] - 1;
               arrayValue$12 = IntrusiveNode.field_a[var2Lifetime4];

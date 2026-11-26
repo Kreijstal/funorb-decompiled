@@ -72,7 +72,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_i = null;
         if (param0 == -1) {
@@ -80,7 +80,7 @@ final class NodeHashTableIterator implements Iterator {
           field_h = null;
           return;
         }
-        NodeHashTableIterator.a(-5);
+        NodeHashTableIterator.clearStaticReferences(-5);
         field_a = null;
         field_h = null;
     }

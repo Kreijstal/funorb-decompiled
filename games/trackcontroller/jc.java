@@ -212,7 +212,7 @@ final class jc {
         return ok.field_D;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 15 / ((-28 - param0) / 46);
     }

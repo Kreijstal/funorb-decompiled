@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fm {
-    static hj field_b;
+    static RgbSprite field_b;
     static String field_c;
     static qd field_a;
     static int[] field_d;
@@ -18,7 +18,7 @@ final class fm {
         int stackIn_64_1 = 0;
         boolean stackIn_65_2 = false;
         RuntimeException decompiledCaughtException = null;
-        hj var1 = null;
+        RgbSprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -29,12 +29,12 @@ final class fm {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        hj var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
-        hj var11 = null;
-        hj var12 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         String var14 = null;
-        hj var16 = null;
+        RgbSprite var16 = null;
         String var17 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -78,13 +78,13 @@ final class fm {
             var2 = SoftwareRasterizer.field_f;
             var3 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
-            var11 = new hj(4 + field_b.field_o, 4 + field_b.field_k);
+            var11 = new RgbSprite(4 + field_b.field_o, 4 + field_b.field_k);
             var11.d();
             field_b.d(2, 2, NodeHashTableIterator.field_d);
             ve.a(2, var11.field_k, var11, var11.field_o, 1, 0, (byte) 91, 0);
             field_b = var11;
             oh.field_a = field_b.b();
-            var12 = new hj(195, 221);
+            var12 = new RgbSprite(195, 221);
             var6 = var12.field_o / 2;
             var12.d();
             MidiPcmStream.field_m.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{lf.field_c}, AccountServiceResult.field_a), var6, 40, 16777215, -1);
@@ -168,13 +168,13 @@ final class fm {
               var8 = var8 + var9_intLifetime3;
             }
             pf.field_b.e();
-            var9 = new hj(pf.field_b.field_s, pf.field_b.field_t);
+            var9 = new RgbSprite(pf.field_b.field_s, pf.field_b.field_t);
             var9.d();
             MidiPcmStream.field_m.a(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
             pf.field_b.d();
             var9.c(0, 0);
-            DualLinkDeque.field_b = new hj(640, 480);
+            DualLinkDeque.field_b = new RgbSprite(640, 480);
             DualLinkDeque.field_b.d();
             pf.field_b.a(qb.field_c + (pf.field_b.field_s >> 1), (pf.field_b.field_t >> 1) + ld.field_a, ba.field_c, 4096);
             pf.field_b = null;
@@ -188,7 +188,7 @@ final class fm {
             var2Lifetime2 = SoftwareRasterizer.field_f;
             var3Lifetime2 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
-            var16 = new hj(412, 43);
+            var16 = new RgbSprite(412, 43);
             var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, oc.field_U);
             pj.field_k = null;
             var16.d();
@@ -232,7 +232,7 @@ final class fm {
             DualLinkDeque.field_b.c(0, 0);
           }
           if (param0 != 241) {
-            field_b = (hj) null;
+            field_b = (RgbSprite) null;
           }
           if (rl.field_a != null &&
             bl.field_n != null) {

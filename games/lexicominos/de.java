@@ -6,7 +6,7 @@ final class de extends RuntimeException {
     Throwable field_c;
     static PcmStreamMixer field_b;
 
-    final static void a(db param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         try {
           if (param1 != 6) {
             field_b = (PcmStreamMixer) null;

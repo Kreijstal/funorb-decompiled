@@ -5,7 +5,7 @@ final class rc {
     static ge[] field_d;
     static String field_b;
     static int[] field_i;
-    static nh[][] field_a;
+    static RgbSprite[][] field_a;
     static String field_h;
     static int field_g;
     static String field_c;
@@ -33,7 +33,7 @@ final class rc {
           field_e = null;
           field_f = null;
           field_d = null;
-          field_a = (nh[][]) null;
+          field_a = (RgbSprite[][]) null;
           field_h = null;
           return;
         }
@@ -43,13 +43,13 @@ final class rc {
         field_e = null;
         field_f = null;
         field_d = null;
-        field_a = (nh[][]) null;
+        field_a = (RgbSprite[][]) null;
         field_h = null;
     }
 
     static {
         field_b = "Log in";
-        field_a = new nh[9][2];
+        field_a = new RgbSprite[9][2];
         field_g = 0;
         field_h = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_c = "Email: ";

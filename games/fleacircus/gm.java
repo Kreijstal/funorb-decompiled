@@ -25,7 +25,7 @@ final class gm extends hl {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_ib = null;
         if (param0) {
           return;

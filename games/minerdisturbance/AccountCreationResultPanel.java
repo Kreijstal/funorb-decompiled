@@ -50,10 +50,10 @@ final class AccountCreationResultPanel extends rg implements sh {
         }
     }
 
-    public static void j(byte param0) {
+    public static void discardDeclaredStaticReferences(byte param0) {
         field_xb = null;
         if (param0 != -42) {
-          AccountCreationResultPanel.j((byte) -31);
+          AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -31);
         }
     }
 

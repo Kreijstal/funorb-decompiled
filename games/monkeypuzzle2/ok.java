@@ -17,7 +17,7 @@ final class ok {
         return ha.field_db;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_f = null;

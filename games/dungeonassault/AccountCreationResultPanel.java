@@ -63,7 +63,7 @@ final class AccountCreationResultPanel extends nk implements vg {
         return super.f((byte) -90);
     }
 
-    public static void p(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_Sb = null;
         field_Vb = null;
         field_Ub = null;
@@ -265,7 +265,7 @@ final class AccountCreationResultPanel extends nk implements vg {
         tb.a((byte) -81);
     }
 
-    final static cn a(byte param0, int param1) {
+    final static RgbSprite a(byte param0, int param1) {
         if (param1 == 0) {
           return null;
         }

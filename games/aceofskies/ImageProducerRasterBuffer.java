@@ -61,9 +61,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -55) {
-          ImageProducerRasterBuffer.d((byte) 111);
+          ImageProducerRasterBuffer.clearDeclaredStaticReferences((byte) 111);
           field_i = null;
           titleFontMetrics = null;
           return;

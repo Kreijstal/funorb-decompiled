@@ -17,7 +17,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         var4 = stellarshard.field_B;
         try {
           if (param1 != 109) {
-            DelegatingCanvas.a((byte) -90);
+            DelegatingCanvas.clearStaticReferences((byte) -90);
           }
           var3_int = 0;
           while (param0 > 0) {
@@ -50,10 +50,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != -92) {
-          DelegatingCanvas.a((byte) 93);
+          DelegatingCanvas.clearStaticReferences((byte) 93);
         }
         field_c = null;
         field_d = null;

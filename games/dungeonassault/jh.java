@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jh {
-    static cn field_l;
+    static RgbSprite field_l;
     static int[] field_d;
     static int[] field_f;
     private static int[] field_j;
@@ -63,12 +63,12 @@ final class jh {
         field_b = field_b + 1;
     }
 
-    final static void a(cn param0) {
+    final static void a(RgbSprite param0) {
         jh.c();
         param0.e();
     }
 
-    private final static void a(cn param0, int[] param1) {
+    private final static void a(RgbSprite param0, int[] param1) {
         param0.e();
         field_f = param1;
         field_l.field_B = param1;
@@ -77,7 +77,7 @@ final class jh {
     }
 
     static {
-        field_l = new cn(640, 480);
+        field_l = new RgbSprite(640, 480);
         field_d = field_l.field_B;
         field_f = field_d;
         field_j = new int[4];

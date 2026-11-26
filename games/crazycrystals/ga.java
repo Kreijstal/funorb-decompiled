@@ -15,7 +15,7 @@ class ga extends pc {
     static mk field_F;
     static am field_B;
     static int[] field_J;
-    static dl field_E;
+    static RgbSprite field_E;
     static PcmSample field_H;
 
     private final void l(int param0) {
@@ -151,7 +151,7 @@ class ga extends pc {
         return;
     }
 
-    public static void o(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_L = null;
         field_F = null;
         field_E = null;

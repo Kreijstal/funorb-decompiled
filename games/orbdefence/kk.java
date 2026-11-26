@@ -7,7 +7,7 @@ final class kk extends te {
     private String field_R;
     static IntrusiveDeque field_X;
     private int field_Q;
-    private hj field_W;
+    private RgbSprite field_W;
     static qg[] field_P;
     static int[] field_U;
     static char[] field_V;
@@ -85,7 +85,7 @@ final class kk extends te {
         return -1;
     }
 
-    public static void l(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_Y = null;
         field_U = null;
         field_X = null;
@@ -105,9 +105,9 @@ final class kk extends te {
         int var11;
         int var12;
         int var13;
-        hj var14;
-        hj var15;
-        hj var16;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
         qd var6Lifetime1;
         regionExit1: {
           regionExit2: {
@@ -160,7 +160,7 @@ final class kk extends te {
             de.a(-123, this.field_W);
             SoftwareRasterizer.clearRaster();
           } else {
-            this.field_W = new hj(var11, var12);
+            this.field_W = new RgbSprite(var11, var12);
             de.a(param2 - 1048697, this.field_W);
           }
           var16.b(112, 144, var16.field_s << 4, var16.field_t << 4, -this.field_Q << 10, 4096);
@@ -169,14 +169,14 @@ final class kk extends te {
         }
     }
 
-    final static hj[] a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        hj[] var10;
-        hj[] var11_ref_hj__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_hj__;
         int var11;
         int var12;
-        hj var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -187,7 +187,7 @@ final class kk extends te {
         int var12Lifetime4;
         var15 = OrbDefence.field_D ? 1 : 0;
         var9 = param3 + (param1 + param6);
-        var10 = new hj[]{new hj(var9, var9), new hj(param0, var9), new hj(var9, var9), new hj(var9, param0), new hj(64, 64), new hj(var9, param0), new hj(var9, var9), new hj(param0, var9), new hj(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param0), new RgbSprite(64, 64), new RgbSprite(var9, param0), new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9)};
         var11_ref_hj__ = var10;
         for (var12 = 0; var12 < var11_ref_hj__.length; var12++) {
           var13 = var11_ref_hj__[var12];

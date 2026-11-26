@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qa {
-    static bd[] field_g;
+    static RgbSprite[] field_g;
     static int[] field_d;
     static String field_a;
     static String field_f;
     static int field_e;
-    static bd field_c;
+    static RgbSprite field_c;
     static int field_b;
 
-    final static bd[] a(int param0) {
+    final static RgbSprite[] a(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        bd[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -28,7 +28,7 @@ final class qa {
         byte[] var21;
         int[] var22;
         var8 = HostileSpawn.field_I ? 1 : 0;
-        var1 = new bd[sc.field_c];
+        var1 = new RgbSprite[sc.field_c];
         for (var2 = 0; var2 < sc.field_c; var2++) {
           var3 = hd.field_r[var2] * sf.field_X[var2];
           var21 = ja.field_e[var2];
@@ -38,7 +38,7 @@ final class qa {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = bf.field_d[ua.a((int) var21[var6], 255)];
             }
-            var1[var2] = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var22);
+            var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var22);
           } else {
             var15 = vh.field_a[var2];
             var11 = var15;
@@ -50,7 +50,7 @@ final class qa {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ll.a(ua.a(-16777216, var15[var7] << 24), bf.field_d[ua.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (bd) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
           }
         }
         if (param0 != 26627) {
@@ -92,7 +92,7 @@ final class qa {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        bd var27 = null;
+        RgbSprite var27 = null;
         int var30 = 0;
         String var31 = null;
         int[] var33 = null;
@@ -370,7 +370,7 @@ final class qa {
         field_f = null;
         field_c = null;
         if (!param0) {
-          field_g = (bd[]) null;
+          field_g = (RgbSprite[]) null;
         }
     }
 

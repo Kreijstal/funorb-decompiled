@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class db extends vf {
-    static nf[] field_w;
+    static RgbSprite[] field_w;
     static ji field_v;
     static String field_u;
     static int[] field_x;

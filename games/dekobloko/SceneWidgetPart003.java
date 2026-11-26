@@ -17,7 +17,7 @@ final class SceneWidgetPart003 extends SceneWidget {
         }
     }
 
-    public static void performAction0613(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 != 3) {
           return;
         }
@@ -36,7 +36,7 @@ final class SceneWidgetPart003 extends SceneWidget {
         if (integerArgument2 == -4168) {
           return integerArgument1 + (this.sceneWidgetState0044.computeInteger1770(true) + this.sceneWidgetState0043.computeInteger1770(true));
         }
-        SceneWidgetPart003.performAction0613(-106);
+        SceneWidgetPart003.discardDeclaredStaticReferences(-106);
         return integerArgument1 + (this.sceneWidgetState0044.computeInteger1770(true) + this.sceneWidgetState0043.computeInteger1770(true));
     }
 

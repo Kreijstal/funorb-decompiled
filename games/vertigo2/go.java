@@ -243,7 +243,7 @@ final class go {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         int var1 = 40 % ((param0 + 63) / 61);
         field_g = null;

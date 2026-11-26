@@ -30,15 +30,15 @@ class aa extends e {
     }
 
     final static void c(byte param0) {
-        dd var1 = null;
-        dd var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = fleas.field_A ? 1 : 0;
         if (param0 != -65) {
           return;
         }
         try {
-          var1 = new dd(540, 140);
+          var1 = new RgbSprite(540, 140);
           r.a(var1, 45);
           bl.b();
           SoftwareRasterizer.clearRaster();

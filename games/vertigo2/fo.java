@@ -1892,7 +1892,7 @@ final class fo {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_e = null;
         int var1 = -61 / ((62 - param0) / 47);

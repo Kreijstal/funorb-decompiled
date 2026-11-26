@@ -5,7 +5,7 @@ final class rb extends gj implements da {
     private bb field_I;
     private bb field_J;
     static int field_H;
-    static dd field_G;
+    static RgbSprite field_G;
     private bb field_F;
 
     final static void a(int param0, int param1, byte param2) {
@@ -288,8 +288,8 @@ final class rb extends gj implements da {
     public static void a(int param0) {
         field_G = null;
         if (param0 > -95) {
-          dd var2 = (dd) null;
-          rb.a(127, -14, 40, (dd) null, 38, 110, (byte) -127, -57, -56);
+          RgbSprite var2 = (RgbSprite) null;
+          rb.a(127, -14, 40, (RgbSprite) null, 38, 110, (byte) -127, -57, -56);
         }
     }
 
@@ -360,7 +360,7 @@ final class rb extends gj implements da {
         this.a((UiComponent) (this.field_I), (byte) -53);
     }
 
-    final static void a(int param0, int param1, int param2, dd param3, int param4, int param5, byte param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5, byte param6, int param7, int param8) {
         bh.field_l = param2;
         IterableNodeHashTable.field_i = param8;
         MidiPcmStream.field_V = param1;

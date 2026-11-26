@@ -69,9 +69,9 @@ final class DirectByteStorage extends ByteStorage {
         SoftwareRasterizer.field_b = var6;
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -6348) {
-          DirectByteStorage.c(78);
+          DirectByteStorage.clearDeclaredStaticReferences(78);
           field_j = null;
           field_h = null;
           return;

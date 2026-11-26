@@ -57,7 +57,7 @@ final class jn extends ga implements el {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 < 94) {
           field_U = (PcmSample) null;
         }

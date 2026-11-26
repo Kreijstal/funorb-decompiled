@@ -6,9 +6,9 @@ import java.io.*;
 final class jj {
     static PlatformTaskDispatcher field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          jj.a(false);
+          jj.clearStaticReferences(false);
           field_a = null;
           return;
         }

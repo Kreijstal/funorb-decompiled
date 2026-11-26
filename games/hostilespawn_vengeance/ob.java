@@ -25,7 +25,7 @@ final class ob extends ql {
     private v field_w;
     private oc field_j;
     static PacketBuffer field_s;
-    static bd field_C;
+    static RgbSprite field_C;
     private oc field_G;
     static boolean field_n;
     private v field_m;

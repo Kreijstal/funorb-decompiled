@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sh {
-    static cn field_a;
+    static RgbSprite field_a;
     static String field_b;
 
     final static String a(byte param0, String param1) {
@@ -57,7 +57,7 @@ final class sh {
             ((fk) (var2)).a(param1, 83);
           }
           if (param0 != 27886) {
-            field_a = (cn) null;
+            field_a = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ final class sh {
     public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
-          field_a = (cn) null;
+          field_a = (RgbSprite) null;
         }
         field_a = null;
     }

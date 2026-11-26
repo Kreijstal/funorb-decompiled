@@ -242,7 +242,7 @@ final class fi {
         }
     }
 
-    final static db[] a(sh param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(sh param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

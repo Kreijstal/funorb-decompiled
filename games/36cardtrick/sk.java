@@ -6,7 +6,7 @@ final class sk {
     static int[][] field_b;
     static int field_d;
     static int field_e;
-    static kc field_c;
+    static RgbSprite field_c;
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
@@ -51,7 +51,7 @@ final class sk {
         field_b = (int[][]) null;
         field_c = null;
         if (param0 != -12865) {
-          field_c = (kc) null;
+          field_c = (RgbSprite) null;
           field_a = null;
           return;
         }

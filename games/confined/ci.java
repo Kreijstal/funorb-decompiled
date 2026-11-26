@@ -8,10 +8,10 @@ final class ci {
     static kc field_b;
     static String field_d;
 
-    final static nf a(int param0, mi param1, int param2, boolean param3) {
+    final static RgbSprite a(int param0, mi param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        nf stackIn_6_0 = null;
+        RgbSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -19,7 +19,7 @@ final class ci {
         try {
           if (!mc.a(param2, param0, param1, (byte) 119)) {
             stackIn_2_0 = null;
-            return (nf) (stackIn_2_0);
+            return (RgbSprite) (stackIn_2_0);
           }
           if (param3) {
             field_b = (kc) null;

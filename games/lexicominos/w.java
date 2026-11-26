@@ -328,12 +328,12 @@ class w extends IntrusiveNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseDeclaredStaticReferences(boolean param0) {
         field_k = null;
         field_s = null;
         field_n = null;
         if (param0) {
-          w.c(true);
+          w.releaseDeclaredStaticReferences(true);
         }
     }
 

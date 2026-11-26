@@ -3,12 +3,12 @@
  */
 final class hc extends IntrusiveNode {
     static int field_j;
-    static hj field_i;
+    static RgbSprite field_i;
     static int field_f;
     byte[] field_m;
     int field_g;
     long field_h;
-    static hj field_l;
+    static RgbSprite field_l;
     static String field_k;
 
     final static void a(byte param0, boolean param1, String param2, int param3, java.awt.Color param4) {

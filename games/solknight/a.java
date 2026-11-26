@@ -65,7 +65,7 @@ abstract class a extends wf implements pi {
         return this.a(this.field_f.field_i, (byte) -112);
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_h = null;
         field_g = null;
         if (param0 == 30514) {

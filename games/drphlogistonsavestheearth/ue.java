@@ -89,7 +89,7 @@ final class ue implements cg {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        nh var8 = null;
+        RgbSprite var8 = null;
         try {
           if (param1 < 94) {
             field_d = (String) null;

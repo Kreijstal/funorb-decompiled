@@ -24,7 +24,7 @@ final class ka {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -117 % ((param0 - 69) / 55);
         field_a = null;
     }

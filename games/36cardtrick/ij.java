@@ -95,7 +95,7 @@ final class ij {
         }
     }
 
-    final static void a(kc param0, byte param1) {
+    final static void a(RgbSprite param0, byte param1) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;

@@ -5,7 +5,7 @@ final class jm {
     private IntrusiveNode[] field_d;
     static String field_h;
     private int field_f;
-    static bd field_b;
+    static RgbSprite field_b;
     private IntrusiveNode field_g;
     private IntrusiveNode field_c;
     private int field_a;

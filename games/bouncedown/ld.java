@@ -5,7 +5,7 @@ final class ld extends IntrusiveNode {
     static MidiPcmStream field_l;
     boolean field_g;
     int field_k;
-    static tg[] field_h;
+    static RgbSprite[] field_h;
     int[] field_i;
     static int[] field_j;
 
@@ -76,9 +76,9 @@ final class ld extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          ld.a(false);
+          ld.clearStaticReferences(false);
           field_j = null;
           field_h = null;
           field_l = null;

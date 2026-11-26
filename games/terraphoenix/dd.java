@@ -38,7 +38,7 @@ final class dd extends eb {
         if (param0 == 105) {
           return pe.field_a == ua.field_d ? true : false;
         }
-        dd.g((byte) -23);
+        dd.clearDeclaredStaticReferences((byte) -23);
         return pe.field_a == ua.field_d ? true : false;
     }
 
@@ -123,7 +123,7 @@ final class dd extends eb {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_N = null;
         field_L = null;
         if (param0 < 106) {

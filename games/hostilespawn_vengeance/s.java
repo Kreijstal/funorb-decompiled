@@ -5,7 +5,7 @@ final class s {
     static String field_h;
     private boolean field_f;
     static int field_e;
-    static bd field_d;
+    static RgbSprite field_d;
     static String field_a;
     private String field_c;
     static int field_g;
@@ -125,8 +125,8 @@ final class s {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        bd var12 = null;
-        bd var13 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var11 = HostileSpawn.field_I ? 1 : 0;
@@ -191,7 +191,7 @@ final class s {
     }
 
     static {
-        bd discarded$0 = new bd(160, 120);
+        RgbSprite discarded$0 = new RgbSprite(160, 120);
         field_h = "Type your age in years";
         field_a = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }

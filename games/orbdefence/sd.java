@@ -3,7 +3,7 @@
  */
 final class sd {
     static IntrusiveDeque field_a;
-    static hj[] field_f;
+    static RgbSprite[] field_f;
     static int field_h;
     static String field_d;
     static int field_g;

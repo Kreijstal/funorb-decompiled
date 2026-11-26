@@ -8,7 +8,7 @@ final class DirectByteStorage extends ByteStorage {
     static Random field_j;
     private java.nio.ByteBuffer buffer;
 
-    final static void a(int param0, int param1, dd param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -16,8 +16,8 @@ final class DirectByteStorage extends ByteStorage {
         int var10Lifetime1;
         try {
           if (param7 != 5120) {
-            dd var12 = (dd) null;
-            DirectByteStorage.a(-46, 27, (dd) null, -27, -105, -46, -75, -59, 119);
+            RgbSprite var12 = (RgbSprite) null;
+            DirectByteStorage.a(-46, 27, (RgbSprite) null, -27, -105, -46, -75, -59, 119);
           }
           var9_int = param4 + param8 + (param2.field_q - param3);
           var10 = param1 + (param8 + (param2.field_q + param4));
@@ -62,8 +62,8 @@ final class DirectByteStorage extends ByteStorage {
           field_j = null;
           return;
         }
-        dd var2 = (dd) null;
-        DirectByteStorage.a(112, -6, (dd) null, 97, -24, -108, -83, 92, -73);
+        RgbSprite var2 = (RgbSprite) null;
+        DirectByteStorage.a(112, -6, (RgbSprite) null, 97, -24, -108, -83, 92, -73);
         field_j = null;
     }
 
@@ -71,8 +71,8 @@ final class DirectByteStorage extends ByteStorage {
         try {
           this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           if (param0 >= -97) {
-            dd var4 = (dd) null;
-            DirectByteStorage.a(-71, 115, (dd) null, -77, 80, 37, 76, 99, 49);
+            RgbSprite var4 = (RgbSprite) null;
+            DirectByteStorage.a(-71, 115, (RgbSprite) null, -77, 80, 37, 76, 99, 49);
           }
           this.buffer.position(0);
           this.buffer.put(param1);

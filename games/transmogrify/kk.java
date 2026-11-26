@@ -62,7 +62,7 @@ abstract class kk {
 
     abstract nk a(int param0);
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_c = null;
           field_d = null;
@@ -73,7 +73,7 @@ abstract class kk {
           field_g = null;
           return;
         }
-        kk.a(false);
+        kk.clearStaticReferences(false);
         field_c = null;
         field_d = null;
         field_e = null;

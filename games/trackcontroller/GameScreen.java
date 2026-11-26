@@ -589,10 +589,10 @@ final class GameScreen {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -8381) {
-          GameScreen.a(-48);
+          GameScreen.clearStaticReferences(-48);
         }
     }
 

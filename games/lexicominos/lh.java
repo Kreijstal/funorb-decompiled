@@ -151,7 +151,7 @@ final class lh extends ik {
         }
     }
 
-    final void a(db[] param0, byte param1) {
+    final void a(RgbSprite[] param0, byte param1) {
         int var4 = 0;
         n[] var3 = null;
         n var5 = null;
@@ -217,7 +217,7 @@ final class lh extends ik {
         return stackIn_9_0;
     }
 
-    final void a(int param0, db param1) {
+    final void a(int param0, RgbSprite param1) {
         n[] var7 = null;
         int var4 = 0;
         n var5 = null;
@@ -246,7 +246,7 @@ final class lh extends ik {
         return dupTemp$0;
     }
 
-    final void a(db[] param0, boolean param1, int param2) {
+    final void a(RgbSprite[] param0, boolean param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param2;

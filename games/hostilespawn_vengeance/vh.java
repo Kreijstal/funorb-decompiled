@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vh {
-    private bd[] field_b;
+    private RgbSprite[] field_b;
     static java.awt.Font field_d;
     static byte[][] field_a;
     static String field_c;
@@ -251,7 +251,7 @@ final class vh {
         field_a = (byte[][]) null;
     }
 
-    vh(bd[] param0) {
+    vh(RgbSprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

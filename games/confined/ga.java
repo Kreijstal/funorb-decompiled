@@ -6,7 +6,7 @@ import java.util.*;
 class ga extends fj implements hi {
     static ej field_J;
     PrimaryNodeDeque field_N;
-    static nf field_K;
+    static RgbSprite field_K;
     static int[] field_I;
     static long field_M;
 
@@ -151,7 +151,7 @@ class ga extends fj implements hi {
     void a(int param0, int param1, byte param2, int param3) {
         int var7 = Confined.field_J ? 1 : 0;
         if (param2 < 36) {
-          ga.h(0);
+          ga.clearDeclaredStaticReferences(0);
         }
         if (0 == param1 &&
           null != this.field_n) {
@@ -220,9 +220,9 @@ class ga extends fj implements hi {
         return null != this.f(-1) ? true : false;
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 52) {
-          field_K = (nf) null;
+          field_K = (RgbSprite) null;
         }
         field_J = null;
         field_I = null;
@@ -377,7 +377,7 @@ class ga extends fj implements hi {
     final static boolean g(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != 15214) {
-          field_K = (nf) null;
+          field_K = (RgbSprite) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (we.field_c >= 20 &&
@@ -592,7 +592,7 @@ class ga extends fj implements hi {
           var3 = (fj) (var2.b(param0 ^ 11913));
         }
         if (param0 != 12007) {
-          field_K = (nf) null;
+          field_K = (RgbSprite) null;
         }
     }
 

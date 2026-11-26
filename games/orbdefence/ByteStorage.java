@@ -5,7 +5,7 @@ abstract class ByteStorage {
     static char[] field_b;
     static fj field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -46 % ((param0 - 59) / 40);
         field_b = null;
         field_a = null;

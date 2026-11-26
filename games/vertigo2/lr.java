@@ -19,7 +19,7 @@ final class lr extends d {
     final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 <= 6) {
-            lr.a((byte) 76);
+            lr.clearStaticReferences((byte) 76);
           }
           this.field_Q = this.field_Q + 1;
           super.a((byte) 114, param1, param2, param3);
@@ -39,7 +39,7 @@ final class lr extends d {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_O = null;
         field_K = null;
         field_T = null;

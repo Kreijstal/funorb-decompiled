@@ -16,7 +16,7 @@ final class th {
 
     final static UiPanel a(boolean param0) {
         if (!param0) {
-          th.a((byte) -18);
+          th.clearStaticReferences((byte) -18);
         }
         return pp.a((byte) 116);
     }
@@ -36,7 +36,7 @@ final class th {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         int var1 = -62 / ((-76 - param0) / 32);
         field_f = null;

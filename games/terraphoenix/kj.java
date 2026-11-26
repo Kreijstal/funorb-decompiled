@@ -93,7 +93,7 @@ final class kj implements WidgetActionListener {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -87 % ((-43 - param0) / 37);
         field_f = null;
         field_a = null;

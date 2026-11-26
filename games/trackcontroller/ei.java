@@ -66,7 +66,7 @@ final class ei extends IntrusiveNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         field_j = null;
         field_i = null;

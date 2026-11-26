@@ -233,7 +233,7 @@ final class IntrusiveDeque {
         this.sentinel.field_c = this.sentinel;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_f = null;
         field_a = null;
@@ -242,7 +242,7 @@ final class IntrusiveDeque {
           field_d = null;
           return;
         }
-        IntrusiveDeque.d((byte) -73);
+        IntrusiveDeque.clearStaticReferences((byte) -73);
         field_d = null;
     }
 

@@ -15,7 +15,7 @@ final class ak extends IntrusiveNode {
     static int[] field_o;
     int field_q;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 >= -117) {
           return;
         }

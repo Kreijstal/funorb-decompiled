@@ -68,7 +68,7 @@ final class p {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, nh param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -83,7 +83,7 @@ final class p {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        nh var21 = null;
+        RgbSprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;

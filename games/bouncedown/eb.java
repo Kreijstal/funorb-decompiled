@@ -57,7 +57,7 @@ final class eb extends lc implements ki, rc {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_E = null;
         field_D = null;
         if (param0) {
@@ -65,7 +65,7 @@ final class eb extends lc implements ki, rc {
           field_z = null;
           return;
         }
-        eb.b(false);
+        eb.clearStaticReferences(false);
         field_F = null;
         field_z = null;
     }

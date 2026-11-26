@@ -7,7 +7,7 @@ final class fc {
     static PacketBuffer field_z;
     String field_C;
     private StringBuilder field_X;
-    static db[] field_e;
+    static RgbSprite[] field_e;
     private int field_W;
     boolean field_T;
     static int field_q;
@@ -863,9 +863,9 @@ final class fc {
         return stackIn_9_0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -265) {
-          fc.a(-122);
+          fc.clearStaticReferences(-122);
         }
         field_e = null;
         field_z = null;
@@ -1007,7 +1007,7 @@ final class fc {
 
     final void d(int param0) {
         int var8 = 0;
-        db stackIn_5_0 = null;
+        RgbSprite stackIn_5_0 = null;
         int stackIn_7_0 = 0;
         char stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
@@ -1017,7 +1017,7 @@ final class fc {
         int stackIn_46_0 = 0;
         char stackOut_32_1;
         char stackOut_10_0;
-        db var2;
+        RgbSprite var2;
         int var3;
         String var3_ref_String;
         int var4;
@@ -1029,7 +1029,7 @@ final class fc {
         bd var11;
         gd var12;
         String var13;
-        db var14;
+        RgbSprite var14;
         String var15;
         int[] var19;
         int var4Lifetime1;
@@ -1040,7 +1040,7 @@ final class fc {
         int var6Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        db var14Lifetime1;
+        RgbSprite var14Lifetime1;
         int stackIn_38_0Lifetime1;
         int stackIn_38_1Lifetime1;
         var9 = Lexicominos.field_L ? 1 : 0;
@@ -1265,15 +1265,15 @@ final class fc {
         int var3;
         int var4;
         int var5;
-        db[] var6;
-        db var7;
-        db[] var8;
-        db var9;
+        RgbSprite[] var6;
+        RgbSprite var7;
+        RgbSprite[] var8;
+        RgbSprite var9;
         bd var10;
         int var3Lifetime1;
         int var3Lifetime2;
-        db var9Lifetime1;
-        db var9Lifetime2;
+        RgbSprite var9Lifetime1;
+        RgbSprite var9Lifetime2;
         var5 = Lexicominos.field_L ? 1 : 0;
         var6 = kf.field_A;
         for (var3 = 0; var6.length > var3; var3++) {

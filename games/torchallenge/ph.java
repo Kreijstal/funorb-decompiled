@@ -79,9 +79,9 @@ final class ph implements j {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
-          ph.a(115);
+          ph.clearStaticReferences(115);
         }
         field_b = null;
         field_h = null;

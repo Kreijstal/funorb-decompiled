@@ -430,7 +430,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(int param0, int param1, nh[] param2, int param3) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3) {
         try {
           if (param3 != 37) {
             MidiPcmStream.a((String) null, -50);
@@ -612,7 +612,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            MidiPcmStream.a(14, 3, (nh[]) null, -32);
+            MidiPcmStream.a(14, 3, (RgbSprite[]) null, -32);
           }
           stackIn_3_0 = new vc(param0);
           return stackIn_3_0;
@@ -1531,11 +1531,11 @@ final class MidiPcmStream extends PcmStream {
         return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, cm.field_P, lb.field_z, bc.field_a, vj.field_d};
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_T = null;
         field_p = null;
         if (param0 != -921185753) {
-          MidiPcmStream.h(38);
+          MidiPcmStream.clearDeclaredStaticReferences(38);
         }
         field_I = null;
         field_m = null;

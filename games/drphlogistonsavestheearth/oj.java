@@ -11,7 +11,7 @@ final class oj {
     static he field_d;
     static he[] field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -23,7 +23,7 @@ final class oj {
           field_f = null;
           return;
         }
-        oj.a(false);
+        oj.clearStaticReferences(false);
         field_g = null;
         field_b = null;
         field_f = null;

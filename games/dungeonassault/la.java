@@ -61,7 +61,7 @@ final class la {
         return 1;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -38 / ((0 - param0) / 45);
         field_j = null;
         field_b = null;

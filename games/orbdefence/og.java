@@ -18,11 +18,11 @@ final class og {
     private long field_m;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_j = null;
         if (param0 > -9) {
-          og.a((byte) -121);
+          og.clearStaticReferences((byte) -121);
           field_g = null;
           return;
         }

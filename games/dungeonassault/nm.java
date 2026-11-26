@@ -147,7 +147,7 @@ final class nm extends sj implements vg {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_lb = null;
         field_jb = null;
         field_ib = null;

@@ -568,7 +568,7 @@ final class el extends a {
         return (byte) var2Lifetime6;
     }
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_j = null;
         field_k = null;
         field_o = null;

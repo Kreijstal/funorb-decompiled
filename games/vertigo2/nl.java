@@ -114,7 +114,7 @@ final class nl extends ug {
         return 250 < hm.field_F ? true : false;
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = 71 % ((70 - param0) / 39);
         field_e = null;
     }

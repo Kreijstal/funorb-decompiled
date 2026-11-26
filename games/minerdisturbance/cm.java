@@ -125,7 +125,7 @@ final class cm extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         if (param0 != 18) {
           field_p = (ae) null;

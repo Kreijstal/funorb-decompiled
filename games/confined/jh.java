@@ -11,12 +11,12 @@ final class jh extends rg {
     int field_V;
     int field_T;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_U = null;
         if (param0) {
           return;
         }
-        jh.b(false);
+        jh.clearStaticReferences(false);
     }
 
     final boolean a(int param0, int param1, byte param2, int param3, fj param4, int param5, int param6) {

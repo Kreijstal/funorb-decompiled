@@ -163,7 +163,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (tk.a(10, (CharSequence) ((Object) var4)) &&
+                      if (SpriteGeometry.a(10, (CharSequence) ((Object) var4)) &&
                         !(th.a(115, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a(7, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);

@@ -137,7 +137,7 @@ final class oc {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_b = null;
         int var1 = 26 % ((-60 - param0) / 41);

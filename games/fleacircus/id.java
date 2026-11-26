@@ -280,7 +280,7 @@ final class id {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 33 / ((-80 - param0) / 42);
         field_i = null;
         field_j = null;

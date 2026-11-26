@@ -23,31 +23,31 @@ final class p extends qe {
     private cp[] field_D;
     private nn field_R;
     static String[] field_J;
-    static cn[] field_G;
+    static RgbSprite[] field_G;
     private rh field_N;
     private rh field_I;
     static String field_r;
     private wd field_H;
 
-    private final static cn[] a(cn[] param0, int param1) {
-        cn[] var2 = null;
+    private final static RgbSprite[] a(RgbSprite[] param0, int param1) {
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        cn var4 = null;
+        RgbSprite var4 = null;
         int var6 = 0;
-        cn var7 = null;
-        cn var8 = null;
-        cn var9 = null;
-        cn var10 = null;
-        cn[] stackIn_10_0 = null;
-        cn[] stackIn_12_0 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
+        RgbSprite[] stackIn_10_0 = null;
+        RgbSprite[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = DungeonAssault.field_K;
         try {
-          var2 = new cn[param0.length];
+          var2 = new RgbSprite[param0.length];
           jh.c();
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -56,11 +56,11 @@ final class p extends qe {
             var4 = var7;
             if (var6 == 0) {
               if (var4 != null) {
-                var8 = new cn(27 * var7.field_E / 16, var7.field_G * 20 / 12);
+                var8 = new RgbSprite(27 * var7.field_E / 16, var7.field_G * 20 / 12);
                 var8.e();
                 var4.c(-(var7.field_w * 27) / 16, -(var7.field_A * 27) / 16, var8.field_E, var8.field_G);
                 var9 = var8;
-                var10 = new cn(var9.field_E / 2, var9.field_G / 2);
+                var10 = new RgbSprite(var9.field_E / 2, var9.field_G / 2);
                 var10.e();
                 var9.e(var10.field_E / 2, var10.field_G / 2, 0, 2048);
                 var10.field_A = var9.field_A * 27 >> 5;
@@ -80,7 +80,7 @@ final class p extends qe {
             stackIn_12_0 = var2;
             return stackIn_12_0;
           }
-          stackIn_10_0 = (cn[]) null;
+          stackIn_10_0 = (RgbSprite[]) null;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,12 +111,12 @@ final class p extends qe {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        cn var8 = null;
-        cn var9 = null;
+        RgbSprite var8 = null;
+        RgbSprite var9 = null;
         String var10 = null;
-        cn var11 = null;
-        cn var12 = null;
-        cn var13 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         try {
           if (param2 < 109) {
             this.a((byte) -82);
@@ -124,11 +124,11 @@ final class p extends qe {
           jh.c();
           var6_int = 130;
           var7 = db.field_v.field_H + db.field_v.field_E;
-          var8 = new cn(var6_int, var7);
+          var8 = new RgbSprite(var6_int, var7);
           var8.e();
           db.field_v.b(param4, 0, db.field_v.field_H, 12632256, -1);
           db.field_v.a(param3, var6_int, db.field_v.field_H, 12632256, -1);
-          var9 = new cn(var6_int, var7);
+          var9 = new RgbSprite(var6_int, var7);
           var9.e();
           db.field_v.b(param4, 0, db.field_v.field_H, 12690143, -1);
           db.field_v.a(param3, var6_int, db.field_v.field_H, 12690143, -1);
@@ -138,7 +138,7 @@ final class p extends qe {
             stackIn_5_0 = (String) (param1);
           }
           var10 = stackIn_5_0;
-          var11 = new cn(var6_int, var7);
+          var11 = new RgbSprite(var6_int, var7);
           var11.e();
           db.field_v.b(param4, 0, db.field_v.field_H, 16744448, -1);
           db.field_v.a(var10, var6_int, db.field_v.field_H, 16744448, -1);
@@ -183,11 +183,11 @@ final class p extends qe {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        cn var9 = null;
-        cn var10 = null;
-        cn var11 = null;
-        cn var12 = null;
-        cn var13 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         gd stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -201,15 +201,15 @@ final class p extends qe {
           jh.c();
           var7_int = 130;
           var8 = db.field_v.field_E + db.field_v.field_H;
-          var9 = new cn(var7_int, var8);
+          var9 = new RgbSprite(var7_int, var8);
           var9.e();
           db.field_v.b(param1, 0, db.field_v.field_H, 12632256, -1);
           db.field_v.a(param0, var7_int, db.field_v.field_H, 12632256, param3);
-          var10 = new cn(var7_int, var8);
+          var10 = new RgbSprite(var7_int, var8);
           var10.e();
           db.field_v.b(param1, 0, db.field_v.field_H, 12690143, -1);
           db.field_v.a(param0, var7_int, db.field_v.field_H, 12690143, -1);
-          var11 = new cn(var7_int, var8);
+          var11 = new RgbSprite(var7_int, var8);
           var11.e();
           db.field_v.b(param1, 0, db.field_v.field_H, 16744448, -1);
           db.field_v.a(param5, var7_int, db.field_v.field_H, 16744448, -1);
@@ -278,7 +278,7 @@ final class p extends qe {
     private final void a(int param0, int param1, byte param2, int param3) {
         lb var5;
         int var6;
-        cn var7_ref_cn;
+        RgbSprite var7_ref_cn;
         int var7;
         int var8;
         int var9;
@@ -477,7 +477,7 @@ final class p extends qe {
                   var17 = "+" + var5Lifetime1 / 10;
                   var11 = db.field_v.b(var17);
                   var12 = db.field_v.field_E + db.field_v.field_H;
-                  jn.field_a = new cn(var11, var12);
+                  jn.field_a = new RgbSprite(var11, var12);
                   jh.a(jn.field_a);
                   db.field_v.b(var17, 0, db.field_v.field_H, 16744512, -1);
                   jh.b();
@@ -558,14 +558,14 @@ final class p extends qe {
         int var9 = 0;
         q[] var10 = null;
         int var11_int = 0;
-        cn var11 = null;
-        cn var12 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var13 = 0;
         q[] var14 = null;
-        cn var15 = null;
+        RgbSprite var15 = null;
         int[][] var16 = null;
-        cn var17 = null;
-        cn var18 = null;
+        RgbSprite var17 = null;
+        RgbSprite var18 = null;
         int[][] var19 = null;
         var13 = DungeonAssault.field_K;
         try {
@@ -577,7 +577,7 @@ final class p extends qe {
           ta.field_e = (se) ((Object) kk.a(param2, param3, "arezzo12", 0, "commonui"));
           lp.field_C = (se) ((Object) kk.a(param2, param3, "arezzo14", 0, "commonui"));
           hc.field_f = (se) ((Object) kk.a(param2, param3, "arezzo14bold", 0, "commonui"));
-          var17 = new cn(param0.a("button.gif", "", (byte) -116), (java.awt.Component) ((Object) c.field_h));
+          var17 = new RgbSprite(param0.a("button.gif", "", (byte) -116), (java.awt.Component) ((Object) c.field_h));
           pa.a((byte) -94, param3, "commonui", "dropdown");
           var5 = qa.a(15322, "screen_options", "commonui", param3);
           d.field_c = new q[4];
@@ -624,21 +624,21 @@ final class p extends qe {
             break;
           }
           SoftwareRasterizer.grayscaleRectangle(stackIn_18_0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
-          var15 = new cn(var9, var9);
+          var15 = new RgbSprite(var9, var9);
           var18 = var15;
           var18.e();
           var17.c(0, 0);
-          var11 = new cn(var9, var9);
+          var11 = new RgbSprite(var9, var9);
           var11.e();
           if (param1 < 2) {
             return;
           }
           var17.c(-var17.field_y + var9, 0);
-          var12 = new cn(var17.field_y - var9 * 2, var9);
+          var12 = new RgbSprite(var17.field_y - var9 * 2, var9);
           var12.e();
           var17.c(-var9, 0);
           ti.c(true);
-          na.field_C = new cn[]{var15, var12, var11};
+          na.field_C = new RgbSprite[]{var15, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -678,7 +678,7 @@ final class p extends qe {
           var3 = new AccountServiceResult(false);
           var3.message = param1;
           if (param2 != -28323) {
-            field_G = (cn[]) null;
+            field_G = (RgbSprite[]) null;
           }
           var3.statusCode = param0;
           stackIn_3_0 = var3;
@@ -735,9 +735,9 @@ final class p extends qe {
             var2_ref_ai = gm.field_d.field_L[this.field_F];
           }
           if (var2_ref_ai != null) {
-            if (var2_ref_ai != rd.field_x) {
+            if (var2_ref_ai != SpriteGeometry.field_x) {
               hh.field_r = (en) ((Object) new bd(var2_ref_ai.field_h));
-              rd.field_x = var2_ref_ai;
+              SpriteGeometry.field_x = var2_ref_ai;
             }
             uj.a(hh.field_r, 95);
           }
@@ -1284,7 +1284,7 @@ final class p extends qe {
         SecondaryNodeDequeIterator.field_m = p.a(mc.field_w, param0 - 2398);
         int var2 = 390;
         int var3 = 300;
-        bd.field_g = new cn(var2, var3);
+        bd.field_g = new RgbSprite(var2, var3);
         if (param0 != 2798) {
           this.field_N = (rh) null;
         }
@@ -1339,7 +1339,7 @@ final class p extends qe {
     }
 
     private final void a(int param0) {
-        ol.field_a = new cn[4];
+        ol.field_a = new RgbSprite[4];
         ol.field_a[0] = me.a(32, param0, 14, 0, 14);
         ol.field_a[1] = me.a(32, 14, 0, 14, 14);
         ol.field_a[2] = me.a(IntrusiveDeque.b(param0, 46), 0, 14, 14, 14);
@@ -1362,7 +1362,7 @@ final class p extends qe {
         im.field_e = null;
         rl.field_d = null;
         dm.field_a = null;
-        rd.field_x = null;
+        SpriteGeometry.field_x = null;
         jn.field_a = null;
         dm.field_f = null;
         ol.field_a = null;
@@ -1452,7 +1452,7 @@ final class p extends qe {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, cn param4) {
+    private final void a(int param0, int param1, int param2, int param3, RgbSprite param4) {
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_19_0 = null;

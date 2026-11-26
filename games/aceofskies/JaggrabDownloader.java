@@ -143,9 +143,9 @@ final class JaggrabDownloader implements Runnable {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -2) {
-          JaggrabDownloader.a(-19);
+          JaggrabDownloader.clearStaticReferences(-19);
           field_b = null;
           return;
         }

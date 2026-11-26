@@ -84,7 +84,7 @@ final class ih {
         return var10;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_f = null;
         field_d = null;

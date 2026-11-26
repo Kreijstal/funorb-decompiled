@@ -18,7 +18,7 @@ final class rb {
         }
     }
 
-    final static db[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -26,11 +26,11 @@ final class rb {
         int stackIn_34_0 = 0;
         int stackIn_45_0 = 0;
         int var9 = 0;
-        db[] var10 = null;
-        db[] var11_ref_db__ = null;
+        RgbSprite[] var10 = null;
+        RgbSprite[] var11_ref_db__ = null;
         int var11 = 0;
         int var12 = 0;
-        db var13 = null;
+        RgbSprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -40,7 +40,7 @@ final class rb {
         int var12Lifetime2Lifetime2;
         var15 = Lexicominos.field_L ? 1 : 0;
         var9 = param1 + (param0 + param3);
-        var10 = new db[]{new db(var9, var9), new db(param7, var9), new db(var9, var9), new db(var9, param7), new db(64, 64), new db(var9, param7), new db(var9, var9), new db(param7, var9), new db(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param7, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param7), new RgbSprite(64, 64), new RgbSprite(var9, param7), new RgbSprite(var9, var9), new RgbSprite(param7, var9), new RgbSprite(var9, var9)};
         var11_ref_db__ = var10;
         var12 = 0;
         scanLoop1: while (true) {
@@ -129,7 +129,7 @@ final class rb {
             break;
           }
           if (stackIn_45_0 != 1) {
-            return (db[]) null;
+            return (RgbSprite[]) null;
           }
           var11Lifetime1 = 0;
           scanLoop4: while (param7 >> 1 > var11Lifetime1) {

@@ -73,7 +73,7 @@ final class nl {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, nf[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

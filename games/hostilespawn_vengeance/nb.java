@@ -4,10 +4,10 @@
 final class nb extends vd implements qk {
     private ph field_H;
     private ph field_G;
-    static bd field_J;
+    static RgbSprite field_J;
     private ph field_K;
     static java.math.BigInteger field_L;
-    static bd field_E;
+    static RgbSprite field_E;
     static int field_I;
     static gg field_F;
 
@@ -243,7 +243,7 @@ final class nb extends vd implements qk {
           field_E = null;
           return;
         }
-        field_E = (bd) null;
+        field_E = (RgbSprite) null;
         field_F = null;
         field_J = null;
         field_L = null;

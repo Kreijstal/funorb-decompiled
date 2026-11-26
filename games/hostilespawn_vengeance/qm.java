@@ -3,7 +3,7 @@
  */
 final class qm extends oj {
     static String field_Q;
-    static bd field_P;
+    static RgbSprite field_P;
     static int field_R;
     static float field_O;
 
@@ -56,7 +56,7 @@ final class qm extends oj {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_P = null;
         field_Q = null;
         int var1 = -80 % ((param0 - 55) / 38);
@@ -69,7 +69,7 @@ final class qm extends oj {
           pc.a(true, true, param0);
           return;
         }
-        qm.h(46);
+        qm.clearDeclaredStaticReferences(46);
         im.field_e = new gg();
         pc.a(true, true, param0);
     }
@@ -112,7 +112,7 @@ final class qm extends oj {
         if (param0 == 1) {
           return bf.a(false, true, param1, 1, false, 84);
         }
-        field_P = (bd) null;
+        field_P = (RgbSprite) null;
         return bf.a(false, true, param1, 1, false, 84);
     }
 

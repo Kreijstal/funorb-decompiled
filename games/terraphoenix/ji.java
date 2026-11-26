@@ -234,9 +234,9 @@ final class ji extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 19061) {
-          ji.a(-117);
+          ji.clearStaticReferences(-117);
           field_j = null;
           return;
         }

@@ -86,7 +86,7 @@ final class ok {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (ma.a((byte) -22, var3) != 0L) {
+            if (SpriteGeometry.a((byte) -22, var3) != 0L) {
               if (param1 >= -37) {
                 ok.a(62, 7, 10, -75, 30);
               }
@@ -161,7 +161,7 @@ final class ok {
         }
     }
 
-    final static tg[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 == 18938) {
           return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
         }

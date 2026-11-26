@@ -4,7 +4,7 @@
 final class vk extends jc {
     static String field_y;
     private int field_x;
-    private hj[] field_A;
+    private RgbSprite[] field_A;
     static boolean[] field_w;
     private int field_u;
     static String field_v;
@@ -12,7 +12,7 @@ final class vk extends jc {
 
     final static void a(int param0, boolean param1) {
         kb.field_m = 0;
-        tk.field_n = 0;
+        SpriteGeometry.field_n = 0;
         h.field_A = og.field_b;
         GzipDecompressor.field_c = param0;
         wj.field_k = new ml(2);

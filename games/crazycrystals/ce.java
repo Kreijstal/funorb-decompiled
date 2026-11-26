@@ -7,7 +7,7 @@ final class ce extends dj {
     static String field_bb;
     int field_db;
     String field_cb;
-    static dl field_eb;
+    static RgbSprite field_eb;
 
     final static double[] b(byte param0) {
         int var1;

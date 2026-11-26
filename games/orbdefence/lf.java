@@ -8,7 +8,7 @@ final class lf {
     static IntrusiveDeque field_b;
     static ki field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

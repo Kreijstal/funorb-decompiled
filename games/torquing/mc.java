@@ -35,19 +35,19 @@ final class mc extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 == 5) {
           return;
         }
-        mc.a(-58);
+        mc.clearStaticReferences(-58);
     }
 
     final static void a(byte param0, int param1, bm param2) {
         IsaacPacketBuffer var3 = null;
         try {
           if (param0 != 85) {
-            mc.a(95);
+            mc.clearStaticReferences(95);
           }
           var3 = wa.field_d;
           var3.f(-71, param1);

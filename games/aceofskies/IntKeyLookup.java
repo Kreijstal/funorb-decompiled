@@ -49,7 +49,7 @@ final class IntKeyLookup {
         try {
           DataInputStream var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
           if (param0 > -64) {
-            IntKeyLookup.a(115);
+            IntKeyLookup.clearStaticReferences(115);
           }
           try {
             var4.readFully(param3, 0, param1);
@@ -61,12 +61,12 @@ final class IntKeyLookup {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         incomingPacket = null;
         if (param0 > 39) {
           return;
         }
-        IntKeyLookup.a(-14);
+        IntKeyLookup.clearStaticReferences(-14);
     }
 
     final int a(boolean param0, int param1) {

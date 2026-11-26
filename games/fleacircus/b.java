@@ -15,12 +15,12 @@ final class b {
         return ug.field_c;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;
         if (param0 != 2) {
-          b.b(-97);
+          b.clearStaticReferences(-97);
           field_b = null;
           return;
         }

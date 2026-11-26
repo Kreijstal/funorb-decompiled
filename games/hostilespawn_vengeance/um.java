@@ -242,10 +242,10 @@ final class um {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         if (param0 != 255) {
-          um.a(-80);
+          um.clearStaticReferences(-80);
         }
     }
 

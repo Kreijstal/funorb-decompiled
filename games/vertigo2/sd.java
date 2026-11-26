@@ -123,11 +123,11 @@ final class sd extends WidgetWrapper {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_M = null;
         field_H = null;
         if (param0 != -25849) {
-          sd.j(91);
+          sd.clearStaticReferences(91);
         }
         field_O = null;
         field_P = null;

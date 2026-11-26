@@ -13,7 +13,7 @@ final class ba {
     static int[] field_g;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         int var1 = -14 / ((-15 - param0) / 60);
         field_g = null;

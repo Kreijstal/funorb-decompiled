@@ -136,7 +136,7 @@ abstract class ic extends UiComponent implements gk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            ic.g(90);
+            ic.clearDeclaredStaticReferences(90);
           }
           stackIn_6_0 = (null != this.field_A) && (this.field_A.a(param0, 0));
           return stackIn_6_0;
@@ -293,7 +293,7 @@ abstract class ic extends UiComponent implements gk {
           }
           var8 = param4;
           if (param6 != 127) {
-            ic.g(29);
+            ic.clearDeclaredStaticReferences(29);
           }
           var9 = SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var10 = var9 + 2;
@@ -585,7 +585,7 @@ abstract class ic extends UiComponent implements gk {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_B = (int[][]) null;
         field_D = null;
         field_C = null;
@@ -635,7 +635,7 @@ abstract class ic extends UiComponent implements gk {
           }
           var8 = param4;
           if (param6 != 127) {
-            ic.g(29);
+            ic.clearDeclaredStaticReferences(29);
           }
           var9 = SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var10 = var9 + 2;

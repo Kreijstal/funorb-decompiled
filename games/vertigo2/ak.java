@@ -52,7 +52,7 @@ final class ak {
           }
           return var2;
         }
-        ak.b(24);
+        ak.clearStaticReferences(24);
         var3Lifetime1 = this.field_a.secondaryPrevious;
         while (var3Lifetime1 != this.field_a) {
           var3Lifetime1 = var3Lifetime1.secondaryPrevious;
@@ -61,7 +61,7 @@ final class ak {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         int var1 = 118 % ((64 - param0) / 40);
         field_f = null;

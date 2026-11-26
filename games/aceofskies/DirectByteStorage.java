@@ -8,14 +8,14 @@ final class DirectByteStorage extends ByteStorage {
     static String field_g;
     static int[] field_e;
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 > 42) {
           field_e = null;
           field_f = null;
           field_g = null;
           return;
         }
-        DirectByteStorage.c(-67);
+        DirectByteStorage.clearDeclaredStaticReferences(-67);
         field_e = null;
         field_f = null;
         field_g = null;

@@ -84,7 +84,7 @@ final class bh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = 103 / ((param0 + 26) / 44);
     }

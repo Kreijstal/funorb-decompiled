@@ -5,7 +5,7 @@ final class kd {
     static java.math.BigInteger field_d;
     static tf[] field_e;
     static String field_a;
-    static cn field_f;
+    static RgbSprite field_f;
     static String field_b;
     static int field_c;
     static int[] field_g;

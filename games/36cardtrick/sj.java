@@ -94,7 +94,7 @@ final class sj {
         }
     }
 
-    final static kc b(byte param0) {
+    final static RgbSprite b(byte param0) {
         int var5_int = 0;
         int var6 = Main.field_T;
         int var1 = hb.field_a[0] * na.field_q[0];
@@ -104,7 +104,7 @@ final class sj {
         for (var5_int = 0; var5_int < var1; var5_int++) {
           var3[var5_int] = jf.field_i[bc.a(255, (int) var2[var5_int])];
         }
-        kc var5 = new kc(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[0], na.field_q[0], hb.field_a[0], var3);
+        RgbSprite var5 = new RgbSprite(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[0], na.field_q[0], hb.field_a[0], var3);
         rh.d(-128);
         return var5;
     }
@@ -201,7 +201,7 @@ final class sj {
             if (var4 >= 0) {
               var1_int = var1_int + e.field_i;
               if (cg.field_e.field_k == var4) {
-                stackIn_46_0 = ie.field_m;
+                stackIn_46_0 = SpriteGeometry.field_m;
               } else {
                 stackIn_46_0 = wd.field_b;
               }

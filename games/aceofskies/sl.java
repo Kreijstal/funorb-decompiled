@@ -7,7 +7,7 @@ class sl extends qm {
     static String field_q;
     static String field_n;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         field_q = null;
         int var1 = 7 % ((param0 + 58) / 61);

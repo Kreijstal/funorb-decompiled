@@ -175,9 +175,9 @@ final class ip {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1423419167) {
-          ip.a(-81);
+          ip.clearStaticReferences(-81);
           field_a = null;
           return;
         }

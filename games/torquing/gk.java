@@ -58,7 +58,7 @@ final class gk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = -55 / ((53 - param0) / 58);
     }

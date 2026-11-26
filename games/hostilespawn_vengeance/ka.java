@@ -54,7 +54,7 @@ final class ka extends hi {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         int var1 = -102 / ((43 - param0) / 48);
         field_p = null;

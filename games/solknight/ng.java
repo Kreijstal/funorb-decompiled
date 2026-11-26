@@ -10,14 +10,14 @@ final class ng {
     static int field_d;
     static ml field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_e = null;
         field_b = null;
         field_f = null;
         field_g = (byte[][]) null;
         if (param0 != 0) {
-          ng.a(-31);
+          ng.clearStaticReferences(-31);
         }
     }
 

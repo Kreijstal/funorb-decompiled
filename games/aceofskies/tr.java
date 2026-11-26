@@ -57,9 +57,9 @@ final class tr {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -67) {
-          tr.a(118);
+          tr.clearStaticReferences(118);
         }
         field_a = null;
     }

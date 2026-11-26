@@ -10,7 +10,7 @@ class MixedSupport024 extends MixedSupport001 {
     static String stringState0119;
     static long longState0007;
 
-    public static void performAction0368(int integerArgument1) {
+    public static void clearDeclaredStaticReferences(int integerArgument1) {
         stringState0115 = null;
         stringState0119 = null;
         stringState0116 = null;

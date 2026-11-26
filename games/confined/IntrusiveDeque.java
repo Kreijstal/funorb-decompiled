@@ -8,7 +8,7 @@ final class IntrusiveDeque implements Iterable {
     DualLinkNode sentinel;
     static String field_d;
     static AccountServiceResult field_e;
-    static nf field_c;
+    static RgbSprite field_c;
 
     private IntrusiveDeque() throws Throwable {
         throw new Error();
@@ -35,10 +35,10 @@ final class IntrusiveDeque implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 < 94) {
-          IntrusiveDeque.a((byte) 44);
+          IntrusiveDeque.clearStaticReferences((byte) 44);
           field_d = null;
           field_c = null;
           return;

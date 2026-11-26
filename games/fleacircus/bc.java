@@ -49,7 +49,7 @@ final class bc extends c implements nh {
         return this.field_W;
     }
 
-    final static void a(dd[] param0, int param1, int param2, byte param3, int param4) {
+    final static void a(RgbSprite[] param0, int param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

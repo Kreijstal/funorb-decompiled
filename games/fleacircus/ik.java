@@ -5,10 +5,10 @@ final class ik extends wi {
     int field_S;
     boolean[] field_t;
     int field_r;
-    private dd field_y;
+    private RgbSprite field_y;
     private int field_I;
     private boolean field_L;
-    private dd field_q;
+    private RgbSprite field_q;
     static double field_G;
     int field_s;
     String[] field_z;
@@ -28,8 +28,8 @@ final class ik extends wi {
     int field_F;
     static boolean field_R;
     static String field_C;
-    private dd field_K;
-    private dd field_E;
+    private RgbSprite field_K;
+    private RgbSprite field_E;
     private int field_N;
 
     final static pd a(PcmSample param0, byte param1) {
@@ -105,16 +105,16 @@ final class ik extends wi {
         int stackIn_19_0 = 0;
         float stackIn_25_0 = 0.0f;
         int stackIn_26_1 = 0;
-        dd stackIn_31_0 = null;
-        dd stackIn_34_0 = null;
+        RgbSprite stackIn_31_0 = null;
+        RgbSprite stackIn_34_0 = null;
         int var2;
         int var3;
         int var4;
         float var5;
         String var5_ref_String;
         int var6;
-        dd var7;
-        dd var8;
+        RgbSprite var7;
+        RgbSprite var8;
         int var9;
         int var4Lifetime1;
         int var6Lifetime1;
@@ -420,7 +420,7 @@ final class ik extends wi {
         }
     }
 
-    ik(int param0, int param1, int param2, int param3, fa param4, dd param5, dd param6, dd param7, dd param8) {
+    ik(int param0, int param1, int param2, int param3, fa param4, RgbSprite param5, RgbSprite param6, RgbSprite param7, RgbSprite param8) {
         int stackIn_4_1 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

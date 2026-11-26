@@ -10,12 +10,12 @@ class ma extends DualLinkNode {
     ma() {
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_m = null;
         field_n = null;
         field_o = null;
         if (!param0) {
-          ma.c(false);
+          ma.clearStaticReferences(false);
         }
     }
 

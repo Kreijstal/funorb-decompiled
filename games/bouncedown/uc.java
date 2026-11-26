@@ -97,11 +97,11 @@ final class uc extends lc implements rc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_E = null;
         field_D = null;
         if (param0 != 28) {
-          uc.e((byte) 127);
+          uc.clearStaticReferences((byte) 127);
         }
     }
 
@@ -194,7 +194,7 @@ final class uc extends lc implements rc {
     }
 
     final static void a(gk param0, int param1, gk param2, gk param3) {
-        tg var17 = null;
+        RgbSprite var17 = null;
         we[] var5 = null;
         we[][] var6 = null;
         int[][] var19 = null;
@@ -202,10 +202,10 @@ final class uc extends lc implements rc {
         int[][] var7 = null;
         we[] var14 = null;
         int var11_int = 0;
-        tg var15 = null;
-        tg var18 = null;
-        tg var11 = null;
-        tg var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Bounce.field_N;
@@ -223,7 +223,7 @@ final class uc extends lc implements rc {
           if (param1 <= 77) {
             field_E = (lj) null;
           }
-          var17 = new tg(param3.b("button.gif", "", 124), (java.awt.Component) ((Object) ch.field_h));
+          var17 = new RgbSprite(param3.b("button.gif", "", 124), (java.awt.Component) ((Object) ch.field_h));
           s.a(param0, "dropdown", 28576, "commonui");
           var5 = ff.a("screen_options", param0, (byte) 124, "commonui");
           nh.field_R = new we[4];
@@ -252,18 +252,18 @@ final class uc extends lc implements rc {
           wa.a(true);
           var17.d();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k);
-          var15 = new tg(var9Lifetime1, var9Lifetime1);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();
           var17.b(0, 0);
-          var11 = new tg(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.d();
           var17.b(-var17.field_s + var9Lifetime1, 0);
-          var12 = new tg(var17.field_s - 2 * var9Lifetime1, var9Lifetime1);
+          var12 = new RgbSprite(var17.field_s - 2 * var9Lifetime1, var9Lifetime1);
           var12.d();
           var17.b(-var9Lifetime1, 0);
           ve.a(-125);
-          ih.field_T = new tg[]{var15, var12, var11};
+          ih.field_T = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "uc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -6,7 +6,7 @@ import java.io.*;
 final class sm {
     static String field_f;
     static String field_e;
-    static cn field_g;
+    static RgbSprite field_g;
     int field_d;
     static String field_b;
     static String field_a;
@@ -120,7 +120,7 @@ final class sm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_e = null;
         if (param0 == -118) {
@@ -129,7 +129,7 @@ final class sm {
           field_f = null;
           return;
         }
-        sm.a((byte) 34);
+        sm.clearStaticReferences((byte) 34);
         field_b = null;
         field_g = null;
         field_f = null;

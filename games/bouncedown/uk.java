@@ -9,9 +9,9 @@ final class uk {
     private IntrusiveNode[] field_c;
     static String field_b;
     private IntrusiveNode field_g;
-    static tg[] field_f;
+    static RgbSprite[] field_f;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         int var1 = -69 % ((61 - param0) / 48);
         field_d = null;
@@ -94,7 +94,7 @@ final class uk {
         }
         this.field_g = null;
         if (param0 < 7) {
-          uk.c(-8);
+          uk.clearStaticReferences(-8);
           return null;
         }
         return null;
@@ -160,7 +160,7 @@ final class uk {
     final static void a(oh param0, int param1, int param2, oh param3, int param4, byte param5) {
         try {
           if (param5 != 82) {
-            uk.c(1);
+            uk.clearStaticReferences(1);
           }
           hj.field_a = param2;
           le.field_a = param3;

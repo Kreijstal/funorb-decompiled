@@ -8,7 +8,7 @@ final class wc extends id {
     private int field_Sb;
     static jk field_Ub;
     private boolean field_Rb;
-    static nf[] field_nc;
+    static RgbSprite[] field_nc;
     static int field_Ob;
     private int field_Tb;
     private kh[] field_ic;

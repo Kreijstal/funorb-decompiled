@@ -3,7 +3,7 @@
  */
 final class uh extends fa {
     static uc field_p;
-    static dl field_q;
+    static RgbSprite field_q;
     static String field_o;
     static boolean field_n;
 

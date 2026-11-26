@@ -4,7 +4,7 @@
 final class hm extends IntrusiveNode {
     int field_m;
     int field_p;
-    static bd field_l;
+    static RgbSprite field_l;
     int field_i;
     int field_j;
     int field_k;
@@ -28,7 +28,7 @@ final class hm extends IntrusiveNode {
         return !c.field_a.d((byte) -102) ? true : false;
     }
 
-    final static void a(int param0, bd[] param1, boolean param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite[] param1, boolean param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -208,8 +208,8 @@ final class hm extends IntrusiveNode {
           param2.a((byte) -113, 17);
           param2.a((byte) -110, param0);
           if (param4 != 4122) {
-            bd[] var6 = (bd[]) null;
-            hm.a(84, (bd[]) null, false, 109, 3, -79);
+            RgbSprite[] var6 = (RgbSprite[]) null;
+            hm.a(84, (RgbSprite[]) null, false, 109, 3, -79);
           }
           param2.a((byte) -128, param1);
           param2.d(122, param3);

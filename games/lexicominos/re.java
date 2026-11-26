@@ -62,7 +62,7 @@ abstract class re extends ql {
         return super.f((byte) -102);
     }
 
-    public static void i(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_X = null;
         field_T = null;
         field_cb = null;

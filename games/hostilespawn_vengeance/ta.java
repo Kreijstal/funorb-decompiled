@@ -5,7 +5,7 @@ final class ta extends me {
     static String field_kb;
     static String field_lb;
     static int[] field_mb;
-    static bd field_jb;
+    static RgbSprite field_jb;
 
     final static boolean p(int param0) {
         if (param0 != 3) {
@@ -99,7 +99,7 @@ final class ta extends me {
               VolumeRampingMidiPcmStream.field_U[1] = 0;
               VolumeRampingMidiPcmStream.field_U[0] = 0;
             }
-            MusicPatchPcmStream.field_n = new bd(72, 72);
+            MusicPatchPcmStream.field_n = new RgbSprite(72, 72);
             MusicPatchPcmStream.field_n.a();
             for (var2_int = 0; var2_int < 3; var2_int++) {
               for (var3 = 0; var3 < 3; var3++) {
@@ -124,7 +124,7 @@ final class ta extends me {
               VolumeRampingMidiPcmStream.field_U[1] = 0;
             }
             if (rl.field_c != 3) {
-              MusicPatchPcmStream.field_n = new bd(72, 72);
+              MusicPatchPcmStream.field_n = new RgbSprite(72, 72);
               MusicPatchPcmStream.field_n.a();
               for (var2_int = 0; 3 > var2_int; var2_int++) {
                 for (var3 = 0; 3 > var3; var3++) {
@@ -178,7 +178,7 @@ final class ta extends me {
           ti.field_f.field_e = ti.field_f.field_e + 1;
           mm.field_m[0] = new oj(ti.field_f, 0, rl.field_c);
           ki.field_c = null;
-          ki.field_c = new bd(ln.field_a.field_a, ln.field_a.field_d);
+          ki.field_c = new RgbSprite(ln.field_a.field_a, ln.field_a.field_d);
           ki.field_c.a();
           var2_intLifetime3 = ln.field_a.field_a;
           var3Lifetime2 = ln.field_a.field_d;

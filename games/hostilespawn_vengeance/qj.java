@@ -8,7 +8,7 @@ final class qj extends IntrusiveNode {
     static String field_m;
     static boolean[] field_k;
     static String field_n;
-    static bd field_l;
+    static RgbSprite field_l;
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
@@ -98,7 +98,7 @@ final class qj extends IntrusiveNode {
           }
           var3 = pe.p(274);
           if (param1 > -29) {
-            field_l = (bd) null;
+            field_l = (RgbSprite) null;
           }
           var4 = 0;
           while (true) {

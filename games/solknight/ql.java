@@ -233,7 +233,7 @@ final class ql extends af {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_r = null;
         field_q = null;
         field_p = null;

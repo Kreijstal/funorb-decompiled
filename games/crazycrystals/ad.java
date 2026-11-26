@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ad extends um {
-    static dl field_h;
+    static RgbSprite field_h;
     static String field_j;
     private int field_g;
     static PcmSample field_k;
@@ -15,12 +15,12 @@ final class ad extends um {
         this.field_g = 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_k = null;
         field_j = null;
         field_h = null;
         if (param0 != 0) {
-          field_h = (dl) null;
+          field_h = (RgbSprite) null;
         }
     }
 

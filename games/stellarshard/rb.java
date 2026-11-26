@@ -294,7 +294,7 @@ abstract class rb extends GameApplet {
         wc.field_x[1] = true;
     }
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 77 / ((param0 - 79) / 32);
         field_u = null;
         field_t = null;

@@ -136,12 +136,12 @@ final class uk extends ql {
         }
     }
 
-    final static db[] a(String param0, String param1, int param2, sh param3) {
+    final static RgbSprite[] a(String param0, String param1, int param2, sh param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        db[] stackIn_2_0 = null;
-        db[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -152,7 +152,7 @@ final class uk extends ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -909811167) {
-            stackIn_2_0 = (db[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param3.c(param1, (byte) -89);
@@ -185,7 +185,7 @@ final class uk extends ql {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 121 % ((param0 + 30) / 35);
         field_U = null;
     }
@@ -199,7 +199,7 @@ final class uk extends ql {
         int var3 = 0;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          var1 = ed.field_q;
+          var1 = SpriteGeometry.field_q;
           if (!param0) {
             uk.g(false);
           }
@@ -209,7 +209,7 @@ final class uk extends ql {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ej.a(-17, var1);
-            ed.field_q.backpatchByteLength(-var2 + var1.position, (byte) -125);
+            SpriteGeometry.field_q.backpatchByteLength(-var2 + var1.position, (byte) -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

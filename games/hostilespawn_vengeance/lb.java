@@ -3,7 +3,7 @@
  */
 final class lb {
     static int field_b;
-    static bd[][] field_a;
+    static RgbSprite[][] field_a;
     static String field_c;
 
     final static void b(int param0) {
@@ -84,7 +84,7 @@ final class lb {
         if (param0 != -16182) {
           return;
         }
-        field_a = (bd[][]) null;
+        field_a = (RgbSprite[][]) null;
     }
 
     final static int a(int param0, byte param1, s param2, boolean param3, s param4, String param5, int param6) {

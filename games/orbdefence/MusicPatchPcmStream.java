@@ -248,10 +248,10 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         if (param0 < 34) {
-          MusicPatchPcmStream.d(-51);
+          MusicPatchPcmStream.clearDeclaredStaticReferences(-51);
           field_n = null;
           return;
         }

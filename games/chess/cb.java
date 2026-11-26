@@ -19,7 +19,7 @@ final class cb {
           i.a(false, param2, -5136, param1);
           int var3_int = 59 % ((param0 - 43) / 38);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "cb.B(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1_ref), "cb.B(" + param0 + ')');
         }
     }
 

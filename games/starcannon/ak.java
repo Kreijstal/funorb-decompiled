@@ -22,7 +22,7 @@ final class ak {
     dl[] field_s;
     private int field_o;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         int var1 = -101 / ((param0 - 41) / 44);
     }
@@ -95,7 +95,7 @@ final class ak {
             var7 = stackIn_17_0;
             var8 = 0;
             if (param1 >= -84) {
-              ak.a((byte) -37);
+              ak.clearStaticReferences((byte) -37);
             }
             this.field_g = new int[this.field_o];
             var9 = -1;

@@ -6,10 +6,10 @@ final class lt {
     static int field_b;
     static String field_c;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 >= -4) {
-          lt.b((byte) 37);
+          lt.clearStaticReferences((byte) 37);
           field_a = null;
           return;
         }
@@ -44,7 +44,7 @@ final class lt {
         String var2 = null;
         String var2Lifetime1;
         if (param0 != 28427) {
-          lt.b((byte) -113);
+          lt.clearStaticReferences((byte) -113);
           var2 = TextInputWidget.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();

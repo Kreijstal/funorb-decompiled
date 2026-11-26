@@ -17,13 +17,13 @@ final class n extends qg {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         field_C = null;
         field_B = null;
         field_D = null;
         if (param0 != -89) {
-          n.d((byte) -100);
+          n.clearStaticReferences((byte) -100);
         }
     }
 
@@ -118,7 +118,7 @@ final class n extends qg {
           this.field_y.a(param0 + this.field_o, param1 + this.field_i, -1, param3);
           return;
         }
-        kc var6 = new kc(this.field_y.field_h, this.field_y.field_q);
+        RgbSprite var6 = new RgbSprite(this.field_y.field_h, this.field_y.field_q);
         dl.a(-27, var6);
         this.field_y.a(0, 0, param2 + 0, param3);
         gg.a(14756);

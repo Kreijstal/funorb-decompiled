@@ -6,7 +6,7 @@ final class up {
     private DualLinkNode field_a;
     static String[] field_c;
     private DualLinkNode field_e;
-    static cn field_b;
+    static RgbSprite field_b;
 
     final DualLinkNode c(int param0) {
         if (param0 != 13395) {

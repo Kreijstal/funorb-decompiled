@@ -112,7 +112,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 > -67) {
           return;
         }

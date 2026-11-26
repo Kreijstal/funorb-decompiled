@@ -810,7 +810,7 @@ final class ResourceArchive {
         return this.field_g.a((byte) 125, param0);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = 30 % ((param0 - 18) / 38);
         field_e = null;

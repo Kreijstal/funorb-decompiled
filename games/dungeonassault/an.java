@@ -15,15 +15,15 @@ final class an extends hh {
 
     final pi a(int param0, byte param1) {
         if (param1 > -81) {
-          cn[] var4 = (cn[]) null;
-          this.a(65, (cn[]) null, -101);
+          RgbSprite[] var4 = (RgbSprite[]) null;
+          this.a(65, (RgbSprite[]) null, -101);
         }
         pi dupTemp$0 = new pi();
         this.field_B[param0] = dupTemp$0;
         return dupTemp$0;
     }
 
-    final void a(byte param0, cn param1) {
+    final void a(byte param0, RgbSprite param1) {
         int var4 = 0;
         pi[] var3 = null;
         pi var5 = null;
@@ -72,7 +72,7 @@ final class an extends hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -109) {
-            an.c(26);
+            an.clearDeclaredStaticReferences(26);
           }
           if (param3 == null) {
             stackIn_5_0 = ng.field_K;
@@ -96,7 +96,7 @@ final class an extends hh {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_y = null;
         field_z = null;
         if (param0 != -13023) {
@@ -147,7 +147,7 @@ final class an extends hh {
         RuntimeException var6 = null;
         pi var7 = null;
         pi var9 = null;
-        cn[] var10 = null;
+        RgbSprite[] var10 = null;
         ck var11 = null;
         pi var12 = null;
         pi var13 = null;
@@ -202,8 +202,8 @@ final class an extends hh {
           this.field_A.a(0, param1, param3, param2, this);
           ti.c(true);
           if (param0 != 34) {
-            var10 = (cn[]) null;
-            this.a(117, (cn[]) null, 121);
+            var10 = (RgbSprite[]) null;
+            this.a(117, (RgbSprite[]) null, 121);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,7 +220,7 @@ final class an extends hh {
         }
     }
 
-    final void a(int param0, cn[] param1, int param2) {
+    final void a(int param0, RgbSprite[] param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
@@ -234,7 +234,7 @@ final class an extends hh {
         }
     }
 
-    final void a(cn[] param0, int param1) {
+    final void a(RgbSprite[] param0, int param1) {
         int var4 = 0;
         pi[] var3 = null;
         pi var5 = null;
@@ -287,7 +287,7 @@ final class an extends hh {
         var7 = DungeonAssault.field_K;
         try {
           if (param0 != 0) {
-            an.c(98);
+            an.clearDeclaredStaticReferences(98);
           }
           super.a((byte) 127, param1);
           if (param2) {

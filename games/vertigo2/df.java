@@ -50,7 +50,7 @@ final class df extends de implements ih, wr {
         return qm.field_G;
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         if (param0 == -3) {
           field_n = null;
@@ -58,7 +58,7 @@ final class df extends de implements ih, wr {
           field_i = null;
           return;
         }
-        df.g(-60);
+        df.clearDeclaredStaticReferences(-60);
         field_n = null;
         field_j = (byte[][][]) null;
         field_i = null;

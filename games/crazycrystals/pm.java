@@ -4,14 +4,14 @@
 final class pm {
     private boolean field_g;
     static IntrusiveDeque field_c;
-    dl[] field_k;
+    RgbSprite[] field_k;
     private int field_e;
     static am field_b;
     static int field_d;
     private int field_j;
     private int field_i;
     private int field_a;
-    dl field_h;
+    RgbSprite field_h;
     private int field_f;
 
     final pm c(int param0, int param1) {
@@ -75,17 +75,17 @@ final class pm {
         this.field_k = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 <= 25) {
-          pm.a((byte) -63);
+          pm.clearStaticReferences((byte) -63);
           field_b = null;
           return;
         }
         field_b = null;
     }
 
-    final pm a(int param0, dl[] param1) {
+    final pm a(int param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         pm stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -215,7 +215,7 @@ final class pm {
     final pm d(int param0, int param1) {
         this.field_j = param1;
         if (param0 > -44) {
-          this.field_h = (dl) null;
+          this.field_h = (RgbSprite) null;
           return this;
         }
         return this;

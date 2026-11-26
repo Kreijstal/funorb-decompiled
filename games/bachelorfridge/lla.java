@@ -4,9 +4,9 @@
 final class lla extends pu {
     static UiComponent field_l;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 0) {
-          lla.d((byte) 46);
+          lla.clearStaticReferences((byte) 46);
           field_l = null;
           return;
         }

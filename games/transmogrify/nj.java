@@ -16,7 +16,7 @@ final class nj extends IntrusiveNode {
     static String[] field_k;
     static int[] field_r;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         int var1 = 18 / ((21 - param0) / 41);
         field_j = null;
@@ -49,7 +49,7 @@ final class nj extends IntrusiveNode {
         var11_ref_ti__ = var10;
         var12 = 0;
         if (param6 < 42) {
-          nj.d(-32);
+          nj.clearStaticReferences(-32);
         }
         while (var12 < var11_ref_ti__.length) {
           var13 = var11_ref_ti__[var12];

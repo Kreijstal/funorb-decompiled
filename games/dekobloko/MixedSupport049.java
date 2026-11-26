@@ -40,7 +40,7 @@ final class MixedSupport049 {
         return false;
     }
 
-    public static void performAction0584(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         int integerLocal1 = -114 % ((integerArgument1 + 21) / 55);
         stringState0205 = null;
     }

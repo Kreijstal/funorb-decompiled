@@ -20,11 +20,11 @@ final class qk extends IOException {
         return param0 ^ param1;
     }
 
-    final static nh a(String param0, vj param1, String param2, boolean param3) {
+    final static RgbSprite a(String param0, vj param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nh stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

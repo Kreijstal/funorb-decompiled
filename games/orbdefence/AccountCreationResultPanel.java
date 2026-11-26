@@ -56,12 +56,12 @@ final class AccountCreationResultPanel extends dh implements ai {
         }
     }
 
-    public static void r(int param0) {
+    public static void resetDeclaredStaticReferences(int param0) {
         field_ib = null;
         field_gb = null;
         field_hb = null;
         if (param0 != 11285) {
-          AccountCreationResultPanel.r(29);
+          AccountCreationResultPanel.resetDeclaredStaticReferences(29);
         }
     }
 

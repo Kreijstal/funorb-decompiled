@@ -452,12 +452,12 @@ abstract class GameShell extends GameApplet {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_m = null;
         field_l = null;
         field_q = null;
         if (!param0) {
-          GameShell.a(false);
+          GameShell.clearStaticReferences(false);
         }
         field_B = null;
     }
@@ -739,7 +739,7 @@ abstract class GameShell extends GameApplet {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 7) {
-            GameShell.a(false);
+            GameShell.clearStaticReferences(false);
           }
           var4 = (oc) (mg.field_N.beginBackward((byte) 100));
           var1 = var4;
@@ -799,7 +799,7 @@ abstract class GameShell extends GameApplet {
     private final void o(int param0) {
         wi.field_h[2] = true;
         if (param0 != 15000) {
-          GameShell.a(false);
+          GameShell.clearStaticReferences(false);
         }
     }
 

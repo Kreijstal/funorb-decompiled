@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class q extends lc implements rf, rc {
-    static tg field_F;
+    static RgbSprite field_F;
     static db field_A;
     private wd field_D;
     nd field_C;
@@ -24,7 +24,7 @@ final class q extends lc implements rf, rc {
           if (param0 == 8927) {
             return;
           }
-          field_F = (tg) null;
+          field_F = (RgbSprite) null;
           return;
         }
         var1 = qj.field_c;
@@ -32,7 +32,7 @@ final class q extends lc implements rf, rc {
           qj.field_c = null;
         }
         if (param0 != 8927) {
-          field_F = (tg) null;
+          field_F = (RgbSprite) null;
         }
     }
 
@@ -41,7 +41,7 @@ final class q extends lc implements rf, rc {
           ((AccountNameAvailabilityValidator) (this.field_E.a(true))).i((byte) -115);
           return;
         }
-        field_F = (tg) null;
+        field_F = (RgbSprite) null;
         ((AccountNameAvailabilityValidator) (this.field_E.a(true))).i((byte) -115);
     }
 

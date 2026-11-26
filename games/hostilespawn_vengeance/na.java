@@ -103,7 +103,7 @@ final class na {
     final void a(vm param0, byte param1) {
         cn var17 = null;
         ha var4 = null;
-        bd[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -112,12 +112,12 @@ final class na {
         ra discarded$0 = null;
         h discarded$1 = null;
         ha var8 = null;
-        bd[] var9 = null;
-        bd[] var10 = null;
-        bd dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         ha var11 = null;
         ha var12 = null;
-        bd var13 = null;
+        RgbSprite var13 = null;
         ha var14 = null;
         ha var19 = null;
         int var15 = HostileSpawn.field_I ? 1 : 0;
@@ -143,13 +143,13 @@ final class na {
           var4.a(0, true).a(15658734, true).a(false, pm.a(7829367, 8947848, (byte) -117, 10066329));
           var4.a(1, true).a(false, pm.a(13421772, 11184810, (byte) -117, 10066329));
           var4.a(3, true).a(false, pm.a(10066329, 8947848, (byte) -117, 7829367)).b(1, 16802).a((byte) 92, 1);
-          var5 = new bd[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_D.length; var7_int++) {
             var16.field_D[var7_int] = 1077952576;
           }
-          var5[4] = (bd) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.a(4, true).a((byte) -37, true).a(false, var5);
           var4.a(5, true).a(false, ArchiveProvider.a(65793, 0, (byte) 127, 0, 0)).a((byte) -128, true).a(-1, true);
           this.field_e = (nn) ((Object) var4);
@@ -167,13 +167,13 @@ final class na {
           var8.a(0, true).a(false, pm.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
           var8.a(4, true).a((byte) -52, true).a(false, var5);
           this.field_j = (nn) ((Object) var8);
-          var9 = new bd[9];
-          var9[4] = new bd(2, 1);
+          var9 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
           if (param1 <= 50) {
             this.field_i = (vm) null;
           }
-          var10 = new bd[9];
-          var10[4] = new bd(1, 2);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_D = new int[]{6710886, 7829367};
           var10[4].field_D = new int[]{6710886, 7829367};
@@ -181,7 +181,7 @@ final class na {
           var12 = new ha();
           var11.a(0, var9, (byte) -26);
           var12.a(0, var10, (byte) -48);
-          var13 = new bd(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_D = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ha(var4, true);
           var14.a(true, var13.h());

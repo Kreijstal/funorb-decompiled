@@ -349,7 +349,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    public static void performAction0396(byte byteArgument1) {
+    public static void clearDeclaredStaticReferences(byte byteArgument1) {
         if (byteArgument1 == -37) {
           stringState0135 = null;
           mixedSupport016State0001 = null;

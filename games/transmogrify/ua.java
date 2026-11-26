@@ -9,7 +9,7 @@ final class ua {
     static String field_b;
     static Sprite[] field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 122 % ((-70 - param0) / 50);
         field_b = null;
         bonusWords = null;
@@ -270,7 +270,7 @@ final class ua {
           var14 = Transmogrify.field_A ? 1 : 0;
           try {
             if (param2 != -22635) {
-              ua.a(-89);
+              ua.clearStaticReferences(-89);
             }
             var18 = new ba();
             var18.field_p = param3.readUnsignedByte((byte) 101);

@@ -336,14 +336,14 @@ abstract class jf {
         }
     }
 
-    final static nf[] a(int param0, byte param1) {
-        nf[] var3 = new nf[9];
-        nf[] var2 = var3;
+    final static RgbSprite[] a(int param0, byte param1) {
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         if (param1 >= 2) {
           var3[4] = wm.a(64, true, param0);
           return var2;
         }
-        return (nf[]) null;
+        return (RgbSprite[]) null;
     }
 
     abstract void d(int param0);

@@ -445,7 +445,7 @@ final class wl extends aj implements hl, df, tc {
         return MusicPatchPcmStream.a(this, this.field_y.field_k, this.field_F.field_k, this.field_w.field_y, false, this.field_J.field_k, var2);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 54 / ((-76 - param0) / 38);
         field_K = null;
     }

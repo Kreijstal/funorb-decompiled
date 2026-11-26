@@ -358,14 +358,14 @@ final class qi {
         this.field_k = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == 46) {
           field_d = null;
           field_h = null;
           field_j = null;
           return;
         }
-        qi.a((byte) 112);
+        qi.clearStaticReferences((byte) 112);
         field_d = null;
         field_h = null;
         field_j = null;

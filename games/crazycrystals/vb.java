@@ -91,7 +91,7 @@ final class vb extends pn implements Cloneable {
         super(param0);
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         ig stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

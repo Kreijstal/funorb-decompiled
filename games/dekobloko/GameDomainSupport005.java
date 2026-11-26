@@ -14,9 +14,9 @@ final class GameDomainSupport005 {
     static String stringState0406;
     static MixedSupport048 mixedSupport048State0002;
 
-    public static void performAction1208(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         if (byteArgument1 != 78) {
-          GameDomainSupport005.performAction1208((byte) -103);
+          GameDomainSupport005.clearStaticReferences((byte) -103);
         }
         stringArrayState0028 = null;
         mixedSupport048State0002 = null;
@@ -266,7 +266,7 @@ final class GameDomainSupport005 {
           }
           SoftwareRaster.saveClip(UiComponentPart013.integerArrayState0055);
           if (integerArgument1 != 390) {
-            GameDomainSupport005.performAction1208((byte) 100);
+            GameDomainSupport005.clearStaticReferences((byte) 100);
           }
           SoftwareRaster.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, UiComponentPart026.integerState0673, SceneWidget.integerState0909);
           SoftwareRaster.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, UiComponentPart026.integerState0673, SceneWidget.integerState0909);

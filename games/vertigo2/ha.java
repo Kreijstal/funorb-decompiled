@@ -373,10 +373,10 @@ final class ha {
         this.field_b = param1;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 > -101) {
-          ha.b((byte) 61);
+          ha.clearStaticReferences((byte) 61);
         }
     }
 
@@ -420,7 +420,7 @@ final class ha {
         this.field_e.d();
         SoftwareRasterizer.fillCircle(param2 + var7, var7 + param4, -3 + var7, 4027280);
         if (!param1) {
-          ha.b((byte) -33);
+          ha.clearStaticReferences((byte) -33);
         }
         SoftwareRasterizer.fillRectangle(param2 + 9, param4, -18 + param0, param3, 4027280);
         SoftwareRasterizer.fillCircle(-15 + param0 + param2, var7 + param4, -2 + (-1 + var7), 4027280);

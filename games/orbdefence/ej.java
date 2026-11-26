@@ -34,7 +34,7 @@ abstract class ej extends sg {
           this.a(var3, (byte) -81, var2);
         }
         if (param0) {
-          ej.o(121);
+          ej.releaseDeclaredStaticReferences(121);
         }
         return super.d(false);
     }
@@ -84,7 +84,7 @@ abstract class ej extends sg {
         this.field_H = param1;
     }
 
-    public static void o(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_J = null;
         if (param0 != -15640) {
           field_J = (String[]) null;

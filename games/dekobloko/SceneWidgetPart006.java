@@ -208,7 +208,7 @@ final class SceneWidgetPart006 extends SceneWidget {
         return false;
     }
 
-    public static void performAction0775(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 != 32) {
           return;
         }

@@ -6,12 +6,12 @@ final class pi {
     static String field_g;
     static String field_i;
     private int field_h;
-    cn field_d;
+    RgbSprite field_d;
     private int field_k;
-    static cn field_b;
+    static RgbSprite field_b;
     private int field_c;
     private int field_j;
-    cn[] field_e;
+    RgbSprite[] field_e;
     private int field_f;
 
     final void a(int param0, lm param1, int param2, int param3, an param4) {
@@ -154,7 +154,7 @@ final class pi {
         }
     }
 
-    final pi a(cn[] param0, boolean param1) {
+    final pi a(RgbSprite[] param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

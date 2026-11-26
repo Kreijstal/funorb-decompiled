@@ -7,14 +7,14 @@ final class ul {
     static int[] field_e;
     static int[] field_b;
     static int[] field_i;
-    static nh field_c;
+    static RgbSprite field_c;
     static int field_a;
     static int[] field_f;
     static he field_h;
     static int[][] field_j;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 == 8) {
           field_f = null;
@@ -26,7 +26,7 @@ final class ul {
           field_b = null;
           return;
         }
-        ul.a((byte) -79);
+        ul.clearStaticReferences((byte) -79);
         field_f = null;
         field_e = null;
         field_g = null;

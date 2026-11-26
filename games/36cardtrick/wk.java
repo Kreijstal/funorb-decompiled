@@ -46,10 +46,10 @@ final class wk {
           return;
         }
         if (param1 % 10L != 0L) {
-          ie.sleepIgnoringInterrupts((byte) 10, param1);
+          SpriteGeometry.sleepIgnoringInterrupts((byte) 10, param1);
         } else {
-          ie.sleepIgnoringInterrupts((byte) 10, param1 - 1L);
-          ie.sleepIgnoringInterrupts((byte) 10, 1L);
+          SpriteGeometry.sleepIgnoringInterrupts((byte) 10, param1 - 1L);
+          SpriteGeometry.sleepIgnoringInterrupts((byte) 10, 1L);
           return;
         }
     }

@@ -8,7 +8,7 @@ final class ph {
     private DualLinkNode field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 110 % ((-13 - param0) / 60);
         field_a = null;
     }

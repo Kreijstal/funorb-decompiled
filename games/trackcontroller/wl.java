@@ -9,7 +9,7 @@ final class wl extends IntrusiveNode {
 
     final static void sleepMillis(long param0, boolean param1) {
         if (param1) {
-          wl.d(78);
+          wl.clearStaticReferences(78);
           if (0L >= param0) {
             return;
           }
@@ -40,7 +40,7 @@ final class wl extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 11 % ((-39 - param0) / 40);
         field_i = null;
         field_l = null;

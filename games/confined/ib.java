@@ -3,11 +3,11 @@
  */
 final class ib extends fj {
     private int field_Y;
-    private nf field_L;
+    private RgbSprite field_L;
     int field_R;
-    private nf[] field_X;
+    private RgbSprite[] field_X;
     static long[] field_V;
-    private nf field_U;
+    private RgbSprite field_U;
     private int field_S;
     private int field_I;
     private int field_Z;
@@ -15,7 +15,7 @@ final class ib extends fj {
     private int field_H;
     private int field_P;
     static long[][] field_T;
-    private nf field_K;
+    private RgbSprite field_K;
     static int field_W;
     static PcmSample field_J;
     static int[] field_M;
@@ -158,8 +158,8 @@ final class ib extends fj {
         }
     }
 
-    private final nf b(int param0, byte param1, int param2) {
-        nf discarded$0 = null;
+    private final RgbSprite b(int param0, byte param1, int param2) {
+        RgbSprite discarded$0 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -174,7 +174,7 @@ final class ib extends fj {
         if (param1 > -75) {
           discarded$0 = this.f(-60);
         }
-        nf var14 = new nf(2 * this.field_P, this.field_z);
+        RgbSprite var14 = new RgbSprite(2 * this.field_P, this.field_z);
         vm.a(var14, -8409);
         int var5 = this.field_z >> 1;
         for (var6 = 0; this.field_z > var6; var6++) {
@@ -196,7 +196,7 @@ final class ib extends fj {
         return var14;
     }
 
-    private final void a(byte param0, nf param1, int param2, int param3) {
+    private final void a(byte param0, RgbSprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -250,13 +250,13 @@ final class ib extends fj {
         }
     }
 
-    private final nf f(int param0) {
+    private final RgbSprite f(int param0) {
         int var6 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = Confined.field_J ? 1 : 0;
         int var2 = this.field_z >> 1;
-        nf var3 = new nf(var2, this.field_z);
+        RgbSprite var3 = new RgbSprite(var2, this.field_z);
         vm.a(var3, -8409);
         int var4 = 0;
         int var5 = 1 % ((47 - param0) / 59);
@@ -305,10 +305,10 @@ final class ib extends fj {
     }
 
     private final void g(byte param0) {
-        this.field_X = new nf[]{this.b(this.field_Z, (byte) -81, this.field_I), this.b(this.field_S, (byte) -120, this.field_Y)};
+        this.field_X = new RgbSprite[]{this.b(this.field_Z, (byte) -81, this.field_I), this.b(this.field_S, (byte) -120, this.field_Y)};
         this.field_K = this.f(124);
         this.field_U = this.field_K.b();
-        this.field_L = new nf(this.field_z >> 1, this.field_z);
+        this.field_L = new RgbSprite(this.field_z >> 1, this.field_z);
         if (param0 >= -105) {
           this.field_S = -14;
         }

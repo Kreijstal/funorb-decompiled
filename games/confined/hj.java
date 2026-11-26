@@ -26,7 +26,7 @@ final class hj extends mf {
           if (param1) {
             return null;
           }
-          hj.e(-48);
+          hj.clearStaticReferences(-48);
           stackIn_6_0 = null;
           return (String) (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +89,7 @@ final class hj extends mf {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         int var1 = 73 / ((param0 + 21) / 59);
         field_h = null;

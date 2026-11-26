@@ -12,7 +12,7 @@ final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode field_d;
     private IterableNodeHashTable field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         int var1 = -127 % ((-59 - param0) / 44);

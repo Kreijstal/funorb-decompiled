@@ -14,11 +14,11 @@ final class il {
         return vd.field_a;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = (int[][]) null;
         field_b = null;
         if (param0 != -24) {
-          il.a((byte) -33);
+          il.clearStaticReferences((byte) -33);
           field_a = null;
           return;
         }

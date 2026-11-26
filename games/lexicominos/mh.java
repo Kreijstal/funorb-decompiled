@@ -16,7 +16,7 @@ final class mh extends nb implements jk {
         wj.field_j.a(kc.field_m[param0], param1, oc.field_e * 128 / 256);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         field_D = null;
         int var1 = 81 % ((param0 - 59) / 60);

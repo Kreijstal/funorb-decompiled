@@ -3,17 +3,17 @@
  */
 final class na extends hh {
     static ji field_D;
-    static cn field_A;
+    static RgbSprite field_A;
     static cc field_y;
     private int field_F;
-    private cn[] field_x;
+    private RgbSprite[] field_x;
     private int field_z;
     static tf field_w;
     private int field_E;
-    static cn[] field_C;
+    static RgbSprite[] field_C;
     static int[] field_G;
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_A = null;
         if (param0 >= -26) {
           return;
@@ -28,7 +28,7 @@ final class na extends hh {
     final static void a(boolean param0, int param1, boolean param2) {
         hd.a(param1 ^ 2599413, param2, (String) null, param0);
         if (param1 != 2591221) {
-          field_A = (cn) null;
+          field_A = (RgbSprite) null;
         }
     }
 
@@ -80,7 +80,7 @@ final class na extends hh {
           stackIn_17_0 = (!param4) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
           if (param0 != 34) {
-            na.c(123);
+            na.clearDeclaredStaticReferences(123);
           }
           this.field_u.a(param1.field_w, param2 + param1.field_q, param3 - (-param1.field_v + 2), param1.field_x, param1.field_s, var8, -1, 1, 1, this.field_u.field_H);
           return;

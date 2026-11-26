@@ -7,7 +7,7 @@ final class dl extends IntrusiveNode {
     static int field_h;
     static String field_j;
 
-    final static void a(int param0, kc param1) {
+    final static void a(int param0, RgbSprite param1) {
         try {
           ji.a(true);
           SoftwareRasterizer.setRasterBuffer(param1.field_r, param1.field_l, param1.field_k);
@@ -31,8 +31,8 @@ final class dl extends IntrusiveNode {
     public static void a(int param0) {
         field_j = null;
         if (param0 != 8996) {
-          kc var2 = (kc) null;
-          dl.a(51, (kc) null);
+          RgbSprite var2 = (RgbSprite) null;
+          dl.a(51, (RgbSprite) null);
         }
     }
 

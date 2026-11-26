@@ -358,7 +358,7 @@ final class ki extends DualLinkNode {
         this.e(123);
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 12950) {
           field_H = (Sprite) null;
         }

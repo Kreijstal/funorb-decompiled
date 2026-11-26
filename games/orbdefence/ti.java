@@ -9,7 +9,7 @@ final class ti extends sf {
     String field_Z;
     static volatile boolean field_cb;
 
-    final static void a(int param0, int param1, int param2, hj[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -176,8 +176,8 @@ final class ti extends sf {
 
     public static void e(int param0) {
         if (param0 < 49) {
-          hj[] var2 = (hj[]) null;
-          ti.a(-39, -56, -76, (hj[]) null, -29, -35);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          ti.a(-39, -56, -76, (RgbSprite[]) null, -29, -35);
         }
         field_bb = null;
     }

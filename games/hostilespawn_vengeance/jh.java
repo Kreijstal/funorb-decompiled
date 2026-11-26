@@ -4,10 +4,10 @@
 final class jh extends wb implements qk {
     private ph field_gb;
     static int field_db;
-    static bd field_cb;
+    static RgbSprite field_cb;
     static int field_ab;
     static String field_bb;
-    static bd[][] field_eb;
+    static RgbSprite[][] field_eb;
     static int field_fb;
 
     final static void b(int param0, int param1) {
@@ -76,7 +76,7 @@ final class jh extends wb implements qk {
         if (param0 > -100) {
           jh.b(-41, -92);
         }
-        field_eb = (bd[][]) null;
+        field_eb = (RgbSprite[][]) null;
         field_bb = null;
     }
 
@@ -392,26 +392,26 @@ final class jh extends wb implements qk {
         }
     }
 
-    final static bd[] a(bd[] param0, int param1, int param2) {
-        bd[] var3 = null;
+    final static RgbSprite[] a(RgbSprite[] param0, int param1, int param2) {
+        RgbSprite[] var3 = null;
         RuntimeException var3_ref = null;
-        bd[] stackIn_2_0 = null;
-        bd[] stackIn_5_0 = null;
-        bd[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_5_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.length == param2) {
-            stackIn_2_0 = (bd[]) (param0);
+            stackIn_2_0 = (RgbSprite[]) (param0);
             return stackIn_2_0;
           }
           if (param1 != 150) {
-            stackIn_5_0 = (bd[]) null;
+            stackIn_5_0 = (RgbSprite[]) null;
             return stackIn_5_0;
           }
-          var3 = new bd[param2];
+          var3 = new RgbSprite[param2];
           kf.a(param0, 0, var3, 0, param2);
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -440,7 +440,7 @@ final class jh extends wb implements qk {
         StringBuilder discarded$1 = var2.append(param1 / 60);
         param1 = param1 % 60;
         if (param0 >= -60) {
-          field_eb = (bd[][]) null;
+          field_eb = (RgbSprite[][]) null;
         }
         StringBuilder discarded$10 = var2.append(':');
         if (param1 < 10) {

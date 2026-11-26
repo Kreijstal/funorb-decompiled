@@ -23,7 +23,7 @@ class DualLinkNode extends IntrusiveNode {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
               return;
             }
-            ed.field_q.h(1, 0);
+            SpriteGeometry.field_q.h(1, 0);
             kc.a(0, -1);
             ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
@@ -33,7 +33,7 @@ class DualLinkNode extends IntrusiveNode {
           hc.h(249);
           wa.a(-45);
           if (el.a(1)) {
-            ed.field_q.h(1, 0);
+            SpriteGeometry.field_q.h(1, 0);
             kc.a(0, -1);
             ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
@@ -50,7 +50,7 @@ class DualLinkNode extends IntrusiveNode {
             ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
             return;
           }
-          ed.field_q.h(1, 0);
+          SpriteGeometry.field_q.h(1, 0);
           kc.a(0, -1);
           ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
@@ -62,7 +62,7 @@ class DualLinkNode extends IntrusiveNode {
           ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
           return;
         }
-        ed.field_q.h(1, 0);
+        SpriteGeometry.field_q.h(1, 0);
         kc.a(0, -1);
         ck.$cfr$intArgs$b$e683eeaaf5b5(-60);
     }
@@ -126,7 +126,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = -106 % ((42 - param0) / 35);
         field_i = null;
         field_o = null;

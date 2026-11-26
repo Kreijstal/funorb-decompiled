@@ -39,7 +39,7 @@ class DualLinkNode extends IntrusiveNode {
         return false;
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = null;
         int var1 = -7 % ((13 - param0) / 62);
     }
@@ -56,7 +56,7 @@ class DualLinkNode extends IntrusiveNode {
         try {
           var6_int = param2;
           if (param0 != 0) {
-            DualLinkNode.g(-46);
+            DualLinkNode.clearDeclaredStaticReferences(-46);
           }
           while (param1 >= var6_int) {
             di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);

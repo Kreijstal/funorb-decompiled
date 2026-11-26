@@ -10,7 +10,7 @@ final class sj {
     static int[] field_g;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_g = null;
         if (param0 == 0) {
@@ -19,7 +19,7 @@ final class sj {
           field_d = null;
           return;
         }
-        sj.a(53);
+        sj.clearStaticReferences(53);
         field_f = null;
         field_a = null;
         field_d = null;

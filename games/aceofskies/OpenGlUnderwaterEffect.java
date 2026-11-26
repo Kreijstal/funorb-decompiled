@@ -133,9 +133,9 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 25320) {
-          OpenGlUnderwaterEffect.g(57);
+          OpenGlUnderwaterEffect.clearStaticReferences(57);
           field_m = null;
           return;
         }
@@ -152,7 +152,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
         String stackIn_14_2 = null;
         try {
           if (param1 <= 66) {
-            OpenGlUnderwaterEffect.g(59);
+            OpenGlUnderwaterEffect.clearStaticReferences(59);
           }
           if (param2 != null) {
             if (this.field_i) {
@@ -215,7 +215,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
         if (param0 == 10) {
           return;
         }
-        OpenGlUnderwaterEffect.g(-79);
+        OpenGlUnderwaterEffect.clearStaticReferences(-79);
     }
 
     final void a(boolean param0, byte param1) {

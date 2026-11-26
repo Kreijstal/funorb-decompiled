@@ -13,12 +13,12 @@ final class pi {
     private vl field_d;
     private ak[] field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_c = null;
         field_g = null;
         if (!param0) {
-          pi.a(true);
+          pi.clearStaticReferences(true);
         }
     }
 

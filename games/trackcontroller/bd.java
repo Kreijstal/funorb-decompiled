@@ -38,11 +38,11 @@ final class bd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 <= 30) {
-          bd.a(19);
+          bd.clearStaticReferences(19);
         }
     }
 

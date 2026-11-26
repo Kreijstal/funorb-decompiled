@@ -97,7 +97,7 @@ final class nh extends v implements sg {
             return false;
           }
           if (param1 != 0) {
-            nh.l(19);
+            nh.releaseDeclaredStaticReferences(19);
           }
           var4 = ea.field_a[param2] + (BufferedCacheFile.field_p[param2] + cb.field_e[param2]);
           var5 = cb.field_e[param3] + (BufferedCacheFile.field_p[param3] + ea.field_a[param3]);
@@ -132,7 +132,7 @@ final class nh extends v implements sg {
           }
           return !(param2 >= param3);
         }
-        nh.l(19);
+        nh.releaseDeclaredStaticReferences(19);
         var4Lifetime2 = ea.field_a[param2] + (BufferedCacheFile.field_p[param2] + cb.field_e[param2]);
         var5Lifetime2 = cb.field_e[param3] + (BufferedCacheFile.field_p[param3] + ea.field_a[param3]);
         if (var4Lifetime2 < var5Lifetime2) {
@@ -234,7 +234,7 @@ final class nh extends v implements sg {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_hb = null;
         field_eb = null;
         field_ib = null;

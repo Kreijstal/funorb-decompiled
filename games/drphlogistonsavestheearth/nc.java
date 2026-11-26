@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class nc extends hf {
-    static nh field_M;
+    static RgbSprite field_M;
     static boolean[][] field_J;
     static ac field_O;
     private static String field_N;
     static int[] field_L;
     static he[] field_I;
-    static nh field_K;
+    static RgbSprite field_K;
 
     private nc(String param0, cg param1, fd param2) {
         super(param0, param1, param2);

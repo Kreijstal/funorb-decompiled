@@ -4,15 +4,15 @@
 final class pf {
     static ResourceArchive field_b;
     static char[] field_d;
-    static dd field_a;
+    static RgbSprite field_a;
     static GameAppletShell field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;
         if (param0 != 13480) {
-          pf.a(40);
+          pf.clearStaticReferences(40);
         }
     }
 
@@ -338,7 +338,7 @@ final class pf {
             sd.field_h = lj.correctedCurrentTimeMillis((byte) -52);
           }
           if (param1 != 1) {
-            field_a = (dd) null;
+            field_a = (RgbSprite) null;
           }
           bk.field_a.field_m = em.field_e.length;
           var3_intLifetime1 = 0;

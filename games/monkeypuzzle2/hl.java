@@ -92,13 +92,13 @@ final class hl {
         hl.a(34, -93, -26);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_f = null;
         if (param0 == 2) {
           return;
         }
-        hl.c(-3);
+        hl.clearStaticReferences(-3);
     }
 
     final static void b(int param0) {

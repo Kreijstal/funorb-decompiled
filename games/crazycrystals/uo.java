@@ -244,7 +244,7 @@ final class uo extends el {
         this.field_p = false;
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         field_l = null;
         int var1 = 69 / ((20 - param0) / 58);

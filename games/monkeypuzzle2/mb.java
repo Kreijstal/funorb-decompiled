@@ -9,9 +9,9 @@ final class mb {
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -125) {
-          mb.a(16);
+          mb.clearStaticReferences(16);
           field_e = null;
           field_b = null;
           return;

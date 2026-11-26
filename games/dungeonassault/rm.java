@@ -708,7 +708,7 @@ class rm extends ck {
         int var2 = 0;
         var2 = DungeonAssault.field_K;
         try {
-          ga.field_o = new cn[9];
+          ga.field_o = new RgbSprite[9];
           if (1 != hc.field_d) {
             if (hc.field_d != 2) {
               sj.field_db = dd.field_C;

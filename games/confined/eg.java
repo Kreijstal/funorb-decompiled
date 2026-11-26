@@ -5,7 +5,7 @@ final class eg {
     private boolean field_c;
     private int field_d;
     static String field_m;
-    private nf field_f;
+    private RgbSprite field_f;
     static int[] field_j;
     private int field_g;
     static int field_i;
@@ -62,7 +62,7 @@ final class eg {
         var5 = Confined.field_J ? 1 : 0;
         this.field_h = param1;
         if (param0 >= -125) {
-          eg.b((byte) -52);
+          eg.clearStaticReferences((byte) -52);
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 != 0) {
@@ -72,14 +72,14 @@ final class eg {
                 var6 = ij.a(0, '#', m.field_h);
                 this.a(240, var6[4], 632, var6[5], ". . . " + var6[3], 0, -116);
                 this.a(0, var6[1], 8, var6[2] + " . . .", var6[0], 1, -83);
-                this.a(396, 550, new nf(64, 64), 0, 278);
+                this.a(396, 550, new RgbSprite(64, 64), 0, 278);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (param1 == 4) {
                   var7 = ij.a(0, '#', sa.field_W);
                   this.a(0, var7[2], var7[4], 4, (String) null, 0, var7[0] + " . . . ", 0, var7[3] + " . . . . . . . . . ", true, var7[1], 80, 50, 320, 0);
-                  this.a(376, 600, new nf(104, 104), 0, 536);
+                  this.a(376, 600, new RgbSprite(104, 104), 0, 536);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -88,7 +88,7 @@ final class eg {
                       var8 = ij.a(0, '#', vf.field_t);
                       this.a(20, dj.field_Ib, 176, (String) null, (String) null, 0, -82);
                       this.a(50, var8[1], 256, var8[2], var8[0], 1, -100);
-                      this.a(396, 700, new nf(64, 64), 0, 184);
+                      this.a(396, 700, new RgbSprite(64, 64), 0, 184);
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -96,7 +96,7 @@ final class eg {
                         var9 = ij.a(0, '#', qa.field_b);
                         this.a(20, var9[1], 284, var9[2], var9[0], 0, -110);
                         this.a(220, var9[4], 356, var9[5], var9[3], 1, -124);
-                        this.a(384, 500, new nf(24, 88), 0, 292);
+                        this.a(384, 500, new RgbSprite(24, 88), 0, 292);
                         decompiledFrameRemainder0 = (var5 != 0);
                       }
                       if (decompiledFrameRemainder0) {
@@ -113,7 +113,7 @@ final class eg {
                               var11 = ij.a(0, '#', li.field_e);
                               this.a(20, var11[1], 300, var11[2], var11[0], 0, -90);
                               this.a(160, var11[4], 340, var11[5], var11[3], 1, -94);
-                              this.a(384, 500, new nf(24, 88), 0, 308);
+                              this.a(384, 500, new RgbSprite(24, 88), 0, 308);
                               decompiledFrameRemainder0 = (var5 != 0);
                             }
                             if (decompiledFrameRemainder0) {
@@ -121,7 +121,7 @@ final class eg {
                                 var12 = ij.a(0, '#', al.field_b);
                                 this.a(60, var12[1], 416, var12[2], var12[0], 0, -113);
                                 this.a(20, mh.field_a, 496, (String) null, (String) null, 1, -111);
-                                this.a(396, 500, new nf(64, 64), 0, 424);
+                                this.a(396, 500, new RgbSprite(64, 64), 0, 424);
                                 decompiledFrameRemainder0 = (var5 != 0);
                               }
                               if (decompiledFrameRemainder0) {
@@ -137,7 +137,7 @@ final class eg {
                                     if (param1 == 14) {
                                       var14 = ij.a(0, '#', rb.field_i);
                                       this.a(25, var14[0], (String) null, 4, var14[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0, 320, 0);
-                                      this.a(0, 1500, (nf) null, 0, 0);
+                                      this.a(0, 1500, (RgbSprite) null, 0, 0);
                                       decompiledFrameRemainder0 = (var5 != 0);
                                     }
                                     if (decompiledFrameRemainder0) {
@@ -145,7 +145,7 @@ final class eg {
                                         var15 = IntrusiveNode.field_b;
                                         this.a(0, (String) null, 0, (String) null, (String) null, 0, -90);
                                         this.a(0, var15, -vg.field_I.c(var15) + 640 >> 1, (String) null, (String) null, 1, -112);
-                                        this.a(0, 1000, (nf) null, 0, 0);
+                                        this.a(0, 1000, (RgbSprite) null, 0, 0);
                                         decompiledFrameRemainder0 = (var5 != 0);
                                       }
                                       if (decompiledFrameRemainder0) {
@@ -153,7 +153,7 @@ final class eg {
                                           if (param1 == 102) {
                                             var16 = ij.a(0, '#', oe.field_S);
                                             this.a(var16[2], 0, 320, 0, var16[0], var16[1]);
-                                            this.a(0, 700, (nf) null, 0, 0);
+                                            this.a(0, 700, (RgbSprite) null, 0, 0);
                                             decompiledFrameRemainder0 = (var5 != 0);
                                           }
                                           if ((decompiledFrameRemainder0) &&
@@ -162,14 +162,14 @@ final class eg {
                                             var4 = -vg.field_I.c(var17) + 640 >> 1;
                                             this.a(0, (String) null, 0, (String) null, (String) null, 0, -115);
                                             this.a(0, var17, var4, (String) null, (String) null, 1, -123);
-                                            this.a(0, 1500, (nf) null, 0, 0);
+                                            this.a(0, 1500, (RgbSprite) null, 0, 0);
                                             decompiledFrameRemainder0 = (var5 != 0);
                                           }
                                         }
                                         if (decompiledFrameRemainder0) {
                                           var18 = ij.a(0, '#', qh.field_z);
                                           this.a(50, var18[0], (String) null, 4, var18[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0, 320, 0);
-                                          this.a(0, 500, (nf) null, 0, 0);
+                                          this.a(0, 500, (RgbSprite) null, 0, 0);
                                           decompiledFrameRemainder0 = (var5 != 0);
                                         }
                                       }
@@ -179,7 +179,7 @@ final class eg {
                                     var19 = ij.a(0, '#', cg.field_b);
                                     this.a(var19[0].length() * 3 / 2, var19[1], 8 + vg.field_I.c(var19[1]), (String) null, (String) null, 0, -79);
                                     this.a(0, (String) null, 8, var19[2], var19[0], 1, -94);
-                                    this.a(0, 700, (nf) null, 0, 0);
+                                    this.a(0, 700, (RgbSprite) null, 0, 0);
                                     decompiledFrameRemainder0 = (var5 != 0);
                                   }
                                 }
@@ -191,7 +191,7 @@ final class eg {
                           var20 = ij.a(0, '#', oh.field_e);
                           this.a(60, var20[1], 398, var20[2], var20[0], 0, -86);
                           this.a(20, kd.field_s, 478, (String) null, (String) null, 1, -76);
-                          this.a(396, 500, new nf(64, 64), 0, 406);
+                          this.a(396, 500, new RgbSprite(64, 64), 0, 406);
                           decompiledFrameRemainder0 = (var5 != 0);
                         }
                       }
@@ -201,7 +201,7 @@ final class eg {
                     var21 = ij.a(0, '#', ke.field_L);
                     this.a(0, (String) null, 0, (String) null, (String) null, 0, -105);
                     this.a(0, 320, var21[2], (byte) -97, var21[1], 1, var21[0]);
-                    this.a(0, 1000, (nf) null, 0, 0);
+                    this.a(0, 1000, (RgbSprite) null, 0, 0);
                   }
                 }
               }
@@ -211,35 +211,35 @@ final class eg {
               var5 != 0)) {
               var22 = ij.a(0, '#', eb.field_j);
               this.a(var22[2], 0, 320, 0, var22[0], var22[1]);
-              this.a(0, 400, (nf) null, 0, 0);
+              this.a(0, 400, (RgbSprite) null, 0, 0);
               if (var5 != 0) {
                 var23 = ij.a(0, '#', cd.field_k);
                 this.a(var23[0].length() * 3 / 2, var23[1], 8 + vg.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
                 this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
-                this.a(376, 400, new nf(220, 104), 0, 420);
+                this.a(376, 400, new RgbSprite(220, 104), 0, 420);
                 var24 = ij.a(0, '#', sb.field_e);
                 this.a(180, (String) null, 632, var24[0], (String) null, 0, -116);
                 this.a(0, var24[1], 8, (String) null, (String) null, 1, -79);
-                this.a(0, 400, (nf) null, 0, 0);
+                this.a(0, 400, (RgbSprite) null, 0, 0);
               }
             }
           } else {
             var23 = ij.a(0, '#', cd.field_k);
             this.a(var23[0].length() * 3 / 2, var23[1], 8 + vg.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
             this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
-            this.a(376, 400, new nf(220, 104), 0, 420);
+            this.a(376, 400, new RgbSprite(220, 104), 0, 420);
             if (var5 != 0) {
               var24 = ij.a(0, '#', sb.field_e);
               this.a(180, (String) null, 632, var24[0], (String) null, 0, -116);
               this.a(0, var24[1], 8, (String) null, (String) null, 1, -79);
-              this.a(0, 400, (nf) null, 0, 0);
+              this.a(0, 400, (RgbSprite) null, 0, 0);
             }
           }
         } else {
           var24 = ij.a(0, '#', sb.field_e);
           this.a(180, (String) null, 632, var24[0], (String) null, 0, -116);
           this.a(0, var24[1], 8, (String) null, (String) null, 1, -79);
-          this.a(0, 400, (nf) null, 0, 0);
+          this.a(0, 400, (RgbSprite) null, 0, 0);
         }
 
     }
@@ -306,7 +306,7 @@ final class eg {
         }
     }
 
-    private final void a(int param0, int param1, nf param2, int param3, int param4) {
+    private final void a(int param0, int param1, RgbSprite param2, int param3, int param4) {
         try {
           this.field_e = param1;
           this.field_d = param4;
@@ -667,12 +667,12 @@ final class eg {
           }
         }
         if (param0 != -1) {
-          this.a(31, -68, (nf) null, -39, -88);
+          this.a(31, -68, (RgbSprite) null, -39, -88);
         }
         return var3;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         int var1 = 110 % ((param0 - 14) / 46);
         field_m = null;
@@ -702,7 +702,7 @@ final class eg {
           if (decompiledFrameRemainder0) {
             if ((7 == this.field_h) &&
               (decompiledFrameRemainder0 = (this.field_a == 239))) {
-              this.field_f = new nf(56, 88);
+              this.field_f = new RgbSprite(56, 88);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -762,7 +762,7 @@ final class eg {
         double var13 = 0.0;
         double var14_double = 0.0;
         int var14 = 0;
-        nf var15_ref_nf = null;
+        RgbSprite var15_ref_nf = null;
         double var15 = 0.0;
         double var16_double = 0.0;
         int var16 = 0;
@@ -786,7 +786,7 @@ final class eg {
         double var28 = 0.0;
         double var30 = 0.0;
         double var32 = 0.0;
-        nf var34 = null;
+        RgbSprite var34 = null;
         int var35 = 0;
         int[] var36 = null;
         Object var37 = null;

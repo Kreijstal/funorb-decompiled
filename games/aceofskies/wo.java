@@ -60,7 +60,7 @@ final class wo extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_e = null;
         int var1 = 101 % ((param0 + 20) / 42);

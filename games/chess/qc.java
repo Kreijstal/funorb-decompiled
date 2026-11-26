@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc {
-    static km[][] field_d;
+    static RgbSprite[][] field_d;
     private v field_f;
     static long field_a;
     private ResourceArchive field_g;
@@ -112,7 +112,7 @@ final class qc {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class qc {
         if (param0 != 7) {
           return;
         }
-        field_d = (km[][]) null;
+        field_d = (RgbSprite[][]) null;
     }
 
     qc(int param0, ResourceArchive param1, ResourceArchive param2, ui param3) {
@@ -168,12 +168,12 @@ final class qc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     static {
-        field_d = new km[2][7];
+        field_d = new RgbSprite[2][7];
         field_c = "Hide players in <%0>'s game";
     }
 }

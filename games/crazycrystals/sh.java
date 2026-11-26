@@ -50,10 +50,10 @@ final class sh extends qc {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_l = null;
         if (param0 <= 83) {
-          sh.c(100);
+          sh.releaseDeclaredStaticReferences(100);
           field_m = null;
           return;
         }

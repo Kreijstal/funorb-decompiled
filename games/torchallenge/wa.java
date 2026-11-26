@@ -118,7 +118,7 @@ class wa extends n implements sg {
         }
     }
 
-    public static void n(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         int var1 = -93 / ((param0 + 20) / 44);
         field_pb = null;
         field_qb = null;

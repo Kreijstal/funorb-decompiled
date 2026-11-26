@@ -325,9 +325,9 @@ final class lc {
         }
     }
 
-    final static cn a(int param0, cn param1, int param2, int param3) {
-        cn var5 = null;
-        cn stackIn_11_0 = null;
+    final static RgbSprite a(int param0, RgbSprite param1, int param2, int param3) {
+        RgbSprite var5 = null;
+        RgbSprite stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -337,7 +337,7 @@ final class lc {
           if (param1 == null) {
             return null;
           }
-          var5 = new cn(param2, param3);
+          var5 = new RgbSprite(param2, param3);
           if (param0 > -114) {
             lc.clearStaticReferences(true);
           }

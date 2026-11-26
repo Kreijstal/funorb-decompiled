@@ -48,7 +48,7 @@ final class ql extends um implements ij {
         bl.field_N.b(jq.field_d, param2 - (-this.x - 4), bl.field_N.field_z + (this.y + param3 + 4), 16777215, -1);
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != 30560) {
           return;
         }

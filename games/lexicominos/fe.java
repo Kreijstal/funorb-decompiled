@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fe implements rd {
-    final static void a(db[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -52,7 +52,7 @@ final class fe implements rd {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        db var8 = null;
+        RgbSprite var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

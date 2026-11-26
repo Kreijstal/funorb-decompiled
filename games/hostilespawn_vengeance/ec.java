@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ec {
-    static bd field_c;
+    static RgbSprite field_c;
     static int field_a;
     static RawPcmStream field_b;
     static byte[] field_d;
@@ -120,16 +120,16 @@ final class ec {
         return var8;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;
         if (param0 != 99) {
-          field_c = (bd) null;
+          field_c = (RgbSprite) null;
         }
     }
 
-    final static void b(int param0) {
+    final static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -21931) {
           field_b = (RawPcmStream) null;
         }

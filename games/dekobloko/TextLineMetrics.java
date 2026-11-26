@@ -84,7 +84,7 @@ final class TextLineMetrics {
         MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][4].performAction0280(66 + integerArgument2, integerArgument4 + 83, 18, 18);
     }
 
-    public static void performAction1103(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         integerArrayState0167 = null;
         renderingSupport009State0004 = null;
         mixedSupport015State0003 = null;
@@ -109,7 +109,7 @@ final class TextLineMetrics {
         if (integerArgument2 > 103) {
           return -1 + this.characterXPositions.length;
         }
-        TextLineMetrics.performAction1103(-11);
+        TextLineMetrics.clearStaticReferences(-11);
         return -1 + this.characterXPositions.length;
     }
 

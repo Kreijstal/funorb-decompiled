@@ -43,7 +43,7 @@ final class bl {
         return 2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 3 / ((param0 + 51) / 53);
         field_e = null;
         field_b = null;

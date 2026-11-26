@@ -427,7 +427,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements CallbackCon
         }
     }
 
-    public static void performAction0702(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         sceneWidgetState0053 = null;
         stringState0248 = null;
         if (integerArgument1 > -10) {

@@ -31,12 +31,12 @@ final class jd extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         field_i = null;
         field_n = null;
         if (param0 != 1) {
-          jd.a(-38);
+          jd.clearDeclaredStaticReferences(-38);
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ee {
-    static nh[] field_c;
+    static RgbSprite[] field_c;
     static int field_a;
     static volatile int field_d;
     static he[] field_b;
@@ -17,7 +17,7 @@ final class ee {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, nh param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, RgbSprite param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;

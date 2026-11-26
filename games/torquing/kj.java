@@ -374,7 +374,7 @@ abstract class kj {
 
     abstract void a(byte param0, int param1, int param2);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = 55 / ((36 - param0) / 55);
         field_d = null;

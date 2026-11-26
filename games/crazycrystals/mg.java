@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class mg {
-    static dl[] field_b;
+    static RgbSprite[] field_b;
     static String field_h;
     static PcmSample field_d;
     static int field_e;
@@ -45,7 +45,7 @@ abstract class mg {
         var3 = CrazyCrystals.field_B;
         try {
           if (le.field_g == null) {
-            le.field_g = new dl[4][];
+            le.field_g = new RgbSprite[4][];
             cd.field_v = new int[10];
             cd.field_v[2] = 8;
             cd.field_v[7] = 12;

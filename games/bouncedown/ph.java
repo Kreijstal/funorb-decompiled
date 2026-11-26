@@ -4,7 +4,7 @@
 final class ph {
     private String field_d;
     private static long[] field_a;
-    static tg field_b;
+    static RgbSprite field_b;
     static byte[][] field_c;
 
     final boolean a(String param0, int param1) {
@@ -38,7 +38,7 @@ final class ph {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-          field_b = (tg) null;
+          field_b = (RgbSprite) null;
         }
         field_c = (byte[][]) null;
     }

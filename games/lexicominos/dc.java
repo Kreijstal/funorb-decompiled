@@ -3,7 +3,7 @@
  */
 final class dc extends si {
     PacketBuffer field_x;
-    static db[] field_z;
+    static RgbSprite[] field_z;
     int field_w;
     byte field_A;
     static String field_y;
@@ -101,7 +101,7 @@ final class dc extends si {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         int var1 = -27 % ((param0 - 19) / 53);
         field_z = null;

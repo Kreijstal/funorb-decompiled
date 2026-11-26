@@ -3,11 +3,11 @@
  */
 final class wd {
     static ResourceArchive field_a;
-    static bd field_b;
+    static RgbSprite field_b;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 != 69) {
-          field_b = (bd) null;
+          field_b = (RgbSprite) null;
         }
         field_a = null;
         field_b = null;

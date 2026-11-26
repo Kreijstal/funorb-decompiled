@@ -36,9 +36,9 @@ final class wa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -2) {
-          wa.a(85);
+          wa.clearStaticReferences(85);
           field_a = null;
           return;
         }

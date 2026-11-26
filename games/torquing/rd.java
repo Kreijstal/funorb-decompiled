@@ -300,7 +300,7 @@ final class rd extends am {
         ie.a(14837);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         field_z = null;
         field_x = null;

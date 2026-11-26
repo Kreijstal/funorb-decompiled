@@ -8,7 +8,7 @@ final class SceneWidgetPart001 extends SceneWidget {
     static String stringState0057;
     static String stringState0058;
 
-    public static void performAction0159(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 != 15338) {
           stringState0056 = (String) null;
         }
@@ -155,7 +155,7 @@ final class SceneWidgetPart001 extends SceneWidget {
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (byteArgument1 != -93) {
-            SceneWidgetPart001.performAction0159(40);
+            SceneWidgetPart001.discardDeclaredStaticReferences(40);
           }
           animatedTileRegionLocal2 = (AnimatedTileRegion) (nodeDequeArgument3.beginBackward((byte) -119));
           while (animatedTileRegionLocal2 != null) {

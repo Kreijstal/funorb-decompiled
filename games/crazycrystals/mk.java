@@ -4,7 +4,7 @@
 final class mk {
     static vk field_b;
     static mg field_c;
-    static dl field_a;
+    static RgbSprite field_a;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -13,7 +13,7 @@ final class mk {
     public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -27838) {
-          field_a = (dl) null;
+          field_a = (RgbSprite) null;
         }
         field_c = null;
         field_a = null;
@@ -22,7 +22,7 @@ final class mk {
     final boolean a(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 != -2) {
-          field_a = (dl) null;
+          field_a = (RgbSprite) null;
         }
         stackIn_8_0 = (tk.field_k == this) || (this == fm.field_y) || (ek.field_h == this);
         return stackIn_8_0;

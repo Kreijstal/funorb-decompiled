@@ -130,7 +130,7 @@ final class ri extends jb implements ha, we {
           }
           var3.writeByte(param1.field_p, (byte) 78);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ri.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ri.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class ri extends jb implements ha, we {
             field_i = -5;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class ri extends jb implements ha, we {
         try {
           this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ri.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ri.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

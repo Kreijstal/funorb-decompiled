@@ -14,7 +14,7 @@ final class db extends sh {
 
     final int f(int param0) {
         if (param0 != 100) {
-          db.h(115);
+          db.clearStaticReferences(115);
         }
         if (this.field_A == null) {
           return 0;
@@ -126,7 +126,7 @@ final class db extends sh {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = (int[][]) null;
         int var1 = 106 % ((74 - param0) / 41);
         field_E = null;

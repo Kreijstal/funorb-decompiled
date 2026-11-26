@@ -8,7 +8,7 @@ final class hj extends gd {
     static int[] field_W;
     static ResourceArchive field_Z;
     private CombatState field_R;
-    static cn field_T;
+    static RgbSprite field_T;
     Raider field_V;
     static int field_S;
     boolean field_Y;
@@ -19,7 +19,7 @@ final class hj extends gd {
     final void b(int param0, int param1, int param2) {
         int var4;
         int var5;
-        cn var7;
+        RgbSprite var7;
         int[] var11;
         if (!this.field_F) {
           return;
@@ -38,8 +38,8 @@ final class hj extends gd {
           this.a(var4, var5, this.field_I, (byte) -12);
         }
         if (param1 != 8187) {
-          var7 = (cn) null;
-          this.a(-8, 106, (cn) null, (byte) 40);
+          var7 = (RgbSprite) null;
+          this.a(-8, 106, (RgbSprite) null, (byte) 40);
         }
         var11 = new int[4];
         SoftwareRasterizer.saveClip(var11);
@@ -78,12 +78,12 @@ final class hj extends gd {
         rp.a(6, 32, (byte) 108, 4 + var4, 32, kc.field_S, 4 + var5);
     }
 
-    final static cn[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         int var5 = 6 / ((param2 - 62) / 33);
         return ba.a(param0, 3, -102, param3, param4, 1, 1, param1, 1);
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 16744448) {
           return;
         }
@@ -145,7 +145,7 @@ final class hj extends gd {
         return (param1 + param3 | var4 + var5) >>> 8;
     }
 
-    private final cn a(int param0, int param1, int param2, int param3, int param4) {
+    private final RgbSprite a(int param0, int param1, int param2, int param3, int param4) {
         int var9 = 0;
         int var10 = 0;
         int var7;
@@ -153,10 +153,10 @@ final class hj extends gd {
         float var11;
         int var12;
         int var13;
-        cn var14;
-        cn var15;
+        RgbSprite var14;
+        RgbSprite var15;
         var13 = DungeonAssault.field_K;
-        var15 = new cn(param0, param4);
+        var15 = new RgbSprite(param0, param4);
         var15.field_w = -param1;
         var15.field_A = -param1;
         var7 = param2 & 16711935;
@@ -177,13 +177,13 @@ final class hj extends gd {
         }
         jh.b();
         if (param3 != 3) {
-          var14 = (cn) null;
-          this.a(38, 87, (cn) null, (byte) 84);
+          var14 = (RgbSprite) null;
+          this.a(38, 87, (RgbSprite) null, (byte) 84);
         }
         return var15;
     }
 
-    private final void a(int param0, int param1, cn param2, byte param3) {
+    private final void a(int param0, int param1, RgbSprite param2, byte param3) {
         int var19 = 0;
         int var20 = 0;
         int var5_int = 0;

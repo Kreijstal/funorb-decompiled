@@ -328,12 +328,12 @@ final class pl {
         return (int)(1000000000L / rj.field_c);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         field_k = null;
         if (param0 != -26537) {
-          pl.e(9);
+          pl.clearStaticReferences(9);
         }
     }
 

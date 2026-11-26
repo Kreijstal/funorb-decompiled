@@ -68,9 +68,9 @@ final class fe extends l {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -33) {
-          fe.b((byte) -23);
+          fe.clearStaticReferences((byte) -23);
         }
         field_n = null;
         field_g = null;

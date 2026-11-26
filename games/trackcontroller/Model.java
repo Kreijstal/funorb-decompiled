@@ -60,13 +60,13 @@ final class Model {
         this.a((byte) -84);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_N = null;
         field_P = null;
         field_C = null;
         if (param0 < 54) {
-          Model.a(100);
+          Model.clearStaticReferences(100);
         }
     }
 

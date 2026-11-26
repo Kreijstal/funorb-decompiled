@@ -254,7 +254,7 @@ final class kh {
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
         if (param0) {
-          kh.a((byte) -124);
+          kh.clearStaticReferences((byte) -124);
         }
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
@@ -275,9 +275,9 @@ final class kh {
         return stackIn_11_0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -41) {
-          kh.a((byte) 93);
+          kh.clearStaticReferences((byte) 93);
         }
         field_e = null;
         field_h = null;

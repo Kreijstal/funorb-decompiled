@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih extends qe {
-    private cn field_I;
-    private cn field_z;
+    private RgbSprite field_I;
+    private RgbSprite field_z;
     private tf field_B;
     private boolean field_E;
-    private cn field_A;
-    private cn field_u;
+    private RgbSprite field_A;
+    private RgbSprite field_u;
     static int[] field_r;
     static String field_s;
     private int field_C;
@@ -106,14 +106,14 @@ final class ih extends qe {
 
     final void a(boolean param0) {
         int var5_int = 0;
-        cn stackIn_36_0 = null;
+        RgbSprite stackIn_36_0 = null;
         Object var2;
         Object var3;
         rj var4;
         h var5;
         int var6;
         int var7;
-        cn var8;
+        RgbSprite var8;
         int var9;
         rj var4Lifetime1;
         var9 = DungeonAssault.field_K;

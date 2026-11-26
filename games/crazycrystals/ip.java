@@ -82,7 +82,7 @@ final class ip implements wo {
         bc.field_f.a((byte) 41, param1, og.a(param0, IsaacRandom.field_h, qh.field_i), -1);
     }
 
-    final static void a(int param0, dl[] param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           qc.a(param0, param6, param3, param1, param5, param2, param4);
         } catch (RuntimeException runtimeException) {

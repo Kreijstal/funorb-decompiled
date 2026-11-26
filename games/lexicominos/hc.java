@@ -58,7 +58,7 @@ final class hc extends ui {
             return stackIn_5_0;
           }
           if (uf.field_m == ae.field_E) {
-            ed.field_q.position = 0;
+            SpriteGeometry.field_q.position = 0;
             wh.field_d = null;
             if (param5 != null) {
               var9 = 0;
@@ -75,16 +75,16 @@ final class hc extends ui {
               of.field_a.writeShort(param3 + 30884, param1);
               of.field_a.writeByte(param0, -1);
               of.field_a.writeByte(var9, param3 + 30761);
-              ed.field_q.writeByte(18, -1);
-              ed.field_q.position = ed.field_q.position + 2;
-              var10 = ed.field_q.position;
+              SpriteGeometry.field_q.writeByte(18, -1);
+              SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 2;
+              var10 = SpriteGeometry.field_q.position;
               var11_ref_String = pg.a(kk.c(param3 + 16715), (byte) -28);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              ed.field_q.writeTerminatedString(var11_ref_String, (byte) 0);
-              wc.a(wb.field_m, ed.field_q, re.field_T, (byte) 111, of.field_a);
-              ed.field_q.backpatchShortLength(ed.field_q.position - var10, (byte) 26);
+              SpriteGeometry.field_q.writeTerminatedString(var11_ref_String, (byte) 0);
+              wc.a(wb.field_m, SpriteGeometry.field_q, re.field_T, (byte) 111, of.field_a);
+              SpriteGeometry.field_q.backpatchShortLength(SpriteGeometry.field_q.position - var10, (byte) 26);
             } else {
               of.field_a.position = 0;
               of.field_a.writeInt(q.field_a.nextInt(), param3 ^ 1591);
@@ -105,17 +105,17 @@ final class hc extends ui {
                 stackIn_15_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_14_0).writePrefixedString((byte) stackIn_14_1, stackIn_15_2);
-              ed.field_q.writeByte(16, -1);
-              ed.field_q.position = ed.field_q.position + 1;
-              var9 = ed.field_q.position;
-              wc.a(wb.field_m, ed.field_q, re.field_T, (byte) 111, of.field_a);
-              ed.field_q.backpatchByteLength(ed.field_q.position - var9, (byte) -128);
+              SpriteGeometry.field_q.writeByte(16, -1);
+              SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 1;
+              var9 = SpriteGeometry.field_q.position;
+              wc.a(wb.field_m, SpriteGeometry.field_q, re.field_T, (byte) 111, of.field_a);
+              SpriteGeometry.field_q.backpatchByteLength(SpriteGeometry.field_q.position - var9, (byte) -128);
             }
             kc.a(-1, param3 ^ 30761);
             uf.field_m = ve.field_e;
           }
           if (param3 != -30762) {
-            hc.g(-12);
+            hc.releaseDeclaredStaticReferences(-12);
           }
           if (uf.field_m == ve.field_e &&
             a.b(1, 10343)) {
@@ -268,7 +268,7 @@ final class hc extends ui {
         return gd.field_o - me.field_v;
     }
 
-    public static void g(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_ib = null;
         if (param0 != -1) {
           field_gb = (sh) null;

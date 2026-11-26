@@ -11,7 +11,7 @@ abstract class v {
 
     abstract tq a(byte param0);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         int var1 = 38 % ((param0 - 42) / 54);

@@ -11,7 +11,7 @@ abstract class jj extends db {
     private int field_W;
     static String field_V;
     private int field_O;
-    static dd field_P;
+    static RgbSprite field_P;
     static String field_Y;
     static String field_X;
     static int[] field_Z;

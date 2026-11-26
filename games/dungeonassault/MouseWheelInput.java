@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static cn field_g;
+    static RgbSprite field_g;
     static pp field_a;
     static String[] field_f;
     static String[] field_b;
@@ -10,7 +10,7 @@ abstract class MouseWheelInput {
     static String field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_f = null;
         field_c = null;
@@ -20,7 +20,7 @@ abstract class MouseWheelInput {
           field_e = null;
           return;
         }
-        MouseWheelInput.a((byte) -115);
+        MouseWheelInput.clearStaticReferences((byte) -115);
         field_e = null;
     }
 
@@ -55,7 +55,7 @@ abstract class MouseWheelInput {
         if (param1 == -124) {
           return true;
         }
-        field_g = (cn) null;
+        field_g = (RgbSprite) null;
         return true;
     }
 

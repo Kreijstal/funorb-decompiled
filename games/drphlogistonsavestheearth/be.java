@@ -6,7 +6,7 @@ final class be {
     private static int[] field_c;
     private static int[] field_b;
 
-    final static void b(nh param0, int param1, int param2) {
+    final static void b(RgbSprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -82,7 +82,7 @@ final class be {
         }
     }
 
-    final static void a(nh param0, int param1, int param2) {
+    final static void a(RgbSprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -949,8 +949,8 @@ final class be {
         }
     }
 
-    final static nh b() {
-        nh var0 = new nh(SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
+    final static RgbSprite b() {
+        RgbSprite var0 = new RgbSprite(SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
         kg.a(SoftwareRasterizer.field_l, 0, var0.field_B, 0, var0.field_B.length);
         return var0;
     }

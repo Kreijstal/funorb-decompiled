@@ -7,7 +7,7 @@ final class fa extends rg {
     static ok field_Q;
     static int field_S;
     static double field_R;
-    static nf field_U;
+    static RgbSprite field_U;
 
     private fa(String param0, fe param1, uk param2) {
         super(param0, param1, param2);
@@ -43,14 +43,14 @@ final class fa extends rg {
         }
     }
 
-    final static nf[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
         int var14 = 0;
         int var9;
-        nf[] var10;
-        nf[] var11_ref_nf__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_nf__;
         int var11;
         int var12;
-        nf var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -61,7 +61,7 @@ final class fa extends rg {
         int var12Lifetime4;
         var15 = Confined.field_J ? 1 : 0;
         var9 = param1 + param7 + param5;
-        var10 = new nf[]{new nf(var9, var9), new nf(param0, var9), new nf(var9, var9), new nf(var9, param0), new nf(64, 64), new nf(var9, param0), new nf(var9, var9), new nf(param0, var9), new nf(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param0), new RgbSprite(64, 64), new RgbSprite(var9, param0), new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9)};
         var11_ref_nf__ = var10;
         for (var12 = 0; var12 < var11_ref_nf__.length; var12++) {
           var13 = var11_ref_nf__[var12];
@@ -160,7 +160,7 @@ final class fa extends rg {
           param1.addMouseMotionListener(tf.field_a);
           param1.addFocusListener(tf.field_a);
           if (param0) {
-            field_U = (nf) null;
+            field_U = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

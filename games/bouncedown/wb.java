@@ -3,7 +3,7 @@
  */
 final class wb {
     static boolean field_b;
-    static tg[] field_e;
+    static RgbSprite[] field_e;
     static int[] field_c;
     static String field_d;
     static int field_a;
@@ -75,7 +75,7 @@ final class wb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_d = null;
         int var1 = -38 % ((-58 - param0) / 38);

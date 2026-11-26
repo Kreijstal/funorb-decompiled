@@ -7,7 +7,7 @@ final class ig {
     static int field_b;
     static th field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         int var1 = -111 % ((28 - param0) / 57);

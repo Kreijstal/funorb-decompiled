@@ -5,7 +5,7 @@ final class AccountCreationResultPanel extends dg implements qk {
     private boolean field_wb;
     private boolean field_vb;
     private mk field_xb;
-    static bd field_zb;
+    static RgbSprite field_zb;
     static boolean field_ub;
     static long field_yb;
 
@@ -45,7 +45,7 @@ final class AccountCreationResultPanel extends dg implements qk {
           var2 = 8192 * var3 * var3 / 1100;
         }
         if (param1 != -5878) {
-          field_zb = (bd) null;
+          field_zb = (RgbSprite) null;
         }
         var4 = 1;
         var5 = 0;
@@ -175,7 +175,7 @@ final class AccountCreationResultPanel extends dg implements qk {
     final boolean l(int param0) {
         AccountServiceResult var2 = null;
         if (param0 != 65393) {
-          field_zb = (bd) null;
+          field_zb = (RgbSprite) null;
         }
         if (this.field_F &&
           !this.field_vb) {

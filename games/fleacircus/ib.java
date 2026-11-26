@@ -73,7 +73,7 @@ final class ib implements ComponentLayout {
         }
     }
 
-    final static void a(int param0, int param1, fa param2, dd[] param3, dd[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, boolean param13, fa param14) {
+    final static void a(int param0, int param1, fa param2, RgbSprite[] param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, boolean param13, fa param14) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -86,7 +86,7 @@ final class ib implements ComponentLayout {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ri.a(param3, param12, param14, param8, param6, true, param7, param5, param2, param0, param10, rg.field_n, fb.field_c, 0, param9, 480, (dd[]) null, param4, param11, param1, cm.field_j);
+          ri.a(param3, param12, param14, param8, param6, true, param7, param5, param2, param0, param10, rg.field_n, fb.field_c, 0, param9, 480, (RgbSprite[]) null, param4, param11, param1, cm.field_j);
           IterableNodeHashTable.a(param13, (byte) -74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

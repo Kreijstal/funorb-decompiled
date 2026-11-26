@@ -8,11 +8,11 @@ final class ai extends IntrusiveNode {
     static String field_m;
     byte[] field_k;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_m = null;
         if (param0 != 64) {
-          ai.a((byte) -51);
+          ai.clearStaticReferences((byte) -51);
           return;
         }
     }

@@ -122,7 +122,7 @@ final class vk extends og implements ho, vd {
 
     final String i(int param0) {
         if (param0 != -1) {
-          vk.a(-27);
+          vk.releaseDeclaredStaticReferences(-27);
         }
         if (null == this.field_J.field_o) {
           return "";
@@ -453,11 +453,11 @@ final class vk extends og implements ho, vd {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_D = null;
         field_N = null;
         if (param0 >= -21) {
-          vk.a(-33);
+          vk.releaseDeclaredStaticReferences(-33);
         }
         field_F = null;
     }

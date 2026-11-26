@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ArgbSprite extends nf {
+final class ArgbSprite extends RgbSprite {
     final void a(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;

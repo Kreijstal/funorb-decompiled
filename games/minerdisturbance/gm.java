@@ -6,7 +6,7 @@ final class gm {
     static String field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         int var1 = 77 % ((58 - param0) / 41);

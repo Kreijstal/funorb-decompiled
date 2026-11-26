@@ -231,7 +231,7 @@ final class e extends cb {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -1) {
           field_i = (String[][][]) null;
           field_i = (String[][][]) null;

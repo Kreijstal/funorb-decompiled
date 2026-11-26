@@ -19,7 +19,7 @@ final class sd extends da {
         }
     }
 
-    final static void a(int param0, cn param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, int param5) {
         try {
           int var6_int = -14 / ((param2 + 15) / 36);
           param1.h(param0, param5);
@@ -29,11 +29,11 @@ final class sd extends da {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_F = null;
         field_G = null;
         if (param0) {
-          sd.b(true);
+          sd.clearStaticReferences(true);
           field_I = null;
           return;
         }
@@ -59,7 +59,7 @@ final class sd extends da {
           this.field_D.a(param0, this.field_q + param1, 0, this.field_v + param3);
           return;
         }
-        cn var6 = new cn(this.field_D.field_x, this.field_D.field_s);
+        RgbSprite var6 = new RgbSprite(this.field_D.field_x, this.field_D.field_s);
         lm.a(var6, (byte) -79);
         this.field_D.a(param0, 0, param2 ^ 0, param2);
         ti.c(true);

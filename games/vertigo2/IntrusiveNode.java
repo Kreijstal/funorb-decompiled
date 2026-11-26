@@ -16,7 +16,7 @@ class IntrusiveNode {
     static Sprite field_m;
     static int[] field_l;
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_e = null;
         field_h = null;
         field_i = null;
@@ -26,7 +26,7 @@ class IntrusiveNode {
         field_g = null;
         field_m = null;
         if (param0 != 55) {
-          IntrusiveNode.d(-58);
+          IntrusiveNode.clearDeclaredStaticReferences(-58);
         }
     }
 

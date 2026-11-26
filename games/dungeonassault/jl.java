@@ -5,7 +5,7 @@ import java.util.*;
 
 final class jl {
     static java.util.zip.CRC32 field_a;
-    static cn field_c;
+    static RgbSprite field_c;
     static String field_b;
     static int field_d;
 

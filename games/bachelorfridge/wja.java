@@ -6,10 +6,10 @@ final class wja extends pu {
     static Sprite field_l;
     static String field_n;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         if (param0 >= -100) {
-          wja.d((byte) 105);
+          wja.clearStaticReferences((byte) 105);
           field_m = null;
           field_l = null;
           return;

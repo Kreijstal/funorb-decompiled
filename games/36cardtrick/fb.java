@@ -8,7 +8,7 @@ final class fb {
     static byte[] field_d;
     static wb[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 == 8) {
@@ -17,15 +17,15 @@ final class fb {
           field_d = null;
           return;
         }
-        fb.a(-114);
+        fb.clearStaticReferences(-114);
         field_e = null;
         field_c = null;
         field_d = null;
     }
 
-    final static kc[] a(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param0 != 18457) {
-          return (kc[]) null;
+          return (RgbSprite[]) null;
         }
         return h.b(1, param2, param0 - 2695, param1, param3);
     }

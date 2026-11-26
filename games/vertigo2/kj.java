@@ -99,7 +99,7 @@ final class kj extends TextureOperator {
         return var3;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -103 % ((param0 - 51) / 40);
         field_A = null;
     }

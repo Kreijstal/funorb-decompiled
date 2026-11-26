@@ -5,9 +5,9 @@ final class qg extends lf {
     static int field_u;
     static String field_o;
     static String field_j;
-    static bd field_q;
-    static bd field_i;
-    static bd field_m;
+    static RgbSprite field_q;
+    static RgbSprite field_i;
+    static RgbSprite field_m;
     private int field_f;
     static String field_s;
     static int field_p;
@@ -17,7 +17,7 @@ final class qg extends lf {
     private int field_k;
     private int field_h;
     private int field_t;
-    static bd[] field_g;
+    static RgbSprite[] field_g;
 
     final static void b(byte param0) {
         if (param0 < 8) {
@@ -28,7 +28,7 @@ final class qg extends lf {
     private final void a(int param0, byte param1) {
         this.field_f = param0 * param0;
         if (param1 != 21) {
-          qg.a(false);
+          qg.clearStaticReferences(false);
         }
     }
 
@@ -80,7 +80,7 @@ final class qg extends lf {
         return param0 | param1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_r = null;
         field_s = null;
         field_m = null;
@@ -92,7 +92,7 @@ final class qg extends lf {
           field_i = null;
           return;
         }
-        qg.a(false);
+        qg.clearStaticReferences(false);
         field_j = null;
         field_o = null;
         field_i = null;

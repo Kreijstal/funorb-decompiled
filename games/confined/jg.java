@@ -6,7 +6,7 @@ import java.util.*;
 
 abstract class jg {
     static String field_a;
-    static nf field_g;
+    static RgbSprite field_g;
     static bm[] field_d;
     static Calendar field_c;
     static int[] field_f;
@@ -128,7 +128,7 @@ abstract class jg {
 
     abstract long a(int param0);
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

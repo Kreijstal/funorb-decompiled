@@ -53,10 +53,10 @@ final class tk {
         return ih.correctedCurrentTimeMillis((byte) -98) - PacketBuffer.field_o;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != -86) {
-          tk.a((byte) -52);
+          tk.clearStaticReferences((byte) -52);
           field_c = null;
           return;
         }

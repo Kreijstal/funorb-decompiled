@@ -86,7 +86,7 @@ final class ua extends WidgetContainer implements ka {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         int var1 = -23 % ((param0 - 11) / 52);
         field_F = null;

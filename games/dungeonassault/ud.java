@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ud extends qe {
-    static cn[] field_s;
+    static RgbSprite[] field_s;
     static IntrusiveDeque field_v;
-    static cn field_r;
+    static RgbSprite field_r;
     static int field_x;
     static ed field_t;
     static int[] field_w;
-    static cn field_y;
+    static RgbSprite field_y;
     static String field_u;
 
     private final int[] a(int[] param0, boolean param1) {
@@ -229,7 +229,7 @@ final class ud extends qe {
         int[] var21 = new int[]{sj.field_db[1], sj.field_db[2] - sj.field_db[1], -sj.field_db[2] + sj.field_db[3], sj.field_db[4] - sj.field_db[3], -sj.field_db[4] + sj.field_db[5], -sj.field_db[5] + sj.field_db[6], sj.field_db[7] - sj.field_db[6], sj.field_db[8] - sj.field_db[7], 1870 - sj.field_db[8]};
         int var3Lifetime1;
         int var9Lifetime1;
-        ia.field_K = new tk(ga.field_o, var21, 0, IntrusiveNode.field_c, qh.field_J, (cn[]) null);
+        ia.field_K = new tk(ga.field_o, var21, 0, IntrusiveNode.field_c, qh.field_J, (RgbSprite[]) null);
         ia.field_K.field_i = new boolean[]{param0, true, true, true, false, true, true, true, true};
         ia.field_K.field_a[8] = 16777215;
         ia.field_K.field_u[7] = 16777215;

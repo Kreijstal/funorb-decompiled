@@ -5,7 +5,7 @@ final class hj extends DualLinkNode {
     private int[][] field_u;
     int[] field_w;
     static String field_s;
-    static bd field_r;
+    static RgbSprite field_r;
     private int[] field_q;
     private String[] field_v;
     static pe field_t;

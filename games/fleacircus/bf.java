@@ -112,9 +112,9 @@ final class bf {
         }
     }
 
-    final static dd[] a(int param0, int param1) {
-        dd[] var3 = new dd[9];
-        dd[] var2 = var3;
+    final static RgbSprite[] a(int param0, int param1) {
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         var3[4] = oh.c(-81, param1, 64);
         if (param0 != 2885) {
           field_b = 93;

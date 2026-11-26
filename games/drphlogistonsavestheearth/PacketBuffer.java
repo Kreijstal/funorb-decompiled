@@ -295,10 +295,10 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         if (param0 != 4) {
-          PacketBuffer.d(-59);
+          PacketBuffer.clearDeclaredStaticReferences(-59);
         }
         field_k = null;
     }

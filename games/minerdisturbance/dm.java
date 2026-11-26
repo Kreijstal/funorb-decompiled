@@ -43,9 +43,9 @@ final class dm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 20583) {
-          dm.a(-62);
+          dm.clearStaticReferences(-62);
           field_f = null;
           field_d = null;
           return;

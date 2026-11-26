@@ -7,17 +7,17 @@ final class ne extends IntrusiveNode {
     static int field_o;
     int field_h;
     static IntrusiveDeque field_q;
-    static bd field_n;
+    static RgbSprite field_n;
     int field_m;
     int field_k;
     int field_i;
     static String field_p;
     int field_r;
 
-    final static bd[] a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static RgbSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
-        bd[] stackIn_5_0 = null;
-        bd[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_5_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -30,7 +30,7 @@ final class ne extends IntrusiveNode {
             stackIn_7_0 = qa.a(param0 ^ 26671);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (bd[]) null;
+          stackIn_5_0 = (RgbSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class ne extends IntrusiveNode {
           var6 = 0;
           var7 = 0;
           if (param0 != 24) {
-            ne.a((byte) 63);
+            ne.clearDeclaredStaticReferences((byte) 63);
           }
           if (0 < var4) {
             var8 = 32;
@@ -109,11 +109,11 @@ final class ne extends IntrusiveNode {
         }
     }
 
-    final static bd a(bd param0, byte param1) {
+    final static RgbSprite a(RgbSprite param0, byte param1) {
         ArgbSprite var2 = null;
         RuntimeException var2_ref = null;
         ArgbSprite var3 = null;
-        bd stackIn_5_0 = null;
+        RgbSprite stackIn_5_0 = null;
         ArgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -131,7 +131,7 @@ final class ne extends IntrusiveNode {
           var3 = var2.i();
           var3.g();
           stackIn_7_0 = var3;
-          return (bd) ((Object) stackIn_7_0);
+          return (RgbSprite) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -146,7 +146,7 @@ final class ne extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_n = null;
         int var1 = -38 % ((-58 - param0) / 47);
         field_p = null;

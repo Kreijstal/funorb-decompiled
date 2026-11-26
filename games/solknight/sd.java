@@ -12,7 +12,7 @@ final class sd extends IntrusiveNode {
     boolean field_h;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         int var1 = -16 / ((param0 - 44) / 50);
     }

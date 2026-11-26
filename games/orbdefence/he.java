@@ -8,7 +8,7 @@ final class he extends IntrusiveNode {
     int field_m;
     int field_k;
     RawPcmStream field_l;
-    static hj[] field_y;
+    static RgbSprite[] field_y;
     ik field_g;
     int field_t;
     int field_s;

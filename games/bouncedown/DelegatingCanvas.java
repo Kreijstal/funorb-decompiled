@@ -14,7 +14,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 23 % ((param0 - 3) / 56);
         field_c = null;
     }
@@ -27,7 +27,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, tg[] param3, int param4, int param5) {
+    final static void a(int param0, byte param1, int param2, RgbSprite[] param3, int param4, int param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

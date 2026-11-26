@@ -35,13 +35,13 @@ final class ek extends l {
         return (l) ((Object) new gj());
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         field_e = null;
         field_h = null;
         if (param0 != 16) {
-          ek.b(19);
+          ek.clearStaticReferences(19);
         }
     }
 

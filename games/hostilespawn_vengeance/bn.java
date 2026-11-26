@@ -11,11 +11,11 @@ final class bn {
     static String field_n;
     private long field_f;
     static int field_p;
-    static bd field_o;
+    static RgbSprite field_o;
     private int field_a;
     private long field_g;
     private long field_k;
-    static bd field_l;
+    static RgbSprite field_l;
     private byte[] field_e;
     private long field_h;
     static int[] field_b;

@@ -138,7 +138,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_s = null;
         field_n = null;
         field_r = null;

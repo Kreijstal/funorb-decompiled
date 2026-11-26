@@ -97,12 +97,12 @@ final class InstrumentPatch extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         field_j = null;
         field_h = null;
         if (param0 != 0) {
-          InstrumentPatch.a(-90);
+          InstrumentPatch.clearStaticReferences(-90);
         }
         field_l = null;
     }

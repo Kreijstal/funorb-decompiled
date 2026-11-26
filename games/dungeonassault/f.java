@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f {
-    static cn field_a;
+    static RgbSprite field_a;
     static String field_c;
-    static cn field_f;
+    static RgbSprite field_f;
     static String field_e;
     static String field_b;
     static boolean field_d;
@@ -64,7 +64,7 @@ final class f {
           }
           return -1;
         }
-        field_f = (cn) null;
+        field_f = (RgbSprite) null;
         if (wk.field_h <= param0) {
           if (param0 >= wk.field_h + MouseWheelInput.field_g.field_y) {
             if (param0 < rm.field_T) {

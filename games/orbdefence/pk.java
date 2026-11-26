@@ -266,7 +266,7 @@ final class pk extends ta implements jb, ai {
           this.field_N = (vi) ((Object) new oc(param0, (ag) (this), 100));
           this.field_C = (vi) ((Object) new oc("", (ag) (this), 20));
           if (this.field_M) {
-            this.field_I = new s(tk.field_l, (ag) null);
+            this.field_I = new s(SpriteGeometry.field_l, (ag) null);
             this.field_A = new s(ld.field_d, (ag) null);
             this.field_N.field_F = false;
           } else {

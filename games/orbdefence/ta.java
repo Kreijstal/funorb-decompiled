@@ -123,7 +123,7 @@ class ta extends pj implements c {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         int var1 = -50 / ((param0 - 17) / 61);
     }
@@ -256,12 +256,12 @@ class ta extends pj implements c {
     }
 
     final static void j(int param0) {
-        hj var1 = null;
-        hj var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          var1 = new hj(540, 140);
+          var1 = new RgbSprite(540, 140);
           de.a(-128, var1);
           wi.c();
           SoftwareRasterizer.clearRaster();

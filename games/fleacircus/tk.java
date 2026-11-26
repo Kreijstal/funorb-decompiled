@@ -16,13 +16,13 @@ final class tk extends IntrusiveNode {
     int field_t;
     int field_o;
     de field_i;
-    static dd field_m;
+    static RgbSprite field_m;
     int field_q;
     int field_p;
     int field_n;
     int field_v;
     int field_x;
-    static dd field_s;
+    static RgbSprite field_s;
     int field_u;
     static String field_y;
     int field_E;
@@ -35,12 +35,12 @@ final class tk extends IntrusiveNode {
         this.field_D = null;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = null;
         field_s = null;
         field_y = null;
         if (param0 >= -90) {
-          tk.a(40);
+          tk.clearDeclaredStaticReferences(40);
         }
     }
 

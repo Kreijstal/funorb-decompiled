@@ -10,11 +10,11 @@ final class hd {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 30714) {
-          hd.a(6);
+          hd.clearStaticReferences(6);
         }
     }
 

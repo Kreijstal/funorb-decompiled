@@ -4,7 +4,7 @@
 final class pc implements Runnable {
     static long field_a;
     static PacketBuffer field_j;
-    static nf[] field_e;
+    static RgbSprite[] field_e;
     static boolean field_d;
     static boolean field_f;
     private wd field_i;

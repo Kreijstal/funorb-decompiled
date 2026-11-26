@@ -5,9 +5,9 @@ final class j {
     static int[] field_b;
     static int[] field_d;
     static int field_c;
-    static bd field_a;
+    static RgbSprite field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = 0 % ((param0 + 77) / 41);
         field_a = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static dl[] field_b;
+    static RgbSprite[] field_b;
     static long field_d;
     static int[] field_e;
     static int[] field_a;
@@ -161,7 +161,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
     }
 
     final static void a(int param0, byte param1, int param2, int param3) {
-        mc.field_s = param3;
+        SpriteGeometry.field_s = param3;
         if (param1 <= 113) {
           return;
         }

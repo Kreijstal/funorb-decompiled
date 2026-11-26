@@ -10,9 +10,9 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
     static String field_k;
     static String field_n;
     static int[] field_j;
-    static nf[] field_o;
+    static RgbSprite[] field_o;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= -40) {
           field_o = null;
           field_k = null;
@@ -21,7 +21,7 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
           field_m = null;
           return;
         }
-        cd.a(32);
+        cd.clearStaticReferences(32);
         field_o = null;
         field_k = null;
         field_n = null;

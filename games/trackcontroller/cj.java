@@ -85,7 +85,7 @@ final class cj extends rb {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 4) {
           return;
         }
@@ -231,7 +231,7 @@ final class cj extends rb {
     final static void a(boolean param0, int param1, int param2) {
         nk.field_l = param2;
         if (!param0) {
-          cj.e(-89);
+          cj.clearDeclaredStaticReferences(-89);
         }
         j.field_c = param1;
     }

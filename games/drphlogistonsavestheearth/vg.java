@@ -962,7 +962,7 @@ class vg extends IntrusiveNode {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_j = null;
         field_r = null;
         field_x = null;

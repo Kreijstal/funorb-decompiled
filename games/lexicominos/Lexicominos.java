@@ -5,7 +5,7 @@ import java.util.*;
 import java.io.PrintStream;
 
 public final class Lexicominos extends nk {
-    static db field_I;
+    static RgbSprite field_I;
     static String field_H;
     private boolean field_K;
     static boolean field_M;
@@ -18,8 +18,8 @@ public final class Lexicominos extends nk {
     private final boolean a(byte param0, boolean param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        db dupTemp$2 = null;
-        db dupTemp$3 = null;
+        RgbSprite dupTemp$2 = null;
+        RgbSprite dupTemp$3 = null;
         int stackIn_127_0 = 0;
         int stackIn_127_1 = 0;
         int stackIn_150_0 = 0;
@@ -41,7 +41,7 @@ public final class Lexicominos extends nk {
         boolean stackOut_253_0;
         eb[] var3 = null;
         int var3_int = 0;
-        db[] var3_array = null;
+        RgbSprite[] var3_array = null;
         PcmSample var3_ref = null;
         RuntimeException var3_ref2 = null;
         int var4 = 0;
@@ -49,11 +49,11 @@ public final class Lexicominos extends nk {
         int var5_int = 0;
         eb[] var5 = null;
         int var6 = 0;
-        db var6_ref_db = null;
+        RgbSprite var6_ref_db = null;
         int var7_int = 0;
-        db var7 = null;
+        RgbSprite var7 = null;
         int[] var7_array = null;
-        db[] var7_array2 = null;
+        RgbSprite[] var7_array2 = null;
         int[] var8_ref_int__ = null;
         int var8 = 0;
         int[] var9 = null;
@@ -233,7 +233,7 @@ public final class Lexicominos extends nk {
               do {
                 if (var3_int >= 15) {
                   th.field_r = 0;
-                  ed.field_v = 90;
+                  SpriteGeometry.field_v = 90;
                   cg.field_j = -1;
                   aa.field_j = -2;
                   break;
@@ -247,7 +247,7 @@ public final class Lexicominos extends nk {
             al.a(16, we.field_j, 99.0f);
             this.d(param0 ^ -18330);
             if (id.field_w == null) {
-              var3 = ed.a(ci.field_a, true);
+              var3 = SpriteGeometry.a(ci.field_a, true);
               var4 = 0;
               var5_int = 0;
               boolean decompiledNaturalLoopExit3 = false;
@@ -320,18 +320,18 @@ public final class Lexicominos extends nk {
           var3_array = td.a("", "frame", dl.field_d, 22306);
           var4 = 150;
           var5_int = 100;
-          var6_ref_db = new db(var4, var5_int);
+          var6_ref_db = new RgbSprite(var4, var5_int);
           var6_ref_db.b();
           va.field_m.b(-104, -198);
-          var3_array[4] = new db(var4 << 1, var5_int << 1);
+          var3_array[4] = new RgbSprite(var4 << 1, var5_int << 1);
           var3_array[4].b();
           var6_ref_db.b(0, 0);
           var6_ref_db.g(var4, 0);
           var6_ref_db.d();
           var6_ref_db.b(0, var5_int);
           var6_ref_db.g(var4, var5_int);
-          nh.field_c = new db[9];
-          GameAppletShell.field_o = new db[9];
+          nh.field_c = new RgbSprite[9];
+          GameAppletShell.field_o = new RgbSprite[9];
           var7_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -349,10 +349,10 @@ public final class Lexicominos extends nk {
                   GameAppletShell.field_o[var7_int] = var3_array[var7_int];
                   nh.field_c[var7_int] = null;
                 } else {
-                  GameAppletShell.field_o[var7_int] = new db(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
+                  GameAppletShell.field_o[var7_int] = new RgbSprite(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
                   GameAppletShell.field_o[var7_int].b();
                   var3_array[var7_int].e(0, 0, 11345438);
-                  nh.field_c[var7_int] = new db(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
+                  nh.field_c[var7_int] = new RgbSprite(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
                   nh.field_c[var7_int].b();
                   var3_array[var7_int].e(0, 0, 13343019);
                 }
@@ -362,7 +362,7 @@ public final class Lexicominos extends nk {
             }
             if (decompiledFrameRemainder0) {
               var3_array = td.a("", "frame2", dl.field_d, param0 + 22392);
-              jh.field_b = new db[9];
+              jh.field_b = new RgbSprite[9];
               var7_int = 0;
               while (true) {
                 stackIn_127_0Lifetime1 = -10;
@@ -376,7 +376,7 @@ public final class Lexicominos extends nk {
                 if (var7_int == 4) {
                   jh.field_b[var7_int] = null;
                 } else {
-                  jh.field_b[var7_int] = new db(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
+                  jh.field_b[var7_int] = new RgbSprite(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
                   jh.field_b[var7_int].b();
                   var3_array[var7_int].e(0, 0, 13343019);
                 }
@@ -418,8 +418,8 @@ public final class Lexicominos extends nk {
           do {
             if (!(ef.field_d.length > var7_int)) {
               MouseWheelInput.a((byte) -102, e.field_u);
-              fc.field_e = new db[ef.field_d.length];
-              md.field_A = new db[ef.field_d.length];
+              fc.field_e = new RgbSprite[ef.field_d.length];
+              md.field_A = new RgbSprite[ef.field_d.length];
               break;
             }
             MouseWheelInput.a((byte) -102, ef.field_d[var7_int]);
@@ -467,7 +467,7 @@ public final class Lexicominos extends nk {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              fg.field_e = new db[ef.field_d.length];
+              fg.field_e = new RgbSprite[ef.field_d.length];
               stackIn_180_0 = 0;
             }
             var7_int = stackIn_180_0;
@@ -496,15 +496,15 @@ public final class Lexicominos extends nk {
                 na.field_a[12] = dupTemp$3;
                 break;
               }
-              fg.field_e[var7_int] = new db(32, 32);
+              fg.field_e[var7_int] = new RgbSprite(32, 32);
               fg.field_e[var7_int].b();
               ef.field_d[var7_int].b(0, 0, 32, 32);
               fg.field_e[var7_int].f();
               var7_int++;
             } while (var17 == 0);
             var7_array2 = td.a("", "mmoutlined", dl.field_d, 22306);
-            gg.field_a = new db[var7_array2.length];
-            ej.field_b = new db[var7_array2.length];
+            gg.field_a = new RgbSprite[var7_array2.length];
+            ej.field_b = new RgbSprite[var7_array2.length];
             var8Lifetime1 = 0;
             while (true) {
               stackIn_189_0 = ~var8Lifetime1;
@@ -534,8 +534,8 @@ public final class Lexicominos extends nk {
                 }
               } else {
                 var7_array2 = td.a("", "hsmodeconcise", dl.field_d, 22306);
-                hi.field_b = new db[var7_array2.length];
-                dc.field_z = new db[var7_array2.length];
+                hi.field_b = new RgbSprite[var7_array2.length];
+                dc.field_z = new RgbSprite[var7_array2.length];
                 stackIn_203_0 = 0;
               }
               var8Lifetime1 = stackIn_203_0;
@@ -599,7 +599,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    private final void a(int param0, db param1, db param2, int param3) {
+    private final void a(int param0, RgbSprite param1, RgbSprite param2, int param3) {
         RuntimeException runtimeException = null;
         int[] var5 = null;
         int var6 = 0;
@@ -923,13 +923,13 @@ public final class Lexicominos extends nk {
           CrossfadingMidiPcmStream.a((byte) 120);
           bi.a(-1);
           of.clearStaticReferences(param0 ^ -80);
-          ka.a((byte) -81);
-          nk.c((byte) 89);
+          ka.clearStaticReferences((byte) -81);
+          nk.clearStaticReferences((byte) 89);
           de.clearStaticReferences(param0 ^ 73);
           GameAppletShell.e(439);
           wg.c(param0 + 37);
           da.a((byte) 123);
-          MouseWheelInput.a(param0 + 35);
+          MouseWheelInput.clearStaticReferences(param0 + 35);
           SoftwareRasterizer.clearStaticReferences();
           sh.clearStaticReferences(1);
           BitmapFont.clearStaticReferences();
@@ -938,14 +938,14 @@ public final class Lexicominos extends nk {
           rf.clearStaticReferences(0);
           qc.clearStaticReferences(225);
           ga.a(param0 - 79);
-          t.a(12307);
+          t.clearStaticReferences(12307);
           jh.clearStaticReferences(false);
           ah.clearStaticReferences((byte) -95);
           il.clearStaticReferences(0);
           df.a(true);
           af.clearStaticReferences(param0 ^ 25);
           hi.clearStaticReferences(5);
-          ig.a(-71);
+          ig.clearStaticReferences(-71);
           tb.a(255);
           dd.a(1);
           td.clearStaticReferences(0);
@@ -955,15 +955,15 @@ public final class Lexicominos extends nk {
           AudioOutput.clearStaticReferences();
           ja.a((byte) -36);
           oj.b((byte) -26);
-          fc.a(-265);
+          fc.clearStaticReferences(-265);
           sg.b(0);
           wb.clearStaticReferences(5);
           pg.c(-8413);
-          be.b((byte) -116);
+          be.clearStaticReferences((byte) -116);
           ge.clearStaticReferences((byte) -59);
-          ed.c(-43);
-          DualLinkNode.a(param0 - 163);
-          IntrusiveNode.b(true);
+          SpriteGeometry.c(-43);
+          DualLinkNode.clearDeclaredStaticReferences(param0 - 163);
+          IntrusiveNode.clearDeclaredStaticReferences(true);
           vg.b(0);
           fd.a((byte) -61);
           MidiPcmStream.c(true);
@@ -972,48 +972,48 @@ public final class Lexicominos extends nk {
           MidiTrackReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 37);
           fg.clearStaticReferences(param0 - 55);
-          wh.a(param0 - 167);
+          wh.clearStaticReferences(param0 - 167);
           bk.a((byte) 98);
-          ob.b(122);
+          ob.clearStaticReferences(122);
           e.a(param0 - 78);
           GzipDecompressor.clearStaticReferences(11);
-          hf.a(param0 - 16006);
+          hf.clearDeclaredStaticReferences(param0 - 16006);
           jl.clearStaticReferences(-15699);
-          fl.a(false);
+          fl.clearStaticReferences(false);
           jj.clearStaticReferences(100);
           eg.clearStaticReferences(-102);
           AccountCreationResultPanel.j((byte) -50);
-          uk.i(78);
+          uk.clearStaticReferences(78);
           qj.clearStaticReferences(true);
           uc.clearStaticReferences(param0 + 11252);
-          pj.e((byte) 71);
-          mh.a((byte) 119);
+          pj.clearStaticReferences((byte) 71);
+          mh.clearStaticReferences((byte) 119);
           ti.clearStaticReferences(false);
           r.clearStaticReferences(param0 ^ -45);
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           SynthInstrument.clearStaticReferences();
-          oh.a(param0 - 204);
+          oh.clearStaticReferences(param0 - 204);
           p.clearStaticReferences(-127);
-          bd.a(84);
+          bd.clearStaticReferences(84);
           gd.clearStaticReferences((byte) -62);
-          th.j((byte) 120);
+          th.clearStaticReferences((byte) 120);
           ej.clearStaticReferences(param0 ^ -77);
           if (param0 != 79) {
             this.field_K = false;
           }
-          ad.a((byte) -108);
+          ad.clearStaticReferences((byte) -108);
           nh.clearStaticReferences(60);
-          gg.a(true);
+          gg.clearStaticReferences(true);
           qg.a((byte) 105);
           bj.clearStaticReferences(true);
           kb.a(false);
           q.clearStaticReferences((byte) 70);
           ph.a(87);
-          pe.a((byte) -81);
+          pe.clearStaticReferences((byte) -81);
           qf.e((byte) -15);
-          ci.b((byte) -127);
-          dc.f((byte) -63);
+          ci.clearStaticReferences((byte) -127);
+          dc.clearStaticReferences((byte) -63);
           dl.a(param0 ^ 72);
           fj.f((byte) -12);
           ug.clearStaticReferences(64);
@@ -1024,13 +1024,13 @@ public final class Lexicominos extends nk {
           ik.b((byte) -108);
           MeshRasterState.clearStaticReferences();
           ne.clearStaticReferences(338);
-          nj.a((byte) -5);
+          nj.clearStaticReferences((byte) -5);
           TriangleMesh.a(15569);
-          eh.a((byte) 99);
+          eh.clearStaticReferences((byte) 99);
           rg.c(0);
           pa.b(param0 - 77);
           wc.a((byte) -50);
-          dj.a(-45);
+          dj.clearStaticReferences(-45);
           ui.clearStaticReferences(-1);
           he.a(-1);
           DelegatingCanvas.clearStaticReferences(-63);
@@ -1038,13 +1038,13 @@ public final class Lexicominos extends nk {
           ByteStorage.clearStaticReferences((byte) -125);
           Bzip2Decoder.clearStaticReferences();
           ok.clearStaticReferences((byte) 28);
-          pd.b(118);
+          pd.clearStaticReferences(118);
           lj.clearStaticReferences(0);
           fb.clearStaticReferences(2);
-          ib.a(false);
-          og.a((byte) 124);
+          ib.clearStaticReferences(false);
+          og.clearStaticReferences((byte) 124);
           ve.a(true);
-          w.c(false);
+          w.releaseDeclaredStaticReferences(false);
           kf.clearStaticReferences(-85);
           mg.clearStaticReferences(false);
           ql.g((byte) 42);
@@ -1055,13 +1055,13 @@ public final class Lexicominos extends nk {
           oe.a(param0 + 32034);
           me.clearStaticReferences(80);
           lb.clearStaticReferences(-128);
-          ll.a((byte) 114);
+          ll.clearStaticReferences((byte) 114);
           bf.a((byte) -118);
           fa.clearStaticReferences(param0 + 829);
-          qa.a(param0 + 48);
+          qa.clearStaticReferences(param0 + 48);
           vl.clearStaticReferences(96);
           ni.clearStaticReferences((byte) 65);
-          lg.c(21745);
+          lg.clearStaticReferences(21745);
           ck.clearStaticReferences((byte) -18);
           rk.clearStaticReferences(true);
           aa.clearStaticReferences((byte) -126);
@@ -1073,75 +1073,75 @@ public final class Lexicominos extends nk {
           wj.c(false);
           rc.clearStaticReferences(870040769);
           jf.h(-127);
-          cl.o(-60);
-          rl.g((byte) 93);
-          re.i((byte) -27);
+          cl.clearDeclaredStaticReferences(-60);
+          rl.clearStaticReferences((byte) 93);
+          re.clearDeclaredStaticReferences((byte) -27);
           md.e(344066273);
           bb.clearStaticReferences((byte) -26);
-          bc.e(false);
-          ld.j(6977);
+          bc.clearStaticReferences(false);
+          ld.clearDeclaredStaticReferences(6977);
           li.a((byte) 81);
           te.clearStaticReferences((byte) -122);
           tj.clearStaticReferences(0);
           pl.clearStaticReferences(0);
           kg.clearStaticReferences(300);
-          ae.j(-126);
+          ae.clearDeclaredStaticReferences(-126);
           AudioFilter.clearStaticReferences();
           hd.a(-115);
           kk.d(param0 - 159);
           gl.clearStaticReferences(-116);
           hh.clearStaticReferences(225);
-          l.h(4);
-          IterableNodeHashTable.b((byte) -70);
+          l.clearStaticReferences(4);
+          IterableNodeHashTable.clearStaticReferences((byte) -70);
           SecondaryNodeDeque.clearStaticReferences((byte) 70);
           rh.clearStaticReferences(-119);
-          gj.d(-8601);
-          ch.d(-123);
+          gj.releaseDeclaredStaticReferences(-8601);
+          ch.clearDeclaredStaticReferences(-123);
           sb.b(16478);
           NodeHashTableIterator.a(param0 ^ -30299);
           SecondaryNodeDequeIterator.clearStaticReferences(true);
-          sj.a((byte) 5);
-          nc.a((byte) 88);
+          sj.clearStaticReferences((byte) 5);
+          nc.clearStaticReferences((byte) 88);
           d.clearStaticReferences(false);
-          cg.a((byte) -119);
+          cg.clearStaticReferences((byte) -119);
           v.clearStaticReferences(-13714);
           uj.a(true);
           id.clearStaticReferences((byte) 96);
           di.clearStaticReferences(false);
-          ia.h(0);
-          hc.g(-1);
+          ia.clearStaticReferences(0);
+          hc.releaseDeclaredStaticReferences(-1);
           f.clearStaticReferences((byte) 69);
           sa.a(0);
-          vi.a(112);
+          vi.clearStaticReferences(112);
           vb.clearStaticReferences(109);
           AccountRequestState.releaseStatics(-119);
-          AccountServiceResult.b(-26);
+          AccountServiceResult.clearStaticReferences(-26);
           la.clearStaticReferences((byte) 122);
           c.clearStaticReferences(117);
           vc.clearStaticReferences(-16531);
           tl.a(3);
           m.clearStaticReferences(1000);
           fk.clearStaticReferences(false);
-          pf.c(false);
+          pf.clearDeclaredStaticReferences(false);
           a.b(true);
-          oc.a(-123);
+          oc.clearStaticReferences(-123);
           mc.a(29407);
-          wa.a((byte) 102);
-          pb.a((byte) -48);
+          wa.clearStaticReferences((byte) 102);
+          pb.clearStaticReferences((byte) -48);
           tg.a(0);
           n.clearStaticReferences(23887);
           rj.clearStaticReferences((byte) 88);
           ij.clearStaticReferences((byte) 66);
-          mk.a((byte) -101);
+          mk.clearStaticReferences((byte) -101);
           AccountNameAvailabilityValidator.clearStaticReferences(false);
           va.clearStaticReferences((byte) -113);
           pc.clearStaticReferences((byte) -82);
-          jg.e(param0 - 25127);
+          jg.clearDeclaredStaticReferences(param0 - 25127);
           uf.clearStaticReferences(false);
           g.e(-17779);
           rb.clearStaticReferences((byte) 50);
-          sc.a(-70);
-          ri.c((byte) 117);
+          sc.clearStaticReferences(-70);
+          ri.clearDeclaredStaticReferences((byte) 117);
           tf.a(-3082);
           this.field_B = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1390,21 +1390,21 @@ public final class Lexicominos extends nk {
                 this.a(22110, cl.field_S, jf.field_O, th.field_r);
                 this.a(22110, v.field_z, bb.field_C, aa.field_j);
               }
-              if (ed.field_v == 0) {
+              if (SpriteGeometry.field_v == 0) {
                 this.a(jf.field_O.field_y, cl.field_S.field_y, false);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (ed.field_v != 40) {
+                if (SpriteGeometry.field_v != 40) {
                   this.a(jf.field_O.field_y, v.field_z.field_y, false);
-                  this.a(ed.field_v, bb.field_C, (byte) 34, cl.field_S);
+                  this.a(SpriteGeometry.field_v, bb.field_C, (byte) 34, cl.field_S);
                   if (var4 != 0) {
                     this.a(bb.field_C.field_y, v.field_z.field_y, false);
                     this.a(22110, v.field_z, jf.field_O, 0);
-                    if (ed.field_v > 40) {
+                    if (SpriteGeometry.field_v > 40) {
                       stackIn_64_0 = 40;
                     } else {
-                      stackIn_64_0 = ed.field_v;
+                      stackIn_64_0 = SpriteGeometry.field_v;
                     }
                     var3 = stackIn_64_0;
                     this.a(-102, GzipDecompressor.field_f[var3], v.field_z, c.field_i[var3], GameAppletShell.field_l[var3]);
@@ -1414,10 +1414,10 @@ public final class Lexicominos extends nk {
                   this.a(bb.field_C.field_y, v.field_z.field_y, false);
                   if (var4 != 0) {
                     this.a(22110, v.field_z, jf.field_O, 0);
-                    if (ed.field_v > 40) {
+                    if (SpriteGeometry.field_v > 40) {
                       stackIn_64_0 = 40;
                     } else {
-                      stackIn_64_0 = ed.field_v;
+                      stackIn_64_0 = SpriteGeometry.field_v;
                     }
                     var3 = stackIn_64_0;
                     this.a(-102, GzipDecompressor.field_f[var3], v.field_z, c.field_i[var3], GameAppletShell.field_l[var3]);
@@ -1428,10 +1428,10 @@ public final class Lexicominos extends nk {
             }
           } else {
             this.a(22110, v.field_z, jf.field_O, 0);
-            if (ed.field_v > 40) {
+            if (SpriteGeometry.field_v > 40) {
               stackIn_64_0 = 40;
             } else {
-              stackIn_64_0 = ed.field_v;
+              stackIn_64_0 = SpriteGeometry.field_v;
             }
             var3 = stackIn_64_0;
             this.a(-102, GzipDecompressor.field_f[var3], v.field_z, c.field_i[var3], GameAppletShell.field_l[var3]);
@@ -1445,7 +1445,7 @@ public final class Lexicominos extends nk {
             rg.a(GameAppletShell.field_o, 10, (byte) -105, 10);
           }
           if (je.field_a != 0) {
-            var3Lifetime1 = ed.field_v << 3;
+            var3Lifetime1 = SpriteGeometry.field_v << 3;
             if (var3Lifetime1 > 0) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, var3Lifetime1);
             }
@@ -1483,7 +1483,7 @@ public final class Lexicominos extends nk {
         try {
           this.a(0, param1, 0, 0, SoftwareRasterizer.field_b, 0, GameAppletShell.field_b, (byte) 121, param0);
           if (param2) {
-            field_I = (db) null;
+            field_I = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1664,8 +1664,8 @@ public final class Lexicominos extends nk {
             if (var2_int != 0) {
               if (je.field_a != 0) {
                 if (je.field_a == 1) {
-                  fieldTemp$1 = ed.field_v + 1;
-                  ed.field_v = ed.field_v + 1;
+                  fieldTemp$1 = SpriteGeometry.field_v + 1;
+                  SpriteGeometry.field_v = SpriteGeometry.field_v + 1;
                   if (fieldTemp$1 != 32) {
                     break regionExit1;
                   }
@@ -1683,8 +1683,8 @@ public final class Lexicominos extends nk {
                   }
                 }
                 if (2 != je.field_a) {
-                  fieldTemp$2 = ed.field_v - 1;
-                  ed.field_v = ed.field_v - 1;
+                  fieldTemp$2 = SpriteGeometry.field_v - 1;
+                  SpriteGeometry.field_v = SpriteGeometry.field_v - 1;
                   if (fieldTemp$2 != 0) {
                     break regionExit1;
                   }
@@ -1834,7 +1834,7 @@ public final class Lexicominos extends nk {
                 }
                 break regionExit1;
               }
-              ed.field_v = ed.field_v + cg.field_j;
+              SpriteGeometry.field_v = SpriteGeometry.field_v + cg.field_j;
               if (aa.field_j >= 0 &&
                 vg.field_d[aa.field_j].field_m != null) {
                 vg.field_d[aa.field_j].field_m.b(2);
@@ -1843,9 +1843,9 @@ public final class Lexicominos extends nk {
                 el.field_c != null) {
                 el.field_c.b(2);
               }
-              if ((ed.field_v - 20) * cg.field_j >= 20) {
+              if ((SpriteGeometry.field_v - 20) * cg.field_j >= 20) {
                 if (th.field_r == -2) {
-                  if (ed.field_v != 40) {
+                  if (SpriteGeometry.field_v != 40) {
                     break regionExit1;
                   }
                   ge.a(0, kk.c(-14047));
@@ -1879,7 +1879,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    private final void a(int param0, int[] param1, db param2, int[] param3, int[] param4) {
+    private final void a(int param0, int[] param1, RgbSprite param2, int[] param3, int[] param4) {
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -2015,7 +2015,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    private final db a(int param0, db param1) {
+    private final RgbSprite a(int param0, RgbSprite param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_3_0 = 0;
@@ -2025,7 +2025,7 @@ public final class Lexicominos extends nk {
         int stackIn_16_1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
-        db stackIn_36_0 = null;
+        RgbSprite stackIn_36_0 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -2033,7 +2033,7 @@ public final class Lexicominos extends nk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        db var5 = null;
+        RgbSprite var5 = null;
         int var6 = 0;
         int var7_int = 0;
         int[] var7 = null;
@@ -2046,7 +2046,7 @@ public final class Lexicominos extends nk {
         try {
           var3_int = param1.field_s;
           var4 = param1.field_w;
-          var5 = new db(param1.field_p + 16, 16 + param1.field_u);
+          var5 = new RgbSprite(param1.field_p + 16, 16 + param1.field_u);
           var5.field_s = -8 + var3_int;
           var5.field_w = -8 + var4;
           var5.b();
@@ -2194,14 +2194,14 @@ public final class Lexicominos extends nk {
           }
           if (ja.field_b[th.field_r + 2] > ja.field_b[2 + aa.field_j]) {
             cg.field_j = 1;
-            ed.field_v = 0;
+            SpriteGeometry.field_v = 0;
             if (var8 != 0) {
               cg.field_j = -1;
-              ed.field_v = 40;
+              SpriteGeometry.field_v = 40;
             }
           } else {
             cg.field_j = -1;
-            ed.field_v = 40;
+            SpriteGeometry.field_v = 40;
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
@@ -2287,7 +2287,7 @@ public final class Lexicominos extends nk {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = ed.field_q;
+          var3 = SpriteGeometry.field_q;
           if (param0 != -17800) {
             field_F = (String) null;
           }
@@ -2309,7 +2309,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    private final void a(int param0, db param1, byte param2, db param3) {
+    private final void a(int param0, RgbSprite param1, byte param2, RgbSprite param3) {
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         RuntimeException stackIn_28_0 = null;
@@ -2329,7 +2329,7 @@ public final class Lexicominos extends nk {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        db var15 = null;
+        RgbSprite var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;

@@ -11,14 +11,14 @@ abstract class SocketConnector {
     String host;
     static int field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= 21) {
           field_b = null;
           levelRingSprites = null;
           field_c = null;
           return;
         }
-        SocketConnector.a(-62);
+        SocketConnector.clearStaticReferences(-62);
         field_b = null;
         levelRingSprites = null;
         field_c = null;

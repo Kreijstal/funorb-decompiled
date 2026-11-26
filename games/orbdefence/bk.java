@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class bk extends IOException {
-    static hj[] field_d;
+    static RgbSprite[] field_d;
     static String field_a;
     static String field_b;
     static int field_e;
     static String field_c;
     static String[] field_f;
 
-    final static void a(int param0, hj[] param1) {
+    final static void a(int param0, RgbSprite[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -197,7 +197,7 @@ final class bk extends IOException {
         field_d = null;
         field_a = null;
         if (param0 != 48) {
-          field_d = (hj[]) null;
+          field_d = (RgbSprite[]) null;
         }
     }
 

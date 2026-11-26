@@ -8,10 +8,10 @@ final class m extends IntrusiveNode {
     static String field_g;
     byte[] field_h;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 256) {
-          m.a(11);
+          m.clearStaticReferences(11);
         }
     }
 

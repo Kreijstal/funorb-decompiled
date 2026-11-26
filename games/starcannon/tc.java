@@ -133,10 +133,10 @@ final class tc extends kf {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         if (param0 != -14528) {
-          tc.g(39);
+          tc.clearStaticReferences(39);
         }
     }
 

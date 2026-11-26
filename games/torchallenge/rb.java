@@ -132,7 +132,7 @@ final class rb implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -33 / ((param0 - 64) / 41);
         field_c = null;
     }

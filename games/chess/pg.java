@@ -16,7 +16,7 @@ final class pg extends IntrusiveNode {
     int field_p;
     static String field_n;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_n = null;
         field_v = null;
@@ -36,7 +36,7 @@ final class pg extends IntrusiveNode {
         try {
           an.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

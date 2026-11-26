@@ -14,9 +14,9 @@ abstract class pe {
     static td field_e;
     static int field_g;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          pe.b(96);
+          pe.clearStaticReferences(96);
           field_i = null;
           field_e = null;
           return;
@@ -40,7 +40,7 @@ abstract class pe {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void a(nh[] param0, int param1, int param2, int param3, int param4) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;

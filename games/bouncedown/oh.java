@@ -7,7 +7,7 @@ final class oh {
     static String field_f;
     static int field_a;
     static boolean field_e;
-    private tg[] field_b;
+    private RgbSprite[] field_b;
 
     public static void a(byte param0) {
         if (param0 == -59) {
@@ -72,7 +72,7 @@ final class oh {
         IterableNodeHashTable.field_g = param1;
     }
 
-    oh(tg[] param0) {
+    oh(RgbSprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

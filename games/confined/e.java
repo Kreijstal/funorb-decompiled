@@ -75,10 +75,10 @@ final class e {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 <= 52) {
-          e.a(26);
+          e.clearStaticReferences(26);
           field_d = null;
           field_c = null;
           return;

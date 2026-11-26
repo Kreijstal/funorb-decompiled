@@ -73,7 +73,7 @@ abstract class gf extends ld {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -116 / ((-50 - param0) / 43);
         field_cb = null;
         field_X = null;

@@ -3,10 +3,10 @@
  */
 final class p extends uc {
     static nd field_i;
-    static dl field_f;
+    static RgbSprite field_f;
     private int field_g;
     private jh field_e;
-    static dl field_k;
+    static RgbSprite field_k;
     static String field_h;
     static int field_j;
 

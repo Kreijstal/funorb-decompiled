@@ -10,7 +10,7 @@ final class vb implements fc {
     private tj field_n;
     private int field_a;
     private int field_b;
-    static tg[] field_m;
+    static RgbSprite[] field_m;
     private int field_h;
     private int field_i;
     static qc field_g;

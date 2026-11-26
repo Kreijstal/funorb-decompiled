@@ -178,7 +178,7 @@ final class jn extends IntrusiveNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         int var1 = 23 % ((28 - param0) / 56);
         field_r = null;

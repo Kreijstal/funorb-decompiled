@@ -8,7 +8,7 @@ final class mh {
     static String field_e;
     static int field_f;
     static int field_d;
-    static nh field_c;
+    static RgbSprite field_c;
 
     final static void a(int param0, byte param1, vb param2) {
         lh var3 = null;

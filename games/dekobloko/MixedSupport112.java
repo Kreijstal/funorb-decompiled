@@ -20,14 +20,14 @@ final class MixedSupport112 extends HashNode {
     static String stringState0489;
     int integerState0730;
 
-    public static void performAction1471(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0486 = null;
         nodeDequeState0030 = null;
         stringState0487 = null;
         rawSoundState0020 = null;
         stringState0489 = null;
         if (byteArgument1 >= -65) {
-          MixedSupport112.performAction1471((byte) -48);
+          MixedSupport112.clearStaticReferences((byte) -48);
         }
     }
 

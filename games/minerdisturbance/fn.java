@@ -329,7 +329,7 @@ final class fn extends IntrusiveNode {
         rb.field_l[sj.field_f] = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_r = null;
         int var1 = 124 % ((param0 + 18) / 45);

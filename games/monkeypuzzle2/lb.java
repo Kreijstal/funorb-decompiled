@@ -142,7 +142,7 @@ final class lb extends WidgetContainer implements ql {
         this.b((byte) -42, this.field_B);
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         field_A = null;
         field_C = null;
@@ -201,7 +201,7 @@ final class lb extends WidgetContainer implements ql {
           var4_int = param2.c(param1, (byte) -105);
           var5 = param2.a(param3, var4_int, -28459);
           if (param0) {
-            lb.e((byte) -92);
+            lb.clearStaticReferences((byte) -92);
           }
           stackIn_3_0 = wj.a((byte) 83, var5, param2, var4_int);
           return stackIn_3_0;

@@ -10,7 +10,7 @@ final class u {
     static String field_a;
     static String field_j;
     static String[] field_f;
-    static bd field_h;
+    static RgbSprite field_h;
     static String field_b;
 
     public static void clearStaticReferences(boolean param0) {
@@ -139,7 +139,7 @@ final class u {
         field_c = "Opens the pause console, which also provides you with a map.";
         field_d = new je();
         field_g = "Enter the name you'd prefer. This is the name displayed to other players.";
-        bd discarded$0 = new bd(640, 480);
+        RgbSprite discarded$0 = new RgbSprite(640, 480);
         field_a = "Create a free account to start using this feature";
         field_e = 0;
         field_b = "More eggs. I might have to do something about these.";

@@ -7,7 +7,7 @@ final class oi {
     static j field_c;
     static ob field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -48 % ((49 - param0) / 41);
         field_a = null;
         field_b = null;

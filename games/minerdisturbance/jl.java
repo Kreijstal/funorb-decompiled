@@ -29,7 +29,7 @@ final class jl extends wf {
         RuntimeException var5 = null;
         try {
           if (param0 >= -100) {
-            jl.h((byte) 32);
+            jl.releaseDeclaredStaticReferences((byte) 32);
           }
           stackIn_5_0 = (param3) ? 0 : 1;
           if (stackIn_5_0 == (this.field_Z ? 1 : 0)) {
@@ -65,7 +65,7 @@ final class jl extends wf {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_bb = null;
         if (param0 < 125) {
           return;

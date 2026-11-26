@@ -771,11 +771,11 @@ final class bg extends WidgetContainer implements u, ql, sh {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_B = null;
         field_L = null;
         if (param0 != 20660) {
-          bg.k(96);
+          bg.releaseDeclaredStaticReferences(96);
         }
     }
 

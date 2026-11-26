@@ -23,16 +23,16 @@ final class jd {
         field_h = null;
     }
 
-    final static nf[] a(int param0, int param1, int param2, int param3, boolean param4) {
-        nf[] var6 = new nf[9];
-        nf[] var5 = var6;
-        nf dupTemp$0 = wm.a(param3, true, param2);
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = wm.a(param3, true, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        nf dupTemp$1 = wm.a(param3, param4, param0);
+        RgbSprite dupTemp$1 = wm.a(param3, param4, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

@@ -4,7 +4,7 @@
 final class so {
     static long[][] field_b;
     static long[] field_a;
-    static dl field_d;
+    static RgbSprite field_d;
     static am field_g;
     static IntrusiveDeque field_h;
     static int[] field_f;
@@ -39,7 +39,7 @@ final class so {
         var4 = CrazyCrystals.field_B;
         try {
           if (!param2) {
-            field_d = (dl) null;
+            field_d = (RgbSprite) null;
           }
           if (null == param1.field_d) {
             return;

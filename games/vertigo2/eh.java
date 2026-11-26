@@ -10,7 +10,7 @@ final class eh {
     static int[] field_b;
     static int field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_b = null;
         field_d = null;

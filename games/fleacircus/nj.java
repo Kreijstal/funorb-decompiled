@@ -6,13 +6,13 @@ import java.util.*;
 final class nj {
     private int field_f;
     private ji[] field_e;
-    static dd field_b;
+    static RgbSprite field_b;
     private int field_c;
     static String field_d;
     private int field_g;
     static PlatformTask field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_b = null;
         int var1 = 29 / ((-60 - param0) / 36);
@@ -114,7 +114,7 @@ final class nj {
               break;
             }
             if (param0 != 53) {
-              field_b = (dd) null;
+              field_b = (RgbSprite) null;
             }
             var7 = new StringBuilder(var6);
             discarded$0 = var7.append(var5.substring(0, var6));
@@ -209,7 +209,7 @@ final class nj {
             var6_int = param0 * SoftwareRasterizer.field_d + param3;
             var7 = SoftwareRasterizer.field_d - param2;
             if (param5 != 1067) {
-              nj.a((byte) 101);
+              nj.clearStaticReferences((byte) 101);
             }
             for (param0 = -param4; 0 > param0; param0++) {
               for (param3 = -param2; 0 > param3; param3++) {
@@ -299,7 +299,7 @@ final class nj {
     }
 
     static {
-        field_b = new dd(540, 140);
+        field_b = new RgbSprite(540, 140);
         field_d = "Next level";
     }
 }

@@ -81,7 +81,7 @@ final class li implements fe {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_e = null;
         if (param0 == 1) {
@@ -90,7 +90,7 @@ final class li implements fe {
           field_n = null;
           return;
         }
-        li.a(117);
+        li.clearStaticReferences(117);
         field_k = null;
         field_m = null;
         field_n = null;

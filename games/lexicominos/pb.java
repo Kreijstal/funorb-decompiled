@@ -17,7 +17,7 @@ final class pb extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -48) {
           field_h = null;
           field_j = null;
@@ -25,7 +25,7 @@ final class pb extends IntrusiveNode {
           field_k = null;
           return;
         }
-        pb.a((byte) -113);
+        pb.clearStaticReferences((byte) -113);
         field_h = null;
         field_j = null;
         field_i = null;

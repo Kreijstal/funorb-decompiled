@@ -7,7 +7,7 @@ abstract class dc implements qi {
     static int field_e;
     static String field_f;
     static volatile long field_c;
-    static nh field_a;
+    static RgbSprite field_a;
     static String field_g;
 
     final static void a(PlatformTaskDispatcher param0, int param1, boolean param2, MidiPcmStream param3, byte param4, java.awt.Component param5) {

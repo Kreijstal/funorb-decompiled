@@ -1107,7 +1107,7 @@ final class sg {
         }
     }
 
-    private final void a(int param0, int param1, int param2, db param3, int param4) {
+    private final void a(int param0, int param1, int param2, RgbSprite param3, int param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -1178,7 +1178,7 @@ final class sg {
         }
     }
 
-    private final void a(db param0, int param1, int param2, int param3) {
+    private final void a(RgbSprite param0, int param1, int param2, int param3) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -1263,7 +1263,7 @@ final class sg {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        db var11 = null;
+        RgbSprite var11 = null;
         int var12 = 0;
         var12 = Lexicominos.field_L ? 1 : 0;
         try {
@@ -1388,12 +1388,12 @@ final class sg {
         int var7 = 0;
         String var8 = null;
         String var9 = null;
-        db var10 = null;
+        RgbSprite var10 = null;
         int var11 = 0;
         int var12 = 0;
         String[] var13 = null;
         String[] var14 = null;
-        db var16 = null;
+        RgbSprite var16 = null;
         int[] var19 = null;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -1751,7 +1751,7 @@ final class sg {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6_int = 0;
-        db var6 = null;
+        RgbSprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;

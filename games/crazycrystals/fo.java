@@ -4,7 +4,7 @@
 final class fo extends IntrusiveNode {
     int field_f;
     int field_l;
-    static dl[] field_g;
+    static RgbSprite[] field_g;
     int field_h;
     int field_n;
     int field_j;
@@ -190,7 +190,7 @@ final class fo extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, dl param1) {
+    final static void a(int param0, RgbSprite param1) {
         try {
           mb.field_b = param1;
           int var2_int = 84 / ((-64 - param0) / 41);

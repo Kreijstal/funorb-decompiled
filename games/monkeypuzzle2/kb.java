@@ -8,11 +8,11 @@ final class kb {
     static lg field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != 2872) {
-          kb.a(-82);
+          kb.clearStaticReferences(-82);
         }
     }
 

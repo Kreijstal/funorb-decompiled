@@ -34,7 +34,7 @@ class ko extends DualLinkNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 >= -65) {
           return;
         }

@@ -3,7 +3,7 @@
  */
 final class dk implements ca {
     static int field_c;
-    static cn field_b;
+    static RgbSprite field_b;
     static String field_e;
     static String field_a;
     static int field_d;
@@ -11,7 +11,7 @@ final class dk implements ca {
     public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 > -41) {
-          field_b = (cn) null;
+          field_b = (RgbSprite) null;
           field_e = null;
           field_b = null;
           return;
@@ -28,10 +28,10 @@ final class dk implements ca {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        cn var8 = null;
+        RgbSprite var8 = null;
         try {
           if (param0 != 34) {
-            field_b = (cn) null;
+            field_b = (RgbSprite) null;
           }
           var6_int = param1.field_q + param2;
           var7 = param3 + param1.field_v;

@@ -12,7 +12,7 @@ final class an extends nk {
     static PcmSample field_s;
     static String field_u;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_t = null;
         field_o = null;
         if (param0 > 107) {
@@ -21,7 +21,7 @@ final class an extends nk {
           field_q = null;
           return;
         }
-        an.b((byte) 58);
+        an.clearStaticReferences((byte) 58);
         field_u = null;
         field_s = null;
         field_q = null;

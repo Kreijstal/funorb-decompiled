@@ -262,7 +262,7 @@ final class lc extends lk {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         field_p = null;
         if (param0 == 3988) {
@@ -270,7 +270,7 @@ final class lc extends lk {
           field_o = null;
           return;
         }
-        lc.f(16);
+        lc.clearDeclaredStaticReferences(16);
         field_m = null;
         field_o = null;
     }

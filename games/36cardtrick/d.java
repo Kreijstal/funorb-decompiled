@@ -20,7 +20,7 @@ final class d {
     static int field_c;
     int field_g;
     private int field_t;
-    static kc[] field_u;
+    static RgbSprite[] field_u;
     int[] field_d;
     private byte[] field_v;
     private int[] field_m;
@@ -143,7 +143,7 @@ final class d {
               }
             }
             if (param1 != -4451) {
-              d.a(false);
+              d.clearStaticReferences(false);
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_t; var10Lifetime4++) {
               this.field_n[this.field_d[var10Lifetime4]] = var17.readInt((byte) 125);
@@ -241,12 +241,12 @@ final class d {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_e = null;
         field_a = null;
         if (!param0) {
-          d.a(false);
+          d.clearStaticReferences(false);
         }
         field_u = null;
     }
@@ -289,7 +289,7 @@ final class d {
     static {
         field_s = false;
         field_e = "You are not currently logged in to the<nbsp>game.";
-        field_u = new kc[11];
+        field_u = new RgbSprite[11];
         field_j = "Please enter your age in years";
     }
 }

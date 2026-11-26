@@ -18,7 +18,7 @@ final class wm {
           var1[var2] = new wj(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
         }
         if (param0 >= -44) {
-          wm.b(97);
+          wm.clearStaticReferences(97);
         }
         ok.a(2188450);
         return var1;
@@ -48,7 +48,7 @@ final class wm {
         }
     }
 
-    final static void a(int param0, int param1, dl param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -61,21 +61,21 @@ final class wm {
           SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param5);
           param2.d(param3 - 1, -1 + param1, param7);
           param2.d(-1 + param3, 1 + param1, param7);
-          SoftwareRasterizer.restoreClip(mc.field_m);
+          SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
           SoftwareRasterizer.intersectClip(1 + var9_int, 0, var10 + 1, param5 + var11);
           param2.d(param3 + 1, -1 + param1, param7);
           param2.d(param3 + 1, 1 + param1, param7);
-          SoftwareRasterizer.restoreClip(mc.field_m);
+          SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
           var10Lifetime1 = param3 + param2.field_l + param2.field_v - (param0 + param8);
           var9_intLifetime1 = -param0 + param2.field_l + (param2.field_v + param3 - param6);
           SoftwareRasterizer.intersectClip(var9_intLifetime1, -param5 + var11, var10Lifetime1, 480);
           param2.d(param3 - 1, -1 + param1, param7);
           param2.d(param3 - 1, param1 + 1, param7);
-          SoftwareRasterizer.restoreClip(mc.field_m);
+          SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
           SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, var11 - param5, 1 + var10Lifetime1, param4);
           param2.d(param3 + 1, param1 - 1, param7);
           param2.d(param3 + 1, param1 + 1, param7);
-          SoftwareRasterizer.restoreClip(mc.field_m);
+          SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "wm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -88,10 +88,10 @@ final class wm {
         this.field_b = param3;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -1) {
-          wm.b(-12);
+          wm.clearStaticReferences(-12);
         }
     }
 

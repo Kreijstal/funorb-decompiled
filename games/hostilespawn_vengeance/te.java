@@ -3,7 +3,7 @@
  */
 final class te extends vd implements nk, qk {
     static GameAppletShell field_E;
-    static bd[] field_G;
+    static RgbSprite[] field_G;
     private AccountCreationResultPanel field_H;
     private cj field_L;
     static ij field_M;

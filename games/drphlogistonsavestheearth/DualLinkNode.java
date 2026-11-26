@@ -4,7 +4,7 @@
 class DualLinkNode extends IntrusiveNode {
     long secondaryKey;
     DualLinkNode secondaryNext;
-    static nh field_r;
+    static RgbSprite field_r;
     private static int[] field_o;
     static rf field_i;
     static int[] field_j;
@@ -16,12 +16,12 @@ class DualLinkNode extends IntrusiveNode {
     static int[] field_h;
     DualLinkNode secondaryPrevious;
 
-    final static nh[] a(byte param0, int param1) {
+    final static RgbSprite[] a(byte param0, int param1) {
         if (param0 != 121) {
           field_s = (int[]) null;
         }
-        nh[] var3 = new nh[9];
-        nh[] var2 = var3;
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         var3[4] = mi.a(64, (byte) -93, param1);
         return var2;
     }

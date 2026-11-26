@@ -12,7 +12,7 @@ final class AchievementIconEntry extends IntrusiveNode {
     int field_i;
     static String field_t;
     static String field_j;
-    static cn field_q;
+    static RgbSprite field_q;
     static int field_s;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
@@ -71,7 +71,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                 if (null == cm.field_R) {
                                   var4 = param2 ? 1 : 0;
                                   tl.field_d = false;
-                                  a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, var4 != 0, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
+                                  a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, var4 != 0, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (RgbSprite[]) null, (RgbSprite[]) null);
                                   if (null != cm.field_R) {
                                     i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
                                   }

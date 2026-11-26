@@ -426,7 +426,7 @@ final class vl {
         this.field_c = this.field_c - (double)param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_s = null;
         field_o = (int[][]) null;
@@ -438,7 +438,7 @@ final class vl {
     private final void a(boolean param0) {
         this.field_c = this.field_c + this.field_j;
         if (!param0) {
-          vl.a(-40);
+          vl.clearStaticReferences(-40);
         }
         this.field_k = this.field_k + this.field_a;
     }

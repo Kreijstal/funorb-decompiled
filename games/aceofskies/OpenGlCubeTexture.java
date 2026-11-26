@@ -47,9 +47,9 @@ final class OpenGlCubeTexture extends OpenGlTexture implements HardwareCubeTextu
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          OpenGlCubeTexture.b(true);
+          OpenGlCubeTexture.clearStaticReferences(true);
           field_j = null;
           return;
         }

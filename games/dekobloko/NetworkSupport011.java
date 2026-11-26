@@ -293,7 +293,7 @@ final class NetworkSupport011 {
         }
     }
 
-    public static void performAction1266(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0431 = null;
         stringState0430 = null;
         int integerLocal1 = 81 % ((integerArgument1 + 78) / 33);

@@ -8,11 +8,11 @@ final class wg {
     static o field_d;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 > -20) {
-          wg.a((byte) -100);
+          wg.clearStaticReferences((byte) -100);
         }
     }
 

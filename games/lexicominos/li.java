@@ -8,7 +8,7 @@ final class li extends bc {
     static int field_S;
     private int field_M;
     private String field_O;
-    private db field_Q;
+    private RgbSprite field_Q;
     static String field_P;
 
     final boolean a(byte param0, w param1) {
@@ -112,10 +112,10 @@ final class li extends bc {
         int var10;
         int var11;
         int var12;
-        db var15;
-        db var16;
-        db var17;
-        db var18;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
         int var11Lifetime1;
         int var12Lifetime1;
         sc var6Lifetime1;
@@ -144,15 +144,15 @@ final class li extends bc {
           var11 = var18.field_r << 1;
           var12 = var18.field_x << 1;
           if (null == this.field_Q) {
-            this.field_Q = new db(var11, var12);
+            this.field_Q = new RgbSprite(var11, var12);
             de.a(this.field_Q, 6);
           } else {
             if (var11 > this.field_Q.field_p) {
-              this.field_Q = new db(var11, var12);
+              this.field_Q = new RgbSprite(var11, var12);
               de.a(this.field_Q, 6);
             } else {
               if (var12 > this.field_Q.field_u) {
-                this.field_Q = new db(var11, var12);
+                this.field_Q = new RgbSprite(var11, var12);
                 de.a(this.field_Q, 6);
               } else {
                 de.a(this.field_Q, 6);
@@ -181,15 +181,15 @@ final class li extends bc {
         var11Lifetime1 = var17.field_r << 1;
         var12Lifetime1 = var17.field_x << 1;
         if (null == this.field_Q) {
-          this.field_Q = new db(var11Lifetime1, var12Lifetime1);
+          this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
           de.a(this.field_Q, 6);
         } else {
           if (var11Lifetime1 > this.field_Q.field_p) {
-            this.field_Q = new db(var11Lifetime1, var12Lifetime1);
+            this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
             de.a(this.field_Q, 6);
           } else {
             if (var12Lifetime1 > this.field_Q.field_u) {
-              this.field_Q = new db(var11Lifetime1, var12Lifetime1);
+              this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
               de.a(this.field_Q, 6);
             } else {
               de.a(this.field_Q, 6);

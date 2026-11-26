@@ -119,12 +119,12 @@ final class wm extends hf {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_fb = null;
         field_jb = null;
         field_gb = null;
         if (param0 != -30002) {
-          wm.n(103);
+          wm.releaseDeclaredStaticReferences(103);
         }
     }
 
@@ -185,14 +185,14 @@ final class wm extends hf {
         }
     }
 
-    final static nf a(int param0, boolean param1, int param2) {
+    final static RgbSprite a(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = Confined.field_J ? 1 : 0;
         if (!param1) {
           wm.a(-107, false, -49);
         }
-        nf var6 = new nf(param0, param0);
-        nf var3 = var6;
+        RgbSprite var6 = new RgbSprite(param0, param0);
+        RgbSprite var3 = var6;
         for (var4 = 0; var4 < var3.field_z.length; var4++) {
           var6.field_z[var4] = param2;
         }

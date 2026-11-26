@@ -43,7 +43,7 @@ final class p {
         rf.a(true);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 22 / ((param0 - 46) / 53);
         field_a = null;
     }

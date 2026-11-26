@@ -48,7 +48,7 @@ final class vn extends ue {
         int var8;
         int var9;
         int var10;
-        dl var11;
+        RgbSprite var11;
         int var12;
         String var13;
         int var14;
@@ -58,8 +58,8 @@ final class vn extends ue {
         int var10Lifetime1;
         int var10Lifetime2;
         int var9Lifetime1Lifetime1;
-        dl var11Lifetime1;
-        dl var11Lifetime2;
+        RgbSprite var11Lifetime1;
+        RgbSprite var11Lifetime2;
         var16 = CrazyCrystals.field_B;
         this.field_g.e(41);
         if (param0 != 8) {

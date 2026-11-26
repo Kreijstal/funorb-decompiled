@@ -42,9 +42,9 @@ abstract class kc extends qd {
         this.field_I = 0;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseDeclaredStaticReferences(boolean param0) {
         if (param0) {
-          kc.a(false);
+          kc.releaseDeclaredStaticReferences(false);
         }
         field_P = null;
         field_U = null;
@@ -173,7 +173,7 @@ abstract class kc extends qd {
         }
         this.field_R = this.field_f;
         if (param2 != 120) {
-          kc.a(false);
+          kc.releaseDeclaredStaticReferences(false);
         }
         this.field_L = param1;
         this.field_I = 0;

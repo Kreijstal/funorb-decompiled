@@ -9,24 +9,24 @@ abstract class ue {
 
     abstract boolean a(int param0);
 
-    final static dl[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 9) {
-          return (dl[]) null;
+          return (RgbSprite[]) null;
         }
-        dl[] var6 = new dl[9];
-        dl[] var5 = var6;
-        dl dupTemp$0 = mc.a(param2, -65, param1);
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = SpriteGeometry.a(param2, -65, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        dl dupTemp$1 = mc.a(param2, -34, param4);
+        RgbSprite dupTemp$1 = SpriteGeometry.a(param2, -34, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 != 0) {
-          var6[4] = mc.a(64, -55, param3);
+          var6[4] = SpriteGeometry.a(64, -55, param3);
         }
         return var5;
     }

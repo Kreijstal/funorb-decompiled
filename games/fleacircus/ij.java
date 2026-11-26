@@ -147,7 +147,7 @@ final class ij extends gj implements da {
     final static void a(int param0, String param1, String param2) {
         try {
           if (param0 != -1) {
-            ij.e((byte) 47);
+            ij.clearDeclaredStaticReferences((byte) 47);
           }
           if (ok.field_x != null) {
             ok.field_x.n(-22645);
@@ -159,11 +159,11 @@ final class ij extends gj implements da {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_H = null;
         field_F = null;
         if (param0 != -20) {
-          ij.e((byte) -66);
+          ij.clearDeclaredStaticReferences((byte) -66);
         }
         field_J = null;
     }
@@ -187,7 +187,7 @@ final class ij extends gj implements da {
             this.field_G.a(-92);
           }
           if (param3 != 248) {
-            ij.e((byte) -83);
+            ij.clearDeclaredStaticReferences((byte) -83);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

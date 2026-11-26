@@ -6,11 +6,11 @@ final class cm {
     static String[] field_b;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 > -113) {
-          cm.b(40);
+          cm.clearStaticReferences(40);
           field_c = null;
           return;
         }
@@ -23,7 +23,7 @@ final class cm {
         }
         MouseInputHandler.a(112, 4, false);
         if (param0 != -15544) {
-          cm.b(44);
+          cm.clearStaticReferences(44);
         }
     }
 

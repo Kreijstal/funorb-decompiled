@@ -3,24 +3,24 @@
  */
 final class mg {
     static String field_d;
-    static bd field_f;
+    static RgbSprite field_f;
     static String[] field_a;
-    static bd field_b;
+    static RgbSprite field_b;
     static int[] field_e;
     static int field_c;
 
-    final static bd[] a(ResourceArchive param0, int param1, int param2, boolean param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, int param2, boolean param3) {
         RuntimeException var4 = null;
-        bd[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        bd[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            stackIn_2_0 = (bd[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           if (rl.a(2884, param0, param1, param2)) {
@@ -28,7 +28,7 @@ final class mg {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (bd[]) (stackIn_5_0);
+          return (RgbSprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

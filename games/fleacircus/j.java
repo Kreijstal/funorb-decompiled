@@ -103,7 +103,7 @@ final class j extends ne {
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
-        dd var17 = null;
+        RgbSprite var17 = null;
         bi[] var5 = null;
         bi[][] var6 = null;
         int[][] var19 = null;
@@ -111,10 +111,10 @@ final class j extends ne {
         int[][] var7 = null;
         bi[] var14 = null;
         int var11_int = 0;
-        dd var15 = null;
-        dd var18 = null;
-        dd var11 = null;
-        dd var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = fleas.field_A ? 1 : 0;
@@ -132,7 +132,7 @@ final class j extends ne {
           nb.field_c = (fa) ((Object) fi.a(param0, param1, "commonui", "arezzo12", (byte) 82));
           ug.field_e = (fa) ((Object) fi.a(param0, param1, "commonui", "arezzo14", (byte) 82));
           rg.field_o = (fa) ((Object) fi.a(param0, param1, "commonui", "arezzo14bold", (byte) 82));
-          var17 = new dd(param3.a(0, "", "button.gif"), (java.awt.Component) ((Object) ol.field_e));
+          var17 = new RgbSprite(param3.a(0, "", "button.gif"), (java.awt.Component) ((Object) ol.field_e));
           hm.a("dropdown", param0, (byte) -42, "commonui");
           var5 = fb.a(param0, (byte) 45, "commonui", "screen_options");
           k.field_c = new bi[4];
@@ -161,18 +161,18 @@ final class j extends ne {
           we.a(-111);
           var17.f();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
-          var15 = new dd(var9Lifetime1, var9Lifetime1);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.f();
           var17.f(0, 0);
-          var11 = new dd(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.f();
           var17.f(-var17.field_w + var9Lifetime1, 0);
-          var12 = new dd(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
+          var12 = new RgbSprite(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
           var12.f();
           var17.f(-var9Lifetime1, 0);
           ia.a(-125);
-          ng.field_h = new dd[]{var15, var12, var11};
+          ng.field_h = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "j.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

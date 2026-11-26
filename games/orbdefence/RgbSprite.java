@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hj extends tk {
+class RgbSprite extends SpriteGeometry {
     int[] field_v;
 
     void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -668,7 +668,7 @@ class hj extends tk {
           if (var5 <= 0) {
             return;
           }
-          hj.blitUnmasked(SoftwareRasterizer.field_b, this.field_v, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitUnmasked(SoftwareRasterizer.field_b, this.field_v, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -824,9 +824,9 @@ class hj extends tk {
         }
     }
 
-    final hj f() {
+    final RgbSprite f() {
         int var3 = 0;
-        hj var1 = new hj(this.field_o, this.field_k);
+        RgbSprite var1 = new RgbSprite(this.field_o, this.field_k);
         var1.field_s = this.field_s;
         var1.field_t = this.field_t;
         var1.field_p = this.field_p;
@@ -929,7 +929,7 @@ class hj extends tk {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          hj.blitColorKeyScaled(SoftwareRasterizer.field_b, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          RgbSprite.blitColorKeyScaled(SoftwareRasterizer.field_b, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1064,7 +1064,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.blitGrayModulated(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayModulated(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1111,9 +1111,9 @@ class hj extends tk {
             return;
           }
           if (param2 == 256) {
-            hj.blitAdditive(0, 0, 0, SoftwareRasterizer.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
+            RgbSprite.blitAdditive(0, 0, 0, SoftwareRasterizer.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            hj.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_b, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1318,7 +1318,7 @@ class hj extends tk {
         int var4 = param0 + (this.field_o >> 1) > SoftwareRasterizer.field_e ? SoftwareRasterizer.field_e - param0 << 1 : this.field_o;
         int var5 = param1 < SoftwareRasterizer.field_d ? SoftwareRasterizer.field_d - param1 << 1 : 0;
         int var6 = param1 + (this.field_k >> 1) > SoftwareRasterizer.field_a ? SoftwareRasterizer.field_a - param1 << 1 : this.field_k;
-        hj.blitHalfSize(this.field_v, var5 * this.field_o + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_o << 1) - (var4 - var3) + (this.field_o & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_o, var4 - var3 >> 1, var6 - var5 >> 1);
+        RgbSprite.blitHalfSize(this.field_v, var5 * this.field_o + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_o << 1) - (var4 - var3) + (this.field_o & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_o, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     void d(int param0, int param1, int param2, int param3, int param4) {
@@ -1388,7 +1388,7 @@ class hj extends tk {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          hj.blitColorKeyScaledAlpha(SoftwareRasterizer.field_b, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          RgbSprite.blitColorKeyScaledAlpha(SoftwareRasterizer.field_b, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1434,7 +1434,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.blitColorKeyAlpha(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitColorKeyAlpha(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1502,7 +1502,7 @@ class hj extends tk {
           if (var5 <= 0) {
             return;
           }
-          hj.blitColorKey(SoftwareRasterizer.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitColorKey(SoftwareRasterizer.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2158,7 +2158,7 @@ class hj extends tk {
         this.field_s = var3Lifetime3;
     }
 
-    hj(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    RgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_s = param0;
         this.field_t = param1;
         this.field_p = param2;
@@ -2209,7 +2209,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.blitSilhouette(SoftwareRasterizer.field_b, this.field_v, param2, var5, var4, var7, var6, var8, var9);
+          RgbSprite.blitSilhouette(SoftwareRasterizer.field_b, this.field_v, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -2255,15 +2255,15 @@ class hj extends tk {
           if (var5 <= 0) {
             return;
           }
-          hj.blitMultiply(0, SoftwareRasterizer.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitMultiply(0, SoftwareRasterizer.field_b, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final hj b() {
+    final RgbSprite b() {
         int var2 = 0;
         int var3 = 0;
-        hj var1 = new hj(this.field_o, this.field_k);
+        RgbSprite var1 = new RgbSprite(this.field_o, this.field_k);
         var1.field_s = this.field_s;
         var1.field_t = this.field_t;
         var1.field_p = this.field_s - this.field_o - this.field_p;
@@ -2481,9 +2481,9 @@ class hj extends tk {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            hj.blitAdditiveScaled(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            RgbSprite.blitAdditiveScaled(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            hj.blitAdditiveScaledIntensity(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            RgbSprite.blitAdditiveScaledIntensity(0, 0, 0, var8, this.field_v, SoftwareRasterizer.field_b, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -2530,7 +2530,7 @@ class hj extends tk {
           if (var6 <= 0) {
             return;
           }
-          hj.blitGrayTinted(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayTinted(SoftwareRasterizer.field_b, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2691,7 +2691,7 @@ class hj extends tk {
         }
     }
 
-    hj(int param0, int param1) {
+    RgbSprite(int param0, int param1) {
         this.field_v = new int[param0 * param1];
         this.field_s = param0;
         this.field_o = param0;
@@ -2701,7 +2701,7 @@ class hj extends tk {
         this.field_p = 0;
     }
 
-    hj(byte[] param0, java.awt.Component param1) {
+    RgbSprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

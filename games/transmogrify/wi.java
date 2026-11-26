@@ -28,7 +28,7 @@ final class wi implements WidgetRenderer {
         return (int)(1000000000L / ImageProducerRasterBuffer.field_j);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         int var1 = -57 % ((param0 - 3) / 47);

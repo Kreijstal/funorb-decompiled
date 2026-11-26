@@ -118,7 +118,7 @@ final class pd extends IntrusiveNode {
     pd() {
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 86 % ((param0 + 51) / 42);
         field_l = null;
     }

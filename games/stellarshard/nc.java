@@ -84,11 +84,11 @@ final class nc extends UiWidget {
         this.a(15035);
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_y = null;
         field_F = null;
         if (!param0) {
-          nc.e(true);
+          nc.clearStaticReferences(true);
         }
     }
 

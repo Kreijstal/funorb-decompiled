@@ -45,11 +45,11 @@ final class ck extends r {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         field_q = null;
         if (param0 != 2) {
-          ck.c((byte) 106);
+          ck.clearStaticReferences((byte) 106);
         }
     }
 
@@ -131,7 +131,7 @@ final class ck extends r {
               var3 = (String) (eb.a("getcookies", param2, -250));
               var4 = m.a(';', 121, var3);
               if (param0 != -5174) {
-                ck.c((byte) 90);
+                ck.clearStaticReferences((byte) 90);
               }
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

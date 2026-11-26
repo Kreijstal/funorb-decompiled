@@ -17,7 +17,7 @@ final class pe extends v {
         this.field_cb = true;
         this.field_bb.field_L = false;
         if (param0 != 100) {
-          pe.m(118);
+          pe.releaseDeclaredStaticReferences(118);
         }
     }
 
@@ -40,7 +40,7 @@ final class pe extends v {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_gb = null;
         field_db = null;
         if (param0 != 4210752) {

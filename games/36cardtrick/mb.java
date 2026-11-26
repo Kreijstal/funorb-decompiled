@@ -21,7 +21,7 @@ final class mb {
         }
     }
 
-    final static void a(int param0, int param1, kc[] param2, boolean param3, int param4, int param5, kc[] param6, int param7, int param8, int param9, int param10, ee param11) {
+    final static void a(int param0, int param1, RgbSprite[] param2, boolean param3, int param4, int param5, RgbSprite[] param6, int param7, int param8, int param9, int param10, ee param11) {
         try {
           we.a(param5, param0, param0, param7, param2, param8, param10, param1, param9, param11, param6, param10, true, param3, param11);
           if (param4 != 9414) {

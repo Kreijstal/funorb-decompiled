@@ -11,9 +11,9 @@ final class hf {
         rc.a(param0 - 25541, param0);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 4) {
-          hf.b(-106);
+          hf.clearStaticReferences(-106);
           field_c = null;
           field_b = null;
           return;

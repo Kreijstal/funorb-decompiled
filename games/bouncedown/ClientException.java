@@ -10,14 +10,14 @@ final class ClientException extends RuntimeException {
     static String[] field_g;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_g = null;
         field_d = null;
         field_f = null;
         field_c = null;
         if (param0 != 72) {
-          ClientException.a((byte) 101);
+          ClientException.clearStaticReferences((byte) 101);
         }
     }
 

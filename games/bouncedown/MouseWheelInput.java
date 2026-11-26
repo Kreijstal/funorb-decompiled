@@ -16,9 +16,9 @@ abstract class MouseWheelInput {
         return stackIn_6_0;
     }
 
-    final static tg[] a(int param0, int param1, gk param2, boolean param3) {
+    final static RgbSprite[] a(int param0, int param1, gk param2, boolean param3) {
         RuntimeException var4 = null;
-        tg[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

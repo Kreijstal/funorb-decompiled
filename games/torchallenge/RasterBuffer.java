@@ -13,14 +13,14 @@ abstract class RasterBuffer {
     int[] pixels;
     java.awt.Image field_e;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         field_a = null;
         field_b = null;
         helpTopicTitles = null;
         if (param0 != -15721) {
-          RasterBuffer.b(-127);
+          RasterBuffer.clearStaticReferences(-127);
         }
     }
 

@@ -19,11 +19,11 @@ final class q extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_h = null;
         if (param0 < 104) {
-          q.b((byte) -41);
+          q.clearStaticReferences((byte) -41);
         }
     }
 

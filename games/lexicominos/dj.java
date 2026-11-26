@@ -6,7 +6,7 @@ final class dj {
     static int field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -91 / ((param0 + 10) / 34);
         field_c = null;
         field_a = null;

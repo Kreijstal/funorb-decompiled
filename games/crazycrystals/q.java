@@ -4,12 +4,12 @@
 final class q {
     static String field_d;
     static vh[] field_a;
-    static dl[] field_b;
+    static RgbSprite[] field_b;
     static String[] field_c;
 
     final static void a(boolean param0) {
         if (param0) {
-          field_b = (dl[]) null;
+          field_b = (RgbSprite[]) null;
           if (ph.field_E != null) {
             fq.a(-75, ph.field_E);
             ph.field_E.exitFullscreen(te.field_a, (byte) -92);
@@ -26,13 +26,13 @@ final class q {
         ph.field_E = null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;
         field_c = null;
         if (param0 != -3591) {
-          q.a(18);
+          q.clearStaticReferences(18);
         }
     }
 

@@ -3,13 +3,13 @@
  */
 final class bh {
     static String[] field_g;
-    static bd[] field_a;
+    static RgbSprite[] field_a;
     static int field_d;
     static nd field_c;
     static int field_e;
     private DualLinkNode field_f;
     private DualLinkNode field_i;
-    static bd field_h;
+    static RgbSprite field_h;
     static int[] field_j;
     static int field_b;
 

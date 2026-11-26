@@ -86,16 +86,16 @@ final class af {
         }
     }
 
-    final static hj a(int param0, byte param1, int param2) {
+    final static RgbSprite a(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = OrbDefence.field_D ? 1 : 0;
-        hj var6 = new hj(param0, param0);
-        hj var3 = var6;
+        RgbSprite var6 = new RgbSprite(param0, param0);
+        RgbSprite var3 = var6;
         for (var4 = 0; var4 < var3.field_v.length; var4++) {
           var6.field_v[var4] = param2;
         }
         if (param1 > -21) {
-          return (hj) null;
+          return (RgbSprite) null;
         }
         return var3;
     }

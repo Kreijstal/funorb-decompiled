@@ -128,7 +128,7 @@ abstract class al extends ei {
         super.j(param0);
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 > -1) {
           field_bb = (int[]) null;
           field_bb = null;

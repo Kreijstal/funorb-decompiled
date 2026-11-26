@@ -4,10 +4,10 @@
 class ih extends fd {
     private int field_W;
     private boolean field_x;
-    private tg[] field_I;
+    private RgbSprite[] field_I;
     private boolean field_N;
-    private tg field_t;
-    private tg[] field_C;
+    private RgbSprite field_t;
+    private RgbSprite[] field_C;
     private int field_H;
     private int field_G;
     private boolean field_eb;
@@ -16,12 +16,12 @@ class ih extends fd {
     static String field_P;
     private int field_M;
     private int field_hb;
-    private tg[] field_S;
+    private RgbSprite[] field_S;
     static int[] field_db;
-    private tg field_F;
-    private tg[] field_ab;
+    private RgbSprite field_F;
+    private RgbSprite[] field_ab;
     private int field_r;
-    private tg[] field_U;
+    private RgbSprite[] field_U;
     private int field_E;
     static oj field_Q;
     private int field_y;
@@ -32,7 +32,7 @@ class ih extends fd {
     private String field_fb;
     static int[] field_V;
     private int field_J;
-    private tg field_Z;
+    private RgbSprite field_Z;
     static gk field_p;
     private boolean field_q;
     private boolean field_Y;
@@ -43,20 +43,20 @@ class ih extends fd {
     private int field_K;
     private boolean field_bb;
     private int field_s;
-    static tg[] field_T;
+    static RgbSprite[] field_T;
     private int field_v;
-    private tg field_gb;
+    private RgbSprite field_gb;
     private tj field_u;
-    private tg field_cb;
+    private RgbSprite field_cb;
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_T = null;
         field_Q = null;
         field_V = null;
         field_P = null;
         field_p = null;
         if (param0 != -58) {
-          ih.d((byte) -127);
+          ih.clearDeclaredStaticReferences((byte) -127);
         }
         field_w = null;
         field_db = null;
@@ -138,7 +138,7 @@ class ih extends fd {
                   }
                 }
                 if (param2) {
-                  ih.d((byte) -38);
+                  ih.clearDeclaredStaticReferences((byte) -38);
                 }
                 if (var5 <= 0) {
                   return null;

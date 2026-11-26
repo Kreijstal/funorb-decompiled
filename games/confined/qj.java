@@ -26,7 +26,7 @@ final class qj {
         field_b = null;
     }
 
-    final static void a(nf[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -38,7 +38,7 @@ final class qj {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        nf[] var12 = null;
+        RgbSprite[] var12 = null;
         var11 = Confined.field_J ? 1 : 0;
         try {
           if (param0 != null &&
@@ -50,8 +50,8 @@ final class qj {
             param0[2].b(-var7 + param4 + param2, param1, param5);
             SoftwareRasterizer.saveClip(hj.field_l);
             if (param3 <= 43) {
-              var12 = (nf[]) null;
-              qj.a((nf[]) null, 54, 102, 49, -15, -58);
+              var12 = (RgbSprite[]) null;
+              qj.a((RgbSprite[]) null, 54, 102, 49, -15, -58);
             }
             SoftwareRasterizer.intersectClip(param4 + var6_int, param1, -var7 + param2 + param4, param1 + param0[1].field_x);
             var9 = var6_int + param4;

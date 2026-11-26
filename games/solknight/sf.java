@@ -45,7 +45,7 @@ final class sf {
         return var4;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = -18 / ((param0 + 23) / 53);
         field_i = null;

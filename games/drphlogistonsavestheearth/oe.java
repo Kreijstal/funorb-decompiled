@@ -23,7 +23,7 @@ final class oe {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -112 % ((-73 - param0) / 51);
         field_c = null;
         field_a = null;

@@ -9,7 +9,7 @@ abstract class hd {
     int field_j;
     int field_i;
     static IntrusiveDeque field_l;
-    static km field_f;
+    static RgbSprite field_f;
     static String field_e;
     static ci field_c;
     static int[][] field_n;
@@ -17,7 +17,7 @@ abstract class hd {
     static ta field_g;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_c = null;
         field_g = null;
@@ -111,7 +111,7 @@ abstract class hd {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -119,6 +119,6 @@ abstract class hd {
 
     static {
         field_l = new IntrusiveDeque();
-        field_f = new km(640, 480);
+        field_f = new RgbSprite(640, 480);
     }
 }

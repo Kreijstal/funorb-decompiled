@@ -8,7 +8,7 @@ final class ve extends mg {
     static long[] field_w;
     static int[] field_y;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_A = null;
         field_y = null;
         int var1 = -95 / ((-34 - param0) / 38);
@@ -34,7 +34,7 @@ final class ve extends mg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -775) {
-            ve.a((byte) 94);
+            ve.clearStaticReferences((byte) 94);
           }
           stackIn_3_0 = SocketConnector.a('*', param0.field_s.length(), 12663);
           return stackIn_3_0;

@@ -140,7 +140,7 @@ class si extends al implements n {
             return true;
           }
           if (param2 != 30) {
-            si.n(16);
+            si.discardDeclaredStaticReferences(16);
           }
           stackIn_6_0 = super.a(param0, param1, 30, param3);
           return stackIn_6_0;
@@ -165,7 +165,7 @@ class si extends al implements n {
         }
     }
 
-    public static void n(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_ob = null;
         field_hb = null;
         field_nb = null;
@@ -218,7 +218,7 @@ class si extends al implements n {
     final static void a(String param0, int param1) {
         try {
           if (param1 != 3) {
-            si.n(13);
+            si.discardDeclaredStaticReferences(13);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "si.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

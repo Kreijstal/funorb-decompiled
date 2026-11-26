@@ -17,7 +17,7 @@ abstract class r extends gg implements nk {
         }
     }
 
-    final static void a(dd param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         try {
           we.a(-68);
           if (param1 != 45) {
@@ -33,8 +33,8 @@ abstract class r extends gg implements nk {
         field_k = null;
         field_j = null;
         if (param0 != 0) {
-          dd var2 = (dd) null;
-          r.a((dd) null, -96);
+          RgbSprite var2 = (RgbSprite) null;
+          r.a((RgbSprite) null, -96);
         }
     }
 
@@ -68,7 +68,7 @@ abstract class r extends gg implements nk {
 
     final static kc a(boolean param0, long param1, byte param2, String param3, String param4) {
         RuntimeException var6 = null;
-        dd var7 = null;
+        RgbSprite var7 = null;
         rg stackIn_5_0 = null;
         rj stackIn_7_0 = null;
         ef stackIn_11_0 = null;
@@ -89,8 +89,8 @@ abstract class r extends gg implements nk {
             return (kc) ((Object) stackIn_5_0);
           }
           if (param2 != 84) {
-            var7 = (dd) null;
-            r.a((dd) null, -52);
+            var7 = (RgbSprite) null;
+            r.a((RgbSprite) null, -52);
           }
           stackIn_11_0 = new ef(param1, param4);
           return (kc) ((Object) stackIn_11_0);

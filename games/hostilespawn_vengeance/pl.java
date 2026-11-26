@@ -4,16 +4,16 @@
 final class pl {
     static nd field_q;
     byte[] field_m;
-    static bd field_p;
+    static RgbSprite field_p;
     int field_d;
-    static bd field_j;
+    static RgbSprite field_j;
     int field_c;
     int field_h;
     byte[] field_n;
     int field_b;
     int field_g;
     int field_o;
-    static bd field_f;
+    static RgbSprite field_f;
     int field_e;
     static boolean field_l;
     static boolean field_k;
@@ -33,12 +33,12 @@ final class pl {
     }
 
     final static void a(int param0) {
-        bd var1 = null;
-        bd var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var1 = new bd(540, 140);
+          var1 = new RgbSprite(540, 140);
           sb.a(var1, -118);
           ge.b();
           SoftwareRasterizer.clearRaster();
@@ -173,7 +173,7 @@ final class pl {
               !rg.a((byte) -109, var4.charAt(-1 + var4.length()))) {
               var5 = 0;
               if (param1 != 12864) {
-                field_f = (bd) null;
+                field_f = (RgbSprite) null;
               }
               for (var6 = 0; param2.length() > var6; var6++) {
                 var7 = param2.charAt(var6);

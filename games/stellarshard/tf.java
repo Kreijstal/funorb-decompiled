@@ -14,12 +14,12 @@ abstract class tf {
           kl.a(true);
           return;
         }
-        tf.b(-92);
+        tf.clearStaticReferences(-92);
         eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), rg.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
         kl.a(true);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -42,7 +42,7 @@ abstract class tf {
             return null;
           }
           if (param0 != 2) {
-            tf.b(-31);
+            tf.clearStaticReferences(-31);
           }
           if (!(param2 instanceof byte[])) {
             if (!(param2 instanceof ByteStorage)) {

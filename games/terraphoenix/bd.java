@@ -368,7 +368,7 @@ final class bd {
         this.field_n = -2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_m = null;
         field_j = null;

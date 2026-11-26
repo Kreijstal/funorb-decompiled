@@ -79,7 +79,7 @@ final class gj {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 67 / ((param0 - 10) / 44);
         levels = null;
         field_a = null;

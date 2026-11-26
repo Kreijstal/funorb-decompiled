@@ -3,7 +3,7 @@
  */
 final class va extends tj {
     private rl field_n;
-    static db field_m;
+    static RgbSprite field_m;
     private rl field_o;
     static String field_l;
 

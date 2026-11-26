@@ -4,7 +4,7 @@
 final class ui {
     static String field_d;
     static jj field_c;
-    static nf field_a;
+    static RgbSprite field_a;
     static String field_e;
     static String field_b;
 

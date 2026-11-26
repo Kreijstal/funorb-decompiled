@@ -7,7 +7,7 @@ final class og {
     static int[] field_b;
     double field_f;
     double field_a;
-    static bd field_d;
+    static RgbSprite field_d;
 
     final void a(int param0, byte param1, double param2) {
         param2 = param2 * 0.02454369260617026;

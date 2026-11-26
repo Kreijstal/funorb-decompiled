@@ -4,7 +4,7 @@
 abstract class ah extends ee {
     static String field_R;
     ee field_Y;
-    static nf[] field_T;
+    static RgbSprite[] field_T;
     static int field_Q;
     static int field_U;
     static String field_Z;

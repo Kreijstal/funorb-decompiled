@@ -17,7 +17,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private int[] field_u;
     private int field_x;
     private int field_r;
-    static hj field_j;
+    static RgbSprite field_j;
     private MidiPcmStream field_v;
 
     final static byte[] a(int param0, String param1) {
@@ -29,7 +29,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 15136) {
-            field_j = (hj) null;
+            field_j = (RgbSprite) null;
           }
           stackIn_3_0 = ak.field_y.a(param1, 1, "");
           return stackIn_3_0;
@@ -88,7 +88,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 break;
               }
               var7_ref_String = param2.substring(var6_int + 2, var5);
-              if (!tk.a(10, (CharSequence) ((Object) var7_ref_String))) {
+              if (!SpriteGeometry.a(10, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -125,7 +125,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               break;
             }
             var9 = param2.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!tk.a(10, (CharSequence) ((Object) var9))) {
+            if (!SpriteGeometry.a(10, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -163,7 +163,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     public static void clearStaticReferences(boolean param0) {
         field_j = null;
         if (!param0) {
-          field_j = (hj) null;
+          field_j = (RgbSprite) null;
         }
         field_k = null;
         field_q = null;
@@ -173,11 +173,11 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         return 2;
     }
 
-    final static hj[] a(String param0, ki param1, String param2, int param3) {
+    final static RgbSprite[] a(String param0, ki param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hj[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

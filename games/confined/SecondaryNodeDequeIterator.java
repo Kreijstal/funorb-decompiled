@@ -175,7 +175,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return this.deque.sentinel != this.nextNode;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -25 / ((param0 - 10) / 55);
         field_e = null;

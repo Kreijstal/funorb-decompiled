@@ -187,7 +187,7 @@ abstract class bi extends mk {
 
     void d(byte param0) {
         if (param0 != -2) {
-          bi.o(-106);
+          bi.clearDeclaredStaticReferences(-106);
         }
     }
 
@@ -199,7 +199,7 @@ abstract class bi extends mk {
         return super.a((byte) -97);
     }
 
-    public static void o(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_O = null;
         int var1 = 38 % ((29 - param0) / 45);
     }

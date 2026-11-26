@@ -16,7 +16,7 @@ abstract class hf extends sj {
     static ad field_wb;
     static ed field_nb;
     static eh field_ib;
-    static cn field_Ab;
+    static RgbSprite field_Ab;
     private int field_vb;
     static int[] field_yb;
     static String field_zb;
@@ -174,7 +174,7 @@ abstract class hf extends sj {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_pb = null;
         field_Ab = null;
         field_zb = null;
@@ -186,7 +186,7 @@ abstract class hf extends sj {
         field_ob = null;
         field_ib = null;
         if (param0 != 0) {
-          field_Ab = (cn) null;
+          field_Ab = (RgbSprite) null;
         }
     }
 

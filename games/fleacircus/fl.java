@@ -6,7 +6,7 @@ final class fl {
     private int[] field_a;
     static ak field_e;
     static boolean field_f;
-    static dd field_b;
+    static RgbSprite field_b;
     static char[][] field_c;
 
     final static void a(boolean param0, boolean param1, String param2, int param3) {

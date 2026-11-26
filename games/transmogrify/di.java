@@ -115,11 +115,11 @@ final class di {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_a = null;
         if (param0 <= 3) {
-          di.b(97);
+          di.clearStaticReferences(97);
         }
     }
 

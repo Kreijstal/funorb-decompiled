@@ -44,7 +44,7 @@ abstract class oh extends pb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_d = null;
         if (param0 != 32) {
           field_d = (qk) null;
@@ -73,7 +73,7 @@ abstract class oh extends pb {
         if (param1 == 108) {
           return false;
         }
-        oh.b(102);
+        oh.clearDeclaredStaticReferences(102);
         return false;
     }
 

@@ -5,10 +5,10 @@ final class og {
     static Sprite[] field_b;
     static Sprite[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != 16) {
-          og.a((byte) 115);
+          og.clearStaticReferences((byte) 115);
           field_a = null;
           return;
         }

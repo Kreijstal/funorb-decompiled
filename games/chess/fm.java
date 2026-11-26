@@ -74,7 +74,7 @@ final class fm extends kn {
         try {
           var3.a(0, (mf) (this));
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "fm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "fm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -155,11 +155,11 @@ final class fm extends kn {
           param0.field_pb = 0;
           param0.field_V = 0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "fm.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "fm.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_T = null;
         field_O = null;
         field_R = null;

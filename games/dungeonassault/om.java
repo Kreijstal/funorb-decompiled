@@ -75,7 +75,7 @@ final class om {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_e = null;
         field_b = null;
@@ -101,7 +101,7 @@ final class om {
           rj.field_s = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_price");
           var1_int = -103 / ((param0 - 15) / 37);
           sh.field_a = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_logo");
-          g.field_Gb = new cn[4];
+          g.field_Gb = new RgbSprite[4];
           g.field_Gb[0] = rc.a("", sb.field_a, "mb_da_thumbs_01.jpg", (byte) 71);
           g.field_Gb[1] = rc.a("", sb.field_a, "mb_da_thumbs_02.jpg", (byte) 71);
           g.field_Gb[2] = rc.a("", sb.field_a, "mb_da_thumbs_06.jpg", (byte) 71);

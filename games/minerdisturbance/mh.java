@@ -103,7 +103,7 @@ final class mh implements uj {
         return "Make Ore Silver";
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = (je[][]) null;
         field_d = null;

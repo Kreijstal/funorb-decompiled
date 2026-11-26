@@ -56,11 +56,11 @@ final class fg extends cg {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_m = null;
         field_n = null;
         if (!param0) {
-          fg.c(true);
+          fg.clearStaticReferences(true);
           field_j = null;
           return;
         }

@@ -12,10 +12,10 @@ final class hq {
         return param3 + (param2 - param3) * param0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         levelRingSpriteData = null;
         if (param0 != 2483) {
-          hq.a(-91);
+          hq.clearStaticReferences(-91);
         }
     }
 

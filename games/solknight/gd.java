@@ -17,7 +17,7 @@ final class gd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -25 / ((24 - param0) / 60);
         field_b = null;

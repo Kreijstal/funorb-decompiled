@@ -6,8 +6,8 @@ final class wg extends pk {
     private int field_u;
     private rk field_n;
     private boolean field_z;
-    private km field_o;
-    private km field_t;
+    private RgbSprite field_o;
+    private RgbSprite field_t;
     private rk field_m;
     private boolean field_v;
     static hg field_r;
@@ -63,7 +63,7 @@ final class wg extends pk {
           }
           kn.field_L = true;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "wg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class wg extends pk {
         }
     }
 
-    wg(int param0, int param1, int param2, rk param3, rk param4, rk param5, km param6, km param7) {
+    wg(int param0, int param1, int param2, rk param3, rk param4, rk param5, RgbSprite param6, RgbSprite param7) {
         this.field_s = 0;
         this.field_v = false;
         this.field_z = false;
@@ -417,7 +417,7 @@ final class wg extends pk {
           this.field_n = param3;
           this.field_u = param2;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "wg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class ng {
     private ResourceArchive field_b;
-    static dd[] field_h;
+    static RgbSprite[] field_h;
     private ResourceArchive field_d;
     static String[] field_g;
     static int field_c;
@@ -151,7 +151,7 @@ final class ng {
             return stackIn_6_0;
           }
           if (param2 != 29037) {
-            ng.a(-126);
+            ng.clearStaticReferences(-126);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,12 +168,12 @@ final class ng {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_a = null;
         field_g = null;
         if (param0 != 0) {
-          ng.a(110);
+          ng.clearStaticReferences(110);
         }
     }
 

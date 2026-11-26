@@ -12,7 +12,7 @@ final class kd extends se {
     private oo field_o;
     private boolean field_q;
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_l = null;
         if (param0 != -33) {
           return;

@@ -261,7 +261,7 @@ final class jh {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_g = null;
         int var1 = -126 / ((-14 - param0) / 43);

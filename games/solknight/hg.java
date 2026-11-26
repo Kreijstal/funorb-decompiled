@@ -50,10 +50,10 @@ final class hg extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_B = null;
         if (param0 != 8192) {
-          hg.a(15);
+          hg.clearDeclaredStaticReferences(15);
           field_E = null;
           return;
         }

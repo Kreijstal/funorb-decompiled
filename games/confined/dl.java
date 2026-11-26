@@ -4,7 +4,7 @@
 final class dl {
     static PrimaryNodeDeque field_b;
     static String field_a;
-    static nf[] field_d;
+    static RgbSprite[] field_d;
     static String[] field_c;
 
     public static void clearStaticReferences(byte param0) {

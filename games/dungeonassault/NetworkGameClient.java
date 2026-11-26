@@ -16,7 +16,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     static pp field_y;
     private boolean field_v;
     private int field_w;
-    static cn field_D;
+    static RgbSprite field_D;
     static int[] field_B;
     static String field_t;
 
@@ -118,21 +118,21 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         field_t = null;
         field_D = null;
         field_y = null;
         field_B = null;
         if (param0 != -1) {
-          NetworkGameClient.e(-36);
+          NetworkGameClient.clearStaticReferences(-36);
         }
     }
 
     final static int countSetBits(int param0, int param1) {
         param0 = (1431655765 & param0 >>> 1) + (param0 & 1431655765);
         if (param1 != 8) {
-          NetworkGameClient.e(-51);
+          NetworkGameClient.clearStaticReferences(-51);
         }
         param0 = (param0 >>> 2 & -1288490189) + (param0 & 858993459);
         param0 = param0 + (param0 >>> 4) & 252645135;

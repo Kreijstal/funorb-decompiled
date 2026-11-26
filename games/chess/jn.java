@@ -17,7 +17,7 @@ final class jn extends fb {
           this.field_N = this.field_N + 1;
           super.a(param0, -10, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "jn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class jn extends fb {
           param0[1 + param1] = var5 / var9;
           param0[param1 + 2] = var7 / var9;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class jn extends fb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -98,14 +98,14 @@ final class jn extends fb {
         int var9;
         int var10;
         int var11;
-        km var15;
-        km var16;
-        km var17;
-        km var18;
-        km var19;
-        km var20;
-        km var21;
-        km var22;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
+        RgbSprite var19;
+        RgbSprite var20;
+        RgbSprite var21;
+        RgbSprite var22;
         int var5Lifetime1;
         int var6Lifetime1;
         int var9Lifetime1;
@@ -129,18 +129,18 @@ final class jn extends fb {
             var9 = var16.field_v << 1;
             var10 = var16.field_u << 1;
             if (null == ca.field_a) {
-              ca.field_a = new km(var9, var10);
+              ca.field_a = new RgbSprite(var9, var10);
               tl.a((byte) -67, ca.field_a);
             } else {
               if (ca.field_a.field_w < var9) {
-                ca.field_a = new km(var9, var10);
+                ca.field_a = new RgbSprite(var9, var10);
                 tl.a((byte) -67, ca.field_a);
               } else {
                 if (var10 <= ca.field_a.field_t) {
                   tl.a((byte) -67, ca.field_a);
                   SoftwareRasterizer.clearRaster();
                 } else {
-                  ca.field_a = new km(var9, var10);
+                  ca.field_a = new RgbSprite(var9, var10);
                   tl.a((byte) -67, ca.field_a);
                 }
               }
@@ -172,7 +172,7 @@ final class jn extends fb {
             tl.a((byte) -67, ca.field_a);
             SoftwareRasterizer.clearRaster();
           } else {
-            ca.field_a = new km(var9Lifetime3, var10Lifetime3);
+            ca.field_a = new RgbSprite(var9Lifetime3, var10Lifetime3);
             tl.a((byte) -67, ca.field_a);
           }
           var15.b(112, 144, var15.field_v << 4, var15.field_u << 4, -this.field_N << 10, 4096);
@@ -193,18 +193,18 @@ final class jn extends fb {
           var9Lifetime1 = var20.field_v << 1;
           var10Lifetime1 = var20.field_u << 1;
           if (null == ca.field_a) {
-            ca.field_a = new km(var9Lifetime1, var10Lifetime1);
+            ca.field_a = new RgbSprite(var9Lifetime1, var10Lifetime1);
             tl.a((byte) -67, ca.field_a);
           } else {
             if (ca.field_a.field_w < var9Lifetime1) {
-              ca.field_a = new km(var9Lifetime1, var10Lifetime1);
+              ca.field_a = new RgbSprite(var9Lifetime1, var10Lifetime1);
               tl.a((byte) -67, ca.field_a);
             } else {
               if (var10Lifetime1 <= ca.field_a.field_t) {
                 tl.a((byte) -67, ca.field_a);
                 SoftwareRasterizer.clearRaster();
               } else {
-                ca.field_a = new km(var9Lifetime1, var10Lifetime1);
+                ca.field_a = new RgbSprite(var9Lifetime1, var10Lifetime1);
                 tl.a((byte) -67, ca.field_a);
               }
             }
@@ -231,7 +231,7 @@ final class jn extends fb {
         var9Lifetime2 = var19.field_v << 1;
         var10Lifetime2 = var19.field_u << 1;
         if (null == ca.field_a) {
-          ca.field_a = new km(var9Lifetime2, var10Lifetime2);
+          ca.field_a = new RgbSprite(var9Lifetime2, var10Lifetime2);
           tl.a((byte) -67, ca.field_a);
         } else {
           if (ca.field_a.field_w >= var9Lifetime2 &&
@@ -239,7 +239,7 @@ final class jn extends fb {
             tl.a((byte) -67, ca.field_a);
             SoftwareRasterizer.clearRaster();
           } else {
-            ca.field_a = new km(var9Lifetime2, var10Lifetime2);
+            ca.field_a = new RgbSprite(var9Lifetime2, var10Lifetime2);
             tl.a((byte) -67, ca.field_a);
           }
         }
@@ -301,7 +301,7 @@ final class jn extends fb {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -332,7 +332,7 @@ final class jn extends fb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class jn extends fb {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

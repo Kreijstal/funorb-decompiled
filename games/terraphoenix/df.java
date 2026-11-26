@@ -29,7 +29,7 @@ final class df extends eb {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_L = null;
         field_M = null;
         field_K = null;

@@ -204,7 +204,7 @@ final class jd {
     final void a(fa param0, boolean param1) {
         e var17 = null;
         hb var4 = null;
-        dd[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -213,12 +213,12 @@ final class jd {
         ee discarded$0 = null;
         ib discarded$1 = null;
         hb var8 = null;
-        dd[] var9 = null;
-        dd[] var10 = null;
-        dd dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         hb var11 = null;
         hb var12 = null;
-        dd var13 = null;
+        RgbSprite var13 = null;
         hb var14 = null;
         hb var19 = null;
         int var15 = fleas.field_A ? 1 : 0;
@@ -244,15 +244,15 @@ final class jd {
           var4.a(0, -17562).a(15658734, (byte) -75).a(true, IntrusiveNode.a(7829367, 8947848, (byte) -90, 10066329));
           var4.a(1, -17562).a(true, IntrusiveNode.a(13421772, 11184810, (byte) 66, 10066329));
           var4.a(3, -17562).a(param1, IntrusiveNode.a(10066329, 8947848, (byte) -99, 7829367)).a(param1, 1).c(124, 1);
-          var5 = new dd[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_B.length; var7_int++) {
             var16.field_B[var7_int] = 1077952576;
           }
-          var5[4] = (dd) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.a(4, -17562).a(true, (byte) -121).a(true, var5);
-          var4.a(5, -17562).a(true, ta.a(0, 65793, -2843, 0, 0)).a(true, (byte) -107).a(-1, (byte) -75);
+          var4.a(5, -17562).a(true, SpriteGeometry.a(0, 65793, -2843, 0, 0)).a(true, (byte) -107).a(-1, (byte) -75);
           this.field_p = (ComponentLayout) ((Object) var4);
           var6 = new hb(var4, true);
           var6.field_i = 0;
@@ -268,10 +268,10 @@ final class jd {
           var8.a(0, -17562).a(param1, IntrusiveNode.a(10066329, 15658734, (byte) -107, 7829367)).a(1118481, (byte) -75).a(-1, 127);
           var8.a(4, -17562).a(true, (byte) -115).a(true, var5);
           this.field_l = (ComponentLayout) ((Object) var8);
-          var9 = new dd[9];
-          var10 = new dd[9];
-          var9[4] = new dd(2, 1);
-          var10[4] = new dd(1, 2);
+          var9 = new RgbSprite[9];
+          var10 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_B = new int[]{6710886, 7829367};
           var10[4].field_B = new int[]{6710886, 7829367};
@@ -279,7 +279,7 @@ final class jd {
           var12 = new hb();
           var11.a(var9, -44, 0);
           var12.a(var10, -82, 0);
-          var13 = new dd(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new hb(var4, param1);
           var14.a(var13.c(), 0);

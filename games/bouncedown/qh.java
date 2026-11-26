@@ -51,7 +51,7 @@ final class qh {
           var5.writeByte(param0.field_g, (byte) 54);
           var5.writeByte(param0.field_i, (byte) 48);
           if (param2 != -22762) {
-            qh.b((byte) 16);
+            qh.clearStaticReferences((byte) 16);
           }
           var5.writeInt(param0.field_h, (byte) 101);
           var5.writeInt(param0.field_k, (byte) 97);
@@ -64,7 +64,7 @@ final class qh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_g = null;
         if (param0 == -101) {
@@ -74,7 +74,7 @@ final class qh {
           field_c = null;
           return;
         }
-        qh.b((byte) 75);
+        qh.clearStaticReferences((byte) 75);
         field_b = (byte[][]) null;
         field_d = null;
         field_e = null;

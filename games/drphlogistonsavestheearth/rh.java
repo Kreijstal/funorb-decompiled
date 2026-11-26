@@ -6,7 +6,7 @@ final class rh {
     static he[] field_l;
     static String field_k;
     static int field_e;
-    static nh field_b;
+    static RgbSprite field_b;
     static boolean field_i;
     static int field_a;
     static he field_h;
@@ -242,7 +242,7 @@ final class rh {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_f = null;
         field_k = null;
@@ -250,7 +250,7 @@ final class rh {
         field_h = null;
         field_b = null;
         if (param0 != -2) {
-          rh.b(-8);
+          rh.clearStaticReferences(-8);
         }
         field_j = null;
     }

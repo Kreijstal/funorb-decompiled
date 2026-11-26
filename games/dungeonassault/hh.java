@@ -4,7 +4,7 @@
 class hh implements ca, th {
     int field_e;
     static int field_p;
-    static cn field_o;
+    static RgbSprite field_o;
     static String[] field_n;
     int field_d;
     int field_f;
@@ -61,7 +61,7 @@ class hh implements ca, th {
         field_h = null;
         field_o = null;
         if (param0 != 1) {
-          field_o = (cn) null;
+          field_o = (RgbSprite) null;
         }
         field_k = null;
         field_s = null;

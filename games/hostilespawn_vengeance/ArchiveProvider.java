@@ -69,7 +69,7 @@ abstract class ArchiveProvider {
         return tk.field_e > 250 ? true : false;
     }
 
-    final static bd[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 >= 126) {
           return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
         }

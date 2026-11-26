@@ -7,7 +7,7 @@ final class oi {
     static BitmapFont field_c;
     static ResourceArchive field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 == 2801) {
           field_c = null;
@@ -15,7 +15,7 @@ final class oi {
           field_d = null;
           return;
         }
-        oi.a(-40);
+        oi.clearStaticReferences(-40);
         field_c = null;
         field_b = null;
         field_d = null;

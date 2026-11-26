@@ -5,10 +5,10 @@ final class tn extends bh {
     static String field_Y;
     static String field_U;
     private String field_Z;
-    private cn field_V;
-    static cn field_W;
+    private RgbSprite field_V;
+    static RgbSprite field_W;
     private dp field_T;
-    static cn field_I;
+    static RgbSprite field_I;
     private int field_X;
 
     final String c(byte param0) {
@@ -61,7 +61,7 @@ final class tn extends bh {
         var6 = DungeonAssault.field_K;
         try {
           if (param0 >= -18) {
-            field_W = (cn) null;
+            field_W = (RgbSprite) null;
           }
           var2_int = param1.length();
           var3 = new char[var2_int];
@@ -107,7 +107,7 @@ final class tn extends bh {
         ol.field_i = sp.field_e;
     }
 
-    final static pp a(int param0, int param1, se param2, cn param3, int param4, String param5) {
+    final static pp a(int param0, int param1, se param2, RgbSprite param3, int param4, String param5) {
         int var10_int = 0;
         pp stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -121,15 +121,15 @@ final class tn extends bh {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        cn var8 = null;
-        cn var9 = null;
-        cn var10 = null;
+        RgbSprite var8 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
         int var11 = 0;
         int var12 = 0;
-        cn var13 = null;
-        cn var14 = null;
-        cn var15 = null;
-        cn var16 = null;
+        RgbSprite var13 = null;
+        RgbSprite var14 = null;
+        RgbSprite var15 = null;
+        RgbSprite var16 = null;
         int var17 = 0;
         String var18 = null;
         var17 = DungeonAssault.field_K;
@@ -137,12 +137,12 @@ final class tn extends bh {
           jh.c();
           var6_int = param2.b(param5);
           var7 = param2.field_E + param2.field_H;
-          var8 = new cn(var6_int, var7);
+          var8 = new RgbSprite(var6_int, var7);
           var8.e();
           param2.b(param5, 0, param2.field_H, 16760960, -1);
           if (param4 > -36) {
             var18 = (String) null;
-            tn.a(9, 109, (se) null, (cn) null, 59, (String) null);
+            tn.a(9, 109, (se) null, (RgbSprite) null, 59, (String) null);
           }
           var9 = te.a(var6_int, var7, ag.field_c, 32, 32, 0.125);
           for (var10_int = 0; var9.field_B.length > var10_int; var10_int++) {
@@ -214,7 +214,7 @@ final class tn extends bh {
         field_W = null;
         if (param0 != -89) {
           String var2 = (String) null;
-          tn.a(-105, -33, (se) null, (cn) null, -20, (String) null);
+          tn.a(-105, -33, (se) null, (RgbSprite) null, -20, (String) null);
         }
         field_U = null;
         field_I = null;
@@ -229,9 +229,9 @@ final class tn extends bh {
         int var11;
         int var12;
         int var13;
-        cn var14;
-        cn var15;
-        cn var16;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
         od var6Lifetime1;
         regionExit1: {
           regionExit2: {
@@ -283,7 +283,7 @@ final class tn extends bh {
             lm.a(this.field_V, (byte) 38);
             SoftwareRasterizer.clearRaster();
           } else {
-            this.field_V = new cn(var11, var12);
+            this.field_V = new RgbSprite(var11, var12);
             lm.a(this.field_V, (byte) -79);
           }
           var14.b(112, 144, var14.field_E << 4, var14.field_G << 4, -this.field_X << 10, 4096);

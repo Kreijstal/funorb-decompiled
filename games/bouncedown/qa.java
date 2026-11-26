@@ -28,7 +28,7 @@ final class qa extends IntrusiveNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = pa.a(ma.a((byte) 120, param0), 7);
+          var2 = pa.a(SpriteGeometry.a((byte) 120, param0), 7);
           if (!param1) {
             field_g = (String) null;
           }

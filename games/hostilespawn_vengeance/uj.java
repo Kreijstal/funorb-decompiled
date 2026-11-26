@@ -8,7 +8,7 @@ final class uj extends IntrusiveNode {
     static oc field_p;
     static AudioOutput field_m;
     static String field_i;
-    static bd field_r;
+    static RgbSprite field_r;
     static int field_n;
     static String field_q;
     static IntrusiveDeque field_o;

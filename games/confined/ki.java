@@ -8,7 +8,7 @@ final class ki {
     static ke field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_a = null;
           field_d = null;
@@ -16,7 +16,7 @@ final class ki {
           field_c = null;
           return;
         }
-        ki.a(false);
+        ki.clearStaticReferences(false);
         field_a = null;
         field_d = null;
         field_b = null;

@@ -3,7 +3,7 @@
  */
 final class sb implements Runnable {
     static String field_i;
-    static nf field_h;
+    static RgbSprite field_h;
     volatile boolean field_d;
     static int[] field_b;
     static String field_e;
@@ -14,7 +14,7 @@ final class sb implements Runnable {
     PlatformTaskDispatcher field_c;
     volatile boolean field_j;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_a = null;
         field_i = null;

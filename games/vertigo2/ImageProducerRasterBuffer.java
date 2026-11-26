@@ -72,7 +72,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         var2.a(td.field_c.field_ob, 54, td.field_c.field_C);
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         int var1 = -5 % ((param0 - 1) / 38);
     }

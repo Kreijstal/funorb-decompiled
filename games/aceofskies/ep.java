@@ -195,7 +195,7 @@ final class ep extends ab implements bh, dn {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         field_u = null;
         int var1 = -64 / ((param0 - 42) / 44);

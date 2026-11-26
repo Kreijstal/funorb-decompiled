@@ -16,7 +16,7 @@ final class ik {
           if (GameClientBase.p(-110)) {
             var2 = 0;
             if (param1 != -27055) {
-              ik.a(false);
+              ik.clearStaticReferences(false);
             }
             if (tf.field_h != null) {
               return;
@@ -42,7 +42,7 @@ final class ik {
           }
         }
         if (param1 != -27055) {
-          ik.a(false);
+          ik.clearStaticReferences(false);
         }
         if (tf.field_h != null) {
           return;
@@ -52,14 +52,14 @@ final class ik {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_d = (int[][][]) null;
         field_e = null;
         if (param0) {
           return;
         }
-        ik.a(true);
+        ik.clearStaticReferences(true);
     }
 
     final static int updateMembershipSlides(byte param0, boolean param1) {

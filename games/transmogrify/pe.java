@@ -300,7 +300,7 @@ final class pe {
         return param1 < 2048 ? nj.field_r[param1] : nj.field_r[-param1 + 4096];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         int var1 = -82 % ((49 - param0) / 47);

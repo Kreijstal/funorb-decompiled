@@ -163,7 +163,7 @@ final class s extends hc {
         throw new Error();
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_O = null;
         field_I = null;
         if (param0 >= -113) {

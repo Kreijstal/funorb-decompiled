@@ -15,7 +15,7 @@ final class LoginCredentials {
     static volatile boolean booleanState0086;
     static MusicTrack musicTrackState0004;
 
-    public static void performAction0794(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         tutorialTips = null;
         integerArrayState0115 = null;
         integerArrayState0116 = null;

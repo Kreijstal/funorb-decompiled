@@ -194,7 +194,7 @@ abstract class f {
         return this.field_a;
     }
 
-    f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

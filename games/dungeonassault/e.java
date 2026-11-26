@@ -3,7 +3,7 @@
  */
 final class e extends en {
     static boolean field_l;
-    static cn field_j;
+    static RgbSprite field_j;
     static int field_d;
     static String field_g;
     static String field_i;
@@ -17,25 +17,25 @@ final class e extends en {
         this((String) null, param0, param0);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_i = null;
         field_j = null;
         field_g = null;
         if (param0 != 29) {
-          e.c((byte) -101);
+          e.clearStaticReferences((byte) -101);
         }
     }
 
-    final cn b(byte param0) {
+    final RgbSprite b(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        cn var5 = null;
+        RgbSprite var5 = null;
         if (this.field_m != null) {
           var2 = db.field_v.b(this.field_m);
           var3 = db.field_v.field_H + db.field_v.field_E;
           int var4 = 87 % ((param0 + 58) / 35);
-          var5 = new cn(var2, var3);
+          var5 = new RgbSprite(var2, var3);
           jh.a(var5);
           db.field_v.b(this.field_m, 0, db.field_v.field_H, 16777215, -1);
           jh.b();

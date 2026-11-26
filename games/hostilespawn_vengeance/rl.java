@@ -3,14 +3,14 @@
  */
 final class rl {
     static String field_a;
-    static bd field_d;
+    static RgbSprite field_d;
     static int field_c;
     static int field_b;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 719371458) {
-          field_d = (bd) null;
+          field_d = (RgbSprite) null;
           field_d = null;
           return;
         }

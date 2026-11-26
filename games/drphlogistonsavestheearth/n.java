@@ -85,7 +85,7 @@ final class n implements Runnable {
         }
     }
 
-    final static nh[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -93,11 +93,11 @@ final class n implements Runnable {
         int stackIn_34_0 = 0;
         int stackIn_45_0 = 0;
         int var9 = 0;
-        nh[] var10 = null;
-        nh[] var11_ref_nh__ = null;
+        RgbSprite[] var10 = null;
+        RgbSprite[] var11_ref_nh__ = null;
         int var11 = 0;
         int var12 = 0;
-        nh var13_ref_nh = null;
+        RgbSprite var13_ref_nh = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -108,7 +108,7 @@ final class n implements Runnable {
         int var12Lifetime2Lifetime2;
         var15 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var9 = param5 + param7 + param8;
-        var10 = new nh[]{new nh(var9, var9), new nh(param1, var9), new nh(var9, var9), new nh(var9, param1), new nh(64, 64), new nh(var9, param1), new nh(var9, var9), new nh(param1, var9), new nh(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param1), new RgbSprite(64, 64), new RgbSprite(var9, param1), new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9)};
         var11_ref_nh__ = var10;
         var12 = 0;
         scanLoop1: while (true) {

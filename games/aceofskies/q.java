@@ -19,7 +19,7 @@ final class q extends rt {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         outgoingPacket = null;
         int var1 = -126 / ((-5 - param0) / 53);
         bigFontSpriteData = null;

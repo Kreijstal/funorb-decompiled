@@ -21,7 +21,7 @@ final class il extends IntrusiveNode {
         return pl.field_h != 15 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_t = (String[][]) null;
         field_s = null;
         int var1 = 47 / ((63 - param0) / 55);

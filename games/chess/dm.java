@@ -23,7 +23,7 @@ abstract class dm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = 100 / ((param0 - 19) / 62);
         field_c = null;
         field_a = null;
@@ -78,7 +78,7 @@ abstract class dm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ abstract class dm {
           var5 = SoftwareRasterizer.field_h;
           var6 = SoftwareRasterizer.field_c;
           var16 = SoftwareRasterizer.field_d;
-          mc.field_b = new km(10, 14);
+          mc.field_b = new RgbSprite(10, 14);
           mc.field_b.e();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
@@ -154,7 +154,7 @@ abstract class dm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 

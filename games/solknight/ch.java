@@ -16,7 +16,7 @@ final class ch {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -104 / ((0 - param0) / 32);
     }

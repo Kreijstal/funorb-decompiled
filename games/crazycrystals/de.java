@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class de extends f implements Cloneable {
-    static dl field_k;
+    static RgbSprite field_k;
     static PcmSample field_l;
     ea field_j;
     private int field_i;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 3) {
-          field_k = (dl) null;
+          field_k = (RgbSprite) null;
           field_k = null;
           field_l = null;
           return;
@@ -80,7 +80,7 @@ final class de extends f implements Cloneable {
 
     final int a(boolean param0, boolean param1) {
         if (!param0) {
-          field_k = (dl) null;
+          field_k = (RgbSprite) null;
           return 3;
         }
         return 3;
@@ -150,21 +150,21 @@ final class de extends f implements Cloneable {
     }
 
     final static void a(byte param0, db param1) {
-        dl var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new dl(param1.a(7693, "", "final_frame.jpg"), (java.awt.Component) ((Object) jd.field_D));
+          var2 = new RgbSprite(param1.a(7693, "", "final_frame.jpg"), (java.awt.Component) ((Object) jd.field_D));
           var3 = var2.field_l;
           var4 = var2.field_u;
           hd.a(false);
           if (param0 >= -58) {
             field_l = (PcmSample) null;
           }
-          kn.field_p = new dl(var3, var4 * 3 / 4);
+          kn.field_p = new RgbSprite(var3, var4 * 3 / 4);
           kn.field_p.a();
           var2.c(0, 0);
-          ne.field_e = new dl(var3, var4 - kn.field_p.field_u);
+          ne.field_e = new RgbSprite(var3, var4 - kn.field_p.field_u);
           ne.field_e.a();
           var2.c(0, -kn.field_p.field_u);
           ne.field_e.field_t = kn.field_p.field_u;
@@ -249,7 +249,7 @@ final class de extends f implements Cloneable {
         this(0);
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         f stackIn_2_0 = null;
         ig stackIn_8_0 = null;
@@ -311,7 +311,7 @@ final class de extends f implements Cloneable {
 
     final void a(int param0, int param1) {
         if (param1 < 61) {
-          field_k = (dl) null;
+          field_k = (RgbSprite) null;
           this.field_i = param0;
           return;
         }

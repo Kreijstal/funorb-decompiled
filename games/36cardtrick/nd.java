@@ -5,7 +5,7 @@ final class nd extends ek {
     private oc field_p;
     private oc[] field_q;
 
-    final void a(kc param0, byte param1) {
+    final void a(RgbSprite param0, byte param1) {
         oc[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -45,7 +45,7 @@ final class nd extends ek {
         }
     }
 
-    final void a(kc[] param0, int param1) {
+    final void a(RgbSprite[] param0, int param1) {
         oc[] var3 = null;
         int var4 = 0;
         oc var5 = null;
@@ -94,7 +94,7 @@ final class nd extends ek {
         return dupTemp$0;
     }
 
-    final void a(boolean param0, int param1, kc[] param2) {
+    final void a(boolean param0, int param1, RgbSprite[] param2) {
         int var4_int = param1;
         if (this.field_q[var4_int] == null) {
           this.field_q[var4_int] = new oc();

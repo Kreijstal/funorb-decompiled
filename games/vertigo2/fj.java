@@ -310,7 +310,7 @@ class fj extends rl implements ij {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 106 / ((param0 + 20) / 39);
         field_lb = null;
         field_hb = null;

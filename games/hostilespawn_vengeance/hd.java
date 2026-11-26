@@ -859,7 +859,7 @@ final class hd extends hi {
         int var6 = 0;
         double var7_double = 0.0;
         int var7_int = 0;
-        bd[] var7 = null;
+        RgbSprite[] var7 = null;
         double var8_double = 0.0;
         int var8 = 0;
         double var9_double = 0.0;

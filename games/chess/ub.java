@@ -4,7 +4,7 @@
 abstract class ub {
     static volatile int field_b;
     fj[] field_a;
-    static km[][] field_d;
+    static RgbSprite[][] field_d;
     static int field_e;
     static String field_c;
 
@@ -117,7 +117,7 @@ abstract class ub {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -149,10 +149,10 @@ abstract class ub {
         return 0;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_c = null;
         int var1 = -92 / ((-17 - param0) / 43);
-        field_d = (km[][]) null;
+        field_d = (RgbSprite[][]) null;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -172,7 +172,7 @@ abstract class ub {
             return this.field_a[0].a(param2, -1);
           }
           if (param1 <= 3) {
-            ub.b((byte) 76);
+            ub.clearDeclaredStaticReferences((byte) 76);
           }
           var4 = 0;
           for (var5 = 0; var5 < this.field_a.length; var5++) {
@@ -194,7 +194,7 @@ abstract class ub {
 
     static {
         field_b = 0;
-        field_d = new km[2][7];
+        field_d = new RgbSprite[2][7];
         field_c = "Accept <%0> into this game";
     }
 }

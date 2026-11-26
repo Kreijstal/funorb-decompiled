@@ -3,7 +3,7 @@
  */
 final class am {
     static sl field_h;
-    static hj[] field_d;
+    static RgbSprite[] field_d;
     static int field_e;
     static String field_g;
     static String field_c;

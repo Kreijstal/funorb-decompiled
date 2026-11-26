@@ -95,11 +95,11 @@ final class rm extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_A = null;
         field_E = null;
         if (param0 != 16145) {
-          rm.g(-113);
+          rm.clearStaticReferences(-113);
         }
     }
 

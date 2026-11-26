@@ -21,11 +21,11 @@ final class gh {
         return ni.field_d > 250 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 < 87) {
-          gh.a((byte) 2);
+          gh.clearStaticReferences((byte) 2);
         }
     }
 

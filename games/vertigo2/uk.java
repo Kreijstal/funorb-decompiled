@@ -62,7 +62,7 @@ final class uk extends ab {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_u = null;
         field_v = null;
         field_e = null;
@@ -73,7 +73,7 @@ final class uk extends ab {
 
     final byte[] a(boolean param0, int param1) {
         if (!param0) {
-          uk.b((byte) 0);
+          uk.clearStaticReferences((byte) 0);
         }
         rk var3 = this.a(101, 0, param1);
         if (var3 == null) {

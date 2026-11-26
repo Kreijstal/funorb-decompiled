@@ -3,7 +3,7 @@
  */
 final class e {
     int[] field_a;
-    static db field_u;
+    static RgbSprite field_u;
     static String field_g;
     static String[] field_p;
     private int[] field_l;

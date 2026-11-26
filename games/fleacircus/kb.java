@@ -88,7 +88,7 @@ final class kb extends IntrusiveNode {
         this.field_q = param0;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         if (!param0) {
           field_o = null;
@@ -98,7 +98,7 @@ final class kb extends IntrusiveNode {
           field_k = (String[][]) null;
           return;
         }
-        kb.b(true);
+        kb.clearStaticReferences(true);
         field_o = null;
         field_m = null;
         field_l = null;

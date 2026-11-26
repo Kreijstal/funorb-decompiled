@@ -33,7 +33,7 @@ final class DualLinkDequeIterator implements Iterator {
         return this.field_d != this.field_b.field_c;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = -35 % ((param0 - 55) / 49);
     }

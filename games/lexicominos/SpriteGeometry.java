@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ed extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     static int field_v;
     int field_x;
     static th field_q;
@@ -71,7 +71,7 @@ abstract class ed extends DualLinkNode {
             }
             if (param0 <= 79) {
               var6 = (PacketBuffer) null;
-              ed.a(-106, (PacketBuffer) null);
+              SpriteGeometry.a(-106, (PacketBuffer) null);
             }
             param1.writeBytes(0, var11, 255, 24);
             return;
@@ -99,7 +99,7 @@ abstract class ed extends DualLinkNode {
         try {
           VorbisSample.b(param1.a((byte) 127, "", "headers.packvorbis"));
           if (param0 != 0) {
-            ed.c(-110);
+            SpriteGeometry.c(-110);
           }
           var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
@@ -158,7 +158,7 @@ abstract class ed extends DualLinkNode {
         }
     }
 
-    ed() {
+    SpriteGeometry() {
     }
 
     static {

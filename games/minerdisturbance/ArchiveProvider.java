@@ -9,10 +9,10 @@ abstract class ArchiveProvider {
 
     abstract ArchiveIndex a(byte param0);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -7672) {
-          ArchiveProvider.a(119);
+          ArchiveProvider.clearStaticReferences(119);
           field_d = null;
           field_c = null;
           return;
@@ -30,7 +30,7 @@ abstract class ArchiveProvider {
           ti.a((byte) 126);
           SoftwareRasterizer.setRasterBuffer(param0.field_D, param0.field_x, param0.field_A);
           if (param1 < 124) {
-            ArchiveProvider.a(-15);
+            ArchiveProvider.clearStaticReferences(-15);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "vb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -9,17 +9,17 @@ final class bl {
     int field_m;
     static int[] field_n;
     static boolean field_k;
-    static cn field_j;
+    static RgbSprite field_j;
     static Random field_i;
     ResourceArchive field_q;
     String field_h;
     static String field_b;
-    static cn[] field_d;
-    static cn field_s;
+    static RgbSprite[] field_d;
+    static RgbSprite field_s;
     static int field_p;
-    static cn field_o;
+    static RgbSprite field_o;
     static rj field_l;
-    static cn field_e;
+    static RgbSprite field_e;
     static int field_c;
     static je field_r;
     static String field_a;
@@ -44,40 +44,40 @@ final class bl {
     }
 
     final static void c(byte param0) {
-        cn var19 = null;
-        cn var2 = null;
-        cn var3 = null;
-        cn var4 = null;
+        RgbSprite var19 = null;
+        RgbSprite var2 = null;
+        RgbSprite var3 = null;
+        RgbSprite var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        cn var7 = null;
+        RgbSprite var7 = null;
         int var8_int = 0;
-        cn var8 = null;
+        RgbSprite var8 = null;
         int var9_int = 0;
-        cn var9 = null;
-        cn var10 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
         int var11_int = 0;
-        cn[] var11 = null;
-        cn[] var20 = null;
-        cn var14_ref_cn = null;
-        cn var21 = null;
-        cn var15_ref_cn = null;
+        RgbSprite[] var11 = null;
+        RgbSprite[] var20 = null;
+        RgbSprite var14_ref_cn = null;
+        RgbSprite var21 = null;
+        RgbSprite var15_ref_cn = null;
         byte[] var14_ref_byte__ = null;
         int var16 = 0;
         int var17 = 0;
         int incrementValue$0 = 0;
         int[] var13 = null;
-        cn discarded$1 = null;
+        RgbSprite discarded$1 = null;
         int var1_int = 0;
         int var10_int = 0;
         int var13_int = 0;
-        cn var22 = null;
+        RgbSprite var22 = null;
         int var15 = 0;
         int var14 = 0;
         int var18 = DungeonAssault.field_K;
-        cn var22Lifetime1;
-        cn var22Lifetime2;
+        RgbSprite var22Lifetime1;
+        RgbSprite var22Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -98,8 +98,8 @@ final class bl {
           kk.field_l = ah.a(np.field_A, 200, "smallfont", "", hj.field_Z);
           db.field_v = ah.a(np.field_A, 200, "roman12bold", "", hj.field_Z);
           df.field_c = rc.a("", sb.field_a, "main_center", (byte) 71);
-          dm.field_d = new cn[3];
-          IterableNodeHashTable.field_f = new cn[3];
+          dm.field_d = new RgbSprite[3];
+          IterableNodeHashTable.field_f = new RgbSprite[3];
           for (var1_int = 0; var1_int < 3; var1_int++) {
             dm.field_d[var1_int] = rc.a("", sb.field_a, "main_left_0" + (var1_int + 1), (byte) 71);
           }
@@ -118,7 +118,7 @@ final class bl {
           lf.field_n = oh.a(hj.field_Z, "", 11091, "menu_chain_line");
           hf.field_Ab = oh.a(hj.field_Z, "", 11091, "menu_chain");
           AccountNameAvailabilityValidator.field_m = kn.a(hj.field_Z, "", "cursor", -49);
-          jg.field_c = new cn[AccountNameAvailabilityValidator.field_m.length];
+          jg.field_c = new RgbSprite[AccountNameAvailabilityValidator.field_m.length];
           for (var1_intLifetime2 = 0; AccountNameAvailabilityValidator.field_m.length > var1_intLifetime2; var1_intLifetime2++) {
             jg.field_c[var1_intLifetime2] = rb.a(8, AccountNameAvailabilityValidator.field_m[var1_intLifetime2], 16711680, (byte) 124);
           }
@@ -156,7 +156,7 @@ final class bl {
           for (var7_int = 0; var5 * var6 > var7_int; var7_int++) {
             var19.field_B[var7_int] = mp.a(var19.field_B[var7_int], -2147483648);
           }
-          var7 = new cn(var5, var6);
+          var7 = new RgbSprite(var5, var6);
           var7.e();
           SoftwareRasterizer.fillRectangle(0, 0, var5, 2, 16416);
           SoftwareRasterizer.fillRectangle(0, 2, var5, var6 - 4, 96);
@@ -167,7 +167,7 @@ final class bl {
           for (var8_int = 0; var8_int < var5Lifetime1 * var6Lifetime1; var8_int++) {
             var2.field_B[var8_int] = mp.a(var2.field_B[var8_int], -2147483648);
           }
-          var8 = new cn(var5Lifetime1, var6Lifetime1);
+          var8 = new RgbSprite(var5Lifetime1, var6Lifetime1);
           var8.e();
           SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime1, 4194336);
           SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime1 - 4, var6Lifetime1, 96);
@@ -178,7 +178,7 @@ final class bl {
           for (var9_int = 0; var6Lifetime2 * var5Lifetime2 > var9_int; var9_int++) {
             var3.field_B[var9_int] = mp.a(var3.field_B[var9_int], -2147483648);
           }
-          var9 = new cn(var5Lifetime2, var6Lifetime2);
+          var9 = new RgbSprite(var5Lifetime2, var6Lifetime2);
           var9.e();
           SoftwareRasterizer.fillRectangle(0, 0, var5Lifetime2, 2, 16416);
           SoftwareRasterizer.fillRectangle(0, 2, var5Lifetime2, -4 + var6Lifetime2, 96);
@@ -195,7 +195,7 @@ final class bl {
           for (var10_intLifetime1 = 0; var10_intLifetime1 < var6Lifetime3 * var5Lifetime3; var10_intLifetime1++) {
             var4.field_B[var10_intLifetime1] = mp.a(var4.field_B[var10_intLifetime1], -2147483648);
           }
-          var10 = new cn(var5Lifetime3, var6Lifetime3);
+          var10 = new RgbSprite(var5Lifetime3, var6Lifetime3);
           var10.e();
           SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime3, 4194336);
           SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime3 - 4, var6Lifetime3, 96);
@@ -210,7 +210,7 @@ final class bl {
           PacketBuffer.field_j = qa.a(15322, "achievements_large", "", hj.field_Z);
           IntrusiveDeque.a(97, f.field_a);
           IntrusiveDeque.a(98, lb.field_o);
-          cf.field_f = new cn(32, 32);
+          cf.field_f = new RgbSprite(32, 32);
           cf.field_f.e();
           lb.field_o.a(0, 0, 32, 32);
           jh.b();
@@ -261,7 +261,7 @@ final class bl {
                 var22Lifetime1.field_B[var15] = mp.a(var22Lifetime1.field_B[var15], -2147483648);
               }
             }
-            var15_ref_cn = new cn(var22Lifetime1.field_y, var22Lifetime1.field_v);
+            var15_ref_cn = new RgbSprite(var22Lifetime1.field_y, var22Lifetime1.field_v);
             var15_ref_cn.e();
             var22Lifetime1.e(0, 0, (1 & var13_intLifetime2) == 0 ? 3199008 : 13684768);
             ua.field_b[var13_intLifetime2] = new ph(var22Lifetime1, var15_ref_cn);
@@ -369,12 +369,12 @@ final class bl {
           ao.field_n = oh.a(hj.field_Z, "", 11091, "scroll_top");
           rn.field_c = oh.a(hj.field_Z, "", 11091, "scroll_bottom");
           field_s = oh.a(hj.field_Z, "", 11091, "scroll_tile");
-          li.field_l = new cn[9];
+          li.field_l = new RgbSprite[9];
           li.field_l[0] = oh.a(hj.field_Z, "", 11091, "scroll_top_left");
           li.field_l[1] = oh.a(hj.field_Z, "", 11091, "scroll_top_centre");
           li.field_l[2] = oh.a(hj.field_Z, "", 11091, "scroll_top_right");
           li.field_l[3] = oh.a(hj.field_Z, "", 11091, "scroll_centre_left");
-          li.field_l[4] = new cn(li.field_l[0].field_y, li.field_l[0].field_v);
+          li.field_l[4] = new RgbSprite(li.field_l[0].field_y, li.field_l[0].field_v);
           li.field_l[4].e();
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 13619075);
           k.field_h.a(true);
@@ -404,7 +404,7 @@ final class bl {
           for (var14Lifetime3 = 0; var14Lifetime3 < ie.field_j.length; var14Lifetime3++) {
             kd.field_e[var14Lifetime3] = new tf(db.field_v, ie.field_j[var14Lifetime3], cm.field_M);
           }
-          discarded$1 = new cn(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
+          discarded$1 = new RgbSprite(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bl.D(" + param0 + ')');
         }
@@ -574,16 +574,16 @@ final class bl {
         }
     }
 
-    final static cn a(boolean param0, int param1, int param2) {
+    final static RgbSprite a(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var5 = DungeonAssault.field_K;
-        cn var6 = new cn(param2, param2);
-        cn var3 = var6;
+        RgbSprite var6 = new RgbSprite(param2, param2);
+        RgbSprite var3 = var6;
         for (var4 = 0; var3.field_B.length > var4; var4++) {
           var6.field_B[var4] = param1;
         }
         if (param0) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         return var3;
     }

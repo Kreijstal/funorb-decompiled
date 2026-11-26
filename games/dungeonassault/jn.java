@@ -11,7 +11,7 @@ final class jn implements ca {
     static gn field_l;
     private int field_f;
     private int field_m;
-    static cn field_a;
+    static RgbSprite field_a;
     private int field_j;
     private int field_e;
     private int field_h;

@@ -64,7 +64,7 @@ final class ic extends mc {
         this(lp.field_C, param0);
     }
 
-    public static void d(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != 4741) {
           return;
         }

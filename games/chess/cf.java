@@ -15,7 +15,7 @@ final class cf extends ci {
     private ci field_Hb;
     private int field_Fb;
     private int field_Ib;
-    private km[] field_Ob;
+    private RgbSprite[] field_Ob;
     private int field_Eb;
     private tl[] field_Gb;
 
@@ -210,7 +210,7 @@ final class cf extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2), "cf.A(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2), "cf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -246,14 +246,14 @@ final class cf extends ci {
         this(param0, param0.field_Ob, param0.field_Hb, param0.field_Qb, param0.field_Ib, param0.field_Rb, param0.field_Mb, param0.field_Eb, param0.field_Fb);
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Tb = null;
         if (param0 != 5) {
-          cf.k(-58);
+          cf.clearDeclaredStaticReferences(-58);
         }
     }
 
-    cf(ci param0, km[] param1, ci param2, ci param3, int param4, int param5, int param6, int param7, int param8) {
+    cf(ci param0, RgbSprite[] param1, ci param2, ci param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Pb = -2;
         this.field_Kb = new int[256];
@@ -268,13 +268,13 @@ final class cf extends ci {
           this.field_Hb = param2;
           this.field_Ib = param4;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final void a(byte param0, String param1, int param2) {
         try {
-          this.field_Gb[this.field_Sb] = new tl(0L, (ci) null, (ci) null, this.field_Qb, (km) null, param1);
+          this.field_Gb[this.field_Sb] = new tl(0L, (ci) null, (ci) null, this.field_Qb, (RgbSprite) null, param1);
           this.field_Gb[this.field_Sb].field_Q = this.field_Ob;
           this.field_Gb[this.field_Sb].field_w = true;
           this.field_Gb[this.field_Sb].field_cb = 1;
@@ -285,7 +285,7 @@ final class cf extends ci {
           this.field_Kb[this.field_Sb] = param2;
           this.field_Sb = this.field_Sb + 1;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -333,7 +333,7 @@ final class cf extends ci {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class cf extends ci {
         qe.a((byte) -31, param1);
     }
 
-    final void a(byte param0, String param1, km param2, int param3) {
+    final void a(byte param0, String param1, RgbSprite param2, int param3) {
         try {
           this.field_Gb[this.field_Sb] = new tl(0L, (ci) null, (ci) null, this.field_Qb, param2, param1);
           this.field_Gb[this.field_Sb].field_Q = this.field_Ob;
@@ -363,7 +363,7 @@ final class cf extends ci {
           }
           this.field_Sb = this.field_Sb + 1;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -386,7 +386,7 @@ final class cf extends ci {
         int var8Lifetime1;
         var11 = Chess.field_G;
         if (this.field_Sb == 0) {
-          this.field_Gb[this.field_Sb] = new tl(0L, (ci) null, (ci) null, this.field_Hb, (km) null, w.field_Gb);
+          this.field_Gb[this.field_Sb] = new tl(0L, (ci) null, (ci) null, this.field_Hb, (RgbSprite) null, w.field_Gb);
           this.field_Gb[this.field_Sb].field_cb = 1;
           this.a((byte) 127, this.field_Gb[this.field_Sb]);
           this.field_Kb[this.field_Sb] = -1;

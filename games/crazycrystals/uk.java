@@ -10,7 +10,7 @@ final class uk extends nf {
     static PcmSample field_i;
     static boolean field_j;
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_i = null;
         int var1 = -52 / ((param0 + 61) / 60);
     }
@@ -74,7 +74,7 @@ final class uk extends nf {
           try {
             try {
               if (param0 != -9762) {
-                uk.c(-48);
+                uk.releaseDeclaredStaticReferences(-48);
               }
               if (null == ol.field_z[0]) {
                 ol.field_z[0] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(ba.field_k.a(7693, "tutorial.ccl", ""))), qp.field_g);

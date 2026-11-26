@@ -14,7 +14,7 @@ class DualNode extends HashNode {
     long longState0003;
     static RgbSprite[][] rgbSpriteArrayArrayState0003;
 
-    public static void performAction0129(int integerArgument1) {
+    public static void releaseDeclaredStaticReferences(int integerArgument1) {
         stringState0043 = null;
         integerArrayState0018 = null;
         stringState0044 = null;

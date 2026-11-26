@@ -9,7 +9,7 @@ final class kn {
     private double[] field_e;
     static int field_c;
     static String field_b;
-    static nf field_g;
+    static RgbSprite field_g;
 
     final void a(int param0, double[] param1, double param2) {
         int var11 = 0;

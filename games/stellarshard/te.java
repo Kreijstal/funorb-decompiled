@@ -6,10 +6,10 @@ final class te {
     static String field_b;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 >= -15) {
-          te.a((byte) 74);
+          te.clearStaticReferences((byte) 74);
           field_a = null;
           return;
         }

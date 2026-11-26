@@ -22,7 +22,7 @@ final class vj {
           this.field_c = param0 ? true : false;
           return;
         }
-        vj.a((byte) 88);
+        vj.clearStaticReferences((byte) 88);
         this.field_a = true;
         this.field_c = param0 ? true : false;
     }
@@ -34,7 +34,7 @@ final class vj {
         return this.field_c;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         int var1 = -10 / ((param0 - 48) / 37);
         field_b = null;

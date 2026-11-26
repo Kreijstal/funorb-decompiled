@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    static dl field_b;
+    static RgbSprite field_b;
     static sj field_a;
     static boolean[] field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 13) {
-          qj.a(-91);
+          qj.clearStaticReferences(-91);
           field_b = null;
           return;
         }

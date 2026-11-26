@@ -75,10 +75,10 @@ final class th extends si {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_L = null;
         if (param0 <= 105) {
-          th.j(-122);
+          th.clearDeclaredStaticReferences(-122);
           field_H = null;
           return;
         }

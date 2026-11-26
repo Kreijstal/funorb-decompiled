@@ -202,7 +202,7 @@ final class c extends UiWidget {
         this.a(-277997311);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_E = null;
         field_M = null;
         int var1 = -97 % ((param0 + 47) / 39);

@@ -8,7 +8,7 @@ class vg extends id {
     static String field_s;
     static String field_r;
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -7392) {
           return;
         }

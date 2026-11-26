@@ -241,7 +241,7 @@ final class ma extends jc {
         this.field_J = this.field_u;
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 27934) {
           return;
         }

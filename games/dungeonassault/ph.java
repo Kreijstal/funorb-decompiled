@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph {
-    cn field_a;
+    RgbSprite field_a;
     int[] field_c;
     int field_d;
     int field_b;
@@ -102,8 +102,8 @@ final class ph {
     }
 
     final static ph a(ResourceArchive param0, String param1, String param2) {
-        cn var4 = null;
-        cn var3 = oh.a(param0, param1, 11091, param2);
+        RgbSprite var4 = null;
+        RgbSprite var3 = oh.a(param0, param1, 11091, param2);
         param2 = param2 + field_z;
         if (param0.b(param2, param1, (byte) -82)) {
           var4 = oh.a(param0, param1, 11091, param2);
@@ -280,7 +280,7 @@ final class ph {
         this.e(param0, param1);
     }
 
-    private final static int[] a(cn param0) {
+    private final static int[] a(RgbSprite param0) {
         int[] var1;
         int var2;
         int var3;
@@ -381,14 +381,14 @@ final class ph {
         return var1;
     }
 
-    ph(cn param0, cn param1) {
+    ph(RgbSprite param0, RgbSprite param1) {
         this.field_a = param0;
         this.field_c = param1.field_B;
         this.field_d = param0.field_y;
         this.field_b = param0.field_v;
     }
 
-    ph(cn param0, int[] param1) {
+    ph(RgbSprite param0, int[] param1) {
         this.field_a = param0;
         this.field_c = param1;
         this.field_d = param0.field_y;

@@ -18,7 +18,7 @@ final class wg {
         return (java.awt.Container) ((Object) ii.b(false));
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = -12 / ((param0 + 4) / 44);
     }

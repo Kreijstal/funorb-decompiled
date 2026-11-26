@@ -108,7 +108,7 @@ final class lh {
     final void a(int param0, se param1) {
         hh var18 = null;
         an var4 = null;
-        cn[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var17 = null;
         ArgbSprite var19 = null;
         int var8_int = 0;
@@ -117,12 +117,12 @@ final class lh {
         jn discarded$0 = null;
         im discarded$1 = null;
         an var9 = null;
-        cn[] var10 = null;
-        cn[] var11 = null;
-        cn dupTemp$2 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite[] var11 = null;
+        RgbSprite dupTemp$2 = null;
         an var12 = null;
         an var13 = null;
-        cn var14 = null;
+        RgbSprite var14 = null;
         an var15 = null;
         an var20 = null;
         int var16 = DungeonAssault.field_K;
@@ -149,13 +149,13 @@ final class lh {
           var4.a(1, (byte) -90).a(bb.a(11184810, false, 13421772, 10066329), true);
           var4.a(3, (byte) -97).a(bb.a(8947848, false, 10066329, 7829367), true).b(1, -114).c(1, -33);
           int var6 = -31 / ((param0 + 69) / 45);
-          var5 = new cn[9];
+          var5 = new RgbSprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var8_int = 0; var8_int < var19.field_B.length; var8_int++) {
             var17.field_B[var8_int] = 1077952576;
           }
-          var5[4] = (cn) ((Object) var19);
+          var5[4] = (RgbSprite) ((Object) var19);
           var4.a(4, (byte) -115).a((byte) -110, true).a(var5, true);
           var4.a(5, (byte) -86).a(hj.a(0, 65793, (byte) 123, 0, 0), true).a((byte) -116, true).a(-7695, -1);
           this.field_o = (ca) ((Object) var4);
@@ -173,10 +173,10 @@ final class lh {
           var9.a(0, (byte) -99).a(bb.a(15658734, false, 10066329, 7829367), true).a(-7695, 1118481).d(-1, 216);
           var9.a(4, (byte) -91).a((byte) -111, true).a(var5, true);
           this.field_c = (ca) ((Object) var9);
-          var10 = new cn[9];
-          var10[4] = new cn(2, 1);
-          var11 = new cn[9];
-          var11[4] = new cn(1, 2);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(2, 1);
+          var11 = new RgbSprite[9];
+          var11[4] = new RgbSprite(1, 2);
           dupTemp$2 = var10[4];
           dupTemp$2.field_B = new int[]{6710886, 7829367};
           var11[4].field_B = new int[]{6710886, 7829367};
@@ -184,7 +184,7 @@ final class lh {
           var13 = new an();
           var12.a(0, var10, -116);
           var13.a(0, var11, -116);
-          var14 = new cn(7, 4);
+          var14 = new RgbSprite(7, 4);
           var14.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var15 = new an(var4, true);
           var15.a((byte) 47, var14.d());
@@ -209,13 +209,13 @@ final class lh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_b = null;
         field_n = null;
         field_p = null;
         if (param0 > -54) {
-          lh.a(6);
+          lh.clearStaticReferences(6);
         }
     }
 

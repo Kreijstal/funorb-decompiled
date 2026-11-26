@@ -14,9 +14,9 @@ final class ah {
     static volatile long field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          ah.a(-83);
+          ah.clearStaticReferences(-83);
         }
         field_a = null;
         field_g = null;

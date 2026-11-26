@@ -48,7 +48,7 @@ final class ni extends ei {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         int var1 = 55 / ((-52 - param0) / 49);
         field_u = null;

@@ -3,7 +3,7 @@
  */
 final class v {
     static int field_c;
-    static dl[] field_b;
+    static RgbSprite[] field_b;
     static long[] field_a;
     static int field_d;
     private int[] field_e;

@@ -98,7 +98,7 @@ final class qd {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_j = null;
         int var1 = 114 / ((param0 + 85) / 39);

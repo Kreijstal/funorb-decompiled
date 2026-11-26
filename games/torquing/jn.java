@@ -50,7 +50,7 @@ final class jn {
         vg.field_o = 0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = 96 % ((param0 + 53) / 34);
         field_b = null;

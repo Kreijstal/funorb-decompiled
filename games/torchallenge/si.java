@@ -358,7 +358,7 @@ final class si extends ic {
         return ii.field_g[var4];
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_K = null;
         int var1 = 74 % ((param0 - 15) / 51);
         field_H = null;

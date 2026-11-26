@@ -19,7 +19,7 @@ final class fn extends TextureOperator {
           var3 = new AccountServiceResult(false);
           var3.message = param2;
           if (!param1) {
-            fn.g(-82);
+            fn.clearStaticReferences(-82);
           }
           var3.statusCode = param0;
           stackIn_3_0 = var3;
@@ -47,14 +47,14 @@ final class fn extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_B = null;
         field_y = null;
         field_A = null;
         if (param0 == 4096) {
           return;
         }
-        fn.g(36);
+        fn.clearStaticReferences(36);
     }
 
     public fn() {

@@ -122,23 +122,23 @@ final class ja {
     }
 
     private final void a(boolean param0) {
-        hj stackIn_15_0 = null;
+        RgbSprite stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
         int stackIn_16_3;
-        hj stackIn_21_0 = null;
+        RgbSprite stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
         int stackIn_22_3;
-        hj stackIn_27_0 = null;
+        RgbSprite stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_27_2 = 0;
         int stackIn_29_3;
-        hj stackIn_34_0 = null;
+        RgbSprite stackIn_34_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_34_2 = 0;
         int stackIn_35_3;
-        hj stackIn_40_0 = null;
+        RgbSprite stackIn_40_0 = null;
         int stackIn_40_1 = 0;
         int stackIn_40_2 = 0;
         int stackIn_41_3;
@@ -194,7 +194,7 @@ final class ja {
           } else {
             stackIn_16_3 = 64;
           }
-          ((hj) (Object) stackIn_15_0).e(stackIn_15_1, stackIn_15_2, stackIn_16_3);
+          ((RgbSprite) (Object) stackIn_15_0).e(stackIn_15_1, stackIn_15_2, stackIn_16_3);
         }
         if (this.field_f.field_h == 2) {
           stackIn_21_0 = hi.field_g[2];
@@ -205,7 +205,7 @@ final class ja {
           } else {
             stackIn_22_3 = 64;
           }
-          ((hj) (Object) stackIn_21_0).e(stackIn_21_1, stackIn_21_2, stackIn_22_3);
+          ((RgbSprite) (Object) stackIn_21_0).e(stackIn_21_1, stackIn_21_2, stackIn_22_3);
         }
         if (this.field_f.field_h == 3) {
           stackIn_27_0 = hi.field_g[3];
@@ -217,7 +217,7 @@ final class ja {
           } else {
             stackIn_29_3 = 64;
           }
-          ((hj) (Object) stackIn_27_0).e(stackIn_27_1, stackIn_27_2, stackIn_29_3);
+          ((RgbSprite) (Object) stackIn_27_0).e(stackIn_27_1, stackIn_27_2, stackIn_29_3);
         }
         if (this.field_f.field_h == 4) {
           stackIn_34_0 = hi.field_g[4];
@@ -229,7 +229,7 @@ final class ja {
           } else {
             stackIn_35_3 = 64;
           }
-          ((hj) (Object) stackIn_34_0).e(stackIn_34_1, stackIn_34_2, stackIn_35_3);
+          ((RgbSprite) (Object) stackIn_34_0).e(stackIn_34_1, stackIn_34_2, stackIn_35_3);
         }
         if (this.field_f.field_h == 5) {
           stackIn_40_0 = hi.field_g[5];
@@ -241,7 +241,7 @@ final class ja {
           } else {
             stackIn_41_3 = 64;
           }
-          ((hj) (Object) stackIn_40_0).e(stackIn_40_1, stackIn_40_2, stackIn_41_3);
+          ((RgbSprite) (Object) stackIn_40_0).e(stackIn_40_1, stackIn_40_2, stackIn_41_3);
         }
         return;
     }
@@ -315,7 +315,7 @@ final class ja {
         int var4 = 14 % ((param0 + 59) / 40);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         int var1 = 95 / ((param0 + 25) / 33);
@@ -1808,7 +1808,7 @@ final class ja {
 
     private final int d(int param0, int param1) {
         if (param0 >= -92) {
-          ja.c(-40);
+          ja.clearStaticReferences(-40);
         }
         if (this.field_a == 2 &&
           !n.b((byte) 68)) {
@@ -2385,7 +2385,7 @@ final class ja {
         int stackIn_64_0 = 0;
         boolean stackOut_56_0;
         int var2 = 0;
-        hj var3_ref_hj = null;
+        RgbSprite var3_ref_hj = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2597,7 +2597,7 @@ final class ja {
         int var20_int = 0;
         String var20 = null;
         Object var21_ref = null;
-        hj var21_ref_hj = null;
+        RgbSprite var21_ref_hj = null;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;

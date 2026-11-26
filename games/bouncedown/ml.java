@@ -4,7 +4,7 @@
 final class ml {
     private DualLinkNode field_a;
     static jd field_e;
-    static tg field_d;
+    static RgbSprite field_d;
     static String field_c;
     static int[] field_f;
     private DualLinkNode field_b;
@@ -93,12 +93,12 @@ final class ml {
         return null;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_c = null;
         field_d = null;
         if (param0 != -1) {
-          ml.c(53);
+          ml.clearStaticReferences(53);
           field_e = null;
           return;
         }

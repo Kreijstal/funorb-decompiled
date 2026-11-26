@@ -80,11 +80,11 @@ final class nj extends al {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_k = null;
         if (param0 != 22382) {
-          nj.d(83);
+          nj.clearStaticReferences(83);
         }
         field_o = null;
         field_j = null;
@@ -294,7 +294,7 @@ final class nj extends al {
             CipherPacketBuffer.field_n[0] = 5;
             CipherPacketBuffer.field_n[1] = 2;
             IterableNodeHashTable.field_a[3] = 1;
-            se.field_E[4] = ma.field_u;
+            se.field_E[4] = SpriteGeometry.field_u;
             se.field_E[5] = "";
             se.field_E[3] = ab.field_g;
             se.field_E[2] = field_j;
@@ -326,7 +326,7 @@ final class nj extends al {
           }
           cf.field_f.field_f = CipherPacketBuffer.field_n.length;
           if (param1 != -25698) {
-            nj.d(-32);
+            nj.clearStaticReferences(-32);
           }
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < se.field_E.length; var4Lifetime1++) {

@@ -13,12 +13,12 @@ final class ae extends WidgetContainer implements rg, n {
     static long field_M;
     static String field_F;
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_L = null;
         field_G = null;
         field_F = null;
         if (param0 != -13271) {
-          ae.h(-27);
+          ae.clearStaticReferences(-27);
         }
     }
 
@@ -57,7 +57,7 @@ final class ae extends WidgetContainer implements rg, n {
         try {
           na.a(false, param2, 92, param0);
           if (param1 < 52) {
-            ae.h(-17);
+            ae.clearStaticReferences(-17);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ae.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

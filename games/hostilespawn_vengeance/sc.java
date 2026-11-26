@@ -12,10 +12,10 @@ final class sc implements Runnable {
     static String field_p;
     static String field_h;
     private DataInputStream field_d;
-    static bd field_a;
+    static RgbSprite field_a;
     static String field_i;
     static String field_k;
-    static bd field_l;
+    static RgbSprite field_l;
     static CipherPacketBuffer field_g;
     private PlatformTask field_n;
     private int field_b;
@@ -102,7 +102,7 @@ final class sc implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         int var1 = -6 / ((-27 - param0) / 46);
         field_g = null;
@@ -210,7 +210,7 @@ final class sc implements Runnable {
         u.field_f[29] = aj.field_g;
         u.field_f[23] = bl.field_e;
         if (param0 != 118) {
-          sc.a(-47);
+          sc.clearStaticReferences(-47);
         }
         u.field_f[17] = DualLinkDeque.field_d;
         u.field_f[32] = f.field_c;

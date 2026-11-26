@@ -7,7 +7,7 @@ abstract class MouseWheelInput {
     static he field_h;
     static he[] field_a;
     static double[] field_b;
-    static nh field_d;
+    static RgbSprite field_d;
     static he[] field_g;
     static boolean field_c;
     static PlatformTaskDispatcher field_e;

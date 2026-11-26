@@ -46,10 +46,10 @@ final class hl {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 <= 38) {
-          hl.b(-70);
+          hl.clearStaticReferences(-70);
           field_b = null;
           field_c = null;
           return;

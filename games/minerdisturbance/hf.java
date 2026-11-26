@@ -11,7 +11,7 @@ final class hf extends IntrusiveNode {
     static ul field_q;
     byte[] field_n;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         if (param0 != -16935) {
           return;

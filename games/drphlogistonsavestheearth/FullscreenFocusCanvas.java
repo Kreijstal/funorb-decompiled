@@ -7,7 +7,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static String field_d;
     static he field_f;
     java.awt.Frame fullscreenFrame;
-    static nh field_e;
+    static RgbSprite field_e;
     static int field_c;
     volatile boolean focusLost;
 
@@ -791,7 +791,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           param4.writeShort(param0, -17402);
           param4.writeShort(param1, param2 - 44202);
           if (param2 != 26800) {
-            field_e = (nh) null;
+            field_e = (RgbSprite) null;
           }
           param4.writeByte(param3, (byte) -126);
           return;

@@ -75,7 +75,7 @@ final class jj extends kj {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        hj var5 = null;
+        RgbSprite var5 = null;
         if (param1 != 0) {
           return;
         }
@@ -86,7 +86,7 @@ final class jj extends kj {
           return;
         }
         if (this.field_A != 256) {
-          var5 = new hj(this.field_y.field_m, this.field_y.field_r);
+          var5 = new RgbSprite(this.field_y.field_m, this.field_y.field_r);
           de.a(-128, var5);
           this.field_y.a(0, param1, param2, 0);
           oc.g((byte) -105);
@@ -112,7 +112,7 @@ final class jj extends kj {
         this.field_A = 256;
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != 37) {
           return;
         }

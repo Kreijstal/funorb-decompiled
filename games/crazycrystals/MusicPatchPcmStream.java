@@ -144,7 +144,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -91 % ((47 - param0) / 56);
         field_m = null;
     }

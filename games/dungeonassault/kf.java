@@ -7,7 +7,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
     private java.awt.image.ColorModel field_l;
     static eh field_j;
     static PlatformTask field_m;
-    static cn field_k;
+    static RgbSprite field_k;
     static String field_q;
     static String field_i;
     static PlatformTaskDispatcher field_o;

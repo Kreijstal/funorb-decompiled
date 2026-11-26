@@ -14,7 +14,7 @@ final class SceneWidgetPart008 extends SceneWidget {
         MixedSupport040.performAction0530(48, (byte) -89, MouseWheelInput.rawSoundState0009);
     }
 
-    public static void performAction1131(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         integerArrayState0170 = null;
         if (integerArgument1 != 48) {
           integerArrayState0170 = (int[]) null;

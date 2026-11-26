@@ -3,7 +3,7 @@
  */
 final class ta {
     static PacketBuffer field_c;
-    static cn field_b;
+    static RgbSprite field_b;
     static ab field_d;
     static String field_h;
     static String field_g;

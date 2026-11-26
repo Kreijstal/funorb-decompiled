@@ -23,9 +23,9 @@ final class lu {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -3) {
-          lu.a((byte) 61);
+          lu.clearStaticReferences((byte) 61);
           field_a = null;
           return;
         }

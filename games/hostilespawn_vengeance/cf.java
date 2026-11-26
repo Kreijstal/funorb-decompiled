@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class cf extends DualLinkNode {
-    static bd[] field_u;
+    static RgbSprite[] field_u;
     static String field_r;
-    static bd field_t;
-    static bd[] field_q;
+    static RgbSprite field_t;
+    static RgbSprite[] field_q;
     static int field_s;
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param0) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, 192);
           if (param2 <= 5) {
-            field_u = (bd[]) null;
+            field_u = (RgbSprite[]) null;
             lf.a((byte) 84, param0);
             return;
           }
@@ -21,7 +21,7 @@ class cf extends DualLinkNode {
         }
         SoftwareRasterizer.clearRaster();
         if (param2 <= 5) {
-          field_u = (bd[]) null;
+          field_u = (RgbSprite[]) null;
           lf.a((byte) 84, param0);
           return;
         }
@@ -140,7 +140,7 @@ class cf extends DualLinkNode {
           if (param1 >= 42) {
             return;
           }
-          field_u = (bd[]) null;
+          field_u = (RgbSprite[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

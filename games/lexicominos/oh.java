@@ -145,7 +145,7 @@ final class oh {
         }
     }
 
-    final static void a(int param0, db param1, boolean param2, String param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite param1, boolean param2, String param3, int param4, int param5) {
         try {
           if (param2) {
             PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
@@ -157,7 +157,7 @@ final class oh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         int var1 = -85 % ((param0 + 65) / 48);

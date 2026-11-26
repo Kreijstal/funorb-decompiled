@@ -149,7 +149,7 @@ class te extends s {
 
     final static int j(int param0) {
         if (param0 != 2) {
-          te.k(-128);
+          te.releaseDeclaredStaticReferences(-128);
         }
         return h.field_H;
     }
@@ -258,12 +258,12 @@ class te extends s {
         return null;
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_N = null;
         field_J = null;
         field_M = null;
         if (param0 != -3213) {
-          te.k(-125);
+          te.releaseDeclaredStaticReferences(-125);
         }
         field_L = null;
     }

@@ -8,7 +8,7 @@ final class bt {
     static String field_b;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         int var1 = 0 / ((63 - param0) / 34);

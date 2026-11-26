@@ -178,11 +178,11 @@ final class lf implements Runnable {
         return null;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = (String[][]) null;
         field_b = null;
         if (param0) {
-          lf.a(false);
+          lf.clearStaticReferences(false);
         }
     }
 

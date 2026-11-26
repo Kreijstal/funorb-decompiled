@@ -5,15 +5,15 @@ final class ao extends IntrusiveNode {
     int field_j;
     static int field_k;
     long field_l;
-    static cn field_n;
+    static RgbSprite field_n;
     static String[] field_i;
     static int field_o;
     byte[] field_m;
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         if (param0 != 10625) {
-          field_n = (cn) null;
+          field_n = (RgbSprite) null;
           field_i = null;
           return;
         }
@@ -22,7 +22,7 @@ final class ao extends IntrusiveNode {
 
     final static String a(int param0) {
         if (param0 != -21) {
-          ao.d(85);
+          ao.clearDeclaredStaticReferences(85);
           return jj.field_d;
         }
         return jj.field_d;

@@ -7,14 +7,14 @@ final class jc {
     static Sprite field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 == 1731) {
           field_c = (byte[][]) null;
           field_a = null;
           return;
         }
-        jc.a(16);
+        jc.clearStaticReferences(16);
         field_c = (byte[][]) null;
         field_a = null;
     }

@@ -43,7 +43,7 @@ final class he extends IntrusiveNode {
         ne.a(true);
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_e = null;
         field_f = null;
         if (param0 != 4) {

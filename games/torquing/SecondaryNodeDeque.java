@@ -9,7 +9,7 @@ final class SecondaryNodeDeque implements Iterable {
     DualLinkNode sentinel;
     static int field_d;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         int var1 = -71 / ((param0 - 70) / 43);

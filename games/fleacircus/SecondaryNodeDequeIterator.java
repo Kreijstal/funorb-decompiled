@@ -405,7 +405,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_h = null;
         int var1 = -81 % ((-31 - param0) / 63);

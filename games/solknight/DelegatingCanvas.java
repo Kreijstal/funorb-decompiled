@@ -10,7 +10,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static long field_b;
     static Archive field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         field_g = null;

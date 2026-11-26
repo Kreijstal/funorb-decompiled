@@ -30,10 +30,10 @@ final class pj extends rh {
         throw new RuntimeException();
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         if (param0 <= 121) {
-          pj.g(-12);
+          pj.clearStaticReferences(-12);
           field_w = null;
           field_A = null;
           return;

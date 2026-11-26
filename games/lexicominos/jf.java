@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf extends mg {
-    static db field_N;
+    static RgbSprite field_N;
     private boolean field_J;
     static long field_P;
     private BitmapFont field_D;
@@ -15,7 +15,7 @@ final class jf extends mg {
     static bj field_L;
     static String[] field_C;
     static int field_I;
-    static db field_O;
+    static RgbSprite field_O;
     static bj field_M;
 
     final String b(int param0) {
@@ -143,7 +143,7 @@ final class jf extends mg {
         field_G = "THREE";
         field_L = new bj(0);
         field_C = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
-        field_O = new db(311, 450);
+        field_O = new RgbSprite(311, 450);
         field_M = new bj(3);
     }
 }

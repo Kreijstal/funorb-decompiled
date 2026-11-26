@@ -28,7 +28,7 @@ final class ha extends cn {
         return dupTemp$0;
     }
 
-    final void a(boolean param0, bd param1) {
+    final void a(boolean param0, RgbSprite param1) {
         int var4 = 0;
         gm[] var3 = null;
         gm var5 = null;
@@ -219,7 +219,7 @@ final class ha extends cn {
         }
     }
 
-    final void a(int param0, bd[] param1, byte param2) {
+    final void a(int param0, RgbSprite[] param1, byte param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
@@ -235,7 +235,7 @@ final class ha extends cn {
         }
     }
 
-    final void a(boolean param0, bd[] param1) {
+    final void a(boolean param0, RgbSprite[] param1) {
         gm[] var3 = null;
         int var4 = 0;
         gm var5 = null;
@@ -330,7 +330,7 @@ final class ha extends cn {
         RuntimeException var6 = null;
         gm var7 = null;
         gm var9 = null;
-        bd[] var10 = null;
+        RgbSprite[] var10 = null;
         ph var11 = null;
         gm var12 = null;
         gm var13 = null;
@@ -384,8 +384,8 @@ final class ha extends cn {
           }
           this.field_u.a(this, 126, param1, param3, param0);
           if (param2 != 15430) {
-            var10 = (bd[]) null;
-            this.a(-65, (bd[]) null, (byte) -86);
+            var10 = (RgbSprite[]) null;
+            this.a(-65, (RgbSprite[]) null, (byte) -86);
           }
           eh.b(false);
           return;

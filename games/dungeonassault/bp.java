@@ -84,7 +84,7 @@ final class bp {
         }
     }
 
-    final static void a(int param0, cn param1, int param2, byte param3) {
+    final static void a(int param0, RgbSprite param1, int param2, byte param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -168,7 +168,7 @@ final class bp {
         this.field_b = this.field_b - 1;
     }
 
-    final static void a(cn param0, byte param1, String param2) {
+    final static void a(RgbSprite param0, byte param1, String param2) {
         try {
           lg.field_m = param2;
           rf.field_Q = param0;
@@ -195,8 +195,8 @@ final class bp {
         field_h = null;
         field_e = null;
         if (param0 != -1) {
-          cn var2 = (cn) null;
-          bp.a(-29, (cn) null, 36, (byte) -4);
+          RgbSprite var2 = (RgbSprite) null;
+          bp.a(-29, (RgbSprite) null, 36, (byte) -4);
         }
     }
 
@@ -210,7 +210,7 @@ final class bp {
     final void e(int param0, int param1) {
         if (param1 > -66) {
           String var4 = (String) null;
-          bp.a((cn) null, (byte) 50, (String) null);
+          bp.a((RgbSprite) null, (byte) 50, (String) null);
         }
         this.a(1 + this.field_b, 0, param0);
     }

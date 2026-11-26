@@ -14,14 +14,14 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
     final static void b(byte param0) {
         ti.a(ua.a(true));
         if (param0 >= -104) {
-          IntrusiveNodeHashTableIterator.a((byte) -125);
+          IntrusiveNodeHashTableIterator.clearStaticReferences((byte) -125);
           da.field_h = 512;
           return;
         }
         da.field_h = 512;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = -23 % ((-24 - param0) / 53);
         field_f = null;

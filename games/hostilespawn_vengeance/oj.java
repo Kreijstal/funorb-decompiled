@@ -6,10 +6,10 @@ class oj extends p {
     boolean field_J;
     int field_I;
     boolean field_s;
-    bd field_u;
+    RgbSprite field_u;
     int field_x;
     boolean field_N;
-    bd[] field_H;
+    RgbSprite[] field_H;
     int field_w;
     int field_o;
     int field_v;
@@ -29,7 +29,7 @@ class oj extends p {
     double field_K;
     int field_p;
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -76 % ((param0 - 22) / 58);
         field_y = null;
     }
@@ -44,7 +44,7 @@ class oj extends p {
         return this.field_A;
     }
 
-    final bd g(int param0) {
+    final RgbSprite g(int param0) {
         int var2;
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;
@@ -106,7 +106,7 @@ class oj extends p {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, oc param5) {
-        bd[] stackIn_106_0 = null;
+        RgbSprite[] stackIn_106_0 = null;
         RuntimeException stackIn_531_0 = null;
         StringBuilder stackIn_531_1 = null;
         String stackIn_532_2 = null;
@@ -115,8 +115,8 @@ class oj extends p {
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        bd[] var10 = null;
-        bd[] var11 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite[] var11 = null;
         int var7_intLifetime1;
         int var8Lifetime1;
         var9 = HostileSpawn.field_I ? 1 : 0;
@@ -1234,7 +1234,7 @@ class oj extends p {
         try {
           var4_double = this.field_c;
           if (param1 != 128) {
-            oj.g((byte) -21);
+            oj.clearStaticReferences((byte) -21);
           }
           if (this.field_J) {
             if (var4_double >= 128.0) {
@@ -1317,7 +1317,7 @@ class oj extends p {
         return stackIn_74_0;
     }
 
-    final bd[][] e(int param0) {
+    final RgbSprite[][] e(int param0) {
         int var2;
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;
@@ -1356,7 +1356,7 @@ class oj extends p {
           return of.field_c;
         }
         if (var2 != 24) {
-          return (bd[][]) null;
+          return (RgbSprite[][]) null;
         }
         return ArchiveIndex.field_f;
     }
@@ -1390,7 +1390,7 @@ class oj extends p {
         try {
           param0.field_G = 1;
           if (!param6) {
-            oj.g((byte) 82);
+            oj.clearStaticReferences((byte) 82);
           }
           if (param0.field_F == 0) {
             param0.field_G = 0;

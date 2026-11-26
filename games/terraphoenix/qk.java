@@ -15,7 +15,7 @@ final class qk {
     private int field_h;
     private int field_j;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_l = null;
         field_e = null;
@@ -25,7 +25,7 @@ final class qk {
           field_f = null;
           return;
         }
-        qk.a(60);
+        qk.clearStaticReferences(60);
         field_g = null;
         field_a = null;
         field_f = null;
@@ -89,7 +89,7 @@ final class qk {
         wc var4 = (wc) (this.field_c.get(param1, (byte) -21));
         this.a(var4, 1);
         if (param0 >= -54) {
-          qk.a(-85);
+          qk.clearStaticReferences(-85);
           return;
         }
     }

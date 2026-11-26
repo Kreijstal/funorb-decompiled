@@ -136,7 +136,7 @@ final class mh extends jk {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_F = null;
         int var1 = 46 % ((55 - param0) / 40);
         field_H = null;

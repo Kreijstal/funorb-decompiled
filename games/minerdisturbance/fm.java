@@ -116,7 +116,7 @@ final class fm extends kn implements sh {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -123) {
           field_N = (int[]) null;
         }
@@ -130,7 +130,7 @@ final class fm extends kn implements sh {
     final static void a(String param0, boolean param1) {
         try {
           if (param1) {
-            fm.e((byte) -36);
+            fm.clearDeclaredStaticReferences((byte) -36);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

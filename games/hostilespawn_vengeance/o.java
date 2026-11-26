@@ -10,11 +10,11 @@ final class o extends ql {
     private oc field_i;
     static sm field_n;
     private we[] field_f;
-    static bd field_g;
+    static RgbSprite field_g;
     static boolean field_e;
     private v field_k;
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_l = null;
         field_g = null;

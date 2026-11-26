@@ -258,7 +258,7 @@ final class rf extends WidgetContainer implements re, ka, ge {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_E = null;
         if (!param0) {
           field_Q = null;
@@ -267,7 +267,7 @@ final class rf extends WidgetContainer implements re, ka, ge {
           field_F = null;
           return;
         }
-        rf.e(false);
+        rf.clearStaticReferences(false);
         field_Q = null;
         field_N = null;
         field_H = null;

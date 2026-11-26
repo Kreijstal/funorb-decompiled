@@ -7,14 +7,14 @@ final class be {
     static int[] field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 20342) {
           field_b = null;
           field_c = null;
           field_a = null;
           return;
         }
-        be.a(85);
+        be.clearStaticReferences(85);
         field_b = null;
         field_c = null;
         field_a = null;

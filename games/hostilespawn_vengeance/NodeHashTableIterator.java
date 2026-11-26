@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
-    static bd field_g;
-    static bd field_d;
+    static RgbSprite field_g;
+    static RgbSprite field_d;
     private IntrusiveNode nextNode;
     static bn[] field_a;
     private IntrusiveNodeHashTable table;
@@ -47,7 +47,7 @@ final class NodeHashTableIterator implements Iterator {
         field_d = null;
         field_a = null;
         if (param0 <= 31) {
-          field_d = (bd) null;
+          field_d = (RgbSprite) null;
           field_g = null;
           return;
         }
@@ -114,7 +114,7 @@ final class NodeHashTableIterator implements Iterator {
         if (param1 == -121) {
           return;
         }
-        field_d = (bd) null;
+        field_d = (RgbSprite) null;
     }
 
     NodeHashTableIterator(IntrusiveNodeHashTable param0) {

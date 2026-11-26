@@ -44,7 +44,7 @@ final class GameDomainSupport001 {
         MixedSupport099.performAction1230(false);
     }
 
-    public static void performAction0093(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         rgbSpriteState0006 = null;
         rgbSpriteArrayArrayState0002 = (RgbSprite[][]) null;
         int integerLocal1 = -3 / ((integerArgument1 - 37) / 58);
@@ -396,7 +396,7 @@ final class GameDomainSupport001 {
 
     final static void performAction0092(byte byteArgument1) {
         if (byteArgument1 != -22) {
-          GameDomainSupport001.performAction0093(-30);
+          GameDomainSupport001.clearStaticReferences(-30);
         }
     }
 

@@ -278,8 +278,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         int var6_int = 0;
         try {
           var2_long = lo.correctedCurrentTimeMillis((byte) 125);
-          var4 = mc.field_p[ne.field_c];
-          mc.field_p[ne.field_c] = var2_long;
+          var4 = SpriteGeometry.field_p[ne.field_c];
+          SpriteGeometry.field_p[ne.field_c] = var2_long;
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);

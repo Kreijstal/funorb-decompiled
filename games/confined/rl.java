@@ -14,10 +14,10 @@ abstract class rl extends DualLinkNode {
 
     abstract byte[] e(byte param0);
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         if (param0 > -90) {
-          rl.c(69);
+          rl.clearStaticReferences(69);
           field_s = null;
           return;
         }

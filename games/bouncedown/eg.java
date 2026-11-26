@@ -66,7 +66,7 @@ abstract class eg extends DualLinkNode {
 
     abstract boolean c(byte param0);
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         int var1 = -84 % ((param0 + 39) / 46);
         field_q = null;

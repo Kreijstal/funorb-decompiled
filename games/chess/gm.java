@@ -94,7 +94,7 @@ abstract class gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2_ref), "gm.I(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2_ref), "gm.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3137,7 +3137,7 @@ abstract class gm {
                   } else {
                     stackIn_2593_2 = "{...}";
                   }
-                  throw fk.wrapClientException((Throwable) ((Object) stackIn_2592_0), ((StringBuilder) (Object) stackIn_2592_1).append(stackIn_2593_2).append(',').append(param1).append(')').toString());
+                  throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_2592_0), ((StringBuilder) (Object) stackIn_2592_1).append(stackIn_2593_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2601_0 = (!GameAppletShell.field_b);
@@ -3157,7 +3157,7 @@ abstract class gm {
             gm.a(']', (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "gm.K(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "gm.K(" + param0 + ')');
         }
     }
 
@@ -3178,7 +3178,7 @@ abstract class gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var4), "gm.J(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var4), "gm.J(" + param0 + ',' + param1 + ')');
         }
     }
 

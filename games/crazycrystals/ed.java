@@ -5,10 +5,10 @@ final class ed extends om {
     static String[] field_y;
     static int field_z;
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_y = null;
         if (param0 != 87) {
-          ed.f((byte) 29);
+          ed.clearStaticReferences((byte) 29);
         }
     }
 

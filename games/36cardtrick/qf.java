@@ -150,7 +150,7 @@ abstract class qf extends g {
           return;
         }
         if (null == ad.field_j) {
-          ad.field_j = new kc(this.field_h, this.field_q);
+          ad.field_j = new RgbSprite(this.field_h, this.field_q);
           dl.a(param2 ^ -128, ad.field_j);
           SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -77, 0);
@@ -160,7 +160,7 @@ abstract class qf extends g {
           return;
         }
         if (this.field_h > ad.field_j.field_p) {
-          ad.field_j = new kc(this.field_h, this.field_q);
+          ad.field_j = new RgbSprite(this.field_h, this.field_q);
           dl.a(param2 ^ -128, ad.field_j);
           SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -77, 0);
@@ -170,7 +170,7 @@ abstract class qf extends g {
           return;
         }
         if (ad.field_j.field_o < this.field_q) {
-          ad.field_j = new kc(this.field_h, this.field_q);
+          ad.field_j = new RgbSprite(this.field_h, this.field_q);
           dl.a(param2 ^ -128, ad.field_j);
           SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -77, 0);

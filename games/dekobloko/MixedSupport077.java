@@ -55,7 +55,7 @@ final class MixedSupport077 {
         }
     }
 
-    public static void performAction0957(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         displayModeControllerState0001 = null;
         rgbSpriteState0032 = null;
         stringState0332 = null;

@@ -16,7 +16,7 @@ final class tm {
     static wh field_b;
     int field_s;
     static int field_e;
-    static cn field_p;
+    static RgbSprite field_p;
     ra[] field_n;
     int field_l;
     byte[][] field_g;
@@ -238,7 +238,7 @@ final class tm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         field_b = null;
         int var1 = 32 / ((param0 - 5) / 55);

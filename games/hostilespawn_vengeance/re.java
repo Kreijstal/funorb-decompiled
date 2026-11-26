@@ -10,14 +10,14 @@ final class re {
     private boolean field_u;
     private be field_C;
     static ub field_r;
-    private bd field_H;
+    private RgbSprite field_H;
     private le[] field_b;
     private int field_s;
     private int field_e;
     private pb field_z;
     private le[][] field_w;
     private int field_j;
-    static bd[][] field_D;
+    static RgbSprite[][] field_D;
     private boolean field_c;
     private int field_x;
     private th field_F;
@@ -40,7 +40,7 @@ final class re {
     static bl field_i;
     static boolean field_l;
     static String field_I;
-    static bd field_q;
+    static RgbSprite field_q;
 
     private final void b(int param0, int param1, int param2) {
         int var4 = 0;
@@ -155,7 +155,7 @@ final class re {
         int stackIn_60_0 = 0;
         int var3 = 0;
         int var4 = 0;
-        bd var5_ref_bd = null;
+        RgbSprite var5_ref_bd = null;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
@@ -192,7 +192,7 @@ final class re {
                 stackIn_14_0 = (!hb.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) ? 0 : 1;
                 var6 = stackIn_14_0;
                 if (var6 == 0) {
-                  qc.field_v.c(3, 3);
+                  SpriteGeometry.field_v.c(3, 3);
                   if (var4 != this.field_J) {
                     var7_int = 0;
                     while (var5_ref_bd.field_D.length > var7_int) {
@@ -251,11 +251,11 @@ final class re {
                 !qa.a(e.field_w, var4Lifetime1, param1)) {
                 de.field_i.e(74, 108);
                 if (var9 != 0) {
-                  qc.field_v.a(74, 108);
+                  SpriteGeometry.field_v.a(74, 108);
                   fj.field_Kb[var4Lifetime1].e(74, 108);
                 }
               } else {
-                qc.field_v.a(74, 108);
+                SpriteGeometry.field_v.a(74, 108);
                 if (var9 != 0) {
                   fj.field_Kb[var4Lifetime1].e(74, 108);
                 }
@@ -278,7 +278,7 @@ final class re {
             }
             var7 = bh.field_g[var4Lifetime1];
             if (var6Lifetime1 != 0) {
-              var7 = qc.field_t;
+              var7 = SpriteGeometry.field_t;
             }
             boolean decompiledFrameCompleted0 = true;
             al.field_Z.a(var7.toUpperCase(), 260, 150, 320, 64, 16776960, -1, 0, 0, 16);
@@ -670,12 +670,12 @@ final class re {
         }
     }
 
-    private final bd e(byte param0, int param1) {
+    private final RgbSprite e(byte param0, int param1) {
         if (param0 != -44) {
           this.a(false);
         }
         int var3 = an.field_r[param1];
-        bd var4 = new bd(128, 128);
+        RgbSprite var4 = new RgbSprite(128, 128);
         int[] var5 = new int[4];
         SoftwareRasterizer.saveClip(var5);
         var4.a();
@@ -847,7 +847,7 @@ final class re {
         int var5;
         int stackIn_5_0 = 0;
         int stackIn_19_0 = 0;
-        bd[] stackIn_27_0 = null;
+        RgbSprite[] stackIn_27_0 = null;
         int var2;
         int var3;
         int var4;
@@ -1120,7 +1120,7 @@ final class re {
                   var30 != 0) {
                   var29 = new le(0L, (le) null);
                   this.field_b[var28] = var29;
-                  var29.field_Y = new bd(38, 38);
+                  var29.field_Y = new RgbSprite(38, 38);
                   var29.field_sb = var29.field_Y.field_z;
                   var29.field_qb = var29.field_Y.field_z;
                   var29.field_zb = var13Lifetime1;
@@ -2114,7 +2114,7 @@ final class re {
 
     }
 
-    private final int a(bd param0, String param1, int param2, String param3, byte param4, bd param5) {
+    private final int a(RgbSprite param0, String param1, int param2, String param3, byte param4, RgbSprite param5) {
         int stackIn_5_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_24_0 = 0;
@@ -2182,8 +2182,8 @@ final class re {
             stackIn_24_0 = param2;
             return stackIn_24_0;
           }
-          param2 = this.a((bd) null, param1, param2, (String) null, (byte) 80, param5);
-          param2 = this.a((bd) null, param3, param2, (String) null, (byte) 80, param0);
+          param2 = this.a((RgbSprite) null, param1, param2, (String) null, (byte) 80, param5);
+          param2 = this.a((RgbSprite) null, param3, param2, (String) null, (byte) 80, param0);
           stackIn_5_0 = param2;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2629,7 +2629,7 @@ final class re {
 
     private final void a(int param0, int param1, int param2) {
         if (param0 != 89) {
-          field_q = (bd) null;
+          field_q = (RgbSprite) null;
         }
     }
 
@@ -2838,7 +2838,7 @@ final class re {
             var12_ref_le.field_jb = false;
             var12_ref_le.field_zb = var7 + var10 * 4;
             var12_ref_le.field_sb = 20;
-            var12_ref_le.field_nb = qc.field_x;
+            var12_ref_le.field_nb = SpriteGeometry.field_x;
             var12_ref_le.field_tb = var6;
             var12_ref_le.field_qb = var4.field_qb - 20;
             var12_ref_le.field_T = 0;
@@ -2985,24 +2985,24 @@ final class re {
         var3 = this.a(il.field_c[4], field_I, var3, tk.field_f, (byte) 80, il.field_c[3]);
         var3 = this.a(il.field_c[6], u.field_c, var3, of.field_b, (byte) 80, il.field_c[5]);
         var3 = this.a(jf.field_f, param0 + 8, var3);
-        var3 = this.a((bd) null, al.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
+        var3 = this.a((RgbSprite) null, al.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
         var3 = this.a(il.field_c[10], g.field_K, var3, ln.field_p, (byte) 80, il.field_c[8]);
-        var3 = this.a((bd) null, MouseWheelInput.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
-        var3 = this.a((bd) null, eh.field_h, var3, (String) null, (byte) 80, km.field_A[0]);
-        var3 = this.a((bd) null, ga.field_c, var3, (String) null, (byte) 80, pi.field_b);
+        var3 = this.a((RgbSprite) null, MouseWheelInput.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
+        var3 = this.a((RgbSprite) null, eh.field_h, var3, (String) null, (byte) 80, km.field_A[0]);
+        var3 = this.a((RgbSprite) null, ga.field_c, var3, (String) null, (byte) 80, pi.field_b);
         var3 = this.a(mb.field_k, param0 ^ 58, var3);
-        var3 = this.a((bd) null, MidiPcmStream.field_A, var3, (String) null, (byte) 80, this.e((byte) -44, 0));
-        var3 = this.a((bd) null, uj.field_q, var3, (String) null, (byte) 80, this.e((byte) -44, 1));
-        var3 = this.a((bd) null, h.field_f, var3, (String) null, (byte) 80, this.e((byte) -44, 2));
-        var3 = this.a((bd) null, tk.field_b, var3, (String) null, (byte) 80, this.e((byte) -44, 3));
-        var3 = this.a((bd) null, vb.field_Hb, var3, (String) null, (byte) 80, this.e((byte) -44, 4));
-        var3 = this.a((bd) null, di.field_c, var3, (String) null, (byte) 80, this.e((byte) -44, 5));
-        var3 = this.a((bd) null, m.field_r, var3, (String) null, (byte) 80, this.e((byte) -44, 6));
-        var3 = this.a((bd) null, od.field_C, var3, (String) null, (byte) 80, this.e((byte) -44, 7));
+        var3 = this.a((RgbSprite) null, MidiPcmStream.field_A, var3, (String) null, (byte) 80, this.e((byte) -44, 0));
+        var3 = this.a((RgbSprite) null, uj.field_q, var3, (String) null, (byte) 80, this.e((byte) -44, 1));
+        var3 = this.a((RgbSprite) null, h.field_f, var3, (String) null, (byte) 80, this.e((byte) -44, 2));
+        var3 = this.a((RgbSprite) null, tk.field_b, var3, (String) null, (byte) 80, this.e((byte) -44, 3));
+        var3 = this.a((RgbSprite) null, vb.field_Hb, var3, (String) null, (byte) 80, this.e((byte) -44, 4));
+        var3 = this.a((RgbSprite) null, di.field_c, var3, (String) null, (byte) 80, this.e((byte) -44, 5));
+        var3 = this.a((RgbSprite) null, m.field_r, var3, (String) null, (byte) 80, this.e((byte) -44, 6));
+        var3 = this.a((RgbSprite) null, od.field_C, var3, (String) null, (byte) 80, this.e((byte) -44, 7));
         var3 = this.a(al.field_O, 87, var3);
-        var3 = this.a((bd) null, od.field_B, var3, (String) null, (byte) 80, wk.field_b[1]);
-        var3 = this.a((bd) null, mf.field_a, var3, (String) null, (byte) 80, wk.field_b[3]);
-        var3 = this.a((bd) null, ha.field_x, var3, (String) null, (byte) 80, wk.field_b[11]);
+        var3 = this.a((RgbSprite) null, od.field_B, var3, (String) null, (byte) 80, wk.field_b[1]);
+        var3 = this.a((RgbSprite) null, mf.field_a, var3, (String) null, (byte) 80, wk.field_b[3]);
+        var3 = this.a((RgbSprite) null, ha.field_x, var3, (String) null, (byte) 80, wk.field_b[11]);
         SoftwareRasterizer.setClip(0, 0, 640, var4);
         if (null != this.field_h) {
           this.field_h.a(param0 - 177, false);
@@ -3011,12 +3011,12 @@ final class re {
         return var3 - param1 - 94;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_B = null;
         field_I = null;
         field_q = null;
-        field_D = (bd[][]) null;
+        field_D = (RgbSprite[][]) null;
         field_n = null;
         field_A = null;
         field_r = null;
@@ -3889,7 +3889,7 @@ final class re {
         this.a((byte) -103, ad.field_d);
         var3 = 2;
         if (null == this.field_H) {
-          this.field_H = new bd(ln.field_a.field_d * var3, var3 * ln.field_a.field_a);
+          this.field_H = new RgbSprite(ln.field_a.field_d * var3, var3 * ln.field_a.field_a);
           this.field_H.a();
           IntrusiveNode.field_d.a(4, var3);
           o.field_n.b((byte) 113);
@@ -4408,7 +4408,7 @@ final class re {
         return;
     }
 
-    private final void a(byte param0, int param1, bd param2, int param3) {
+    private final void a(byte param0, int param1, RgbSprite param2, int param3) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -4508,7 +4508,7 @@ final class re {
         this.field_G = new th(-1L, var2_ref, var3, this.field_z);
         this.field_G.field_qb = var3.field_qb;
         if (param0 <= 100) {
-          field_D = (bd[][]) null;
+          field_D = (RgbSprite[][]) null;
         }
         this.field_G.field_sb = 140;
         this.field_G.field_zb = 216;
@@ -4784,7 +4784,7 @@ final class re {
           ab.field_b = param2;
           jd.field_l = param4;
           if (param0 != 4) {
-            field_D = (bd[][]) null;
+            field_D = (RgbSprite[][]) null;
           }
           tk.field_c = param5;
           cl.field_l = param3;
@@ -4805,7 +4805,7 @@ final class re {
         String stackIn_7_0 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         if (param3 >= -106) {
-          field_q = (bd) null;
+          field_q = (RgbSprite) null;
         }
         var4 = param0.indexOf(param1);
         while (-1 != var4) {
@@ -4823,7 +4823,7 @@ final class re {
         le var3 = null;
         le var4 = null;
         le var5 = null;
-        bd var6 = null;
+        RgbSprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -4837,7 +4837,7 @@ final class re {
         var3 = new le(0L, (le) null);
         var4 = new le(0L, (le) null);
         var5 = new le(0L, (le) null);
-        var6 = new bd(16, 16);
+        var6 = new RgbSprite(16, 16);
         var6.a();
         var7 = 2;
         var8 = 6;

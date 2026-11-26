@@ -9,7 +9,7 @@ final class ClientException extends RuntimeException {
     Throwable cause;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_b = null;
         int var1 = 1 / ((3 - param0) / 33);

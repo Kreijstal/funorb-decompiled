@@ -66,7 +66,7 @@ final class rc extends hh {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -29304) {
           return;
         }

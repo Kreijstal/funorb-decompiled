@@ -6,11 +6,11 @@ final class hk {
     static mi field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 < 26) {
-          hk.a((byte) 26);
+          hk.clearStaticReferences((byte) 26);
           field_b = null;
           return;
         }

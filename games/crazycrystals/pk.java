@@ -12,7 +12,7 @@ final class pk {
     static int field_c;
     private ob field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -69 / ((46 - param0) / 43);
         field_f = null;
     }

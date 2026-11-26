@@ -71,7 +71,7 @@ final class oe {
         return (String) null;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         int var1 = 41 / ((44 - param0) / 57);

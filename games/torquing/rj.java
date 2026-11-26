@@ -261,10 +261,10 @@ final class rj extends am {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_v = null;
         if (param0 > -101) {
-          rj.g((byte) 114);
+          rj.clearDeclaredStaticReferences((byte) 114);
         }
         field_y = null;
     }

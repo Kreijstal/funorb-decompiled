@@ -30,7 +30,7 @@ final class MixedSupport010 {
         return MixedSupport053.networkSupport002State0002;
     }
 
-    public static void performAction0140(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0048 = null;
         stringState0049 = null;
         bitmapFontState0005 = null;
@@ -102,7 +102,7 @@ final class MixedSupport010 {
         try {
           SceneWidgetPart010.performAction1463(integerArgument9 ^ 25206, integerArgument5, rgbSpriteArrayArrayArgument12, byteArrayArgument4, rgbSpriteArrayArrayArgument11, integerArgument8, booleanArgument13, stringArrayArrayArgument15, integerArrayArgument2, byteArrayArgument1, resourceArchiveArgument7, (int[]) null, resourceArchiveArgument10, (IndexedSprite[]) null, stringArrayArgument3, stringArrayArrayArgument6, resourceArchiveArgument14);
           if (integerArgument9 != 25150) {
-            MixedSupport010.performAction0140((byte) 118);
+            MixedSupport010.clearStaticReferences((byte) 118);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal26) {

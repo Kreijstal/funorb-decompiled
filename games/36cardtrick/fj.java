@@ -224,7 +224,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (pg.a(false, (CharSequence) ((Object) var4)) &&
-                        !(ie.a(false, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(SpriteGeometry.a(false, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a((byte) -41, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }

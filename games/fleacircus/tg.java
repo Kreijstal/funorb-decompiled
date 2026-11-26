@@ -53,7 +53,7 @@ final class tg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_a = null;
         field_c = null;
@@ -62,7 +62,7 @@ final class tg {
         field_b = null;
         field_i = null;
         if (!param0) {
-          tg.a(true);
+          tg.clearStaticReferences(true);
         }
     }
 

@@ -3316,13 +3316,13 @@ final class ng extends ck {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        cn var7 = null;
+        RgbSprite var7 = null;
         od var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        cn var7Lifetime1;
-        cn var7Lifetime2;
+        RgbSprite var7Lifetime1;
+        RgbSprite var7Lifetime2;
         var11 = DungeonAssault.field_K;
         try {
           super.a(param0, param1, 0, param3);
@@ -3346,7 +3346,7 @@ final class ng extends ck {
               decompiledSharedTail0 = (var11 != 0);
             }
             if (decompiledSharedTail0) {
-              ta.field_b = new cn(var9, var10);
+              ta.field_b = new RgbSprite(var9, var10);
               lm.a(ta.field_b, (byte) 108);
             }
             var7.b(112, 144, var7.field_E << 4, var7.field_G << 4, -this.field_O << 10, 4096);

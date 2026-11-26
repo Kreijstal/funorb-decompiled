@@ -5,7 +5,7 @@ final class sg {
     static int[] field_c;
     static String field_f;
     static int[] field_d;
-    static cn field_b;
+    static RgbSprite field_b;
     static String field_a;
     static String[] field_e;
 
@@ -354,7 +354,7 @@ final class sg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_f = null;

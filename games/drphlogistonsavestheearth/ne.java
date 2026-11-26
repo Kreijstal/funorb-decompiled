@@ -78,7 +78,7 @@ final class ne {
         return false;
     }
 
-    final static boolean a(nh param0, int param1, int param2, he param3, int param4, int param5) {
+    final static boolean a(RgbSprite param0, int param1, int param2, he param3, int param4, int param5) {
         int var22 = 0;
         int var23 = 0;
         int stackIn_9_0 = 0;

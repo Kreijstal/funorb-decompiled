@@ -8,7 +8,7 @@ final class gj {
     String field_e;
     String field_g;
     static ub field_b;
-    static bd field_d;
+    static RgbSprite field_d;
     int field_f;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -50,7 +50,7 @@ final class gj {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 > -5) {
-          field_d = (bd) null;
+          field_d = (RgbSprite) null;
         }
         field_d = null;
         field_b = null;
@@ -58,7 +58,7 @@ final class gj {
 
     final static nd[] a(int param0) {
         if (param0 != -17) {
-          field_d = (bd) null;
+          field_d = (RgbSprite) null;
         }
         return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, CrossfadingMidiPcmStream.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, ee.field_a};
     }

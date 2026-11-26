@@ -7,7 +7,7 @@ final class mm extends kj {
     static String field_E;
     static vg field_A;
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_B = null;
         field_E = null;
         if (param0 != 21006) {

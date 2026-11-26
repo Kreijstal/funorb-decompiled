@@ -3,10 +3,10 @@
  */
 class ue extends DualLinkNode {
     static String field_s;
-    static nf[] field_u;
+    static RgbSprite[] field_u;
     static int field_t;
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = -3 / ((param0 + 31) / 56);
         field_s = null;
         field_u = null;

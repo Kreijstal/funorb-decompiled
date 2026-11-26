@@ -66,30 +66,30 @@ final class el {
         return stackIn_6_0;
     }
 
-    final static db[] a(int param0, db param1) {
+    final static RgbSprite[] a(int param0, RgbSprite param1) {
         int var3 = 0;
-        db[] var2 = null;
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
         double var5 = 0.0;
         int var7 = 0;
         int var8 = 0;
-        db[] var9 = null;
-        db[] stackIn_5_0 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          var9 = new db[32];
+          var9 = new RgbSprite[32];
           var2 = var9;
           var9[param0] = param1;
           for (var3 = 1; var3 < 32; var3++) {
             var4 = var3 - 32;
             var5 = (double)var4 * 3.141592653589793 / 64.0;
             var7 = (int)(1.0 + Math.abs(Math.sin(var5)) * (double)param1.field_u + Math.abs(Math.cos(var5)) * (double)param1.field_p);
-            var9[var3] = new db(var7, var7);
+            var9[var3] = new RgbSprite(var7, var7);
             var9[var3].b();
             param1.a(8 * param1.field_p, 8 * param1.field_u, var7 * 8, 8 * var7, var4 * 16384 / 32, 4096);
             var9[var3].h();

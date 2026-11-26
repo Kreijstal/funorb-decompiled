@@ -103,11 +103,11 @@ final class we {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_j = null;
         if (param0 != -11509) {
-          we.a(45);
+          we.clearStaticReferences(45);
         }
         field_b = null;
     }
@@ -165,7 +165,7 @@ final class we {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param1 <= 110) {
-          we.a(49);
+          we.clearStaticReferences(49);
         }
         return WordDictionary.a(param0, param3, param2, 127, 1);
     }
@@ -193,7 +193,7 @@ final class we {
               this.a(false);
             }
             if (param2 <= 52) {
-              we.a(48);
+              we.clearStaticReferences(48);
             }
             if (-1L != this.field_c &&
               this.field_f + (long)param1 > this.field_c + (long)this.field_d.length) {

@@ -97,12 +97,12 @@ final class aq {
         return this.field_k[var4.field_n];
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         field_f = null;
         if (param0 > -80) {
-          aq.b(79);
+          aq.clearStaticReferences(79);
         }
     }
 

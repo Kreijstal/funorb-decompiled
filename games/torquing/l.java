@@ -43,7 +43,7 @@ final class l {
         return (tl) null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = (byte[][][]) null;
         int var1 = 124 % ((17 - param0) / 51);
         field_a = null;

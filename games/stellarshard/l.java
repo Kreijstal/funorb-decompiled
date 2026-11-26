@@ -13,11 +13,11 @@ final class l {
     int field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         if (param0 != 0) {
-          l.a(23);
+          l.clearStaticReferences(23);
           field_f = null;
           return;
         }

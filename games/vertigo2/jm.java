@@ -291,7 +291,7 @@ final class jm extends TextureOperator {
         this.g(2);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_C = null;
         field_H = null;
         field_E = null;

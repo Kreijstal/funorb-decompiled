@@ -57,10 +57,10 @@ final class am extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         if (param0 != 5) {
-          am.a((byte) -97);
+          am.clearStaticReferences((byte) -97);
         }
     }
 

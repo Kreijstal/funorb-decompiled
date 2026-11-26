@@ -5,7 +5,7 @@ final class eh {
     static he[] field_b;
     static volatile boolean field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 77 % ((param0 + 13) / 44);
         field_b = null;
     }

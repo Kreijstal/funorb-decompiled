@@ -35,7 +35,7 @@ final class oa implements ca {
           }
           var6_int = stackIn_6_0;
           if (param0 != 34) {
-            oa.a((byte) -52);
+            oa.clearStaticReferences((byte) -52);
           }
           this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
           if (param1.a((byte) 20)) {
@@ -74,7 +74,7 @@ final class oa implements ca {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_i = null;
         field_e = null;

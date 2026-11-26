@@ -3,7 +3,7 @@
  */
 public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_g;
-    static dd field_b;
+    static RgbSprite field_b;
     boolean field_i;
     public static boolean field_e;
     public static int field_j;
@@ -226,7 +226,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var1 = null;
         try {
           if (!param0) {
-            field_b = (dd) null;
+            field_b = (RgbSprite) null;
           }
           field_b = null;
           field_g = null;

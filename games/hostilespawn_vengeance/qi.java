@@ -4,7 +4,7 @@
 final class qi extends vd implements qk {
     private dg field_F;
     private String field_I;
-    static bd field_H;
+    static RgbSprite field_H;
     private int[] field_M;
     static int field_N;
     private int field_E;
@@ -209,7 +209,7 @@ final class qi extends vd implements qk {
           if (param0 == 22770) {
             return;
           }
-          qi.j(17);
+          qi.clearStaticReferences(17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,11 +225,11 @@ final class qi extends vd implements qk {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_G = null;
         field_H = null;
         if (param0 <= 48) {
-          qi.j(-55);
+          qi.clearStaticReferences(-55);
         }
     }
 

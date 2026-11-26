@@ -16,7 +16,7 @@ final class ci implements de {
     final static void a(String param0, int param1) {
         try {
           if (param1 != 0) {
-            ci.a(-63);
+            ci.clearStaticReferences(-63);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ci.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -170,10 +170,10 @@ final class ci implements de {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 > -114) {
-          ci.a(47);
+          ci.clearStaticReferences(47);
           field_g = null;
           return;
         }

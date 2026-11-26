@@ -3,7 +3,7 @@
  */
 final class ic {
     static String field_d;
-    static nf field_a;
+    static RgbSprite field_a;
     static int field_b;
     static PcmSample[] field_c;
 

@@ -10,7 +10,7 @@ final class nj {
     f field_a;
     private int field_d;
     nj field_n;
-    dl field_l;
+    RgbSprite field_l;
     boolean field_i;
     private int field_j;
     int field_g;
@@ -296,7 +296,7 @@ final class nj {
         }
     }
 
-    nj(dl param0, String param1, String param2) {
+    nj(RgbSprite param0, String param1, String param2) {
         this.field_f = 300;
         this.field_d = 0;
         this.field_j = 0;

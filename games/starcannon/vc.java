@@ -21,18 +21,18 @@ final class vc extends IntrusiveNode {
           vj.field_ab = param2;
           return;
         }
-        vc.b((byte) 96);
+        vc.clearStaticReferences((byte) 96);
         ff.field_o = param0;
         nh.field_e = 1;
         jb.field_e = 0;
         vj.field_ab = param2;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_k = null;
         if (param0 != 35) {
-          vc.b((byte) -120);
+          vc.clearStaticReferences((byte) -120);
           field_m = null;
           return;
         }

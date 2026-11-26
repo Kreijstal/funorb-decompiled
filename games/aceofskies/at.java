@@ -5,10 +5,10 @@ final class at {
     static int[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -7978) {
-          at.a(37);
+          at.clearStaticReferences(37);
         }
     }
 

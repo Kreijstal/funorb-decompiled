@@ -10,7 +10,7 @@ final class w extends ci {
     final boolean a(int param0, boolean param1) {
         boolean stackIn_9_0 = false;
         if (param0 != -23647) {
-          w.k(100);
+          w.clearDeclaredStaticReferences(100);
         }
         boolean decompiledFrameRemainder0 = true;
         this.a(true, (byte) 88);
@@ -127,11 +127,11 @@ final class w extends ci {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Gb = null;
         field_Fb = null;
         field_Hb = null;

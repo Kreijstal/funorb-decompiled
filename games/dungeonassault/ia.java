@@ -8,12 +8,12 @@ final class ia extends ii implements vg {
     static int field_X;
     static String field_N;
     static ResourceArchive field_U;
-    static cn field_R;
+    static RgbSprite field_R;
     static ResourceArchive field_W;
     private ck field_Z;
     static tk field_K;
     static String field_Y;
-    static cn field_Q;
+    static RgbSprite field_Q;
     static int field_M;
     static int[] field_P;
     private ck field_V;
@@ -91,14 +91,14 @@ final class ia extends ii implements vg {
         super.a(param0, param1, param2, param3);
     }
 
-    final static cn a(String param0, int param1, String param2, int param3, int param4, String param5, ResourceArchive param6) {
+    final static RgbSprite a(String param0, int param1, String param2, int param3, int param4, String param5, ResourceArchive param6) {
         int var9 = 0;
         byte[] var7 = null;
         RuntimeException var7_ref = null;
-        cn var8 = null;
+        RgbSprite var8 = null;
         int var10 = 0;
         byte[] var11 = null;
-        cn stackIn_10_0 = null;
+        RgbSprite stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -119,7 +119,7 @@ final class ia extends ii implements vg {
           if (var11 == null) {
             return null;
           }
-          var8 = new cn(var11, (java.awt.Component) ((Object) fi.d(false)));
+          var8 = new RgbSprite(var11, (java.awt.Component) ((Object) fi.d(false)));
           for (var9 = 0; var8.field_B.length > var9; var9++) {
             var8.field_B[var9] = nb.a(var8.field_B[var9], 16777215);
           }

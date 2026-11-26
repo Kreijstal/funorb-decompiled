@@ -22,7 +22,7 @@ final class ij extends hh {
     final void a(int param0, int param1, rt param2) {
         try {
           if (param1 != -1486691000) {
-            ij.b(-8);
+            ij.clearDeclaredStaticReferences(-8);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ij.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -144,7 +144,7 @@ final class ij extends hh {
         if (!param0) {
           return;
         }
-        ij.b(-83);
+        ij.clearDeclaredStaticReferences(-83);
     }
 
     final boolean a(byte param0) {
@@ -193,7 +193,7 @@ final class ij extends hh {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         field_g = null;
         field_h = null;

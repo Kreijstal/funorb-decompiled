@@ -7,14 +7,14 @@ abstract class ib {
     static ki field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -22719) {
           field_c = null;
           field_b = null;
           field_a = null;
           return;
         }
-        ib.a(54);
+        ib.clearStaticReferences(54);
         field_c = null;
         field_b = null;
         field_a = null;

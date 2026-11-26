@@ -401,7 +401,7 @@ class rl extends kf {
         this.f(false);
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         int var1 = -50 / ((param0 - 16) / 52);
     }

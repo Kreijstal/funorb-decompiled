@@ -432,7 +432,7 @@ final class ul extends IntrusiveNode {
     }
 
     final static void a(sh param0, sh param1, sh param2, byte param3) {
-        db var18 = null;
+        RgbSprite var18 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
         int[][] var20 = null;
@@ -440,10 +440,10 @@ final class ul extends IntrusiveNode {
         int[][] var7 = null;
         IndexedSprite[] var15 = null;
         int var11_int = 0;
-        db var16 = null;
-        db var19 = null;
-        db var11 = null;
-        db var13 = null;
+        RgbSprite var16 = null;
+        RgbSprite var19 = null;
+        RgbSprite var11 = null;
+        RgbSprite var13 = null;
         int var8 = 0;
         int var9 = 0;
         int var14 = Lexicominos.field_L ? 1 : 0;
@@ -458,7 +458,7 @@ final class ul extends IntrusiveNode {
           cl.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
           ql.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
           FullscreenFocusCanvas.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));
-          var18 = new db(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
+          var18 = new RgbSprite(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
           var5 = PacketBuffer.a(param0, "commonui", true, "screen_options");
           si.field_u = new IndexedSprite[4];
@@ -487,19 +487,19 @@ final class ul extends IntrusiveNode {
           ja.b((byte) -116);
           var18.b();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
-          var16 = new db(var9Lifetime1, var9Lifetime1);
+          var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.b();
           var18.b(0, 0);
-          var11 = new db(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.b();
           var18.b(-var18.field_p + var9Lifetime1, 0);
           int var12 = -33 / ((param3 - 38) / 59);
-          var13 = new db(var18.field_p - var9Lifetime1 * 2, var9Lifetime1);
+          var13 = new RgbSprite(var18.field_p - var9Lifetime1 * 2, var9Lifetime1);
           var13.b();
           var18.b(-var9Lifetime1, 0);
           pd.a(-22949);
-          uc.field_hb = new db[]{var16, var13, var11};
+          uc.field_hb = new RgbSprite[]{var16, var13, var11};
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ul.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

@@ -19,7 +19,7 @@ final class mla {
             }
           }
           if (param1 != 0) {
-            mla.a((byte) 105);
+            mla.clearStaticReferences((byte) 105);
           }
           return -1 + this.field_a.length;
         }
@@ -100,10 +100,10 @@ final class mla {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 < 52) {
-          mla.a((byte) -89);
+          mla.clearStaticReferences((byte) -89);
         }
     }
 

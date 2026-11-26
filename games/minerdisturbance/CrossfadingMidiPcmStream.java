@@ -303,7 +303,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         return null;
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_s = null;
         int var1 = 29 / ((param0 + 82) / 42);
         field_x = null;

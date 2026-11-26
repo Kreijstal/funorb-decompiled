@@ -7,7 +7,7 @@ class dh extends hl implements ai {
     private kc field_db;
     private dg field_ab;
     static tl field_bb;
-    static hj field_X;
+    static RgbSprite field_X;
     static int field_Z;
     private boolean field_cb;
     private boolean field_eb;
@@ -178,13 +178,13 @@ class dh extends hl implements ai {
             if (param1 != 256) {
               stackIn_12_0 = var7;
               if (this.field_W) {
-                stackIn_13_1 = tk.field_l;
+                stackIn_13_1 = SpriteGeometry.field_l;
               } else {
                 stackIn_13_1 = vc.field_i;
               }
               ((ec) (Object) stackIn_12_0).a(stackIn_13_1, -1, -15858);
             } else {
-              var7.a(tk.field_l, -34, (ag) (this));
+              var7.a(SpriteGeometry.field_l, -34, (ag) (this));
             }
           }
           if (param1 != 3) {

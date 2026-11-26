@@ -6,9 +6,9 @@ final class MusicPatchPcmStream extends PcmStream {
     static boolean field_l;
     static String field_p;
     static int[] field_o;
-    static bd field_r;
+    static RgbSprite field_r;
     IntrusiveDeque field_t;
-    static bd field_n;
+    static RgbSprite field_n;
     static String field_m;
     PcmStreamMixer field_q;
 
@@ -1200,7 +1200,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("cancel", 24);
                 if (var2 != null) {
-                  qc.field_C = PcmResampler.a(123, var2);
+                  SpriteGeometry.field_C = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("pleaselogintoplay", 24);
                 if (null != var2) {

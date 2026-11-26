@@ -137,7 +137,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         ig stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -192,7 +192,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_m = null;
         if (param0 != 33) {
           field_m = (String[]) null;

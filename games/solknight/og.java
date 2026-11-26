@@ -26,7 +26,7 @@ final class og {
         qf.field_d = null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_a = null;
         field_h = null;
@@ -36,7 +36,7 @@ final class og {
         field_g = null;
         field_k = null;
         if (param0 <= 31) {
-          og.a(18);
+          og.clearStaticReferences(18);
         }
     }
 

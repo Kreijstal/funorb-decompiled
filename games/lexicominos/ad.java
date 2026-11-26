@@ -8,11 +8,11 @@ final class ad {
     static String[] field_a;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -108) {
-          ad.a((byte) 70);
+          ad.clearStaticReferences((byte) 70);
         }
     }
 

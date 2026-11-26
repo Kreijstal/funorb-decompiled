@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fk extends kl {
-    private cn field_m;
-    private cn field_u;
-    private cn field_n;
+    private RgbSprite field_m;
+    private RgbSprite field_u;
+    private RgbSprite field_n;
     private pp field_p;
     private int field_t;
     static tb field_v;
@@ -70,7 +70,7 @@ final class fk extends kl {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param0 > -104) {
-          this.field_u = (cn) null;
+          this.field_u = (RgbSprite) null;
         }
         for (var2 = 0; var2 < 2; var2++) {
           for (var3 = 0; var3 < 4; var3++) {
@@ -434,8 +434,8 @@ final class fk extends kl {
         for (var3_int = 0; var3_int < 64; var3_int++) {
           var6[var3_int] = mp.a(-2147483648, (var3_int + 24) * 65793);
         }
-        cn var3 = new cn(this.field_a, this.field_i);
-        cn var4 = new cn(this.field_a, this.field_i);
+        RgbSprite var3 = new RgbSprite(this.field_a, this.field_i);
+        RgbSprite var4 = new RgbSprite(this.field_a, this.field_i);
         this.field_l = new ph(var3, var4);
         jh.a(this.field_l);
         if (param0 != 37) {
@@ -474,10 +474,10 @@ final class fk extends kl {
         }
     }
 
-    final static cn a(byte param0, cn param1, int param2, int param3) {
+    final static RgbSprite a(byte param0, RgbSprite param1, int param2, int param3) {
         int var7 = 0;
-        cn stackIn_3_0 = null;
-        cn stackIn_11_0 = null;
+        RgbSprite stackIn_3_0 = null;
+        RgbSprite stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -489,12 +489,12 @@ final class fk extends kl {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        cn var12 = null;
-        cn var13 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         var11 = DungeonAssault.field_K;
         try {
           if (param0 != 36) {
-            stackIn_3_0 = (cn) null;
+            stackIn_3_0 = (RgbSprite) null;
             return stackIn_3_0;
           }
           var12 = param1.d();

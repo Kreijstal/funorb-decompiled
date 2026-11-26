@@ -30,7 +30,7 @@ abstract class RenderEffect {
 
     abstract void a(int param0, int param1, HardwareTexture param2);
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_e = null;
         int var1 = -89 % ((0 - param0) / 52);
         field_d = null;

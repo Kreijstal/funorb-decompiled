@@ -8,7 +8,7 @@ final class nb implements ci {
     private int field_a;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         int var1 = -115 / ((param0 + 38) / 55);
     }
@@ -126,7 +126,7 @@ final class nb implements ci {
           if (param0 <= -25) {
             return;
           }
-          nb.a(-21);
+          nb.clearStaticReferences(-21);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

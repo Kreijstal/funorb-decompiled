@@ -6,7 +6,7 @@ import java.util.*;
 final class ae extends ca implements ke {
     static Calendar field_ib;
     private hf field_fb;
-    static nh[] field_hb;
+    static RgbSprite[] field_hb;
     static String field_jb;
     static int field_kb;
     static int field_gb;

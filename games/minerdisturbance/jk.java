@@ -144,7 +144,7 @@ abstract class jk extends wf {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_jb = null;
         field_ib = null;
         field_gb = null;

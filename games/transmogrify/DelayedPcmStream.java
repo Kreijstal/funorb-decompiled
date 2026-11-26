@@ -8,11 +8,11 @@ final class DelayedPcmStream extends PcmStream {
     static ci field_n;
     static int[] field_l;
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_l = null;
         if (param0 != 0) {
-          DelayedPcmStream.e(-80);
+          DelayedPcmStream.clearStaticReferences(-80);
         }
     }
 

@@ -44,7 +44,7 @@ final class MixedSupport065 {
           if (integerArgument3 == -6351) {
             return;
           }
-          MixedSupport065.performAction0785(-78);
+          MixedSupport065.clearStaticReferences(-78);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal6 = caughtParameterLocal8;
@@ -60,7 +60,7 @@ final class MixedSupport065 {
         }
     }
 
-    public static void performAction0785(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         sceneWidgetState0067 = null;
         stringState0278 = null;
         int integerLocal1 = -128 % ((integerArgument1 + 47) / 61);

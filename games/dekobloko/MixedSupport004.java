@@ -22,7 +22,7 @@ final class MixedSupport004 {
             return null;
           }
           if (integerArgument2 != 50) {
-            MixedSupport004.performAction0050((byte) -13);
+            MixedSupport004.clearStaticReferences((byte) -13);
           }
           stackRgbSpriteLocal2 = SceneWidgetPart008.computeRgbSprite1130((byte) 26);
           return stackRgbSpriteLocal2;
@@ -49,7 +49,7 @@ final class MixedSupport004 {
         throw new IllegalStateException();
     }
 
-    public static void performAction0050(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0015 = null;
         stringState0017 = null;
         stringState0016 = null;

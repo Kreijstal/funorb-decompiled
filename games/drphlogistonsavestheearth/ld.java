@@ -311,7 +311,7 @@ final class ld {
         }
         if (hh.field_d[var3Lifetime1] == null) {
           if (sd.field_a.levelNumber != 8) {
-            mf.h(-8372);
+            SpriteGeometry.h(-8372);
           }
         } else {
           if (var3Lifetime1 == 2 &&
@@ -839,7 +839,7 @@ final class ld {
           bf.field_h = null;
           ob.field_b = null;
           sd.field_a = new LevelSession(param0);
-          mf.h(-8372);
+          SpriteGeometry.h(-8372);
         }
     }
 
@@ -1031,7 +1031,7 @@ final class ld {
         String[] var15_ref_String__;
         int var16;
         int var17;
-        nh var18;
+        RgbSprite var18;
         int var19;
         int var20;
         int var21;
@@ -1684,7 +1684,7 @@ final class ld {
                                               sd.field_a.levelNumber = sd.field_a.levelNumber + 1;
                                               ek.a(-72, param2, 2);
                                             } else {
-                                              mf.h(param1 - 8452);
+                                              SpriteGeometry.h(param1 - 8452);
                                             }
                                           }
                                         }
@@ -2025,7 +2025,7 @@ final class ld {
         int var6;
         int var7;
         he var8;
-        nh var9;
+        RgbSprite var9;
         int var10;
         vb var11_ref_vb;
         int var11;

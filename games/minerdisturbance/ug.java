@@ -5,9 +5,9 @@ final class ug implements uj {
     static String field_b;
     static bf field_a;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 41) {
-          ug.b((byte) 64);
+          ug.clearStaticReferences((byte) 64);
           field_b = null;
           field_a = null;
           return;

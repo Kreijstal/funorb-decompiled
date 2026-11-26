@@ -8,7 +8,7 @@ final class ea extends se {
     static ok field_bb;
     private String field_eb;
     private int field_db;
-    private km field_T;
+    private RgbSprite field_T;
 
     final void a(int param0, int param1, mf param2, int param3) {
         try {
@@ -19,11 +19,11 @@ final class ea extends se {
             this.a(95, -66, (mf) null, 75);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ea.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ea.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 101 / ((param0 - 37) / 53);
         field_bb = null;
         field_P = null;
@@ -38,27 +38,27 @@ final class ea extends se {
         int var11;
         int var12;
         int var13;
-        km var16;
+        RgbSprite var16;
         String var17;
         Object var18;
-        km var19;
-        km var20;
-        km var21;
+        RgbSprite var19;
+        RgbSprite var20;
+        RgbSprite var21;
         String var22;
         Object var23;
-        km var24;
-        km var25;
-        km var26;
+        RgbSprite var24;
+        RgbSprite var25;
+        RgbSprite var26;
         String var27;
         Object var28;
-        km var29;
-        km var31;
-        km var37;
-        km var38;
+        RgbSprite var29;
+        RgbSprite var31;
+        RgbSprite var37;
+        RgbSprite var38;
         Object var39;
-        km var40;
-        km var41;
-        km var42;
+        RgbSprite var40;
+        RgbSprite var41;
+        RgbSprite var42;
         mg var43;
         mg var44;
         mg var45;
@@ -80,7 +80,7 @@ final class ea extends se {
         String var5Lifetime1;
         mk var6Lifetime1;
         mk var6Lifetime2;
-        km var16Lifetime1;
+        RgbSprite var16Lifetime1;
         var18 = null;
         var23 = null;
         var28 = null;
@@ -119,15 +119,15 @@ final class ea extends se {
           var11 = var21.field_v << 1;
           var12 = var21.field_u << 1;
           if (null == this.field_T) {
-            this.field_T = new km(var11, var12);
+            this.field_T = new RgbSprite(var11, var12);
             tl.a((byte) -67, this.field_T);
           } else {
             if (var11 > this.field_T.field_w) {
-              this.field_T = new km(var11, var12);
+              this.field_T = new RgbSprite(var11, var12);
               tl.a((byte) -67, this.field_T);
             } else {
               if (var12 > this.field_T.field_t) {
-                this.field_T = new km(var11, var12);
+                this.field_T = new RgbSprite(var11, var12);
                 tl.a((byte) -67, this.field_T);
               } else {
                 tl.a((byte) -67, this.field_T);
@@ -169,15 +169,15 @@ final class ea extends se {
           var11Lifetime1 = var26.field_v << 1;
           var12Lifetime1 = var26.field_u << 1;
           if (null == this.field_T) {
-            this.field_T = new km(var11Lifetime1, var12Lifetime1);
+            this.field_T = new RgbSprite(var11Lifetime1, var12Lifetime1);
             tl.a((byte) -67, this.field_T);
           } else {
             if (var11Lifetime1 > this.field_T.field_w) {
-              this.field_T = new km(var11Lifetime1, var12Lifetime1);
+              this.field_T = new RgbSprite(var11Lifetime1, var12Lifetime1);
               tl.a((byte) -67, this.field_T);
             } else {
               if (var12Lifetime1 > this.field_T.field_t) {
-                this.field_T = new km(var11Lifetime1, var12Lifetime1);
+                this.field_T = new RgbSprite(var11Lifetime1, var12Lifetime1);
                 tl.a((byte) -67, this.field_T);
               } else {
                 tl.a((byte) -67, this.field_T);
@@ -224,11 +224,11 @@ final class ea extends se {
               tl.a((byte) -67, this.field_T);
               SoftwareRasterizer.clearRaster();
             } else {
-              this.field_T = new km(var11Lifetime2, var12Lifetime2);
+              this.field_T = new RgbSprite(var11Lifetime2, var12Lifetime2);
               tl.a((byte) -67, this.field_T);
             }
           } else {
-            this.field_T = new km(var11Lifetime2, var12Lifetime2);
+            this.field_T = new RgbSprite(var11Lifetime2, var12Lifetime2);
             tl.a((byte) -67, this.field_T);
           }
           var42.b(112, 144, var42.field_v << 4, var42.field_u << 4, -this.field_db << 10, 4096);
@@ -253,18 +253,18 @@ final class ea extends se {
           var11Lifetime3 = var29.field_v << 1;
           var12Lifetime3 = var29.field_u << 1;
           if (null == this.field_T) {
-            this.field_T = new km(var11Lifetime3, var12Lifetime3);
+            this.field_T = new RgbSprite(var11Lifetime3, var12Lifetime3);
             tl.a((byte) -67, this.field_T);
           } else {
             if (var11Lifetime3 > this.field_T.field_w) {
-              this.field_T = new km(var11Lifetime3, var12Lifetime3);
+              this.field_T = new RgbSprite(var11Lifetime3, var12Lifetime3);
               tl.a((byte) -67, this.field_T);
             } else {
               if (var12Lifetime3 <= this.field_T.field_t) {
                 tl.a((byte) -67, this.field_T);
                 SoftwareRasterizer.clearRaster();
               } else {
-                this.field_T = new km(var11Lifetime3, var12Lifetime3);
+                this.field_T = new RgbSprite(var11Lifetime3, var12Lifetime3);
                 tl.a((byte) -67, this.field_T);
               }
             }
@@ -292,15 +292,15 @@ final class ea extends se {
         var11Lifetime4 = var31.field_v << 1;
         var12Lifetime4 = var31.field_u << 1;
         if (null == this.field_T) {
-          this.field_T = new km(var11Lifetime4, var12Lifetime4);
+          this.field_T = new RgbSprite(var11Lifetime4, var12Lifetime4);
           tl.a((byte) -67, this.field_T);
         } else {
           if (var11Lifetime4 > this.field_T.field_w) {
-            this.field_T = new km(var11Lifetime4, var12Lifetime4);
+            this.field_T = new RgbSprite(var11Lifetime4, var12Lifetime4);
             tl.a((byte) -67, this.field_T);
           } else {
             if (var12Lifetime4 > this.field_T.field_t) {
-              this.field_T = new km(var11Lifetime4, var12Lifetime4);
+              this.field_T = new RgbSprite(var11Lifetime4, var12Lifetime4);
               tl.a((byte) -67, this.field_T);
             } else {
               tl.a((byte) -67, this.field_T);
@@ -342,7 +342,7 @@ final class ea extends se {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class ea extends se {
           this.field_eb = param1;
           this.a(param3, 34, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

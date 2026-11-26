@@ -204,7 +204,7 @@ final class je {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static void a(byte param0, int param1, int param2, cn param3, int param4, int param5) {
+    final static void a(byte param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = DungeonAssault.field_K;

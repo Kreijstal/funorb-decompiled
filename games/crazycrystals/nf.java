@@ -3,7 +3,7 @@
  */
 abstract class nf extends oh {
     static boolean field_f;
-    static dl field_g;
+    static RgbSprite field_g;
 
     final int a(byte param0, boolean param1) {
         if (param0 <= -53) {

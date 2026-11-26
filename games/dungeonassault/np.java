@@ -11,7 +11,7 @@ class np extends rj {
     static boolean field_D;
     boolean field_N;
     static int[] field_I;
-    static cn field_F;
+    static RgbSprite field_F;
     IntrusiveDeque field_J;
     static String[] field_C;
     static int field_K;
@@ -74,7 +74,7 @@ class np extends rj {
 
     final static String b(int param0, int param1) {
         if (param0 != 3) {
-          field_F = (cn) null;
+          field_F = (RgbSprite) null;
           return k.a((byte) -122, 3, 3, param1);
         }
         return k.a((byte) -122, 3, 3, param1);

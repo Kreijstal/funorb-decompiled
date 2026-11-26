@@ -263,7 +263,7 @@ final class oc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -274,11 +274,11 @@ final class oc {
         throw new Error();
     }
 
-    final static dd[] a(ResourceArchive param0, int param1, int param2, byte param3) {
+    final static RgbSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        dd[] stackIn_5_0 = null;
-        dd[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_5_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -286,13 +286,13 @@ final class oc {
         try {
           if (!ha.a(param0, -32180, param2, param1)) {
             stackIn_2_0 = null;
-            return (dd[]) (stackIn_2_0);
+            return (RgbSprite[]) (stackIn_2_0);
           }
           if (param3 < -95) {
             stackIn_7_0 = me.b(120);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (dd[]) null;
+          stackIn_5_0 = (RgbSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

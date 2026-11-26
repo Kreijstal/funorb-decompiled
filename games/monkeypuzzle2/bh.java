@@ -17,11 +17,11 @@ abstract class bh {
 
     abstract void a(int param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_b = null;
         if (param0 != -8765) {
-          bh.a(68);
+          bh.clearStaticReferences(68);
         }
     }
 

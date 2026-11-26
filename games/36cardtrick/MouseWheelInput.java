@@ -5,13 +5,13 @@ abstract class MouseWheelInput {
     static String field_b;
     static int field_a;
 
-    final static kc a(int param0, int param1, int param2) {
+    final static RgbSprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Main.field_T;
-        kc var6 = new kc(param0, param0);
-        kc var3 = var6;
+        RgbSprite var6 = new RgbSprite(param0, param0);
+        RgbSprite var3 = var6;
         if (param1 >= -123) {
-          return (kc) null;
+          return (RgbSprite) null;
         }
         for (var4 = 0; var4 < var3.field_r.length; var4++) {
           var6.field_r[var4] = param2;

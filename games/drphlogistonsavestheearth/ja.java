@@ -6,7 +6,7 @@ final class ja {
     short[] field_J;
     byte field_G;
     int[] field_r;
-    static nh[] field_n;
+    static RgbSprite[] field_n;
     short[] field_D;
     short[] field_E;
     int[] field_p;
@@ -124,7 +124,7 @@ final class ja {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_Q = null;
         field_t = null;

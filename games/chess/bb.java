@@ -9,10 +9,10 @@ final class bb {
     static String field_a;
 
     final static void a(ResourceArchive param0, rk[] param1, ResourceArchive param2, byte param3, int[] param4) {
-        km[] dupTemp$0 = null;
-        km[] dupTemp$1 = null;
-        km[] dupTemp$2 = null;
-        km[] dupTemp$3 = null;
+        RgbSprite[] dupTemp$0 = null;
+        RgbSprite[] dupTemp$1 = null;
+        RgbSprite[] dupTemp$2 = null;
+        RgbSprite[] dupTemp$3 = null;
         rk[] var5 = null;
         int[] var6 = null;
         rk[] var6_array = null;
@@ -40,12 +40,12 @@ final class bb {
         ci var9 = null;
         ci var10 = null;
         ci var11 = null;
-        km[] var12 = null;
-        km[] var13 = null;
-        km[] var14 = null;
+        RgbSprite[] var12 = null;
+        RgbSprite[] var13 = null;
+        RgbSprite[] var14 = null;
         ci var15 = null;
-        km[] var16 = null;
-        km[] var17 = null;
+        RgbSprite[] var16 = null;
+        RgbSprite[] var17 = null;
         int var7_intLifetime1;
         var18 = Chess.field_G;
         try {
@@ -313,7 +313,7 @@ final class bb {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class bb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

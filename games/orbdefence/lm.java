@@ -1155,7 +1155,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "retry");
                 if (null != var2) {
-                  tk.field_l = bk.a(var2, -12465);
+                  SpriteGeometry.field_l = bk.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "back");
                 if (var2 != null) {
@@ -3087,8 +3087,8 @@ final class lm {
         decompiledBody.run();
     }
 
-    final static hj[] a(int param0) {
-        hj[] var1 = null;
+    final static RgbSprite[] a(int param0) {
+        RgbSprite[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -3097,11 +3097,11 @@ final class lm {
         int var6 = 0;
         int var7 = 0;
         int stackIn_15_0 = 0;
-        hj[] stackIn_16_0 = null;
+        RgbSprite[] stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          var1 = new hj[ec.field_K];
+          var1 = new RgbSprite[ec.field_K];
           var2 = 0;
           if (param0 >= -97) {
             field_f = (kc) null;
@@ -3120,7 +3120,7 @@ final class lm {
                 var5[var6] = vc.field_g[vi.a(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new hj(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
+              var1[var2] = new RgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
               var2++;
               continue scanLoop1;
             }

@@ -24,7 +24,7 @@ final class ec {
         ClientException.field_b = (byte[][]) null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         int var1 = -94 % ((param0 - 50) / 62);
         field_d = null;

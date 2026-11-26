@@ -1324,7 +1324,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         }
     }
 
-    public static void W(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_Rc = null;
         field_Mc = null;
         field_wc = null;

@@ -256,14 +256,14 @@ final class q extends lo {
         q.blitIndexedAlpha(SoftwareRasterizer.field_b, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final cn a() {
+    final RgbSprite a() {
         int var3 = 0;
         int var1 = this.field_h * this.field_e;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
           var2[var3] = this.field_i[this.field_j[var3] & 255];
         }
-        return new cn(this.field_d, this.field_g, this.field_b, this.field_a, this.field_h, this.field_e, var2);
+        return new RgbSprite(this.field_d, this.field_g, this.field_b, this.field_a, this.field_h, this.field_e, var2);
     }
 
     final q c() {

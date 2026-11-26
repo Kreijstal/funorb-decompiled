@@ -72,7 +72,7 @@ final class eg {
         return param0 & param1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, cn param5, int param6, int param7, int param8, se param9, int param10) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, se param9, int param10) {
         ig.field_a = param6;
         e.field_d = param10;
         wm.field_b = param0;

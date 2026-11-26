@@ -32,7 +32,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 123 % ((-4 - param0) / 33);
         field_f = null;
         field_c = null;

@@ -8,7 +8,7 @@ final class l extends mg {
     static int[] field_D;
     static String field_C;
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_D = null;
         if (param0 == 4) {
           field_E = null;
@@ -16,7 +16,7 @@ final class l extends mg {
           field_F = null;
           return;
         }
-        l.h(36);
+        l.clearStaticReferences(36);
         field_E = null;
         field_C = null;
         field_F = null;

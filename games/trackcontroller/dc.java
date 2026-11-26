@@ -35,7 +35,7 @@ final class dc extends ic {
             param3 = param3 & ((ButtonWidget) (param1)).field_B;
           }
           if (param0 != -24969) {
-            dc.c((byte) -91);
+            dc.clearDeclaredStaticReferences((byte) -91);
           }
           if (!param3) {
             stackIn_15_0 = this.field_q;
@@ -66,7 +66,7 @@ final class dc extends ic {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_s = null;
         if (param0 >= 20) {
           field_o = null;
@@ -75,7 +75,7 @@ final class dc extends ic {
           field_r = null;
           return;
         }
-        dc.c((byte) -11);
+        dc.clearDeclaredStaticReferences((byte) -11);
         field_o = null;
         field_w = null;
         field_p = null;

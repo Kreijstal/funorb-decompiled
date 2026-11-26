@@ -37,7 +37,7 @@ final class ca {
     }
 
     final static void a(qk param0, qk param1, qk param2, int param3) {
-        kc var17 = null;
+        RgbSprite var17 = null;
         wb[] var5 = null;
         wb[][] var6 = null;
         int[][] var19 = null;
@@ -45,10 +45,10 @@ final class ca {
         int[][] var7 = null;
         wb[] var14 = null;
         int var11_int = 0;
-        kc var15 = null;
-        kc var18 = null;
-        kc var11 = null;
-        kc var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Main.field_T;
@@ -63,7 +63,7 @@ final class ca {
           me.field_c = (ee) ((Object) ec.a("commonui", param2, false, "arezzo12", param1));
           j.field_C = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14", param1));
           vd.field_p = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14bold", param1));
-          var17 = new kc(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
+          var17 = new RgbSprite(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
           lh.a("dropdown", param1, "commonui", 105);
           var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
           ri.field_d = new wb[4];
@@ -95,18 +95,18 @@ final class ca {
           ji.a(true);
           var17.c();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
-          var15 = new kc(var9Lifetime1, var9Lifetime1);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.c();
           var17.b(0, 0);
-          var11 = new kc(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.c();
           var17.b(var9Lifetime1 - var17.field_p, 0);
-          var12 = new kc(-(2 * var9Lifetime1) + var17.field_p, var9Lifetime1);
+          var12 = new RgbSprite(-(2 * var9Lifetime1) + var17.field_p, var9Lifetime1);
           var12.c();
           var17.b(-var9Lifetime1, 0);
           gg.a(14756);
-          eg.field_c = new kc[]{var15, var12, var11};
+          eg.field_c = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ca.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

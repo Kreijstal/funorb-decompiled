@@ -134,7 +134,7 @@ final class vh extends me {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_l = null;
         field_k = null;
         field_j = null;

@@ -3,7 +3,7 @@
  */
 abstract class in {
     static int[] field_c;
-    static bd field_d;
+    static RgbSprite field_d;
     static String field_a;
     static int field_b;
 
@@ -192,7 +192,7 @@ abstract class in {
         return this.a((byte) -125, param0);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -86 % ((param0 + 24) / 52);
         field_d = null;

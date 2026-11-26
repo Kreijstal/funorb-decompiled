@@ -135,11 +135,11 @@ final class eb {
         return var5;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_h = null;
         if (param0 != -31) {
-          eb.a((byte) -21);
+          eb.clearStaticReferences((byte) -21);
         }
     }
 

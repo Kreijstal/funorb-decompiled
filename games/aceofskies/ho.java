@@ -8,7 +8,7 @@ final class ho {
     static int[] field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 < -25) {
           field_c = null;
@@ -16,7 +16,7 @@ final class ho {
           field_a = null;
           return;
         }
-        ho.a((byte) -66);
+        ho.clearStaticReferences((byte) -66);
         field_c = null;
         field_d = null;
         field_a = null;

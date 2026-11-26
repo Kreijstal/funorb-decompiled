@@ -897,10 +897,10 @@ final class he extends ip {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, cn[] param7, int param8, int param9, cn[] param10, se param11, se param12, int param13, boolean param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite[] param7, int param8, int param9, RgbSprite[] param10, se param11, se param12, int param13, boolean param14) {
         try {
-          cn[] var16 = (cn[]) null;
-          lp.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (cn[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
+          RgbSprite[] var16 = (RgbSprite[]) null;
+          lp.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (RgbSprite[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
           ic.a(param14, -31425);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "he.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
@@ -985,7 +985,7 @@ final class he extends ip {
     final static void e(byte param0) {
         int var1_int = 0;
         int var2 = 0;
-        cn var2_ref_cn = null;
+        RgbSprite var2_ref_cn = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -994,12 +994,12 @@ final class he extends ip {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        cn var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
-        cn var11 = null;
-        cn var12 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         String var14 = null;
-        cn var16 = null;
+        RgbSprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -1049,13 +1049,13 @@ final class he extends ip {
             var2 = SoftwareRasterizer.field_i;
             var3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
-            var11 = new cn(4 + DelegatingCanvas.field_c.field_y, DelegatingCanvas.field_c.field_v + 4);
+            var11 = new RgbSprite(4 + DelegatingCanvas.field_c.field_y, DelegatingCanvas.field_c.field_v + 4);
             var11.e();
             DelegatingCanvas.field_c.c(2, 2, uj.field_d);
             uc.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0, false);
             DelegatingCanvas.field_c = var11;
             al.field_j = DelegatingCanvas.field_c.b();
-            var12 = new cn(195, 221);
+            var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.e();
             dc.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
@@ -1139,13 +1139,13 @@ final class he extends ip {
               cb.field_b = cb.field_b + var9_intLifetime3;
             }
             qc.field_z.a();
-            var9 = new cn(qc.field_z.field_E, qc.field_z.field_G);
+            var9 = new RgbSprite(qc.field_z.field_E, qc.field_z.field_G);
             var9.e();
             dc.field_e.a(var14, lj.field_m, cb.field_b, wm.field_b, e.field_d, 16777215, -1, 1, 1, dc.field_e.field_H + dc.field_e.field_E);
             uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
             qc.field_z.e();
             var9.h(0, 0);
-            ud.field_r = new cn(640, 480);
+            ud.field_r = new RgbSprite(640, 480);
             ud.field_r.e();
             qc.field_z.e((qc.field_z.field_E >> 1) + je.field_b, (qc.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
             qc.field_z = null;
@@ -1159,7 +1159,7 @@ final class he extends ip {
             var2Lifetime2 = SoftwareRasterizer.field_i;
             var3Lifetime2 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
-            var16 = new cn(412, 43);
+            var16 = new RgbSprite(412, 43);
             var5_ref_String = jk.a(new String[]{lg.field_m}, je.field_a, 30496);
             lg.field_m = null;
             var16.e();

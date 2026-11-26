@@ -40,7 +40,7 @@ final class lp extends IntrusiveNode {
           return;
         }
         se var3 = (se) null;
-        lp.a(32, 13, -24, -116, -76, (cn[]) null, 99, (se) null, -88, 17, -20, -33, (cn[]) null, 46, 59, 87, (cn[]) null, -51, (se) null, -61, 66);
+        lp.a(32, 13, -24, -116, -76, (RgbSprite[]) null, 99, (se) null, -88, 17, -20, -33, (RgbSprite[]) null, 46, 59, 87, (RgbSprite[]) null, -51, (se) null, -61, 66);
         this.field_v = null;
     }
 
@@ -69,7 +69,7 @@ final class lp extends IntrusiveNode {
         field_n = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, cn[] param5, int param6, se param7, int param8, int param9, int param10, int param11, cn[] param12, int param13, int param14, int param15, cn[] param16, int param17, se param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite[] param5, int param6, se param7, int param8, int param9, int param10, int param11, RgbSprite[] param12, int param13, int param14, int param15, RgbSprite[] param16, int param17, se param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

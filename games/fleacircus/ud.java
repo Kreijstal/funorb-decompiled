@@ -9,14 +9,14 @@ final class ud {
     static boolean field_c;
     static String field_a;
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        dd[] var10;
-        dd[] var11_ref_dd__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_dd__;
         int var11;
         int var12;
-        dd var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -25,10 +25,10 @@ final class ud {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        dd[] var10Lifetime1;
+        RgbSprite[] var10Lifetime1;
         var15 = fleas.field_A ? 1 : 0;
         var9 = param3 + (param4 + param7);
-        var10 = new dd[]{new dd(var9, var9), new dd(param1, var9), new dd(var9, var9), new dd(var9, param1), new dd(64, 64), new dd(var9, param1), new dd(var9, var9), new dd(param1, var9), new dd(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param1), new RgbSprite(64, 64), new RgbSprite(var9, param1), new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9)};
         var11_ref_dd__ = var10;
         for (var12 = 0; var11_ref_dd__.length > var12; var12++) {
           var13 = var11_ref_dd__[var12];
@@ -207,8 +207,8 @@ final class ud {
           if (var2 > sd.field_f) {
             sd.field_f = var2;
           }
-          ContextualRuntimeException.field_g = new dd[b.field_d.length];
-          AccountCreationResultPanel.field_tb = new dd[b.field_d.length];
+          ContextualRuntimeException.field_g = new RgbSprite[b.field_d.length];
+          AccountCreationResultPanel.field_tb = new RgbSprite[b.field_d.length];
           var3 = -15 % ((-48 - param0) / 60);
           var4 = 0;
           while (var4 < ContextualRuntimeException.field_g.length) {

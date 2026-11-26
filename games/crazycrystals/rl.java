@@ -50,7 +50,7 @@ abstract class rl extends oh {
         return param1 ? 16 : 4;
     }
 
-    public static void e(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         field_i = null;
@@ -82,7 +82,7 @@ abstract class rl extends oh {
 
     final static int c(byte param0) {
         if (param0 < 58) {
-          rl.e(-15);
+          rl.releaseDeclaredStaticReferences(-15);
           return gp.field_a;
         }
         return gp.field_a;

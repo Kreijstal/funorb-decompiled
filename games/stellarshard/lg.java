@@ -9,7 +9,7 @@ final class lg {
     static int field_b;
     static int field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 75 % ((param0 - 79) / 33);
         field_e = null;
@@ -28,7 +28,7 @@ final class lg {
         var4 = stellarshard.field_B;
         try {
           if (param0 >= -107) {
-            lg.a(-86);
+            lg.clearStaticReferences(-86);
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);

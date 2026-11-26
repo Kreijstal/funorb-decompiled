@@ -5,22 +5,22 @@ final class lk extends UiComponent {
     static IntrusiveDeque field_O;
     int field_I;
     private int field_N;
-    private dd[] field_E;
-    private dd field_F;
+    private RgbSprite[] field_E;
+    private RgbSprite field_F;
     private int field_B;
     private int field_L;
     private int field_K;
     private int field_C;
-    private dd field_P;
+    private RgbSprite field_P;
     static vg field_D;
     static volatile int field_J;
     private int field_G;
     static fh field_A;
-    private dd field_M;
+    private RgbSprite field_M;
     static fa field_Q;
     boolean field_H;
 
-    private final dd b(int param0, int param1, int param2) {
+    private final RgbSprite b(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -29,7 +29,7 @@ final class lk extends UiComponent {
         int var12 = 0;
         int var6 = 0;
         int var13 = fleas.field_A ? 1 : 0;
-        dd var14 = new dd(this.field_N * 2, this.field_j);
+        RgbSprite var14 = new RgbSprite(this.field_N * 2, this.field_j);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -229,14 +229,14 @@ final class lk extends UiComponent {
         }
     }
 
-    private final dd d(byte param0) {
+    private final RgbSprite d(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = fleas.field_A ? 1 : 0;
         int var2 = this.field_j >> 1;
-        dd var3 = new dd(var2, this.field_j);
+        RgbSprite var3 = new RgbSprite(var2, this.field_j);
         r.a(var3, 45);
         if (param0 != -15) {
           field_D = (vg) null;
@@ -265,7 +265,7 @@ final class lk extends UiComponent {
         this.j(124);
     }
 
-    private final void a(dd param0, int param1, int param2, int param3) {
+    private final void a(RgbSprite param0, int param1, int param2, int param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -327,13 +327,13 @@ final class lk extends UiComponent {
         return true;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_O = null;
         field_D = null;
         field_Q = null;
         field_A = null;
         if (!param0) {
-          lk.c(true);
+          lk.clearStaticReferences(true);
         }
     }
 
@@ -351,10 +351,10 @@ final class lk extends UiComponent {
         if (param0 < 116) {
           return;
         }
-        this.field_E = new dd[]{this.b(this.field_G, this.field_C, -117), this.b(this.field_L, this.field_K, 118)};
+        this.field_E = new RgbSprite[]{this.b(this.field_G, this.field_C, -117), this.b(this.field_L, this.field_K, 118)};
         this.field_P = this.d((byte) -15);
         this.field_F = this.field_P.b();
-        this.field_M = new dd(this.field_j >> 1, this.field_j);
+        this.field_M = new RgbSprite(this.field_j >> 1, this.field_j);
     }
 
     final static boolean i(int param0) {
@@ -372,7 +372,7 @@ final class lk extends UiComponent {
         this.field_C = param2;
         this.field_K = 8355711 & param2 >> 1;
         if (param0 <= 77) {
-          lk.c(false);
+          lk.clearStaticReferences(false);
         }
         this.j(119);
     }

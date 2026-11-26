@@ -14,7 +14,7 @@ abstract class MouseWheelSource {
 
     abstract void detach(java.awt.Component param0, boolean param1);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -23,7 +23,7 @@ abstract class MouseWheelSource {
           field_a = null;
           return;
         }
-        MouseWheelSource.a(44);
+        MouseWheelSource.clearStaticReferences(44);
         field_a = null;
     }
 

@@ -464,7 +464,7 @@ final class q {
           } else {
             stackIn_316_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_315_0), ((StringBuilder) (Object) stackIn_315_1).append(stackIn_316_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_315_0), ((StringBuilder) (Object) stackIn_315_1).append(stackIn_316_2).append(')').toString());
         }
     }
 
@@ -537,7 +537,7 @@ final class q {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -563,7 +563,7 @@ final class q {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -576,7 +576,7 @@ final class q {
             q.a((CharSequence) null, (byte) 34);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "q.C(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "q.C(" + param0 + ')');
         }
     }
 
@@ -609,7 +609,7 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) (var2), "q.E(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) (var2), "q.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -687,7 +687,7 @@ final class q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var4_ref), "q.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var4_ref), "q.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

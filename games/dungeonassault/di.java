@@ -13,7 +13,7 @@ final class di {
     static String field_k;
     int field_b;
     static int field_d;
-    static cn[] field_l;
+    static RgbSprite[] field_l;
 
     final static boolean a(int[] param0, int param1) {
         int var5_int = 0;
@@ -51,8 +51,8 @@ final class di {
                 ra.field_c.payload[var5_int] = var4_ref_ao.field_m[var5_int];
               }
               wl.field_f = oc.field_E;
-              oc.field_E = rd.field_C;
-              rd.field_C = hc.field_c;
+              oc.field_E = SpriteGeometry.field_C;
+              SpriteGeometry.field_C = hc.field_c;
               hc.field_c = var4_ref_ao.field_j;
               return true;
             }
@@ -72,8 +72,8 @@ final class di {
             }
             if (pm.field_p == 0) {
               wl.field_f = oc.field_E;
-              oc.field_E = rd.field_C;
-              rd.field_C = hc.field_c;
+              oc.field_E = SpriteGeometry.field_C;
+              SpriteGeometry.field_C = hc.field_c;
               hc.field_c = pp.field_J;
               pp.field_J = -1;
               return true;

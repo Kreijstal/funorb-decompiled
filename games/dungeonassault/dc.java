@@ -26,7 +26,7 @@ final class dc {
     byte field_O;
     int field_A;
     int field_N;
-    static cn field_x;
+    static RgbSprite field_x;
     int field_L;
     int field_F;
     int field_j;

@@ -59,7 +59,7 @@ final class wi extends sj {
         }
     }
 
-    public static void i(byte param0) {
+    public static void discardDeclaredStaticReferences(byte param0) {
         if (param0 <= -44) {
           field_lb = null;
           field_mb = null;
@@ -93,7 +93,7 @@ final class wi extends sj {
           this.field_ub.field_R = false;
           return;
         }
-        wi.i((byte) 54);
+        wi.discardDeclaredStaticReferences((byte) 54);
         this.field_pb = true;
         this.field_ub.field_R = false;
     }

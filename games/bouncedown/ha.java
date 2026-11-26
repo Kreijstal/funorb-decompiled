@@ -204,7 +204,7 @@ final class ha implements Runnable {
           if (param0 == -17765) {
             return;
           }
-          ha.a(true);
+          ha.clearStaticReferences(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,13 +220,13 @@ final class ha implements Runnable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_g = null;
         field_k = null;
         field_j = null;
         field_l = null;
         if (param0) {
-          ha.a(true);
+          ha.clearStaticReferences(true);
           field_m = null;
           return;
         }

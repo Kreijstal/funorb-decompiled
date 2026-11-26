@@ -123,10 +123,10 @@ final class oh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 20269) {
-          oh.a(-112);
+          oh.clearStaticReferences(-112);
         }
     }
 

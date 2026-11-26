@@ -25,7 +25,7 @@ final class MixedSupport040 {
         }
     }
 
-    public static void performAction0529(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0181 = null;
         sceneWidgetState0032 = null;
         if (integerArgument1 == 25988) {
@@ -38,7 +38,7 @@ final class MixedSupport040 {
           sceneWidgetState0031 = null;
           return;
         }
-        MixedSupport040.performAction0529(-61);
+        MixedSupport040.clearStaticReferences(-61);
         stringState0179 = null;
         rgbSpriteArrayState0011 = null;
         stringState0177 = null;

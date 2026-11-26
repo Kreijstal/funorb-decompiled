@@ -4,7 +4,7 @@
 final class le {
     static ci field_e;
     static jd field_g;
-    private km[] field_a;
+    private RgbSprite[] field_a;
     static String field_b;
     static String field_c;
     static String field_d;
@@ -42,7 +42,7 @@ final class le {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+            throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -58,7 +58,7 @@ final class le {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "le.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "le.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) (var1), "le.B(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) (var1), "le.B(" + param0 + ')');
         }
     }
 
@@ -212,11 +212,11 @@ final class le {
           field_d = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "le.A(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "le.A(" + param0 + ')');
         }
     }
 
-    le(km[] param0) {
+    le(RgbSprite[] param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -235,7 +235,7 @@ final class le {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "le.E(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "le.E(" + param0 + ')');
         }
     }
 

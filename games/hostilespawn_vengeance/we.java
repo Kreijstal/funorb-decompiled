@@ -137,7 +137,7 @@ final class we {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 93 / ((param0 - 55) / 49);
         field_g = null;
         field_h = null;

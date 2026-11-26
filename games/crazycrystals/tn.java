@@ -286,20 +286,20 @@ final class tn extends pn {
         return true;
     }
 
-    final static dl b(boolean param0) {
+    final static RgbSprite b(boolean param0) {
         int var4_int = 0;
-        dl var4 = null;
+        RgbSprite var4 = null;
         int var5 = CrazyCrystals.field_B;
         int var1 = je.field_c[0] * uo.field_l[0];
         byte[] var7 = ui.field_c[0];
         int[] var3 = new int[var1];
-        dl var4Lifetime1;
+        RgbSprite var4Lifetime1;
         int var4_intLifetime1;
         if (param0) {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = gh.field_z[pf.b(255, (int) var7[var4_int])];
           }
-          var4 = new dl(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[0], MouseWheelInput.field_a[0], uo.field_l[0], je.field_c[0], var3);
+          var4 = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[0], MouseWheelInput.field_a[0], uo.field_l[0], je.field_c[0], var3);
           ok.a(2188450);
           return var4;
         }
@@ -307,12 +307,12 @@ final class tn extends pn {
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = gh.field_z[pf.b(255, (int) var7[var4_intLifetime1])];
         }
-        var4Lifetime1 = new dl(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[0], MouseWheelInput.field_a[0], uo.field_l[0], je.field_c[0], var3);
+        var4Lifetime1 = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[0], MouseWheelInput.field_a[0], uo.field_l[0], je.field_c[0], var3);
         ok.a(2188450);
         return var4Lifetime1;
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;

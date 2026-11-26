@@ -46,10 +46,10 @@ final class rj extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 != -1) {
-          rj.a(118);
+          rj.clearStaticReferences(118);
         }
         field_l = null;
         field_m = null;

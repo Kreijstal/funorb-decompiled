@@ -5,13 +5,13 @@ final class ja {
     static String[] field_d;
     private int[] field_e;
     private int[] field_c;
-    static cn[] field_b;
+    static RgbSprite[] field_b;
     static String field_a;
 
     public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (param0) {
-          field_b = (cn[]) null;
+          field_b = (RgbSprite[]) null;
         }
         field_d = null;
         field_b = null;

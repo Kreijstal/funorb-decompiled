@@ -30,9 +30,9 @@ final class al extends sh {
         return 100;
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 < 3) {
-          al.c((byte) 59);
+          al.clearDeclaredStaticReferences((byte) 59);
           field_A = (int[][]) null;
           field_x = null;
           return;

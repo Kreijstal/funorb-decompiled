@@ -3,7 +3,7 @@
  */
 final class cg {
     j[] field_g;
-    static hj field_d;
+    static RgbSprite field_d;
     int field_e;
     static fa[] field_c;
     int field_a;
@@ -11,13 +11,13 @@ final class cg {
     private static long[] field_b;
     static java.applet.Applet field_f;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_b = null;
         field_c = null;
         field_d = null;
         if (param0 != 0) {
-          cg.d(51);
+          cg.clearStaticReferences(51);
         }
         field_h = null;
     }
@@ -167,7 +167,7 @@ final class cg {
         int var2 = 0;
         int var3 = 0;
         long var0;
-        field_d = new hj(640, 480);
+        field_d = new RgbSprite(640, 480);
         field_h = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_b = new long[256];
         for (var2 = 0; 256 > var2; var2++) {

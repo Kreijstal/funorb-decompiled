@@ -63,7 +63,7 @@ final class lh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 == 41) {
           field_a = null;
@@ -72,7 +72,7 @@ final class lh {
           field_c = null;
           return;
         }
-        lh.b((byte) 70);
+        lh.clearStaticReferences((byte) 70);
         field_a = null;
         field_e = null;
         field_b = null;

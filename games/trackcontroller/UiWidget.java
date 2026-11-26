@@ -538,11 +538,11 @@ class UiWidget extends IntrusiveNode {
         return !this.field_q ? null : this.field_n;
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_j = null;
         field_t = null;
         if (param0 > -30) {
-          UiWidget.d(17);
+          UiWidget.clearDeclaredStaticReferences(17);
         }
         field_w = null;
         field_v = null;

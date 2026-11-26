@@ -6,10 +6,10 @@ final class nd extends c {
     static String field_j;
     static int field_k;
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         if (param0 >= -15) {
-          nd.d(-114);
+          nd.clearDeclaredStaticReferences(-114);
           field_j = null;
           return;
         }

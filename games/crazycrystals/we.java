@@ -20,12 +20,12 @@ final class we extends IntrusiveNode {
         field_l = null;
     }
 
-    final static dl[] a(String param0, String param1, db param2, boolean param3) {
+    final static RgbSprite[] a(String param0, String param1, db param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         db var6 = null;
-        dl[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

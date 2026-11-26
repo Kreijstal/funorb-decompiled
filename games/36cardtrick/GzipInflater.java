@@ -40,7 +40,7 @@ final class GzipInflater {
         }
     }
 
-    final static void a(int param0, kc[] param1, int param2, int param3, int param4, byte param5) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, byte param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -140,8 +140,8 @@ final class GzipInflater {
         field_b = null;
         field_c = null;
         if (param0 != -117) {
-          kc[] var2 = (kc[]) null;
-          GzipInflater.a(120, (kc[]) null, -103, -3, 58, (byte) 16);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          GzipInflater.a(120, (RgbSprite[]) null, -103, -3, 58, (byte) 16);
         }
     }
 

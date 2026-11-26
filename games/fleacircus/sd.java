@@ -4,7 +4,7 @@
 final class sd {
     static bi field_e;
     static PacketBuffer field_i;
-    static dd field_c;
+    static RgbSprite field_c;
     static int field_a;
     static int field_f;
     static String field_b;

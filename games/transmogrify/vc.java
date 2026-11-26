@@ -8,9 +8,9 @@ final class vc extends rg implements ie {
     private int field_P;
     static q field_N;
 
-    public static void p(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 78) {
-          vc.p(67);
+          vc.clearStaticReferences(67);
           field_G = null;
           field_N = null;
           return;

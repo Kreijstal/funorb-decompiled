@@ -16,7 +16,7 @@ abstract class wf extends DualLinkNode {
 
     abstract Object d(int param0);
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_w = null;
         if (param0 == -28) {
           field_v = null;
@@ -26,7 +26,7 @@ abstract class wf extends DualLinkNode {
           field_y = null;
           return;
         }
-        wf.d((byte) -46);
+        wf.clearStaticReferences((byte) -46);
         field_v = null;
         field_B = null;
         field_z = null;

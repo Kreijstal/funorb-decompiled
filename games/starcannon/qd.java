@@ -114,7 +114,7 @@ abstract class qd extends vk {
         return (UiWidget) (this);
     }
 
-    public static void h(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_H = null;
         field_E = null;
         field_B = null;
@@ -122,7 +122,7 @@ abstract class qd extends vk {
         field_y = null;
         field_C = null;
         if (param0 != -37) {
-          qd.h((byte) -24);
+          qd.clearDeclaredStaticReferences((byte) -24);
         }
     }
 

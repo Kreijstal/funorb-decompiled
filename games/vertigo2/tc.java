@@ -5,7 +5,7 @@ final class tc {
     static String field_a;
     static int field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 108 % ((param0 - 59) / 48);
     }

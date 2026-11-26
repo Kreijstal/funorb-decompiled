@@ -280,7 +280,7 @@ final class ee extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_h = null;
         field_j = null;
         int var1 = -126 % ((-79 - param0) / 34);

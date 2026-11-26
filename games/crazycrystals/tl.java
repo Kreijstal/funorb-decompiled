@@ -6,7 +6,7 @@ import java.io.*;
 abstract class tl {
     String field_c;
     int field_d;
-    static dl field_b;
+    static RgbSprite field_b;
     static AccountRequestState field_e;
     static am field_a;
 

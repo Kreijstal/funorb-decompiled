@@ -423,7 +423,7 @@ final class MidiPcmStream extends PcmStream {
         String var1 = var21;
         String var2 = db.a(ak.field_g, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var3 = db.a(UiComponent.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
-        String var4 = db.a(ta.field_s, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
+        String var4 = db.a(SpriteGeometry.field_s, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var5 = db.a(wh.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var6 = db.a(jk.field_q, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var7 = db.a(ga.field_r, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0);
@@ -959,7 +959,7 @@ final class MidiPcmStream extends PcmStream {
         this.b(-1, param1);
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_H = null;
         field_N = null;
         field_v = null;

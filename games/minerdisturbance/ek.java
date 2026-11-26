@@ -6,11 +6,11 @@ abstract class ek {
     static boolean field_c;
     static String[][] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = (String[][]) null;
         field_b = null;
         if (param0 != 19) {
-          ek.a((byte) 93);
+          ek.clearStaticReferences((byte) 93);
         }
     }
 
@@ -36,7 +36,7 @@ abstract class ek {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 20839) {
-            ek.a((byte) -67);
+            ek.clearStaticReferences((byte) -67);
           }
           if (cn.a(param3, param2 ^ 20581, param0, param1)) {
             return aa.a(-113);

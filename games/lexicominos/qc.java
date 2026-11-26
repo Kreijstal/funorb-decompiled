@@ -7,11 +7,11 @@ final class qc {
     static int[][][] field_f;
     static int[][] field_a;
     static int[] field_c;
-    static db[] field_d;
+    static RgbSprite[] field_d;
 
     final static void a(int param0, int param1, int param2) {
         int var3 = -15 % ((-43 - param2) / 61);
-        ed.field_v = 0;
+        SpriteGeometry.field_v = 0;
         hf.field_a = param1;
         hc.field_db = param0;
         je.field_a = 1;

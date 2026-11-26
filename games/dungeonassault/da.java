@@ -519,10 +519,10 @@ abstract class da extends lm implements aa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_E = null;
         if (param0 != 6) {
-          da.a(38);
+          da.clearDeclaredStaticReferences(38);
         }
     }
 
@@ -531,11 +531,11 @@ abstract class da extends lm implements aa {
         this.e((byte) -95);
     }
 
-    final static cn[] a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static RgbSprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        cn[] stackIn_1_0 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

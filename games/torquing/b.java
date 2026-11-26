@@ -28,11 +28,11 @@ final class b extends am {
         super(0, true);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         field_s = null;
         if (param0 != 16060) {
-          b.c(118);
+          b.clearStaticReferences(118);
         }
         field_u = null;
     }

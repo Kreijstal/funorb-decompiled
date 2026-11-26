@@ -7,7 +7,7 @@ final class ee {
     static char[] field_c;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 95 % ((param0 + 65) / 53);
         field_c = null;
         field_d = null;
@@ -48,7 +48,7 @@ final class ee {
           if (param0 == 320) {
             return;
           }
-          ee.a((byte) 1);
+          ee.clearStaticReferences((byte) 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

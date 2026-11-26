@@ -6,7 +6,7 @@ final class nb extends hi {
     static String field_p;
     static String field_n;
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         if (param0 != -1) {
           return;
@@ -62,7 +62,7 @@ final class nb extends hi {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!tk.a(param1 + 109, var4)) {
+          if (!SpriteGeometry.a(param1 + 109, var4)) {
             stackIn_2_0 = vh.field_h;
             return stackIn_2_0;
           }

@@ -4,7 +4,7 @@
 final class tg {
     int field_n;
     jm field_k;
-    static km field_u;
+    static RgbSprite field_u;
     int field_l;
     int field_m;
     jm field_f;
@@ -21,7 +21,7 @@ final class tg {
     jm field_o;
     int field_s;
     static tk field_d;
-    static km[] field_r;
+    static RgbSprite[] field_r;
     static String field_i;
     static String field_b;
     static int field_t;
@@ -33,7 +33,7 @@ final class tg {
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         if (param5) {
-          field_r = (km[]) null;
+          field_r = (RgbSprite[]) null;
         }
         SoftwareRasterizer.drawLine(param0, param3, param2, param4, param1);
     }
@@ -41,7 +41,7 @@ final class tg {
     final void a(lh param0, int param1) {
         hl var17 = null;
         nj var4 = null;
-        km[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -50,12 +50,12 @@ final class tg {
         ka discarded$0 = null;
         sj discarded$1 = null;
         nj var8 = null;
-        km[] var9 = null;
-        km[] var10 = null;
-        km dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         nj var11 = null;
         nj var12 = null;
-        km var13 = null;
+        RgbSprite var13 = null;
         nj var14 = null;
         nj var19 = null;
         int var15 = Chess.field_G;
@@ -81,13 +81,13 @@ final class tg {
           var4.a(117, 0).a(15658734, false).a((byte) 125, hk.a(8947848, 1, 7829367, 10066329));
           var4.a(param1 - 7829289, 1).a((byte) 108, hk.a(11184810, param1 ^ 7829366, 13421772, 10066329));
           var4.a(113, 3).a((byte) 126, hk.a(8947848, 1, 10066329, param1)).a(1, param1 ^ 7806832).a((byte) -128, 1);
-          var5 = new km[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_x.length; var7_int++) {
             var16.field_x[var7_int] = 1077952576;
           }
-          var5[4] = (km) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.a(param1 - 7829249, 4).a((byte) -84, true).a((byte) 108, var5);
           var4.a(87, 5).a((byte) 115, be.a(65793, false, 0, 0, 0)).a((byte) -107, true).a(-1, false);
           this.field_a = (jm) ((Object) var4);
@@ -105,10 +105,10 @@ final class tg {
           var8.a(110, 0).a((byte) 84, hk.a(15658734, param1 ^ 7829366, 10066329, 7829367)).a(1118481, false).a(-1, (byte) -82);
           var8.a(67, 4).a((byte) -112, true).a((byte) 101, var5);
           this.field_o = (jm) ((Object) var8);
-          var9 = new km[9];
-          var9[4] = new km(2, 1);
-          var10 = new km[9];
-          var10[4] = new km(1, 2);
+          var9 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_x = new int[]{6710886, 7829367};
           var10[4].field_x = new int[]{6710886, 7829367};
@@ -116,7 +116,7 @@ final class tg {
           var12 = new nj();
           var11.a((byte) -32, 0, var9);
           var12.a((byte) -32, 0, var10);
-          var13 = new km(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_x = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new nj(var4, true);
           var14.a(var13.c(), -4755);
@@ -130,7 +130,7 @@ final class tg {
           var19 = new nj(var4, true);
           var19.a(var13, -4755);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class tg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class tg {
         field_r = null;
         field_u = null;
         if (param0 != 93) {
-          field_r = (km[]) null;
+          field_r = (RgbSprite[]) null;
         }
     }
 
@@ -266,7 +266,7 @@ final class tg {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class tg {
           }
           int var5_int = -21 / ((param2 - 41) / 62);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class tg {
     }
 
     static {
-        field_u = new km(270, 70);
+        field_u = new RgbSprite(270, 70);
         field_e = new IntrusiveDeque();
         field_d = new tk();
         field_i = "You have resigned.";

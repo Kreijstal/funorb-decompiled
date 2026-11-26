@@ -11,7 +11,7 @@ final class AccountCreationResultPanel extends ma implements ke {
     private v field_Ib;
     private boolean field_Eb;
 
-    public static void o(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_Gb = null;
         field_Fb = null;
         field_Cb = null;

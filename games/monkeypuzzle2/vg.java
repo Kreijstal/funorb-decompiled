@@ -320,11 +320,11 @@ final class vg extends jj {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_M = null;
         field_K = null;
         if (param0 != -3114) {
-          vg.k(-104);
+          vg.clearDeclaredStaticReferences(-104);
         }
     }
 

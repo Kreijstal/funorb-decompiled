@@ -6,7 +6,7 @@ final class gh {
     static String field_b;
     static ac[] field_i;
     static long[] field_a;
-    static cn[] field_g;
+    static RgbSprite[] field_g;
     static ResourceArchive field_c;
     static long[][] field_h;
     static boolean field_f;

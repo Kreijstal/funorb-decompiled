@@ -334,11 +334,11 @@ final class ak extends g implements pi, qh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_P = null;
         field_N = null;
         if (param0) {
-          ak.a(false);
+          ak.clearDeclaredStaticReferences(false);
         }
         field_L = null;
     }

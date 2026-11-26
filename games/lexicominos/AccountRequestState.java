@@ -9,7 +9,7 @@ final class AccountRequestState {
     static nc field_d;
     static int field_g;
     static wh field_a;
-    static db field_c;
+    static RgbSprite field_c;
     static boolean field_e;
 
     final static void a(int param0, Random param1, int param2) {
@@ -30,7 +30,7 @@ final class AccountRequestState {
           e.field_q = var3_int;
           nh.a(0, param0, var3_int, true);
           if (param2 > -96) {
-            field_c = (db) null;
+            field_c = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

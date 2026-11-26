@@ -435,7 +435,7 @@ final class tj extends uh {
     public tj() {
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_z = null;
         field_w = null;
         field_v = null;

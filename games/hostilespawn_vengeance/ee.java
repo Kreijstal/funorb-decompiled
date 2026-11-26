@@ -10,14 +10,14 @@ final class ee {
     static nd field_h;
     private long field_f;
     static AccountRequestState field_b;
-    static bd field_g;
-    static bd[] field_d;
+    static RgbSprite field_g;
+    static RgbSprite[] field_d;
     static int field_e;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
-          ee.b(121);
+          ee.clearStaticReferences(121);
         }
         field_a = null;
         field_g = null;
@@ -56,7 +56,7 @@ final class ee {
     final void a(int param0, long param1) throws IOException {
         this.field_i.seek(param1);
         if (param0 != -18127) {
-          ee.b(35);
+          ee.clearStaticReferences(35);
         }
         this.field_f = param1;
     }

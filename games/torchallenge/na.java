@@ -9,9 +9,9 @@ class na extends t {
     private String field_g;
     static boolean field_e;
 
-    public static void e(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != -7345) {
-          na.e(3);
+          na.releaseDeclaredStaticReferences(3);
           field_d = null;
           return;
         }
@@ -37,7 +37,7 @@ class na extends t {
           if (param0 == 52) {
             return;
           }
-          na.e(18);
+          na.releaseDeclaredStaticReferences(18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ class na extends t {
           if (param0 == 52) {
             return;
           }
-          na.e(18);
+          na.releaseDeclaredStaticReferences(18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

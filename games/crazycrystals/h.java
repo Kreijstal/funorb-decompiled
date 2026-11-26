@@ -5,7 +5,7 @@ final class h {
     static int field_b;
     static int field_a;
     static int field_c;
-    static dl[] field_d;
+    static RgbSprite[] field_d;
 
     final static void a(byte[] param0, boolean param1) {
         byte dupTemp$0 = 0;
@@ -156,10 +156,10 @@ final class h {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != 0) {
-          h.a(-16);
+          h.clearStaticReferences(-16);
         }
     }
 
@@ -193,7 +193,7 @@ final class h {
           return var2_ref_byte__Lifetime1;
         }
         if (param0 != 26) {
-          field_d = (dl[]) null;
+          field_d = (RgbSprite[]) null;
         }
         if (param1 == 30000 &&
           ed.field_z > 0) {

@@ -5,7 +5,7 @@ final class jm {
     static String[] field_a;
     static String field_g;
     static String field_b;
-    static cn field_i;
+    static RgbSprite field_i;
     static String field_e;
     static lh field_h;
     static int field_c;
@@ -82,7 +82,7 @@ final class jm {
         }
     }
 
-    final static void a(int param0, int param1, cn[] param2, int param3, int param4) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -147,7 +147,7 @@ final class jm {
         field_d = null;
         field_b = null;
         if (param0 >= -114) {
-          field_i = (cn) null;
+          field_i = (RgbSprite) null;
         }
     }
 

@@ -4,7 +4,7 @@
 final class mn {
     static int field_c;
     static fn field_e;
-    static bd field_b;
+    static RgbSprite field_b;
     static int[] field_a;
     int[] field_d;
 
@@ -19,7 +19,7 @@ final class mn {
 
     final static void c(byte param0) {
         if (param0 != 67) {
-          field_b = (bd) null;
+          field_b = (RgbSprite) null;
           if (DirectByteStorage.field_k) {
             ka.field_r = true;
             MidiPcmStream.b(true, -23960);
@@ -37,7 +37,7 @@ final class mn {
         throw new IllegalStateException();
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = -20 % ((-5 - param0) / 55);
         field_b = null;

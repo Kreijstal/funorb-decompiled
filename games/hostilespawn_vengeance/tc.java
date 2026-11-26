@@ -3,7 +3,7 @@
  */
 final class tc {
     static int field_a;
-    static bd field_b;
+    static RgbSprite field_b;
     static String field_c;
     static String field_d;
     static String field_e;
@@ -17,7 +17,7 @@ final class tc {
           field_e = null;
           return;
         }
-        field_b = (bd) null;
+        field_b = (RgbSprite) null;
         field_b = null;
         field_d = null;
         field_e = null;

@@ -5,7 +5,7 @@ final class LevelDecoder {
     static String[] field_b;
     static String field_a;
 
-    final static void c(int param0) {
+    final static void clearDeclaredStaticReferences(int param0) {
         if (param0 >= -68) {
           field_a = (String) null;
         }
@@ -16,7 +16,7 @@ final class LevelDecoder {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 3) {
           return;
@@ -112,7 +112,7 @@ final class LevelDecoder {
           ByteStorage.field_f = 0;
           BufferedSocket.field_p = null;
           if (param2 != 24233) {
-            LevelDecoder.a(-120);
+            LevelDecoder.clearStaticReferences(-120);
           }
           var4_int = 0;
           fg.field_N = 0;

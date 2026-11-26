@@ -10,10 +10,10 @@ final class ji {
     static String field_e;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != -64) {
-          ji.a((byte) 111);
+          ji.clearStaticReferences((byte) 111);
           field_a = null;
           field_d = null;
           return;

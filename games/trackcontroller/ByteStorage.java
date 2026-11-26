@@ -73,14 +73,14 @@ abstract class ByteStorage {
 
     abstract void setBytes(byte[] param0, int param1);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_a = null;
         field_c = null;
         field_b = null;
         field_d = null;
         if (param0 < 122) {
-          ByteStorage.a((byte) 65);
+          ByteStorage.clearStaticReferences((byte) 65);
         }
     }
 

@@ -23,7 +23,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         return var4;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_h = null;
         field_d = null;
@@ -51,9 +51,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    final static cn[] a(byte param0, int param1) {
+    final static RgbSprite[] a(byte param0, int param1) {
         int var2 = 36 % ((param0 - 13) / 57);
-        cn[] var3 = new cn[9];
+        RgbSprite[] var3 = new RgbSprite[9];
         var3[4] = bl.a(false, param1, 64);
         return var3;
     }

@@ -3,13 +3,13 @@
  */
 final class wh {
     static int field_f;
-    private db[] field_b;
+    private RgbSprite[] field_b;
     static int[] field_e;
     static String field_a;
     static Boolean field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -3 / ((25 - param0) / 51);
         field_e = null;
         field_c = null;
@@ -30,12 +30,12 @@ final class wh {
             if (param1 == 63) {
               return;
             }
-            wh.a(44);
+            wh.clearStaticReferences(44);
             return;
           }
           fi.field_b = 2;
           if (param1 != 63) {
-            wh.a(44);
+            wh.clearStaticReferences(44);
             return;
           }
           return;
@@ -49,13 +49,13 @@ final class wh {
           if (param1 == 63) {
             return;
           }
-          wh.a(44);
+          wh.clearStaticReferences(44);
           return;
         }
         if (param1 == 63) {
           return;
         }
-        wh.a(44);
+        wh.clearStaticReferences(44);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -67,7 +67,7 @@ final class wh {
         gf.a(param3, param1, this.field_b, param2, param0, (byte) 107);
     }
 
-    wh(db[] param0) {
+    wh(RgbSprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

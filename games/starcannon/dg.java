@@ -31,7 +31,7 @@ final class dg extends IntrusiveNode {
         sc.field_c = null;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 57 / ((69 - param0) / 54);
         field_j = null;
     }

@@ -12,7 +12,7 @@ final class mi {
     private int field_h;
     private int field_d;
     private int field_i;
-    static tg field_k;
+    static RgbSprite field_k;
 
     final void a(int param0, int param1, int param2) {
         he var5;
@@ -443,7 +443,7 @@ final class mi {
           this.field_a = lh.field_f;
         }
         if (param0 < 58) {
-          field_k = (tg) null;
+          field_k = (RgbSprite) null;
         }
         if (this.field_i != 0) {
           return;

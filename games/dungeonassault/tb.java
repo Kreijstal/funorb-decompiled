@@ -4,7 +4,7 @@
 final class tb {
     private DualLinkNode field_e;
     static q field_a;
-    static cn field_c;
+    static RgbSprite field_c;
     static int field_i;
     static int field_g;
     private DualLinkNode[] field_d;
@@ -81,7 +81,7 @@ final class tb {
         return null;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_h = null;
         int var1 = 47 % ((param0 - 65) / 57);

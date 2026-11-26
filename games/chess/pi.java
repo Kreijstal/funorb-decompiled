@@ -121,7 +121,7 @@ final class pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "pi.A(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "pi.A(" + param0 + ')');
         }
     }
 
@@ -155,11 +155,11 @@ final class pi {
           }
           int var10_int = 48 / ((-44 - param9) / 39);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "pi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "pi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

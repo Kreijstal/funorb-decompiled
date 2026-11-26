@@ -33,7 +33,7 @@ final class fj {
         return this.field_i.length - 1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -27 % ((69 - param0) / 39);
         field_f = null;
         field_h = null;
@@ -62,7 +62,7 @@ final class fj {
           BoundedRandomAccessFile.field_f.field_M = BoundedRandomAccessFile.field_f.field_M - uc.field_c.field_M;
           uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class lm {
     String field_c;
     String field_b;
     String field_f;
-    static dl[] field_g;
+    static RgbSprite[] field_g;
     static PcmSample field_a;
     static sj field_e;
     static f[] field_d;

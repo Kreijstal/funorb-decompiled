@@ -8,7 +8,7 @@ final class jj {
     static int field_c;
     static Sprite[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;

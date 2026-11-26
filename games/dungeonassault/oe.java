@@ -66,7 +66,7 @@ final class oe extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = null;
         field_p = null;
         if (param0 != 0) {

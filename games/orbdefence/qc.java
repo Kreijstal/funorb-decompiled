@@ -8,7 +8,7 @@ final class qc implements td {
     private int field_e;
     private int field_a;
     static Calendar field_c;
-    static hj[] field_f;
+    static RgbSprite[] field_f;
     static kc field_b;
     static AccountRequestState field_g;
 

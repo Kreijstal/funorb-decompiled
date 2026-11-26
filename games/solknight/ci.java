@@ -141,7 +141,7 @@ class ci extends gf implements ka {
         this.c(-3399, var2);
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_qb = null;
         field_pb = null;
         field_gb = null;

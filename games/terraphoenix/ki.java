@@ -365,7 +365,7 @@ final class ki extends vj {
         if (param0 > 70) {
           return null;
         }
-        ki.f((byte) -53);
+        ki.clearDeclaredStaticReferences((byte) -53);
         return null;
     }
 
@@ -445,7 +445,7 @@ final class ki extends vj {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_S = null;
         field_Z = null;
         field_ab = null;

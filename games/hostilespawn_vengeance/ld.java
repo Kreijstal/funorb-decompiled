@@ -4,8 +4,8 @@
 final class ld extends hi {
     static String field_r;
     static String field_q;
-    static bd field_p;
-    static bd field_o;
+    static RgbSprite field_p;
+    static RgbSprite field_o;
 
     final static void a(int param0, byte param1, vm param2, String param3, pm param4) {
         RuntimeException stackIn_18_0 = null;
@@ -74,7 +74,7 @@ final class ld extends hi {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, bd param4, int param5) {
+    final static void a(int param0, byte param1, int param2, int param3, RgbSprite param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         try {
@@ -380,7 +380,7 @@ final class ld extends hi {
           }
           var5 = new bf();
           if (param2 < 92) {
-            field_p = (bd) null;
+            field_p = (RgbSprite) null;
           }
           var5.a((byte) 30);
           var5.a((byte) 123, var4, (long)(param3 * 8));

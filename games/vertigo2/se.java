@@ -89,7 +89,7 @@ final class se extends TextureOperator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

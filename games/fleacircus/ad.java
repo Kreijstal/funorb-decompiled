@@ -4,7 +4,7 @@
 final class ad {
     private String field_a;
     private boolean field_c;
-    static dd[] field_b;
+    static RgbSprite[] field_b;
 
     final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
@@ -46,7 +46,7 @@ final class ad {
 
     final boolean a(int param0) {
         if (param0 < 8) {
-          field_b = (dd[]) null;
+          field_b = (RgbSprite[]) null;
           return this.field_c;
         }
         return this.field_c;

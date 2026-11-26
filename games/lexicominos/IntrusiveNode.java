@@ -33,14 +33,14 @@ class IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (param0) {
           field_g = null;
           field_b = null;
           field_e = null;
           return;
         }
-        IntrusiveNode.b(false);
+        IntrusiveNode.clearDeclaredStaticReferences(false);
         field_g = null;
         field_b = null;
         field_e = null;

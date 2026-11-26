@@ -4,7 +4,7 @@
 final class sg {
     private String field_m;
     String field_l;
-    static dd field_f;
+    static RgbSprite field_f;
     private int field_d;
     static String field_a;
     int field_j;
@@ -142,7 +142,7 @@ final class sg {
           var8.readString(0);
         }
         if (param1 < 22) {
-          field_f = (dd) null;
+          field_f = (RgbSprite) null;
         }
         if (param0) {
           var5 = var8.readUnsignedShort((byte) 59);
@@ -188,11 +188,11 @@ final class sg {
         return 2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_f = null;
         if (param0 != -3) {
-          sg.a(-59);
+          sg.clearStaticReferences(-59);
         }
         field_h = null;
         field_a = null;

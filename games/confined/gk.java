@@ -141,7 +141,7 @@ class gk extends IntrusiveNode {
         this(param0, param1, -1, false);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         field_q = null;
         if (param0 == 14714) {
@@ -149,7 +149,7 @@ class gk extends IntrusiveNode {
           field_y = null;
           return;
         }
-        gk.c(118);
+        gk.clearStaticReferences(118);
         field_v = null;
         field_y = null;
     }

@@ -9,7 +9,7 @@ class DualLinkNode extends IntrusiveNode {
     static String field_r;
     static String field_q;
 
-    public static void g(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_s = null;
         int var1 = 11 % ((param0 + 49) / 44);
         field_r = null;

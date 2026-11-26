@@ -14,8 +14,8 @@ final class di {
         field_d = null;
         field_b = null;
         if (param0 != 0) {
-          nf[] var2 = (nf[]) null;
-          di.a(100, (nf[]) null, (byte) 46, 121, -125, -36);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          di.a(100, (RgbSprite[]) null, (byte) 46, 121, -125, -36);
         }
         field_g = null;
         field_c = null;
@@ -24,7 +24,7 @@ final class di {
         field_e = null;
     }
 
-    final static void a(int param0, nf[] param1, byte param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite[] param1, byte param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -51,7 +51,7 @@ final class di {
         int var19 = 0;
         int var20 = 0;
         int var22 = 0;
-        nf[] var23 = null;
+        RgbSprite[] var23 = null;
         int var20Lifetime1;
         int var20Lifetime2;
         int var20Lifetime3;
@@ -91,8 +91,8 @@ final class di {
             var11 = param0 + param5;
             var12 = var6_int + param3;
             if (param2 >= -23) {
-              var23 = (nf[]) null;
-              di.a(-48, (nf[]) null, (byte) 113, -19, 53, -112);
+              var23 = (RgbSprite[]) null;
+              di.a(-48, (RgbSprite[]) null, (byte) 113, -19, 53, -112);
             }
             var13 = var10 - var7;
             var14 = var8 + param5;

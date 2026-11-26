@@ -7,7 +7,7 @@ final class ih extends ej {
     static IntrusiveDeque field_x;
     static String field_z;
     static String field_u;
-    static bd field_v;
+    static RgbSprite field_v;
     static volatile boolean field_s;
     private td field_t;
     static int field_w;
@@ -338,7 +338,7 @@ final class ih extends ej {
               break;
             }
             if (param1 != 75) {
-              field_v = (bd) null;
+              field_v = (RgbSprite) null;
             }
             if (this.field_r != 0) {
               try {
@@ -500,7 +500,7 @@ final class ih extends ej {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 200) {
           field_x = (IntrusiveDeque) null;
         }

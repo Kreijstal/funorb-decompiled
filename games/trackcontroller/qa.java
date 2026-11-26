@@ -6,10 +6,10 @@ final class qa {
     static int[] field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (!param0) {
-          qa.a(true);
+          qa.clearStaticReferences(true);
           field_b = null;
           return;
         }

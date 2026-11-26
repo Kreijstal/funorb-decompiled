@@ -242,7 +242,7 @@ final class le extends di {
         ok.field_j = -2147483648;
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_m = null;
         field_r = null;
         field_q = null;
@@ -251,7 +251,7 @@ final class le extends di {
         field_o = null;
         field_s = null;
         if (param0 != -76) {
-          le.e((byte) -47);
+          le.clearDeclaredStaticReferences((byte) -47);
         }
     }
 

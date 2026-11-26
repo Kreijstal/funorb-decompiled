@@ -3,12 +3,12 @@
  */
 abstract class ByteStorage {
     static int field_a;
-    static dl field_b;
+    static RgbSprite field_b;
 
     final static void b(int param0) {
         int stackIn_138_0 = 0;
         int stackIn_141_0 = 0;
-        dl[] stackIn_142_1 = null;
+        RgbSprite[] stackIn_142_1 = null;
         int stackIn_145_0 = 0;
         boolean stackIn_145_1 = false;
         int stackIn_146_2 = 0;
@@ -17,7 +17,7 @@ abstract class ByteStorage {
         int stackIn_161_2 = 0;
         int stackIn_180_0 = 0;
         int stackIn_183_0 = 0;
-        dl[] stackIn_184_1 = null;
+        RgbSprite[] stackIn_184_1 = null;
         int stackIn_187_0 = 0;
         boolean stackIn_187_1 = false;
         int stackIn_188_2 = 0;
@@ -26,7 +26,7 @@ abstract class ByteStorage {
         int stackIn_192_2 = 0;
         int stackIn_208_0 = 0;
         int stackIn_211_0 = 0;
-        dl[] stackIn_212_1 = null;
+        RgbSprite[] stackIn_212_1 = null;
         int stackIn_215_0 = 0;
         boolean stackIn_215_1 = false;
         int stackIn_216_2 = 0;
@@ -35,7 +35,7 @@ abstract class ByteStorage {
         int stackIn_220_2 = 0;
         int stackIn_233_0 = 0;
         int stackIn_236_0 = 0;
-        dl[] stackIn_237_1 = null;
+        RgbSprite[] stackIn_237_1 = null;
         int stackIn_240_0 = 0;
         boolean stackIn_240_1 = false;
         int stackIn_241_2 = 0;
@@ -3167,7 +3167,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("fs_unavailable", 5236);
                 if (param1 >= -53) {
-                  field_b = (dl) null;
+                  field_b = (RgbSprite) null;
                 }
                 if (var2 != null) {
                   ib.field_m = fa.a((byte) -88, var2);

@@ -3,14 +3,14 @@
  */
 final class GameCanvas extends java.awt.Canvas {
     static int[] field_i;
-    static bd field_k;
+    static RgbSprite field_k;
     private java.awt.Component field_l;
     static String field_j;
     static int field_e;
     static int field_g;
     static ResourceArchive field_d;
     static String field_f;
-    static bd field_h;
+    static RgbSprite field_h;
     static dh field_c;
     static int field_b;
     static float field_a;
@@ -44,7 +44,7 @@ final class GameCanvas extends java.awt.Canvas {
             param3.field_e = param3.field_e + 1;
           }
           if (param1 != -11112) {
-            field_h = (bd) null;
+            field_h = (RgbSprite) null;
           }
           var4_int = 0;
           while (param3.field_e <= 4) {
@@ -255,11 +255,11 @@ final class GameCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_k = null;
         if (param0 < 3) {
-          GameCanvas.a(-49);
+          GameCanvas.clearStaticReferences(-49);
         }
         field_h = null;
         field_j = null;

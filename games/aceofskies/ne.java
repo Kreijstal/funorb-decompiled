@@ -86,7 +86,7 @@ final class ne extends hh {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         field_g = null;
         field_e = null;

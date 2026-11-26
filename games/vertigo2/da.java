@@ -24,9 +24,9 @@ abstract class da extends de implements ih {
         return true;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 >= -97) {
-          da.b((byte) -31);
+          da.clearDeclaredStaticReferences((byte) -31);
           field_k = null;
           return;
         }

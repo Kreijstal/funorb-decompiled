@@ -7,7 +7,7 @@ final class ak {
     static IntrusiveDeque field_i;
     int field_k;
     int field_j;
-    static bd field_a;
+    static RgbSprite field_a;
     static pg[] field_b;
     static int field_f;
     static int[] field_c;

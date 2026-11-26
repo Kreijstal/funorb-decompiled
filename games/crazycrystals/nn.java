@@ -6,9 +6,9 @@ final class nn {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -121) {
-          nn.a(125);
+          nn.clearStaticReferences(125);
           field_a = null;
           field_b = null;
           return;

@@ -13,12 +13,12 @@ final class ProxyAuthenticationRequiredException extends IOException {
         return var1;
     }
 
-    final static kc[] a(String param0, String param1, int param2, qk param3) {
+    final static RgbSprite[] a(String param0, String param1, int param2, qk param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        kc[] stackIn_2_0 = null;
-        kc[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -29,7 +29,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            stackIn_2_0 = (kc[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param3.a(param2 ^ 18659, param1);

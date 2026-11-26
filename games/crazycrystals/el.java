@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class el extends fb {
-    static dl field_g;
+    static RgbSprite field_g;
     static String field_h;
     static String field_f;
 

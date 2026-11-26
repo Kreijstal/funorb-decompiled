@@ -149,7 +149,7 @@ final class ue extends jk {
         ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3Lifetime3)).field_j + ((ta) ((Object) var3Lifetime3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime3, param1, 240, ((ta) ((Object) var3Lifetime3)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime3);
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 8443) {
           return;
         }

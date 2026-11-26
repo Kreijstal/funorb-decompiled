@@ -17,7 +17,7 @@ abstract class ej {
     volatile int field_k;
     volatile int field_e;
     byte field_r;
-    static bd field_d;
+    static RgbSprite field_d;
     PacketBuffer field_i;
     lm field_p;
 
@@ -153,7 +153,7 @@ abstract class ej {
         if (param0 >= 46) {
           return true;
         }
-        field_d = (bd) null;
+        field_d = (RgbSprite) null;
         return true;
     }
 

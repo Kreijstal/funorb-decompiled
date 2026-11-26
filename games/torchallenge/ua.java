@@ -27,7 +27,7 @@ final class ua {
           var5_int = 0;
           var6 = -1;
           if (param1 != -113) {
-            ua.a(125);
+            ua.clearStaticReferences(125);
           }
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
@@ -73,7 +73,7 @@ final class ua {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         int var1 = 68 % ((18 - param0) / 56);

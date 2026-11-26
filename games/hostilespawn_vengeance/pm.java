@@ -61,7 +61,7 @@ final class pm {
         fc.field_z = fc.field_z + 1;
     }
 
-    final static bd[] a(int param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {
         if (param2 != -117) {
           pm.clearStaticReferences((byte) -84);
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ArgbSprite extends hj {
+final class ArgbSprite extends RgbSprite {
     final void d(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;

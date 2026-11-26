@@ -35,7 +35,7 @@ final class og extends gj implements dc, da {
         }
     }
 
-    final static void a(int param0, dd[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;

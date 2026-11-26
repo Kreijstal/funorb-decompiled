@@ -179,7 +179,7 @@ abstract class wi {
         }
     }
 
-    final static void a(int param0, dl[] param1, int param2, int param3, byte param4, int param5) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, byte param4, int param5) {
         try {
           qc.a(192, param2, param3, param1, param0, param5, 2);
           if (param4 != -71) {

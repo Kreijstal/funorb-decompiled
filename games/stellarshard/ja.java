@@ -158,7 +158,7 @@ final class ja extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_m = null;
         int var1 = -119 % ((-61 - param0) / 60);
         field_k = null;

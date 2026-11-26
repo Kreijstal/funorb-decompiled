@@ -15,10 +15,10 @@ final class bn {
     private int field_e;
     static String field_i;
     static String[] field_m;
-    static cn field_h;
+    static RgbSprite field_h;
     private int field_p;
     private int field_w;
-    static cn field_f;
+    static RgbSprite field_f;
     private float field_y;
     private boolean field_d;
     private int field_v;

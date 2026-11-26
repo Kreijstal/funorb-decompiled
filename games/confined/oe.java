@@ -38,7 +38,7 @@ abstract class oe extends ga {
         return false;
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_X = null;
         field_Q = null;
         field_S = null;
@@ -49,7 +49,7 @@ abstract class oe extends ga {
           field_R = null;
           return;
         }
-        oe.k(76);
+        oe.releaseDeclaredStaticReferences(76);
         field_U = null;
         field_O = null;
         field_T = null;
@@ -60,7 +60,7 @@ abstract class oe extends ga {
         if (!param0) {
           return !this.field_H ? 0 : this.field_L.h(0) == this ? 256 : 0;
         }
-        oe.k(-60);
+        oe.releaseDeclaredStaticReferences(-60);
         return !this.field_H ? 0 : this.field_L.h(0) == this ? 256 : 0;
     }
 
@@ -149,7 +149,7 @@ abstract class oe extends ga {
         if (param2 < 36) {
           field_O = (String) null;
           if (ga.field_K == null) {
-            ga.field_K = new nf(this.field_F, this.field_z);
+            ga.field_K = new RgbSprite(this.field_F, this.field_z);
             vm.a(ga.field_K, -8409);
             SoftwareRasterizer.clearRaster();
             this.b(0, (byte) -90, 0);
@@ -159,7 +159,7 @@ abstract class oe extends ga {
             return;
           }
           if (this.field_F > ga.field_K.field_u) {
-            ga.field_K = new nf(this.field_F, this.field_z);
+            ga.field_K = new RgbSprite(this.field_F, this.field_z);
             vm.a(ga.field_K, -8409);
             SoftwareRasterizer.clearRaster();
             this.b(0, (byte) -90, 0);
@@ -177,7 +177,7 @@ abstract class oe extends ga {
             ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
-          ga.field_K = new nf(this.field_F, this.field_z);
+          ga.field_K = new RgbSprite(this.field_F, this.field_z);
           vm.a(ga.field_K, -8409);
           SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
@@ -187,7 +187,7 @@ abstract class oe extends ga {
           return;
         }
         if (ga.field_K == null) {
-          ga.field_K = new nf(this.field_F, this.field_z);
+          ga.field_K = new RgbSprite(this.field_F, this.field_z);
           vm.a(ga.field_K, -8409);
           SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
@@ -197,7 +197,7 @@ abstract class oe extends ga {
           return;
         }
         if (this.field_F > ga.field_K.field_u) {
-          ga.field_K = new nf(this.field_F, this.field_z);
+          ga.field_K = new RgbSprite(this.field_F, this.field_z);
           vm.a(ga.field_K, -8409);
           SoftwareRasterizer.clearRaster();
           this.b(0, (byte) -90, 0);
@@ -215,7 +215,7 @@ abstract class oe extends ga {
           ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
-        ga.field_K = new nf(this.field_F, this.field_z);
+        ga.field_K = new RgbSprite(this.field_F, this.field_z);
         vm.a(ga.field_K, -8409);
         SoftwareRasterizer.clearRaster();
         this.b(0, (byte) -90, 0);

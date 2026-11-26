@@ -20,7 +20,7 @@ final class ud {
         return sj.a(true);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -33 / ((-41 - param0) / 48);
         field_a = null;
     }

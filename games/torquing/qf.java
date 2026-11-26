@@ -5,9 +5,9 @@ class qf {
     static IntrusiveDeque field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          qf.a(false);
+          qf.clearStaticReferences(false);
           field_a = null;
           return;
         }

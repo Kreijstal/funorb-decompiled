@@ -4,13 +4,13 @@
 final class ue extends IntrusiveNode {
     static String field_m;
     byte[] field_l;
-    static cn[] field_i;
+    static RgbSprite[] field_i;
     int field_k;
     static int[] field_j;
 
     final static boolean b(byte param0) {
         if (param0 >= -91) {
-          ue.a((byte) -63);
+          ue.clearStaticReferences((byte) -63);
         }
         return d.field_f;
     }
@@ -37,7 +37,7 @@ final class ue extends IntrusiveNode {
           var2 += 4;
         }
         if (param1 != -715) {
-          field_i = (cn[]) null;
+          field_i = (RgbSprite[]) null;
         }
         if (param0 >= 4) {
           var2 += 2;
@@ -50,7 +50,7 @@ final class ue extends IntrusiveNode {
         return var2 + param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_m = null;
         field_i = null;

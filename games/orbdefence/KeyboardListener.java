@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class KeyboardListener implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static hj[] field_d;
+    static RgbSprite[] field_d;
     static int field_a;
     static int[] field_c;
     static byte[][] field_b;

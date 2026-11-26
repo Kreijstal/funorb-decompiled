@@ -26,7 +26,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           tg.field_d = (param0 << 16) / 150;
           return;
         }
-        SecondaryNodeDequeIterator.a(96);
+        SecondaryNodeDequeIterator.clearStaticReferences(96);
         tg.field_g = 100 * param0 / 150;
         tg.field_d = (param0 << 16) / 150;
     }
@@ -46,7 +46,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -31 / ((-15 - param0) / 48);
         field_b = null;
     }

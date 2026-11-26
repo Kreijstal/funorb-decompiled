@@ -73,7 +73,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           field_h = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) field_h));
-          field_h.setSize(hf.field_h, qc.field_s);
+          field_h.setSize(hf.field_h, SpriteGeometry.field_s);
           field_h.setVisible(true);
           boolean decompiledSharedTail0 = (DirectByteStorage.field_n == var2);
           if (!decompiledSharedTail0) {
@@ -174,7 +174,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             ch.field_e = ch.field_e - 50;
             pc.field_a = true;
-            field_h.setSize(hf.field_h, qc.field_s);
+            field_h.setSize(hf.field_h, SpriteGeometry.field_s);
             field_h.setVisible(true);
             boolean decompiledSharedTail0 = (DirectByteStorage.field_n != null &&
               db.field_r == null);
@@ -304,7 +304,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.a(3904, "alreadyloaded");
                 return;
               }
-              qc.field_s = param0;
+              SpriteGeometry.field_s = param0;
               he.field_x = param0;
               ql.field_a = param6;
               sg.field_a = 0;
@@ -780,7 +780,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 ph.h(1048576);
                 this.b(-54);
-                o.field_n = rf.a(hf.field_h, (java.awt.Component) ((Object) field_h), qc.field_s, false);
+                o.field_n = rf.a(hf.field_h, (java.awt.Component) ((Object) field_h), SpriteGeometry.field_s, false);
                 this.a(-4323);
                 vj.field_v = dd.c(false);
                 do {

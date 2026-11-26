@@ -43,7 +43,7 @@ abstract class w {
 
     abstract void a(byte param0);
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         int var1 = 114 / ((param0 + 33) / 34);
         field_e = null;
@@ -52,11 +52,11 @@ abstract class w {
 
     abstract void a(Object param0, boolean param1, byte param2);
 
-    final static dd[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        dd[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -68,7 +68,7 @@ abstract class w {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (dd[]) (stackIn_2_0);
+          return (RgbSprite[]) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

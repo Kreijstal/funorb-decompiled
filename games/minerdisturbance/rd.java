@@ -70,7 +70,7 @@ final class rd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -97,7 +97,7 @@ final class rd {
           var5_int = param3.a(-89, param0);
           var6 = param3.a(param4, var5_int, -80);
           if (param1 >= -64) {
-            rd.a((byte) -105);
+            rd.clearStaticReferences((byte) -105);
           }
           stackIn_3_0 = dl.a(param2, var6, var5_int, (byte) 122, param3);
           return stackIn_3_0;

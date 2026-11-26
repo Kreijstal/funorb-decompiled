@@ -6,8 +6,8 @@ abstract class wl extends DualLinkNode {
     boolean field_q;
     boolean field_l;
     static volatile boolean field_m;
-    static dl[][] field_p;
-    static dl field_o;
+    static RgbSprite[][] field_p;
+    static RgbSprite field_o;
 
     abstract byte[] e(int param0);
 
@@ -228,10 +228,10 @@ abstract class wl extends DualLinkNode {
         this.field_n = true;
     }
 
-    final static dl[] a(int param0, int param1, db param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, db param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_5_0 = null;
-        dl[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -245,7 +245,7 @@ abstract class wl extends DualLinkNode {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (dl[]) (stackIn_5_0);
+          return (RgbSprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -294,7 +294,7 @@ abstract class wl extends DualLinkNode {
             AccountNameAvailabilityValidator.field_m = 2;
           }
           if (param0 != 7) {
-            field_o = (dl) null;
+            field_o = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -306,7 +306,7 @@ abstract class wl extends DualLinkNode {
 
     public static void c(byte param0) {
         try {
-          field_p = (dl[][]) null;
+          field_p = (RgbSprite[][]) null;
           field_o = null;
           if (param0 >= -38) {
             wl.a((byte) 90);
@@ -318,12 +318,12 @@ abstract class wl extends DualLinkNode {
 
     abstract int b(byte param0);
 
-    final static dl a(String param0, db param1, int param2, String param3) {
+    final static RgbSprite a(String param0, db param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        dl stackIn_2_0 = null;
-        dl stackIn_4_0 = null;
+        RgbSprite stackIn_2_0 = null;
+        RgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -335,7 +335,7 @@ abstract class wl extends DualLinkNode {
         try {
           var4_int = param1.a(param3, -1);
           if (param2 != 10) {
-            stackIn_2_0 = (dl) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           var5 = param1.a(-2862, param0, var4_int);

@@ -5,16 +5,16 @@ final class an extends ql {
     private v[] field_i;
     static int field_q;
     private we[] field_k;
-    static bd field_d;
+    static RgbSprite field_d;
     private boolean field_o;
-    static bd field_l;
+    static RgbSprite field_l;
     static int[] field_r;
     private oc[] field_m;
     private oc[] field_e;
     private oc[] field_h;
     private v[] field_p;
     static String field_f;
-    static bd field_j;
+    static RgbSprite field_j;
     static float field_n;
     private oc field_g;
 

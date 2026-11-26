@@ -13,7 +13,7 @@ final class ah {
     private byte[] field_l;
     private long[] field_o;
     private long[] field_h;
-    static dl field_b;
+    static RgbSprite field_b;
     private int field_i;
     private long[] field_m;
     static String field_f;

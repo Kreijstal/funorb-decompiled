@@ -98,9 +98,9 @@ final class ta extends RenderEffect {
         this.field_b.a(ru.field_a, param0, ru.field_a);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          ta.b(false);
+          ta.clearStaticReferences(false);
           field_f = null;
           return;
         }

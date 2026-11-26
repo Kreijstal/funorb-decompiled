@@ -7,7 +7,7 @@ final class bf {
     static String field_b;
     static String[] field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -106 % ((-34 - param0) / 60);
         field_b = null;
         field_c = null;

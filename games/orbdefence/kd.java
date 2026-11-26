@@ -25,16 +25,16 @@ final class kd {
     int field_i;
     int[] field_v;
 
-    final static hj[] a(int param0, int param1, int param2, int param3, int param4) {
-        hj[] var6 = new hj[9];
-        hj[] var5 = var6;
-        hj dupTemp$0 = af.a(param0, (byte) -50, param4);
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = af.a(param0, (byte) -50, param4);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        hj dupTemp$1 = af.a(param0, (byte) -95, param3);
+        RgbSprite dupTemp$1 = af.a(param0, (byte) -95, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -42,7 +42,7 @@ final class kd {
           var6[4] = af.a(64, (byte) -54, param1);
         }
         if (param2 < 20) {
-          kd.b((byte) 65);
+          kd.clearStaticReferences((byte) 65);
         }
         return var5;
     }
@@ -338,7 +338,7 @@ final class kd {
         return m.field_d[this.field_o[param0]] + (!this.field_e[param0] ? 0 : 25000) + (this.field_v[param0] + this.field_g[param0]) * this.field_n;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 87 / ((49 - param0) / 39);
         field_q = null;
         field_f = null;
@@ -355,7 +355,7 @@ final class kd {
         return ve.field_O;
     }
 
-    kd(hj param0) {
+    kd(RgbSprite param0) {
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_108_0 = null;

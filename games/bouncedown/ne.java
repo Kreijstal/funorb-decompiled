@@ -92,7 +92,7 @@ final class ne extends DualLinkNode {
         return var2.toString();
     }
 
-    final static tg a(boolean param0) {
+    final static RgbSprite a(boolean param0) {
         int var4_int = 0;
         int var5 = Bounce.field_N;
         int var1 = ih.field_V[0] * qh.field_i[0];
@@ -101,7 +101,7 @@ final class ne extends DualLinkNode {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = he.field_k[da.b(255, (int) var2[var4_int])];
         }
-        tg var4 = new tg(se.field_C, fk.field_e, cl.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
+        RgbSprite var4 = new RgbSprite(se.field_C, fk.field_e, cl.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
         vb.a((byte) 122);
         if (!param0) {
           ne.f(-101);

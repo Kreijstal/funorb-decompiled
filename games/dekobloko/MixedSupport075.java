@@ -12,7 +12,7 @@ final class MixedSupport075 {
     int integerState0421;
     static long longState0026;
 
-    public static void performAction0929(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0323 = null;
         stringState0324 = null;
         if (integerArgument1 == -19893) {
@@ -20,7 +20,7 @@ final class MixedSupport075 {
           stringState0325 = null;
           return;
         }
-        MixedSupport075.performAction0929(101);
+        MixedSupport075.clearStaticReferences(101);
         rgbSpriteState0030 = null;
         stringState0325 = null;
     }

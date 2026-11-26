@@ -17,7 +17,7 @@ final class ub {
     static int field_n;
     static int field_j;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_c = (Sprite[][]) null;
         int var1 = -122 / ((40 - param0) / 45);

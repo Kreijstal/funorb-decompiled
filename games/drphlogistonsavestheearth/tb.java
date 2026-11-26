@@ -51,7 +51,7 @@ final class tb {
         return tl.field_J;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_d = null;
         int var1 = 78 / ((param0 + 6) / 36);

@@ -205,7 +205,7 @@ class rj extends ButtonWidget {
         }
     }
 
-    public static void o(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_B = null;
         if (param0 != 0) {
           field_B = (String) null;
@@ -292,7 +292,7 @@ class rj extends ButtonWidget {
         int var6 = 0;
         try {
           if (param3 >= -13) {
-            rj.o(59);
+            rj.clearDeclaredStaticReferences(59);
           }
           super.a(param0, param1, param2, (byte) -98);
           this.k(95);
@@ -335,7 +335,7 @@ class rj extends ButtonWidget {
             }
           }
           if (param2 != 20) {
-            rj.o(-49);
+            rj.clearDeclaredStaticReferences(-49);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

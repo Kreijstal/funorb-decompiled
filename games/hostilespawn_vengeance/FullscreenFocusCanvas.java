@@ -5,14 +5,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     volatile boolean focusLost;
     static int field_e;
     java.awt.Frame fullscreenFrame;
-    static bd field_h;
+    static RgbSprite field_h;
     static int[] field_k;
-    static bd field_j;
-    static bd field_f;
+    static RgbSprite field_j;
+    static RgbSprite field_f;
     static ql field_a;
     static int field_d;
     static String field_b;
-    static bd field_c;
+    static RgbSprite field_c;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
@@ -62,7 +62,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_21_0;
           }
           if (param0 != 0) {
-            field_c = (bd) null;
+            field_c = (RgbSprite) null;
           }
           if (param1.equals("D")) {
             stackIn_26_0 = Double.TYPE;
@@ -103,7 +103,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           return;
         }
-        FullscreenFocusCanvas.a((byte) -119);
+        FullscreenFocusCanvas.clearStaticReferences((byte) -119);
         MidiPcmStream.field_r = MidiPcmStream.field_r + param0;
         qb.field_k = qb.field_k - param0;
         if (0 >= rf.field_f) {
@@ -117,7 +117,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           sd.exitFullscreenFrame(param1, -106, this.fullscreenFrame);
           if (!param0) {
-            field_h = (bd) null;
+            field_h = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -127,7 +127,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_c = null;
         field_a = null;
@@ -138,7 +138,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           field_b = null;
           return;
         }
-        FullscreenFocusCanvas.a((byte) 62);
+        FullscreenFocusCanvas.clearStaticReferences((byte) 62);
         field_f = null;
         field_k = null;
         field_b = null;

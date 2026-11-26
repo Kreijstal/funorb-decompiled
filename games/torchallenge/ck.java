@@ -6,10 +6,10 @@ final class ck {
     static int[] field_a;
     static boolean field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 255) {
-          ck.b(97);
+          ck.clearStaticReferences(97);
           field_c = null;
           return;
         }

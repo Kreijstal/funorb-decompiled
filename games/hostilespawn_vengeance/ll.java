@@ -16,7 +16,7 @@ final class ll {
         return param0 | param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_b = null;
         int var1 = 122 / ((-61 - param0) / 56);

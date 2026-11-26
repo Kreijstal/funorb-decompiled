@@ -67,7 +67,7 @@ final class la {
         ec.a((byte) 27);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_d = null;
         int var1 = -33 / ((param0 + 66) / 38);

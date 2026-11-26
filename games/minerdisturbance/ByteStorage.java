@@ -20,7 +20,7 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int param0);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -11 % ((-37 - param0) / 60);
         field_b = null;
     }

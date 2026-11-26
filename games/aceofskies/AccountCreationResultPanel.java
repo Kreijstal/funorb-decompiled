@@ -7,9 +7,9 @@ final class AccountCreationResultPanel extends oo implements dn {
     private boolean field_eb;
     private boolean field_gb;
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 61) {
-          AccountCreationResultPanel.m(-87);
+          AccountCreationResultPanel.clearStaticReferences(-87);
           field_fb = null;
           return;
         }

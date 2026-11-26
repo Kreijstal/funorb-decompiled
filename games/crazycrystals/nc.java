@@ -10,10 +10,10 @@ final class nc extends ue {
     private re field_f;
     static String field_k;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_k = null;
         if (param0) {
-          nc.b(false);
+          nc.clearStaticReferences(false);
         }
     }
 

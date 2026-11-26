@@ -5,7 +5,7 @@ final class g extends ph {
     int field_Q;
     int field_J;
     int field_I;
-    static bd[] field_G;
+    static RgbSprite[] field_G;
     static String field_N;
     static String field_O;
     int field_H;
@@ -15,7 +15,7 @@ final class g extends ph {
     int field_L;
     int field_P;
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 >= -119) {
           return;
         }
@@ -32,7 +32,7 @@ final class g extends ph {
           wk.field_g.addLast(param0, 124);
           fj.a(param1, param0, true);
           if (param2 != -7347) {
-            g.j(101);
+            g.clearDeclaredStaticReferences(101);
           }
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "g.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

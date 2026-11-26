@@ -19,7 +19,7 @@ abstract class MouseWheelInput {
 
     abstract void detach(java.awt.Component param0, int param1);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 0) {
           field_i = null;
           field_c = null;
@@ -30,7 +30,7 @@ abstract class MouseWheelInput {
           field_k = null;
           return;
         }
-        MouseWheelInput.b(26);
+        MouseWheelInput.clearStaticReferences(26);
         field_i = null;
         field_c = null;
         field_g = null;

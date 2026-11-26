@@ -5,12 +5,12 @@ final class uh extends IntrusiveNode {
     int field_q;
     int field_u;
     int field_p;
-    static dd[] field_m;
+    static RgbSprite[] field_m;
     int field_j;
     int field_l;
     static PcmSample field_s;
     static String field_o;
-    static dd field_k;
+    static RgbSprite field_k;
     int field_i;
     static String field_t;
     static int[] field_n;
@@ -774,7 +774,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime115 = tf.a(0, "BALLOON_TIP");
           if (null != var2Lifetime115) {
-            ta.field_s = ab.a(0, var2Lifetime115);
+            SpriteGeometry.field_s = ab.a(0, var2Lifetime115);
           }
           var2Lifetime116 = tf.a(0, "TRAPDOOR_TIP");
           if (null != var2Lifetime116) {

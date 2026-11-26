@@ -69,7 +69,7 @@ final class uj implements Runnable {
         }
         th.a(106);
         if (param0 != 63) {
-          uj.c(33);
+          uj.clearStaticReferences(33);
         }
     }
 
@@ -186,8 +186,8 @@ final class uj implements Runnable {
               return true;
             }
             var5 = hf.field_i;
-            if (tk.field_q != 0.0) {
-              var5 = (int)((double)var5 + tl.field_f.nextGaussian() * tk.field_q);
+            if (SpriteGeometry.field_q != 0.0) {
+              var5 = (int)((double)var5 + tl.field_f.nextGaussian() * SpriteGeometry.field_q);
               if (var5 < 0) {
                 var5 = 0;
               }
@@ -223,10 +223,10 @@ final class uj implements Runnable {
         return (PacketBuffer) null;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
-          uj.c(113);
+          uj.clearStaticReferences(113);
         }
     }
 

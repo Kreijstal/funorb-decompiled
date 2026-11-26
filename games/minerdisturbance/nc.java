@@ -54,7 +54,7 @@ final class nc implements ad {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -96 % ((33 - param0) / 63);
         field_b = null;
     }

@@ -29,7 +29,7 @@ final class mo extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = null;
         field_h = null;
         int var1 = -12 % ((param0 - 45) / 52);

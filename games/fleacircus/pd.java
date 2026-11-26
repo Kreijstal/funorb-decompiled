@@ -3,7 +3,7 @@
  */
 final class pd extends IntrusiveNode {
     RawPcmStream field_m;
-    static dd[] field_k;
+    static RgbSprite[] field_k;
     int field_j;
     static String field_i;
     static int field_l;
@@ -60,10 +60,10 @@ final class pd extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         if (param0 != -89) {
-          pd.a((byte) 62);
+          pd.clearStaticReferences((byte) 62);
           field_i = null;
           return;
         }

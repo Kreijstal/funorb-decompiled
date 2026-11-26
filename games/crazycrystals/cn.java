@@ -4,7 +4,7 @@
 final class cn {
     static sj field_b;
     static int field_a;
-    static dl[] field_c;
+    static RgbSprite[] field_c;
     static am field_e;
     static double[] field_d;
 
@@ -47,7 +47,7 @@ final class cn {
         field_b = null;
         field_d = null;
         if (param0 < 9) {
-          field_c = (dl[]) null;
+          field_c = (RgbSprite[]) null;
           field_e = null;
           return;
         }

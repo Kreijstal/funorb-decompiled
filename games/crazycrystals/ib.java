@@ -6,7 +6,7 @@ abstract class ib extends DualLinkNode {
     int field_n;
     static int[] field_l;
 
-    public static void g(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_l = null;
         if (param0 != 31438) {
           field_l = (int[]) null;

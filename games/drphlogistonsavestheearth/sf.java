@@ -48,13 +48,13 @@ final class sf {
         var4.a((byte) 63, 0).b(256, 15658734).a(eg.a((byte) 126, 10066329, 7829367, 8947848), -61);
         var4.a((byte) 112, 1).a(eg.a((byte) 70, 10066329, 13421772, 11184810), -123);
         var4.a((byte) 74, 3).a(eg.a((byte) 98, 7829367, 10066329, 8947848), -87).a((byte) 92, 1).a(-4130, 1);
-        nh[] var5 = new nh[9];
+        RgbSprite[] var5 = new RgbSprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
         for (var7_int = 0; var18.field_B.length > var7_int; var7_int++) {
           var16.field_B[var7_int] = 1077952576;
         }
-        var5[4] = (nh) ((Object) var18);
+        var5[4] = (RgbSprite) ((Object) var18);
         var4.a((byte) 104, 4).a((byte) 125, true).a(var5, -111);
         var4.a((byte) 124, 5).a(dl.a((byte) 58, 0, 65793, 0, 0), -86).a((byte) 108, true).b(256, -1);
         this.field_b = (cg) ((Object) var4);
@@ -72,18 +72,18 @@ final class sf {
         var8.a((byte) 69, 0).a(eg.a((byte) 96, 7829367, 10066329, 15658734), -100).b(256, 1118481).c(-1, 85);
         var8.a((byte) 106, 4).a((byte) 117, true).a(var5, -63);
         this.field_f = (cg) ((Object) var8);
-        nh[] var9 = new nh[9];
-        var9[4] = new nh(2, 1);
-        nh[] var10 = new nh[9];
-        var10[4] = new nh(1, 2);
-        nh dupTemp$2 = var9[4];
+        RgbSprite[] var9 = new RgbSprite[9];
+        var9[4] = new RgbSprite(2, 1);
+        RgbSprite[] var10 = new RgbSprite[9];
+        var10[4] = new RgbSprite(1, 2);
+        RgbSprite dupTemp$2 = var9[4];
         dupTemp$2.field_B = new int[]{6710886, 7829367};
         var10[4].field_B = new int[]{6710886, 7829367};
         ch var11 = new ch();
         ch var12 = new ch();
         var11.a(var9, 0, 120);
         var12.a(var10, 0, 127);
-        nh var13 = new nh(7, 4);
+        RgbSprite var13 = new RgbSprite(7, 4);
         var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
         ch var14 = new ch(var4, true);
         if (param0 <= 41) {

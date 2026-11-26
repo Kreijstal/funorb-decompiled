@@ -188,7 +188,7 @@ final class fe {
     final void a(int param0, tj param1) {
         jd var17 = null;
         qi var4 = null;
-        tg[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -197,12 +197,12 @@ final class fe {
         sj discarded$0 = null;
         vg discarded$1 = null;
         qi var8 = null;
-        tg[] var9 = null;
-        tg[] var10 = null;
-        tg dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         qi var11 = null;
         qi var12 = null;
-        tg var13 = null;
+        RgbSprite var13 = null;
         qi var14 = null;
         qi var19 = null;
         int var15 = Bounce.field_N;
@@ -228,13 +228,13 @@ final class fe {
           var4.b(-1, 0).a(15658734, -2).a(ed.a(8947848, 7829367, 78, 10066329), -1);
           var4.b(-1, 1).a(ed.a(11184810, 13421772, 73, 10066329), -1);
           var4.b(param0 - 33, 3).a(ed.a(8947848, 10066329, param0 ^ 78, 7829367), param0 - 33).a((byte) 74, 1).b(1, (byte) -54);
-          var5 = new tg[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, param0);
           var18 = var16;
           for (var7_int = 0; var18.field_v.length > var7_int; var7_int++) {
             var16.field_v[var7_int] = 1077952576;
           }
-          var5[4] = (tg) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.b(-1, 4).a(true, (byte) -118).a(var5, -1);
           var4.b(-1, 5).a(ok.a(param0 ^ 18906, 0, 0, 0, 65793), -1).a(true, (byte) -46).a(-1, param0 - 34);
           this.field_b = (fc) ((Object) var4);
@@ -252,10 +252,10 @@ final class fe {
           var8.b(-1, 0).a(ed.a(15658734, 10066329, 67, 7829367), -1).a(1118481, param0 ^ -34).a(-1, (byte) -49);
           var8.b(param0 ^ -33, 4).a(true, (byte) -61).a(var5, -1);
           this.field_e = (fc) ((Object) var8);
-          var9 = new tg[9];
-          var9[4] = new tg(2, 1);
-          var10 = new tg[9];
-          var10[4] = new tg(1, 2);
+          var9 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_v = new int[]{6710886, 7829367};
           var10[4].field_v = new int[]{6710886, 7829367};
@@ -263,7 +263,7 @@ final class fe {
           var12 = new qi();
           var11.a(param0 - 25058, 0, var9);
           var12.a(-25026, 0, var10);
-          var13 = new tg(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new qi(var4, true);
           var14.a(true, var13.b());

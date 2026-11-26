@@ -3,10 +3,10 @@
  */
 final class oc {
     static int[] field_h;
-    kc field_b;
+    RgbSprite field_b;
     private int field_c;
     private int field_a;
-    kc[] field_f;
+    RgbSprite[] field_f;
     private boolean field_g;
     private int field_e;
     private int field_d;
@@ -335,7 +335,7 @@ final class oc {
         }
     }
 
-    final oc a(kc[] param0, boolean param1) {
+    final oc a(RgbSprite[] param0, boolean param1) {
         RuntimeException var3 = null;
         oc stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

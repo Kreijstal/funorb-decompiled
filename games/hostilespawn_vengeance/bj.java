@@ -3,7 +3,7 @@
  */
 abstract class bj implements bg {
     static int field_b;
-    static bd field_j;
+    static RgbSprite field_j;
     static int field_d;
     static int field_f;
     private long field_c;
@@ -15,7 +15,7 @@ abstract class bj implements bg {
 
     final static boolean c(byte param0) {
         if (param0 >= -23) {
-          bj.c(44);
+          bj.clearStaticReferences(44);
           if (null == ag.field_t) {
             return false;
           }
@@ -75,7 +75,7 @@ abstract class bj implements bg {
 
     abstract String b(byte param0);
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         int var1 = -81 % ((param0 - 89) / 32);

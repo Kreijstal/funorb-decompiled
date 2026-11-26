@@ -8,8 +8,8 @@ final class tb extends ph {
     static PacketBuffer field_M;
     static int[] field_K;
     int field_H;
-    static bd field_I;
-    static bd field_L;
+    static RgbSprite field_I;
+    static RgbSprite field_L;
     private int field_J;
     static int field_P;
 
@@ -22,7 +22,7 @@ final class tb extends ph {
 
     final int j(int param0) {
         if (param0 != 11884) {
-          field_I = (bd) null;
+          field_I = (RgbSprite) null;
           return this.field_J;
         }
         return this.field_J;
@@ -125,7 +125,7 @@ final class tb extends ph {
           GameAppletShell.field_h.requestFocus();
           return;
         }
-        tb.e((byte) -36);
+        tb.clearDeclaredStaticReferences((byte) -36);
         wa.field_q = null;
         if (ie.field_c != null) {
           ie.field_c.c(73);
@@ -133,13 +133,13 @@ final class tb extends ph {
         GameAppletShell.field_h.requestFocus();
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_K = null;
         field_I = null;
         field_L = null;
         field_M = null;
         if (param0 <= 47) {
-          field_L = (bd) null;
+          field_L = (RgbSprite) null;
         }
     }
 
@@ -214,7 +214,7 @@ final class tb extends ph {
         if (param1 == -24584) {
           return this.field_O.a(param0, param1 ^ 26834);
         }
-        field_L = (bd) null;
+        field_L = (RgbSprite) null;
         return this.field_O.a(param0, param1 ^ 26834);
     }
 

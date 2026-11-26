@@ -15,12 +15,12 @@ final class mm extends IntrusiveNode {
     int field_p;
     static String[] field_n;
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_n = null;
         field_m = null;
         field_h = null;
         if (param0 != 10) {
-          mm.a((byte) 126);
+          mm.clearDeclaredStaticReferences((byte) 126);
         }
         field_k = null;
     }

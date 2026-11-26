@@ -4,23 +4,23 @@
 import java.util.*;
 
 class gd extends rj {
-    cn field_K;
+    RgbSprite field_K;
     nn field_M;
-    cn field_H;
+    RgbSprite field_H;
     int field_C;
     static String field_D;
     static String field_J;
     static qk field_G;
-    static cn field_A;
-    cn field_z;
-    cn field_I;
+    static RgbSprite field_A;
+    RgbSprite field_z;
+    RgbSprite field_I;
     int field_L;
     boolean field_F;
-    static cn field_E;
+    static RgbSprite field_E;
     boolean field_B;
-    cn field_N;
+    RgbSprite field_N;
 
-    private gd(cn param0, cn param1, cn param2, cn param3, cn param4, int param5, int param6, int param7) {
+    private gd(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, RgbSprite param4, int param5, int param6, int param7) {
         super(param5, param6, param0.field_y, param0.field_v, param7);
         try {
           this.field_H = param3;
@@ -250,7 +250,7 @@ class gd extends rj {
         }
     }
 
-    private final void a(boolean param0, cn param1) {
+    private final void a(boolean param0, RgbSprite param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
@@ -327,7 +327,7 @@ class gd extends rj {
     final void a(int param0, byte param1, int param2) {
         int var5 = DungeonAssault.field_K;
         if (param1 >= -59) {
-          this.field_K = (cn) null;
+          this.field_K = (RgbSprite) null;
           super.a(param0, (byte) -113, param2);
           if (this.field_B) {
             if (this.field_M == null) {
@@ -369,7 +369,7 @@ class gd extends rj {
         this.field_F = true;
     }
 
-    gd(cn param0, cn param1, cn param2, cn param3, cn param4, int param5, int param6) {
+    gd(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, RgbSprite param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, 0);
     }
 
@@ -386,7 +386,7 @@ class gd extends rj {
         field_G = null;
     }
 
-    final void a(cn param0, cn param1, cn param2, cn param3, byte param4, cn param5) {
+    final void a(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, byte param4, RgbSprite param5) {
         this.a(true, param1);
         this.field_H = param0;
         this.field_z = param3;

@@ -27,7 +27,7 @@ abstract class eh {
         od.b(128, 4);
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_b = null;
         int var1 = 125 % ((param0 - 14) / 44);
         field_i = null;
@@ -76,7 +76,7 @@ abstract class eh {
           eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
           return;
         }
-        eh.b((byte) -115);
+        eh.clearDeclaredStaticReferences((byte) -115);
         jg.field_t.d(param1, param0);
         if (!param3) {
           return;

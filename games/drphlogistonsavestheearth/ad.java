@@ -3,7 +3,7 @@
  */
 final class ad extends ei {
     static String field_r;
-    static nh field_t;
+    static RgbSprite field_t;
     static ok field_q;
     static String field_p;
     private kl field_u;
@@ -304,7 +304,7 @@ final class ad extends ei {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_t = null;
         field_r = null;
         field_q = null;

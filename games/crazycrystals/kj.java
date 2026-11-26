@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class kj {
-    static dl[] field_a;
+    static RgbSprite[] field_a;
     static int field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -90) {
-          kj.a(29);
+          kj.clearStaticReferences(29);
         }
         field_a = null;
         field_c = null;
@@ -99,6 +99,6 @@ final class kj {
 
     static {
         field_c = "Connection restored.";
-        field_a = new dl[4];
+        field_a = new RgbSprite[4];
     }
 }

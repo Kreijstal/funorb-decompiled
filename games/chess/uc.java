@@ -17,7 +17,7 @@ final class uc {
         return ib.field_c.field_Kb;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         int var1 = -95 % ((-52 - param0) / 46);
         field_e = null;

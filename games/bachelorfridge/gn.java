@@ -5,10 +5,10 @@ final class gn extends pu {
     static int[] field_l;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 >= -9) {
-          gn.d((byte) -25);
+          gn.clearStaticReferences((byte) -25);
         }
     }
 

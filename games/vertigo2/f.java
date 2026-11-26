@@ -82,7 +82,7 @@ final class f extends TextureOperator {
         this.field_G = 4096;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 14 % ((param0 - 5) / 51);
         field_D = null;
         field_J = null;

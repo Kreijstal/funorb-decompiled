@@ -21,13 +21,13 @@ final class td extends IntrusiveNode {
           tn.field_m = param1;
           IterableNodeHashTable.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "td.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "td.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static km[] a(int param0, int param1) {
-        km[] var4 = new km[9];
-        km[] var2 = var4;
+    final static RgbSprite[] a(int param0, int param1) {
+        RgbSprite[] var4 = new RgbSprite[9];
+        RgbSprite[] var2 = var4;
         if (param0 == -31056) {
           var4[4] = rd.a(64, param1, 14727);
           return var2;
@@ -42,7 +42,7 @@ final class td extends IntrusiveNode {
         try {
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -78,9 +78,9 @@ final class ee implements ComponentLayout {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
-          ee.a(55);
+          ee.clearStaticReferences(55);
           field_k = null;
           return;
         }

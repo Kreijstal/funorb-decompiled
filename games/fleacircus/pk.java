@@ -201,10 +201,10 @@ final class pk extends dk {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_G = null;
         if (param0 < 50) {
-          pk.d((byte) 21);
+          pk.clearDeclaredStaticReferences((byte) 21);
           field_J = null;
           return;
         }

@@ -234,14 +234,14 @@ final class mh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;
         field_e = null;
         field_d = null;
         if (param0 != 0) {
-          mh.a(1);
+          mh.clearStaticReferences(1);
         }
     }
 

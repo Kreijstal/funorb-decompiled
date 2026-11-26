@@ -176,7 +176,7 @@ final class ae {
         }
     }
 
-    final static void a(kc param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -244,7 +244,7 @@ final class ae {
         return;
     }
 
-    final static void a(kc param0, int param1, int param2, int param3, int param4) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var7;

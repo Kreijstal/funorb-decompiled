@@ -22,10 +22,10 @@ abstract class ak extends lk implements ik {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_w = null;
         if (param0 < 118) {
-          ak.h(-55);
+          ak.clearDeclaredStaticReferences(-55);
         }
     }
 

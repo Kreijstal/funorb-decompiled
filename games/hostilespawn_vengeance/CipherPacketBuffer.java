@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CipherPacketBuffer extends PacketBuffer {
-    static bd field_q;
+    static RgbSprite field_q;
     private IsaacGenerator field_r;
     static String field_v;
     private int field_x;
-    static bd field_y;
-    static bd field_t;
+    static RgbSprite field_y;
+    static RgbSprite field_t;
     static ji field_u;
     static int field_s;
     static String field_z;
-    static bd field_w;
+    static RgbSprite field_w;
 
-    final static bd[] h(int param0, int param1) {
-        bd[] var3 = new bd[9];
-        bd[] var2 = var3;
+    final static RgbSprite[] h(int param0, int param1) {
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         var3[4] = el.a(-106, 64, param1);
         if (param0 < -7) {
           return var2;
@@ -176,11 +176,11 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     static {
         field_v = "Destroy the spawn queen.";
-        field_y = new bd(8, 13);
+        field_y = new RgbSprite(8, 13);
         kf.a(field_y.field_D, 0, 64, 8421376);
-        field_q = new bd(8, 13);
+        field_q = new RgbSprite(8, 13);
         kf.a(field_q.field_D, 0, 64, 16776960);
-        field_t = new bd(8, 13);
+        field_t = new RgbSprite(8, 13);
         kf.a(field_t.field_D, 0, 64, 65793);
         field_z = "Please check if address is correct";
     }

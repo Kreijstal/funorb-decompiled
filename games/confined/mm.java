@@ -11,7 +11,7 @@ final class mm extends ah {
     static int[] field_cb;
     static int[] field_gb;
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_fb = null;
         field_bb = (int[][]) null;
         field_cb = null;
@@ -55,7 +55,7 @@ final class mm extends ah {
     }
 
     mm(hn param0, ee param1, da param2, pm param3) {
-        super(param0, 0.2, 0.003, 16.0, param1, pl.field_y);
+        super(param0, 0.2, 0.003, 16.0, param1, SpriteGeometry.field_y);
         double[] var39 = null;
         double[] var38 = null;
         double[] var37 = null;
@@ -153,7 +153,7 @@ final class mm extends ah {
     final void g(int param0) {
         ka var2 = this.a((byte) -126, kj.field_b, 1.5);
         if (param0 != 26402) {
-          mm.m(42);
+          mm.clearDeclaredStaticReferences(42);
         }
         var2.field_M.field_w = 0.5;
     }
@@ -228,7 +228,7 @@ final class mm extends ah {
         }
     }
 
-    final static void a(int param0, int param1, nf[] param2, nf[] param3, nf[] param4, int param5, byte param6, int param7, int param8, int param9, int param10, int param11, ok param12, int param13, ok param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, RgbSprite[] param2, RgbSprite[] param3, RgbSprite[] param4, int param5, byte param6, int param7, int param8, int param9, int param10, int param11, ok param12, int param13, ok param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -312,7 +312,7 @@ final class mm extends ah {
           }
         }
         if (param0 != 11878) {
-          mm.m(-44);
+          mm.clearDeclaredStaticReferences(-44);
         }
         super.a(param0 ^ 0, param1);
     }

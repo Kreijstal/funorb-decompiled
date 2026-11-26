@@ -23,7 +23,7 @@ final class od extends DualLinkNode {
           }
         }
         if (param0 != 20865) {
-          od.d((byte) -65);
+          od.clearDeclaredStaticReferences((byte) -65);
         }
     }
 
@@ -35,7 +35,7 @@ final class od extends DualLinkNode {
         int var6 = fj.field_k.get(1);
         int var7 = fj.field_k.get(11);
         if (param0 != 10) {
-          od.d((byte) 71);
+          od.clearDeclaredStaticReferences((byte) 71);
         }
         int var8 = fj.field_k.get(12);
         int var9 = fj.field_k.get(13);
@@ -92,7 +92,7 @@ final class od extends DualLinkNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != 11) {
           return;
         }

@@ -69,7 +69,7 @@ abstract class hl extends ej {
         }
     }
 
-    public static void p(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -145,7 +145,7 @@ abstract class hl extends ej {
           if (!param0) {
             return super.d(false);
           }
-          hl.p(-91);
+          hl.discardDeclaredStaticReferences(-91);
           return super.d(false);
         }
         if (this.field_R != ji.field_d) {
@@ -153,7 +153,7 @@ abstract class hl extends ej {
             if (!param0) {
               return super.d(false);
             }
-            hl.p(-91);
+            hl.discardDeclaredStaticReferences(-91);
             return super.d(false);
           }
           fieldTemp$0 = this.field_U + 1;
@@ -164,14 +164,14 @@ abstract class hl extends ej {
             if (!param0) {
               return super.d(false);
             }
-            hl.p(-91);
+            hl.discardDeclaredStaticReferences(-91);
             return super.d(false);
           }
           this.field_Q.field_A = (this.field_U << 8) / this.field_O;
           if (!param0) {
             return super.d(false);
           }
-          hl.p(-91);
+          hl.discardDeclaredStaticReferences(-91);
           return super.d(false);
         }
         int fieldTemp$1 = this.field_U + 1;
@@ -181,7 +181,7 @@ abstract class hl extends ej {
           if (!param0) {
             return super.d(false);
           }
-          hl.p(-91);
+          hl.discardDeclaredStaticReferences(-91);
           return super.d(false);
         }
         this.field_R = pd.field_w;
@@ -191,7 +191,7 @@ abstract class hl extends ej {
         if (!param0) {
           return super.d(false);
         }
-        hl.p(-91);
+        hl.discardDeclaredStaticReferences(-91);
         return super.d(false);
     }
 

@@ -7,11 +7,11 @@ final class ec {
     static int field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         if (param0 != 82) {
-          ec.a(39);
+          ec.clearStaticReferences(39);
         }
     }
 
@@ -79,7 +79,7 @@ final class ec {
           m.field_b.b((byte) -52);
           m.field_b = null;
           if (param0 != 27) {
-            ec.a(72);
+            ec.clearStaticReferences(72);
             return;
           }
           return;
@@ -87,7 +87,7 @@ final class ec {
         if (param0 == 27) {
           return;
         }
-        ec.a(72);
+        ec.clearStaticReferences(72);
     }
 
     static {

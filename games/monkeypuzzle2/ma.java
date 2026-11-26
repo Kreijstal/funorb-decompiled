@@ -493,7 +493,7 @@ final class ma {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;

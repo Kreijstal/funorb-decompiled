@@ -76,7 +76,7 @@ final class de extends wd {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 < 114) {
           field_z = (String) null;
         }

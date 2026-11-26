@@ -16,14 +16,14 @@ final class rf {
 
     final static void b(int param0, int param1) {
         bc.field_b = param1;
-        fk.field_q.a(64 * param1 / param0, (byte) -100);
+        SpriteGeometry.field_q.a(64 * param1 / param0, (byte) -100);
     }
 
-    final static km[] b(byte param0) {
+    final static RgbSprite[] b(byte param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        km[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -37,7 +37,7 @@ final class rf {
         byte[] var21;
         int[] var22;
         var8 = Chess.field_G;
-        var1 = new km[h.field_n];
+        var1 = new RgbSprite[h.field_n];
         for (var2 = 0; var2 < h.field_n; var2++) {
           var3 = b.field_c[var2] * wm.field_b[var2];
           var21 = vk.field_d[var2];
@@ -47,7 +47,7 @@ final class rf {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var6], 255)];
             }
-            var1[var2] = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var22);
+            var1[var2] = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var22);
           } else {
             var15 = gg.field_y[var2];
             var11 = var15;
@@ -59,7 +59,7 @@ final class rf {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = s.a(ce.a((int) var15[var7], 255) << 24, AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (km) ((Object) new ArgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
           }
         }
         if (param0 != 8) {

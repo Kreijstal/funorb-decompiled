@@ -8,10 +8,10 @@ final class lb extends nk {
     static k field_z;
     static int field_y;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_z = null;
         if (param0 != 0) {
-          lb.c(-97);
+          lb.clearStaticReferences(-97);
         }
     }
 

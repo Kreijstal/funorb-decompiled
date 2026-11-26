@@ -11,7 +11,7 @@ final class dj extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_j = null;
         field_k = null;
         if (param0 > -65) {

@@ -6,7 +6,7 @@ final class ri {
     static PcmSample field_b;
     static String[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -117 / ((param0 + 52) / 52);
         field_c = null;
         field_b = null;

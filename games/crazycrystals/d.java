@@ -4,7 +4,7 @@
 final class d {
     static PcmSample[] field_b;
     static int[] field_a;
-    static dl[] field_c;
+    static RgbSprite[] field_c;
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
         try {

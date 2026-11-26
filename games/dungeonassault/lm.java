@@ -22,7 +22,7 @@ class lm extends IntrusiveNode {
     ca field_o;
     int field_q;
     int field_s;
-    static cn field_z;
+    static RgbSprite field_z;
     String field_i;
 
     final static void b(byte param0) {
@@ -420,7 +420,7 @@ class lm extends IntrusiveNode {
 
     void a(int param0, int param1, int param2, int param3) {
         if (param2 != 0) {
-          lm.a((cn) null, (byte) 98);
+          lm.a((RgbSprite) null, (byte) 98);
           if (param0 != 0) {
             return;
           }
@@ -648,7 +648,7 @@ class lm extends IntrusiveNode {
         return 0;
     }
 
-    final static void a(cn param0, byte param1) {
+    final static void a(RgbSprite param0, byte param1) {
         try {
           ie.a(116);
           SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_E, param0.field_G);

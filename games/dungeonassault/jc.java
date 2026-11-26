@@ -5,7 +5,7 @@ final class jc {
     static java.awt.Color field_d;
     static String field_b;
     static int[] field_f;
-    static cn field_c;
+    static RgbSprite field_c;
     static int field_e;
     static String field_a;
 
@@ -82,7 +82,7 @@ final class jc {
         field_b = null;
         field_d = null;
         if (param0 != 0) {
-          field_c = (cn) null;
+          field_c = (RgbSprite) null;
         }
     }
 

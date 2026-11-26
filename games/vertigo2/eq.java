@@ -10,11 +10,11 @@ final class eq extends TextureOperator {
     static String field_B;
     static String field_C;
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_E = null;
         if (param0 != 11902) {
-          eq.g(-49);
+          eq.clearStaticReferences(-49);
         }
         field_z = null;
         field_C = null;

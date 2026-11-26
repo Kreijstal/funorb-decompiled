@@ -23,7 +23,7 @@ final class ck {
     int field_w;
     static String field_o;
     int field_L;
-    static bd field_C;
+    static RgbSprite field_C;
     int field_q;
     byte[] field_M;
     static int field_e;
@@ -36,7 +36,7 @@ final class ck {
     boolean[] field_h;
     int field_B;
     static IntrusiveDeque field_u;
-    static bd[][] field_y;
+    static RgbSprite[][] field_y;
     byte field_n;
     int field_c;
 
@@ -45,7 +45,7 @@ final class ck {
         if (param0 != -665) {
           return;
         }
-        field_y = (bd[][]) null;
+        field_y = (RgbSprite[][]) null;
         field_o = null;
         field_u = null;
     }

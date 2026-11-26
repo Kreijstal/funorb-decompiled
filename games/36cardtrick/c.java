@@ -3315,7 +3315,7 @@ abstract class c extends fj {
             stackIn_2_0 = -1;
             return stackIn_2_0;
           }
-          if (!ie.b((byte) 34)) {
+          if (!SpriteGeometry.b((byte) 34)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
@@ -3428,7 +3428,7 @@ abstract class c extends fj {
             if (var3_intLifetime1 != 0 &&
               w.field_n == 0 &&
               cd.field_e == 11 &&
-              !ie.b((byte) 34)) {
+              !SpriteGeometry.b((byte) 34)) {
               al.a(-76);
             }
             if (-1 != w.field_n &&
@@ -3508,7 +3508,7 @@ abstract class c extends fj {
           }
           if ((w.field_n != -1 &&
             w.field_n != 0 ||
-            ie.b((byte) 34)) &&
+            SpriteGeometry.b((byte) 34)) &&
             mf.field_j <= id.correctedCurrentTimeMillis(59)) {
             ve.field_a = false;
             if (w.field_n != -1 &&
@@ -3518,7 +3518,7 @@ abstract class c extends fj {
             }
           }
           if (w.field_n == 0 &&
-            !ie.b((byte) 34)) {
+            !SpriteGeometry.b((byte) 34)) {
             sg.field_b = false;
           }
           if (g.field_A == 0 &&

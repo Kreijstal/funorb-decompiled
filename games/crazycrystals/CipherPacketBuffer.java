@@ -203,7 +203,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.position = (this.field_l + 7) / 8;
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
           return;

@@ -45,16 +45,16 @@ final class id {
           var4 = new ci[]{param1, hb.field_a, (ci) ((Object) fg.field_d)};
           this.field_a = new d(0L, ao.field_a, var3, hd.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, km[] param3, boolean param4, byte param5, lh param6, int param7, km[] param8, int param9, int param10, int param11) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, boolean param4, byte param5, lh param6, int param7, RgbSprite[] param8, int param9, int param10, int param11) {
         try {
           int var12_int = 19 % ((-8 - param5) / 42);
           n.a(param6, param7, param4, param3, param1, param2, param10, param11, param0, param6, param9, 126, param10, param11, param8);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 

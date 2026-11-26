@@ -26,9 +26,9 @@ final class gl {
         }
     }
 
-    final static bd[] a(bd param0, int param1, int param2) {
+    final static RgbSprite[] a(RgbSprite param0, int param1, int param2) {
         int var10 = 0;
-        bd[] var3 = new bd[param1 * param2];
+        RgbSprite[] var3 = new RgbSprite[param1 * param2];
         int[][] var4 = new int[param1 * param2][];
         int var5 = param0.field_z / param2;
         int var6 = param0.field_A / param1;
@@ -36,7 +36,7 @@ final class gl {
         int var8 = 0;
         int var9 = var4.length;
         for (var10 = 0; var10 < var9; var10++) {
-          var3[var10] = new bd(var5, var6);
+          var3[var10] = new RgbSprite(var5, var6);
           sb.a(var3[var10], -122);
           param0.c(-var7, -var8);
           var7 = var7 + var5;

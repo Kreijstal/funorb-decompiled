@@ -130,7 +130,7 @@ final class ma {
         return (byte) var2;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         int var1 = -110 / ((8 - param0) / 57);
         field_c = null;

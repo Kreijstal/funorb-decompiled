@@ -43,10 +43,10 @@ final class mk extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 > -44) {
-          mk.a((byte) -122);
+          mk.clearStaticReferences((byte) -122);
         }
     }
 

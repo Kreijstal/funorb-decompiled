@@ -88,7 +88,7 @@ class qn extends fb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ class qn extends fb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ class qn extends fb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ class qn extends fb {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_R = null;
         if (param0 != -14) {
           field_R = (String) null;
@@ -287,7 +287,7 @@ class qn extends fb {
           this.field_W = true;
           this.field_V = ud.correctedCurrentTimeMillis(2);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ class qn extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "qn.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "qn.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -503,7 +503,7 @@ class qn extends fb {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 
@@ -572,7 +572,7 @@ class qn extends fb {
           this.field_k = 0;
         } else {
           if (!param0) {
-            qn.m(61);
+            qn.releaseDeclaredStaticReferences(61);
           }
           var7 = this.field_A + var3.a(-5940, this.field_Q);
           if (var7 <= -var6 + var5) {
@@ -617,7 +617,7 @@ class qn extends fb {
             this.field_V = ud.correctedCurrentTimeMillis(2);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

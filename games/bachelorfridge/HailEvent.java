@@ -43,13 +43,13 @@ final class HailEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_s = null;
         field_u = null;
         field_r = null;
         if (param0 != 20) {
-          HailEvent.d((byte) 88);
+          HailEvent.clearStaticReferences((byte) 88);
         }
     }
 

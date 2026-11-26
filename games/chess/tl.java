@@ -50,7 +50,7 @@ final class tl extends ci {
         }
     }
 
-    final static void a(byte param0, km param1) {
+    final static void a(byte param0, RgbSprite param1) {
         try {
           r.k(param0 ^ -2968);
           if (param0 != -67) {
@@ -59,7 +59,7 @@ final class tl extends ci {
           }
           SoftwareRasterizer.setRasterBuffer(param1.field_x, param1.field_v, param1.field_u);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class tl extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "tl.H(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "tl.H(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class tl extends ci {
             field_Gb = (PlatformTask) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class tl extends ci {
         }
     }
 
-    tl(long param0, ci param1, ci param2, ci param3, km param4, String param5) {
+    tl(long param0, ci param1, ci param2, ci param3, RgbSprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -245,7 +245,7 @@ final class tl extends ci {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

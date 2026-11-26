@@ -11,10 +11,10 @@ final class ub extends IntrusiveNode {
     static tf field_i;
     static String field_r;
     static String field_o;
-    static cn field_j;
+    static RgbSprite field_j;
     static String field_l;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = (byte[][]) null;
         field_o = null;
         field_r = null;

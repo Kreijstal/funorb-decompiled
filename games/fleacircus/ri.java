@@ -8,7 +8,7 @@ final class ri extends e {
     private int field_w;
     static String field_s;
     private int field_v;
-    private dd[] field_t;
+    private RgbSprite[] field_t;
     private int field_y;
     static String field_r;
 
@@ -70,7 +70,7 @@ final class ri extends e {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_s = null;
         field_r = null;
         field_q = null;
@@ -87,7 +87,7 @@ final class ri extends e {
         this.field_y = param0;
     }
 
-    final static void a(dd[] param0, int param1, fa param2, int param3, int param4, boolean param5, int param6, int param7, fa param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, dd[] param16, dd[] param17, int param18, int param19, int param20) {
+    final static void a(RgbSprite[] param0, int param1, fa param2, int param3, int param4, boolean param5, int param6, int param7, fa param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, RgbSprite[] param16, RgbSprite[] param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -103,7 +103,7 @@ final class ri extends e {
         RuntimeException var21 = null;
         try {
           if (!param5) {
-            ri.c((byte) 79);
+            ri.clearDeclaredStaticReferences((byte) 79);
           }
           d.a(param10, param4, new qc(param17), new qc(param0), param6, param1, param9, param2, param8, new qc(param16), param13, param3, param12, param20, param7, param15, param19, param14, param11, param18, 255);
           return;

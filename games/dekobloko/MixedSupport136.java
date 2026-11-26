@@ -16,7 +16,7 @@ final class MixedSupport136 extends HashNode {
         return DisplayModeController.integerState0700 - RenderingSupport003.integerState0251;
     }
 
-    public static void performAction1706(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         int integerLocal1 = 9 % ((byteArgument1 - 10) / 59);
         stringState0584 = null;
         stringState0583 = null;

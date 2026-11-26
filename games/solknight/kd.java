@@ -6,9 +6,9 @@ final class kd {
     static int currentScreenIndex;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -93) {
-          kd.a((byte) 57);
+          kd.clearStaticReferences((byte) 57);
           field_b = null;
           return;
         }

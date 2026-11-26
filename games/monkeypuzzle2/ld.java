@@ -25,7 +25,7 @@ final class ld {
           GameApplet.field_k.serviceOutput();
           vg.field_J = vg.field_J - 1;
           if (param0) {
-            ld.a(126);
+            ld.clearStaticReferences(126);
           }
           if (vg.field_J == 0) {
             vg.field_J = 200;
@@ -42,10 +42,10 @@ final class ld {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 > -66) {
-          ld.a(73);
+          ld.clearStaticReferences(73);
         }
     }
 

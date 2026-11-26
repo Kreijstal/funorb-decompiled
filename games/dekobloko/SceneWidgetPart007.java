@@ -19,7 +19,7 @@ final class SceneWidgetPart007 extends SceneWidget {
     static int integerState0506;
     private int integerState0507;
 
-    public static void performAction1057(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         integerArrayArrayState0017 = (int[][]) null;
         if (integerArgument1 != 256) {
           return;
@@ -114,7 +114,7 @@ final class SceneWidgetPart007 extends SceneWidget {
             }
           }
           if (byteArgument7 < 84) {
-            SceneWidgetPart007.performAction1057(17);
+            SceneWidgetPart007.discardDeclaredStaticReferences(17);
           }
           stackRgbSpriteLocal3 = rgbSpriteLocal19;
           return stackRgbSpriteLocal3;
@@ -331,7 +331,7 @@ final class SceneWidgetPart007 extends SceneWidget {
     final boolean computeBoolean1056(int integerArgument1) {
         boolean stackBooleanLocal1 = false;
         if (integerArgument1 != 5658) {
-          SceneWidgetPart007.performAction1057(-70);
+          SceneWidgetPart007.discardDeclaredStaticReferences(-70);
         }
         stackBooleanLocal1 = (null != this.sceneWidgetPart003State0002) && (this.sceneWidgetPart003State0002.booleanState0217);
         return stackBooleanLocal1;

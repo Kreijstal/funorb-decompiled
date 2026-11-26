@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class la extends ca {
-    static bd field_e;
+    static RgbSprite field_e;
     static String field_i;
     private String field_j;
     static int field_g;
-    static bd field_h;
+    static RgbSprite field_h;
     private String field_f;
 
     final static void a(int param0, String param1, byte param2) {
@@ -14,7 +14,7 @@ final class la extends ca {
         try {
           rj.field_K = false;
           if (param2 < 41) {
-            field_h = (bd) null;
+            field_h = (RgbSprite) null;
           }
           eh.field_e = false;
           if (null != AccountServiceResult.field_d) {
@@ -279,7 +279,7 @@ final class la extends ca {
 
     final static int a(int param0, boolean param1) {
         if (param1) {
-          field_h = (bd) null;
+          field_h = (RgbSprite) null;
           return ge.field_d[2047 & param0];
         }
         return ge.field_d[2047 & param0];
@@ -289,14 +289,14 @@ final class la extends ca {
         if (!param0) {
           return new s(jm.a((byte) 93), hm.c(8));
         }
-        field_h = (bd) null;
+        field_h = (RgbSprite) null;
         return new s(jm.a((byte) 93), hm.c(8));
     }
 
     public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != -62) {
-          field_h = (bd) null;
+          field_h = (RgbSprite) null;
           field_h = null;
           field_i = null;
           return;

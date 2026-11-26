@@ -12,7 +12,7 @@ final class fr extends pu {
     static Sprite[] field_q;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         field_p = null;
         field_l = null;
@@ -23,7 +23,7 @@ final class fr extends pu {
           field_r = null;
           return;
         }
-        fr.d((byte) 103);
+        fr.clearStaticReferences((byte) 103);
         field_q = null;
         field_o = null;
         field_r = null;

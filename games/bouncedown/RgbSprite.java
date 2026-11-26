@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tg extends ma {
+class RgbSprite extends SpriteGeometry {
     int[] field_v;
 
     private final static void blitIntensity(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -92,9 +92,9 @@ class tg extends ma {
             return;
           }
           if (param2 == 256) {
-            tg.blitAdditive(0, 0, 0, SoftwareRasterizer.field_d, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
+            RgbSprite.blitAdditive(0, 0, 0, SoftwareRasterizer.field_d, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            tg.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_d, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_d, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -226,7 +226,7 @@ class tg extends ma {
         int var4 = param0 + (this.field_s >> 1) > SoftwareRasterizer.field_b ? SoftwareRasterizer.field_b - param0 << 1 : this.field_s;
         int var5 = param1 < SoftwareRasterizer.field_i ? SoftwareRasterizer.field_i - param1 << 1 : 0;
         int var6 = param1 + (this.field_q >> 1) > SoftwareRasterizer.field_f ? SoftwareRasterizer.field_f - param1 << 1 : this.field_q;
-        tg.blitHalfSize(this.field_v, var5 * this.field_s + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_e + (param0 + (var3 >> 1)), (this.field_s << 1) - (var4 - var3) + (this.field_s & 1), SoftwareRasterizer.field_e - (var4 - var3 >> 1), this.field_s, var4 - var3 >> 1, var6 - var5 >> 1);
+        RgbSprite.blitHalfSize(this.field_v, var5 * this.field_s + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_e + (param0 + (var3 >> 1)), (this.field_s << 1) - (var4 - var3) + (this.field_s & 1), SoftwareRasterizer.field_e - (var4 - var3 >> 1), this.field_s, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     void b(int param0, int param1, int param2) {
@@ -270,7 +270,7 @@ class tg extends ma {
           if (var6 <= 0) {
             return;
           }
-          tg.blitGrayTinted(SoftwareRasterizer.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayTinted(SoftwareRasterizer.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -363,7 +363,7 @@ class tg extends ma {
           if (var6 <= 0) {
             return;
           }
-          tg.blitColorKeyAlpha(SoftwareRasterizer.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitColorKeyAlpha(SoftwareRasterizer.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -596,14 +596,14 @@ class tg extends ma {
           if (var5 <= 0) {
             return;
           }
-          tg.blitColorKey(SoftwareRasterizer.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitColorKey(SoftwareRasterizer.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final tg b() {
+    final RgbSprite b() {
         int var3 = 0;
-        tg var1 = new tg(this.field_s, this.field_q);
+        RgbSprite var1 = new RgbSprite(this.field_s, this.field_q);
         var1.field_t = this.field_t;
         var1.field_o = this.field_o;
         var1.field_r = this.field_r;
@@ -682,7 +682,7 @@ class tg extends ma {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          tg.blitColorKeyScaled(SoftwareRasterizer.field_d, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          RgbSprite.blitColorKeyScaled(SoftwareRasterizer.field_d, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -728,7 +728,7 @@ class tg extends ma {
           if (var6 <= 0) {
             return;
           }
-          tg.blitSilhouette(SoftwareRasterizer.field_d, this.field_v, param2, var5, var4, var7, var6, var8, var9);
+          RgbSprite.blitSilhouette(SoftwareRasterizer.field_d, this.field_v, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1189,7 +1189,7 @@ class tg extends ma {
           if (var5 <= 0) {
             return;
           }
-          tg.blitMultiply(0, SoftwareRasterizer.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitMultiply(0, SoftwareRasterizer.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1504,7 +1504,7 @@ class tg extends ma {
           if (var6 <= 0) {
             return;
           }
-          tg.blitIntensity(SoftwareRasterizer.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitIntensity(SoftwareRasterizer.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1674,12 +1674,12 @@ class tg extends ma {
           if (var5 <= 0) {
             return;
           }
-          tg.blitUnmasked(SoftwareRasterizer.field_d, this.field_v, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitUnmasked(SoftwareRasterizer.field_d, this.field_v, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    tg(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    RgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_t = param0;
         this.field_o = param1;
         this.field_r = param2;
@@ -1689,10 +1689,10 @@ class tg extends ma {
         this.field_v = param6;
     }
 
-    final tg a() {
+    final RgbSprite a() {
         int var2 = 0;
         int var3 = 0;
-        tg var1 = new tg(this.field_s, this.field_q);
+        RgbSprite var1 = new RgbSprite(this.field_s, this.field_q);
         var1.field_t = this.field_t;
         var1.field_o = this.field_o;
         var1.field_r = this.field_t - this.field_s - this.field_r;
@@ -1746,7 +1746,7 @@ class tg extends ma {
           if (var5 <= 0) {
             return;
           }
-          tg.blitColorKeyReverse(SoftwareRasterizer.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitColorKeyReverse(SoftwareRasterizer.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2369,7 +2369,7 @@ class tg extends ma {
         }
     }
 
-    tg(int param0, int param1) {
+    RgbSprite(int param0, int param1) {
         this.field_v = new int[param0 * param1];
         this.field_t = param0;
         this.field_s = param0;
@@ -2379,7 +2379,7 @@ class tg extends ma {
         this.field_r = 0;
     }
 
-    tg(byte[] param0, java.awt.Component param1) {
+    RgbSprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

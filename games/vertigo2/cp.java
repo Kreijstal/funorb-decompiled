@@ -23,7 +23,7 @@ final class cp {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 65 / ((-65 - param0) / 61);
         field_a = null;
         field_b = null;

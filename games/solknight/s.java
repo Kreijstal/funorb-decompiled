@@ -23,7 +23,7 @@ final class s extends gf {
         }
     }
 
-    public static void m(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 != -1) {
           return;
         }

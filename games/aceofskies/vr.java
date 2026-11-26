@@ -14,7 +14,7 @@ final class vr {
     private int field_i;
     static String[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_h = null;
         int var1 = 25 % ((param0 - 55) / 40);

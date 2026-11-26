@@ -5,7 +5,7 @@ final class AccountRequestState {
     static int field_e;
     static IntrusiveDeque field_d;
     static pc field_a;
-    static tg field_b;
+    static RgbSprite field_b;
     static String field_c;
 
     public static void releaseStatics(byte param0) {

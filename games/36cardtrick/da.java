@@ -39,7 +39,7 @@ final class da {
             return (PcmSample) (stackIn_7_0);
           }
           if (param0 < 100) {
-            da.a(60);
+            da.clearStaticReferences(60);
           }
           var9 = uj.a(this.field_f, param3, param2);
           if (var9 == null) {
@@ -75,10 +75,10 @@ final class da {
         return this.a((byte) 113, (int[]) null, param0, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -1703274388) {
-          da.a(-86);
+          da.clearStaticReferences(-86);
         }
     }
 

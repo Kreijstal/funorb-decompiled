@@ -4,7 +4,7 @@
 final class mj {
     static String field_d;
     private int field_e;
-    static dl[] field_f;
+    static RgbSprite[] field_f;
     int field_c;
     private int field_g;
     ma field_a;
@@ -25,9 +25,9 @@ final class mj {
         }
     }
 
-    final dl b(byte param0) {
+    final RgbSprite b(byte param0) {
         if (param0 != 84) {
-          field_f = (dl[]) null;
+          field_f = (RgbSprite[]) null;
           if (this.field_e != 0) {
             return qn.field_e;
           }
@@ -45,17 +45,17 @@ final class mj {
         this.field_c = this.field_c + this.field_e;
     }
 
-    final dl a(int param0, int param1) {
+    final RgbSprite a(int param0, int param1) {
         int var4 = 0;
         int var3 = 0;
-        dl var5 = null;
+        RgbSprite var5 = null;
         int var6 = CrazyCrystals.field_B;
-        dl var5Lifetime1;
-        dl var5Lifetime2;
-        dl var5Lifetime3;
-        dl var5Lifetime4;
-        dl var5Lifetime5;
-        dl var5Lifetime1Lifetime1;
+        RgbSprite var5Lifetime1;
+        RgbSprite var5Lifetime2;
+        RgbSprite var5Lifetime3;
+        RgbSprite var5Lifetime4;
+        RgbSprite var5Lifetime5;
+        RgbSprite var5Lifetime1Lifetime1;
         if (1 == param1) {
           var4 = this.field_g;
           var3 = this.field_e;
@@ -64,7 +64,7 @@ final class mj {
           var3 = -this.field_e;
         }
         if (param0 != 13214) {
-          field_f = (dl[]) null;
+          field_f = (RgbSprite[]) null;
           if ((var4 | -this.field_e) < 0) {
             if ((-this.field_g | var3) >= 0) {
               var5 = jl.field_b;

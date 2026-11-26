@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ro extends pn implements Cloneable {
-    static dl[] field_u;
+    static RgbSprite[] field_u;
     gh field_o;
     gh field_p;
     static String[] field_r;
@@ -10,10 +10,10 @@ final class ro extends pn implements Cloneable {
     static String field_t;
     int field_m;
     static String field_s;
-    static dl field_q;
+    static RgbSprite field_q;
 
     final f a(mj param0, byte param1, boolean param2, f[][] param3) {
-        dl var5 = null;
+        RgbSprite var5 = null;
         RuntimeException var5_ref = null;
         ma stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -108,50 +108,50 @@ final class ro extends pn implements Cloneable {
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
-        dl stackIn_22_0 = null;
+        RgbSprite stackIn_22_0 = null;
         int stackIn_25_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_39_0 = 0;
-        dl stackIn_44_0 = null;
-        dl stackIn_48_0 = null;
-        dl stackIn_70_0 = null;
+        RgbSprite stackIn_44_0 = null;
+        RgbSprite stackIn_48_0 = null;
+        RgbSprite stackIn_70_0 = null;
         int stackIn_73_0 = 0;
         int stackIn_79_0 = 0;
         int stackIn_83_0 = 0;
         int stackIn_87_0 = 0;
-        dl stackIn_92_0 = null;
-        dl stackIn_96_0 = null;
+        RgbSprite stackIn_92_0 = null;
+        RgbSprite stackIn_96_0 = null;
         int stackIn_120_0 = 0;
         int stackIn_126_0 = 0;
         int stackIn_130_0 = 0;
         int stackIn_134_0 = 0;
-        dl stackIn_139_0 = null;
-        dl stackIn_143_0 = null;
-        dl stackIn_169_0 = null;
+        RgbSprite stackIn_139_0 = null;
+        RgbSprite stackIn_143_0 = null;
+        RgbSprite stackIn_169_0 = null;
         int stackIn_172_0 = 0;
         int stackIn_178_0 = 0;
         int stackIn_182_0 = 0;
         int stackIn_186_0 = 0;
-        dl stackIn_191_0 = null;
-        dl stackIn_195_0 = null;
-        dl stackIn_217_0 = null;
+        RgbSprite stackIn_191_0 = null;
+        RgbSprite stackIn_195_0 = null;
+        RgbSprite stackIn_217_0 = null;
         int stackIn_220_0 = 0;
         int stackIn_226_0 = 0;
         int stackIn_230_0 = 0;
         int stackIn_234_0 = 0;
-        dl stackIn_239_0 = null;
-        dl stackIn_243_0 = null;
+        RgbSprite stackIn_239_0 = null;
+        RgbSprite stackIn_243_0 = null;
         int stackIn_293_0 = 0;
         int stackIn_297_0 = 0;
         int stackIn_301_0 = 0;
-        dl stackIn_306_0 = null;
-        dl stackIn_339_0 = null;
+        RgbSprite stackIn_306_0 = null;
+        RgbSprite stackIn_339_0 = null;
         int var7;
         int var8;
         int var9;
         int var10;
-        dl var11;
+        RgbSprite var11;
         int var12;
         int var13;
         int var14;
@@ -567,7 +567,7 @@ final class ro extends pn implements Cloneable {
 
     final f a(int param0, byte param1, int param2) {
         if (param1 != -110) {
-          field_u = (dl[]) null;
+          field_u = (RgbSprite[]) null;
           return (f) (this);
         }
         return (f) (this);
@@ -587,7 +587,7 @@ final class ro extends pn implements Cloneable {
         if (param0) {
           return this.field_m != 1 ? 4 : 8;
         }
-        field_u = (dl[]) null;
+        field_u = (RgbSprite[]) null;
         return this.field_m != 1 ? 4 : 8;
     }
 

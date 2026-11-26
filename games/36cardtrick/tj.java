@@ -11,7 +11,7 @@ final class tj extends g implements qh {
     static String field_J;
     static boolean field_K;
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_D = null;
         field_F = null;
         if (param0 == 0) {

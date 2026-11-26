@@ -27,9 +27,9 @@ final class ki extends fn {
         return SteeringMode.field_a;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 64) {
-          ki.b(-115);
+          ki.clearStaticReferences(-115);
           field_c = null;
           return;
         }

@@ -41,7 +41,7 @@ final class fj extends ok {
         this.field_E = this.field_m;
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 == 118) {
           field_O = null;
           field_N = null;
@@ -51,7 +51,7 @@ final class fj extends ok {
           field_H = null;
           return;
         }
-        fj.e((byte) 71);
+        fj.clearDeclaredStaticReferences((byte) 71);
         field_O = null;
         field_N = null;
         field_R = null;
@@ -97,7 +97,7 @@ final class fj extends ok {
           stackIn_62_0 = (param1 != 43) ? 63 : 62;
           return stackIn_62_0;
         }
-        fj.e((byte) -76);
+        fj.clearDeclaredStaticReferences((byte) -76);
         if (param1 >= 48) {
           if (57 >= param1) {
             return -48 + param1;

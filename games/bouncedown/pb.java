@@ -98,7 +98,7 @@ final class pb {
         throw new IllegalArgumentException("" + Integer.toString(var2Lifetime1, 16));
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         int var1 = 28 % ((param0 - 45) / 63);
         field_g = null;
@@ -311,7 +311,7 @@ final class pb {
 
     final static int c(int param0) {
         if (param0 != 0) {
-          pb.a(-21);
+          pb.clearDeclaredStaticReferences(-21);
           return ih.field_D;
         }
         return ih.field_D;

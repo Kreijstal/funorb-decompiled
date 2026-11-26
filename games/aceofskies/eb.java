@@ -282,9 +282,9 @@ final class eb {
         return var50;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 64) {
-          eb.b(-61);
+          eb.clearStaticReferences(-61);
           counterPanelSpriteData = null;
           return;
         }
@@ -294,7 +294,7 @@ final class eb {
     final void a(int param0) {
         this.field_a.a((byte) -86, 5);
         if (param0 != 64) {
-          eb.b(116);
+          eb.clearStaticReferences(116);
         }
     }
 

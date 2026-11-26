@@ -626,7 +626,7 @@ final class fq extends ea implements Cloneable {
           if (!this.field_l.b((byte) 66)) {
             return false;
           }
-          this.a(param1, this.field_t, new ig(param2, (dl[]) null, (f) null, false), param0 + 11418, this.field_A);
+          this.a(param1, this.field_t, new ig(param2, (RgbSprite[]) null, (f) null, false), param0 + 11418, this.field_A);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1368,7 +1368,7 @@ final class fq extends ea implements Cloneable {
         }
     }
 
-    final dl h(int param0) {
+    final RgbSprite h(int param0) {
         if (param0 > -2) {
           this.d(102, -119, -74);
         }

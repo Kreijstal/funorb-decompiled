@@ -248,11 +248,11 @@ final class dh {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != -14955) {
-          dh.a(-41);
+          dh.clearStaticReferences(-41);
         }
     }
 

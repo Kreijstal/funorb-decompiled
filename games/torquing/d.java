@@ -7,7 +7,7 @@ abstract class d extends DualLinkNode {
     static String field_q;
     static sp field_r;
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_q = null;
         field_r = null;
         int var1 = 112 % ((param0 + 54) / 34);
@@ -26,7 +26,7 @@ abstract class d extends DualLinkNode {
           hb.field_x.c(je.field_g, 33);
           return;
         }
-        d.a(8);
+        d.releaseDeclaredStaticReferences(8);
         hb.field_x.c(je.field_g, 33);
     }
 

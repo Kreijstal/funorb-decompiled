@@ -586,7 +586,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (vh.field_n == 3 &&
           dk.a(1, og.field_g, wb.field_b, am.field_b) &&
-          tk.a(wb.field_b, 26810)) {
+          SpriteGeometry.a(wb.field_b, 26810)) {
           ak.b(22176);
           IterableNodeHashTable.a(-96);
           tl.field_e = cj.field_c;
@@ -793,7 +793,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         return var2;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -4 % ((param0 - 1) / 49);
         field_x = null;
     }

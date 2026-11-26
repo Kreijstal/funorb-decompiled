@@ -15,7 +15,7 @@ final class vf {
         field_a = null;
     }
 
-    final static hj[] a(int param0, int param1, int param2, byte param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, byte param3) {
         if (param3 >= -44) {
           vf.clearStaticReferences(45);
         }

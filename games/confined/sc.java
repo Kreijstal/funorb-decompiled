@@ -144,7 +144,7 @@ abstract class sc {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         field_b = null;
@@ -154,7 +154,7 @@ abstract class sc {
         field_i = null;
         field_j = null;
         if (param0 != -30048) {
-          sc.a(-29);
+          sc.clearStaticReferences(-29);
         }
     }
 

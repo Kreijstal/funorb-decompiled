@@ -6,7 +6,7 @@ final class ti extends nb implements nf, jk {
     static long field_M;
     private String field_F;
     private rl field_G;
-    static db[] field_I;
+    static RgbSprite[] field_I;
     private rl field_B;
     private kf field_H;
     private boolean field_K;

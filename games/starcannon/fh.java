@@ -103,7 +103,7 @@ class fh extends hd {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 43 % ((param0 + 7) / 39);
         field_q = null;
         field_r = null;

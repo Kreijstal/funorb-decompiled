@@ -6,7 +6,7 @@ final class se extends hl {
     int field_L;
     int field_N;
     static String[] field_O;
-    static kc[] field_G;
+    static RgbSprite[] field_G;
     int field_M;
     static long[] field_J;
     int field_E;
@@ -66,7 +66,7 @@ final class se extends hl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 < 52) {
           return;
         }

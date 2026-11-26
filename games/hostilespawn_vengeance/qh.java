@@ -11,7 +11,7 @@ final class qh {
     static boolean[] field_m;
     private int field_t;
     static int field_q;
-    static bd field_l;
+    static RgbSprite field_l;
     private int field_v;
     private boolean[][] field_n;
     private int[][] field_h;
@@ -23,7 +23,7 @@ final class qh {
     private int field_p;
     static int field_k;
     private int[][] field_w;
-    static bd field_g;
+    static RgbSprite field_g;
     private int field_f;
     static String field_c;
     private boolean[][] field_d;
@@ -529,7 +529,7 @@ final class qh {
           int var4 = 0;
           int var5 = 0;
           int var6_int = 0;
-          bd var6 = null;
+          RgbSprite var6 = null;
           byte[] var6_array = null;
           byte[] var7 = null;
           Exception var7_ref = null;

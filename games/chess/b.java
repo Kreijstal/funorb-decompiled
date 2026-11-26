@@ -6,7 +6,7 @@ final class b {
     static volatile boolean field_f;
     static int[] field_c;
     static String field_g;
-    static km field_a;
+    static RgbSprite field_a;
     static bn field_e;
     static int field_d;
     static ta field_b;
@@ -225,7 +225,7 @@ final class b {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(',').append(param7).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class b {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

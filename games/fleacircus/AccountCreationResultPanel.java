@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends bd implements da {
-    static dd[] field_tb;
+    static RgbSprite[] field_tb;
     static String field_xb;
     static long field_sb;
     private boolean field_wb;
     private ca field_ub;
     private boolean field_vb;
 
-    public static void i(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         if (param0 <= 119) {
-          AccountCreationResultPanel.i((byte) -36);
+          AccountCreationResultPanel.releaseDeclaredStaticReferences((byte) -36);
           field_xb = null;
           field_tb = null;
           return;

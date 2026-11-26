@@ -47,7 +47,7 @@ final class mh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -56,7 +56,7 @@ final class mh {
           field_f = null;
           return;
         }
-        mh.a(-32);
+        mh.clearStaticReferences(-32);
         field_g = null;
         field_f = null;
     }
@@ -74,7 +74,7 @@ final class mh {
 
     final boolean b(byte param0) {
         if (param0 < 94) {
-          mh.a(35);
+          mh.clearStaticReferences(35);
           return this.field_c;
         }
         return this.field_c;
@@ -99,7 +99,7 @@ final class mh {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -29,7 +29,7 @@ final class MovingBlock extends IntrusiveNode {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = (byte[][][]) null;
         field_k = null;
         int var1 = 56 % ((-65 - param0) / 40);

@@ -6,7 +6,7 @@ class kl extends hf {
     private int field_T;
     private boolean field_N;
     private boolean field_M;
-    static nh[] field_R;
+    static RgbSprite[] field_R;
     static boolean field_S;
     private int field_Q;
     private int field_L;
@@ -489,7 +489,7 @@ class kl extends hf {
             return stackIn_2_0;
           }
           if (param2 != 27867) {
-            field_R = (nh[]) null;
+            field_R = (RgbSprite[]) null;
           }
           stackIn_6_0 = param3 + " - " + param1.d((byte) 95) + "%";
           return stackIn_6_0;
@@ -519,7 +519,7 @@ class kl extends hf {
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_R = null;
         int var1 = 94 % ((25 - param0) / 49);
     }
@@ -664,6 +664,6 @@ class kl extends hf {
     }
 
     static {
-        field_R = new nh[5];
+        field_R = new RgbSprite[5];
     }
 }

@@ -36,9 +36,9 @@ final class aq {
         super.finalize();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 32683) {
-          aq.a(-86);
+          aq.clearStaticReferences(-86);
         }
         field_b = null;
         field_d = null;

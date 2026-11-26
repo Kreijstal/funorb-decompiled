@@ -60,7 +60,7 @@ final class fj {
         return rd.field_h;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = -70 % ((param0 - 53) / 58);
         field_a = null;

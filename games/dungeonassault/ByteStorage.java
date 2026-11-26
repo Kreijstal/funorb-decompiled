@@ -8,7 +8,7 @@ abstract class ByteStorage {
     static String[] field_b;
     static String[] field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_b = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f {
-    static kc field_a;
+    static RgbSprite field_a;
 
     public static void a(int param0) {
         if (param0 != -663255224) {

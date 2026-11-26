@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km extends sd {
-    static bd[] field_y;
-    static bd field_z;
-    static bd[] field_A;
+    static RgbSprite[] field_y;
+    static RgbSprite field_z;
+    static RgbSprite[] field_A;
     static String field_x;
 
-    final static void a(int param0, int param1, int param2, bd[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -89,7 +89,7 @@ final class km extends sd {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         field_z = null;
         if (param0 <= 46) {
@@ -123,7 +123,7 @@ final class km extends sd {
 
     final String c(ag param0, int param1) {
         RuntimeException var3 = null;
-        bd[] var4 = null;
+        RgbSprite[] var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -131,8 +131,8 @@ final class km extends sd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            var4 = (bd[]) null;
-            km.a(-66, -3, -19, (bd[]) null, -48, -1);
+            var4 = (RgbSprite[]) null;
+            km.a(-66, -3, -19, (RgbSprite[]) null, -48, -1);
           }
           stackIn_3_0 = wj.a(param0.field_n.length(), 512, '*');
           return stackIn_3_0;

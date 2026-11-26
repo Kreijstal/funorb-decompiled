@@ -5,7 +5,7 @@ final class ki {
     static String field_e;
     static long field_b;
     static int field_a;
-    static dd[] field_c;
+    static RgbSprite[] field_c;
     static int field_d;
 
     final static void a(int param0, int param1) {

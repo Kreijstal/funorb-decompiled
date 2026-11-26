@@ -11,12 +11,12 @@ final class td {
     private int field_e;
     float field_c;
 
-    final static db[] a(String param0, String param1, sh param2, int param3) {
+    final static RgbSprite[] a(String param0, String param1, sh param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int[] var6 = null;
-        db[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

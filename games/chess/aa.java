@@ -118,7 +118,7 @@ final class aa {
           AccountNameAvailabilityValidator.i(23156).field_g &&
           nc.field_T == 0)) {
           if (null == b.field_a) {
-            b.field_a = new km(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+            b.field_a = new RgbSprite(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           }
           b.field_a.e();
           nh.a();
@@ -295,8 +295,8 @@ final class aa {
 
     private final boolean a(int param0, byte param1) {
         if (param1 <= 111) {
-          km var4 = (km) null;
-          aa.a((km) null, 106);
+          RgbSprite var4 = (RgbSprite) null;
+          aa.a((RgbSprite) null, 106);
           return true;
         }
         return true;
@@ -467,7 +467,7 @@ final class aa {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -807,7 +807,7 @@ final class aa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1404,7 +1404,7 @@ final class aa {
                       break regionExit2;
                     }
                   }
-                  fk.a(param0, 15);
+                  SpriteGeometry.a(param0, 15);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1998,17 +1998,17 @@ final class aa {
         }
     }
 
-    final static km[] a(km param0, int param1) {
-        km[] var2 = null;
+    final static RgbSprite[] a(RgbSprite param0, int param1) {
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
-        km[] var3 = null;
-        km[] stackIn_1_0 = null;
+        RgbSprite[] var3 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new km[9];
+          var3 = new RgbSprite[9];
           var2 = var3;
           var3[param1] = param0;
           stackIn_1_0 = var2;
@@ -2023,7 +2023,7 @@ final class aa {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2281,7 +2281,7 @@ final class aa {
         eb stackIn_57_0 = null;
         boolean stackIn_59_1 = false;
         Object var2 = null;
-        km var2_ref = null;
+        RgbSprite var2_ref = null;
         qe var3 = null;
         int var4 = 0;
         int var5_int = 0;

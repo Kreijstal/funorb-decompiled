@@ -314,7 +314,7 @@ final class a extends ge {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_s = null;
         field_u = null;

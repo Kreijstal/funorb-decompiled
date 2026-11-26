@@ -9,7 +9,7 @@ final class ck {
     static td[] field_j;
     static boolean[] field_f;
     private double[] field_g;
-    static nh field_l;
+    static RgbSprite field_l;
     static he[] field_k;
     static int field_c;
     private int[] field_a;

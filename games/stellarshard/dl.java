@@ -28,7 +28,7 @@ final class dl extends dg {
         return 255 & param1;
     }
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_A = null;
         if (param0 < 49) {
           field_B = (String) null;
@@ -86,7 +86,7 @@ final class dl extends dg {
           }
         }
         if (param0 <= 85) {
-          dl.i(-97);
+          dl.clearDeclaredStaticReferences(-97);
         }
         tb.f((byte) -66);
         return var1;

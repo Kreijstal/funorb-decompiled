@@ -255,7 +255,7 @@ final class on extends eg {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_z = null;
         field_t = null;
         field_x = null;
@@ -273,7 +273,7 @@ final class on extends eg {
           this.field_w[param1] = dupTemp$0;
           return dupTemp$0;
         }
-        on.d(-8);
+        on.clearDeclaredStaticReferences(-8);
         nb dupTemp$1 = new nb();
         this.field_w[param1] = dupTemp$1;
         return dupTemp$1;

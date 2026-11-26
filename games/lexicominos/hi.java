@@ -5,7 +5,7 @@ final class hi {
     static String field_a;
     static int[] field_c;
     static ll field_d;
-    static db[] field_b;
+    static RgbSprite[] field_b;
 
     final static short[] a(th param0, byte param1, int param2, short[] param3) {
         int var4_int = 0;
@@ -119,10 +119,10 @@ final class hi {
             var6 = MouseWheelInput.field_g[var3];
             if (sh.field_a == 2 &&
               var2 == 1) {
-              if (hf.field_b.length > ed.field_t.length) {
+              if (hf.field_b.length > SpriteGeometry.field_t.length) {
                 stackIn_16_0 = hf.field_b.length;
               } else {
-                stackIn_16_0 = ed.field_t.length;
+                stackIn_16_0 = SpriteGeometry.field_t.length;
               }
               var7 = stackIn_16_0;
               if (qc.field_e.length < ByteStorage.field_a.length) {
@@ -133,8 +133,8 @@ final class hi {
               var8 = stackIn_19_0;
               if (6 <= var3 &&
                 var7 + 6 > var3) {
-                if (0 <= var3 - (6 - ed.field_t.length) - var7) {
-                  stackIn_25_0 = ed.field_t[-var7 + ed.field_t.length + (-6 + var3)];
+                if (0 <= var3 - (6 - SpriteGeometry.field_t.length) - var7) {
+                  stackIn_25_0 = SpriteGeometry.field_t[-var7 + SpriteGeometry.field_t.length + (-6 + var3)];
                 } else {
                   stackIn_25_0 = "";
                 }

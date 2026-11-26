@@ -91,7 +91,7 @@ final class tf extends dk {
           this.field_A.b(this.field_z + param0, this.field_y + param1, true, param3);
           return;
         }
-        dd var6 = new dd(this.field_A.field_u, this.field_A.field_j);
+        RgbSprite var6 = new RgbSprite(this.field_A.field_u, this.field_A.field_j);
         r.a(var6, 45);
         this.field_A.b(0, 0, param2, param3);
         ia.a(-107);

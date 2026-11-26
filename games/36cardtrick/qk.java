@@ -3,7 +3,7 @@
  */
 final class qk {
     static String field_h;
-    static kc[] field_a;
+    static RgbSprite[] field_a;
     private int field_f;
     private boolean field_e;
     static String field_i;
@@ -688,7 +688,7 @@ final class qk {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -123 / ((62 - param0) / 60);
         field_i = null;
         field_h = null;

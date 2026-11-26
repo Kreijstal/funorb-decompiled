@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ma extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     int field_s;
     int field_p;
     int field_t;
@@ -16,7 +16,7 @@ abstract class ma extends DualLinkNode {
         this.a(param1 << 8, true, param0, param4, param3 << 5);
         if (param2 != -741572379) {
           CharSequence var7 = (CharSequence) null;
-          ma.a((byte) 48, (CharSequence) null);
+          SpriteGeometry.a((byte) 48, (CharSequence) null);
         }
     }
 
@@ -42,7 +42,7 @@ abstract class ma extends DualLinkNode {
         this.a(var6, var7, param2, param3, param0, param4);
     }
 
-    ma() {
+    SpriteGeometry() {
     }
 
     final static long a(byte param0, CharSequence param1) {

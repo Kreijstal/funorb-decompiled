@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class IntrusiveNodeHashTable implements Iterable {
-    static bd field_a;
+    static RgbSprite field_a;
     private IntrusiveNode field_c;
     static String field_e;
     IntrusiveNode[] field_f;

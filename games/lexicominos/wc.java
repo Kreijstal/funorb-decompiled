@@ -4,7 +4,7 @@
 final class wc {
     static int field_a;
     static String field_b;
-    static db[] field_c;
+    static RgbSprite[] field_c;
 
     final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, byte param3, PacketBuffer param4) {
         try {

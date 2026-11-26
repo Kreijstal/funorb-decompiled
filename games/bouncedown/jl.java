@@ -9,7 +9,7 @@ final class jl {
     static long field_g;
     static int field_a;
     static AudioOutput field_d;
-    static tg field_c;
+    static RgbSprite field_c;
 
     public static void a(int param0) {
         if (param0 > 68) {
@@ -54,7 +54,7 @@ final class jl {
             var6 = param3;
           } else {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = ma.a((byte) 82, var7);
+            var4_long = SpriteGeometry.a((byte) 82, var7);
           }
           stackIn_7_0 = ck.a(param0, (String) (var6), var4_long, 112, param1);
           return stackIn_7_0;

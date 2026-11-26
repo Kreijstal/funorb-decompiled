@@ -11,7 +11,7 @@ final class nj extends hl {
     static String field_z;
     static ci field_x;
 
-    final void a(km param0, int param1) {
+    final void a(RgbSprite param0, int param1) {
         int var4 = 0;
         ai[] var3 = null;
         ai var5 = null;
@@ -46,7 +46,7 @@ final class nj extends hl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class nj extends hl {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class nj extends hl {
           gm.field_c = gm.field_c + (var2_intLifetime2 >> 1);
           sl.field_e = sl.field_e + param1.readUnsignedShort(param0 ^ 674914996);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class nj extends hl {
             field_t = -89;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -202,11 +202,11 @@ final class nj extends hl {
         try {
           param0.a(param1, (byte) 110, this);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, km[] param1) {
+    final void a(byte param0, RgbSprite[] param1) {
         int var4 = 0;
         ai[] var3 = null;
         ai var5 = null;
@@ -241,11 +241,11 @@ final class nj extends hl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static void a(km[] param0, byte param1, int param2, int param3) {
+    final static void a(RgbSprite[] param0, byte param1, int param2, int param3) {
         try {
           IterableNodeHashTable.field_d = new le(param0);
           tn.field_m = param3;
@@ -255,7 +255,7 @@ final class nj extends hl {
             field_t = -112;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ final class nj extends hl {
           qi.field_o.a(24, -24 + la.field_c.field_M - 24, -2147483648, -20 + la.field_c.field_pb - 24, 16);
           of.field_i.a(120, 80, -2147483648, 24, la.field_c.field_pb - 44);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -326,11 +326,11 @@ final class nj extends hl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, int param1, km[] param2) {
+    final void a(byte param0, int param1, RgbSprite[] param2) {
         int var4_int = param1;
         if (param0 != -32) {
           return;
@@ -341,7 +341,7 @@ final class nj extends hl {
           }
           this.field_y[param1].field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -400,7 +400,7 @@ final class nj extends hl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class nj extends hl {
           field_w = new sb(jh.field_e, ResourceArchive.field_b);
           jh.field_e.b(field_w, (byte) -75);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "nj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

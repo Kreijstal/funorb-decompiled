@@ -11,7 +11,7 @@ final class ResourceArchive {
     static String[] field_k;
     private Object[] field_d;
     static nd field_f;
-    static bd field_l;
+    static RgbSprite field_l;
     private ArchiveProvider field_c;
     private Object[][] field_j;
     static long field_e;
@@ -170,18 +170,18 @@ final class ResourceArchive {
     }
 
     final static void a(ResourceArchive param0, int param1) {
-        bd var2 = new bd(param0.a("", "final_frame.jpg", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+        RgbSprite var2 = new RgbSprite(param0.a("", "final_frame.jpg", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
         int var3 = var2.field_z;
         int var4 = var2.field_A;
         pf.b(param1 ^ -11731);
-        ob.field_C = new bd(var3, 3 * var4 / 4);
+        ob.field_C = new RgbSprite(var3, 3 * var4 / 4);
         ob.field_C.a();
         var2.c(0, 0);
         if (param1 != -11310) {
           return;
         }
         try {
-          ki.field_e = new bd(var3, -ob.field_C.field_A + var4);
+          ki.field_e = new RgbSprite(var3, -ob.field_C.field_A + var4);
           ki.field_e.a();
           var2.c(0, -ob.field_C.field_A);
           ki.field_e.field_y = ob.field_C.field_A;
@@ -253,8 +253,8 @@ final class ResourceArchive {
         RuntimeException var4 = null;
         int var5 = 0;
         ResourceArchive var6 = null;
-        bd var7 = null;
-        bd var8 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param2.field_e > 0) {
@@ -267,7 +267,7 @@ final class ResourceArchive {
             }
           } else {
             if (param2.field_i == 20) {
-              var7 = new bd(64, 64);
+              var7 = new RgbSprite(64, 64);
               var8 = var7;
               var7.a();
               pe.field_fb[12].a(true, 128, (int)param2.field_c, 32, 32);

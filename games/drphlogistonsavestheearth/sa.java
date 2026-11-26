@@ -3,9 +3,9 @@
  */
 final class sa {
     int field_d;
-    static nh field_e;
+    static RgbSprite field_e;
     static String field_g;
-    static nh field_c;
+    static RgbSprite field_c;
     static int field_f;
     static String field_b;
     int field_a;

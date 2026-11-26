@@ -20,7 +20,7 @@ final class jg extends bh implements mj {
         try {
           s.b(this.field_J.c(false), this.field_J.h(-1), 0, this.field_J.i(82));
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "jg.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jg.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class jg extends bh implements mj {
         vk.field_g = 0;
     }
 
-    final static km[] a(byte param0, int param1, ResourceArchive param2, int param3) {
+    final static RgbSprite[] a(byte param0, int param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -65,7 +65,7 @@ final class jg extends bh implements mj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class jg extends bh implements mj {
           if (param1 <= -6) {
             return;
           }
-          jg.l(4);
+          jg.clearDeclaredStaticReferences(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ final class jg extends bh implements mj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -129,11 +129,11 @@ final class jg extends bh implements mj {
         if (param0 >= 32) {
           return v.field_d + ((ii.field_Q << 2) + (sg.field_d << 4));
         }
-        jg.l(5);
+        jg.clearDeclaredStaticReferences(5);
         return v.field_d + ((ii.field_Q << 2) + (sg.field_d << 4));
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 10000536) {
           field_L = (String) null;
           field_L = null;

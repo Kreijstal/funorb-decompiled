@@ -3,7 +3,7 @@
  */
 final class uk implements cg {
     static int field_g;
-    static nh field_f;
+    static RgbSprite field_f;
     static he[] field_b;
     private rf field_c;
     private int field_a;
@@ -85,11 +85,11 @@ final class uk implements cg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_h = null;
         if (param0) {
-          uk.a(true);
+          uk.clearStaticReferences(true);
         }
         field_b = null;
     }

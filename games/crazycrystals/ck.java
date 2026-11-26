@@ -7,7 +7,7 @@ final class ck extends ud {
     static String field_eb;
     static am field_db;
 
-    public static void l(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 >= 14) {
           field_eb = null;
           field_fb = null;
@@ -15,7 +15,7 @@ final class ck extends ud {
           field_cb = null;
           return;
         }
-        ck.l(-61);
+        ck.discardDeclaredStaticReferences(-61);
         field_eb = null;
         field_fb = null;
         field_db = null;

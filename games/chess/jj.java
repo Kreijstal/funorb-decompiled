@@ -34,7 +34,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "jj.C(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1_ref), "jj.C(" + param0 + ')');
         }
     }
 

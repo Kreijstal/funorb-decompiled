@@ -152,7 +152,7 @@ final class cj extends qf implements Cloneable {
         int stackIn_23_4 = 0;
         int stackIn_23_5 = 0;
         f[][] stackIn_23_6 = null;
-        dl[] stackIn_23_7 = null;
+        RgbSprite[] stackIn_23_7 = null;
         f[] stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         f stackIn_28_2 = null;
@@ -199,7 +199,7 @@ final class cj extends qf implements Cloneable {
         int stackIn_33_4 = 0;
         int stackIn_33_5 = 0;
         f[][] stackIn_33_6 = null;
-        dl[] stackIn_33_7 = null;
+        RgbSprite[] stackIn_33_7 = null;
         f[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
         f stackIn_39_2 = null;
@@ -221,7 +221,7 @@ final class cj extends qf implements Cloneable {
         int stackIn_41_4 = 0;
         int stackIn_41_5 = 0;
         f[][] stackIn_41_6 = null;
-        dl[] stackIn_41_7 = null;
+        RgbSprite[] stackIn_41_7 = null;
         f[] stackIn_47_0 = null;
         int stackIn_47_1 = 0;
         f stackIn_47_2 = null;
@@ -243,7 +243,7 @@ final class cj extends qf implements Cloneable {
         int stackIn_49_4 = 0;
         int stackIn_49_5 = 0;
         f[][] stackIn_49_6 = null;
-        dl[] stackIn_49_7 = null;
+        RgbSprite[] stackIn_49_7 = null;
         f stackIn_53_0 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
@@ -1011,7 +1011,7 @@ final class cj extends qf implements Cloneable {
         var8 = CrazyCrystals.field_B;
         try {
           if (param1 != 2048) {
-            cj.f((byte) 73);
+            cj.releaseDeclaredStaticReferences((byte) 73);
           }
           var4_int = param2.d((byte) -61, param0);
           if (var4_int == 0) {
@@ -1083,7 +1083,7 @@ final class cj extends qf implements Cloneable {
         return this.field_B;
     }
 
-    public static void f(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_x = null;
         if (param0 != -21) {
           return;

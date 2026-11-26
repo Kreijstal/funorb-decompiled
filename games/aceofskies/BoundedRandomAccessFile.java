@@ -14,13 +14,13 @@ final class BoundedRandomAccessFile {
     static int field_c;
     static String field_g;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         titleImageData = null;
         field_g = null;
         field_d = null;
         if (param0 <= 104) {
-          BoundedRandomAccessFile.a((byte) -17);
+          BoundedRandomAccessFile.clearStaticReferences((byte) -17);
         }
     }
 
@@ -79,7 +79,7 @@ final class BoundedRandomAccessFile {
         this.field_h.seek(param0);
         this.field_b = param0;
         if (!param1) {
-          BoundedRandomAccessFile.a((byte) 118);
+          BoundedRandomAccessFile.clearStaticReferences((byte) 118);
         }
     }
 

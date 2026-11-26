@@ -31,7 +31,7 @@ abstract class al extends nb {
           return;
         }
         if (AccountRequestState.field_c == null) {
-          AccountRequestState.field_c = new db(this.field_j, this.field_v);
+          AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
           de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.clearRaster();
           this.a(0, (byte) 115, 0);
@@ -41,7 +41,7 @@ abstract class al extends nb {
           return;
         }
         if (AccountRequestState.field_c.field_p < this.field_j) {
-          AccountRequestState.field_c = new db(this.field_j, this.field_v);
+          AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
           de.a(AccountRequestState.field_c, param0 + 121);
           SoftwareRasterizer.clearRaster();
           this.a(0, (byte) 115, 0);
@@ -59,7 +59,7 @@ abstract class al extends nb {
           AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
-        AccountRequestState.field_c = new db(this.field_j, this.field_v);
+        AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
         de.a(AccountRequestState.field_c, param0 + 121);
         SoftwareRasterizer.clearRaster();
         this.a(0, (byte) 115, 0);

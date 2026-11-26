@@ -707,7 +707,7 @@ abstract class GameClient extends AppletShell {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_w = null;
         field_t = null;

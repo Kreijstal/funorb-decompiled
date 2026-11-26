@@ -75,7 +75,7 @@ final class je implements WidgetRenderer {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_g = null;
         int var1 = 30 % ((30 - param0) / 35);

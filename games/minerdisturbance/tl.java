@@ -66,7 +66,7 @@ final class tl extends pc {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -51 % ((50 - param0) / 55);
         field_p = null;
         field_l = null;

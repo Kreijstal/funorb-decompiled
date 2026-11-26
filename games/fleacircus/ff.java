@@ -3,20 +3,20 @@
  */
 final class ff {
     static String field_a;
-    static dd[] field_b;
+    static RgbSprite[] field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 < 49) {
-          ff.a((byte) -78);
+          ff.clearStaticReferences((byte) -78);
         }
     }
 
     static {
         field_z = "ff.A(";
         field_a = "Email (Login):";
-        field_b = new dd[50];
+        field_b = new RgbSprite[50];
     }
 }

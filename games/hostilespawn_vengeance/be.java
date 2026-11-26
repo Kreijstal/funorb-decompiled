@@ -170,9 +170,9 @@ final class be {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          be.a(-66);
+          be.clearStaticReferences(-66);
           field_g = null;
           return;
         }

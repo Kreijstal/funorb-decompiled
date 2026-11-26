@@ -35,7 +35,7 @@ final class ud extends IntrusiveNode {
           var3 = new ud(param1, this.field_m);
           var3.field_p = this.field_p;
           if (!param0) {
-            ud.a((byte) -23);
+            ud.clearStaticReferences((byte) -23);
           }
           var3.field_o = this.field_o;
           stackIn_3_0 = var3;
@@ -54,7 +54,7 @@ final class ud extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_k = null;
         int var1 = 99 % ((param0 + 48) / 61);

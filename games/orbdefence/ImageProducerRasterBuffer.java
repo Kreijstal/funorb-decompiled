@@ -114,7 +114,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void a(int param0, String param1, hj param2) {
+    final static void a(int param0, String param1, RgbSprite param2) {
         try {
           if (param0 > -26) {
             field_h = (byte[]) null;

@@ -6,11 +6,11 @@ final class qc {
     static he field_a;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 >= -78) {
-          qc.b(112);
+          qc.clearStaticReferences(112);
         }
     }
 
@@ -38,7 +38,7 @@ final class qc {
             if (param1 == 24) {
               return;
             }
-            qc.b(69);
+            qc.clearStaticReferences(69);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

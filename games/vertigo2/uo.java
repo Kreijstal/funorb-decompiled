@@ -30,7 +30,7 @@ final class uo {
         return dc.field_P;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 104 % ((-58 - param0) / 49);
         field_j = null;
         field_f = (byte[][]) null;

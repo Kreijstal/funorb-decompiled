@@ -64,7 +64,7 @@ final class d extends IntrusiveNode {
             if (2 == mc.field_j) {
               dd.field_A = new cb((java.net.Socket) (cf.field_a.result), lh.field_b);
               var2 = new PacketBuffer(13);
-              nl.a(20994, hc.field_f, tk.field_m, var2, s.field_x);
+              nl.a(20994, hc.field_f, SpriteGeometry.field_m, var2, s.field_x);
               var2.writeByte(15, -49);
               var2.writeInt(m.field_b, -1);
               dd.field_A.a((byte) 30, var2.payload, 0, 13);

@@ -48,13 +48,13 @@ class kg extends rc {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_db = null;
         field_P = null;
         field_cb = null;
         field_eb = null;
         if (param0 != -8796) {
-          kg.e(53);
+          kg.clearStaticReferences(53);
         }
     }
 

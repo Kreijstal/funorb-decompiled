@@ -121,7 +121,7 @@ final class qi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_f = (int[][]) null;
         field_a = null;

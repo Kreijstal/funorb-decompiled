@@ -7,11 +7,11 @@ final class wf {
     static AudioOutput field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 < 35) {
-          wf.a(50);
+          wf.clearStaticReferences(50);
         }
     }
 

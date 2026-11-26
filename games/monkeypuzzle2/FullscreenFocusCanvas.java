@@ -73,7 +73,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         return stackIn_5_0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         int var1 = -44 / ((param0 + 23) / 59);

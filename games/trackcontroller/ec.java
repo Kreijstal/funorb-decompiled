@@ -9,7 +9,7 @@ class ec extends kd {
     final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -6) {
-            ec.b((byte) 6);
+            ec.clearDeclaredStaticReferences((byte) 6);
           }
           param1.writeLong(this.field_e, 2147483647);
           param1.writeBase38String(this.field_c, param0 + 27939);
@@ -32,10 +32,10 @@ class ec extends kd {
         return var4;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_d = null;
         if (param0 > -12) {
-          ec.b((byte) -1);
+          ec.clearDeclaredStaticReferences((byte) -1);
         }
     }
 

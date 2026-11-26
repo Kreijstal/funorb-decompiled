@@ -53,27 +53,27 @@ class kl {
         this.b((byte) 37);
         nm.field_ib = new int[this.field_i * this.field_a];
         if (param3 == -23241) {
-          this.field_g = new ph(new cn(this.field_a, this.field_i), new cn(this.field_a, this.field_i));
+          this.field_g = new ph(new RgbSprite(this.field_a, this.field_i), new RgbSprite(this.field_a, this.field_i));
           return;
         }
         this.a(true);
-        this.field_g = new ph(new cn(this.field_a, this.field_i), new cn(this.field_a, this.field_i));
+        this.field_g = new ph(new RgbSprite(this.field_a, this.field_i), new RgbSprite(this.field_a, this.field_i));
     }
 
     void b(byte param0) {
         int var3_int = 0;
         int[] var4 = null;
-        cn var5 = null;
+        RgbSprite var5 = null;
         int var6 = DungeonAssault.field_K;
         int[] var7 = new int[64];
         int[] var2 = var7;
         for (var3_int = 0; 64 > var3_int; var3_int++) {
           var7[var3_int] = mp.a(-2147483648, 65793 * (24 + var3_int));
         }
-        cn var3 = te.a(this.field_a, this.field_i, var7, 16, 8, 0.125);
+        RgbSprite var3 = te.a(this.field_a, this.field_i, var7, 16, 8, 0.125);
         if (param0 == 37) {
           var4 = te.b(this.field_a, this.field_i, 0.125);
-          var5 = new cn(0, 0);
+          var5 = new RgbSprite(0, 0);
           var5.field_v = this.field_i;
           var5.field_B = var4;
           var5.field_y = this.field_a;

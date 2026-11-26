@@ -4,9 +4,9 @@
 final class dba {
     static ws field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 38) {
-          dba.a((byte) 90);
+          dba.clearStaticReferences((byte) 90);
           field_a = null;
           return;
         }

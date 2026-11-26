@@ -7,7 +7,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -3 % ((-38 - param0) / 59);
         field_b = null;
     }

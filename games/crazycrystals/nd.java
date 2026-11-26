@@ -65,7 +65,7 @@ final class nd {
     final void a(vc param0, boolean param1) {
         lb var17 = null;
         fk var4 = null;
-        dl[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -74,12 +74,12 @@ final class nd {
         gk discarded$0 = null;
         ip discarded$1 = null;
         fk var8 = null;
-        dl[] var9 = null;
-        dl[] var10 = null;
-        dl dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         fk var11 = null;
         fk var12 = null;
-        dl var13 = null;
+        RgbSprite var13 = null;
         fk var14 = null;
         fk var19 = null;
         int var15 = CrazyCrystals.field_B;
@@ -105,13 +105,13 @@ final class nd {
           var4.a((byte) -127, 0).b(15658734, -46).a(60, s.a(10066329, 7829367, 8947848, (byte) 127));
           var4.a((byte) 61, 1).a(33, s.a(10066329, 13421772, 11184810, (byte) 127));
           var4.a((byte) -13, 3).a(24, s.a(7829367, 10066329, 8947848, (byte) 127)).c(-123, 1).d(-64, 1);
-          var5 = new dl[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_w.length; var7_int++) {
             var16.field_w[var7_int] = 1077952576;
           }
-          var5[4] = (dl) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.a((byte) -124, 4).a(false, true).a(46, var5);
           var4.a((byte) 43, 5).a(31, ci.a(0, 0, (byte) -70, 65793, 0)).a(param1, true).b(-1, -98);
           this.field_p = (wo) ((Object) var4);
@@ -129,10 +129,10 @@ final class nd {
           var8.a((byte) 8, 0).a(105, s.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
           var8.a((byte) -3, 4).a(false, true).a(69, var5);
           this.field_q = (wo) ((Object) var8);
-          var9 = new dl[9];
-          var10 = new dl[9];
-          var9[4] = new dl(2, 1);
-          var10[4] = new dl(1, 2);
+          var9 = new RgbSprite[9];
+          var10 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_w = new int[]{6710886, 7829367};
           var10[4].field_w = new int[]{6710886, 7829367};
@@ -140,7 +140,7 @@ final class nd {
           var12 = new fk();
           var11.a(0, 0, var9);
           var12.a(0, 0, var10);
-          var13 = new dl(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_w = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new fk(var4, true);
           var14.a(var13.d(), -13869);
@@ -274,10 +274,10 @@ final class nd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 < 1) {
-          nd.a(-15);
+          nd.clearStaticReferences(-15);
         }
         field_k = null;
     }

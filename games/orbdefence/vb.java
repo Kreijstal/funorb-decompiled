@@ -7,12 +7,12 @@ final class vb extends IntrusiveNode {
     static PcmStreamMixer field_f;
     static int field_i;
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         field_h = null;
         if (param0 != -26818) {
-          vb.c(-3);
+          vb.clearDeclaredStaticReferences(-3);
         }
     }
 

@@ -24,7 +24,7 @@ final class qh extends hk {
     }
 
     final static boolean a(int param0, int param1, int param2, db param3) {
-        dl[] array$0 = null;
+        RgbSprite[] array$0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -39,7 +39,7 @@ final class qh extends hk {
             if (null != vj.field_a) {
               return false;
             }
-            vj.field_a = new dl[23][];
+            vj.field_a = new RgbSprite[23][];
           }
           var4_int = 23 * param2 >> 2;
           if (vj.field_a[var4_int] != null) {
@@ -48,7 +48,7 @@ final class qh extends hk {
           td.a((float)param1, oi.field_b, false);
           fe.field_g.a(param0 - 9384);
           while (var4_int < 23 * (1 + param2) >> 2) {
-            array$0 = new dl[bp.field_c[var4_int]];
+            array$0 = new RgbSprite[bp.field_c[var4_int]];
             vj.field_a[var4_int] = array$0;
             if (SecondaryNodeDequeIterator.field_c[var4_int] == null) {
               for (var5 = 0; var5 < bp.field_c[var4_int]; var5++) {

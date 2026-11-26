@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dn {
-    static bd[] field_i;
-    static bd field_h;
+    static RgbSprite[] field_i;
+    static RgbSprite field_h;
     static int field_b;
     static int field_a;
     private IntrusiveNodeHashTable field_e;
@@ -54,7 +54,7 @@ final class dn {
     public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 != 16) {
-          field_h = (bd) null;
+          field_h = (RgbSprite) null;
         }
         field_g = null;
         field_i = null;
@@ -104,7 +104,7 @@ final class dn {
         int var6 = 0;
         int var9 = 0;
         int var10 = 0;
-        bd var11 = null;
+        RgbSprite var11 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         var10 = HostileSpawn.field_I ? 1 : 0;

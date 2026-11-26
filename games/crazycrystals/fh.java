@@ -70,7 +70,7 @@ final class fh extends ln {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         int var1 = -112 / ((70 - param0) / 52);
         field_i = null;

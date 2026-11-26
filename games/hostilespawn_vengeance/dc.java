@@ -3,9 +3,9 @@
  */
 final class dc {
     static String field_c;
-    static bd field_b;
+    static RgbSprite field_b;
     static ub field_e;
-    static bd[] field_a;
+    static RgbSprite[] field_a;
     static volatile int field_d;
 
     final static void a(byte param0) {
@@ -223,7 +223,7 @@ final class dc {
           field_a = null;
           return;
         }
-        field_a = (bd[]) null;
+        field_a = (RgbSprite[]) null;
         field_c = null;
         field_a = null;
     }
@@ -273,6 +273,6 @@ final class dc {
         field_c = "This password is part of your Player Name, and would be easy to guess";
         field_e = new ub();
         field_d = 0;
-        field_a = new bd[222];
+        field_a = new RgbSprite[222];
     }
 }

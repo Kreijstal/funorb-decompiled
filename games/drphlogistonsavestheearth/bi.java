@@ -19,20 +19,20 @@ final class bi extends lb {
         return this.field_F;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         field_K = null;
         field_J = null;
         int var1 = 93 / ((47 - param0) / 62);
     }
 
-    final static void a(String param0, int param1, nh param2) {
+    final static void a(String param0, int param1, RgbSprite param2) {
         try {
           hf.field_D = param2;
           df.field_b = param0;
           if (param1 < 119) {
-            nh var4 = (nh) null;
-            bi.a((String) null, -46, (nh) null);
+            RgbSprite var4 = (RgbSprite) null;
+            bi.a((String) null, -46, (RgbSprite) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

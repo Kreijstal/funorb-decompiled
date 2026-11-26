@@ -5,7 +5,7 @@ final class ke {
     static String field_a;
     static int[] field_d;
     static int field_b;
-    static hj field_c;
+    static RgbSprite field_c;
 
     public static void a(byte param0) {
         field_c = null;
@@ -435,7 +435,7 @@ final class ke {
           RuntimeException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_c.startsWith("win") &&
-              tk.a(true, param0)) {
+              SpriteGeometry.a(true, param0)) {
               return;
             }
             try {

@@ -6,7 +6,7 @@ final class gd extends IntrusiveNode {
     int field_s;
     static pf field_q;
     static String field_r;
-    static nf[] field_t;
+    static RgbSprite[] field_t;
     static int field_n;
     int[] field_p;
     static int field_u;

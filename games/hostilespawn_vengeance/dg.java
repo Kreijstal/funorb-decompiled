@@ -30,7 +30,7 @@ class dg extends me implements qk {
         pe.b(true);
     }
 
-    public static void q(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_tb = null;
         field_rb = null;
         field_sb = null;

@@ -29,7 +29,7 @@ final class gl {
           var5 = 0;
           var6 = 0;
           if (param0 != -118) {
-            gl.a((byte) -53);
+            gl.clearStaticReferences((byte) -53);
           }
           for (var7 = 0; var7 < var3_int; var7++) {
             for (var8 = var6; param2.charAt(var8) != param1; var8++) {
@@ -52,11 +52,11 @@ final class gl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 30 / ((param0 + 17) / 62);
         field_b = null;
         field_a = null;
@@ -90,7 +90,7 @@ final class gl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

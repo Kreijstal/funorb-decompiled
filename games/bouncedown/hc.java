@@ -72,20 +72,20 @@ final class hc {
         }
     }
 
-    final static tg a(int param0, int param1, byte param2) {
-        tg var6 = null;
-        tg var3 = null;
+    final static RgbSprite a(int param0, int param1, byte param2) {
+        RgbSprite var6 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
         int var5 = Bounce.field_N;
         if (param2 < -121) {
-          var6 = new tg(param0, param0);
+          var6 = new RgbSprite(param0, param0);
           var3 = var6;
           for (var4 = 0; var3.field_v.length > var4; var4++) {
             var6.field_v[var4] = param1;
           }
           return var3;
         }
-        return (tg) null;
+        return (RgbSprite) null;
     }
 
     final static ke a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {

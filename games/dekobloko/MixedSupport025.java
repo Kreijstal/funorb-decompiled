@@ -9,13 +9,13 @@ final class MixedSupport025 {
 
     final static SceneWidget computeSceneWidget0379(byte byteArgument1) {
         if (byteArgument1 <= 95) {
-          MixedSupport025.performAction0380(-23);
+          MixedSupport025.clearStaticReferences(-23);
           return RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0108;
         }
         return RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetState0108;
     }
 
-    public static void performAction0380(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         mixedSupport033State0001 = null;
         uiComponentPart013State0001 = null;
         int integerLocal1 = -77 / ((69 - integerArgument1) / 33);

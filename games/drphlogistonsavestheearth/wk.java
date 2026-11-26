@@ -15,7 +15,7 @@ final class wk extends IntrusiveNode {
         s.field_a.a(param1 * 128 / param0, (byte) -13);
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == 80) {
           field_m = null;
           field_h = null;

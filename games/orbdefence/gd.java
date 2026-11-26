@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gd {
-    static hj[] field_b;
+    static RgbSprite[] field_b;
     static int field_c;
     static String field_a;
 
@@ -61,13 +61,13 @@ final class gd {
               if (param0 > 38) {
                 return;
               }
-              field_b = (hj[]) null;
+              field_b = (RgbSprite[]) null;
               return;
             }
           }
           cd.field_t.position = cd.field_t.position + 24;
           if (param0 <= 38) {
-            field_b = (hj[]) null;
+            field_b = (RgbSprite[]) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

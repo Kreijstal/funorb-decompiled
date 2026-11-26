@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static dd field_e;
+    static RgbSprite field_e;
     static String field_b;
     static byte[][] field_a;
     static k field_c;
     static int[] field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = (byte[][]) null;
         field_e = null;
         field_c = null;
@@ -23,7 +23,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var3 = ud.field_b;
           var3.e(8, param0);
           if (param2 >= -97) {
-            field_e = (dd) null;
+            field_e = (RgbSprite) null;
           }
           var3.writeByte(-11, 2);
           var3.writeByte(-11, 0);

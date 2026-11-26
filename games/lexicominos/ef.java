@@ -5,7 +5,7 @@ final class ef {
     static int field_e;
     static String field_c;
     static int field_f;
-    static db[] field_d;
+    static RgbSprite[] field_d;
     static String field_b;
     static int field_a;
 

@@ -5,7 +5,7 @@ final class hg {
     static int field_e;
     static int field_f;
     static String field_c;
-    static bd field_a;
+    static RgbSprite field_a;
     static String field_d;
     static String[] field_b;
 
@@ -109,7 +109,7 @@ final class hg {
           field_b = null;
           return;
         }
-        field_a = (bd) null;
+        field_a = (RgbSprite) null;
         field_d = null;
         field_b = null;
     }

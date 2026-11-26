@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class PacketBuffer extends IntrusiveNode {
-    static bd field_k;
+    static RgbSprite field_k;
     static double field_h;
     int field_i;
     byte[] field_n;
@@ -10,7 +10,7 @@ class PacketBuffer extends IntrusiveNode {
     static String field_o;
     static int[] field_m;
     static long field_l;
-    static bd field_j;
+    static RgbSprite field_j;
 
     final long c(int param0) {
         long var2 = (long)this.d(param0 - 2623) & 4294967295L;
@@ -98,7 +98,7 @@ class PacketBuffer extends IntrusiveNode {
         int fieldTemp$1 = 0;
         try {
           if (param0 < 11) {
-            field_k = (bd) null;
+            field_k = (RgbSprite) null;
           }
           var3_int = param1.indexOf('\0');
           if (var3_int >= 0) {
@@ -904,7 +904,7 @@ class PacketBuffer extends IntrusiveNode {
     final void b(int param0, byte param1) {
         this.field_n[-4 + (-param0 + this.field_i)] = (byte)(param0 >> 24);
         if (param1 != -79) {
-          field_j = (bd) null;
+          field_j = (RgbSprite) null;
         }
         this.field_n[-param0 + (this.field_i - 3)] = (byte)(param0 >> 16);
         this.field_n[this.field_i - param0 - 2] = (byte)(param0 >> 8);

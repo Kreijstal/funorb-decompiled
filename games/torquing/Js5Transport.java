@@ -31,7 +31,7 @@ abstract class Js5Transport {
 
     abstract void a(Object param0, boolean param1, byte param2);
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         int var1 = 10 / ((-1 - param0) / 37);
         field_n = null;

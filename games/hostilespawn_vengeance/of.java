@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class of {
-    static bd[][] field_c;
+    static RgbSprite[][] field_c;
     static String field_b;
     static re field_h;
     static int[] field_g;
     static nc field_e;
-    static bd[] field_d;
+    static RgbSprite[] field_d;
     static int field_a;
     static int[][] field_f;
 
@@ -20,13 +20,13 @@ final class of {
         return param1 < 6144 ? -vd.field_B[-param1 + 6144] : vd.field_B[-6144 + param1];
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = (int[][]) null;
         if (!param0) {
-          of.a(true);
+          of.clearStaticReferences(true);
         }
         field_d = null;
-        field_c = (bd[][]) null;
+        field_c = (RgbSprite[][]) null;
         field_e = null;
         field_b = null;
         field_g = null;

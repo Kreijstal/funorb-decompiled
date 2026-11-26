@@ -8,11 +8,11 @@ final class nb {
     static String field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 19161) {
-          nb.a(-100);
+          nb.clearStaticReferences(-100);
           field_d = null;
           return;
         }

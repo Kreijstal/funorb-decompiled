@@ -4,7 +4,7 @@
 abstract class cg extends k implements pi {
     static lh field_e;
     static int field_h;
-    static kc field_i;
+    static RgbSprite field_i;
     private hf field_g;
     static boolean field_f;
 
@@ -79,7 +79,7 @@ abstract class cg extends k implements pi {
         if (param0 == 14) {
           return this.a(this.field_g.field_r, -103);
         }
-        field_i = (kc) null;
+        field_i = (RgbSprite) null;
         return this.a(this.field_g.field_r, -103);
     }
 

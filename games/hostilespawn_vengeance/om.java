@@ -5,9 +5,9 @@ final class om {
     static boolean field_b;
     static boolean field_a;
     static String field_f;
-    static bd field_c;
-    static bd field_d;
-    static bd field_e;
+    static RgbSprite field_c;
+    static RgbSprite field_d;
+    static RgbSprite field_e;
 
     final static char a(byte param0, char param1) {
         int var2;
@@ -258,7 +258,7 @@ final class om {
           field_e = null;
           return;
         }
-        field_e = (bd) null;
+        field_e = (RgbSprite) null;
         field_d = null;
         field_f = null;
         field_e = null;

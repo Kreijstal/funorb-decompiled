@@ -135,10 +135,10 @@ final class ge extends WidgetWrapper {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_K = null;
         if (param0 >= -30) {
-          ge.e((byte) 35);
+          ge.clearStaticReferences((byte) 35);
         }
     }
 

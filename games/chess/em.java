@@ -12,7 +12,7 @@ final class em {
     short[] field_N;
     byte field_j;
     int[] field_D;
-    static km[] field_r;
+    static RgbSprite[] field_r;
     int field_x;
     int[] field_h;
     short field_d;
@@ -96,7 +96,7 @@ final class em {
           }
           qf.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "em.G(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "em.G(" + param0 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class em {
         this.field_v = var6;
     }
 
-    final static void a(int param0, km[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -377,7 +377,7 @@ final class em {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

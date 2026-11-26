@@ -38,7 +38,7 @@ abstract class IndexedSpriteState {
 
     abstract void draw(int x, int y);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 20 / ((param0 + 5) / 46);
         field_g = null;
     }

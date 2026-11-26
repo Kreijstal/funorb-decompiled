@@ -10,7 +10,7 @@ final class lg {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 25 / ((param0 - 33) / 55);
         field_c = null;
         field_b = null;

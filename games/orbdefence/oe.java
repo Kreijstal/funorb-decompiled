@@ -114,7 +114,7 @@ final class oe extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -12563) {
           field_m = (String) null;
         }

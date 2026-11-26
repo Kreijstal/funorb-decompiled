@@ -39,7 +39,7 @@ final class mk extends cg {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -52 / ((param0 - 43) / 36);
         field_k = null;
     }
@@ -135,7 +135,7 @@ final class mk extends cg {
 
     final static int h(int param0) {
         if (param0 != -1) {
-          mk.b((byte) -72);
+          mk.clearStaticReferences((byte) -72);
           return mh.field_b;
         }
         return mh.field_b;

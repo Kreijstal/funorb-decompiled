@@ -6,7 +6,7 @@ final class bo extends ok {
     String field_Nb;
     static String field_Mb;
     String field_Hb;
-    static cn field_Kb;
+    static RgbSprite field_Kb;
     static wm field_Jb;
     int field_Ib;
     static String[] field_Gb;

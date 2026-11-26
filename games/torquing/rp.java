@@ -11,14 +11,14 @@ final class rp {
     static ResourceArchive field_d;
     String field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -28607) {
           field_h = null;
           field_d = null;
           field_b = null;
           return;
         }
-        rp.a(-86);
+        rp.clearStaticReferences(-86);
         field_h = null;
         field_d = null;
         field_b = null;

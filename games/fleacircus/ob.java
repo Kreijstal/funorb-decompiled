@@ -29,7 +29,7 @@ final class ob {
           var4 = vh.field_i[param1] + kk.field_b[param1] + hg.field_q[param1];
           var5 = vh.field_i[param3] + kk.field_b[param3] + hg.field_q[param3];
           if (!param2) {
-            ob.a(33);
+            ob.clearStaticReferences(33);
           }
           if (var4 < var5) {
             return true;
@@ -62,7 +62,7 @@ final class ob {
           }
           return !(param1 >= param3);
         }
-        ob.a(33);
+        ob.clearStaticReferences(33);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }
@@ -92,7 +92,7 @@ final class ob {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 45 % ((20 - param0) / 53);
         field_a = null;
         field_b = null;

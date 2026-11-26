@@ -8,7 +8,7 @@ final class vg extends IntrusiveNode {
     int field_m;
     int field_k;
     static volatile int field_p;
-    static hj field_i;
+    static RgbSprite field_i;
     int field_n;
     static String field_s;
     int[] field_o;
@@ -57,7 +57,7 @@ final class vg extends IntrusiveNode {
         return true;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_q = null;
         field_u = null;
@@ -66,7 +66,7 @@ final class vg extends IntrusiveNode {
           field_i = null;
           return;
         }
-        vg.c(true);
+        vg.clearStaticReferences(true);
         field_s = null;
         field_i = null;
     }

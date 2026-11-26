@@ -8,7 +8,7 @@ class fa extends mg {
     private String field_l;
     private long field_j;
 
-    final static void a(vc param0, vc param1, boolean param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, dl[] param10, dl[] param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void a(vc param0, vc param1, boolean param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, RgbSprite[] param11, int param12, int param13, int param14, int param15, int param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -20,13 +20,13 @@ class fa extends mg {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var17 = null;
-        dl[] var18 = null;
+        RgbSprite[] var18 = null;
         try {
-          MouseInputHandler.a(param8, param9, 0, param16, param7, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), param12, new hj(param10), param15, param5, param4, mc.field_s, param6);
+          MouseInputHandler.a(param8, param9, 0, param16, param7, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), param12, new hj(param10), param15, param5, param4, SpriteGeometry.field_s, param6);
           MouseInputHandler.a(126, param13, param3);
           if (!param2) {
-            var18 = (dl[]) null;
-            fa.a((vc) null, (vc) null, true, false, 27, -22, 78, -62, -125, 77, (dl[]) null, (dl[]) null, -82, -3, -91, -105, 37);
+            var18 = (RgbSprite[]) null;
+            fa.a((vc) null, (vc) null, true, false, 27, -22, 78, -62, -125, 77, (RgbSprite[]) null, (RgbSprite[]) null, -82, -3, -91, -105, 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,8 +119,8 @@ class fa extends mg {
     final static void a(boolean param0, boolean param1, String param2, boolean param3) {
         try {
           if (!param3) {
-            dl[] var5 = (dl[]) null;
-            fa.a((vc) null, (vc) null, true, false, 27, -113, -121, 67, 2, -38, (dl[]) null, (dl[]) null, 66, -114, 40, 57, 65);
+            RgbSprite[] var5 = (RgbSprite[]) null;
+            fa.a((vc) null, (vc) null, true, false, 27, -113, -121, 67, 2, -38, (RgbSprite[]) null, (RgbSprite[]) null, 66, -114, 40, 57, 65);
           }
           pl.e(-125);
           qe.field_g.g((byte) -100);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    static cn field_b;
+    static RgbSprite field_b;
     static String field_d;
     static int field_c;
     static String field_a;
@@ -10,7 +10,7 @@ final class jj {
     public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 <= 60) {
-          field_b = (cn) null;
+          field_b = (RgbSprite) null;
         }
         field_d = null;
         field_b = null;
@@ -18,7 +18,7 @@ final class jj {
 
     final static void b(byte param0) {
         if (param0 >= -87) {
-          field_b = (cn) null;
+          field_b = (RgbSprite) null;
         }
         eg.a(rl.field_h, true);
     }

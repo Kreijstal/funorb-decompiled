@@ -204,12 +204,12 @@ final class pc {
         this.field_f = 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_b = (boolean[][]) null;
         if (param0 != 12653) {
-          pc.a(53);
+          pc.clearStaticReferences(53);
           field_e = null;
           return;
         }

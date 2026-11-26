@@ -3,7 +3,7 @@
  */
 final class li {
     static IntrusiveDeque field_a;
-    static cn[] field_l;
+    static RgbSprite[] field_l;
     static int field_j;
     static int field_k;
     static String[] field_b;
@@ -43,11 +43,11 @@ final class li {
         field_l = null;
     }
 
-    final static cn[] a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        cn[] stackIn_5_0 = null;
-        cn[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_5_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -55,13 +55,13 @@ final class li {
         try {
           if (!kk.a(param2, param3 - 3, param0, param1)) {
             stackIn_2_0 = null;
-            return (cn[]) (stackIn_2_0);
+            return (RgbSprite[]) (stackIn_2_0);
           }
           if (param3 == 4) {
             stackIn_7_0 = ib.b(-10718);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (cn[]) null;
+          stackIn_5_0 = (RgbSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,8 +91,8 @@ final class li {
             field_e = (String) null;
           }
           if (null == wm.field_c) {
-            bn.field_f = new cn(256, 256);
-            wm.field_c = new cn(316, 316);
+            bn.field_f = new RgbSprite(256, 256);
+            wm.field_c = new RgbSprite(316, 316);
             wm.field_c.field_w = -16;
             wm.field_c.field_A = -16;
           }

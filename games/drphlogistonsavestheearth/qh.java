@@ -6,9 +6,9 @@ final class qh {
     static int[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
-          qh.a(13);
+          qh.clearStaticReferences(13);
           field_a = null;
           return;
         }

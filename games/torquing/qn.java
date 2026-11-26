@@ -29,7 +29,7 @@ final class qn extends am {
           var4 += 2;
         }
         if (param1 != 2) {
-          qn.a(true);
+          qn.clearStaticReferences(true);
         }
         if (param2) {
           var4++;
@@ -163,10 +163,10 @@ final class qn extends am {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_E = null;
         if (param0) {
-          qn.a(true);
+          qn.clearStaticReferences(true);
         }
     }
 

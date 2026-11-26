@@ -6,7 +6,7 @@ final class cf extends RenderEffect {
     static String normalizedPlayerName;
     static ResourceArchive field_f;
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         normalizedPlayerName = null;
         int var1 = -94 % ((-48 - param0) / 41);
@@ -29,7 +29,7 @@ final class cf extends RenderEffect {
             int var9 = -var6 + param1 + param4;
             param1 = var8;
             if (param2 > -108) {
-              cf.f(78);
+              cf.clearStaticReferences(78);
             }
             while (var9 > param1) {
               param0[1].b(param1, param3);

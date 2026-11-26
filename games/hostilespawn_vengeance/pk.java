@@ -10,7 +10,7 @@ final class pk extends ql {
     private v field_h;
     static int field_l;
     static boolean field_k;
-    static bd[] field_d;
+    static RgbSprite[] field_d;
     static int[] field_e;
     static String field_j;
 
@@ -148,7 +148,7 @@ final class pk extends ql {
           field_n = null;
           return;
         }
-        field_d = (bd[]) null;
+        field_d = (RgbSprite[]) null;
         field_e = null;
         field_j = null;
         field_i = null;

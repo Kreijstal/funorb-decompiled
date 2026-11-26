@@ -277,7 +277,7 @@ final class bg extends me {
     final static void a(byte param0, String param1) {
         try {
           if (param0 > -99) {
-            bg.b((byte) -60);
+            bg.clearDeclaredStaticReferences((byte) -60);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "bg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -289,10 +289,10 @@ final class bg extends me {
         return lb.field_d;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_j = null;
         if (param0 != 54) {
-          bg.b((byte) -109);
+          bg.clearDeclaredStaticReferences((byte) -109);
         }
     }
 

@@ -82,7 +82,7 @@ abstract class aa extends im {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_X = null;
         if (param0 != 0) {
           return;
@@ -215,7 +215,7 @@ abstract class aa extends im {
           this.field_T.field_D = 0;
           return;
         }
-        aa.m(2);
+        aa.clearDeclaredStaticReferences(2);
         this.b((byte) 83, this.field_V);
         this.field_V = null;
         this.field_T.field_D = 0;

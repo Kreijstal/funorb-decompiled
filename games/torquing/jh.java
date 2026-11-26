@@ -316,7 +316,7 @@ abstract class jh extends UiWidget implements cj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = 13 % ((-49 - param0) / 33);
         field_y = null;
         field_B = null;

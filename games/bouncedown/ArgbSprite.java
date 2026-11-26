@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ArgbSprite extends tg {
+final class ArgbSprite extends RgbSprite {
     final void c(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;

@@ -7,7 +7,7 @@ final class wa {
     static uj field_g;
     static int field_m;
     private byte[] field_n;
-    static dd[] field_k;
+    static RgbSprite[] field_k;
     static String field_p;
     private long[] field_i;
     private long[] field_j;

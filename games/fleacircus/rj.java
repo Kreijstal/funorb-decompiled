@@ -23,7 +23,7 @@ final class rj extends kc {
 
     final uj a(boolean param0) {
         if (!param0) {
-          rj.a((byte) -81);
+          rj.clearStaticReferences((byte) -81);
           return wa.field_g;
         }
         return wa.field_g;
@@ -38,10 +38,10 @@ final class rj extends kc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         if (param0 != 75) {
-          rj.a((byte) 16);
+          rj.clearStaticReferences((byte) 16);
         }
     }
 

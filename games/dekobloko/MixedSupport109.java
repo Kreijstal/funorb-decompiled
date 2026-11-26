@@ -35,7 +35,7 @@ final class MixedSupport109 {
               stringLocal3 = (String) (MixedSupport084.computeObject1096(true, "getcookies", appletArgument1));
               stringArrayLocal4 = ResourceArchive.computeStringArray0801(';', (byte) 66, stringLocal3);
               if (byteArgument2 >= -55) {
-                MixedSupport109.performAction1435(-124);
+                MixedSupport109.clearStaticReferences(-124);
               }
               for (integerLocal1 = 0; integerLocal1 < stringArrayLocal4.length; integerLocal1++) {
                 integerLocal5 = stringArrayLocal4[integerLocal1].indexOf('=');
@@ -69,7 +69,7 @@ final class MixedSupport109 {
         }
     }
 
-    public static void performAction1435(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0477 = null;
         stringState0475 = null;
         stringState0476 = null;

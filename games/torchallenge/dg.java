@@ -123,7 +123,7 @@ final class dg extends kj implements tl, sg, tb {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 >= -55) {
           return;
         }

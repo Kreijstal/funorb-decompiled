@@ -3,7 +3,7 @@
  */
 final class ij extends IntrusiveNode {
     static int field_p;
-    static db[] field_n;
+    static RgbSprite[] field_n;
     IntrusiveDeque field_s;
     static int field_l;
     IntrusiveDeque field_k;
@@ -255,10 +255,10 @@ final class ij extends IntrusiveNode {
         }
     }
 
-    final static db[] a(int param0, byte param1, sh param2, int param3) {
+    final static RgbSprite[] a(int param0, byte param1, sh param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        db[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -340,7 +340,7 @@ final class ij extends IntrusiveNode {
     }
 
     static {
-        field_n = new db[15];
+        field_n = new RgbSprite[15];
         field_h = -1;
         field_o = new boolean[64];
         field_j = 0;

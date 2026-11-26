@@ -9,7 +9,7 @@ final class mi {
     private Object[][] field_h;
     private boolean field_e;
     private we field_j;
-    static nf field_a;
+    static RgbSprite field_a;
     private Object[] field_d;
     static int[] field_c;
     static PcmSample[] field_b;
@@ -428,7 +428,7 @@ final class mi {
 
     final byte[] a(byte param0, int param1, int param2) {
         if (param0 != -2) {
-          field_a = (nf) null;
+          field_a = (RgbSprite) null;
         }
         return this.a(param0 ^ -60, param2, param1, (int[]) null);
     }
@@ -872,7 +872,7 @@ final class mi {
 
     static {
         field_g = 0;
-        field_a = new nf(540, 140);
+        field_a = new RgbSprite(540, 140);
         field_c = new int[8192];
         field_b = new PcmSample[4];
     }

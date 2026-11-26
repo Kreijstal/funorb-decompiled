@@ -25,11 +25,11 @@ class ng extends fd {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         field_u = null;
         if (param0 < 26) {
-          ng.e(-69);
+          ng.clearStaticReferences(-69);
         }
     }
 

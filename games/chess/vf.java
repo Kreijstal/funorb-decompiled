@@ -42,7 +42,7 @@ final class vf implements jm {
             d.field_Mb = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class vf implements jm {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        km var8 = null;
+        RgbSprite var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -82,7 +82,7 @@ final class vf implements jm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

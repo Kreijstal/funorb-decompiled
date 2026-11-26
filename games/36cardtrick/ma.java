@@ -7,14 +7,14 @@ final class ma {
     static String[] field_d;
     static int field_c;
 
-    final static kc[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
         int var14 = 0;
         int var9;
-        kc[] var10;
-        kc[] var11_ref_kc__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_kc__;
         int var11;
         int var12;
-        kc var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -23,10 +23,10 @@ final class ma {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        kc[] var10Lifetime1;
+        RgbSprite[] var10Lifetime1;
         var15 = Main.field_T;
         var9 = param3 + param1 + param6;
-        var10 = new kc[]{new kc(var9, var9), new kc(param4, var9), new kc(var9, var9), new kc(var9, param4), new kc(64, 64), new kc(var9, param4), new kc(var9, var9), new kc(param4, var9), new kc(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param4, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param4), new RgbSprite(64, 64), new RgbSprite(var9, param4), new RgbSprite(var9, var9), new RgbSprite(param4, var9), new RgbSprite(var9, var9)};
         var11_ref_kc__ = var10;
         for (var12 = 0; var12 < var11_ref_kc__.length; var12++) {
           var13 = var11_ref_kc__[var12];

@@ -3,11 +3,11 @@
  */
 final class DirectByteStorage extends ByteStorage {
     private java.nio.ByteBuffer buffer;
-    static dl[] field_c;
+    static RgbSprite[] field_c;
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          field_c = (dl[]) null;
+          field_c = (RgbSprite[]) null;
           field_c = null;
           return;
         }

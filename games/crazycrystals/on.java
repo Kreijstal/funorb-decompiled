@@ -7,12 +7,12 @@ final class on {
     static int field_b;
 
     final static void a(int param0) {
-        dl var1 = null;
-        dl var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = CrazyCrystals.field_B;
         try {
-          var1 = new dl(540, 140);
+          var1 = new RgbSprite(540, 140);
           em.a((byte) 38, var1);
           nb.b();
           SoftwareRasterizer.clearRaster();
@@ -21,7 +21,7 @@ final class on {
           var2 = var1.d();
           var3 = 0;
           if (param0 > -66) {
-            on.a((byte) -56);
+            on.clearStaticReferences((byte) -56);
           }
           while (var3 < 15) {
             var2.g(-2, -2, 16777215);
@@ -36,9 +36,9 @@ final class on {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -84) {
-          on.a((byte) -80);
+          on.clearStaticReferences((byte) -80);
         }
         field_c = null;
         field_a = null;

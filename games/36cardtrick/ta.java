@@ -176,7 +176,7 @@ abstract class ta extends jc {
         dg.field_H.field_l = 0;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_fb = null;
         int var1 = -62 % ((param0 - 58) / 50);
         field_ib = null;

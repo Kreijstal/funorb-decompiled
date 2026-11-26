@@ -18,7 +18,7 @@ final class fj extends si {
     }
 
     final static void a(int param0, mc param1, boolean param2) {
-        th var3 = ed.field_q;
+        th var3 = SpriteGeometry.field_q;
         var3.h(param0, 0);
         var3.writeByte(2, -1);
         if (param2) {

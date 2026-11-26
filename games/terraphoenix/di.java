@@ -64,7 +64,7 @@ abstract class di extends af implements pa {
         return this.b(this.field_j.text, 0);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -109 % ((72 - param0) / 50);
         field_h = null;
         field_i = null;

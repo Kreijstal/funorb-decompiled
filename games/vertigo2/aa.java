@@ -311,10 +311,10 @@ final class aa extends UiPanel {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_Jb = null;
         if (param0 != -29238) {
-          aa.m(73);
+          aa.clearStaticReferences(73);
         }
         field_Sb = null;
     }

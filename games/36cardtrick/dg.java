@@ -100,7 +100,7 @@ class dg extends hl {
         this.e((byte) 5);
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_E = null;
         field_I = null;
         field_G = null;

@@ -12,7 +12,7 @@ final class cb extends IntrusiveNode {
         int var2 = -19 / ((28 - param1) / 43);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         int var1 = 7 % ((-37 - param0) / 59);
     }

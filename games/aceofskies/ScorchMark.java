@@ -9,7 +9,7 @@ final class ScorchMark {
     int worldX;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         int var1 = 18 % ((param0 - 57) / 62);
         field_a = null;
@@ -42,7 +42,7 @@ final class ScorchMark {
         String stackIn_9_2 = null;
         try {
           if (param2 >= -7) {
-            ScorchMark.a((byte) -14);
+            ScorchMark.clearStaticReferences((byte) -14);
           }
           if (tn.a(param0, (byte) -127, param3, param1)) {
             return SectorCacheStore.b(-95);

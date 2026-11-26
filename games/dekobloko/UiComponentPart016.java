@@ -18,7 +18,7 @@ final class UiComponentPart016 extends ComponentDecorator {
         mixedSupport108Local1 = new MixedSupport108(this.nodeDequeState0012);
         uiComponentPart003Local2 = (UiComponentPart003) (mixedSupport108Local1.computeHashNode1412((byte) 71));
         if (byteArgument1 > -73) {
-          UiComponentPart016.performAction0838((byte) 44);
+          UiComponentPart016.clearStaticReferences((byte) 44);
         }
         while (uiComponentPart003Local2 != null) {
           if (uiComponentPart003Local2.booleanState0011) {
@@ -165,7 +165,7 @@ final class UiComponentPart016 extends ComponentDecorator {
         this.uiComponentState0002 = (UiComponent) ((Object) this.computeUiComponentPart0030836((byte) -87));
     }
 
-    public static void performAction0838(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         networkSupport011State0001 = null;
         stringState0297 = null;
         stringState0296 = null;

@@ -231,7 +231,7 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
         }
     }
 
-    public static void performAction0595(int integerArgument1) {
+    public static void resetDeclaredStaticReferences(int integerArgument1) {
         stringState0207 = null;
         byteArrayArrayState0002 = (byte[][]) null;
         int integerLocal1 = 107 % ((-66 - integerArgument1) / 34);

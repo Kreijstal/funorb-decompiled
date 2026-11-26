@@ -265,10 +265,10 @@ final class c {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         if (!param0) {
-          c.a(true);
+          c.clearStaticReferences(true);
         }
         field_h = null;
     }

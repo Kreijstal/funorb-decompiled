@@ -32,11 +32,11 @@ final class kg {
         return dd.correctedCurrentTimeMillis(param0 + 150) - ik.field_p;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 < 83) {
-          kg.a((byte) -5);
+          kg.clearStaticReferences((byte) -5);
         }
     }
 

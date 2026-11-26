@@ -79,10 +79,10 @@ abstract class sk extends DualLinkNode {
 
     abstract byte[] f(int param0);
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         if (param0 >= -78) {
-          sk.h(-30);
+          sk.clearDeclaredStaticReferences(-30);
           field_p = null;
           return;
         }

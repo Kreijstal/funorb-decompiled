@@ -97,7 +97,7 @@ final class be extends ip {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_s = null;
         field_m = null;

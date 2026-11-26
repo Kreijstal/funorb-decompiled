@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il {
-    static dd[] field_d;
+    static RgbSprite[] field_d;
     static ResourceArchive field_a;
     String field_e;
     static int[] field_f;
@@ -20,9 +20,9 @@ final class il {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dd var6 = null;
-        dd var7 = null;
-        dd var8 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
         int var3Lifetime1;
         var4 = fleas.field_A ? 1 : 0;
         try {

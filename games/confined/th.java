@@ -28,14 +28,14 @@ final class th extends ah {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == 256) {
           field_eb = null;
           field_bb = null;
           field_fb = null;
           return;
         }
-        th.m(97);
+        th.clearDeclaredStaticReferences(97);
         field_eb = null;
         field_bb = null;
         field_fb = null;

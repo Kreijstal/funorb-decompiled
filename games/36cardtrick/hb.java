@@ -4,13 +4,13 @@
 final class hb {
     static int field_d;
     static long field_b;
-    static kc field_c;
+    static RgbSprite field_c;
     static int[] field_a;
 
     public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (!param0) {
-          field_c = (kc) null;
+          field_c = (RgbSprite) null;
           field_c = null;
           return;
         }

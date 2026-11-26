@@ -8,7 +8,7 @@ final class ad {
     int field_a;
     String field_f;
     ki field_g;
-    static hj field_e;
+    static RgbSprite field_e;
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -143,7 +143,7 @@ final class ad {
     public static void clearStaticReferences(boolean param0) {
         field_e = null;
         if (!param0) {
-          field_e = (hj) null;
+          field_e = (RgbSprite) null;
         }
         field_b = null;
     }

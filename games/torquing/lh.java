@@ -49,7 +49,7 @@ final class lh {
         return (ha) ((Object) new np());
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_O = null;
         field_u = null;
         int var1 = -85 / ((-35 - param0) / 46);

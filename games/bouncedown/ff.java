@@ -72,7 +72,7 @@ final class ff extends wd {
     private ff(String param0, fc param1, sk param2) {
         super(param0, param1, param2);
         try {
-          this.field_j = ma.field_m.field_a;
+          this.field_j = SpriteGeometry.field_m.field_a;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -88,9 +88,9 @@ final class ff extends wd {
     }
 
     private ff(String param0, sk param1) {
-        this(param0, ma.field_m.field_b, param1);
+        this(param0, SpriteGeometry.field_m.field_b, param1);
         try {
-          this.field_j = ma.field_m.field_a;
+          this.field_j = SpriteGeometry.field_m.field_a;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

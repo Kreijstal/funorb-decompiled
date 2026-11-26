@@ -4,7 +4,7 @@
 abstract class dl extends DualLinkNode {
     boolean field_v;
     static ed field_w;
-    static dd field_s;
+    static RgbSprite field_s;
     boolean field_r;
     static String field_u;
     volatile boolean field_q;
@@ -12,13 +12,13 @@ abstract class dl extends DualLinkNode {
 
     abstract int f(int param0);
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_s = null;
         field_t = null;
         field_w = null;
         field_u = null;
         if (param0 != 2) {
-          dl.h(-20);
+          dl.releaseDeclaredStaticReferences(-20);
         }
     }
 

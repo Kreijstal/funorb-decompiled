@@ -127,7 +127,7 @@ final class ih extends pj implements ra, ke {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_O = null;
         if (param0 != 288) {
           return;

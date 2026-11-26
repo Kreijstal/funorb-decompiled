@@ -16,7 +16,7 @@ final class fa extends IntrusiveNode {
         this.field_n = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_o = null;
         field_t = null;

@@ -12,9 +12,9 @@ final class ol {
     private long[] field_c;
     private byte[] field_l;
     private int field_d;
-    static cn[] field_a;
+    static RgbSprite[] field_a;
     private long[] field_e;
-    static cn field_b;
+    static RgbSprite field_b;
 
     final void a(byte param0, byte[] param1, int param2) {
         int fieldTemp$0 = 0;

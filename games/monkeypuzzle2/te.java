@@ -39,9 +39,9 @@ final class te {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -40) {
-          te.a((byte) -57);
+          te.clearStaticReferences((byte) -57);
           field_a = null;
           return;
         }

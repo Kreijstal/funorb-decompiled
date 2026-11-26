@@ -152,13 +152,13 @@ class nk extends hf implements vg {
         np.d((byte) 95);
     }
 
-    public static void n(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_Jb = null;
         field_Ib = null;
         field_Fb = null;
         field_Lb = null;
         if (param0 != 2121792) {
-          nk.n(57);
+          nk.releaseDeclaredStaticReferences(57);
         }
     }
 

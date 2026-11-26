@@ -19,9 +19,9 @@ final class ih {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -121) {
-          ih.a(5);
+          ih.clearStaticReferences(5);
           field_b = null;
           return;
         }

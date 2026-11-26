@@ -327,7 +327,7 @@ final class hh {
         pi.field_e = 2147483647;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = 65 / ((param0 - 28) / 44);
         field_a = null;

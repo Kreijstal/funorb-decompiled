@@ -262,7 +262,7 @@ class r extends ek {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, kc[] param5, int param6, ee param7, int param8, kc[] param9, int param10) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite[] param5, int param6, ee param7, int param8, RgbSprite[] param9, int param10) {
         try {
           wd.a(31668);
           if (param2 != -250) {

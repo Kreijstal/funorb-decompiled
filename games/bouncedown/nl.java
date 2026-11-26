@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nl {
-    static tg[] field_d;
+    static RgbSprite[] field_d;
     static String field_a;
     static String[] field_b;
     static int field_c;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -76 % ((param0 + 61) / 47);
         field_b = null;
         field_d = null;

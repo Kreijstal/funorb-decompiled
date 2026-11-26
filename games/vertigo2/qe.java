@@ -18,11 +18,11 @@ final class qe extends pn {
         if (!param0) {
           return null;
         }
-        qe.h(-124);
+        qe.clearStaticReferences(-124);
         return null;
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_W = null;
         field_U = null;
         field_X = null;

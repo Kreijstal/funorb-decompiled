@@ -90,12 +90,12 @@ final class bg {
         }
     }
 
-    final static dd[] a(String param0, ResourceArchive param1, byte param2, String param3) {
+    final static RgbSprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        dd[] stackIn_2_0 = null;
-        dd[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -106,7 +106,7 @@ final class bg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 7) {
-            stackIn_2_0 = (dd[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param1.a(param3, (byte) -100);

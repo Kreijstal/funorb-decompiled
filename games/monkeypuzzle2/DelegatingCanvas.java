@@ -5,9 +5,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component delegateComponent;
     static Sprite[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -24) {
-          DelegatingCanvas.a(-117);
+          DelegatingCanvas.clearStaticReferences(-117);
           field_b = null;
           return;
         }

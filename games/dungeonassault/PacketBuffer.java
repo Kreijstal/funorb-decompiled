@@ -13,7 +13,7 @@ class PacketBuffer extends IntrusiveNode {
     byte[] payload;
     static ResourceArchive field_k;
 
-    final static void a(int param0, int param1, byte param2, cn param3, int param4, int param5) {
+    final static void a(int param0, int param1, byte param2, RgbSprite param3, int param4, int param5) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;

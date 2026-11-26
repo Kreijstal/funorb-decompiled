@@ -15,7 +15,7 @@ final class cd extends ea implements Cloneable {
     private int field_x;
     static int[] field_u;
 
-    private final dl h(int param0) {
+    private final RgbSprite h(int param0) {
         if (0 < this.field_t) {
           return rf.field_C;
         }
@@ -640,7 +640,7 @@ final class cd extends ea implements Cloneable {
         }
     }
 
-    private final dl i(int param0) {
+    private final RgbSprite i(int param0) {
         if (this.field_x < 0) {
           return vp.field_d;
         }
@@ -654,7 +654,7 @@ final class cd extends ea implements Cloneable {
     }
 
     final void c(boolean param0, boolean param1) {
-        dl discarded$0 = null;
+        RgbSprite discarded$0 = null;
         if (!param0) {
           discarded$0 = this.i(-72);
         }

@@ -142,7 +142,7 @@ final class hb extends e {
         }
     }
 
-    final void a(dd[] param0, int param1, int param2) {
+    final void a(RgbSprite[] param0, int param1, int param2) {
         int var4_int = 0;
         try {
           if (param1 > -27) {
@@ -185,7 +185,7 @@ final class hb extends e {
         }
     }
 
-    final void a(dd param0, int param1) {
+    final void a(RgbSprite param0, int param1) {
         int var4 = 0;
         te[] var3 = null;
         te var5 = null;
@@ -221,12 +221,12 @@ final class hb extends e {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_q = null;
         int var1 = -65 / ((param0 + 36) / 56);
     }
 
-    final void a(byte param0, dd[] param1) {
+    final void a(byte param0, RgbSprite[] param1) {
         int var4 = 0;
         te[] var3 = null;
         te var5 = null;

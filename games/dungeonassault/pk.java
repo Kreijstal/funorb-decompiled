@@ -4,7 +4,7 @@
 final class pk extends kl {
     boolean field_r;
     private pp field_n;
-    static cn field_o;
+    static RgbSprite field_o;
     int field_u;
     static String field_q;
     private String field_p;
@@ -118,24 +118,24 @@ final class pk extends kl {
     final void b(byte param0) {
         int var3_int = 0;
         ph var16 = null;
-        cn var14 = null;
-        cn var15 = null;
+        RgbSprite var14 = null;
+        RgbSprite var15 = null;
         int var9 = DungeonAssault.field_K;
         int[] var10 = new int[64];
         int[] var2 = var10;
         for (var3_int = 0; 64 > var3_int; var3_int++) {
           var10[var3_int] = mp.a((24 + var3_int) * 65793, -2147483648);
         }
-        cn var3 = te.a(-32 + this.field_a, this.field_i - 28, var10, 16, 8, 0.125);
+        RgbSprite var3 = te.a(-32 + this.field_a, this.field_i - 28, var10, 16, 8, 0.125);
         int[] var4 = te.b(-32 + this.field_a, -28 + this.field_i, 0.125);
-        cn var5 = new cn(0, 0);
+        RgbSprite var5 = new RgbSprite(0, 0);
         if (param0 == 37) {
           var5.field_y = -32 + this.field_a;
           var5.field_v = this.field_i - 28;
           var5.field_B = var4;
           var16 = new ph(var3, var5);
-          var14 = new cn(this.field_a, this.field_i);
-          var15 = new cn(this.field_a, this.field_i);
+          var14 = new RgbSprite(this.field_a, this.field_i);
+          var15 = new RgbSprite(this.field_a, this.field_i);
           this.field_l = new ph(var14, var15);
           jh.a(this.field_l);
           var16.b(16, 16);
@@ -162,8 +162,8 @@ final class pk extends kl {
         var5.field_v = this.field_i - 28;
         var5.field_B = var4;
         ph var13 = new ph(var3, var5);
-        cn var11 = new cn(this.field_a, this.field_i);
-        cn var12 = new cn(this.field_a, this.field_i);
+        RgbSprite var11 = new RgbSprite(this.field_a, this.field_i);
+        RgbSprite var12 = new RgbSprite(this.field_a, this.field_i);
         this.field_l = new ph(var11, var12);
         jh.a(this.field_l);
         var13.b(16, 16);
@@ -251,7 +251,7 @@ final class pk extends kl {
           }
           return;
         }
-        field_o = (cn) null;
+        field_o = (RgbSprite) null;
         super.a(param0);
         if (hh.field_s != null) {
           this.field_d = true;

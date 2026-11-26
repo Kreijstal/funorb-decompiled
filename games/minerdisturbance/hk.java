@@ -27,7 +27,7 @@ final class hk {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         int var1 = -41 / ((param0 - 63) / 61);
         field_d = null;

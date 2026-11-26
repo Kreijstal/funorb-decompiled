@@ -29,12 +29,12 @@ final class lb extends IntrusiveNode {
           var3 = param1 >>> 31;
           return -var3 + (var3 + param1) / param2;
         }
-        lb.a(-94);
+        lb.clearDeclaredStaticReferences(-94);
         var3Lifetime1 = param1 >>> 31;
         return -var3Lifetime1 + (var3Lifetime1 + param1) / param2;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         if (param0 != 0) {
           return;

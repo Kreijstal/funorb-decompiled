@@ -6,7 +6,7 @@ import java.util.*;
 final class ja extends ff {
     private int field_g;
     static Boolean field_f;
-    static dl[] field_h;
+    static RgbSprite[] field_h;
 
     final static void d(byte param0) {
         int var15 = 0;
@@ -139,7 +139,7 @@ final class ja extends ff {
         try {
           tn.e((byte) -128);
           if (param5 != -17213) {
-            field_h = (dl[]) null;
+            field_h = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ja.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -148,15 +148,15 @@ final class ja extends ff {
 
     final void b(int param0) {
         int var5 = 0;
-        dl stackIn_7_0 = null;
+        RgbSprite stackIn_7_0 = null;
         ef stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int var2;
-        dl var3;
+        RgbSprite var3;
         int var4;
         ln var6;
         int var7;
-        dl var8;
+        RgbSprite var8;
         kk var9;
         int var2Lifetime1;
         var7 = CrazyCrystals.field_B;
@@ -241,7 +241,7 @@ final class ja extends ff {
     public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 != 27348) {
-          field_h = (dl[]) null;
+          field_h = (RgbSprite[]) null;
         }
         field_h = null;
     }
@@ -377,7 +377,7 @@ final class ja extends ff {
           }
         }
         if (param0 != 15) {
-          field_h = (dl[]) null;
+          field_h = (RgbSprite[]) null;
         }
         ln[] array$0 = new ln[8];
         stackIn_17_0 = array$0;

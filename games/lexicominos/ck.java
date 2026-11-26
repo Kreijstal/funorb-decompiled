@@ -92,7 +92,7 @@ final class ck extends IOException {
     }
 
     final static void a(int param0, int param1) {
-        th var2 = ed.field_q;
+        th var2 = SpriteGeometry.field_q;
         var2.h(param0, 0);
         var2.writeByte(1, -1);
         var2.writeByte(param1, -1);

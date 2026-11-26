@@ -8,7 +8,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     static e field_g;
     static jb field_a;
     static kc field_d;
-    static nf field_c;
+    static RgbSprite field_c;
 
     final static boolean a(int param0, char param1) {
         if (param0 != 175) {
@@ -214,6 +214,6 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     static {
         field_e = "Invalid password.";
         field_g = new e(12, 0, 1, 0);
-        field_c = new nf(270, 70);
+        field_c = new RgbSprite(270, 70);
     }
 }

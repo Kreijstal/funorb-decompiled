@@ -85,12 +85,12 @@ final class mj {
         this.field_c = new int[4];
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 == 3) {
           return;
         }
-        mj.a(26);
+        mj.clearStaticReferences(26);
     }
 
     final static void a(byte param0, int param1) {

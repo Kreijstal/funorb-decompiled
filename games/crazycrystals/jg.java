@@ -13,7 +13,7 @@ final class jg {
     short[] field_r;
     int field_p;
     int[] field_q;
-    static dl[] field_i;
+    static RgbSprite[] field_i;
     short[] field_c;
     int[] field_y;
     short[] field_B;
@@ -124,10 +124,10 @@ final class jg {
         this.a(true);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         if (param0 != 32767) {
-          jg.a(39);
+          jg.clearStaticReferences(39);
         }
         field_h = null;
         field_i = null;

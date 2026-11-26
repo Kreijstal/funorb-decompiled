@@ -59,7 +59,7 @@ abstract class SocketConnector {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_j = null;
         field_g = null;
@@ -68,7 +68,7 @@ abstract class SocketConnector {
         field_b = null;
         field_l = (int[][][][]) null;
         if (param0 != -26425) {
-          SocketConnector.a(-19);
+          SocketConnector.clearStaticReferences(-19);
         }
     }
 

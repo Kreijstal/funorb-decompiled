@@ -52,10 +52,10 @@ final class pg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         if (param0 != -85) {
-          pg.a((byte) -89);
+          pg.clearStaticReferences((byte) -89);
           field_b = null;
           field_a = null;
           return;

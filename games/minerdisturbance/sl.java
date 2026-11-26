@@ -211,7 +211,7 @@ final class sl extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_u = (String[][]) null;
         field_q = null;
         field_v = null;

@@ -55,7 +55,7 @@ final class sj extends jc {
         var1.b((byte) -31);
     }
 
-    final void a(int param0, hj param1) {
+    final void a(int param0, RgbSprite param1) {
         int var4 = 0;
         sa[] var3 = null;
         sa var5 = null;
@@ -201,7 +201,7 @@ final class sj extends jc {
         }
     }
 
-    final void a(int param0, hj[] param1, int param2) {
+    final void a(int param0, RgbSprite[] param1, int param2) {
         int var4_int = 0;
         if (param2 <= 85) {
           return;
@@ -226,7 +226,7 @@ final class sj extends jc {
         }
     }
 
-    final void a(int param0, hj[] param1) {
+    final void a(int param0, RgbSprite[] param1) {
         int var4 = 0;
         sa[] var3 = null;
         sa var5 = null;
@@ -274,7 +274,7 @@ final class sj extends jc {
         return dupTemp$0;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_u = null;
         int var1 = 8 % ((-5 - param0) / 61);
     }

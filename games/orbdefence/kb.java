@@ -836,7 +836,7 @@ final class kb extends IntrusiveNode {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        hj var7_ref_hj = null;
+        RgbSprite var7_ref_hj = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

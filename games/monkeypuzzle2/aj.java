@@ -21,12 +21,12 @@ final class aj {
         this(param0, false);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         field_e = null;
         if (param0 != -14958) {
-          aj.a(-119);
+          aj.clearStaticReferences(-119);
         }
     }
 

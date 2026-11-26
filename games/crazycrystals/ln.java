@@ -3,7 +3,7 @@
  */
 abstract class ln {
     int field_b;
-    static dl field_d;
+    static RgbSprite field_d;
     static am field_f;
     int field_c;
     int field_e;

@@ -32,7 +32,7 @@ final class ih extends PacketBuffer {
         return this.payload[fieldTemp$1] - this.field_n.a(995108848) & 255;
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = null;
         if (param0 != 8) {
           return;
@@ -59,7 +59,7 @@ final class ih extends PacketBuffer {
         int var4Lifetime1;
         int var5Lifetime1;
         if (param1 != -87) {
-          ih.j(33);
+          ih.clearDeclaredStaticReferences(33);
         } else {
           var4 = 8 - (this.field_o & 7);
           var5 = 0;
@@ -123,7 +123,7 @@ final class ih extends PacketBuffer {
         var6 = fleas.field_A ? 1 : 0;
         try {
           if (param0 < 66) {
-            ih.j(-43);
+            ih.clearDeclaredStaticReferences(-43);
           }
           for (var5_int = 0; param1 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;

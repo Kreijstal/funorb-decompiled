@@ -223,7 +223,7 @@ final class ah {
         ri.field_g = PacketBuffer.field_j[param1].a();
         String var5 = ce.field_o[param1];
         int var3 = 40 + IntrusiveNode.field_c.b(var5);
-        cn var4 = new cn(var3, 32);
+        RgbSprite var4 = new RgbSprite(var3, 32);
         jh.c();
         if (!param0) {
           field_a = (String) null;

@@ -6,9 +6,9 @@ final class ia {
     static int field_h;
     static String field_k;
     private int[] field_c;
-    static bd field_e;
+    static RgbSprite field_e;
     private boolean field_f;
-    static bd[] field_l;
+    static RgbSprite[] field_l;
     private int field_a;
     private int field_g;
     private int field_j;
@@ -235,7 +235,7 @@ final class ia {
         this.field_j = wa.field_p;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_i = null;
         int var1 = -105 / ((param0 - 39) / 35);
@@ -259,7 +259,7 @@ final class ia {
     }
 
     static {
-        field_l = new bd[222];
+        field_l = new RgbSprite[222];
         field_k = "Switch level set";
         field_i = new int[4];
     }

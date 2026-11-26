@@ -150,7 +150,7 @@ final class SceneWidgetPart014 extends SceneWidget {
         }
     }
 
-    public static void performAction1785(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 < -73) {
           stringArrayState0057 = null;
           integerArrayState0257 = null;

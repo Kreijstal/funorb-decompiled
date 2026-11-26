@@ -3,7 +3,7 @@
  */
 final class ge {
     static String field_a;
-    static tg field_b;
+    static RgbSprite field_b;
     static int field_c;
 
     final static ph[] b(int param0) {

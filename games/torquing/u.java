@@ -105,7 +105,7 @@ final class u extends am {
         this.field_u = param0;
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 <= -41) {
           field_v = null;
           field_t = null;

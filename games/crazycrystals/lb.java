@@ -394,7 +394,7 @@ class lb implements wo, fi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_d = null;
         int var1 = -52 % ((-77 - param0) / 36);
         field_l = null;

@@ -85,7 +85,7 @@ final class fj {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_l = null;
         field_i = null;
@@ -94,7 +94,7 @@ final class fj {
           field_k = null;
           return;
         }
-        fj.a((byte) -58);
+        fj.clearStaticReferences((byte) -58);
         field_k = null;
     }
 

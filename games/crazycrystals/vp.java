@@ -3,12 +3,12 @@
  */
 final class vp {
     static String field_g;
-    static dl field_d;
+    static RgbSprite field_d;
     private long field_f;
     private int field_h;
     static int[] field_a;
     private DualLinkNode field_c;
-    static dl[][] field_i;
+    static RgbSprite[][] field_i;
     private DualLinkNode[] field_e;
     static int field_b;
 
@@ -78,7 +78,7 @@ final class vp {
 
     public static void clearStaticReferences(byte param0) {
         field_g = null;
-        field_i = (dl[][]) null;
+        field_i = (RgbSprite[][]) null;
         field_a = null;
         field_d = null;
         if (param0 != -14) {
@@ -92,7 +92,7 @@ final class vp {
         int var1_intLifetime1;
         MouseWheelInput.field_h.a(15834);
         for (var1_int = 0; var1_int < 32; var1_int++) {
-          mc.field_p[var1_int] = 0L;
+          SpriteGeometry.field_p[var1_int] = 0L;
         }
         for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
           v.field_a[var1_intLifetime1] = 0L;

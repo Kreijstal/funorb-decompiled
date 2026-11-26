@@ -158,11 +158,11 @@ abstract class RasterBuffer {
         }
     }
 
-    final static hj[] a(ki param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(ki param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         ki var5 = null;
         Object stackIn_4_0 = null;
-        hj[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -177,7 +177,7 @@ abstract class RasterBuffer {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (hj[]) (stackIn_4_0);
+          return (RgbSprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

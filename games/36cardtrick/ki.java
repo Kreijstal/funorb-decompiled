@@ -5,7 +5,7 @@ final class ki extends ek {
     private int field_q;
     private int field_s;
     private int field_p;
-    private kc[] field_r;
+    private RgbSprite[] field_r;
 
     public ki() {
         this(2188450, 2591221, 9543);

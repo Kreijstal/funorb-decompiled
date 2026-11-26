@@ -189,7 +189,7 @@ final class gi extends ic {
           var7 = this.field_s[0];
           this.field_p.a((byte) 76);
           if (param0 != -24969) {
-            gi.c((byte) -116);
+            gi.clearDeclaredStaticReferences((byte) -116);
           }
           var7.a(this, param2, param1, -1, this.field_p, param4);
           if (var10 != null) {
@@ -267,10 +267,10 @@ final class gi extends ic {
         var1.a((byte) 127);
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_q = null;
         if (param0 >= -107) {
-          gi.c((byte) 60);
+          gi.clearDeclaredStaticReferences((byte) 60);
         }
     }
 

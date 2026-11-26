@@ -10,7 +10,7 @@ final class fd {
     private long[] field_l;
     private long[] field_a;
     static ok field_k;
-    static nf field_e;
+    static RgbSprite field_e;
     private byte[] field_f;
     private byte[] field_c;
     static boolean field_j;
@@ -111,11 +111,11 @@ final class fd {
         ah.field_U = 0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_e = null;
         if (param0 >= -107) {
-          fd.a((byte) -117);
+          fd.clearStaticReferences((byte) -117);
         }
     }
 
@@ -298,7 +298,7 @@ final class fd {
     }
 
     static {
-        field_e = new nf(640, 376);
+        field_e = new RgbSprite(640, 376);
         field_j = true;
     }
 }

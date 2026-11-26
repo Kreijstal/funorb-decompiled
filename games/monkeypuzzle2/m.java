@@ -330,7 +330,7 @@ final class m extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         if (param0 < 15) {
           return;

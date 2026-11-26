@@ -14,7 +14,7 @@ final class og implements rd {
     private int field_h;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = (int[][]) null;
         field_c = null;
         int var1 = -100 % ((param0 - 73) / 46);

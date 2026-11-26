@@ -10,7 +10,7 @@ final class ng extends IntrusiveNode {
     static String[] field_l;
     static String field_h;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_g = null;
         field_j = null;
@@ -26,10 +26,10 @@ final class ng extends IntrusiveNode {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
           if (gl.field_y == 11) {
-            sd.q(274);
+            sd.releaseDeclaredStaticReferences(274);
           }
           if (param0) {
-            ng.a((byte) 43);
+            ng.clearStaticReferences((byte) 43);
           }
           ch.a(58, ea.field_n, g.field_A, DelegatingCanvas.field_a);
           DelegatingCanvas.a(0, 0, (byte) 90, param1);

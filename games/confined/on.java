@@ -59,7 +59,7 @@ abstract class on {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -14330) {
           field_f = null;
           field_d = null;
@@ -67,7 +67,7 @@ abstract class on {
           field_c = null;
           return;
         }
-        on.a(-91);
+        on.clearStaticReferences(-91);
         field_f = null;
         field_d = null;
         field_b = null;

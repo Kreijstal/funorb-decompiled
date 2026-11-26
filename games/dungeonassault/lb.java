@@ -3,12 +3,12 @@
  */
 final class lb {
     int field_w;
-    static cn field_C;
+    static RgbSprite field_C;
     int field_i;
     int field_K;
-    static cn field_o;
+    static RgbSprite field_o;
     static String field_O;
-    static cn field_v;
+    static RgbSprite field_v;
     int field_r;
     int field_u;
     private long[] field_c;
@@ -260,7 +260,7 @@ final class lb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_E = null;
         field_C = null;
         field_O = null;
@@ -268,7 +268,7 @@ final class lb {
         field_o = null;
         field_d = null;
         if (param0 <= 3) {
-          lb.a((byte) 82);
+          lb.clearStaticReferences((byte) 82);
         }
         field_v = null;
     }

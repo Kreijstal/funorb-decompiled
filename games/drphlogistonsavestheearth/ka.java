@@ -233,7 +233,7 @@ final class ka extends hj {
             }
           }
           if (param1 != 8192) {
-            ka.c(110);
+            ka.clearDeclaredStaticReferences(110);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -274,7 +274,7 @@ final class ka extends hj {
 
     final static void a(byte param0) {
         if (param0 >= -17) {
-          ka.c(-43);
+          ka.clearDeclaredStaticReferences(-43);
         }
         sd.a((byte) -124);
         sf.a(4, 11649);
@@ -379,7 +379,7 @@ final class ka extends hj {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_j = null;
         field_p = null;
         if (param0 != 26713) {

@@ -18,9 +18,9 @@ final class kq extends EventEffect {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -91) {
-          kq.d((byte) -84);
+          kq.clearStaticReferences((byte) -84);
           field_j = null;
           return;
         }

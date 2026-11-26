@@ -65,7 +65,7 @@ final class eg extends fg {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         int var1 = -71 / ((param0 + 53) / 62);
         field_w = null;

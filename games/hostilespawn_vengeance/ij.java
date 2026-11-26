@@ -40,7 +40,7 @@ final class ij extends vd implements kn, qk {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_J = null;
         if (param0 != 75) {
           field_J = (IntrusiveDeque) null;
@@ -309,7 +309,7 @@ final class ij extends vd implements kn, qk {
         cn var1 = new cn(jn.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
         ag var2 = new ag(bl.field_d, var1, (mh) null);
         this.field_E = new ph(GzipDecompressor.field_h, (mh) null);
-        this.field_H = new ph(qc.field_C, (mh) null);
+        this.field_H = new ph(SpriteGeometry.field_C, (mh) null);
         this.field_G.field_i = u.field_g;
         this.field_G.a(new AccountNameAvailabilityValidator(this.field_G), (byte) -105);
         this.field_E.field_D = false;

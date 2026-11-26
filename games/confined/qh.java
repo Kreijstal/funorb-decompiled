@@ -169,7 +169,7 @@ final class qh extends vf {
         field_y = null;
     }
 
-    final void a(int param0, nf param1) {
+    final void a(int param0, RgbSprite param1) {
         int var5 = 0;
         pn[] var3 = null;
         int var4 = 0;
@@ -207,7 +207,7 @@ final class qh extends vf {
         }
     }
 
-    final void a(byte param0, nf[] param1) {
+    final void a(byte param0, RgbSprite[] param1) {
         int var5 = 0;
         pn[] var3 = null;
         int var4 = 0;
@@ -349,7 +349,7 @@ final class qh extends vf {
         }
     }
 
-    final void a(byte param0, nf[] param1, int param2) {
+    final void a(byte param0, RgbSprite[] param1, int param2) {
         int var4_int = 0;
         int var4_intLifetime1;
         try {

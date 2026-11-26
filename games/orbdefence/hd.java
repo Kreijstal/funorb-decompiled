@@ -18,7 +18,7 @@ final class hd {
     int field_b;
     af field_o;
     byte[][] field_k;
-    static hj field_e;
+    static RgbSprite field_e;
     static int field_t;
     af[] field_g;
     static String field_j;
@@ -239,11 +239,11 @@ final class hd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_j = null;
         if (param0 != 100) {
-          hd.a(33);
+          hd.clearStaticReferences(33);
         }
         field_e = null;
     }

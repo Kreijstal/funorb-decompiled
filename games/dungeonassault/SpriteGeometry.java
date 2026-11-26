@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rd extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     int field_w;
     int field_A;
     static int field_C;
@@ -9,16 +9,16 @@ abstract class rd extends DualLinkNode {
     int field_y;
     static int field_D;
     static en[] field_F;
-    static cn field_z;
+    static RgbSprite field_z;
     int field_E;
     int field_G;
     int field_v;
     private static String field_B;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_z = null;
         if (!param0) {
-          rd.b(false);
+          SpriteGeometry.clearStaticReferences(false);
           field_F = null;
           field_x = null;
           return;
@@ -27,7 +27,7 @@ abstract class rd extends DualLinkNode {
         field_x = null;
     }
 
-    rd() {
+    SpriteGeometry() {
     }
 
     static {

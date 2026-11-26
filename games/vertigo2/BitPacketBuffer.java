@@ -45,7 +45,7 @@ final class BitPacketBuffer extends PacketBuffer {
         this.payload[this.position] = (byte) 0;
         this.field_y = 8;
         if (param0) {
-          BitPacketBuffer.r(42);
+          BitPacketBuffer.releaseDeclaredStaticReferences(42);
         }
     }
 
@@ -81,7 +81,7 @@ final class BitPacketBuffer extends PacketBuffer {
         try {
           var4_int = param1.a((byte) 126, param3);
           if (param2 != 34) {
-            BitPacketBuffer.r(66);
+            BitPacketBuffer.releaseDeclaredStaticReferences(66);
           }
           var5 = param1.a(var4_int, param0, 94);
           stackIn_3_0 = bk.a(var4_int, var5, param1, -2724);
@@ -230,11 +230,11 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void r(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_w = null;
         field_x = null;
         if (param0 <= 79) {
-          BitPacketBuffer.r(84);
+          BitPacketBuffer.releaseDeclaredStaticReferences(84);
         }
     }
 
@@ -247,7 +247,7 @@ final class BitPacketBuffer extends PacketBuffer {
         int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != -32460) {
-          BitPacketBuffer.r(53);
+          BitPacketBuffer.releaseDeclaredStaticReferences(53);
         }
         m.field_B = param1;
         var2 = param1;

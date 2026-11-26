@@ -8,7 +8,7 @@ final class oj {
     private eb field_a;
     static int[] field_l;
     boolean field_e;
-    db field_h;
+    RgbSprite field_h;
     static boolean field_g;
     int field_i;
     int field_b;

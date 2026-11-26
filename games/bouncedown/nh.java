@@ -67,13 +67,13 @@ final class nh extends wk implements rc {
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_S = null;
         field_N = null;
         field_O = null;
         field_R = null;
         if (param0 != -102) {
-          nh.j((byte) 26);
+          nh.releaseDeclaredStaticReferences((byte) 26);
         }
     }
 

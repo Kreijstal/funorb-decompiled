@@ -14,7 +14,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static IntrusiveDeque field_e;
     static int[] field_j;
     static String field_f;
-    static cn[] field_m;
+    static RgbSprite[] field_m;
     static ResourceArchive field_i;
     private DualLinkNode nextNode;
 
@@ -159,7 +159,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         field_c = null;
         field_b = null;
         if (param0 > -73) {
-          field_m = (cn[]) null;
+          field_m = (RgbSprite[]) null;
         }
         field_m = null;
         field_i = null;

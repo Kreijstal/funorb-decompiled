@@ -9,8 +9,8 @@ class ig extends ph {
     static String field_H;
     private int field_O;
     private long field_Q;
-    static bd field_S;
-    static bd field_R;
+    static RgbSprite field_S;
+    static RgbSprite field_R;
     static int field_L;
     private long field_M;
     private int field_K;
@@ -207,7 +207,7 @@ class ig extends ph {
           }
         }
         if (param2 <= 42) {
-          field_R = (bd) null;
+          field_R = (RgbSprite) null;
         }
     }
 
@@ -609,7 +609,7 @@ class ig extends ph {
           try {
             var5 = param1.getFile();
             if (!param0) {
-              field_S = (bd) null;
+              field_S = (RgbSprite) null;
             }
             var6 = 0;
             while (true) {

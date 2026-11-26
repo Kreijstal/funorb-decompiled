@@ -9,11 +9,11 @@ final class p {
     static String field_b;
     static String field_f;
 
-    final static hj[] a(int param0, String param1, ki param2, String param3) {
+    final static RgbSprite[] a(int param0, String param1, ki param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hj[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -301,7 +301,7 @@ final class p {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = 98 % ((-29 - param0) / 48);
         field_e = null;

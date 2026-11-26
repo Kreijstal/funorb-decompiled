@@ -11,11 +11,11 @@ final class oh {
     static String field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != -32313) {
-          oh.a(115);
+          oh.clearStaticReferences(115);
           field_e = null;
           return;
         }

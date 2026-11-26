@@ -4,7 +4,7 @@
 final class rl {
     static String field_b;
     static String field_d;
-    static hj field_a;
+    static RgbSprite field_a;
     static int field_e;
     static String field_c;
 
@@ -25,7 +25,7 @@ final class rl {
         field_d = null;
     }
 
-    final static void a(hj[] param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

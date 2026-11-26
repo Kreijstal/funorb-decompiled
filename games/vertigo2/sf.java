@@ -9,7 +9,7 @@ final class sf {
     static int[] field_e;
     static boolean[][] field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = (boolean[][]) null;
         field_e = null;
         field_b = null;

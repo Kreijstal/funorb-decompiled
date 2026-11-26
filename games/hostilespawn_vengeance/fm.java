@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fm {
-    static bd field_b;
-    static bd[] field_a;
+    static RgbSprite field_b;
+    static RgbSprite[] field_a;
     static int[] field_c;
 
     final static void a(p param0, boolean param1, int param2, int[] param3) {
@@ -18,7 +18,7 @@ final class fm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_a = (bd[]) null;
+            field_a = (RgbSprite[]) null;
           }
           stackIn_5_0 = (param2 == 17) ? 3 : 6;
           var4_int = stackIn_5_0;

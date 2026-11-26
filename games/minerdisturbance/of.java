@@ -5,7 +5,7 @@ final class of {
     static java.applet.Applet field_b;
     static boolean field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 45 % ((75 - param0) / 45);
         field_b = null;
     }
@@ -325,7 +325,7 @@ final class of {
               var18 = var18 + var20;
             }
             if (param1 != -5190) {
-              of.a(83);
+              of.clearStaticReferences(83);
             }
             return;
           }

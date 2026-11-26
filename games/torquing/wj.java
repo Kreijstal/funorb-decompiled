@@ -25,14 +25,14 @@ final class wj extends e {
         bd.a(false, 160);
     }
 
-    public static void c(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_i = null;
         field_j = null;
         field_k = null;
         field_h = null;
         field_g = null;
         if (param0) {
-          wj.c(true);
+          wj.clearDeclaredStaticReferences(true);
         }
     }
 

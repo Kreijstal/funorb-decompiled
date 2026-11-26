@@ -47,13 +47,13 @@ final class al {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         field_e = null;
         field_f = null;
         if (param0 != 20) {
-          al.a((byte) -68);
+          al.clearStaticReferences((byte) -68);
         }
     }
 
@@ -78,7 +78,7 @@ final class al {
           }
           this.a(param1, 18998);
           if (!param3) {
-            al.a((byte) 76);
+            al.clearStaticReferences((byte) 76);
           }
           this.field_g = this.field_g - param0;
           while (0 > this.field_g) {

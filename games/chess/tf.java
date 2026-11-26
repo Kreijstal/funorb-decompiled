@@ -73,7 +73,7 @@ final class tf extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class tf extends IntrusiveNode {
         rb.field_c.a(var3 * 438 / var2 + (var1 + 202), 438, -2147483648, -120 + SoftwareRasterizer.field_c - 4, 0);
     }
 
-    final static km[] a(int param0, byte param1, int param2) {
+    final static RgbSprite[] a(int param0, byte param1, int param2) {
         if (param1 != -46) {
           field_k = (String) null;
           return om.a(1, param0, param2, (byte) -87);
@@ -107,7 +107,7 @@ final class tf extends IntrusiveNode {
           this.field_m = param0;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "tf.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tf.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

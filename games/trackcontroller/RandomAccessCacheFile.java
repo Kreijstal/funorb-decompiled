@@ -21,10 +21,10 @@ final class RandomAccessCacheFile {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 >= -78) {
-          RandomAccessCacheFile.b((byte) -126);
+          RandomAccessCacheFile.clearStaticReferences((byte) -126);
         }
     }
 

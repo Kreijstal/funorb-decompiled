@@ -19,10 +19,10 @@ abstract class pe extends DualLinkNode {
         return true;
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = null;
         if (param0 < 66) {
-          pe.f(-38);
+          pe.clearDeclaredStaticReferences(-38);
         }
     }
 

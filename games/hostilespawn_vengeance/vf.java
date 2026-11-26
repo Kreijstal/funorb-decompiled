@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vf extends ph {
-    static bd field_H;
+    static RgbSprite field_H;
     static String field_G;
     static String field_I;
     static String field_J;
@@ -34,7 +34,7 @@ final class vf extends ph {
             nb.field_F.a(pj.field_e, aj.field_e, 80);
           }
           if (param0 != -1) {
-            field_H = (bd) null;
+            field_H = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class vf extends ph {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = 82 / ((param0 - 27) / 32);
         field_G = null;
         field_I = null;

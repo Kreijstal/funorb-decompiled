@@ -44,7 +44,7 @@ final class ip {
         return var3;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -39 % ((param0 - 6) / 32);
         field_c = null;
         field_b = null;

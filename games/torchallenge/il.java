@@ -185,7 +185,7 @@ final class il extends ma {
 
     final static void a(int param0, java.awt.Canvas param1) {
         if (11 == gj.field_c) {
-          LevelDecoder.c(-122);
+          LevelDecoder.clearDeclaredStaticReferences(-122);
         }
         if (param0 != -20895) {
           return;

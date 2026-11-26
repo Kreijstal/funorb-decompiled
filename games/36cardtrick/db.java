@@ -19,7 +19,7 @@ final class db implements ci {
     private int field_j;
     static String field_b;
     private int field_q;
-    static kc field_o;
+    static RgbSprite field_o;
     private int field_s;
     static int[] field_l;
 

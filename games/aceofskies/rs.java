@@ -27,7 +27,7 @@ final class rs extends ab implements ue, dn {
           if (param0 < -59) {
             return;
           }
-          rs.d((byte) -100);
+          rs.clearStaticReferences((byte) -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,13 +73,13 @@ final class rs extends ab implements ue, dn {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         field_w = null;
         field_x = null;
         medalSprites = null;
         if (param0 != 105) {
-          rs.d((byte) -82);
+          rs.clearStaticReferences((byte) -82);
         }
     }
 

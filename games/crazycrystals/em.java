@@ -9,22 +9,22 @@ final class em extends fb {
     static int field_i;
     private int field_h;
     static volatile boolean field_f;
-    static dl field_m;
+    static RgbSprite field_m;
     private boolean field_l;
     private int[] field_k;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_m = null;
         if (param0 != -25) {
-          em.b(122);
+          em.clearStaticReferences(122);
         }
     }
 
-    final static void a(byte param0, dl param1) {
+    final static void a(byte param0, RgbSprite param1) {
         try {
           if (param0 != 38) {
-            em.b(5);
+            em.clearStaticReferences(5);
           }
           hd.a(false);
           SoftwareRasterizer.setRasterBuffer(param1.field_w, param1.field_n, param1.field_o);
@@ -56,7 +56,7 @@ final class em extends fb {
               if (param3 <= -59) {
                 return;
               }
-              field_m = (dl) null;
+              field_m = (RgbSprite) null;
               return;
             }
           }
@@ -73,7 +73,7 @@ final class em extends fb {
             }
           }
           if (param3 > -59) {
-            field_m = (dl) null;
+            field_m = (RgbSprite) null;
           }
           return;
         }
@@ -92,7 +92,7 @@ final class em extends fb {
             fm.field_s[var8].b(param5, param6 - param2, 2 * param1, param2 * 3, ek.field_f[this.field_a.field_u]);
           }
           if (param3 > -59) {
-            field_m = (dl) null;
+            field_m = (RgbSprite) null;
           }
           return;
         }
@@ -122,7 +122,7 @@ final class em extends fb {
         if (param3 <= -59) {
           return;
         }
-        field_m = (dl) null;
+        field_m = (RgbSprite) null;
     }
 
     final fb a(int param0) {

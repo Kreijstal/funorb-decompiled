@@ -6,11 +6,11 @@ final class qa {
     private int[] field_a;
     static la field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 < 42) {
-          qa.a(101);
+          qa.clearStaticReferences(101);
         }
     }
 

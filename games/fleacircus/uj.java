@@ -197,11 +197,11 @@ final class uj {
         this.field_c = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 <= 124) {
-          uj.a((byte) -12);
+          uj.clearStaticReferences((byte) -12);
         }
         field_f = null;
         field_b = null;

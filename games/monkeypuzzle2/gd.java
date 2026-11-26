@@ -4,7 +4,7 @@
 final class gd {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 112 / ((param0 - 69) / 54);
         field_a = null;
     }

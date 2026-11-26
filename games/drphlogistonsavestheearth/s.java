@@ -27,14 +27,14 @@ final class s {
 
     final static void b(byte param0) {
         RuntimeException runtimeException = null;
-        nh var1 = null;
-        nh var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var1 = new nh(540, 140);
+          var1 = new RgbSprite(540, 140);
           MouseInput.a(var1, (byte) 127);
           uc.b();
           SoftwareRasterizer.clearRaster();

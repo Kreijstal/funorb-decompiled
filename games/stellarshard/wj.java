@@ -7,7 +7,7 @@ final class wj extends fb {
     private BufferedSocket field_s;
     static String[] field_t;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 69 % ((param0 + 39) / 53);
         field_t = null;
     }
@@ -355,7 +355,7 @@ final class wj extends fb {
               var2 = (ph) (this.field_o.a(-116));
             }
             if (param0 != 26348) {
-              wj.d((byte) 71);
+              wj.clearStaticReferences((byte) 71);
             }
             var2Lifetime1 = (ph) (this.field_j.a(false));
             while (var2Lifetime1 != null) {
@@ -974,7 +974,7 @@ final class wj extends fb {
 
     final void a(byte param0) {
         if (param0 <= 82) {
-          wj.d((byte) -54);
+          wj.clearStaticReferences((byte) -54);
         }
         if (this.field_s != null) {
           this.field_s.a(true);

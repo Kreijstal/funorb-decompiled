@@ -79,7 +79,7 @@ final class IsaacCipher {
         int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (param0 >= -34) {
-          IsaacCipher.a(-78);
+          IsaacCipher.clearStaticReferences(-78);
         }
         int fieldTemp$0 = this.field_d + 1;
         this.field_d = this.field_d + 1;
@@ -122,7 +122,7 @@ final class IsaacCipher {
         return this.field_a[fieldTemp$0];
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = (String[][]) null;
         int var1 = 48 / ((75 - param0) / 45);

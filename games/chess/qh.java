@@ -323,7 +323,7 @@ final class qh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "qh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "qh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -386,7 +386,7 @@ final class qh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

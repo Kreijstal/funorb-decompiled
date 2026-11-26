@@ -134,7 +134,7 @@ final class ve {
           param4 = false;
         }
         if (param3 != 21911) {
-          ve.a((byte) 13);
+          ve.clearStaticReferences((byte) 13);
         }
         return param4;
     }
@@ -144,12 +144,12 @@ final class ve {
         this.field_c = param3;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_f = null;
         field_d = null;
         if (param0 > -124) {
-          ve.a((byte) -20);
+          ve.clearStaticReferences((byte) -20);
         }
     }
 

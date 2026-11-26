@@ -185,7 +185,7 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
         super.setChannelVolumeScale(256, -1, (byte) -107);
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_ab = null;
         field_hb = null;
         field_eb = null;

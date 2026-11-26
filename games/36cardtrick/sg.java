@@ -3,7 +3,7 @@
  */
 final class sg {
     static String field_e;
-    static kc field_d;
+    static RgbSprite field_d;
     static boolean field_b;
     static qk field_a;
     static int[] field_c;

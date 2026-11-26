@@ -26,7 +26,7 @@ final class ja {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = (boolean[][]) null;
         int var1 = -91 / ((param0 + 62) / 55);

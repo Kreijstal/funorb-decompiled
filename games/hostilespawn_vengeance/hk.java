@@ -3,7 +3,7 @@
  */
 final class hk extends IntrusiveNode {
     static String field_k;
-    static bd field_h;
+    static RgbSprite field_h;
     static boolean field_q;
     int field_r;
     int field_p;
@@ -19,7 +19,7 @@ final class hk extends IntrusiveNode {
           this.field_n = param2;
           this.field_p = param7;
           if (param3 != -12131) {
-            hk.c(39);
+            hk.clearStaticReferences(39);
           }
           this.field_o = param4;
           this.field_r = param5;
@@ -34,14 +34,14 @@ final class hk extends IntrusiveNode {
     hk() {
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -20150) {
           field_l = null;
           field_k = null;
           field_h = null;
           return;
         }
-        hk.c(76);
+        hk.clearStaticReferences(76);
         field_l = null;
         field_k = null;
         field_h = null;

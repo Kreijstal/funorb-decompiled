@@ -4,7 +4,7 @@
 final class vh {
     static double[] field_a;
     static String field_d;
-    static nh field_f;
+    static RgbSprite field_f;
     static String field_b;
     static int[] field_c;
     static int[] field_e;
@@ -26,7 +26,7 @@ final class vh {
         throw new IllegalStateException();
     }
 
-    final static nh[] a(vj param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(vj param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -58,7 +58,7 @@ final class vh {
         field_b = "Player names can be up to 12 letters, numbers and underscores";
         field_a = new double[]{0.3, 0.3, 1.0, 0.5, 0.5, 0.5, 0.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.3, 0.0, 0.25, 0.3, 1.0, 0.3, 1.0, 0.5, 1.0, 1.0, 1.0, 0.5, 0.2, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
         field_d = "Level complete!";
-        field_f = new nh(270, 70);
+        field_f = new RgbSprite(270, 70);
         field_e = new int[]{0, 8, 8, 8, 8, 8, 12, 6, 5, 4, 6, -1, 8, 6};
     }
 }

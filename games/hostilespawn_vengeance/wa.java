@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class wa extends sm implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static bd field_n;
+    static RgbSprite field_n;
     private java.awt.image.ColorModel field_j;
     static String field_l;
-    static bd field_o;
+    static RgbSprite field_o;
     private java.awt.image.ImageConsumer field_m;
     static int field_p;
     static FullscreenFocusCanvas field_q;

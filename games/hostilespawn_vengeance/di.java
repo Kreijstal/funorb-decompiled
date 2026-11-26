@@ -4,7 +4,7 @@
 final class di {
     static String field_a;
     static String field_c;
-    static bd[] field_b;
+    static RgbSprite[] field_b;
 
     final static void a(int param0, int param1, pf param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_16_0 = 0;
@@ -75,7 +75,7 @@ final class di {
             jc.a(-122);
           }
           if (param4 != -536936193) {
-            field_b = (bd[]) null;
+            field_b = (RgbSprite[]) null;
           }
           var54 = new int[param2.field_L];
           var49 = var54;

@@ -3,7 +3,7 @@
  */
 final class ml {
     static String field_b;
-    static bd field_a;
+    static RgbSprite field_a;
 
     final static void a(byte param0, int param1) {
         KeyboardInput.a(23);
@@ -46,7 +46,7 @@ final class ml {
         try {
           var2_int = param1.length();
           if (param0 >= -43) {
-            field_a = (bd) null;
+            field_a = (RgbSprite) null;
           }
           if (var2_int == 0) {
             stackIn_6_0 = gf.field_f;
@@ -272,7 +272,7 @@ final class ml {
           param3.a(8573);
           param4[param6] = 0;
           if (param0 > -96) {
-            field_a = (bd) null;
+            field_a = (RgbSprite) null;
           }
           if (param3.a(param1, param2, 29821)) {
             if (param3.field_i != 14) {

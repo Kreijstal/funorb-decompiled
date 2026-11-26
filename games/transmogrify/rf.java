@@ -357,7 +357,7 @@ final class rf extends a {
         }
     }
 
-    public static void r(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_eb = null;
         field_cb = null;
         if (param0 != -2391) {

@@ -5,7 +5,7 @@ final class qk extends wh {
     static String field_H;
     static String field_G;
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }
@@ -73,7 +73,7 @@ final class qk extends wh {
           var3.writeShort(param0, param2 ^ -19683);
           return;
         }
-        qk.b(true);
+        qk.clearDeclaredStaticReferences(true);
         var3Lifetime1 = uh.field_Wb;
         var3Lifetime1.writeCipheredByte(param1, 122);
         var3Lifetime1.writeByte(3, 122);

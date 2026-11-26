@@ -80,14 +80,14 @@ final class ba {
         throw new IllegalStateException();
     }
 
-    final static cn[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        cn[] var10;
-        cn[] var11_ref_cn__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_cn__;
         int var11;
         int var12;
-        cn var13;
+        RgbSprite var13;
         int var11Lifetime1;
         int var11Lifetime2;
         int var11Lifetime3;
@@ -96,7 +96,7 @@ final class ba {
         int var12Lifetime3;
         int var12Lifetime4;
         var9 = param6 + (param5 + param8);
-        var10 = new cn[]{new cn(var9, var9), new cn(param1, var9), new cn(var9, var9), new cn(var9, param1), new cn(64, 64), new cn(var9, param1), new cn(var9, var9), new cn(param1, var9), new cn(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param1), new RgbSprite(64, 64), new RgbSprite(var9, param1), new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9)};
         if (param2 > -80) {
           field_a = (String) null;
         }

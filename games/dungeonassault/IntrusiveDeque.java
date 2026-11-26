@@ -125,13 +125,13 @@ final class IntrusiveDeque {
         return null == cm.field_R ? rj.field_o : true;
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         if (param0 == -4) {
           return;
         }
-        IntrusiveDeque.h(69);
+        IntrusiveDeque.clearStaticReferences(69);
     }
 
     final void addFirst(IntrusiveNode param0, boolean param1) {
@@ -171,8 +171,8 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 4) {
-          cn var3 = (cn) null;
-          IntrusiveDeque.a(-3, (cn) null);
+          RgbSprite var3 = (RgbSprite) null;
+          IntrusiveDeque.a(-3, (RgbSprite) null);
           var2 = this.iterationCursor;
           if (var2 == this.sentinel) {
             this.iterationCursor = null;
@@ -229,7 +229,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final static void a(int param0, cn param1) {
+    final static void a(int param0, RgbSprite param1) {
         int var8 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

@@ -17,7 +17,7 @@ final class gm {
           Throwable decompiledCaughtException = null;
           try {
             if (param1 != 2) {
-              gm.a(false);
+              gm.clearStaticReferences(false);
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
@@ -48,11 +48,11 @@ final class gm {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_c = null;
         if (!param0) {
-          gm.a(false);
+          gm.clearStaticReferences(false);
           field_b = null;
           return;
         }

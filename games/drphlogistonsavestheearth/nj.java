@@ -6,7 +6,7 @@ final class nj {
     private int field_b;
     static int field_j;
     private long[] field_i;
-    static nh field_f;
+    static RgbSprite field_f;
     private int field_g;
     static String field_e;
     static lh field_p;

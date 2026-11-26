@@ -12,7 +12,7 @@ class uh extends ca {
     static MidiPcmStream field_l;
     static boolean field_o;
     static int field_k;
-    static bd field_f;
+    static RgbSprite field_f;
     static int field_i;
     static String field_g;
 

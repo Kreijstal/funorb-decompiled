@@ -65,7 +65,7 @@ final class km {
         return -53L;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 104 % ((param0 + 46) / 40);
         field_a = null;
     }

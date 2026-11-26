@@ -8,7 +8,7 @@ final class ah {
     static int[] field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 53 % ((78 - param0) / 32);
         field_c = null;

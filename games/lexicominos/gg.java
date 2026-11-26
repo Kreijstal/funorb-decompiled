@@ -4,10 +4,10 @@
 final class gg {
     static dg field_b;
     static sh field_d;
-    static db[] field_a;
+    static RgbSprite[] field_a;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_c = null;
           field_b = null;
@@ -15,7 +15,7 @@ final class gg {
           field_a = null;
           return;
         }
-        gg.a(true);
+        gg.clearStaticReferences(true);
         field_c = null;
         field_b = null;
         field_d = null;
@@ -61,7 +61,7 @@ final class gg {
             if (param0) {
               return;
             }
-            gg.a(false);
+            gg.clearStaticReferences(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

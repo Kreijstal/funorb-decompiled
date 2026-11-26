@@ -6,10 +6,10 @@ final class h {
     static int[][][] field_b;
     private Sprite[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = (int[][][]) null;
         if (param0 <= 9) {
-          h.a(66);
+          h.clearStaticReferences(66);
         }
         field_a = (byte[][]) null;
     }

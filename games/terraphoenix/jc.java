@@ -76,14 +76,14 @@ abstract class jc extends UiWidget implements sf {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_z = null;
         field_B = null;
         field_E = null;
         field_G = null;
         field_C = null;
         if (param0 <= 32) {
-          jc.f((byte) -46);
+          jc.clearDeclaredStaticReferences((byte) -46);
         }
     }
 

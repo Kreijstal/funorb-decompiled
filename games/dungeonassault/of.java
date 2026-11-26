@@ -3,16 +3,16 @@
  */
 final class of {
     int field_c;
-    static cn field_j;
+    static RgbSprite field_j;
     int field_b;
     static fd field_p;
-    static cn[] field_q;
+    static RgbSprite[] field_q;
     int field_e;
     static int field_l;
     byte[] field_o;
     int field_h;
     int field_i;
-    static cn field_f;
+    static RgbSprite field_f;
     int field_m;
     byte[] field_n;
     static String field_d;
@@ -42,7 +42,7 @@ final class of {
           }
           jh.c();
           if (im.field_e == null) {
-            im.field_e = new cn(268, 268);
+            im.field_e = new RgbSprite(268, 268);
             im.field_e.field_w = -8;
             im.field_e.field_A = -8;
           }

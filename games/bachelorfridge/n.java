@@ -77,9 +77,9 @@ final class n {
         return this.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 81) {
-          n.a((byte) 118);
+          n.clearStaticReferences((byte) 118);
           field_c = null;
           field_d = null;
           return;

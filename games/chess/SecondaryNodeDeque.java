@@ -232,7 +232,7 @@ final class SecondaryNodeDeque implements Iterable {
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "cn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

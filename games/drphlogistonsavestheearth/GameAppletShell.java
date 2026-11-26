@@ -3,7 +3,7 @@
  */
 public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_d;
-    static nh field_i;
+    static RgbSprite field_i;
     boolean field_c;
     static PacketBuffer field_h;
     static int field_k;
@@ -844,7 +844,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           synchronized (var6) {
             pj.field_C = cm.field_J;
             if (param0 != -17) {
-              field_i = (nh) null;
+              field_i = (RgbSprite) null;
             }
           }
           this.c((byte) 35);
@@ -905,7 +905,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ta.field_c = param4;
               hh.field_e = this;
               if (param0 != -4) {
-                field_i = (nh) null;
+                field_i = (RgbSprite) null;
               }
               fg.field_h = param6;
               kj.field_a = param6;

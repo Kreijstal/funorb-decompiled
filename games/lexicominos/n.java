@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n {
-    db field_j;
+    RgbSprite field_j;
     private boolean field_e;
     private int field_d;
     static char[] field_l;
@@ -13,7 +13,7 @@ final class n {
     private int field_i;
     private int field_b;
     static String field_h;
-    db[] field_f;
+    RgbSprite[] field_f;
 
     final void a(n param0, int param1) {
         param0.field_f = this.field_f;
@@ -196,7 +196,7 @@ final class n {
         return this;
     }
 
-    final n a(byte param0, db[] param1) {
+    final n a(byte param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         n stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

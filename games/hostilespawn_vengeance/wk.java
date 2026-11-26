@@ -5,10 +5,10 @@ final class wk {
     static boolean field_h;
     static String field_f;
     static int[] field_d;
-    static bd[] field_b;
+    static RgbSprite[] field_b;
     static int field_c;
     static IntrusiveDeque field_g;
-    static bd field_a;
+    static RgbSprite field_a;
     static String field_e;
 
     final static ln a(boolean param0, boolean param1) {
@@ -153,7 +153,7 @@ final class wk {
         int var1 = 0;
         field_h = false;
         field_f = "Reach the lift and go down to the next level.";
-        field_b = new bd[12];
+        field_b = new RgbSprite[12];
         field_d = new int[255];
         for (var0 = 0; var0 < 255; var0++) {
           var1 = -384 + 3 * var0;

@@ -32,7 +32,7 @@ final class st {
             }
           }
           if (!param0) {
-            st.a((byte) -3);
+            st.clearStaticReferences((byte) -3);
           }
           me[] stackIn_14_0 = var4;
           return stackIn_14_0;
@@ -50,7 +50,7 @@ final class st {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 > -78) {
           return;
         }
@@ -80,7 +80,7 @@ final class st {
         return wd.field_G[var4];
     }
 
-    final static void a(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 != 87) {
           field_b = (String[]) null;
         }

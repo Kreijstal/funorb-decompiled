@@ -3,13 +3,13 @@
  */
 final class rh extends na {
     private int field_Y;
-    private nf field_eb;
+    private RgbSprite field_eb;
     static ej field_ab;
     private String field_cb;
     private dm field_bb;
     static int field_X;
     static String field_db;
-    static nf field_Z;
+    static RgbSprite field_Z;
 
     final void a(int param0, int param1, byte param2, int param3) {
         String var5;
@@ -21,14 +21,14 @@ final class rh extends na {
         int var10;
         int var11;
         int var12;
-        nf var16;
-        nf var18;
-        nf var19;
-        nf var20;
-        nf var21;
-        nf var24;
-        nf var25;
-        nf var26;
+        RgbSprite var16;
+        RgbSprite var18;
+        RgbSprite var19;
+        RgbSprite var20;
+        RgbSprite var21;
+        RgbSprite var24;
+        RgbSprite var25;
+        RgbSprite var26;
         pj var27;
         pj var28;
         int var9Lifetime1;
@@ -80,15 +80,15 @@ final class rh extends na {
           var11 = var26.field_t << 1;
           var12 = var26.field_x << 1;
           if (null == this.field_eb) {
-            this.field_eb = new nf(var11, var12);
+            this.field_eb = new RgbSprite(var11, var12);
             vm.a(this.field_eb, -8409);
           } else {
             if (var11 > this.field_eb.field_u) {
-              this.field_eb = new nf(var11, var12);
+              this.field_eb = new RgbSprite(var11, var12);
               vm.a(this.field_eb, -8409);
             } else {
               if (this.field_eb.field_w < var12) {
-                this.field_eb = new nf(var11, var12);
+                this.field_eb = new RgbSprite(var11, var12);
                 vm.a(this.field_eb, -8409);
               } else {
                 vm.a(this.field_eb, -8409);
@@ -117,7 +117,7 @@ final class rh extends na {
             vm.a(this.field_eb, -8409);
             SoftwareRasterizer.clearRaster();
           } else {
-            this.field_eb = new nf(var11Lifetime1, var12Lifetime1);
+            this.field_eb = new RgbSprite(var11Lifetime1, var12Lifetime1);
             vm.a(this.field_eb, -8409);
           }
           var18.a(112, 144, var18.field_t << 4, var18.field_x << 4, -this.field_Y << 10, 4096);
@@ -148,7 +148,7 @@ final class rh extends na {
           vm.a(this.field_eb, -8409);
           SoftwareRasterizer.clearRaster();
         } else {
-          this.field_eb = new nf(var11Lifetime2, var12Lifetime2);
+          this.field_eb = new RgbSprite(var11Lifetime2, var12Lifetime2);
           vm.a(this.field_eb, -8409);
         }
         var19.a(112, 144, var19.field_t << 4, var19.field_x << 4, -this.field_Y << 10, 4096);
@@ -157,11 +157,11 @@ final class rh extends na {
         return;
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Z = null;
         field_db = null;
         if (param0 != 8692) {
-          rh.g(-116);
+          rh.clearDeclaredStaticReferences(-116);
           field_ab = null;
           return;
         }

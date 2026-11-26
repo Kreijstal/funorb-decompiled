@@ -4,7 +4,7 @@
 final class jm {
     static i field_a;
     static String field_c;
-    static hj field_b;
+    static RgbSprite field_b;
 
     final static void b(int param0) {
         int var1 = me.b((byte) -18);
@@ -14,7 +14,7 @@ final class jm {
           j.a((byte) -22);
           return;
         }
-        field_b = (hj) null;
+        field_b = (RgbSprite) null;
         ui.field_b.a(-123, -df.field_d + ha.field_o, var2 + (ak.field_z << 1), sd.field_h - ak.field_z, (df.field_d << 1) + var1);
         j.a((byte) -22);
     }

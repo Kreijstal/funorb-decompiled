@@ -3,8 +3,8 @@
  */
 final class le {
     static String field_a;
-    static cn field_d;
-    static cn field_f;
+    static RgbSprite field_d;
+    static RgbSprite field_f;
     static String[] field_c;
     static gn[][] field_b;
     static pp field_g;

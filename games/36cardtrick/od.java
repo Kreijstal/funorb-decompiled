@@ -6,9 +6,9 @@ final class od {
     static int field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -28178) {
-          od.a(-38);
+          od.clearStaticReferences(-38);
           field_b = null;
           return;
         }

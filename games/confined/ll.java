@@ -116,9 +116,9 @@ final class ll {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          ll.a(false);
+          ll.clearStaticReferences(false);
         }
         field_c = null;
     }

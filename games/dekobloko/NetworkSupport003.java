@@ -213,7 +213,7 @@ abstract class NetworkSupport003 {
         MixedSupport107.performAction1402(booleanArgument1, -85, (String) null, booleanArgument2);
     }
 
-    public static void performAction0349(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         sceneWidgetState0018 = null;
         stringState0107 = null;
         integerArrayState0031 = null;

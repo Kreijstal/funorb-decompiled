@@ -5,11 +5,11 @@ abstract class sm {
     static int field_g;
     int[] field_f;
     int field_e;
-    static bd field_h;
+    static RgbSprite field_h;
     java.awt.Image field_c;
     static String field_a;
-    static bd field_d;
-    static bd field_i;
+    static RgbSprite field_d;
+    static RgbSprite field_i;
     int field_b;
 
     abstract void a(int param0, byte param1, int param2, java.awt.Graphics param3);

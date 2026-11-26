@@ -131,7 +131,7 @@ final class pi extends si {
         }
     }
 
-    final static void a(nh param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         try {
           sa.field_e = param0;
           if (param1 != 21914) {
@@ -188,7 +188,7 @@ final class pi extends si {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_I = null;
         field_V = null;
         field_J = null;

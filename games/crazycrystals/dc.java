@@ -395,7 +395,7 @@ final class dc extends og implements im, vd, fd {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_J = null;
         int var1 = -101 / ((15 - param0) / 35);
         field_C = null;

@@ -10,7 +10,7 @@ final class i extends im implements ng {
     static vn field_N;
     static pk field_Q;
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Q = null;
         field_P = null;
         if (param0 != 50) {
@@ -122,7 +122,7 @@ final class i extends im implements ng {
         int var5Lifetime1;
         var9 = Torquing.field_u;
         if (param0 != 10758) {
-          i.m(-52);
+          i.clearDeclaredStaticReferences(-52);
         }
         var2 = (n) (rj.field_v.a((long)param1, 4604));
         if (var2 == null) {

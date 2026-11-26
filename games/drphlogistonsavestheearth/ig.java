@@ -112,7 +112,7 @@ final class ig extends IntrusiveNode {
         return vi.field_e;
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         if (param0 != -15877) {
           return;

@@ -179,7 +179,7 @@ final class qh implements ad {
         h.field_b = param1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = 127 % ((param0 - 44) / 48);
         field_b = null;

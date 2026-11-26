@@ -10,7 +10,7 @@ final class vb {
     private int field_j;
     private IntrusiveNode[] field_f;
     static int field_b;
-    static kc field_k;
+    static RgbSprite field_k;
     static ej field_h;
     static IntrusiveDeque field_c;
 

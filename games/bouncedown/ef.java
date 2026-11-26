@@ -27,7 +27,7 @@ abstract class ef {
         if (param0 >= 99) {
           return;
         }
-        ef.b(-125);
+        ef.clearStaticReferences(-125);
     }
 
     final static ve a(int param0) {
@@ -50,7 +50,7 @@ abstract class ef {
     final void c(int param0) {
         SoftwareRasterizer.setRasterBuffer(this.field_g, this.field_h, this.field_b);
         if (param0 != 64) {
-          ef.b(-45);
+          ef.clearStaticReferences(-45);
         }
     }
 
@@ -75,7 +75,7 @@ abstract class ef {
 
     abstract void a(int param0, byte param1, java.awt.Component param2, int param3);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -119 % ((param0 + 58) / 47);
         field_d = null;
         field_i = null;

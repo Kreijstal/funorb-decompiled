@@ -3,7 +3,7 @@
  */
 final class al extends IntrusiveNode {
     int field_l;
-    static cn field_j;
+    static RgbSprite field_j;
     static wm field_o;
     int field_p;
     static String field_n;

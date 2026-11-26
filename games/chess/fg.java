@@ -9,10 +9,10 @@ final class fg {
     static boolean field_b;
     static ok field_d;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (!param0) {
-          fg.a(false);
+          fg.clearStaticReferences(false);
           field_a = null;
           field_d = null;
           return;

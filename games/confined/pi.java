@@ -108,13 +108,13 @@ final class pi extends ga implements ge, el {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_U = null;
         field_T = null;
         field_S = null;
         field_P = null;
         if (param0 >= -70) {
-          pi.a((byte) -105);
+          pi.clearStaticReferences((byte) -105);
         }
     }
 

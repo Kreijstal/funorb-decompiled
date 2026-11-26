@@ -3,7 +3,7 @@
  */
 final class pe {
     static int field_c;
-    static tg[] field_a;
+    static RgbSprite[] field_a;
     static boolean field_e;
     static sa field_f;
     static String field_h;
@@ -32,7 +32,7 @@ final class pe {
         return (sa) null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_h = null;
         field_f = null;
@@ -41,7 +41,7 @@ final class pe {
           field_a = null;
           return;
         }
-        pe.a(49);
+        pe.clearStaticReferences(49);
         field_g = null;
         field_a = null;
     }

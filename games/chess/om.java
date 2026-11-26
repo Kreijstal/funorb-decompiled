@@ -43,15 +43,15 @@ final class om extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static km[] a(int param0, int param1, int param2, byte param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var7 = Chess.field_G;
-        km[] var8 = new km[9];
-        km[] var4 = var8;
+        RgbSprite[] var8 = new RgbSprite[9];
+        RgbSprite[] var4 = var8;
         var8[0] = rd.a(param0, param2, 14727);
         int var6 = 119 % ((param3 - 22) / 35);
         for (var5 = 1; var5 < 9; var5++) {
@@ -61,9 +61,9 @@ final class om extends IntrusiveNode {
         return var4;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -98) {
-          om.c((byte) -118);
+          om.clearStaticReferences((byte) -118);
           field_m = null;
           return;
         }

@@ -23,7 +23,7 @@ final class qj extends ButtonWidget {
         RuntimeException var3_ref = null;
         try {
           if (param1) {
-            qj.a(-18);
+            qj.clearDeclaredStaticReferences(-18);
           }
           var3 = ki.a((byte) 43, param2);
           if (-1 == param0.indexOf(param2) &&
@@ -134,7 +134,7 @@ final class qj extends ButtonWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_E = null;
         field_C = null;
         if (param0 != 4201) {

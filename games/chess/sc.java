@@ -58,7 +58,7 @@ final class sc {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -85,11 +85,11 @@ final class sc {
         field_h = null;
     }
 
-    final static km[] a(int param0, int param1, int param2, int param3, int param4) {
-        km dupTemp$0 = null;
-        km dupTemp$1 = null;
-        km[] var6 = new km[9];
-        km[] var5 = var6;
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite dupTemp$0 = null;
+        RgbSprite dupTemp$1 = null;
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
         if (param1 >= 120) {
           dupTemp$0 = rd.a(param3, param2, 14727);
           var6[6] = dupTemp$0;
@@ -107,13 +107,13 @@ final class sc {
           return var5;
         }
         field_e = -99;
-        km dupTemp$2 = rd.a(param3, param2, 14727);
+        RgbSprite dupTemp$2 = rd.a(param3, param2, 14727);
         var6[6] = dupTemp$2;
         var5[3] = dupTemp$2;
         var5[2] = dupTemp$2;
         var5[1] = dupTemp$2;
         var5[0] = dupTemp$2;
-        km dupTemp$3 = rd.a(param3, param0, 14727);
+        RgbSprite dupTemp$3 = rd.a(param3, param0, 14727);
         var6[8] = dupTemp$3;
         var5[7] = dupTemp$3;
         var5[5] = dupTemp$3;
@@ -153,7 +153,7 @@ final class sc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2), "sc.C(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2), "sc.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class sc {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

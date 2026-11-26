@@ -95,9 +95,9 @@ final class lk extends gd {
               }
               var7 = var7 + db.field_v.field_H;
             }
-            this.field_K = new cn(var6, var7);
-            this.field_H = new cn(var6, var7);
-            this.field_z = new cn(var6, var7);
+            this.field_K = new RgbSprite(var6, var7);
+            this.field_H = new RgbSprite(var6, var7);
+            this.field_z = new RgbSprite(var6, var7);
             jh.c();
             this.field_K.e();
             db.field_v.b(var10, 0, la.field_b.field_H, 12632256, -1);
@@ -148,9 +148,9 @@ final class lk extends gd {
               }
               var7Lifetime2 = var7Lifetime2 + db.field_v.field_H;
             }
-            this.field_K = new cn(var6Lifetime2, var7Lifetime2);
-            this.field_H = new cn(var6Lifetime2, var7Lifetime2);
-            this.field_z = new cn(var6Lifetime2, var7Lifetime2);
+            this.field_K = new RgbSprite(var6Lifetime2, var7Lifetime2);
+            this.field_H = new RgbSprite(var6Lifetime2, var7Lifetime2);
+            this.field_z = new RgbSprite(var6Lifetime2, var7Lifetime2);
             jh.c();
             this.field_K.e();
             db.field_v.b(var11, 0, la.field_b.field_H, 12632256, -1);
@@ -201,9 +201,9 @@ final class lk extends gd {
               }
               var7Lifetime3 = var7Lifetime3 + db.field_v.field_H;
             }
-            this.field_K = new cn(var6Lifetime3, var7Lifetime3);
-            this.field_H = new cn(var6Lifetime3, var7Lifetime3);
-            this.field_z = new cn(var6Lifetime3, var7Lifetime3);
+            this.field_K = new RgbSprite(var6Lifetime3, var7Lifetime3);
+            this.field_H = new RgbSprite(var6Lifetime3, var7Lifetime3);
+            this.field_z = new RgbSprite(var6Lifetime3, var7Lifetime3);
             jh.c();
             this.field_K.e();
             db.field_v.b(var12, 0, la.field_b.field_H, 12632256, -1);
@@ -254,9 +254,9 @@ final class lk extends gd {
             }
             var7Lifetime4 = var7Lifetime4 + db.field_v.field_H;
           }
-          this.field_K = new cn(var6Lifetime4, var7Lifetime4);
-          this.field_H = new cn(var6Lifetime4, var7Lifetime4);
-          this.field_z = new cn(var6Lifetime4, var7Lifetime4);
+          this.field_K = new RgbSprite(var6Lifetime4, var7Lifetime4);
+          this.field_H = new RgbSprite(var6Lifetime4, var7Lifetime4);
+          this.field_z = new RgbSprite(var6Lifetime4, var7Lifetime4);
           jh.c();
           this.field_K.e();
           db.field_v.b(var13, 0, la.field_b.field_H, 12632256, -1);
@@ -309,9 +309,9 @@ final class lk extends gd {
           }
           var7Lifetime1 = var7Lifetime1 + db.field_v.field_H;
         }
-        this.field_K = new cn(var6Lifetime1, var7Lifetime1);
-        this.field_H = new cn(var6Lifetime1, var7Lifetime1);
-        this.field_z = new cn(var6Lifetime1, var7Lifetime1);
+        this.field_K = new RgbSprite(var6Lifetime1, var7Lifetime1);
+        this.field_H = new RgbSprite(var6Lifetime1, var7Lifetime1);
+        this.field_z = new RgbSprite(var6Lifetime1, var7Lifetime1);
         jh.c();
         this.field_K.e();
         db.field_v.b(var15, 0, la.field_b.field_H, 12632256, -1);

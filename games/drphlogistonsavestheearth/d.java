@@ -7,12 +7,12 @@ final class d {
     static int field_b;
     static he[] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         field_a = null;
         if (param0 < 32) {
-          d.a((byte) 105);
+          d.clearStaticReferences((byte) 105);
         }
     }
 

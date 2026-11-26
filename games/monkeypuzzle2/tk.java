@@ -210,9 +210,9 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 114) {
-          tk.a(-14);
+          tk.clearStaticReferences(-14);
           field_a = null;
           return;
         }

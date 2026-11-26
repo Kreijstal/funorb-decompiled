@@ -7,7 +7,7 @@ final class de {
     static String[] field_c;
     static AccountServiceResult field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 == -79) {
           field_d = null;
@@ -15,7 +15,7 @@ final class de {
           field_b = null;
           return;
         }
-        de.a((byte) 73);
+        de.clearStaticReferences((byte) 73);
         field_d = null;
         field_a = null;
         field_b = null;

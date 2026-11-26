@@ -64,7 +64,7 @@ final class kh {
         }
     }
 
-    final static void a(tg param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;

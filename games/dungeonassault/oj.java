@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oj {
-    static cn field_a;
+    static RgbSprite field_a;
     static boolean field_b;
     static String field_c;
 
@@ -79,10 +79,10 @@ final class oj {
         return param0 < 2048 ? AccountCreationResultPanel.field_Tb[param0] : AccountCreationResultPanel.field_Tb[-param0 + 4096];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != -29) {
-          oj.a((byte) 67);
+          oj.clearStaticReferences((byte) 67);
         }
         field_c = null;
     }

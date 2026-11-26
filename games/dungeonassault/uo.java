@@ -10,7 +10,7 @@ final class uo {
     static int[] field_c;
     static gn[] field_f;
     static String field_e;
-    static cn field_a;
+    static RgbSprite field_a;
 
     public static void clearStaticReferences(int param0) {
         field_f = null;

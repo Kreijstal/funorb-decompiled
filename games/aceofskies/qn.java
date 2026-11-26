@@ -7,7 +7,7 @@ final class qn {
     static st field_a;
     static PcmStreamMixer pcmMixer;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         pcmMixer = null;
         int var1 = -119 % ((param0 + 44) / 62);
@@ -41,7 +41,7 @@ final class qn {
           return bd.field_I;
         }
         if (param0 >= -88) {
-          qn.a(82);
+          qn.clearStaticReferences(82);
         }
         if (!cf.field_f.b(0)) {
           return RenderStateStack.field_g + " - " + cf.field_f.a(-82) + "%";

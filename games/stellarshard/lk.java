@@ -155,7 +155,7 @@ abstract class lk extends ic implements ec {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_i = null;
         field_g = null;

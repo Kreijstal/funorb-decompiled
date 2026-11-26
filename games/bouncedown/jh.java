@@ -3,7 +3,7 @@
  */
 final class jh extends jd {
     private int field_q;
-    private tg[] field_u;
+    private RgbSprite[] field_u;
     static String field_t;
     private int field_w;
     static ie field_s;

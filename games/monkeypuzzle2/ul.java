@@ -77,7 +77,7 @@ final class ul extends nf {
         this.field_R = true;
     }
 
-    public static void q(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 >= -34) {
           return;
         }

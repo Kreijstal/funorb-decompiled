@@ -21,7 +21,7 @@ final class ti extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -100 % ((-71 - param0) / 39);
         field_p = null;
         field_j = null;

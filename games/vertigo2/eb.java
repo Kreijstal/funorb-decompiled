@@ -132,14 +132,14 @@ final class eb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_i = null;
         field_a = null;
         field_g = null;
         field_c = null;
         if (param0 != 15) {
-          eb.a((byte) -51);
+          eb.clearStaticReferences((byte) -51);
         }
         field_d = null;
     }

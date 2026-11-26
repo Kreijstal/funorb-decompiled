@@ -3,7 +3,7 @@
  */
 final class DelegatingCanvas extends java.awt.Canvas {
     static String field_k;
-    static cn field_c;
+    static RgbSprite field_c;
     private java.awt.Component delegateComponent;
     static String field_l;
     static String field_a;

@@ -39,7 +39,7 @@ final class p extends cg {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -95,7 +95,7 @@ final class p extends cg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -58) {
-            p.g(126);
+            p.clearDeclaredStaticReferences(126);
           }
           if (this.field_o.a(param0, -61) == pe.field_b) {
             stackIn_5_0 = pe.field_b;

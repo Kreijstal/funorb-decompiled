@@ -15,7 +15,7 @@ final class ad {
         return (ad[]) null;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, cn[] param5) {
+    final static void a(int param0, int param1, int param2, byte param3, int param4, RgbSprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

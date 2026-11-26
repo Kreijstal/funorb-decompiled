@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gk {
-    private nh[] field_c;
+    private RgbSprite[] field_c;
     static String field_b;
     static String field_a;
 
@@ -63,7 +63,7 @@ final class gk {
         }
     }
 
-    gk(nh[] param0) {
+    gk(RgbSprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

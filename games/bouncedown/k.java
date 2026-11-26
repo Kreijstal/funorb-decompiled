@@ -120,9 +120,9 @@ final class k extends lc implements rc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -81) {
-          k.e((byte) 88);
+          k.clearStaticReferences((byte) 88);
           field_B = null;
           field_E = null;
           return;

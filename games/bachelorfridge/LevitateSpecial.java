@@ -14,11 +14,11 @@ final class LevitateSpecial extends SpecialOrder {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         field_q = null;
         if (param0 > -71) {
-          LevitateSpecial.c((byte) -75);
+          LevitateSpecial.clearStaticReferences((byte) -75);
         }
     }
 

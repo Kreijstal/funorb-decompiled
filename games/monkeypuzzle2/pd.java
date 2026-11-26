@@ -177,7 +177,7 @@ final class pd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_f = null;
         int var1 = 71 % ((38 - param0) / 62);

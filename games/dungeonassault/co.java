@@ -10,7 +10,7 @@ final class co extends vf {
     static vj field_G;
     static String field_E;
     static String field_C;
-    static cn field_F;
+    static RgbSprite field_F;
     static String[] field_J;
 
     final static String e(byte param0) {
@@ -43,7 +43,7 @@ final class co extends vf {
         throw new RuntimeException();
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = 99 / ((param0 - 6) / 54);
         field_I = null;
         field_J = null;

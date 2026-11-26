@@ -4,10 +4,10 @@
 final class jd extends IntrusiveNode {
     int field_u;
     int field_p;
-    static bd field_h;
+    static RgbSprite field_h;
     int field_t;
     static String field_x;
-    static bd[] field_o;
+    static RgbSprite[] field_o;
     static int field_l;
     static int field_q;
     int field_r;
@@ -93,11 +93,11 @@ final class jd extends IntrusiveNode {
         }
     }
 
-    final static bd[] a(byte param0, String param1, ResourceArchive param2, String param3) {
+    final static RgbSprite[] a(byte param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bd[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

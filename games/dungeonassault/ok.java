@@ -4,7 +4,7 @@
 class ok extends ko {
     int field_G;
     private boolean field_Cb;
-    private cn field_C;
+    private RgbSprite field_C;
     private int field_Z;
     private IntrusiveDeque field_F;
     private int field_xb;
@@ -15,7 +15,7 @@ class ok extends ko {
     private int field_ub;
     static String field_jb;
     private boolean field_bb;
-    cn field_L;
+    RgbSprite field_L;
     private int field_H;
     int field_B;
     private int field_db;
@@ -25,10 +25,10 @@ class ok extends ko {
     private int field_M;
     private int field_eb;
     boolean field_hb;
-    private cn[] field_rb;
+    private RgbSprite[] field_rb;
     private int field_W;
     static tf field_Y;
-    private cn[] field_Fb;
+    private RgbSprite[] field_Fb;
     private boolean field_ib;
     private int field_nb;
     private int field_x;
@@ -42,24 +42,24 @@ class ok extends ko {
     private int field_yb;
     private int field_I;
     private boolean field_A;
-    private cn[] field_U;
+    private RgbSprite[] field_U;
     private String field_Q;
-    private cn field_ab;
+    private RgbSprite field_ab;
     static int[] field_X;
     private int field_sb;
     private boolean field_V;
-    private cn[] field_R;
+    private RgbSprite[] field_R;
     private int field_Bb;
     private int field_T;
     private int field_N;
     private int field_mb;
     private boolean field_O;
-    private cn field_P;
-    private cn[] field_E;
+    private RgbSprite field_P;
+    private RgbSprite[] field_E;
     int field_D;
     private int field_zb;
     private int field_wb;
-    private cn field_cb;
+    private RgbSprite field_cb;
     int field_gb;
     private int field_J;
     static int field_z;
@@ -103,8 +103,8 @@ class ok extends ko {
         int var13;
         int var14;
         int var15;
-        cn[] var16;
-        cn var17;
+        RgbSprite[] var16;
+        RgbSprite var17;
         int var18;
         int var19;
         int var20;
@@ -310,7 +310,7 @@ class ok extends ko {
 
     final void b(boolean param0, int param1) {
         if (param1 < 59) {
-          ok.f(124);
+          ok.releaseDeclaredStaticReferences(124);
         }
         this.a(0, SoftwareRasterizer.field_c, 0, false, true, false, param0, false, false, SoftwareRasterizer.field_i, 0);
     }
@@ -456,7 +456,7 @@ class ok extends ko {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != -16218) {
           return;
         }

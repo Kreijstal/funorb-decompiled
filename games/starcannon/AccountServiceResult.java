@@ -327,9 +327,9 @@ final class AccountServiceResult {
         return new ma(ff.g(119), wf.d(-15200));
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
-          AccountServiceResult.a(-126);
+          AccountServiceResult.clearStaticReferences(-126);
         }
         field_c = null;
     }

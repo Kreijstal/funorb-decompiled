@@ -9,7 +9,7 @@ final class eo {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 == 6) {
@@ -18,7 +18,7 @@ final class eo {
           field_a = null;
           return;
         }
-        eo.a(20);
+        eo.clearStaticReferences(20);
         field_d = (int[][]) null;
         field_e = null;
         field_a = null;

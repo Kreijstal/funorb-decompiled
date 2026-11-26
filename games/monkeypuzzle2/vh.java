@@ -71,7 +71,7 @@ final class vh extends ButtonWidget {
         if (param0 == 54) {
           return null;
         }
-        vh.a(-25);
+        vh.clearDeclaredStaticReferences(-25);
         return null;
     }
 
@@ -254,7 +254,7 @@ final class vh extends ButtonWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_B = null;
         field_H = null;
         field_F = null;
@@ -262,7 +262,7 @@ final class vh extends ButtonWidget {
         field_C = null;
         field_K = null;
         if (param0 != -9473) {
-          vh.a(-33);
+          vh.clearDeclaredStaticReferences(-33);
         }
         field_L = null;
     }

@@ -9,7 +9,7 @@ final class rj {
     static GameAppletShell field_e;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = (byte[][]) null;
         field_c = null;
         field_b = null;
@@ -19,7 +19,7 @@ final class rj {
 
     final static boolean b(int param0) {
         if (param0 != 28404) {
-          rj.a(58);
+          rj.clearStaticReferences(58);
           if (IntrusiveNode.field_e < 10) {
             return false;
           }

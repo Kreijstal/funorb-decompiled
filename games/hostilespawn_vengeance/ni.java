@@ -6,9 +6,9 @@ final class ni {
     static java.applet.Applet field_g;
     static int field_f;
     static int[] field_a;
-    static bd field_b;
+    static RgbSprite field_b;
     static boolean field_e;
-    static bd field_d;
+    static RgbSprite field_d;
 
     final static int a(int param0, int param1) {
         param0 = param0 & param1;
@@ -70,9 +70,9 @@ final class ni {
         return true;
     }
 
-    final static void c(int param0) {
+    final static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -30074) {
-          field_b = (bd) null;
+          field_b = (RgbSprite) null;
         }
     }
 
@@ -82,9 +82,9 @@ final class ni {
         gn.a(param3, -1 + (param5 + param1), param5, param2, param4 + (param3 - 1), (byte) 101);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 116) {
-          field_b = (bd) null;
+          field_b = (RgbSprite) null;
         }
         field_b = null;
         field_g = null;

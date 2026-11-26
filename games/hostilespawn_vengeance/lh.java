@@ -6,7 +6,7 @@ final class lh {
     static int field_a;
     static int[][] field_b;
     static String field_c;
-    static bd field_e;
+    static RgbSprite field_e;
     private static String field_z;
 
     public static void clearStaticReferences(int param0) {

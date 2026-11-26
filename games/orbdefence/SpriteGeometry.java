@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tk extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     static String field_l;
     int field_p;
     int field_k;
@@ -23,7 +23,7 @@ abstract class tk extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 26810) {
-            tk.e(4);
+            SpriteGeometry.clearDeclaredStaticReferences(4);
           }
           stackIn_3_0 = param0.c(7715);
           return stackIn_3_0;
@@ -93,7 +93,7 @@ abstract class tk extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -31028) {
           return;
         }
@@ -121,7 +121,7 @@ abstract class tk extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 10) {
-            tk.e(8);
+            SpriteGeometry.clearDeclaredStaticReferences(8);
           }
           stackIn_3_0 = we.a(10, 87, param1, true);
           return stackIn_3_0;
@@ -142,12 +142,12 @@ abstract class tk extends DualLinkNode {
     final void b(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 2093920872) {
           String var7 = (String) null;
-          tk.a(false, (String) null);
+          SpriteGeometry.a(false, (String) null);
         }
         this.a(-102, param3, param4, param1 << 8, param2 << 5);
     }
 
-    tk() {
+    SpriteGeometry() {
     }
 
     static {

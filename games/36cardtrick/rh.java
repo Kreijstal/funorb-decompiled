@@ -251,23 +251,23 @@ final class rh extends IntrusiveNode {
         }
     }
 
-    final static kc a(int param0, qk param1, int param2, int param3) {
+    final static RgbSprite a(int param0, qk param1, int param2, int param3) {
         RuntimeException var4 = null;
-        kc stackIn_2_0 = null;
+        RgbSprite stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        kc stackIn_9_0 = null;
+        RgbSprite stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -30851) {
-            stackIn_2_0 = (kc) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           if (!tc.a(param2, param0, 25479, param1)) {
             stackIn_7_0 = null;
-            return (kc) (stackIn_7_0);
+            return (RgbSprite) (stackIn_7_0);
           }
           stackIn_9_0 = sj.b((byte) 35);
           return stackIn_9_0;

@@ -9,8 +9,8 @@ final class pb {
     static ResourceArchive field_a;
     static int field_i;
     static int field_d;
-    static dd field_g;
-    static dd field_c;
+    static RgbSprite field_g;
+    static RgbSprite field_c;
 
     final static void a(int param0, int param1) {
         int var3 = 0;
@@ -76,7 +76,7 @@ final class pb {
         field_e = null;
         field_c = null;
         if (param0 >= -80) {
-          field_c = (dd) null;
+          field_c = (RgbSprite) null;
         }
     }
 

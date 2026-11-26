@@ -8,7 +8,7 @@ final class ve {
     private boolean field_e;
     private String field_d;
 
-    final static void a(int param0, int param1, tg[] param2, byte param3, int param4, int param5) {
+    final static void a(int param0, int param1, RgbSprite[] param2, byte param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;

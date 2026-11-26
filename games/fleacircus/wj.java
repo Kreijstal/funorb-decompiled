@@ -27,12 +27,12 @@ abstract class wj {
         return this.a(-23124, param1);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         field_c = (String[][]) null;
         if (param0 >= -13) {
-          wj.a(52);
+          wj.clearStaticReferences(52);
         }
     }
 

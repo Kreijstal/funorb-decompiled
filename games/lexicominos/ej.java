@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ej {
     static bj field_a;
-    static db[] field_b;
+    static RgbSprite[] field_b;
     static sh field_d;
     static int[] field_c;
 
@@ -69,7 +69,7 @@ final class ej {
           var12 = Lexicominos.field_L ? 1 : 0;
           try {
             if (param0 != -17) {
-              field_b = (db[]) null;
+              field_b = (RgbSprite[]) null;
             }
             var13 = (pd) (al.field_C.beginForward(true));
             var17 = var13;

@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gf {
-    static bd field_d;
+    static RgbSprite field_d;
     static ll field_f;
     static int field_j;
     static String[] field_c;
     static na field_e;
-    static bd field_g;
+    static RgbSprite field_g;
     static PlatformTaskDispatcher field_b;
     static int field_i;
     static long field_h;
-    static bd field_a;
+    static RgbSprite field_a;
 
     final static String a(byte param0) {
         int var2 = 0;

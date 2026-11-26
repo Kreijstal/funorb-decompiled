@@ -134,13 +134,13 @@ class wh extends TextureOperator {
         return var3;
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         field_B = null;
         field_D = null;
         field_A = null;
         if (param0 != 9724) {
-          wh.h(21);
+          wh.clearStaticReferences(21);
         }
     }
 

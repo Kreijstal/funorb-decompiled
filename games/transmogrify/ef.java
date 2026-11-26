@@ -9,11 +9,11 @@ final class ef implements Runnable {
     volatile boolean field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         if (param0 >= -99) {
-          ef.a(-74);
+          ef.clearStaticReferences(-74);
         }
     }
 

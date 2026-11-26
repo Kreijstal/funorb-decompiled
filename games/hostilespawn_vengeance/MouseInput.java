@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static bd field_k;
-    static bd field_b;
-    static bd[] field_e;
-    static bd field_l;
+    static RgbSprite field_k;
+    static RgbSprite field_b;
+    static RgbSprite[] field_e;
+    static RgbSprite field_l;
     static int[] field_a;
     static ub field_d;
-    static bd field_g;
+    static RgbSprite field_g;
     static String[] field_i;
     static String field_c;
-    static bd field_j;
+    static RgbSprite field_j;
     static String field_f;
     static ub field_h;
 
@@ -88,12 +88,12 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    final static bd a(String param0, int param1, String param2, ResourceArchive param3) {
+    final static RgbSprite a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        bd stackIn_1_0 = null;
+        RgbSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -426,7 +426,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     static {
         field_a = new int[]{0, 0};
-        field_e = new bd[25];
+        field_e = new RgbSprite[25];
         field_i = new String[]{"Explore new levels", "Continue the story", "Kill more aliens"};
         field_c = "Service unavailable";
         field_d = new ub();

@@ -22,9 +22,9 @@ final class jf extends s {
         int var9;
         int var10;
         int var11;
-        hj var12;
-        hj var13;
-        hj var14;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
         var11 = OrbDefence.field_D ? 1 : 0;
         super.a(param0, param1, param2, param3);
         if (0 != param1) {
@@ -52,7 +52,7 @@ final class jf extends s {
             de.a(-128, MidiPcmStream.field_N);
             SoftwareRasterizer.clearRaster();
           } else {
-            MidiPcmStream.field_N = new hj(var9, var10);
+            MidiPcmStream.field_N = new RgbSprite(var9, var10);
             de.a(param2 ^ -1048454, MidiPcmStream.field_N);
           }
           var12.b(112, 144, var12.field_s << 4, var12.field_t << 4, -this.field_G << 10, 4096);
@@ -96,8 +96,8 @@ final class jf extends s {
 
     final static boolean j(int param0) {
         if (param0 != 989270945) {
-          hj var2 = (hj) null;
-          jf.a((byte) 68, 27, (hj) null, 15, -89, 88);
+          RgbSprite var2 = (RgbSprite) null;
+          jf.a((byte) 68, 27, (RgbSprite) null, 15, -89, 88);
         }
         return mb.field_c;
     }
@@ -112,7 +112,7 @@ final class jf extends s {
         return null;
     }
 
-    final static void a(byte param0, int param1, hj param2, int param3, int param4, int param5) {
+    final static void a(byte param0, int param1, RgbSprite param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;

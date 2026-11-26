@@ -5,7 +5,7 @@ final class ci extends qa {
     private int field_X;
     private qi field_V;
     static int field_W;
-    private nh field_Z;
+    private RgbSprite field_Z;
     static volatile boolean field_U;
     static String field_K;
     private String field_Y;
@@ -55,27 +55,27 @@ final class ci extends qa {
         int var11;
         int var12;
         int var13;
-        nh var16;
+        RgbSprite var16;
         String var17;
         Object var18;
-        nh var19;
-        nh var20;
-        nh var21;
+        RgbSprite var19;
+        RgbSprite var20;
+        RgbSprite var21;
         String var22;
         Object var23;
-        nh var24;
-        nh var25;
-        nh var26;
+        RgbSprite var24;
+        RgbSprite var25;
+        RgbSprite var26;
         String var27;
         Object var28;
-        nh var29;
-        nh var30;
-        nh var31;
+        RgbSprite var29;
+        RgbSprite var30;
+        RgbSprite var31;
         String var32;
         Object var33;
-        nh var34;
-        nh var35;
-        nh var36;
+        RgbSprite var34;
+        RgbSprite var35;
+        RgbSprite var36;
         va var38;
         va var39;
         va var40;
@@ -129,15 +129,15 @@ final class ci extends qa {
           var11 = var21.field_z << 1;
           var12 = var21.field_C << 1;
           if (null == this.field_Z) {
-            this.field_Z = new nh(var11, var12);
+            this.field_Z = new RgbSprite(var11, var12);
             MouseInput.a(this.field_Z, (byte) 85);
           } else {
             if (this.field_Z.field_y < var11) {
-              this.field_Z = new nh(var11, var12);
+              this.field_Z = new RgbSprite(var11, var12);
               MouseInput.a(this.field_Z, (byte) 85);
             } else {
               if (this.field_Z.field_w < var12) {
-                this.field_Z = new nh(var11, var12);
+                this.field_Z = new RgbSprite(var11, var12);
                 MouseInput.a(this.field_Z, (byte) 85);
               } else {
                 MouseInput.a(this.field_Z, (byte) 83);
@@ -179,18 +179,18 @@ final class ci extends qa {
           var11Lifetime1 = var26.field_z << 1;
           var12Lifetime1 = var26.field_C << 1;
           if (null == this.field_Z) {
-            this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
+            this.field_Z = new RgbSprite(var11Lifetime1, var12Lifetime1);
             MouseInput.a(this.field_Z, (byte) 85);
           } else {
             if (this.field_Z.field_y < var11Lifetime1) {
-              this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
+              this.field_Z = new RgbSprite(var11Lifetime1, var12Lifetime1);
               MouseInput.a(this.field_Z, (byte) 85);
             } else {
               if (this.field_Z.field_w >= var12Lifetime1) {
                 MouseInput.a(this.field_Z, (byte) 83);
                 SoftwareRasterizer.clearRaster();
               } else {
-                this.field_Z = new nh(var11Lifetime1, var12Lifetime1);
+                this.field_Z = new RgbSprite(var11Lifetime1, var12Lifetime1);
                 MouseInput.a(this.field_Z, (byte) 85);
               }
             }
@@ -236,11 +236,11 @@ final class ci extends qa {
               MouseInput.a(this.field_Z, (byte) 83);
               SoftwareRasterizer.clearRaster();
             } else {
-              this.field_Z = new nh(var11Lifetime2, var12Lifetime2);
+              this.field_Z = new RgbSprite(var11Lifetime2, var12Lifetime2);
               MouseInput.a(this.field_Z, (byte) 85);
             }
           } else {
-            this.field_Z = new nh(var11Lifetime2, var12Lifetime2);
+            this.field_Z = new RgbSprite(var11Lifetime2, var12Lifetime2);
             MouseInput.a(this.field_Z, (byte) 85);
           }
           var36.b(112, 144, var36.field_z << 4, var36.field_C << 4, -this.field_X << 10, 4096);
@@ -275,15 +275,15 @@ final class ci extends qa {
         var11Lifetime3 = var31.field_z << 1;
         var12Lifetime3 = var31.field_C << 1;
         if (null == this.field_Z) {
-          this.field_Z = new nh(var11Lifetime3, var12Lifetime3);
+          this.field_Z = new RgbSprite(var11Lifetime3, var12Lifetime3);
           MouseInput.a(this.field_Z, (byte) 85);
         } else {
           if (this.field_Z.field_y < var11Lifetime3) {
-            this.field_Z = new nh(var11Lifetime3, var12Lifetime3);
+            this.field_Z = new RgbSprite(var11Lifetime3, var12Lifetime3);
             MouseInput.a(this.field_Z, (byte) 85);
           } else {
             if (this.field_Z.field_w < var12Lifetime3) {
-              this.field_Z = new nh(var11Lifetime3, var12Lifetime3);
+              this.field_Z = new RgbSprite(var11Lifetime3, var12Lifetime3);
               MouseInput.a(this.field_Z, (byte) 85);
             } else {
               MouseInput.a(this.field_Z, (byte) 83);

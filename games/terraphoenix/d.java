@@ -116,7 +116,7 @@ final class d extends jc {
         return null;
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_I = null;
         field_L = null;

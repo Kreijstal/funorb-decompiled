@@ -5,7 +5,7 @@ import java.util.*;
 
 final class tk {
     int[] field_n;
-    private cn[] field_p;
+    private RgbSprite[] field_p;
     int[] field_z;
     int[] field_m;
     int[] field_s;
@@ -23,7 +23,7 @@ final class tk {
     int[] field_u;
     int[] field_A;
     boolean[] field_B;
-    private cn[] field_l;
+    private RgbSprite[] field_l;
     int[] field_j;
     int[] field_f;
     private String[] field_t;
@@ -51,7 +51,7 @@ final class tk {
         gh.a(23321, ha.field_o, false);
     }
 
-    private final int a(cn[] param0, cn[] param1, int[] param2, se param3, int param4, String[] param5, int param6) {
+    private final int a(RgbSprite[] param0, RgbSprite[] param1, int[] param2, se param3, int param4, String[] param5, int param6) {
         int var11 = 0;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -201,7 +201,7 @@ final class tk {
         int stackIn_21_0 = 0;
         int stackIn_22_1 = 0;
         int stackIn_24_1;
-        cn[] stackIn_24_2;
+        RgbSprite[] stackIn_24_2;
         int stackIn_24_3;
         int stackIn_24_4;
         int stackIn_25_5;
@@ -276,7 +276,7 @@ final class tk {
         }
     }
 
-    tk(cn[] param0, int[] param1, int param2, se param3, String[] param4, cn[] param5) {
+    tk(RgbSprite[] param0, int[] param1, int param2, se param3, String[] param4, RgbSprite[] param5) {
         try {
           this.field_g = this.a(param5, param0, param1, param3, param2, param4, 2048);
         } catch (RuntimeException runtimeException) {

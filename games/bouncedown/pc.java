@@ -14,7 +14,7 @@ final class pc implements Runnable {
     private int field_g;
     private boolean field_b;
     private int field_h;
-    static tg field_o;
+    static RgbSprite field_o;
     private InputStream field_m;
     private boolean field_l;
     private OutputStream field_k;
@@ -380,7 +380,7 @@ final class pc implements Runnable {
         }
         var6Lifetime1 = -140 + oa.field_a;
         if (param1 > -44) {
-          field_o = (tg) null;
+          field_o = (RgbSprite) null;
         }
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;

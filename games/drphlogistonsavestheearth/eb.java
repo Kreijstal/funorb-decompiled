@@ -7,8 +7,8 @@ final class eb {
     static int[] field_b;
     static he[] field_a;
     static byte[][] field_f;
-    static nh[] field_e;
-    static nh field_g;
+    static RgbSprite[] field_e;
+    static RgbSprite field_g;
 
     public static void a(int param0) {
         field_f = (byte[][]) null;
@@ -157,6 +157,6 @@ final class eb {
     static {
         field_d = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
         field_f = new byte[250][];
-        field_e = new nh[9];
+        field_e = new RgbSprite[9];
     }
 }

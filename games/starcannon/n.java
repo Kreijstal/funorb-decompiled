@@ -469,11 +469,11 @@ final class n {
         return this.field_j == 97 ? true : false;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         if (param0 != 0) {
-          n.f(14);
+          n.clearStaticReferences(14);
           field_a = null;
           field_l = null;
           return;

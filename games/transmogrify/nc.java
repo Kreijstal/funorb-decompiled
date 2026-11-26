@@ -41,7 +41,7 @@ final class nc extends ni {
         this(vd.field_h, param0);
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_s = null;
         field_p = null;
         field_q = null;

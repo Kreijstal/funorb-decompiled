@@ -527,11 +527,11 @@ final class jh {
         int var2 = -49 / ((param0 + 70) / 53);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_d = null;
         if (param0 != 18744) {
-          jh.a(-47);
+          jh.clearStaticReferences(-47);
         }
     }
 

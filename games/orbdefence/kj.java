@@ -404,7 +404,7 @@ abstract class kj extends pj implements c {
         return (pj) null;
     }
 
-    final static void a(hj param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(RgbSprite param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           pa.field_d = param8;
           ok.field_f = param4;

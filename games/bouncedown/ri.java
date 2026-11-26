@@ -28,11 +28,11 @@ abstract class ri extends lc {
         }
     }
 
-    final static tg[] a(String param0, gk param1, boolean param2, String param3) {
+    final static RgbSprite[] a(String param0, gk param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tg[] stackIn_1_0 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -115,7 +115,7 @@ abstract class ri extends lc {
           return;
         }
         if (ml.field_d == null) {
-          ml.field_d = new tg(this.field_k, this.field_m);
+          ml.field_d = new RgbSprite(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
           SoftwareRasterizer.clearRaster();
           this.b(0, -11, 0);
@@ -132,7 +132,7 @@ abstract class ri extends lc {
           return;
         }
         if (ml.field_d.field_s < this.field_k) {
-          ml.field_d = new tg(this.field_k, this.field_m);
+          ml.field_d = new RgbSprite(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
           SoftwareRasterizer.clearRaster();
           this.b(0, -11, 0);
@@ -149,7 +149,7 @@ abstract class ri extends lc {
           return;
         }
         if (ml.field_d.field_q < this.field_m) {
-          ml.field_d = new tg(this.field_k, this.field_m);
+          ml.field_d = new RgbSprite(this.field_k, this.field_m);
           kh.a(ml.field_d, 1);
           SoftwareRasterizer.clearRaster();
           this.b(0, -11, 0);

@@ -3,16 +3,16 @@
  */
 final class ri {
     private static int[] field_a;
-    static cn field_g;
+    static RgbSprite field_g;
     static String field_c;
     static ab field_e;
-    static cn[] field_d;
+    static RgbSprite[] field_d;
     static int field_b;
     static String field_f;
 
     final static hh a(byte param0) {
         if (param0 <= 25) {
-          field_d = (cn[]) null;
+          field_d = (RgbSprite[]) null;
           if (null == IntrusiveNode.field_b) {
             IntrusiveNode.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
             return IntrusiveNode.field_b;

@@ -238,7 +238,7 @@ final class lm extends TextureOperator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         int var1 = -76 / ((param0 + 12) / 44);
         field_F = null;

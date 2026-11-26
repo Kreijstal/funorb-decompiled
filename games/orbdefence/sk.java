@@ -23,7 +23,7 @@ final class sk extends kj {
         this.field_y = (pj) ((Object) this.k(3469));
     }
 
-    public static void m(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_I = null;
         field_E = null;
         field_C = null;

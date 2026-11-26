@@ -7,7 +7,7 @@ final class AccountServiceResult {
     static String field_h;
     static String field_f;
     static int field_g;
-    static bd[] field_j;
+    static RgbSprite[] field_j;
     int statusCode;
     static String field_i;
     boolean success;
@@ -107,7 +107,7 @@ final class AccountServiceResult {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -8 % ((86 - param0) / 32);
         field_j = null;
         field_h = null;

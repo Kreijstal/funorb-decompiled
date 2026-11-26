@@ -15,7 +15,7 @@ final class ib {
     static MouseInput field_f;
     static String field_c;
 
-    final static void a(int param0, cn[] param1) {
+    final static void a(int param0, RgbSprite[] param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -146,11 +146,11 @@ final class ib {
         int var1 = -60 % ((18 - param0) / 61);
     }
 
-    final static cn[] b(int param0) {
+    final static RgbSprite[] b(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        cn[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -164,7 +164,7 @@ final class ib {
         byte[] var21;
         int[] var22;
         var8 = DungeonAssault.field_K;
-        var1 = new cn[dk.field_d];
+        var1 = new RgbSprite[dk.field_d];
         if (param0 != -10718) {
           field_f = (MouseInput) null;
         }
@@ -177,7 +177,7 @@ final class ib {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = uo.field_b[nb.a((int) var21[var6], 255)];
             }
-            var1[var2] = new cn(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var22);
+            var1[var2] = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var22);
           } else {
             var16 = rf.field_P[var2];
             var12 = var16;
@@ -189,7 +189,7 @@ final class ib {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = mp.a(uo.field_b[nb.a((int) var21[var7], 255)], nb.a(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (cn) ((Object) new ArgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], var17));
           }
         }
         sb.a(500);

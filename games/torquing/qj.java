@@ -421,10 +421,10 @@ final class qj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
-          qj.a(false);
+          qj.clearStaticReferences(false);
           field_a = null;
           return;
         }

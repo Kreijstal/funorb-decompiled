@@ -5,7 +5,7 @@ abstract class qm {
     static ResourceArchive field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -65 / ((-66 - param0) / 43);
         field_b = null;
         field_a = null;

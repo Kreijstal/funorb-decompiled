@@ -16,7 +16,7 @@ final class IsaacCipher {
     static int field_d;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_m = null;
         field_h = null;
         field_b = null;

@@ -3,7 +3,7 @@
  */
 class PacketBuffer extends IntrusiveNode {
     static a[] field_g;
-    static tg field_j;
+    static RgbSprite field_j;
     int position;
     byte[] payload;
 
@@ -155,7 +155,7 @@ class PacketBuffer extends IntrusiveNode {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        tg[] var11 = null;
+        RgbSprite[] var11 = null;
         var10 = Bounce.field_N;
         try {
           var3_long = 0L;
@@ -188,8 +188,8 @@ class PacketBuffer extends IntrusiveNode {
             }
           }
           if (param1 >= -52) {
-            var11 = (tg[]) null;
-            PacketBuffer.a((tg[]) null, 99, -16, (byte) -80);
+            var11 = (RgbSprite[]) null;
+            PacketBuffer.a((RgbSprite[]) null, 99, -16, (byte) -80);
           }
           this.writeLong56(494545288, var3_long);
           this.writeLong56(494545288, var5);
@@ -361,12 +361,12 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(tg[] param0, int param1, int param2, byte param3) {
+    final static void a(RgbSprite[] param0, int param1, int param2, byte param3) {
         try {
           cf.field_g = new oh(param0);
           td.field_a = param1;
           if (param3 != -126) {
-            field_j = (tg) null;
+            field_j = (RgbSprite) null;
           }
           gh.field_H = param2;
           pg.a(param3 + 126);

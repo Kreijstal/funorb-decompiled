@@ -194,7 +194,7 @@ final class tm {
         return null;
     }
 
-    final static void a(int param0, int param1, int param2, dl[] param3, int param4, byte param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, byte param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

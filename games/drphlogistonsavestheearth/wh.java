@@ -31,7 +31,7 @@ abstract class wh extends DualLinkNode {
         RuntimeException var1 = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          mf.field_u = null;
+          SpriteGeometry.field_u = null;
           MouseWheelInput.field_c = false;
           boolean decompiledSharedTail0 = !(sg.field_a);
           if (!decompiledSharedTail0) {
@@ -42,13 +42,13 @@ abstract class wh extends DualLinkNode {
             var1_int = rh.field_a;
             if (var1_int > 0) {
               if (var1_int != 1) {
-                mf.field_u = a.a(5044, hi.field_i, new String[]{Integer.toString(var1_int)});
+                SpriteGeometry.field_u = a.a(5044, hi.field_i, new String[]{Integer.toString(var1_int)});
               }
               if (var1_int == 1 ||
                 var2 != 0) {
-                mf.field_u = sj.field_b;
+                SpriteGeometry.field_u = sj.field_b;
               }
-              mf.field_u = dm.a(0, new CharSequence[]{(CharSequence) ((Object) mf.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fm.field_b)});
+              SpriteGeometry.field_u = dm.a(0, new CharSequence[]{(CharSequence) ((Object) SpriteGeometry.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fm.field_b)});
             }
             ol.field_a.d(true);
             sd.a((byte) -124);

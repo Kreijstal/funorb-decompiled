@@ -6,11 +6,11 @@ final class bh {
     static AccountRequestState field_a;
     static IntrusiveDeque field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 > -23) {
-          bh.a(-35);
+          bh.clearStaticReferences(-35);
         }
     }
 

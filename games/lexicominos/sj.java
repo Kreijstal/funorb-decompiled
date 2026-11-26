@@ -98,10 +98,10 @@ final class sj extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 <= 3) {
-          sj.a((byte) -96);
+          sj.clearStaticReferences((byte) -96);
         }
     }
 

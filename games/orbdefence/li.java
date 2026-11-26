@@ -4,7 +4,7 @@
 final class li {
     static String[] field_b;
     static String[] field_c;
-    static hj field_a;
+    static RgbSprite field_a;
 
     final static void a(int param0, String param1) {
         try {
@@ -40,7 +40,7 @@ final class li {
               var3 = (String) (gm.a(-31183, "getcookies", param0));
               var4 = g.a(-79, ';', var3);
               if (!param2) {
-                li.a(true);
+                li.clearStaticReferences(true);
               }
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -81,12 +81,12 @@ final class li {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         field_c = null;
         if (param0) {
-          li.a(true);
+          li.clearStaticReferences(true);
         }
     }
 
@@ -160,6 +160,6 @@ final class li {
     static {
         field_c = new String[16];
         field_b = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
-        field_a = new hj(160, 120);
+        field_a = new RgbSprite(160, 120);
     }
 }

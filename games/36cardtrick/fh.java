@@ -107,7 +107,7 @@ final class fh extends g implements wi, qh {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 200) {
           field_D = (String) null;
           field_D = null;

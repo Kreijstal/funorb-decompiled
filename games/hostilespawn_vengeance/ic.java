@@ -9,7 +9,7 @@ final class ic extends IntrusiveNode {
     static String field_o;
     int field_q;
     int field_h;
-    static bd field_k;
+    static RgbSprite field_k;
     boolean field_m;
     int[][] field_l;
     static int field_n;

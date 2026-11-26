@@ -4,7 +4,7 @@
 class mj extends l {
     static volatile int field_u;
     static he[] field_w;
-    static nh field_v;
+    static RgbSprite field_v;
     static String field_t;
 
     mj(int param0) {

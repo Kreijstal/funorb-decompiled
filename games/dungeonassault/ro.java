@@ -9,10 +9,10 @@ final class ro extends kl {
     private go field_p;
     static boolean field_B;
     private int field_z;
-    private cn field_v;
+    private RgbSprite field_v;
     private pp field_s;
     private sa field_w;
-    private cn field_q;
+    private RgbSprite field_q;
     private eh field_y;
     static boolean field_u;
     private int field_x;
@@ -394,15 +394,15 @@ final class ro extends kl {
         for (var3_int = 0; var3_int < 64; var3_int++) {
           var10[var3_int] = mp.a(-2147483648, 1579032 + var3_int * 65793);
         }
-        cn var3 = te.a(this.field_a - 32, this.field_i - 28, var10, 16, 8, 0.125);
+        RgbSprite var3 = te.a(this.field_a - 32, this.field_i - 28, var10, 16, 8, 0.125);
         int[] var4 = te.b(this.field_a - 32, -28 + this.field_i, 0.125);
-        cn var5 = new cn(0, 0);
+        RgbSprite var5 = new RgbSprite(0, 0);
         var5.field_B = var4;
         var5.field_v = this.field_i - 28;
         var5.field_y = this.field_a - 32;
         ph var6 = new ph(var3, var5);
-        cn var7 = new cn(this.field_a, this.field_i);
-        cn var8 = new cn(this.field_a, this.field_i);
+        RgbSprite var7 = new RgbSprite(this.field_a, this.field_i);
+        RgbSprite var8 = new RgbSprite(this.field_a, this.field_i);
         this.field_l = new ph(var7, var8);
         jh.a(this.field_l);
         if (param0 == 37) {
@@ -533,12 +533,12 @@ final class ro extends kl {
     }
 
     private final void a(boolean param0, int param1, String param2) {
-        cn var5 = null;
+        RgbSprite var5 = null;
         try {
           if (this.field_w == null) {
             this.field_w = new sa(60 + this.field_k, (la.field_b.field_H >> 1) - 120 + (this.field_i + this.field_j), this.field_a - 120, 80);
             this.field_w.field_k = 0;
-            var5 = new cn(this.field_a - 120, 80);
+            var5 = new RgbSprite(this.field_a - 120, 80);
             jh.a(var5);
             this.a(-60, -(la.field_b.field_H >> 1) + 40, this.field_a, (byte) 4, 120);
             jh.b();
@@ -557,7 +557,7 @@ final class ro extends kl {
           return;
         }
         try {
-          this.field_v = new cn(var4_int, var5);
+          this.field_v = new RgbSprite(var4_int, var5);
           jh.a(this.field_v);
           IntrusiveNode.field_c.b(param0, 0, IntrusiveNode.field_c.field_H, param1, -1);
           this.field_q = rb.a(16, this.field_v, param1, (byte) 86);

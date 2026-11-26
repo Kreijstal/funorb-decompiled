@@ -678,7 +678,7 @@ final class sf implements cl {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        cn var8 = null;
+        RgbSprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -708,13 +708,13 @@ final class sf implements cl {
           this.a(15122, 48);
           this.b(-20827);
           jh.c();
-          p.field_G = new cn[16];
+          p.field_G = new RgbSprite[16];
           var7 = 0;
           scanLoop1: while (true) {
             stackIn_9_0 = 16;
             stackIn_9_1 = var7;
             if (stackIn_9_0 > stackIn_9_1) {
-              var8 = new cn(32, 32);
+              var8 = new RgbSprite(32, 32);
               var8.e();
               SoftwareRasterizer.fillRectangle(0, 0, 32, 32, 65793);
               var9 = 16777215;

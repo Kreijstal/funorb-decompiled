@@ -7,7 +7,7 @@ final class lg extends in {
     private long field_i;
     private long field_j;
     private int field_o;
-    static bd field_k;
+    static RgbSprite field_k;
     private int field_p;
     private long[] field_r;
     private long field_q;
@@ -37,10 +37,10 @@ final class lg extends in {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        bd stackIn_17_0 = null;
-        bd stackIn_26_0 = null;
-        bd stackIn_95_0 = null;
-        bd stackIn_104_0 = null;
+        RgbSprite stackIn_17_0 = null;
+        RgbSprite stackIn_26_0 = null;
+        RgbSprite stackIn_95_0 = null;
+        RgbSprite stackIn_104_0 = null;
         Throwable decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -74,7 +74,7 @@ final class lg extends in {
                         } else {
                           stackIn_26_0 = ia.field_l[12];
                         }
-                        ((bd) (Object) stackIn_26_0).a(true, 128, (int)var13.field_c, var5 - 8, -8 + var6);
+                        ((RgbSprite) (Object) stackIn_26_0).a(true, 128, (int)var13.field_c, var5 - 8, -8 + var6);
                       } else {
                         if (var13.field_i != 30) {
                           if (var13.field_i == 230) {
@@ -90,7 +90,7 @@ final class lg extends in {
                       } else {
                         stackIn_17_0 = MouseInput.field_b;
                       }
-                      ((bd) (Object) stackIn_17_0).a(true, 128, (int)var13.field_c, var5 - 8, var6 - 8);
+                      ((RgbSprite) (Object) stackIn_17_0).a(true, 128, (int)var13.field_c, var5 - 8, var6 - 8);
                     }
                   }
                   if (FullscreenFocusCanvas.field_d == 0) {
@@ -193,7 +193,7 @@ final class lg extends in {
                   } else {
                     stackIn_104_0 = MouseInput.field_b;
                   }
-                  ((bd) (Object) stackIn_104_0).a(true, 128, (int)var14.field_c, -8 + var5, -8 + var6);
+                  ((RgbSprite) (Object) stackIn_104_0).a(true, 128, (int)var14.field_c, -8 + var5, -8 + var6);
                 }
               } else {
                 if (var14.field_i == 5) {
@@ -209,7 +209,7 @@ final class lg extends in {
                     } else {
                       stackIn_95_0 = rl.field_d;
                     }
-                    ((bd) (Object) stackIn_95_0).a(true, 128, (int)var14.field_c, -8 + var5, -8 + var6);
+                    ((RgbSprite) (Object) stackIn_95_0).a(true, 128, (int)var14.field_c, -8 + var5, -8 + var6);
                   }
                 } else {
                   if (var14.field_i == 24 ||

@@ -9,7 +9,7 @@ final class fd {
     static String field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 16 % ((15 - param0) / 50);
         field_c = null;
         field_e = null;

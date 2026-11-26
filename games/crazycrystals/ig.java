@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ig extends pn {
-    private dl[] field_o;
+    private RgbSprite[] field_o;
     private boolean field_r;
     static String field_p;
     private int field_n;
     static String field_m;
-    static dl field_q;
+    static RgbSprite field_q;
 
     final boolean a(boolean param0, f[][] param1, mj param2) {
         RuntimeException var4 = null;
@@ -124,7 +124,7 @@ class ig extends pn {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -248,7 +248,7 @@ class ig extends pn {
         return this.field_r ? 0 : this.field_l.a(true, param1);
     }
 
-    ig(f param0, dl[] param1, f param2, boolean param3) {
+    ig(f param0, RgbSprite[] param1, f param2, boolean param3) {
         super(param2);
         this.field_n = 0;
         try {
@@ -306,11 +306,11 @@ class ig extends pn {
         return this.field_r ? false : this.field_l.b((byte) 83);
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         field_q = null;
         if (param0 != 24) {
-          ig.f(108);
+          ig.clearStaticReferences(108);
           field_m = null;
           return;
         }

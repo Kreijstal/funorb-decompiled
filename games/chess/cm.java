@@ -30,12 +30,12 @@ abstract class cm extends DualLinkNode {
         this.field_q = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_s = null;
         field_t = null;
         field_v = null;
         if (param0) {
-          cm.a(false);
+          cm.clearStaticReferences(false);
           field_r = null;
           return;
         }

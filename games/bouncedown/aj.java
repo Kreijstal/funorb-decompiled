@@ -68,9 +68,9 @@ final class aj {
         this.field_d[param2] = param1;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          aj.a(true);
+          aj.clearStaticReferences(true);
           field_e = null;
           return;
         }

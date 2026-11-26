@@ -16,9 +16,9 @@ abstract class rj extends IntrusiveNode {
     static String field_y;
     static int field_l;
     int field_x;
-    static cn field_s;
+    static RgbSprite field_s;
     int field_q;
-    static cn field_k;
+    static RgbSprite field_k;
     Object field_u;
     int field_i;
 
@@ -241,13 +241,13 @@ abstract class rj extends IntrusiveNode {
         field_s = null;
     }
 
-    final static cn a(byte param0) {
+    final static RgbSprite a(byte param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
-        cn var1 = new cn(11, 11);
+        RgbSprite var1 = new RgbSprite(11, 11);
         jh.a(var1);
         if (param0 <= 105) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         for (var2 = 0; var2 < 5; var2++) {
           SoftwareRasterizer.drawHorizontalLine(var2, 3 + var2, 11 - 2 * var2, 65793);
@@ -285,8 +285,8 @@ abstract class rj extends IntrusiveNode {
               pd.field_A = no.field_c;
               wl.field_f = !param1 ? -1 : -2;
               oc.field_E = !param1 ? -1 : -2;
-              rd.field_C = !param1 ? -1 : -2;
-              rg.a(MouseInput.field_g, ac.field_B, kn.field_b, 119, rd.field_D);
+              SpriteGeometry.field_C = !param1 ? -1 : -2;
+              rg.a(MouseInput.field_g, ac.field_B, kn.field_b, 119, SpriteGeometry.field_D);
               op.a(0, -1);
             } catch (IOException iOException) {
               pd.field_A = tp.field_B;

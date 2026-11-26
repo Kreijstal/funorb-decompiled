@@ -9,7 +9,7 @@ final class vb extends IntrusiveNode {
     String[][] field_p;
     boolean field_r;
     static int field_l;
-    static nh field_s;
+    static RgbSprite field_s;
     int field_i;
     static int field_n;
     int field_h;

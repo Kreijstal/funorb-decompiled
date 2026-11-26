@@ -9,10 +9,10 @@ final class ec {
     static Sprite[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -1) {
-          ec.a(-66);
+          ec.clearStaticReferences(-66);
           field_c = null;
           return;
         }

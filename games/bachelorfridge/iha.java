@@ -73,7 +73,7 @@ abstract class iha extends AnimationNode {
         return stackIn_50_0;
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         int var1 = -57 / ((param0 - 43) / 45);
     }

@@ -280,10 +280,10 @@ final class un {
         int var23;
         int var24;
         int[] var25;
-        km var26;
-        km var27;
-        km var28;
-        km var29;
+        RgbSprite var26;
+        RgbSprite var27;
+        RgbSprite var28;
+        RgbSprite var29;
         String var30;
         int[] var31;
         int[] var33;
@@ -1196,11 +1196,11 @@ final class un {
           this.field_w = -1;
           wc.field_s = new eb(552, 10, 81, 24, vh.field_f);
           df.a(wc.field_s, 0);
-          tj.field_n = new ta(554, 62, ng.field_b, me.field_d, (km) null, false, true);
-          hd.field_g = new ta(606, 62, tb.field_c, vn.field_rb, (km) null, false, true);
-          rf.field_d = new ta(580, 37, be.field_d, df.field_e, (km) null, false, true);
-          b.field_b = new ta(580, 89, kn.field_G, vn.field_xb, (km) null, false, true);
-          nb.field_Fb = new wg(100, 100, 108, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (km) null);
+          tj.field_n = new ta(554, 62, ng.field_b, me.field_d, (RgbSprite) null, false, true);
+          hd.field_g = new ta(606, 62, tb.field_c, vn.field_rb, (RgbSprite) null, false, true);
+          rf.field_d = new ta(580, 37, be.field_d, df.field_e, (RgbSprite) null, false, true);
+          b.field_b = new ta(580, 89, kn.field_G, vn.field_xb, (RgbSprite) null, false, true);
+          nb.field_Fb = new wg(100, 100, 108, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
           this.field_a = param3;
           this.field_C = param4;
           stackIn_13_1 = (param0);
@@ -1251,7 +1251,7 @@ final class un {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

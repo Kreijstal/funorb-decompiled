@@ -18,7 +18,7 @@ final class jd {
           }
           return new qj(hr.h(-104), IsaacCipher.b((byte) -119));
         }
-        jd.a(13);
+        jd.clearStaticReferences(13);
         var1Lifetime1 = hr.h(-101);
         if (var1Lifetime1 != null &&
           0 <= var1Lifetime1.indexOf('@')) {
@@ -27,7 +27,7 @@ final class jd {
         return new qj(hr.h(-104), IsaacCipher.b((byte) -119));
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         int var1 = -61 % ((param0 + 10) / 34);

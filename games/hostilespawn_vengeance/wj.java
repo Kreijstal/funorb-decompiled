@@ -9,7 +9,7 @@ final class wj extends ph {
     static String field_G;
     static ub field_N;
     static pf[] field_J;
-    static bd field_L;
+    static RgbSprite field_L;
     static AccountServiceResult field_H;
 
     final String e(int param0) {
@@ -40,9 +40,9 @@ final class wj extends ph {
         int var9;
         int var10;
         int var11;
-        bd var12;
-        bd var13;
-        bd var14;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
         var11 = HostileSpawn.field_I ? 1 : 0;
         super.a(param0, param1, (byte) 69, param3);
         if (param3 != 0) {
@@ -77,7 +77,7 @@ final class wj extends ph {
           sb.a(ng.field_s, -127);
           SoftwareRasterizer.clearRaster();
         } else {
-          ng.field_s = new bd(var9, var10);
+          ng.field_s = new RgbSprite(var9, var10);
           sb.a(ng.field_s, -121);
         }
         var14.b(112, 144, var14.field_u << 4, var14.field_r << 4, -this.field_M << 10, 4096);

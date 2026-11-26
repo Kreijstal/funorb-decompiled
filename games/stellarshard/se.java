@@ -62,10 +62,10 @@ final class se extends WidgetContainer implements oi {
         this.b(4, this.field_I);
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_C = null;
         if (param0 != 9) {
-          se.e((byte) -6);
+          se.clearStaticReferences((byte) -6);
           field_E = null;
           field_B = null;
           return;

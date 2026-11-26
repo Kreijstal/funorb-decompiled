@@ -411,12 +411,12 @@ final class vh {
         field_g = null;
     }
 
-    final static tg[] a(gk param0, String param1, byte param2, String param3) {
+    final static RgbSprite[] a(gk param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        tg[] stackIn_1_0 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

@@ -163,7 +163,7 @@ final class ic extends jj implements da {
         }
     }
 
-    public static void o(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_db = null;
         field_ab = null;
         if (param0 > -79) {

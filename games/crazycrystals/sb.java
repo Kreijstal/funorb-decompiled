@@ -8,7 +8,7 @@ final class sb extends pc {
     private n field_H;
     static sj field_E;
     static String field_C;
-    static dl[] field_B;
+    static RgbSprite[] field_B;
     static volatile int field_I;
     static int field_F;
 
@@ -83,7 +83,7 @@ final class sb extends pc {
           if (param0) {
             return false;
           }
-          field_B = (dl[]) null;
+          field_B = (RgbSprite[]) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,14 +139,14 @@ final class sb extends pc {
         int var9;
         int var10;
         int var11;
-        dl var15;
-        dl var14;
-        dl var16;
-        dl var17;
-        dl var18;
-        dl var20;
-        dl var21;
-        dl var22;
+        RgbSprite var15;
+        RgbSprite var14;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
+        RgbSprite var20;
+        RgbSprite var21;
+        RgbSprite var22;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -179,15 +179,15 @@ final class sb extends pc {
           var9 = var22.field_n << 1;
           var10 = var22.field_o << 1;
           if (null == tk.field_l) {
-            tk.field_l = new dl(var9, var10);
+            tk.field_l = new RgbSprite(var9, var10);
             em.a((byte) 38, tk.field_l);
           } else {
             if (var9 > tk.field_l.field_l) {
-              tk.field_l = new dl(var9, var10);
+              tk.field_l = new RgbSprite(var9, var10);
               em.a((byte) 38, tk.field_l);
             } else {
               if (tk.field_l.field_u < var10) {
-                tk.field_l = new dl(var9, var10);
+                tk.field_l = new RgbSprite(var9, var10);
                 em.a((byte) 38, tk.field_l);
               } else {
                 em.a((byte) 38, tk.field_l);
@@ -212,7 +212,7 @@ final class sb extends pc {
             em.a((byte) 38, tk.field_l);
             SoftwareRasterizer.clearRaster();
           } else {
-            tk.field_l = new dl(var9Lifetime1, var10Lifetime1);
+            tk.field_l = new RgbSprite(var9Lifetime1, var10Lifetime1);
             em.a((byte) 38, tk.field_l);
           }
           var15.a(112, 144, var15.field_n << 4, var15.field_o << 4, -this.field_D << 10, 4096);
@@ -243,7 +243,7 @@ final class sb extends pc {
           em.a((byte) 38, tk.field_l);
           SoftwareRasterizer.clearRaster();
         } else {
-          tk.field_l = new dl(var9Lifetime2, var10Lifetime2);
+          tk.field_l = new RgbSprite(var9Lifetime2, var10Lifetime2);
           em.a((byte) 38, tk.field_l);
         }
         var16.a(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);

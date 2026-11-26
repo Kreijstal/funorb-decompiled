@@ -59,10 +59,10 @@ abstract class me extends ca implements fb {
         lb.field_j = param2;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         if (param0 <= 118) {
-          me.a((byte) 112);
+          me.clearStaticReferences((byte) 112);
         }
     }
 

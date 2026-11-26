@@ -8,7 +8,7 @@ final class ch extends l {
     static String field_u;
     static int field_B;
     private kj field_x;
-    static nh[] field_z;
+    static RgbSprite[] field_z;
     static String field_w;
     static int field_A;
 
@@ -22,7 +22,7 @@ final class ch extends l {
         field_t = null;
     }
 
-    final void a(int param0, nh[] param1) {
+    final void a(int param0, RgbSprite[] param1) {
         int var4 = 0;
         kj[] var3 = null;
         kj var5 = null;
@@ -78,7 +78,7 @@ final class ch extends l {
         var1.b(0);
     }
 
-    final void a(nh[] param0, int param1, int param2) {
+    final void a(RgbSprite[] param0, int param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -112,7 +112,7 @@ final class ch extends l {
         return dupTemp$0;
     }
 
-    final void a(int param0, nh param1) {
+    final void a(int param0, RgbSprite param1) {
         int var4 = 0;
         kj[] var3 = null;
         kj var5 = null;
@@ -162,7 +162,7 @@ final class ch extends l {
         RuntimeException var6 = null;
         kj var7 = null;
         kj var9 = null;
-        nh[] var10 = null;
+        RgbSprite[] var10 = null;
         hf var11 = null;
         kj var12 = null;
         kj var13 = null;
@@ -216,8 +216,8 @@ final class ch extends l {
           }
           this.field_x.a(this, param2, true, param3, param4);
           if (param1 <= 94) {
-            var10 = (nh[]) null;
-            this.a((nh[]) null, -43, 125);
+            var10 = (RgbSprite[]) null;
+            this.a((RgbSprite[]) null, -43, 125);
           }
           cl.d((byte) -110);
           return;

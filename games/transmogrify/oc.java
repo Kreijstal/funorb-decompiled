@@ -108,11 +108,11 @@ final class oc extends fi {
         return (td) ((Object) new kf());
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_G = null;
         field_E = null;
         if (param0 <= 115) {
-          oc.i(77);
+          oc.clearStaticReferences(77);
           field_H = null;
           return;
         }

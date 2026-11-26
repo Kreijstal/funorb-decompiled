@@ -7,12 +7,12 @@ final class pc {
     static String field_d;
     static he[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
         if (param0 != 13302) {
-          pc.a(-19);
+          pc.clearStaticReferences(-19);
         }
     }
 

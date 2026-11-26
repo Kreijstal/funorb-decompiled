@@ -80,7 +80,7 @@ final class du extends PacketBuffer {
         super(param0);
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         menuActionLabels = null;
         field_n = null;
         int var1 = -10 % ((8 - param0) / 50);

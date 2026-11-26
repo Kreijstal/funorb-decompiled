@@ -1586,7 +1586,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 122, "create_username_unavailable");
                 if (null != var2) {
-                  ma.field_n = c.a(param0 ^ -99, var2);
+                  SpriteGeometry.field_n = c.a(param0 ^ -99, var2);
                 }
                 var2 = hg.a((byte) 124, "create_username_available");
                 if (null != var2) {
@@ -2668,7 +2668,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 106, "fs_accept_aftercancel");
                 if (var2 != null) {
-                  ma.field_u = c.a(param0 + 99, var2);
+                  SpriteGeometry.field_u = c.a(param0 + 99, var2);
                 }
                 var2 = hg.a((byte) 115, "fs_accept_countdown_sing");
                 if (var2 != null) {

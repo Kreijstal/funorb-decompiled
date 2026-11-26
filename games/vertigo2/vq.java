@@ -140,7 +140,7 @@ final class vq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_i = null;
         int var1 = 26 % ((47 - param0) / 63);

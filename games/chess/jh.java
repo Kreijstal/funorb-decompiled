@@ -6,7 +6,7 @@ final class jh {
     static fm field_e;
     static boolean field_a;
     static String field_c;
-    static km field_b;
+    static RgbSprite field_b;
     static String field_d;
     private static String field_z;
 

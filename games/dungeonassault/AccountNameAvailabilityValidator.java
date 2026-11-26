@@ -5,12 +5,12 @@ final class AccountNameAvailabilityValidator extends ip {
     private boolean nameAvailable;
     private String checkedName;
     private static long[] field_q;
-    static cn field_r;
+    static RgbSprite field_r;
     static int field_t;
     static int field_n;
     static en field_u;
     static boolean field_s;
-    static cn[] field_m;
+    static RgbSprite[] field_m;
 
     final void e(boolean param0) {
         if (!param0) {
@@ -19,7 +19,7 @@ final class AccountNameAvailabilityValidator extends ip {
         this.checkedName = null;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_m = null;
         int var1 = -44 / ((-37 - param0) / 44);
@@ -49,8 +49,8 @@ final class AccountNameAvailabilityValidator extends ip {
         try {
           jh.c();
           if (null == wm.field_c) {
-            bn.field_f = new cn(378, 300);
-            wm.field_c = new cn(410, 332);
+            bn.field_f = new RgbSprite(378, 300);
+            wm.field_c = new RgbSprite(410, 332);
             wm.field_c.field_A = -16;
             wm.field_c.field_w = -16;
           }
@@ -143,7 +143,7 @@ final class AccountNameAvailabilityValidator extends ip {
     final static boolean d(boolean param0) {
         boolean stackIn_9_0 = false;
         if (!param0) {
-          field_r = (cn) null;
+          field_r = (RgbSprite) null;
         }
         stackIn_9_0 = (null != gi.field_S) || (uc.g(127)) || (null != MouseInput.field_e) || (ck.g(-1));
         return stackIn_9_0;

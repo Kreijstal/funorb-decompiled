@@ -33,7 +33,7 @@ final class qo extends el {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_i = null;
         field_k = null;
         field_p = null;

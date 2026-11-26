@@ -3,7 +3,7 @@
  */
 final class hf extends IntrusiveNode {
     int field_j;
-    static hj[] field_g;
+    static RgbSprite[] field_g;
     static int field_i;
     IntrusiveNode field_f;
     static tl field_l;
@@ -20,10 +20,10 @@ final class hf extends IntrusiveNode {
         }
     }
 
-    final static void a(kc param0, int param1, int param2, int param3, int param4, boolean param5, int param6, hj[] param7, kc param8, int param9, int param10, int param11, int param12, hj[] param13, int param14) {
+    final static void a(kc param0, int param1, int param2, int param3, int param4, boolean param5, int param6, RgbSprite[] param7, kc param8, int param9, int param10, int param11, int param12, RgbSprite[] param13, int param14) {
         try {
-          hj[] var17 = (hj[]) null;
-          ok.a(param2, param9, param4, param13, param11, param6, param3, -1, 0, lf.field_e, he.field_C, param7, param14, mf.field_c, 480, (hj[]) null, param12, 0, param1, param0, param8);
+          RgbSprite[] var17 = (RgbSprite[]) null;
+          ok.a(param2, param9, param4, param13, param11, param6, param3, -1, 0, lf.field_e, he.field_C, param7, param14, mf.field_c, 480, (RgbSprite[]) null, param12, 0, param1, param0, param8);
           hb.a(param5, (byte) -128);
           if (param10 < 5) {
             ki var16 = (ki) null;

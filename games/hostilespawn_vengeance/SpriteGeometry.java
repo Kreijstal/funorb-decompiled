@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qc extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     int field_z;
     static String field_C;
     static int field_s;
-    static bd[] field_x;
+    static RgbSprite[] field_x;
     int field_w;
     int field_u;
     int field_A;
@@ -13,8 +13,8 @@ abstract class qc extends DualLinkNode {
     int field_r;
     int field_y;
     static pg field_v;
-    static bd field_B;
-    static bd field_q;
+    static RgbSprite field_B;
+    static RgbSprite field_q;
 
     final static String d(int param0) {
         if (od.field_I == ti.field_b) {
@@ -24,7 +24,7 @@ abstract class qc extends DualLinkNode {
           return uh.field_g;
         }
         if (param0 != 750938499) {
-          field_x = (bd[]) null;
+          field_x = (RgbSprite[]) null;
           if (c.field_a.d((byte) -70)) {
             return rf.field_e;
           }
@@ -74,7 +74,7 @@ abstract class qc extends DualLinkNode {
           field_C = null;
           return;
         }
-        qc.c((byte) -25);
+        SpriteGeometry.c((byte) -25);
         field_x = null;
         field_q = null;
         field_B = null;
@@ -85,7 +85,7 @@ abstract class qc extends DualLinkNode {
     final void a(double param0, double param1, boolean param2, double param3, int param4) {
         this.a(this.field_u << 3, this.field_r << 3, (int)Math.floor(0.5 + param1 * 16.0), (int)Math.floor(0.5 + param0 * 16.0), (int)Math.floor(0.5 + param3 * 256.0), param4 << 5);
         if (param2) {
-          qc.c((byte) -94);
+          SpriteGeometry.c((byte) -94);
         }
     }
 
@@ -98,7 +98,7 @@ abstract class qc extends DualLinkNode {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    qc() {
+    SpriteGeometry() {
     }
 
     static {

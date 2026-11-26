@@ -5,7 +5,7 @@ class rf extends pc {
     private fo field_D;
     private IntrusiveDeque field_B;
     static int field_G;
-    static dl field_C;
+    static RgbSprite field_C;
     private String[] field_F;
 
     final void b(boolean param0) {

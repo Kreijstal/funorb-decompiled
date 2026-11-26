@@ -111,12 +111,12 @@ final class kl extends UiPanel {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_Jb = null;
         field_Nb = null;
         field_Ib = null;
         if (!param0) {
-          kl.b(false);
+          kl.clearDeclaredStaticReferences(false);
         }
     }
 

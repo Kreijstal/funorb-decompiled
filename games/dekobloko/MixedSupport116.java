@@ -33,7 +33,7 @@ final class MixedSupport116 {
 
     final boolean computeBoolean1517(boolean booleanArgument1) {
         if (!booleanArgument1) {
-          MixedSupport116.performAction1525(-70);
+          MixedSupport116.clearStaticReferences(-70);
         }
         return this.integerState0755 != 0 ? true : false;
     }
@@ -251,14 +251,14 @@ final class MixedSupport116 {
         }
     }
 
-    public static void performAction1525(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         sceneWidgetState0111 = null;
         stringState0511 = null;
         stringState0512 = null;
         resourceArchiveState0021 = null;
         rgbSpriteState0056 = null;
         if (integerArgument1 != -28610) {
-          MixedSupport116.performAction1525(69);
+          MixedSupport116.clearStaticReferences(69);
         }
         rawPcmStreamArrayArrayState0001 = (RawPcmStream[][]) null;
         stringState0513 = null;

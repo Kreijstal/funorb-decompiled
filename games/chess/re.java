@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class re extends IntrusiveNode {
-    static km field_u;
+    static RgbSprite field_u;
     int field_k;
     int field_s;
     static int field_m;
@@ -15,11 +15,11 @@ final class re extends IntrusiveNode {
     static int field_j;
     int field_o;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_u = null;
         if (param0 != -7101) {
-          re.a(116);
+          re.clearStaticReferences(116);
         }
     }
 

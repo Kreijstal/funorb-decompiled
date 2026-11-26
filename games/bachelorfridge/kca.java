@@ -7,11 +7,11 @@ final class kca {
     static GzipDecompressor field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 != 32) {
-          kca.a((byte) -1);
+          kca.clearStaticReferences((byte) -1);
         }
     }
 

@@ -8,7 +8,7 @@ final class qo {
     static eg field_a;
     static BitmapFont field_b;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         int var1 = -27 % ((param0 + 24) / 37);
         field_b = null;

@@ -412,12 +412,12 @@ final class mc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         field_u = null;
         field_m = null;
         if (param0 != -43) {
-          mc.a((byte) -122);
+          mc.clearStaticReferences((byte) -122);
         }
         field_t = null;
         field_z = null;

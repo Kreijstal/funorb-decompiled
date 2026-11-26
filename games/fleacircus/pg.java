@@ -103,7 +103,7 @@ final class pg {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 20 % ((-74 - param0) / 41);
         field_b = null;
     }

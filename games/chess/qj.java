@@ -11,7 +11,7 @@ final class qj {
     static boolean field_d;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -79 / ((-15 - param0) / 45);
         field_a = null;
         field_g = null;
@@ -41,7 +41,7 @@ final class qj {
           }
           this.field_c = var3.previous;
           if (param0) {
-            qj.a(89);
+            qj.clearStaticReferences(89);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;
@@ -55,7 +55,7 @@ final class qj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class qj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class qj {
           this.field_c = var2.next;
           return var2;
         }
-        qj.a(92);
+        qj.clearStaticReferences(92);
         this.field_c = var2.next;
         return var2;
     }
@@ -117,11 +117,11 @@ final class qj {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static km[] a(int param0, int param1, byte param2, ResourceArchive param3) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -145,7 +145,7 @@ final class qj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

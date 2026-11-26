@@ -11,18 +11,18 @@ final class oc extends kl {
     private int field_r;
     int field_q;
     boolean field_t;
-    private cn field_m;
+    private RgbSprite field_m;
     private Raider field_n;
     private String field_D;
     private pp field_z;
     private wd field_p;
     int field_B;
-    private cn field_y;
-    private cn field_o;
+    private RgbSprite field_y;
+    private RgbSprite field_o;
     private int field_C;
     static String field_v;
     private boolean field_u;
-    private cn field_I;
+    private RgbSprite field_I;
     private boolean field_x;
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
@@ -91,10 +91,10 @@ final class oc extends kl {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_v = null;
         if (param0 != 4296) {
-          oc.e(-11);
+          oc.clearStaticReferences(-11);
         }
         field_A = null;
     }
@@ -124,15 +124,15 @@ final class oc extends kl {
         for (var3_int = 0; var3_int < 64; var3_int++) {
           var10[var3_int] = mp.a(-2147483648, 1579032 + 65793 * var3_int);
         }
-        cn var3 = te.a(-32 + this.field_a, this.field_i - 28, var10, 16, 8, 0.125);
+        RgbSprite var3 = te.a(-32 + this.field_a, this.field_i - 28, var10, 16, 8, 0.125);
         int[] var4 = te.b(-32 + this.field_a, this.field_i - 28, 0.125);
-        cn var5 = new cn(0, 0);
+        RgbSprite var5 = new RgbSprite(0, 0);
         var5.field_v = -28 + this.field_i;
         var5.field_y = -32 + this.field_a;
         var5.field_B = var4;
         ph var6 = new ph(var3, var5);
-        cn var7 = new cn(this.field_a, this.field_i);
-        cn var8 = new cn(this.field_a, this.field_i);
+        RgbSprite var7 = new RgbSprite(this.field_a, this.field_i);
+        RgbSprite var8 = new RgbSprite(this.field_a, this.field_i);
         this.field_l = new ph(var7, var8);
         jh.a(this.field_l);
         var6.b(16, 16);
@@ -207,7 +207,7 @@ final class oc extends kl {
           var6 = jn.a(this.field_D, new int[]{var5_int}, -105, la.field_b);
           var7 = var6.length * la.field_b.field_H + la.field_b.field_E;
           jh.c();
-          this.field_m = new cn(var5_int, var7);
+          this.field_m = new RgbSprite(var5_int, var7);
           this.field_m.e();
           var8 = la.field_b.field_H;
           var13 = var6;
@@ -217,7 +217,7 @@ final class oc extends kl {
             la.field_b.c(var11, var5_int >> 1, var8, 16777215, -1);
             var8 = var8 + la.field_b.field_H;
           }
-          this.field_o = new cn(var5_int + 4, 4 + var7);
+          this.field_o = new RgbSprite(var5_int + 4, 4 + var7);
           this.field_o.e();
           this.field_m.e(2, 2, 12690143);
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, 4 + var5_int, 4 + var7);
@@ -232,7 +232,7 @@ final class oc extends kl {
           var10Lifetime1 = stackIn_19_0;
           var5_int = IntrusiveNode.field_c.b(var14);
           var7Lifetime1 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
-          this.field_y = new cn(var5_int, var7Lifetime1);
+          this.field_y = new RgbSprite(var5_int, var7Lifetime1);
           this.field_y.e();
           IntrusiveNode.field_c.b(var14, 0, IntrusiveNode.field_c.field_H, var10Lifetime1, -1);
           this.field_I = rb.a(16, this.field_y, var10Lifetime1, (byte) 100);
@@ -297,8 +297,8 @@ final class oc extends kl {
         int var16;
         int var17;
         int var18;
-        cn var19;
-        cn var20;
+        RgbSprite var19;
+        RgbSprite var20;
         int var6Lifetime1;
         var18 = DungeonAssault.field_K;
         super.b(105);
@@ -346,7 +346,7 @@ final class oc extends kl {
             this.field_y.h(var15, var16);
           } else {
             var15 = 192 - 192 * (-100 + this.field_C) / 150;
-            ((cn) (var9)).d(var10 - 4, var11 - 4, var15);
+            ((RgbSprite) (var9)).d(var10 - 4, var11 - 4, var15);
             var15 = (this.field_C - 100 << 8) / 150;
             var16 = var10 + (216 - this.field_y.field_y >> 1);
             var17 = var11 + (-this.field_y.field_v + 208);
@@ -365,7 +365,7 @@ final class oc extends kl {
           }
         } else {
           this.field_p.a(216, var11, (byte) 102, var10, 216);
-          ((cn) (var9)).d(-4 + var10, -4 + var11, 192);
+          ((RgbSprite) (var9)).d(-4 + var10, -4 + var11, 192);
         }
     }
 

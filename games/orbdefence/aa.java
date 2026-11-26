@@ -73,11 +73,11 @@ abstract class aa {
 
     abstract long a(int param0);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 > -13) {
-          aa.a((byte) 34);
+          aa.clearStaticReferences((byte) 34);
         }
         field_b = null;
     }

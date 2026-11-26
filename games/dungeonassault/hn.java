@@ -28,12 +28,12 @@ final class hn extends kl {
     }
 
     final static void d(byte param0) {
-        cn var1 = null;
-        cn var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = DungeonAssault.field_K;
         try {
-          var1 = new cn(540, 140);
+          var1 = new RgbSprite(540, 140);
           lm.a(var1, (byte) 70);
           re.b();
           if (param0 != -117) {

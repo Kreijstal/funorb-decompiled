@@ -10,7 +10,7 @@ final class sb {
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        bd var5 = null;
+        RgbSprite var5 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           var1 = ByteStorage.field_c;
@@ -36,8 +36,8 @@ final class sb {
             PcmResampler.field_j = oa.field_a;
           }
           if (param0 != -113) {
-            var5 = (bd) null;
-            sb.a((bd) null, -98);
+            var5 = (RgbSprite) null;
+            sb.a((RgbSprite) null, -98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class sb {
         }
     }
 
-    final static void a(bd param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         if (param1 > -109) {
           return;
         }

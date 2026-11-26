@@ -13,14 +13,14 @@ final class BagpipeAnimation extends EventAnimation {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -3) {
           field_y = null;
           field_x = null;
           field_w = null;
           return;
         }
-        BagpipeAnimation.e((byte) -54);
+        BagpipeAnimation.clearStaticReferences((byte) -54);
         field_y = null;
         field_x = null;
         field_w = null;

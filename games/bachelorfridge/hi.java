@@ -88,10 +88,10 @@ final class hi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 < 17) {
-          hi.a((byte) -70);
+          hi.clearStaticReferences((byte) -70);
         }
     }
 

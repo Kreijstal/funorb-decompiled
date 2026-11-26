@@ -21,7 +21,7 @@ final class sn {
         var6 = CrazyCrystals.field_B;
         try {
           if (param1 <= 81) {
-            sn.a((byte) 105);
+            sn.clearStaticReferences((byte) 105);
           }
           var2_int = param0.length();
           var3 = new byte[var2_int];
@@ -138,9 +138,9 @@ final class sn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -103) {
-          sn.a((byte) 111);
+          sn.clearStaticReferences((byte) 111);
           field_a = null;
           field_b = null;
           return;
@@ -151,7 +151,7 @@ final class sn {
 
     final static ke a(int param0) {
         if (param0 != 27801) {
-          sn.a((byte) 15);
+          sn.clearStaticReferences((byte) 15);
           return (ke) ((Object) new s());
         }
         return (ke) ((Object) new s());

@@ -88,7 +88,7 @@ final class wn implements wo {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        dl var8 = null;
+        RgbSprite var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

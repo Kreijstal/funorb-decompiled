@@ -33,20 +33,20 @@ final class il {
           cl.field_e = param1.field_I;
           ab.d((byte) -42);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static km[] a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
-        km var13 = null;
-        km var14 = null;
+    final static RgbSprite[] a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
+        RgbSprite var13 = null;
+        RgbSprite var14 = null;
         int[] var16 = SoftwareRasterizer.field_d;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
         int var7 = SoftwareRasterizer.field_h;
         int var8 = SoftwareRasterizer.field_c;
-        km var9 = new km(16, param2);
+        RgbSprite var9 = new RgbSprite(16, param2);
         var9.e();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, param0, 16, param2, param5, param1);
         Object var10 = null;
@@ -72,7 +72,7 @@ final class il {
           SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
         SoftwareRasterizer.setRasterBuffer(var16, var7, var8);
-        return new km[]{null, null, null, (km) (var10), var9, (km) (var11), null, null, null};
+        return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
     }
 
     static {

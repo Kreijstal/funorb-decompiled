@@ -208,7 +208,7 @@ class lk extends IntrusiveNode {
     }
 
     lk(String param0, sk param1) {
-        this(param0, ma.field_m.field_c, param1);
+        this(param0, SpriteGeometry.field_m.field_c, param1);
     }
 
     void a(int param0, int param1, lk param2, int param3, int param4, int param5) {
@@ -459,14 +459,14 @@ class lk extends IntrusiveNode {
             if (param2 <= -28) {
               var11 = ag.b(-1);
               if (var11 != null) {
-                ma.field_m.a(ha.field_b, var11, mh.field_Z, true);
+                SpriteGeometry.field_m.a(ha.field_b, var11, mh.field_Z, true);
               }
               return;
             }
             this.a(88, (StringBuilder) null, (Hashtable) null, -53);
             var10 = ag.b(-1);
             if (var10 != null) {
-              ma.field_m.a(ha.field_b, var10, mh.field_Z, true);
+              SpriteGeometry.field_m.a(ha.field_b, var10, mh.field_Z, true);
             }
             return;
           }
@@ -475,7 +475,7 @@ class lk extends IntrusiveNode {
           if (var6 != 0) {
             var7 = ag.b(-1);
             if (var7 != null) {
-              ma.field_m.a(ha.field_b, var7, mh.field_Z, true);
+              SpriteGeometry.field_m.a(ha.field_b, var7, mh.field_Z, true);
             }
             return;
           }
@@ -529,7 +529,7 @@ class lk extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_s = null;
         int var1 = 30 / ((param0 + 5) / 58);
         field_t = null;
@@ -569,7 +569,7 @@ class lk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param6) {
-            lk.b((byte) -10);
+            lk.clearDeclaredStaticReferences((byte) -10);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

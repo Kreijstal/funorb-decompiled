@@ -15,12 +15,12 @@ abstract class nk extends DualLinkNode {
 
     abstract int b(int param0);
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_q = null;
         field_s = null;
         field_u = null;
         if (param0 != 256) {
-          nk.a(41);
+          nk.releaseDeclaredStaticReferences(41);
         }
     }
 

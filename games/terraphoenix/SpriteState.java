@@ -36,9 +36,9 @@ abstract class SpriteState extends DualLinkNode {
         this.a((byte) 88, param3, param0 << 8, param1 << 5, param2);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -47) {
-          SpriteState.d((byte) -67);
+          SpriteState.clearStaticReferences((byte) -67);
           field_w = null;
           field_s = null;
           return;

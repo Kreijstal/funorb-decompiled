@@ -93,7 +93,7 @@ final class eb extends ck {
         return -1;
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_M = null;
         if (param0 == 86) {
           field_O = null;
@@ -102,7 +102,7 @@ final class eb extends ck {
           field_P = null;
           return;
         }
-        eb.f((byte) 0);
+        eb.clearDeclaredStaticReferences((byte) 0);
         field_O = null;
         field_L = null;
         field_I = null;

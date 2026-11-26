@@ -20,7 +20,7 @@ final class dl extends si {
         }
     }
 
-    final static nh[] a(byte param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = -126 % ((-80 - param0) / 37);
         return n.a(123, 3, param4, param3, param1, 1, param2, 1, 1);
     }
@@ -126,7 +126,7 @@ final class dl extends si {
         }
         if (!param0) {
           MusicPatchPcmStream.field_m = gm.a((byte) -96, var9, 80);
-          mf.field_x = null;
+          SpriteGeometry.field_x = null;
           return new fg(param0);
         }
         var6 = var9.readUnsignedShort(-788751192);
@@ -138,12 +138,12 @@ final class dl extends si {
           } else {
             stackIn_22_0 = var10.field_D;
           }
-          mf.field_x = stackIn_22_0;
+          SpriteGeometry.field_x = stackIn_22_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (Exception) (Object) decompiledCaughtException;
           gb.a((Throwable) ((Object) var7), "CC1", 10);
-          mf.field_x = null;
+          SpriteGeometry.field_x = null;
           MusicPatchPcmStream.field_m = null;
           return new fg(param0);
         }
@@ -156,7 +156,7 @@ final class dl extends si {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        nh var5 = null;
+        RgbSprite var5 = null;
         if (param1 != 0) {
           return;
         }
@@ -167,7 +167,7 @@ final class dl extends si {
           return;
         }
         if (this.field_K != 256) {
-          var5 = new nh(this.field_z.field_w, this.field_z.field_k);
+          var5 = new RgbSprite(this.field_z.field_w, this.field_z.field_k);
           MouseInput.a(var5, (byte) 47);
           this.field_z.a(0, param1, param2, 0);
           cl.d((byte) -81);
@@ -200,7 +200,7 @@ final class dl extends si {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_M = null;
         if (param0 != 0) {
           return;

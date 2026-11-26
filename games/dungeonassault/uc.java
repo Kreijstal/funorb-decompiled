@@ -7,28 +7,28 @@ final class uc extends lm {
     boolean field_R;
     static ph field_E;
     static String[] field_K;
-    private cn field_D;
+    private RgbSprite field_D;
     private int field_H;
     int field_S;
     private int field_B;
-    private cn field_P;
+    private RgbSprite field_P;
     static String field_Q;
     static String field_C;
     static ResourceArchive field_I;
     private int field_J;
     private int field_F;
-    private cn[] field_M;
+    private RgbSprite[] field_M;
     private int field_G;
-    private cn field_T;
+    private RgbSprite field_T;
 
-    private final cn b(boolean param0) {
+    private final RgbSprite b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = DungeonAssault.field_K;
         int var2 = this.field_s >> 1;
-        cn var3 = new cn(var2, this.field_s);
+        RgbSprite var3 = new RgbSprite(var2, this.field_s);
         lm.a(var3, (byte) 66);
         for (var4 = 0; var4 < this.field_s; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -45,7 +45,7 @@ final class uc extends lm {
         return var3;
     }
 
-    private final cn b(int param0, int param1, int param2) {
+    private final RgbSprite b(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -54,7 +54,7 @@ final class uc extends lm {
         int var12 = 0;
         int var6 = 0;
         int var13 = DungeonAssault.field_K;
-        cn var14 = new cn(2 * this.field_B, this.field_s);
+        RgbSprite var14 = new RgbSprite(2 * this.field_B, this.field_s);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -81,7 +81,7 @@ final class uc extends lm {
         return var14;
     }
 
-    private final void a(int param0, int param1, int param2, cn param3) {
+    private final void a(int param0, int param1, int param2, RgbSprite param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -147,7 +147,7 @@ final class uc extends lm {
         this.a(param0 ^ -370091864);
     }
 
-    final static void a(int param0, int param1, int param2, cn param3, int param4, int param5, int param6, boolean param7) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5, int param6, boolean param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -162,7 +162,7 @@ final class uc extends lm {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        cn var21 = null;
+        RgbSprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -238,14 +238,14 @@ final class uc extends lm {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_Q = null;
         field_E = null;
         field_K = null;
         field_C = null;
         field_I = null;
         if (param0) {
-          uc.c(true);
+          uc.clearStaticReferences(true);
         }
         field_L = null;
     }
@@ -318,7 +318,7 @@ final class uc extends lm {
         this.field_F = param2;
         this.field_H = 8355711 & param0 >> 1;
         if (param1 != 94) {
-          this.field_P = (cn) null;
+          this.field_P = (RgbSprite) null;
         }
         this.a(-370091864);
     }
@@ -336,10 +336,10 @@ final class uc extends lm {
         if (param0 != -370091864) {
           field_Q = (String) null;
         }
-        this.field_M = new cn[]{this.b(this.field_G, -123, this.field_F), this.b(this.field_H, -88, this.field_J)};
+        this.field_M = new RgbSprite[]{this.b(this.field_G, -123, this.field_F), this.b(this.field_H, -88, this.field_J)};
         this.field_D = this.b(true);
         this.field_T = this.field_D.b();
-        this.field_P = new cn(this.field_s >> 1, this.field_s);
+        this.field_P = new RgbSprite(this.field_s >> 1, this.field_s);
     }
 
     static {

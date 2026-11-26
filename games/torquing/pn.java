@@ -7,14 +7,14 @@ final class pn {
     static byte[][] field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= 57) {
           field_a = null;
           field_b = (byte[][]) null;
           field_c = null;
           return;
         }
-        pn.a(-85);
+        pn.clearStaticReferences(-85);
         field_a = null;
         field_b = (byte[][]) null;
         field_c = null;

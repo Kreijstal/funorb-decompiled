@@ -7,7 +7,7 @@ final class eh {
     static boolean field_a;
     static sh field_d;
 
-    final static void a(int param0, db param1, int param2, int param3, String param4, int param5) {
+    final static void a(int param0, RgbSprite param1, int param2, int param3, String param4, int param5) {
         int var7 = 0;
         int var6_int = 0;
         int var8 = 0;
@@ -50,7 +50,7 @@ final class eh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 84 % ((param0 + 10) / 56);
         field_c = null;
         field_d = null;

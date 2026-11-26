@@ -16,11 +16,11 @@ final class ne {
     private CachedArchiveSource[] field_k;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         if (param0 != 30731) {
-          ne.b(-57);
+          ne.clearStaticReferences(-57);
         }
         field_i = null;
         field_a = null;

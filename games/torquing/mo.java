@@ -530,7 +530,7 @@ final class mo extends am {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_B = null;
         field_x = null;
         field_D = null;

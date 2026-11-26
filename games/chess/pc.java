@@ -53,7 +53,7 @@ final class pc extends ci {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -382,7 +382,7 @@ final class pc extends ci {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param12).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ final class pc extends ci {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -987,11 +987,11 @@ final class pc extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var5_ref), "pc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var5_ref), "pc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Qb = null;
         if (param0 != 0) {
           return;

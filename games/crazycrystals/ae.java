@@ -70,7 +70,7 @@ final class ae extends og implements vd {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_G = null;
         if (param0 != 20) {
           return;

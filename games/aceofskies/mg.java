@@ -7,10 +7,10 @@ final class mg {
     static MidiPcmStream field_d;
     private Sprite[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
-          mg.a(36);
+          mg.clearStaticReferences(36);
           field_d = null;
           return;
         }

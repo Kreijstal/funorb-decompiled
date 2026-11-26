@@ -89,7 +89,7 @@ final class ti extends rd {
         return (pb) ((Object) new qh());
     }
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_l = null;
         field_m = null;
         field_j = null;

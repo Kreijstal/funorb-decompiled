@@ -6,7 +6,7 @@ final class tg extends pj {
     static Sprite field_I;
     static String field_K;
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_K = null;
         field_I = null;
         if (param0 != 22722) {

@@ -185,7 +185,7 @@ final class pb {
         mb.field_b.b(1, AccountRequestState.field_e);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_R = (String[][]) null;
         field_r = null;
         field_A = null;

@@ -323,9 +323,9 @@ final class eg extends tk {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 3) {
-          eg.h(116);
+          eg.clearStaticReferences(116);
         }
         field_s = (int[][]) null;
         field_q = null;

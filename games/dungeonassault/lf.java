@@ -3,7 +3,7 @@
  */
 final class lf extends kl {
     private String field_r;
-    static cn field_x;
+    static RgbSprite field_x;
     static u[] field_y;
     private pp field_o;
     static String field_v;
@@ -11,7 +11,7 @@ final class lf extends kl {
     static String field_p;
     static wh field_w;
     boolean field_u;
-    static cn field_n;
+    static RgbSprite field_n;
     private String field_t;
     static String field_m;
     static String field_q;

@@ -40,7 +40,7 @@ final class s extends am {
         super(0, true);
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -73) {
           return;
         }
@@ -119,7 +119,7 @@ final class s extends am {
         var7 = Torquing.field_u;
         try {
           if (param1 != 35) {
-            s.g((byte) -103);
+            s.clearDeclaredStaticReferences((byte) -103);
           }
           if (param2 == 0) {
             this.field_v = new kj[param0.readUnsignedByte((byte) -101)];

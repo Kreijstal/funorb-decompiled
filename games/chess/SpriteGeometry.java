@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fk extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     int field_r;
     int field_v;
     int field_t;
@@ -40,7 +40,7 @@ abstract class fk extends DualLinkNode {
               if (param0 == 0) {
                 return;
               }
-              fk.a(true, -123);
+              SpriteGeometry.a(true, -123);
               return;
             }
             var9 = param3;
@@ -60,7 +60,7 @@ abstract class fk extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -72,14 +72,14 @@ abstract class fk extends DualLinkNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 82 % ((param0 + 86) / 36);
         field_q = null;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    fk() {
+    SpriteGeometry() {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {

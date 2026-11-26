@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cl extends al {
-    static tg[] field_p;
+    static RgbSprite[] field_p;
     static int field_q;
     private String field_j;
     static int[] field_n;

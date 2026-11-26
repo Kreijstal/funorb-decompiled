@@ -26,7 +26,7 @@ final class ok extends wi {
     static String field_B;
     int field_C;
     private boolean field_A;
-    static dd field_y;
+    static RgbSprite field_y;
 
     final boolean a(byte param0) {
         if (param0 < 67) {
@@ -112,7 +112,7 @@ final class ok extends wi {
         this.field_A = this.a((byte) 112);
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_y = null;
         field_s = null;
         field_B = null;

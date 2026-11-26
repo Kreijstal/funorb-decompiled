@@ -226,7 +226,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_g = null;
         int var1 = -70 % ((-19 - param0) / 59);

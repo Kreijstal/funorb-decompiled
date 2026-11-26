@@ -33,7 +33,7 @@ final class jc implements ComponentLayout {
     public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
-        dd var8 = null;
+        RgbSprite var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

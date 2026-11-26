@@ -46,10 +46,10 @@ class si extends bi {
     private BitmapFont field_v;
     static int field_X;
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_I = null;
         if (param0 != -16412) {
-          si.f(-65);
+          si.clearDeclaredStaticReferences(-65);
         }
         field_B = null;
         field_jb = null;
@@ -181,7 +181,7 @@ class si extends bi {
             }
           }
           if (param0 != -62) {
-            si.f(75);
+            si.clearDeclaredStaticReferences(75);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

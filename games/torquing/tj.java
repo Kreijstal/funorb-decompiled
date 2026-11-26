@@ -8,14 +8,14 @@ final class tj extends IntrusiveNode {
     static Sprite[] field_n;
     static int field_l;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == -36) {
           field_j = null;
           field_n = null;
           field_m = null;
           return;
         }
-        tj.a(-48);
+        tj.clearStaticReferences(-48);
         field_j = null;
         field_n = null;
         field_m = null;

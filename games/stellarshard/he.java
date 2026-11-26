@@ -8,7 +8,7 @@ final class he extends IntrusiveNode {
     boolean field_n;
     int[] field_m;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_o = null;
         int var1 = -67 / ((param0 - 35) / 55);

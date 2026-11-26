@@ -180,14 +180,14 @@ final class cb implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < -66) {
           field_a = null;
           field_b = null;
           field_g = null;
           return;
         }
-        cb.a((byte) -75);
+        cb.clearStaticReferences((byte) -75);
         field_a = null;
         field_b = null;
         field_g = null;

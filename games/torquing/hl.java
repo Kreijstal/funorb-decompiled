@@ -6,10 +6,10 @@ final class hl {
     static int[] field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 > -45) {
-          hl.a((byte) 46);
+          hl.clearStaticReferences((byte) 46);
           field_b = null;
           return;
         }

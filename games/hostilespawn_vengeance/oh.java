@@ -3,14 +3,14 @@
  */
 final class oh {
     static String field_b;
-    static bd field_a;
+    static RgbSprite field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != -32278) {
-          oh.a(-61);
+          oh.clearStaticReferences(-61);
         }
     }
 

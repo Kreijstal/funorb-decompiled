@@ -24,9 +24,9 @@ final class sk implements uj {
         SecondaryNodeDequeIterator.field_a = 2;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          sk.b(true);
+          sk.clearStaticReferences(true);
           field_b = null;
           field_e = null;
           return;

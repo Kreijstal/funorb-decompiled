@@ -56,7 +56,7 @@ final class jg extends al {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         if (param0) {
           field_kb = null;
           field_jb = null;

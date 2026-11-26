@@ -63,7 +63,7 @@ final class hn implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -231,10 +231,10 @@ final class hn implements Runnable {
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         rk[] var14 = null;
         int var11_int = 0;
-        km var15 = null;
-        km var18 = null;
-        km var11 = null;
-        km var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Chess.field_G;
@@ -248,7 +248,7 @@ final class hn implements Runnable {
         rc.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
         rb.field_b = (lh) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
         tk.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));
-        km var17 = new km(param2.a("button.gif", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
+        RgbSprite var17 = new RgbSprite(param2.a("button.gif", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
         jn.a("dropdown", 8221, "commonui", param3);
         rk[] var5 = qm.a(1, "commonui", "screen_options", param3);
         mf.field_s = new rk[4];
@@ -281,20 +281,20 @@ final class hn implements Runnable {
           r.k(3029);
           var17.e();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
-          var15 = new km(var9Lifetime1, var9Lifetime1);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
           var17.d(0, 0);
-          var11 = new km(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var17.d(-var17.field_w + var9Lifetime1, 0);
-          var12 = new km(var17.field_w - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new RgbSprite(var17.field_w - var9Lifetime1 * 2, var9Lifetime1);
           var12.e();
           var17.d(-var9Lifetime1, 0);
           fd.a(28773);
-          bj.field_db = new km[]{var15, var12, var11};
+          bj.field_db = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class hn implements Runnable {
           tj.field_m = param4;
           hd.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "hn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "hn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -393,7 +393,7 @@ final class hn implements Runnable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -467,7 +467,7 @@ final class hn implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ final class hn implements Runnable {
           this.field_o = this.field_i.getOutputStream();
           this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

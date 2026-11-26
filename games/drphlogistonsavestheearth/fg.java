@@ -113,7 +113,7 @@ final class fg {
         this.field_c = fm.field_j;
         this.field_g = dj.field_K;
         if (param0) {
-          this.field_e = mf.field_x;
+          this.field_e = SpriteGeometry.field_x;
         } else {
           this.field_e = null;
         }

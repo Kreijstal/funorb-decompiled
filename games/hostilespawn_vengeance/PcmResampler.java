@@ -7,7 +7,7 @@ final class PcmResampler {
     private int[][] field_b;
     private int field_g;
     static int[] field_c;
-    static bd field_f;
+    static RgbSprite field_f;
     static boolean field_a;
     static int field_j;
     static String field_d;
@@ -38,7 +38,7 @@ final class PcmResampler {
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param1 != 0) {
-            field_f = (bd) null;
+            field_f = (RgbSprite) null;
           }
           if (null != this.field_b) {
             var3_int = (int)((long)this.field_e * (long)param0.length / (long)this.field_g) + 14;
@@ -104,7 +104,7 @@ final class PcmResampler {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        bd[] var12_ref_bd__ = null;
+        RgbSprite[] var12_ref_bd__ = null;
         int var12 = 0;
         double var13_double = 0.0;
         int var13 = 0;
@@ -114,16 +114,16 @@ final class PcmResampler {
         double var16_double = 0.0;
         int var16 = 0;
         int var18 = 0;
-        bd var19 = null;
-        bd var20 = null;
-        bd var21 = null;
-        bd var22 = null;
-        bd var23 = null;
-        bd var24 = null;
-        bd var25 = null;
-        bd var26 = null;
-        bd var27 = null;
-        bd var28 = null;
+        RgbSprite var19 = null;
+        RgbSprite var20 = null;
+        RgbSprite var21 = null;
+        RgbSprite var22 = null;
+        RgbSprite var23 = null;
+        RgbSprite var24 = null;
+        RgbSprite var25 = null;
+        RgbSprite var26 = null;
+        RgbSprite var27 = null;
+        RgbSprite var28 = null;
         int var11Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;

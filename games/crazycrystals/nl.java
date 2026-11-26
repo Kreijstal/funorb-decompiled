@@ -5,7 +5,7 @@ final class nl extends fb {
     static String field_g;
     private int field_j;
     private int field_i;
-    static dl[] field_f;
+    static RgbSprite[] field_f;
     private de field_h;
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
@@ -75,9 +75,9 @@ final class nl extends fb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          nl.b(-100);
+          nl.clearStaticReferences(-100);
         }
         field_f = null;
         field_g = null;
@@ -120,7 +120,7 @@ final class nl extends fb {
         try {
           bl.b(param0.a(7693, "", "headers.packvorbis"));
           if (param1 != 640) {
-            nl.b(100);
+            nl.clearStaticReferences(100);
           }
           var2 = bl.a(param0, "jagex logo2.packvorbis", "");
           var2.a();

@@ -9,7 +9,7 @@ final class ec extends ln {
     static am field_k;
     static oi field_h;
     static vc field_m;
-    static dl[] field_j;
+    static RgbSprite[] field_j;
 
     final static void a(boolean param0, String param1, java.applet.Applet param2, byte param3) {
         try {

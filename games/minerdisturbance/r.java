@@ -19,12 +19,12 @@ final class r {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         field_b = null;
         if (param0 != 125) {
-          r.b((byte) 54);
+          r.clearStaticReferences((byte) 54);
         }
     }
 

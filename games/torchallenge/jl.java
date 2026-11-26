@@ -26,7 +26,7 @@ abstract class jl {
 
     abstract int a(long param0, int param1);
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 46 % ((param0 - 25) / 53);
         field_a = null;
         field_b = null;

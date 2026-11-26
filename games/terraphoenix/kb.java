@@ -37,7 +37,7 @@ final class kb {
     int field_z;
     int field_t;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -73 / ((param0 - 3) / 61);
         field_a = null;
         field_s = null;

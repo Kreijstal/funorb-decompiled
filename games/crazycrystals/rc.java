@@ -37,14 +37,14 @@ final class rc {
         field_b = null;
     }
 
-    final static dl[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        dl[] var10;
-        dl[] var11_ref_dl__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_dl__;
         int var11;
         int var12;
-        dl var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -53,10 +53,10 @@ final class rc {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        dl[] var10Lifetime1;
+        RgbSprite[] var10Lifetime1;
         var15 = CrazyCrystals.field_B;
         var9 = param8 + (param1 + param4);
-        var10 = new dl[]{new dl(var9, var9), new dl(param0, var9), new dl(var9, var9), new dl(var9, param0), new dl(64, 64), new dl(var9, param0), new dl(var9, var9), new dl(param0, var9), new dl(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param0), new RgbSprite(64, 64), new RgbSprite(var9, param0), new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9)};
         var11_ref_dl__ = var10;
         for (var12 = 0; var11_ref_dl__.length > var12; var12++) {
           var13 = var11_ref_dl__[var12];

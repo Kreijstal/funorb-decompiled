@@ -162,9 +162,9 @@ final class rk extends DualLinkNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          rk.b(true);
+          rk.clearStaticReferences(true);
         }
         field_n = null;
         field_r = null;

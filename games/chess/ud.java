@@ -5,7 +5,7 @@ final class ud {
     static boolean field_b;
     static nb field_d;
     static int field_a;
-    static km field_c;
+    static RgbSprite field_c;
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {
         PlatformTaskDispatcher var3 = null;
@@ -98,7 +98,7 @@ final class ud {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

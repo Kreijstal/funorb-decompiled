@@ -11,14 +11,14 @@ final class AccountNameAvailabilityValidator extends me {
     private String checkedName;
     private boolean nameAvailable;
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 > 117) {
           field_n = null;
           field_o = null;
           field_k = null;
           return;
         }
-        AccountNameAvailabilityValidator.h(106);
+        AccountNameAvailabilityValidator.clearDeclaredStaticReferences(106);
         field_n = null;
         field_o = null;
         field_k = null;

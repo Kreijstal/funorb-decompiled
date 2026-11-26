@@ -27,7 +27,7 @@ final class fe {
           gg.field_N = param0;
           lc.field_v = param2;
           if (param5 > -36) {
-            fe.a((byte) 54);
+            fe.clearStaticReferences((byte) 54);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fe.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -56,7 +56,7 @@ final class fe {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = -55 % ((88 - param0) / 35);
     }

@@ -16,13 +16,13 @@ final class tf extends wm {
         return uk.field_v.field_Nb;
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         field_m = null;
         field_p = null;
         field_o = null;
         if (param0 < 1) {
-          tf.c(-28);
+          tf.clearDeclaredStaticReferences(-28);
         }
     }
 

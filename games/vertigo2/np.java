@@ -35,7 +35,7 @@ final class np extends UiPanel {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_Mb = null;
         field_Kb = null;
         field_Ib = null;

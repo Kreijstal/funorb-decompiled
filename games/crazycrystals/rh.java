@@ -50,16 +50,16 @@ final class rh {
 
     final static void a(boolean param0) {
         RuntimeException decompiledCaughtException = null;
-        dl var1 = null;
+        RgbSprite var1 = null;
         RuntimeException var1_ref = null;
         int var2_int = 0;
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dl var6 = null;
-        dl var7 = null;
-        dl var8 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
         int var3Lifetime1;
         var4 = CrazyCrystals.field_B;
         try {

@@ -49,7 +49,7 @@ final class bj extends IOException {
         super(param0);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = 30 % ((param0 - 17) / 50);
         field_a = null;

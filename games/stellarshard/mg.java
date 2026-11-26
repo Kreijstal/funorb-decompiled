@@ -39,10 +39,10 @@ final class mg {
     int[] field_x;
     int[][] field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         if (!param0) {
-          mg.a(true);
+          mg.clearStaticReferences(true);
         }
         field_k = null;
     }
@@ -85,7 +85,7 @@ final class mg {
               return;
             }
             if (param6 != -445834032) {
-              mg.a(false);
+              mg.clearStaticReferences(false);
             }
             var14 = param0 - param4;
             if (param4 == param8) {

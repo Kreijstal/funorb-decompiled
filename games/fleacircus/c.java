@@ -370,7 +370,7 @@ class c extends bb {
         return this.field_i.substring(var2, var3);
     }
 
-    final static void a(int param0, byte param1, int param2, dd[] param3, int param4, int param5, fa param6, dd[] param7, int param8, int param9, boolean param10, int param11) {
+    final static void a(int param0, byte param1, int param2, RgbSprite[] param3, int param4, int param5, fa param6, RgbSprite[] param7, int param8, int param9, boolean param10, int param11) {
         try {
           ib.a(param0, param9, param6, param3, param7, param2, 0, param8, param4, param2, param9, param5, param11, param10, param6);
           if (param1 <= 66) {

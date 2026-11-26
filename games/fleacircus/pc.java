@@ -204,7 +204,7 @@ final class pc {
         return stackIn_9_0;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_f = null;
         field_i = null;

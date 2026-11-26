@@ -6,16 +6,16 @@ final class mc {
     static k[] field_c;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 82) {
-          mc.a((byte) 110);
+          mc.clearStaticReferences((byte) 110);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final static void a(dd param0, String param1, int param2) {
+    final static void a(RgbSprite param0, String param1, int param2) {
         try {
           DualLinkNode.field_k = param1;
           if (param2 != 0) {

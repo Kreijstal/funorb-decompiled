@@ -48,12 +48,12 @@ final class uf {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_c = null;
         field_e = null;
         if (param0 != 0) {
-          uf.a(-25);
+          uf.clearStaticReferences(-25);
         }
     }
 

@@ -7,9 +7,9 @@ final class ue {
     static IntrusiveDeque field_b;
     static qk field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 4) {
-          ue.a(-20);
+          ue.clearStaticReferences(-20);
           field_b = null;
           field_a = null;
           return;

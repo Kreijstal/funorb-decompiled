@@ -169,11 +169,11 @@ final class ul extends gj implements nk, da {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_G = null;
         field_F = null;
         if (param0 != 16777215) {
-          ul.k(-9);
+          ul.releaseDeclaredStaticReferences(-9);
         }
     }
 

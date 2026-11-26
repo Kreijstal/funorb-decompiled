@@ -4,7 +4,7 @@
 final class hn {
     static String field_c;
     static String field_d;
-    static bd field_e;
+    static RgbSprite field_e;
     static int field_a;
     static int field_b;
 

@@ -4,7 +4,7 @@
 final class qm extends ip {
     static IntrusiveDeque field_q;
     static String field_p;
-    static cn field_m;
+    static RgbSprite field_m;
     static long field_o;
     static cf field_n;
     static u[] field_r;

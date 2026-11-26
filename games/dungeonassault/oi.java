@@ -214,7 +214,7 @@ final class oi extends da {
         }
     }
 
-    final static cn[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -307,7 +307,7 @@ final class oi extends da {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 >= 108) {
           field_M = null;
           field_F = null;

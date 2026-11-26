@@ -9,9 +9,9 @@ class qa extends hf {
     static he[] field_S;
     private String[] field_R;
     static int[] field_T;
-    static nh field_L;
+    static RgbSprite field_L;
     static int[] field_J;
-    static nh field_M;
+    static RgbSprite field_M;
     static String field_O;
 
     String e(int param0) {
@@ -121,11 +121,11 @@ class qa extends hf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_I = null;
         if (param0 != 122) {
-          qa.a((byte) 76);
+          qa.clearStaticReferences((byte) 76);
         }
         field_O = null;
         field_L = null;
@@ -160,7 +160,7 @@ class qa extends hf {
             param3--;
             if (param3 < 0) {
               if (param4 != -2141888031) {
-                field_L = (nh) null;
+                field_L = (RgbSprite) null;
               }
               return;
             }

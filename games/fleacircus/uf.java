@@ -5,7 +5,7 @@ final class uf {
     private cg[] field_g;
     private af field_a;
     private java.math.BigInteger field_i;
-    static dd field_f;
+    static RgbSprite field_f;
     static int[] field_b;
     static int[] field_e;
     private java.math.BigInteger field_d;

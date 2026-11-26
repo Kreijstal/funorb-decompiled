@@ -51,12 +51,12 @@ final class SplitEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         field_q = null;
         field_s = null;
         if (param0 >= -116) {
-          SplitEvent.d((byte) -64);
+          SplitEvent.clearStaticReferences((byte) -64);
         }
     }
 
@@ -85,7 +85,7 @@ final class SplitEvent extends SpecialEvent {
         int var4 = BachelorFridge.field_y;
         try {
           if (param0 > -12) {
-            SplitEvent.d((byte) -18);
+            SplitEvent.clearStaticReferences((byte) -18);
           }
           param1.writeShort(this.moveId, -125);
           param1.writeByte(this.effects.countWithOffset(0), 0);

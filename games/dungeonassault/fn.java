@@ -6,7 +6,7 @@ final class fn extends IntrusiveNode {
     int field_r;
     static String field_j;
     int[] field_p;
-    static cn field_o;
+    static RgbSprite field_o;
     static String field_q;
     int field_k;
     int field_s;
@@ -14,14 +14,14 @@ final class fn extends IntrusiveNode {
     int field_i;
     int field_l;
 
-    final static cn a(int param0) {
+    final static RgbSprite a(int param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
         int var2Lifetime1;
         if (param0 != 2) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
-        cn var1 = new cn(11, 11);
+        RgbSprite var1 = new RgbSprite(11, 11);
         jh.a(var1);
         for (var2 = 0; var2 < 6; var2++) {
           SoftwareRasterizer.drawVerticalLine(var2, -var2 + 5, 2 * var2 + 1, 65793);
@@ -33,11 +33,11 @@ final class fn extends IntrusiveNode {
         return var1;
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_j = null;
         if (param0 != 1) {
-          fn.d(-32);
+          fn.clearDeclaredStaticReferences(-32);
         }
         field_o = null;
     }

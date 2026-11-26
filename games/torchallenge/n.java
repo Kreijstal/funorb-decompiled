@@ -42,7 +42,7 @@ abstract class n extends v {
         var2Lifetime1 = 9 / ((param0 + 2) / 62);
     }
 
-    public static void l(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_cb = null;
         if (param0 == 5) {
           field_db = (int[][][]) null;
@@ -50,7 +50,7 @@ abstract class n extends v {
           field_kb = (int[][][]) null;
           return;
         }
-        n.l(-121);
+        n.releaseDeclaredStaticReferences(-121);
         field_db = (int[][][]) null;
         field_fb = null;
         field_kb = (int[][][]) null;

@@ -7,9 +7,9 @@ final class cf {
     static hd[] field_c;
     static String field_d;
     PcmSample field_e;
-    static cn field_f;
+    static RgbSprite field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         if (param0 == 30) {
@@ -17,7 +17,7 @@ final class cf {
           field_f = null;
           return;
         }
-        cf.a(45);
+        cf.clearStaticReferences(45);
         field_c = null;
         field_f = null;
     }

@@ -115,7 +115,7 @@ final class lk extends am {
         var16 = var18;
         var3 = var16;
         if (param0 != -29116) {
-          lk.b(-110);
+          lk.clearStaticReferences(-110);
         }
         if (this.field_r.field_b) {
           var31 = this.c(24066, param1, 0);
@@ -144,9 +144,9 @@ final class lk extends am {
         return var3;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          lk.b(60);
+          lk.clearStaticReferences(60);
         }
         field_t = (byte[][]) null;
         field_v = null;

@@ -17,7 +17,7 @@ final class ch extends lg {
             f var4 = (f) null;
             ch.a(91, -91, (f) null);
           }
-          var3 = ed.field_q;
+          var3 = SpriteGeometry.field_q;
           var3.h(param1, 0);
           var3.writeByte(param2.field_k, param0 - 18392);
           var3.writeByte(param2.field_j, -1);
@@ -146,7 +146,7 @@ final class ch extends lg {
         int var13 = 0;
         var13 = Lexicominos.field_L ? 1 : 0;
         if (param0 < 14) {
-          ch.d(-8);
+          ch.clearDeclaredStaticReferences(-8);
         }
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
@@ -315,10 +315,10 @@ final class ch extends lg {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_d = null;
         if (param0 >= -121) {
-          ch.d(29);
+          ch.clearDeclaredStaticReferences(29);
           field_g = null;
           return;
         }

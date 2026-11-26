@@ -128,14 +128,14 @@ final class WeightedObjectCache {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == 12) {
           field_a = null;
           field_f = null;
           field_i = null;
           return;
         }
-        WeightedObjectCache.a((byte) -81);
+        WeightedObjectCache.clearStaticReferences((byte) -81);
         field_a = null;
         field_f = null;
         field_i = null;

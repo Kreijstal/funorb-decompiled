@@ -14,12 +14,12 @@ final class qh {
     private im field_h;
     private im field_i;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = (int[][]) null;
         field_c = null;
         field_d = null;
         if (param0 <= 46) {
-          qh.c(126);
+          qh.clearStaticReferences(126);
         }
     }
 

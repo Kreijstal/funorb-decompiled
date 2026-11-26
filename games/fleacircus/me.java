@@ -12,7 +12,7 @@ final class me implements ComponentLayout {
     static String field_f;
     private int field_h;
     static int[] field_i;
-    static dd field_g;
+    static RgbSprite field_g;
 
     public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
         int stackIn_7_0 = 0;
@@ -30,7 +30,7 @@ final class me implements ComponentLayout {
         var11 = fleas.field_A ? 1 : 0;
         try {
           if (param0 >= -36) {
-            field_g = (dd) null;
+            field_g = (RgbSprite) null;
           }
           if (!param3.field_x &&
             !param3.e(1)) {
@@ -93,7 +93,7 @@ final class me implements ComponentLayout {
               return;
             }
             if (param1 >= -39) {
-              field_g = (dd) null;
+              field_g = (RgbSprite) null;
             }
             try {
               param0.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
@@ -129,7 +129,7 @@ final class me implements ComponentLayout {
         }
     }
 
-    final static dd[] b(int param0) {
+    final static RgbSprite[] b(int param0) {
         int var3 = 0;
         int var4 = 0;
         byte[] var5 = null;
@@ -137,7 +137,7 @@ final class me implements ComponentLayout {
         int var7 = 0;
         int var8 = fleas.field_A ? 1 : 0;
         int var1 = -93 / ((param0 + 66) / 37);
-        dd[] var2 = new dd[ef.field_l];
+        RgbSprite[] var2 = new RgbSprite[ef.field_l];
         for (var3 = 0; ef.field_l > var3; var3++) {
           var4 = ij.field_H[var3] * ob.field_a[var3];
           var5 = of.field_d[var3];
@@ -145,7 +145,7 @@ final class me implements ComponentLayout {
           for (var7 = 0; var4 > var7; var7++) {
             var6[var7] = rd.field_d[sc.a((int) var5[var7], 255)];
           }
-          var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
+          var2[var3] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
         }
         c.o(-28210);
         return var2;
@@ -156,7 +156,7 @@ final class me implements ComponentLayout {
         mf.field_c = param1;
         vk.field_L = 1;
         if (param2) {
-          field_g = (dd) null;
+          field_g = (RgbSprite) null;
         }
     }
 

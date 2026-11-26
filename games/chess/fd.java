@@ -49,7 +49,7 @@ final class fd extends IntrusiveNode {
         kg.field_V = param2;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 123 / ((-58 - param0) / 50);
         field_o = null;
         field_l = null;
@@ -63,7 +63,7 @@ final class fd extends IntrusiveNode {
           var2 = hi.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "fd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "fd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

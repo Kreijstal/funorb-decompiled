@@ -7,40 +7,40 @@ class hc extends of {
     private int field_L;
     static he[][] field_M;
     private int field_R;
-    private nh field_kb;
+    private RgbSprite field_kb;
     private String field_fb;
     private int field_eb;
     private int field_jb;
     private int field_Q;
     private int field_I;
-    private nh field_J;
-    private nh field_F;
+    private RgbSprite field_J;
+    private RgbSprite field_F;
     private int field_W;
     private boolean field_y;
     private int field_H;
-    private nh[] field_U;
-    private nh[] field_bb;
+    private RgbSprite[] field_U;
+    private RgbSprite[] field_bb;
     private int field_gb;
     private boolean field_hb;
-    private nh[] field_nb;
+    private RgbSprite[] field_nb;
     private int field_A;
     private int field_Y;
     private boolean field_mb;
-    private nh field_B;
+    private RgbSprite field_B;
     private int field_N;
     private int field_E;
     private boolean field_lb;
-    static nh[] field_K;
+    static RgbSprite[] field_K;
     private int field_db;
-    private nh[] field_D;
+    private RgbSprite[] field_D;
     static int field_G;
     private int field_O;
     private int field_Z;
-    private nh field_cb;
+    private RgbSprite field_cb;
     private rf field_T;
     private boolean field_C;
     private int field_X;
-    private nh[] field_ib;
+    private RgbSprite[] field_ib;
     private int field_P;
 
     private final void a(hc param0, int param1) {
@@ -51,7 +51,7 @@ class hc extends of {
         RuntimeException var3 = null;
         try {
           if (param1 > -63) {
-            this.field_U = (nh[]) null;
+            this.field_U = (RgbSprite[]) null;
           }
           if (param0 != null) {
             if (param0.field_y) {

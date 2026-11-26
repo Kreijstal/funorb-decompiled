@@ -12,7 +12,7 @@ class ii extends lm implements aa {
     static String field_D;
     static String field_J;
     static int field_F;
-    static cn field_H;
+    static RgbSprite field_H;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, lm param5, byte param6) {
         dj var8 = null;
@@ -56,7 +56,7 @@ class ii extends lm implements aa {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_I = null;
         field_D = null;
         field_H = null;
@@ -439,7 +439,7 @@ class ii extends lm implements aa {
             break;
           }
           if (param3 < 55) {
-            field_H = (cn) null;
+            field_H = (RgbSprite) null;
           }
           var6 = param2;
           if (var6 != 80) {

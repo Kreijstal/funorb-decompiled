@@ -6,7 +6,7 @@ final class il {
     private DualLinkNode field_b;
     static String field_d;
     static boolean field_a;
-    static hj[] field_e;
+    static RgbSprite[] field_e;
     private DualLinkNode field_c;
 
     final DualLinkNode b(int param0) {

@@ -5,7 +5,7 @@ final class sh extends to {
     static String[] field_v;
     static int field_u;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 81 / ((19 - param0) / 47);
         field_v = null;
     }

@@ -54,7 +54,7 @@ final class sd extends bi {
         }
     }
 
-    final static void q(int param0) {
+    final static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != 274) {
           field_V = (String) null;
         }
@@ -90,7 +90,7 @@ final class sd extends bi {
             }
           }
           if (param2 != -27) {
-            sd.e((byte) 2);
+            sd.clearStaticReferences((byte) 2);
           }
           this.field_R.field_J = (int)(65536.0f * (param3 / 100.0f));
           this.field_P = param1;
@@ -168,7 +168,7 @@ final class sd extends bi {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_V = null;
         field_Q = null;
         int var1 = 81 / ((47 - param0) / 43);

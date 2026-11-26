@@ -37,10 +37,10 @@ final class ll {
         return var5;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != 114) {
-          ll.a((byte) -124);
+          ll.clearStaticReferences((byte) -124);
           field_c = null;
           field_e = null;
           return;

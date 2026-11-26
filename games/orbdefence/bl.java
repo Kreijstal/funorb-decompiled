@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bl {
-    static hj field_n;
+    static RgbSprite field_n;
     td field_e;
     int field_k;
     td field_c;
@@ -24,7 +24,7 @@ final class bl {
     final void a(kc param0, int param1) {
         jc var18 = null;
         sj var4 = null;
-        hj[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var17 = null;
         ArgbSprite var19 = null;
         int var7_int = 0;
@@ -33,12 +33,12 @@ final class bl {
         ab discarded$0 = null;
         ck discarded$1 = null;
         sj var8 = null;
-        hj[] var9 = null;
-        hj[] var10 = null;
-        hj dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         sj var11 = null;
         sj var12 = null;
-        hj var13 = null;
+        RgbSprite var13 = null;
         sj var14 = null;
         sj var20 = null;
         int var15 = OrbDefence.field_D ? 1 : 0;
@@ -64,13 +64,13 @@ final class bl {
           var4.a(0, true).a((byte) 123, 15658734).a(vf.a(7829367, 10066329, 8947848, (byte) -106), 0);
           var4.a(1, true).a(vf.a(13421772, 10066329, 11184810, (byte) -118), 0);
           var4.a(3, true).a(vf.a(10066329, 7829367, 8947848, (byte) -90), 0).a(1, 0).b(1, 2);
-          var5 = new hj[9];
+          var5 = new RgbSprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_v.length; var7_int++) {
             var17.field_v[var7_int] = 1077952576;
           }
-          var5[4] = (hj) ((Object) var19);
+          var5[4] = (RgbSprite) ((Object) var19);
           var4.a(4, true).a(true, (byte) -57).a(var5, 0);
           var4.a(5, true).a(q.a(false, 0, 0, 0, 65793), 0).a(true, (byte) -57).a((byte) 114, -1);
           this.field_l = (td) ((Object) var4);
@@ -92,10 +92,10 @@ final class bl {
           var8.a(0, true).a(vf.a(10066329, 7829367, 15658734, (byte) -94), 0).a((byte) 116, 1118481).c(-1, param1 + 2701);
           var8.a(4, true).a(true, (byte) -57).a(var5, 0);
           this.field_q = (td) ((Object) var8);
-          var9 = new hj[9];
-          var9[4] = new hj(2, 1);
-          var10 = new hj[9];
-          var10[4] = new hj(1, 2);
+          var9 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_v = new int[]{6710886, 7829367};
           var10[4].field_v = new int[]{6710886, 7829367};
@@ -103,7 +103,7 @@ final class bl {
           var12 = new sj();
           var11.a(0, var9, 87);
           var12.a(0, var10, 94);
-          var13 = new hj(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new sj(var4, true);
           var14.a(param1 ^ 2698, var13.f());

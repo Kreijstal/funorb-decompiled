@@ -28,14 +28,14 @@ abstract class eq implements sk {
         return null;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_c = null;
         int var1 = 86 / ((param0 + 24) / 46);
     }
 
     public final void a(boolean param0) {
         if (!param0) {
-          eq.b((byte) 82);
+          eq.clearDeclaredStaticReferences((byte) 82);
           this.field_e = km.correctedCurrentTimeMillis(-1);
           return;
         }

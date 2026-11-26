@@ -57,9 +57,9 @@ final class uh extends IntrusiveNode {
         }
     }
 
-    final static kc[] a(int param0, qk param1, int param2, byte param3) {
+    final static RgbSprite[] a(int param0, qk param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        kc[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

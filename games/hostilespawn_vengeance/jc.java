@@ -6,9 +6,9 @@ final class jc {
     static String field_e;
     static PcmSample[] field_c;
     static String field_d;
-    static bd field_a;
+    static RgbSprite field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -17,7 +17,7 @@ final class jc {
         if (param0 == 89) {
           return;
         }
-        jc.a((byte) 73);
+        jc.clearStaticReferences((byte) 73);
     }
 
     final static void a(int[] param0, int param1, int param2, byte[] param3, int param4) {
@@ -84,7 +84,7 @@ final class jc {
         }
     }
 
-    final static bd a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static RgbSprite a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -145,7 +145,7 @@ final class jc {
           throw new IllegalStateException();
         }
         if (param0) {
-          field_a = (bd) null;
+          field_a = (RgbSprite) null;
           if (od.field_I == ee.field_b) {
             od.field_I = e.field_q;
             return wj.field_H;

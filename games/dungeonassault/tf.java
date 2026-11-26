@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tf {
-    private cn field_c;
+    private RgbSprite field_c;
     int[] field_h;
     String field_f;
-    private cn field_b;
+    private RgbSprite field_b;
     int field_i;
     private int field_d;
     private se field_a;
     static boolean[] field_e;
     static int[] field_k;
     static String field_g;
-    static cn field_j;
+    static RgbSprite field_j;
 
     final static boolean a(java.applet.Applet param0, int param1) {
         RuntimeException stackIn_25_0 = null;
@@ -115,8 +115,8 @@ final class tf {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        cn var7 = null;
-        cn var8 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
         try {
           this.field_f = param1;
           this.field_a = param0;
@@ -124,7 +124,7 @@ final class tf {
           jh.c();
           this.field_i = this.field_a.b(this.field_f);
           this.field_d = this.field_a.field_H + this.field_a.field_E;
-          var7 = new cn(this.field_i, this.field_d);
+          var7 = new RgbSprite(this.field_i, this.field_d);
           var8 = var7;
           var8.e();
           this.field_a.b(this.field_f, 0, this.field_a.field_H, 16777215, -1);

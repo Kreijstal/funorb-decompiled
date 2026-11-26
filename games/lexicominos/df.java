@@ -34,11 +34,11 @@ final class df {
         return 2;
     }
 
-    final static db[] a(byte param0) {
+    final static RgbSprite[] a(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        db[] var1;
+        RgbSprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -52,7 +52,7 @@ final class df {
         if (param0 != 91) {
           field_d = (String[]) null;
         }
-        var1 = new db[th.field_t];
+        var1 = new RgbSprite[th.field_t];
         for (var2 = 0; var2 < th.field_t; var2++) {
           var3 = pb.field_h[var2] * bd.field_m[var2];
           var20 = be.field_f[var2];
@@ -62,7 +62,7 @@ final class df {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = ci.field_b[vg.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
+            var1[var2] = new RgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var21);
           } else {
             var22 = MidiPcmStream.field_o[var2];
             var16 = new int[var3];
@@ -71,7 +71,7 @@ final class df {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = tb.a(vg.a(255, (int) var22[var7]) << 24, ci.field_b[vg.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (db) ((Object) new ArgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
           }
         }
         GzipDecompressor.a(12428);
@@ -85,11 +85,11 @@ final class df {
         field_d = null;
     }
 
-    final static db a(String param0, String param1, sh param2, byte param3) {
+    final static RgbSprite a(String param0, String param1, sh param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        db stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

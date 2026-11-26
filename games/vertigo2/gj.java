@@ -679,9 +679,9 @@ final class gj extends TextureOperator {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -68) {
-          gj.b((byte) -14);
+          gj.clearStaticReferences((byte) -14);
         }
         field_z = null;
     }

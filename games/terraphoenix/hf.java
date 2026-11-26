@@ -200,7 +200,7 @@ final class hf extends fd {
         var1.a(15);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_z = null;
         field_u = null;
         field_s = null;
@@ -311,7 +311,7 @@ final class hf extends fd {
 
     final bd a(int param0, int param1) {
         if (param1 != 3) {
-          hf.a((byte) -125);
+          hf.clearStaticReferences((byte) -125);
         }
         bd dupTemp$0 = new bd();
         this.field_A[param0] = dupTemp$0;

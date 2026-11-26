@@ -17,7 +17,7 @@ final class up {
         this.field_g = param1 ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         int var1 = -1 / ((-61 - param0) / 39);
         field_e = null;

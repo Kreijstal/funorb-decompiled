@@ -10,7 +10,7 @@ final class db {
     private boolean field_c;
     static String field_f;
     private lk field_g;
-    static dl[] field_j;
+    static RgbSprite[] field_j;
     static wj[] field_a;
 
     private final synchronized boolean a(byte param0, int param1) {
@@ -201,7 +201,7 @@ final class db {
           return 100;
         }
         if (param0 != 25030) {
-          field_j = (dl[]) null;
+          field_j = (RgbSprite[]) null;
         }
         return this.field_g.a(param1, 486289953);
     }
@@ -227,7 +227,7 @@ final class db {
             return false;
           }
           if (param0 != -20402) {
-            db.b((byte) -19);
+            db.clearStaticReferences((byte) -19);
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
@@ -248,10 +248,10 @@ final class db {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != 127) {
-          db.b((byte) -99);
+          db.clearStaticReferences((byte) -99);
         }
         field_j = null;
         field_f = null;

@@ -3,16 +3,16 @@
  */
 final class g extends ok {
     static int field_Hb;
-    static cn field_Ib;
+    static RgbSprite field_Ib;
     static wh field_Lb;
-    static cn[] field_Gb;
+    static RgbSprite[] field_Gb;
     static String field_Jb;
     static String field_Kb;
 
-    final static cn a(cn param0, byte param1) {
+    final static RgbSprite a(RgbSprite param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
-        cn stackIn_39_0 = null;
+        RgbSprite stackIn_39_0 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_43_2 = null;
@@ -35,7 +35,7 @@ final class g extends ok {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        cn var22 = null;
+        RgbSprite var22 = null;
         int var15Lifetime1;
         var21 = DungeonAssault.field_K;
         try {
@@ -48,7 +48,7 @@ final class g extends ok {
           if (param0.field_v == 0) {
             return null;
           }
-          var22 = new cn(64, 48);
+          var22 = new RgbSprite(64, 48);
           for (var3 = 0; 48 > var3; var3++) {
             for (var4 = 0; var4 < 64; var4++) {
               boolean decompiledFrameRemainder0 = true;
@@ -200,7 +200,7 @@ final class g extends ok {
           var5.writeInt((byte) 63, param1.field_r);
           var5.writeInt((byte) 63, param1.field_l);
           if (param2 != 50) {
-            field_Ib = (cn) null;
+            field_Ib = (RgbSprite) null;
           }
           var5.writeInt((byte) 63, param1.field_s);
           var5.writeInt((byte) 63, param1.field_i);

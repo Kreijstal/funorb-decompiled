@@ -4,7 +4,7 @@
 final class nh {
     static pg field_a;
     static String field_b;
-    static db[] field_c;
+    static RgbSprite[] field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         if (aa.field_i[param2] == null) {
@@ -79,7 +79,7 @@ final class nh {
         int var4 = 0;
         int var5 = Lexicominos.field_L ? 1 : 0;
         if (param2 < 44) {
-          field_c = (db[]) null;
+          field_c = (RgbSprite[]) null;
         }
         char[] var6 = new char[param1];
         char[] var3 = var6;

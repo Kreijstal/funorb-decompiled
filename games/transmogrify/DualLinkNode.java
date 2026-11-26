@@ -30,7 +30,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_i = null;
         int var1 = 35 / ((-82 - param0) / 43);
         field_k = null;

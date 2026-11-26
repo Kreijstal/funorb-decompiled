@@ -24,7 +24,7 @@ final class fh {
         ui.field_kb = ql.field_l;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_a = null;
         int var1 = 90 % ((param0 + 20) / 57);

@@ -4,7 +4,7 @@
 final class ba {
     int field_f;
     static e field_a;
-    static hj field_e;
+    static RgbSprite field_e;
     static int field_c;
     static String field_g;
     int field_d;
@@ -38,8 +38,8 @@ final class ba {
         int var1_int = 0;
         int var2 = OrbDefence.field_D ? 1 : 0;
         try {
-          i.field_a = new hj(640, 58);
-          hc.field_i = new hj(640, 122);
+          i.field_a = new RgbSprite(640, 58);
+          hc.field_i = new RgbSprite(640, 122);
           i.field_a.d();
           SoftwareRasterizer.fillRectangle(3, 3, 634, 50, 0);
           SoftwareRasterizer.fillRectangle(65, 3, 511, 50, 10359);

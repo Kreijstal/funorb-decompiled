@@ -137,15 +137,15 @@ final class cb extends pn implements Cloneable {
     }
 
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        dl[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         ef stackIn_10_0 = null;
         String stackIn_11_1 = null;
-        dl[] stackIn_16_0 = null;
+        RgbSprite[] stackIn_16_0 = null;
         int stackIn_17_1 = 0;
         ef stackIn_21_0 = null;
         String stackIn_22_1 = null;
-        dl[] stackIn_26_0 = null;
+        RgbSprite[] stackIn_26_0 = null;
         int stackIn_27_1 = 0;
         ef stackIn_31_0 = null;
         String stackIn_32_1 = null;
@@ -159,7 +159,7 @@ final class cb extends pn implements Cloneable {
           } else {
             stackIn_4_1 = this.field_s >> 2;
           }
-          ((dl) (Object) stackIn_3_0[stackIn_4_1]).a(param4, param5, 2 * param1, 2 * param2, 128);
+          ((RgbSprite) (Object) stackIn_3_0[stackIn_4_1]).a(param4, param5, 2 * param1, 2 * param2, 128);
           var7 = -115 % ((param0 - 74) / 41);
           if (param3) {
             stackIn_10_0 = an.field_q;
@@ -179,7 +179,7 @@ final class cb extends pn implements Cloneable {
           } else {
             stackIn_27_1 = this.field_s >> 2;
           }
-          ((dl) (Object) stackIn_26_0[stackIn_27_1]).a(param4, param5, 2 * param1, 2 * param2, 128);
+          ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).a(param4, param5, 2 * param1, 2 * param2, 128);
           var7Lifetime1 = -115 % ((param0 - 74) / 41);
           if (param3) {
             stackIn_31_0 = an.field_q;
@@ -198,7 +198,7 @@ final class cb extends pn implements Cloneable {
         } else {
           stackIn_17_1 = 0;
         }
-        ((dl) (Object) stackIn_16_0[stackIn_17_1]).d(param4, param5, 128);
+        ((RgbSprite) (Object) stackIn_16_0[stackIn_17_1]).d(param4, param5, 128);
         var7Lifetime2 = -115 % ((param0 - 74) / 41);
         if (param3) {
           stackIn_21_0 = an.field_q;
@@ -380,7 +380,7 @@ final class cb extends pn implements Cloneable {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         f stackIn_6_0 = null;
         ig stackIn_8_0 = null;

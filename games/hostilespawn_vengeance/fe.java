@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class fe {
-    static bd field_c;
+    static RgbSprite field_c;
     String field_a;
     int field_b;
 
@@ -19,7 +19,7 @@ abstract class fe {
           ke.field_s.b(te.field_M, (byte) 110);
           return;
         }
-        fe.a((byte) -109);
+        fe.clearStaticReferences((byte) -109);
         te.field_M = new ij();
         ke.field_s.b(te.field_M, (byte) 110);
     }
@@ -31,10 +31,10 @@ abstract class fe {
         return new java.net.Socket(this.field_a, this.field_b);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != -112) {
-          fe.a((byte) 80);
+          fe.clearStaticReferences((byte) 80);
         }
     }
 

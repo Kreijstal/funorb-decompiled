@@ -6,10 +6,10 @@ final class ca {
     static int[][] field_a;
     private int[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (int[][]) null;
         if (param0 != 32) {
-          ca.a(-32);
+          ca.clearStaticReferences(-32);
           field_c = null;
           return;
         }
@@ -238,7 +238,7 @@ final class ca {
             var3 = (CharSequence) ((Object) var2);
             if (lg.a(var3, -1) != 0L) {
               if (param1 > -101) {
-                ca.a(1);
+                ca.clearStaticReferences(1);
               }
               return;
             }

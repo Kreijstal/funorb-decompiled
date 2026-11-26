@@ -375,7 +375,7 @@ final class df extends wj {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         field_q = null;
         field_o = null;

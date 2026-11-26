@@ -6,7 +6,7 @@ abstract class MouseWheelInput {
     static String field_a;
     static int field_e;
     static boolean field_d;
-    static dd field_f;
+    static RgbSprite field_f;
     static String field_c;
 
     abstract int pollRotation(int param0);
@@ -50,7 +50,7 @@ abstract class MouseWheelInput {
             return stackIn_6_0;
           }
           if (param0) {
-            MouseWheelInput.a(-40);
+            MouseWheelInput.clearStaticReferences(-40);
           }
           if (!(param1 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
@@ -72,7 +72,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 <= -9) {
           field_a = null;
@@ -80,7 +80,7 @@ abstract class MouseWheelInput {
           field_b = null;
           return;
         }
-        MouseWheelInput.a(-122);
+        MouseWheelInput.clearStaticReferences(-122);
         field_a = null;
         field_f = null;
         field_b = null;

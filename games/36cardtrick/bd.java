@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd extends g implements qh {
-    static kc field_H;
+    static RgbSprite field_H;
     private hl[] field_G;
     private wi field_D;
     private String[] field_E;
@@ -93,7 +93,7 @@ final class bd extends g implements qh {
           var4 = var10;
           var5 = 0;
           if (param0 != 255) {
-            field_H = (kc) null;
+            field_H = (RgbSprite) null;
           }
           for (var6 = 0; param3 > var6; var6++) {
             var7 = 255 & param2[var6 + param1];

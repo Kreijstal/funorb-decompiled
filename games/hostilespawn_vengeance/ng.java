@@ -7,12 +7,12 @@ final class ng extends IntrusiveNode {
     static boolean field_k;
     int[] field_n;
     static int[] field_l;
-    static bd field_v;
+    static RgbSprite field_v;
     int[] field_q;
     PlatformTask[] field_j;
-    static bd field_s;
-    static bd field_i;
-    static bd[][] field_p;
+    static RgbSprite field_s;
+    static RgbSprite field_i;
+    static RgbSprite[][] field_p;
     PlatformTask[] field_r;
     int[] field_m;
     int field_t;
@@ -90,7 +90,7 @@ final class ng extends IntrusiveNode {
         }
         field_v = null;
         field_i = null;
-        field_p = (bd[][]) null;
+        field_p = (RgbSprite[][]) null;
         field_l = null;
         field_s = null;
     }

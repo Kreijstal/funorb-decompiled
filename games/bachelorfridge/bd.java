@@ -21,12 +21,12 @@ final class bd extends ot {
         super(param0, param1);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = (int[][]) null;
         field_i = null;
         field_k = null;
         if (param0 >= -119) {
-          bd.c((byte) 21);
+          bd.clearStaticReferences((byte) 21);
           field_h = null;
           return;
         }

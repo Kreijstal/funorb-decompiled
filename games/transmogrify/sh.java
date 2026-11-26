@@ -14,11 +14,11 @@ final class sh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_c = null;
         if (param0) {
-          sh.a(false);
+          sh.clearStaticReferences(false);
         }
     }
 

@@ -3,7 +3,7 @@
  */
 class PacketBuffer extends IntrusiveNode {
     byte[] payload;
-    static kc field_k;
+    static RgbSprite field_k;
     static int field_j;
     int position;
     static boolean field_h;
@@ -178,7 +178,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.writeShort(var8.length, 26040);
           if (param2 != -15792) {
-            field_k = (kc) null;
+            field_k = (RgbSprite) null;
           }
           this.writeBytes(var8.length, 0, var8, (byte) -113);
         } catch (RuntimeException runtimeException) {
@@ -237,7 +237,7 @@ class PacketBuffer extends IntrusiveNode {
         int var3 = ml.computeCrc32(this.payload, param0, this.position, param1 ^ 12014);
         this.writeInt(-246, var3);
         if (param1 != 5) {
-          field_k = (kc) null;
+          field_k = (RgbSprite) null;
           return var3;
         }
         return var3;
@@ -294,7 +294,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 == 60) {
           return;
         }
-        field_k = (kc) null;
+        field_k = (RgbSprite) null;
     }
 
     final int readUnsignedShortOrInt(boolean param0) {
@@ -373,7 +373,7 @@ class PacketBuffer extends IntrusiveNode {
     final int readUnsignedShort(byte param0) {
         this.position = this.position + 2;
         if (param0 != 72) {
-          field_k = (kc) null;
+          field_k = (RgbSprite) null;
           return ((this.payload[-2 + this.position] & 255) << 8) + (this.payload[-1 + this.position] & 255);
         }
         return ((this.payload[-2 + this.position] & 255) << 8) + (this.payload[-1 + this.position] & 255);
@@ -761,7 +761,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.payload[fieldTemp$2] = (byte)(param1 >> 8);
         if (param0 != -246) {
-          field_k = (kc) null;
+          field_k = (RgbSprite) null;
           fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$3] = (byte)param1;

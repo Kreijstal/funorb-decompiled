@@ -7,23 +7,23 @@ final class va {
     static volatile int field_a;
     static jb field_b;
 
-    final static nf[] a(int param0, nf[] param1) {
-        nf dupTemp$0 = null;
-        nf dupTemp$1 = null;
-        nf dupTemp$2 = null;
-        nf dupTemp$3 = null;
-        nf dupTemp$4 = null;
-        nf dupTemp$5 = null;
-        nf dupTemp$6 = null;
-        nf dupTemp$7 = null;
-        nf dupTemp$8 = null;
-        nf dupTemp$9 = null;
-        nf dupTemp$10 = null;
-        nf dupTemp$11 = null;
-        nf dupTemp$12 = null;
-        nf dupTemp$13 = null;
-        nf dupTemp$14 = null;
-        nf dupTemp$15 = null;
+    final static RgbSprite[] a(int param0, RgbSprite[] param1) {
+        RgbSprite dupTemp$0 = null;
+        RgbSprite dupTemp$1 = null;
+        RgbSprite dupTemp$2 = null;
+        RgbSprite dupTemp$3 = null;
+        RgbSprite dupTemp$4 = null;
+        RgbSprite dupTemp$5 = null;
+        RgbSprite dupTemp$6 = null;
+        RgbSprite dupTemp$7 = null;
+        RgbSprite dupTemp$8 = null;
+        RgbSprite dupTemp$9 = null;
+        RgbSprite dupTemp$10 = null;
+        RgbSprite dupTemp$11 = null;
+        RgbSprite dupTemp$12 = null;
+        RgbSprite dupTemp$13 = null;
+        RgbSprite dupTemp$14 = null;
+        RgbSprite dupTemp$15 = null;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -32,7 +32,7 @@ final class va {
         int stackIn_33_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_41_0 = 0;
-        nf[] stackIn_42_0 = null;
+        RgbSprite[] stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -142,7 +142,7 @@ final class va {
           dupTemp$14.field_v = dupTemp$14.field_v - var5Lifetime7;
           dupTemp$15 = param1[8];
           dupTemp$15.field_x = dupTemp$15.field_x - var5Lifetime7;
-          stackIn_42_0 = (nf[]) (param1);
+          stackIn_42_0 = (RgbSprite[]) (param1);
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class va {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         field_c = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gi extends pn implements Cloneable {
-    static dl field_n;
+    static RgbSprite field_n;
     static int field_m;
     private int field_o;
     private int field_p;
@@ -181,9 +181,9 @@ final class gi extends pn implements Cloneable {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          gi.b(false);
+          gi.clearStaticReferences(false);
         }
         field_n = null;
     }
@@ -220,7 +220,7 @@ final class gi extends pn implements Cloneable {
             }
           }
           if (param4 >= -87) {
-            field_n = (dl) null;
+            field_n = (RgbSprite) null;
           }
           var10Lifetime1 = this.field_p;
           if (var9 <= 0) {
@@ -291,7 +291,7 @@ final class gi extends pn implements Cloneable {
     }
 
     static {
-        field_n = new dl(256, 25);
+        field_n = new RgbSprite(256, 25);
         field_m = 64;
     }
 }

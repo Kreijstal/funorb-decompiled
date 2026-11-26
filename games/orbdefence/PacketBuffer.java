@@ -145,10 +145,10 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$7] = (byte)(int)param0;
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         if (param0 != 10) {
-          PacketBuffer.c(-9);
+          PacketBuffer.clearDeclaredStaticReferences(-9);
         }
         field_l = null;
         field_h = null;

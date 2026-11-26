@@ -231,9 +231,9 @@ final class ab {
         return param0 + 1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -14839) {
-          ab.b(85);
+          ab.clearStaticReferences(85);
         }
         field_a = null;
         field_b = null;

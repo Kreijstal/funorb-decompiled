@@ -13,7 +13,7 @@ final class ad extends IntrusiveNode {
     static String[] field_i;
     int field_r;
     static int[] field_t;
-    static kc field_j;
+    static RgbSprite field_j;
     static int[] field_g;
     int field_l;
 

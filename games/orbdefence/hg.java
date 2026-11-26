@@ -3,7 +3,7 @@
  */
 final class hg extends sf {
     static int field_Z;
-    static hj field_ab;
+    static RgbSprite field_ab;
 
     public static void c(boolean param0) {
         field_ab = null;

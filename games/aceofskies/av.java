@@ -26,7 +26,7 @@ final class av {
         int var2 = 4 + ImageProducerRasterBuffer.titleFontMetrics.field_a + ImageProducerRasterBuffer.titleFontMetrics.maxDescent;
         bk.menuTop[6] = var2 + 200 + (ImageProducerRasterBuffer.titleFontMetrics.maxAscent + ImageProducerRasterBuffer.titleFontMetrics.maxDescent);
         if (!param0) {
-          av.a((byte) -119);
+          av.clearStaticReferences((byte) -119);
         }
         oo.menuRowSpacing[6] = 30 + 2 * var2;
         return true;
@@ -54,7 +54,7 @@ final class av {
         return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bl {
-    static bd field_c;
+    static RgbSprite field_c;
     static String field_e;
     int field_a;
     static int field_b;
     static float field_f;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

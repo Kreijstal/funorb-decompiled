@@ -71,8 +71,8 @@ abstract class MouseWheelInput {
 
     final static void b(int param0) {
         if (param0 != 95) {
-          db var2 = (db) null;
-          MouseWheelInput.a((byte) -44, (db) null);
+          RgbSprite var2 = (RgbSprite) null;
+          MouseWheelInput.a((byte) -44, (RgbSprite) null);
         }
     }
 
@@ -88,7 +88,7 @@ abstract class MouseWheelInput {
           RuntimeException var3_ref = null;
           String var4 = null;
           String var5 = null;
-          db var6 = null;
+          RgbSprite var6 = null;
           String var7 = null;
           String var8 = null;
           String var5Lifetime1;
@@ -110,8 +110,8 @@ abstract class MouseWheelInput {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (param1 != -11971) {
-                var6 = (db) null;
-                MouseWheelInput.a((byte) -4, (db) null);
+                var6 = (RgbSprite) null;
+                MouseWheelInput.a((byte) -4, (RgbSprite) null);
               }
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
@@ -150,7 +150,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -86 % ((64 - param0) / 50);
         field_c = null;
         field_f = null;
@@ -159,7 +159,7 @@ abstract class MouseWheelInput {
         field_b = null;
     }
 
-    final static void a(byte param0, db param1) {
+    final static void a(byte param0, RgbSprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

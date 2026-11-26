@@ -68,7 +68,7 @@ final class l extends di {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

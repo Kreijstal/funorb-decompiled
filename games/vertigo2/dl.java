@@ -6,7 +6,7 @@ final class dl {
     static boolean[][] field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = 96 / ((-42 - param0) / 60);
         field_b = (boolean[][]) null;
@@ -111,7 +111,7 @@ final class dl {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != -5996) {
-            dl.a((byte) -91);
+            dl.clearStaticReferences((byte) -91);
           }
           var4 = (ri) (ob.field_M.beginBackward((byte) 100));
           while (var4 != null) {

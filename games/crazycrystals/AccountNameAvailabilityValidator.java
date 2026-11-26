@@ -8,9 +8,9 @@ final class AccountNameAvailabilityValidator extends se {
     static int field_k;
     private String checkedName;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          AccountNameAvailabilityValidator.b(true);
+          AccountNameAvailabilityValidator.clearStaticReferences(true);
           field_i = null;
           return;
         }

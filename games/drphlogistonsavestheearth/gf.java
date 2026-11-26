@@ -17,7 +17,7 @@ final class gf {
     private int field_f;
     private int field_E;
     private double field_z;
-    nh field_g;
+    RgbSprite field_g;
     double field_F;
     int field_l;
     private int field_n;

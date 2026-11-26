@@ -11,7 +11,7 @@ final class sa extends IntrusiveNode {
     static int field_m;
     static int[] field_l;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 45 % ((param0 - 7) / 58);
         field_n = null;
         field_l = null;

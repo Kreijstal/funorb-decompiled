@@ -609,7 +609,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         this.byteState0001 = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    public static void performAction1291(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         mixedSupport080State0003 = null;
         rgbSpriteState0044 = null;
         sceneWidgetState0098 = null;

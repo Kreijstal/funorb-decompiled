@@ -19,7 +19,7 @@ final class LevelEditor {
     int field_k;
     static uc field_j;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_f = null;
         int var1 = 61 % ((-36 - param0) / 54);
@@ -283,7 +283,7 @@ final class LevelEditor {
         var3 = Terraphoenix.field_V;
         var2 = this.map.tiles[IntrusiveNode.field_c][vf.field_a];
         if (param0 <= 121) {
-          LevelEditor.d((byte) 89);
+          LevelEditor.clearStaticReferences((byte) 89);
         }
         if (0 != this.field_a) {
           if (var2 == null) {

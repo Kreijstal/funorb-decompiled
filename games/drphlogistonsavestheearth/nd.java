@@ -9,7 +9,7 @@ final class nd extends hf {
     int field_S;
     int field_I;
     int field_N;
-    static nh field_L;
+    static RgbSprite field_L;
     static boolean field_Q;
     static int field_M;
     int field_T;

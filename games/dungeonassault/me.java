@@ -13,13 +13,13 @@ final class me {
 
     final boolean a(byte param0) {
         if (param0 <= 36) {
-          me.a(-118);
+          me.clearStaticReferences(-118);
           return this.field_b;
         }
         return this.field_b;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 36) {
           field_e = null;
           field_g = null;
@@ -27,7 +27,7 @@ final class me {
           field_c = null;
           return;
         }
-        me.a(95);
+        me.clearStaticReferences(95);
         field_e = null;
         field_g = null;
         field_a = null;
@@ -76,17 +76,17 @@ final class me {
         }
     }
 
-    final static cn a(int param0, int param1, int param2, int param3, int param4) {
-        cn var6 = null;
+    final static RgbSprite a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite var6 = null;
         int var5 = !gl.field_Lb ? 32 : 36;
         if (param0 == 32) {
-          var6 = new cn(var5, var5);
+          var6 = new RgbSprite(var5, var5);
           jh.a(var6);
           SoftwareRasterizer.fillRectangle(param3, param2, -param3 - (param1 - var5), -param2 + (-param4 + var5), 16777215);
           jh.b();
           return var6;
         }
-        return (cn) null;
+        return (RgbSprite) null;
     }
 
     final String c(int param0) {

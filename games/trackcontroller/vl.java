@@ -215,7 +215,7 @@ final class vl extends ok {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_E = null;
         int var1 = -79 / ((-66 - param0) / 52);
         field_J = null;

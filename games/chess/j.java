@@ -35,7 +35,7 @@ final class j extends DualLinkNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -87 % ((-44 - param0) / 39);
         field_v = null;
     }
@@ -59,7 +59,7 @@ final class j extends DualLinkNode {
         var7 = Chess.field_G;
         try {
           if (!param2) {
-            j.d((byte) 104);
+            j.clearStaticReferences((byte) 104);
           }
           if (param0 != 1) {
             if (param0 == 2) {
@@ -114,7 +114,7 @@ final class j extends DualLinkNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class j extends DualLinkNode {
         var4 = Chess.field_G;
         try {
           if (param1 != 0) {
-            j.d((byte) 71);
+            j.clearStaticReferences((byte) 71);
           }
           while (true) {
             var3_int = param0.readUnsignedByte(-96);
@@ -148,7 +148,7 @@ final class j extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

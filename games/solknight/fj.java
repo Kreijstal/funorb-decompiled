@@ -7,7 +7,7 @@ final class fj extends IntrusiveNode {
     static String field_j;
     int field_k;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_j = null;
         if (param0 != -13) {
           field_j = (String) null;

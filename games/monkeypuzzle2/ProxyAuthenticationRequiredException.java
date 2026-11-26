@@ -11,7 +11,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static d field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -20,7 +20,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           field_b = null;
           return;
         }
-        ProxyAuthenticationRequiredException.a((byte) -128);
+        ProxyAuthenticationRequiredException.clearStaticReferences((byte) -128);
         field_e = null;
         field_b = null;
     }

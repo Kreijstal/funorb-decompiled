@@ -6,7 +6,7 @@ final class so extends am {
     static cd field_s;
     static cd field_u;
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 <= 104) {
           field_s = (cd) null;
         }

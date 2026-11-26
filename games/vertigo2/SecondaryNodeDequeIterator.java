@@ -73,7 +73,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_c = null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 21 / ((36 - param0) / 55);
         field_b = null;
     }

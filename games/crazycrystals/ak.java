@@ -14,7 +14,7 @@ final class ak extends IntrusiveNode {
     int field_h;
     static int field_m;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_f = null;
         if (param0 != 77) {
           field_f = (db) null;
@@ -65,7 +65,7 @@ final class ak extends IntrusiveNode {
         SoftwareRasterizer.fillRectangle(param1 + 1, 10 + param2, 77, 4, param4);
         oc.a(DirectByteStorage.field_c, 26, param2, param3 + param1, 15, -123);
         if (param0 != 61) {
-          ak.a(-86);
+          ak.clearDeclaredStaticReferences(-86);
         }
     }
 

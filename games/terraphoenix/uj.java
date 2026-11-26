@@ -15,10 +15,10 @@ abstract class uj {
 
     abstract int b(int param0, int param1);
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 >= -47) {
-          uj.b((byte) -117);
+          uj.clearStaticReferences((byte) -117);
           field_b = null;
           field_a = null;
           return;

@@ -78,7 +78,7 @@ abstract class OpenGlBuffer implements HardwareBuffer {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_j = null;
         menuActions = (int[][]) null;
         field_d = null;

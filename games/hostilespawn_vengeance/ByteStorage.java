@@ -18,7 +18,7 @@ abstract class ByteStorage {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, bd param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite param4, int param5) {
         if (param3 != 22173) {
           return;
         }

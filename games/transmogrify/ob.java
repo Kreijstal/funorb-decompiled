@@ -203,7 +203,7 @@ final class ob extends le {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_M = null;
         int var1 = -3 % ((-60 - param0) / 57);
         field_F = null;

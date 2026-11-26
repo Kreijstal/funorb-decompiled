@@ -4,7 +4,7 @@
 final class kl {
     static int[] field_c;
     static int field_a;
-    static bd[][] field_b;
+    static RgbSprite[][] field_b;
 
     final static boolean b(int param0) {
         if (param0 != 50) {
@@ -26,15 +26,15 @@ final class kl {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 90) {
-          kl.a(92);
+          kl.clearStaticReferences(92);
           field_c = null;
-          field_b = (bd[][]) null;
+          field_b = (RgbSprite[][]) null;
           return;
         }
         field_c = null;
-        field_b = (bd[][]) null;
+        field_b = (RgbSprite[][]) null;
     }
 
     static {

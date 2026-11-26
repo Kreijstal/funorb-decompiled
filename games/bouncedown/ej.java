@@ -3,7 +3,7 @@
  */
 final class ej {
     static String field_b;
-    static tg field_a;
+    static RgbSprite field_a;
     static int field_d;
     static String field_c;
     static String field_e;
@@ -68,7 +68,7 @@ final class ej {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 36 % ((53 - param0) / 44);
         field_b = null;
         field_a = null;

@@ -7,7 +7,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private boolean field_z;
     private boolean field_r;
     private int field_p;
-    static bd field_s;
+    static RgbSprite field_s;
     static long field_y;
     private int field_v;
     static int field_u;
@@ -67,7 +67,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         mk.field_O[2] = param0;
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         int var1 = -80 % ((-65 - param0) / 37);
     }
@@ -91,7 +91,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ll.field_d = param2;
           uh.field_k = param0;
           this.i(12);
-          ec.b(-21931);
+          ec.clearDeclaredStaticReferences(-21931);
           return;
         }
     }
@@ -114,7 +114,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (i.field_d) {
           return -1;
         }
-        int var2 = ee.a(true, this.field_A, this.field_r, -109, qc.d(750938499), q.c(-1));
+        int var2 = ee.a(true, this.field_A, this.field_r, -109, SpriteGeometry.d(750938499), q.c(-1));
         if (-1 == var2) {
           return -1;
         }
@@ -161,7 +161,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void g(int param0) {
         if (param0 != 24293) {
-          field_s = (bd) null;
+          field_s = (RgbSprite) null;
         }
         mk.field_O[1] = true;
     }
@@ -264,7 +264,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private final void f(byte param0) {
         mk.field_O[5] = true;
         if (param0 != 97) {
-          NetworkGameClient.g((byte) -39);
+          NetworkGameClient.clearStaticReferences((byte) -39);
         }
     }
 
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = fj.a(jm.a((byte) 93), this.field_A, vf.l(-1), q.c(-1), SecondaryNodeDequeIterator.a(param1 - 125), (byte) -8, qc.d(param1 ^ -750938500));
+            var5_intLifetime1 = fj.a(jm.a((byte) 93), this.field_A, vf.l(-1), q.c(-1), SecondaryNodeDequeIterator.a(param1 - 125), (byte) -8, SpriteGeometry.d(param1 ^ -750938500));
             if (var5_intLifetime1 != -1) {
               gm.a(26991, km.field_x, ea.field_a, var5_intLifetime1);
               km.field_x = null;
@@ -315,7 +315,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param0) {
               i.field_d = false;
             } else {
-              var5_intLifetime2 = ee.a(false, this.field_A, this.field_r, -124, qc.d(750938499), q.c(-1));
+              var5_intLifetime2 = ee.a(false, this.field_A, this.field_r, -124, SpriteGeometry.d(750938499), q.c(-1));
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   la.a(var5_intLifetime2, km.field_x, (byte) 51);
@@ -683,7 +683,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ca.a(ll.field_b, mb.field_m, im.field_c, param1 - 9768) &&
           jh.a(-95, ll.field_b)) {
           GzipDecompressor.a(1);
-          ni.c(-30074);
+          ni.clearDeclaredStaticReferences(-30074);
           wi.field_c = l.field_e;
           ka.field_r = false;
           lc.a(ArchiveIndex.field_g, ll.field_b, im.field_c, 12789, mb.field_m);

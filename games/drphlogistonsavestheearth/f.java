@@ -7,7 +7,7 @@ final class f extends IntrusiveNode {
     static String field_m;
     static volatile int field_h;
     int[] field_k;
-    static nh[] field_i;
+    static RgbSprite[] field_i;
 
     public static void d(int param0) {
         if (param0 != -1) {

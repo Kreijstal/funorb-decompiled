@@ -176,12 +176,12 @@ final class vo extends ip {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_m = null;
         field_o = null;
         if (param0 != 1) {
-          vo.e(-81);
+          vo.clearDeclaredStaticReferences(-81);
         }
     }
 

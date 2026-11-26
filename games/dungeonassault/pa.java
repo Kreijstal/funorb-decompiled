@@ -4,7 +4,7 @@
 final class pa {
     static String field_b;
     static rj field_c;
-    static cn field_a;
+    static RgbSprite field_a;
 
     final static void a(int param0, java.applet.Applet param1) {
         try {

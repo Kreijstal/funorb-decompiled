@@ -3,7 +3,7 @@
  */
 abstract class ca {
     static int field_a;
-    static bd field_b;
+    static RgbSprite field_b;
     static int field_c;
     static int field_d;
 

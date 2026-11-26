@@ -15,7 +15,7 @@ abstract class kc {
 
     abstract void a(PacketBuffer param0, byte param1);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -24,7 +24,7 @@ abstract class kc {
           field_g = null;
           return;
         }
-        kc.a(-52);
+        kc.clearStaticReferences(-52);
         field_g = null;
     }
 

@@ -380,9 +380,9 @@ class ui extends hc {
         return 38;
     }
 
-    public static void q(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -1) {
-          ui.q(68);
+          ui.clearDeclaredStaticReferences(68);
         }
         field_N = null;
     }

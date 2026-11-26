@@ -4,7 +4,7 @@
 import java.util.*;
 
 class gj extends UiComponent implements wg {
-    static dd[] field_E;
+    static RgbSprite[] field_E;
     IntrusiveDeque field_C;
     static rk field_A;
     static String field_D;

@@ -4,7 +4,7 @@
 final class mf {
     static int field_c;
     static String field_a;
-    static hj[] field_b;
+    static RgbSprite[] field_b;
     static boolean field_d;
 
     public static void clearStaticReferences(int param0) {

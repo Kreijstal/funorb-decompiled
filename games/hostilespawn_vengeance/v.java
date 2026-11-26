@@ -14,7 +14,7 @@ final class v {
     int field_m;
     int field_a;
     private int field_f;
-    static bd field_j;
+    static RgbSprite field_j;
 
     public static void b(int param0) {
         field_j = null;
@@ -131,7 +131,7 @@ final class v {
         try {
           var4_int = param3.length();
           if (param0 != -18214) {
-            field_j = (bd) null;
+            field_j = (RgbSprite) null;
           }
           var5 = param2.length();
           var6 = var4_int;

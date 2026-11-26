@@ -58,13 +58,13 @@ final class k {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_e = null;
         if (param0 <= -77) {
           return;
         }
-        k.a((byte) -75);
+        k.clearStaticReferences((byte) -75);
     }
 
     final DualLinkNode c(byte param0) {
@@ -77,7 +77,7 @@ final class k {
           return null;
         }
         if (param0 >= -9) {
-          k.a((byte) -31);
+          k.clearStaticReferences((byte) -31);
           var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
           while (this.field_c != var2) {
             if (this.field_c.field_h == this.field_f) {

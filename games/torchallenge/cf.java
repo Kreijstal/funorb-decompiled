@@ -32,7 +32,7 @@ final class cf {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         int var1 = -94 / ((-6 - param0) / 49);
         field_d = null;

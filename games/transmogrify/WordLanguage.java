@@ -29,14 +29,14 @@ final class WordLanguage {
         return Character.toUpperCase(param1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_i = null;
         field_q = null;
         field_l = null;
         field_m = null;
         if (param0 != -41) {
-          WordLanguage.a((byte) -93);
+          WordLanguage.clearStaticReferences((byte) -93);
         }
     }
 

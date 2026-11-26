@@ -48,7 +48,7 @@ abstract class hl extends td {
           GameApplet.field_g.b(new sf(), param0 ^ 1217366722);
           return;
         }
-        hl.l(-40);
+        hl.releaseDeclaredStaticReferences(-40);
         GameApplet.field_g.b(new sf(), param0 ^ 1217366722);
     }
 
@@ -102,7 +102,7 @@ abstract class hl extends td {
           this.a(param2, -3050, kg.field_c - param2 >> 1, param0, -param0 + jf.field_j >> 1);
           return;
         }
-        hl.l(54);
+        hl.releaseDeclaredStaticReferences(54);
         this.a(param2, -3050, kg.field_c - param2 >> 1, param0, -param0 + jf.field_j >> 1);
     }
 
@@ -156,7 +156,7 @@ abstract class hl extends td {
         CachedArchiveSource.field_p.drawTransparentWithOpacity(param1 + this.field_p, param2 + this.field_m, this.field_G);
     }
 
-    public static void l(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_C = null;
         int var1 = -64 / ((param0 - 19) / 59);
     }

@@ -9,12 +9,12 @@ final class ta {
     static String field_b;
 
     final static void c(int param0) {
-        tg var1 = null;
-        tg var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = Bounce.field_N;
         try {
-          var1 = new tg(540, 140);
+          var1 = new RgbSprite(540, 140);
           kh.a(var1, param0 + 1);
           qk.c();
           SoftwareRasterizer.clearRaster();

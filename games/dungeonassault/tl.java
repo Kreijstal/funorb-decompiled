@@ -8,7 +8,7 @@ final class tl implements Runnable {
     private int field_a;
     static ResourceArchive field_k;
     private PlatformTask field_g;
-    static cn field_i;
+    static RgbSprite field_i;
     static String[] field_e;
     static String field_c;
     private DataInputStream field_o;
@@ -264,7 +264,7 @@ final class tl implements Runnable {
         field_i = null;
         field_m = null;
         if (param0 != 50) {
-          field_i = (cn) null;
+          field_i = (RgbSprite) null;
         }
     }
 

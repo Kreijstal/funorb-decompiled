@@ -183,9 +183,9 @@ final class tn extends gf {
         super(param0);
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
-          tn.e(-1);
+          tn.clearDeclaredStaticReferences(-1);
           field_l = null;
           field_m = null;
           return;

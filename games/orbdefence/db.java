@@ -10,7 +10,7 @@ final class db {
     int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 3 % ((param0 - 12) / 58);
         field_c = null;
     }

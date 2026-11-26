@@ -18,10 +18,10 @@ final class ql {
     boolean field_f;
     int field_d;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 != 0) {
-          ql.b(70);
+          ql.clearStaticReferences(70);
         }
     }
 
@@ -128,7 +128,7 @@ final class ql {
           var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
-        ql.b(-98);
+        ql.clearStaticReferences(-98);
         var9 = (int)((long)var5 * (long)var4 >> 16);
         var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};

@@ -138,13 +138,13 @@ final class nn extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_j = null;
         if (param0 == -80) {
           return;
         }
-        nn.b((byte) 94);
+        nn.clearStaticReferences((byte) 94);
     }
 
     final void a(byte param0, gd param1) {

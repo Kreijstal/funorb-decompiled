@@ -5,7 +5,7 @@ final class fg {
     static PcmSample[] field_b;
     static String field_a;
     static int[] field_c;
-    static bd field_d;
+    static RgbSprite field_d;
 
     final static void a(int param0, int param1, int param2, p param3) {
         int var4_int = 0;
@@ -98,12 +98,12 @@ final class fg {
         return (java.awt.Container) ((Object) bn.c(-1));
     }
 
-    final static bd a(String param0, String param1, ResourceArchive param2, boolean param3) {
+    final static RgbSprite a(String param0, String param1, ResourceArchive param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bd stackIn_2_0 = null;
-        bd stackIn_4_0 = null;
+        RgbSprite stackIn_2_0 = null;
+        RgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -115,7 +115,7 @@ final class fg {
         try {
           var4_int = param2.a((byte) -2, param0);
           if (param3) {
-            stackIn_2_0 = (bd) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           var5 = param2.a(var4_int, param1, -1);
@@ -147,7 +147,7 @@ final class fg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -157,7 +157,7 @@ final class fg {
 
     final static boolean a(int param0) {
         if (param0 != 32) {
-          fg.a((byte) 107);
+          fg.clearStaticReferences((byte) 107);
         }
         return sj.field_a.a(-26720);
     }

@@ -5,7 +5,7 @@ final class bc {
     static rc field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -65 % ((85 - param0) / 33);
     }

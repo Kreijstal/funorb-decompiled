@@ -7,7 +7,7 @@ final class AccountNameAvailabilityValidator extends di {
     private boolean nameAvailable;
     private String checkedName;
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = -80 / ((0 - param0) / 46);
         field_n = null;
         field_o = null;
@@ -245,7 +245,7 @@ final class AccountNameAvailabilityValidator extends di {
               return true;
             }
             if (param0 != 9819) {
-              AccountNameAvailabilityValidator.d((byte) 51);
+              AccountNameAvailabilityValidator.clearDeclaredStaticReferences((byte) 51);
             }
             try {
               var2 = "tuhstatbut";

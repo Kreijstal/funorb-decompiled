@@ -55,7 +55,7 @@ final class po extends am {
         this.field_s = param1 >> 4 & param0;
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_x = null;
         int var1 = 100 % ((49 - param0) / 48);
         field_y = null;

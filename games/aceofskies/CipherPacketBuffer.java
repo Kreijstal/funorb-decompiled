@@ -9,12 +9,12 @@ final class CipherPacketBuffer extends PacketBuffer {
     static long field_o;
     static SpriteData[] fontSpriteData;
 
-    public static void l(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         fontSpriteData = null;
         brassSliderSprites = null;
         field_p = null;
         if (param0 <= 91) {
-          CipherPacketBuffer.l((byte) -94);
+          CipherPacketBuffer.clearStaticReferences((byte) -94);
         }
     }
 

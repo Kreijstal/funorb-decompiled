@@ -92,7 +92,7 @@ final class jk extends si {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_H = null;
         field_K = null;
         field_I = null;
@@ -107,7 +107,7 @@ final class jk extends si {
           jk.b((byte) 71, param1);
           nc.a(LevelSession.field_Y, false, (byte) 92);
           if (param0 != 1) {
-            jk.j(-66);
+            jk.clearDeclaredStaticReferences(-66);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

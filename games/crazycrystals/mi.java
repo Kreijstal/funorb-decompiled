@@ -4,7 +4,7 @@
 final class mi extends ea implements Cloneable {
     static int[] field_A;
     private transient boolean field_w;
-    private dl[] field_y;
+    private RgbSprite[] field_y;
     transient fq field_C;
     transient fq field_z;
     transient int field_u;
@@ -13,7 +13,7 @@ final class mi extends ea implements Cloneable {
     transient int field_t;
     static fp field_D;
     static int field_v;
-    static dl[] field_x;
+    static RgbSprite[] field_x;
 
     final boolean a(mj param0, boolean param1, f[][] param2) {
         RuntimeException var4 = null;
@@ -85,7 +85,7 @@ final class mi extends ea implements Cloneable {
         return qk.a(param0, -114, false, true, false, 1);
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_A = null;
         if (param0 != -20188) {
           return;
@@ -121,11 +121,11 @@ final class mi extends ea implements Cloneable {
         }
     }
 
-    final static dl[] b(int param0, int param1) {
+    final static RgbSprite[] b(int param0, int param1) {
         int var3 = -18 % ((param0 + 26) / 60);
-        dl[] var4 = new dl[9];
-        dl[] var2 = var4;
-        var4[4] = mc.a(64, -64, param1);
+        RgbSprite[] var4 = new RgbSprite[9];
+        RgbSprite[] var2 = var4;
+        var4[4] = SpriteGeometry.a(64, -64, param1);
         return var2;
     }
 
@@ -185,7 +185,7 @@ final class mi extends ea implements Cloneable {
 
     final static int e(byte param0) {
         if (param0 != 125) {
-          mi.h(-58);
+          mi.clearDeclaredStaticReferences(-58);
           return jf.field_a;
         }
         return jf.field_a;
@@ -367,22 +367,22 @@ final class mi extends ea implements Cloneable {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
-        dl stackIn_6_0 = null;
-        dl stackIn_20_0 = null;
-        dl stackIn_31_0 = null;
-        dl stackIn_40_0 = null;
-        dl stackIn_48_0 = null;
-        dl stackIn_60_0 = null;
-        dl stackIn_69_0 = null;
-        dl stackIn_77_0 = null;
-        dl var7;
+        RgbSprite stackIn_6_0 = null;
+        RgbSprite stackIn_20_0 = null;
+        RgbSprite stackIn_31_0 = null;
+        RgbSprite stackIn_40_0 = null;
+        RgbSprite stackIn_48_0 = null;
+        RgbSprite stackIn_60_0 = null;
+        RgbSprite stackIn_69_0 = null;
+        RgbSprite stackIn_77_0 = null;
+        RgbSprite var7;
         int var8;
         f var9;
-        dl var7Lifetime1;
-        dl var7Lifetime2;
-        dl var7Lifetime3;
-        dl var7Lifetime1Lifetime1;
-        dl var7Lifetime1Lifetime2;
+        RgbSprite var7Lifetime1;
+        RgbSprite var7Lifetime2;
+        RgbSprite var7Lifetime3;
+        RgbSprite var7Lifetime1Lifetime1;
+        RgbSprite var7Lifetime1Lifetime2;
         var8 = CrazyCrystals.field_B;
         if (param5 != 4261) {
           var9 = (f) null;

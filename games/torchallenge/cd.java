@@ -421,14 +421,14 @@ final class cd {
         int var4 = 74 / ((55 - param1) / 47);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = (byte[][]) null;
         field_d = null;
         field_a = null;
         field_s = null;
         field_p = null;
         if (param0 <= 72) {
-          cd.b((byte) -52);
+          cd.clearStaticReferences((byte) -52);
         }
     }
 

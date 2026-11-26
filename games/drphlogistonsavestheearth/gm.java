@@ -17,7 +17,7 @@ final class gm extends hf {
           this.field_N = this.field_N + 1;
           super.a(param0, param1, param2, (byte) -128);
           if (param3 >= -127) {
-            gm.h(-80);
+            gm.releaseDeclaredStaticReferences(-80);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -30,7 +30,7 @@ final class gm extends hf {
             field_J = 66;
           }
           if (af.field_g == null) {
-            af.field_g = new tf(PcmResampler.field_c, mf.field_u);
+            af.field_g = new tf(PcmResampler.field_c, SpriteGeometry.field_u);
             PcmResampler.field_c.a((byte) -111, (vg) (af.field_g));
           }
           af.field_g.a(param2, param3, 6, param1);
@@ -131,9 +131,9 @@ final class gm extends hf {
         int var9;
         int var10;
         int var11;
-        nh var12;
-        nh var13;
-        nh var14;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         super.a(param0, param1, param2, param3);
         if (param1 != 0) {
@@ -161,7 +161,7 @@ final class gm extends hf {
             MouseInput.a(mj.field_v, (byte) 91);
             SoftwareRasterizer.clearRaster();
           } else {
-            mj.field_v = new nh(var9, var10);
+            mj.field_v = new RgbSprite(var9, var10);
             MouseInput.a(mj.field_v, (byte) 125);
           }
           var12.b(112, 144, var12.field_z << 4, var12.field_C << 4, -this.field_N << 10, 4096);
@@ -178,9 +178,9 @@ final class gm extends hf {
         }
     }
 
-    final static nh a(nh param0, int param1, int param2, he param3, int param4, boolean param5) {
-        nh stackIn_23_0 = null;
-        nh stackIn_25_0 = null;
+    final static RgbSprite a(RgbSprite param0, int param1, int param2, he param3, int param4, boolean param5) {
+        RgbSprite stackIn_23_0 = null;
+        RgbSprite stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -206,8 +206,8 @@ final class gm extends hf {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        nh var25 = null;
-        nh var26 = null;
+        RgbSprite var25 = null;
+        RgbSprite var26 = null;
         int[] var27 = null;
         int[] var28 = null;
         int var13Lifetime1;
@@ -229,7 +229,7 @@ final class gm extends hf {
             var7 != var9 ||
             !(var6_int * var7 <= param3.field_m.length) ||
             !(param0.field_B.length >= var8 * var9)) {
-            var25 = new nh(var6_int, var7);
+            var25 = new RgbSprite(var6_int, var7);
             var25.c();
             param0.a(0, 0);
             lb.field_C.a(114);
@@ -281,7 +281,7 @@ final class gm extends hf {
             stackIn_25_0 = var26;
             return stackIn_25_0;
           }
-          stackIn_23_0 = (nh) null;
+          stackIn_23_0 = (RgbSprite) null;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -303,7 +303,7 @@ final class gm extends hf {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_L = null;
         if (param0 > -67) {
           field_K = (String) null;

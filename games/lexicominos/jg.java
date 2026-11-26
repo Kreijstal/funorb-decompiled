@@ -5,7 +5,7 @@ final class jg extends tj {
     private g field_o;
     private boolean field_l;
     private String field_n;
-    static db field_m;
+    static RgbSprite field_m;
 
     jg(rl param0, rl param1) {
         super(param0);
@@ -69,16 +69,16 @@ final class jg extends tj {
         return null;
     }
 
-    final static db[] a(int param0, int param1) {
-        db[] var3 = new db[9];
-        db[] var2 = var3;
+    final static RgbSprite[] a(int param0, int param1) {
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         var3[param1] = gf.a((byte) -76, 64, param0);
         return var2;
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -25048) {
-          jg.e(-58);
+          jg.clearDeclaredStaticReferences(-58);
           field_m = null;
           return;
         }

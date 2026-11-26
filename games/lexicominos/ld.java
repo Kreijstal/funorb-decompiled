@@ -6,7 +6,7 @@ final class ld extends kf {
     private ma field_E;
     static String field_G;
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_G = null;
         if (param0 != 6977) {
           field_G = (String) null;
@@ -111,10 +111,10 @@ final class ld extends kf {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        db var15 = null;
-        db var16 = null;
-        db var14 = null;
-        db var13 = null;
+        RgbSprite var15 = null;
+        RgbSprite var16 = null;
+        RgbSprite var14 = null;
+        RgbSprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = Lexicominos.field_L ? 1 : 0;
@@ -132,7 +132,7 @@ final class ld extends kf {
           var9 = var15.field_r << 1;
           var10 = var15.field_x << 1;
           if (dd.field_f == null) {
-            dd.field_f = new db(var9, var10);
+            dd.field_f = new RgbSprite(var9, var10);
             de.a(dd.field_f, param0 ^ -117);
             var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
@@ -140,7 +140,7 @@ final class ld extends kf {
             return;
           }
           if (var9 > dd.field_f.field_p) {
-            dd.field_f = new db(var9, var10);
+            dd.field_f = new RgbSprite(var9, var10);
             de.a(dd.field_f, param0 ^ -117);
             var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
@@ -155,7 +155,7 @@ final class ld extends kf {
             dd.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
-          dd.field_f = new db(var9, var10);
+          dd.field_f = new RgbSprite(var9, var10);
           de.a(dd.field_f, param0 ^ -117);
           var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
           pd.a(-22949);
@@ -167,7 +167,7 @@ final class ld extends kf {
           var9Lifetime1 = var16.field_r << 1;
           var10Lifetime1 = var16.field_x << 1;
           if (dd.field_f == null) {
-            dd.field_f = new db(var9Lifetime1, var10Lifetime1);
+            dd.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
             de.a(dd.field_f, param0 ^ -117);
             var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
@@ -175,7 +175,7 @@ final class ld extends kf {
             return;
           }
           if (var9Lifetime1 > dd.field_f.field_p) {
-            dd.field_f = new db(var9Lifetime1, var10Lifetime1);
+            dd.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
             de.a(dd.field_f, param0 ^ -117);
             var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
@@ -190,7 +190,7 @@ final class ld extends kf {
             dd.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
-          dd.field_f = new db(var9Lifetime1, var10Lifetime1);
+          dd.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
           de.a(dd.field_f, param0 ^ -117);
           var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
           pd.a(-22949);

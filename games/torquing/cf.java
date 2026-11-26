@@ -33,9 +33,9 @@ final class cf {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
-          cf.b(-90);
+          cf.clearStaticReferences(-90);
         }
         field_a = null;
     }

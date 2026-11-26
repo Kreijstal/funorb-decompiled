@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi {
-    static bd field_e;
+    static RgbSprite field_e;
     boolean field_b;
     static String field_a;
     String field_d;
     String field_f;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 24074) {
-          wi.a(-33);
+          wi.clearStaticReferences(-33);
           field_e = null;
           field_a = null;
           return;

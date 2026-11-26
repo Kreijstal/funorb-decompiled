@@ -5,7 +5,7 @@ final class ca extends gj implements dc, da, pe {
     private bc field_K;
     private bb field_R;
     static mf field_L;
-    static dd field_P;
+    static RgbSprite field_P;
     private bc field_F;
     static String field_O;
     private bb field_I;

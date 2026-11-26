@@ -4,7 +4,7 @@
 final class td {
     static PlatformTaskDispatcher field_b;
     static String field_a;
-    static kc[] field_c;
+    static RgbSprite[] field_c;
 
     final static void a(PacketBuffer param0, byte param1, int param2, PlatformTaskDispatcher param3) {
         try {
@@ -159,7 +159,7 @@ final class td {
         throw new IllegalStateException();
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = 96 % ((-46 - param0) / 61);
         field_a = null;
@@ -185,6 +185,6 @@ final class td {
 
     static {
         field_a = "Sound: ";
-        field_c = new kc[6];
+        field_c = new RgbSprite[6];
     }
 }

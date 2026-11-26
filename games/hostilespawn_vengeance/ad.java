@@ -10,7 +10,7 @@ final class ad {
     final static void a(java.awt.Canvas param0, boolean param1) {
         try {
           if (fa.field_c == 11) {
-            ad.b(95);
+            ad.clearDeclaredStaticReferences(95);
           }
           km.a(wi.field_c, tf.field_d, bl.field_f, (byte) 125);
           if (param1) {
@@ -26,9 +26,9 @@ final class ad {
         int var4 = 0;
         oj var5 = null;
         int var6 = 0;
-        bd stackIn_12_0 = null;
+        RgbSprite stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
-        bd var1 = null;
+        RgbSprite var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -61,7 +61,7 @@ final class ad {
             }
           }
           if (param0 != -118) {
-            ad.a(-64);
+            ad.clearStaticReferences(-64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,7 +71,7 @@ final class ad {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         if (param0 != -24221) {
@@ -80,7 +80,7 @@ final class ad {
         field_c = null;
     }
 
-    private final static void b(int param0) {
+    private final static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 95) {
           field_d = (String) null;
         }

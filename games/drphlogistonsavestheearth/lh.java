@@ -6,7 +6,7 @@ final class lh extends PacketBuffer {
     static ok field_l;
     private ta field_o;
     static int field_m;
-    static nh field_p;
+    static RgbSprite field_p;
     private int field_q;
 
     final int e(byte param0) {
@@ -59,7 +59,7 @@ final class lh extends PacketBuffer {
         }
     }
 
-    final static void a(nh[] param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -196,7 +196,7 @@ final class lh extends PacketBuffer {
         return var5;
     }
 
-    public static void p(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_l = null;
         field_p = null;
         if (param0 != 0) {

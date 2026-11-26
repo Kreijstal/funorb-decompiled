@@ -18,15 +18,15 @@ final class bg {
         }
     }
 
-    final static hj[] a(int param0, int param1) {
-        hj[] stackIn_1_0 = null;
+    final static RgbSprite[] a(int param0, int param1) {
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
-        hj[] var2 = null;
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         try {
           var3 = -9 / ((-1 - param0) / 56);
-          var2 = new hj[9];
+          var2 = new RgbSprite[9];
           var2[4] = af.a(64, (byte) -51, param1);
           stackIn_1_0 = var2;
           return stackIn_1_0;

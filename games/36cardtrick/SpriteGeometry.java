@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ie extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     int field_k;
     int field_p;
     int field_q;
@@ -13,7 +13,7 @@ abstract class ie extends DualLinkNode {
     final static boolean b(byte param0) {
         if (param0 != 34) {
           CharSequence var2 = (CharSequence) null;
-          ie.a(false, (CharSequence) null);
+          SpriteGeometry.a(false, (CharSequence) null);
           if (cd.field_e < 10) {
             return false;
           }
@@ -31,10 +31,10 @@ abstract class ie extends DualLinkNode {
         return false;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         if (param0 != -11) {
-          ie.e(75);
+          SpriteGeometry.clearStaticReferences(75);
         }
     }
 
@@ -69,7 +69,7 @@ abstract class ie extends DualLinkNode {
         try {
           if (param0) {
             var3 = (CharSequence) null;
-            ie.a(false, (CharSequence) null);
+            SpriteGeometry.a(false, (CharSequence) null);
           }
           stackIn_3_0 = bd.a(true, param1, (byte) 122, 10);
           return stackIn_3_0;
@@ -89,11 +89,11 @@ abstract class ie extends DualLinkNode {
 
     final static void f(int param0) {
         if (param0 != -11) {
-          ie.b((byte) 44);
+          SpriteGeometry.b((byte) 44);
         }
     }
 
-    ie() {
+    SpriteGeometry() {
     }
 
     static {

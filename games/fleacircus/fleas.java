@@ -4,14 +4,14 @@
 import java.util.*;
 
 public final class fleas extends NetworkGameClient {
-    private dd field_C;
+    private RgbSprite field_C;
     static String field_H;
     static Random field_F;
     private static long[] field_J;
     private double field_M;
-    private dd field_D;
+    private RgbSprite field_D;
     static int field_E;
-    private dd[] field_N;
+    private RgbSprite[] field_N;
     static int field_L;
     private static int[][] field_G;
     private static ng field_K;
@@ -454,10 +454,10 @@ public final class fleas extends NetworkGameClient {
         int[] array$0 = null;
         int[] array$1 = null;
         int[] array$2 = null;
-        dd[] array$3 = null;
-        dd[] array$4 = null;
-        dd dupTemp$5 = null;
-        dd dupTemp$6 = null;
+        RgbSprite[] array$3 = null;
+        RgbSprite[] array$4 = null;
+        RgbSprite dupTemp$5 = null;
+        RgbSprite dupTemp$6 = null;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_17_0 = 0;
@@ -469,15 +469,15 @@ public final class fleas extends NetworkGameClient {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4_int = 0;
-        dd[] var4 = null;
+        RgbSprite[] var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
         int[] var7 = null;
         int var8_int = 0;
-        dd var8 = null;
-        dd[] var9 = null;
-        dd[] var10 = null;
+        RgbSprite var8 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         vg var13 = null;
@@ -558,7 +558,7 @@ public final class fleas extends NetworkGameClient {
                   continue;
                 }
               } else {
-                se.field_a = new dd[3];
+                se.field_a = new RgbSprite[3];
                 ((dj) (tl.field_p)).field_P = var2;
                 se.field_a[0] = kl.a(252, hm.field_g, "", "texture_1");
                 se.field_a[1] = kl.a(252, hm.field_g, "", "texture_3");
@@ -570,7 +570,7 @@ public final class fleas extends NetworkGameClient {
                 jj.field_P = kl.a(252, hm.field_g, "", "ingame_title");
                 stackIn_40_0 = aj.field_t.length + 1;
               }
-              var4 = new dd[stackIn_40_0];
+              var4 = new RgbSprite[stackIn_40_0];
               var5 = 0;
               do {
                 if (!(aj.field_t.length > var5)) {
@@ -606,7 +606,7 @@ public final class fleas extends NetworkGameClient {
                   MusicPatchPcmStream.field_m = hm.a("checkbox_value_0", hm.field_g, (byte) -88, "");
                   UiComponent.field_l = hm.a("checkbox_value_1", hm.field_g, (byte) -13, "");
                   ai.field_n = of.a("countdown", "", hm.field_g, 103);
-                  ji.field_f = new dd[ai.field_n.length];
+                  ji.field_f = new RgbSprite[ai.field_n.length];
                   break;
                 }
                 var4[var5] = aj.field_t[var5];
@@ -627,7 +627,7 @@ public final class fleas extends NetworkGameClient {
               } while (var17 == 0);
               var6Lifetime1 = SoftwareRasterizer.field_k;
               var7 = SoftwareRasterizer.field_a;
-              var8 = new dd(640, 480);
+              var8 = new RgbSprite(640, 480);
               var8.f();
               qi.field_c.d(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
@@ -635,8 +635,8 @@ public final class fleas extends NetworkGameClient {
               SoftwareRasterizer.setRasterBuffer(var7, var5, var6Lifetime1);
               ca.field_P = kl.a(252, hm.field_g, "", "explosion");
               il.field_d = of.a("achievementicons", "", hm.field_g, 103);
-              var9 = new dd[3];
-              var10 = new dd[3];
+              var9 = new RgbSprite[3];
+              var10 = new RgbSprite[3];
               var9[0] = kl.a(252, hm.field_g, "", "ingame_background_1");
               var9[1] = kl.a(252, hm.field_g, "", "ingame_background_2");
               var9[2] = kl.a(252, hm.field_g, "", "ingame_background_3");
@@ -644,14 +644,14 @@ public final class fleas extends NetworkGameClient {
               do {
                 if (var11 >= 3) {
                   gi.field_b.a((byte) 111);
-                  nl.field_c = new dd[2][];
-                  array$3 = new dd[pl.field_l[0]];
+                  nl.field_c = new RgbSprite[2][];
+                  array$3 = new RgbSprite[pl.field_l[0]];
                   nl.field_c[0] = array$3;
-                  array$4 = new dd[pl.field_l[1]];
+                  array$4 = new RgbSprite[pl.field_l[1]];
                   nl.field_c[1] = array$4;
                   break;
                 }
-                var10[var11] = new dd(640, 350);
+                var10[var11] = new RgbSprite(640, 350);
                 var10[var11].f();
                 var9[var11].d(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
@@ -701,7 +701,7 @@ public final class fleas extends NetworkGameClient {
               } while (var17 == 0);
               do {
                 if (!(var11 < nl.field_c[0].length)) {
-                  je.field_O = new dd[6];
+                  je.field_O = new RgbSprite[6];
                   je.field_O[0] = kl.a(252, hm.field_g, "", "menu_character_1");
                   je.field_O[1] = kl.a(252, hm.field_g, "", "menu_character_2");
                   je.field_O[2] = kl.a(252, hm.field_g, "", "menu_character_3");
@@ -714,11 +714,11 @@ public final class fleas extends NetworkGameClient {
                   dupTemp$6.field_v = dupTemp$6.field_v - 200;
                   pd.field_k = fc.a(hm.field_g, "frame", "", (byte) 61);
                   gj.field_E = fc.a(hm.field_g, "frame_bright", "", (byte) 61);
-                  ta.field_z = fc.a(hm.field_g, "button_frame", "", (byte) 61);
+                  SpriteGeometry.field_z = fc.a(hm.field_g, "button_frame", "", (byte) 61);
                   a.field_b = fc.a(hm.field_g, "button_raised", "", (byte) 61);
                   ud.b((byte) 47);
                   var11 = tl.field_p.field_N;
-                  FullscreenFocusCanvas.field_a = new dd(var11, var11);
+                  FullscreenFocusCanvas.field_a = new RgbSprite(var11, var11);
                   FullscreenFocusCanvas.field_a.f();
                   BufferedSocket.field_m.a(0, 0, var11, var11);
                   BufferedSocket.field_m = null;
@@ -786,8 +786,8 @@ public final class fleas extends NetworkGameClient {
                   si.field_y.field_w = lk.field_D.field_w;
                   si.field_y.field_x = lk.field_D.field_x;
                   si.field_y.field_n = 220;
-                  f.field_G = new el(100, 100, 150, q.field_c, sd.field_e, lj.field_f, (dd) null, tb.field_f);
-                  cb.field_w = new el(100, 100, 150, q.field_c, sd.field_e, lj.field_f, (dd) null, tb.field_f);
+                  f.field_G = new el(100, 100, 150, q.field_c, sd.field_e, lj.field_f, (RgbSprite) null, tb.field_f);
+                  cb.field_w = new el(100, 100, 150, q.field_c, sd.field_e, lj.field_f, (RgbSprite) null, tb.field_f);
                   f.field_G.field_A = 256;
                   break;
                 }
@@ -953,17 +953,17 @@ public final class fleas extends NetworkGameClient {
           nb.clearStaticReferences((byte) 69);
           cf.clearStaticReferences(21230);
           lc.clearStaticReferences((byte) 99);
-          pg.a(-12);
+          pg.clearStaticReferences(-12);
           IntrusiveDeque.clearStaticReferences(-29943);
-          MidiPcmStream.f(-16257);
+          MidiPcmStream.clearDeclaredStaticReferences(-16257);
           cl.a(-2);
           l.clearStaticReferences(-29049);
           qi.clearStaticReferences((byte) -113);
           NetworkGameClient.i(param0 + 0);
-          ContextualRuntimeException.c(param0 ^ 55);
+          ContextualRuntimeException.clearStaticReferences(param0 ^ 55);
           GameAppletShell.c(true);
-          rd.a((byte) -19);
-          MouseWheelInput.a(param0 ^ 107);
+          rd.clearStaticReferences((byte) -19);
+          MouseWheelInput.clearStaticReferences(param0 ^ 107);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences((byte) -110);
           fa.clearStaticReferences();
@@ -976,17 +976,17 @@ public final class fleas extends NetworkGameClient {
           oe.clearStaticReferences((byte) 71);
           se.clearStaticReferences(true);
           ma.a((byte) -127);
-          sg.a(param0 ^ 2);
-          fb.a(3);
-          b.b(2);
+          sg.clearStaticReferences(param0 ^ 2);
+          fb.clearStaticReferences(3);
+          b.clearStaticReferences(2);
           ud.clearStaticReferences((byte) 85);
-          wj.a(param0 - 95);
+          wj.clearStaticReferences(param0 - 95);
           uc.clearStaticReferences((byte) -118);
-          of.b(71);
+          of.clearStaticReferences(71);
           FullscreenFocusCanvas.a(-29039);
           va.b((byte) 126);
-          ng.a(0);
-          w.c(5);
+          ng.clearStaticReferences(0);
+          w.clearStaticReferences(5);
           af.a(105);
           uf.a(true);
           k.a(-40);
@@ -996,52 +996,52 @@ public final class fleas extends NetworkGameClient {
           vg.clearStaticReferences((byte) -53);
           el.clearStaticReferences(30537);
           rk.clearStaticReferences(109);
-          ok.b(false);
+          ok.clearDeclaredStaticReferences(false);
           t.clearStaticReferences(9973);
           vj.clearStaticReferences(true);
-          df.a((byte) 71);
+          df.clearStaticReferences((byte) 71);
           bk.clearStaticReferences(param0 ^ -6565);
           IntrusiveNode.clearStaticReferences(1);
           hc.clearStaticReferences((byte) 87);
-          tk.a(param0 ^ 93);
+          tk.clearDeclaredStaticReferences(param0 ^ 93);
           fd.clearStaticReferences();
           MusicPatchPcmStream.a((byte) 112);
           AudioOutput.clearStaticReferences();
           CrossfadingMidiPcmStream.b(false);
           tj.clearStaticReferences(false);
           pl.f(param0 + 1);
-          sa.a((byte) 33);
+          sa.clearStaticReferences((byte) 33);
           ue.a(param0 - 6617886);
           pb.clearStaticReferences((byte) -120);
-          ge.a((byte) -79);
-          pf.a(13480);
+          ge.clearStaticReferences((byte) -79);
+          pf.clearStaticReferences(13480);
           rf.clearStaticReferences((byte) 119);
           GzipDecompressor.clearStaticReferences((byte) -3);
           gi.clearStaticReferences((byte) 96);
           fj.clearStaticReferences((byte) -127);
           jl.clearStaticReferences(32768);
           nl.clearStaticReferences((byte) -33);
-          f.j(-7409);
-          AccountCreationResultPanel.i((byte) 124);
+          f.releaseDeclaredStaticReferences(-7409);
+          AccountCreationResultPanel.releaseDeclaredStaticReferences((byte) 124);
           ui.e(false);
-          bd.g((byte) 127);
+          bd.clearDeclaredStaticReferences((byte) 127);
           ca.j(100);
           rb.a(param0 ^ 107);
-          ul.k(16777215);
-          nf.f((byte) -50);
+          ul.releaseDeclaredStaticReferences(16777215);
+          nf.clearDeclaredStaticReferences((byte) -50);
           ad.clearStaticReferences((byte) 42);
           jd.a((byte) 72);
-          ff.a((byte) 92);
+          ff.clearStaticReferences((byte) 92);
           cc.clearStaticReferences();
           ti.clearStaticReferences(-23740);
           nc.clearStaticReferences(param0 ^ -99);
-          DualLinkNode.d(-6);
+          DualLinkNode.clearDeclaredStaticReferences(-6);
           cm.a(param0 ^ -91);
-          ta.c((byte) 62);
-          ea.a((byte) -95);
+          SpriteGeometry.clearStaticReferences((byte) 62);
+          ea.clearStaticReferences((byte) -95);
           s.clearStaticReferences((byte) 123);
           mf.clearStaticReferences((byte) -9);
-          ih.j(8);
+          ih.clearDeclaredStaticReferences(8);
           al.clearStaticReferences(true);
           wi.clearStaticReferences(false);
           PcmResampler.clearStaticReferences((byte) 127);
@@ -1052,14 +1052,14 @@ public final class fleas extends NetworkGameClient {
           ub.clearStaticReferences(17077);
           uk.clearStaticReferences(-9435);
           hj.clearStaticReferences(-5928);
-          uj.a((byte) 126);
-          kc.a(param0 ^ -2);
+          uj.clearStaticReferences((byte) 126);
+          kc.clearStaticReferences(param0 ^ -2);
           ug.a((byte) -73);
           hh.a(true);
-          pc.c(param0 - 119);
-          oj.a(param0 ^ -100);
+          pc.clearStaticReferences(param0 - 119);
+          oj.clearDeclaredStaticReferences(param0 ^ -100);
           wc.a(-24464);
-          de.a(0);
+          de.clearStaticReferences(0);
           g.a(false);
           bf.a(false);
           fk.i(105);
@@ -1068,16 +1068,16 @@ public final class fleas extends NetworkGameClient {
           cg.b(1);
           BoundedRandomAccessFile.clearStaticReferences(-930374320);
           u.a(-2355);
-          dl.h(2);
+          dl.releaseDeclaredStaticReferences(2);
           ek.clearStaticReferences((byte) -42);
-          ic.o(-101);
-          mc.a((byte) 87);
+          ic.discardDeclaredStaticReferences(-101);
+          mc.clearStaticReferences((byte) 87);
           e.clearStaticReferences((byte) -92);
           bl.clearStaticReferences();
           sd.a(9330);
-          re.a((byte) -56);
-          si.c(param0 ^ -66);
-          tg.a(true);
+          re.clearStaticReferences((byte) -56);
+          si.clearStaticReferences(param0 ^ -66);
+          tg.clearStaticReferences(true);
           cj.a(false);
           di.a(26189);
           q.a((byte) -127);
@@ -1091,109 +1091,109 @@ public final class fleas extends NetworkGameClient {
           ByteStorage.clearStaticReferences((byte) -75);
           fe.clearStaticReferences();
           gk.a(true);
-          fg.a(-5);
-          gf.c(-46);
+          fg.clearDeclaredStaticReferences(-5);
+          gf.clearStaticReferences(-46);
           bg.b((byte) -120);
-          hb.c((byte) 116);
-          ee.a(1);
+          hb.clearDeclaredStaticReferences((byte) 116);
+          ee.clearStaticReferences(1);
           ib.a(-111);
-          ne.a((byte) -84);
-          UiComponent.d(0);
-          bb.a(-1);
+          ne.clearStaticReferences((byte) -84);
+          UiComponent.clearDeclaredStaticReferences(0);
+          bb.releaseDeclaredStaticReferences(-1);
           dk.clearStaticReferences((byte) 2);
           jj.clearStaticReferences(true);
-          db.k(0);
+          db.releaseDeclaredStaticReferences(0);
           gj.clearStaticReferences((byte) -112);
           ab.clearStaticReferences(param0 + 1);
           ii.a(param0 + 6);
-          aj.f(113);
+          aj.releaseDeclaredStaticReferences(113);
           ol.clearStaticReferences(true);
           ej.clearStaticReferences(1);
           ag.a(param0 + 1);
           kk.clearStaticReferences(4);
-          oc.a((byte) -40);
+          oc.clearStaticReferences((byte) -40);
           lg.clearStaticReferences(-106);
           hm.clearStaticReferences(2067);
-          em.b(3505);
+          em.clearStaticReferences(3505);
           o.clearStaticReferences((byte) 82);
           bj.clearStaticReferences(0);
           hf.clearStaticReferences(-124);
           wa.clearStaticReferences(param0 ^ 1730);
-          kb.b(false);
+          kb.clearStaticReferences(false);
           ml.j(1);
           oh.f((byte) -110);
-          lk.c(true);
-          ij.e((byte) -20);
-          ja.j(-91);
+          lk.clearStaticReferences(true);
+          ij.clearDeclaredStaticReferences((byte) -20);
+          ja.discardDeclaredStaticReferences(-91);
           je.i(93);
-          v.k(-8011);
+          v.resetDeclaredStaticReferences(-8011);
           vk.c(false);
           r.d(0);
-          sc.a((byte) -73);
+          sc.clearStaticReferences((byte) -73);
           md.a((byte) -101);
-          d.j(-1);
+          d.discardDeclaredStaticReferences(-1);
           SoundFilter.clearStaticReferences();
           dh.a(120);
           j.a(-113);
           DirectByteStorage.c(-1);
-          id.a((byte) 110);
-          pk.d((byte) 89);
+          id.clearStaticReferences((byte) 110);
+          pk.clearDeclaredStaticReferences((byte) 89);
           qj.i(param0 ^ 124);
-          fh.a((byte) -94);
+          fh.clearStaticReferences((byte) -94);
           IterableNodeHashTable.clearStaticReferences((byte) -112);
           SecondaryNodeDeque.clearStaticReferences(0);
-          cb.f(param0 ^ 67);
-          pj.h(-103);
-          jk.c(28);
+          cb.releaseDeclaredStaticReferences(param0 ^ 67);
+          pj.discardDeclaredStaticReferences(-103);
+          jk.clearDeclaredStaticReferences(28);
           a.a((byte) 126);
           NodeHashTableIterator.clearStaticReferences(105);
-          SecondaryNodeDequeIterator.a((byte) 58);
+          SecondaryNodeDequeIterator.clearStaticReferences((byte) 58);
           ll.a(61);
-          bh.a(param0 ^ 125);
+          bh.clearDeclaredStaticReferences(param0 ^ 125);
           il.a(-70);
-          pd.a((byte) -89);
+          pd.clearStaticReferences((byte) -89);
           vh.d(-889323520);
-          ri.c((byte) -97);
+          ri.clearDeclaredStaticReferences((byte) -97);
           me.clearStaticReferences(param0 ^ -4284);
           aa.clearStaticReferences(-122);
           mh.b(705);
           jc.a(param0 - 36);
           tf.i(0);
-          gm.c(false);
+          gm.clearDeclaredStaticReferences(false);
           hg.clearStaticReferences((byte) 108);
           tc.clearStaticReferences((byte) -75);
           ia.c(true);
           hi.clearStaticReferences((byte) -117);
-          fi.a(param0 + param0);
+          fi.clearDeclaredStaticReferences(param0 + param0);
           ql.clearStaticReferences((byte) -92);
           AccountRequestState.releaseStatics((byte) -114);
           AccountServiceResult.clearStaticReferences(122);
-          ve.a((byte) 84);
-          ed.a(20760);
+          ve.clearStaticReferences((byte) 84);
+          ed.clearStaticReferences(20760);
           ha.clearStaticReferences(false);
           bm.clearStaticReferences(false);
-          nj.a((byte) -105);
-          ji.a(-122);
+          nj.clearStaticReferences((byte) -105);
+          ji.clearStaticReferences(-122);
           wh.clearStaticReferences(param0 ^ 250);
           ef.clearStaticReferences((byte) -117);
           rg.b(true);
-          rj.a((byte) 75);
+          rj.clearStaticReferences((byte) 75);
           fc.a(-100);
           uh.a(8);
-          kf.a(param0 ^ 116);
+          kf.clearDeclaredStaticReferences(param0 ^ 116);
           oa.clearStaticReferences((byte) -88);
-          te.a(false);
+          te.clearStaticReferences(false);
           pi.clearStaticReferences((byte) 11);
           AccountNameAvailabilityValidator.c(false);
           ai.clearStaticReferences((byte) -10);
-          ck.c((byte) 2);
+          ck.clearStaticReferences((byte) 2);
           ga.c((byte) 113);
           tl.clearStaticReferences((byte) 115);
           ak.clearStaticReferences(false);
           mi.a((byte) 27);
           wd.a(false);
           gg.clearStaticReferences(param0 ^ -125);
-          ob.a(param0 ^ 73);
+          ob.clearStaticReferences(param0 ^ 73);
           this.field_C = null;
           this.field_N = null;
           this.field_D = null;
@@ -1469,8 +1469,8 @@ public final class fleas extends NetworkGameClient {
             if (decompiledFrameCompleted0) {
               var6 = 0;
               while (var6 < 50) {
-                CrossfadingMidiPcmStream.field_v[var6] = new dd(20, 20);
-                ff.field_b[var6] = new dd(20, 20);
+                CrossfadingMidiPcmStream.field_v[var6] = new RgbSprite(20, 20);
+                ff.field_b[var6] = new RgbSprite(20, 20);
                 var6++;
                 if (var10 != 0) {
                   break scanLoop1;
@@ -1595,7 +1595,7 @@ public final class fleas extends NetworkGameClient {
             }
           }
           if (param0 != 21434) {
-            this.field_C = (dd) null;
+            this.field_C = (RgbSprite) null;
           }
           boolean decompiledFrameRemainder0 = true;
           if (md.field_T) {
@@ -1623,7 +1623,7 @@ public final class fleas extends NetworkGameClient {
                   var2_int = lk.k(param0 ^ 31053);
                   switch (var2_int) {
                     case 3:
-                      c.a(320, (byte) 110, tl.field_p.field_K + tl.field_p.field_y, a.field_b, 8, 2, tl.field_p, ta.field_z, 240, tl.field_p.field_y, true, 8);
+                      c.a(320, (byte) 110, tl.field_p.field_K + tl.field_p.field_y, a.field_b, 8, 2, tl.field_p, SpriteGeometry.field_z, 240, tl.field_p.field_y, true, 8);
                     default:
                       break;
                     case 4:
@@ -1793,7 +1793,7 @@ public final class fleas extends NetworkGameClient {
                   ml.i(param0 + 14);
                   if (ab.field_b == -2) {
                     ab.field_b = 0;
-                    c.a(320, (byte) 111, tl.field_p.field_y + tl.field_p.field_K, a.field_b, 8, 2, tl.field_p, ta.field_z, 240, tl.field_p.field_y, false, 8);
+                    c.a(320, (byte) 111, tl.field_p.field_y + tl.field_p.field_K, a.field_b, 8, 2, tl.field_p, SpriteGeometry.field_z, 240, tl.field_p.field_y, false, 8);
                     if (var3 != 0) {
                       ab.field_b = mf.field_c;
                     }

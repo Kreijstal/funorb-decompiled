@@ -14,7 +14,7 @@ final class rb extends ArchiveProvider {
     private ae field_j;
     private um field_q;
     static ji field_s;
-    static bd field_y;
+    static RgbSprite field_y;
     private int field_g;
     private ej field_h;
     private dh field_t;
@@ -498,7 +498,7 @@ final class rb extends ArchiveProvider {
         ae discarded$1 = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         if (param0 < 20) {
-          field_y = (bd) null;
+          field_y = (RgbSprite) null;
         }
         if (this.field_w == null) {
           return;

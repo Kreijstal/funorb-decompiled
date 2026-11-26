@@ -233,7 +233,7 @@ final class gh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = -11 / ((86 - param0) / 34);
         field_b = null;

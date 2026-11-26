@@ -62,13 +62,13 @@ final class u extends gd {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        cn var11 = null;
-        cn var12 = null;
-        cn var13 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         int var14 = 0;
         int var15 = 0;
-        cn var16 = null;
-        cn var17 = null;
+        RgbSprite var16 = null;
+        RgbSprite var17 = null;
         String var19 = null;
         int var15Lifetime1;
         try {
@@ -91,9 +91,9 @@ final class u extends gd {
           }
           var9 = stackIn_13_0;
           var10 = var8 | var9;
-          var11 = new cn(140, var7);
-          var12 = new cn(140, var7);
-          var13 = new cn(140, var7);
+          var11 = new RgbSprite(140, var7);
+          var12 = new RgbSprite(140, var7);
+          var13 = new RgbSprite(140, var7);
           jh.a(var11);
           SoftwareRasterizer.clearRaster();
           var14 = 0;
@@ -231,8 +231,8 @@ final class u extends gd {
         }
         SoftwareRasterizer.fillRectangleAlpha(var4, var5, 5 + this.field_q, this.field_x + 5, 0, 128);
         super.b(param0, param1, param2);
-        cn var13 = null == this.field_Q.field_e ? null : this.field_Q.field_e.a(40, 0, 40, 0);
-        cn var8 = var13;
+        RgbSprite var13 = null == this.field_Q.field_e ? null : this.field_Q.field_e.a(40, 0, 40, 0);
+        RgbSprite var8 = var13;
         int var9 = this.field_x + var5 - 2 - 40;
         int var10 = 5 + var4;
         if (var13 != null) {
@@ -276,7 +276,7 @@ final class u extends gd {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_R = null;
         field_S = null;
         field_T = null;

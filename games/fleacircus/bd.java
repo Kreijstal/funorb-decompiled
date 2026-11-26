@@ -101,10 +101,10 @@ class bd extends oh implements da {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_ob = null;
         if (param0 != 127) {
-          bd.g((byte) 53);
+          bd.clearDeclaredStaticReferences((byte) 53);
         }
         field_kb = null;
     }

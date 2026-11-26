@@ -94,7 +94,7 @@ final class gb {
         return (DualLinkNode) null;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         int var1 = -51 / ((-42 - param0) / 39);
     }

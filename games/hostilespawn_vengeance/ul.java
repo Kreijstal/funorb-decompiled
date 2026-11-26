@@ -4,12 +4,12 @@
 abstract class ul extends vd {
     static int field_H;
     private int field_I;
-    static bd field_G;
+    static RgbSprite field_G;
     static java.text.DecimalFormat field_E;
     private gg field_K;
     static String field_M;
     static int field_L;
-    static bd[] field_J;
+    static RgbSprite[] field_J;
     static boolean field_O;
     static ResourceArchive field_P;
     static boolean field_N;
@@ -111,7 +111,7 @@ abstract class ul extends vd {
     final void a(int param0, int param1, int param2) {
         this.a(param0, -param2 + fb.field_f >> 1, param1 - 15767, -param0 + mm.field_q >> 1, param2);
         if (param1 != 15767) {
-          field_G = (bd) null;
+          field_G = (RgbSprite) null;
         }
     }
 
@@ -176,7 +176,7 @@ abstract class ul extends vd {
             return;
           }
           if (q.field_f == null) {
-            q.field_f = new bd(this.field_s, this.field_x);
+            q.field_f = new RgbSprite(this.field_s, this.field_x);
             sb.a(q.field_f, -119);
             SoftwareRasterizer.clearRaster();
             this.b(0, -238948511, 0);
@@ -186,7 +186,7 @@ abstract class ul extends vd {
             return;
           }
           if (this.field_s > q.field_f.field_z) {
-            q.field_f = new bd(this.field_s, this.field_x);
+            q.field_f = new RgbSprite(this.field_s, this.field_x);
             sb.a(q.field_f, -119);
             SoftwareRasterizer.clearRaster();
             this.b(0, -238948511, 0);
@@ -196,7 +196,7 @@ abstract class ul extends vd {
             return;
           }
           if (q.field_f.field_A < this.field_x) {
-            q.field_f = new bd(this.field_s, this.field_x);
+            q.field_f = new RgbSprite(this.field_s, this.field_x);
             sb.a(q.field_f, -119);
             SoftwareRasterizer.clearRaster();
             this.b(0, -238948511, 0);
@@ -225,7 +225,7 @@ abstract class ul extends vd {
           return;
         }
         if (q.field_f == null) {
-          q.field_f = new bd(this.field_s, this.field_x);
+          q.field_f = new RgbSprite(this.field_s, this.field_x);
           sb.a(q.field_f, -119);
           SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
@@ -235,7 +235,7 @@ abstract class ul extends vd {
           return;
         }
         if (this.field_s > q.field_f.field_z) {
-          q.field_f = new bd(this.field_s, this.field_x);
+          q.field_f = new RgbSprite(this.field_s, this.field_x);
           sb.a(q.field_f, -119);
           SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
@@ -245,7 +245,7 @@ abstract class ul extends vd {
           return;
         }
         if (q.field_f.field_A < this.field_x) {
-          q.field_f = new bd(this.field_s, this.field_x);
+          q.field_f = new RgbSprite(this.field_s, this.field_x);
           sb.a(q.field_f, -119);
           SoftwareRasterizer.clearRaster();
           this.b(0, -238948511, 0);
@@ -279,7 +279,7 @@ abstract class ul extends vd {
           field_M = null;
           return;
         }
-        field_G = (bd) null;
+        field_G = (RgbSprite) null;
         field_G = null;
         field_M = null;
     }

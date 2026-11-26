@@ -8,7 +8,7 @@ final class bf extends al {
     static eh field_p;
     static String[] field_m;
     static int[] field_j;
-    static tg field_o;
+    static RgbSprite field_o;
 
     public static void clearStaticReferences(int param0) {
         field_j = null;

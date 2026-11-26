@@ -77,7 +77,7 @@ final class ol extends ai {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         powerchuteSpriteData = null;
         if (param0 < 88) {
           return;

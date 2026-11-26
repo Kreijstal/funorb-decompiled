@@ -222,7 +222,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 <= 43) {
           return;
         }

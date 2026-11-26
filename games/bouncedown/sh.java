@@ -190,12 +190,12 @@ class sh extends mh implements rc {
         this.a(10768, var2);
     }
 
-    public static void o(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_jb = null;
         field_cb = null;
         field_gb = null;
         if (param0 != 5) {
-          sh.o(88);
+          sh.clearDeclaredStaticReferences(88);
         }
     }
 

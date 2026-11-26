@@ -14,7 +14,7 @@ final class bl extends IntrusiveNode {
     int field_l;
     int field_h;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = (byte[][]) null;
         if (param0 != 0) {
           return;
@@ -26,7 +26,7 @@ final class bl extends IntrusiveNode {
     final static void a(int param0, lg param1) {
         try {
           if (param0 != 50) {
-            bl.a(87);
+            bl.clearDeclaredStaticReferences(87);
           }
           ve.a(82, 0, 0, param1);
         } catch (RuntimeException runtimeException) {

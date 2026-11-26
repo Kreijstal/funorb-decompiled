@@ -397,7 +397,7 @@ final class MixedSupport099 {
         return String.valueOf(characterArgument1);
     }
 
-    public static void performAction1220(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringArrayState0029 = null;
         byteArrayState0020 = null;
         stringState0419 = null;

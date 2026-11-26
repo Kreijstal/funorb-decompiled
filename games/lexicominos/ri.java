@@ -5,7 +5,7 @@ abstract class ri implements ma {
     static oc field_c;
     private long field_a;
     static String field_f;
-    static db field_b;
+    static RgbSprite field_b;
     static String field_d;
     static int field_e;
 
@@ -71,7 +71,7 @@ abstract class ri implements ma {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_d = null;
         if (param0 == 117) {
           field_b = null;
@@ -79,7 +79,7 @@ abstract class ri implements ma {
           field_c = null;
           return;
         }
-        ri.c((byte) 46);
+        ri.clearDeclaredStaticReferences((byte) 46);
         field_b = null;
         field_f = null;
         field_c = null;
@@ -115,19 +115,19 @@ abstract class ri implements ma {
           of.field_a.writeInt(l.field_F[1], -32287);
           of.field_a.writeInt(l.field_F[2], -32287);
           of.field_a.writeInt(l.field_F[3], -32287);
-          ed.a(93, of.field_a);
+          SpriteGeometry.a(93, of.field_a);
           of.field_a.writeShort(89, param4);
           param2.a(of.field_a, 7895);
-          ed.field_q.position = 0;
+          SpriteGeometry.field_q.position = 0;
           if (param1) {
-            ed.field_q.writeByte(18, -1);
+            SpriteGeometry.field_q.writeByte(18, -1);
           } else {
-            ed.field_q.writeByte(16, -1);
+            SpriteGeometry.field_q.writeByte(16, -1);
           }
-          ed.field_q.position = ed.field_q.position + 2;
-          var5_int = ed.field_q.position;
-          ed.field_q.writeInt(bk.field_a, -32287);
-          ed.field_q.writeLong(fa.field_a, (byte) 37);
+          SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 2;
+          var5_int = SpriteGeometry.field_q.position;
+          SpriteGeometry.field_q.writeInt(bk.field_a, -32287);
+          SpriteGeometry.field_q.writeLong(fa.field_a, (byte) 37);
           var6 = 0;
           if (MidiPcmStream.field_F) {
             var6 = var6 | 1;
@@ -141,17 +141,17 @@ abstract class ri implements ma {
           if (null != og.field_b) {
             var6 = var6 | 16;
           }
-          ed.field_q.writeByte(var6, -1);
+          SpriteGeometry.field_q.writeByte(var6, -1);
           var7 = pg.a(kk.c(-14047), (byte) -28);
           if (var7 == null) {
             var7 = "";
           }
-          ed.field_q.writeTerminatedString(var7, (byte) 0);
+          SpriteGeometry.field_q.writeTerminatedString(var7, (byte) 0);
           if (null != og.field_b) {
-            ed.field_q.writePrefixedString((byte) -38, og.field_b);
+            SpriteGeometry.field_q.writePrefixedString((byte) -38, og.field_b);
           }
-          wc.a(wb.field_m, ed.field_q, re.field_T, (byte) 111, of.field_a);
-          ed.field_q.backpatchShortLength(-var5_int + ed.field_q.position, (byte) 26);
+          wc.a(wb.field_m, SpriteGeometry.field_q, re.field_T, (byte) 111, of.field_a);
+          SpriteGeometry.field_q.backpatchShortLength(-var5_int + SpriteGeometry.field_q.position, (byte) 26);
           if (param3 != -82) {
             field_f = (String) null;
           }

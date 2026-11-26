@@ -6,9 +6,9 @@ abstract class rj {
     static int field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
-          rj.b(110);
+          rj.clearDeclaredStaticReferences(110);
           field_a = null;
           return;
         }
@@ -42,7 +42,7 @@ abstract class rj {
           var4_long = 0L;
           var6 = null;
           if (param1 < 67) {
-            rj.b(-118);
+            rj.clearDeclaredStaticReferences(-118);
           }
           if (param0.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param0);

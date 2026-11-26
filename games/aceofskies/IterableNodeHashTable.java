@@ -65,10 +65,10 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_g = null;
         if (!param0) {
-          IterableNodeHashTable.a(false);
+          IterableNodeHashTable.clearStaticReferences(false);
         }
         field_b = null;
     }

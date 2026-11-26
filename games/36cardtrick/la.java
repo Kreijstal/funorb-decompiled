@@ -4,7 +4,7 @@
 abstract class la extends DualLinkNode {
     static int[] field_m;
     boolean field_o;
-    static kc field_k;
+    static RgbSprite field_k;
     volatile boolean field_n;
     boolean field_l;
 

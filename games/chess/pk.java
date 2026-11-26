@@ -15,11 +15,11 @@ abstract class pk {
     int field_l;
     static int field_b;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_a = null;
         if (param0 != -100) {
-          pk.b((byte) -25);
+          pk.clearStaticReferences((byte) -25);
         }
     }
 
@@ -35,7 +35,7 @@ abstract class pk {
           var3.writeByte(param2.field_k, (byte) -111);
           var3.writeByte(param2.field_m, (byte) -62);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "pk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "pk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

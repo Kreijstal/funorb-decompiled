@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hd {
-    static tg[] field_a;
+    static RgbSprite[] field_a;
 
     final static int a(byte param0) {
         ih.field_Q.b(-16840);
@@ -12,7 +12,7 @@ final class hd {
         if (param0 > 34) {
           return 0;
         }
-        field_a = (tg[]) null;
+        field_a = (RgbSprite[]) null;
         return 0;
     }
 
@@ -23,7 +23,7 @@ final class hd {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 233) {
-          field_a = (tg[]) null;
+          field_a = (RgbSprite[]) null;
           field_a = null;
           return;
         }

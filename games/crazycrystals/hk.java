@@ -24,7 +24,7 @@ abstract class hk extends pb {
             var4 = (we) (tb.field_b.nextForward(false));
           }
           if (param0 != 5) {
-            hk.b(72);
+            hk.clearDeclaredStaticReferences(72);
           }
           var5 = (pp) (nh.field_A.beginForward(param0 ^ 32076));
           while (var5 != null) {
@@ -58,7 +58,7 @@ abstract class hk extends pb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         if (param0 != 6388) {

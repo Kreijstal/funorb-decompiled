@@ -23,7 +23,7 @@ final class ta {
           var3 = new byte[var2_int];
           if (param0 != -126) {
             var7 = (String) null;
-            ta.a(126, 40, (nf) null, -29, (String) null);
+            ta.a(126, 40, (RgbSprite) null, -29, (String) null);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             {
@@ -138,7 +138,7 @@ final class ta {
         }
     }
 
-    final static void a(int param0, int param1, nf param2, int param3, String param4) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, String param4) {
         try {
           if (param0 <= 94) {
             CharSequence var6 = (CharSequence) null;

@@ -84,7 +84,7 @@ final class dj {
     }
 
     final static void a(ki param0, byte param1, ki param2, ki param3) {
-        hj var18 = null;
+        RgbSprite var18 = null;
         qg[] var5 = null;
         qg[][] var6 = null;
         int[][] var20 = null;
@@ -92,10 +92,10 @@ final class dj {
         int[][] var7 = null;
         qg[] var15 = null;
         int var11_int = 0;
-        hj var16 = null;
-        hj var19 = null;
-        hj var11 = null;
-        hj var12 = null;
+        RgbSprite var16 = null;
+        RgbSprite var19 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = OrbDefence.field_D ? 1 : 0;
@@ -114,7 +114,7 @@ final class dj {
             dj.a((ki) null, (byte) 9, (ki) null, (ki) null);
           }
           qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
-          var18 = new hj(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
+          var18 = new RgbSprite(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           uc.a(false, "commonui", param2, "dropdown");
           var5 = fl.a(-9945, param2, "commonui", "screen_options");
           kk.field_P = new qg[4];
@@ -143,18 +143,18 @@ final class dj {
           h.k(126);
           var18.d();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l);
-          var16 = new hj(var9Lifetime1, var9Lifetime1);
+          var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.d();
           var18.b(0, 0);
-          var11 = new hj(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.d();
           var18.b(-var18.field_o + var9Lifetime1, 0);
-          var12 = new hj(-(2 * var9Lifetime1) + var18.field_o, var9Lifetime1);
+          var12 = new RgbSprite(-(2 * var9Lifetime1) + var18.field_o, var9Lifetime1);
           var12.d();
           var18.b(-var9Lifetime1, 0);
           oc.g((byte) -105);
-          FullscreenFocusCanvas.field_b = new hj[]{var16, var12, var11};
+          FullscreenFocusCanvas.field_b = new RgbSprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

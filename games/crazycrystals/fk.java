@@ -93,7 +93,7 @@ final class fk extends lb {
         var1.a(0);
     }
 
-    final void a(int param0, int param1, dl[] param2) {
+    final void a(int param0, int param1, RgbSprite[] param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
@@ -109,7 +109,7 @@ final class fk extends lb {
         }
     }
 
-    final void a(dl[] param0, int param1) {
+    final void a(RgbSprite[] param0, int param1) {
         int var4 = 0;
         pm[] var3 = null;
         pm var5 = null;
@@ -200,7 +200,7 @@ final class fk extends lb {
         }
     }
 
-    final void a(dl param0, int param1) {
+    final void a(RgbSprite param0, int param1) {
         int var4 = 0;
         pm[] var3 = null;
         pm var5 = null;

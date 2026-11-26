@@ -25,7 +25,7 @@ final class od extends f {
         return (Sprite) null;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -74 / ((73 - param0) / 39);
         field_o = null;
         field_n = null;

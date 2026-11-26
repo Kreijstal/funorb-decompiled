@@ -47,7 +47,7 @@ final class sa extends ok {
         try {
           var1_int = rf.field_a[0];
           if (param0 < 3) {
-            sa.b(false);
+            sa.clearStaticReferences(false);
           }
           for (var2 = 1; var2 < rf.field_a.length; var2++) {
             var3 = rf.field_a[var2];
@@ -62,10 +62,10 @@ final class sa extends ok {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_I = null;
         if (!param0) {
-          sa.b(true);
+          sa.clearStaticReferences(true);
           field_R = null;
           field_J = null;
           field_P = null;

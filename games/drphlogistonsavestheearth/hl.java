@@ -68,7 +68,7 @@ final class hl {
                 stackIn_15_0 = hj.field_i;
               }
               var9 = stackIn_15_0;
-              var2 = var2 + mf.field_F;
+              var2 = var2 + SpriteGeometry.field_F;
               if (var9 != null) {
                 var9.a((pd.field_b << 1) + pa.field_a, var8 - gd.field_c, var7 + (gd.field_c << 1), var2, param0 + 7453);
               }
@@ -76,7 +76,7 @@ final class hl {
             }
             if (0 <= var4) {
               GameClientShell.field_o.c(var6, var8, ae.field_kb + var2, var5, -1);
-              var2 = var2 + (pa.field_a + (mf.field_F + pd.field_b));
+              var2 = var2 + (pa.field_a + (SpriteGeometry.field_F + pd.field_b));
             } else {
               k.field_H.c(var6, var8, var2 + cd.field_b, var5, -1);
               var2 = var2 + wa.field_R;

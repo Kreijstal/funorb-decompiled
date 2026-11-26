@@ -11,7 +11,7 @@ final class SecondaryNodeDeque implements Iterable {
     static am field_d;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         int var1 = 11 / ((param0 - 62) / 56);
         field_e = null;

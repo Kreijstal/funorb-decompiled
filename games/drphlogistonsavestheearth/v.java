@@ -16,9 +16,9 @@ final class v extends pj implements ra, ke, fh {
     private hf field_R;
     static int field_N;
     static String field_X;
-    static nh field_Y;
+    static RgbSprite field_Y;
     private qg field_J;
-    static nh field_O;
+    static RgbSprite field_O;
 
     private final int a(String param0, int param1, vg param2, byte param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
@@ -166,7 +166,7 @@ final class v extends pj implements ra, ke, fh {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_O = null;
         field_X = null;
         if (param0 != 3) {
@@ -232,7 +232,7 @@ final class v extends pj implements ra, ke, fh {
             return true;
           }
           if (param3 < 63) {
-            v.j(24);
+            v.releaseDeclaredStaticReferences(24);
           }
           if (param0 == 98) {
             stackIn_9_0 = this.a(param2, 65535);

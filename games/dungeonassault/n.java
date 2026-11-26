@@ -3,7 +3,7 @@
  */
 final class n {
     static q field_e;
-    static cn field_b;
+    static RgbSprite field_b;
     static int[] field_f;
     static se field_c;
     static int field_d;
@@ -25,7 +25,7 @@ final class n {
           field_g = null;
           return;
         }
-        field_b = (cn) null;
+        field_b = (RgbSprite) null;
         field_b = null;
         field_e = null;
         field_c = null;

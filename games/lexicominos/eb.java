@@ -120,7 +120,7 @@ final class eb {
         }
     }
 
-    final static db a(byte param0) {
+    final static RgbSprite a(byte param0) {
         int var4_int = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
         int var1 = bd.field_m[0] * pb.field_h[0];
@@ -130,7 +130,7 @@ final class eb {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ci.field_b[vg.a(255, (int) var2[var4_int])];
         }
-        db var4 = new db(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], var3);
+        RgbSprite var4 = new RgbSprite(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], var3);
         GzipDecompressor.a(12428);
         return var4;
     }
@@ -423,12 +423,12 @@ final class eb {
         }
     }
 
-    final static void a(int param0, oj param1, int param2, db param3, char param4, int param5, int param6) {
+    final static void a(int param0, oj param1, int param2, RgbSprite param3, char param4, int param5, int param6) {
         try {
           cg.a(param1.field_f, param3, param2, param5, (byte) -72, param1.field_b, param6, param4);
           if (param0 <= 3) {
-            db var8 = (db) null;
-            eb.a(121, (oj) null, 17, (db) null, 'ﾍ', 59, 10);
+            RgbSprite var8 = (RgbSprite) null;
+            eb.a(121, (oj) null, 17, (RgbSprite) null, 'ﾍ', 59, 10);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "eb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -437,8 +437,8 @@ final class eb {
 
     public static void b(byte param0) {
         if (param0 != -100) {
-          db var2 = (db) null;
-          eb.a(-23, (oj) null, -39, (db) null, 'ﾡ', 117, 22);
+          RgbSprite var2 = (RgbSprite) null;
+          eb.a(-23, (oj) null, -39, (RgbSprite) null, 'ﾡ', 117, 22);
         }
         field_a = null;
         field_f = null;

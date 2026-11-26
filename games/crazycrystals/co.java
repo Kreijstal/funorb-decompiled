@@ -5,7 +5,7 @@ import java.io.*;
 
 final class co extends qm {
     private int field_E;
-    private dl field_z;
+    private RgbSprite field_z;
     private int field_v;
     private int field_C;
     private int field_I;
@@ -13,24 +13,24 @@ final class co extends qm {
     static String[] field_G;
     private int field_w;
     static int field_x;
-    private dl[] field_y;
+    private RgbSprite[] field_y;
     static boolean field_F;
-    private dl field_D;
+    private RgbSprite field_D;
     int field_A;
-    private dl field_B;
+    private RgbSprite field_B;
     private int field_u;
 
-    private final dl j(int param0) {
+    private final RgbSprite j(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = CrazyCrystals.field_B;
         if (param0 != 255) {
-          this.field_D = (dl) null;
+          this.field_D = (RgbSprite) null;
         }
         int var2 = this.field_f >> 1;
-        dl var3 = new dl(var2, this.field_f);
+        RgbSprite var3 = new RgbSprite(var2, this.field_f);
         em.a((byte) 38, var3);
         for (var4 = 0; this.field_f > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -53,10 +53,10 @@ final class co extends qm {
     }
 
     private final void h(int param0) {
-        this.field_y = new dl[]{this.a(this.field_w, this.field_C, 2), this.a(this.field_u, this.field_E, 2)};
+        this.field_y = new RgbSprite[]{this.a(this.field_w, this.field_C, 2), this.a(this.field_u, this.field_E, 2)};
         this.field_z = this.j(param0 + 255);
         this.field_B = this.field_z.c();
-        this.field_D = new dl(this.field_f >> 1, this.field_f);
+        this.field_D = new RgbSprite(this.field_f >> 1, this.field_f);
         if (param0 != 0) {
           field_G = (String[]) null;
         }
@@ -162,7 +162,7 @@ final class co extends qm {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    private final dl a(int param0, int param1, int param2) {
+    private final RgbSprite a(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -171,7 +171,7 @@ final class co extends qm {
         int var11 = 0;
         int var12 = 0;
         int var13 = CrazyCrystals.field_B;
-        dl var14 = new dl(param2 * this.field_v, this.field_f);
+        RgbSprite var14 = new RgbSprite(param2 * this.field_v, this.field_f);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -196,7 +196,7 @@ final class co extends qm {
         return var14;
     }
 
-    private final void a(byte param0, dl param1, int param2, int param3) {
+    private final void a(byte param0, RgbSprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -268,10 +268,10 @@ final class co extends qm {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_G = null;
         if (param0 != 2) {
-          co.a(-117);
+          co.clearDeclaredStaticReferences(-117);
         }
     }
 

@@ -32,7 +32,7 @@ final class mm {
         }
     }
 
-    final static dl[] a(int param0) {
+    final static RgbSprite[] a(int param0) {
         int var3 = 0;
         byte[] var10 = null;
         int[] var11 = null;
@@ -41,7 +41,7 @@ final class mm {
         int var6 = 0;
         int var2 = 0;
         int var7 = CrazyCrystals.field_B;
-        dl[] var1 = new dl[mg.field_a];
+        RgbSprite[] var1 = new RgbSprite[mg.field_a];
         int var2Lifetime1;
         for (var2 = 0; var2 < mg.field_a; var2++) {
           var3 = uo.field_l[var2] * je.field_c[var2];
@@ -52,7 +52,7 @@ final class mm {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = gh.field_z[pf.b((int) var10[var6], 255)];
           }
-          var1[var2] = new dl(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var11);
+          var1[var2] = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var11);
         }
         ok.a(2188450);
         var2Lifetime1 = -46 % ((-74 - param0) / 50);

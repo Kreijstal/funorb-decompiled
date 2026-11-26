@@ -57,7 +57,7 @@ final class ha {
         int var5;
         int[] var5_ref_int__;
         int var6;
-        db var6_ref_db;
+        RgbSprite var6_ref_db;
         int var7;
         int var8;
         int var9;

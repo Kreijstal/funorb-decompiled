@@ -34,7 +34,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 64 / ((-33 - param0) / 39);
         field_b = null;
     }

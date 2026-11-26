@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dg extends pj {
-    private hj field_G;
+    private RgbSprite field_G;
     private int field_A;
     static String field_C;
     private int field_y;
     static int[] field_B;
     private int field_K;
-    private hj[] field_E;
+    private RgbSprite[] field_E;
     private int field_H;
     int field_J;
-    private hj field_F;
+    private RgbSprite field_F;
     boolean field_z;
-    private hj field_L;
+    private RgbSprite field_L;
     private int field_x;
     private int field_D;
 
@@ -21,8 +21,8 @@ final class dg extends pj {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (16711422 & param6) >> 1);
     }
 
-    private final void a(int param0, int param1, int param2, hj param3) {
-        hj discarded$0 = null;
+    private final void a(int param0, int param1, int param2, RgbSprite param3) {
+        RgbSprite discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -79,24 +79,24 @@ final class dg extends pj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 113) {
-          dg.a((byte) -26);
+          dg.clearStaticReferences((byte) -26);
         }
         field_C = null;
         field_B = null;
     }
 
-    private final hj i(int param0) {
+    private final RgbSprite i(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = OrbDefence.field_D ? 1 : 0;
         int var2 = this.field_r >> 1;
-        hj var3 = new hj(var2, this.field_r);
+        RgbSprite var3 = new RgbSprite(var2, this.field_r);
         if (param0 < 33) {
-          return (hj) null;
+          return (RgbSprite) null;
         }
         de.a(-125, var3);
         for (var4 = 0; var4 < this.field_r; var4++) {
@@ -114,7 +114,7 @@ final class dg extends pj {
         return var3;
     }
 
-    private final hj a(int param0, byte param1, int param2) {
+    private final RgbSprite a(int param0, byte param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -129,7 +129,7 @@ final class dg extends pj {
         if (param1 != -45) {
           this.field_J = 82;
         }
-        hj var14 = new hj(2 * this.field_D, this.field_r);
+        RgbSprite var14 = new RgbSprite(2 * this.field_D, this.field_r);
         de.a(-127, var14);
         int var5 = this.field_r >> 1;
         for (var6 = 0; var6 < this.field_r; var6++) {
@@ -165,13 +165,13 @@ final class dg extends pj {
     }
 
     private final void c(boolean param0) {
-        this.field_E = new hj[]{this.a(this.field_y, (byte) -45, this.field_x), this.a(this.field_K, (byte) -45, this.field_H)};
+        this.field_E = new RgbSprite[]{this.a(this.field_y, (byte) -45, this.field_x), this.a(this.field_K, (byte) -45, this.field_H)};
         this.field_L = this.i(90);
         if (param0) {
           this.field_y = -26;
         }
         this.field_F = this.field_L.b();
-        this.field_G = new hj(this.field_r >> 1, this.field_r);
+        this.field_G = new RgbSprite(this.field_r >> 1, this.field_r);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

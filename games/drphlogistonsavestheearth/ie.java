@@ -10,7 +10,7 @@ final class ie extends l {
     private int field_A;
     static boolean field_B;
     static he[] field_x;
-    private nh[] field_t;
+    private RgbSprite[] field_t;
     static boolean[] field_u;
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
@@ -64,7 +64,7 @@ final class ie extends l {
         int var8 = 0;
         try {
           if (param1 <= 94) {
-            this.field_t = (nh[]) null;
+            this.field_t = (RgbSprite[]) null;
           }
           if (!param2.field_n) {
             stackIn_8_0 = (param2.a(true)) ? 1 : 0;

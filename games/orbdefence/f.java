@@ -18,7 +18,7 @@ final class f {
     private int field_d;
     int field_y;
     private int field_q;
-    static hj[] field_w;
+    static RgbSprite[] field_w;
     int field_p;
     lb[] field_e;
     IntrusiveDeque field_b;
@@ -939,7 +939,7 @@ final class f {
 
     final static void a(ki param0, int param1) {
         RuntimeException runtimeException = null;
-        hj var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -947,17 +947,17 @@ final class f {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new hj(param0.a("", 1, "final_frame.jpg"), (java.awt.Component) ((Object) GameAppletShell.field_f));
+          var2 = new RgbSprite(param0.a("", 1, "final_frame.jpg"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           if (param1 != -17763) {
             return;
           }
           var3 = var2.field_o;
           var4 = var2.field_k;
           h.k(122);
-          CrossfadingMidiPcmStream.field_j = new hj(var3, var4 * 3 / 4);
+          CrossfadingMidiPcmStream.field_j = new RgbSprite(var3, var4 * 3 / 4);
           CrossfadingMidiPcmStream.field_j.d();
           var2.b(0, 0);
-          fd.field_a = new hj(var3, -CrossfadingMidiPcmStream.field_j.field_k + var4);
+          fd.field_a = new RgbSprite(var3, -CrossfadingMidiPcmStream.field_j.field_k + var4);
           fd.field_a.d();
           var2.b(0, -CrossfadingMidiPcmStream.field_j.field_k);
           fd.field_a.field_u = CrossfadingMidiPcmStream.field_j.field_k;

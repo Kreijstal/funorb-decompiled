@@ -173,14 +173,14 @@ abstract class Framebuffer {
 
     abstract void performAction0421(byte byteArgument1, java.awt.Graphics graphicsArgument2, int integerArgument3, int integerArgument4);
 
-    public static void performAction0423(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0154 = null;
         stringState0155 = null;
         booleanArrayArrayState0002 = (boolean[][]) null;
         emailValidationErrorState0002 = null;
         renderingSupport010State0001 = null;
         if (integerArgument1 != 24744) {
-          Framebuffer.performAction0423(125);
+          Framebuffer.clearStaticReferences(125);
         }
     }
 

@@ -11,7 +11,7 @@ abstract class RasterBuffer {
 
     final static PcmStreamMixer c(byte param0) {
         if (param0 > -61) {
-          RasterBuffer.a((byte) 38);
+          RasterBuffer.clearStaticReferences((byte) 38);
           return qn.pcmMixer;
         }
         return qn.pcmMixer;
@@ -26,7 +26,7 @@ abstract class RasterBuffer {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 18 % ((param0 + 44) / 47);
         field_f = null;
         field_a = null;

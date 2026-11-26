@@ -4,7 +4,7 @@
 final class kf extends IntrusiveNode {
     static int field_k;
     static String field_l;
-    static dd field_i;
+    static RgbSprite field_i;
     static String field_j;
 
     private kf() throws Throwable {
@@ -75,7 +75,7 @@ final class kf extends IntrusiveNode {
             var18.field_r = new int[var18.field_k];
             var18.field_s = new PlatformTask[var18.field_k];
             if (param1 != -3) {
-              kf.a(-63);
+              kf.clearDeclaredStaticReferences(-63);
             }
             for (var5 = 0; var18.field_k > var5; var5++) {
               try {
@@ -176,9 +176,9 @@ final class kf extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 > -88) {
-          field_i = (dd) null;
+          field_i = (RgbSprite) null;
         }
         field_i = null;
         field_j = null;

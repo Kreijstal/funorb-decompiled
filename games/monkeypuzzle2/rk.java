@@ -58,10 +58,10 @@ final class rk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 10) {
-          rk.a(-4);
+          rk.clearStaticReferences(-4);
           field_a = null;
           return;
         }

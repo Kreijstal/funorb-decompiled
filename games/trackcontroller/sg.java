@@ -230,11 +230,11 @@ final class sg {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         if (param0 != -8217) {
-          sg.a(-34);
+          sg.clearStaticReferences(-34);
         }
         field_a = null;
     }

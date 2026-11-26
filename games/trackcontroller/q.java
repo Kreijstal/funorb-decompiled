@@ -29,7 +29,7 @@ final class q {
             return 1;
           }
           if (param0 > -41) {
-            q.a(4);
+            q.clearStaticReferences(4);
           }
         } else {
           if (this.field_h > 0) {
@@ -47,7 +47,7 @@ final class q {
             }
             return 0;
           }
-          q.a(4);
+          q.clearStaticReferences(4);
         }
         if (field_a != 2) {
           return 0;
@@ -87,7 +87,7 @@ final class q {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_j = null;
         field_o = null;

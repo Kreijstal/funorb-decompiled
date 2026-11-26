@@ -9,7 +9,7 @@ final class ud {
     static String field_f;
     static char field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = 96 / ((param0 + 54) / 45);
         field_f = null;

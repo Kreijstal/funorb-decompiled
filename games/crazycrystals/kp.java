@@ -6,7 +6,7 @@ final class kp extends f implements Cloneable {
     private int field_i;
     static mk field_k;
     static int field_j;
-    static dl field_n;
+    static RgbSprite field_n;
     static int field_m;
     static String field_l;
 
@@ -158,7 +158,7 @@ final class kp extends f implements Cloneable {
         return new pf(param2, param0, (f) (this)).a(param0, (byte) -110, param2);
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         ig stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -292,7 +292,7 @@ final class kp extends f implements Cloneable {
 
     final boolean a(byte param0, f[][] param1, int param2, int param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
-        dl[] var9 = null;
+        RgbSprite[] var9 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -303,8 +303,8 @@ final class kp extends f implements Cloneable {
           if (param0 == -21) {
             return true;
           }
-          var9 = (dl[]) null;
-          this.a((f) null, 35, 9, (f[][]) null, (dl[]) null, (byte) -34);
+          var9 = (RgbSprite[]) null;
+          this.a((f) null, 35, 9, (f[][]) null, (RgbSprite[]) null, (byte) -34);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

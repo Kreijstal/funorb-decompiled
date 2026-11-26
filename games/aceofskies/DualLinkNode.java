@@ -12,7 +12,7 @@ class DualLinkNode extends IntrusiveNode {
     static String[] field_k;
     static Sprite[] field_h;
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_e = null;
         field_g = null;
         field_h = null;
@@ -20,7 +20,7 @@ class DualLinkNode extends IntrusiveNode {
         field_m = null;
         field_k = null;
         if (param0 != 14349) {
-          DualLinkNode.a(55);
+          DualLinkNode.releaseDeclaredStaticReferences(55);
         }
     }
 

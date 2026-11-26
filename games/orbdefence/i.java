@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i {
-    static hj field_a;
+    static RgbSprite field_a;
 
     final static void a(int param0, String param1, String[] param2, int param3) {
         RuntimeException var4 = null;
@@ -63,10 +63,10 @@ final class i {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 100) {
-          i.a(8);
+          i.clearStaticReferences(8);
         }
     }
 

@@ -138,7 +138,7 @@ final class rk extends jc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_fb = null;
         field_ab = null;
         int var1 = -71 / ((param0 - 18) / 35);

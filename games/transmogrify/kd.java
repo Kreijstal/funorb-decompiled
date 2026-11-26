@@ -164,7 +164,7 @@ final class kd implements WidgetRenderer {
           var17 = new StringBuilder(4);
           var5Lifetime1 = wk.field_c / 50;
           if (param0 <= 84) {
-            kd.a(1);
+            kd.clearStaticReferences(1);
           }
           var6Lifetime1 = var5Lifetime1 / 60;
           var5Lifetime1 = var5Lifetime1 % 60;
@@ -338,12 +338,12 @@ final class kd implements WidgetRenderer {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;
         if (param0 > -58) {
-          kd.a(20);
+          kd.clearStaticReferences(20);
         }
     }
 

@@ -4,19 +4,19 @@
 final class nl {
     static int[] field_a;
     static String[] field_b;
-    static dd[][] field_c;
+    static RgbSprite[][] field_c;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 == -33) {
           field_a = null;
           field_b = null;
-          field_c = (dd[][]) null;
+          field_c = (RgbSprite[][]) null;
           return;
         }
         field_a = (int[]) null;
         field_a = null;
         field_b = null;
-        field_c = (dd[][]) null;
+        field_c = (RgbSprite[][]) null;
     }
 
     final static void a(int param0, IntrusiveNode param1, IntrusiveNode param2) {

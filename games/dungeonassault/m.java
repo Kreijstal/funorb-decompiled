@@ -8,7 +8,7 @@ abstract class m implements dp {
     static ad field_d;
     static en field_e;
     static String field_g;
-    static cn field_c;
+    static RgbSprite field_c;
 
     public final String a(boolean param0) {
         if (this.a(96)) {
@@ -88,7 +88,7 @@ abstract class m implements dp {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 < 34) {
-          field_c = (cn) null;
+          field_c = (RgbSprite) null;
           if (oo.field_d >= 224) {
             sf.d(-93, 256);
             return;

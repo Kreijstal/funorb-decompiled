@@ -24,13 +24,13 @@ final class id implements Serializable {
     int[] field_i;
     int[] field_g;
     boolean[] field_e;
-    static bd[] field_p;
+    static RgbSprite[] field_p;
     int[] field_f;
     int[] field_o;
     static ji field_t;
     static String field_l;
     boolean[] field_B;
-    static bd field_w;
+    static RgbSprite field_w;
     static String field_b;
 
     private final void a(byte[] param0, int param1) {
@@ -263,7 +263,7 @@ final class id implements Serializable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         int var1 = -12 / ((param0 + 14) / 33);
         field_b = null;

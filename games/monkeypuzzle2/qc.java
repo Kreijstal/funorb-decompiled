@@ -54,7 +54,7 @@ final class qc extends rj implements ag {
         return this.field_m;
     }
 
-    public static void q(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_L = null;
         field_O = null;
         if (param0 < 92) {

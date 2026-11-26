@@ -25,7 +25,7 @@ class ig extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            ig.a(78);
+            ig.clearDeclaredStaticReferences(78);
           }
           if (this.a((byte) -125, param3, param2, param0)) {
             this.a((byte) 117, param0, param2, param3);
@@ -176,9 +176,9 @@ class ig extends UiWidget {
         this(param0, n.field_i.field_b, param1);
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -8278) {
-          ig.a(-27);
+          ig.clearDeclaredStaticReferences(-27);
           field_C = null;
           return;
         }

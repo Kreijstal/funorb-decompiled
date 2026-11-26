@@ -5,7 +5,7 @@ final class nb {
     static boolean field_d;
     static mk field_a;
     static String field_c;
-    static nh field_b;
+    static RgbSprite field_b;
 
     final static java.applet.Applet a(int param0) {
         if (null != wi.field_d) {

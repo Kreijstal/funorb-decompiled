@@ -13,7 +13,7 @@ final class tc extends IntrusiveNode {
     static String field_p;
     String field_n;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         field_o = null;
         field_v = null;

@@ -139,10 +139,10 @@ abstract class oh extends jj {
         }
     }
 
-    final static dd c(int param0, int param1, int param2) {
+    final static RgbSprite c(int param0, int param1, int param2) {
         int var6 = fleas.field_A ? 1 : 0;
-        dd var7 = new dd(param2, param2);
-        dd var3 = var7;
+        RgbSprite var7 = new RgbSprite(param2, param2);
+        RgbSprite var3 = var7;
         int var4 = 0;
         int var5 = 73 % ((param0 - 37) / 48);
         while (var3.field_B.length > var4) {

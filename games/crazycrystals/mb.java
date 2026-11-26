@@ -6,7 +6,7 @@ final class mb {
     private String field_e;
     static int[] field_c;
     static String field_a;
-    static dl field_b;
+    static RgbSprite field_b;
     static int field_f;
     static boolean field_d;
 

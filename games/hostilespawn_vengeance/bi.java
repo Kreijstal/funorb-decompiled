@@ -4,7 +4,7 @@
 final class bi {
     static String field_e;
     static bm field_d;
-    static bd field_b;
+    static RgbSprite field_b;
     static ub field_a;
     static String field_g;
     static String field_f;
@@ -80,7 +80,7 @@ final class bi {
                 if (var8.field_e < 0) {
                   var7 = (384000 + 128 * var8.field_e) / 3000;
                 }
-                ((bd) (var9)).a(true, var7, (int)var8.field_c, var5, var6);
+                ((RgbSprite) (var9)).a(true, var7, (int)var8.field_c, var5, var6);
               }
             }
             var4_int++;
@@ -123,7 +123,7 @@ final class bi {
         int var4_int = 0;
         RuntimeException var4 = null;
         p var5 = null;
-        bd stackIn_2_0;
+        RgbSprite stackIn_2_0;
         double stackIn_2_1;
         double stackIn_2_2;
         boolean stackIn_2_3;
@@ -144,7 +144,7 @@ final class bi {
           } else {
             stackIn_3_4 = 0;
           }
-          ((bd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, (double)stackIn_3_4 + param0.field_c, 128);
+          ((RgbSprite) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, (double)stackIn_3_4 + param0.field_c, 128);
           if (param3 <= -4) {
             return;
           }

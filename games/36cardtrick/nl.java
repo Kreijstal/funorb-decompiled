@@ -11,7 +11,7 @@ final class nl {
     final static void a(java.awt.Canvas param0, int param1) {
         try {
           if (cd.field_e == 11) {
-            ie.f(-11);
+            SpriteGeometry.f(-11);
           }
           int var2_int = -107 % ((param1 + 26) / 62);
           ti.a(DualLinkNode.field_g, (byte) 54, ck.field_G, sg.field_b);

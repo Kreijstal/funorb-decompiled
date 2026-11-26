@@ -25,9 +25,9 @@ final class d extends ci {
           kn.field_F = AudioOutput.createOutput(param3, param4, 1, 2048);
           h.field_s = new PcmStreamMixer();
           kn.field_F.setRootStream(h.field_s);
-          fk.field_q = param2;
-          fk.field_q.a(64 * bc.field_b / 80, (byte) -100);
-          mh.field_d.setRootStream(fk.field_q);
+          SpriteGeometry.field_q = param2;
+          SpriteGeometry.field_q.a(64 * bc.field_b / 80, (byte) -100);
+          mh.field_d.setRootStream(SpriteGeometry.field_q);
           if (param6 > -21) {
             field_Mb = (SecondaryNodeHashTable) null;
           }
@@ -35,7 +35,7 @@ final class d extends ci {
           ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);
           h.field_s.a(ka.field_a);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "d.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "d.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class d extends ci {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class d extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "d.B(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "d.B(" + param0 + ')');
         }
     }
 
@@ -234,11 +234,11 @@ final class d extends ci {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = -83 % ((-59 - param0) / 40);
         field_Jb = null;
         field_Lb = null;

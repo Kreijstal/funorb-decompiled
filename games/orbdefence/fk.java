@@ -3,7 +3,7 @@
  */
 final class fk {
     static String field_d;
-    static hj field_b;
+    static RgbSprite field_b;
     static String field_a;
     int field_c;
 
@@ -18,12 +18,12 @@ final class fk {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         field_d = null;
         if (param0 != -102) {
-          fk.a((byte) 29);
+          fk.clearStaticReferences((byte) 29);
         }
     }
 
@@ -35,12 +35,12 @@ final class fk {
         return tl.a(uj.b((byte) -120), 61);
     }
 
-    final static hj a(ki param0, String param1, int param2, String param3) {
+    final static RgbSprite a(ki param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        hj stackIn_1_0 = null;
+        RgbSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

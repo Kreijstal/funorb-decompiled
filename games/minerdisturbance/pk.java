@@ -61,7 +61,7 @@ final class pk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 < -77) {
           field_a = null;
@@ -188,7 +188,7 @@ final class pk {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearDeclaredStaticReferences(int param0) {
         if (param0 < 102) {
           field_c = (Sprite) null;
         }

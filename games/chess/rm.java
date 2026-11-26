@@ -8,18 +8,18 @@ final class rm extends mf {
     static PcmStreamMixer field_M;
     boolean field_W;
     private int field_G;
-    private km field_P;
+    private RgbSprite field_P;
     private int field_K;
     private int field_T;
     static int field_U;
-    private km field_N;
-    private km field_I;
+    private RgbSprite field_N;
+    private RgbSprite field_I;
     static String field_D;
     private int field_F;
     private int field_X;
     static int field_Q;
     int field_L;
-    private km[] field_O;
+    private RgbSprite[] field_O;
     private int field_V;
     static FullscreenFocusCanvas field_R;
 
@@ -30,16 +30,16 @@ final class rm extends mf {
             field_U = 107;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "rm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "rm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void e(byte param0) {
-        this.field_O = new km[]{this.c(-72, this.field_K, this.field_F), this.c(-43, this.field_X, this.field_V)};
+        this.field_O = new RgbSprite[]{this.c(-72, this.field_K, this.field_F), this.c(-43, this.field_X, this.field_V)};
         int var2 = -46 / ((-5 - param0) / 54);
         this.field_P = this.f((byte) 8);
         this.field_N = this.field_P.b();
-        this.field_I = new km(this.field_C >> 1, this.field_C);
+        this.field_I = new RgbSprite(this.field_C >> 1, this.field_C);
     }
 
     rm(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -51,7 +51,7 @@ final class rm extends mf {
         this.e((byte) 53);
     }
 
-    private final void a(int param0, km param1, int param2, int param3) {
+    private final void a(int param0, RgbSprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -101,7 +101,7 @@ final class rm extends mf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -162,11 +162,11 @@ final class rm extends mf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final km f(byte param0) {
+    private final RgbSprite f(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -176,7 +176,7 @@ final class rm extends mf {
           rm.a(-18);
         }
         int var2 = this.field_C >> 1;
-        km var3 = new km(var2, this.field_C);
+        RgbSprite var3 = new RgbSprite(var2, this.field_C);
         tl.a((byte) -67, var3);
         for (var4 = 0; var4 < this.field_C; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -232,11 +232,11 @@ final class rm extends mf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final km c(int param0, int param1, int param2) {
+    private final RgbSprite c(int param0, int param1, int param2) {
         int var6 = 0;
         int var5;
         int var7;
@@ -246,14 +246,14 @@ final class rm extends mf {
         int var11;
         int var12;
         int var13;
-        km var14;
+        RgbSprite var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = Chess.field_G;
-        var14 = new km(this.field_T * 2, this.field_C);
+        var14 = new RgbSprite(this.field_T * 2, this.field_C);
         tl.a((byte) -67, var14);
         var5 = this.field_C >> 1;
         for (var6 = 0; this.field_C > var6; var6++) {

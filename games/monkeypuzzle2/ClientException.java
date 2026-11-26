@@ -8,7 +8,7 @@ final class ClientException extends RuntimeException {
     static String field_a;
     static int field_e;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = 74 / ((-51 - param0) / 54);
     }

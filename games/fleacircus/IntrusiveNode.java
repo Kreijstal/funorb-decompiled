@@ -68,7 +68,7 @@ class IntrusiveNode {
         }
     }
 
-    final static dd[] a(int param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {
         int var4 = 22 % ((-22 - param2) / 59);
         return cb.a(1, param0, 0, param3, param1);
     }

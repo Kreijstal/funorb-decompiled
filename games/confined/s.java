@@ -5,14 +5,14 @@ final class s extends am {
     static String field_L;
     static boolean field_K;
     static String field_J;
-    static nf[] field_M;
+    static RgbSprite[] field_M;
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_M = null;
         field_J = null;
         field_L = null;
         if (param0 < 57) {
-          s.g((byte) -22);
+          s.clearStaticReferences((byte) -22);
         }
     }
 
@@ -127,7 +127,7 @@ final class s extends am {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -84) {
-            s.g((byte) 110);
+            s.clearStaticReferences((byte) 110);
           }
           var4 = (String) null;
           stackIn_3_0 = ai.a(0, (String) null, param0, false, 0, 126, param1);

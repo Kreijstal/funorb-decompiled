@@ -183,7 +183,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 38 / ((param0 + 67) / 37);
         field_a = null;
     }

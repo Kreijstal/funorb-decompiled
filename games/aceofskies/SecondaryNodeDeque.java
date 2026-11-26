@@ -49,7 +49,7 @@ final class SecondaryNodeDeque {
           ScorchMark.field_f = new int[65536];
           double var1_double = -0.015 + Math.random() * 0.03 + 0.7;
           if (param0 != -128) {
-            SecondaryNodeDeque.d(65);
+            SecondaryNodeDeque.clearStaticReferences(65);
           }
           for (int var3 = 0; 65536 > var3; var3++) {
             double var4 = 0.0078125 + (double)((var3 & 64725) >> 10) / 64.0;
@@ -165,7 +165,7 @@ final class SecondaryNodeDeque {
         return (DualLinkNode) null;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 118 % ((67 - param0) / 57);
         field_c = null;
     }

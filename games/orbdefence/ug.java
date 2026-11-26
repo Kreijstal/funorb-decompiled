@@ -81,7 +81,7 @@ final class ug extends hi {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         int var1 = 49 / ((param0 - 7) / 43);
         field_r = null;

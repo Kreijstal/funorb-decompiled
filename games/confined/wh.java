@@ -71,7 +71,7 @@ final class wh extends ul implements j {
         return this.field_db;
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -9466) {
           return;
         }

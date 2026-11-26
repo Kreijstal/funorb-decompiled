@@ -6,7 +6,7 @@ abstract class cb extends DualLinkNode {
     static java.awt.Frame field_t;
     static String field_q;
     static AccountRequestState field_v;
-    static dd field_u;
+    static RgbSprite field_u;
     static el field_w;
     static String field_s;
 
@@ -14,16 +14,16 @@ abstract class cb extends DualLinkNode {
 
     abstract boolean c(byte param0);
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
-        dd[] var6 = new dd[9];
-        dd[] var5 = var6;
-        dd dupTemp$0 = oh.c(102, param3, param0);
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = oh.c(102, param3, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[param2] = dupTemp$0;
-        dd dupTemp$1 = oh.c(107, param1, param0);
+        RgbSprite dupTemp$1 = oh.c(107, param1, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -122,7 +122,7 @@ abstract class cb extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_w = null;
         field_u = null;
         field_s = null;

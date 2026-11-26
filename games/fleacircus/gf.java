@@ -170,7 +170,7 @@ final class gf {
         vh var1 = (vh) (al.field_e.beginForward((byte) 47));
         ih var2Lifetime1;
         if (param0 > -5) {
-          gf.c(126);
+          gf.clearStaticReferences(126);
           if (var1 == null) {
             k.c(-28354);
             return;
@@ -195,7 +195,7 @@ final class gf {
         var1.unlink(-1);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = null;
         if (param0 < -40) {
@@ -204,7 +204,7 @@ final class gf {
           field_f = null;
           return;
         }
-        gf.c(95);
+        gf.clearStaticReferences(95);
         field_g = null;
         field_a = null;
         field_f = null;

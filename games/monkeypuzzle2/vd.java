@@ -204,11 +204,11 @@ final class vd {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_e = null;
         if (param0 <= 106) {
-          vd.a(-53);
+          vd.clearStaticReferences(-53);
         }
     }
 

@@ -216,9 +216,9 @@ final class b {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
-          b.a(true);
+          b.clearStaticReferences(true);
         }
         field_c = null;
         field_a = null;
@@ -228,7 +228,7 @@ final class b {
 
     final static ue a(boolean param0, int param1) {
         if (param0) {
-          b.a(true);
+          b.clearStaticReferences(true);
         }
         return ri.a(true, false, 1, param1, false, true);
     }

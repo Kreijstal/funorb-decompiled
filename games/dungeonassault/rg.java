@@ -105,7 +105,7 @@ final class rg extends ii implements pf, vg, mg {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_M = null;
         field_P = null;
         if (param0 != -53) {

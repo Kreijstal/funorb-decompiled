@@ -22,11 +22,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         throw new RuntimeException();
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_v = null;
         field_y = null;
         if (param0 <= 74) {
-          NetworkArchiveRequest.c((byte) -48);
+          NetworkArchiveRequest.clearStaticReferences((byte) -48);
         }
     }
 

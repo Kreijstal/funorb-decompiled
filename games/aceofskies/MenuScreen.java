@@ -35,11 +35,11 @@ final class MenuScreen {
         return value + var3;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_f = null;
         if (param0 < 82) {
-          MenuScreen.c((byte) 16);
+          MenuScreen.clearStaticReferences((byte) 16);
         }
     }
 

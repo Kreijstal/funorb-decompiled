@@ -7,7 +7,7 @@ class kf extends w {
     boolean field_D;
     private boolean field_B;
     static be field_y;
-    static db[] field_A;
+    static RgbSprite[] field_A;
     private boolean field_x;
     boolean field_C;
     static dg field_z;

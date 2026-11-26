@@ -980,7 +980,7 @@ final class ib {
                 }
                 var2 = mk.b("obscured_description", (byte) -127);
                 if (var2 != null) {
-                  qc.field_t = PcmResampler.a(126, var2);
+                  SpriteGeometry.field_t = PcmResampler.a(126, var2);
                 }
                 var2 = mk.b("settings_option", (byte) -119);
                 if (var2 != null) {

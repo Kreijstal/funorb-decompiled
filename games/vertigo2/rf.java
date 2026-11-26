@@ -11,7 +11,7 @@ final class rf extends da {
     static int field_s;
     static String[][] field_m;
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_m = (String[][]) null;
         field_n = null;
         if (param0 != 29492) {

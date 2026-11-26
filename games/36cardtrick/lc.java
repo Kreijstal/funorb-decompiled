@@ -70,7 +70,7 @@ final class lc {
         }
         try {
           tc.field_b = param0;
-          ie.field_m = param2;
+          SpriteGeometry.field_m = param2;
           wd.field_b = param4;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "lc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');

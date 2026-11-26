@@ -11,10 +11,10 @@ final class im implements ca {
     static volatile boolean field_d;
     private int field_k;
     private se field_j;
-    static cn field_m;
+    static RgbSprite field_m;
     static me field_b;
     private int field_h;
-    static cn field_e;
+    static RgbSprite field_e;
 
     public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
         int var10 = 0;

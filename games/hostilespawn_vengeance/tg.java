@@ -5,7 +5,7 @@ final class tg {
     static GzipDecompressor field_b;
     static boolean field_a;
 
-    final static void a(int param0, bd[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -405,7 +405,7 @@ final class tg {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = -104 % ((36 - param0) / 62);
     }
@@ -416,7 +416,7 @@ final class tg {
           if (null != GameAppletShell.field_h) {
             v.a(67, GameAppletShell.field_h);
           }
-          qc.c((byte) -118);
+          SpriteGeometry.c((byte) -118);
           lj.d((byte) 114);
           DirectByteStorage.b(51);
           if (bj.c((byte) -29)) {

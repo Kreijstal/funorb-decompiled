@@ -61,7 +61,7 @@ final class dj {
             ii.field_D = param4;
             la.field_c = param5;
             sc.field_q = param13;
-            rd.field_D = param6;
+            SpriteGeometry.field_D = param6;
             if (null == sc.field_q.field_h) {
               return;
             }

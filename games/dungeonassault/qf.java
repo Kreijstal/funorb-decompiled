@@ -4,7 +4,7 @@
 final class qf extends en {
     private String field_d;
     private String field_g;
-    static cn field_f;
+    static RgbSprite field_f;
     private String field_e;
 
     final static hl a(int param0, boolean param1, String param2, String param3) {
@@ -21,7 +21,7 @@ final class qf extends en {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 46) {
-            field_f = (cn) null;
+            field_f = (RgbSprite) null;
           }
           var4_long = 0L;
           var6 = null;
@@ -121,7 +121,7 @@ final class qf extends en {
         field_f = null;
     }
 
-    final cn b(byte param0) {
+    final RgbSprite b(byte param0) {
         int var9 = 0;
         String var10 = null;
         int var11 = DungeonAssault.field_K;
@@ -134,7 +134,7 @@ final class qf extends en {
         int var3 = var12.length;
         int var4 = db.field_v.field_E + db.field_v.field_H * var3;
         int var5 = db.field_v.field_H;
-        cn var6 = new cn(200, var4);
+        RgbSprite var6 = new RgbSprite(200, var4);
         int var7 = -48 / ((param0 + 58) / 35);
         var6.e();
         String[] var8 = var12;
@@ -157,7 +157,7 @@ final class qf extends en {
         }
     }
 
-    private final cn a(byte param0, int param1) {
+    private final RgbSprite a(byte param0, int param1) {
         int var9 = 0;
         String var10 = null;
         int var11 = DungeonAssault.field_K;
@@ -170,9 +170,9 @@ final class qf extends en {
         if (this.field_e != null) {
           var5 = var5 + 2 * la.field_b.field_H;
         }
-        cn var7 = new cn(param1, var5);
+        RgbSprite var7 = new RgbSprite(param1, var5);
         if (param0 <= 22) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         var7.e();
         if (null != this.field_e) {
@@ -194,8 +194,8 @@ final class qf extends en {
     }
 
     final void a(int param0, sa param1) {
-        cn discarded$0 = null;
-        cn var3 = null;
+        RgbSprite discarded$0 = null;
+        RgbSprite var3 = null;
         try {
           if (param0 != 0) {
             discarded$0 = this.a((byte) -60, 34);

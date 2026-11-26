@@ -4,7 +4,7 @@
 final class al {
     static he[] field_d;
     static fi field_e;
-    static nh field_b;
+    static RgbSprite field_b;
     static he field_c;
     static he[] field_a;
     static int[] field_g;

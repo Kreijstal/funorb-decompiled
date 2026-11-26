@@ -32,7 +32,7 @@ abstract class nf extends DualLinkNode {
         this.field_m = param0;
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         if (param0 != 127) {
           field_n = (String) null;

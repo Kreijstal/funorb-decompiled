@@ -131,7 +131,7 @@ final class tg implements ci {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        kc var8 = null;
+        RgbSprite var8 = null;
         PacketBuffer var9 = null;
         try {
           var6_int = param1.field_o + param0;

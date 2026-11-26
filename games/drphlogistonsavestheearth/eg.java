@@ -9,7 +9,7 @@ final class eg {
     static IntrusiveDeque field_c;
     static String field_b;
     static String field_g;
-    static nh field_d;
+    static RgbSprite field_d;
     static he[] field_f;
 
     final static int a(int param0, int param1) {
@@ -27,10 +27,10 @@ final class eg {
 
     final static sd[] b(byte param0) {
         if (param0 < -103) {
-          return new sd[]{p.field_d, ka.field_q, mf.field_A};
+          return new sd[]{p.field_d, ka.field_q, SpriteGeometry.field_A};
         }
         eg.a(99, 71);
-        return new sd[]{p.field_d, ka.field_q, mf.field_A};
+        return new sd[]{p.field_d, ka.field_q, SpriteGeometry.field_A};
     }
 
     final static int a(int param0, int param1, CharSequence param2) {
@@ -86,7 +86,7 @@ final class eg {
         }
     }
 
-    final static nh[] a(byte param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(byte param0, int param1, int param2, int param3) {
         if (param0 >= 66) {
           return af.a(param1, 1, param2, (byte) 32, param3);
         }

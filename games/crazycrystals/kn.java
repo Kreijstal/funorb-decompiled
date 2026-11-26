@@ -4,7 +4,7 @@
 final class kn extends bo implements Cloneable {
     private int field_r;
     static int field_q;
-    static dl field_p;
+    static RgbSprite field_p;
 
     final void c(boolean param0, boolean param1) {
         if (!param0) {
@@ -156,7 +156,7 @@ final class kn extends bo implements Cloneable {
         super(param0);
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         ig stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -205,7 +205,7 @@ final class kn extends bo implements Cloneable {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -57 % ((-51 - param0) / 48);
         field_p = null;
     }

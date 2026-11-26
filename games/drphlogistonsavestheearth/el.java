@@ -77,7 +77,7 @@ final class el extends jf {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_sb = null;
         field_vb = null;
         if (param0 != 20) {

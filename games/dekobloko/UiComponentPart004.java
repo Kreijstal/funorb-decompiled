@@ -320,7 +320,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
         return rgbSpriteArrayLocal4;
     }
 
-    public static void performAction0188(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 <= 72) {
           return;
         }

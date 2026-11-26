@@ -35,7 +35,7 @@ final class BoundedRandomAccessFile {
           this.field_c.write(param2, param0, param3);
           this.field_a = this.field_a + (long)param3;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "eg.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "eg.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class BoundedRandomAccessFile {
         try {
           gm.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "eg.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "eg.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static void a(int[] param0, String[] param1, int param2, boolean param3, ResourceArchive param4, km[][] param5, String[][] param6, ResourceArchive param7, byte[] param8, int param9, ResourceArchive param10, String[][] param11, byte[] param12, int param13, km[][] param14) {
+    final static void a(int[] param0, String[] param1, int param2, boolean param3, ResourceArchive param4, RgbSprite[][] param5, String[][] param6, ResourceArchive param7, byte[] param8, int param9, ResourceArchive param10, String[][] param11, byte[] param12, int param13, RgbSprite[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -139,7 +139,7 @@ final class BoundedRandomAccessFile {
         int[] var17 = null;
         try {
           if (param2 > -108) {
-            BoundedRandomAccessFile.a((int[]) null, (String[]) null, 1, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 64, (ResourceArchive) null, (String[][]) null, (byte[]) null, -39, (km[][]) null);
+            BoundedRandomAccessFile.a((int[]) null, (String[]) null, 1, true, (ResourceArchive) null, (RgbSprite[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 64, (ResourceArchive) null, (String[][]) null, (byte[]) null, -39, (RgbSprite[][]) null);
           }
           var17 = (int[]) null;
           var16 = (rk[]) null;
@@ -215,7 +215,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class BoundedRandomAccessFile {
           return param0;
         }
         if (param1 != 0) {
-          BoundedRandomAccessFile.a((int[]) null, (String[]) null, -25, true, (ResourceArchive) null, (km[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 53, (ResourceArchive) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
+          BoundedRandomAccessFile.a((int[]) null, (String[]) null, -25, true, (ResourceArchive) null, (RgbSprite[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, 53, (ResourceArchive) null, (String[][]) null, (byte[]) null, -67, (RgbSprite[][]) null);
           if (param2 != param0) {
             return 1;
           }
@@ -267,7 +267,7 @@ final class BoundedRandomAccessFile {
           }
           this.field_c.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

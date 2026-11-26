@@ -9,14 +9,14 @@ final class bk {
     static String field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < -9) {
           field_b = null;
           field_d = null;
           field_e = null;
           return;
         }
-        bk.a(77);
+        bk.clearStaticReferences(77);
         field_b = null;
         field_d = null;
         field_e = null;

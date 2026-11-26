@@ -10,14 +10,14 @@ class ei extends DualLinkNode {
     static ug field_t;
     private static String field_z;
 
-    public static void d(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_t = null;
         field_q = null;
         field_v = null;
         field_s = null;
         field_r = null;
         if (param0 != -55) {
-          ei.d((byte) 66);
+          ei.releaseDeclaredStaticReferences((byte) 66);
         }
     }
 

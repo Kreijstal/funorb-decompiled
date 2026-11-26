@@ -13,7 +13,7 @@ final class me extends IntrusiveNode {
     static String field_l;
     static int[] field_j;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_i = null;
           field_l = null;
@@ -24,7 +24,7 @@ final class me extends IntrusiveNode {
           field_g = (byte[][][]) null;
           return;
         }
-        me.a(true);
+        me.clearStaticReferences(true);
         field_i = null;
         field_l = null;
         field_j = null;

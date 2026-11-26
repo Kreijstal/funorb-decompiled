@@ -35,7 +35,7 @@ final class IsaacRandom {
         }
         try {
           if (11 == fh.field_b) {
-            pk.b(114);
+            pk.clearDeclaredStaticReferences(114);
           }
           mn.a((byte) -63, MouseWheelInput.field_d, ul.field_a, ResourceArchive.field_c);
           cl.a(param1, 0, 0, 310);

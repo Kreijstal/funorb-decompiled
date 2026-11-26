@@ -10,7 +10,7 @@ final class Platform {
     int field_d;
     private int field_g;
     double field_j;
-    static tg[] field_a;
+    static RgbSprite[] field_a;
     static String[] field_f;
     static String field_i;
 
@@ -182,7 +182,7 @@ final class Platform {
     final static void b(int param0) {
         hf.field_b = false;
         if (param0 != 16) {
-          field_a = (tg[]) null;
+          field_a = (RgbSprite[]) null;
         }
         jc.field_g.readUnsignedByte((byte) -72);
     }

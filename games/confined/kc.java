@@ -115,7 +115,7 @@ final class kc {
     final void a(boolean param0, ok param1) {
         vf var17 = null;
         qh var4 = null;
-        nf[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -124,12 +124,12 @@ final class kc {
         li discarded$0 = null;
         rc discarded$1 = null;
         qh var8 = null;
-        nf[] var9 = null;
-        nf[] var10 = null;
-        nf dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         qh var11 = null;
         qh var12 = null;
-        nf var13 = null;
+        RgbSprite var13 = null;
         qh var14 = null;
         qh var19 = null;
         int var15 = Confined.field_J ? 1 : 0;
@@ -155,13 +155,13 @@ final class kc {
           var4.b(0, -69).a(1918, 15658734).a(-1, en.a(!param0 ? true : false, 8947848, 7829367, 10066329));
           var4.b(1, -57).a(-1, en.a(!param0 ? true : false, 11184810, 13421772, 10066329));
           var4.b(3, -62).a(-1, en.a(true, 8947848, 10066329, 7829367)).b(1, -2147483648).d(1, -2);
-          var5 = new nf[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_z.length > var7_int; var7_int++) {
             var16.field_z[var7_int] = 1077952576;
           }
-          var5[4] = (nf) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.b(4, -90).a(true, 0).a(-1, var5);
           var4.b(5, -97).a(-1, em.a(0, 0, 65793, (byte) 2, 0)).a(true, 0).a(1918, -1);
           this.field_h = (fe) ((Object) var4);
@@ -179,10 +179,10 @@ final class kc {
           var8.b(0, -69).a(-1, en.a(!param0 ? true : false, 15658734, 10066329, 7829367)).a(1918, 1118481).c(-1, 97);
           var8.b(4, -106).a(true, 0).a(-1, var5);
           this.field_u = (fe) ((Object) var8);
-          var9 = new nf[9];
-          var10 = new nf[9];
-          var9[4] = new nf(2, 1);
-          var10[4] = new nf(1, 2);
+          var9 = new RgbSprite[9];
+          var10 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
@@ -190,7 +190,7 @@ final class kc {
           var12 = new qh();
           var11.a((byte) -70, var9, 0);
           var12.a((byte) 69, var10, 0);
-          var13 = new nf(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new qh(var4, true);
           var14.a(-92, var13.c());

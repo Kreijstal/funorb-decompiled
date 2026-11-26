@@ -9,7 +9,7 @@ final class lf {
     static int field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = (he[][]) null;
         field_d = null;
         field_f = null;

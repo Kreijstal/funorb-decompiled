@@ -60,9 +60,9 @@ final class kk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
-          kk.a(-33);
+          kk.clearStaticReferences(-33);
           field_a = null;
           return;
         }

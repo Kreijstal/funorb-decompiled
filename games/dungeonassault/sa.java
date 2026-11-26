@@ -10,26 +10,26 @@ final class sa {
     private int field_q;
     private int field_j;
     int field_k;
-    private cn field_a;
+    private RgbSprite field_a;
     private int field_p;
     static String field_w;
-    private cn field_u;
+    private RgbSprite field_u;
     static hd field_x;
-    private cn field_g;
-    private cn field_c;
+    private RgbSprite field_g;
+    private RgbSprite field_c;
     int field_b;
     private int field_l;
     static int field_f;
     private int field_o;
     static String field_t;
-    private cn field_r;
+    private RgbSprite field_r;
     private int field_n;
     private int field_i;
     int field_y;
     static String field_e;
 
-    final void a(cn param0, int param1, boolean param2, int param3, int param4) {
-        cn var7 = null;
+    final void a(RgbSprite param0, int param1, boolean param2, int param3, int param4) {
+        RgbSprite var7 = null;
         try {
           this.field_i = this.field_l;
           this.field_n = this.field_p;
@@ -46,7 +46,7 @@ final class sa {
             this.field_s = 32;
           }
           this.field_u = param0;
-          this.field_r = new cn(this.field_u.field_y + 4, 4 + this.field_u.field_v);
+          this.field_r = new RgbSprite(this.field_u.field_y + 4, 4 + this.field_u.field_v);
           jh.a(this.field_r);
           this.field_u.e(2, 2, 12690143);
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, this.field_r.field_y, this.field_r.field_v);
@@ -74,8 +74,8 @@ final class sa {
 
     private final void a(int param0) {
         if (param0 != 384) {
-          cn var3 = (cn) null;
-          this.a(33, false, (cn) null);
+          RgbSprite var3 = (RgbSprite) null;
+          this.a(33, false, (RgbSprite) null);
         }
         this.a(this.field_g, this.field_d, true, -89, this.field_q);
     }
@@ -118,7 +118,7 @@ final class sa {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3, cn param4) {
+    private final void a(int param0, byte param1, int param2, int param3, RgbSprite param4) {
         int[] var13 = null;
         int[] var11 = null;
         int[] var10 = null;
@@ -149,7 +149,7 @@ final class sa {
         }
     }
 
-    private final void a(int param0, int param1, cn param2, byte param3) {
+    private final void a(int param0, int param1, RgbSprite param2, byte param3) {
         int[] var12 = null;
         int[] var10 = null;
         int[] var9 = null;
@@ -180,7 +180,7 @@ final class sa {
         }
     }
 
-    final void a(int param0, boolean param1, cn param2) {
+    final void a(int param0, boolean param1, RgbSprite param2) {
         try {
           this.a(param2, 0, param1, 118, this.field_y - param2.field_v >> 1);
           if (param0 != 1929) {
@@ -205,7 +205,7 @@ final class sa {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        cn var11 = null;
+        RgbSprite var11 = null;
         String[] var12 = null;
         String var14 = null;
         int var15 = 0;
@@ -221,7 +221,7 @@ final class sa {
             var9 = var9 + 2 * la.field_b.field_H;
           }
           var10 = la.field_b.field_H;
-          var11 = new cn(var6_int, var9);
+          var11 = new RgbSprite(var6_int, var9);
           var11.e();
           if (param1 != null) {
             db.field_v.c(param1, var6_int >> 1, var10, param4, -1);

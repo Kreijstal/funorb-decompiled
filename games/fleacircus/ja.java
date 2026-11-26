@@ -183,7 +183,7 @@ class ja extends bb {
         }
     }
 
-    public static void j(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_O = null;
         if (param0 > -75) {
           return;

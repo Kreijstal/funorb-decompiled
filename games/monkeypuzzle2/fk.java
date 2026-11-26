@@ -7,7 +7,7 @@ final class fk {
     static PlatformTaskDispatcher field_c;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = 74 % ((param0 + 51) / 55);
         field_d = null;

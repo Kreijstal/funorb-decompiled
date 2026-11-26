@@ -9,7 +9,7 @@ final class pm extends IOException {
     static String field_d;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 85 % ((9 - param0) / 37);
         field_b = null;
         field_d = null;

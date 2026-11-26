@@ -72,14 +72,14 @@ final class AccountCreationResultPanel extends fj implements ij {
         }
     }
 
-    public static void p(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_qb = null;
         field_sb = null;
         field_vb = null;
         field_pb = null;
         field_ob = (int[][]) null;
         if (param0 != 12705) {
-          AccountCreationResultPanel.p(83);
+          AccountCreationResultPanel.releaseDeclaredStaticReferences(83);
         }
         field_rb = null;
     }

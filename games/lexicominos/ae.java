@@ -58,7 +58,7 @@ final class ae extends kf {
         return pb.c(true);
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_J = null;
         field_E = null;
         field_M = null;

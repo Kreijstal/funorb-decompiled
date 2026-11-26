@@ -128,13 +128,13 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         usedWords = null;
         field_i = null;
         wordScores = null;
         if (param0 < 33) {
-          IterableNodeHashTable.a(103);
+          IterableNodeHashTable.clearStaticReferences(103);
         }
         field_e = null;
     }

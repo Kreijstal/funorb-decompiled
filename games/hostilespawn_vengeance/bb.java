@@ -4,7 +4,7 @@
 final class bb {
     static int field_d;
     static ji field_b;
-    static bd field_a;
+    static RgbSprite field_a;
     static long field_c;
     static PacketBuffer field_f;
     static ji field_e;

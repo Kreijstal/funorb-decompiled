@@ -11,13 +11,13 @@ final class gj extends rh {
 
     final Object c(byte param0) {
         if (param0 != 30) {
-          gj.d(70);
+          gj.releaseDeclaredStaticReferences(70);
           return this.field_v;
         }
         return this.field_v;
     }
 
-    final static db[] a(int param0, int param1, boolean param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
           return wb.a(param0, param1, 1, param3, 3);
         }
@@ -30,12 +30,12 @@ final class gj extends rh {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_w = null;
         field_s = (byte[][]) null;
         field_u = null;
         if (param0 != -8601) {
-          gj.d(-12);
+          gj.releaseDeclaredStaticReferences(-12);
           field_x = null;
           return;
         }

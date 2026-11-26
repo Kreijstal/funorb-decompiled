@@ -19,7 +19,7 @@ final class la extends am {
         int var2 = this.field_H.field_w ? 1 : 0;
         this.field_H.field_w = this.field_w;
         if (param0 > -82) {
-          la.i(13);
+          la.clearDeclaredStaticReferences(13);
         }
         String var3 = this.field_H.f((byte) -84);
         this.field_H.field_w = var2 != 0 ? true : false;
@@ -114,7 +114,7 @@ final class la extends am {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_T = null;
         field_N = null;
         field_M = null;

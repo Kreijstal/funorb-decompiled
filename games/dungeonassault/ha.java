@@ -349,7 +349,7 @@ final class ha extends um {
         return ld.field_f.nextDouble();
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_k = null;
         field_j = null;

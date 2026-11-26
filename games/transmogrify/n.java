@@ -33,7 +33,7 @@ final class n {
           }
           var5 = new rl();
           if (param2 != -5705) {
-            n.a(true);
+            n.clearStaticReferences(true);
           }
           var5.a(param2 + 21003);
           var5.a(14027, (long)(param1 * 8), var4);
@@ -57,9 +57,9 @@ final class n {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          n.a(true);
+          n.clearStaticReferences(true);
         }
         field_b = null;
     }

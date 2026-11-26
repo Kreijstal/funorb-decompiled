@@ -52,7 +52,7 @@ final class em extends IOException {
           return 1;
         }
         if (param1) {
-          em.b(-117);
+          em.clearStaticReferences(-117);
         }
         return -1;
     }
@@ -71,7 +71,7 @@ final class em extends IOException {
         return b.field_e;
     }
 
-    final static void a(dd param0, byte param1) {
+    final static void a(RgbSprite param0, byte param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -122,11 +122,11 @@ final class em extends IOException {
         return stackIn_6_0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 3505) {
-          em.b(17);
+          em.clearStaticReferences(17);
         }
         field_h = null;
         field_e = null;

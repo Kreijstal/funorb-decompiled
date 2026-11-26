@@ -181,8 +181,8 @@ class id extends ik {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            ed.field_t = new String[var4];
-            o.a(ug.field_r, 0, ed.field_t, 0, var4);
+            SpriteGeometry.field_t = new String[var4];
+            o.a(ug.field_r, 0, SpriteGeometry.field_t, 0, var4);
             qc.field_e = new String[-1 + (-var4 + var3_int)];
             o.a(ug.field_r, 1 + var4, qc.field_e, 0, -1 + var3_int - var4);
             var4 = -1;
@@ -201,8 +201,8 @@ class id extends ik {
             o.a(ug.field_r, 0, hf.field_b, 0, var4);
             ByteStorage.field_a = new String[-1 + (-var4 + var3_int)];
             o.a(ug.field_r, 1 + var4, ByteStorage.field_a, 0, -1 + var3_int - var4);
-            if (ed.field_t.length >= hf.field_b.length) {
-              stackIn_29_0 = ed.field_t.length;
+            if (SpriteGeometry.field_t.length >= hf.field_b.length) {
+              stackIn_29_0 = SpriteGeometry.field_t.length;
             } else {
               stackIn_29_0 = hf.field_b.length;
             }
@@ -266,7 +266,7 @@ class id extends ik {
             }
           }
           if (sh.field_a == 2) {
-            var11 = ed.field_t;
+            var11 = SpriteGeometry.field_t;
             var5_ref_String__ = var11;
             for (var6Lifetime2 = 0; var11.length > var6Lifetime2; var6Lifetime2++) {
               var12 = var11[var6Lifetime2];

@@ -6,7 +6,7 @@ abstract class qe {
     static int field_j;
     static int field_n;
     static int field_l;
-    static cn[] field_i;
+    static RgbSprite[] field_i;
     ph field_e;
     private static int field_d;
     private static wb[] field_k;
@@ -17,7 +17,7 @@ abstract class qe {
     IntrusiveDeque field_p;
     private static int[][] field_h;
     kl field_b;
-    private static cn[] field_o;
+    private static RgbSprite[] field_o;
     private static int[] field_m;
 
     final void b() {
@@ -229,7 +229,7 @@ abstract class qe {
         }
     }
 
-    private final static wb a(int param0, int param1, String param2, cn param3) {
+    private final static wb a(int param0, int param1, String param2, RgbSprite param3) {
         if (param0 < param1) {
           return new wb(jk.a(new String[]{param2, Integer.toString(param1 - param0)}, vc.field_b, 30496), param3, 16711680);
         }
@@ -388,9 +388,9 @@ abstract class qe {
         return false;
     }
 
-    final static void a(cn param0, cn param1, cn param2, cn param3, cn param4, cn param5) {
-        field_o = new cn[]{param0, param1, param4, param5};
-        field_i = new cn[]{param0, param1, param2, param3};
+    final static void a(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, RgbSprite param4, RgbSprite param5) {
+        field_o = new RgbSprite[]{param0, param1, param4, param5};
+        field_i = new RgbSprite[]{param0, param1, param2, param3};
     }
 
     final static void a(ph param0, int param1, int param2, int param3, int param4) {
@@ -504,7 +504,7 @@ abstract class qe {
         for (var3_int = 0; var3_int < 64; var3_int++) {
           var2[var3_int] = -2147483648 | 65793 * (24 + var3_int);
         }
-        cn var3 = new cn(640, 480);
+        RgbSprite var3 = new RgbSprite(640, 480);
         jh.a(var3);
         for (var4 = 0; var4 < 480; var4 = var4 + bf.field_d.field_v) {
           for (var5 = 0; var5 < 640; var5 = var5 + bf.field_d.field_y) {
@@ -775,7 +775,7 @@ abstract class qe {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, int param3, int param4, cn param5, int param6, int param7) {
+    private final static void b(int param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -799,14 +799,14 @@ abstract class qe {
         }
     }
 
-    private final static void a(int param0, int param1, cn[] param2, int[][] param3, int[] param4) {
+    private final static void a(int param0, int param1, RgbSprite[] param2, int[][] param3, int[] param4) {
         int var5 = 0;
         for (var5 = 0; var5 < param4.length; var5++) {
           qe.a(param0, param1 + 16 * var5, 96, param4[var5], 10, param2[var5], param3[var5][0], param3[var5][1]);
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, cn param5, int param6, int param7) {
+    private final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -904,7 +904,7 @@ abstract class qe {
         qe.a(SoftwareRasterizer.field_b, field_m, 0, 0, 0, var14Lifetime1 - 1);
     }
 
-    private final static void b(int param0, int param1, cn[] param2, int[][] param3, int[] param4) {
+    private final static void b(int param0, int param1, RgbSprite[] param2, int[][] param3, int[] param4) {
         int var5 = 0;
         for (var5 = 0; var5 < param4.length; var5++) {
           qe.b(param0, param1 + 16 * var5, 96, param4[var5], 10, param2[var5], param3[var5][0], param3[var5][1]);

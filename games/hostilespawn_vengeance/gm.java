@@ -5,12 +5,12 @@ final class gm {
     static int field_f;
     static IntrusiveDeque field_d;
     private boolean field_b;
-    bd[] field_c;
+    RgbSprite[] field_c;
     private int field_i;
     static String[] field_k;
-    bd field_a;
+    RgbSprite field_a;
     private int field_h;
-    static bd field_j;
+    static RgbSprite field_j;
     static int field_m;
     private int field_l;
     private int field_e;
@@ -126,7 +126,7 @@ final class gm {
         this.field_h = 0;
     }
 
-    final gm a(boolean param0, bd[] param1) {
+    final gm a(boolean param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         CharSequence var4 = null;
         RuntimeException stackIn_6_0 = null;

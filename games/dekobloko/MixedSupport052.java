@@ -86,7 +86,7 @@ final class MixedSupport052 {
         }
     }
 
-    public static void performAction0618(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0218 = null;
         integerArrayState0054 = null;
         int integerLocal1 = -68 / ((16 - byteArgument1) / 39);

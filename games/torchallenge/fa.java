@@ -279,11 +279,11 @@ final class fa extends lg {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_h = null;
         if (param0 != -3) {
-          fa.b(-61);
+          fa.clearStaticReferences(-61);
         }
         field_m = (int[][]) null;
     }

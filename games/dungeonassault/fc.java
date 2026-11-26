@@ -13,7 +13,7 @@ final class fc extends en {
     static String field_l;
     static String field_j;
 
-    private final cn a(int param0, int param1) {
+    private final RgbSprite a(int param0, int param1) {
         int var14 = 0;
         int var15 = 0;
         int stackIn_6_0 = 0;
@@ -45,7 +45,7 @@ final class fc extends en {
         String[] var23;
         String[] var24;
         String[] var25;
-        cn var26;
+        RgbSprite var26;
         String[] var27;
         String var28;
         wb[] var29;
@@ -121,7 +121,7 @@ final class fc extends en {
         if (var12 != 0) {
           var9 = var9 + 2 * db.field_v.field_H;
         }
-        var26 = new cn(param1, var9);
+        var26 = new RgbSprite(param1, var9);
         var26.e();
         db.field_v.c(this.field_k.field_F.toUpperCase(), param1 >> 1, var10, param0, -1);
         var10 = var10 + la.field_b.field_H * 2;
@@ -194,7 +194,7 @@ final class fc extends en {
     }
 
     final void a(int param0, sa param1) {
-        cn var3 = this.a(16777215, -40 + param1.field_b);
+        RgbSprite var3 = this.a(16777215, -40 + param1.field_b);
         if (param0 != 0) {
           return;
         }
@@ -205,7 +205,7 @@ final class fc extends en {
         }
     }
 
-    final cn b(byte param0) {
+    final RgbSprite b(byte param0) {
         String var6_ref_String = null;
         String[] var13 = null;
         String var14 = null;
@@ -246,7 +246,7 @@ final class fc extends en {
           var3[var6] = jn.a("<col=FF8000>" + var18 + "</col> - " + var19, new int[]{200}, -95, db.field_v);
           var4 = var4 + db.field_v.field_H * (1 + var3[var6].length);
         }
-        cn var20 = new cn(200, var4);
+        RgbSprite var20 = new RgbSprite(200, var4);
         var20.e();
         int var7 = -80 % ((param0 + 58) / 35);
         db.field_v.c(this.field_k.field_F, 100, var5, 16777215, -1);
@@ -272,7 +272,7 @@ final class fc extends en {
         return var20;
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_h = null;
         field_l = null;
         if (param0 != 18677) {

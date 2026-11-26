@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ai {
-    km field_k;
+    RgbSprite field_k;
     private boolean field_i;
     private int field_d;
     private int field_g;
@@ -10,7 +10,7 @@ final class ai {
     private int field_b;
     private int field_f;
     static int field_j;
-    km[] field_e;
+    RgbSprite[] field_e;
     private int field_c;
     static String[] field_a;
 
@@ -396,7 +396,7 @@ final class ai {
         return (byte) var2;
     }
 
-    final ai a(byte param0, km[] param1) {
+    final ai a(byte param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         ai stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -420,7 +420,7 @@ final class ai {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ final class ai {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param5).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -511,8 +511,8 @@ final class ai {
           this.field_c = param1;
           return this;
         }
-        km[] var4 = (km[]) null;
-        this.a((byte) 114, (km[]) null);
+        RgbSprite[] var4 = (RgbSprite[]) null;
+        this.a((byte) 114, (RgbSprite[]) null);
         this.field_c = param1;
         return this;
     }
@@ -522,7 +522,7 @@ final class ai {
           param0.field_d = this.field_d;
           param0.field_b = this.field_b;
           if (param1 != -103) {
-            this.field_k = (km) null;
+            this.field_k = (RgbSprite) null;
           }
           param0.field_f = this.field_f;
           param0.field_g = this.field_g;
@@ -531,7 +531,7 @@ final class ai {
           param0.field_e = this.field_e;
           param0.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ai.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ai.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -554,11 +554,11 @@ final class ai {
         field_h = null;
     }
 
-    final static km[] a(int param0, String param1, String param2, ResourceArchive param3) {
-        km[] var4 = null;
+    final static RgbSprite[] a(int param0, String param1, String param2, ResourceArchive param3) {
+        RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
-        km[] var5 = null;
-        km[] stackIn_3_0 = null;
+        RgbSprite[] var5 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -601,7 +601,7 @@ final class ai {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -729,7 +729,7 @@ final class ai {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
         }
     }
 

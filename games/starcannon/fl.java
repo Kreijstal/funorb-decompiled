@@ -303,7 +303,7 @@ final class fl extends oe {
           if (param2 == -20384) {
             return null;
           }
-          fl.e(-64);
+          fl.clearStaticReferences(-64);
           stackIn_26_0 = null;
           return (java.net.Socket) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -516,7 +516,7 @@ final class fl extends oe {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_h = null;
         int var1 = -118 % ((-22 - param0) / 55);

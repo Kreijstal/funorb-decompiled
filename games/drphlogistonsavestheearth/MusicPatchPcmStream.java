@@ -9,7 +9,7 @@ final class MusicPatchPcmStream extends PcmStream {
     static int field_l;
     PcmStreamMixer field_r;
     static String field_m;
-    static nh field_o;
+    static RgbSprite field_o;
 
     final int getSchedulingCost() {
         return 0;
@@ -41,7 +41,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return (PcmStream) ((Object) var1.field_D);
     }
 
-    final static void a(int param0, int param1, int param2, nh[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -407,7 +407,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         field_m = null;
         if (param0 >= -108) {

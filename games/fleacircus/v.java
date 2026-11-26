@@ -4,7 +4,7 @@
 final class v extends ja {
     private int field_T;
     static String[] field_R;
-    private dd field_Q;
+    private RgbSprite field_Q;
     private jb field_S;
     private String field_V;
     static byte[][] field_U;
@@ -13,7 +13,7 @@ final class v extends ja {
         if (param0 == 4) {
           return null;
         }
-        this.field_Q = (dd) null;
+        this.field_Q = (RgbSprite) null;
         return null;
     }
 
@@ -47,8 +47,8 @@ final class v extends ja {
         int var13;
         String var17;
         Object var18;
-        dd var19;
-        dd var20;
+        RgbSprite var19;
+        RgbSprite var20;
         Object var22;
         Object var26;
         Object var36;
@@ -56,18 +56,18 @@ final class v extends ja {
         String var5;
         int var11;
         int var12;
-        dd var16;
-        dd var21;
-        dd var23;
-        dd var24;
-        dd var25;
-        dd var27;
-        dd var28;
-        dd var29;
-        dd var30;
-        dd var37;
-        dd var38;
-        dd var39;
+        RgbSprite var16;
+        RgbSprite var21;
+        RgbSprite var23;
+        RgbSprite var24;
+        RgbSprite var25;
+        RgbSprite var27;
+        RgbSprite var28;
+        RgbSprite var29;
+        RgbSprite var30;
+        RgbSprite var37;
+        RgbSprite var38;
+        RgbSprite var39;
         eg var41;
         eg var42;
         eg var43;
@@ -126,7 +126,7 @@ final class v extends ja {
               r.a(this.field_Q, 45);
               SoftwareRasterizer.clearRaster();
             } else {
-              this.field_Q = new dd(var11, var12);
+              this.field_Q = new RgbSprite(var11, var12);
               r.a(this.field_Q, 45);
             }
             var21.a(112, 144, var21.field_x << 4, var21.field_r << 4, -this.field_T << 10, 4096);
@@ -157,18 +157,18 @@ final class v extends ja {
           var11Lifetime4 = var25.field_x << 1;
           var12Lifetime4 = var25.field_r << 1;
           if (this.field_Q == null) {
-            this.field_Q = new dd(var11Lifetime4, var12Lifetime4);
+            this.field_Q = new RgbSprite(var11Lifetime4, var12Lifetime4);
             r.a(this.field_Q, 45);
           } else {
             if (var11Lifetime4 > this.field_Q.field_w) {
-              this.field_Q = new dd(var11Lifetime4, var12Lifetime4);
+              this.field_Q = new RgbSprite(var11Lifetime4, var12Lifetime4);
               r.a(this.field_Q, 45);
             } else {
               if (this.field_Q.field_t >= var12Lifetime4) {
                 r.a(this.field_Q, 45);
                 SoftwareRasterizer.clearRaster();
               } else {
-                this.field_Q = new dd(var11Lifetime4, var12Lifetime4);
+                this.field_Q = new RgbSprite(var11Lifetime4, var12Lifetime4);
                 r.a(this.field_Q, 45);
               }
             }
@@ -210,15 +210,15 @@ final class v extends ja {
           var11Lifetime1 = var39.field_x << 1;
           var12Lifetime1 = var39.field_r << 1;
           if (this.field_Q == null) {
-            this.field_Q = new dd(var11Lifetime1, var12Lifetime1);
+            this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
             r.a(this.field_Q, 45);
           } else {
             if (var11Lifetime1 > this.field_Q.field_w) {
-              this.field_Q = new dd(var11Lifetime1, var12Lifetime1);
+              this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
               r.a(this.field_Q, 45);
             } else {
               if (this.field_Q.field_t < var12Lifetime1) {
-                this.field_Q = new dd(var11Lifetime1, var12Lifetime1);
+                this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
                 r.a(this.field_Q, 45);
               } else {
                 r.a(this.field_Q, 45);
@@ -248,7 +248,7 @@ final class v extends ja {
             r.a(this.field_Q, 45);
             SoftwareRasterizer.clearRaster();
           } else {
-            this.field_Q = new dd(var11Lifetime2, var12Lifetime2);
+            this.field_Q = new RgbSprite(var11Lifetime2, var12Lifetime2);
             r.a(this.field_Q, 45);
           }
           var27.a(112, 144, var27.field_x << 4, var27.field_r << 4, -this.field_T << 10, 4096);
@@ -274,18 +274,18 @@ final class v extends ja {
         var11Lifetime3 = var30.field_x << 1;
         var12Lifetime3 = var30.field_r << 1;
         if (this.field_Q == null) {
-          this.field_Q = new dd(var11Lifetime3, var12Lifetime3);
+          this.field_Q = new RgbSprite(var11Lifetime3, var12Lifetime3);
           r.a(this.field_Q, 45);
         } else {
           if (var11Lifetime3 > this.field_Q.field_w) {
-            this.field_Q = new dd(var11Lifetime3, var12Lifetime3);
+            this.field_Q = new RgbSprite(var11Lifetime3, var12Lifetime3);
             r.a(this.field_Q, 45);
           } else {
             if (this.field_Q.field_t >= var12Lifetime3) {
               r.a(this.field_Q, 45);
               SoftwareRasterizer.clearRaster();
             } else {
-              this.field_Q = new dd(var11Lifetime3, var12Lifetime3);
+              this.field_Q = new RgbSprite(var11Lifetime3, var12Lifetime3);
               r.a(this.field_Q, 45);
             }
           }
@@ -322,7 +322,7 @@ final class v extends ja {
         }
     }
 
-    public static void k(int param0) {
+    public static void resetDeclaredStaticReferences(int param0) {
         field_U = (byte[][]) null;
         field_R = null;
         if (param0 != -8011) {

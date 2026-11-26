@@ -31,7 +31,7 @@ class IntrusiveNode {
     }
 
     final static void a(mi param0, int param1, mi param2, mi param3) {
-        nf var5 = null;
+        RgbSprite var5 = null;
         bm[] var6 = null;
         bm[][] var7 = null;
         int[][] var19 = null;
@@ -39,10 +39,10 @@ class IntrusiveNode {
         int[][] var8 = null;
         bm[] var15 = null;
         int var12_int = 0;
-        nf var16 = null;
-        nf var18 = null;
-        nf var12 = null;
-        nf var13 = null;
+        RgbSprite var16 = null;
+        RgbSprite var18 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var14 = Confined.field_J ? 1 : 0;
@@ -58,7 +58,7 @@ class IntrusiveNode {
           gm.field_cb = (ok) ((Object) ej.a("arezzo14", param3, param2, "commonui", 0));
           int var4_int = -4 % ((68 - param1) / 50);
           fd.field_k = (ok) ((Object) ej.a("arezzo14bold", param3, param2, "commonui", 0));
-          var5 = new nf(param0.a(110, "button.gif", ""), (java.awt.Component) ((Object) fb.field_b));
+          var5 = new RgbSprite(param0.a(110, "button.gif", ""), (java.awt.Component) ((Object) fb.field_b));
           pm.a(param3, "commonui", "dropdown", (byte) 112);
           var6 = ql.a("commonui", (byte) 90, "screen_options", param3);
           qm.field_B = new bm[4];
@@ -87,18 +87,18 @@ class IntrusiveNode {
           mk.b(128);
           var5.d();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l);
-          var16 = new nf(var10Lifetime1, var10Lifetime1);
+          var16 = new RgbSprite(var10Lifetime1, var10Lifetime1);
           var18 = var16;
           var18.d();
           var5.c(0, 0);
-          var12 = new nf(var10Lifetime1, var10Lifetime1);
+          var12 = new RgbSprite(var10Lifetime1, var10Lifetime1);
           var12.d();
           var5.c(var10Lifetime1 - var5.field_u, 0);
-          var13 = new nf(var5.field_u - 2 * var10Lifetime1, var10Lifetime1);
+          var13 = new RgbSprite(var5.field_u - 2 * var10Lifetime1, var10Lifetime1);
           var13.d();
           var5.c(-var10Lifetime1, 0);
           ib.b(false);
-          em.field_d = new nf[]{var16, var13, var12};
+          em.field_d = new RgbSprite[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rk.AD(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

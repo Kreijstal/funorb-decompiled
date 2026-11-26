@@ -14,7 +14,7 @@ final class mf extends am {
     final void a(byte param0) {
         this.field_y = -this.field_v + this.field_x;
         if (param0 <= 123) {
-          mf.g((byte) -42);
+          mf.clearDeclaredStaticReferences((byte) -42);
         }
     }
 
@@ -68,7 +68,7 @@ final class mf extends am {
         op.field_i = 0;
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_s = null;
         if (param0 != 21) {
           field_u = (he) null;

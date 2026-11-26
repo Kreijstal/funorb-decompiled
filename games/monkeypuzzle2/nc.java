@@ -10,7 +10,7 @@ final class nc {
     static int[] field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_d = (long[][]) null;

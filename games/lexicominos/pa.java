@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa {
-    static db field_a;
+    static RgbSprite field_a;
     static int field_d;
     static String field_c;
     static String field_b;

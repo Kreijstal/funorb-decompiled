@@ -13,15 +13,15 @@ final class ef extends IntrusiveNode {
           return;
         }
         try {
-          fk.field_q.e(-3435);
+          SpriteGeometry.field_q.e(-3435);
           mh.field_d.flushAndMarkDrainCheck();
           wf.field_R = param0;
           if (wf.field_R != null) {
-            fk.field_q.a(false, wf.field_R, 59);
+            SpriteGeometry.field_q.a(false, wf.field_R, 59);
           }
           int var2_int = 0 % ((-35 - param1) / 36);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

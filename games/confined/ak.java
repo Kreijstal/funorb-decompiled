@@ -138,7 +138,7 @@ final class ak extends ga implements el {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         int var1 = -100 / ((param0 + 50) / 48);
         field_L = null;
         field_P = null;

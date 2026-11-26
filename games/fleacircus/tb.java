@@ -7,7 +7,7 @@ final class tb {
     static String field_e;
     static String field_b;
     static String field_a;
-    static dd field_f;
+    static RgbSprite field_f;
 
     final static boolean a(int param0, int[] param1) {
         int var5_int = 0;

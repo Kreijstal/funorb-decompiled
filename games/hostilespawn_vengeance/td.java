@@ -13,7 +13,7 @@ final class td implements Runnable {
     private OutputStream field_q;
     private int field_j;
     private PlatformTask field_k;
-    static bd field_f;
+    static RgbSprite field_f;
     private int field_i;
     private PlatformTaskDispatcher field_g;
     static int[] field_d;
@@ -68,9 +68,9 @@ final class td implements Runnable {
         return this.field_b.available();
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 200) {
-          td.b(-94);
+          td.clearStaticReferences(-94);
         }
         field_d = null;
         field_f = null;
@@ -166,7 +166,7 @@ final class td implements Runnable {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
               param0.getAppletContext().showDocument(ByteStorage.a(param0, true, var2), "_top");
               if (param1 != 200) {
-                td.b(-26);
+                td.clearStaticReferences(-26);
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -142,7 +142,7 @@ final class dl extends jla {
 
     private final Sprite b(int param0, byte param1) {
         if (param1 != 96) {
-          dl.d((byte) 68);
+          dl.clearStaticReferences((byte) 68);
         }
         return param0 == 0 ? FoodShopPanel.field_g : BattleScreen.field_F;
     }
@@ -233,10 +233,10 @@ final class dl extends jla {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         if (param0 != -39) {
-          dl.d((byte) 31);
+          dl.clearStaticReferences((byte) 31);
         }
         field_h = null;
         field_k = null;

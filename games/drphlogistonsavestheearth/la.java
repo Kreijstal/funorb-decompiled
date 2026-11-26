@@ -5,10 +5,10 @@ final class la {
     static he field_a;
     static int field_b;
 
-    final static nh[] a(String param0, vj param1, String param2, int param3) {
-        nh[] var4 = null;
+    final static RgbSprite[] a(String param0, vj param1, String param2, int param3) {
+        RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
-        nh[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -58,7 +58,7 @@ final class la {
         try {
           field_a = null;
           if (param0 != 0) {
-            la.a((rf) null, -9, true, -84, (byte) -88, -64, -25, (nh[]) null, 62, (nh[]) null, -111, 124, -88, -112, (rf) null, -41);
+            la.a((rf) null, -9, true, -84, (byte) -88, -64, -25, (RgbSprite[]) null, 62, (RgbSprite[]) null, -111, 124, -88, -112, (rf) null, -41);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "la.A(" + param0 + ')');
@@ -103,7 +103,7 @@ final class la {
         }
     }
 
-    final static void a(rf param0, int param1, boolean param2, int param3, byte param4, int param5, int param6, nh[] param7, int param8, nh[] param9, int param10, int param11, int param12, int param13, rf param14, int param15) {
+    final static void a(rf param0, int param1, boolean param2, int param3, byte param4, int param5, int param6, RgbSprite[] param7, int param8, RgbSprite[] param9, int param10, int param11, int param12, int param13, rf param14, int param15) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

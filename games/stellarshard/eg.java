@@ -7,9 +7,9 @@ final class eg {
     static String field_c;
     static IntrusiveDeque field_b;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -85) {
-          eg.b(42);
+          eg.clearStaticReferences(42);
         }
         field_b = null;
         field_c = null;
@@ -26,7 +26,7 @@ final class eg {
         var2 = stellarshard.field_B;
         try {
           if (param0 > -26) {
-            eg.b(12);
+            eg.clearStaticReferences(12);
           }
           for (var1_int = 0; var1_int < 3000; var1_int++) {
             if (null == wk.field_b[var1_int]) {

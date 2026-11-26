@@ -8,9 +8,9 @@ final class kg {
     private int field_a;
     private boolean field_c;
     static gk field_b;
-    tg field_o;
+    RgbSprite field_o;
     static String field_d;
-    tg[] field_n;
+    RgbSprite[] field_n;
     static boolean field_i;
     static PcmStreamMixer field_k;
     static int[] field_g;
@@ -71,13 +71,13 @@ final class kg {
         this.field_l = 0;
     }
 
-    final static tg[] a(int param0, int param1, int param2, int param3, int param4) {
-        tg[] var6 = null;
-        tg[] var5 = null;
-        tg dupTemp$0 = null;
-        tg dupTemp$1 = null;
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite[] var6 = null;
+        RgbSprite[] var5 = null;
+        RgbSprite dupTemp$0 = null;
+        RgbSprite dupTemp$1 = null;
         if (param3 == -2147483648) {
-          var6 = new tg[9];
+          var6 = new RgbSprite[9];
           var5 = var6;
           dupTemp$0 = hc.a(param1, param2, (byte) -126);
           var6[6] = dupTemp$0;
@@ -94,7 +94,7 @@ final class kg {
           }
           return var5;
         }
-        return (tg[]) null;
+        return (RgbSprite[]) null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8) {
@@ -417,7 +417,7 @@ final class kg {
         }
     }
 
-    final kg a(tg[] param0, int param1) {
+    final kg a(RgbSprite[] param0, int param1) {
         RuntimeException var3 = null;
         kg stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

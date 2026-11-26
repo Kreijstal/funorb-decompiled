@@ -22,7 +22,7 @@ final class ad extends gf {
             return stackIn_2_0;
           }
           if (param0 != -121) {
-            ad.c((byte) 37);
+            ad.clearStaticReferences((byte) 37);
           }
           if (this.a(114, param1) != so.field_u) {
             return cp.field_h;
@@ -90,9 +90,9 @@ final class ad extends gf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 17) {
-          ad.c((byte) 10);
+          ad.clearStaticReferences((byte) 10);
           field_l = null;
           return;
         }

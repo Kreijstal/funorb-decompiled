@@ -7,9 +7,9 @@ final class he extends pu {
     static String field_m;
     static String field_o;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 81) {
-          he.d((byte) 27);
+          he.clearStaticReferences((byte) 27);
         }
         field_m = null;
         field_n = null;

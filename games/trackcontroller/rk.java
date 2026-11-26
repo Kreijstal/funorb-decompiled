@@ -161,7 +161,7 @@ final class rk extends wd {
         return true;
     }
 
-    public static void t(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 != 4210752) {
           return;
         }

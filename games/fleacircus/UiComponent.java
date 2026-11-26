@@ -74,7 +74,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         field_t = null;
         field_q = null;
@@ -272,7 +272,7 @@ class UiComponent extends IntrusiveNode {
                     if (var7 != 0) {
                       param2 = false;
                       if (0 == kc.field_f &&
-                        ta.field_u != 0) {
+                        SpriteGeometry.field_u != 0) {
                         this.a((byte) 5, this, param3, ag.field_f, kc.field_b, param0);
                         var8 = wi.field_e;
                         if (var8 != null) {
@@ -291,7 +291,7 @@ class UiComponent extends IntrusiveNode {
                 }
               }
               if (0 == kc.field_f &&
-                ta.field_u != 0) {
+                SpriteGeometry.field_u != 0) {
                 this.a((byte) 5, this, param3, ag.field_f, kc.field_b, param0);
                 var9 = wi.field_e;
                 var6 = var9;
@@ -305,7 +305,7 @@ class UiComponent extends IntrusiveNode {
                   var5 != 0 &&
                   jk.field_r != 0) {
                   this.f(-1);
-                  ta.field_u = kc.field_f;
+                  SpriteGeometry.field_u = kc.field_f;
                   if (param1 < 38) {
                     return false;
                   }
@@ -325,7 +325,7 @@ class UiComponent extends IntrusiveNode {
                   if (var7 != 0) {
                     param2 = false;
                     if (0 == kc.field_f &&
-                      ta.field_u != 0) {
+                      SpriteGeometry.field_u != 0) {
                       this.a((byte) 5, this, param3, ag.field_f, kc.field_b, param0);
                       var12 = wi.field_e;
                       var6 = var12;
@@ -339,7 +339,7 @@ class UiComponent extends IntrusiveNode {
                         this.f(-1);
                       }
                     }
-                    ta.field_u = kc.field_f;
+                    SpriteGeometry.field_u = kc.field_f;
                     if (param1 < 38) {
                       return false;
                     }
@@ -349,15 +349,15 @@ class UiComponent extends IntrusiveNode {
                 }
               }
               if (0 != kc.field_f) {
-                ta.field_u = kc.field_f;
+                SpriteGeometry.field_u = kc.field_f;
                 if (param1 < 38) {
                   return false;
                 }
                 df.a(0, this.g(4));
                 return param2;
               }
-              if (ta.field_u == 0) {
-                ta.field_u = kc.field_f;
+              if (SpriteGeometry.field_u == 0) {
+                SpriteGeometry.field_u = kc.field_f;
                 if (param1 < 38) {
                   return false;
                 }
@@ -377,7 +377,7 @@ class UiComponent extends IntrusiveNode {
                 jk.field_r != 0) {
                 this.f(-1);
               }
-              ta.field_u = kc.field_f;
+              SpriteGeometry.field_u = kc.field_f;
               if (param1 < 38) {
                 return false;
               }
@@ -391,8 +391,8 @@ class UiComponent extends IntrusiveNode {
               }
             }
             if (0 == kc.field_f) {
-              if (ta.field_u == 0) {
-                ta.field_u = kc.field_f;
+              if (SpriteGeometry.field_u == 0) {
+                SpriteGeometry.field_u = kc.field_f;
                 if (param1 < 38) {
                   return false;
                 }
@@ -411,7 +411,7 @@ class UiComponent extends IntrusiveNode {
                 var5 != 0 &&
                 jk.field_r != 0) {
                 this.f(-1);
-                ta.field_u = kc.field_f;
+                SpriteGeometry.field_u = kc.field_f;
                 if (param1 < 38) {
                   return false;
                 }
@@ -421,7 +421,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
         }
-        ta.field_u = kc.field_f;
+        SpriteGeometry.field_u = kc.field_f;
         if (param1 < 38) {
           return false;
         }
@@ -435,12 +435,12 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final static dd h(int param0) {
+    final static RgbSprite h(int param0) {
         int var1;
         byte[] var2;
         int[] var3;
         int var4_int;
-        dd var4;
+        RgbSprite var4;
         int var5;
         var5 = fleas.field_A ? 1 : 0;
         var1 = ob.field_a[0] * ij.field_H[0];
@@ -455,7 +455,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        var4 = new dd(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], ij.field_H[0], ob.field_a[0], var3);
+        var4 = new RgbSprite(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], ij.field_H[0], ob.field_a[0], var3);
         c.o(-28210);
         if (param0 > 75) {
           return var4;
@@ -642,7 +642,7 @@ class UiComponent extends IntrusiveNode {
         try {
           this.field_v = 0;
           if (param0 != 5) {
-            UiComponent.d(-24);
+            UiComponent.clearDeclaredStaticReferences(-24);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "qa.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

@@ -234,7 +234,7 @@ class bb extends UiComponent {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_H = null;
         field_I = null;
         if (param0 == -1) {

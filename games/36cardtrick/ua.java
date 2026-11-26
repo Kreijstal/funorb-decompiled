@@ -6,7 +6,7 @@ final class ua extends hl {
     static IntrusiveDeque field_G;
     static java.awt.Image field_F;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = 40 / ((param0 - 6) / 45);
         field_G = null;
         field_F = null;

@@ -8,7 +8,7 @@ final class ob extends fb {
     byte field_q;
     static int field_r;
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 8364) {
           field_s = (IntrusiveDeque) null;
         }
@@ -18,7 +18,7 @@ final class ob extends fb {
     final static void b(byte param0) {
         if (null == tj.field_d) {
           if (param0 != -19) {
-            ob.f(119);
+            ob.clearDeclaredStaticReferences(119);
           }
           tj.field_d = PcmSampleStream.a(ke.field_h[7], 100, 96);
           na.a((byte) 85, tj.field_d);
@@ -26,7 +26,7 @@ final class ob extends fb {
         }
         if (tj.field_d.h()) {
           if (param0 != -19) {
-            ob.f(119);
+            ob.clearDeclaredStaticReferences(119);
           }
           tj.field_d = PcmSampleStream.a(ke.field_h[7], 100, 96);
           na.a((byte) 85, tj.field_d);

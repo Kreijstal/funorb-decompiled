@@ -193,19 +193,19 @@ final class ff {
         return;
     }
 
-    final static cn a(byte param0) {
+    final static RgbSprite a(byte param0) {
         int var4_int = 0;
         int var5 = DungeonAssault.field_K;
         int var1 = jc.field_f[0] * jn.field_k[0];
         byte[] var2 = ub.field_q[0];
         int[] var3 = new int[var1];
         if (param0 < 1) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = uo.field_b[nb.a(255, (int) var2[var4_int])];
         }
-        cn var4 = new cn(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], var3);
+        RgbSprite var4 = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], var3);
         sb.a(500);
         return var4;
     }

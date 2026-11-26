@@ -46,7 +46,7 @@ final class kc extends pj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_K = null;
         field_Q = null;
         int var1 = -101 % ((param0 - 35) / 57);

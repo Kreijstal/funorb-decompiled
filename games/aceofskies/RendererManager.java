@@ -10,10 +10,10 @@ final class RendererManager {
     private d field_b;
     private sn[] field_g;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         bulletSpriteData = null;
         if (!param0) {
-          RendererManager.a(false);
+          RendererManager.clearStaticReferences(false);
         }
     }
 

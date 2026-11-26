@@ -13,9 +13,9 @@ final class se {
     BattleUnit field_d;
     int field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
-          se.a(74);
+          se.clearStaticReferences(74);
           field_c = null;
           return;
         }

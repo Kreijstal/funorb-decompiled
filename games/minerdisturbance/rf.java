@@ -18,7 +18,7 @@ final class rf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -75) {
-            rf.a((byte) -48);
+            rf.clearStaticReferences((byte) -48);
           }
           if (AccountRequestState.field_h == ci.field_e) {
             stackIn_4_0 = null;
@@ -65,11 +65,11 @@ final class rf {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_d = null;
         if (param0 != -56) {
-          rf.a((byte) -36);
+          rf.clearStaticReferences((byte) -36);
           field_c = null;
           return;
         }

@@ -170,7 +170,7 @@ final class ca {
         uc.$cfr$intArgs$a$7ffe4b125357(stackIn_66_0, stackIn_67_1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_a = null;
         field_f = null;
@@ -179,7 +179,7 @@ final class ca {
           field_e = null;
           return;
         }
-        ca.a((byte) 63);
+        ca.clearStaticReferences((byte) 63);
         field_e = null;
     }
 

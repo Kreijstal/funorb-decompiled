@@ -427,9 +427,9 @@ final class ja extends WidgetContainer implements u, ql {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          ja.b(false);
+          ja.clearStaticReferences(false);
         }
         field_A = (int[][]) null;
         field_B = null;

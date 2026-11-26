@@ -56,7 +56,7 @@ final class tc extends id {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 > -52) {
           return;
         }

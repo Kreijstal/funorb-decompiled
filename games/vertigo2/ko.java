@@ -122,7 +122,7 @@ final class ko extends af {
         }
     }
 
-    public static void f(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_U = null;
         field_O = null;
         field_M = null;
@@ -183,7 +183,7 @@ final class ko extends af {
             nd.a(var9, 32192);
           }
           if (!param3) {
-            ko.f(true);
+            ko.clearDeclaredStaticReferences(true);
           }
           var8 = ui.b(-485);
           if (var8 == null) {

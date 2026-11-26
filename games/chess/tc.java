@@ -10,7 +10,7 @@ final class tc extends ab {
     gd field_x;
     byte[] field_v;
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == -7588) {
           field_z = null;
           field_y = null;
@@ -18,7 +18,7 @@ final class tc extends ab {
           field_A = null;
           return;
         }
-        tc.i(32);
+        tc.clearDeclaredStaticReferences(32);
         field_z = null;
         field_y = null;
         field_w = null;

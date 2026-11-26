@@ -5,7 +5,7 @@ final class sl extends sf {
     static int field_ab;
     static String field_Z;
 
-    final static void a(int param0, hj param1) {
+    final static void a(int param0, RgbSprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -69,21 +69,21 @@ final class sl extends sf {
     public static void c(byte param0) {
         field_Z = null;
         if (param0 < 118) {
-          hj var2 = (hj) null;
-          sl.a(16, (hj) null);
+          RgbSprite var2 = (RgbSprite) null;
+          sl.a(16, (RgbSprite) null);
         }
     }
 
-    final static hj[] d(byte param0) {
+    final static RgbSprite[] d(byte param0) {
         int var6 = 0;
         int var7 = 0;
-        hj[] var1;
+        RgbSprite[] var1;
         int var2;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
         int var8;
-        hj var9;
+        RgbSprite var9;
         byte[] var10;
         int[] var11;
         byte[] var13;
@@ -93,11 +93,11 @@ final class sl extends sf {
         byte[] var22;
         int[] var23;
         var8 = OrbDefence.field_D ? 1 : 0;
-        var1 = new hj[ec.field_K];
+        var1 = new RgbSprite[ec.field_K];
         var2 = 0;
         if (param0 >= -82) {
-          var9 = (hj) null;
-          sl.a(16, (hj) null);
+          var9 = (RgbSprite) null;
+          sl.a(16, (RgbSprite) null);
         }
         while (var2 < ec.field_K) {
           var3 = wh.field_b[var2] * m.field_a[var2];
@@ -108,7 +108,7 @@ final class sl extends sf {
             for (var6 = 0; var6 < var3; var6++) {
               var11[var6] = vc.field_g[vi.a(255, (int) var22[var6])];
             }
-            var1[var2] = new hj(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var23);
+            var1[var2] = new RgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var23);
           } else {
             var17 = md.field_i[var2];
             var13 = var17;
@@ -120,7 +120,7 @@ final class sl extends sf {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ge.a(vc.field_g[vi.a(255, (int) var22[var7])], vi.a(-16777216, var17[var7] << 24));
             }
-            var1[var2] = (hj) ((Object) new ArgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var18));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var18));
           }
           var2++;
         }

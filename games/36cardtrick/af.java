@@ -177,7 +177,7 @@ class af extends ta implements qh {
         return sb.field_b[var4];
     }
 
-    final static void a(ee param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, kc[] param11, int param12, kc[] param13, int param14, int param15, ee param16, int param17, int param18, int param19, kc[] param20) {
+    final static void a(ee param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, RgbSprite[] param11, int param12, RgbSprite[] param13, int param14, int param15, ee param16, int param17, int param18, int param19, RgbSprite[] param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

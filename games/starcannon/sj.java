@@ -12,7 +12,7 @@ final class sj extends dk {
     int field_G;
     static int field_I;
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = (byte[][]) null;
         field_D = null;
         int var1 = 80 / ((param0 + 39) / 52);

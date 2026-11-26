@@ -67,7 +67,7 @@ final class ij extends fk {
         bg.field_P.requestFocus();
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 42) {
           field_y = null;
           field_x = null;
@@ -75,7 +75,7 @@ final class ij extends fk {
           field_A = null;
           return;
         }
-        ij.b(50);
+        ij.clearStaticReferences(50);
         field_y = null;
         field_x = null;
         field_w = null;

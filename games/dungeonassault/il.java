@@ -8,22 +8,22 @@ final class il {
     static int field_a;
     private Object field_e;
 
-    final cn a(int param0) {
+    final RgbSprite a(int param0) {
         try {
-          cn stackIn_6_0 = null;
+          RgbSprite stackIn_6_0 = null;
           Throwable decompiledCaughtException = null;
           IllegalAccessException var2 = null;
           java.lang.reflect.InvocationTargetException var2_ref = null;
           Object[] var3 = null;
-          if (this.field_e instanceof cn) {
-            return (cn) (this.field_e);
+          if (this.field_e instanceof RgbSprite) {
+            return (RgbSprite) (this.field_e);
           }
           try {
             if (param0 != 16) {
               this.field_e = (Object) null;
             }
             var3 = (Object[]) null;
-            stackIn_6_0 = (cn) (hd.field_e.invoke(this.field_e, (Object[]) null));
+            stackIn_6_0 = (RgbSprite) (hd.field_e.invoke(this.field_e, (Object[]) null));
             return stackIn_6_0;
           } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class il {
         }
     }
 
-    il(cn param0) {
+    il(RgbSprite param0) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;

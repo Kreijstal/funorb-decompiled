@@ -11,7 +11,7 @@ final class mi extends IntrusiveNode {
     int field_m;
     int field_n;
     static String field_k;
-    static dd field_o;
+    static RgbSprite field_o;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         we.a(param0 - 7);

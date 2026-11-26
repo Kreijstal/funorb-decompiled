@@ -257,12 +257,12 @@ final class hba extends AttackEvent {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         field_u = null;
         field_v = null;
         if (param0 != 92) {
-          hba.e((byte) -83);
+          hba.clearStaticReferences((byte) -83);
         }
     }
 

@@ -3,14 +3,14 @@
  */
 final class sl {
     static int field_d;
-    static cn[] field_c;
+    static RgbSprite[] field_c;
     static String field_a;
     static rh field_b;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 < 103) {
-          field_c = (cn[]) null;
+          field_c = (RgbSprite[]) null;
           field_b = null;
           field_c = null;
           return;

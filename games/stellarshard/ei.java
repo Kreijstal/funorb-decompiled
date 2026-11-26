@@ -27,7 +27,7 @@ final class ei extends dg {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         field_E = null;
         field_H = (byte[][]) null;
@@ -35,7 +35,7 @@ final class ei extends dg {
         field_D = null;
         field_G = null;
         if (param0 < 21) {
-          ei.g((byte) -109);
+          ei.clearStaticReferences((byte) -109);
         }
         field_A = null;
     }

@@ -4,7 +4,7 @@
 final class ne {
     static PacketBuffer field_a;
     static char[] field_d;
-    static db[] field_b;
+    static RgbSprite[] field_b;
     static boolean field_e;
     static boolean field_c;
 
@@ -76,7 +76,7 @@ final class ne {
             }
           }
           if (param3 > -123) {
-            field_b = (db[]) null;
+            field_b = (RgbSprite[]) null;
           }
           var8 = new StringBuilder(var6);
           var9 = 0;

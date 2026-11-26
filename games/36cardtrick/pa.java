@@ -5,7 +5,7 @@ final class pa extends dg {
     static String field_N;
     private int field_R;
     private ba field_O;
-    private kc field_Q;
+    private RgbSprite field_Q;
     private String field_P;
 
     final static void a(java.applet.Applet param0, String param1, int param2) {
@@ -448,9 +448,9 @@ final class pa extends dg {
         int var12;
         int var13;
         lk var14;
-        kc var15;
-        kc var16;
-        kc var17;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
         sg var6Lifetime1;
         var13 = Main.field_T;
         var6 = this.field_O.a(true);
@@ -495,7 +495,7 @@ final class pa extends dg {
             dl.a(-60, this.field_Q);
             SoftwareRasterizer.clearRaster();
           } else {
-            this.field_Q = new kc(var11, var12);
+            this.field_Q = new RgbSprite(var11, var12);
             dl.a(-33, this.field_Q);
           }
           var17.a(112, 144, var17.field_l << 4, var17.field_k << 4, -this.field_R << 10, 4096);

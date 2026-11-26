@@ -7,7 +7,7 @@ final class ab extends IOException {
     static int field_c;
     static String field_d;
     static int field_b;
-    static bd field_a;
+    static RgbSprite field_a;
 
     final static void a(int param0, boolean param1, oc param2, oc param3, int param4, double param5, oc param6, oj param7, double param8, int param9, int param10) {
         og dupTemp$0 = null;
@@ -377,7 +377,7 @@ final class ab extends IOException {
     }
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
-        bd var17 = null;
+        RgbSprite var17 = null;
         pg[] var5 = null;
         pg[][] var6 = null;
         int[][] var19 = null;
@@ -385,10 +385,10 @@ final class ab extends IOException {
         int[][] var7 = null;
         pg[] var14 = null;
         int var11_int = 0;
-        bd var15 = null;
-        bd var18 = null;
-        bd var11 = null;
-        bd var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = HostileSpawn.field_I ? 1 : 0;
@@ -403,7 +403,7 @@ final class ab extends IOException {
           jn.field_G = (vm) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
           jd.field_s = (vm) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
           pe.field_eb = (vm) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
-          var17 = new bd(param2.a("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
+          var17 = new RgbSprite(param2.a("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
           var5 = sg.a(true, "commonui", param3, "screen_options");
           ak.field_h = new pg[4];
@@ -432,18 +432,18 @@ final class ab extends IOException {
           pf.b(511);
           var17.a();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k);
-          var15 = new bd(var9Lifetime1, var9Lifetime1);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();
           var17.c(0, 0);
-          var11 = new bd(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.a();
           var17.c(-var17.field_z + var9Lifetime1, 0);
-          var12 = new bd(var17.field_z - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new RgbSprite(var17.field_z - var9Lifetime1 * 2, var9Lifetime1);
           var12.a();
           var17.c(-var9Lifetime1, param0);
           eh.b(false);
-          km.field_y = new bd[]{var15, var12, var11};
+          km.field_y = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

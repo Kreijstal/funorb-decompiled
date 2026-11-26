@@ -17,7 +17,7 @@ final class nc extends sf {
 
     final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
         try {
-          tk.field_m = param2;
+          SpriteGeometry.field_m = param2;
           ta.field_z = param5;
           m.field_b = param6;
           hc.field_f = param1;

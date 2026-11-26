@@ -24,7 +24,7 @@ final class GzipDecompressor {
               throw new RuntimeException("");
             }
             if (param0) {
-              GzipDecompressor.a(50);
+              GzipDecompressor.clearStaticReferences(50);
             }
             if (this.field_a == null) {
               this.field_a = new java.util.zip.Inflater(true);
@@ -47,10 +47,10 @@ final class GzipDecompressor {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 >= -46) {
-          GzipDecompressor.a(-12);
+          GzipDecompressor.clearStaticReferences(-12);
         }
     }
 

@@ -10,7 +10,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     static boolean field_k;
     private IntrusiveNode field_g;
     static int[] field_c;
-    static nf[] field_h;
+    static RgbSprite[] field_h;
     static PrimaryNodeDeque field_e;
     static String field_b;
     static String field_d;

@@ -3,7 +3,7 @@
  */
 final class md {
     static int field_d;
-    static nh field_f;
+    static RgbSprite field_f;
     static IntrusiveDeque field_e;
     static int[] field_c;
     static rf field_a;

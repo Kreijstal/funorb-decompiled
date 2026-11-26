@@ -31,14 +31,14 @@ final class so {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_d = null;
         if (param0 <= 0) {
           return;
         }
-        so.a((byte) 88);
+        so.clearStaticReferences((byte) 88);
     }
 
     static {

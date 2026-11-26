@@ -83,7 +83,7 @@ final class ActorAnimation extends AnimationNode {
 
     private final void d(int param0) {
         if (param0 != 1998707041) {
-          ActorAnimation.d((byte) -37);
+          ActorAnimation.clearStaticReferences((byte) -37);
         }
     }
 
@@ -105,11 +105,11 @@ final class ActorAnimation extends AnimationNode {
         return true;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_m = null;
         field_u = null;
         if (param0 != -41) {
-          ActorAnimation.d((byte) -11);
+          ActorAnimation.clearStaticReferences((byte) -11);
         }
     }
 

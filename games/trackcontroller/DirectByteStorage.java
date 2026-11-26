@@ -99,9 +99,9 @@ final class DirectByteStorage extends ByteStorage {
         return var4Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          DirectByteStorage.b(81);
+          DirectByteStorage.clearStaticReferences(81);
           field_h = null;
           field_f = null;
           return;

@@ -17,7 +17,7 @@ final class mk implements ad {
     private int field_l;
     private we field_n;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 93 / ((param0 - 30) / 58);
         field_b = null;
     }

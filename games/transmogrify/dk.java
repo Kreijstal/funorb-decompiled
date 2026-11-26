@@ -32,7 +32,7 @@ final class dk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 < 7) {
-            dk.a((byte) 119);
+            dk.clearStaticReferences((byte) 119);
           }
           if (param1 == 0L &&
             param0 != null) {
@@ -360,7 +360,7 @@ final class dk {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_a = null;
         int var1 = 45 % ((67 - param0) / 36);

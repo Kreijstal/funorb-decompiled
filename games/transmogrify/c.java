@@ -16,9 +16,9 @@ final class c {
         SoftwareRasterizer.intersectClip(param1, param4, param0, param3);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 18126) {
-          c.a(-55);
+          c.clearStaticReferences(-55);
           field_a = null;
           field_e = null;
           return;

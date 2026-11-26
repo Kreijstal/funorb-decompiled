@@ -18,14 +18,14 @@ final class se extends jc {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == -13673) {
           field_J = null;
           field_O = null;
           field_L = null;
           return;
         }
-        se.n(28);
+        se.clearDeclaredStaticReferences(28);
         field_J = null;
         field_O = null;
         field_L = null;

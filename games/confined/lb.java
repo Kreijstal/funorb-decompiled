@@ -126,7 +126,7 @@ final class lb extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_u = null;
         if (param0 <= 113) {
           field_u = (int[]) null;
@@ -175,14 +175,14 @@ final class lb extends DualLinkNode {
           }
         }
         if (param0 != 0) {
-          lb.e(93);
+          lb.clearDeclaredStaticReferences(93);
         }
     }
 
     lb() {
     }
 
-    final static void d(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 > -98) {
           field_u = (int[]) null;
         }

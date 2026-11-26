@@ -133,7 +133,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         if (param0 == -31417) {
@@ -141,7 +141,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           field_a = null;
           return;
         }
-        MouseInputHandler.a(86);
+        MouseInputHandler.clearStaticReferences(86);
         field_b = null;
         field_a = null;
     }

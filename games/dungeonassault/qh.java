@@ -3,7 +3,7 @@
  */
 final class qh {
     int field_M;
-    static cn field_q;
+    static RgbSprite field_q;
     int[] field_k;
     int[] field_O;
     int[] field_g;
@@ -138,11 +138,11 @@ final class qh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        cn var6 = null;
-        cn var7 = null;
-        cn var8 = null;
-        cn var7Lifetime1;
-        cn var7Lifetime2;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
+        RgbSprite var7Lifetime1;
+        RgbSprite var7Lifetime2;
         int var3Lifetime1;
         var4 = DungeonAssault.field_K;
         try {

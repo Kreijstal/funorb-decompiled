@@ -12,7 +12,7 @@ final class ab implements td {
     static ml field_j;
     private int field_e;
     static IntrusiveDeque field_h;
-    static hj[] field_g;
+    static RgbSprite[] field_g;
     static int field_f;
     static int field_l;
 

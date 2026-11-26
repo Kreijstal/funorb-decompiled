@@ -15,12 +15,12 @@ class of extends DualLinkNode {
     of() {
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_w = null;
         field_x = null;
         field_u = null;
         if (param0 != 1024) {
-          of.g(47);
+          of.clearDeclaredStaticReferences(47);
         }
     }
 

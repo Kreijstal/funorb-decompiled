@@ -21,7 +21,7 @@ final class mk extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 110 % ((40 - param0) / 55);
         field_l = null;
         field_h = null;

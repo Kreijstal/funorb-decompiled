@@ -12,7 +12,7 @@ public final class Chess extends gb {
     private int field_F;
     public static int field_G;
 
-    final static void a(String[] args, String[] param1, byte[] param2, rk[] param3, ResourceArchive param4, int param5, int[] param6, byte[] param7, km[][] param8, boolean param9, String[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, int[] param14, km[][] param15, String[][] param16, int param17, int param18) {
+    final static void a(String[] args, String[] param1, byte[] param2, rk[] param3, ResourceArchive param4, int param5, int[] param6, byte[] param7, RgbSprite[][] param8, boolean param9, String[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, int[] param14, RgbSprite[][] param15, String[][] param16, int param17, int param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -137,7 +137,7 @@ public final class Chess extends gb {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param17).append(',').append(param18).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param17).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ public final class Chess extends gb {
         ea.h((byte) -16);
         fl.field_n = ib.a(true);
         la.b(-49);
-        if (!fk.field_q.d((byte) -125)) {
+        if (!SpriteGeometry.field_q.d((byte) -125)) {
           ug.a(123);
         }
         if (!ka.field_a.d((byte) -126) &&
@@ -320,7 +320,7 @@ public final class Chess extends gb {
                       hj.a(0, -6, false);
                     }
                   } else {
-                    fk.a(true, 15);
+                    SpriteGeometry.a(true, 15);
                   }
                 }
               } else {
@@ -918,7 +918,7 @@ public final class Chess extends gb {
         field_B = null;
     }
 
-    private final void a(boolean param0, km param1) {
+    private final void a(boolean param0, RgbSprite param1) {
         int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -951,15 +951,15 @@ public final class Chess extends gb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     private final void q(int param0) {
         nj.a(-20, mm.field_e, 88.0f);
         this.a(true);
-        km var6 = new km(25, 25);
-        km var3 = new km(25, 25);
+        RgbSprite var6 = new RgbSprite(25, 25);
+        RgbSprite var3 = new RgbSprite(25, 25);
         int[] var4 = new int[]{12, 3, 19, 10, 15, 10, 15, 18, 10, 18, 10, 10, 6, 10, 12, 4};
         var6.e();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 4, 1647364);
@@ -980,7 +980,7 @@ public final class Chess extends gb {
         kn.field_G = var6.c();
         int var5 = -41 / ((19 - param0) / 56);
         vn.field_xb = var3.c();
-        bg.field_Z = new km(77, 20);
+        bg.field_Z = new RgbSprite(77, 20);
         bg.field_Z.e();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, -1 + SoftwareRasterizer.field_c / 2, 1449732);
         ph.field_j.b(48);
@@ -1043,7 +1043,7 @@ public final class Chess extends gb {
         int var6;
         int[] var7;
         int var8_int;
-        km var8;
+        RgbSprite var8;
         int var9;
         dd[] var9_ref_dd__;
         int var10;
@@ -1066,14 +1066,14 @@ public final class Chess extends gb {
         var5 = (int)(Math.sin(0.39269908169872414) * 65536.0);
         var6 = (int)(Math.cos(0.39269908169872414) * 65536.0);
         var7 = new int[]{0, 0, 0, var6, 0, var5, 0, 65536, 0, -var5, 0, var6};
-        rl.field_d[0][0] = new km(0, 0);
-        rl.field_d[1][0] = new km(0, 0);
-        hb.field_b[0][0] = new km(0, 0);
-        hb.field_b[1][0] = new km(0, 0);
-        ub.field_d[0][0] = new km(0, 0);
-        ub.field_d[1][0] = new km(0, 0);
-        qc.field_d[0][0] = new km(0, 0);
-        qc.field_d[1][0] = new km(0, 0);
+        rl.field_d[0][0] = new RgbSprite(0, 0);
+        rl.field_d[1][0] = new RgbSprite(0, 0);
+        hb.field_b[0][0] = new RgbSprite(0, 0);
+        hb.field_b[1][0] = new RgbSprite(0, 0);
+        ub.field_d[0][0] = new RgbSprite(0, 0);
+        ub.field_d[1][0] = new RgbSprite(0, 0);
+        qc.field_d[0][0] = new RgbSprite(0, 0);
+        qc.field_d[1][0] = new RgbSprite(0, 0);
         for (var8_int = 0; var8_int <= 1; var8_int++) {
           if (var8_int != 0) {
             stackIn_5_0 = se.field_N;
@@ -1082,7 +1082,7 @@ public final class Chess extends gb {
           }
           var9_ref_dd__ = stackIn_5_0;
           for (var10 = 1; 7 > var10; var10++) {
-            ub.field_d[var8_int][var10] = new km(180, 180);
+            ub.field_d[var8_int][var10] = new RgbSprite(180, 180);
             ub.field_d[var8_int][var10].e();
             nh.a();
             if (var10 == 2) {
@@ -1111,14 +1111,14 @@ public final class Chess extends gb {
             for (var11 = 0; var11 < 2; var11++) {
               rl.field_d[var8_intLifetime2][var10Lifetime1].f(var9);
             }
-            hb.field_b[var8_intLifetime2][var10Lifetime1] = new km(45, 45);
+            hb.field_b[var8_intLifetime2][var10Lifetime1] = new RgbSprite(45, 45);
             hb.field_b[var8_intLifetime2][var10Lifetime1].e();
             rl.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 94);
             hb.field_b[var8_intLifetime2][var10Lifetime1].f(var9);
             for (var11Lifetime2 = 0; var11Lifetime2 < 2; var11Lifetime2++) {
               ub.field_d[var8_intLifetime2][var10Lifetime1].f(var9);
             }
-            qc.field_d[var8_intLifetime2][var10Lifetime1] = new km(45, 45);
+            qc.field_d[var8_intLifetime2][var10Lifetime1] = new RgbSprite(45, 45);
             qc.field_d[var8_intLifetime2][var10Lifetime1].e();
             ub.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 101);
             qc.field_d[var8_intLifetime2][var10Lifetime1].f(var9);
@@ -1144,7 +1144,7 @@ public final class Chess extends gb {
             }
             for (var12 = 0; var12 < 2; var12++) {
               for (var13 = 0; 7 > var13; var13++) {
-                var8 = new km(45, 45);
+                var8 = new RgbSprite(45, 45);
                 var8.e();
                 SoftwareRasterizer.fillRectangle(0, 0, 45, 45, var9Lifetime1);
                 rl.field_d[var12][var13].a(0, 0);
@@ -1275,7 +1275,7 @@ public final class Chess extends gb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1335,7 +1335,7 @@ public final class Chess extends gb {
                 ResourceArchive.a(5);
                 qk.field_h = ge.field_bb;
                 if (FullscreenFocusCanvas.field_d) {
-                  fk.a(false, 15);
+                  SpriteGeometry.a(false, 15);
                 }
                 if (ia.field_l) {
                   uk.a(qk.field_h, false, 28333, -4);
@@ -1492,7 +1492,7 @@ public final class Chess extends gb {
     }
 
     private final void r(int param0) {
-        km var2;
+        RgbSprite var2;
         int var3;
         int var4;
         int var3Lifetime1;
@@ -1513,7 +1513,7 @@ public final class Chess extends gb {
         } else {
           var2 = wk.a(mm.field_d, 1, "background_3d_halloween", "");
         }
-        ph.field_f = new km(var2.field_w * 2, var2.field_t * 2);
+        ph.field_f = new RgbSprite(var2.field_w * 2, var2.field_t * 2);
         ph.field_f.e();
         var2.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
         SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
@@ -1557,15 +1557,15 @@ public final class Chess extends gb {
         i.a(0);
         jl.a(-1699);
         gb.f(-113);
-        ae.a(122);
+        ae.clearStaticReferences(122);
         GameAppletShell.a((byte) -53);
-        qk.a(true);
+        qk.clearStaticReferences(true);
         rl.b(1);
         MouseWheelInput.clearStaticReferences((byte) 30);
         SoftwareRasterizer.clearStaticReferences();
         ResourceArchive.d((byte) 73);
         lh.clearStaticReferences();
-        jf.a((byte) -8);
+        jf.clearStaticReferences((byte) -8);
         PacketBuffer.clearStaticReferences((byte) -128);
         ud.clearStaticReferences((byte) -109);
         gi.a(true);
@@ -1573,15 +1573,15 @@ public final class Chess extends gb {
         bb.b(-16987);
         rn.a(-2);
         ti.clearStaticReferences(3411);
-        ng.a((byte) -85);
-        li.a(-69);
+        ng.clearStaticReferences((byte) -85);
+        li.clearStaticReferences(-69);
         wh.clearStaticReferences((byte) -46);
-        ld.a(0);
+        ld.clearStaticReferences(0);
         vk.clearStaticReferences((byte) -14);
         wk.a(-26815);
         ca.a((byte) -102);
         gm.a(6);
-        vj.a(-97);
+        vj.clearStaticReferences(-97);
         rh.a(104);
         FullscreenFocusCanvas.a(-9);
         gg.c(0);
@@ -1598,20 +1598,20 @@ public final class Chess extends gb {
         tn.a(-2);
         AudioOutput.clearStaticReferences();
         MidiPcmStream.clearStaticReferences(-1);
-        mc.a((byte) 47);
-        pi.b(-107);
-        qb.a((byte) -113);
+        mc.clearStaticReferences((byte) 47);
+        pi.clearStaticReferences(-107);
+        qb.clearStaticReferences((byte) -113);
         ue.clearStaticReferences(6);
         he.clearStaticReferences(false);
-        pd.n(0);
-        ei.d((byte) -55);
+        pd.clearDeclaredStaticReferences(0);
+        ei.releaseDeclaredStaticReferences((byte) -55);
         ci.clearStaticReferences(-128);
-        cf.k(5);
+        cf.clearDeclaredStaticReferences(5);
         ok.clearStaticReferences((byte) 3);
         dh.clearStaticReferences((byte) -75);
         nb.f((byte) -33);
-        pc.k(0);
-        r.m(92);
+        pc.clearDeclaredStaticReferences(0);
+        r.clearDeclaredStaticReferences(92);
         kl.a((byte) -66);
         qd.a(27265);
         al.clearStaticReferences();
@@ -1621,9 +1621,9 @@ public final class Chess extends gb {
         le.a(-485);
         bo.clearStaticReferences(-39);
         tb.clearStaticReferences((byte) -99);
-        in.b((byte) 23);
+        in.clearStaticReferences((byte) 23);
         an.clearStaticReferences((byte) -109);
-        ln.k(0);
+        ln.clearDeclaredStaticReferences(0);
         SecondaryNodeHashTable.clearStaticReferences(12000);
         ce.clearStaticReferences(true);
         ArchiveIndex.a(87);
@@ -1631,13 +1631,13 @@ public final class Chess extends gb {
         ArchiveProvider.clearStaticReferences(1007);
         rd.clearStaticReferences(32286);
         ie.a(-1962602524);
-        fm.l(-9);
-        AccountCreationResultPanel.l((byte) -106);
-        ch.m(30);
-        vn.j((byte) 5);
-        ol.h(106);
-        ii.a(82);
-        wf.a(35);
+        fm.clearDeclaredStaticReferences(-9);
+        AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -106);
+        ch.releaseDeclaredStaticReferences(30);
+        vn.releaseDeclaredStaticReferences((byte) 5);
+        ol.clearDeclaredStaticReferences(106);
+        ii.clearDeclaredStaticReferences(82);
+        wf.clearDeclaredStaticReferences(35);
         s.g((byte) -93);
         vg.b(125);
         tg.clearStaticReferences((byte) 93);
@@ -1654,46 +1654,46 @@ public final class Chess extends gb {
         qe.clearStaticReferences(2);
         nk.l(8);
         sc.a(-26862);
-        hd.a((byte) -2);
-        fk.d((byte) 1);
-        DualLinkNode.c((byte) -26);
+        hd.clearStaticReferences((byte) -2);
+        SpriteGeometry.clearStaticReferences((byte) 1);
+        DualLinkNode.clearDeclaredStaticReferences((byte) -26);
         PolygonScanlineRasterizer.clearStaticReferences();
         b.clearStaticReferences(-17436);
         gf.clearStaticReferences(540);
         cb.clearStaticReferences(-1);
         ga.clearStaticReferences(-124);
         af.clearStaticReferences(-123);
-        pk.b((byte) -100);
-        lg.a(85);
+        pk.clearStaticReferences((byte) -100);
+        lg.clearStaticReferences(85);
         jj.clearStaticReferences(7);
-        uc.a(-112);
+        uc.clearStaticReferences(-112);
         be.clearStaticReferences((byte) 122);
-        dm.a((byte) 123);
-        IsaacCipher.a((byte) -105);
-        gl.a((byte) 67);
+        dm.clearDeclaredStaticReferences((byte) 123);
+        IsaacCipher.clearStaticReferences((byte) -105);
+        gl.clearStaticReferences((byte) 67);
         ej.clearStaticReferences((byte) -30);
-        jg.l(10000536);
+        jg.clearDeclaredStaticReferences(10000536);
         uk.c(-1);
         bc.a(10);
         bi.clearStaticReferences((byte) 60);
         hm.clearStaticReferences((byte) 76);
         int var2 = 98 % ((-27 - param0) / 55);
-        w.k(-13077);
+        w.clearDeclaredStaticReferences(-13077);
         fl.clearStaticReferences(true);
         BoundedRandomAccessFile.clearStaticReferences(-1);
-        fg.a(true);
+        fg.clearStaticReferences(true);
         va.clearStaticReferences((byte) 121);
-        pe.a((byte) 71);
+        pe.clearStaticReferences((byte) 71);
         ig.clearStaticReferences(-49);
         ob.clearStaticReferences(false);
-        ad.a(-82);
+        ad.clearStaticReferences(-82);
         cc.e((byte) 109);
-        gd.a((byte) 84);
-        tc.i(-7588);
+        gd.clearStaticReferences((byte) 84);
+        tc.clearDeclaredStaticReferences(-7588);
         da.e(16);
         jh.clearStaticReferences((byte) -93);
-        ab.g(-115);
-        sl.a((byte) 59);
+        ab.clearStaticReferences(-115);
+        sl.clearStaticReferences((byte) 59);
         ge.k(0);
         hl.clearStaticReferences(true);
         hi.clearStaticReferences();
@@ -1702,28 +1702,28 @@ public final class Chess extends gb {
         em.b(3);
         rb.clearStaticReferences(-18067);
         lk.a(0);
-        sg.a((byte) 124);
-        la.a(69);
+        sg.clearStaticReferences((byte) 124);
+        la.clearStaticReferences(69);
         DelegatingCanvas.clearStaticReferences(-20905);
         qm.clearStaticReferences((byte) -6);
         qh.clearStaticReferences(-99);
         ByteStorage.clearStaticReferences(-24420);
         en.clearStaticReferences();
         ia.clearStaticReferences(256);
-        ql.a((byte) 109);
+        ql.clearStaticReferences((byte) 109);
         vh.a(102);
-        nd.a(84);
+        nd.clearStaticReferences(84);
         nj.clearStaticReferences(-10406);
         ka.clearStaticReferences((byte) -122);
         sj.clearStaticReferences(true);
-        ub.b((byte) 80);
+        ub.clearDeclaredStaticReferences((byte) 80);
         mf.clearStaticReferences(0);
-        fb.h(-1);
+        fb.clearDeclaredStaticReferences(-1);
         kn.e((byte) 127);
-        k.h((byte) -24);
-        eh.i(888706465);
+        k.clearDeclaredStaticReferences((byte) -24);
+        eh.clearDeclaredStaticReferences(888706465);
         ma.clearStaticReferences((byte) -96);
-        qj.a(124);
+        qj.clearStaticReferences(124);
         m.clearStaticReferences(false);
         VorbisFloor.clearStaticReferences();
         ib.clearStaticReferences(-12374);
@@ -1731,67 +1731,67 @@ public final class Chess extends gb {
         th.a(0);
         rf.clearStaticReferences(9);
         di.clearStaticReferences((byte) -54);
-        kj.a((byte) 115);
+        kj.clearStaticReferences((byte) 115);
         qc.clearStaticReferences(7);
-        j.d((byte) -84);
+        j.clearStaticReferences((byte) -84);
         dj.d((byte) -114);
         v.clearStaticReferences((byte) -117);
         wn.clearStaticReferences(false);
         oa.a(17);
         kh.clearStaticReferences(64);
-        si.c(23);
+        si.clearDeclaredStaticReferences(23);
         de.clearStaticReferences((byte) -120);
         tm.a((byte) 76);
         og.clearStaticReferences();
         td.a(5239);
-        cl.a(12);
-        df.b(-6);
-        vi.a((byte) 116);
+        cl.clearStaticReferences(12);
+        df.clearStaticReferences(-6);
+        vi.clearStaticReferences((byte) 116);
         kf.c((byte) -101);
         dl.clearStaticReferences(7);
-        d.k(-110);
-        kd.l(-4403);
+        d.clearDeclaredStaticReferences(-110);
+        kd.clearDeclaredStaticReferences(-4403);
         qa.clearStaticReferences(-1);
         kg.c(false);
-        bg.n(2491);
-        qn.m(-14);
-        bj.k(45);
+        bg.discardDeclaredStaticReferences(2491);
+        qn.releaseDeclaredStaticReferences(-14);
+        bj.releaseDeclaredStaticReferences(45);
         rm.a(850101921);
-        t.a(8);
+        t.clearDeclaredStaticReferences(8);
         se.e((byte) 67);
         jn.clearStaticReferences((byte) -61);
-        ea.g((byte) -44);
+        ea.clearStaticReferences((byte) -44);
         ki.b(true);
         vm.c(true);
         ni.clearStaticReferences(0);
         ba.c(false);
         od.clearStaticReferences(false);
-        nc.e((byte) -116);
+        nc.clearStaticReferences((byte) -116);
         cg.a(1);
         fc.clearStaticReferences(-29306);
         ri.h(1);
-        ih.i((byte) 48);
+        ih.clearDeclaredStaticReferences((byte) 48);
         bh.j(0);
         bf.clearStaticReferences(false);
         ah.clearStaticReferences((byte) 83);
         DirectByteStorage.a((byte) -115);
         ml.clearStaticReferences((byte) -122);
-        kb.i(-15237);
+        kb.clearDeclaredStaticReferences(-15237);
         ji.i(5849);
         IterableNodeHashTable.clearStaticReferences(0);
         SecondaryNodeDeque.clearStaticReferences(7043);
-        cm.a(false);
+        cm.clearStaticReferences(false);
         hg.clearStaticReferences((byte) -76);
-        el.e((byte) 125);
+        el.clearStaticReferences((byte) 125);
         mn.a(32768);
         SoundFilter.clearStaticReferences();
         bd.clearStaticReferences(-40);
         NodeHashTableIterator.clearStaticReferences((byte) -120);
         SecondaryNodeDequeIterator.clearStaticReferences(false);
-        fd.c((byte) 101);
+        fd.clearStaticReferences((byte) 101);
         ak.clearStaticReferences(21296);
         ao.clearStaticReferences(1);
-        pg.c((byte) 11);
+        pg.clearStaticReferences((byte) 11);
         hh.clearStaticReferences((byte) 109);
         sf.clearStaticReferences(103);
         wj.clearStaticReferences(-3);
@@ -1799,10 +1799,10 @@ public final class Chess extends gb {
         hk.clearStaticReferences((byte) -42);
         vf.clearStaticReferences(false);
         lf.j(1839839976);
-        ve.l(103);
+        ve.clearDeclaredStaticReferences(103);
         bk.a(true);
-        ac.c((byte) -119);
-        mh.a(3);
+        ac.clearStaticReferences((byte) -119);
+        mh.clearStaticReferences(3);
         tk.b((byte) 77);
         tf.clearStaticReferences(false);
         AccountRequestState.releaseStatics((byte) -31);
@@ -1811,23 +1811,23 @@ public final class Chess extends gb {
         h.a(1187598372);
         jd.clearStaticReferences(false);
         ph.clearStaticReferences(0);
-        sk.c(10);
+        sk.clearDeclaredStaticReferences(10);
         ec.clearStaticReferences((byte) 98);
-        oj.a((byte) 52);
+        oj.clearStaticReferences((byte) 52);
         pa.clearStaticReferences((byte) -117);
         dc.clearStaticReferences(5);
         ij.b(255);
         uj.clearStaticReferences((byte) -118);
-        om.c((byte) -126);
+        om.clearStaticReferences((byte) -126);
         ai.clearStaticReferences(-125);
-        fj.a((byte) 126);
-        AccountNameAvailabilityValidator.k(16);
+        fj.clearStaticReferences((byte) 126);
+        AccountNameAvailabilityValidator.clearDeclaredStaticReferences(16);
         tj.i(-19374);
         db.clearStaticReferences(true);
-        qi.b((byte) 79);
+        qi.clearStaticReferences((byte) 79);
         oc.h(0);
         ag.clearStaticReferences(9604);
-        re.a(-7101);
+        re.clearStaticReferences(-7101);
         mk.clearStaticReferences((byte) -95);
         jb.clearStaticReferences(350);
         sa.clearStaticReferences(-20127);
@@ -1836,11 +1836,11 @@ public final class Chess extends gb {
     }
 
     private final boolean b(int param0, boolean param1) {
-        km discarded$0 = null;
+        RgbSprite discarded$0 = null;
         int var3;
         int var4;
-        km var5;
-        km[][] var6;
+        RgbSprite var5;
+        RgbSprite[][] var6;
         int var3Lifetime1;
         var4 = field_G;
         ab.h(param0 - 19759);
@@ -1854,8 +1854,8 @@ public final class Chess extends gb {
             return false;
           }
           if (param0 != 19763) {
-            var5 = (km) null;
-            discarded$0 = this.a(16, (km) null);
+            var5 = (RgbSprite) null;
+            discarded$0 = this.a(16, (RgbSprite) null);
           }
           if (null != li.field_g) {
             nj.a(param0 ^ -19745, qe.field_O, 75.0f);
@@ -1863,14 +1863,14 @@ public final class Chess extends gb {
             for (var3 = 0; 7 > var3; var3++) {
               el.field_y[var3] = pf.a(li.field_g, "", "chess" + (1 + var3));
               if (null != el.field_y[var3]) {
-                fk.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], s.field_S);
+                SpriteGeometry.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], s.field_S);
               }
             }
             gl.field_b = pf.a(li.field_g, "", "fanfare");
             if (null != gl.field_b) {
               ka.field_a.a(pg.field_o, param0 - 19887, 0, gl.field_b, s.field_S);
             }
-            fk.field_q.c((byte) -61);
+            SpriteGeometry.field_q.c((byte) -61);
             ka.field_a.c((byte) -61);
             ug.a(86);
             s.field_S = null;
@@ -1930,8 +1930,8 @@ public final class Chess extends gb {
           if (this.field_F == 4) {
             mm.field_d = null;
           }
-          var6 = (km[][]) null;
-          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new km[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (km[][]) null);
+          var6 = (RgbSprite[][]) null;
+          BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new RgbSprite[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (RgbSprite[][]) null);
           ig.field_h = wf.field_Q;
           tk.b(200, 93);
           hm.field_e = null;
@@ -2029,16 +2029,16 @@ public final class Chess extends gb {
         return false;
     }
 
-    private final km a(int param0, km param1) {
-        km var3 = null;
+    private final RgbSprite a(int param0, RgbSprite param1) {
+        RgbSprite var3 = null;
         RuntimeException var3_ref = null;
-        km stackIn_1_0 = null;
+        RgbSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new km(2 * param1.field_w, param1.field_t * 2);
+          var3 = new RgbSprite(2 * param1.field_w, param1.field_t * 2);
           var3.e();
           param1.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           SoftwareRasterizer.blurRectangle(param0, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
@@ -2055,7 +2055,7 @@ public final class Chess extends gb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -2063,7 +2063,7 @@ public final class Chess extends gb {
         if (param0 != 117) {
           return;
         }
-        tb.field_a = new km(270, 325);
+        tb.field_a = new RgbSprite(270, 325);
         tb.field_a.field_r = 145;
         tb.field_a.e();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 270, 325, 13875857, 15987691);

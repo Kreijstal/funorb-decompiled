@@ -151,7 +151,7 @@ class vb extends DualLinkNode {
         return var3;
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = -105 % ((param0 - 14) / 34);
         field_i = null;
     }

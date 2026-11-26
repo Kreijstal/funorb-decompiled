@@ -7,9 +7,9 @@ final class ve {
     private String field_b;
     private boolean field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 84) {
-          ve.a((byte) 97);
+          ve.clearStaticReferences((byte) 97);
           field_d = null;
           return;
         }

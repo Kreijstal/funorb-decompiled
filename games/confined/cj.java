@@ -5,7 +5,7 @@ final class cj implements fe {
     static int[] field_b;
     static String field_c;
     static boolean field_d;
-    static nf[] field_a;
+    static RgbSprite[] field_a;
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;
@@ -71,7 +71,7 @@ final class cj implements fe {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        nf var8 = null;
+        RgbSprite var8 = null;
         try {
           if (param0 >= -97) {
             cj.clearStaticReferences((byte) -62);

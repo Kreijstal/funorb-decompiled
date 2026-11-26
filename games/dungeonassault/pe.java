@@ -10,7 +10,7 @@ final class pe extends IntrusiveNode {
     static String field_o;
     static String[] field_m;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == 9) {
           field_n = null;
           field_i = null;
@@ -21,7 +21,7 @@ final class pe extends IntrusiveNode {
           field_k = null;
           return;
         }
-        pe.a(39);
+        pe.clearDeclaredStaticReferences(39);
         field_n = null;
         field_i = null;
         field_l = null;
@@ -31,11 +31,11 @@ final class pe extends IntrusiveNode {
         field_k = null;
     }
 
-    final static cn[] a(int param0, int param1, int param2, int param3, int param4) {
-        cn dupTemp$1 = null;
-        cn[] var6 = new cn[9];
-        cn[] var5 = var6;
-        cn dupTemp$0 = bl.a(false, param0, param4);
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite dupTemp$1 = null;
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = bl.a(false, param0, param4);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
@@ -53,7 +53,7 @@ final class pe extends IntrusiveNode {
           }
           return var5;
         }
-        cn dupTemp$2 = bl.a(false, param3, param4);
+        RgbSprite dupTemp$2 = bl.a(false, param3, param4);
         var6[8] = dupTemp$2;
         var5[7] = dupTemp$2;
         var5[5] = dupTemp$2;

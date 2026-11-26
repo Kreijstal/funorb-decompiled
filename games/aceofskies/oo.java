@@ -69,7 +69,7 @@ class oo extends dg implements dn {
         GlyphMask.showLoginWithStoredUsername(87);
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != 105) {
           return;
         }

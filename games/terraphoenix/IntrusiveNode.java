@@ -10,12 +10,12 @@ class IntrusiveNode {
     IntrusiveNode next;
     IntrusiveNode previous;
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_f = null;
         if (param0 == 71) {
           return;
         }
-        IntrusiveNode.b(75);
+        IntrusiveNode.clearDeclaredStaticReferences(75);
     }
 
     final boolean isLinked(byte obfuscationGuard) {

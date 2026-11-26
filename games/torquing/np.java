@@ -86,7 +86,7 @@ final class np extends ha {
           vd.field_c = param0;
           qd.field_b.flushAndMarkDrainCheck();
           if (param2 <= 117) {
-            np.d(61);
+            np.clearDeclaredStaticReferences(61);
           }
           ti.field_e.a(vd.field_c);
         } catch (RuntimeException runtimeException) {
@@ -102,7 +102,7 @@ final class np extends ha {
         var1 = ha.field_b;
         synchronized (var1) {
           if (param0 != -13) {
-            np.d(-95);
+            np.clearDeclaredStaticReferences(-95);
           }
           if (IntrusiveNode.field_g == mj.field_d) {
             return false;
@@ -213,7 +213,7 @@ final class np extends ha {
         this.field_h = System.nanoTime();
     }
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_k = null;
         if (param0 != 0) {
           field_m = (String) null;

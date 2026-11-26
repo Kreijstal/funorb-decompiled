@@ -8,7 +8,7 @@ final class uj {
     static String field_a;
     static String field_e;
     static String field_b;
-    static cn field_c;
+    static RgbSprite field_c;
 
     final static int a(Random param0, int param1, int param2) {
         int var3_int = 0;
@@ -32,7 +32,7 @@ final class uj {
           }
           var3_int = -2147483648 - (int)(4294967296L % (long)param2);
           if (param1 != 37) {
-            field_c = (cn) null;
+            field_c = (RgbSprite) null;
           }
           do {
             var4 = param0.nextInt();

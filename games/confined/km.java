@@ -40,11 +40,11 @@ final class km {
         return param1 + var2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 11645) {
-          km.a(66);
+          km.clearStaticReferences(66);
         }
     }
 

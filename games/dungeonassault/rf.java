@@ -7,7 +7,7 @@ abstract class rf extends ii {
     static fm field_K;
     boolean field_T;
     static int field_M;
-    static cn field_Q;
+    static RgbSprite field_Q;
     static ob field_O;
     static byte[][] field_P;
     private int field_U;
@@ -29,7 +29,7 @@ abstract class rf extends ii {
         if (np.field_F == null ||
           !(this.field_x <= np.field_F.field_y) ||
           !(np.field_F.field_v >= this.field_s)) {
-          np.field_F = new cn(this.field_x, this.field_s);
+          np.field_F = new RgbSprite(this.field_x, this.field_s);
         }
         lm.a(np.field_F, (byte) -102);
         SoftwareRasterizer.clearRaster();

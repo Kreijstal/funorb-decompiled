@@ -44,7 +44,7 @@ final class m extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

@@ -62,7 +62,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements HardwareIndexBuffe
         super.a(param0);
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         field_o = null;
         field_u = null;

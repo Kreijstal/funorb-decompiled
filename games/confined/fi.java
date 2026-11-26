@@ -5,7 +5,7 @@ final class fi {
     static String field_b;
     static int field_c;
     static int field_a;
-    static nf[] field_d;
+    static RgbSprite[] field_d;
 
     final static void a(mi param0, int param1, boolean param2, mi param3, mi param4) {
         try {
@@ -16,7 +16,7 @@ final class fi {
           na.field_S = ml.field_a;
           oe.field_Q = ml.field_a;
           if (param1 != 0) {
-            field_d = (nf[]) null;
+            field_d = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

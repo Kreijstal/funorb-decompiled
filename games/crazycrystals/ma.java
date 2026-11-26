@@ -6,9 +6,9 @@ final class ma extends pn {
     static String field_o;
     static int[] field_n;
     static jp field_m;
-    private dl field_q;
+    private RgbSprite field_q;
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -133,7 +133,7 @@ final class ma extends pn {
         }
     }
 
-    private ma(dl param0, f param1, ma param2) {
+    private ma(RgbSprite param0, f param1, ma param2) {
         super(param1);
         try {
           this.field_q = param0;
@@ -466,7 +466,7 @@ final class ma extends pn {
         }
     }
 
-    ma(dl param0, f param1, mj param2) {
+    ma(RgbSprite param0, f param1, mj param2) {
         this(param0, param1, param2.field_a);
         try {
           param2.field_a = this;
@@ -521,13 +521,13 @@ final class ma extends pn {
         return this.field_l.e(-4128);
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_n = null;
         field_m = null;
         field_p = null;
         if (param0 < 39) {
-          ma.f(-74);
+          ma.clearStaticReferences(-74);
         }
     }
 
@@ -535,8 +535,8 @@ final class ma extends pn {
         try {
           vk.field_N.a(16, param3 * 12, 12 * param0, 60, (byte) -111);
           if (param1 != 0) {
-            dl[] var6 = (dl[]) null;
-            this.a((f) null, 106, -41, (f[][]) null, (dl[]) null, (byte) -23);
+            RgbSprite[] var6 = (RgbSprite[]) null;
+            this.a((f) null, 106, -41, (f[][]) null, (RgbSprite[]) null, (byte) -23);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ma.W(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

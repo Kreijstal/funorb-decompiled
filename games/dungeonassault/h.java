@@ -14,7 +14,7 @@ final class h {
     int field_c;
     int field_s;
     static ae field_h;
-    static cn field_E;
+    static RgbSprite field_E;
     String field_F;
     int[] field_A;
     static int field_j;
@@ -23,7 +23,7 @@ final class h {
     int field_b;
     int field_x;
     int field_m;
-    static cn field_f;
+    static RgbSprite field_f;
     String field_G;
     String[] field_C;
     String[] field_d;

@@ -5,7 +5,7 @@ final class t {
     static he[] field_c;
     static int field_b;
     static he field_a;
-    static nh field_d;
+    static RgbSprite field_d;
 
     final static void a(boolean param0, int param1, String param2, int param3, java.awt.Color param4) {
         Exception exception = null;

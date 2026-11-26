@@ -315,7 +315,7 @@ final class SceneWidgetPart004 extends SceneWidget {
           MixedSupport074.performAction0928(resourceArchiveArgument16, 32373);
           UiComponentPart019.performAction1046(integerArgument7, stringArrayArgument20, byteArrayArgument1, resourceArchiveArgument16, -8894, stringArrayArrayArgument9, rgbSpriteArrayArrayArgument10, integerArgument2, stringArrayArrayArgument15, stringArrayArgument18, stringArrayArgument5, rgbSpriteArrayArrayArgument13, integerArgument17, byteArrayArgument14, integerArrayArgument19);
           if (integerArgument6 != 3) {
-            SceneWidgetPart004.performAction0616(-36);
+            SceneWidgetPart004.discardDeclaredStaticReferences(-36);
           }
           MixedSupport125.performAction1619(46, resourceArchiveArgument16, booleanArgument11, resourceArchiveArgument4);
           RenderingSupport003.performAction0568((byte) 123);
@@ -420,7 +420,7 @@ final class SceneWidgetPart004 extends SceneWidget {
         }
     }
 
-    public static void performAction0616(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         integerArrayState0053 = null;
         stringArrayArrayState0003 = (String[][]) null;
         if (integerArgument1 < -48) {

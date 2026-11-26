@@ -6,14 +6,14 @@ final class f {
     static String field_a;
     static String field_c;
 
-    final static nf[] a(int param0, nf[] param1, int param2) {
+    final static RgbSprite[] a(int param0, RgbSprite[] param1, int param2) {
         int var4 = 0;
-        nf[] var3 = null;
+        RgbSprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        nf[] var6 = null;
-        nf[] stackIn_3_0 = null;
-        nf[] stackIn_8_0 = null;
+        RgbSprite[] var6 = null;
+        RgbSprite[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -21,13 +21,13 @@ final class f {
         var5 = Confined.field_J ? 1 : 0;
         try {
           if (param0 != 8364) {
-            stackIn_3_0 = (nf[]) null;
+            stackIn_3_0 = (RgbSprite[]) null;
             return stackIn_3_0;
           }
-          var6 = new nf[param1.length];
+          var6 = new RgbSprite[param1.length];
           var3 = var6;
           for (var4 = 0; var4 < param1.length; var4++) {
-            var6[var4] = new nf(160, 94);
+            var6[var4] = new RgbSprite(160, 94);
             var6[var4].d();
             param1[var4].a(param1[var4].field_t << 3, param1[var4].field_x << 3, 1280, 752, 0, 655360 / param2);
           }
@@ -53,8 +53,8 @@ final class f {
         field_a = null;
         field_c = null;
         if (param0 != -12435) {
-          nf[] var2 = (nf[]) null;
-          f.a(-105, (nf[]) null, 93);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          f.a(-105, (RgbSprite[]) null, 93);
         }
     }
 

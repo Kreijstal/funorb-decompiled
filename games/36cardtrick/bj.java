@@ -150,7 +150,7 @@ final class bj {
 
     final void a(byte param0) {
         if (param0 != 10) {
-          bj.a(-113);
+          bj.clearStaticReferences(-113);
         }
         this.field_q.a(-23603, this.field_o, this.field_r);
     }
@@ -231,11 +231,11 @@ final class bj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_u = null;
         if (param0 >= -96) {
-          bj.a(-59);
+          bj.clearStaticReferences(-59);
         }
     }
 

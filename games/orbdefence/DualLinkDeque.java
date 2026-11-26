@@ -4,15 +4,15 @@
 import java.util.*;
 
 final class DualLinkDeque implements Iterable {
-    static hj field_c;
-    static hj field_b;
+    static RgbSprite field_c;
+    static RgbSprite field_b;
     DualLinkNode field_a;
 
     public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_b = null;
         if (!param0) {
-          field_b = (hj) null;
+          field_b = (RgbSprite) null;
         }
     }
 

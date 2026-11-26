@@ -4,8 +4,8 @@
 final class ie extends IntrusiveNode {
     gd field_m;
     static int[] field_k;
-    static cn field_l;
-    static cn field_i;
+    static RgbSprite field_l;
+    static RgbSprite field_i;
     static String field_n;
     static String[] field_j;
 
@@ -29,7 +29,7 @@ final class ie extends IntrusiveNode {
           SecondaryNodeDequeIterator.field_e.addFirst(var1, false);
           return;
         }
-        field_l = (cn) null;
+        field_l = (RgbSprite) null;
         var1Lifetime1 = (i) (cd.field_g.removeFirst(0));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new i();
@@ -51,7 +51,7 @@ final class ie extends IntrusiveNode {
 
     static {
         field_k = new int[8192];
-        field_l = new cn(270, 70);
+        field_l = new RgbSprite(270, 70);
         field_n = "Unknown";
         field_j = new String[]{"Introduction", "Story", "Renown", "Raiders", "Dungeon Rooms", "Finding Dungeons", "Raiding Dungeons", "Building Dungeons"};
     }

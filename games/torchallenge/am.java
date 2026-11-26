@@ -14,9 +14,9 @@ final class am {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 6) {
-          am.a(-39);
+          am.clearStaticReferences(-39);
           field_b = (int[][][]) null;
           field_c = null;
           return;

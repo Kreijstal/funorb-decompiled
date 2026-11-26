@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hj {
-    static dl[] field_b;
-    private dl[] field_a;
+    static RgbSprite[] field_b;
+    private RgbSprite[] field_a;
 
     public static void a(int param0) {
         if (param0 != 0) {
@@ -14,7 +14,7 @@ final class hj {
         field_b = null;
     }
 
-    hj(dl[] param0) {
+    hj(RgbSprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
@@ -27,7 +27,7 @@ final class hj {
           oc.a(this.field_a, param3, param2, param0, param4, param1 ^ -73);
           return;
         }
-        field_b = (dl[]) null;
+        field_b = (RgbSprite[]) null;
         oc.a(this.field_a, param3, param2, param0, param4, param1 ^ -73);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mf extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     int field_C;
     int field_y;
     int field_v;
@@ -24,7 +24,7 @@ abstract class mf extends DualLinkNode {
           field_A = null;
           return;
         }
-        mf.h(-109);
+        SpriteGeometry.h(-109);
         field_x = null;
         field_E = null;
         field_u = null;
@@ -186,7 +186,7 @@ abstract class mf extends DualLinkNode {
             }
           }
         } else {
-          mf.h(85);
+          SpriteGeometry.h(85);
           pa.field_c = -100;
           sd.field_a.a(255, 0);
           sd.field_a.field_N = (double)(-MusicPatchPcmStream.field_l);
@@ -345,7 +345,7 @@ abstract class mf extends DualLinkNode {
         sd.field_a.s(86);
     }
 
-    mf() {
+    SpriteGeometry() {
     }
 
     static {

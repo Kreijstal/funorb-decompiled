@@ -120,7 +120,7 @@ final class lo {
         return var1 + r.field_f;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = -114 / ((55 - param0) / 48);
         field_c = null;

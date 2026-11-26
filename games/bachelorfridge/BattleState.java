@@ -350,12 +350,12 @@ final class BattleState {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         field_q = null;
         field_u = null;
         if (param0 < 34) {
-          BattleState.e((byte) 67);
+          BattleState.clearStaticReferences((byte) 67);
         }
     }
 

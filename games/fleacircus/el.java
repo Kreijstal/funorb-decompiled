@@ -3,12 +3,12 @@
  */
 final class el extends wi {
     private bi field_z;
-    dd field_w;
+    RgbSprite field_w;
     private boolean field_x;
     static PcmSample field_C;
-    static dd[] field_s;
+    static RgbSprite[] field_s;
     private int field_q;
-    private dd field_y;
+    private RgbSprite field_y;
     private bi field_v;
     static String field_B;
     private bi field_u;
@@ -82,9 +82,9 @@ final class el extends wi {
           fi.field_j = param5;
           SecondaryNodeDequeIterator.field_e = param3;
           pb.field_i = param1;
-          of.field_h = new dd[param4.length];
+          of.field_h = new RgbSprite[param4.length];
           for (var7 = 0; param4.length > var7; var7++) {
-            of.field_h[var7] = new dd(317, 34);
+            of.field_h[var7] = new RgbSprite(317, 34);
           }
           vg.field_u = param4;
           if (param2 <= 24) {
@@ -536,7 +536,7 @@ final class el extends wi {
         return;
     }
 
-    el(int param0, int param1, int param2, bi param3, bi param4, bi param5, dd param6, dd param7) {
+    el(int param0, int param1, int param2, bi param3, bi param4, bi param5, RgbSprite param6, RgbSprite param7) {
         this.field_x = false;
         this.field_q = 0;
         this.field_r = false;

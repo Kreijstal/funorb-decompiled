@@ -294,13 +294,13 @@ final class MixedSupport069 {
         }
     }
 
-    public static void performAction0905(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0310 = null;
         stringState0312 = null;
         integerArrayState0123 = null;
         stringState0311 = null;
         if (integerArgument1 != -1643605936) {
-          MixedSupport069.performAction0905(15);
+          MixedSupport069.clearStaticReferences(15);
         }
     }
 

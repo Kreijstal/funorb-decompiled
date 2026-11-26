@@ -222,11 +222,11 @@ final class di extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_B = null;
         field_y = null;
         if (param0 != 0) {
-          di.g(-78);
+          di.clearStaticReferences(-78);
         }
     }
 

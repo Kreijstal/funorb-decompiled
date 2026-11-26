@@ -7,11 +7,11 @@ final class fc {
     static re[] field_a;
     static String field_b;
 
-    final static dd[] b(int param0) {
+    final static RgbSprite[] b(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        dd[] var1;
+        RgbSprite[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -22,7 +22,7 @@ final class fc {
         int[] var21;
         byte[] var22;
         var8 = fleas.field_A ? 1 : 0;
-        var1 = new dd[ef.field_l];
+        var1 = new RgbSprite[ef.field_l];
         for (var2 = 0; ef.field_l > var2; var2++) {
           var3 = ij.field_H[var2] * ob.field_a[var2];
           var20 = of.field_d[var2];
@@ -32,7 +32,7 @@ final class fc {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = rd.field_d[sc.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new dd(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var21);
+            var1[var2] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var21);
           } else {
             var22 = NetworkGameClient.field_t[var2];
             var16 = new int[var3];
@@ -41,7 +41,7 @@ final class fc {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = ne.a(rd.field_d[sc.a(255, (int) var20[var7])], sc.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (dd) ((Object) new ArgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var16));
           }
         }
         if (param0 >= -127) {
@@ -63,7 +63,7 @@ final class fc {
 
     final static void c(int param0) {
         int stackIn_85_0 = 0;
-        dd[] stackIn_86_1 = null;
+        RgbSprite[] stackIn_86_1 = null;
         fa stackIn_88_0;
         String stackIn_88_1;
         int stackIn_88_2;
@@ -72,7 +72,7 @@ final class fc {
         boolean stackIn_89_5 = false;
         int stackIn_92_4 = 0;
         int stackIn_94_0 = 0;
-        dd[] stackIn_95_1 = null;
+        RgbSprite[] stackIn_95_1 = null;
         fa stackIn_97_0;
         String stackIn_97_1;
         int stackIn_97_2;
@@ -81,7 +81,7 @@ final class fc {
         boolean stackIn_98_5 = false;
         int stackIn_101_4 = 0;
         int stackIn_103_0 = 0;
-        dd[] stackIn_104_1 = null;
+        RgbSprite[] stackIn_104_1 = null;
         fa stackIn_106_0;
         String stackIn_106_1;
         int stackIn_106_2;
@@ -94,7 +94,7 @@ final class fc {
         boolean stackIn_117_0 = false;
         boolean stackIn_118_1 = false;
         int stackIn_120_0 = 0;
-        dd[] stackIn_121_1 = null;
+        RgbSprite[] stackIn_121_1 = null;
         vg stackIn_123_0 = null;
         boolean stackIn_123_1 = false;
         boolean stackIn_124_2 = false;
@@ -104,7 +104,7 @@ final class fc {
         boolean stackIn_140_0 = false;
         boolean stackIn_141_1 = false;
         int stackIn_143_0 = 0;
-        dd[] stackIn_144_1 = null;
+        RgbSprite[] stackIn_144_1 = null;
         vg stackIn_146_0 = null;
         boolean stackIn_146_1 = false;
         boolean stackIn_147_2 = false;
@@ -124,7 +124,7 @@ final class fc {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        dd var8 = null;
+        RgbSprite var8 = null;
         int var9 = 0;
         int var10_int = 0;
         String var10 = null;
@@ -144,7 +144,7 @@ final class fc {
         int var22 = 0;
         int var23 = 0;
         int var24_int = 0;
-        dd var24 = null;
+        RgbSprite var24 = null;
         int var25 = 0;
         int var26 = 0;
         String var26_ref_String = null;
@@ -497,11 +497,11 @@ final class fc {
         throw new IllegalStateException();
     }
 
-    final static dd[] a(ResourceArchive param0, String param1, String param2, byte param3) {
-        dd[] var4 = null;
+    final static RgbSprite[] a(ResourceArchive param0, String param1, String param2, byte param3) {
+        RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
-        dd[] var5 = null;
-        dd[] stackIn_6_0 = null;
+        RgbSprite[] var5 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

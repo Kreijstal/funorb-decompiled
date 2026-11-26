@@ -11,7 +11,7 @@ final class vi {
     static int[] field_b;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         field_h = (ck[][]) null;
@@ -22,7 +22,7 @@ final class vi {
           field_g = null;
           return;
         }
-        vi.a(-117);
+        vi.clearStaticReferences(-117);
         field_c = null;
         field_a = null;
         field_g = null;

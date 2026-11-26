@@ -7,9 +7,9 @@ final class pe extends wb {
     private String field_cb;
     static ji field_ab;
     private String field_bb;
-    static bd field_hb;
+    static RgbSprite field_hb;
     static char[] field_db;
-    static bd[] field_fb;
+    static RgbSprite[] field_fb;
     private boolean field_kb;
     private ba field_ib;
     static vm field_eb;
@@ -30,7 +30,7 @@ final class pe extends wb {
           ak.a(false, (String) null, fj.field_Sb);
           return;
         }
-        field_fb = (bd[]) null;
+        field_fb = (RgbSprite[]) null;
         var2Lifetime1 = (String) null;
         ak.a(false, (String) null, fj.field_Sb);
     }
@@ -127,7 +127,7 @@ final class pe extends wb {
         }
     }
 
-    public static void q(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_eb = null;
         field_db = null;
         if (param0 == 8421504) {
@@ -137,7 +137,7 @@ final class pe extends wb {
           field_fb = null;
           return;
         }
-        pe.q(-49);
+        pe.releaseDeclaredStaticReferences(-49);
         field_hb = null;
         field_ab = null;
         field_gb = null;

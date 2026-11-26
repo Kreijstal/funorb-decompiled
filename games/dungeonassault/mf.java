@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class mf {
-    static cn[] field_b;
+    static RgbSprite[] field_b;
     static String[] field_c;
     static int[] field_d;
     static String field_a;
@@ -79,14 +79,14 @@ final class mf {
         }
     }
 
-    final static cn a(int param0, int param1, int param2, int param3, byte param4) {
+    final static RgbSprite a(int param0, int param1, int param2, int param3, byte param4) {
         int var10 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = DungeonAssault.field_K;
         int var5 = param3 + param2 * 2;
         int var6 = param1 + 2 * param2;
-        cn var7 = new cn(var5, var6);
+        RgbSprite var7 = new RgbSprite(var5, var6);
         jh.a(var7);
         int var8 = 16711935 & param0;
         int var9 = param0 & 65280;

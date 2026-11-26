@@ -42,7 +42,7 @@ final class ib {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_d = null;
         int var1 = 1 % ((-67 - param0) / 49);

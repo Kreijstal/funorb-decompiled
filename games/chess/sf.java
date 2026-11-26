@@ -6,7 +6,7 @@ final class sf extends hl {
     private int field_w;
     private int field_s;
     private static long[] field_u;
-    private km[] field_x;
+    private RgbSprite[] field_x;
     static boolean[] field_v;
 
     public static void clearStaticReferences(int param0) {
@@ -25,7 +25,7 @@ final class sf extends hl {
             field_u = (long[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "sf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "sf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class sf extends hl {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

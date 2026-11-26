@@ -40,7 +40,7 @@ final class OpenGlVolumeTexture extends OpenGlTexture implements HardwareVolumeT
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_l = null;
         field_n = null;

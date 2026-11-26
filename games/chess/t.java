@@ -264,7 +264,7 @@ final class t extends ma implements mj {
             stackIn_122_0.field_tb = stackIn_123_1;
           }
           if (!param3) {
-            t.a(107);
+            t.clearDeclaredStaticReferences(107);
           }
           if (param1 &&
             1 < un.field_q) {
@@ -597,7 +597,7 @@ final class t extends ma implements mj {
           } else {
             stackIn_344_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_343_0), ((StringBuilder) (Object) stackIn_343_1).append(stackIn_344_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_343_0), ((StringBuilder) (Object) stackIn_343_1).append(stackIn_344_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -621,7 +621,7 @@ final class t extends ma implements mj {
         try {
           this.field_N = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -676,7 +676,7 @@ final class t extends ma implements mj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -712,11 +712,11 @@ final class t extends ma implements mj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 8) {
           return;
         }
@@ -757,7 +757,7 @@ final class t extends ma implements mj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

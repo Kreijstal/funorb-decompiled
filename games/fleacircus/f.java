@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f extends dk {
-    static dd field_E;
+    static RgbSprite field_E;
     static el field_G;
     static String field_H;
     private IntrusiveDeque field_I;
@@ -114,7 +114,7 @@ final class f extends dk {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_E = null;
         if (param0 != -7409) {
           field_G = (el) null;
@@ -132,7 +132,7 @@ final class f extends dk {
         var2 = new we(this.field_I);
         var3 = (db) (var2.b(-59));
         if (param0 != 0) {
-          field_E = (dd) null;
+          field_E = (RgbSprite) null;
         }
         while (var3 != null) {
           if (var3.field_G) {
@@ -155,7 +155,7 @@ final class f extends dk {
           var6 = (UiComponent) (var5.a(true));
         }
         if (!param2) {
-          f.j(69);
+          f.releaseDeclaredStaticReferences(69);
         }
     }
 

@@ -95,7 +95,7 @@ final class ne {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 38 / ((param0 + 6) / 43);
         field_c = null;
         field_a = null;

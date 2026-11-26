@@ -61,7 +61,7 @@ final class ln extends ci {
         return (int)this.getSecondaryKey(0);
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_cc = null;
         field_vc = null;
         if (param0 == 0) {
@@ -179,13 +179,13 @@ final class ln extends ci {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
     final static void f(byte param0) {
         if (param0 != -74) {
-          ln.k(-24);
+          ln.clearDeclaredStaticReferences(-24);
           bo.a(bh.i(81), (byte) -12);
           return;
         }

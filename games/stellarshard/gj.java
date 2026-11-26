@@ -9,7 +9,7 @@ abstract class gj extends DualLinkNode {
     static String field_s;
     static int field_t;
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = 82 / ((param0 - 55) / 58);
         field_r = null;
         field_w = null;
@@ -61,7 +61,7 @@ abstract class gj extends DualLinkNode {
         try {
           var4_int = param3.c((byte) 48);
           if (param1 != 0) {
-            gj.d((byte) -22);
+            gj.clearDeclaredStaticReferences((byte) -22);
           }
           var5 = param0.c((byte) 39);
           if (param0.x + (double)var5 > param3.x - (double)var4_int &&

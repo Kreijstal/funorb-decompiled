@@ -41,7 +41,7 @@ final class wb extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         if (param0 != 0) {
           field_q = (String) null;

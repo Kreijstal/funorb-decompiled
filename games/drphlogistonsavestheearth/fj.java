@@ -6,7 +6,7 @@ final class fj extends IntrusiveNode {
     static volatile int field_j;
     static String[] field_i;
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         if (param0 <= 33) {
           field_i = (String[]) null;

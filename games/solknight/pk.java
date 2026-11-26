@@ -325,7 +325,7 @@ final class pk extends kj {
         return;
     }
 
-    public static void j(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         int var1 = 118 % ((param0 + 39) / 46);
         field_X = null;
         field_Y = null;

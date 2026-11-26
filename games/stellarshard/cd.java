@@ -60,7 +60,7 @@ final class cd extends rg {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_L = null;
         field_P = null;
         int var1 = -117 % ((71 - param0) / 50);

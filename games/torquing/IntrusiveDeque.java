@@ -34,7 +34,7 @@ final class IntrusiveDeque {
             return stackIn_9_0;
           }
           if (param0 > -102) {
-            IntrusiveDeque.d(13);
+            IntrusiveDeque.clearStaticReferences(13);
           }
           if (param1.equals("J")) {
             stackIn_14_0 = Long.TYPE;
@@ -238,9 +238,9 @@ final class IntrusiveDeque {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 25) {
-          IntrusiveDeque.d(19);
+          IntrusiveDeque.clearStaticReferences(19);
           field_c = null;
           return;
         }

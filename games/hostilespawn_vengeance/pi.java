@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pi {
-    static bd field_b;
-    static bd[] field_a;
-    static bd field_c;
+    static RgbSprite field_b;
+    static RgbSprite[] field_a;
+    static RgbSprite field_c;
 
     final static int a(int param0, int param1, byte[] param2) {
         RuntimeException var3 = null;
@@ -35,11 +35,11 @@ final class pi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-          pi.a(-10);
+          pi.clearStaticReferences(-10);
           field_c = null;
           return;
         }
@@ -64,7 +64,7 @@ final class pi {
           rl.a(param2, var7, param1 + 746031541);
           return var7;
         }
-        field_b = (bd) null;
+        field_b = (RgbSprite) null;
         var7.field_q = param0;
         var7.field_j = param3;
         var7.field_h = param4;
@@ -74,6 +74,6 @@ final class pi {
     }
 
     static {
-        field_a = new bd[3];
+        field_a = new RgbSprite[3];
     }
 }

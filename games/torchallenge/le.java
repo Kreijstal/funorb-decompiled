@@ -11,7 +11,7 @@ final class le {
     static String field_c;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_f = null;
         if (param0) {
@@ -21,7 +21,7 @@ final class le {
           field_e = null;
           return;
         }
-        le.a(true);
+        le.clearStaticReferences(true);
         field_a = null;
         field_c = null;
         field_d = null;

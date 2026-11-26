@@ -16,7 +16,7 @@ final class ue {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        dd[] var17 = null;
+        RgbSprite[] var17 = null;
         int[] var18 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -30,8 +30,8 @@ final class ue {
               if (param5 == -117) {
                 return;
               }
-              var17 = (dd[]) null;
-              ue.a((byte) 49, (dd[]) null);
+              var17 = (RgbSprite[]) null;
+              ue.a((byte) 49, (RgbSprite[]) null);
               return;
             }
             var18 = param9;
@@ -61,7 +61,7 @@ final class ue {
         }
     }
 
-    final static void a(byte param0, dd[] param1) {
+    final static void a(byte param0, RgbSprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;

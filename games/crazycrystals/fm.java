@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fm extends pn {
-    static dl[] field_s;
+    static RgbSprite[] field_s;
     private int[] field_w;
     private int[] field_x;
     static mk field_y;
@@ -95,7 +95,7 @@ final class fm extends pn {
         return true;
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -232,9 +232,9 @@ final class fm extends pn {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -80) {
-          fm.f(-18);
+          fm.clearStaticReferences(-18);
         }
         field_s = null;
         field_o = null;

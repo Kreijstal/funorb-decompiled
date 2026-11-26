@@ -17,13 +17,13 @@ final class ri {
     }
 
     final static void a(byte param0) {
-        kc var1 = null;
-        kc var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = Main.field_T;
         int var3Lifetime1;
         try {
-          var1 = new kc(540, 140);
+          var1 = new RgbSprite(540, 140);
           dl.a(-78, var1);
           jb.b();
           SoftwareRasterizer.clearRaster();

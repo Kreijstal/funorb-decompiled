@@ -5,7 +5,7 @@ import java.util.*;
 
 class g extends lk implements u {
     static String field_B;
-    static kc[] field_C;
+    static RgbSprite[] field_C;
     static int[][] field_y;
     IntrusiveDeque field_z;
     static int field_A;
@@ -68,7 +68,7 @@ class g extends lk implements u {
 
     final boolean d(int param0) {
         if (param0 < 44) {
-          field_C = (kc[]) null;
+          field_C = (RgbSprite[]) null;
         }
         return null != this.i(-1) ? true : false;
     }
@@ -150,12 +150,12 @@ class g extends lk implements u {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_C = null;
         field_y = (int[][]) null;
         field_B = null;
         if (!param0) {
-          g.b(true);
+          g.clearStaticReferences(true);
         }
     }
 

@@ -173,7 +173,7 @@ final class ml extends dk {
         this.field_H.a(this.field_M, this.field_J + var5 + var7, var6 + this.field_J, -this.field_J + this.field_L, -(2 * this.field_J) + this.field_j, this.field_G, -1, !this.field_E ? 2 : 0, 1, this.field_H.field_H);
     }
 
-    final static void a(int param0, int param1, dd[] param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, int param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

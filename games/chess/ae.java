@@ -11,23 +11,23 @@ final class ae extends RuntimeException {
     static String field_d;
     static String field_i;
     static int field_k;
-    static km[][] field_b;
+    static RgbSprite[][] field_b;
     Throwable field_g;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_a = null;
         field_c = null;
         field_j = null;
         field_i = null;
         if (param0 >= 108) {
-          field_b = (km[][]) null;
+          field_b = (RgbSprite[][]) null;
           field_d = null;
           field_f = null;
           return;
         }
-        ae.a(83);
-        field_b = (km[][]) null;
+        ae.clearStaticReferences(83);
+        field_b = (RgbSprite[][]) null;
         field_d = null;
         field_f = null;
     }

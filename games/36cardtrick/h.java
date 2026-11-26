@@ -109,16 +109,16 @@ final class h extends hl {
         return this.field_H.a((byte) 123);
     }
 
-    final static kc[] b(int param0, int param1, int param2, int param3, int param4) {
-        kc[] var6 = new kc[9];
-        kc[] var5 = var6;
-        kc dupTemp$0 = MouseWheelInput.a(param0, -127, param1);
+    final static RgbSprite[] b(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = MouseWheelInput.a(param0, -127, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        kc dupTemp$1 = MouseWheelInput.a(param0, -126, param4);
+        RgbSprite dupTemp$1 = MouseWheelInput.a(param0, -126, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -126,7 +126,7 @@ final class h extends hl {
           var6[4] = MouseWheelInput.a(64, -126, param3);
         }
         if (param2 != 15762) {
-          return (kc[]) null;
+          return (RgbSprite[]) null;
         }
         return var5;
     }
@@ -196,7 +196,7 @@ final class h extends hl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_E = null;
         if (param0 != -26526) {
           field_I = (fe) null;

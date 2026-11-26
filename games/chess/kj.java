@@ -17,7 +17,7 @@ final class kj {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param2 != 4239) {
-          kj.a((byte) -55);
+          kj.clearStaticReferences((byte) -55);
           if (GzipInflater.field_h != null) {
             var3 = GzipInflater.field_h.b(param0, (byte) -95);
             if (var3 == -2) {
@@ -80,7 +80,7 @@ final class kj {
         return var5;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -16 % ((param0 + 18) / 61);
         field_f = null;
         field_g = null;
@@ -123,7 +123,7 @@ final class kj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

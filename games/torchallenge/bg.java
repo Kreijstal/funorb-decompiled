@@ -15,7 +15,7 @@ final class bg extends ic {
     static int[][] field_I;
     static float field_G;
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

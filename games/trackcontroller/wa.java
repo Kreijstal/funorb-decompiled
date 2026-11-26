@@ -9,7 +9,7 @@ final class wa extends IntrusiveNode {
     long field_l;
     byte[] field_m;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_k = null;
         field_j = null;

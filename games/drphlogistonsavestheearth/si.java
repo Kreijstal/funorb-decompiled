@@ -7,7 +7,7 @@ abstract class si extends vg implements ba {
     static db field_A;
     vg field_z;
     static he[] field_G;
-    static nh field_F;
+    static RgbSprite field_F;
     static boolean[] field_C;
     static vj field_E;
     static int field_B;
@@ -238,7 +238,7 @@ abstract class si extends vg implements ba {
         if (param0 == 3) {
           return null != this.field_z ? this.field_z.d(3) : 0;
         }
-        field_F = (nh) null;
+        field_F = (RgbSprite) null;
         return null != this.field_z ? this.field_z.d(3) : 0;
     }
 

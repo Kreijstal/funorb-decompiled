@@ -9,7 +9,7 @@ final class lb {
     static int field_b;
     static String[] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_e = null;

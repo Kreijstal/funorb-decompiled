@@ -68,7 +68,7 @@ final class sa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 63 % ((-74 - param0) / 49);
         field_h = null;
     }
@@ -87,7 +87,7 @@ final class sa {
           int var8 = SoftwareRasterizer.stride >> 2;
           int var9 = this.field_b.measureTextWidth(param1);
           if (param3 != 27201) {
-            sa.a(51);
+            sa.clearStaticReferences(51);
           }
           int var10 = this.field_b.maxDescent + this.field_b.maxAscent;
           int var11 = 1;

@@ -133,7 +133,7 @@ final class wp {
               if (var4 == lb.field_l.field_c) {
                 var5 = jn.field_i;
               } else {
-                var5 = mc.field_s;
+                var5 = SpriteGeometry.field_s;
               }
             }
             var6 = je.field_i[var3];

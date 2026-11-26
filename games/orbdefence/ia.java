@@ -22,7 +22,7 @@ abstract class ia {
         return stackIn_9_0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 67 / ((66 - param0) / 58);
         field_a = null;
         field_j = null;

@@ -104,16 +104,16 @@ final class af {
         var1.unlink(-16175);
     }
 
-    final static nh[] a(int param0, int param1, int param2, byte param3, int param4) {
-        nh[] var6 = new nh[9];
-        nh[] var5 = var6;
-        nh dupTemp$0 = mi.a(param1, (byte) -96, param0);
+    final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = mi.a(param1, (byte) -96, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        nh dupTemp$1 = mi.a(param1, (byte) -85, param2);
+        RgbSprite dupTemp$1 = mi.a(param1, (byte) -85, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -123,7 +123,7 @@ final class af {
           }
           return var5;
         }
-        return (nh[]) null;
+        return (RgbSprite[]) null;
     }
 
     static {

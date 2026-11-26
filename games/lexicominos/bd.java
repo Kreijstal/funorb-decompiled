@@ -9,7 +9,7 @@ final class bd extends IntrusiveNode {
     static int[] field_m;
     static be[] field_i;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_i = null;
         field_m = null;

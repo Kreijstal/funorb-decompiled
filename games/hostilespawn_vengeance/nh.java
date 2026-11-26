@@ -14,7 +14,7 @@ final class nh extends fc {
     private int field_I;
     private int field_F;
     static we field_P;
-    static bd field_C;
+    static RgbSprite field_C;
 
     final String e(int param0) {
         int var2 = this.field_A.field_u ? 1 : 0;

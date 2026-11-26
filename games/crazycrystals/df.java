@@ -7,10 +7,10 @@ final class df {
     static IntrusiveDeque field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -20012) {
-          df.a(-77);
+          df.clearStaticReferences(-77);
           field_b = null;
           return;
         }

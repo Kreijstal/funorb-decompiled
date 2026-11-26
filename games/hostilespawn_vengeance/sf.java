@@ -5,11 +5,11 @@ final class sf extends ig implements sk {
     private bg field_W;
     private int field_Z;
     static boolean field_U;
-    static bd field_ab;
+    static RgbSprite field_ab;
     static PcmSample[] field_V;
     static int[] field_X;
     static String field_Y;
-    static bd field_T;
+    static RgbSprite field_T;
 
     public final bg a(byte param0) {
         int var2 = -60 % ((param0 - 35) / 39);
@@ -20,7 +20,7 @@ final class sf extends ig implements sk {
         try {
           this.field_W = param0;
           if (param1 >= -37) {
-            field_ab = (bd) null;
+            field_ab = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "sf.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cl extends IntrusiveNode {
-    static bd field_j;
+    static RgbSprite field_j;
     static String field_h;
     static ji field_o;
     static int field_l;

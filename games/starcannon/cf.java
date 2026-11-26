@@ -13,7 +13,7 @@ final class cf extends qf {
     static boolean field_r;
     static String field_s;
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_p = null;
         field_k = null;
         if (param0 != 1) {

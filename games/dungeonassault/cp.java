@@ -15,7 +15,7 @@ final class cp extends gd {
         int var5;
         int var6;
         int var7;
-        cn var8;
+        RgbSprite var8;
         int var9;
         int var10;
         if (param1 != 8187) {
@@ -66,13 +66,13 @@ final class cp extends gd {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        cn var11 = null;
-        cn var12 = null;
-        cn var13 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         int var14 = 0;
         int var15 = 0;
-        cn var16 = null;
-        cn var17 = null;
+        RgbSprite var16 = null;
+        RgbSprite var17 = null;
         String var19 = null;
         int var15Lifetime1;
         try {
@@ -95,9 +95,9 @@ final class cp extends gd {
           }
           var9 = stackIn_13_0;
           var10 = var8 | var9;
-          var11 = new cn(140, var7);
-          var12 = new cn(140, var7);
-          var13 = new cn(140, var7);
+          var11 = new RgbSprite(140, var7);
+          var12 = new RgbSprite(140, var7);
+          var13 = new RgbSprite(140, var7);
           jh.a(var11);
           SoftwareRasterizer.clearRaster();
           var14 = 0;
@@ -200,13 +200,13 @@ final class cp extends gd {
           uj.field_d = param5;
           lj.field_u = param3;
           ld.field_c = param0;
-          en.field_b = new cn[param4.length];
+          en.field_b = new RgbSprite[param4.length];
           var7 = 0;
           if (param2 != -36) {
             cp.f(104, 12, -116);
           }
           while (var7 < param4.length) {
-            en.field_b[var7] = new cn(317, 34);
+            en.field_b[var7] = new RgbSprite(317, 34);
             var7++;
           }
           PacketBuffer.field_l = param4;

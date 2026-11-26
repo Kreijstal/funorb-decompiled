@@ -22,9 +22,9 @@ final class pk implements Runnable {
         return this.field_d;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -13541) {
-          pk.c(46);
+          pk.clearStaticReferences(46);
           field_f = null;
           return;
         }

@@ -13,12 +13,12 @@ final class vk {
         field_e = null;
         field_c = null;
         if (param0 != 3) {
-          tg[] var2 = (tg[]) null;
-          vk.a(-114, (tg[]) null, -39, 70, 118, -53, -38, 23, -5, (tj) null, (tj) null, (tg[]) null, 94, -108);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          vk.a(-114, (RgbSprite[]) null, -39, 70, 118, -53, -38, 23, -5, (tj) null, (tj) null, (RgbSprite[]) null, 94, -108);
         }
     }
 
-    final static void a(int param0, tg[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, tj param9, tj param10, tg[] param11, int param12, int param13) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, tj param9, tj param10, RgbSprite[] param11, int param12, int param13) {
         try {
           if (param7 != 3) {
             field_a = true;

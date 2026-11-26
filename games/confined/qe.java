@@ -7,17 +7,17 @@ final class qe extends am {
     private boolean field_L;
     private boolean field_P;
     private int field_K;
-    static nf[] field_O;
+    static RgbSprite[] field_O;
     private int field_R;
     private int field_M;
-    static nf field_J;
+    static RgbSprite field_J;
     static int field_Q;
     private int field_N;
 
     final void a(int param0, int param1, int param2, fj param3, int param4, int param5) {
         try {
           if (param0 > -18) {
-            field_O = (nf[]) null;
+            field_O = (RgbSprite[]) null;
           }
           super.a(-26, param1, param2, param3, param4, param5);
           this.field_o = 0;
@@ -112,7 +112,7 @@ final class qe extends am {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 44) {
           return;
         }
@@ -195,7 +195,7 @@ final class qe extends am {
           if (param1 == 11579568) {
             return;
           }
-          field_J = (nf) null;
+          field_J = (RgbSprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

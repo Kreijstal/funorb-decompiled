@@ -74,16 +74,16 @@ abstract class wb {
 
     abstract void c(int param0);
 
-    final static db[] a(int param0, int param1, int param2, int param3, int param4) {
-        db[] var6 = new db[9];
-        db[] var5 = var6;
-        db dupTemp$0 = gf.a((byte) -76, param2, param0);
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = gf.a((byte) -76, param2, param0);
         var6[6] = dupTemp$0;
         var5[param4] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        db dupTemp$1 = gf.a((byte) -76, param2, param3);
+        RgbSprite dupTemp$1 = gf.a((byte) -76, param2, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

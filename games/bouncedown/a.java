@@ -3,7 +3,7 @@
  */
 final class a {
     int field_d;
-    static tg field_f;
+    static RgbSprite field_f;
     static char[] field_b;
     static java.applet.Applet field_c;
     static vf field_e;
@@ -47,9 +47,9 @@ final class a {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 249) {
-          a.a(107);
+          a.clearStaticReferences(107);
         }
         field_c = null;
         field_b = null;

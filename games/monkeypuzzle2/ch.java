@@ -181,7 +181,7 @@ final class ch {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         int var1 = -9 % ((param0 - 10) / 63);
         field_d = null;

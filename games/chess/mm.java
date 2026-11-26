@@ -102,16 +102,16 @@ final class mm {
                     if (var19 == 0) {
                       if (var18 >= 0 &&
                         var18 < nh.field_o) {
-                        fk.a(0, var19, param4, param2, var17Lifetime2 + var18);
+                        SpriteGeometry.a(0, var19, param4, param2, var17Lifetime2 + var18);
                       }
                     } else {
                       if (var19 + var18 >= nh.field_o) {
                         var19 = nh.field_o - var18 - 1;
                       }
                       if (0 > var18) {
-                        fk.a(0, var18 + var19, param4, param2, var17Lifetime2);
+                        SpriteGeometry.a(0, var18 + var19, param4, param2, var17Lifetime2);
                       } else {
-                        fk.a(0, var19, param4, param2, var17Lifetime2 + var18);
+                        SpriteGeometry.a(0, var19, param4, param2, var17Lifetime2 + var18);
                       }
                     }
                   }
@@ -182,14 +182,14 @@ final class mm {
                     var18Lifetime1 = -1 + (-var17Lifetime1 + nh.field_o);
                   }
                   if (var17Lifetime1 >= 0) {
-                    fk.a(0, var18Lifetime1, param4, param2, var17Lifetime1 + var16Lifetime1);
+                    SpriteGeometry.a(0, var18Lifetime1, param4, param2, var17Lifetime1 + var16Lifetime1);
                   } else {
-                    fk.a(0, var18Lifetime1 + var17Lifetime1, param4, param2, var16Lifetime1);
+                    SpriteGeometry.a(0, var18Lifetime1 + var17Lifetime1, param4, param2, var16Lifetime1);
                   }
                 } else {
                   if (0 <= var17Lifetime1 &&
                     var17Lifetime1 < nh.field_o) {
-                    fk.a(0, var18Lifetime1, param4, param2, var16Lifetime1 + var17Lifetime1);
+                    SpriteGeometry.a(0, var18Lifetime1, param4, param2, var16Lifetime1 + var17Lifetime1);
                   }
                 }
               }
@@ -214,7 +214,7 @@ final class mm {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -295,7 +295,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         int var1 = 79 / ((-81 - param0) / 38);
     }
@@ -438,7 +438,7 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void a(int param0, boolean param1, int param2) {
         this.c(-128, param2, param0);
         if (!param1) {
-          MidiPcmStream.f(-103);
+          MidiPcmStream.clearStaticReferences(-103);
         }
     }
 

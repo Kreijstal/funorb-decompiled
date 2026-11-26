@@ -3,7 +3,7 @@
  */
 final class df {
     private long[] field_h;
-    static km field_e;
+    static RgbSprite field_e;
     private int field_b;
     private long[] field_d;
     private long[] field_l;
@@ -16,12 +16,12 @@ final class df {
     private byte[] field_j;
     private byte[] field_f;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_i = null;
         field_e = null;
         if (param0 != -6) {
-          df.b(-105);
+          df.clearStaticReferences(-105);
         }
         field_c = null;
     }
@@ -126,7 +126,7 @@ final class df {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class df {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -296,13 +296,13 @@ final class df {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
         if (!param0) {
-          df.b(43);
+          df.clearStaticReferences(43);
         }
         pg.a((byte) -18, ng.field_c);
     }

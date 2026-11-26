@@ -106,7 +106,7 @@ final class AccountCreationResultPanel extends ha implements ql {
         this.showAccountCreationResult(lh.createAccountErrorResult(true, fe.field_e, 248), 9, true);
     }
 
-    public static void r(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != -249) {
           field_kb = (String) null;
           field_kb = null;

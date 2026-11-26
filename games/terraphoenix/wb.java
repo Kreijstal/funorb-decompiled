@@ -22,12 +22,12 @@ final class wb extends IOException {
           lb.field_b = -1;
           return;
         }
-        wb.a(27);
+        wb.clearStaticReferences(27);
         cc.field_j = null;
         lb.field_b = -1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_h = null;
         field_b = null;

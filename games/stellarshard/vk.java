@@ -27,7 +27,7 @@ abstract class vk {
             param8--;
             if (param8 < 0) {
               if (param5 < 44) {
-                vk.a((byte) -20);
+                vk.clearDeclaredStaticReferences((byte) -20);
               }
               return;
             }
@@ -265,11 +265,11 @@ abstract class vk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_d = null;
         field_c = null;
         if (param0 < 103) {
-          vk.a((byte) 93);
+          vk.clearDeclaredStaticReferences((byte) 93);
         }
     }
 

@@ -30,7 +30,7 @@ class ag extends IntrusiveNode {
         return false;
     }
 
-    final static bd d(byte param0) {
+    final static RgbSprite d(byte param0) {
         int var1;
         Object var3;
         int[] var5_ref_int__;
@@ -74,7 +74,7 @@ class ag extends IntrusiveNode {
               }
               break;
             }
-            var3 = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
+            var3 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
           }
         } else {
           regionExit2: {
@@ -107,11 +107,11 @@ class ag extends IntrusiveNode {
               }
               break;
             }
-            var3 = new bd(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
+            var3 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
           }
         }
         uj.d(121);
-        return (bd) (var3);
+        return (RgbSprite) (var3);
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3) {

@@ -12,7 +12,7 @@ final class ji {
     private double field_h;
     private int field_c;
     static int field_i;
-    static dd[] field_f;
+    static RgbSprite[] field_f;
     private double field_j;
 
     final boolean a(boolean param0) {
@@ -46,7 +46,7 @@ final class ji {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = 104 % ((-63 - param0) / 59);
         field_f = null;
@@ -85,7 +85,7 @@ final class ji {
 
     final static void a(byte param0) {
         if (param0 >= -57) {
-          ji.a(77);
+          ji.clearStaticReferences(77);
         }
     }
 

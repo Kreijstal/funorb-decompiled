@@ -75,14 +75,14 @@ final class eh {
         }
     }
 
-    private final cn a(byte param0, int param1) {
+    private final RgbSprite a(byte param0, int param1) {
         int var3_int = 0;
-        cn var3;
+        RgbSprite var3;
         int var5;
         int var4;
-        cn var4_ref_cn;
-        cn var6;
-        cn var3Lifetime1;
+        RgbSprite var4_ref_cn;
+        RgbSprite var6;
+        RgbSprite var3Lifetime1;
         var5 = DungeonAssault.field_K;
         if (this.field_l == null) {
           this.field_l = new il[this.field_c];
@@ -110,18 +110,18 @@ final class eh {
         return var3Lifetime1;
     }
 
-    final cn a(int param0, int param1, int param2, int param3) {
+    final RgbSprite a(int param0, int param1, int param2, int param3) {
         fl var5;
         Object var6;
         int var7;
-        cn var8;
+        RgbSprite var8;
         var7 = DungeonAssault.field_K;
         if (param0 == this.field_g &&
           this.field_m == param2) {
           return this.a((byte) -94, param1);
         }
         if (param3 != 0) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         if (this.field_n == null) {
           this.field_n = new IntrusiveDeque();
@@ -148,7 +148,7 @@ final class eh {
           var6 = var8;
           var5.field_k[param1] = new il(var8);
         }
-        return (cn) (var6);
+        return (RgbSprite) (var6);
     }
 
     static {

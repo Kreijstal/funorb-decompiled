@@ -5,11 +5,11 @@ abstract class em {
     static int field_e;
     static int[] field_b;
     static String field_c;
-    static nf[] field_d;
+    static RgbSprite[] field_d;
     static int field_a;
     static String[] field_f;
 
-    final static nf[] a(int param0, int param1, int param2, byte param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 == 2) {
           return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
         }

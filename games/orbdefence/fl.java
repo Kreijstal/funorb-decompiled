@@ -4,7 +4,7 @@
 final class fl {
     static byte[][] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 10 / ((-41 - param0) / 43);
         field_a = (byte[][]) null;
     }

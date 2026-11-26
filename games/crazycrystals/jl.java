@@ -5,7 +5,7 @@ final class jl {
     static sj field_g;
     static String[] field_a;
     static String field_f;
-    static dl field_b;
+    static RgbSprite field_b;
     static int[] field_c;
     static int field_d;
     static ai field_e;
@@ -142,7 +142,7 @@ final class jl {
             if (decompiledRegionSelector0 == 0) {
               kd.field_n.position = kd.field_n.position + 24;
               if (param0 <= 26) {
-                field_b = (dl) null;
+                field_b = (RgbSprite) null;
               }
               return;
             }
@@ -151,7 +151,7 @@ final class jl {
           if (param0 > 26) {
             return;
           }
-          field_b = (dl) null;
+          field_b = (RgbSprite) null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

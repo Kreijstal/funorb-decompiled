@@ -21,7 +21,7 @@ final class rd extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_p = null;
         field_j = null;
         field_i = null;

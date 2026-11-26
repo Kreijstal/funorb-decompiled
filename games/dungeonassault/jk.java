@@ -157,7 +157,7 @@ final class jk extends hf {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_Bb = null;
         field_Cb = null;
         if (param0 != -18554) {

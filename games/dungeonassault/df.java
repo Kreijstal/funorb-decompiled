@@ -3,8 +3,8 @@
  */
 final class df {
     static String field_g;
-    static cn field_c;
-    static cn field_e;
+    static RgbSprite field_c;
+    static RgbSprite field_e;
     static String field_a;
     static String field_b;
     static String field_d;

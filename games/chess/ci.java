@@ -10,13 +10,13 @@ class ci extends ei {
     int field_bb;
     int field_cb;
     private boolean field_B;
-    km field_hb;
+    RgbSprite field_hb;
     private int field_yb;
     int field_kb;
-    km[] field_D;
+    RgbSprite[] field_D;
     int field_G;
     int field_eb;
-    km[] field_Q;
+    RgbSprite[] field_Q;
     int field_N;
     private int field_C;
     int field_O;
@@ -30,27 +30,27 @@ class ci extends ei {
     static String field_J;
     boolean field_Db;
     private int field_lb;
-    km[] field_Ab;
+    RgbSprite[] field_Ab;
     String field_S;
     int field_P;
     int field_R;
     private int field_E;
     int field_fb;
-    km field_nb;
+    RgbSprite field_nb;
     int field_M;
     int field_L;
     int field_wb;
-    km[] field_ab;
+    RgbSprite[] field_ab;
     boolean field_rb;
     boolean field_gb;
     int field_vb;
     static AccountRequestState field_ub;
-    km field_jb;
-    km field_Bb;
-    km field_sb;
+    RgbSprite field_jb;
+    RgbSprite field_Bb;
+    RgbSprite field_sb;
     boolean field_tb;
     private int field_X;
-    km[] field_Z;
+    RgbSprite[] field_Z;
     boolean field_w;
     int field_ib;
     int field_mb;
@@ -245,7 +245,7 @@ class ci extends ei {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -259,8 +259,8 @@ class ci extends ei {
         int var13;
         int var14;
         int var15;
-        km[] var16;
-        km var17;
+        RgbSprite[] var16;
+        RgbSprite var17;
         int var18;
         int var19;
         int var20;
@@ -281,7 +281,7 @@ class ci extends ei {
         var13 = SoftwareRasterizer.field_a;
         var14 = SoftwareRasterizer.field_j;
         if (param6 < 49) {
-          this.field_Ab = (km[]) null;
+          this.field_Ab = (RgbSprite[]) null;
         }
         var15 = SoftwareRasterizer.field_b;
         SoftwareRasterizer.intersectClip(this.field_U, this.field_wb, this.field_M + this.field_U, this.field_pb + this.field_wb);
@@ -511,7 +511,7 @@ class ci extends ei {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -561,7 +561,7 @@ class ci extends ei {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "ci.KA(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1_ref), "ci.KA(" + param0 + ')');
         }
     }
 
@@ -784,7 +784,7 @@ class ci extends ei {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -866,7 +866,7 @@ class ci extends ei {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -897,7 +897,7 @@ class ci extends ei {
             this.field_db = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ci.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -102,11 +102,11 @@ final class kk extends IntrusiveNode {
     final void a(byte param0) {
         this.field_q = null;
         if (param0 != -97) {
-          kk.a(95);
+          kk.clearDeclaredStaticReferences(95);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         field_t = null;
         field_s = null;

@@ -18,7 +18,7 @@ final class uc {
         int var4 = 0;
         int var5 = SolKnight.field_L ? 1 : 0;
         if (param0 > -54) {
-          uc.a(49);
+          uc.clearStaticReferences(49);
         }
         char[] var6 = new char[param2];
         char[] var3 = var6;
@@ -145,7 +145,7 @@ final class uc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_a = null;
         field_g = null;

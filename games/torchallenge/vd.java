@@ -9,7 +9,7 @@ final class vd {
     static int field_f;
     static long field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;

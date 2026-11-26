@@ -65,7 +65,7 @@ final class ke {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         int var1 = -105 % ((param0 - 50) / 49);

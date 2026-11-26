@@ -389,11 +389,11 @@ abstract class om extends qm implements he {
         this.field_w.f(param0 + 8316);
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_x = null;
         field_v = null;
         if (param0 != 122) {
-          om.e((byte) 110);
+          om.clearDeclaredStaticReferences((byte) 110);
         }
     }
 

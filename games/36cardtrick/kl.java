@@ -176,7 +176,7 @@ final class kl extends g implements cl, qh, wi {
         return oc.a(this.field_M.field_r, this, this.field_D.field_r, this.field_G.field_r, this.field_N.field_D, param0 ^ 20, var2);
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != -23573) {
           return;
         }
@@ -258,7 +258,7 @@ final class kl extends g implements cl, qh, wi {
           if (param1) {
             return;
           }
-          kl.m(86);
+          kl.clearDeclaredStaticReferences(86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

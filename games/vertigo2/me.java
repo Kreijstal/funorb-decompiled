@@ -8,12 +8,12 @@ final class me {
     static String field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 != 6457) {
-          me.a(-87);
+          me.clearStaticReferences(-87);
           field_d = null;
           return;
         }

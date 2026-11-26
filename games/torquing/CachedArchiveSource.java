@@ -131,14 +131,14 @@ final class CachedArchiveSource extends ArchiveSource {
         return var4;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         int var1 = 109 % ((-37 - param0) / 37);
     }
 
     final int a(int param0, int param1) {
         if (param1 != -26954) {
-          CachedArchiveSource.c(83);
+          CachedArchiveSource.clearStaticReferences(83);
         }
         nk var3 = (nk) (this.field_t.a((long)param0, (byte) 101));
         if (var3 != null) {

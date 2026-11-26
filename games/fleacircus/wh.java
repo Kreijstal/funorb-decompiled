@@ -3,7 +3,7 @@
  */
 final class wh {
     static String field_c;
-    static dd field_b;
+    static RgbSprite field_b;
     static ResourceArchive field_e;
     static int[] field_d;
     private String field_a;

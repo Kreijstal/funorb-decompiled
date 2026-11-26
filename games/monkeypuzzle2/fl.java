@@ -28,11 +28,11 @@ final class fl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != -45) {
-          fl.a((byte) 31);
+          fl.clearStaticReferences((byte) 31);
         }
     }
 

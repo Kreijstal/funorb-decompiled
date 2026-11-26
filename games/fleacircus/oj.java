@@ -24,7 +24,7 @@ final class oj extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         if (param0 < 49) {
           return;

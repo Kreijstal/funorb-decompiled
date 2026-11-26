@@ -7,7 +7,7 @@ final class BoundedRandomAccessFile {
     static String field_c;
     private RandomAccessFile field_g;
     static String field_e;
-    static cn field_a;
+    static RgbSprite field_a;
     private long field_d;
     private long field_b;
     static String[] field_f;
@@ -39,20 +39,20 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static cn a(boolean param0) {
+    final static RgbSprite a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var2;
         int var5;
-        cn var6;
+        RgbSprite var6;
         int var2Lifetime1;
         var5 = DungeonAssault.field_K;
-        var6 = new cn(20, 20);
+        var6 = new RgbSprite(20, 20);
         jh.a(var6);
         SoftwareRasterizer.fillRectangle(0, 0, 20, 20, 16711680);
         SoftwareRasterizer.fillCircle(10, 10, 6, 0);
         if (!param0) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         for (var2 = 0; var2 < 20; var2++) {
           SoftwareRasterizer.drawHorizontalLine(-var2 + 18, var2, 4, 16711680);

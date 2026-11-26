@@ -3,7 +3,7 @@
  */
 final class rd {
     private ResourceArchive field_f;
-    static bd field_a;
+    static RgbSprite field_a;
     static boolean field_d;
     private ResourceArchive field_c;
     static String field_g;

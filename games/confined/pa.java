@@ -12,7 +12,7 @@ final class pa {
         return param0 ^ param1;
     }
 
-    final static void a(double param0, double param1, byte param2, int param3, double param4, double param5, nf param6, double param7, vg param8) {
+    final static void a(double param0, double param1, byte param2, int param3, double param4, double param5, RgbSprite param6, double param7, vg param8) {
         double var14_double = 0.0;
         RuntimeException var14 = null;
         double var16 = 0.0;
@@ -25,7 +25,7 @@ final class pa {
         int var28 = 0;
         double var29 = 0.0;
         int var31 = 0;
-        nf stackIn_8_0;
+        RgbSprite stackIn_8_0;
         int stackIn_8_1;
         int stackIn_8_2;
         int stackIn_8_3;
@@ -58,7 +58,7 @@ final class pa {
           if (var31 <= 0) {
             return;
           }
-          stackIn_8_0 = (nf) (param6);
+          stackIn_8_0 = (RgbSprite) (param6);
           stackIn_8_1 = var26 - var28;
           stackIn_8_2 = -var28 + var27;
           stackIn_8_3 = 2 * var28;
@@ -68,7 +68,7 @@ final class pa {
           } else {
             stackIn_9_5 = var31;
           }
-          ((nf) (Object) stackIn_8_0).d(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_9_5);
+          ((RgbSprite) (Object) stackIn_8_0).d(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_9_5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class pa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         int var1 = 5 / ((param0 + 16) / 38);
         field_d = null;

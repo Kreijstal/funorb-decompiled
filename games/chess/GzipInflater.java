@@ -7,7 +7,7 @@ final class GzipInflater {
     static volatile long field_g;
     static int[] field_b;
     static int field_d;
-    static km[][] field_e;
+    static RgbSprite[][] field_e;
     static int[] field_f;
     private java.util.zip.Inflater field_a;
     static pc field_h;
@@ -109,7 +109,7 @@ final class GzipInflater {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class GzipInflater {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -178,7 +178,7 @@ final class GzipInflater {
     }
 
     public static void clearStaticReferences(int param0) {
-        field_e = (km[][]) null;
+        field_e = (RgbSprite[][]) null;
         field_h = null;
         field_b = null;
         field_f = null;

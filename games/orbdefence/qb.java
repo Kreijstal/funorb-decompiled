@@ -19,9 +19,9 @@ final class qb {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -27) {
-          qb.a((byte) -109);
+          qb.clearStaticReferences((byte) -109);
           field_b = null;
           field_a = null;
           return;

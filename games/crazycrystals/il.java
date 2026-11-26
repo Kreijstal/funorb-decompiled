@@ -4,7 +4,7 @@
 final class il extends l {
     private int field_f;
     private RawPcmStream field_g;
-    static dl field_e;
+    static RgbSprite field_e;
     static am[] field_h;
 
     final l a(int param0) {
@@ -203,7 +203,7 @@ final class il extends l {
         if (param5) {
           field_h = (am[]) null;
         }
-        dl[] var6 = h.field_d;
+        RgbSprite[] var6 = h.field_d;
         if (param1) {
           var6 = DirectByteStorage.field_c;
         }

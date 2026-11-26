@@ -207,7 +207,7 @@ class UiComponentPart025 extends InteractiveComponent {
         return null;
     }
 
-    public static void performAction1366(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         rgbSpriteState0045 = null;
         nodeDequeState0027 = null;
         stringState0449 = null;

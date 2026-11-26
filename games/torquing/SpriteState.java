@@ -116,11 +116,11 @@ abstract class SpriteState extends DualLinkNode {
         SoftwareRasterizer.drawVerticalLine(param3 + 5, param0 + 2, 4, param1);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_x = null;
         field_q = null;
         if (param0) {
-          SpriteState.a(true);
+          SpriteState.clearStaticReferences(true);
         }
     }
 

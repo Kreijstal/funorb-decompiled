@@ -7,13 +7,13 @@ final class TileEffectAnimation extends AnimationNode {
     static String[][] field_j;
     private TileEffect field_l;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = (String[][]) null;
         field_k = null;
         if (param0 == 9) {
           return;
         }
-        TileEffectAnimation.d((byte) 101);
+        TileEffectAnimation.clearStaticReferences((byte) 101);
     }
 
     final boolean isFinished(byte param0) {

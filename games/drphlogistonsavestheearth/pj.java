@@ -15,7 +15,7 @@ class pj extends vg implements ba {
     static AccountRequestState field_D;
     static boolean field_F;
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_A = null;
         field_B = (he[][]) null;
         field_G = null;

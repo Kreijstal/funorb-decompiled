@@ -145,7 +145,7 @@ class dj extends ng {
         }
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 65) {
           return;
         }

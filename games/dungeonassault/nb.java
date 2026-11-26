@@ -4,7 +4,7 @@
 final class nb {
     static la[] field_a;
     static String field_c;
-    static cn field_d;
+    static RgbSprite field_d;
     static int[] field_e;
     static String field_b;
 

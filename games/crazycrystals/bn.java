@@ -109,7 +109,7 @@ final class bn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_g = null;
         if (param0 == -3) {
@@ -117,7 +117,7 @@ final class bn {
           field_i = null;
           return;
         }
-        bn.a((byte) 80);
+        bn.clearStaticReferences((byte) 80);
         field_f = null;
         field_i = null;
     }

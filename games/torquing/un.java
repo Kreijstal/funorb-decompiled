@@ -25,14 +25,14 @@ final class un {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_a = null;
         field_k = null;
         field_b = null;
         field_c = null;
         if (param0 != -13524) {
-          un.b(40);
+          un.clearStaticReferences(40);
         }
     }
 

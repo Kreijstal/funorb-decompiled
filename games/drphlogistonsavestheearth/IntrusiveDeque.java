@@ -168,11 +168,11 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static nh[] b(byte param0) {
+    final static RgbSprite[] b(byte param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        nh[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -186,7 +186,7 @@ final class IntrusiveDeque {
         byte[] var21;
         int[] var22;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var1 = new nh[bd.field_M];
+        var1 = new RgbSprite[bd.field_M];
         if (param0 != -22) {
           field_g = (he[]) null;
         }
@@ -199,7 +199,7 @@ final class IntrusiveDeque {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = MouseInput.field_a[rk.a(255, (int) var21[var6])];
             }
-            var1[var2] = new nh(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var22);
+            var1[var2] = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var22);
           } else {
             var15 = ll.field_o[var2];
             var11 = var15;
@@ -211,7 +211,7 @@ final class IntrusiveDeque {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = GameAppletShell.a(rk.a(255, (int) var15[var7]) << 24, MouseInput.field_a[rk.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (nh) ((Object) new ArgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var17));
           }
         }
         oc.a((byte) -21);

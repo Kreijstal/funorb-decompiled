@@ -5,7 +5,7 @@ final class mc {
     static String field_c;
     static vf field_a;
     static String field_d;
-    static tg[] field_b;
+    static RgbSprite[] field_b;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 == 47) {
@@ -15,7 +15,7 @@ final class mc {
           field_b = null;
           return;
         }
-        field_b = (tg[]) null;
+        field_b = (RgbSprite[]) null;
         field_c = null;
         field_a = null;
         field_d = null;

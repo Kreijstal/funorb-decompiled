@@ -13,7 +13,7 @@ final class ee extends lk {
     private sp field_i;
     private byte[] field_x;
     private ob field_w;
-    static dl field_m;
+    static RgbSprite field_m;
     private int field_s;
     private byte[] field_h;
     private fc field_g;
@@ -177,7 +177,7 @@ final class ee extends lk {
           var4_int = param0.a(param1, -1);
           var5 = param0.a(-2862, param3, var4_int);
           if (param2 >= -14) {
-            field_m = (dl) null;
+            field_m = (RgbSprite) null;
           }
           stackIn_3_0 = v.a(28297, var4_int, var5, param0);
           return stackIn_3_0;
@@ -231,11 +231,11 @@ final class ee extends lk {
         return var4;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_m = null;
         if (param0 != 0) {
-          ee.d(-92);
+          ee.clearStaticReferences(-92);
         }
     }
 

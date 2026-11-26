@@ -6,7 +6,7 @@ final class rh {
     static String field_a;
     static int[] field_c;
     static int[] field_e;
-    static hj field_b;
+    static RgbSprite field_b;
 
     final static void a(byte param0, int param1, boolean param2) {
         int var3 = 99 / ((param0 - 75) / 33);
@@ -18,7 +18,7 @@ final class rh {
         nc.field_cb[kk.field_S].a(param2, (byte) 53);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > 20) {
           field_b = null;
           field_a = null;
@@ -27,7 +27,7 @@ final class rh {
           field_d = null;
           return;
         }
-        rh.a((byte) -94);
+        rh.clearStaticReferences((byte) -94);
         field_b = null;
         field_a = null;
         field_c = null;

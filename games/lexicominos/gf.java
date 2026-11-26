@@ -201,7 +201,7 @@ final class gf {
         }
     }
 
-    final static void a(int param0, int param1, db[] param2, int param3, int param4, byte param5) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, byte param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -515,15 +515,15 @@ final class gf {
         }
     }
 
-    final static db a(byte param0, int param1, int param2) {
+    final static RgbSprite a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Lexicominos.field_L ? 1 : 0;
         if (param0 != -76) {
           java.applet.Applet var6 = (java.applet.Applet) null;
           gf.a(107, (java.net.URL) null, (java.applet.Applet) null);
         }
-        db var7 = new db(param1, param1);
-        db var3 = var7;
+        RgbSprite var7 = new RgbSprite(param1, param1);
+        RgbSprite var3 = var7;
         for (var4 = 0; var4 < var3.field_y.length; var4++) {
           var7.field_y[var4] = param2;
         }

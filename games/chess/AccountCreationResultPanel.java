@@ -32,7 +32,7 @@ final class AccountCreationResultPanel extends vn implements mj {
           ij.a(-128);
           this.k((byte) -114);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vd.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "vd.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class AccountCreationResultPanel extends vn implements mj {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class AccountCreationResultPanel extends vn implements mj {
         try {
           this.field_Ib = param1;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class AccountCreationResultPanel extends vn implements mj {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0 > -4) {
-          AccountCreationResultPanel.l((byte) -32);
+          AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -32);
           if (!this.field_P) {
             return super.g((byte) -90);
           }
@@ -153,7 +153,7 @@ final class AccountCreationResultPanel extends vn implements mj {
         return super.g((byte) -90);
     }
 
-    public static void l(byte param0) {
+    public static void discardDeclaredStaticReferences(byte param0) {
         int var1 = 57 % ((-49 - param0) / 44);
         field_Gb = null;
     }

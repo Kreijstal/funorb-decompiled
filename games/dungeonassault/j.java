@@ -159,7 +159,7 @@ final class j extends ck {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_S = null;
         int var1 = 107 / ((param0 + 61) / 50);
         field_Q = null;

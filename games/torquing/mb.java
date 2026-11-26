@@ -7,14 +7,14 @@ final class mb {
     static String field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -83) {
           field_c = null;
           field_a = null;
           field_b = (byte[][]) null;
           return;
         }
-        mb.a((byte) 97);
+        mb.clearStaticReferences((byte) 97);
         field_c = null;
         field_a = null;
         field_b = (byte[][]) null;

@@ -3,7 +3,7 @@
  */
 final class wh {
     static String field_a;
-    static bd field_e;
+    static RgbSprite field_e;
     static p[] field_b;
     static boolean field_f;
     static fa field_c;
@@ -26,7 +26,7 @@ final class wh {
         ne.field_j.a(var1 + (ac.field_a << 1), s.field_g - ac.field_g, var2 + (ac.field_g << 1), hg.field_f - ac.field_a, 5);
         rh.d((byte) -93);
         if (param0 <= 99) {
-          field_e = (bd) null;
+          field_e = (RgbSprite) null;
         }
     }
 

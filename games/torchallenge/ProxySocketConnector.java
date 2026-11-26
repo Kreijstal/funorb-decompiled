@@ -386,7 +386,7 @@ final class ProxySocketConnector extends SocketConnector {
         this.field_n = java.net.ProxySelector.getDefault();
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_m = null;
         int var1 = -103 / ((14 - param0) / 49);

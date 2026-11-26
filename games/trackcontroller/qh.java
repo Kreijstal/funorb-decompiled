@@ -12,7 +12,7 @@ final class qh {
     private int field_h;
     static boolean field_i;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 12 / ((param0 - 26) / 63);
         field_b = null;
         field_c = null;

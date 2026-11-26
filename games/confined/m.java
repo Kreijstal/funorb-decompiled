@@ -4,7 +4,7 @@
 final class m {
     private vh field_f;
     static va field_g;
-    static nf[] field_i;
+    static RgbSprite[] field_i;
     static int field_a;
     static int field_l;
     private mi field_c;
@@ -152,7 +152,7 @@ final class m {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_d = null;
         field_i = null;
@@ -161,7 +161,7 @@ final class m {
           field_h = null;
           return;
         }
-        m.a(23);
+        m.clearStaticReferences(23);
         field_h = null;
     }
 

@@ -145,20 +145,20 @@ final class dd extends rj {
         }
     }
 
-    final static cn a(byte param0, int param1, cn param2) {
+    final static RgbSprite a(byte param0, int param1, RgbSprite param2) {
         int var4 = 0;
         RuntimeException var3 = null;
         int var5 = 0;
-        cn var6 = null;
-        cn stackIn_6_0 = null;
-        cn stackIn_8_0 = null;
+        RgbSprite var6 = null;
+        RgbSprite stackIn_6_0 = null;
+        RgbSprite stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = DungeonAssault.field_K;
         try {
-          var6 = new cn(param1 * 2 + param2.field_y, 2 * param1 + param2.field_v);
+          var6 = new RgbSprite(param1 * 2 + param2.field_y, 2 * param1 + param2.field_v);
           jh.a(var6);
           SoftwareRasterizer.fillRectangle(0, 0, var6.field_y, var6.field_v, 16777215);
           for (var4 = 0; param1 > var4; var4++) {
@@ -169,7 +169,7 @@ final class dd extends rj {
           param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
           jh.b();
           if (param0 != -112) {
-            stackIn_6_0 = (cn) null;
+            stackIn_6_0 = (RgbSprite) null;
             return stackIn_6_0;
           }
           var6.field_w = param2.field_w - param1;

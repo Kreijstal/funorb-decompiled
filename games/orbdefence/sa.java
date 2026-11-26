@@ -6,8 +6,8 @@ final class sa {
     private int field_a;
     private boolean field_h;
     private int field_i;
-    hj field_e;
-    hj[] field_b;
+    RgbSprite field_e;
+    RgbSprite[] field_b;
     private int field_c;
     static String[] field_d;
     static String field_g;
@@ -125,7 +125,7 @@ final class sa {
         return this;
     }
 
-    final static void a(int param0, hj[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -196,7 +196,7 @@ final class sa {
         return pf.field_a[var4];
     }
 
-    final sa a(hj[] param0, int param1) {
+    final sa a(RgbSprite[] param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -271,7 +271,7 @@ final class sa {
           this.field_f = -1;
           return;
         }
-        this.field_e = (hj) null;
+        this.field_e = (RgbSprite) null;
         this.field_i = 0;
         this.field_a = 256;
         this.field_c = 0;

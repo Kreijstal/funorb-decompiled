@@ -6,9 +6,9 @@ final class s {
     static int field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -19) {
-          s.a(60);
+          s.clearStaticReferences(60);
           field_b = null;
           field_c = null;
           return;

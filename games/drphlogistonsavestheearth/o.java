@@ -64,9 +64,9 @@ final class o extends em {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 99) {
-          o.a((byte) 0);
+          o.clearStaticReferences((byte) 0);
         }
         field_f = null;
         field_l = null;

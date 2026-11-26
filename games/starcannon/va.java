@@ -42,7 +42,7 @@ final class va extends IntrusiveNode {
           var4 = var9;
           var5 = 0;
           if (param1 <= 59) {
-            va.b((byte) 21);
+            va.clearStaticReferences((byte) 21);
           }
           for (var6 = 0; param3 > var6; var6++) {
             var7 = 255 & param2[param0 + var6];
@@ -76,7 +76,7 @@ final class va extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         int var1 = -70 / ((8 - param0) / 59);
         field_m = null;

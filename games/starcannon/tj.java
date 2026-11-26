@@ -261,10 +261,10 @@ final class tj extends kf {
         return var1;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         if (param0 >= -113) {
-          tj.g(104);
+          tj.clearStaticReferences(104);
         }
     }
 

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class DelegatingCanvas extends java.awt.Canvas {
-    static hj field_d;
+    static RgbSprite field_d;
     static dd field_c;
     static int field_b;
     private java.awt.Component field_a;
@@ -166,7 +166,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             }
             var15Lifetime1 = wi.field_i[param6];
             if (param4 != 30979) {
-              field_d = (hj) null;
+              field_d = (RgbSprite) null;
             }
             while (param6 < param8) {
               var16Lifetime1 = var9_int >> 16;
@@ -213,7 +213,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         int var1 = -70 % ((-53 - param0) / 56);
         field_c = null;
@@ -236,7 +236,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           Throwable decompiledCaughtException = null;
           try {
             if (param1 != 5200) {
-              field_d = (hj) null;
+              field_d = (RgbSprite) null;
             }
             var6 = null;
             var7 = null;

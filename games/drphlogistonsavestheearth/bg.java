@@ -32,7 +32,7 @@ final class bg extends IntrusiveNode {
         boolean stackIn_58_0 = false;
         boolean stackIn_67_0 = false;
         RuntimeException decompiledCaughtException = null;
-        nh var1 = null;
+        RgbSprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -43,12 +43,12 @@ final class bg extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        nh var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
-        nh var11 = null;
-        nh var12 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         String var14 = null;
-        nh var16 = null;
+        RgbSprite var16 = null;
         String var17 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -92,13 +92,13 @@ final class bg extends IntrusiveNode {
             var2 = SoftwareRasterizer.field_k;
             var3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
-            var11 = new nh(sc.field_c.field_y + 4, 4 + sc.field_c.field_w);
+            var11 = new RgbSprite(sc.field_c.field_y + 4, 4 + sc.field_c.field_w);
             var11.c();
             sc.field_c.d(2, 2, rh.field_e);
             p.a(var11.field_y, 2, 0, var11.field_w, 1, 0, 0, var11);
             sc.field_c = var11;
             lb.field_x = sc.field_c.e();
-            var12 = new nh(195, 221);
+            var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.c();
             md.field_a.b(a.a(5044, ja.field_g, new String[]{dc.field_f}), var6, 40, 16777215, -1);
@@ -182,13 +182,13 @@ final class bg extends IntrusiveNode {
               hf.field_z.field_v = hf.field_z.field_v + var9_intLifetime3;
             }
             hf.field_z.b();
-            var9 = new nh(hf.field_z.field_z, hf.field_z.field_C);
+            var9 = new RgbSprite(hf.field_z.field_z, hf.field_z.field_C);
             var9.c();
             md.field_a.a(var14, KeyboardInput.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
             p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
             hf.field_z.c();
             var9.d(0, 0);
-            qa.field_L = new nh(640, 480);
+            qa.field_L = new RgbSprite(640, 480);
             qa.field_L.c();
             hf.field_z.c(hd.field_B + (hf.field_z.field_z >> 1), (hf.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
             hf.field_z = null;
@@ -205,7 +205,7 @@ final class bg extends IntrusiveNode {
             var2Lifetime2 = SoftwareRasterizer.field_k;
             var3Lifetime2 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
-            var16 = new nh(412, 43);
+            var16 = new RgbSprite(412, 43);
             var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
             df.field_b = null;
             var16.c();

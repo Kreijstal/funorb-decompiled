@@ -162,7 +162,7 @@ final class bm extends TextureOperator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_G = (int[][]) null;
         if (!param0) {
           return;

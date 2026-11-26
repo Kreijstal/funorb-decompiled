@@ -4,17 +4,17 @@
 final class oo {
     static boolean field_a;
     static String field_b;
-    static cn field_c;
+    static RgbSprite field_c;
     static String field_e;
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         field_b = null;
         if (param0 != 13054) {
-          oo.a(-79);
+          oo.clearStaticReferences(-79);
         }
     }
 

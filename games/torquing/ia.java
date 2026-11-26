@@ -21,17 +21,17 @@ final class ia extends af {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         if (param0 <= 16) {
-          ia.c(23);
+          ia.clearStaticReferences(23);
         }
     }
 
     final static boolean a(int param0, int param1) {
         if (param1 != -1) {
           if (param0 != -22426) {
-            ia.c(-53);
+            ia.clearStaticReferences(-53);
           }
           return 0 != (1 << param1 & oh.field_c) ? true : false;
         }

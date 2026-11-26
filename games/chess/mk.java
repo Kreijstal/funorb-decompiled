@@ -54,9 +54,9 @@ final class mk {
         int stackIn_37_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_81_0 = 0;
-        km[] stackIn_83_0 = null;
+        RgbSprite[] stackIn_83_0 = null;
         int stackIn_84_1 = 0;
-        km[] stackIn_89_0 = null;
+        RgbSprite[] stackIn_89_0 = null;
         int stackIn_92_1 = 0;
         String stackIn_157_0 = null;
         String stackIn_165_0 = null;
@@ -98,7 +98,7 @@ final class mk {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        km var42 = null;
+        RgbSprite var42 = null;
         ci var43 = null;
         ci var44 = null;
         ci var45 = null;
@@ -107,14 +107,14 @@ final class mk {
         ci var48 = null;
         ci var49 = null;
         Object var50 = null;
-        km var50_ref = null;
+        RgbSprite var50_ref = null;
         Object var51 = null;
-        km var51_ref = null;
+        RgbSprite var51_ref = null;
         Object var52 = null;
-        km var52_ref = null;
+        RgbSprite var52_ref = null;
         Object var53 = null;
-        km var53_ref = null;
-        km var54 = null;
+        RgbSprite var53_ref = null;
+        RgbSprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -574,7 +574,7 @@ final class mk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var7), "mk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var7), "mk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

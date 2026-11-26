@@ -19,7 +19,7 @@ final class li extends IntrusiveNode {
         return IntrusiveDequeCursor.field_a;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         int var1 = -101 % ((param0 - 0) / 63);
     }

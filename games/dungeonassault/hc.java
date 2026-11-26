@@ -7,7 +7,7 @@ final class hc {
     static int field_c;
     static se field_f;
     static int field_b;
-    static cn field_a;
+    static RgbSprite field_a;
     static String field_g;
     static se field_e;
     static int field_d;
@@ -235,6 +235,6 @@ final class hc {
     static {
         field_c = -1;
         field_g = "His face is obscured by the darkness of his hood and most do not notice him until his voice rasps in their ear...or his blade plunges into their back.";
-        field_a = new cn(540, 140);
+        field_a = new RgbSprite(540, 140);
     }
 }

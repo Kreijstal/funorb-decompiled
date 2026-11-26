@@ -9,7 +9,7 @@ final class ge {
     static String field_b;
     static k field_d;
     static int field_g;
-    static dd field_f;
+    static RgbSprite field_f;
 
     final static void a(int param0) {
         if (param0 <= 118) {
@@ -18,7 +18,7 @@ final class ge {
         jk.field_m = new IntrusiveDeque();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_d = null;
         field_e = null;

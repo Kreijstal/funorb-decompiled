@@ -48,7 +48,7 @@ abstract class bl extends DualLinkNode {
               }
             }
             if (!param0) {
-              bl.b((byte) 56);
+              bl.clearStaticReferences((byte) 56);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -226,7 +226,7 @@ abstract class bl extends DualLinkNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 35 % ((24 - param0) / 34);
         field_w = null;
         field_z = null;

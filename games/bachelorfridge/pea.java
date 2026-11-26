@@ -28,10 +28,10 @@ final class pea extends EventEffect {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 != 116) {
-          pea.e((byte) -2);
+          pea.clearStaticReferences((byte) -2);
           field_k = null;
           return;
         }
@@ -73,7 +73,7 @@ final class pea extends EventEffect {
           if (param0 > 113) {
             return;
           }
-          pea.e((byte) 34);
+          pea.clearStaticReferences((byte) 34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

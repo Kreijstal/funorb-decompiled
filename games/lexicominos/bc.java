@@ -163,7 +163,7 @@ class bc extends kf {
         return null;
     }
 
-    public static void e(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_L = null;
         if (!param0) {
           field_H = null;
@@ -172,7 +172,7 @@ class bc extends kf {
           field_F = null;
           return;
         }
-        bc.e(true);
+        bc.clearStaticReferences(true);
         field_H = null;
         field_E = null;
         field_J = null;
@@ -206,7 +206,7 @@ class bc extends kf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            bc.e(true);
+            bc.clearStaticReferences(true);
           }
           stackIn_4_0 = 10;
           stackIn_5_1 = !(param0);

@@ -66,7 +66,7 @@ final class ra extends ik {
         return 74;
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_x = null;
         field_y = null;
         field_t = null;

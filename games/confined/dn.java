@@ -3,13 +3,13 @@
  */
 final class dn {
     static GameCanvas field_d;
-    static nf[] field_c;
+    static RgbSprite[] field_c;
     static ef field_b;
     static String field_a;
     static String[] field_e;
     static ok field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = 88 % ((72 - param0) / 51);
         field_c = null;
@@ -19,7 +19,7 @@ final class dn {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, nf[] param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5, int param6) {
         int var22 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -46,7 +46,7 @@ final class dn {
         int var20 = 0;
         int var21 = 0;
         int var23 = 0;
-        nf[] var24 = null;
+        RgbSprite[] var24 = null;
         int var21Lifetime1;
         int var21Lifetime2;
         int var21Lifetime3;
@@ -89,8 +89,8 @@ final class dn {
             var14 = -var8 + var11;
             var15 = param2 + var9;
             if (param5 != -7992) {
-              var24 = (nf[]) null;
-              dn.a(100, 4, -112, (nf[]) null, 66, 93, 126);
+              var24 = (RgbSprite[]) null;
+              dn.a(100, 4, -112, (RgbSprite[]) null, 66, 93, 126);
             }
             var16 = var12 - var10;
             var17 = var13;

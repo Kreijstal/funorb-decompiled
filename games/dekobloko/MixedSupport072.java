@@ -15,11 +15,11 @@ final class MixedSupport072 extends HashNode {
     int integerState0414;
     static SceneWidget sceneWidgetState0072;
 
-    public static void performAction0917(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         sceneWidgetState0071 = null;
         sceneWidgetState0072 = null;
         if (integerArgument1 != -1) {
-          MixedSupport072.performAction0917(11);
+          MixedSupport072.clearStaticReferences(11);
           stringState0320 = null;
           return;
         }

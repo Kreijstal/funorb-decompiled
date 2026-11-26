@@ -471,7 +471,7 @@ final class ce extends ab implements dr, dn {
         return qk.a(3, 1, param3, param4, 1, 1, param1, -128, param0);
     }
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         int var1 = -76 / ((param0 - 35) / 61);
     }

@@ -223,7 +223,7 @@ final class MidiPlayer extends PcmStream {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -40 % ((-35 - param0) / 62);
         field_v = null;
         field_s = null;

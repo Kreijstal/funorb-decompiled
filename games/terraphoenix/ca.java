@@ -5,7 +5,7 @@ final class ca {
     static tk[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -41 / ((param0 - 48) / 58);
         field_a = null;
     }

@@ -8,14 +8,14 @@ final class na extends da {
     static String field_l;
     static int[] field_o;
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 == -27799) {
           field_o = null;
           field_m = null;
           field_l = null;
           return;
         }
-        na.g(15);
+        na.clearDeclaredStaticReferences(15);
         field_o = null;
         field_m = null;
         field_l = null;
@@ -73,7 +73,7 @@ final class na extends da {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 3614) {
-            na.g(-83);
+            na.clearDeclaredStaticReferences(-83);
           }
           if (this.a(-1, param1) != ir.field_a) {
             return null;

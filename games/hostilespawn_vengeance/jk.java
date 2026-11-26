@@ -68,16 +68,16 @@ final class jk {
 
     final static boolean a(int param0) {
         if (param0 != -23322) {
-          jk.b(-58);
+          jk.clearStaticReferences(-58);
           return sf.field_U;
         }
         return sf.field_U;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 > -43) {
-          jk.b(66);
+          jk.clearStaticReferences(66);
           field_a = null;
           field_c = null;
           return;

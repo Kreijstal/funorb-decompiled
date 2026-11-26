@@ -5,13 +5,13 @@ final class gn {
     private String field_j;
     String field_f;
     String field_b;
-    static cn[] field_i;
+    static RgbSprite[] field_i;
     static int field_d;
     int field_a;
     private String field_e;
     int field_g;
     static int field_h;
-    static cn field_c;
+    static RgbSprite field_c;
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
@@ -25,9 +25,9 @@ final class gn {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 194) {
-          gn.a(3);
+          gn.clearStaticReferences(3);
           field_i = null;
           field_c = null;
           return;

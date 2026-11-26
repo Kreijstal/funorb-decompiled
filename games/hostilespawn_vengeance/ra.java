@@ -6,7 +6,7 @@ final class ra implements nn {
     static String field_f;
     private int field_m;
     private int field_k;
-    static bd field_b;
+    static RgbSprite field_b;
     private int field_d;
     static int field_a;
     static int[] field_i;

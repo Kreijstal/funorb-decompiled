@@ -122,7 +122,7 @@ class HashNode {
         }
     }
 
-    public static void performAction0150(int integerArgument1) {
+    public static void clearDeclaredStaticReferences(int integerArgument1) {
         rgbSpriteArrayArrayState0004 = (RgbSprite[][]) null;
         stringState0051 = null;
         stringState0050 = null;
@@ -133,7 +133,7 @@ class HashNode {
           stringState0053 = null;
           return;
         }
-        HashNode.performAction0150(-88);
+        HashNode.clearDeclaredStaticReferences(-88);
         mixedSupport132State0002 = null;
         stringArrayState0002 = null;
         stringState0052 = null;

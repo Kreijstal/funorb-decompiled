@@ -6,10 +6,10 @@ final class pd {
     static int field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 < 22) {
-          pd.a(-14);
+          pd.clearStaticReferences(-14);
         }
     }
 

@@ -13,7 +13,7 @@ final class ib extends IntrusiveNode {
     static GameApplet field_l;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_i = null;
         if (param0 != 0) {
           field_i = (Random) null;

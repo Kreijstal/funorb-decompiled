@@ -4,7 +4,7 @@
 final class kf {
     static AccountRequestState field_d;
     static int field_e;
-    static hj field_a;
+    static RgbSprite field_a;
     static int field_c;
     static String field_b;
     private static String field_z;
@@ -24,7 +24,7 @@ final class kf {
         field_z = "kf.A(";
         field_e = -1;
         field_d = new AccountRequestState();
-        field_a = new hj(540, 140);
+        field_a = new RgbSprite(540, 140);
         field_b = "Name is available";
     }
 }

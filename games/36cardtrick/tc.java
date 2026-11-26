@@ -3,7 +3,7 @@
  */
 final class tc {
     static int field_b;
-    static kc[] field_a;
+    static RgbSprite[] field_a;
     static String field_c;
 
     public static void a(byte param0) {
@@ -17,7 +17,7 @@ final class tc {
         field_a = null;
     }
 
-    final static void a(int param0, kc[] param1, int param2, int param3) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3) {
         try {
           ij.field_f = new vg(param1);
           eg.field_d = param3;

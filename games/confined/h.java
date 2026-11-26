@@ -101,7 +101,7 @@ final class h extends ee {
         ac.a(false);
         lc.field_J = null;
         if (param0 != -6) {
-          h.l(95);
+          h.clearDeclaredStaticReferences(95);
         }
         oj.field_B = 0;
         hc.field_u = hk.field_f;
@@ -246,7 +246,7 @@ final class h extends ee {
         kc.a(db.field_u, (pm) (this), param0 - 26281, false);
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }

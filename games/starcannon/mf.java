@@ -89,12 +89,12 @@ final class mf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = null;
         field_a = null;
         if (param0 != 23675) {
-          mf.a(1);
+          mf.clearStaticReferences(1);
           field_c = null;
           return;
         }

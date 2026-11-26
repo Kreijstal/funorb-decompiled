@@ -333,12 +333,12 @@ final class la extends WidgetContainer implements ec, oi {
         super.a(param0, param1, param2, param3);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_L = null;
         field_I = null;
         field_O = null;
         if (param0 <= 82) {
-          la.a(-59);
+          la.clearStaticReferences(-59);
         }
         field_B = null;
     }

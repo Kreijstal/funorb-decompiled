@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd extends al {
-    static tg[] field_j;
+    static RgbSprite[] field_j;
     static int[] field_n;
     private ba field_k;
     static String field_m;
@@ -60,7 +60,7 @@ final class bd extends al {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_m = null;
         field_n = null;
@@ -92,7 +92,7 @@ final class bd extends al {
             }
           }
           if (param1 != -114) {
-            field_j = (tg[]) null;
+            field_j = (RgbSprite[]) null;
           }
           if (param0.equals(this.field_k.field_h)) {
             return null;

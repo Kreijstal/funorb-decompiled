@@ -79,14 +79,14 @@ final class qe implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         field_k = null;
         if (param0 == 0) {
           return;
         }
-        qe.c(44);
+        qe.clearStaticReferences(44);
     }
 
     public final void run() {
@@ -242,7 +242,7 @@ final class qe implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        nh[] var9 = null;
+        RgbSprite[] var9 = null;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (this.field_n) {
@@ -256,8 +256,8 @@ final class qe implements Runnable {
             this.field_o = new byte[this.field_d];
           }
           if (param1 != -30537) {
-            var9 = (nh[]) null;
-            qe.a(-98, -28, (nh[]) null, (byte) 55);
+            var9 = (RgbSprite[]) null;
+            qe.a(-98, -28, (RgbSprite[]) null, (byte) 55);
           }
           var5 = this;
           synchronized (var5) {
@@ -288,11 +288,11 @@ final class qe implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, nh[] param2, byte param3) {
+    final static void a(int param0, int param1, RgbSprite[] param2, byte param3) {
         try {
           ia.field_a = new gk(param2);
           if (param3 > -65) {
-            qe.c(-58);
+            qe.clearStaticReferences(-58);
           }
           ch.field_B = param1;
           lg.field_i = param0;
@@ -339,7 +339,7 @@ final class qe implements Runnable {
             param2 = var3_int;
           }
           if (param0 != 26) {
-            qe.c(-113);
+            qe.clearStaticReferences(-113);
           }
           while (0 != param2) {
             var3_intLifetime1 = param1 % param2;

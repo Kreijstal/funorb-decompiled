@@ -12,10 +12,10 @@ final class fl implements wo {
     static int field_m;
     private int field_e;
     private int field_d;
-    static dl[] field_i;
+    static RgbSprite[] field_i;
     static String field_f;
     private int field_o;
-    static dl field_a;
+    static RgbSprite field_a;
     private int field_k;
     static String field_l;
     private int field_b;

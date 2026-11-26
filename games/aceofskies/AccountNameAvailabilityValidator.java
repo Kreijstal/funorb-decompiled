@@ -57,9 +57,9 @@ final class AccountNameAvailabilityValidator extends vo {
         this.nameAvailable = false;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -11) {
-          AccountNameAvailabilityValidator.c((byte) -28);
+          AccountNameAvailabilityValidator.clearStaticReferences((byte) -28);
           field_e = null;
           titleImage = null;
           return;
@@ -71,7 +71,7 @@ final class AccountNameAvailabilityValidator extends vo {
     final void e(int param0) {
         this.checkedName = null;
         if (param0 >= -86) {
-          AccountNameAvailabilityValidator.c((byte) 34);
+          AccountNameAvailabilityValidator.clearStaticReferences((byte) 34);
         }
     }
 

@@ -11,7 +11,7 @@ final class ai implements Runnable {
     private DataInputStream field_e;
     private PlatformTask field_f;
     static int[] field_c;
-    static dl field_b;
+    static RgbSprite field_b;
     private int field_d;
     private PlatformTaskDispatcher field_a;
     static vc field_h;

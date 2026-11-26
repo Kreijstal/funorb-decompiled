@@ -37,11 +37,11 @@ final class cg extends IntrusiveNode {
         this.field_D = null;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_r = null;
         field_K = (String[][]) null;
         if (param0 != 0) {
-          cg.a(-85);
+          cg.clearDeclaredStaticReferences(-85);
         }
     }
 

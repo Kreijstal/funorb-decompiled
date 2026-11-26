@@ -4,7 +4,7 @@
 final class DirectByteStorage extends ByteStorage {
     static String field_i;
     static String field_j;
-    static cn field_g;
+    static RgbSprite field_g;
     static String[] field_f;
     private java.nio.ByteBuffer buffer;
 
@@ -21,7 +21,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_g = null;
         int var1 = 82 % ((75 - param0) / 44);

@@ -9,7 +9,7 @@ final class ad extends vh {
         dd.field_o = 1;
         nf.field_e = param1;
         if (param2 > -22) {
-          ad.i(-126);
+          ad.releaseDeclaredStaticReferences(-126);
           jh.field_a = param0;
           return;
         }
@@ -21,7 +21,7 @@ final class ad extends vh {
         return this.field_r;
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != 1) {
           field_s = (String) null;
           field_s = null;

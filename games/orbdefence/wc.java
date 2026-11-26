@@ -7,11 +7,11 @@ final class wc {
     static PlatformTaskDispatcher field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 > -68) {
-          wc.a((byte) 74);
+          wc.clearStaticReferences((byte) 74);
           field_b = null;
           return;
         }

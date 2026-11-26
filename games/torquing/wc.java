@@ -117,10 +117,10 @@ final class wc extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != 0) {
-          wc.a(47);
+          wc.clearStaticReferences(47);
         }
         field_t = null;
     }

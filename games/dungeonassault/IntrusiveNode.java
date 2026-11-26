@@ -9,7 +9,7 @@ class IntrusiveNode {
     static gp field_c;
     long key;
     static String[] field_f;
-    static cn field_d;
+    static RgbSprite field_d;
 
     final void unlink(boolean obfuscationGuard) {
         if (this.next != null) {
@@ -18,7 +18,7 @@ class IntrusiveNode {
           this.previous = null;
           this.next = null;
           if (obfuscationGuard) {
-            field_d = (cn) null;
+            field_d = (RgbSprite) null;
           }
           return;
         }

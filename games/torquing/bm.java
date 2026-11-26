@@ -21,7 +21,7 @@ final class bm extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -82 / ((param0 - 71) / 33);
         field_l = null;
         field_j = null;

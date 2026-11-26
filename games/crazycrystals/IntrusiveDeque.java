@@ -94,13 +94,13 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static void a(int param0, dl param1, String param2) {
+    final static void a(int param0, RgbSprite param1, String param2) {
         try {
           gh.field_A = param2;
           wl.field_o = param1;
           if (param0 != 0) {
             String var4 = (String) null;
-            IntrusiveDeque.a(21, (dl) null, (String) null);
+            IntrusiveDeque.a(21, (RgbSprite) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "wb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

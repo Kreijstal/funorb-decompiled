@@ -787,7 +787,7 @@ final class ra {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = (boolean[][]) null;
         field_b = (Sprite[][]) null;
         field_j = null;

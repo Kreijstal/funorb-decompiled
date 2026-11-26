@@ -14,11 +14,11 @@ final class ia extends IntrusiveNode {
     int field_o;
     ia field_k;
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_p = (int[][]) null;
         field_l = null;
         if (param0 != 79) {
-          ia.b((byte) 52);
+          ia.clearDeclaredStaticReferences((byte) 52);
           field_i = (PcmSample[][][]) null;
           return;
         }

@@ -6,7 +6,7 @@ abstract class MouseWheelInput {
     static int[] field_a;
     static boolean field_j;
     static int field_g;
-    static dl field_i;
+    static RgbSprite field_i;
     static String[] field_e;
     static ck field_d;
     static int field_c;
@@ -121,7 +121,7 @@ abstract class MouseWheelInput {
           field_h = null;
           return;
         }
-        field_i = (dl) null;
+        field_i = (RgbSprite) null;
         field_k = null;
         field_e = null;
         field_f = null;

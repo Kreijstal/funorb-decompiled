@@ -76,11 +76,11 @@ final class sf extends IntrusiveNode {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         field_o = null;
         if (param0 <= 83) {
-          sf.b(-104);
+          sf.clearStaticReferences(-104);
           field_s = null;
           return;
         }

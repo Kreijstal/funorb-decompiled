@@ -159,11 +159,11 @@ abstract class sj extends ug {
         return super.l(param0 ^ 0);
     }
 
-    public static void h(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_kb = null;
         field_pb = null;
         if (param0 <= 6) {
-          sj.h((byte) -55);
+          sj.releaseDeclaredStaticReferences((byte) -55);
           field_rb = null;
           return;
         }

@@ -4,11 +4,11 @@
 final class al {
     static String field_d;
     static int field_c;
-    static dl[] field_h;
+    static RgbSprite[] field_h;
     static volatile boolean field_f;
     int field_e;
     int field_b;
-    static dl field_a;
+    static RgbSprite field_a;
     int field_g;
     int field_i;
 

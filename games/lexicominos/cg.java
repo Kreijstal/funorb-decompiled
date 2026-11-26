@@ -8,7 +8,7 @@ final class cg extends IntrusiveNode {
     static int field_j;
     int field_k;
 
-    final static void a(BinaryBitmapFont param0, db param1, int param2, int param3, byte param4, int param5, int param6, char param7) {
+    final static void a(BinaryBitmapFont param0, RgbSprite param1, int param2, int param3, byte param4, int param5, int param6, char param7) {
         try {
           param1.d(param6, param3);
           int var8_int = 118 % ((param4 - 3) / 50);
@@ -27,7 +27,7 @@ final class cg extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         int var1 = 84 % ((16 - param0) / 36);
     }

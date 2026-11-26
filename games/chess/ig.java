@@ -6,7 +6,7 @@ final class ig {
     static le field_b;
     static hg field_d;
     static int field_c;
-    static km field_h;
+    static RgbSprite field_h;
     static ci[] field_i;
     static dd[] field_f;
     static int field_g;
@@ -58,7 +58,7 @@ final class ig {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

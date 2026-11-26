@@ -5,7 +5,7 @@ final class id {
     static String field_f;
     static java.math.BigInteger field_c;
     static String field_d;
-    static kc field_e;
+    static RgbSprite field_e;
     static int field_b;
     static qk field_a;
 
@@ -65,7 +65,7 @@ final class id {
         field_d = "Mouse over an icon for details";
         field_f = "Resume Game";
         field_c = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
-        field_e = new kc(540, 140);
+        field_e = new RgbSprite(540, 140);
         field_b = 10;
     }
 }

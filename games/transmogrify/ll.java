@@ -43,7 +43,7 @@ final class ll extends bi implements df {
         }
     }
 
-    public static void q(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_V = null;
         field_Q = null;
         field_W = null;

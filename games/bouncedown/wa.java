@@ -9,11 +9,11 @@ final class wa {
     static int field_b;
     static long field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != -13268) {
-          wa.a(34);
+          wa.clearStaticReferences(34);
           field_f = null;
           return;
         }

@@ -20,7 +20,7 @@ final class hg {
         this(param0, false);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 103 / ((67 - param0) / 36);
         field_a = null;
         field_d = null;

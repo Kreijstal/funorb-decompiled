@@ -85,7 +85,7 @@ final class uk extends wj {
         super(param0);
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         int var1 = 93 % ((param0 + 19) / 59);
         field_n = null;

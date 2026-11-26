@@ -54,7 +54,7 @@ final class dj extends IOException {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -23 / ((4 - param0) / 41);
         field_b = null;
         field_a = null;

@@ -6,7 +6,7 @@ final class aj {
     int field_a;
 
     final static void a(byte param0) {
-        ed.field_t = null;
+        SpriteGeometry.field_t = null;
         hf.field_b = null;
         sc.field_e = false;
         qc.field_e = null;
@@ -16,7 +16,7 @@ final class aj {
         ByteStorage.field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, db[] param12, db[] param13, int param14, boolean param15, int param16, db[] param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, RgbSprite[] param12, RgbSprite[] param13, int param14, boolean param15, int param16, RgbSprite[] param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

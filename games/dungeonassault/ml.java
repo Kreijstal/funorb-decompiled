@@ -4,7 +4,7 @@
 final class ml {
     static int[] field_b;
     static String field_c;
-    static cn field_a;
+    static RgbSprite field_a;
     private static String field_z;
 
     public static void clearStaticReferences(byte param0) {
@@ -12,7 +12,7 @@ final class ml {
         field_a = null;
         field_b = null;
         if (param0 < 8) {
-          field_a = (cn) null;
+          field_a = (RgbSprite) null;
         }
     }
 

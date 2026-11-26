@@ -13,12 +13,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static kc a(int param0, String param1, String param2, qk param3) {
+    final static RgbSprite a(int param0, String param1, String param2, qk param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         Object var6 = null;
-        kc stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

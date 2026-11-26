@@ -6,7 +6,7 @@ final class ac {
     static String field_b;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 85 / ((param0 - 43) / 54);
         field_c = null;
         field_a = null;

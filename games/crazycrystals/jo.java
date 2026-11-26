@@ -27,10 +27,10 @@ final class jo extends pn implements Cloneable {
         }
     }
 
-    final static dl[] a(boolean param0, int param1, db param2, int param3) {
+    final static RgbSprite[] a(boolean param0, int param1, db param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        dl[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -41,7 +41,7 @@ final class jo extends pn implements Cloneable {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (dl[]) (stackIn_2_0);
+          return (RgbSprite[]) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

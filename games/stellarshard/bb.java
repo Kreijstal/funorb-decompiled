@@ -21,13 +21,13 @@ final class bb implements uk {
     static String field_f;
     private int field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_h = null;
         field_f = null;
         field_l = null;
         field_k = null;
         if (param0) {
-          bb.a(true);
+          bb.clearStaticReferences(true);
           field_m = null;
           return;
         }

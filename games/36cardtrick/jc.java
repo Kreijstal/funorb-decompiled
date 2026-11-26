@@ -120,7 +120,7 @@ abstract class jc extends qf {
         }
     }
 
-    public static void p(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_S = null;
         field_P = null;
         field_O = null;
@@ -183,7 +183,7 @@ abstract class jc extends qf {
             }
           }
           if (param2 != 21) {
-            jc.p(-103);
+            jc.clearDeclaredStaticReferences(-103);
           }
           stackIn_18_0 = (short[]) (param3);
           return stackIn_18_0;

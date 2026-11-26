@@ -23,7 +23,7 @@ final class sa extends IntrusiveNode {
         return 49;
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 < 33) {
           return;
         }

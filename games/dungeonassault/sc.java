@@ -5,11 +5,11 @@ final class sc extends ch {
     static PlatformTaskDispatcher field_q;
     static String field_p;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_q = null;
         field_p = null;
         if (param0 != -94) {
-          sc.b((byte) -6);
+          sc.clearStaticReferences((byte) -6);
         }
     }
 

@@ -3,12 +3,12 @@
  */
 final class oc {
     int field_e;
-    static bd field_d;
+    static RgbSprite field_d;
     static byte[][][] field_h;
     private int field_f;
     int field_g;
     private int field_a;
-    static bd field_c;
+    static RgbSprite field_c;
     private int field_b;
 
     public final boolean equals(Object param0) {
@@ -335,7 +335,7 @@ final class oc {
         try {
           var2_double = Math.atan2((double)(-this.field_e), (double)(-this.field_g));
           if (param0 != 25124) {
-            field_d = (bd) null;
+            field_d = (RgbSprite) null;
           }
           var2_double = var2_double * 128.0 / 3.141592653589793;
           stackIn_4_0 = var2_double;

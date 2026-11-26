@@ -46,7 +46,7 @@ final class fd extends si {
         super(0L, (si) null);
     }
 
-    public static void g(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_qb = null;
         if (param0 != -30900) {
           field_qb = (int[]) null;

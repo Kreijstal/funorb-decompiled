@@ -5,7 +5,7 @@ final class fc {
     static int[] field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -91 % ((param0 - 3) / 48);
         field_b = null;
     }
@@ -106,7 +106,7 @@ final class fc {
           var5.writeInt(param1.field_h, (byte) 122);
           var5.writeInt(param1.field_p, (byte) -2);
           if (param0 > -1) {
-            fc.a(113);
+            fc.clearStaticReferences(113);
           }
           var5.writeInt(param1.field_q, (byte) -117);
           var5.writeInt(param1.field_k, (byte) 104);

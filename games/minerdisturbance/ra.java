@@ -84,13 +84,13 @@ final class ra {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         field_d = null;
         field_e = null;
         if (param0 >= -21) {
-          ra.a(-11);
+          ra.clearStaticReferences(-11);
         }
     }
 

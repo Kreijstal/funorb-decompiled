@@ -44,7 +44,7 @@ abstract class ea extends pn {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         f var7 = null;
         int var9 = 0;
         Object stackIn_9_0;
@@ -53,7 +53,7 @@ abstract class ea extends pn {
         int stackIn_9_3;
         int stackIn_9_4;
         f[][] stackIn_9_5;
-        dl[] stackIn_10_6 = null;
+        RgbSprite[] stackIn_10_6 = null;
         ig stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -87,7 +87,7 @@ abstract class ea extends pn {
           if (!this.b((byte) 97)) {
             stackIn_10_6 = null;
           } else {
-            stackIn_10_6 = (dl[]) (param4);
+            stackIn_10_6 = (RgbSprite[]) (param4);
           }
           this.field_l = ((f) (Object) stackIn_9_1).a(stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_10_6, param5);
           if (this.a((byte) 42, param3, param0)) {

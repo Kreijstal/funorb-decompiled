@@ -8,7 +8,7 @@ final class nc extends IntrusiveNode {
     long field_h;
     int field_k;
     static String field_p;
-    static db field_n;
+    static RgbSprite field_n;
     static int field_r;
     int field_o;
     int field_s;
@@ -70,7 +70,7 @@ final class nc extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 67 % ((param0 - 1) / 43);
         field_p = null;
         field_n = null;

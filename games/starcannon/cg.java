@@ -50,7 +50,7 @@ final class cg {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         int var1 = 117 / ((param0 - 14) / 53);
         field_g = null;

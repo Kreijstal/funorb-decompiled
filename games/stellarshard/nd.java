@@ -137,7 +137,7 @@ final class nd extends ig {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_F = null;
         int var1 = -67 / ((-44 - param0) / 44);
     }

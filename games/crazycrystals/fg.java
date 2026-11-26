@@ -46,7 +46,7 @@ final class fg extends pd {
 
     final static void c(byte param0) {
         if (param0 != 95) {
-          fg.c(-20);
+          fg.releaseDeclaredStaticReferences(-20);
         }
     }
 
@@ -57,7 +57,7 @@ final class fg extends pd {
         this.field_k = 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_i = null;
         field_l = null;
         field_j = null;

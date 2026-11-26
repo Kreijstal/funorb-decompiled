@@ -16,11 +16,11 @@ final class ch {
     int field_f;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_h = null;
         if (param0) {
-          ch.a(true);
+          ch.clearStaticReferences(true);
         }
     }
 

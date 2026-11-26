@@ -7,7 +7,7 @@ final class GzipDecompressor {
     private java.util.zip.Inflater field_d;
     static int field_c;
     static String field_b;
-    static cn field_e;
+    static RgbSprite field_e;
     static int field_a;
 
     final static wm a(int param0, Random param1) {
@@ -205,7 +205,7 @@ final class GzipDecompressor {
         field_b = null;
         field_e = null;
         if (param0 != 0) {
-          field_e = (cn) null;
+          field_e = (RgbSprite) null;
         }
     }
 
@@ -235,7 +235,7 @@ final class GzipDecompressor {
                 throw new RuntimeException("");
               }
               if (param0 >= -80) {
-                field_e = (cn) null;
+                field_e = (RgbSprite) null;
               }
               this.field_d.reset();
               return;

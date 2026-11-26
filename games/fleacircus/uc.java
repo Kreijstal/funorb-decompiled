@@ -7,7 +7,7 @@ abstract class uc {
     int field_f;
     static StringBuilder field_a;
     int field_h;
-    static dd field_d;
+    static RgbSprite field_d;
     static ve field_c;
     static nf field_e;
 
@@ -38,7 +38,7 @@ abstract class uc {
         try {
           ml.field_O = ia.field_m[fleas.field_E][tj.field_a].field_f;
           if (param0 != 84) {
-            field_d = (dd) null;
+            field_d = (RgbSprite) null;
           }
           for (var1_int = 0; var1_int < 40; var1_int++) {
             for (var2 = 0; var2 < 21; var2++) {
@@ -65,6 +65,6 @@ abstract class uc {
 
     static {
         field_a = new StringBuilder(12);
-        field_d = new dd(270, 70);
+        field_d = new RgbSprite(270, 70);
     }
 }

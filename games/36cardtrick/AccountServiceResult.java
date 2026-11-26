@@ -58,9 +58,9 @@ final class AccountServiceResult {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
-          AccountServiceResult.a(47);
+          AccountServiceResult.clearStaticReferences(47);
           field_f = null;
           field_a = null;
           return;
@@ -113,7 +113,7 @@ final class AccountServiceResult {
           if (param1 == -9) {
             return;
           }
-          AccountServiceResult.a(40);
+          AccountServiceResult.clearStaticReferences(40);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

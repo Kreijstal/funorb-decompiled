@@ -25,21 +25,21 @@ final class ub {
     }
 
     final static void a(byte param0, gk param1) {
-        tg var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         if (param0 != -32) {
           return;
         }
         try {
-          var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) ((Object) ch.field_h));
+          var2 = new RgbSprite(param1.b("final_frame.jpg", "", -90), (java.awt.Component) ((Object) ch.field_h));
           var3 = var2.field_s;
           var4 = var2.field_q;
           wa.a(true);
-          jl.field_c = new tg(var3, 3 * var4 / 4);
+          jl.field_c = new RgbSprite(var3, 3 * var4 / 4);
           jl.field_c.d();
           var2.b(0, 0);
-          bf.field_o = new tg(var3, var4 - jl.field_c.field_q);
+          bf.field_o = new RgbSprite(var3, var4 - jl.field_c.field_q);
           bf.field_o.d();
           var2.b(0, -jl.field_c.field_q);
           bf.field_o.field_p = jl.field_c.field_q;

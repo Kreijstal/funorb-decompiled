@@ -156,11 +156,11 @@ final class ul extends WidgetContainer implements oi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_H = null;
         field_B = null;
         if (param0 != 160) {
-          ul.a(117);
+          ul.clearStaticReferences(117);
         }
     }
 

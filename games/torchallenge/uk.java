@@ -372,7 +372,7 @@ final class uk extends ic {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_Q = null;
         field_I = null;
         field_U = null;

@@ -607,7 +607,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
             uiComponentLocal2 = (UiComponent) (mixedSupport108Local6.computeHashNode1414(-109));
           }
           if (integerArgument1 != 32) {
-            ComponentContainer.performAction0897(-42);
+            ComponentContainer.releaseDeclaredStaticReferences(-42);
           }
           return false;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -624,9 +624,9 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
         }
     }
 
-    public static void performAction0897(int integerArgument1) {
+    public static void releaseDeclaredStaticReferences(int integerArgument1) {
         if (integerArgument1 < 72) {
-          ComponentContainer.performAction0897(-51);
+          ComponentContainer.releaseDeclaredStaticReferences(-51);
         }
         rawSoundState0014 = null;
         stringState0308 = null;

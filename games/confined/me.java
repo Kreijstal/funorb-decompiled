@@ -75,7 +75,7 @@ final class me extends am {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        nf var6 = null;
+        RgbSprite var6 = null;
         if (param2 < 36) {
           return;
         }
@@ -89,7 +89,7 @@ final class me extends am {
           return;
         }
         if (this.field_K != 256) {
-          var6 = new nf(this.field_H.field_F, this.field_H.field_z);
+          var6 = new RgbSprite(this.field_H.field_F, this.field_H.field_z);
           vm.a(var6, -8409);
           this.field_H.a(0, param1, (byte) 83, 0);
           ib.b(false);

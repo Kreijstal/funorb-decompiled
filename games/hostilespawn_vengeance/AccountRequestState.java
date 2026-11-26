@@ -3,7 +3,7 @@
  */
 final class AccountRequestState {
     static String field_a;
-    static bd field_c;
+    static RgbSprite field_c;
     static String field_b;
 
     final static void a(byte param0) {

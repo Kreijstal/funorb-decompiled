@@ -74,11 +74,11 @@ final class oa extends dg {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_B = null;
         field_C = null;
         if (param0 > -68) {
-          oa.i(-65);
+          oa.clearDeclaredStaticReferences(-65);
           field_F = null;
           return;
         }

@@ -3,7 +3,7 @@
  */
 class mc extends hh {
     static r field_x;
-    static cn[] field_w;
+    static RgbSprite[] field_w;
 
     public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
         try {
@@ -20,7 +20,7 @@ class mc extends hh {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_H, -1, 2147483647, false);
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         field_w = null;
         int var1 = 44 / ((param0 + 51) / 47);
@@ -39,7 +39,7 @@ class mc extends hh {
     final static void a(byte param0, int param1, int[] param2) {
         try {
           if (param0 <= 15) {
-            mc.c(21);
+            mc.clearDeclaredStaticReferences(21);
           }
           tg.field_f[param1] = param2;
           bf.field_f[param1] = (qe) ((Object) new qc(param1));

@@ -15,7 +15,7 @@ abstract class qc extends DualLinkNode {
 
     abstract Object a(byte param0);
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         field_u = null;
         field_x = null;
@@ -25,7 +25,7 @@ abstract class qc extends DualLinkNode {
           field_w = null;
           return;
         }
-        qc.h(126);
+        qc.clearStaticReferences(126);
         field_v = null;
         field_w = null;
     }

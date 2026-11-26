@@ -106,11 +106,11 @@ final class ve extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "ve.B(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "ve.B(" + param0 + ')');
         }
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_Qb = null;
         field_Gb = null;
         int var1 = -2 % ((param0 - 29) / 63);

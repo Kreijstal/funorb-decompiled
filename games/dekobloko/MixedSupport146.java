@@ -10,11 +10,11 @@ final class MixedSupport146 {
     static int integerState0932;
     private static String stringState0621;
 
-    public static void performAction1807(boolean booleanArgument1) {
+    public static void clearStaticReferences(boolean booleanArgument1) {
         rgbSpriteState0074 = null;
         stringState0620 = null;
         if (!booleanArgument1) {
-          MixedSupport146.performAction1807(true);
+          MixedSupport146.clearStaticReferences(true);
         }
     }
 

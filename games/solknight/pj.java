@@ -161,7 +161,7 @@ class pj extends UiWidget {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_G = null;
         int var1 = -33 / ((param0 - 0) / 41);
         field_D = null;

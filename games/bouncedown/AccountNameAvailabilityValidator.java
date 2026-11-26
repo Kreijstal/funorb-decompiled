@@ -185,7 +185,7 @@ final class AccountNameAvailabilityValidator extends al {
             this.nameAvailable = var4.success;
           }
           if (!this.nameAvailable) {
-            stackIn_13_0 = ma.field_n;
+            stackIn_13_0 = SpriteGeometry.field_n;
             return stackIn_13_0;
           }
           if (param1 != -114) {

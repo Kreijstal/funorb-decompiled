@@ -16,14 +16,14 @@ class pj extends IntrusiveNode {
     int field_f;
     String field_l;
     int field_r;
-    static hj[] field_u;
+    static RgbSprite[] field_u;
     static int field_p;
     static String field_k;
     dm field_g;
     td field_j;
     int field_n;
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_u = null;
         if (param0 < -66) {
           field_w = null;
@@ -298,7 +298,7 @@ class pj extends IntrusiveNode {
             }
           }
           if (param1 > -88) {
-            pj.a(-49, (hj) null);
+            pj.a(-49, (RgbSprite) null);
           }
           if (this.field_h != null) {
             discarded$6 = param3.append(" listener=");
@@ -352,7 +352,7 @@ class pj extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, hj param1) {
+    final static void a(int param0, RgbSprite param1) {
         try {
           if (param0 != 0) {
             field_o = (String[]) null;

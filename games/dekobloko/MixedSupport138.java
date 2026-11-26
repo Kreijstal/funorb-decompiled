@@ -379,7 +379,7 @@ final class MixedSupport138 {
         this.performAction1723(false);
     }
 
-    public static void performAction1716(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringArrayState0053 = null;
         int integerLocal1 = 0 / ((10 - byteArgument1) / 39);
         stringState0591 = null;

@@ -30,7 +30,7 @@ final class el extends ki {
         return 100;
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_E = null;
         field_F = null;
         int var1 = 27 % ((-59 - param0) / 48);

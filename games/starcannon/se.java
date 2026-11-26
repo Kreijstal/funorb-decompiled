@@ -58,12 +58,12 @@ final class se extends bd {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_l = null;
         field_p = null;
         field_t = null;
         if (param0 != -2) {
-          se.c((byte) 85);
+          se.clearDeclaredStaticReferences((byte) 85);
           field_o = null;
           field_n = null;
           return;

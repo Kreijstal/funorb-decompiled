@@ -151,9 +151,9 @@ class lb extends ButtonWidget {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -85) {
-          lb.n(-22);
+          lb.clearStaticReferences(-22);
         }
         field_O = null;
     }

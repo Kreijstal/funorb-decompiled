@@ -257,7 +257,7 @@ final class rk implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, cn param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, RgbSprite param8) {
         int var9_int = param8.field_w - (-param5 - param2 + param6);
         int var10 = param5 + (param8.field_w - (-param2 - param0));
         int var11 = param4 + param8.field_A + (param8.field_v >> 1);
@@ -297,7 +297,7 @@ final class rk implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        cn var9 = null;
+        RgbSprite var9 = null;
         var8 = DungeonAssault.field_K;
         try {
           if (this.field_m) {
@@ -313,8 +313,8 @@ final class rk implements Runnable {
           var5 = this;
           synchronized (var5) {
             if (param1) {
-              var9 = (cn) null;
-              rk.a(-80, 100, -128, -38, -21, -28, 61, -115, (cn) null);
+              var9 = (RgbSprite) null;
+              rk.a(-80, 100, -128, -38, -21, -28, 61, -115, (RgbSprite) null);
             }
             for (var6 = 0; param3 > var6; var6++) {
               this.field_c[this.field_i] = param0[param2 + var6];

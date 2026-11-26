@@ -727,10 +727,10 @@ final class ci {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 > -74) {
-          ci.d(-75);
+          ci.clearStaticReferences(-75);
         }
         field_f = null;
     }

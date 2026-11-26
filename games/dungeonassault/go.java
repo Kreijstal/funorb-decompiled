@@ -6,7 +6,7 @@ import java.util.*;
 final class go extends qe {
     static String[] field_A;
     private boolean field_w;
-    static cn field_S;
+    static RgbSprite field_S;
     CombatState field_Y;
     static String field_F;
     static String field_V;
@@ -1015,7 +1015,7 @@ final class go extends qe {
             uj.a(fi.field_r[var4Lifetime1], 95);
           }
           if (jg.a(false, -var5_int + 590, 16, var5_int, 320 + 16 * var4Lifetime1)) {
-            uj.a(rd.field_F[var4Lifetime1], 95);
+            uj.a(SpriteGeometry.field_F[var4Lifetime1], 95);
           }
         }
         if (0 <= this.field_u &&
@@ -1632,7 +1632,7 @@ final class go extends qe {
         int var4 = var3.length;
         int var5 = la.field_b.field_E + la.field_b.field_H * var4;
         int var6 = la.field_b.field_H;
-        cn var7 = new cn(var2, var5);
+        RgbSprite var7 = new RgbSprite(var2, var5);
         if (param0 > -62) {
           Raider var12 = (Raider) null;
           this.a((Raider) null, (Raider) null, 123, (byte) -100);
@@ -2050,11 +2050,11 @@ final class go extends qe {
             var7Lifetime1Lifetime1 = this.field_z[0].field_i;
             var8Lifetime1 = 166;
             var9Lifetime1 = this.field_z[0].field_x;
-            if (rd.field_z == null) {
-              rd.field_z = mf.a(16744448, 4 + var9Lifetime1, 8, var8Lifetime1 + 4, (byte) 115);
+            if (SpriteGeometry.field_z == null) {
+              SpriteGeometry.field_z = mf.a(16744448, 4 + var9Lifetime1, 8, var8Lifetime1 + 4, (byte) 115);
             }
             if (15 <= this.field_X % 30) {
-              PacketBuffer.a(-2 + var7Lifetime1Lifetime1, -2 + var6Lifetime2, (byte) -96, rd.field_z, 16711680, 256);
+              PacketBuffer.a(-2 + var7Lifetime1Lifetime1, -2 + var6Lifetime2, (byte) -96, SpriteGeometry.field_z, 16711680, 256);
             } else {
               if (this.field_X <= 0) {
                 stackIn_85_0 = (int)(64.0 * (Math.cos((double)((float)mo.field_a / 10.0f)) + 1.0)) + 128;
@@ -2062,7 +2062,7 @@ final class go extends qe {
                 stackIn_85_0 = 256;
               }
               var10Lifetime1 = stackIn_85_0;
-              rd.field_z.b(var6Lifetime2 - 2, var7Lifetime1Lifetime1 - 2, var10Lifetime1);
+              SpriteGeometry.field_z.b(var6Lifetime2 - 2, var7Lifetime1Lifetime1 - 2, var10Lifetime1);
             }
           }
         }
@@ -3032,18 +3032,18 @@ final class go extends qe {
           }
           this.d(false);
           if (null == fi.field_r) {
-            rd.field_F = new en[4];
+            SpriteGeometry.field_F = new en[4];
             fi.field_r = new en[4];
             dupTemp$1 = new e(ck.field_H.a("attack", -53));
-            rd.field_F[0] = (en) ((Object) dupTemp$1);
+            SpriteGeometry.field_F[0] = (en) ((Object) dupTemp$1);
             fi.field_r[0] = (en) ((Object) dupTemp$1);
             dupTemp$2 = new e(ck.field_H.a("defence", -126));
-            rd.field_F[1] = (en) ((Object) dupTemp$2);
+            SpriteGeometry.field_F[1] = (en) ((Object) dupTemp$2);
             fi.field_r[1] = (en) ((Object) dupTemp$2);
             fi.field_r[2] = (en) ((Object) new e(ck.field_H.a("dodge", -96)));
             fi.field_r[3] = (en) ((Object) new e(ck.field_H.a("sneak", -48)));
-            rd.field_F[2] = (en) ((Object) new e(ck.field_H.a("snare", -115)));
-            rd.field_F[3] = (en) ((Object) new e(ck.field_H.a("detect", -89)));
+            SpriteGeometry.field_F[2] = (en) ((Object) new e(ck.field_H.a("snare", -115)));
+            SpriteGeometry.field_F[3] = (en) ((Object) new e(ck.field_H.a("detect", -89)));
           }
           var3_int = 0;
           var13 = this.field_Y.field_A;

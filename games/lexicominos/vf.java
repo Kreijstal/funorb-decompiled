@@ -61,18 +61,18 @@ final class vf extends IntrusiveNode {
     }
 
     final static void a(boolean param0, sh param1) {
-        db var2 = new db(param1.a((byte) 127, "", "final_frame.jpg"), (java.awt.Component) ((Object) ug.field_y));
+        RgbSprite var2 = new RgbSprite(param1.a((byte) 127, "", "final_frame.jpg"), (java.awt.Component) ((Object) ug.field_y));
         int var3 = var2.field_p;
         int var4 = var2.field_u;
         ja.b((byte) -126);
-        nc.field_n = new db(var3, var4 * 3 / 4);
+        nc.field_n = new RgbSprite(var3, var4 * 3 / 4);
         if (param0) {
           return;
         }
         try {
           nc.field_n.b();
           var2.b(0, 0);
-          jg.field_m = new db(var3, -nc.field_n.field_u + var4);
+          jg.field_m = new RgbSprite(var3, -nc.field_n.field_u + var4);
           jg.field_m.b();
           var2.b(0, -nc.field_n.field_u);
           jg.field_m.field_w = nc.field_n.field_u;
@@ -84,7 +84,7 @@ final class vf extends IntrusiveNode {
 
     final void a(int param0, oj param1, int param2) {
         int var17 = 0;
-        db var4 = null;
+        RgbSprite var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -93,7 +93,7 @@ final class vf extends IntrusiveNode {
         double var13 = 0.0;
         double var15 = 0.0;
         int var18 = 0;
-        db var19 = null;
+        RgbSprite var19 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

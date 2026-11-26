@@ -7,7 +7,7 @@ abstract class ao {
     static String field_a;
     static IntrusiveDeque field_c;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         int var1 = 96 % ((param0 - 6) / 52);

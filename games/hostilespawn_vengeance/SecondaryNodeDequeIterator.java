@@ -12,7 +12,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static cb field_g;
     static boolean field_c;
     static String field_e;
-    static bd field_f;
+    static RgbSprite field_f;
 
     public final Object next() {
         Object var1 = this.nextNode;
@@ -30,20 +30,20 @@ final class SecondaryNodeDequeIterator implements Iterator {
         String var1 = null;
         String var1Lifetime1;
         if (param0 <= -98) {
-          var1 = qc.d(750938499);
+          var1 = SpriteGeometry.d(750938499);
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new s(qc.d(750938499), ia.b(32674));
+          return new s(SpriteGeometry.d(750938499), ia.b(32674));
         }
         SecondaryNodeDequeIterator.clearStaticReferences((byte) 44);
-        var1Lifetime1 = qc.d(750938499);
+        var1Lifetime1 = SpriteGeometry.d(750938499);
         if (var1Lifetime1 != null &&
           var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
         }
-        return new s(qc.d(750938499), ia.b(32674));
+        return new s(SpriteGeometry.d(750938499), ia.b(32674));
     }
 
     final static int a(int param0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ji {
-    private nf[] field_c;
+    private RgbSprite[] field_c;
     static AccountServiceResult field_d;
     static String field_b;
     static jb field_e;
@@ -15,7 +15,7 @@ final class ji {
         }
     }
 
-    ji(nf[] param0) {
+    ji(RgbSprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

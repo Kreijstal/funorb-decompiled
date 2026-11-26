@@ -12,7 +12,7 @@ final class MixedSupport097 {
     static MixedSupport056[] mixedSupport056ArrayState0001;
     static SceneWidgetPart007 sceneWidgetPart007State0001;
 
-    public static void performAction1214(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         byteArrayArrayState0007 = (byte[][]) null;
         sceneWidgetPart007State0001 = null;
         integerArrayState0180 = null;

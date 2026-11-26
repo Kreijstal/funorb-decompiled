@@ -8,7 +8,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_c;
     static String field_f;
     DualLinkNode sentinel;
-    static cn field_a;
+    static RgbSprite field_a;
     static int field_g;
     static String field_e;
 
@@ -126,7 +126,7 @@ final class SecondaryNodeDeque implements Iterable {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -135,7 +135,7 @@ final class SecondaryNodeDeque implements Iterable {
           field_e = null;
           return;
         }
-        SecondaryNodeDeque.a(-80);
+        SecondaryNodeDeque.clearStaticReferences(-80);
         field_f = null;
         field_e = null;
     }

@@ -39,7 +39,7 @@ abstract class bi extends GameApplet {
         ok.field_c[18] = 1;
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_B = null;
         int var1 = 73 / ((param0 - 41) / 55);
         field_s = null;
@@ -788,7 +788,7 @@ abstract class bi extends GameApplet {
           var8 = MonkeyPuzzle2.field_F ? 1 : 0;
           var4 = sg.a(fe.field_h, param2, -128, DirectByteStorage.field_d);
           if (!param1) {
-            bi.d((byte) -64);
+            bi.clearStaticReferences((byte) -64);
           }
           if (var4 == 0) {
             throw new IllegalStateException();

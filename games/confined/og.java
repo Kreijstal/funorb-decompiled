@@ -11,7 +11,7 @@ final class og extends n {
     static PcmSample field_f;
     static e field_i;
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 13 / ((param0 + 72) / 34);
         field_f = null;
         field_g = null;
@@ -659,7 +659,7 @@ final class og extends n {
 
     final static void a(byte param0, mi param1, PcmStreamMixer param2, int param3) {
         mg.field_g = KeyboardInput.a(12398) * param3 / 1000;
-        pl.a(param1, true);
+        SpriteGeometry.a(param1, true);
         if (param0 <= 115) {
           return;
         }

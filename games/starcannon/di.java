@@ -54,7 +54,7 @@ final class di extends qf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            di.f(-21);
+            di.clearDeclaredStaticReferences(-21);
           }
           if (this.a(param0, -26188) != BufferedSocket.field_n) {
             return null;
@@ -117,7 +117,7 @@ final class di extends qf {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         field_k = null;
         if (param0 != 24979) {

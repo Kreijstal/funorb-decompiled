@@ -94,11 +94,11 @@ abstract class MouseWheelInput {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (byte[][]) null;
         field_b = null;
         if (param0 <= 105) {
-          MouseWheelInput.b(119);
+          MouseWheelInput.clearStaticReferences(119);
           field_c = null;
           return;
         }

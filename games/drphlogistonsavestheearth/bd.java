@@ -11,7 +11,7 @@ abstract class bd extends pj {
     static bb field_T;
     static java.awt.Font field_S;
     static char[] field_K;
-    static nh field_P;
+    static RgbSprite field_P;
     static boolean[] field_O;
 
     private final int i(int param0) {
@@ -75,7 +75,7 @@ abstract class bd extends pj {
           return;
         }
         if (uk.field_f == null) {
-          uk.field_f = new nh(this.field_w, this.field_k);
+          uk.field_f = new RgbSprite(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
           SoftwareRasterizer.clearRaster();
           this.c(0, param2 ^ -68, 0);
@@ -85,7 +85,7 @@ abstract class bd extends pj {
           return;
         }
         if (this.field_w > uk.field_f.field_y) {
-          uk.field_f = new nh(this.field_w, this.field_k);
+          uk.field_f = new RgbSprite(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
           SoftwareRasterizer.clearRaster();
           this.c(0, param2 ^ -68, 0);
@@ -95,7 +95,7 @@ abstract class bd extends pj {
           return;
         }
         if (uk.field_f.field_w < this.field_k) {
-          uk.field_f = new nh(this.field_w, this.field_k);
+          uk.field_f = new RgbSprite(this.field_w, this.field_k);
           MouseInput.a(uk.field_f, (byte) 79);
           SoftwareRasterizer.clearRaster();
           this.c(0, param2 ^ -68, 0);
@@ -112,7 +112,7 @@ abstract class bd extends pj {
         uk.field_f.e(param0 + this.field_o, param3 + this.field_m, this.field_J);
     }
 
-    public static void a(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_T = null;
         field_S = null;
         field_P = null;

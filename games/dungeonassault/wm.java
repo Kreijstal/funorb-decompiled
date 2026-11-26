@@ -9,8 +9,8 @@ final class wm {
     static volatile int field_g;
     int[] field_f;
     static int field_b;
-    static cn field_c;
-    static cn field_h;
+    static RgbSprite field_c;
+    static RgbSprite field_h;
     static String[] field_i;
 
     final boolean a(int param0, byte param1) {

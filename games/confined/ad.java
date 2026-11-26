@@ -10,7 +10,7 @@ final class ad {
     private int field_a;
     float field_g;
     private int field_c;
-    static nf field_b;
+    static RgbSprite field_b;
 
     final void a(boolean param0, String param1, String param2, mi param3, String param4) {
         try {
@@ -56,10 +56,10 @@ final class ad {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 >= -2) {
-          ad.a((byte) -25);
+          ad.clearStaticReferences((byte) -25);
         }
     }
 

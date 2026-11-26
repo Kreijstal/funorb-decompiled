@@ -5,18 +5,18 @@ import java.util.*;
 
 class hf extends vg {
     private boolean field_F;
-    static nh field_D;
+    static RgbSprite field_D;
     static int[] field_H;
     boolean field_E;
     private boolean field_B;
-    static nh field_z;
+    static RgbSprite field_z;
     static int field_C;
     boolean field_A;
     static int[] field_G;
 
     final static String g(int param0) {
         if (param0 != -1) {
-          field_D = (nh) null;
+          field_D = (RgbSprite) null;
           if (em.field_c) {
             return null;
           }
@@ -59,7 +59,7 @@ class hf extends vg {
         ((pl) (this.field_u)).a((vg) (this), this.field_F, false);
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 7966) {
           return;
         }
@@ -188,7 +188,7 @@ class hf extends vg {
 
     final boolean a(boolean param0) {
         if (!param0) {
-          hf.f(-19);
+          hf.clearDeclaredStaticReferences(-19);
           return this.field_F;
         }
         return this.field_F;

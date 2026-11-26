@@ -19,7 +19,7 @@ final class mi extends am {
             return null;
           }
           if (param3 != 482809644) {
-            mi.g((byte) 127);
+            mi.clearDeclaredStaticReferences((byte) 127);
           }
           stackIn_6_0 = p.a(3499);
           return stackIn_6_0;
@@ -165,7 +165,7 @@ final class mi extends am {
         return var18;
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -39) {
           field_v = (String) null;
         }

@@ -52,7 +52,7 @@ abstract class wj extends DualLinkNode {
         cc.field_f.a(true);
     }
 
-    public static void c(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         int var1 = 121 % ((-48 - param0) / 35);
         field_k = null;
         field_o = null;

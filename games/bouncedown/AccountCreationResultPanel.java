@@ -61,10 +61,10 @@ final class AccountCreationResultPanel extends sh implements rc {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_pb = null;
         if (param0) {
-          AccountCreationResultPanel.b(false);
+          AccountCreationResultPanel.clearStaticReferences(false);
           field_mb = null;
           return;
         }
@@ -99,7 +99,7 @@ final class AccountCreationResultPanel extends sh implements rc {
                 this.field_nb = true;
               }
             } else {
-              var4 = ma.field_n;
+              var4 = SpriteGeometry.field_n;
               if (this.field_kb != null) {
                 this.field_kb.a(-3814);
               }

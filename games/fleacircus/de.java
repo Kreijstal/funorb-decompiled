@@ -17,15 +17,15 @@ final class de {
     int field_l;
     static String field_j;
     static java.math.BigInteger field_k;
-    static dd field_a;
+    static RgbSprite field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         field_n = null;
         field_a = null;
         field_j = null;
         if (param0 != 0) {
-          de.a(38);
+          de.clearStaticReferences(38);
         }
         field_b = null;
         field_h = null;

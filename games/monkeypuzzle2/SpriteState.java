@@ -14,11 +14,11 @@ abstract class SpriteState extends DualLinkNode {
     static int field_l;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_i = null;
         if (param0 != -69) {
-          SpriteState.a((byte) 11);
+          SpriteState.clearStaticReferences((byte) 11);
           field_p = null;
           return;
         }

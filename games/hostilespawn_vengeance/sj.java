@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class sj {
-    static bd field_g;
+    static RgbSprite field_g;
     static int[] field_f;
     static int[] field_h;
     static String field_d;
     static ub field_c;
-    static bd field_b;
+    static RgbSprite field_b;
     static sg field_a;
-    static bd field_e;
+    static RgbSprite field_e;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 == 58) {
@@ -56,7 +56,7 @@ final class sj {
             return 4;
           }
           if (!param0) {
-            field_b = (bd) null;
+            field_b = (RgbSprite) null;
           }
           try {
             if (ce.field_e == 0) {

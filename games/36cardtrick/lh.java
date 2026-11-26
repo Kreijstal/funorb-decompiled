@@ -264,10 +264,10 @@ final class lh {
         this.field_i = param0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 7865) {
-          lh.a(-76);
+          lh.clearStaticReferences(-76);
         }
         field_c = null;
         field_d = null;

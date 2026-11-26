@@ -15,11 +15,11 @@ final class ln {
         return ScoreSubmission.a(0, param2, param1) & (HighscoreNameEntry.a(param1, 544, param2) | ((param1 & 8192) != 0 ? true : false) | BufferedRandomAccessFile.a(param2, false, param1));
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 >= -95) {
-          ln.a((byte) -52);
+          ln.clearStaticReferences((byte) -52);
         }
     }
 

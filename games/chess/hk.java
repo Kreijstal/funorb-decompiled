@@ -37,7 +37,7 @@ final class hk extends wc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class hk extends wc {
         field_K = (byte[][]) null;
     }
 
-    final static km[] a(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param1 == 1) {
           return sc.a(param2, 121, param3, 1, param0);
         }

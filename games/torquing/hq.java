@@ -52,7 +52,7 @@ final class hq {
         this.field_i = this.field_i - 1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 == -1) {
           field_a = null;
@@ -61,7 +61,7 @@ final class hq {
           field_h = null;
           return;
         }
-        hq.a(-97);
+        hq.clearStaticReferences(-97);
         field_a = null;
         field_e = null;
         field_d = null;

@@ -297,14 +297,14 @@ final class uf extends ch {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         field_v = null;
         field_r = null;
         field_q = null;
         field_u = null;
         if (param0 != 200) {
-          uf.f(119);
+          uf.clearStaticReferences(119);
         }
         field_w = null;
         field_p = null;

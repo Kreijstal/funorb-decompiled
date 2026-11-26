@@ -45,7 +45,7 @@ final class qk {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = -39 / ((2 - param0) / 42);
         field_e = null;

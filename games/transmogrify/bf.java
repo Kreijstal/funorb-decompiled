@@ -77,10 +77,10 @@ final class bf extends lj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_C = null;
         if (param0 != 16) {
-          bf.a((byte) 39);
+          bf.clearStaticReferences((byte) 39);
         }
     }
 

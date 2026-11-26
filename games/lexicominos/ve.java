@@ -112,9 +112,9 @@ abstract class ve {
               } else {
                 fa.field_b = fj.a(param0, param4, false, param1 ^ 118);
               }
-              ed.field_q.position = 0;
-              ed.field_q.writeByte(14, param1 + 24);
-              ed.field_q.writeByte(fa.field_b.a((byte) 45).field_b, -1);
+              SpriteGeometry.field_q.position = 0;
+              SpriteGeometry.field_q.writeByte(14, param1 + 24);
+              SpriteGeometry.field_q.writeByte(fa.field_b.a((byte) 45).field_b, -1);
               kc.a(-1, -1);
               uf.field_m = rb.field_d;
             }
@@ -231,7 +231,7 @@ abstract class ve {
               if (jd.field_c > 0) {
                 MidiPcmStream.field_F = true;
               }
-              ed.field_q.a(l.field_F, param1 ^ -48);
+              SpriteGeometry.field_q.a(l.field_F, param1 ^ -48);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 l.field_F[var8Lifetime1] = l.field_F[var8Lifetime1] + 50;
               }

@@ -6,10 +6,10 @@ import java.util.*;
 final class mf {
     private nj[] field_f;
     static int field_c;
-    static dd field_g;
+    static RgbSprite field_g;
     int[] field_d;
     static mf field_e;
-    static dd field_b;
+    static RgbSprite field_b;
     static fi[] field_a;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -56,7 +56,7 @@ final class mf {
         Boolean var1 = null;
         Boolean var1Lifetime1;
         if (!param0) {
-          field_b = (dd) null;
+          field_b = (RgbSprite) null;
           var1 = bb.field_A;
           bb.field_A = null;
           return var1;

@@ -27,7 +27,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(int param0, byte[] param1);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = -110 % ((-24 - param0) / 53);
     }

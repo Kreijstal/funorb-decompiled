@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class db extends ed {
+class RgbSprite extends SpriteGeometry {
     int[] field_y;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -461,9 +461,9 @@ class db extends ed {
         }
     }
 
-    final db c() {
+    final RgbSprite c() {
         int var3 = 0;
-        db var1 = new db(this.field_p, this.field_u);
+        RgbSprite var1 = new RgbSprite(this.field_p, this.field_u);
         var1.field_r = this.field_r;
         var1.field_x = this.field_x;
         var1.field_s = this.field_s;
@@ -730,7 +730,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.blitUnmasked(SoftwareRasterizer.field_b, this.field_y, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitUnmasked(SoftwareRasterizer.field_b, this.field_y, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -776,7 +776,7 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.blitGrayModulated(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayModulated(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -860,7 +860,7 @@ class db extends ed {
         int var4 = param0 + (this.field_p >> 1) > SoftwareRasterizer.field_e ? SoftwareRasterizer.field_e - param0 << 1 : this.field_p;
         int var5 = param1 < SoftwareRasterizer.field_c ? SoftwareRasterizer.field_c - param1 << 1 : 0;
         int var6 = param1 + (this.field_u >> 1) > SoftwareRasterizer.field_h ? SoftwareRasterizer.field_h - param1 << 1 : this.field_u;
-        db.blitHalfSize(this.field_y, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
+        RgbSprite.blitHalfSize(this.field_y, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void a() {
@@ -933,9 +933,9 @@ class db extends ed {
             return;
           }
           if (param2 == 256) {
-            db.blitAdditive(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9);
+            RgbSprite.blitAdditive(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            db.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1146,10 +1146,10 @@ class db extends ed {
         }
     }
 
-    final db g() {
+    final RgbSprite g() {
         int var2 = 0;
         int var3 = 0;
-        db var1 = new db(this.field_p, this.field_u);
+        RgbSprite var1 = new RgbSprite(this.field_p, this.field_u);
         var1.field_r = this.field_r;
         var1.field_x = this.field_x;
         var1.field_s = this.field_r - this.field_p - this.field_s;
@@ -1203,7 +1203,7 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.blitSilhouette(SoftwareRasterizer.field_b, this.field_y, param2, var5, var4, var7, var6, var8, var9);
+          RgbSprite.blitSilhouette(SoftwareRasterizer.field_b, this.field_y, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1269,7 +1269,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.blitColorKeyReverse(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitColorKeyReverse(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1315,7 +1315,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.blitColorKey(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitColorKey(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1361,7 +1361,7 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.blitColorKeyAlpha(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitColorKeyAlpha(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1541,7 +1541,7 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.blitGrayTinted(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayTinted(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1707,7 +1707,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.blitMultiply(0, SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitMultiply(0, SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1804,7 +1804,7 @@ class db extends ed {
         return;
     }
 
-    db(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    RgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_r = param0;
         this.field_x = param1;
         this.field_s = param2;
@@ -1814,7 +1814,7 @@ class db extends ed {
         this.field_y = param6;
     }
 
-    db(int param0, int param1) {
+    RgbSprite(int param0, int param1) {
         this.field_y = new int[param0 * param1];
         this.field_r = param0;
         this.field_p = param0;
@@ -1824,7 +1824,7 @@ class db extends ed {
         this.field_s = 0;
     }
 
-    db(byte[] param0, java.awt.Component param1) {
+    RgbSprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

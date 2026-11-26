@@ -8,7 +8,7 @@ final class hp extends IntrusiveNode {
     int field_f;
     int[] field_p;
     static int field_s;
-    static dl field_g;
+    static RgbSprite field_g;
     long field_i;
     int field_o;
     int field_h;
@@ -17,7 +17,7 @@ final class hp extends IntrusiveNode {
     int field_j;
     int field_k;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_g = null;
         field_m = null;

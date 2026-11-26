@@ -6,7 +6,7 @@ final class th extends le {
     static int[] field_Fb;
     static int[] field_Jb;
     static int field_Lb;
-    static bd[] field_Hb;
+    static RgbSprite[] field_Hb;
     le field_Kb;
     private pb field_Gb;
     private pb field_Mb;
@@ -92,12 +92,12 @@ final class th extends le {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_Jb = null;
         field_Fb = null;
         field_Hb = null;
         if (param0 != 16) {
-          th.d((byte) -46);
+          th.releaseDeclaredStaticReferences((byte) -46);
         }
     }
 

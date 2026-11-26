@@ -26,7 +26,7 @@ final class i {
             return stackIn_3_0;
           }
           if (param0 != 25910) {
-            i.a(-63);
+            i.clearStaticReferences(-63);
           }
           if (1 != this.field_b.a((byte) 47, param1)) {
             throw new RuntimeException();
@@ -47,7 +47,7 @@ final class i {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_g = null;
         int var1 = 48 % ((param0 - 59) / 57);

@@ -7,12 +7,12 @@ final class gg extends fc {
     static String[] field_D;
     static String[] field_C;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_D = null;
         field_C = null;
         field_E = null;
         if (param0) {
-          gg.a(true);
+          gg.clearStaticReferences(true);
         }
     }
 

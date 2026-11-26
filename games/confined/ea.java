@@ -8,10 +8,10 @@ final class ea {
     static String field_e;
     int field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 != 75) {
-          ea.a((byte) 30);
+          ea.clearStaticReferences((byte) 30);
         }
     }
 

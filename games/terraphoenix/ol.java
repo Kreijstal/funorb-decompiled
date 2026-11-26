@@ -13,7 +13,7 @@ final class ol extends g {
     static String field_Hb;
     private g field_Eb;
 
-    public static void g(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_Hb = null;
         if (param0 != 20) {
           field_Lb = (String) null;

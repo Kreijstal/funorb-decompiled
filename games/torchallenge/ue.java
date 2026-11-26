@@ -132,7 +132,7 @@ final class ue extends IntrusiveNode {
             return (ti[]) (stackIn_3_0);
           }
           if (param0 != -8191) {
-            ue.c((byte) -109);
+            ue.clearDeclaredStaticReferences((byte) -109);
           }
           var3 = param1.e(12, param0 ^ 8171);
           var4 = new ti[var3];
@@ -168,7 +168,7 @@ final class ue extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = -6 % ((90 - param0) / 32);
         field_l = null;
         field_i = (boolean[][]) null;

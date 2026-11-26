@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vk extends uh {
-    static bd field_p;
+    static RgbSprite field_p;
 
     vk(long param0, String param1) {
         super(param0, param1);
@@ -18,7 +18,7 @@ final class vk extends uh {
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param0 != 8) {
-            field_p = (bd) null;
+            field_p = (RgbSprite) null;
           }
           var1 = s.field_b;
           while (ac.a(24501)) {
@@ -45,7 +45,7 @@ final class vk extends uh {
         return re.field_i;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         int var1 = 117 / ((72 - param0) / 52);
     }

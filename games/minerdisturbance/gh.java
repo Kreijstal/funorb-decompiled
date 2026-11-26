@@ -39,7 +39,7 @@ final class gh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         int var1 = 120 % ((-23 - param0) / 47);

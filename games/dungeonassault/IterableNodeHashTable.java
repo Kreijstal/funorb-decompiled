@@ -5,11 +5,11 @@ import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
     static double field_a;
-    static cn[] field_f;
+    static RgbSprite[] field_f;
     static String field_h;
     static int field_b;
     static PlatformTask field_e;
-    static cn field_i;
+    static RgbSprite field_i;
     private IntrusiveNode lookupCursor;
     static String field_c;
     IntrusiveNode[] buckets;

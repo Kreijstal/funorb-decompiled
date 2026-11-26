@@ -20,9 +20,9 @@ final class fa extends IntrusiveNode {
         return (int)(var6 * (double)(param2 - param1)) + param1;
     }
 
-    final static cn a(int param0, byte param1, int param2, int param3, int param4, cn param5) {
+    final static RgbSprite a(int param0, byte param1, int param2, int param3, int param4, RgbSprite param5) {
         int var12 = 0;
-        cn stackIn_29_0 = null;
+        RgbSprite stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -68,7 +68,7 @@ final class fa extends IntrusiveNode {
           if (param5 == null ||
             !(param5.field_y >= param4) ||
             !(param5.field_v >= param2)) {
-            param5 = new cn(param4, param2);
+            param5 = new RgbSprite(param4, param2);
           }
           var8 = -param4 + SoftwareRasterizer.field_i;
           var9 = -param4 + param5.field_y;
@@ -87,7 +87,7 @@ final class fa extends IntrusiveNode {
           }
           param5.field_w = var6_int;
           param5.field_A = var7;
-          stackIn_29_0 = (cn) (param5);
+          stackIn_29_0 = (RgbSprite) (param5);
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

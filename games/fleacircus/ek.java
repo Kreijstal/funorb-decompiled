@@ -3,7 +3,7 @@
  */
 final class ek {
     static fh field_a;
-    static dd field_c;
+    static RgbSprite field_c;
     static int[] field_d;
     static int[] field_b;
 
@@ -46,7 +46,7 @@ final class ek {
         try {
           var5_int = param4 + param1;
           if (param3 != 1) {
-            field_c = (dd) null;
+            field_c = (RgbSprite) null;
           }
           var6 = param2 + param0;
           if (SoftwareRasterizer.field_l >= param1) {

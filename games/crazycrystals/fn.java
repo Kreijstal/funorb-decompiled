@@ -7,10 +7,10 @@ final class fn extends ln {
     static int field_j;
     static String field_i;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         if (!param0) {
-          fn.a(true);
+          fn.clearStaticReferences(true);
           field_g = null;
           field_h = null;
           return;

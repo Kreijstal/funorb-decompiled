@@ -43,9 +43,9 @@ final class ua extends ButtonWidget {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -109) {
-          ua.j(37);
+          ua.clearStaticReferences(37);
           field_L = null;
           field_K = null;
           return;

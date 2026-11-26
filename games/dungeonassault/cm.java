@@ -128,7 +128,7 @@ final class cm extends ii implements pf, vg {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_M = null;
         field_S = null;
         if (param0 > -117) {

@@ -6,7 +6,7 @@ final class db {
     static String field_g;
     static he[] field_b;
     int field_c;
-    static nh field_e;
+    static RgbSprite field_e;
     static int field_a;
     static String field_f;
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class eh extends ue {
-    private nf field_F;
-    private nf[] field_O;
+    private RgbSprite field_F;
+    private RgbSprite[] field_O;
     private int field_E;
     private boolean field_U;
     private int field_X;
@@ -11,32 +11,32 @@ class eh extends ue {
     private int field_x;
     private int field_J;
     private int field_K;
-    private nf[] field_hb;
+    private RgbSprite[] field_hb;
     static String field_A;
     private boolean field_ab;
     static int field_R;
-    private nf field_z;
+    private RgbSprite field_z;
     private int field_Q;
     private int field_cb;
     private int field_Z;
     private int field_T;
     private int field_W;
-    private nf field_P;
+    private RgbSprite field_P;
     private int field_ib;
-    private nf[] field_w;
+    private RgbSprite[] field_w;
     private int field_v;
     private int field_C;
-    private nf field_B;
+    private RgbSprite field_B;
     static String field_eb;
-    private nf[] field_fb;
+    private RgbSprite[] field_fb;
     private int field_jb;
     private boolean field_V;
-    private nf field_S;
+    private RgbSprite field_S;
     private int field_y;
     private boolean field_M;
     static boolean field_gb;
     private int field_N;
-    private nf[] field_L;
+    private RgbSprite[] field_L;
     private boolean field_db;
     private boolean field_G;
     private int field_H;
@@ -51,17 +51,17 @@ class eh extends ue {
         return cg.field_d;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_A = null;
         field_eb = null;
         if (!param0) {
-          eh.c(false);
+          eh.clearStaticReferences(false);
         }
     }
 
     final static void d(int param0) {
         if (param0 > -104) {
-          eh.c(false);
+          eh.clearStaticReferences(false);
         }
     }
 

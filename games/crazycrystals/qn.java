@@ -7,7 +7,7 @@ final class qn {
     int[][] field_l;
     byte[] field_A;
     int[] field_o;
-    static dl field_e;
+    static RgbSprite field_e;
     int field_h;
     int field_s;
     int[][] field_x;

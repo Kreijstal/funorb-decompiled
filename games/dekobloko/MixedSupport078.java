@@ -6,7 +6,7 @@ final class MixedSupport078 {
     static String stringState0334;
     static java.awt.Image imageState0002;
 
-    public static void performAction0959(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         int integerLocal1 = 67 % ((integerArgument1 + 1) / 55);
         stringState0334 = null;
         imageState0002 = null;

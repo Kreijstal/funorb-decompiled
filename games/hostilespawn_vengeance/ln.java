@@ -12,15 +12,15 @@ final class ln {
     String field_s;
     int field_i;
     static id field_a;
-    static bd field_g;
-    static bd field_j;
+    static RgbSprite field_g;
+    static RgbSprite field_j;
     static String field_h;
-    static bd field_c;
+    static RgbSprite field_c;
     static String field_p;
     int[] field_o;
     int field_f;
     static int field_q;
-    static bd[] field_m;
+    static RgbSprite[] field_m;
     static boolean[] field_b;
     private boolean field_n;
 
@@ -104,7 +104,7 @@ final class ln {
         field_l = null;
         field_a = null;
         if (param0 != 31311) {
-          field_g = (bd) null;
+          field_g = (RgbSprite) null;
         }
         field_h = null;
         field_c = null;

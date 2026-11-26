@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ob extends bl {
-    static db field_e;
+    static RgbSprite field_e;
     static String[] field_f;
     static boolean field_c;
-    static db field_d;
+    static RgbSprite field_d;
 
     final static StringBuilder a(int param0, StringBuilder param1, byte param2, char param3) {
         int var5 = 0;
@@ -22,7 +22,7 @@ final class ob extends bl {
           var4_int = param1.length();
           param1.setLength(param0);
           if (param2 != 22) {
-            field_d = (db) null;
+            field_d = (RgbSprite) null;
           }
           for (var5 = var4_int; param0 > var5; var5++) {
             param1.setCharAt(var5, param3);
@@ -43,14 +43,14 @@ final class ob extends bl {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= 112) {
           field_e = null;
           field_d = null;
           field_f = null;
           return;
         }
-        ob.b(119);
+        ob.clearStaticReferences(119);
         field_e = null;
         field_d = null;
         field_f = null;

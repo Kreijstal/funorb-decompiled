@@ -54,12 +54,12 @@ final class im {
     }
 
     final static void b(byte param0) {
-        nf var1 = null;
-        nf var3 = null;
+        RgbSprite var1 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
         int var5 = Confined.field_J ? 1 : 0;
         try {
-          var1 = new nf(540, 140);
+          var1 = new RgbSprite(540, 140);
           vm.a(var1, -8409);
           ti.b();
           int var2 = -113 / ((param0 - 32) / 49);

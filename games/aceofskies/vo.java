@@ -109,9 +109,9 @@ abstract class vo extends li implements dr {
         return param0 | param1;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 14695) {
-          vo.d(89);
+          vo.clearStaticReferences(89);
           field_d = null;
           return;
         }

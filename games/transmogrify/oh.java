@@ -47,10 +47,10 @@ final class oh extends IntrusiveNode {
         this.field_i = false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 < 83) {
-          oh.a((byte) 68);
+          oh.clearStaticReferences((byte) 68);
         }
     }
 

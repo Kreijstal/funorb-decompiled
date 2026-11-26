@@ -4,10 +4,10 @@
 import java.io.*;
 
 final class f implements nn {
-    static bd field_d;
+    static RgbSprite field_d;
     static String[][] field_a;
     static String field_c;
-    static bd field_b;
+    static RgbSprite field_b;
 
     final static void a(int param0, int param1, p param2, int param3) {
         try {
@@ -30,7 +30,7 @@ final class f implements nn {
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
-        bd var8 = null;
+        RgbSprite var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

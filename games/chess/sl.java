@@ -12,7 +12,7 @@ final class sl {
     static String field_d;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_d = null;
         if (param0 == 59) {
@@ -21,7 +21,7 @@ final class sl {
           field_h = null;
           return;
         }
-        sl.a((byte) -67);
+        sl.clearStaticReferences((byte) -67);
         field_g = null;
         field_f = null;
         field_h = null;

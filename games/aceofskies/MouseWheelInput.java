@@ -50,7 +50,7 @@ abstract class MouseWheelInput {
 
     abstract int pollRotation(int param0);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 124 % ((param0 + 53) / 40);
         field_b = null;
         field_d = null;

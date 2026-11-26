@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ji extends da {
     static int[] field_F;
-    static cn field_G;
+    static RgbSprite field_G;
     static String field_H;
     private IntrusiveDeque field_I;
 
@@ -63,7 +63,7 @@ final class ji extends da {
         var4 = DungeonAssault.field_K;
         try {
           if (param1 > -30) {
-            field_G = (cn) null;
+            field_G = (RgbSprite) null;
           }
           try {
             if (!PlatformTaskDispatcher.field_n.startsWith("win")) {
@@ -171,11 +171,11 @@ final class ji extends da {
         this.field_D = null;
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_H = null;
         field_G = null;
         if (param0 != -98) {
-          ji.f((byte) -89);
+          ji.clearDeclaredStaticReferences((byte) -89);
         }
         field_F = null;
     }

@@ -11,7 +11,7 @@ final class th extends PacketBuffer {
     static PcmSampleStream[] field_o;
     private pe field_n;
     static int field_t;
-    static db[] field_l;
+    static RgbSprite[] field_l;
     static int field_s;
 
     final int i(byte param0) {
@@ -156,7 +156,7 @@ final class th extends PacketBuffer {
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_u = null;
         field_o = null;

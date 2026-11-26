@@ -4,7 +4,7 @@
 final class ji {
     static int[] field_e;
     static KeyboardInput field_c;
-    static nh field_b;
+    static RgbSprite field_b;
     static int field_f;
     static int[] field_a;
     static jb field_d;

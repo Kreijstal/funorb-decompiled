@@ -38,7 +38,7 @@ final class bh extends wf implements sh {
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseDeclaredStaticReferences(byte param0) {
         field_Z = null;
         field_db = null;
         field_bb = null;

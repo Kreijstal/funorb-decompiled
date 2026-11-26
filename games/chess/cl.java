@@ -4,10 +4,10 @@
 final class cl {
     static IntrusiveDeque field_e;
     static long field_b;
-    static km field_g;
+    static RgbSprite field_g;
     static int field_d;
     static String field_f;
-    static km[][][][] field_c;
+    static RgbSprite[][][][] field_c;
     static String field_a;
     static String field_h;
 
@@ -33,18 +33,18 @@ final class cl {
         var1Lifetime1 = -102 % ((param0 + 89) / 32);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_h = null;
         field_g = null;
         field_a = null;
         if (param0 == 12) {
-          field_c = (km[][][][]) null;
+          field_c = (RgbSprite[][][][]) null;
           field_e = null;
           return;
         }
-        cl.a(40);
-        field_c = (km[][][][]) null;
+        cl.clearStaticReferences(40);
+        field_c = (RgbSprite[][][][]) null;
         field_e = null;
     }
 
@@ -66,7 +66,7 @@ final class cl {
         var7 = Chess.field_G;
         try {
           if (param0 != -4974) {
-            field_g = (km) null;
+            field_g = (RgbSprite) null;
           }
           var2_int = param1.e(-16, 8);
           if (var2_int > 0) {
@@ -103,14 +103,14 @@ final class cl {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     static {
-        field_g = new km(0, 0);
+        field_g = new RgbSprite(0, 0);
         field_f = "Create unrated game";
-        field_c = new km[2][2][2][7];
+        field_c = new RgbSprite[2][2][2][7];
         field_a = "Match by...";
         field_h = "Honour";
     }

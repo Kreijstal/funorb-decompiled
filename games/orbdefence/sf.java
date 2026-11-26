@@ -3,7 +3,7 @@
  */
 class sf extends ie {
     private int field_w;
-    private hj field_D;
+    private RgbSprite field_D;
     private int field_R;
     private int field_x;
     private int field_n;
@@ -11,22 +11,22 @@ class sf extends ie {
     private int field_E;
     private int field_X;
     private int field_y;
-    private hj field_v;
+    private RgbSprite field_v;
     private String field_N;
     private boolean field_l;
-    private hj[] field_B;
+    private RgbSprite[] field_B;
     static ki field_q;
-    private hj field_S;
+    private RgbSprite field_S;
     static int field_O;
-    private hj[] field_J;
+    private RgbSprite[] field_J;
     private int field_H;
     private int field_s;
     private boolean field_U;
     private int field_m;
-    private hj[] field_V;
-    private hj[] field_t;
+    private RgbSprite[] field_V;
+    private RgbSprite[] field_t;
     private int field_p;
-    private hj field_C;
+    private RgbSprite field_C;
     private int field_z;
     private kc field_A;
     private int field_Q;
@@ -35,12 +35,12 @@ class sf extends ie {
     static int field_T;
     private int field_L;
     private int field_G;
-    private hj field_M;
+    private RgbSprite field_M;
     private int field_u;
     private String field_r;
     private boolean field_Y;
     private int field_W;
-    private hj[] field_k;
+    private RgbSprite[] field_k;
     private boolean field_P;
     private boolean field_F;
 

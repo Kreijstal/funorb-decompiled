@@ -56,7 +56,7 @@ final class ib implements rd {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         field_i = null;
@@ -64,7 +64,7 @@ final class ib implements rd {
         if (!param0) {
           return;
         }
-        ib.a(true);
+        ib.clearStaticReferences(true);
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4) {

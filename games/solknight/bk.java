@@ -82,7 +82,7 @@ final class bk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 82 % ((2 - param0) / 55);
         field_a = null;
     }
@@ -148,7 +148,7 @@ final class bk {
             }
           }
           if (param0 != 3) {
-            bk.a((byte) -51);
+            bk.clearStaticReferences((byte) -51);
           }
           if (var7 < var8) {
             incrementValue$0 = var6Lifetime1;

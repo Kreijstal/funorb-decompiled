@@ -8,7 +8,7 @@ final class kb {
     static String field_d;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -38 % ((-45 - param0) / 59);
         field_d = null;
         field_b = null;
@@ -26,7 +26,7 @@ final class kb {
         if (!param1) {
           return new String(var3);
         }
-        kb.a((byte) 81);
+        kb.clearStaticReferences((byte) 81);
         return new String(var3);
     }
 

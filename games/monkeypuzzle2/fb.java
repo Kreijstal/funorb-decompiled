@@ -14,10 +14,10 @@ abstract class fb extends DualLinkNode {
 
     abstract int a(boolean param0);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         if (param0 != -61) {
-          fb.a((byte) 7);
+          fb.clearStaticReferences((byte) 7);
         }
     }
 

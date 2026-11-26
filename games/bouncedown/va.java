@@ -7,7 +7,7 @@ final class va {
     static String field_g;
     static boolean field_f;
     static gk field_c;
-    static tg[] field_d;
+    static RgbSprite[] field_d;
     static int field_a;
 
     public static void c(int param0) {

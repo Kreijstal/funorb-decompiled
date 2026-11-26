@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class se extends ak {
-    static tg field_A;
+    static RgbSprite field_A;
     static String field_F;
     static String field_B;
     static String[] field_E;

@@ -81,7 +81,7 @@ final class nf extends gj implements pe, da {
           el.a(this.field_I.field_i, (byte) 126);
           return;
         }
-        nf.f((byte) 10);
+        nf.clearDeclaredStaticReferences((byte) 10);
         el.a(this.field_I.field_i, (byte) 126);
     }
 
@@ -98,7 +98,7 @@ final class nf extends gj implements pe, da {
         String var4 = null;
         try {
           if (param1 != -96) {
-            nf.f((byte) 39);
+            nf.clearDeclaredStaticReferences((byte) 39);
           }
           var3 = this.field_I;
           var4 = param0;
@@ -299,7 +299,7 @@ final class nf extends gj implements pe, da {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_M = null;
         field_F = null;
         if (param0 >= -40) {

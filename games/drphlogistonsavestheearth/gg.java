@@ -25,16 +25,16 @@ final class gg {
 
     private final double a(int param0) {
         if (param0 != 1769212228) {
-          nh[] var3 = (nh[]) null;
-          gg.a(38, (nh[]) null);
+          RgbSprite[] var3 = (RgbSprite[]) null;
+          gg.a(38, (RgbSprite[]) null);
         }
         return (double)hi.a(1000, param0 ^ 1769212224, this.field_r) / 1000.0;
     }
 
     public static void b(int param0) {
         if (param0 != -339514552) {
-          nh[] var2 = (nh[]) null;
-          gg.a(-70, (nh[]) null);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          gg.a(-70, (RgbSprite[]) null);
         }
         field_i = null;
         field_f = null;
@@ -42,7 +42,7 @@ final class gg {
         field_n = null;
     }
 
-    final static void a(int param0, nh[] param1) {
+    final static void a(int param0, RgbSprite[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

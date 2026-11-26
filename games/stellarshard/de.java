@@ -7,11 +7,11 @@ final class de {
     static th field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 4) {
-          de.a(57);
+          de.clearStaticReferences(57);
         }
         field_a = null;
         field_d = null;

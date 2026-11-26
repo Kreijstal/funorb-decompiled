@@ -80,7 +80,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static void a(String[] args, int param1, byte param2, int param3, int[] param4, ResourceArchive param5, byte[] param6, km[][] param7, int[] param8, boolean param9, rk[] param10, int param11, String[][] param12, km[][] param13, String[][] param14, String[] param15, ResourceArchive param16, String[] param17, ResourceArchive param18, byte[] param19) {
+    final static void a(String[] args, int param1, byte param2, int param3, int[] param4, ResourceArchive param5, byte[] param6, RgbSprite[][] param7, int[] param8, boolean param9, rk[] param10, int param11, String[][] param12, RgbSprite[][] param13, String[][] param14, String[] param15, ResourceArchive param16, String[] param17, ResourceArchive param18, byte[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -239,7 +239,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class IterableNodeHashTable implements Iterable {
           }
           param0.key = param1;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

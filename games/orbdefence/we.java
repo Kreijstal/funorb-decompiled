@@ -239,7 +239,7 @@ final class we extends ta implements ai {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_A = null;
         if (param0 != 29858) {
           return;

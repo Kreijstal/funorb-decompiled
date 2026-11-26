@@ -47,7 +47,7 @@ final class md extends sk {
         return this.field_u;
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_s = null;
         field_v = null;
         int var1 = 60 / ((-82 - param0) / 32);

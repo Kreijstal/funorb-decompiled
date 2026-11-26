@@ -7,7 +7,7 @@ final class cb extends IntrusiveNode {
     int field_j;
     int field_E;
     static String field_t;
-    static db field_n;
+    static RgbSprite field_n;
     int field_i;
     PcmSample field_w;
     wj field_p;
@@ -56,7 +56,7 @@ final class cb extends IntrusiveNode {
             gl.field_e[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (param0 > -51) {
-            field_n = (db) null;
+            field_n = (RgbSprite) null;
           }
           var5 = 256;
           var1_intLifetime1 = var5;
@@ -78,7 +78,7 @@ final class cb extends IntrusiveNode {
         af.field_b = false;
         vf.field_r = -1;
         if (param0 != -52) {
-          field_n = (db) null;
+          field_n = (RgbSprite) null;
         }
         bf.field_g = -1;
     }

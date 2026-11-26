@@ -40,9 +40,9 @@ final class OpenGlEnvironmentWaterEffect extends RenderEffect {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 115) {
-          OpenGlEnvironmentWaterEffect.c((byte) 61);
+          OpenGlEnvironmentWaterEffect.clearStaticReferences((byte) 61);
           field_j = null;
           return;
         }

@@ -48,12 +48,12 @@ final class SuperSpeedAnimation extends EventAnimation {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         if (param0 >= 17) {
           return;
         }
-        SuperSpeedAnimation.e((byte) 8);
+        SuperSpeedAnimation.clearStaticReferences((byte) 8);
     }
 
     private final void d(int param0) {

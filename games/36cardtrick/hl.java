@@ -213,11 +213,11 @@ class hl extends lk {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_C = null;
         field_y = null;
         if (param0 > -33) {
-          hl.d((byte) -15);
+          hl.clearDeclaredStaticReferences((byte) -15);
         }
     }
 
@@ -280,11 +280,11 @@ class hl extends lk {
         }
     }
 
-    final static kc[] a(qk param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(qk param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        kc[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -296,7 +296,7 @@ class hl extends lk {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (kc[]) (stackIn_2_0);
+          return (RgbSprite[]) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

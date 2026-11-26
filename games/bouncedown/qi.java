@@ -20,13 +20,13 @@ final class qi extends jd {
         kg var5 = null;
         kg var6 = null;
         int var7 = 0;
-        tg[] var8 = null;
+        RgbSprite[] var8 = null;
         var7 = Bounce.field_N;
         try {
           super.a(param2, (byte) -122);
           if (param1 != -19463) {
-            var8 = (tg[]) null;
-            this.a(10, 115, (tg[]) null);
+            var8 = (RgbSprite[]) null;
+            this.a(10, 115, (RgbSprite[]) null);
           }
           if (param0) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
@@ -64,10 +64,10 @@ final class qi extends jd {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != 0) {
-          qi.b(66);
+          qi.clearStaticReferences(66);
         }
         field_r = null;
     }
@@ -81,7 +81,7 @@ final class qi extends jd {
         var1.a(-29776);
     }
 
-    final void a(int param0, int param1, tg[] param2) {
+    final void a(int param0, int param1, RgbSprite[] param2) {
         int var4_int = param1;
         if (this.field_q[var4_int] == null) {
           this.field_q[var4_int] = new kg();
@@ -286,7 +286,7 @@ final class qi extends jd {
         }
     }
 
-    final void a(int param0, tg[] param1) {
+    final void a(int param0, RgbSprite[] param1) {
         int var4 = 0;
         kg[] var3 = null;
         kg var5 = null;
@@ -356,7 +356,7 @@ final class qi extends jd {
         }
     }
 
-    final void a(boolean param0, tg param1) {
+    final void a(boolean param0, RgbSprite param1) {
         int var4 = 0;
         kg[] var3 = null;
         kg var5 = null;

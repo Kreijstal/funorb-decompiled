@@ -41,25 +41,25 @@ final class mi {
         return -1 + this.field_a.length;
     }
 
-    final static nh a(int param0, byte param1, int param2) {
-        nh var6 = null;
-        nh var3 = null;
+    final static RgbSprite a(int param0, byte param1, int param2) {
+        RgbSprite var6 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
         int var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        nh var6Lifetime1;
-        nh var3Lifetime1;
+        RgbSprite var6Lifetime1;
+        RgbSprite var3Lifetime1;
         int var4Lifetime1;
         if (param1 >= -62) {
           mi.clearStaticReferences((byte) 48);
         } else {
-          var6 = new nh(param0, param0);
+          var6 = new RgbSprite(param0, param0);
           var3 = var6;
           for (var4 = 0; var3.field_B.length > var4; var4++) {
             var6.field_B[var4] = param2;
           }
           return var3;
         }
-        var6Lifetime1 = new nh(param0, param0);
+        var6Lifetime1 = new RgbSprite(param0, param0);
         var3Lifetime1 = var6Lifetime1;
         for (var4Lifetime1 = 0; var3Lifetime1.field_B.length > var4Lifetime1; var4Lifetime1++) {
           var6Lifetime1.field_B[var4Lifetime1] = param2;

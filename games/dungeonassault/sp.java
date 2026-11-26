@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sp {
-    static cn field_d;
+    static RgbSprite field_d;
     static String[] field_g;
-    static cn field_a;
+    static RgbSprite field_a;
     static int field_h;
     static AccountRequestState field_e;
     static String field_f;
@@ -12,7 +12,7 @@ final class sp {
     static String field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -21,7 +21,7 @@ final class sp {
         field_d = null;
         field_g = null;
         if (!param0) {
-          sp.a(true);
+          sp.clearStaticReferences(true);
         }
     }
 

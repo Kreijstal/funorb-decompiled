@@ -11,13 +11,13 @@ final class be {
     private ea field_n;
     private long field_h;
     private byte[] field_j;
-    static db[] field_b;
+    static RgbSprite[] field_b;
     private int field_c;
     static sc field_q;
     private long field_o;
     private long field_e;
     private byte[] field_p;
-    static db field_d;
+    static RgbSprite field_d;
     private long field_k;
     static int field_l;
     static byte[][] field_f;
@@ -70,7 +70,7 @@ final class be {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 3 % ((-62 - param0) / 41);
         field_i = null;
         field_b = null;
@@ -136,7 +136,7 @@ final class be {
 
     final long a(byte param0) {
         if (param0 != -122) {
-          be.b((byte) 125);
+          be.clearStaticReferences((byte) 125);
         }
         return this.field_o;
     }
@@ -306,7 +306,7 @@ final class be {
               this.field_o = (long)param2 + this.field_h;
             }
             if (param3 != -31593) {
-              be.b((byte) -7);
+              be.clearStaticReferences((byte) -7);
             }
             if (this.field_g != -1L) {
               if (this.field_g <= this.field_h) {
@@ -418,6 +418,6 @@ final class be {
     static {
         field_i = "Log in";
         field_q = new sc();
-        field_d = new db(540, 140);
+        field_d = new RgbSprite(540, 140);
     }
 }

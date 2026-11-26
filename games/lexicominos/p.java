@@ -11,7 +11,7 @@ final class p {
         th var5 = null;
         int var4 = 0;
         try {
-          var5 = ed.field_q;
+          var5 = SpriteGeometry.field_q;
           var5.h(param1, 0);
           if (param2 != 24) {
             field_a = (String[]) null;

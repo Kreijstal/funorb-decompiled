@@ -85,7 +85,7 @@ final class AccountCreationResultPanel extends wa implements sg {
         }
     }
 
-    public static void p(int param0) {
+    public static void resetDeclaredStaticReferences(int param0) {
         field_Ab = null;
         if (param0 != 255) {
           return;

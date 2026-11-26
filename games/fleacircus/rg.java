@@ -106,7 +106,7 @@ final class rg extends ef {
         }
     }
 
-    final static void a(int param0, dd param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -121,7 +121,7 @@ final class rg extends ef {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        dd var21 = null;
+        RgbSprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;

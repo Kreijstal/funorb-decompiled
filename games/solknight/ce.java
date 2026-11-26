@@ -17,12 +17,12 @@ final class ce {
         return this.field_d;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_c = null;
         field_f = null;
         if (!param0) {
-          ce.b(true);
+          ce.clearStaticReferences(true);
         }
     }
 
@@ -55,7 +55,7 @@ final class ce {
         this.field_d = true;
         this.field_g = param0 ? true : false;
         if (param1 != -75) {
-          ce.b(true);
+          ce.clearStaticReferences(true);
         }
     }
 

@@ -3,22 +3,22 @@
  */
 final class md extends w {
     private int field_x;
-    static db[] field_A;
+    static RgbSprite[] field_A;
     private int field_E;
     private int field_y;
     int field_K;
-    private db field_z;
-    private db[] field_F;
+    private RgbSprite field_z;
+    private RgbSprite[] field_F;
     static String field_L;
     private int field_C;
     static String field_B;
-    private db field_D;
+    private RgbSprite field_D;
     private int field_M;
     private int field_I;
     boolean field_G;
-    private db field_H;
+    private RgbSprite field_H;
 
-    private final db a(int param0, int param1, byte param2) {
+    private final RgbSprite a(int param0, int param1, byte param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -27,14 +27,14 @@ final class md extends w {
         int var11 = 0;
         int var12 = 0;
         int var13 = Lexicominos.field_L ? 1 : 0;
-        db var14 = new db(this.field_I * 2, this.field_v);
+        RgbSprite var14 = new RgbSprite(this.field_I * 2, this.field_v);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         de.a(var14, 6);
         int var5 = this.field_v >> 1;
         if (param2 > -38) {
-          return (db) null;
+          return (RgbSprite) null;
         }
         for (var6 = 0; this.field_v > var6; var6++) {
           var7 = (var6 >> 1) * (2 * this.field_I - 1) % (2 * this.field_I);
@@ -60,7 +60,7 @@ final class md extends w {
         this.field_C = (16711422 & param0) >> 1;
         this.field_M = (16711422 & param1) >> 1;
         if (param2 <= 68) {
-          this.field_H = (db) null;
+          this.field_H = (RgbSprite) null;
         }
         this.field_x = param1;
         this.f(-90);
@@ -70,14 +70,14 @@ final class md extends w {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    private final db d(boolean param0) {
+    private final RgbSprite d(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Lexicominos.field_L ? 1 : 0;
         int var2 = this.field_v >> 1;
-        db var3 = new db(var2, this.field_v);
+        RgbSprite var3 = new RgbSprite(var2, this.field_v);
         de.a(var3, 6);
         for (var4 = 0; var4 < this.field_v; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -186,14 +186,14 @@ final class md extends w {
     }
 
     private final void f(int param0) {
-        db discarded$0 = null;
-        this.field_F = new db[]{this.a(this.field_E, this.field_x, (byte) -50), this.a(this.field_C, this.field_M, (byte) -98)};
+        RgbSprite discarded$0 = null;
+        this.field_F = new RgbSprite[]{this.a(this.field_E, this.field_x, (byte) -50), this.a(this.field_C, this.field_M, (byte) -98)};
         if (param0 >= -59) {
           discarded$0 = this.d(false);
         }
         this.field_H = this.d(false);
         this.field_z = this.field_H.g();
-        this.field_D = new db(this.field_v >> 1, this.field_v);
+        this.field_D = new RgbSprite(this.field_v >> 1, this.field_v);
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4) {
@@ -201,7 +201,7 @@ final class md extends w {
         this.f(-72);
     }
 
-    private final void a(db param0, int param1, int param2, int param3) {
+    private final void a(RgbSprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

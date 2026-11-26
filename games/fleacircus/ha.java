@@ -4,7 +4,7 @@
 final class ha extends IntrusiveNode {
     static int field_l;
     byte[] field_r;
-    static dd field_i;
+    static RgbSprite field_i;
     static String field_m;
     long field_q;
     int field_n;

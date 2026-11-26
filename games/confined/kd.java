@@ -49,16 +49,16 @@ final class kd extends jf {
 
     final void d(int param0) {
         if (param0 >= -57) {
-          kd.d((byte) -7);
+          kd.clearStaticReferences((byte) -7);
         }
         if (null != this.field_p) {
           this.field_p.a(1);
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 86) {
-          kd.d((byte) 68);
+          kd.clearStaticReferences((byte) 68);
         }
         field_s = null;
         field_t = null;
@@ -91,7 +91,7 @@ final class kd extends jf {
             }
             this.field_p = (vd) (param1);
             if (param2 != -65) {
-              kd.d((byte) -56);
+              kd.clearStaticReferences((byte) -56);
             }
             this.e(22112);
             this.a(param2 + 67, param0);

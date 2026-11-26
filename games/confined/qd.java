@@ -4,7 +4,7 @@
 final class qd {
     static int field_d;
     static String field_a;
-    static nf[] field_c;
+    static RgbSprite[] field_c;
     static bm[] field_b;
 
     final static String a(char param0, int param1, byte param2) {

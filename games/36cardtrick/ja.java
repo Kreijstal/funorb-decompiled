@@ -23,17 +23,17 @@ final class ja {
         if (param0 == -7705) {
           return ng.field_y;
         }
-        ja.a((byte) -105);
+        ja.clearStaticReferences((byte) -105);
         return ng.field_y;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0 >= -69) {
-          ja.a((byte) 55);
+          ja.clearStaticReferences((byte) 55);
         }
     }
 

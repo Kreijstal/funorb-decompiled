@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class se {
-    static dd[] field_a;
+    static RgbSprite[] field_a;
     static GzipDecompressor field_c;
     static String field_e;
     static String field_f;

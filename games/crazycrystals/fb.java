@@ -8,7 +8,7 @@ abstract class fb {
     fq field_a;
     static PcmSample field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 == -50) {
           field_d = null;
@@ -16,13 +16,13 @@ abstract class fb {
           field_c = null;
           return;
         }
-        fb.a((byte) -54);
+        fb.clearStaticReferences((byte) -54);
         field_d = null;
         field_e = null;
         field_c = null;
     }
 
-    final static void a(int param0, dl[] param1, int param2, int param3, int param4) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;

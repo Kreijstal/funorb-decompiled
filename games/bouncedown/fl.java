@@ -80,7 +80,7 @@ final class fl {
         }
     }
 
-    final static tg[] a(int param0, int param1, gk param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, gk param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;

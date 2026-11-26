@@ -392,11 +392,11 @@ final class LevelSession {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_db = null;
         field_V = null;
         if (param0 != 24342) {
-          LevelSession.h(-24);
+          LevelSession.clearStaticReferences(-24);
         }
         field_Y = null;
         field_K = null;
@@ -773,7 +773,7 @@ final class LevelSession {
         int var11_int = 0;
         jb var11 = null;
         int var12_int = 0;
-        nh var12 = null;
+        RgbSprite var12 = null;
         int var13_int = 0;
         double var13 = 0.0;
         int var15_int = 0;
@@ -866,7 +866,7 @@ final class LevelSession {
         SoftwareRasterizer.restoreClip(this.field_t);
         var10 = "x" + this.field_A;
         var11 = cb.field_b;
-        var12 = new nh(var11.b(var10), var11.field_x + var11.field_S);
+        var12 = new RgbSprite(var11.b(var10), var11.field_x + var11.field_S);
         var12.c();
         if (param0 != -2639) {
           this.field_T = -118;
@@ -1157,7 +1157,7 @@ final class LevelSession {
         double var2 = 0.0;
         int var4 = 0;
         bf var5 = null;
-        nh var6 = null;
+        RgbSprite var6 = null;
         bf var7 = null;
         bf var8 = null;
         bf var9 = null;

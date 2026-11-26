@@ -9,9 +9,9 @@ final class cl extends di {
     static String field_db;
     static RasterBuffer field_fb;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -93) {
-          cl.a((byte) 36);
+          cl.clearStaticReferences((byte) 36);
         }
         field_fb = null;
         field_db = null;
@@ -28,7 +28,7 @@ final class cl extends di {
           }
           var4_int = ~var4_int;
           if (param3 != -105) {
-            cl.a((byte) -28);
+            cl.clearStaticReferences((byte) -28);
           }
           int stackIn_7_0 = var4_int;
           return stackIn_7_0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
-    static dd field_a;
+    static RgbSprite field_a;
     volatile boolean focusLost;
     java.awt.Frame fullscreenFrame;
 
@@ -12,7 +12,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final void exitFullscreen(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != 20401) {
-            field_a = (dd) null;
+            field_a = (RgbSprite) null;
           }
           hi.exitFullscreenFrame(param0, this.fullscreenFrame, (byte) 52);
         } catch (RuntimeException runtimeException) {
@@ -99,7 +99,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static dd a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static RgbSprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -107,7 +107,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -21) {
-            field_a = (dd) null;
+            field_a = (RgbSprite) null;
           }
           if (ha.a(param1, -32180, param2, param3)) {
             return UiComponent.h(114);

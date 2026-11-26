@@ -134,14 +134,14 @@ final class sj extends WidgetContainer implements md, oi {
         return "</col></u>";
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_F = null;
         field_J = null;
         field_E = null;
         field_B = null;
         field_C = null;
         if (param0 != 23) {
-          sj.e((byte) 57);
+          sj.clearStaticReferences((byte) 57);
         }
     }
 

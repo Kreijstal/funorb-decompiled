@@ -114,7 +114,7 @@ final class of extends pc {
         return stackIn_6_0;
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_F = null;
         field_C = null;
         field_G = null;

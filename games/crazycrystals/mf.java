@@ -41,7 +41,7 @@ final class mf extends wl {
               var4 = (String) (hi.a(param0, "getcookies", -126));
               var5 = ik.a(var4, (byte) -76, ';');
               if (param1 != -28697) {
-                mf.f(82);
+                mf.releaseDeclaredStaticReferences(82);
               }
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -81,7 +81,7 @@ final class mf extends wl {
 
     final int b(byte param0) {
         if (param0 < 18) {
-          mf.f(-91);
+          mf.releaseDeclaredStaticReferences(-91);
           if (this.field_n) {
             return 0;
           }
@@ -93,7 +93,7 @@ final class mf extends wl {
         return 100;
     }
 
-    public static void f(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_u = null;
         if (param0 <= 19) {
           return;

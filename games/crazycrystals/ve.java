@@ -6,7 +6,7 @@ final class ve extends lb {
     static boolean field_t;
     private int field_s;
     private int field_q;
-    private dl[] field_u;
+    private RgbSprite[] field_u;
 
     final static dh a(int param0, db param1, int param2, db param3, int param4) {
         RuntimeException var5 = null;

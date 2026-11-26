@@ -240,7 +240,7 @@ final class qh extends kj implements tl, sg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -36) {
           field_O = (boolean[][][]) null;
         }
@@ -259,7 +259,7 @@ final class qh extends kj implements tl, sg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 9) {
-            qh.f((byte) -104);
+            qh.clearDeclaredStaticReferences((byte) -104);
           }
           if (super.a(param0, param1, (byte) 51, param3)) {
             return true;

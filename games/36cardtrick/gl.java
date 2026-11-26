@@ -6,7 +6,7 @@ final class gl extends hl {
     private ba field_F;
     static String[] field_G;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 1) {
           return;
         }
@@ -124,12 +124,12 @@ final class gl extends hl {
         }
     }
 
-    final static kc[] a(String param0, qk param1, String param2, int param3) {
+    final static RgbSprite[] a(String param0, qk param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        kc[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -174,10 +174,10 @@ final class gl extends hl {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        kc var15 = null;
-        kc var16 = null;
-        kc var13 = null;
-        kc var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var16 = null;
+        RgbSprite var13 = null;
+        RgbSprite var12 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = Main.field_T;
@@ -195,7 +195,7 @@ final class gl extends hl {
           var9 = var15.field_l << 1;
           var10 = var15.field_k << 1;
           if (null == hb.field_c) {
-            hb.field_c = new kc(var9, var10);
+            hb.field_c = new RgbSprite(var9, var10);
             dl.a(97, hb.field_c);
             var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
@@ -203,7 +203,7 @@ final class gl extends hl {
             return;
           }
           if (var9 > hb.field_c.field_p) {
-            hb.field_c = new kc(var9, var10);
+            hb.field_c = new RgbSprite(var9, var10);
             dl.a(97, hb.field_c);
             var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
@@ -218,7 +218,7 @@ final class gl extends hl {
             hb.field_c.b(var5 - var15.field_l, -var15.field_k + var6, 256);
             return;
           }
-          hb.field_c = new kc(var9, var10);
+          hb.field_c = new RgbSprite(var9, var10);
           dl.a(97, hb.field_c);
           var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
           gg.a(14756);
@@ -230,7 +230,7 @@ final class gl extends hl {
           var9Lifetime1 = var16.field_l << 1;
           var10Lifetime1 = var16.field_k << 1;
           if (null == hb.field_c) {
-            hb.field_c = new kc(var9Lifetime1, var10Lifetime1);
+            hb.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
             dl.a(97, hb.field_c);
             var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
@@ -238,7 +238,7 @@ final class gl extends hl {
             return;
           }
           if (var9Lifetime1 > hb.field_c.field_p) {
-            hb.field_c = new kc(var9Lifetime1, var10Lifetime1);
+            hb.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
             dl.a(97, hb.field_c);
             var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
@@ -253,7 +253,7 @@ final class gl extends hl {
             hb.field_c.b(var5 - var16.field_l, -var16.field_k + var6, 256);
             return;
           }
-          hb.field_c = new kc(var9Lifetime1, var10Lifetime1);
+          hb.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
           dl.a(97, hb.field_c);
           var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
           gg.a(14756);

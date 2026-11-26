@@ -125,9 +125,9 @@ final class gm extends ah {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 15) {
-          gm.m(-41);
+          gm.clearDeclaredStaticReferences(-41);
           field_cb = null;
           field_bb = null;
           return;

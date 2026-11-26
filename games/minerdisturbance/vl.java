@@ -107,7 +107,7 @@ final class vl extends em {
         return 100;
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_I = null;
         field_E = null;
         int var1 = -60 / ((52 - param0) / 61);

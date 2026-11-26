@@ -4,7 +4,7 @@
 final class kc extends RuntimeException {
     static String field_e;
     static String field_b;
-    static bd field_d;
+    static RgbSprite field_d;
     String field_a;
     static int field_c;
     Throwable field_g;

@@ -22,14 +22,14 @@ final class i implements uj {
         i.a(-114, (int[]) null, (int[]) null);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -57) {
           field_b = (String[][]) null;
           field_c = null;
           field_d = null;
           return;
         }
-        i.b((byte) -113);
+        i.clearStaticReferences((byte) -113);
         field_b = (String[][]) null;
         field_c = null;
         field_d = null;

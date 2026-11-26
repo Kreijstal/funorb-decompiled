@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rk {
-    static nh field_e;
+    static RgbSprite field_e;
     static String field_f;
-    static nh[] field_d;
+    static RgbSprite[] field_d;
     static ia field_b;
     static he field_a;
     static String field_c;
@@ -13,7 +13,7 @@ final class rk {
         return param0 & param1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 == 52) {
           field_d = null;
@@ -23,7 +23,7 @@ final class rk {
           field_b = null;
           return;
         }
-        rk.a((byte) -12);
+        rk.clearStaticReferences((byte) -12);
         field_d = null;
         field_a = null;
         field_e = null;

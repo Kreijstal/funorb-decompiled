@@ -38,10 +38,10 @@ final class MidiNote extends IntrusiveNode {
         this.field_x = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 < 96) {
-          MidiNote.a((byte) -80);
+          MidiNote.clearStaticReferences((byte) -80);
         }
     }
 

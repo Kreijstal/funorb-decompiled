@@ -70,9 +70,9 @@ abstract class nk extends GameAppletShell {
         ij.field_o[param0] = true;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 89) {
-          nk.c((byte) -5);
+          nk.clearStaticReferences((byte) -5);
         }
         field_t = null;
         field_C = null;
@@ -611,7 +611,7 @@ abstract class nk extends GameAppletShell {
             la.a(kk.c(-14047), true);
           }
           if (var4 == 10) {
-            ed.field_q.h(17, 0);
+            SpriteGeometry.field_q.h(17, 0);
           }
           if (var4 == 11) {
             rf.a(20104, kk.c(-14047));

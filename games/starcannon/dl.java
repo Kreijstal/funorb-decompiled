@@ -116,11 +116,11 @@ final class dl {
         return lb.field_d[var4];
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_b = null;
         if (!param0) {
-          dl.a(false);
+          dl.clearStaticReferences(false);
         }
     }
 

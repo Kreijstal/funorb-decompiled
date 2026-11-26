@@ -11,7 +11,7 @@ final class a extends IntrusiveNode {
     int field_j;
     static nk field_n;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_l = null;
         field_n = null;
         field_m = null;
@@ -27,7 +27,7 @@ final class a extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void a(int param0, int param1, se param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, int param9, cn[] param10, cn[] param11) {
+    final static void a(int param0, int param1, se param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, RgbSprite[] param11) {
         if (!param3) {
           return;
         }

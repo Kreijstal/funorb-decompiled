@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class tb {
-    static dl[] field_e;
+    static RgbSprite[] field_e;
     static int field_g;
     bh[] field_h;
     static IntrusiveDeque field_b;
@@ -73,13 +73,13 @@ abstract class tb {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          mc.field_q = param1.readUnsignedShort((byte) -7) << 5;
+          SpriteGeometry.field_q = param1.readUnsignedShort((byte) -7) << 5;
           if (param0 != -31416) {
             field_d = (PcmStreamMixer) null;
           }
           var2_int = param1.readUnsignedByte(255);
           jn.field_q = (7 & var2_int) << 18;
-          mc.field_q = mc.field_q + (var2_int >> 3);
+          SpriteGeometry.field_q = SpriteGeometry.field_q + (var2_int >> 3);
           jn.field_q = jn.field_q + (param1.readUnsignedShort((byte) -7) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(255);
           of.field_D = 2064384 & var2_intLifetime1 << 15;

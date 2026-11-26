@@ -4,15 +4,15 @@
 final class ba extends ag {
     boolean field_E;
     private int field_z;
-    private bd[] field_C;
+    private RgbSprite[] field_C;
     private int field_A;
-    private bd field_F;
+    private RgbSprite field_F;
     private int field_y;
-    private bd field_I;
+    private RgbSprite field_I;
     private int field_K;
     int field_G;
     private int field_B;
-    private bd field_D;
+    private RgbSprite field_D;
     private int field_L;
 
     final static int a(byte param0) {
@@ -30,7 +30,7 @@ final class ba extends ag {
         RuntimeException var5 = null;
         try {
           if (param2 != 0) {
-            this.field_C = (bd[]) null;
+            this.field_C = (RgbSprite[]) null;
           }
           if (this.field_E) {
             this.field_z = this.field_z + 1;
@@ -58,13 +58,13 @@ final class ba extends ag {
         if (param0 != 4008) {
           this.field_A = -88;
         }
-        this.field_C = new bd[]{this.a((byte) -38, this.field_K, this.field_L), this.a((byte) -38, this.field_A, this.field_B)};
+        this.field_C = new RgbSprite[]{this.a((byte) -38, this.field_K, this.field_L), this.a((byte) -38, this.field_A, this.field_B)};
         this.field_D = this.i(-1);
         this.field_F = this.field_D.d();
-        this.field_I = new bd(this.field_x >> 1, this.field_x);
+        this.field_I = new RgbSprite(this.field_x >> 1, this.field_x);
     }
 
-    private final bd a(byte param0, int param1, int param2) {
+    private final RgbSprite a(byte param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -73,13 +73,13 @@ final class ba extends ag {
         int var11 = 0;
         int var12 = 0;
         int var13 = HostileSpawn.field_I ? 1 : 0;
-        bd var14 = new bd(2 * this.field_y, this.field_x);
+        RgbSprite var14 = new RgbSprite(2 * this.field_y, this.field_x);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         sb.a(var14, param0 ^ 95);
         if (param0 != -38) {
-          return (bd) null;
+          return (RgbSprite) null;
         }
         int var5 = this.field_x >> 1;
         for (var6 = 0; var6 < this.field_x; var6++) {
@@ -126,7 +126,7 @@ final class ba extends ag {
         }
     }
 
-    private final void a(int param0, bd param1, int param2, int param3) {
+    private final void a(int param0, RgbSprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -186,7 +186,7 @@ final class ba extends ag {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        bd discarded$0 = null;
+        RgbSprite discarded$0 = null;
         if (param3 != 0) {
           return;
         }
@@ -228,7 +228,7 @@ final class ba extends ag {
         this.a(param2, param1, 0, param0, param3);
     }
 
-    private final bd i(int param0) {
+    private final RgbSprite i(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -238,7 +238,7 @@ final class ba extends ag {
         if (param0 != -1) {
           this.field_A = -87;
         }
-        bd var3 = new bd(var2, this.field_x);
+        RgbSprite var3 = new RgbSprite(var2, this.field_x);
         sb.a(var3, -110);
         for (var4 = 0; var4 < this.field_x; var4++) {
           for (var5 = 0; var2 > var5; var5++) {

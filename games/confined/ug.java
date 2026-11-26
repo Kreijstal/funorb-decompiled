@@ -52,7 +52,7 @@ abstract class ug extends oe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 194) {
-            ug.a((byte) 35);
+            ug.clearDeclaredStaticReferences((byte) 35);
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
@@ -95,11 +95,11 @@ abstract class ug extends oe {
         this.field_ab = 0;
         this.g((byte) -9);
         if (param0 <= 53) {
-          ug.a((byte) -18);
+          ug.clearDeclaredStaticReferences((byte) -18);
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = 31 / ((param0 + 9) / 37);
         field_bb = null;
         field_Z = null;
@@ -241,7 +241,7 @@ abstract class ug extends oe {
 
     void g(byte param0) {
         if (param0 >= -6) {
-          ug.a((byte) -68);
+          ug.clearDeclaredStaticReferences((byte) -68);
         }
     }
 

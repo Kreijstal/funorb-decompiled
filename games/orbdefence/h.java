@@ -24,7 +24,7 @@ final class h extends kj {
           GzipDecompressor.field_a.addLast(-115, var1);
           return;
         }
-        h.l(-54);
+        h.releaseDeclaredStaticReferences(-54);
         var1.a(SoftwareRasterizer.field_b, 95, SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e);
         GzipDecompressor.field_a.addLast(-115, var1);
     }
@@ -103,7 +103,7 @@ final class h extends kj {
         return var3;
     }
 
-    public static void l(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         int var1 = -23 % ((param0 + 30) / 42);
         field_L = null;
         field_J = null;

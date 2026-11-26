@@ -49,7 +49,7 @@ final class jg extends ak {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        tg var6 = null;
+        RgbSprite var6 = null;
         if (0 != param0) {
           return;
         }
@@ -63,7 +63,7 @@ final class jg extends ak {
           return;
         }
         if (this.field_E != 256) {
-          var6 = new tg(this.field_x.field_k, this.field_x.field_m);
+          var6 = new RgbSprite(this.field_x.field_k, this.field_x.field_m);
           kh.a(var6, 1);
           this.field_x.a(param0, 0, 59, 0);
           ve.a(-121);

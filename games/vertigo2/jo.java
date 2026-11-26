@@ -27,9 +27,9 @@ final class jo implements WidgetListener {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
-          jo.a(40);
+          jo.clearStaticReferences(40);
           field_g = null;
           field_h = null;
           return;

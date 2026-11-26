@@ -16,7 +16,7 @@ final class jk {
         sf.field_F = param2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         int var1 = -100 % ((param0 + 51) / 40);
         field_b = null;

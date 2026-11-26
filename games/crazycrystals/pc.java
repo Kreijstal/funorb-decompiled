@@ -132,7 +132,7 @@ class pc extends qm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, dl param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -154,7 +154,7 @@ class pc extends qm {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        dl var21 = null;
+        RgbSprite var21 = null;
         int var14Lifetime1;
         int var14Lifetime2;
         int var14Lifetime3;
@@ -167,8 +167,8 @@ class pc extends qm {
           var8 = SoftwareRasterizer.field_l * param0 + param5;
           var9 = 0;
           if (param1 != 617553576) {
-            var21 = (dl) null;
-            pc.a(-79, 70, -75, (dl) null, 95, -72);
+            var21 = (RgbSprite) null;
+            pc.a(-79, 70, -75, (RgbSprite) null, 95, -72);
           }
           var10 = param3.field_u;
           var11 = param3.field_l;
@@ -405,7 +405,7 @@ class pc extends qm {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_u = null;
         int var1 = -118 % ((param0 - 44) / 55);
         field_w = null;

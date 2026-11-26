@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class r {
-    static nh field_b;
+    static RgbSprite field_b;
     static ja[] field_c;
     static String field_a;
     static int field_d;
@@ -342,7 +342,7 @@ final class r {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_e = null;
         int var1 = -27 % ((param0 - 82) / 38);

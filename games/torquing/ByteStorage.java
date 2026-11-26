@@ -50,7 +50,7 @@ abstract class ByteStorage {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 119 % ((param0 + 49) / 50);
         field_a = null;
         field_b = null;

@@ -24,7 +24,7 @@ class fh extends DualLinkNode {
           var3 = ro.field_g.field_d;
           var4 = rh.field_I.field_z.a(param0, 272, rh.field_I.field_qb);
           if (param1 != -19615) {
-            fh.h(-30);
+            fh.discardDeclaredStaticReferences(-30);
           }
           var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
           oc.field_v.a(77, 320, -120 + var3 - var5 * 2, var5, (-320 + var2_int) / 2);
@@ -36,7 +36,7 @@ class fh extends DualLinkNode {
         }
     }
 
-    public static void h(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_u = null;
         int var1 = -58 / ((-23 - param0) / 51);
         field_t = null;

@@ -13,14 +13,14 @@ final class ja {
     static int field_d;
     static String field_g;
 
-    final static nf[] a(int param0) {
+    final static RgbSprite[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Confined.field_J ? 1 : 0;
-        nf[] var1 = new nf[wc.field_hc];
+        RgbSprite[] var1 = new RgbSprite[wc.field_hc];
         if (param0 > -65) {
           ja.a(-63);
         }
@@ -31,7 +31,7 @@ final class ja {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = an.field_p[va.a((int) var4[var6], 255)];
           }
-          var1[var2] = new nf(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var5);
+          var1[var2] = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var5);
         }
         ql.a(false);
         return var1;
@@ -95,7 +95,7 @@ final class ja {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_g = null;
         int var1 = 104 % ((43 - param0) / 52);

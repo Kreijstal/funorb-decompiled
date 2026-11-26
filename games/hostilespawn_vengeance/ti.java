@@ -7,10 +7,10 @@ final class ti implements nn {
     static String field_d;
     private int field_e;
     private vm field_h;
-    static bd field_c;
+    static RgbSprite field_c;
     static String[] field_a;
     static String field_i;
-    static bd field_j;
+    static RgbSprite field_j;
     static AccountRequestState field_b;
 
     public static void a(int param0) {
@@ -169,7 +169,7 @@ final class ti implements nn {
 
     static {
         field_f = new oc();
-        field_c = new bd(270, 70);
+        field_c = new RgbSprite(270, 70);
         field_i = "Invalid password.";
         field_a = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_b = new AccountRequestState();

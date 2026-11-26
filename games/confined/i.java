@@ -270,7 +270,7 @@ abstract class i extends GameAppletShell {
           nn.a(wc.field_Wb, tf.field_k, field_r, param0 ^ 117) &&
           qn.a(tf.field_k, -1)) {
           bd.b(param0 ^ -4585);
-          lb.d(param0 - 228);
+          lb.clearStaticReferences(param0 - 228);
           ByteStorage.field_g = false;
           ui.field_b = ClientException.field_d;
           fi.a(tf.field_k, 0, d.field_d, wc.field_Wb, field_r);

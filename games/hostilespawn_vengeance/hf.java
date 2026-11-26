@@ -3,13 +3,13 @@
  */
 final class hf {
     static jf field_g;
-    static bd field_b;
+    static RgbSprite field_b;
     static int field_i;
     static PcmStreamMixer field_c;
     static int field_a;
-    static bd field_j;
+    static RgbSprite field_j;
     static String[] field_d;
-    static bd field_e;
+    static RgbSprite field_e;
     static int field_h;
     static String field_f;
 

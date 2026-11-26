@@ -1264,7 +1264,7 @@ final class ml {
         return var2Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 12 % ((32 - param0) / 58);
         field_c = null;
     }

@@ -80,7 +80,7 @@ final class hg extends hc {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_ob = null;
         int var1 = -51 / ((71 - param0) / 47);
         field_S = null;
@@ -139,7 +139,7 @@ final class hg extends hc {
     final static void e(byte param0) {
         cd.a(bg.field_q, param0 - 170, (String) null);
         if (param0 != 47) {
-          hg.h(105);
+          hg.releaseDeclaredStaticReferences(105);
         }
     }
 

@@ -38,7 +38,7 @@ final class MixedSupport003 extends DualNode {
           integerLocal1 = resourceArchiveArgument4.computeInteger0819(-1, stringArgument2);
           integerLocal3 = resourceArchiveArgument4.computeInteger0806(integerLocal1, 13030, stringArgument3);
           if (integerArgument1 != 0) {
-            MixedSupport003.performAction0043((byte) 24);
+            MixedSupport003.clearStaticReferences((byte) 24);
           }
           stackRgbSpriteArrayLocal4 = NodeHashTable.computeRgbSpriteArray1499(integerLocal3, integerLocal1, resourceArchiveArgument4, (byte) -46);
           return stackRgbSpriteArrayLocal4;
@@ -102,9 +102,9 @@ final class MixedSupport003 extends DualNode {
         }
     }
 
-    public static void performAction0043(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         if (byteArgument1 != -17) {
-          MixedSupport003.performAction0043((byte) -64);
+          MixedSupport003.clearStaticReferences((byte) -64);
         }
         stringArrayState0001 = null;
     }

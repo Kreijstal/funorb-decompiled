@@ -117,10 +117,10 @@ abstract class ug {
         return vo.a(false, 124, param4, param0, param1, param2);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 0) {
-          ug.c(-10);
+          ug.clearStaticReferences(-10);
         }
     }
 

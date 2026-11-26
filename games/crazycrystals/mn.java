@@ -23,11 +23,11 @@ final class mn extends pd {
         return (pb) ((Object) new ti());
     }
 
-    final static dl[] c(int param0) {
+    final static RgbSprite[] c(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        dl[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -41,7 +41,7 @@ final class mn extends pd {
         byte[] var21;
         int[] var22;
         var8 = CrazyCrystals.field_B;
-        var1 = new dl[mg.field_a];
+        var1 = new RgbSprite[mg.field_a];
         for (var2 = param0; var2 < mg.field_a; var2++) {
           var3 = je.field_c[var2] * uo.field_l[var2];
           var21 = ui.field_c[var2];
@@ -51,7 +51,7 @@ final class mn extends pd {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = gh.field_z[pf.b((int) var21[var6], 255)];
             }
-            var1[var2] = new dl(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
+            var1[var2] = new RgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
           } else {
             var16 = PacketBuffer.field_g[var2];
             var12 = var16;
@@ -63,7 +63,7 @@ final class mn extends pd {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (dl) ((Object) new ArgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
           }
         }
         ok.a(param0 ^ 2188450);

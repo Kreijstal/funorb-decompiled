@@ -100,7 +100,7 @@ final class IsaacRandom {
         return ab.a(2097152, param0, 1, false, true, false);
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         int var1 = 121 % ((-28 - param0) / 52);

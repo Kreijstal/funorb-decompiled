@@ -10,7 +10,7 @@ final class va {
     private int field_x;
     private int field_q;
     private int field_i;
-    static dd field_g;
+    static RgbSprite field_g;
     private int field_l;
     static String field_k;
     static int field_u;

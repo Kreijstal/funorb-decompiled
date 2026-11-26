@@ -12,7 +12,7 @@ final class ag {
     String field_h;
     static String[] field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         int var1 = -33 / ((param0 - 69) / 55);
         field_a = null;

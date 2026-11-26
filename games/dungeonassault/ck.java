@@ -6,7 +6,7 @@ import java.util.*;
 class ck extends lm {
     private boolean field_C;
     boolean field_B;
-    static cn field_G;
+    static RgbSprite field_G;
     static fm field_H;
     static String field_D;
     boolean field_E;

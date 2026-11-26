@@ -19,10 +19,10 @@ final class Raider {
     static String field_h;
     static bb field_a;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != 3) {
-          Raider.a((byte) 75);
+          Raider.clearStaticReferences((byte) 75);
         }
         field_h = null;
         field_l = null;
@@ -60,7 +60,7 @@ final class Raider {
         this.field_p = 255;
         this.field_o = this.field_o | 4;
         if (param0) {
-          Raider.a((byte) 103);
+          Raider.clearStaticReferences((byte) 103);
         }
     }
 

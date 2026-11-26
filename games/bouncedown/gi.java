@@ -11,7 +11,7 @@ final class gi {
     static int field_e;
     private int field_h;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -89 % ((param0 - 27) / 45);
         field_b = null;
     }

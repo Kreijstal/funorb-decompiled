@@ -7,7 +7,7 @@ final class ld {
     static boolean field_i;
     static Raider field_e;
     static boolean field_g;
-    static cn field_d;
+    static RgbSprite field_d;
     static String field_a;
     static boolean field_b;
     static Random field_f;

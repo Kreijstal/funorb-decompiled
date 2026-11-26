@@ -9,7 +9,7 @@ final class i {
     static Sprite[] field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_a = null;
         if (param0 == -21307) {
@@ -18,7 +18,7 @@ final class i {
           field_c = null;
           return;
         }
-        i.a(-122);
+        i.clearStaticReferences(-122);
         field_b = null;
         field_d = null;
         field_c = null;

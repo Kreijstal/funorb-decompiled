@@ -7,18 +7,18 @@ final class ea {
     static he field_c;
 
     final static void a(int param0, vj param1) {
-        nh var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new nh(param1.a("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) n.field_g));
+          var2 = new RgbSprite(param1.a("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) n.field_g));
           var3 = var2.field_y;
           var4 = var2.field_w;
           MouseInput.a(true);
-          ji.field_b = new nh(var3, 3 * var4 / 4);
+          ji.field_b = new RgbSprite(var3, 3 * var4 / 4);
           ji.field_b.c();
           var2.a(param0, 0);
-          vb.field_s = new nh(var3, -ji.field_b.field_w + var4);
+          vb.field_s = new RgbSprite(var3, -ji.field_b.field_w + var4);
           vb.field_s.c();
           var2.a(0, -ji.field_b.field_w);
           vb.field_s.field_v = ji.field_b.field_w;
@@ -37,11 +37,11 @@ final class ea {
         }
     }
 
-    final static nh[] a(String param0, String param1, int param2, vj param3) {
+    final static RgbSprite[] a(String param0, String param1, int param2, vj param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nh[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -56,9 +56,9 @@ final class ei {
         int var4 = 0;
         ki var5 = null;
         int var6 = 0;
-        hj var7 = null;
-        hj var8 = null;
-        hj var9 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
+        RgbSprite var9 = null;
         int var3Lifetime1;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {

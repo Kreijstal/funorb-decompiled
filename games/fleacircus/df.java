@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class df {
-    static dd field_b;
+    static RgbSprite field_b;
     static String field_c;
     static int field_a;
 
@@ -107,7 +107,7 @@ final class df {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -58 % ((param0 + 7) / 47);
         field_b = null;
         field_c = null;
@@ -146,7 +146,7 @@ final class df {
               if (param1 == 10245) {
                 return;
               }
-              df.a((byte) 57);
+              df.clearStaticReferences((byte) 57);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

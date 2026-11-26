@@ -85,7 +85,7 @@ final class w extends ga implements uj, el {
           gm.field_cb.a(this.field_H, 20 + (param3 + this.field_q), this.field_m + param0 + 15, -40 + this.field_F, this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
         }
         if (param2 < 36) {
-          w.k(-83);
+          w.releaseDeclaredStaticReferences(-83);
         }
         if (null != this.field_P) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param0, this.field_F - 20, 4210752);
@@ -107,7 +107,7 @@ final class w extends ga implements uj, el {
             this.a((byte) -65);
           }
           if (param1 != 83) {
-            w.k(88);
+            w.releaseDeclaredStaticReferences(88);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,11 +188,11 @@ final class w extends ga implements uj, el {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_Q = null;
         field_R = null;
         if (param0 != 1) {
-          w.k(50);
+          w.releaseDeclaredStaticReferences(50);
         }
     }
 

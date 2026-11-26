@@ -14,7 +14,7 @@ abstract class AsyncRequest extends DualLinkNode {
 
     abstract byte[] g(int param0);
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         if (param0 > 13) {
           field_o = null;
@@ -24,7 +24,7 @@ abstract class AsyncRequest extends DualLinkNode {
           field_s = null;
           return;
         }
-        AsyncRequest.f(103);
+        AsyncRequest.clearStaticReferences(103);
         field_o = null;
         field_u = null;
         field_r = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s extends ke {
-    static dl[] field_o;
+    static RgbSprite[] field_o;
     private long field_m;
     private int field_g;
     static int[] field_h;
@@ -40,9 +40,9 @@ final class s extends ke {
         return var4;
     }
 
-    final static dl[] a(int param0, int param1, int param2, byte param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, byte param3) {
         if (param3 < 126) {
-          return (dl[]) null;
+          return (RgbSprite[]) null;
         }
         return ue.a(9, param0, 1, param2, param1);
     }

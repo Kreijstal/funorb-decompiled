@@ -51,7 +51,7 @@ final class sh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 42 % ((param0 + 71) / 43);
     }

@@ -60,12 +60,12 @@ final class wh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final static km[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        km var17 = null;
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        RgbSprite var17 = null;
         int[] var19 = SoftwareRasterizer.field_d;
         int[] var18 = var19;
         int[] var16 = var18;
@@ -73,30 +73,30 @@ final class wh {
         int var7 = SoftwareRasterizer.field_h;
         int var8 = 7 % ((param0 + 10) / 58);
         int var9 = SoftwareRasterizer.field_c;
-        km var10 = new km(param2, param1 - 2 * param2);
+        RgbSprite var10 = new RgbSprite(param2, param1 - 2 * param2);
         var10.e();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, param2, -(2 * param2) + param1, param3, param4);
-        km var11 = new km(param2, param2);
+        RgbSprite var11 = new RgbSprite(param2, param2);
         var11.e();
         SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param3);
-        km var12 = new km(16, param2);
+        RgbSprite var12 = new RgbSprite(16, param2);
         var12.e();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param3);
-        km var13 = new km(param2, param2);
+        RgbSprite var13 = new RgbSprite(param2, param2);
         var13.e();
         SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param4);
-        km var14 = new km(16, param2);
+        RgbSprite var14 = new RgbSprite(16, param2);
         var14.e();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param4);
         Object var15 = null;
         if (param5 > 0) {
-          var17 = new km(16, 16);
+          var17 = new RgbSprite(16, 16);
           var15 = var17;
           var17.e();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param5);
         }
         SoftwareRasterizer.setRasterBuffer(var19, var7, var9);
-        return new km[]{var11, var12, var11, var10, (km) (var15), var10, var13, var14, var13};
+        return new RgbSprite[]{var11, var12, var11, var10, (RgbSprite) (var15), var10, var13, var14, var13};
     }
 
     public static void clearStaticReferences(byte param0) {

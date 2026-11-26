@@ -80,14 +80,14 @@ final class hd extends di {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 == 69) {
           field_r = null;
           field_m = null;
           mouseHandler = null;
           return;
         }
-        hd.d((byte) -97);
+        hd.clearDeclaredStaticReferences((byte) -97);
         field_r = null;
         field_m = null;
         mouseHandler = null;

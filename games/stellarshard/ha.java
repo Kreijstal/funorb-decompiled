@@ -9,7 +9,7 @@ final class ha extends PacketBuffer {
     private int field_s;
     private na field_u;
 
-    public static void i(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         int var1 = 85 % ((param0 - 44) / 60);
         field_v = null;

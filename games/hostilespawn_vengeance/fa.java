@@ -4,9 +4,9 @@
 final class fa {
     private String field_b;
     static int field_a;
-    static bd field_e;
+    static RgbSprite field_e;
     static int field_c;
-    static bd[] field_d;
+    static RgbSprite[] field_d;
 
     final boolean a(int param0, String param1) {
         RuntimeException var3 = null;
@@ -65,7 +65,7 @@ final class fa {
         var13 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param2 <= 48) {
-            field_e = (bd) null;
+            field_e = (RgbSprite) null;
           }
           var5_int = param3.a(param4);
           if (param1 >= var5_int &&
@@ -136,7 +136,7 @@ final class fa {
     final void a(byte param0, java.applet.Applet param1) {
         try {
           if (param0 > -94) {
-            field_e = (bd) null;
+            field_e = (RgbSprite) null;
           }
           pc.a(this.field_b, "jagex-last-login-method", true, 31536000L, param1);
         } catch (RuntimeException runtimeException) {
@@ -168,7 +168,7 @@ final class fa {
         String var2 = (String) null;
         ak.a(false, (String) null, "");
         if (param0 != 5109) {
-          field_e = (bd) null;
+          field_e = (RgbSprite) null;
         }
     }
 

@@ -4,7 +4,7 @@
 abstract class wb extends ul {
     private int field_U;
     private int field_Q;
-    static bd field_W;
+    static RgbSprite field_W;
     static int field_S;
     static boolean field_Z;
     private int field_Y;
@@ -213,7 +213,7 @@ abstract class wb extends ul {
         this.field_U = param0;
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 420) {
           return;
         }
@@ -247,7 +247,7 @@ abstract class wb extends ul {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 79) {
-            wb.n(119);
+            wb.clearDeclaredStaticReferences(119);
           }
           if (!param1) {
             stackIn_6_0 = lj.field_u.a(param2);

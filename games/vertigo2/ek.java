@@ -58,12 +58,12 @@ final class ek extends TextureOperator {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_y = null;
         field_F = null;
         field_C = null;
         if (param0 > -50) {
-          ek.g(43);
+          ek.clearStaticReferences(43);
         }
     }
 

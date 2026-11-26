@@ -3,10 +3,10 @@
  */
 final class eh {
     static String field_h;
-    static bd field_a;
+    static RgbSprite field_a;
     static int field_g;
     static boolean field_e;
-    static bd field_b;
+    static RgbSprite field_b;
     static int[] field_f;
     static int field_d;
     static PcmStreamMixer field_c;
@@ -105,6 +105,6 @@ final class eh {
         field_e = false;
         field_g = 128;
         field_f = new int[]{1, 22, 12, 13, 4, 7};
-        field_a = new bd(96, 96);
+        field_a = new RgbSprite(96, 96);
     }
 }

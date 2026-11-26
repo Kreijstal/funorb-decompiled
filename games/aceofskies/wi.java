@@ -6,7 +6,7 @@ final class wi {
     static ResourceArchive gameSpriteArchive;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 88 / ((-8 - param0) / 55);
         gameSpriteArchive = null;
         field_b = null;

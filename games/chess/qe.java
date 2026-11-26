@@ -16,18 +16,18 @@ final class qe extends uk {
     static String field_O;
     private int field_Q;
     static String field_y;
-    private km field_M;
-    private km field_A;
-    private km field_S;
+    private RgbSprite field_M;
+    private RgbSprite field_A;
+    private RgbSprite field_S;
     private dd field_v;
-    private km field_F;
-    private km field_p;
+    private RgbSprite field_F;
+    private RgbSprite field_p;
     private double[] field_D;
-    private km[] field_N;
+    private RgbSprite[] field_N;
     private int[] field_G;
-    private km field_q;
+    private RgbSprite field_q;
     private int[] field_x;
-    private km[] field_z;
+    private RgbSprite[] field_z;
     qe field_K;
     private int field_P;
     String[] field_L;
@@ -37,7 +37,7 @@ final class qe extends uk {
         int var5;
         int var6;
         int var7;
-        km[] var8_ref_km__;
+        RgbSprite[] var8_ref_km__;
         int var8;
         int var9;
         int var10;
@@ -63,7 +63,7 @@ final class qe extends uk {
         var6 = rf.field_b;
         this.field_j = -1;
         if (qk.field_k == null) {
-          qk.field_k = new km(0, 0);
+          qk.field_k = new RgbSprite(0, 0);
         }
         qk.field_k.field_x = SoftwareRasterizer.field_d;
         qk.field_k.field_w = SoftwareRasterizer.field_h;
@@ -72,7 +72,7 @@ final class qe extends uk {
           hd.field_f.e();
           SoftwareRasterizer.clearRaster();
         } else {
-          hd.field_f = new km(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+          hd.field_f = new RgbSprite(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           hd.field_f.e();
         }
         this.a(param3, param1, 64, -13147);
@@ -142,7 +142,7 @@ final class qe extends uk {
               if (var14[3] > var12) {
                 var14[3] = var12;
               }
-              this.field_N[var7Lifetime1] = new km(var10 - var11 + 2, var12 - var13 + 2);
+              this.field_N[var7Lifetime1] = new RgbSprite(var10 - var11 + 2, var12 - var13 + 2);
               this.field_N[var7Lifetime1].e();
               this.field_M.b(1 - var11, 1 - var13);
               this.field_N[var7Lifetime1].field_s = var11;
@@ -160,7 +160,7 @@ final class qe extends uk {
               var11Lifetime1 = dd.field_x;
               var12Lifetime1 = dd.field_eb;
               var13Lifetime1 = dd.field_D;
-              this.field_z[var7Lifetime1] = new km(var10Lifetime1 - var11Lifetime1 + 2, var12Lifetime1 - var13Lifetime1 + 2);
+              this.field_z[var7Lifetime1] = new RgbSprite(var10Lifetime1 - var11Lifetime1 + 2, var12Lifetime1 - var13Lifetime1 + 2);
               this.field_z[var7Lifetime1].e();
               this.field_M.b(1 - var11Lifetime1, 1 - var13Lifetime1);
               this.field_z[var7Lifetime1].field_s = var11Lifetime1;
@@ -195,22 +195,22 @@ final class qe extends uk {
     private final void b(int param0, int param1, byte param2) {
         int var4;
         int var5;
-        km var6;
+        RgbSprite var6;
         int var7;
         int var8;
         int var9;
         int var10;
         int var11;
-        km var12;
-        km var13;
-        km var14;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        km var6Lifetime1;
-        km var6Lifetime2;
-        km var13Lifetime1;
-        km var13Lifetime2;
+        RgbSprite var6Lifetime1;
+        RgbSprite var6Lifetime2;
+        RgbSprite var13Lifetime1;
+        RgbSprite var13Lifetime2;
         var11 = Chess.field_G;
         this.e(-73);
         this.field_S.b(0, 0);
@@ -375,7 +375,7 @@ final class qe extends uk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -431,16 +431,16 @@ final class qe extends uk {
         this.field_T = 0.5;
         this.field_r = new int[64];
         this.field_s = 0.5;
-        this.field_M = new km(640, 480);
-        this.field_A = new km(640, 480);
-        this.field_S = new km(640, 480);
-        this.field_p = new km(640, 480);
+        this.field_M = new RgbSprite(640, 480);
+        this.field_A = new RgbSprite(640, 480);
+        this.field_S = new RgbSprite(640, 480);
+        this.field_p = new RgbSprite(640, 480);
         this.field_D = new double[64];
-        this.field_N = new km[64];
+        this.field_N = new RgbSprite[64];
         this.field_G = new int[64];
         this.field_x = new int[4];
-        this.field_z = new km[64];
-        this.field_q = new km(640, 480);
+        this.field_z = new RgbSprite[64];
+        this.field_q = new RgbSprite(640, 480);
         this.field_P = -1;
         this.c((byte) -110);
         this.a(-0.7853981633974483, param0 ? 3.141592653589793 : 0.0, true);
@@ -448,7 +448,7 @@ final class qe extends uk {
 
     final boolean b(byte param0) {
         if (param0 != 15) {
-          this.field_S = (km) null;
+          this.field_S = (RgbSprite) null;
         }
         return this.a(this.field_s, (byte) 42, this.field_w);
     }
@@ -534,7 +534,7 @@ final class qe extends uk {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -562,7 +562,7 @@ final class qe extends uk {
         var8[0] = (int)((double)var8[0] - (double)var9 * qn.a(-17513, this.field_T));
         var8[2] = (int)((double)var8[2] - mn.a(this.field_T, 2278) * (double)var9);
         if (this.field_F == null) {
-          this.field_F = new km(640, 480);
+          this.field_F = new RgbSprite(640, 480);
           vk.field_e = true;
         }
         if (vk.field_e) {
@@ -684,7 +684,7 @@ final class qe extends uk {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -781,8 +781,8 @@ final class qe extends uk {
         int var22;
         int var23;
         int var24;
-        km var25;
-        km var26;
+        RgbSprite var25;
+        RgbSprite var26;
         int[] var30;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -1206,7 +1206,7 @@ final class qe extends uk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

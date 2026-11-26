@@ -12,7 +12,7 @@ class cn implements nn, mi {
     vm field_g;
     int field_q;
     int field_i;
-    static bd field_h;
+    static RgbSprite field_h;
     int field_d;
     static int[] field_e;
     private int field_f;

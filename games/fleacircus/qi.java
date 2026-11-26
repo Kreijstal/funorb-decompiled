@@ -5,7 +5,7 @@ final class qi {
     static fh field_b;
     static String field_d;
     static String field_e;
-    static dd field_c;
+    static RgbSprite field_c;
     static int field_f;
     static String field_a;
 

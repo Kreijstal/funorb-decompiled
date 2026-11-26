@@ -4,7 +4,7 @@
 final class jd extends og implements vd {
     static java.awt.Canvas field_D;
     private String field_M;
-    static dl field_A;
+    static RgbSprite field_A;
     private int field_F;
     private pc[] field_L;
     static int field_I;

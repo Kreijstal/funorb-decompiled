@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd extends en {
-    static cn field_g;
+    static RgbSprite field_g;
     static int field_f;
     private ai field_d;
     private ac field_h;
     static String[] field_e;
 
-    private final cn a(boolean param0, int param1) {
+    private final RgbSprite a(boolean param0, int param1) {
         wb[] stackIn_3_0 = null;
         boolean stackIn_9_0 = false;
         int stackIn_13_0 = 0;
@@ -20,7 +20,7 @@ final class bd extends en {
         int var7;
         wb[] var8;
         int var9;
-        cn var10;
+        RgbSprite var10;
         int var12;
         int var14;
         int var15;
@@ -66,7 +66,7 @@ final class bd extends en {
         if (var9Lifetime1 != 0) {
           var6 = var6 + 2 * db.field_v.field_H;
         }
-        var10 = new cn(param1, var6);
+        var10 = new RgbSprite(param1, var6);
         var10.e();
         db.field_v.c(this.field_h.field_z.toUpperCase(), param1 >> 1, var7, 16777215, -1);
         var7 = var7 + la.field_b.field_H * 2;
@@ -123,7 +123,7 @@ final class bd extends en {
         var2.writeByte(6, 2);
     }
 
-    final cn b(byte param0) {
+    final RgbSprite b(byte param0) {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackIn_9_1 = 0;
@@ -131,7 +131,7 @@ final class bd extends en {
         Object var3;
         String var4_ref_String;
         int var4;
-        cn var5;
+        RgbSprite var5;
         int var6;
         Object[] var7_ref;
         int var7;
@@ -159,7 +159,7 @@ final class bd extends en {
           stackIn_9_1 = 2 + java.lang.reflect.Array.getLength(var3);
         }
         var4 = stackIn_8_0 * stackIn_9_1 + db.field_v.field_E;
-        var5 = new cn(200, var4);
+        var5 = new RgbSprite(200, var4);
         var5.e();
         var6 = db.field_v.field_H;
         db.field_v.c(this.field_h.field_z, 100, var6, 16777215, -1);
@@ -178,7 +178,7 @@ final class bd extends en {
     }
 
     final void a(int param0, sa param1) {
-        cn var3 = null;
+        RgbSprite var3 = null;
         try {
           if (param0 != 0) {
             this.field_d = (ai) null;
@@ -190,11 +190,11 @@ final class bd extends en {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         if (param0 < 65) {
-          bd.b(64);
+          bd.clearDeclaredStaticReferences(64);
         }
     }
 

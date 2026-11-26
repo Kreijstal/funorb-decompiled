@@ -3,7 +3,7 @@
  */
 final class qc {
     static int field_b;
-    private dd[] field_a;
+    private RgbSprite[] field_a;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         og.a(param4, this.field_a, 96, param0, param3, param2);
@@ -26,7 +26,7 @@ final class qc {
         bh.field_t = 0;
     }
 
-    qc(dd[] param0) {
+    qc(RgbSprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

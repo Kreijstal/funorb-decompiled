@@ -67,7 +67,7 @@ final class s extends nf implements ql {
         }
     }
 
-    public static void q(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_S = null;
         field_Q = null;
         if (param0 != 7993) {
@@ -94,7 +94,7 @@ final class s extends nf implements ql {
           var4.a(30, 13361, 15, -30 + this.field_l, var5);
           this.b((byte) -98, var4);
           if (param0) {
-            s.q(-59);
+            s.releaseDeclaredStaticReferences(-59);
           }
           this.g(-1);
           stackIn_3_0 = var4;

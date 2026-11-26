@@ -7,13 +7,13 @@ final class hd extends vg {
     static String field_O;
     private int field_G;
     private int field_J;
-    private nh field_C;
-    private nh field_H;
+    private RgbSprite field_C;
+    private RgbSprite field_H;
     private int field_K;
     static int field_B;
     private int field_z;
-    private nh[] field_D;
-    private nh field_F;
+    private RgbSprite[] field_D;
+    private RgbSprite field_F;
     private int field_N;
     static String field_L;
     int field_I;
@@ -30,7 +30,7 @@ final class hd extends vg {
         this.f(2);
     }
 
-    private final nh a(int param0, byte param1, int param2) {
+    private final RgbSprite a(int param0, byte param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -39,7 +39,7 @@ final class hd extends vg {
         int var11 = 0;
         int var12 = 0;
         int var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        nh var14 = new nh(this.field_J * 2, this.field_k);
+        RgbSprite var14 = new RgbSprite(this.field_J * 2, this.field_k);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -82,7 +82,7 @@ final class hd extends vg {
         }
         int var5 = this.field_o + param0;
         if (param2 != -21) {
-          this.field_C = (nh) null;
+          this.field_C = (RgbSprite) null;
         }
         int var6 = this.field_m + param3;
         this.a((byte) -116, var5, this.field_D[0], var6);
@@ -93,11 +93,11 @@ final class hd extends vg {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_L = null;
         field_O = null;
         if (param0) {
-          hd.b(true);
+          hd.clearStaticReferences(true);
         }
     }
 
@@ -281,15 +281,15 @@ final class hd extends vg {
         }
     }
 
-    private final nh a(byte param0) {
+    private final RgbSprite a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        nh discarded$0 = null;
+        RgbSprite discarded$0 = null;
         int var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = this.field_k >> 1;
-        nh var3 = new nh(var2, this.field_k);
+        RgbSprite var3 = new RgbSprite(var2, this.field_k);
         MouseInput.a(var3, (byte) 85);
         for (var4 = 0; this.field_k > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -309,7 +309,7 @@ final class hd extends vg {
         return var3;
     }
 
-    final static nh[] c(boolean param0) {
+    final static RgbSprite[] c(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -317,9 +317,9 @@ final class hd extends vg {
         int var6 = 0;
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (!param0) {
-          return (nh[]) null;
+          return (RgbSprite[]) null;
         }
-        nh[] var1 = new nh[bd.field_M];
+        RgbSprite[] var1 = new RgbSprite[bd.field_M];
         for (var2 = 0; var2 < bd.field_M; var2++) {
           var3 = gf.field_o[var2] * qa.field_J[var2];
           var4 = a.field_e[var2];
@@ -327,7 +327,7 @@ final class hd extends vg {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = MouseInput.field_a[rk.a(255, (int) var4[var6])];
           }
-          var1[var2] = new nh(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var5);
+          var1[var2] = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var5);
         }
         oc.a((byte) -21);
         return var1;
@@ -337,13 +337,13 @@ final class hd extends vg {
         if (param0 != 2) {
           return;
         }
-        this.field_D = new nh[]{this.a(this.field_A, (byte) 43, this.field_N), this.a(this.field_K, (byte) 43, this.field_G)};
+        this.field_D = new RgbSprite[]{this.a(this.field_A, (byte) 43, this.field_N), this.a(this.field_K, (byte) 43, this.field_G)};
         this.field_C = this.a((byte) 101);
         this.field_H = this.field_C.e();
-        this.field_F = new nh(this.field_k >> 1, this.field_k);
+        this.field_F = new RgbSprite(this.field_k >> 1, this.field_k);
     }
 
-    private final void a(byte param0, int param1, nh param2, int param3) {
+    private final void a(byte param0, int param1, RgbSprite param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

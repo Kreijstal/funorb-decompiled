@@ -463,12 +463,12 @@ final class Archive {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_e = null;
         field_c = null;
         if (param0 < 34) {
-          Archive.b(29);
+          Archive.clearStaticReferences(29);
         }
         field_i = null;
     }

@@ -453,7 +453,7 @@ final class MidiPcmStream extends PcmStream {
         uc.field_a.addFirst(var1, -7044);
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         field_F = null;
         field_l = null;
@@ -515,7 +515,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 127) {
-            MidiPcmStream.g(51);
+            MidiPcmStream.clearDeclaredStaticReferences(51);
           }
           var3_int = this.field_w[param1.field_z];
           if (var3_int < 8192) {

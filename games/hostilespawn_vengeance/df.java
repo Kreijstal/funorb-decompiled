@@ -3,14 +3,14 @@
  */
 final class df {
     static String field_b;
-    static bd[] field_g;
+    static RgbSprite[] field_g;
     private boolean field_h;
-    static bd field_a;
+    static RgbSprite field_a;
     private int[] field_i;
     static String field_e;
     static int field_c;
     private int field_d;
-    static bd field_j;
+    static RgbSprite field_j;
     private int field_f;
 
     final int b(int param0) {
@@ -275,7 +275,7 @@ final class df {
     public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 < 44) {
-          field_g = (bd[]) null;
+          field_g = (RgbSprite[]) null;
         }
         field_g = null;
         field_a = null;

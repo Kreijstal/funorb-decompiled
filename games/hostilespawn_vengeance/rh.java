@@ -3,13 +3,13 @@
  */
 final class rh extends ae {
     um field_B;
-    static bd field_x;
-    static bd field_C;
+    static RgbSprite field_x;
+    static RgbSprite field_C;
     static int field_A;
     byte[] field_y;
     int field_E;
     static rj field_D;
-    static bd field_z;
+    static RgbSprite field_z;
 
     final int d(int param0) {
         if (param0 >= -72) {
@@ -26,7 +26,7 @@ final class rh extends ae {
         field_x = null;
         field_D = null;
         if (param0 != 6) {
-          field_z = (bd) null;
+          field_z = (RgbSprite) null;
         }
         field_z = null;
     }
@@ -36,7 +36,7 @@ final class rh extends ae {
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;
         if (!param1) {
-          field_z = (bd) null;
+          field_z = (RgbSprite) null;
         }
         var2 = param0;
         if (var2 == 10) {

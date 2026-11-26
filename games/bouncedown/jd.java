@@ -169,7 +169,7 @@ class jd implements fc, sf {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             IntrusiveNode.a(param4 + param0.field_r + param0.field_k, param0.field_m + param0.field_i + param3, param3 + param0.field_i, param0.field_r + param4, -19852);
-            ma.field_m.a(var10, var11, this.field_j, false, var10, var12);
+            SpriteGeometry.field_m.a(var10, var11, this.field_j, false, var10, var12);
             ve.a(-124);
           }
           if (param2 != 65) {
@@ -555,7 +555,7 @@ class jd implements fc, sf {
                 stackIn_21_0 = var18.a(var9, 125);
               }
               var15 = stackIn_21_0;
-              ma.field_m.a(-1, var13.field_b, this.field_i, this.field_i >>> 24, -var14 + var15, this.a(0, param0, var14, param1), var13.field_f + (param1.field_o + param2) + (param1.field_i + this.field_o));
+              SpriteGeometry.field_m.a(-1, var13.field_b, this.field_i, this.field_i >>> 24, -var14 + var15, this.a(0, param0, var14, param1), var13.field_f + (param1.field_o + param2) + (param1.field_i + this.field_o));
             }
             ve.a(-120);
             return;

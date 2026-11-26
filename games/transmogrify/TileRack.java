@@ -10,10 +10,10 @@ final class TileRack {
     int originX;
     LetterTile[] tiles;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 > -117) {
-          TileRack.a((byte) 18);
+          TileRack.clearStaticReferences((byte) 18);
         }
     }
 

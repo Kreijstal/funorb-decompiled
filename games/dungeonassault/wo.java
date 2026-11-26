@@ -11,13 +11,13 @@ final class wo {
     static String field_d;
     static int field_b;
 
-    final static cn a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite a(int param0, int param1, int param2, int param3, int param4) {
         int var9 = 0;
         int var8 = 0;
         int var10 = DungeonAssault.field_K;
         int var5 = -1 + 2 * param3;
         int var6 = param3 + param2;
-        cn var7 = new cn(var5, var6);
+        RgbSprite var7 = new RgbSprite(var5, var6);
         int var8Lifetime1;
         jh.a(var7);
         for (var8 = 0; var8 < param3; var8++) {
@@ -25,7 +25,7 @@ final class wo {
         }
         var8Lifetime1 = -param0 + var5 >> 1;
         if (param1 != 1) {
-          return (cn) null;
+          return (RgbSprite) null;
         }
         for (var9 = 0; param2 > var9; var9++) {
           SoftwareRasterizer.drawHorizontalLine(var8Lifetime1, param3 + var9, param0, param4);

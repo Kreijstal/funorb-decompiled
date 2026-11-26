@@ -70,7 +70,7 @@ final class q extends jg {
         return 0L;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_n = null;
         int var1 = 23 % ((param0 - 49) / 55);

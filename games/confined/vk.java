@@ -75,7 +75,7 @@ final class vk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         int var1 = -52 / ((-60 - param0) / 49);
     }

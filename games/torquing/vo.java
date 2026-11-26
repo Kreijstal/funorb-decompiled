@@ -54,7 +54,7 @@ final class vo {
         return -v.field_a + bh.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_g = null;
         field_f = null;
@@ -65,7 +65,7 @@ final class vo {
           field_b = null;
           return;
         }
-        vo.a((byte) 91);
+        vo.clearStaticReferences((byte) 91);
         field_a = null;
         field_c = null;
         field_d = null;

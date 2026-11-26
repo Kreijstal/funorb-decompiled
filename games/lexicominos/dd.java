@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class dd {
-    static db field_f;
+    static RgbSprite field_f;
     int field_c;
     static String field_d;
     int[] field_b;
@@ -12,7 +12,7 @@ abstract class dd {
     abstract void a(boolean param0, int param1, int param2, java.awt.Component param3);
 
     final static void a(int param0, int param1) {
-        th var2 = ed.field_q;
+        th var2 = SpriteGeometry.field_q;
         var2.h(param1, 0);
         if (param0 <= 32) {
           return;

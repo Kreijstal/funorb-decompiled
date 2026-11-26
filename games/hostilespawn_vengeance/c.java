@@ -6,11 +6,11 @@ final class c {
     static byte[][][] field_c;
     static String field_b;
     static String field_e;
-    static bd[] field_f;
+    static RgbSprite[] field_f;
     static ii field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_d = null;
           field_f = null;
@@ -20,7 +20,7 @@ final class c {
           field_e = null;
           return;
         }
-        c.a(true);
+        c.clearStaticReferences(true);
         field_d = null;
         field_f = null;
         field_b = null;

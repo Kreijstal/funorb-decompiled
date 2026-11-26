@@ -5,7 +5,7 @@ final class ei extends ug implements el {
     private rg field_hb;
     static e field_lb;
     static AudioOutput field_ob;
-    static nf[] field_mb;
+    static RgbSprite[] field_mb;
     static String field_ib;
     static int field_jb;
     static String field_nb;
@@ -176,7 +176,7 @@ final class ei extends ug implements el {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_ob = null;
         field_nb = null;
         int var1 = -69 / ((param0 - 9) / 60);

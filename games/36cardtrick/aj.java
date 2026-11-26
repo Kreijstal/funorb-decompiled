@@ -111,9 +111,9 @@ final class aj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 43) {
-          aj.a(42);
+          aj.clearStaticReferences(42);
         }
         field_p = null;
         field_a = null;
@@ -156,7 +156,7 @@ final class aj {
     final void a(int param0, ee param1) {
         ek var17 = null;
         nd var4 = null;
-        kc[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -165,12 +165,12 @@ final class aj {
         ug discarded$0 = null;
         tb discarded$1 = null;
         nd var8 = null;
-        kc[] var9 = null;
-        kc[] var10 = null;
-        kc dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         nd var11 = null;
         nd var12 = null;
-        kc var13 = null;
+        RgbSprite var13 = null;
         nd var14 = null;
         nd var19 = null;
         int var15 = Main.field_T;
@@ -196,13 +196,13 @@ final class aj {
           var4.a((byte) -1, 0).c(15658734, (byte) 52).a(fb.a(18457, 8947848, 10066329, 7829367), true);
           var4.a((byte) -1, 1).a(fb.a(18457, 11184810, 10066329, 13421772), true);
           var4.a((byte) -1, 3).a(fb.a(18457, 8947848, 7829367, 10066329), true).b(1, (byte) -51).a(1, -99);
-          var5 = new kc[9];
+          var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_r.length > var7_int; var7_int++) {
             var16.field_r[var7_int] = 1077952576;
           }
-          var5[4] = (kc) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.a((byte) -1, 4).a(true, (byte) -74).a(var5, true);
           var4.a((byte) -1, 5).a(wf.a(0, 1, 0, 0, 65793), true).a(true, (byte) -104).c(-1, (byte) 73);
           this.field_i = (ci) ((Object) var4);
@@ -220,10 +220,10 @@ final class aj {
           var8.a((byte) -1, 0).a(fb.a(18457, 15658734, 7829367, 10066329), true).c(1118481, (byte) 68).a(-1, (byte) -118);
           var8.a((byte) -1, 4).a(true, (byte) -93).a(var5, true);
           this.field_r = (ci) ((Object) var8);
-          var9 = new kc[9];
-          var9[4] = new kc(2, 1);
-          var10 = new kc[9];
-          var10[4] = new kc(1, 2);
+          var9 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_r = new int[]{6710886, 7829367};
           var10[4].field_r = new int[]{6710886, 7829367};
@@ -231,7 +231,7 @@ final class aj {
           var12 = new nd();
           var11.a(true, 0, var9);
           var12.a(true, 0, var10);
-          var13 = new kc(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_r = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new nd(var4, true);
           var14.a(var13.b(), (byte) -78);

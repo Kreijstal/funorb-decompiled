@@ -14,52 +14,52 @@ final class qf {
 
     final static void a(int param0, ci param1, byte param2) {
         dh var12 = null;
-        km var14 = null;
+        RgbSprite var14 = null;
         String var13 = null;
         dh var15 = null;
-        km var17 = null;
+        RgbSprite var17 = null;
         String var16 = null;
         dh var18 = null;
-        km var20 = null;
+        RgbSprite var20 = null;
         String var19 = null;
         dh var21 = null;
         String var22 = null;
         dh var24 = null;
-        km var26 = null;
+        RgbSprite var26 = null;
         String var25 = null;
         dh var27 = null;
-        km var29 = null;
+        RgbSprite var29 = null;
         String var28 = null;
         dh var30 = null;
         String var31 = null;
         dh var33 = null;
-        km var35 = null;
+        RgbSprite var35 = null;
         String var34 = null;
         dh var36 = null;
-        km var38 = null;
+        RgbSprite var38 = null;
         String var37 = null;
         dh var39 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        km var23 = null;
-        km var32 = null;
-        km var23Lifetime1;
-        km var32Lifetime1;
-        km var32Lifetime2;
-        km var23Lifetime2;
-        km var23Lifetime3;
-        km var23Lifetime4;
-        km var23Lifetime5;
-        km var23Lifetime6;
-        km var32Lifetime3;
-        km var32Lifetime4;
-        km var32Lifetime1Lifetime1;
-        km var32Lifetime1Lifetime2;
-        km var32Lifetime1Lifetime3;
-        km var32Lifetime1Lifetime4;
-        km var32Lifetime1Lifetime5;
+        RgbSprite var23 = null;
+        RgbSprite var32 = null;
+        RgbSprite var23Lifetime1;
+        RgbSprite var32Lifetime1;
+        RgbSprite var32Lifetime2;
+        RgbSprite var23Lifetime2;
+        RgbSprite var23Lifetime3;
+        RgbSprite var23Lifetime4;
+        RgbSprite var23Lifetime5;
+        RgbSprite var23Lifetime6;
+        RgbSprite var32Lifetime3;
+        RgbSprite var32Lifetime4;
+        RgbSprite var32Lifetime1Lifetime1;
+        RgbSprite var32Lifetime1Lifetime2;
+        RgbSprite var32Lifetime1Lifetime3;
+        RgbSprite var32Lifetime1Lifetime4;
+        RgbSprite var32Lifetime1Lifetime5;
         try {
           DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 85, (nb) null, param0, param1, (int[]) null, -1, (String) null);
           if (param0 == 0) {
@@ -129,7 +129,7 @@ final class qf {
           var7 = param1.field_pb;
           var39.field_b.a(true, var4, var7, var5, var6);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

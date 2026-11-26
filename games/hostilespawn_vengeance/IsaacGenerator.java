@@ -3,19 +3,19 @@
  */
 final class IsaacGenerator {
     static String field_m;
-    static bd field_f;
+    static RgbSprite field_f;
     private int[] field_k;
     private int field_e;
     private int field_g;
     static int[] field_l;
-    static bd field_d;
+    static RgbSprite field_d;
     static String field_n;
     private int field_i;
     private int field_b;
     static ResourceArchive field_h;
     private int[] field_a;
-    static bd field_c;
-    static bd field_j;
+    static RgbSprite field_c;
+    static RgbSprite field_j;
 
     private final void a(int param0) {
         int var2 = 0;
@@ -224,7 +224,7 @@ final class IsaacGenerator {
         field_f = null;
         field_j = null;
         if (!param0) {
-          field_j = (bd) null;
+          field_j = (RgbSprite) null;
         }
         field_n = null;
         field_h = null;

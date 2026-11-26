@@ -6,7 +6,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     static aj field_d;
     boolean field_g;
     static String field_a;
-    static db[] field_o;
+    static RgbSprite[] field_o;
     static volatile int field_j;
     static int[] field_b;
     static boolean field_c;
@@ -173,7 +173,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_g = true;
             System.out.println("error_game_" + param0);
             if (param1 <= 66) {
-              field_o = (db[]) null;
+              field_o = (RgbSprite[]) null;
             }
             try {
               oa.a(true, kk.c(-14047), "loggedout");
@@ -768,7 +768,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2 = null;
         try {
           if (param0 != 24344) {
-            field_o = (db[]) null;
+            field_o = (RgbSprite[]) null;
           }
           var2_long = rf.correctedCurrentTimeMillis(param0 - 24344);
           var4 = MusicPatchPcmStream.field_q[gb.field_a];

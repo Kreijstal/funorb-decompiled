@@ -93,7 +93,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    public static void n(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         field_X = null;
         field_W = null;
         if (param0 != -1) {
@@ -130,7 +130,7 @@ final class nf extends ld implements ka {
             return false;
           }
           if (param6 <= 110) {
-            nf.n(118);
+            nf.discardDeclaredStaticReferences(118);
           }
           var8 = new AccountCreationResultPanel(u.field_b, param4);
           var7 = var8;

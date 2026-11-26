@@ -458,12 +458,12 @@ final class SectorCacheStore {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_d = null;
         field_f = null;
         if (param0 != -64) {
-          SectorCacheStore.b((byte) -70);
+          SectorCacheStore.clearStaticReferences((byte) -70);
         }
     }
 

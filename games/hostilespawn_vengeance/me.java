@@ -12,7 +12,7 @@ abstract class me extends wb {
     private int field_eb;
     private ag field_bb;
     private je field_ab;
-    static bd[] field_ib;
+    static RgbSprite[] field_ib;
 
     final void o(int param0) {
         if (bf.field_j == this.field_ab) {
@@ -69,9 +69,9 @@ abstract class me extends wb {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -56) {
-          me.f((byte) 91);
+          me.clearDeclaredStaticReferences((byte) 91);
           field_ib = null;
           return;
         }
@@ -292,7 +292,7 @@ abstract class me extends wb {
             this.field_fb.field_D = 256;
             this.field_ab = null;
             if (param0 > 0) {
-              field_ib = (bd[]) null;
+              field_ib = (RgbSprite[]) null;
               super.m(-3);
               return;
             }
@@ -302,7 +302,7 @@ abstract class me extends wb {
           this.field_fb.field_D = 256;
           this.field_ab = null;
           if (param0 > 0) {
-            field_ib = (bd[]) null;
+            field_ib = (RgbSprite[]) null;
             super.m(-3);
             return;
           }
@@ -313,7 +313,7 @@ abstract class me extends wb {
           super.m(-3);
           return;
         }
-        field_ib = (bd[]) null;
+        field_ib = (RgbSprite[]) null;
         super.m(-3);
     }
 
@@ -398,7 +398,7 @@ abstract class me extends wb {
           RuntimeException var2 = null;
           int var3 = 0;
           Object var4 = null;
-          bd var5 = null;
+          RgbSprite var5 = null;
           int[] var6 = null;
           int var7_int = 0;
           Object var7 = null;
@@ -431,7 +431,7 @@ abstract class me extends wb {
               return;
             }
             if (param0 <= 83) {
-              field_ib = (bd[]) null;
+              field_ib = (RgbSprite[]) null;
             }
             var5 = ee.field_d[-1 + param1];
             var6 = new int[var5.field_D.length];

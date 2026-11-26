@@ -128,9 +128,9 @@ final class ca {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          ca.b(76);
+          ca.clearStaticReferences(76);
         }
         field_g = null;
         field_f = null;

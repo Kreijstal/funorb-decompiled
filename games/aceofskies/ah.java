@@ -28,10 +28,10 @@ final class ah extends qd {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         if (param0 != -27) {
-          ah.c((byte) 54);
+          ah.clearStaticReferences((byte) 54);
         }
     }
 

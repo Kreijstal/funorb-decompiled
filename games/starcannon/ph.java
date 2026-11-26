@@ -54,7 +54,7 @@ class ph extends qj implements ga {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_mb = null;
         field_nb = null;
         field_gb = null;

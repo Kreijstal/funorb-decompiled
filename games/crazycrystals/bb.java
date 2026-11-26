@@ -3,7 +3,7 @@
  */
 final class bb extends qf implements Cloneable {
     static PcmSample field_x;
-    static dl[] field_y;
+    static RgbSprite[] field_y;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;

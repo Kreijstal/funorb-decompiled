@@ -112,7 +112,7 @@ final class dd extends kj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -23) {
-            dd.c((byte) 95);
+            dd.clearDeclaredStaticReferences((byte) 95);
           }
           if (this.a(9882, param3, param2, param1)) {
             this.a(param2, (byte) -98, param1, param3);
@@ -280,7 +280,7 @@ final class dd extends kj {
         return -63;
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_D = null;
         field_B = null;
         if (param0 >= -102) {

@@ -21,9 +21,9 @@ final class rk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          rk.a(-124);
+          rk.clearStaticReferences(-124);
           field_e = null;
           field_b = null;
           field_f = null;

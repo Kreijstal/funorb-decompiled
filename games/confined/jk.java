@@ -297,9 +297,9 @@ final class jk {
         return var3;
     }
 
-    final static nf b(int param0) {
+    final static RgbSprite b(int param0) {
         int var4_int = 0;
-        nf var4 = null;
+        RgbSprite var4 = null;
         int var5 = Confined.field_J ? 1 : 0;
         int var1 = sd.field_f[0] * rg.field_I[0];
         byte[] var2 = rj.field_f[0];
@@ -308,11 +308,11 @@ final class jk {
           var3[var4_int] = an.field_p[va.a(255, (int) var2[var4_int])];
         }
         if (param0 == 255) {
-          var4 = new nf(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], var3);
+          var4 = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], var3);
           ql.a(false);
           return var4;
         }
-        return (nf) null;
+        return (RgbSprite) null;
     }
 
     public static void clearStaticReferences(int param0) {

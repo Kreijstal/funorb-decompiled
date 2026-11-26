@@ -8,9 +8,9 @@ final class li extends hi {
     static int field_s;
     static int field_p;
     static String field_v;
-    static bd field_t;
+    static RgbSprite field_t;
     static boolean field_o;
-    static bd field_y;
+    static RgbSprite field_y;
     static boolean[] field_r;
     static int field_q;
 
@@ -103,12 +103,12 @@ final class li extends hi {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_u = null;
         field_r = null;
         field_y = null;
         if (param0 > -34) {
-          li.d((byte) 88);
+          li.clearStaticReferences((byte) 88);
         }
         field_t = null;
         field_v = null;

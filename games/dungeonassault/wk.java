@@ -116,20 +116,20 @@ final class wk {
         sn.a(66, 17);
     }
 
-    final static cn[] a(cn[] param0, int param1) {
+    final static RgbSprite[] a(RgbSprite[] param0, int param1) {
         int var3 = 0;
-        cn[] var2 = null;
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        cn[] var5 = null;
-        cn[] stackIn_5_0 = null;
+        RgbSprite[] var5 = null;
+        RgbSprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = DungeonAssault.field_K;
         try {
-          var5 = new cn[param0.length];
+          var5 = new RgbSprite[param0.length];
           var2 = var5;
           for (var3 = param1; param0.length > var3; var3++) {
             var5[var3] = g.a(param0[var3], (byte) -105);
@@ -238,8 +238,8 @@ final class wk {
         try {
           this.a(param3, param0, param1, false, -1, param2);
           if (param4 >= -75) {
-            cn[] var7 = (cn[]) null;
-            wk.a((cn[]) null, 114);
+            RgbSprite[] var7 = (RgbSprite[]) null;
+            wk.a((RgbSprite[]) null, 114);
           }
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

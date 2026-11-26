@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class el extends cm {
-    static km[] field_z;
+    static RgbSprite[] field_z;
     static String field_x;
     static pf[] field_y;
     private Object field_A;
@@ -12,7 +12,7 @@ final class el extends cm {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class el extends cm {
         var2.writeByte(2, (byte) -56);
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 86 / ((param0 - 49) / 47);
         field_z = null;
         field_y = null;
@@ -46,7 +46,7 @@ final class el extends cm {
 
     final Object f(int param0) {
         if (param0 != -10) {
-          el.e((byte) 45);
+          el.clearStaticReferences((byte) 45);
           return this.field_A;
         }
         return this.field_A;

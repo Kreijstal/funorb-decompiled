@@ -1100,9 +1100,9 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
     }
 
-    public static void y(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 32598) {
-          OpenGlRenderer.y(40);
+          OpenGlRenderer.clearStaticReferences(40);
         }
         field_m = null;
         field_Ub = null;

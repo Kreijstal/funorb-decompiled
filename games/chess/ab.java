@@ -8,7 +8,7 @@ abstract class ab extends DualLinkNode {
     volatile boolean field_s;
     boolean field_q;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, km[] param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite[] param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -55,13 +55,13 @@ abstract class ab extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     abstract int f(int param0);
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         int var1 = -110 / ((param0 + 27) / 41);
         field_t = null;
@@ -135,7 +135,7 @@ abstract class ab extends DualLinkNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ abstract class ab extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1_ref), "ab.G(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1_ref), "ab.G(" + param0 + ')');
         }
     }
 

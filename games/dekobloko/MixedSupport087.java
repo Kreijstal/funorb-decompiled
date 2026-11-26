@@ -47,12 +47,12 @@ final class MixedSupport087 {
         }
     }
 
-    public static void performAction1133(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         mixedSupport132State0007 = null;
         stringState0369 = null;
         sceneWidgetState0091 = null;
         if (integerArgument1 != 14925) {
-          MixedSupport087.performAction1133(-43);
+          MixedSupport087.clearStaticReferences(-43);
         }
     }
 

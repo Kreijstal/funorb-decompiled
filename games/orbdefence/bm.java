@@ -12,7 +12,7 @@ final class bm {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 == 63) {
           field_a = null;
@@ -20,7 +20,7 @@ final class bm {
           field_c = null;
           return;
         }
-        bm.a(122);
+        bm.clearStaticReferences(122);
         field_a = null;
         field_d = null;
         field_c = null;

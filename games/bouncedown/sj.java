@@ -9,7 +9,7 @@ final class sj implements fc {
     static int field_d;
     private int field_k;
     private int field_b;
-    static tg field_c;
+    static RgbSprite field_c;
     private int field_g;
     private int field_a;
     private int field_h;

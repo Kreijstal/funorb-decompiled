@@ -24,7 +24,7 @@ final class md extends TextureOperator {
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 110) {
-            md.g(10);
+            md.clearStaticReferences(10);
           }
           var4_int = param1;
           if (var4_int == 0) {
@@ -153,7 +153,7 @@ final class md extends TextureOperator {
         this.field_z = 4096;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_C = null;
         int var1 = -119 / ((param0 - 50) / 32);
         field_y = null;

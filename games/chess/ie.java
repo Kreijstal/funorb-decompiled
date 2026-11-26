@@ -28,12 +28,12 @@ final class ie {
     }
 
     final static void b(int param0) {
-        km var1 = null;
-        km var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = Chess.field_G;
         try {
-          var1 = new km(param0, 140);
+          var1 = new RgbSprite(param0, 140);
           tl.a((byte) -67, var1);
           nh.a();
           SoftwareRasterizer.clearRaster();
@@ -48,7 +48,7 @@ final class ie {
           var1.c(0, 0);
           fd.a(28773);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class ie {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "ie.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "ie.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ie {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 

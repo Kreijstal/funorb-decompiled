@@ -61,7 +61,7 @@ final class af extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 82 % ((param0 - 8) / 41);
         field_r = null;
         field_n = null;

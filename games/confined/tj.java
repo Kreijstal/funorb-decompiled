@@ -650,7 +650,7 @@ final class tj extends tk {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_z = null;
         field_n = null;
         field_l = (int[][]) null;

@@ -4,8 +4,8 @@
 final class e {
     private int field_t;
     private int field_o;
-    private bd field_e;
-    private bd field_h;
+    private RgbSprite field_e;
+    private RgbSprite field_h;
     private be field_u;
     private int field_b;
     private String[] field_a;
@@ -17,18 +17,18 @@ final class e {
     private int field_f;
     private pg[] field_p;
     static int[] field_y;
-    private bd field_i;
+    private RgbSprite field_i;
     static int[] field_g;
     static String field_x;
     static String field_A;
-    static bd field_d;
+    static RgbSprite field_d;
     static AccountRequestState field_q;
     static int field_z;
     static String field_k;
     static int[] field_c;
     static String field_m;
     static RawPcmStream field_l;
-    static bd field_r;
+    static RgbSprite field_r;
 
     final int a(int param0, boolean param1) {
         int var3;
@@ -161,7 +161,7 @@ final class e {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_g = null;
         field_y = null;
@@ -310,7 +310,7 @@ final class e {
         return -1;
     }
 
-    private final void a(int param0, int param1, int[] param2, vm param3, int param4, String param5, float param6, int param7, bd param8, int param9) {
+    private final void a(int param0, int param1, int[] param2, vm param3, int param4, String param5, float param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -324,11 +324,11 @@ final class e {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        bd var13 = null;
+        RgbSprite var13 = null;
         try {
           var11_int = (int)((float)param9 / param6);
           var12 = (int)((float)param1 / param6);
-          var13 = new bd(var11_int, var12);
+          var13 = new RgbSprite(var11_int, var12);
           sb.a(var13, param4 - 120);
           param8.a((int)((float)(-param7) / param6), (int)((float)(-param0) / param6), (int)((float)param8.field_z / param6), (int)((float)param8.field_A / param6));
           this.a(param4, param2, 0, param5, 1, var12, param3, var11_int);
@@ -461,7 +461,7 @@ final class e {
     private final void a(int param0) {
         int var2;
         int var3;
-        bd var5;
+        RgbSprite var5;
         String var6;
         String var7;
         int[] var8;
@@ -470,7 +470,7 @@ final class e {
         int[] var11;
         if (null == this.field_i &&
           ra.field_e != null) {
-          this.field_i = new bd(622, 47);
+          this.field_i = new RgbSprite(622, 47);
           sb.a(this.field_i, -119);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
@@ -480,10 +480,10 @@ final class e {
           var9 = var10;
           this.a(0, var11, 0, this.field_n, 1, 47, ra.field_e, 622);
           eh.b(false);
-          this.field_e = new bd(475, 24);
+          this.field_e = new RgbSprite(475, 24);
           this.a(-4, 24, var9, ra.field_e, 0, eb.field_f, 0.75f, 0, this.field_e, 475);
           var8 = AccountCreationResultPanel.a(true, 526344, 526344);
-          var5 = new bd(121, 122);
+          var5 = new RgbSprite(121, 122);
           sb.a(var5, -121);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, var5.field_z, var5.field_A / 2, 16180917, 16306250);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, var5.field_A / 2, var5.field_z, var5.field_A, 16306250, 15568919);
@@ -493,7 +493,7 @@ final class e {
           this.a(20, var5.field_A, var8, ra.field_e, param0 + 0, var7, 0.5f, 0, var5, var5.field_z);
           this.a(var5.field_A / 2 - ra.field_e.field_y + 12, var5.field_A / 3, var8, ra.field_e, 0, lk.field_E[this.field_t], 0.699999988079071f, 0, var5, var5.field_z);
           eh.b(false);
-          this.field_h = new bd(121, 122);
+          this.field_h = new RgbSprite(121, 122);
           sb.a(this.field_h, -126);
           var5.b(this.field_h.field_z / 2, this.field_h.field_A / 2, -2048, 4096);
           eh.b(false);

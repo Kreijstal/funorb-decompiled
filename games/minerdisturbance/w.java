@@ -431,7 +431,7 @@ final class w extends tn {
         }
     }
 
-    public static void m(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_P = null;
         if (param0 != 256) {
           return;

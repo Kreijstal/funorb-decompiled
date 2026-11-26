@@ -110,7 +110,7 @@ final class SecondaryNodeDeque implements Iterable {
             SecondaryNodeDeque.a(-9, -29);
           }
           if (var2 == null) {
-            stackIn_6_0 = mf.field_A;
+            stackIn_6_0 = SpriteGeometry.field_A;
             return stackIn_6_0;
           }
           var3 = eg.b((byte) -128);
@@ -121,7 +121,7 @@ final class SecondaryNodeDeque implements Iterable {
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = mf.field_A;
+          stackIn_15_0 = SpriteGeometry.field_A;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

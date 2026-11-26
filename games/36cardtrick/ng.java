@@ -4,16 +4,16 @@
 final class ng extends lk {
     private int field_L;
     private int field_M;
-    private kc[] field_K;
+    private RgbSprite[] field_K;
     private int field_G;
-    private kc field_E;
+    private RgbSprite field_E;
     static byte field_H;
     private int field_z;
     static String field_y;
-    private kc field_D;
+    private RgbSprite field_D;
     private int field_A;
     private int field_B;
-    private kc field_F;
+    private RgbSprite field_F;
     boolean field_I;
     int field_J;
 
@@ -86,7 +86,7 @@ final class ng extends lk {
         }
     }
 
-    private final void a(kc param0, int param1, boolean param2, int param3) {
+    private final void a(RgbSprite param0, int param1, boolean param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -146,17 +146,17 @@ final class ng extends lk {
     }
 
     private final void b(boolean param0) {
-        this.field_K = new kc[]{this.a(this.field_z, this.field_M, (byte) 88), this.a(this.field_A, this.field_L, (byte) 88)};
+        this.field_K = new RgbSprite[]{this.a(this.field_z, this.field_M, (byte) 88), this.a(this.field_A, this.field_L, (byte) 88)};
         this.field_D = this.a(param0);
         if (param0) {
           ng.a(-28);
         }
         this.field_E = this.field_D.a();
-        this.field_F = new kc(this.field_q >> 1, this.field_q);
+        this.field_F = new RgbSprite(this.field_q >> 1, this.field_q);
     }
 
-    private final kc a(boolean param0) {
-        kc discarded$0 = null;
+    private final RgbSprite a(boolean param0) {
+        RgbSprite discarded$0 = null;
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -166,7 +166,7 @@ final class ng extends lk {
         if (param0) {
           discarded$0 = this.a(-57, 44, (byte) 37);
         }
-        kc var3 = new kc(var2, this.field_q);
+        RgbSprite var3 = new RgbSprite(var2, this.field_q);
         dl.a(-79, var3);
         for (var4 = 0; var4 < this.field_q; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -183,7 +183,7 @@ final class ng extends lk {
         return var3;
     }
 
-    private final kc a(int param0, int param1, byte param2) {
+    private final RgbSprite a(int param0, int param1, byte param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -192,13 +192,13 @@ final class ng extends lk {
         int var11 = 0;
         int var12 = 0;
         int var13 = Main.field_T;
-        kc var14 = new kc(2 * this.field_G, this.field_q);
+        RgbSprite var14 = new RgbSprite(2 * this.field_G, this.field_q);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         dl.a(102, var14);
         if (param2 != 88) {
-          return (kc) null;
+          return (RgbSprite) null;
         }
         int var5 = this.field_q >> 1;
         for (var6 = 0; var6 < this.field_q; var6++) {

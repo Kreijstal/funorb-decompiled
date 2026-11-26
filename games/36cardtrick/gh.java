@@ -6,7 +6,7 @@ final class gh extends IntrusiveNode {
     static boolean field_g;
     int field_m;
     static volatile boolean field_j;
-    static kc[] field_n;
+    static RgbSprite[] field_n;
     static PcmStreamMixer field_k;
     static String field_i;
     int field_l;

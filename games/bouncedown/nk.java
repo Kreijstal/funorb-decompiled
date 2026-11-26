@@ -3,7 +3,7 @@
  */
 final class nk {
     private double field_d;
-    static tg[] field_h;
+    static RgbSprite[] field_h;
     private int field_l;
     private mj field_k;
     String field_f;
@@ -412,8 +412,8 @@ final class nk {
 
     final void a(int param0, int param1) {
         int discarded$0 = 0;
-        tg discarded$1 = null;
-        tg stackIn_68_0 = null;
+        RgbSprite discarded$1 = null;
+        RgbSprite stackIn_68_0 = null;
         int stackIn_68_1 = 0;
         int stackIn_69_2 = 0;
         int stackIn_180_0 = 0;
@@ -626,7 +626,7 @@ final class nk {
           } else {
             stackIn_69_2 = -160 + this.field_g;
           }
-          ((tg) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
+          ((RgbSprite) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
         }
         if (this.field_i == 13) {
           mi.field_k.a(-(mi.field_k.field_t / 2) + 320, this.field_g - 470);
@@ -825,7 +825,7 @@ final class nk {
         }
         if (12 == this.field_i) {
           ej.field_a.a(-(ej.field_a.field_t / 2) + 320, -430 + this.field_g);
-          discarded$1 = new tg(32, 32);
+          discarded$1 = new RgbSprite(32, 32);
           fa.field_b = -1;
           var7Lifetime3 = 140;
           var7Lifetime3Lifetime1 = 144;

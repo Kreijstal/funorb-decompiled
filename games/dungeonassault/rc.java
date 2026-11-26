@@ -13,14 +13,14 @@ final class rc {
         field_b = null;
     }
 
-    final static cn a(String param0, ResourceArchive param1, String param2, byte param3) {
+    final static RgbSprite a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var5 = 0;
         RuntimeException var4 = null;
         int var6 = 0;
-        cn var7 = null;
-        cn var8 = null;
-        cn stackIn_6_0 = null;
-        cn stackIn_11_0 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
+        RgbSprite stackIn_6_0 = null;
+        RgbSprite stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -34,10 +34,10 @@ final class rc {
           if (!param1.b(param2, param0, (byte) -82)) {
             param2 = param2 + ".jpg";
           }
-          var7 = new cn(param1.a(param0, param2, (byte) -127), (java.awt.Component) ((Object) fi.d(false)));
+          var7 = new RgbSprite(param1.a(param0, param2, (byte) -127), (java.awt.Component) ((Object) fi.d(false)));
           var8 = var7;
           if (param3 != 71) {
-            stackIn_6_0 = (cn) null;
+            stackIn_6_0 = (RgbSprite) null;
             return stackIn_6_0;
           }
           for (var5 = 0; var5 < var8.field_B.length; var5++) {

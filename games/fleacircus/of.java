@@ -10,7 +10,7 @@ final class of {
     static byte[][] field_d;
     static boolean field_i;
     static String field_g;
-    static dd[] field_h;
+    static RgbSprite[] field_h;
     String field_f;
     private int field_a;
     float field_k;
@@ -93,7 +93,7 @@ final class of {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != -21814) {
-              of.b(125);
+              of.clearStaticReferences(125);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
@@ -109,19 +109,19 @@ final class of {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_h = null;
         field_g = null;
         field_d = (byte[][]) null;
         int var1 = 30 % ((param0 + 47) / 39);
     }
 
-    final static dd[] a(String param0, String param1, ResourceArchive param2, int param3) {
+    final static RgbSprite[] a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         ResourceArchive var6 = null;
-        dd[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

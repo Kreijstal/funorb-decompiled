@@ -13,9 +13,9 @@ final class sj extends kj implements sg {
     private int[] field_K;
     static volatile int field_L;
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         if (param0 != 15638) {
-          sj.a(-59);
+          sj.clearDeclaredStaticReferences(-59);
         }
         field_S = null;
     }

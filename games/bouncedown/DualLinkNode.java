@@ -4,7 +4,7 @@
 class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_l;
     static java.security.SecureRandom field_g;
-    static tg[] field_h;
+    static RgbSprite[] field_h;
     DualLinkNode field_i;
     long field_j;
     static ph field_k;
@@ -12,7 +12,7 @@ class DualLinkNode extends IntrusiveNode {
     public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != 115) {
-          field_h = (tg[]) null;
+          field_h = (RgbSprite[]) null;
           field_k = null;
           field_h = null;
           return;

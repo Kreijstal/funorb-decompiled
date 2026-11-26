@@ -11,7 +11,7 @@ final class ht extends IntrusiveNode {
     int field_f;
     static SteeringMode field_i;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_h = null;
         field_i = null;

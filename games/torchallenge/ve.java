@@ -119,7 +119,7 @@ final class ve {
         return;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 26 % ((-23 - param0) / 43);
         field_b = null;
         field_a = null;

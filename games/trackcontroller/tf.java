@@ -148,10 +148,10 @@ final class tf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -1) {
-          tf.a(26);
+          tf.clearStaticReferences(26);
         }
     }
 

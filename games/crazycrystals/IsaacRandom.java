@@ -23,7 +23,7 @@ final class IsaacRandom {
         return je.field_g;
     }
 
-    final static void a(int param0, dl[] param1) {
+    final static void a(int param0, RgbSprite[] param1) {
         try {
           if (param0 != 6437) {
             field_h = -125;

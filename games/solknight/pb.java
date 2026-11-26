@@ -74,7 +74,7 @@ final class pb implements j {
         try {
           var6_int = param3 + param4.field_m;
           if (param0 <= 113) {
-            pb.a(88);
+            pb.clearStaticReferences(88);
           }
           var7 = param4.field_j + param1;
           pl.a(true, param4.field_x, param4.field_t, var7, var6_int);
@@ -224,7 +224,7 @@ final class pb implements j {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = 33 % ((param0 + 53) / 41);
     }

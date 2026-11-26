@@ -26,7 +26,7 @@ final class c extends IntrusiveNode {
         field_n = null;
     }
 
-    final static db[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 >= 82) {
           return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
         }

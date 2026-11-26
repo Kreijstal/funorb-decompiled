@@ -95,10 +95,10 @@ final class StickyAnimation extends EventAnimation {
         return false;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         if (param0 != -75) {
-          StickyAnimation.e((byte) 8);
+          StickyAnimation.clearStaticReferences((byte) 8);
         }
     }
 

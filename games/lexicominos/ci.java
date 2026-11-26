@@ -9,13 +9,13 @@ final class ci {
     static sh field_e;
     static sh field_a;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_a = null;
         field_b = null;
         field_f = null;
         if (param0 != -127) {
-          ci.b((byte) -96);
+          ci.clearStaticReferences((byte) -96);
         }
     }
 

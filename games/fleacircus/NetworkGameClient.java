@@ -460,7 +460,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 924) {
           field_w = (String) null;
         }
-        String var2 = ta.f(-15040);
+        String var2 = SpriteGeometry.f(-15040);
         cb.a(50, var2, BoundedRandomAccessFile.getApplet((byte) -99));
     }
 
@@ -681,7 +681,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
             var11 = mf.a(true);
             if (var11 != null) {
-              ta.a(var11.booleanValue(), 105);
+              SpriteGeometry.a(var11.booleanValue(), 105);
             }
           }
           if (var4 == 2) {

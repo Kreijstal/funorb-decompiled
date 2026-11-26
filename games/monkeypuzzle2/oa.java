@@ -10,7 +10,7 @@ final class oa extends jk {
     static String field_F;
     static boolean field_I;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_J = null;
           field_E = null;
@@ -18,7 +18,7 @@ final class oa extends jk {
           field_F = null;
           return;
         }
-        oa.a(false);
+        oa.clearStaticReferences(false);
         field_J = null;
         field_E = null;
         field_D = null;
@@ -228,7 +228,7 @@ final class oa extends jk {
           }
           var2_refLifetime1 = (ki) (ok.field_a.beginBackward((byte) -117));
           if (param0 > -79) {
-            oa.a(true);
+            oa.clearStaticReferences(true);
           }
           while (var2_refLifetime1 != null) {
             var2_refLifetime1.d((byte) 116);

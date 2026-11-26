@@ -118,69 +118,69 @@ final class ek {
     }
 
     final void a(int param0) {
-        nf stackIn_7_0;
+        RgbSprite stackIn_7_0;
         int stackIn_7_1;
         int stackIn_7_2;
         int stackIn_7_3;
         int stackIn_7_4;
         int stackIn_8_5;
-        nf stackIn_14_0;
+        RgbSprite stackIn_14_0;
         int stackIn_14_1;
         int stackIn_14_2;
         int stackIn_14_3;
         int stackIn_14_4;
         int stackIn_15_5;
         int stackIn_20_0 = 0;
-        nf stackIn_25_0;
+        RgbSprite stackIn_25_0;
         int stackIn_25_1;
         int stackIn_25_2;
         int stackIn_25_3;
         int stackIn_25_4;
         int stackIn_26_5;
-        nf stackIn_31_0;
+        RgbSprite stackIn_31_0;
         int stackIn_31_1;
         int stackIn_31_2;
         int stackIn_31_3;
         int stackIn_31_4;
         int stackIn_32_5;
-        nf stackIn_37_0;
+        RgbSprite stackIn_37_0;
         int stackIn_37_1;
         int stackIn_37_2;
         int stackIn_37_3;
         int stackIn_37_4;
         int stackIn_38_5 = 0;
-        nf stackIn_49_0;
+        RgbSprite stackIn_49_0;
         int stackIn_49_1;
         int stackIn_49_2;
         int stackIn_49_3;
         int stackIn_49_4;
         int stackIn_50_5;
-        nf stackIn_55_0;
+        RgbSprite stackIn_55_0;
         int stackIn_55_1;
         int stackIn_55_2;
         int stackIn_55_3;
         int stackIn_55_4;
         int stackIn_56_5;
-        nf stackIn_61_0;
+        RgbSprite stackIn_61_0;
         int stackIn_61_1;
         int stackIn_61_2;
         int stackIn_61_3;
         int stackIn_61_4;
         int stackIn_62_5;
         int stackIn_67_0 = 0;
-        nf stackIn_72_0;
+        RgbSprite stackIn_72_0;
         int stackIn_72_1;
         int stackIn_72_2;
         int stackIn_72_3;
         int stackIn_72_4;
         int stackIn_73_5;
-        nf stackIn_78_0;
+        RgbSprite stackIn_78_0;
         int stackIn_78_1;
         int stackIn_78_2;
         int stackIn_78_3;
         int stackIn_78_4;
         int stackIn_79_5;
-        nf stackIn_84_0;
+        RgbSprite stackIn_84_0;
         int stackIn_84_1;
         int stackIn_84_2;
         int stackIn_84_3;
@@ -212,7 +212,7 @@ final class ek {
                 } else {
                   stackIn_8_5 = var2;
                 }
-                ((nf) (Object) stackIn_7_0).d(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
+                ((RgbSprite) (Object) stackIn_7_0).d(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
               }
               if (var4 > 0) {
                 dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4);
@@ -228,7 +228,7 @@ final class ek {
                 } else {
                   stackIn_15_5 = 256;
                 }
-                ((nf) (Object) stackIn_14_0).d(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5);
+                ((RgbSprite) (Object) stackIn_14_0).d(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5);
               }
             }
             return;
@@ -249,7 +249,7 @@ final class ek {
             } else {
               stackIn_26_5 = var2;
             }
-            ((nf) (Object) stackIn_25_0).d(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, stackIn_26_5);
+            ((RgbSprite) (Object) stackIn_25_0).d(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, stackIn_26_5);
           }
           if (var4Lifetime3 <= 0) {
             if (var3 > 0) {
@@ -263,7 +263,7 @@ final class ek {
               } else {
                 stackIn_32_5 = 256;
               }
-              ((nf) (Object) stackIn_31_0).d(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_32_5);
+              ((RgbSprite) (Object) stackIn_31_0).d(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_32_5);
             }
             return;
           }
@@ -281,7 +281,7 @@ final class ek {
           } else {
             stackIn_38_5 = 256;
           }
-          ((nf) (Object) stackIn_37_0).d(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5);
+          ((RgbSprite) (Object) stackIn_37_0).d(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5);
           return;
         }
         var2Lifetime1 = this.field_o >> 4;
@@ -305,7 +305,7 @@ final class ek {
               } else {
                 stackIn_50_5 = var2Lifetime1;
               }
-              ((nf) (Object) stackIn_49_0).d(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_49_4, stackIn_50_5);
+              ((RgbSprite) (Object) stackIn_49_0).d(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_49_4, stackIn_50_5);
             }
             if (var4Lifetime1 <= 0) {
               if (var3Lifetime1 > 0) {
@@ -319,7 +319,7 @@ final class ek {
                 } else {
                   stackIn_56_5 = 256;
                 }
-                ((nf) (Object) stackIn_55_0).d(stackIn_55_1, stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_56_5);
+                ((RgbSprite) (Object) stackIn_55_0).d(stackIn_55_1, stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_56_5);
               }
             } else {
               dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4Lifetime1);
@@ -334,7 +334,7 @@ final class ek {
                 } else {
                   stackIn_62_5 = 256;
                 }
-                ((nf) (Object) stackIn_61_0).d(stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_61_4, stackIn_62_5);
+                ((RgbSprite) (Object) stackIn_61_0).d(stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_61_4, stackIn_62_5);
               }
             }
             return;
@@ -356,7 +356,7 @@ final class ek {
           } else {
             stackIn_73_5 = var2Lifetime1;
           }
-          ((nf) (Object) stackIn_72_0).d(stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_73_5);
+          ((RgbSprite) (Object) stackIn_72_0).d(stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_73_5);
         }
         if (var4Lifetime2 <= 0) {
           if (var3Lifetime1 > 0) {
@@ -370,7 +370,7 @@ final class ek {
             } else {
               stackIn_79_5 = 256;
             }
-            ((nf) (Object) stackIn_78_0).d(stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
+            ((RgbSprite) (Object) stackIn_78_0).d(stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
           }
         } else {
           dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4Lifetime2);
@@ -385,7 +385,7 @@ final class ek {
             } else {
               stackIn_85_5 = 256;
             }
-            ((nf) (Object) stackIn_84_0).d(stackIn_84_1, stackIn_84_2, stackIn_84_3, stackIn_84_4, stackIn_85_5);
+            ((RgbSprite) (Object) stackIn_84_0).d(stackIn_84_1, stackIn_84_2, stackIn_84_3, stackIn_84_4, stackIn_85_5);
           }
         }
         return;
@@ -484,15 +484,15 @@ final class ek {
 
     final void a(vg param0, double param1, byte param2) {
         int stackIn_10_0 = 0;
-        nf[] stackIn_19_0 = null;
-        nf stackIn_21_0;
+        RgbSprite[] stackIn_19_0 = null;
+        RgbSprite stackIn_21_0;
         int stackIn_21_1;
         int stackIn_21_2;
         int stackIn_21_3;
         int stackIn_21_4;
         int stackIn_22_5;
-        nf[] stackIn_30_0 = null;
-        nf stackIn_32_0;
+        RgbSprite[] stackIn_30_0 = null;
+        RgbSprite stackIn_32_0;
         int stackIn_32_1;
         int stackIn_32_2;
         int stackIn_32_3;
@@ -565,7 +565,7 @@ final class ek {
                 } else {
                   stackIn_22_5 = var7;
                 }
-                ((nf) (Object) stackIn_21_0).d(stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_22_5);
+                ((RgbSprite) (Object) stackIn_21_0).d(stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_22_5);
               }
               if (var9 > 0) {
                 pn.field_l[(30 & this.field_m) >> 1].d(var22 - var24, -var24 + var23, var24 * 2, 2 * var24, var9);
@@ -588,7 +588,7 @@ final class ek {
               } else {
                 stackIn_33_5 = 256;
               }
-              ((nf) (Object) stackIn_32_0).d(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
+              ((RgbSprite) (Object) stackIn_32_0).d(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
             }
           }
           return;

@@ -59,9 +59,9 @@ final class Bullet extends FlightBody {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 24) {
-          Bullet.c(111);
+          Bullet.clearStaticReferences(111);
           field_j = null;
           field_k = null;
           return;

@@ -4,7 +4,7 @@
 final class ag {
     static String field_a;
     static boolean field_b;
-    static dl[] field_c;
+    static RgbSprite[] field_c;
 
     final static void a(String param0, int param1) {
         try {

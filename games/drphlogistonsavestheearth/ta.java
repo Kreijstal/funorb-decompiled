@@ -90,7 +90,7 @@ final class ta {
         }
     }
 
-    final static nh a(int param0) {
+    final static RgbSprite a(int param0) {
         int var4_int = 0;
         int var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 != 20529) {
@@ -102,7 +102,7 @@ final class ta {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = MouseInput.field_a[rk.a((int) var2[var4_int], 255)];
         }
-        nh var4 = new nh(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], var3);
+        RgbSprite var4 = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], var3);
         oc.a((byte) -21);
         return var4;
     }

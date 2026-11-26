@@ -22,7 +22,7 @@ final class ri {
     static he field_o;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_r = null;
         if (!param0) {
           field_o = null;
@@ -32,7 +32,7 @@ final class ri {
           field_h = null;
           return;
         }
-        ri.a(true);
+        ri.clearStaticReferences(true);
         field_o = null;
         field_f = null;
         field_b = null;

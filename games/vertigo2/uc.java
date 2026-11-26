@@ -6,11 +6,11 @@ final class uc {
     static char[] field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 91) {
-          uc.a(12);
+          uc.clearStaticReferences(12);
           field_b = null;
           return;
         }

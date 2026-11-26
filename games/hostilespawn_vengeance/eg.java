@@ -20,7 +20,7 @@ final class eg {
     private int field_m;
     private int field_q;
     static String field_p;
-    static bd field_v;
+    static RgbSprite field_v;
     private int field_e;
     static int field_h;
     private int field_n;

@@ -254,7 +254,7 @@ final class jk extends hm {
             return (java.net.Socket) (stackIn_5_0);
           }
           if (param1 != -38) {
-            jk.c(-87);
+            jk.clearDeclaredStaticReferences(-87);
           }
           var4 = (java.net.InetSocketAddress) ((Object) var3);
           if (param0.type() != java.net.Proxy.Type.HTTP) {
@@ -310,7 +310,7 @@ final class jk extends hm {
         this.field_k = java.net.ProxySelector.getDefault();
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_i = null;
         field_m = null;
@@ -378,7 +378,7 @@ final class jk extends hm {
           var3Lifetime1 = 0;
           var4Lifetime1 = 0;
           if (param1 < 112) {
-            jk.c(-110);
+            jk.clearDeclaredStaticReferences(-110);
           }
           while (var2_int > var4Lifetime1) {
             boolean decompiledFrameRemainder0 = true;

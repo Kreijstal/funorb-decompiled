@@ -56,11 +56,11 @@ final class mk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != -3) {
-          mk.a((byte) -6);
+          mk.clearStaticReferences((byte) -6);
         }
     }
 

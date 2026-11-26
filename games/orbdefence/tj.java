@@ -266,7 +266,7 @@ final class tj {
         this.a(this.field_b + param0, param1, param0 ^ -11783);
     }
 
-    final static hj c(int param0) {
+    final static RgbSprite c(int param0) {
         int var4_int = 0;
         int var5 = OrbDefence.field_D ? 1 : 0;
         int var1 = wh.field_b[0] * m.field_a[0];
@@ -278,7 +278,7 @@ final class tj {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = vc.field_g[vi.a(255, (int) var2[var4_int])];
         }
-        hj var4 = new hj(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
+        RgbSprite var4 = new RgbSprite(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
         md.$cfr$intArgs$a$6121ff5511c4(-125);
         return var4;
     }

@@ -140,14 +140,14 @@ final class sl extends pn {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         Object stackIn_10_0;
         f stackIn_10_1;
         f stackIn_10_2;
         int stackIn_10_3;
         int stackIn_10_4;
         f[][] stackIn_10_5;
-        dl[] stackIn_11_6 = null;
+        RgbSprite[] stackIn_11_6 = null;
         f stackIn_16_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -184,7 +184,7 @@ final class sl extends pn {
           if (!this.field_o.b((byte) 121)) {
             stackIn_11_6 = null;
           } else {
-            stackIn_11_6 = (dl[]) (param4);
+            stackIn_11_6 = (RgbSprite[]) (param4);
           }
           this.field_l = ((f) (Object) stackIn_10_1).a(stackIn_10_2, stackIn_10_3, stackIn_10_4, stackIn_10_5, stackIn_11_6, param5);
           if (this.field_o.a((byte) 42, param3, param0)) {

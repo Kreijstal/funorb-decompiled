@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dd extends ql {
-    static bd field_j;
+    static RgbSprite field_j;
     private oc[] field_h;
     private oc field_k;
     private v field_d;

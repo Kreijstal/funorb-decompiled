@@ -3,8 +3,8 @@
  */
 final class uc extends sa {
     static String field_Z;
-    static nf[] field_U;
-    static nf[] field_db;
+    static RgbSprite[] field_U;
+    static RgbSprite[] field_db;
     static PrimaryNodeDeque field_bb;
     static int[] field_ab;
     static String field_cb;
@@ -44,7 +44,7 @@ final class uc extends sa {
         int var3 = Confined.field_J ? 1 : 0;
         int var2Lifetime1;
         if (param0 != 26402) {
-          uc.l(103);
+          uc.clearDeclaredStaticReferences(103);
         } else {
           this.a((byte) 112, ji.field_a, 1.5);
           this.a(AccountNameAvailabilityValidator.field_k, false);
@@ -83,7 +83,7 @@ final class uc extends sa {
         }
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_ab = null;
         field_U = null;
         field_db = null;
@@ -91,7 +91,7 @@ final class uc extends sa {
         field_Z = null;
         field_bb = null;
         if (param0 >= -124) {
-          field_db = (nf[]) null;
+          field_db = (RgbSprite[]) null;
         }
     }
 

@@ -23,7 +23,7 @@ abstract class af {
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           if (!param0) {
-            af.a(-61);
+            af.clearDeclaredStaticReferences(-61);
           }
           ff.field_c.e();
           var1.drawHalfSize(0, 0);
@@ -35,11 +35,11 @@ abstract class af {
 
     abstract void b(int param0);
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 23394) {
-          af.a(-25);
+          af.clearDeclaredStaticReferences(-25);
         }
     }
 

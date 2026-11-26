@@ -69,7 +69,7 @@ final class oh extends bl {
         return null;
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_A = null;
         int var1 = -128 % ((54 - param0) / 48);
         field_C = null;

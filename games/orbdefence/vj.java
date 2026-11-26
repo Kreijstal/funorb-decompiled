@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj {
-    static hj field_b;
+    static RgbSprite field_b;
     static e field_c;
     static String field_a;
 
@@ -14,7 +14,7 @@ final class vj {
         return cc.field_f == null ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -22,7 +22,7 @@ final class vj {
     }
 
     static {
-        field_b = new hj(640, 480);
+        field_b = new RgbSprite(640, 480);
         field_c = new e();
     }
 }

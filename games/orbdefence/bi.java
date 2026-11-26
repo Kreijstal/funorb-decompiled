@@ -7,7 +7,7 @@ final class bi {
     static String field_b;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_c = null;
         int var1 = 72 % ((-47 - param0) / 37);

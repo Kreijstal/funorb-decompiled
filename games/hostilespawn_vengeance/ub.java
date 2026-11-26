@@ -3,7 +3,7 @@
  */
 final class ub {
     static fa field_b;
-    static bd field_c;
+    static RgbSprite field_c;
     static int[][] field_a;
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {

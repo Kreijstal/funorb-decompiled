@@ -21,12 +21,12 @@ class ii extends sh {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_d = null;
         field_e = null;
         if (param0 != -26268) {
-          ii.b(-100);
+          ii.clearStaticReferences(-100);
           field_a = null;
           return;
         }
@@ -35,7 +35,7 @@ class ii extends sh {
 
     fk a(int param0) {
         if (param0 != 10277) {
-          ii.b(77);
+          ii.clearStaticReferences(77);
           return oj.field_j;
         }
         return oj.field_j;

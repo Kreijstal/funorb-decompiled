@@ -334,7 +334,7 @@ class ab extends dk {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_G = null;
         field_F = null;
         field_A = null;

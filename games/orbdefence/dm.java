@@ -3,7 +3,7 @@
  */
 abstract class dm {
     ed[] field_c;
-    static hj[] field_b;
+    static RgbSprite[] field_b;
     static int[] field_g;
     static int field_a;
     static int field_e;
@@ -151,7 +151,7 @@ abstract class dm {
           var6 = 0;
           var7 = param0.length();
           if (param3 != 74) {
-            field_b = (hj[]) null;
+            field_b = (RgbSprite[]) null;
           }
           for (var8 = 0; var8 < var7; var8++) {
             var9 = param0.charAt(var8);

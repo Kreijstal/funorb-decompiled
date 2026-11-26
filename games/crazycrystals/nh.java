@@ -268,7 +268,7 @@ final class nh extends og implements vd {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != -7397) {
           return;
         }

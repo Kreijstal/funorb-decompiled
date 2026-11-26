@@ -478,10 +478,10 @@ final class cb extends UiPanel {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearDeclaredStaticReferences(boolean param0) {
         field_Pb = null;
         if (param0) {
-          cb.b(false);
+          cb.clearDeclaredStaticReferences(false);
         }
     }
 

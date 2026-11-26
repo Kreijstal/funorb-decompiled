@@ -7,10 +7,10 @@ final class bc {
     static int field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 24740) {
-          bc.a(32);
+          bc.clearStaticReferences(32);
           field_b = null;
           return;
         }

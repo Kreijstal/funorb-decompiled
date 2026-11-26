@@ -312,7 +312,7 @@ final class gh extends ea implements Cloneable {
         int var1_int = 0;
         RuntimeException var1 = null;
         Object var2 = null;
-        dl var4 = null;
+        RgbSprite var4 = null;
         String var5 = null;
         String var6 = null;
         nj var7 = null;
@@ -389,7 +389,7 @@ final class gh extends ea implements Cloneable {
         return 12;
     }
 
-    private final dl e(byte param0) {
+    private final RgbSprite e(byte param0) {
         if (this.field_G < 0) {
           return vp.field_d;
         }
@@ -400,7 +400,7 @@ final class gh extends ea implements Cloneable {
           return mk.field_a;
         }
         if (param0 != 79) {
-          return (dl) null;
+          return (RgbSprite) null;
         }
         return tl.field_b;
     }
@@ -581,7 +581,7 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_z = null;
         field_E = null;
         field_F = null;
@@ -685,7 +685,7 @@ final class gh extends ea implements Cloneable {
 
     final void c(boolean param0, boolean param1) {
         if (!param0) {
-          gh.k(-98);
+          gh.clearDeclaredStaticReferences(-98);
         }
         if (param1) {
           return;
@@ -798,7 +798,7 @@ final class gh extends ea implements Cloneable {
         var10 = param1 + param5 << 4;
         var11 = (param4 << 3) + (param2 << 4);
         if (param6 != -105) {
-          gh.k(107);
+          gh.clearDeclaredStaticReferences(107);
         }
         var12 = param7 + 0.16534698176788384 * (double)(this.field_m * this.field_x + this.field_u);
         var14 = Math.sin(var12);

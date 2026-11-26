@@ -5,7 +5,7 @@ final class qf {
     static he[] field_e;
     static int field_d;
     static String field_a;
-    static nh field_b;
+    static RgbSprite field_b;
     private int[] field_f;
     static String field_c;
     static he[] field_g;
@@ -70,12 +70,12 @@ final class qf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_g = null;
         field_e = null;
         if (param0 != 64) {
-          qf.a((byte) -43);
+          qf.clearStaticReferences((byte) -43);
         }
         field_b = null;
         field_c = null;

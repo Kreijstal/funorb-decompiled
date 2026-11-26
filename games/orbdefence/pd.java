@@ -28,11 +28,11 @@ final class pd extends IntrusiveNode {
     kb field_p;
     boolean field_n;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         field_w = null;
         if (param0 != -19) {
-          pd.a((byte) -62);
+          pd.clearStaticReferences((byte) -62);
         }
     }
 
@@ -50,7 +50,7 @@ final class pd extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        hj var13_ref_hj;
+        RgbSprite var13_ref_hj;
         int var14;
         int var15;
         int var16;
@@ -63,9 +63,9 @@ final class pd extends IntrusiveNode {
         int var23;
         int var26;
         int var27;
-        hj var28;
-        hj var29;
-        hj var30;
+        RgbSprite var28;
+        RgbSprite var29;
+        RgbSprite var30;
         int var12Lifetime1;
         int var13Lifetime1;
         int var14Lifetime1;
@@ -152,7 +152,7 @@ final class pd extends IntrusiveNode {
             ab.field_g[var11].d(-(var12 >> 1) + var4, -(var13 >> 1) + var5, var12, var13, 100);
           } else {
             var30 = ab.field_g[var11];
-            var13_ref_hj = new hj(var30.field_o, var30.field_k);
+            var13_ref_hj = new RgbSprite(var30.field_o, var30.field_k);
             var16 = 0;
             var22 = -(var13_ref_hj.field_o * var7 >> 13) + var4;
             var15 = -var13_ref_hj.field_k >> 1;

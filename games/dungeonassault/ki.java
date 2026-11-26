@@ -11,12 +11,12 @@ final class ki {
     int field_d;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_h = null;
         field_c = null;
         field_e = null;
         if (param0 != -35) {
-          ki.a((byte) 80);
+          ki.clearStaticReferences((byte) 80);
         }
     }
 

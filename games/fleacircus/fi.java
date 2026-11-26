@@ -147,13 +147,13 @@ final class fi extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         field_o = null;
         field_k = null;
         field_l = null;
         if (param0 != -2) {
-          fi.a(38);
+          fi.clearDeclaredStaticReferences(38);
         }
     }
 

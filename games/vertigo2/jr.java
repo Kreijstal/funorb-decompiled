@@ -117,10 +117,10 @@ final class jr implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 > -55) {
-          jr.a((byte) 3);
+          jr.clearStaticReferences((byte) 3);
         }
         field_f = null;
     }

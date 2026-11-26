@@ -15,12 +15,12 @@ final class dd {
     private byte[] field_g;
     private int field_b;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_e = null;
         field_h = null;
         if (param0) {
-          dd.a(false);
+          dd.clearStaticReferences(false);
         }
     }
 

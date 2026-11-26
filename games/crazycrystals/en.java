@@ -9,10 +9,10 @@ abstract class en extends ab {
     static String field_I;
     private int field_G;
     private int field_H;
-    static dl field_M;
+    static RgbSprite field_M;
     static String field_F;
     private int field_P;
-    static dl[] field_K;
+    static RgbSprite[] field_K;
 
     boolean e(byte param0) {
         this.j(param0 ^ -80);
@@ -33,7 +33,7 @@ abstract class en extends ab {
 
     void k(int param0) {
         if (param0 != 42) {
-          field_K = (dl[]) null;
+          field_K = (RgbSprite[]) null;
         }
     }
 
@@ -49,7 +49,7 @@ abstract class en extends ab {
         this.field_H = param3;
         this.field_J = 0;
         if (param2 != -93) {
-          field_M = (dl) null;
+          field_M = (RgbSprite) null;
         }
     }
 
@@ -85,7 +85,7 @@ abstract class en extends ab {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_K = null;
         field_F = null;
         if (param0 != 0) {

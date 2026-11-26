@@ -17,7 +17,7 @@ final class g extends aa {
         this.field_k = (long)param0;
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_g = null;
         int var1 = 31 / ((48 - param0) / 47);
     }
@@ -68,7 +68,7 @@ final class g extends aa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -119) {
-            g.b((byte) 111);
+            g.clearDeclaredStaticReferences((byte) 111);
           }
           var2 = jj.a(param1 + 14580, bk.a(124, param0));
           if (var2 == null) {

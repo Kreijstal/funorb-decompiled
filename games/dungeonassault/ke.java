@@ -13,7 +13,7 @@ final class ke {
         int var4 = 14 / ((-45 - param0) / 48);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 59 % ((58 - param0) / 55);
         field_a = null;
         field_c = null;
@@ -37,12 +37,12 @@ final class ke {
         }
     }
 
-    final static pp a(int param0, byte param1, cn param2, int param3) {
-        cn var4 = null;
+    final static pp a(int param0, byte param1, RgbSprite param2, int param3) {
+        RgbSprite var4 = null;
         RuntimeException var4_ref = null;
-        cn var5 = null;
-        cn var6 = null;
-        cn var7 = null;
+        RgbSprite var5 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
         pp stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -51,7 +51,7 @@ final class ke {
         try {
           jh.c();
           var4 = param2;
-          var5 = new cn(param2.field_y, param2.field_v);
+          var5 = new RgbSprite(param2.field_y, param2.field_v);
           var5.e();
           var4.f(0, 0, 96);
           var6 = param2.d();

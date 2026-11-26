@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga {
-    static bd field_a;
+    static RgbSprite field_a;
     static int field_b;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -47) {
-          ga.a((byte) -107);
+          ga.clearStaticReferences((byte) -107);
         }
         field_a = null;
         field_c = null;

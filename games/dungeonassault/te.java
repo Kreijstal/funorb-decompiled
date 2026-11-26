@@ -178,15 +178,15 @@ final class te {
         return var5;
     }
 
-    final static cn a(int param0, int param1, int param2, int[] param3, int param4, int param5, double param6) {
+    final static RgbSprite a(int param0, int param1, int param2, int[] param3, int param4, int param5, double param6) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;
-        cn var8;
+        RgbSprite var8;
         int[] var9;
         int var10;
         int var13;
-        var8 = new cn(param0, param1);
+        var8 = new RgbSprite(param0, param1);
         var9 = var8.field_B;
         var10 = 0;
         for (var11 = 0; var11 < param1; var11++) {
@@ -268,12 +268,12 @@ final class te {
         }
     }
 
-    final static cn a(int param0, int param1, int[] param2, int param3, int param4, double param5) {
+    final static RgbSprite a(int param0, int param1, int[] param2, int param3, int param4, double param5) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;
-        cn var7 = new cn(param0, param1);
+        RgbSprite var7 = new RgbSprite(param0, param1);
         int[] var8 = var7.field_B;
         int var9 = 0;
         if (field_a == null) {

@@ -4,7 +4,7 @@
 final class bg extends qn implements ee {
     private int field_bb;
     static boolean field_ab;
-    static km field_Z;
+    static RgbSprite field_Z;
     private vb field_Y;
     static String[] field_cb;
 
@@ -44,13 +44,13 @@ final class bg extends qn implements ee {
             field_ab = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "bg.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bg.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void n(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 != 2491) {
-          field_Z = (km) null;
+          field_Z = (RgbSprite) null;
           field_cb = null;
           field_Z = null;
           return;
@@ -67,7 +67,7 @@ final class bg extends qn implements ee {
           super.a(param0, -30, param2, param3);
           this.field_bb = -param0 + (-this.field_u + hn.field_k);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

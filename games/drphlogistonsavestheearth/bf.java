@@ -7,7 +7,7 @@ final class bf {
     private int field_B;
     private PcmSampleStream field_q;
     private he[] field_F;
-    private nh field_f;
+    private RgbSprite field_f;
     private int field_G;
     int field_m;
     private ck[] field_L;

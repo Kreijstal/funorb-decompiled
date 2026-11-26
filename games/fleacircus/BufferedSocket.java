@@ -17,7 +17,7 @@ final class BufferedSocket implements Runnable {
     private PlatformTaskDispatcher field_p;
     private byte[] field_h;
     private int field_e;
-    static dd field_m;
+    static RgbSprite field_m;
     static PcmStreamMixer field_g;
     static w field_k;
     static wk field_j;
@@ -95,7 +95,7 @@ final class BufferedSocket implements Runnable {
           }
         }
         if (param0 <= 8) {
-          field_m = (dd) null;
+          field_m = (RgbSprite) null;
         }
     }
 

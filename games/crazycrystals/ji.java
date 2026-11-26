@@ -342,7 +342,7 @@ final class ji extends pn {
         this.a(0, param2, param1, 0, param5, 5461, param4);
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != -8) {
           return;
         }
@@ -352,7 +352,7 @@ final class ji extends pn {
 
     final int a(boolean param0) {
         if (param0) {
-          ji.e((byte) -61);
+          ji.clearDeclaredStaticReferences((byte) -61);
         }
         return this.field_l.a(false);
     }
@@ -371,7 +371,7 @@ final class ji extends pn {
         return this.field_l.b(-3445);
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, dl[] param4, byte param5) {
+    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;

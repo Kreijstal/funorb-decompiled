@@ -13,7 +13,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = 70 / ((param0 - 34) / 33);
     }

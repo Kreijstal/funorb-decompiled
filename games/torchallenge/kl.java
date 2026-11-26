@@ -12,7 +12,7 @@ abstract class kl {
 
     abstract byte[] a(int param0, byte param1);
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         int var1 = -83 % ((param0 + 25) / 51);
         field_f = null;

@@ -37,14 +37,14 @@ final class kf {
         return hi.field_a;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
         field_d = null;
         field_e = null;
         if (param0 != 23050) {
-          kf.a(-121);
+          kf.clearStaticReferences(-121);
         }
     }
 

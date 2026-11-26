@@ -4,7 +4,7 @@
 final class bd extends dm {
     private boolean field_s;
     static ba field_q;
-    static hj[] field_o;
+    static RgbSprite[] field_o;
     private int field_j;
     static int field_k;
     private int field_r;
@@ -25,7 +25,7 @@ final class bd extends dm {
           md.$cfr$intArgs$a$6121ff5511c4(-128);
           return var1;
         }
-        bd.c(-19);
+        bd.clearDeclaredStaticReferences(-19);
         var1Lifetime1 = new qg(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], fl.field_a[0], vc.field_g);
         md.$cfr$intArgs$a$6121ff5511c4(-128);
         return var1Lifetime1;
@@ -249,11 +249,11 @@ final class bd extends dm {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_q = null;
         field_m = null;
         if (param0 != 0) {
-          bd.c(15);
+          bd.clearDeclaredStaticReferences(15);
           field_u = null;
           field_o = null;
           return;

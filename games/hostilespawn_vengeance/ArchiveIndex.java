@@ -15,11 +15,11 @@ final class ArchiveIndex {
     byte[][] field_w;
     int[] field_p;
     int field_c;
-    static bd field_e;
+    static RgbSprite field_e;
     int field_d;
     static boolean field_g;
     rg field_l;
-    static bd[][] field_f;
+    static RgbSprite[][] field_f;
     rg[] field_h;
     private byte[] field_a;
     private int field_j;
@@ -385,7 +385,7 @@ final class ArchiveIndex {
     }
 
     public static void clearStaticReferences(int param0) {
-        field_f = (bd[][]) null;
+        field_f = (RgbSprite[][]) null;
         field_s = null;
         if (param0 != -17514) {
           return;

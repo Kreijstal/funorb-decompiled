@@ -59,7 +59,7 @@ final class oi extends WidgetContainer implements n {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_H = null;
         int var1 = 38 / ((84 - param0) / 35);
         field_J = null;
@@ -149,7 +149,7 @@ final class oi extends WidgetContainer implements n {
 
     final static void a(int param0, boolean param1) {
         if (param0 != -22417) {
-          oi.f((byte) 108);
+          oi.clearStaticReferences((byte) 108);
           jl.field_I.a((byte) -43, 0, 0);
           return;
         }

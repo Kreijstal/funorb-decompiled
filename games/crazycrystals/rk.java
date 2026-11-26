@@ -5,7 +5,7 @@ final class rk {
     static String field_e;
     static int field_d;
     static int field_g;
-    static dl field_a;
+    static RgbSprite field_a;
     static String field_f;
     static oi field_c;
     static int field_b;
@@ -64,7 +64,7 @@ final class rk {
     static {
         field_d = 54;
         field_e = "Waiting for sound effects";
-        field_a = new dl(540, 140);
+        field_a = new RgbSprite(540, 140);
         field_f = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_c = new oi();
     }

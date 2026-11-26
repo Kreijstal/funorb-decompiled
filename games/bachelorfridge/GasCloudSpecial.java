@@ -23,11 +23,11 @@ final class GasCloudSpecial extends SpecialOrder {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         field_r = null;
         if (param0 >= -91) {
-          GasCloudSpecial.d((byte) -36);
+          GasCloudSpecial.clearStaticReferences((byte) -36);
         }
     }
 

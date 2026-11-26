@@ -18,11 +18,11 @@ final class re {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         if (param0 != 9050) {
-          re.a(-113);
+          re.clearStaticReferences(-113);
         }
         field_c = null;
         field_b = null;

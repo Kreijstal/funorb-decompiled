@@ -45,7 +45,7 @@ final class pc {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 108 / ((param0 - 27) / 57);
         field_a = null;
         field_b = null;

@@ -21,7 +21,7 @@ final class ba extends DualLinkNode {
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           if (param1) {
-            ba.f(1);
+            ba.clearDeclaredStaticReferences(1);
           }
           while (true) {
             var3_int = param0.readUnsignedByte(255);
@@ -145,7 +145,7 @@ final class ba extends DualLinkNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         if (param0 < 6) {
           field_o = (String) null;

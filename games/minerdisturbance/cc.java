@@ -143,7 +143,7 @@ abstract class cc extends kn {
         cc.a(37, 30);
     }
 
-    public static void e(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         if (param0 != 15) {
           return;
         }

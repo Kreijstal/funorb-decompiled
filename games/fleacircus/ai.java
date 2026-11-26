@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ai extends r {
-    static dd[] field_n;
+    static RgbSprite[] field_n;
     static String field_o;
 
     final wd a(int param0, String param1) {
@@ -43,7 +43,7 @@ final class ai extends r {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 != -10) {
-          field_n = (dd[]) null;
+          field_n = (RgbSprite[]) null;
           field_n = null;
           field_o = null;
           return;

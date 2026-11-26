@@ -4,7 +4,7 @@
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int field_a;
     static ue field_b;
-    static dl field_c;
+    static RgbSprite field_c;
     static am field_d;
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {

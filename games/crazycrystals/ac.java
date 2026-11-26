@@ -3,7 +3,7 @@
  */
 final class ac extends nf {
     private int field_h;
-    static dl field_j;
+    static RgbSprite field_j;
     private int field_i;
     static String field_k;
 

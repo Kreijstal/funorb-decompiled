@@ -6,7 +6,7 @@ final class w {
     String field_b;
     boolean field_e;
     static ph field_g;
-    static tg[] field_c;
+    static RgbSprite[] field_c;
     static int field_d;
     static int[] field_f;
 

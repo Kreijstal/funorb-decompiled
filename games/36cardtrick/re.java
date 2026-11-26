@@ -74,7 +74,7 @@ final class re {
         return ia.field_c[fh.field_G[this.field_i][param0]].field_o;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, kc param4) {
+    final static void a(int param0, int param1, int param2, byte param3, RgbSprite param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -86,7 +86,7 @@ final class re {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        kc var11 = null;
+        RgbSprite var11 = null;
         int var8Lifetime1;
         int var8Lifetime2;
         try {
@@ -116,8 +116,8 @@ final class re {
           var8Lifetime2 = param2 * SoftwareRasterizer.field_l + param1;
           var9 = param4.field_p - var7;
           if (param3 < 46) {
-            var11 = (kc) null;
-            re.a(-101, 85, 79, (byte) -16, (kc) null);
+            var11 = (RgbSprite) null;
+            re.a(-101, 85, 79, (byte) -16, (RgbSprite) null);
           }
           var10 = SoftwareRasterizer.field_l - var7;
           if (var7 > 0 &&
@@ -289,7 +289,7 @@ final class re {
         int discarded$1 = 0;
         int var4 = 0;
         int var5;
-        kc var6;
+        RgbSprite var6;
         int var7;
         var7 = Main.field_T;
         if (param0 != -22) {
@@ -362,7 +362,7 @@ final class re {
                 continue;
               }
               var5++;
-              var8 = ie.a(false, (CharSequence) ((Object) var7_ref_String));
+              var8 = SpriteGeometry.a(false, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (param1[var8].length() + var6_int - var5);
               continue;
             }
@@ -396,7 +396,7 @@ final class re {
               continue;
             }
             var5Lifetime1++;
-            var10 = ie.a(false, (CharSequence) ((Object) var9));
+            var10 = SpriteGeometry.a(false, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(param1[var10]);
@@ -461,7 +461,7 @@ final class re {
         if (param0 != -24133) {
           field_c = (int[]) null;
         }
-        kc var3 = ia.field_c[fh.field_G[this.field_i][param1]];
+        RgbSprite var3 = ia.field_c[fh.field_G[this.field_i][param1]];
         return this.a(param1, (byte) 119) + var3.field_q + var3.field_p;
     }
 
@@ -885,7 +885,7 @@ final class re {
         int var8;
         int var9;
         int var10;
-        kc var11;
+        RgbSprite var11;
         int var12;
         int var13;
         int var14;
@@ -1472,7 +1472,7 @@ final class re {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        kc var9 = null;
+        RgbSprite var9 = null;
         var8 = Main.field_T;
         try {
           if (param2 == null) {
@@ -1493,8 +1493,8 @@ final class re {
               var5 = 0;
               var6 = 0;
               if (param1 > -91) {
-                var9 = (kc) null;
-                re.a(-38, -4, -9, (byte) -72, (kc) null);
+                var9 = (RgbSprite) null;
+                re.a(-38, -4, -9, (byte) -72, (RgbSprite) null);
               }
               while (var6 < param2.length()) {
                 var7 = param2.charAt(var6);

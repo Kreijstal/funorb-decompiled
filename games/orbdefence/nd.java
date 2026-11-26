@@ -11,19 +11,19 @@ final class nd {
 
     final static df[] a(int param0) {
         if (param0 != -1) {
-          nd.b(91);
+          nd.clearStaticReferences(91);
         }
         return new df[]{mj.field_l, vh.field_s, jc.field_a};
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_e = null;
         field_c = (long[][]) null;
         field_f = null;
         field_d = null;
         if (param0 != -16996) {
-          nd.b(-46);
+          nd.clearStaticReferences(-46);
         }
         field_b = null;
     }
@@ -60,7 +60,7 @@ final class nd {
             }
           }
           if (param0 > -43) {
-            nd.b(-113);
+            nd.clearStaticReferences(-113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

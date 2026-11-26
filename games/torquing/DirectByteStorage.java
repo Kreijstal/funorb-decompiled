@@ -19,7 +19,7 @@ final class DirectByteStorage extends ByteStorage {
         return var3;
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = 69 / ((param0 + 2) / 42);
         field_e = null;
         field_d = null;
@@ -55,7 +55,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           if (param0 > -11) {
-            DirectByteStorage.c(28);
+            DirectByteStorage.clearDeclaredStaticReferences(28);
           }
           this.buffer.position(0);
           this.buffer.put(param1);
@@ -69,7 +69,7 @@ final class DirectByteStorage extends ByteStorage {
           System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
           return;
         }
-        DirectByteStorage.c(61);
+        DirectByteStorage.clearDeclaredStaticReferences(61);
         System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
     }
 

@@ -39,7 +39,7 @@ final class ob extends ok {
     static String[] field_Rb;
     static MidiPcmStream field_Xb;
 
-    final static void a(cn param0, int param1, int param2, int param3, boolean param4) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -113,7 +113,7 @@ final class ob extends ok {
         }
     }
 
-    ob(long param0, ok param1, ok param2, ok param3, cn param4, String param5) {
+    ob(long param0, ok param1, ok param2, ok param3, RgbSprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -181,21 +181,21 @@ final class ob extends ok {
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        cn var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new cn(param1.a("final_frame.jpg", "", (byte) -123), (java.awt.Component) ((Object) c.field_h));
+          var2 = new RgbSprite(param1.a("final_frame.jpg", "", (byte) -123), (java.awt.Component) ((Object) c.field_h));
           if (param0 >= -40) {
-            ob.g(119);
+            ob.discardDeclaredStaticReferences(119);
           }
           var3 = var2.field_y;
           var4 = var2.field_v;
           ie.a(99);
-          dm.field_g = new cn(var3, 3 * var4 / 4);
+          dm.field_g = new RgbSprite(var3, 3 * var4 / 4);
           dm.field_g.e();
           var2.c(0, 0);
-          lb.field_C = new cn(var3, -dm.field_g.field_v + var4);
+          lb.field_C = new RgbSprite(var3, -dm.field_g.field_v + var4);
           lb.field_C.e();
           var2.c(0, -dm.field_g.field_v);
           lb.field_C.field_A = dm.field_g.field_v;
@@ -207,7 +207,7 @@ final class ob extends ok {
 
     final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
-        cn var5 = null;
+        RgbSprite var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -225,8 +225,8 @@ final class ob extends ok {
             param2.repaint();
           }
           if (param1 > -76) {
-            var5 = (cn) null;
-            ob.a((cn) null, -84, 120, -93, false);
+            var5 = (RgbSprite) null;
+            ob.a((RgbSprite) null, -84, 120, -93, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -243,7 +243,7 @@ final class ob extends ok {
         }
     }
 
-    public static void g(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         if (param0 != 16) {
           return;
         }

@@ -13,7 +13,7 @@ final class va {
     static String field_b;
     static String field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         field_f = null;
@@ -25,7 +25,7 @@ final class va {
         field_j = null;
         field_a = null;
         if (param0 >= -33) {
-          va.a(-7);
+          va.clearStaticReferences(-7);
         }
     }
 

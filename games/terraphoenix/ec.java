@@ -73,11 +73,11 @@ final class ec {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_c = null;
         if (param0 >= -64) {
-          ec.a((byte) -113);
+          ec.clearStaticReferences((byte) -113);
           field_a = null;
           return;
         }

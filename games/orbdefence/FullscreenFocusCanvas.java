@@ -9,7 +9,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     volatile boolean field_e;
     static boolean field_a;
     static String[] field_d;
-    static hj[] field_b;
+    static RgbSprite[] field_b;
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }

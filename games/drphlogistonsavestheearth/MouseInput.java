@@ -210,7 +210,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -42 % ((-14 - param0) / 46);
         field_b = null;
@@ -315,7 +315,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    final static void a(nh param0, byte param1) {
+    final static void a(RgbSprite param0, byte param1) {
         try {
           MouseInput.a(true);
           SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_z, param0.field_C);

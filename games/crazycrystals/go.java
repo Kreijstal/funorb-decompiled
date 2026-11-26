@@ -35,10 +35,10 @@ final class go extends ln {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_l = null;
         if (param0 < 48) {
-          go.b((byte) -69);
+          go.clearDeclaredStaticReferences((byte) -69);
         }
         field_g = null;
         field_j = null;
@@ -103,7 +103,7 @@ final class go extends ln {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        dl var8 = null;
+        RgbSprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;

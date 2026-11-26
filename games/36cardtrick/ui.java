@@ -62,10 +62,10 @@ final class ui extends g implements qh {
         }
     }
 
-    public static void l(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_H = (byte[][][]) null;
         if (param0 != -22742) {
-          ui.l(108);
+          ui.clearDeclaredStaticReferences(108);
         }
         field_K = null;
         field_F = null;
@@ -80,7 +80,7 @@ final class ui extends g implements qh {
               dg.field_H.a(82);
             }
             if (param0 >= -49) {
-              ui.l(-66);
+              ui.clearDeclaredStaticReferences(-66);
             }
             if (null != AccountRequestState.field_b) {
               AccountRequestState.field_b.b(124);

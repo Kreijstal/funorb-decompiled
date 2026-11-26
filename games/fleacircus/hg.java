@@ -103,7 +103,7 @@ final class hg extends IntrusiveNode {
         }
         hb.field_t = param1;
         cm.field_f = param3;
-        ta.field_y = param2;
+        SpriteGeometry.field_y = param2;
     }
 
     private hg() throws Throwable {

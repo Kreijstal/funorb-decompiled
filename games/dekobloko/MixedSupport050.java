@@ -26,7 +26,7 @@ final class MixedSupport050 extends MixedSupport024 {
         this(GameDomainSupport003.bitmapFontState0015, integerArgument1);
     }
 
-    public static void performAction0598(int integerArgument1) {
+    public static void releaseDeclaredStaticReferences(int integerArgument1) {
         int integerLocal1 = 85 / ((-16 - integerArgument1) / 51);
         stringState0208 = null;
     }

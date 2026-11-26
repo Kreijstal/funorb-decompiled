@@ -107,7 +107,7 @@ final class nh {
         return var8;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_j = null;
         field_h = null;

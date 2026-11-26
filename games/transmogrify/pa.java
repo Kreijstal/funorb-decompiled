@@ -96,7 +96,7 @@ final class pa implements WidgetRenderer {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -3 % ((param0 + 60) / 60);
         field_a = null;
         field_h = null;

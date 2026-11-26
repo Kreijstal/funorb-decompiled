@@ -3,7 +3,7 @@
  */
 final class rn {
     static String[] field_g;
-    static cn field_c;
+    static RgbSprite field_c;
     static String field_d;
     static String field_f;
     static int field_a;

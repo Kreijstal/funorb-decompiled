@@ -55,9 +55,9 @@ final class qf {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -94) {
-          qf.b(88);
+          qf.clearStaticReferences(88);
           field_a = null;
           return;
         }

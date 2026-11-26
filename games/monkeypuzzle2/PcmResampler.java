@@ -10,7 +10,7 @@ final class PcmResampler {
     static int field_a;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -60 % ((0 - param0) / 62);
         field_d = null;
     }

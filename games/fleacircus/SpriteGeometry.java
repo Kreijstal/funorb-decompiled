@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ta extends DualLinkNode {
+abstract class SpriteGeometry extends DualLinkNode {
     static String field_s;
     static int field_y;
     int field_q;
     int field_w;
-    static dd[] field_z;
+    static RgbSprite[] field_z;
     static int field_u;
     int field_t;
     int field_v;
     int field_x;
     int field_r;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -122 % ((-53 - param0) / 38);
         field_z = null;
         field_s = null;
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 == -2843) {
           return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
         }
@@ -37,11 +37,11 @@ abstract class ta extends DualLinkNode {
     final static void a(boolean param0, int param1) {
         uc.field_c.a(param0, 10518);
         if (param1 <= 43) {
-          ta.a(19, 19, 119, 12, 2);
+          SpriteGeometry.a(19, 19, 119, 12, 2);
         }
     }
 
-    ta() {
+    SpriteGeometry() {
     }
 
     static {

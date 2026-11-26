@@ -19,7 +19,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_i = null;
         int var1 = 107 % ((param0 - 8) / 51);
     }
@@ -96,7 +96,7 @@ class DualLinkNode extends IntrusiveNode {
           if (var6 == null) {
             ml.field_j = 2;
           } else {
-            if (!tk.a(10, (CharSequence) ((Object) var6))) {
+            if (!SpriteGeometry.a(10, (CharSequence) ((Object) var6))) {
               ml.field_j = 2;
             } else {
               ml.field_j = th.a(103, (CharSequence) ((Object) var6));
@@ -106,9 +106,9 @@ class DualLinkNode extends IntrusiveNode {
           var7 = -51 / ((param1 - 18) / 56);
           NodeHashTableIterator.field_d = param5;
           uh.field_a = param4;
-          il.field_e = new hj[param3.length];
+          il.field_e = new RgbSprite[param3.length];
           for (var8 = 0; param3.length > var8; var8++) {
-            il.field_e[var8] = new hj(317, 34);
+            il.field_e[var8] = new RgbSprite(317, 34);
           }
           tb.field_c = param3;
           return;

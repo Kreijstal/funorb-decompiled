@@ -10,7 +10,7 @@ final class nn extends IntrusiveNode {
     int field_w;
     int field_r;
     static String field_v;
-    static nf[] field_t;
+    static RgbSprite[] field_t;
     static PcmSample field_o;
     static String[] field_p;
 

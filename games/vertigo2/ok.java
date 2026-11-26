@@ -7,7 +7,7 @@ final class ok {
     static int[] field_d;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         int var1 = -67 % ((param0 - 81) / 38);

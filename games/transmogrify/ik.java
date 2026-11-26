@@ -171,7 +171,7 @@ class ik extends a implements df {
         }
     }
 
-    public static void s(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_ib = null;
         field_cb = null;
         int var1 = -30 % ((param0 - 50) / 47);

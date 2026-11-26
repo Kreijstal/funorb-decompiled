@@ -5,7 +5,7 @@ final class si {
     short[] field_M;
     short[] field_s;
     static String field_o;
-    static dd field_C;
+    static RgbSprite field_C;
     short field_w;
     short[] field_t;
     int field_m;
@@ -47,7 +47,7 @@ final class si {
     static String field_H;
     short[] field_r;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = 55 % ((param0 - 9) / 40);
         field_H = null;
         field_C = null;

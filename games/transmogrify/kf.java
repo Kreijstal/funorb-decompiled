@@ -217,7 +217,7 @@ final class kf extends td {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_e = null;
         field_h = null;
         int var1 = -87 / ((55 - param0) / 36);

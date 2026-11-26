@@ -3,23 +3,23 @@
  */
 class kj extends cj {
     private boolean field_p;
-    private kc field_V;
-    private kc[] field_Q;
+    private RgbSprite field_V;
+    private RgbSprite[] field_Q;
     private int field_K;
-    private kc field_A;
+    private RgbSprite field_A;
     private int field_I;
     private int field_u;
     private int field_E;
     private int field_H;
     private boolean field_o;
     private static long[] field_z;
-    private kc field_x;
+    private RgbSprite field_x;
     private int field_U;
     private int field_D;
     private int field_S;
-    private kc[] field_w;
+    private RgbSprite[] field_w;
     static String field_q;
-    private kc field_N;
+    private RgbSprite field_N;
     private boolean field_C;
     private int field_J;
     private int field_bb;
@@ -27,18 +27,18 @@ class kj extends cj {
     private boolean field_s;
     private boolean field_v;
     static int field_t;
-    private kc field_B;
+    private RgbSprite field_B;
     private boolean field_F;
     private int field_r;
     private ee field_Y;
     private int field_ab;
-    private kc[] field_T;
+    private RgbSprite[] field_T;
     private int field_R;
     private int field_G;
     private int field_n;
-    private kc[] field_L;
+    private RgbSprite[] field_L;
     private String field_O;
-    private kc[] field_X;
+    private RgbSprite[] field_X;
     static boolean field_P;
     private int field_M;
     private int field_W;
@@ -263,7 +263,7 @@ class kj extends cj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_q = null;
         if (param0 != 45) {
           field_q = (String) null;

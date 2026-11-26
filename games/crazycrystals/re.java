@@ -58,7 +58,7 @@ final class re extends ue {
         int stackIn_30_0 = 0;
         int stackIn_34_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        dl var3 = null;
+        RgbSprite var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;

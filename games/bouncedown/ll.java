@@ -4,12 +4,12 @@
 final class ll extends lk {
     private int field_x;
     private int field_w;
-    private tg[] field_z;
-    private tg field_I;
+    private RgbSprite[] field_z;
+    private RgbSprite field_I;
     static String field_J;
     static String field_D;
     private int field_K;
-    private tg field_M;
+    private RgbSprite field_M;
     boolean field_C;
     static int field_y;
     private int field_L;
@@ -18,7 +18,7 @@ final class ll extends lk {
     int field_F;
     private int field_H;
     private int field_G;
-    private tg field_B;
+    private RgbSprite field_B;
 
     final static void a(int param0, boolean param1, int param2) {
         ck.field_c = param0;
@@ -50,7 +50,7 @@ final class ll extends lk {
         }
     }
 
-    private final tg b(int param0, int param1, int param2) {
+    private final RgbSprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -59,7 +59,7 @@ final class ll extends lk {
         int var11 = 0;
         int var12 = 0;
         int var13 = Bounce.field_N;
-        tg var14 = new tg(2 * this.field_K, this.field_m);
+        RgbSprite var14 = new RgbSprite(2 * this.field_K, this.field_m);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -88,7 +88,7 @@ final class ll extends lk {
     }
 
     final void a(int param0, int param1, int param2, lk param3) {
-        tg discarded$1 = null;
+        RgbSprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -155,16 +155,16 @@ final class ll extends lk {
     }
 
     private final void a(boolean param0) {
-        this.field_z = new tg[]{this.b(this.field_G, -30578, this.field_H), this.b(this.field_L, -30578, this.field_x)};
+        this.field_z = new RgbSprite[]{this.b(this.field_G, -30578, this.field_H), this.b(this.field_L, -30578, this.field_x)};
         if (!param0) {
           this.field_C = true;
         }
         this.field_M = this.d((byte) -21);
         this.field_I = this.field_M.a();
-        this.field_B = new tg(this.field_m >> 1, this.field_m);
+        this.field_B = new RgbSprite(this.field_m >> 1, this.field_m);
     }
 
-    private final void a(tg param0, int param1, byte param2, int param3) {
+    private final void a(RgbSprite param0, int param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -217,9 +217,9 @@ final class ll extends lk {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -35) {
-          ll.e((byte) 2);
+          ll.clearStaticReferences((byte) 2);
         }
         field_A = null;
         field_J = null;
@@ -242,14 +242,14 @@ final class ll extends lk {
         this.a(true);
     }
 
-    private final tg d(byte param0) {
+    private final RgbSprite d(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Bounce.field_N;
         int var2 = this.field_m >> 1;
-        tg var3 = new tg(var2, this.field_m);
+        RgbSprite var3 = new RgbSprite(var2, this.field_m);
         kh.a(var3, 1);
         for (var4 = 0; var4 < this.field_m; var4++) {
           for (var5 = 0; var2 > var5; var5++) {

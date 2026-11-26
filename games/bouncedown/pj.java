@@ -38,9 +38,9 @@ final class pj implements fc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -4) {
-          pj.a(-34);
+          pj.clearStaticReferences(-34);
         }
         field_c = null;
         field_a = null;
@@ -54,7 +54,7 @@ final class pj implements fc {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        tg var8 = null;
+        RgbSprite var8 = null;
         int var9 = 0;
         try {
           var6_int = param4 + param1.field_r;

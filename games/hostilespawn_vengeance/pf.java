@@ -216,8 +216,8 @@ final class pf {
         int var6 = 0;
         int var9 = 0;
         int var10 = 0;
-        bd var11 = null;
-        bd var12 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         var10 = HostileSpawn.field_I ? 1 : 0;

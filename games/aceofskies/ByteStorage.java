@@ -7,7 +7,7 @@ abstract class ByteStorage {
     static SpriteData[] medalSpriteData;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         int var1 = -94 / ((param0 + 42) / 41);
         field_b = null;

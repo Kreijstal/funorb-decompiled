@@ -5,16 +5,16 @@ final class pp extends rj {
     static IntrusiveDeque field_K;
     static String[] field_F;
     static String field_I;
-    private cn field_B;
-    private cn field_z;
+    private RgbSprite field_B;
+    private RgbSprite field_z;
     boolean field_D;
     static int field_J;
-    private cn field_C;
+    private RgbSprite field_C;
     static String[] field_E;
-    private cn field_A;
+    private RgbSprite field_A;
     private boolean field_G;
 
-    final void a(cn param0, cn param1, cn param2, cn param3, int param4) {
+    final void a(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, int param4) {
         try {
           this.a(-66, param0);
           this.field_C = param1;
@@ -103,7 +103,7 @@ final class pp extends rj {
         this.field_C.b(this.field_t + param0, this.field_i + param2, var8Lifetime2);
     }
 
-    private pp(cn param0, cn param1, cn param2, cn param3, int param4, int param5, int param6) {
+    private pp(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, int param4, int param5, int param6) {
         super(param4, param5, param0.field_y, param0.field_v, param6);
         try {
           this.field_D = true;
@@ -118,17 +118,17 @@ final class pp extends rj {
 
     final void a(boolean param0, int param1, int param2) {
         if (param0) {
-          this.field_C = (cn) null;
+          this.field_C = (RgbSprite) null;
           throw new RuntimeException("Unsupported");
         }
         throw new RuntimeException("Unsupported");
     }
 
-    pp(cn param0, cn param1, cn param2, cn param3, int param4, int param5) {
+    pp(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, int param4, int param5) {
         this(param0, param1, param2, param3, param4, param5, 0);
     }
 
-    private final void a(int param0, cn param1) {
+    private final void a(int param0, RgbSprite param1) {
         try {
           this.field_z = param1;
           this.field_B = param1;
@@ -141,7 +141,7 @@ final class pp extends rj {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_F = null;
         field_E = null;
         field_K = null;

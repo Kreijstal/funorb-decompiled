@@ -59,7 +59,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -221,11 +221,11 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryKey = -17L;
     }
 
-    public static void c(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_n = null;
         field_j = null;
         if (param0 > -24) {
-          DualLinkNode.c((byte) 50);
+          DualLinkNode.clearDeclaredStaticReferences((byte) 50);
           field_k = null;
           return;
         }

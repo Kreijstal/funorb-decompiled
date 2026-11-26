@@ -41,7 +41,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var4), "uk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var4), "uk.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "uk.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "uk.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "uk.AB(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "uk.AB(" + param0 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2), "uk.BB(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2), "uk.BB(" + param0 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ class uk {
             uk.a(83, false, 26, 15);
           }
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "uk.RA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "uk.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ class uk {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var4), "uk.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var4), "uk.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "uk.WA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "uk.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -520,7 +520,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var5), "uk.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var5), "uk.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1031,7 +1031,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var4), "uk.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var4), "uk.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1077,7 +1077,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var4), "uk.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var4), "uk.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1118,7 +1118,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "uk.QA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "uk.QA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1145,7 +1145,7 @@ class uk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1164,7 +1164,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "uk.OA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "uk.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1181,7 +1181,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "uk.NA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "uk.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1226,7 +1226,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "uk.MA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "uk.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1314,7 +1314,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2), "uk.UA(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2), "uk.UA(" + param0 + ')');
         }
     }
 
@@ -1351,7 +1351,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var2), "uk.PA(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var2), "uk.PA(" + param0 + ')');
         }
     }
 
@@ -1370,7 +1370,7 @@ class uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var3), "uk.TA(" + param0 + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var3), "uk.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1390,7 +1390,7 @@ class uk {
         try {
           ne.a(df.field_i, 0, this.field_f, 0, df.field_i.length);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>()");
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>()");
         }
     }
 

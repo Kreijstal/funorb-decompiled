@@ -10,7 +10,7 @@ final class ga {
         int var4 = 0;
         int var5 = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
-        th var7 = ed.field_q;
+        th var7 = SpriteGeometry.field_q;
         th var8 = var7;
         if (param2 <= 71) {
           return;

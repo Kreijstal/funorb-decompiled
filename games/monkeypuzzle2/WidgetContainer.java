@@ -267,7 +267,7 @@ class WidgetContainer extends UiWidget implements ga {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_w = null;
         field_v = null;
         field_y = null;
@@ -322,7 +322,7 @@ class WidgetContainer extends UiWidget implements ga {
         try {
           var8 = new DequeCursor(this.field_u);
           if (param3 != -1625) {
-            WidgetContainer.j(-119);
+            WidgetContainer.clearDeclaredStaticReferences(-119);
           }
           var9 = (UiWidget) (var8.a((byte) -37));
           while (var9 != null) {

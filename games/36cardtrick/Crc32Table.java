@@ -3,7 +3,7 @@
  */
 final class Crc32Table {
     static int[] lookupTable;
-    static kc[] field_d;
+    static RgbSprite[] field_d;
     static af field_a;
     static int field_c;
     private static String field_z;

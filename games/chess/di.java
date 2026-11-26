@@ -153,7 +153,7 @@ final class di extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "di.F(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "di.F(" + param0 + ')');
         }
     }
 
@@ -384,7 +384,7 @@ final class di extends ci {
               this.field_Gb[var13] == -1) {
               var14 = mc.field_b;
             }
-            this.field_Nb[var13] = new tl(0L, param2, (ci) null, param3, (km) (var14), param6[var13]);
+            this.field_Nb[var13] = new tl(0L, param2, (ci) null, param3, (RgbSprite) (var14), param6[var13]);
             this.a((byte) 127, this.field_Nb[var13]);
             var15 = var17.b(param6[var13]);
             if (this.field_Ob < var15) {
@@ -440,7 +440,7 @@ final class di extends ci {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -603,7 +603,7 @@ final class di extends ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "di.I(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "di.I(" + param0 + ')');
         }
     }
 

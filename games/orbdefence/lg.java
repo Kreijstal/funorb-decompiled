@@ -88,7 +88,7 @@ final class lg {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         int var1 = -14 / ((param0 - 40) / 62);
         field_b = null;

@@ -195,14 +195,14 @@ final class he extends pe {
         }
     }
 
-    final nh b() {
+    final RgbSprite b() {
         int var3 = 0;
         int var1 = this.field_d * this.field_k;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
           var2[var3] = this.field_l[this.field_m[var3] & 255];
         }
-        return new nh(this.field_h, this.field_c, this.field_a, this.field_f, this.field_d, this.field_k, var2);
+        return new RgbSprite(this.field_h, this.field_c, this.field_a, this.field_f, this.field_d, this.field_k, var2);
     }
 
     private final static void blitIndexedSkipRuns(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {

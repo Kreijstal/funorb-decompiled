@@ -275,7 +275,7 @@ class fd extends ja {
         tk.field_d = ql.a(var4 * var2, var5 * var2, 127);
     }
 
-    public static void g(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 != -257) {
           return;
         }

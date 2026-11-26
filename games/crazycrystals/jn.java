@@ -5,7 +5,7 @@ final class jn extends se {
     static int field_i;
     static int field_p;
     static String field_n;
-    static dl[] field_o;
+    static RgbSprite[] field_o;
     static PcmSample field_m;
     static int field_q;
     static String field_l;
@@ -13,7 +13,7 @@ final class jn extends se {
     private ga field_j;
     private ga field_r;
 
-    public static void d(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_n = null;
         if (param0 == -31737) {
           field_l = null;

@@ -586,21 +586,21 @@ abstract class ee extends pm {
     }
 
     final static void a(mi param0, byte param1) {
-        nf var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new nf(param0.a(-75, "final_frame.jpg", ""), (java.awt.Component) ((Object) fb.field_b));
+          var2 = new RgbSprite(param0.a(-75, "final_frame.jpg", ""), (java.awt.Component) ((Object) fb.field_b));
           var3 = var2.field_u;
           var4 = var2.field_w;
           mk.b(param1 ^ 198);
           if (param1 != 70) {
             ee.clearStaticReferences(-74);
           }
-          ad.field_b = new nf(var3, var4 * 3 / 4);
+          ad.field_b = new RgbSprite(var3, var4 * 3 / 4);
           ad.field_b.d();
           var2.c(0, 0);
-          ic.field_a = new nf(var3, var4 - ad.field_b.field_w);
+          ic.field_a = new RgbSprite(var3, var4 - ad.field_b.field_w);
           ic.field_a.d();
           var2.c(0, -ad.field_b.field_w);
           ic.field_a.field_v = ad.field_b.field_w;

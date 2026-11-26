@@ -10,9 +10,9 @@ final class nf extends LinkTextWidget {
     private qu field_L;
     private String field_O;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -110) {
-          nf.d((byte) 95);
+          nf.clearStaticReferences((byte) 95);
           field_P = null;
           return;
         }

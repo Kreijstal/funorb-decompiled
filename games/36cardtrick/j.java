@@ -64,7 +64,7 @@ final class j extends qg {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         if (param0 <= 37) {
           field_F = (String) null;
         }
@@ -80,7 +80,7 @@ final class j extends qg {
         int var4;
         var4 = Main.field_T;
         if (param0 < 7) {
-          j.m(65);
+          j.releaseDeclaredStaticReferences(65);
         }
         var2 = new qd(this.field_D);
         var3 = (qf) (var2.b((byte) -33));

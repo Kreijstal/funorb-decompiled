@@ -138,7 +138,7 @@ final class ph extends ki {
         throw new RuntimeException();
     }
 
-    public static void h(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -69 % ((param0 - 44) / 32);
         field_E = null;
     }

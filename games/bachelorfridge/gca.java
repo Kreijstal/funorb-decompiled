@@ -8,7 +8,7 @@ abstract class gca extends IntrusiveNode {
 
     void a(int param0, int param1, byte param2) {
         if (param2 != -34) {
-          gca.c((byte) -81);
+          gca.clearStaticReferences((byte) -81);
         }
     }
 
@@ -22,7 +22,7 @@ abstract class gca extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            gca.c((byte) -1);
+            gca.clearStaticReferences((byte) -1);
           }
           var2 = new FridgeScreen();
           var2.a((byte) -118, param1);
@@ -48,7 +48,7 @@ abstract class gca extends IntrusiveNode {
           hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
           return;
         }
-        gca.c((byte) -33);
+        gca.clearStaticReferences((byte) -33);
         DamageEffect.b(false);
         hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
     }
@@ -63,11 +63,11 @@ abstract class gca extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_f = null;
         if (param0 <= 102) {
-          gca.c((byte) 111);
+          gca.clearStaticReferences((byte) 111);
         }
     }
 

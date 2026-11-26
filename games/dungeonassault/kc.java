@@ -90,7 +90,7 @@ final class kc extends ii implements vg {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_M = null;
         field_V = (int[][]) null;
         field_S = (int[][]) null;

@@ -79,10 +79,10 @@ final class MixedSupport056 {
         }
     }
 
-    public static void performAction0667(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0240 = null;
         if (integerArgument1 != -21128) {
-          MixedSupport056.performAction0667(-128);
+          MixedSupport056.clearStaticReferences(-128);
         }
         integerArrayState0064 = null;
         stringState0242 = null;

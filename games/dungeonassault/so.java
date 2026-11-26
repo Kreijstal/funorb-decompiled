@@ -48,9 +48,9 @@ final class so {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 95) {
-          so.a((byte) -62);
+          so.clearStaticReferences((byte) -62);
           field_a = null;
           field_b = null;
           return;

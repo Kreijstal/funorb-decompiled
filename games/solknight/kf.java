@@ -208,7 +208,7 @@ abstract class kf extends WidgetContainer {
         jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
     }
 
-    public static void i(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_G = null;
         field_F = null;
         if (param0 >= 16) {

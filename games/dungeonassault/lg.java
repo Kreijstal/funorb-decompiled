@@ -25,7 +25,7 @@ final class lg {
     static String field_e;
     int field_t;
     private int field_z;
-    static cn field_u;
+    static RgbSprite field_u;
     static String field_m;
     q field_v;
     static String field_l;
@@ -36,7 +36,7 @@ final class lg {
     final void a(int param0, boolean param1) {
         int var3 = 0;
         int var4;
-        cn var5;
+        RgbSprite var5;
         var4 = DungeonAssault.field_K;
         for (var3 = -1 + this.field_g.length; var3 >= 0; var3--) {
           if (this.field_k[var3] <= 0) {
@@ -57,8 +57,8 @@ final class lg {
           }
         }
         if (param1) {
-          var5 = (cn) null;
-          lg.a(54, -127, 107, -64, -29, (cn) null);
+          var5 = (RgbSprite) null;
+          lg.a(54, -127, 107, -64, -29, (RgbSprite) null);
         }
     }
 
@@ -173,7 +173,7 @@ final class lg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, cn param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;

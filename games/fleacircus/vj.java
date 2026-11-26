@@ -5,7 +5,7 @@ import java.util.*;
 
 final class vj {
     int field_b;
-    static dd field_c;
+    static RgbSprite field_c;
     static String field_a;
 
     final void a(int param0) {
@@ -29,7 +29,7 @@ final class vj {
           mc.field_b = -65536 & wi.field_b;
           return;
         }
-        field_c = (dd) null;
+        field_c = (RgbSprite) null;
         mc.field_a = wi.field_b & 65535;
         mc.field_b = -65536 & wi.field_b;
     }

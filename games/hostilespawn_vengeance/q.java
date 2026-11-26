@@ -5,7 +5,7 @@ final class q {
     static int field_k;
     static int field_d;
     static int field_h;
-    static bd field_c;
+    static RgbSprite field_c;
     static bn field_b;
     static String field_l;
     static na field_j;
@@ -13,7 +13,7 @@ final class q {
     static String field_a;
     static int[][] field_e;
     static RawPcmStream field_i;
-    static bd field_f;
+    static RgbSprite field_f;
     static String[] field_m;
     static int field_n;
 

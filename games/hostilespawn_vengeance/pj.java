@@ -18,7 +18,7 @@ final class pj extends ql {
     private oc field_f;
     static int field_v;
     private we[] field_p;
-    static bd field_l;
+    static RgbSprite field_l;
     private boolean field_B;
     private boolean field_n;
     private v[] field_x;

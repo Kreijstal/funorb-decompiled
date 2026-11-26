@@ -7,7 +7,7 @@ final class am {
     static int field_d;
     static int field_c;
     static int field_g;
-    static cn field_a;
+    static RgbSprite field_a;
     static ad field_b;
 
     final static void b(int param0) {

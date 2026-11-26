@@ -145,14 +145,14 @@ final class fb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_d = null;
         field_n = null;
         field_c = null;
         field_l = null;
         if (param0 > -8) {
-          fb.a(122);
+          fb.clearStaticReferences(122);
         }
         field_f = null;
         field_t = null;

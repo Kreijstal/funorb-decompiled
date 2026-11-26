@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kc extends ie {
+class RgbSprite extends SpriteGeometry {
     int[] field_r;
 
     void e(int param0, int param1, int param2) {
@@ -45,7 +45,7 @@ class kc extends ie {
           if (var6 <= 0) {
             return;
           }
-          kc.blitColorKeyAlpha(SoftwareRasterizer.field_j, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitColorKeyAlpha(SoftwareRasterizer.field_j, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -91,7 +91,7 @@ class kc extends ie {
           if (var6 <= 0) {
             return;
           }
-          kc.blitGrayModulated(SoftwareRasterizer.field_j, this.field_r, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayModulated(SoftwareRasterizer.field_j, this.field_r, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -394,9 +394,9 @@ class kc extends ie {
         }
     }
 
-    final kc b() {
+    final RgbSprite b() {
         int var3 = 0;
-        kc var1 = new kc(this.field_p, this.field_o);
+        RgbSprite var1 = new RgbSprite(this.field_p, this.field_o);
         var1.field_l = this.field_l;
         var1.field_k = this.field_k;
         var1.field_q = this.field_q;
@@ -430,7 +430,7 @@ class kc extends ie {
         }
     }
 
-    final static void a(kc param0, kc param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(RgbSprite param0, RgbSprite param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param0 == param1) {
           throw new RuntimeException();
         }
@@ -476,7 +476,7 @@ class kc extends ie {
         if (param7 <= 0) {
           return;
         }
-        kc.blitColorKey(param1.field_r, param0.field_r, 0, param3 * param0.field_p + param2, param5 * param1.field_p + param4, param6, param7, param1.field_p - param6, param0.field_p - param6);
+        RgbSprite.blitColorKey(param1.field_r, param0.field_r, 0, param3 * param0.field_p + param2, param5 * param1.field_p + param4, param6, param7, param1.field_p - param6, param0.field_p - param6);
     }
 
     void a(int param0, int param1) {
@@ -595,7 +595,7 @@ class kc extends ie {
           if (var5 <= 0) {
             return;
           }
-          kc.blitMultiply(0, SoftwareRasterizer.field_j, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitMultiply(0, SoftwareRasterizer.field_j, this.field_r, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1159,7 +1159,7 @@ class kc extends ie {
           if (var6 <= 0) {
             return;
           }
-          kc.blitGrayTinted(SoftwareRasterizer.field_j, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.blitGrayTinted(SoftwareRasterizer.field_j, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1230,9 +1230,9 @@ class kc extends ie {
             return;
           }
           if (param2 == 256) {
-            kc.blitAdditive(0, 0, 0, SoftwareRasterizer.field_j, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9);
+            RgbSprite.blitAdditive(0, 0, 0, SoftwareRasterizer.field_j, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            kc.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_j, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_j, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1305,15 +1305,15 @@ class kc extends ie {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          kc.blitColorKeyScaled(SoftwareRasterizer.field_j, this.field_r, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          RgbSprite.blitColorKeyScaled(SoftwareRasterizer.field_j, this.field_r, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    final kc a() {
+    final RgbSprite a() {
         int var2 = 0;
         int var3 = 0;
-        kc var1 = new kc(this.field_p, this.field_o);
+        RgbSprite var1 = new RgbSprite(this.field_p, this.field_o);
         var1.field_l = this.field_l;
         var1.field_k = this.field_k;
         var1.field_q = this.field_l - this.field_p - this.field_q;
@@ -1494,7 +1494,7 @@ class kc extends ie {
           if (var5 <= 0) {
             return;
           }
-          kc.blitUnmasked(SoftwareRasterizer.field_j, this.field_r, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitUnmasked(SoftwareRasterizer.field_j, this.field_r, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1541,7 +1541,7 @@ class kc extends ie {
         }
     }
 
-    kc(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    RgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_l = param0;
         this.field_k = param1;
         this.field_q = param2;
@@ -1592,7 +1592,7 @@ class kc extends ie {
           if (var6 <= 0) {
             return;
           }
-          kc.blitSilhouette(SoftwareRasterizer.field_j, this.field_r, param2, var5, var4, var7, var6, var8, var9);
+          RgbSprite.blitSilhouette(SoftwareRasterizer.field_j, this.field_r, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1638,12 +1638,12 @@ class kc extends ie {
           if (var5 <= 0) {
             return;
           }
-          kc.blitColorKey(SoftwareRasterizer.field_j, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitColorKey(SoftwareRasterizer.field_j, this.field_r, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    kc(int param0, int param1) {
+    RgbSprite(int param0, int param1) {
         this.field_r = new int[param0 * param1];
         this.field_l = param0;
         this.field_p = param0;
@@ -1681,7 +1681,7 @@ class kc extends ie {
         this.field_l = var3Lifetime3;
     }
 
-    kc(byte[] param0, java.awt.Component param1) {
+    RgbSprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;
@@ -1714,7 +1714,7 @@ class kc extends ie {
         int var4 = param0 + (this.field_p >> 1) > SoftwareRasterizer.field_a ? SoftwareRasterizer.field_a - param0 << 1 : this.field_p;
         int var5 = param1 < SoftwareRasterizer.field_h ? SoftwareRasterizer.field_h - param1 << 1 : 0;
         int var6 = param1 + (this.field_o >> 1) > SoftwareRasterizer.field_b ? SoftwareRasterizer.field_b - param1 << 1 : this.field_o;
-        kc.blitHalfSize(this.field_r, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_l + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), SoftwareRasterizer.field_l - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
+        RgbSprite.blitHalfSize(this.field_r, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_l + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), SoftwareRasterizer.field_l - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {

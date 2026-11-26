@@ -14,7 +14,7 @@ final class oj extends om {
     private boolean field_I;
     private int field_F;
     static am field_E;
-    static dl field_B;
+    static RgbSprite field_B;
     private boolean field_J;
     static db field_H;
 

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sn {
-    static cn[] field_c;
+    static RgbSprite[] field_c;
     static String[] field_a;
     static pp field_b;
 
     final static void a(int param0, String param1) {
         System.out.println("Error: " + eg.a(param1, "%0a", "\n", true));
         if (param0 != 11580) {
-          field_c = (cn[]) null;
+          field_c = (RgbSprite[]) null;
         }
     }
 
@@ -17,13 +17,13 @@ final class sn {
         field_b = null;
         field_c = null;
         if (param0 != 5) {
-          cn[] var2 = (cn[]) null;
-          sn.a(99, -43, (cn[]) null, -117, -42, 22);
+          RgbSprite[] var2 = (RgbSprite[]) null;
+          sn.a(99, -43, (RgbSprite[]) null, -117, -42, 22);
         }
         field_a = null;
     }
 
-    final static void a(int param0, int param1, cn[] param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;

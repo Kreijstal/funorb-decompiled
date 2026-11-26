@@ -10,7 +10,7 @@ final class MixedSupport101 {
     static int integerState0590;
     static int integerState0591;
 
-    public static void performAction1268(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         int integerLocal1 = -26 / ((integerArgument1 + 34) / 48);
         stringState0433 = null;
         stringState0434 = null;

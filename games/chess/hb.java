@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hb {
-    static km[][] field_b;
+    static RgbSprite[][] field_b;
     static ci field_a;
 
     final static jd[] a(int param0) {
@@ -18,7 +18,7 @@ final class hb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.wrapClientException((Throwable) ((Object) var1), "hb.B(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) var1), "hb.B(" + param0 + ')');
         }
     }
 
@@ -28,9 +28,9 @@ final class hb {
           return;
         }
         try {
-          field_b = (km[][]) null;
+          field_b = (RgbSprite[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "hb.C(" + param0 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "hb.C(" + param0 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class hb {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param6).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -273,11 +273,11 @@ final class hb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
-        field_b = new km[2][7];
+        field_b = new RgbSprite[2][7];
     }
 }

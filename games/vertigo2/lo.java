@@ -63,7 +63,7 @@ final class lo {
         this.a(var4, 118);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -47 / ((param0 + 63) / 36);
         field_j = null;
         field_a = null;

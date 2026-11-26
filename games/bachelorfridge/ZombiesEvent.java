@@ -4,9 +4,9 @@
 final class ZombiesEvent extends SpecialEvent {
     static IndexedSprite field_q;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -8) {
-          ZombiesEvent.d((byte) -65);
+          ZombiesEvent.clearStaticReferences((byte) -65);
           field_q = null;
           return;
         }

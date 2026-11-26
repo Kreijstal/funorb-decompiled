@@ -49,7 +49,7 @@ abstract class RenderingSupport004 extends DualNode {
             throw new IllegalArgumentException();
           }
           if (integerArgument2 <= 48) {
-            RenderingSupport004.performAction0582(-68);
+            RenderingSupport004.clearStaticReferences(-68);
           }
           integerArrayLocal22 = new int[256];
           integerArrayLocal17 = integerArrayLocal22;
@@ -113,13 +113,13 @@ abstract class RenderingSupport004 extends DualNode {
         SoftwareRaster.intersectClip(integerArgument4, integerArgument1, integerArgument3, integerArgument5);
     }
 
-    public static void performAction0582(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         stringState0202 = null;
         randomState0002 = null;
         sceneWidgetState0040 = null;
         sceneWidgetState0039 = null;
         if (integerArgument1 != 0) {
-          RenderingSupport004.performAction0582(-109);
+          RenderingSupport004.clearStaticReferences(-109);
         }
     }
 

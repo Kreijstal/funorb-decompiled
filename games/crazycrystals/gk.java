@@ -6,7 +6,7 @@ final class gk implements wo {
     private int field_b;
     static e field_e;
     static PcmSample field_j;
-    static dl[] field_d;
+    static RgbSprite[] field_d;
     private int field_i;
     private int field_l;
     private vc field_h;
@@ -79,7 +79,7 @@ final class gk implements wo {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_k = null;
         if (param0 <= -95) {
@@ -87,7 +87,7 @@ final class gk implements wo {
           field_d = null;
           return;
         }
-        gk.a(-93);
+        gk.clearStaticReferences(-93);
         field_j = null;
         field_d = null;
     }

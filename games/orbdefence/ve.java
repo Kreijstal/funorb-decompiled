@@ -44,12 +44,12 @@ final class ve extends ej {
         this.field_U = true;
         this.field_T.field_z = false;
         if (param0 != 1) {
-          hj var3 = (hj) null;
-          ve.a(62, -4, (hj) null, -58, 98, -124, (byte) 124, -112);
+          RgbSprite var3 = (RgbSprite) null;
+          ve.a(62, -4, (RgbSprite) null, -58, 98, -124, (byte) 124, -112);
         }
     }
 
-    final static void a(int param0, int param1, hj param2, int param3, int param4, int param5, byte param6, int param7) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, int param4, int param5, byte param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_47_0 = null;
@@ -64,8 +64,8 @@ final class ve extends ej {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        hj var20 = null;
-        hj var22 = null;
+        RgbSprite var20 = null;
+        RgbSprite var22 = null;
         int[] var23 = null;
         int[] var26 = null;
         int[] var30 = null;
@@ -102,8 +102,8 @@ final class ve extends ej {
             var23 = var26;
             var15 = var23;
             if (param6 < 52) {
-              var20 = (hj) null;
-              ve.a(69, -127, (hj) null, 0, -117, 43, (byte) -101, -90);
+              var20 = (RgbSprite) null;
+              ve.a(69, -127, (RgbSprite) null, 0, -117, 43, (byte) -101, -90);
             }
             for (var16 = param7; var16 < param1 + param7; var16++) {
               for (var17 = param5; param5 + param3 > var17; var17++) {

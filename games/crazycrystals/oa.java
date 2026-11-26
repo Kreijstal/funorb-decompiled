@@ -229,11 +229,11 @@ final class oa {
           this.field_q.a(117, this.field_m, this.field_a);
           return;
         }
-        oa.b(-71);
+        oa.clearStaticReferences(-71);
         this.field_q.a(117, this.field_m, this.field_a);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         int var1 = -115 / ((-37 - param0) / 57);
     }

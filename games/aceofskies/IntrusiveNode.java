@@ -36,7 +36,7 @@ class IntrusiveNode {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_d = null;
         int var1 = -7 % ((param0 - 12) / 47);
     }

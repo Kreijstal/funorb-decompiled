@@ -13,12 +13,12 @@ final class nc {
         }
     }
 
-    final static tg a(String param0, gk param1, String param2, int param3) {
+    final static RgbSprite a(String param0, gk param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tg stackIn_2_0 = null;
-        tg stackIn_4_0 = null;
+        RgbSprite stackIn_2_0 = null;
+        RgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -29,7 +29,7 @@ final class nc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 0) {
-            stackIn_2_0 = (tg) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           var4_int = param1.a(param2, false);

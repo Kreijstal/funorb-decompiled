@@ -142,7 +142,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
         }
     }
 
-    public static void v(int param0) {
+    public static void discardDeclaredStaticReferences(int param0) {
         int var1 = -66 / ((21 - param0) / 62);
         field_rb = null;
         field_nb = null;

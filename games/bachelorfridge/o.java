@@ -4,10 +4,10 @@
 final class o extends EventEffect {
     static String field_i;
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         if (param0 != -7) {
-          o.e((byte) -68);
+          o.clearStaticReferences((byte) -68);
         }
     }
 

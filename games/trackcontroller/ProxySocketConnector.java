@@ -9,11 +9,11 @@ final class ProxySocketConnector extends SocketConnector {
     static PcmStreamMixer field_e;
     static String field_f;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_e = null;
         if (!param0) {
-          ProxySocketConnector.a(true);
+          ProxySocketConnector.clearStaticReferences(true);
         }
     }
 

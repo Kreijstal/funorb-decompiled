@@ -18,7 +18,7 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 20) {
-            oc.a(-29);
+            oc.clearStaticReferences(-29);
           }
           if (nb.a(param2, param1, (byte) 125, param0)) {
             stackIn_6_0 = ti.a((byte) 108);
@@ -40,7 +40,7 @@ final class oc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         int var1 = -2 % ((param0 - 11) / 49);
         field_d = null;
         field_a = null;

@@ -3,13 +3,13 @@
  */
 final class te {
     private boolean field_b;
-    dd field_c;
+    RgbSprite field_c;
     static String field_i;
     private int field_f;
     private int field_h;
     private int field_a;
     private int field_e;
-    dd[] field_g;
+    RgbSprite[] field_g;
     private int field_d;
 
     final void a(int param0) {
@@ -25,7 +25,7 @@ final class te {
     final te c(int param0, int param1) {
         this.field_a = param1;
         if (param0 < 103) {
-          this.field_c = (dd) null;
+          this.field_c = (RgbSprite) null;
           return this;
         }
         return this;
@@ -148,7 +148,7 @@ final class te {
         }
     }
 
-    final te a(boolean param0, dd[] param1) {
+    final te a(boolean param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         te var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -176,10 +176,10 @@ final class te {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         if (param0) {
-          te.a(false);
+          te.clearStaticReferences(false);
         }
     }
 

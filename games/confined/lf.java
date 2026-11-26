@@ -5,7 +5,7 @@ final class lf extends mf {
     private ul field_l;
     static PrimaryNodeDeque field_k;
     static int[] field_m;
-    static nf field_j;
+    static RgbSprite field_j;
     static String field_h;
     static PcmSample field_i;
 

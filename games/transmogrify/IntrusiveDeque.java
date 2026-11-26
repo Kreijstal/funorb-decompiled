@@ -24,7 +24,7 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -9424) {
-          IntrusiveDeque.c((byte) 97);
+          IntrusiveDeque.clearStaticReferences((byte) 97);
           var2 = this.sentinel.previous;
           if (this.sentinel != var2) {
             var2.unlink(5);
@@ -200,7 +200,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         int var1 = -105 % ((-25 - param0) / 33);
         field_c = null;

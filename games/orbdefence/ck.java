@@ -15,7 +15,7 @@ final class ck implements td {
     private int field_o;
     static rf field_j;
     private int field_d;
-    static hj[] field_c;
+    static RgbSprite[] field_c;
     private kc field_m;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {

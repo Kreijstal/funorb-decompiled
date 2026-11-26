@@ -53,7 +53,7 @@ abstract class ld extends kf {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_O = null;
         field_M = null;
         int var1 = -31 % ((-28 - param0) / 50);

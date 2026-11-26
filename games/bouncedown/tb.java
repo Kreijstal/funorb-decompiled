@@ -101,7 +101,7 @@ final class tb extends v {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_r = null;
         field_o = null;
         field_p = null;
@@ -164,7 +164,7 @@ final class tb extends v {
     final static boolean e(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -11) {
-          tb.e((byte) 123);
+          tb.clearStaticReferences((byte) 123);
         }
         stackIn_7_0 = (mh.field_U >= 10) && (!pg.field_c) && (!ej.b(-27));
         return stackIn_7_0;

@@ -3,7 +3,7 @@
  */
 final class rh {
     int field_g;
-    private cn field_d;
+    private RgbSprite field_d;
     private int field_c;
     int field_a;
     int field_h;
@@ -15,7 +15,7 @@ final class rh {
         this.c();
     }
 
-    final void a(cn param0, int param1, int param2) {
+    final void a(RgbSprite param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -171,7 +171,7 @@ final class rh {
         this.field_b = param1;
         this.field_c = param2;
         this.field_f = param3;
-        this.field_d = new cn(this.field_c, this.field_f);
+        this.field_d = new RgbSprite(this.field_c, this.field_f);
         this.field_e = param4;
         this.field_h = param5;
         this.field_a = param6;

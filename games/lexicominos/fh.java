@@ -23,7 +23,7 @@ final class fh {
     final void a(BitmapFont param0, int param1) {
         ik var18 = null;
         lh var4 = null;
-        db[] var5 = null;
+        RgbSprite[] var5 = null;
         ArgbSprite var17 = null;
         ArgbSprite var19 = null;
         int var7_int = 0;
@@ -32,12 +32,12 @@ final class fh {
         ib discarded$0 = null;
         og discarded$1 = null;
         lh var8 = null;
-        db[] var9 = null;
-        db[] var10 = null;
-        db dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         lh var12 = null;
         lh var13 = null;
-        db var14 = null;
+        RgbSprite var14 = null;
         lh var15 = null;
         lh var20 = null;
         int var16 = Lexicominos.field_L ? 1 : 0;
@@ -63,13 +63,13 @@ final class fh {
           var4.a(false, 0).a(15658734, (byte) -81).a((byte) -114, gj.a(10066329, 8947848, false, 7829367));
           var4.a(false, 1).a((byte) -123, gj.a(10066329, 11184810, false, 13421772));
           var4.a(false, 3).a((byte) -126, gj.a(7829367, 8947848, false, 10066329)).a(1, -94).b((byte) 68, 1);
-          var5 = new db[9];
+          var5 = new RgbSprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var19.field_y.length > var7_int; var7_int++) {
             var17.field_y[var7_int] = 1077952576;
           }
-          var5[4] = (db) ((Object) var19);
+          var5[4] = (RgbSprite) ((Object) var19);
           var4.a(false, 4).a(true, 124).a((byte) -105, var5);
           var4.a(false, 5).a((byte) -105, c.a(0, 65793, 0, 0, 84)).a(true, 116).a(-1, (byte) -116);
           this.field_f = (rd) ((Object) var4);
@@ -88,10 +88,10 @@ final class fh {
           var8.a(false, 4).a(true, 115).a((byte) -115, var5);
           this.field_a = (rd) ((Object) var8);
           int var11 = 103 % ((param1 - 10) / 32);
-          var9 = new db[9];
-          var10 = new db[9];
-          var9[4] = new db(2, 1);
-          var10[4] = new db(1, 2);
+          var9 = new RgbSprite[9];
+          var10 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_y = new int[]{6710886, 7829367};
           var10[4].field_y = new int[]{6710886, 7829367};
@@ -99,7 +99,7 @@ final class fh {
           var13 = new lh();
           var12.a(var9, false, 0);
           var13.a(var10, false, 0);
-          var14 = new db(7, 4);
+          var14 = new RgbSprite(7, 4);
           var14.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var15 = new lh(var4, true);
           var15.a(-10, var14.c());

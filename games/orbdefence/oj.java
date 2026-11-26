@@ -248,7 +248,7 @@ final class oj extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_o = null;
         field_j = null;
         if (param0 == 384) {
@@ -256,7 +256,7 @@ final class oj extends IntrusiveNode {
           field_r = null;
           return;
         }
-        oj.c(100);
+        oj.clearDeclaredStaticReferences(100);
         field_q = null;
         field_r = null;
     }

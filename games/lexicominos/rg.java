@@ -7,7 +7,7 @@ final class rg {
     static String field_d;
     static String field_a;
 
-    final static void a(db[] param0, int param1, byte param2, int param3) {
+    final static void a(RgbSprite[] param0, int param1, byte param2, int param3) {
         AccountRequestState.field_a = new wh(param0);
         wh.field_f = param3;
         if (param2 != -105) {

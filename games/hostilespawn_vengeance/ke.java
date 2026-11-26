@@ -5,7 +5,7 @@ final class ke extends cn {
     private int field_t;
     static ta field_s;
     static String field_w;
-    private bd[] field_u;
+    private RgbSprite[] field_u;
     private int field_y;
     private int field_A;
     static int[] field_z;
@@ -79,7 +79,7 @@ final class ke extends cn {
         this.field_g = pe.field_eb;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_B = null;
         field_w = null;
         if (param0) {
@@ -89,7 +89,7 @@ final class ke extends cn {
           field_z = null;
           return;
         }
-        ke.b(true);
+        ke.clearStaticReferences(true);
         field_s = null;
         field_v = null;
         field_x = null;

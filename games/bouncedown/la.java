@@ -8,7 +8,7 @@ final class la extends wd {
     static gk field_D;
     private int field_F;
     static Random field_C;
-    static tg[] field_E;
+    static RgbSprite[] field_E;
 
     public static void clearStaticReferences(byte param0) {
         field_D = null;
@@ -45,14 +45,14 @@ final class la extends wd {
         int var9;
         int var10;
         int var11;
-        tg var15;
-        tg var14;
-        tg var16;
-        tg var17;
-        tg var18;
-        tg var20;
-        tg var21;
-        tg var22;
+        RgbSprite var15;
+        RgbSprite var14;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
+        RgbSprite var20;
+        RgbSprite var21;
+        RgbSprite var22;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -84,15 +84,15 @@ final class la extends wd {
           var9 = var22.field_t << 1;
           var10 = var22.field_o << 1;
           if (sj.field_c == null) {
-            sj.field_c = new tg(var9, var10);
+            sj.field_c = new RgbSprite(var9, var10);
             kh.a(sj.field_c, 1);
           } else {
             if (var9 > sj.field_c.field_s) {
-              sj.field_c = new tg(var9, var10);
+              sj.field_c = new RgbSprite(var9, var10);
               kh.a(sj.field_c, 1);
             } else {
               if (var10 > sj.field_c.field_q) {
-                sj.field_c = new tg(var9, var10);
+                sj.field_c = new RgbSprite(var9, var10);
                 kh.a(sj.field_c, 1);
               } else {
                 kh.a(sj.field_c, 1);
@@ -116,7 +116,7 @@ final class la extends wd {
             kh.a(sj.field_c, 1);
             SoftwareRasterizer.clearRaster();
           } else {
-            sj.field_c = new tg(var9Lifetime1, var10Lifetime1);
+            sj.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
             kh.a(sj.field_c, 1);
           }
           var15.b(112, 144, var15.field_t << 4, var15.field_o << 4, -this.field_F << 10, 4096);
@@ -147,7 +147,7 @@ final class la extends wd {
           kh.a(sj.field_c, 1);
           SoftwareRasterizer.clearRaster();
         } else {
-          sj.field_c = new tg(var9Lifetime2, var10Lifetime2);
+          sj.field_c = new RgbSprite(var9Lifetime2, var10Lifetime2);
           kh.a(sj.field_c, 1);
         }
         var16.b(112, 144, var16.field_t << 4, var16.field_o << 4, -this.field_F << 10, 4096);
@@ -266,7 +266,7 @@ final class la extends wd {
         var8 = Bounce.field_N;
         try {
           if (param1 != 2) {
-            field_E = (tg[]) null;
+            field_E = (RgbSprite[]) null;
           }
           param2--;
           while (param2 >= 0) {

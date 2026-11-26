@@ -45,7 +45,7 @@ class ml extends va {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         field_u = null;
         field_t = null;

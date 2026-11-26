@@ -220,7 +220,7 @@ final class BufferedCacheFile {
 
     final static int c(int param0) {
         if (param0 != -14496) {
-          BufferedCacheFile.b(-115);
+          BufferedCacheFile.clearStaticReferences(-115);
         }
         return (int)(1000000000L / ba.field_f);
     }
@@ -274,11 +274,11 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_l = null;
         if (param0 != -1) {
-          BufferedCacheFile.b(-44);
+          BufferedCacheFile.clearStaticReferences(-44);
         }
     }
 
@@ -439,7 +439,7 @@ final class BufferedCacheFile {
     final void a(int param0, byte[] param1) throws IOException {
         try {
           if (param0 > -113) {
-            BufferedCacheFile.b(46);
+            BufferedCacheFile.clearStaticReferences(46);
           }
           this.a(param1, param1.length, 0, 0);
         } catch (RuntimeException runtimeException) {

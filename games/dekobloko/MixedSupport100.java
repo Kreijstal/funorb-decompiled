@@ -24,7 +24,7 @@ final class MixedSupport100 {
         return booleanLocal2;
     }
 
-    public static void performAction1237(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0421 = null;
         booleanArrayState0008 = null;
         stringState0420 = null;
@@ -32,7 +32,7 @@ final class MixedSupport100 {
         rgbSpriteState0041 = null;
         rawSoundState0016 = null;
         if (byteArgument1 != 126) {
-          MixedSupport100.performAction1237((byte) 95);
+          MixedSupport100.clearStaticReferences((byte) 95);
         }
     }
 

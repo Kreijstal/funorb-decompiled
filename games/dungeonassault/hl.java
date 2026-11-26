@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hl {
-    static cn field_h;
+    static RgbSprite field_h;
     static lh field_a;
     static gd field_b;
     static volatile int field_g;

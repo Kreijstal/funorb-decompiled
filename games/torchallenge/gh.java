@@ -21,7 +21,7 @@ final class gh extends IntrusiveNode {
     static int field_w;
     static boolean field_m;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_n = null;
         field_k = (int[][][]) null;
@@ -32,7 +32,7 @@ final class gh extends IntrusiveNode {
           field_v = null;
           return;
         }
-        gh.a(-119);
+        gh.clearStaticReferences(-119);
         field_y = null;
         field_i = null;
         field_v = null;

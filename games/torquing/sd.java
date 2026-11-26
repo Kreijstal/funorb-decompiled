@@ -140,7 +140,7 @@ final class sd extends am {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         int var1 = -127 / ((54 - param0) / 60);
         field_s = null;
     }

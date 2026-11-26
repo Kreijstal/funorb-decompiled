@@ -13,7 +13,7 @@ final class ac extends IntrusiveNode {
     int field_s;
     static nb field_j;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         int var1 = -105 % ((7 - param0) / 45);
         field_l = null;
@@ -106,7 +106,7 @@ final class ac extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 

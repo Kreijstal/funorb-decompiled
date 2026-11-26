@@ -17,7 +17,7 @@ final class wa {
     static int[] field_m;
     static int field_l;
 
-    final static void a(int param0, int param1, int param2, cn param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         try {
           param3.h(param4, param5);
           db.field_v.b(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1) + param5, param2, param1);
@@ -85,8 +85,8 @@ final class wa {
         field_m = null;
         field_j = null;
         if (param0 != 23413) {
-          cn var2 = (cn) null;
-          wa.a(-5, (cn) null);
+          RgbSprite var2 = (RgbSprite) null;
+          wa.a(-5, (RgbSprite) null);
           field_f = null;
           field_e = null;
           return;
@@ -95,7 +95,7 @@ final class wa {
         field_e = null;
     }
 
-    final static void a(int param0, cn param1) {
+    final static void a(int param0, RgbSprite param1) {
         try {
           if (param0 < 116) {
             field_m = (int[]) null;

@@ -243,11 +243,11 @@ final class wd {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
-        cn var10 = null;
-        cn var11 = null;
-        cn var12 = null;
+        RgbSprite var10 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var7 = 0;
-        cn var8 = this.field_n.a(param2, this.field_m, param4, 0);
+        RgbSprite var8 = this.field_n.a(param2, this.field_m, param4, 0);
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
@@ -273,7 +273,7 @@ final class wd {
             return;
           }
           var11 = this.field_g.a(param2, this.field_h, param4, param1 - 1);
-          cn var9 = var11;
+          RgbSprite var9 = var11;
           if (var11 != null) {
             var7Lifetime3 = -((this.field_c << 8) / this.field_b) + 256;
             ob.a(var11, param3, var7Lifetime3, param0, true);
@@ -296,7 +296,7 @@ final class wd {
           }
           return;
         }
-        cn var13 = this.field_g.a(param2, this.field_h, param4, param1 - 1);
+        RgbSprite var13 = this.field_g.a(param2, this.field_h, param4, param1 - 1);
         if (var13 != null) {
           var7Lifetime2 = -((this.field_c << 8) / this.field_b) + 256;
           ob.a(var13, param3, var7Lifetime2, param0, true);

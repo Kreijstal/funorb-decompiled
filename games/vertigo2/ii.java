@@ -173,11 +173,11 @@ final class ii extends TextureOperator {
         return var15Lifetime1;
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_A = null;
         field_C = null;
         if (param0 < 57) {
-          ii.g(-31);
+          ii.clearStaticReferences(-31);
         }
     }
 

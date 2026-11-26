@@ -65,10 +65,10 @@ final class ve {
         throw new RuntimeException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 >= -92) {
-          ve.a(42);
+          ve.clearStaticReferences(42);
           field_c = null;
           return;
         }

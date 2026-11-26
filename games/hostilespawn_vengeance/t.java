@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class t extends IntrusiveNode {
-    static bd field_l;
+    static RgbSprite field_l;
     static ca field_i;
     int field_h;
-    static bd field_j;
+    static RgbSprite field_j;
     static String[] field_k;
 
     final static boolean a(int param0, int param1, int param2) {

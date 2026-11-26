@@ -7,7 +7,7 @@ final class bj extends da {
     static String[] field_H;
     static String field_I;
     static ef field_K;
-    static cn field_F;
+    static RgbSprite field_F;
 
     final static String a(int param0, int param1) {
         if (param1 > 29) {

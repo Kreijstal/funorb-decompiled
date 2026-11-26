@@ -12,7 +12,7 @@ final class qi extends qg {
     static String field_F;
     private int field_B;
     private boolean field_J;
-    static kc field_D;
+    static RgbSprite field_D;
 
     final StringBuilder a(Hashtable param0, boolean param1, int param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;

@@ -10,12 +10,12 @@ final class he {
     static long field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_c = null;
         field_d = null;
         if (param0 <= 70) {
-          he.a((byte) -66);
+          he.clearStaticReferences((byte) -66);
         }
     }
 

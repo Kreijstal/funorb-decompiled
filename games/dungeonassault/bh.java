@@ -34,7 +34,7 @@ class bh extends ck {
         return cc.field_e[param1];
     }
 
-    public static void f(byte param0) {
+    public static void clearDeclaredStaticReferences(byte param0) {
         field_J = null;
         int var1 = -97 / ((param0 + 1) / 33);
         field_L = null;

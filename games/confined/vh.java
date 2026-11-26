@@ -10,10 +10,10 @@ final class vh {
     private IntrusiveNode[] field_b;
     static CipherPacketBuffer field_a;
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         if (param0) {
-          vh.b(false);
+          vh.clearStaticReferences(false);
           field_a = null;
           return;
         }
@@ -27,7 +27,7 @@ final class vh {
             param0.unlink(true);
           }
           if (param1 != 11) {
-            vh.b(false);
+            vh.clearStaticReferences(false);
           }
           var5 = this.field_b[(int)((long)(this.field_d - 1) & param2)];
           param0.field_h = var5;

@@ -22,11 +22,11 @@ final class cf implements b {
         return this.field_e[param0];
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = (byte[][]) null;
         if (param0 <= 3) {
-          cf.a((byte) -30);
+          cf.clearStaticReferences((byte) -30);
         }
     }
 
@@ -113,7 +113,7 @@ final class cf implements b {
         return 0;
     }
 
-    cf(kc[] param0) {
+    cf(RgbSprite[] param0) {
         int var2_int = 0;
         int var5 = 0;
         int var6 = 0;

@@ -3,7 +3,7 @@
  */
 final class ng {
     static di field_c;
-    static km field_b;
+    static RgbSprite field_b;
     static String field_d;
     static String field_a;
 
@@ -22,11 +22,11 @@ final class ng {
           qn.field_U.writeByte(param1 ? 1 : 0, (byte) -95);
           qn.field_U.backpatchByteLength(qn.field_U.position - var7_int, -1);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_d = null;
         field_a = null;

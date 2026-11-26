@@ -131,7 +131,7 @@ class uf extends af {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_s = (byte[][]) null;
         if (param0 != 22645) {
           field_r = (String) null;

@@ -115,11 +115,11 @@ final class hj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_i = null;
         field_a = null;
         if (param0) {
-          hj.a(false);
+          hj.clearStaticReferences(false);
         }
         field_c = null;
         field_b = null;

@@ -47,9 +47,9 @@ final class kl extends pm {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -16420) {
-          kl.k(119);
+          kl.clearStaticReferences(119);
         }
         field_G = null;
         field_R = null;

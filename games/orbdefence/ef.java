@@ -10,7 +10,7 @@ final class ef extends IntrusiveNode {
     static int field_k;
     int field_f;
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_g = (byte[][][]) null;
         field_i = null;
         if (param0) {
@@ -18,7 +18,7 @@ final class ef extends IntrusiveNode {
           field_h = null;
           return;
         }
-        ef.c(false);
+        ef.clearStaticReferences(false);
         field_j = null;
         field_h = null;
     }

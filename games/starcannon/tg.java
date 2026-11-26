@@ -28,7 +28,7 @@ final class tg extends ik {
         return new ma(we.a(29084), IterableNodeHashTable.a(-86));
     }
 
-    public static void h(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_x = null;
         field_w = null;
         int var1 = 34 % ((-11 - param0) / 38);

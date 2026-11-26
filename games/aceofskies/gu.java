@@ -6,10 +6,10 @@ final class gu {
     static SpriteData[] brassFrameSpriteData;
     static Sprite[] field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         brassFrameSpriteData = null;
         if (param0) {
-          gu.a(false);
+          gu.clearStaticReferences(false);
         }
         field_c = null;
     }

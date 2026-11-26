@@ -103,7 +103,7 @@ final class ni extends di {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         keyDown = null;
         if (param0 != 112) {
           keyDown = (boolean[]) null;

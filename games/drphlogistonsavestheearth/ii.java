@@ -6,11 +6,11 @@ final class ii {
     static he[] field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 < 76) {
-          ii.a(-86);
+          ii.clearStaticReferences(-86);
         }
     }
 

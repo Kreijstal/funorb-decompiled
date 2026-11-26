@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class t {
-    static db field_a;
+    static RgbSprite field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 12307) {
-          t.a(-10);
+          t.clearStaticReferences(-10);
         }
     }
 
@@ -20,6 +20,6 @@ final class t {
     }
 
     static {
-        field_a = new db(270, 70);
+        field_a = new RgbSprite(270, 70);
     }
 }

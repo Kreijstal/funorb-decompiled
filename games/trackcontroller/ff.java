@@ -6,10 +6,10 @@ final class ff {
     static String[] field_c;
     private int[] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -1) {
-          ff.a(-90);
+          ff.clearStaticReferences(-90);
           field_b = null;
           return;
         }

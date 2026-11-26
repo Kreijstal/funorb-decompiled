@@ -15,12 +15,12 @@ final class qk implements Runnable {
     private int field_a;
     static int field_h;
     private PlatformTaskDispatcher field_g;
-    static km field_k;
+    static RgbSprite field_k;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (!param0) {
-          qk.a(true);
+          qk.clearStaticReferences(true);
           field_k = null;
           return;
         }
@@ -123,7 +123,7 @@ final class qk implements Runnable {
               return false;
             }
             if (param0 != 17) {
-              field_k = (km) null;
+              field_k = (RgbSprite) null;
             }
             if (this.field_d.status == 1) {
               return false;
@@ -140,7 +140,7 @@ final class qk implements Runnable {
           return false;
         }
         if (param0 != 17) {
-          field_k = (km) null;
+          field_k = (RgbSprite) null;
         }
         if (this.field_d.status != 1) {
           this.finalize();
@@ -199,7 +199,7 @@ final class qk implements Runnable {
           this.field_i = param1;
           this.field_j = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class qk implements Runnable {
 
     static {
         field_b = new mk();
-        field_k = new km(0, 0);
+        field_k = new RgbSprite(0, 0);
     }
 
     @SuppressWarnings("unchecked")

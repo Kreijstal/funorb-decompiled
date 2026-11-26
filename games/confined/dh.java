@@ -12,12 +12,12 @@ class dh extends sj implements el {
     private ib field_wb;
     private ok field_xb;
 
-    final static nf a(boolean param0, String param1, String param2, mi param3) {
+    final static RgbSprite a(boolean param0, String param1, String param2, mi param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        nf stackIn_2_0 = null;
-        nf stackIn_4_0 = null;
+        RgbSprite stackIn_2_0 = null;
+        RgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -28,7 +28,7 @@ class dh extends sj implements el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (nf) null;
+            stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
           var4_int = param3.a(-37, param2);

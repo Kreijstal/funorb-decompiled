@@ -34,7 +34,7 @@ final class pa extends PacketBuffer {
         try {
           var5_int = 0;
           if (param0 != -25038) {
-            pa.n(-36);
+            pa.clearDeclaredStaticReferences(-36);
           }
           while (param1 > var5_int) {
             fieldTemp$0 = this.position;
@@ -117,7 +117,7 @@ final class pa extends PacketBuffer {
         }
     }
 
-    public static void n(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_z = null;
         if (param0 != 6) {
           return;

@@ -37,7 +37,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
         super(uiComponentPart016Argument1, uiComponentArgument2, 33, 20, 30);
     }
 
-    public static void performAction1241(byte byteArgument1) {
+    public static void clearStaticReferences(byte byteArgument1) {
         stringState0422 = null;
         resourceArchiveState0015 = null;
         stringState0426 = null;

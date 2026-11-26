@@ -26,7 +26,7 @@ final class ng {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = 113 / ((18 - param0) / 58);
         field_a = null;
     }

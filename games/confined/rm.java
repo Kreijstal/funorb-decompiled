@@ -31,7 +31,7 @@ final class rm {
     short[] field_J;
     short[] field_l;
     int field_I;
-    static nf field_K;
+    static RgbSprite field_K;
     short[] field_r;
     int[] field_c;
     short[] field_h;

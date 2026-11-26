@@ -36,7 +36,7 @@ final class g extends hh {
         this.field_a.a(false, 1);
         this.field_a.a((rt) null, 1);
         if (param0 < 5) {
-          g.b(-66);
+          g.clearDeclaredStaticReferences(-66);
           this.field_a.a(8448, -26625, 8448);
           this.field_a.a(5890, 768, 34176, 0);
           this.field_a.a(34166, 770, 34176, 2);
@@ -63,7 +63,7 @@ final class g extends hh {
         this.field_j = false;
     }
 
-    public static void b(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         int var1 = -12 % ((0 - param0) / 54);
         field_h = null;
     }

@@ -3,7 +3,7 @@
  */
 final class kc {
     static String field_d;
-    static tg field_c;
+    static RgbSprite field_c;
     static String field_b;
     static int field_a;
 
@@ -55,11 +55,11 @@ final class kc {
         }
     }
 
-    final static tg[] a(boolean param0) {
+    final static RgbSprite[] a(boolean param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        tg[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -73,7 +73,7 @@ final class kc {
         int[] var10;
         int[] var22;
         var8 = Bounce.field_N;
-        var1 = new tg[nj.field_p];
+        var1 = new RgbSprite[nj.field_p];
         for (var2 = 0; nj.field_p > var2; var2++) {
           var3 = ih.field_V[var2] * qh.field_i[var2];
           var21 = ph.field_c[var2];
@@ -83,7 +83,7 @@ final class kc {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = he.field_k[da.b(255, (int) var21[var6])];
             }
-            var1[var2] = new tg(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var22);
+            var1[var2] = new RgbSprite(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var22);
           } else {
             var16 = gk.field_g[var2];
             var12 = var16;
@@ -95,11 +95,11 @@ final class kc {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = ge.a(he.field_k[da.b((int) var21[var7], 255)], da.b(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (tg) ((Object) new ArgbSprite(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var17));
           }
         }
         if (!param0) {
-          field_c = (tg) null;
+          field_c = (RgbSprite) null;
         }
         vb.a((byte) 122);
         return var1;

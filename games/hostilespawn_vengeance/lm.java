@@ -7,7 +7,7 @@ final class lm extends ae {
     PacketBuffer field_C;
     static PcmSample[] field_A;
     int field_x;
-    static bd field_y;
+    static RgbSprite field_y;
 
     final byte[] c(byte param0) {
         if (this.field_v ||

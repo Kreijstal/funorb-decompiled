@@ -239,7 +239,7 @@ final class ei extends om {
         db.field_i = 2147483647;
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -26 % ((4 - param0) / 38);
         field_G = null;
     }

@@ -311,7 +311,7 @@ final class t extends ti {
         return this.field_t;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_x = null;
         int var1 = -37 % ((param0 + 4) / 33);
         field_q = null;

@@ -112,7 +112,7 @@ final class SceneWidgetPart012 extends SceneWidget {
           MixedSupport109.mixedSupport116State0003.performAction1516(-1, 0, MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport101.integerState0590, (byte) 7), booleanArgument1);
           return;
         }
-        SceneWidgetPart012.performAction1610(-61);
+        SceneWidgetPart012.discardDeclaredStaticReferences(-61);
         MixedSupport107.integerState0682 = 0;
         MixedSupport003.integerState0019 = PlatformSupport002.integerState0147;
         MixedSupport146.integerState0930 = 0;
@@ -143,7 +143,7 @@ final class SceneWidgetPart012 extends SceneWidget {
         }
     }
 
-    public static void performAction1610(int integerArgument1) {
+    public static void discardDeclaredStaticReferences(int integerArgument1) {
         integerArrayArrayState0020 = (int[][]) null;
         if (integerArgument1 != -18263) {
           return;

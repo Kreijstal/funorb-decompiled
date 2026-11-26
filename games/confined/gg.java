@@ -5,7 +5,7 @@ final class gg extends IntrusiveNode {
     static wi field_m;
     int field_o;
     static String[] field_p;
-    static nf[] field_q;
+    static RgbSprite[] field_q;
     static od[] field_n;
 
     public static void clearStaticReferences(int param0) {

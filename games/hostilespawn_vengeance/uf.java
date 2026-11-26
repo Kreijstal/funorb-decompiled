@@ -4,7 +4,7 @@
 final class uf extends ql {
     static int[] field_d;
     static pg[] field_g;
-    static bd[] field_i;
+    static RgbSprite[] field_i;
     static int[] field_e;
     static int[] field_f;
     static boolean field_h;
@@ -330,7 +330,7 @@ final class uf extends ql {
           field_i = null;
           return;
         }
-        field_i = (bd[]) null;
+        field_i = (RgbSprite[]) null;
         field_g = null;
         field_d = null;
         field_e = null;
@@ -346,7 +346,7 @@ final class uf extends ql {
         field_f = new int[128];
         field_d = new int[128];
         field_e = new int[128];
-        field_i = new bd[5];
+        field_i = new RgbSprite[5];
         for (var2 = 0; field_f.length > var2; var2++) {
           var0 = 1114111;
           var1 = (var0 & 16711935) * ((var2 + 1) * 255 / 128);

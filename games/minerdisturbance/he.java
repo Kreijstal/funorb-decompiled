@@ -9,10 +9,10 @@ final class he {
     static Sprite[] field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 >= -118) {
-          he.a((byte) -126);
+          he.clearStaticReferences((byte) -126);
           field_c = null;
           field_d = null;
           return;

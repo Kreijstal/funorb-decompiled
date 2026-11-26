@@ -9,9 +9,9 @@ final class wf extends tl {
     private java.net.ProxySelector field_g;
     static int field_h;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          wf.c(59);
+          wf.clearStaticReferences(59);
         }
         field_f = null;
     }
@@ -42,7 +42,7 @@ final class wf extends tl {
           var13.setSoTimeout(10000);
           var6 = var13.getOutputStream();
           if (param3 > 0) {
-            wf.c(-1);
+            wf.clearStaticReferences(-1);
           }
           if (param2 == null) {
             var6.write(("CONNECT " + this.field_c + ":" + this.field_d + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));

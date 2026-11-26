@@ -3,8 +3,8 @@
  */
 final class hh {
     static int field_e;
-    static bd[] field_a;
-    static bd field_b;
+    static RgbSprite[] field_a;
+    static RgbSprite field_b;
     static String field_c;
     static int field_d;
 
@@ -560,7 +560,7 @@ final class hh {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
-          field_a = (bd[]) null;
+          field_a = (RgbSprite[]) null;
         }
         field_c = null;
         field_a = null;
@@ -568,7 +568,7 @@ final class hh {
     }
 
     static {
-        field_a = new bd[4];
+        field_a = new RgbSprite[4];
         field_c = "Try again";
     }
 }

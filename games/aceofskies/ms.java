@@ -22,7 +22,7 @@ final class ms {
         this.field_b = (HardwareIndexBuffer) null;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         int var1 = -69 / ((71 - param0) / 39);
         field_a = null;

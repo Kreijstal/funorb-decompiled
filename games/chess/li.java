@@ -26,7 +26,7 @@ final class li {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -35,14 +35,14 @@ final class li {
         field_g = null;
         field_c = null;
         if (param0 > -30) {
-          li.a(86);
+          li.clearStaticReferences(86);
         }
     }
 
-    final static km a(int param0, byte param1, ResourceArchive param2, int param3) {
+    final static RgbSprite a(int param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
-        km stackIn_5_0 = null;
-        km stackIn_7_0 = null;
+        RgbSprite stackIn_5_0 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -55,7 +55,7 @@ final class li {
             stackIn_7_0 = hl.a(param1 + 2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (km) null;
+          stackIn_5_0 = (RgbSprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class li {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

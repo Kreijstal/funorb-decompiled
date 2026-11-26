@@ -43,7 +43,7 @@ final class bo {
           var4 = -1L;
           vm.a(var3, 11440, param0, var4, var2);
         } catch (RuntimeException runtimeException) {
-          throw fk.wrapClientException((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

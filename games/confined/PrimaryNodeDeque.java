@@ -83,7 +83,7 @@ final class PrimaryNodeDeque {
           nn.field_t[param4].d(param1, param3);
           pn.field_a.c(param0, 2 + param1, 14 + param3, 16777215, -1);
           if (param2 != -30) {
-            PrimaryNodeDeque.b(-116);
+            PrimaryNodeDeque.clearStaticReferences(-116);
           }
           pn.field_a.a(Integer.toString(param5), 39 + param1, 38 + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -200,7 +200,7 @@ final class PrimaryNodeDeque {
         if (!param0) {
           return var2;
         }
-        PrimaryNodeDeque.b(-115);
+        PrimaryNodeDeque.clearStaticReferences(-115);
         return var2;
     }
 
@@ -210,7 +210,7 @@ final class PrimaryNodeDeque {
         this.sentinel.field_h = this.sentinel;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_g = null;
         field_c = null;

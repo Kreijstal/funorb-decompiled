@@ -7,10 +7,10 @@ class mh {
     static ja field_d;
     static volatile int field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 != -41) {
-          mh.a((byte) 58);
+          mh.clearStaticReferences((byte) 58);
         }
         field_a = null;
         field_d = null;

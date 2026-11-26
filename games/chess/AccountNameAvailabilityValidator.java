@@ -6,7 +6,7 @@ final class AccountNameAvailabilityValidator extends vm {
     static ci field_m;
     private boolean nameAvailable;
     static int field_l;
-    static km[] field_p;
+    static RgbSprite[] field_p;
     private String checkedName;
     static String field_q;
     static String[] field_u;
@@ -66,7 +66,7 @@ final class AccountNameAvailabilityValidator extends vm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class AccountNameAvailabilityValidator extends vm {
         this.checkedName = null;
     }
 
-    public static void k(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_u = null;
         field_r = null;
         field_m = null;
@@ -179,7 +179,7 @@ final class AccountNameAvailabilityValidator extends vm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

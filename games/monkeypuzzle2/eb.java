@@ -724,7 +724,7 @@ final class eb extends WidgetContainer implements sh, ql {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseDeclaredStaticReferences(int param0) {
         field_A = null;
         field_C = null;
         field_E = null;

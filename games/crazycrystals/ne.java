@@ -8,8 +8,8 @@ final class ne {
     static int field_c;
     static String[] field_a;
     static oa field_f;
-    static dl field_e;
-    static dl field_i;
+    static RgbSprite field_e;
+    static RgbSprite field_i;
     static boolean field_d;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {

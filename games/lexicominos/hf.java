@@ -8,10 +8,10 @@ abstract class hf {
 
     abstract e a(boolean param0);
 
-    public static void a(int param0) {
+    public static void clearDeclaredStaticReferences(int param0) {
         field_c = null;
         if (param0 != -15927) {
-          hf.a(25);
+          hf.clearDeclaredStaticReferences(25);
           field_b = null;
           return;
         }
@@ -25,7 +25,7 @@ abstract class hf {
     final static void a(String param0, byte param1) {
         try {
           if (param1 < 107) {
-            hf.a(-22);
+            hf.clearDeclaredStaticReferences(-22);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "hf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

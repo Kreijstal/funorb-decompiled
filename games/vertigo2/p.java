@@ -159,9 +159,9 @@ final class p {
         AccountServiceResult.field_e.b(bb.field_F, 0);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
-          p.b(36);
+          p.clearStaticReferences(36);
           field_a = null;
           return;
         }

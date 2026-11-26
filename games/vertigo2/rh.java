@@ -89,7 +89,7 @@ final class rh extends WidgetContainer implements ij {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         int var1 = -98 % ((param0 - 48) / 47);
         field_I = null;
         field_G = null;

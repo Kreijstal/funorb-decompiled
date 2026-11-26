@@ -3,16 +3,16 @@
  */
 final class be {
     static String field_e;
-    static km field_d;
+    static RgbSprite field_d;
     static String[] field_b;
     static String field_g;
     static int field_f;
     static int[] field_a;
     static String field_c;
 
-    final static km[] a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, boolean param1, int param2, int param3, int param4) {
         if (param1) {
-          return (km[]) null;
+          return (RgbSprite[]) null;
         }
         return IntrusiveDeque.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
     }

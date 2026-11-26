@@ -10,10 +10,10 @@ final class el extends fe {
     static long[] field_e;
     static String field_i;
     static de[] field_h;
-    static bd field_f;
-    static bd field_d;
+    static RgbSprite field_f;
+    static RgbSprite field_d;
     private java.net.ProxySelector field_k;
-    static bd field_l;
+    static RgbSprite field_l;
     static String field_g;
 
     public static void b(boolean param0) {
@@ -38,16 +38,16 @@ final class el extends fe {
         }
     }
 
-    final static bd a(int param0, int param1, int param2) {
-        bd var3 = null;
+    final static RgbSprite a(int param0, int param1, int param2) {
+        RgbSprite var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        bd stackIn_11_0 = null;
+        RgbSprite stackIn_11_0 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var3 = new bd(param1, param1);
+          var3 = new RgbSprite(param1, param1);
           if (param0 > -6) {
             field_m = -43;
           }

@@ -35,17 +35,17 @@ final class rd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw fk.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static km a(int param0, int param1, int param2) {
+    final static RgbSprite a(int param0, int param1, int param2) {
         int var5 = Chess.field_G;
-        km var6 = new km(param0, param0);
-        km var3 = var6;
+        RgbSprite var6 = new RgbSprite(param0, param0);
+        RgbSprite var3 = var6;
         int var4 = 0;
         if (param2 != 14727) {
-          return (km) null;
+          return (RgbSprite) null;
         }
         while (var4 < var3.field_x.length) {
           var6.field_x[var4] = param1;
