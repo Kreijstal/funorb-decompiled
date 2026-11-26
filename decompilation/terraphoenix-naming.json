@@ -2116,6 +2116,14 @@
       "renamedSymbol": "M:IndexedSprite.copyFlippedHorizontal()LIndexedSprite;"
     },
     {
+      "symbol": "M:bg.a([I[B[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitIndexed",
+      "evidence": "Source-purpose review: Copy nonzero byte indices through the palette into the destination;index0 leaves destination untouched,including when a nonzero index selects RGB0. Preserve the four-pixel unroll,tail,source/destination offsets and row skips. Original body SHA256 7cfc82afa4257c33681de2809015031780098243424c072e87501204ed53dbae. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.blitIndexed([I[B[IIIIIIII)V"
+    },
+    {
       "symbol": "M:bg.b()Lci;",
       "originalName": "b",
       "to": "toRgbSprite",
@@ -2138,6 +2146,14 @@
       "evidence": "Source-purpose review: Tint applies ONLY when palette RGB channels are equal;non-gray colours pass through unchanged. New evidence must preserve this condition;existing generic blitTinted alias retained. Original identity M:bg.c([I[B[IIIIIIII)V. Pinned original body SHA256 6b9390013d817fd6c6d00be74b953600643461b415b2e71b28f3d2be7439b781. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IndexedSprite.blitTinted([I[B[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:bg.d([I[B[IIIIIIII)V",
+      "originalName": "d",
+      "to": "blitIndexedAlpha",
+      "evidence": "Source-purpose review: Blend nonzero indexed palette pixels over destination using the original supplied alpha and256-minus-alpha packed RGB expression with signed right shift;index0 leaves destination untouched. Original body SHA256 d798b9b8c1facd081112441f6fb3648865f3a3ad657dc4265b6b72e40c821e6f. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V"
     },
     {
       "symbol": "M:bh.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -57742,7 +57758,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -57753,7 +57769,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -57764,7 +57780,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -57775,7 +57791,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -57786,7 +57802,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -57797,7 +57813,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -57808,7 +57824,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -57819,7 +57835,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -57830,7 +57846,7 @@
     },
     {
       "symbol": "L:bg.a([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:IndexedSprite.a([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -58446,7 +58462,7 @@
     },
     {
       "symbol": "L:bg.d([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -58457,7 +58473,7 @@
     },
     {
       "symbol": "L:bg.d([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -58468,7 +58484,7 @@
     },
     {
       "symbol": "L:bg.d([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -58479,7 +58495,7 @@
     },
     {
       "symbol": "L:bg.d([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -58490,7 +58506,7 @@
     },
     {
       "symbol": "L:bg.d([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -58501,7 +58517,7 @@
     },
     {
       "symbol": "L:bg.d([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:IndexedSprite.d([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -193922,9 +193938,9 @@
     },
     {
       "symbol": "M:bg.a([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:IndexedSprite.a([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:IndexedSprite.blitIndexed([I[B[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitIndexed",
       "declaration": {
         "file": "bg.java",
         "start": 2912,
@@ -194010,9 +194026,9 @@
     },
     {
       "symbol": "M:bg.d([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:IndexedSprite.d([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "blitIndexedAlpha",
       "declaration": {
         "file": "bg.java",
         "start": 17166,
@@ -222522,7 +222538,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222533,7 +222549,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222544,7 +222560,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -222555,7 +222571,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -222566,7 +222582,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -222577,7 +222593,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -222588,7 +222604,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -222599,7 +222615,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -222610,7 +222626,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -222621,7 +222637,7 @@
     },
     {
       "symbol": "P:bg.a([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:IndexedSprite.a([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -223061,7 +223077,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223072,7 +223088,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -223083,7 +223099,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -223094,7 +223110,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -223105,7 +223121,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -223116,7 +223132,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -223127,7 +223143,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -223138,7 +223154,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -223149,7 +223165,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -223160,7 +223176,7 @@
     },
     {
       "symbol": "P:bg.d([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:IndexedSprite.d([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -295357,7 +295373,7 @@
       "original": "bg.java",
       "renamed": "IndexedSprite.java",
       "inputSha256": "cef1bbf6256a1648351fdced230a8e86f2c64c066140d90c2a39cffcd3823a03",
-      "outputSha256": "81ab315122519b5ca619d4b39ac39195fed1f5027ef87a95ea5adb10824d5f08",
+      "outputSha256": "04f24f4d8c30839098300b19a736ffa2b8321ddd48ad49d27a0971142b232540",
       "edits": [
         {
           "start": 50,
@@ -295479,11 +295495,25 @@
           "renamed": "IndexedSprite"
         },
         {
+          "start": 2789,
+          "end": 2790,
+          "symbol": "M:bg.d([I[B[IIIIIIII)V",
+          "original": "d",
+          "renamed": "blitIndexedAlpha"
+        },
+        {
           "start": 2791,
           "end": 2792,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2912,
+          "end": 2913,
+          "symbol": "M:bg.a([I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexed"
         },
         {
           "start": 5184,
@@ -295582,6 +295612,13 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 6289,
+          "end": 6290,
+          "symbol": "M:bg.a([I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexed"
         },
         {
           "start": 6291,
@@ -295932,6 +295969,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 17166,
+          "end": 17167,
+          "symbol": "M:bg.d([I[B[IIIIIIII)V",
+          "original": "d",
+          "renamed": "blitIndexedAlpha"
         },
         {
           "start": 18141,
@@ -398231,10 +398275,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "2887300609ed97da40c3e02f9aa02dffef8b2e725f7917f9c83341954c9f5ed9",
+    "rulesSha256": "03c0de6cb1d555c0ac7b3fc8ad5d18eaf356361e041d168f37c63fe3b042372d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "f40559ca09c95c40626a65af786834814cdad5c200d5da06bf6e306b0e32a44c",
+    "outputTreeSha256": "4d34d97cfe86a257fff2f3125ef8f84ea9d94a601d2d9d5d9a7a359851e29e95",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

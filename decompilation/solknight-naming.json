@@ -2964,6 +2964,22 @@
       "renamedSymbol": "M:oc.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:od.a([I[B[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitIndexed",
+      "evidence": "Source-purpose review: Copy nonzero byte indices through the palette into the destination;index0 leaves destination untouched,including when a nonzero index selects RGB0. Preserve the four-pixel unroll,tail,source/destination offsets and row skips. Original body SHA256 7cfc82afa4257c33681de2809015031780098243424c072e87501204ed53dbae. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:od.blitIndexed([I[B[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:od.b([I[B[IIIIIIII)V",
+      "originalName": "b",
+      "to": "blitIndexedAlpha",
+      "evidence": "Source-purpose review: Blend nonzero indexed palette pixels over destination using the original supplied alpha and256-minus-alpha packed RGB expression with signed right shift;index0 leaves destination untouched. Original body SHA256 d798b9b8c1facd081112441f6fb3648865f3a3ad657dc4265b6b72e40c821e6f. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:od.blitIndexedAlpha([I[B[IIIIIIII)V"
+    },
+    {
       "symbol": "M:oi.c()V",
       "originalName": "c",
       "to": "clearStaticReferences",
@@ -107374,7 +107390,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -107385,7 +107401,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -107396,7 +107412,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -107407,7 +107423,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -107418,7 +107434,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -107429,7 +107445,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -107440,7 +107456,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -107451,7 +107467,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -107462,7 +107478,7 @@
     },
     {
       "symbol": "L:od.a([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:od.a([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:od.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -107473,7 +107489,7 @@
     },
     {
       "symbol": "L:od.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:od.b([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:od.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -107484,7 +107500,7 @@
     },
     {
       "symbol": "L:od.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:od.b([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:od.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -107495,7 +107511,7 @@
     },
     {
       "symbol": "L:od.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:od.b([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:od.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -107506,7 +107522,7 @@
     },
     {
       "symbol": "L:od.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:od.b([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:od.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -107517,7 +107533,7 @@
     },
     {
       "symbol": "L:od.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:od.b([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:od.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -107528,7 +107544,7 @@
     },
     {
       "symbol": "L:od.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:od.b([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:od.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -160977,9 +160993,9 @@
     },
     {
       "symbol": "M:od.a([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:od.a([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:od.blitIndexed([I[B[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitIndexed",
       "declaration": {
         "file": "od.java",
         "start": 136,
@@ -160988,9 +161004,9 @@
     },
     {
       "symbol": "M:od.b([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:od.b([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:od.blitIndexedAlpha([I[B[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitIndexedAlpha",
       "declaration": {
         "file": "od.java",
         "start": 3679,
@@ -203800,7 +203816,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -203811,7 +203827,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -203822,7 +203838,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -203833,7 +203849,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -203844,7 +203860,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -203855,7 +203871,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -203866,7 +203882,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -203877,7 +203893,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -203888,7 +203904,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -203899,7 +203915,7 @@
     },
     {
       "symbol": "P:od.a([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:od.a([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:od.blitIndexed([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -203910,7 +203926,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -203921,7 +203937,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -203932,7 +203948,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -203943,7 +203959,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -203954,7 +203970,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -203965,7 +203981,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -203976,7 +203992,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -203987,7 +204003,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -203998,7 +204014,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -204009,7 +204025,7 @@
     },
     {
       "symbol": "P:od.b([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:od.b([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:od.blitIndexedAlpha([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -272376,8 +272392,15 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "5c9649ef1ef1fbd448e0ccffde2555ad4050dedbab4d6e2c1809ba3a0b2caa2e",
-      "outputSha256": "d52253d48ddfb8afbc81ef8439b6f6d72726b9eba92d1413ad4703929d3cb8d4",
+      "outputSha256": "7181d9589471d15b4a2ca6eb8d63296a0aa3ddb115477d6577dc9ca7b0b4b23f",
       "edits": [
+        {
+          "start": 136,
+          "end": 137,
+          "symbol": "M:od.a([I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexed"
+        },
         {
           "start": 2423,
           "end": 2425,
@@ -272470,11 +272493,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 3555,
+          "end": 3556,
+          "symbol": "M:od.b([I[B[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitIndexedAlpha"
+        },
+        {
           "start": 3557,
           "end": 3559,
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3679,
+          "end": 3680,
+          "symbol": "M:od.b([I[B[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitIndexedAlpha"
         },
         {
           "start": 4880,
@@ -272566,6 +272603,13 @@
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 5998,
+          "end": 5999,
+          "symbol": "M:od.a([I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexed"
         },
         {
           "start": 6000,
@@ -292833,10 +292877,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/solknight"
     },
-    "rulesSha256": "bb011a2c0c272fbf4ee0e2b666284090b2ee58c27ddc124ea259ed139c5ef254",
+    "rulesSha256": "7869326bb0bb6d05df79b3bda17b49bef3c02a550b2b03f52575e632442d03dd",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
-    "outputTreeSha256": "49ca9c958aa711ac1d6eea77af1eed27d761144b65d36d122290eb51bf7bbe56",
+    "outputTreeSha256": "249591a67eedabbab980bc3ffcde121f95a760ee36ac3f656f12dbdb2649753d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

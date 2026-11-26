@@ -46,7 +46,7 @@ final class pg extends aj {
           var6 <= 0) {
           return;
         }
-        pg.b(SoftwareRasterizer.field_i, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
+        pg.blitIndexedAlpha(SoftwareRasterizer.field_i, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -144,7 +144,7 @@ final class pg extends aj {
         pg.a(SoftwareRasterizer.field_i, this.field_j, this.field_k, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -360,7 +360,7 @@ final class pg extends aj {
         pg.a(SoftwareRasterizer.field_i, this.field_j, this.field_k, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -449,6 +449,6 @@ final class pg extends aj {
           var5 <= 0) {
           return;
         }
-        pg.a(SoftwareRasterizer.field_i, this.field_j, this.field_k, 0, var4, var3, var6, var5, var7, var8);
+        pg.blitIndexed(SoftwareRasterizer.field_i, this.field_j, this.field_k, 0, var4, var3, var6, var5, var7, var8);
     }
 }

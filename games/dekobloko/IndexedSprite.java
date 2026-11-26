@@ -5,7 +5,7 @@ final class IndexedSprite extends Sprite {
     byte[] byteArrayState0021;
     int[] integerArrayState0183;
 
-    private final static void performAction1244(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void blitIndexedAlpha(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -72,10 +72,10 @@ final class IndexedSprite extends Sprite {
           integerLocal6 <= 0) {
           return;
         }
-        IndexedSprite.performAction1244(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+        IndexedSprite.blitIndexedAlpha(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
     }
 
-    private final static void performAction1246(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void blitIndexed(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -189,7 +189,7 @@ final class IndexedSprite extends Sprite {
           integerLocal6 <= 0) {
           return;
         }
-        IndexedSprite.performAction1246(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+        IndexedSprite.blitIndexed(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
     }
 
     final void performAction1243() {

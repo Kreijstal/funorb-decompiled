@@ -107025,7 +107025,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#0"
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#0"
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#1",
@@ -107033,7 +107033,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#1"
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#1"
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#2",
@@ -107041,7 +107041,7 @@
       "to": "previousIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#2"
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#2"
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#3",
@@ -107049,7 +107049,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#3"
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#3"
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#4",
@@ -107057,7 +107057,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#4"
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#4"
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#5",
@@ -107065,7 +107065,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#5"
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#5"
     },
     {
       "symbol": "L:pi.b()Lpi;#0",
@@ -107113,7 +107113,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#0"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#0"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#1",
@@ -107121,7 +107121,7 @@
       "to": "previousIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#1"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#1"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#2",
@@ -107129,7 +107129,7 @@
       "to": "previousIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#2"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#2"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#3",
@@ -107137,7 +107137,7 @@
       "to": "previousIntegerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#3"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#3"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#4",
@@ -107145,7 +107145,7 @@
       "to": "previousIntegerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#4"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#4"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#5",
@@ -107153,7 +107153,7 @@
       "to": "previousIntegerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#5"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#5"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#6",
@@ -107161,7 +107161,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#6"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#6"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#7",
@@ -107169,7 +107169,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#7"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#7"
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#8",
@@ -107177,7 +107177,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#8"
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#8"
     },
     {
       "symbol": "L:pj.a(Lve;B)V#0",
@@ -160174,10 +160174,10 @@
     {
       "symbol": "M:pi.a([I[B[IIIIIIII)V",
       "originalName": "a",
-      "to": "performAction1244",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:IndexedSprite.performAction1244([I[B[IIIIIIII)V"
+      "to": "blitIndexedAlpha",
+      "evidence": "Source-purpose review: Blend nonzero indexed palette pixels over destination using the original supplied alpha and256-minus-alpha packed RGB expression with signed right shift;index0 leaves destination untouched. Original body SHA256 d798b9b8c1facd081112441f6fb3648865f3a3ad657dc4265b6b72e40c821e6f. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V"
     },
     {
       "symbol": "M:pi.b()Lpi;",
@@ -160190,10 +160190,10 @@
     {
       "symbol": "M:pi.b([I[B[IIIIIIII)V",
       "originalName": "b",
-      "to": "performAction1246",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:IndexedSprite.performAction1246([I[B[IIIIIIII)V"
+      "to": "blitIndexed",
+      "evidence": "Source-purpose review: Copy nonzero byte indices through the palette into the destination;index0 leaves destination untouched,including when a nonzero index selects RGB0. Preserve the four-pixel unroll,tail,source/destination offsets and row skips. Original body SHA256 7cfc82afa4257c33681de2809015031780098243424c072e87501204ed53dbae. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IndexedSprite.blitIndexed([I[B[IIIIIIII)V"
     },
     {
       "symbol": "M:pj.a(III)V",
@@ -205657,7 +205657,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#0"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#0"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#1",
@@ -205665,7 +205665,7 @@
       "to": "byteArrayArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#1"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#1"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#2",
@@ -205673,7 +205673,7 @@
       "to": "integerArrayArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#2"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#2"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#3",
@@ -205681,7 +205681,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#3"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#3"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#4",
@@ -205689,7 +205689,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#4"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#4"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#5",
@@ -205697,7 +205697,7 @@
       "to": "integerArgument6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#5"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#5"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#6",
@@ -205705,7 +205705,7 @@
       "to": "integerArgument7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#6"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#6"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#7",
@@ -205713,7 +205713,7 @@
       "to": "integerArgument8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#7"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#7"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#8",
@@ -205721,7 +205721,7 @@
       "to": "integerArgument9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#8"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#8"
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#9",
@@ -205729,7 +205729,7 @@
       "to": "integerArgument10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#9"
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#9"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#0",
@@ -205737,7 +205737,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#0"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#0"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#1",
@@ -205745,7 +205745,7 @@
       "to": "byteArrayArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#1"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#1"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#2",
@@ -205753,7 +205753,7 @@
       "to": "integerArrayArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#2"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#2"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#3",
@@ -205761,7 +205761,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#3"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#3"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#4",
@@ -205769,7 +205769,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#4"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#4"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#5",
@@ -205777,7 +205777,7 @@
       "to": "integerArgument6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#5"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#5"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#6",
@@ -205785,7 +205785,7 @@
       "to": "integerArgument7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#6"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#6"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#7",
@@ -205793,7 +205793,7 @@
       "to": "integerArgument8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#7"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#7"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#8",
@@ -205801,7 +205801,7 @@
       "to": "integerArgument9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#8"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#8"
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#9",
@@ -205809,7 +205809,7 @@
       "to": "integerArgument10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#9"
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#9"
     },
     {
       "symbol": "P:pj.a(III)V#0",
@@ -373229,7 +373229,7 @@
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -373240,7 +373240,7 @@
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -373251,7 +373251,7 @@
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "previousIntegerLocal3",
       "declaration": {
@@ -373262,7 +373262,7 @@
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -373273,7 +373273,7 @@
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -373284,7 +373284,7 @@
     },
     {
       "symbol": "L:pi.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:IndexedSprite.performAction1244([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -373350,7 +373350,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -373361,7 +373361,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "previousIntegerLocal2",
       "declaration": {
@@ -373372,7 +373372,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "previousIntegerLocal3",
       "declaration": {
@@ -373383,7 +373383,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "incrementValue$7",
       "renamedName": "previousIntegerLocal4",
       "declaration": {
@@ -373394,7 +373394,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$9",
       "renamedName": "previousIntegerLocal5",
       "declaration": {
@@ -373405,7 +373405,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "incrementValue$1",
       "renamedName": "previousIntegerLocal6",
       "declaration": {
@@ -373416,7 +373416,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -373427,7 +373427,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -373438,7 +373438,7 @@
     },
     {
       "symbol": "L:pi.b([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:IndexedSprite.performAction1246([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "var12Lifetime1",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -450141,9 +450141,9 @@
     },
     {
       "symbol": "M:pi.a([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:IndexedSprite.performAction1244([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "performAction1244",
+      "renamedName": "blitIndexedAlpha",
       "declaration": {
         "file": "pi.java",
         "start": 136,
@@ -450163,9 +450163,9 @@
     },
     {
       "symbol": "M:pi.b([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:IndexedSprite.performAction1246([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:IndexedSprite.blitIndexed([I[B[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "performAction1246",
+      "renamedName": "blitIndexed",
       "declaration": {
         "file": "pi.java",
         "start": 2608,
@@ -513985,7 +513985,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -513996,7 +513996,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "byteArrayArgument2",
       "declaration": {
@@ -514007,7 +514007,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "integerArrayArgument3",
       "declaration": {
@@ -514018,7 +514018,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -514029,7 +514029,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -514040,7 +514040,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "integerArgument6",
       "declaration": {
@@ -514051,7 +514051,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "integerArgument7",
       "declaration": {
@@ -514062,7 +514062,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "integerArgument8",
       "declaration": {
@@ -514073,7 +514073,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "integerArgument9",
       "declaration": {
@@ -514084,7 +514084,7 @@
     },
     {
       "symbol": "P:pi.a([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:IndexedSprite.performAction1244([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:IndexedSprite.blitIndexedAlpha([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "integerArgument10",
       "declaration": {
@@ -514095,7 +514095,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -514106,7 +514106,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "byteArrayArgument2",
       "declaration": {
@@ -514117,7 +514117,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "integerArrayArgument3",
       "declaration": {
@@ -514128,7 +514128,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -514139,7 +514139,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -514150,7 +514150,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "integerArgument6",
       "declaration": {
@@ -514161,7 +514161,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "integerArgument7",
       "declaration": {
@@ -514172,7 +514172,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "integerArgument8",
       "declaration": {
@@ -514183,7 +514183,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "integerArgument9",
       "declaration": {
@@ -514194,7 +514194,7 @@
     },
     {
       "symbol": "P:pi.b([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:IndexedSprite.performAction1246([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:IndexedSprite.blitIndexed([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "integerArgument10",
       "declaration": {
@@ -1389917,7 +1389917,7 @@
       "original": "pi.java",
       "renamed": "IndexedSprite.java",
       "inputSha256": "994774af268988ed62d223daae4d869c896605df046cb85c1f52c7173060f544",
-      "outputSha256": "6516be4de23c992e18c659c2654394d43a239a768cd5286433a363e33fb677d2",
+      "outputSha256": "171744faa8b1b6ad75e16ba299b00642d2b7e398fded9c5e05f9aa340ec523ef",
       "edits": [
         {
           "start": 50,
@@ -1389952,7 +1389952,7 @@
           "end": 137,
           "symbol": "M:pi.a([I[B[IIIIIIII)V",
           "original": "a",
-          "renamed": "performAction1244"
+          "renamed": "blitIndexedAlpha"
         },
         {
           "start": 144,
@@ -1391093,7 +1391093,7 @@
           "end": 2485,
           "symbol": "M:pi.a([I[B[IIIIIIII)V",
           "original": "a",
-          "renamed": "performAction1244"
+          "renamed": "blitIndexedAlpha"
         },
         {
           "start": 2486,
@@ -1391177,7 +1391177,7 @@
           "end": 2609,
           "symbol": "M:pi.b([I[B[IIIIIIII)V",
           "original": "b",
-          "renamed": "performAction1246"
+          "renamed": "blitIndexed"
         },
         {
           "start": 2616,
@@ -1392801,7 +1392801,7 @@
           "end": 6364,
           "symbol": "M:pi.b([I[B[IIIIIIII)V",
           "original": "b",
-          "renamed": "performAction1246"
+          "renamed": "blitIndexed"
         },
         {
           "start": 6365,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "b3ee047795ab645f215cd9b49008694c7d3749ecde0cfcbecda8b0f83688fa93",
+    "rulesSha256": "cc68a0b4437324d0b3a60cd49b279ba118c01517827b397022e21e8ec05c1724",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "c1ad8c34e635dd82ff8356e6e1859f9cfabd6a54996d8573a84f39419c1681ce",
+    "outputTreeSha256": "bf6145ac9c32f76da2ee51aa8d9bee3be52aa8ce10b430f4c5a159b1aaa3854c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

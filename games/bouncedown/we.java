@@ -46,7 +46,7 @@ final class we extends li {
           var6 <= 0) {
           return;
         }
-        we.a(SoftwareRasterizer.field_d, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
+        we.blitIndexedAlpha(SoftwareRasterizer.field_d, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void a(int param0, int param1) {
@@ -90,7 +90,7 @@ final class we extends li {
           var5 <= 0) {
           return;
         }
-        we.b(SoftwareRasterizer.field_d, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        we.blitIndexed(SoftwareRasterizer.field_d, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
     }
 
     we(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
@@ -104,7 +104,7 @@ final class we extends li {
         this.field_i = param7;
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -177,7 +177,7 @@ final class we extends li {
         this.field_i = new int[param2];
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;

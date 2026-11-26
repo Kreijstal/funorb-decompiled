@@ -3316,6 +3316,22 @@
       "renamedSymbol": "M:pm.createMouseWheelInput(B)LMouseWheelInput;"
     },
     {
+      "symbol": "M:q.b([I[B[IIIIIIII)V",
+      "originalName": "b",
+      "to": "blitIndexedAlpha",
+      "evidence": "Source-purpose review: Blend nonzero indexed palette pixels over destination using the original supplied alpha and256-minus-alpha packed RGB expression with signed right shift;index0 leaves destination untouched. Original body SHA256 d798b9b8c1facd081112441f6fb3648865f3a3ad657dc4265b6b72e40c821e6f. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:q.blitIndexedAlpha([I[B[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:q.c([I[B[IIIIIIII)V",
+      "originalName": "c",
+      "to": "blitIndexed",
+      "evidence": "Source-purpose review: Copy nonzero byte indices through the palette into the destination;index0 leaves destination untouched,including when a nonzero index selects RGB0. Preserve the four-pixel unroll,tail,source/destination offsets and row skips. Original body SHA256 7cfc82afa4257c33681de2809015031780098243424c072e87501204ed53dbae. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:q.blitIndexed([I[B[IIIIIIII)V"
+    },
+    {
       "symbol": "M:qa.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -184165,7 +184181,7 @@
     },
     {
       "symbol": "L:q.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:q.b([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:q.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -184176,7 +184192,7 @@
     },
     {
       "symbol": "L:q.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:q.b([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:q.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -184187,7 +184203,7 @@
     },
     {
       "symbol": "L:q.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:q.b([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:q.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -184198,7 +184214,7 @@
     },
     {
       "symbol": "L:q.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:q.b([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:q.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -184209,7 +184225,7 @@
     },
     {
       "symbol": "L:q.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:q.b([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:q.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -184220,7 +184236,7 @@
     },
     {
       "symbol": "L:q.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:q.b([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:q.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -184286,7 +184302,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -184297,7 +184313,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -184308,7 +184324,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -184319,7 +184335,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -184330,7 +184346,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -184341,7 +184357,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -184352,7 +184368,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -184363,7 +184379,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -184374,7 +184390,7 @@
     },
     {
       "symbol": "L:q.c([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:q.c([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:q.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -251221,9 +251237,9 @@
     },
     {
       "symbol": "M:q.b([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:q.b([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:q.blitIndexedAlpha([I[B[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitIndexedAlpha",
       "declaration": {
         "file": "q.java",
         "start": 13589,
@@ -251243,9 +251259,9 @@
     },
     {
       "symbol": "M:q.c([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:q.c([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:q.blitIndexed([I[B[IIIIIIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "blitIndexed",
       "declaration": {
         "file": "q.java",
         "start": 5244,
@@ -320312,7 +320328,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -320323,7 +320339,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -320334,7 +320350,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -320345,7 +320361,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -320356,7 +320372,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -320367,7 +320383,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -320378,7 +320394,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -320389,7 +320405,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -320400,7 +320416,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -320411,7 +320427,7 @@
     },
     {
       "symbol": "P:q.b([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:q.b([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:q.blitIndexedAlpha([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -320422,7 +320438,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -320433,7 +320449,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -320444,7 +320460,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -320455,7 +320471,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -320466,7 +320482,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -320477,7 +320493,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -320488,7 +320504,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -320499,7 +320515,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -320510,7 +320526,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -320521,7 +320537,7 @@
     },
     {
       "symbol": "P:q.c([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:q.c([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:q.blitIndexed([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -401075,7 +401091,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "fc1b6bed4b7ef920a93f669e2f4371cf59cd6eda7f6e893aec4b6ec0ee990886",
-      "outputSha256": "058430b22d79ec70b06cef820329ed00c4e3478a7f4c0c293b069c7b4f8d35df",
+      "outputSha256": "d4e8329f3faa30c327773d1ec27f18c9519d0ce6132a8ed15c0d4381ec696b4f",
       "edits": [
         {
           "start": 1269,
@@ -401351,11 +401367,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 5125,
+          "end": 5126,
+          "symbol": "M:q.c([I[B[IIIIIIII)V",
+          "original": "c",
+          "renamed": "blitIndexed"
+        },
+        {
           "start": 5127,
           "end": 5129,
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 5244,
+          "end": 5245,
+          "symbol": "M:q.c([I[B[IIIIIIII)V",
+          "original": "c",
+          "renamed": "blitIndexed"
         },
         {
           "start": 7531,
@@ -401449,11 +401479,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8662,
+          "end": 8663,
+          "symbol": "M:q.b([I[B[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitIndexedAlpha"
+        },
+        {
           "start": 8664,
           "end": 8666,
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 13589,
+          "end": 13590,
+          "symbol": "M:q.b([I[B[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitIndexedAlpha"
         }
       ]
     },
@@ -420393,10 +420437,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/dungeonassault"
     },
-    "rulesSha256": "846c6d458292d456b95af07b9ffce8e67c4f9518f570d5203eaf01707d9cd069",
+    "rulesSha256": "bc628bc248a7672107adc935de48992027d77930cd04228b8ba98b343fdb3581",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
-    "outputTreeSha256": "93fde65a26c0358ae3e11d905e74f764981e1e5f15775bb6a28e92a717df82bc",
+    "outputTreeSha256": "56582ee975d7b5de88515fbed15545d9823ad043991c4fcbe0fdff5198a8beea",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

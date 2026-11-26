@@ -3404,6 +3404,22 @@
       "renamedSymbol": "M:rf.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:rk.a([I[B[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitIndexedAlpha",
+      "evidence": "Source-purpose review: Blend nonzero indexed palette pixels over destination using the original supplied alpha and256-minus-alpha packed RGB expression with signed right shift;index0 leaves destination untouched. Original body SHA256 d798b9b8c1facd081112441f6fb3648865f3a3ad657dc4265b6b72e40c821e6f. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rk.blitIndexedAlpha([I[B[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:rk.b([I[B[IIIIIIII)V",
+      "originalName": "b",
+      "to": "blitIndexed",
+      "evidence": "Source-purpose review: Copy nonzero byte indices through the palette into the destination;index0 leaves destination untouched,including when a nonzero index selects RGB0. Preserve the four-pixel unroll,tail,source/destination offsets and row skips. Original body SHA256 7cfc82afa4257c33681de2809015031780098243424c072e87501204ed53dbae. Preserve full JVM integer domains,byte signedness,unsigned palette index masking,parameter slots,array aliases,partial writes and all index/null/overflow behavior. Naming only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rk.blitIndexed([I[B[IIIIIIII)V"
+    },
+    {
       "symbol": "M:sa.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -163643,7 +163659,7 @@
     },
     {
       "symbol": "L:rk.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:rk.a([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:rk.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -163654,7 +163670,7 @@
     },
     {
       "symbol": "L:rk.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:rk.a([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:rk.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -163665,7 +163681,7 @@
     },
     {
       "symbol": "L:rk.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:rk.a([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:rk.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -163676,7 +163692,7 @@
     },
     {
       "symbol": "L:rk.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:rk.a([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:rk.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -163687,7 +163703,7 @@
     },
     {
       "symbol": "L:rk.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:rk.a([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:rk.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -163698,7 +163714,7 @@
     },
     {
       "symbol": "L:rk.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:rk.a([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:rk.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -163907,7 +163923,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -163918,7 +163934,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -163929,7 +163945,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -163940,7 +163956,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -163951,7 +163967,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -163962,7 +163978,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -163973,7 +163989,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -163984,7 +164000,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -163995,7 +164011,7 @@
     },
     {
       "symbol": "L:rk.b([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "L:rk.b([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "L:rk.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -223890,9 +223906,9 @@
     },
     {
       "symbol": "M:rk.a([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:rk.a([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:rk.blitIndexedAlpha([I[B[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitIndexedAlpha",
       "declaration": {
         "file": "rk.java",
         "start": 12086,
@@ -223934,9 +223950,9 @@
     },
     {
       "symbol": "M:rk.b([I[B[IIIIIIII)V",
-      "renamedSymbol": "M:rk.b([I[B[IIIIIIII)V",
+      "renamedSymbol": "M:rk.blitIndexed([I[B[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitIndexed",
       "declaration": {
         "file": "rk.java",
         "start": 10020,
@@ -286744,7 +286760,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286755,7 +286771,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -286766,7 +286782,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -286777,7 +286793,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -286788,7 +286804,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -286799,7 +286815,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -286810,7 +286826,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -286821,7 +286837,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -286832,7 +286848,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -286843,7 +286859,7 @@
     },
     {
       "symbol": "P:rk.a([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:rk.a([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:rk.blitIndexedAlpha([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -287052,7 +287068,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#0",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#0",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287063,7 +287079,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#1",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#1",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -287074,7 +287090,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#2",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#2",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -287085,7 +287101,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#3",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#3",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -287096,7 +287112,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#4",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#4",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -287107,7 +287123,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#5",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#5",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -287118,7 +287134,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#6",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#6",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -287129,7 +287145,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#7",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#7",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -287140,7 +287156,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#8",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#8",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -287151,7 +287167,7 @@
     },
     {
       "symbol": "P:rk.b([I[B[IIIIIIII)V#9",
-      "renamedSymbol": "P:rk.b([I[B[IIIIIIII)V#9",
+      "renamedSymbol": "P:rk.blitIndexed([I[B[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -352920,7 +352936,7 @@
       "original": "rk.java",
       "renamed": "rk.java",
       "inputSha256": "3c9dbe4f5f45b6591399ffb8f92ee1c226cb7f6585d805bcfdabbf3a4c405b0f",
-      "outputSha256": "4a1032f38e2dd7e98eb7fc7778e9bbe5eed5f3d0f8949d81eb6e596b940c9a00",
+      "outputSha256": "c9ac768df473a5786c58fb3deb66466f2a3fca6b222526d2b60f10058ee2e813",
       "edits": [
         {
           "start": 342,
@@ -353012,6 +353028,13 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1460,
+          "end": 1461,
+          "symbol": "M:rk.b([I[B[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitIndexed"
         },
         {
           "start": 1462,
@@ -353180,6 +353203,20 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10020,
+          "end": 10021,
+          "symbol": "M:rk.b([I[B[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitIndexed"
+        },
+        {
+          "start": 12086,
+          "end": 12087,
+          "symbol": "M:rk.a([I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexedAlpha"
         },
         {
           "start": 13405,
@@ -353467,6 +353504,13 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 19531,
+          "end": 19532,
+          "symbol": "M:rk.a([I[B[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexedAlpha"
         },
         {
           "start": 19533,
@@ -364534,10 +364578,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/chess"
     },
-    "rulesSha256": "454601020b50dc1c9c3c4deb746484b400b11348454a77be79b37ca9c1097424",
+    "rulesSha256": "28962524c8c161f994df754667083ee61f9966e08ddade9a7378bbf9ec6a0e97",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
-    "outputTreeSha256": "fe92f626b15ea19402614fda32379c3273bd9792f0952c086ccb4f34b1d15f1f",
+    "outputTreeSha256": "5aea7b7d4dc23366dd75dbbbf03657f4cbf979b389ed1e9032500685024d8a83",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
